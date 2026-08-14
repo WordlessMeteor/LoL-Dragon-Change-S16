@@ -683,7 +683,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Anivia_Rebirth.project_jade.png",
         "abilityVideoPath": "champion-abilities/60034/ability_60034_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60034/ability_60034_P1.jpg",
-        "description": "在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋在6秒内没有被击破的话，艾尼维亚就会闪亮重生。"
+        "description": "在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋没有被击破，艾尼维亚就会闪亮重生。"
     },
     "spells": [
         {
@@ -695,7 +695,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "艾尼维亚挥动翅膀聚集空气，制造一枚冰晶向目标区域施放，冰冻并伤害路径上的所有敌人。当冰晶爆裂时，它会晕眩并伤害一定范围内的所有敌人。",
-            "dynamicDescription": "一大块寒冰飞向目标位置，造成<magicDamage>@TotalPassthroughDamage@魔法伤害</magicDamage>并施加冰冻效果，<status>减缓</status>其20%移动速度。<br><br>到达最大距离后，或当艾尼维亚<recast>再次施放</recast>该技能时，冰块会爆炸，对小范围内的敌人造成<magicDamage>@TotalExplosionDamage@魔法伤害</magicDamage>和@StunDuration@秒<status>晕眩</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "一枚巨大的冰块飞向目标区域，造成<magicDamage>@TotalPassthroughDamage@魔法伤害</magicDamage>并对目标施加冰冷效果，从而使其受到持续@SlowDuration@秒的@MovementSpeedMod*-100@%移动速度<status>减速</status>。<br><br>在飞到范围的终点时，或艾尼维亚<recast>再次施放</recast>此技能时，冰块会爆炸，对小范围内的敌人造成<magicDamage>@TotalExplosionDamage@魔法伤害</magicDamage>和@StunDuration@秒的<status>晕眩</status>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,

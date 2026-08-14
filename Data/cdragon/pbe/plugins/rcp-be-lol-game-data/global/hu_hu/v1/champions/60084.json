@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Fullánk Akali",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "Az Óriás Lódarázs Rendje brutális, hosszú idő alatt tökéletesített képzése során a tanulók elsajátítják, hogyan kell olyan vadul és fáradhatatlanul szúrni, mint egy darázs. Akali a legfőbb bajnokuk, aki még tovább szeretné fejleszteni harcművészetüket."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Akali egy ellenfélre hajítja a kamáját, amivel varázssebzést okoz, és 6 másodpercre megjelöli a célpontot. Akali közelharci támadásai aktiválják a jelet, ami így további sebzést okoz az ellenfélnek, és visszatölti Akali energiájának egy részét.",
-            "dynamicDescription": "Akali egy ellenfélre hajítja a kamáját, amivel <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okoz, és 6 másodpercre megjelöli a célpontot.<br><br>Akali közelharci támadásai aktiválják a jelet, ami így további <magicDamage>@ProcDamage@ varázssebzést</magicDamage> okoz az ellenfélnek, és visszatölt Akali számára <keywordMajor>@EnergyReturn@ energiát</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_AkaliQ_Jade_Summary",
+            "dynamicDescription": "Spell_AkaliQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Akali egy füstfelhőt hoz létre. Ezen belül Akali páncélt és varázsellenállást kap, és láthatatlanná válik. Támadáskor vagy a képességeinek használatakor rövid időre láthatóvá válik. A füstfelhőben tartózkodó ellenfelek mozgási sebessége lecsökken.",
-            "dynamicDescription": "Akali egy füstfelhőt hoz létre, amely 8 másodpercig tart. Ezen belül Akali <scaleArmor>@TotalResists@ páncélt</scaleArmor> és <scaleMR>@TotalResists@ varázsellenállást</scaleMR> kap, és <keywordStealth>láthatatlanná</keywordStealth> válik. Támadáskor vagy a képességeinek használatakor rövid időre láthatóvá válik.<br><br>A füstben tartózkodó ellenfelek @SlowAmount@%-kal <status>lelassulnak</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_AkaliW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

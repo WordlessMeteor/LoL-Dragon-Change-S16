@@ -6949,6 +6949,46 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_HoL_KaisaStatue_B_MAT": {
+        "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_HoL_KaisaStatue_B_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Bloom/Textures/Bloom_HoL_KaisaStatue_B.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Order_Blue_A_MAT": {
         "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Order_Blue_A_MAT",
         "type": 0,
@@ -9269,6 +9309,67 @@
                     "ENV_TRANSITION": "1"
                 },
                 "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Periph_Top_H_MAT": {
+        "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Periph_Top_H_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Bloom/Textures/Bloom_Periph_Top_H_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
             }
         ],
         "__type": "StaticMaterialDef"
@@ -18021,6 +18122,46 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_HoL_KaisaStatue_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_HoL_KaisaStatue_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Bloom/Textures/Bloom_HoL_KaisaStatue_A.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Chaos_Gromp_A_MAT": {
         "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Chaos_Gromp_A_MAT",
         "type": 0,
@@ -20076,6 +20217,46 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HoL_KaisaStatue_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HoL_KaisaStatue_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Base/Textures/HoL_KaisaStatue_A.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Bot_B_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Bot_B_MAT",
         "type": 0,
@@ -21865,6 +22046,67 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Base/Textures/Periph_Top_H_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_D4_DragonPit_Ocean_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_D4_DragonPit_Ocean_A_MAT",
         "type": 0,
@@ -22677,67 +22919,6 @@
                     "ENV_TRANSITION": "1"
                 },
                 "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "{33df0c7d}": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/SRS/Base/Textures/HOL2026_Periph_Top_H_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
             }
         ],
         "__type": "StaticMaterialDef"
@@ -28626,6 +28807,46 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HoL_KaisaStatue_B_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HoL_KaisaStatue_B_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/SRS/Base/Textures/HoL_KaisaStatue_B.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Bot_G_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Bot_G_MAT",
         "type": 0,
@@ -29220,46 +29441,6 @@
                         "blendEnable": true,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "{c304851a}": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HoL_TristanaStatue_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/SRS/Base/Textures/HoL_Statue_Tris_2026.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -308666,7 +308847,7 @@
     "{27772d3e}": {
         "ID": "{27772d3e}",
         "texture": {
-            "texturePath": "ASSETS/UX/Minimap/Icons/Dragon_Party.tex",
+            "texturePath": "assets/ux/minimap/icons/dragon_party.tex",
             "__type": "{1003c990}"
         },
         "Size": [
@@ -345256,44 +345437,11 @@
                 ],
                 "name": "2024_Hall_of_Legends_Ahri_Godrays1",
                 "system": "Maps/Particles/SR/SRT_2024/2024_Hall_of_Legends_Ahri_Godrays",
-                "VisibilityController": "{76c50391}",
                 "__type": "MapParticle"
             },
             "{b7ee17f2}": null,
-            "{8bfba8d4}": null,
-            "{e00e67de}": null,
-            "{567e1d79}": null,
-            "{ed41a404}": null,
-            "{355dbc2d}": {
-                "transform": [
-                    [
-                        0.8755214810371399,
-                        0.0,
-                        0.24909645318984985,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        0.9102675318717957,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        -0.24909645318984985,
-                        0.0,
-                        0.8755214810371399,
-                        0.0
-                    ],
-                    [
-                        2034.254638671875,
-                        39.61114501953125,
-                        14314.2626953125,
-                        1.0
-                    ]
-                ],
-                "name": "{9529afba}",
-                "__type": "{fa42cdaf}"
-            }
+            "{6a040234}": null,
+            "{096c23a7}": null
         },
         "__type": "MapPlaceableContainer"
     },
@@ -377054,9 +377202,6 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{a3047a68}": {
-        "__type": "MapPlaceableContainer"
-    },
     "{a72ec953}": {
         "items": {
             "{924195a6}": {
@@ -382167,78 +382312,6 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{d3d72048}": {
-        "items": {
-            "{d3e6a20d}": {
-                "transform": [
-                    [
-                        1.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    [
-                        1978.0775146484375,
-                        -172.86065673828125,
-                        14465.3056640625,
-                        1.0
-                    ]
-                ],
-                "name": "2024_Hall_of_Legends_Ahri_Godrays1",
-                "system": "Maps/Particles/SR/SRT_2024/2024_Hall_of_Legends_Ahri_Godrays",
-                "VisibilityController": "{76c50391}",
-                "__type": "MapParticle"
-            },
-            "{b7ee17f2}": null,
-            "{8bfba8d4}": null,
-            "{e00e67de}": null,
-            "{567e1d79}": null,
-            "{ed41a404}": null,
-            "{355dbc2d}": {
-                "transform": [
-                    [
-                        0.8755214810371399,
-                        0.0,
-                        0.24909645318984985,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        0.9102675318717957,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        -0.24909645318984985,
-                        0.0,
-                        0.8755214810371399,
-                        0.0
-                    ],
-                    [
-                        2034.254638671875,
-                        39.61114501953125,
-                        14314.2626953125,
-                        1.0
-                    ]
-                ],
-                "name": "{9529afba}",
-                "__type": "{fa42cdaf}"
-            }
-        },
-        "__type": "MapPlaceableContainer"
-    },
     "Maps/MapGeometry/Map11/Chunks/SRX_Audio": {
         "items": {
             "{4c6c305c}": {
@@ -386975,11 +387048,6 @@
         ],
         "__type": "ChildMapVisibilityController"
     },
-    "{76c50391}": {
-        "PathHash": "{76c50391}",
-        "MutatorName": "SR_Hall_Of_Legends",
-        "__type": "MutatorMapVisibilityController"
-    },
     "{789a0ddf}": {
         "PathHash": "{789a0ddf}",
         "Parents": [
@@ -387207,11 +387275,6 @@
                         "chunk": "Maps/MapGeometry/SR/Chunks/Esports_Banners",
                         "VisibilityController": "{11a9b55d}",
                         "__type": "{6355dd6f}"
-                    },
-                    {
-                        "chunk": "{d3d72048}",
-                        "VisibilityController": "{76c50391}",
-                        "__type": "{6355dd6f}"
                     }
                 ],
                 "__type": "{cdb1c8f6}"
@@ -387257,7 +387320,6 @@
             "PRACTICETOOL": "{d2477887}",
             "{38115f73}": "{0b8a6840}",
             "{878b9a7f}": "{c10d3ea0}",
-            "Test": "{a3047a68}",
             "{14c5c6ff}": "{6dd251f0}",
             "{4d6f0502}": "{a72ec953}",
             "{9a4fbc0e}": "{ee1c9357}",

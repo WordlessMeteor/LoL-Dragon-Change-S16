@@ -367,6 +367,326 @@
         "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Victory_VFX",
         "__type": "UiElementParticleSystemData"
     },
+    "{2639f017}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene",
+        "Layer": 1000,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "TransitionStartDelaySecs": 0.6499999761581421,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "{f0b33f1a}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton",
+        "Scene": "{2639f017}",
+        "Elements": [
+            "{0cd34817}",
+            "{fa8fc48b}",
+            "{72053d7e}",
+            "{afbb5ca8}",
+            "{ba7b8475}",
+            "{7b659402}"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "{7b659402}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{fa8fc48b}"
+            ],
+            "TextElement": "{ba7b8475}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{afbb5ca8}"
+            ],
+            "TextElement": "{ba7b8475}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{0cd34817}"
+            ],
+            "TextElement": "{ba7b8475}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{72053d7e}"
+            ],
+            "TextElement": "{ba7b8475}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "objectPath": "{f0b33f1a}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{0cd34817}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Clicked",
+        "Scene": "{2639f017}",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                110.0,
+                190.0,
+                163.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{72053d7e}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Disabled",
+        "Scene": "{2639f017}",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                164.0,
+                190.0,
+                217.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{7b659402}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Region",
+        "Scene": "{2639f017}",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{afbb5ca8}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Hover",
+        "Scene": "{2639f017}",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                56.0,
+                190.0,
+                109.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{ba7b8475}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Text",
+        "Scene": "{2639f017}",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    743.0,
+                    704.0
+                ],
+                "Size": [
+                    118.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "connectionerror_continue",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_EoGContinue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{fa8fc48b}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_ContinueButton/ConnectionError_ContinueButton_Default",
+        "Scene": "{2639f017}",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                2.0,
+                190.0,
+                55.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{10a9ec66}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorScene/ConnectionError_DetectedText",
+        "Scene": "{2639f017}",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    300.0,
+                    610.0
+                ],
+                "Size": [
+                    1000.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "connection_error",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Subtitle",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
     "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene",
         "Layer": 1000,
@@ -719,7 +1039,7 @@
         "TRAKey": "vanguard_gameEndExplanation",
         "FontDescription": "UX/Fonts/Descriptions/Vanguard_Explanation",
         "TextAlignmentHorizontal": 1,
-        "HTMLStyleSheet": "{9c87124a}",
+        "HTMLStyleSheet": "UX/Fonts/CSS/StyleSheet",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
     },
@@ -1286,6 +1606,65 @@
                 2.0,
                 190.0,
                 55.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{e3b835b2}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorBGScene",
+        "Layer": 999,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "{dd450f94}": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/ConnectionErrorBGScene/ConnectionError_Background",
+        "Scene": "{e3b835b2}",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -800.0,
+                    -600.0
+                ],
+                "Size": [
+                    3200.0,
+                    2400.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            210
+        ],
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EoG_GradientMap.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 16,
+            "mTextureUV": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
             ],
             "__type": "AtlasData"
         },

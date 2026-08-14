@@ -3527,53 +3527,54 @@
                         SkinChromaButtonComponent: B,
                         SkinChromaModalComponent: N,
                         SkinQuestFormModalComponent: O,
-                        WardSkinSelectComponent: F,
-                        WardSkinPopupComponent: q,
-                        WardSkinPopupButtonComponent: G,
-                        WardSkinRendererComponent: U
+                        TftCompensationTooltipComponent: F,
+                        WardSkinSelectComponent: q,
+                        WardSkinPopupComponent: G,
+                        WardSkinPopupButtonComponent: U,
+                        WardSkinRendererComponent: $
                     } = o.SharedComponents.getSharedEmberComponents(),
                     {
-                        ChallengeBannerTitleComponent: $,
-                        ChallengeBannerTokenComponent: j,
-                        ChallengeBannerTokenContainerComponent: Q,
-                        ChallengeItemTooltipComponent: H,
-                        ChallengeItemFooterComponent: z,
-                        RiotclientService: W,
-                        GameDataService: Y
+                        ChallengeBannerTitleComponent: j,
+                        ChallengeBannerTokenComponent: Q,
+                        ChallengeBannerTokenContainerComponent: H,
+                        ChallengeItemTooltipComponent: z,
+                        ChallengeItemFooterComponent: W,
+                        RiotclientService: Y,
+                        GameDataService: V
                     } = o.SharedComponents.getApi_SharedChallengesComponents(),
                     {
-                        DiscordBetaComponent: V,
-                        DiscordButtonComponent: K,
-                        DiscordPopupComponent: X,
-                        DiscordLinkingPopupComponent: J
+                        DiscordBetaComponent: K,
+                        DiscordButtonComponent: X,
+                        DiscordPopupComponent: J,
+                        DiscordLinkingPopupComponent: Z
                     } = o.SharedComponents.getApi_SharedDiscordPopupComponents(),
-                    Z = n(101),
-                    ee = n(103).default,
-                    te = n(104),
-                    ne = n(106).default,
-                    ie = n(107),
-                    oe = n(108),
-                    se = n(111),
-                    ae = n(114),
-                    re = n(115),
-                    le = n(116),
-                    ce = n(117),
-                    me = n(118),
-                    ue = n(119),
-                    de = n(125),
-                    pe = n(128),
-                    he = n(129).default,
-                    ge = n(130),
-                    be = n(132),
-                    fe = n(136),
-                    _e = n(137),
-                    ye = n(138),
-                    ve = n(139).default,
-                    Ee = n(140),
-                    Se = n(141),
-                    xe = n(142).default,
-                    ke = n(143);
-                let Ae = {
+                    ee = n(101),
+                    te = n(103).default,
+                    ne = n(104),
+                    ie = n(106).default,
+                    oe = n(107),
+                    se = n(108),
+                    ae = n(111),
+                    re = n(114),
+                    le = n(115),
+                    ce = n(116),
+                    me = n(117),
+                    ue = n(118),
+                    de = n(119),
+                    pe = n(125),
+                    he = n(128),
+                    ge = n(129).default,
+                    be = n(130),
+                    fe = n(132),
+                    _e = n(136),
+                    ye = n(137),
+                    ve = n(138),
+                    Ee = n(139).default,
+                    Se = n(140),
+                    xe = n(141),
+                    ke = n(142).default,
+                    Ae = n(143);
+                let Ce = {
                     name: "PartiesScreen",
                     tra: h,
                     ComponentFactory: o.ComponentFactory,
@@ -3660,11 +3661,11 @@
                     GenericButtonComponent: n(385),
                     AnimatedFindMatchButtonComponent: n(389),
                     CopySmartUrlButtonComponent: n(392),
-                    ChallengeBannerTitleComponent: $,
-                    ChallengeBannerTokenComponent: j,
-                    ChallengeBannerTokenContainerComponent: Q,
-                    ChallengeItemTooltipComponent: H,
-                    ChallengeItemFooterComponent: z,
+                    ChallengeBannerTitleComponent: j,
+                    ChallengeBannerTokenComponent: Q,
+                    ChallengeBannerTokenContainerComponent: H,
+                    ChallengeItemTooltipComponent: z,
+                    ChallengeItemFooterComponent: W,
                     PlayerRestrictionInfoComponent: P,
                     RemainingTimeTextComponent: I,
                     CountdownWidgetComponent: w,
@@ -3707,16 +3708,17 @@
                     SkinChromaButtonComponent: B,
                     SkinChromaModalComponent: N,
                     SkinQuestFormModalComponent: O,
+                    TftCompensationTooltipComponent: F,
                     ...o.RewardTrackerEmberComponents,
                     ...o.PassProgressionWidgetComponents,
-                    WardSkinSelectComponent: F,
-                    WardSkinPopupComponent: q,
-                    WardSkinPopupButtonComponent: G,
-                    WardSkinRendererComponent: U,
-                    DiscordBetaComponent: V,
-                    DiscordButtonComponent: K,
-                    DiscordPopupComponent: X,
-                    DiscordLinkingPopupComponent: J,
+                    WardSkinSelectComponent: q,
+                    WardSkinPopupComponent: G,
+                    WardSkinPopupButtonComponent: U,
+                    WardSkinRendererComponent: $,
+                    DiscordBetaComponent: K,
+                    DiscordButtonComponent: X,
+                    DiscordPopupComponent: J,
+                    DiscordLinkingPopupComponent: Z,
                     ObjectivesCardV2Component: o.SharedObjectivesComponents.ObjectivesCardComponentV2,
                     ObjectivesRewardTooltipComponent: o.SharedObjectivesComponents.ObjectivesRewardTooltipComponent,
                     ObjectivesProgressRadialComponent: o.SharedObjectivesComponents.ObjectivesProgressRadialComponent,
@@ -3724,54 +3726,54 @@
                     ObjectivesTooltipRequirementIconComponent: o.SharedObjectivesComponents.ObjectivesTooltipRequirementIconComponent,
                     RankedProgressionPanelComponent: o.SharedRankedComponents.RankedProgressionPanelComponent,
                     RankedProgressionWidgetComponent: o.SharedRankedComponents.RankedProgressionWidgetComponent,
-                    LobbiesService: oe,
-                    AssetsService: Z,
-                    ChampionAssetSubstitutionService: ee,
-                    ChatService: te,
+                    LobbiesService: se,
+                    AssetsService: ee,
+                    ChampionAssetSubstitutionService: te,
+                    ChatService: ne,
                     CherryLobbyService: p.CherryLobbyService,
-                    DiscordIntegrationService: ne,
-                    PartySettingsService: me,
-                    MatchmakingService: se,
-                    SummonerService: ie,
-                    QueueEligibilityService: re,
-                    GameflowService: le,
-                    GameSelectQueuePipService: ce,
-                    CustomGamesService: ue,
-                    CustomGameListService: de,
-                    InventoryService: pe,
-                    PatcherService: he,
-                    InvitesService: ge,
-                    EternalsService: ae,
-                    TftCosmeticsService: fe,
-                    TftCosmeticsV2Service: _e,
-                    TftEventsService: ye,
-                    TftNpeService: ve,
-                    SocialLeaderboardService: Ee,
-                    ChallengesService: Se,
-                    EventHubService: ke,
-                    RiotclientService: W,
-                    GameDataService: Y,
-                    QuickPlayService: be,
-                    ClientConfigService: xe,
+                    DiscordIntegrationService: ie,
+                    PartySettingsService: ue,
+                    MatchmakingService: ae,
+                    SummonerService: oe,
+                    QueueEligibilityService: le,
+                    GameflowService: ce,
+                    GameSelectQueuePipService: me,
+                    CustomGamesService: de,
+                    CustomGameListService: pe,
+                    InventoryService: he,
+                    PatcherService: ge,
+                    InvitesService: be,
+                    EternalsService: re,
+                    TftCosmeticsService: _e,
+                    TftCosmeticsV2Service: ye,
+                    TftEventsService: ve,
+                    TftNpeService: Ee,
+                    SocialLeaderboardService: Se,
+                    ChallengesService: xe,
+                    EventHubService: Ae,
+                    RiotclientService: Y,
+                    GameDataService: V,
+                    QuickPlayService: fe,
+                    ClientConfigService: ke,
                     LobbyStateService: n(467).default,
                     RankedAssetsService: y,
                     LolMissionsService: v,
                     EqHelper: o.Ember.Helper.helper((e => e[0] === e[1]))
                 };
-                Object.assign(Ae, {
+                Object.assign(Ce, {
                     TftLoadoutMenuButtonComponent: n(468),
                     TftLoadoutMenuButtonDoubleUpComponent: n(473),
                     TftLoadoutMenuComponent: n(476),
                     TftLoadoutMenuOptionComponent: n(479)
-                }), o.PromethiumModules && Object.assign(Ae, {
+                }), o.PromethiumModules && Object.assign(Ce, {
                     ...o.PromethiumModules
-                }), o.StrawberryModules && Object.assign(Ae, {
+                }), o.StrawberryModules && Object.assign(Ce, {
                     ...o.StrawberryModules
-                }), o.TftBridgeComponents && Object.assign(Ae, {
+                }), o.TftBridgeComponents && Object.assign(Ce, {
                     ...o.TftBridgeComponents
-                }), o.KiwiHubModules && Object.assign(Ae, {
+                }), o.KiwiHubModules && Object.assign(Ce, {
                     ...o.KiwiHubModules
-                }), Object.assign(Ae, {
+                }), Object.assign(Ce, {
                     DemaciaPositionPreferenceModalComponent: n(482),
                     DemaciaPositionCardComponent: n(486),
                     DemaciaProgressionWidgetComponent: n(488).default,
@@ -3779,24 +3781,24 @@
                     JadeRankUnlockFooterComponent: n(495).default,
                     SummonersJourneyService: n(498).default
                 });
-                const Ce = Object.assign({}, Ae.TEMPLATES || {}, {
+                const Pe = Object.assign({}, Ce.TEMPLATES || {}, {
                     "components/demacia-progression-widget": n(491),
                     "components/demacia-position-preference-modal": n(485),
                     "components/demacia-position-card": n(487)
                 });
-                Ae.TEMPLATES = Ce, Object.assign(Ae, {
+                Ce.TEMPLATES = Pe, Object.assign(Ce, {
                     AwBoostService: n(499).default
                 });
-                const Pe = n(500);
-                Object.assign(Ae, {
+                const Ie = n(500);
+                Object.assign(Ce, {
                     TftPlaybookIconComponent: n(501),
                     TftPlaybookMenuComponent: n(504),
                     TftPlaybookItemComponent: n(507),
                     TftPlaybookItemDetailsComponent: n(510),
                     TftPlaybookCardComponent: n(513),
                     TftPlaybookTutorialComponent: n(516),
-                    TftPlaybookService: Pe
-                }), Ae = g.registerToFactoryDefinition(Ae), o.EmberApplicationFactory.setFactoryDefinition(Ae), o.EmberApplicationFactory.setFactoryDefinition({
+                    TftPlaybookService: Ie
+                }), Ce = g.registerToFactoryDefinition(Ce), o.EmberApplicationFactory.setFactoryDefinition(Ce), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "RoleSwapFTUXModalComponent",
                     tra: h,
                     ComponentFactory: o.ComponentFactory,
@@ -3820,29 +3822,29 @@
                     PartyQueueErrorDialogPrerequisiteQueuesNotPlayedComponent: n(541),
                     PartyQueueErrorDialogReadyCheckFailerComponent: n(543),
                     PartyQueueErrorDialogDisruptiveGameplayLockoutComponent: n(546),
-                    LobbiesService: oe,
-                    SummonerService: ie,
-                    QueueEligibilityService: re,
-                    MatchmakingService: se
+                    LobbiesService: se,
+                    SummonerService: oe,
+                    QueueEligibilityService: le,
+                    MatchmakingService: ae
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "PartiesInviteDialog",
                     tra: h,
                     ComponentFactory: o.ComponentFactory,
                     PartiesInviteDialogComponent: n(549),
                     InviteDialogGroupComponent: n(553),
-                    LobbiesService: oe,
-                    ChatService: te,
-                    DiscordIntegrationService: ne,
-                    MatchmakingService: se,
-                    SummonerService: ie,
-                    QueueEligibilityService: re,
-                    CustomGamesService: ue,
-                    InvitesService: ge,
+                    LobbiesService: se,
+                    ChatService: ne,
+                    DiscordIntegrationService: ie,
+                    MatchmakingService: ae,
+                    SummonerService: oe,
+                    QueueEligibilityService: le,
+                    CustomGamesService: de,
+                    InvitesService: be,
                     PlayerNameComponent: L,
-                    DiscordBetaComponent: V,
-                    DiscordButtonComponent: K,
-                    DiscordPopupComponent: X,
-                    DiscordLinkingPopupComponent: J,
+                    DiscordBetaComponent: K,
+                    DiscordButtonComponent: X,
+                    DiscordPopupComponent: J,
+                    DiscordLinkingPopupComponent: Z,
                     ...b.fetchPlayerNameInputAndDependencies()
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "LowPriorityQueueToastComponent",
@@ -3878,13 +3880,13 @@
                     SocialLeaderboardNotEnoughFriendsComponent: n(589),
                     SocialLeaderboardErrorStateComponent: n(592),
                     HextechLoadingAnimationComponent: C,
-                    LobbiesService: oe,
-                    SummonerService: ie,
-                    QueueEligibilityService: re,
-                    MatchmakingService: se,
-                    ChatService: te,
-                    SocialLeaderboardService: Ee,
-                    InvitesService: ge,
+                    LobbiesService: se,
+                    SummonerService: oe,
+                    QueueEligibilityService: le,
+                    MatchmakingService: ae,
+                    ChatService: ne,
+                    SocialLeaderboardService: Se,
+                    InvitesService: be,
                     ...e,
                     TEMPLATES: {
                         ...t
@@ -12663,16 +12665,16 @@
             }), t.getServerTimeZone = void 0;
             const n = {
                 NA1: "America/Chicago",
-                LA2: "America/Argentina/Buenos_Aires",
-                LA1: "America/Mexico_City",
+                LA2: "America/Santiago",
+                LA1: "America/New_York",
                 BR1: "America/Sao_Paulo",
-                TR1: "Europe/Istanbul",
-                RU: "Europe/Moscow",
+                TR1: "Asia/Riyadh",
+                RU: "Europe/Berlin",
                 ME1: "Asia/Riyadh",
-                EUW1: "Europe/London",
-                EUN1: "Europe/Warsaw",
-                VN2: "Asia/Ho_Chi_Min",
-                TW2: "Asia/Taipei",
+                EUW1: "Europe/Berlin",
+                EUN1: "Europe/Berlin",
+                VN2: "Asia/Ho_Chi_Minh",
+                TW2: "Asia/Singapore",
                 SG2: "Asia/Singapore",
                 OC1: "Australia/Sydney",
                 KR: "Asia/Seoul",
@@ -12697,8 +12699,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "/HJxJD2d",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showDisabledRadioButton"]]],null,13,12],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","game-mode-description-text"],["flush-element"],["append",["unknown",["tra","game_select_ranked_premade_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showSeconds","timerText","showBackground","digits","separator","showUnits"],[["get",["fivesQueueStartDate"]],true,false,["get",["tra","parties_queue_availability_tooltip"]],false,1," ",true]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","queue-id-info"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],5],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,8],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,10],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],11],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],9],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-id"],["flush-element"],["text","\\n      "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["showQueueCountdown"]]],null,6],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,4],["block",["if"],[["get",["isSwiftPlay"]]],null,3],["block",["if"],[["get",["shouldShowPartySizeRequirement"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","unselectable parties-game-type-card-category-btn"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8rk30aTI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showDisabledRadioButton"]]],null,13,12],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","game-mode-description-text"],["flush-element"],["append",["unknown",["tra","game_select_ranked_premade_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showSeconds","timerText","showBackground","digits","separator","showUnits"],[["get",["fivesQueueStartDate"]],true,false,["get",["tra","parties_queue_availability_tooltip"]],false,1," ",true]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","queue-id-info"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],5],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,8],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,10],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],11],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],9],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-id"],["flush-element"],["text","\\n      "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["showQueueCountdown"]]],null,6],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,4],["block",["if"],[["get",["isSwiftPlay"]]],null,3],["block",["if"],[["get",["shouldShowPartySizeRequirement"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","unselectable parties-game-type-card-category-btn"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16654,6 +16656,7 @@
                     return this.get("isTFT") ? this.get("platformConfigSingleton.TftPatchNotesUrl") : ""
                 })),
                 showTFTCompensationBadge: i.Ember.computed.and("isTFT", "tftService.hasCompensationRewards"),
+                showTFTCompensationTooltip: !1,
                 isPvE: i.Ember.computed.alias("isStrawberry"),
                 mapName: i.Ember.computed("mapId", "assets.availableMaps", (function() {
                     const e = this.get("mapId"),
@@ -16726,6 +16729,12 @@
                     return 6130 === this.get("queueId")
                 })),
                 actions: {
+                    toggleTFTCompensationTooltip() {
+                        this.toggleProperty("showTFTCompensationTooltip")
+                    },
+                    dismissTFTCompensationTooltip() {
+                        this.set("showTFTCompensationTooltip", !1)
+                    },
                     cancelFlow() {
                         this.sendAction("cancelFlow")
                     },
@@ -16771,8 +16780,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "ftxogcQ8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lobby-header-overlay"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lobby-header-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lobby-back-button-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lobby-back-button"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],17],["text","      "],["append",["helper",["generic-button"],null,[["baseImgPath","overImgPath","downImgPath","disabledImgPath","onClickSound","onHoverSound","onClick","isEnabled"],["/fe/lol-parties/button-back-arrow.png","/fe/lol-parties/button-back-arrow-over.png","/fe/lol-parties/button-back-arrow-down.png","/fe/lol-parties/button-back-arrow-disabled.png","/fe/lol-uikit/sfx-uikit-button-gold-click.ogg","/fe/lol-uikit/sfx-uikit-button-gold-hover.ogg",["helper",["action"],[["get",[null]],"cancelFlow"],null],["get",["isGameModeSelectionEnabled"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lobby-header-vertical-line"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lobby-header-map-icon ",["unknown",["mapBackgroundClass"]]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lobby-header-description"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,10],["text","    "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["queueName"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,8],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,7],["block",["if"],[["get",["hasGameModeInfo"]]],null,6],["block",["if"],[["get",["hasGameModeTutorial"]]],null,5],["text","  "],["open-element","div",[]],["static-attr","class","lobby-header-buttons-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["patchNotesUrl"]]],null,4],["block",["if"],[["get",["shouldShowDiscordSmartUrlButton"]]],null,3],["block",["if"],[["get",["showTFTCompensationBadge"]]],null,2],["block",["if"],[["get",["shouldShowInviteButton"]]],null,1],["text","    "],["append",["helper",["social-leaderboard-button"],null,[["selected","queueType","currentPlayer"],[["get",["selected"]],["get",["selected","queue","type"]],["get",["currentPlayer"]]]]],false],["text","\\n"],["block",["if"],[["get",["lobbiesService","isOpenPartyEnabled"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["open-party-toggle"],null,[["showingState"],[["get",["showingState"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["invite-button"],null,[["currentPlayerCanInvite","buttonsDisabled","currentPartyIsFull","isCurrentPlayerPartyLeader","showInviteModal","isLobbyFull"],[["get",["currentPlayerCanInvite"]],["get",["inviteButtonDisabled"]],["get",["currentPartyIsFull"]],["get",["isCurrentPlayerPartyLeader"]],"showInviteModal",["get",["currentPartyIsFull"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tft-compensation-badge"],["static-attr","src","/fe/lol-static-assets/images/riot-badge.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["copy-smart-url-button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["tftPatchNotesUrl"]]]]],["static-attr","target","_new"],["static-attr","class","patch-notes-button"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","tft_patch_notes"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","show-tutorial-button lobby-header-interactable"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showGameModeTutorial"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","show-tutorial-button lobby-header-interactable"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showGameModeInfo"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lobby-header-tooltip"],["flush-element"],["text","\\n      "],["append",["helper",["v2-point-eligibility"],null,[["selected","mapBackgroundClass","mapName","queueName","pickTypeName"],[["get",["selected"]],["get",["mapBackgroundClass"]],["get",["mapName"]],["get",["queueName"]],["get",["pickTypeName"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lobby-header-separator"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["pickTypeName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["mapNameShorthand"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lobby-header-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showMapNameShortHand"]]],null,9]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","parties_button_change_mode_in_queue"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","parties_button_change_mode_disabled"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","parties_button_change_mode"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isGameModeSelectionEnabled"]]],null,13,12]],"locals":[]},{"statements":[["text","                "],["append",["unknown",["tra","promethium_lobby_back_button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","\\n"],["block",["if"],[["get",["isPromethium"]]],null,15,14],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["notInQueue"]]],null,16,11],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "xtaQ5toz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lobby-header-overlay"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lobby-header-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lobby-back-button-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lobby-back-button"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],18],["text","      "],["append",["helper",["generic-button"],null,[["baseImgPath","overImgPath","downImgPath","disabledImgPath","onClickSound","onHoverSound","onClick","isEnabled"],["/fe/lol-parties/button-back-arrow.png","/fe/lol-parties/button-back-arrow-over.png","/fe/lol-parties/button-back-arrow-down.png","/fe/lol-parties/button-back-arrow-disabled.png","/fe/lol-uikit/sfx-uikit-button-gold-click.ogg","/fe/lol-uikit/sfx-uikit-button-gold-hover.ogg",["helper",["action"],[["get",[null]],"cancelFlow"],null],["get",["isGameModeSelectionEnabled"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lobby-header-vertical-line"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lobby-header-map-icon ",["unknown",["mapBackgroundClass"]]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lobby-header-description"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,11],["text","    "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["queueName"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,9],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isTFT"]]],null,8],["block",["if"],[["get",["hasGameModeInfo"]]],null,7],["block",["if"],[["get",["hasGameModeTutorial"]]],null,6],["text","  "],["open-element","div",[]],["static-attr","class","lobby-header-buttons-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["patchNotesUrl"]]],null,5],["block",["if"],[["get",["shouldShowDiscordSmartUrlButton"]]],null,4],["block",["if"],[["get",["showTFTCompensationBadge"]]],null,3],["block",["if"],[["get",["shouldShowInviteButton"]]],null,1],["text","    "],["append",["helper",["social-leaderboard-button"],null,[["selected","queueType","currentPlayer"],[["get",["selected"]],["get",["selected","queue","type"]],["get",["currentPlayer"]]]]],false],["text","\\n"],["block",["if"],[["get",["lobbiesService","isOpenPartyEnabled"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["open-party-toggle"],null,[["showingState"],[["get",["showingState"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["invite-button"],null,[["currentPlayerCanInvite","buttonsDisabled","currentPartyIsFull","isCurrentPlayerPartyLeader","showInviteModal","isLobbyFull"],[["get",["currentPlayerCanInvite"]],["get",["inviteButtonDisabled"]],["get",["currentPartyIsFull"]],["get",["isCurrentPlayerPartyLeader"]],"showInviteModal",["get",["currentPartyIsFull"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["tft-compensation-tooltip"],null,[["onDismiss"],[["helper",["action"],[["get",[null]],"dismissTFTCompensationTooltip"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","tft-compensation-badge-wrapper"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleTFTCompensationTooltip"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["type","tooltipPosition","show"],["persistent","bottom",["get",["showTFTCompensationTooltip"]]]],2],["text","        "],["open-element","img",[]],["static-attr","class","tft-compensation-badge"],["static-attr","src","/fe/lol-static-assets/images/riot-badge.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["copy-smart-url-button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["tftPatchNotesUrl"]]]]],["static-attr","target","_new"],["static-attr","class","patch-notes-button"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","tft_patch_notes"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","show-tutorial-button lobby-header-interactable"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showGameModeTutorial"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","show-tutorial-button lobby-header-interactable"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showGameModeInfo"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lobby-header-tooltip"],["flush-element"],["text","\\n      "],["append",["helper",["v2-point-eligibility"],null,[["selected","mapBackgroundClass","mapName","queueName","pickTypeName"],[["get",["selected"]],["get",["mapBackgroundClass"]],["get",["mapName"]],["get",["queueName"]],["get",["pickTypeName"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lobby-header-separator"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["pickTypeName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lobby-header-detail"],["flush-element"],["append",["unknown",["mapNameShorthand"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lobby-header-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showMapNameShortHand"]]],null,10]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","parties_button_change_mode_in_queue"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","parties_button_change_mode_disabled"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","parties_button_change_mode"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isGameModeSelectionEnabled"]]],null,14,13]],"locals":[]},{"statements":[["text","                "],["append",["unknown",["tra","promethium_lobby_back_button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","\\n"],["block",["if"],[["get",["isPromethium"]]],null,16,15],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["notInQueue"]]],null,17,12],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -18229,8 +18238,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "Fzrsidj1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-milestone-rank"],["flush-element"],["append",["unknown",["kiwiHubService","milestoneRank"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-xp"],["flush-element"],["append",["unknown",["kiwiHubService","currentXP"]],false],["text","/"],["append",["unknown",["kiwiHubService","requiredXP"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateToKiwiHub"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["kiwiHubService","kiwiHubHasClaimableObjective"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    View the hub\\n"]],"locals":[]},{"statements":[["text","    Has claimable reward\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "SgqdFbQX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties-v2\\\\invite-info-panel\\\\kiwi-progression-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-milestone-rank"],["flush-element"],["append",["unknown",["kiwiHubService","milestoneRank"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-xp"],["flush-element"],["append",["unknown",["kiwiHubService","currentXP"]],false],["text","/"],["append",["unknown",["kiwiHubService","requiredXP"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","v2-parties-invite-panel-kiwi-progression-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateToKiwiHub"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["kiwiHubService","kiwiHubHasClaimableRewards"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    View the hub\\n"]],"locals":[]},{"statements":[["text","    Has claimable reward\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

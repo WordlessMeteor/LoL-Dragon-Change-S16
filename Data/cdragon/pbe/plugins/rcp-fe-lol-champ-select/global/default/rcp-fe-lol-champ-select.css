@@ -27785,7 +27785,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     width: 28px
 }
 
-.jade-swap-button-component .hidden {
+.jade-swap-button-component .removed {
     display: none
 }
 
@@ -27800,6 +27800,10 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     position: fixed;
     text-align: left;
     z-index: 1
+}
+
+.jade-swap-button-component__tooltip span {
+    color: #fabe0a
 }
 
 .jade-swap-dialog-component .jade-swap-dialog__action-button-text,
@@ -27867,6 +27871,20 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     position: absolute;
     right: 0;
     transform-origin: left
+}
+
+.jade-swap-dialog-component .jade-swap-dialog__frame .swap-dialog-champion-image-container {
+    align-items: center;
+    display: flex;
+    height: 52px;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%
+}
+
+.jade-swap-dialog-component .jade-swap-dialog__frame .swap-dialog-champion-image-container .swap-dialog-champion-image {
+    height: 100%;
+    width: 52px
 }
 
 .jade-swap-dialog-component .jade-swap-dialog__action-button-text,
@@ -30907,10 +30925,13 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 
 .voting-system-btn-primary,
 .voting-system-btn-secondary,
+.voting-system-header-title,
 .voting-system-heading,
 .voting-system-option-label p,
 .voting-system-power-label,
 .voting-system-power-value,
+.voting-system-question-title,
+.voting-system-result-heading,
 .voting-system-time-tooltip-title {
     font-family: var(--font-frizquadrata)
 }
@@ -30937,6 +30958,17 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-btn-secondary:lang(zh-cn),
 .voting-system-btn-secondary:lang(zh-my),
 .voting-system-btn-secondary:lang(zh-tw),
+.voting-system-header-title:lang(el-gr),
+.voting-system-header-title:lang(ja-jp),
+.voting-system-header-title:lang(ko-kr),
+.voting-system-header-title:lang(ro-ro),
+.voting-system-header-title:lang(ru-ru),
+.voting-system-header-title:lang(th-th),
+.voting-system-header-title:lang(tr-tr),
+.voting-system-header-title:lang(vi-VN),
+.voting-system-header-title:lang(zh-cn),
+.voting-system-header-title:lang(zh-my),
+.voting-system-header-title:lang(zh-tw),
 .voting-system-heading:lang(el-gr),
 .voting-system-heading:lang(ja-jp),
 .voting-system-heading:lang(ko-kr),
@@ -30981,6 +31013,28 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-power-value:lang(zh-cn),
 .voting-system-power-value:lang(zh-my),
 .voting-system-power-value:lang(zh-tw),
+.voting-system-question-title:lang(el-gr),
+.voting-system-question-title:lang(ja-jp),
+.voting-system-question-title:lang(ko-kr),
+.voting-system-question-title:lang(ro-ro),
+.voting-system-question-title:lang(ru-ru),
+.voting-system-question-title:lang(th-th),
+.voting-system-question-title:lang(tr-tr),
+.voting-system-question-title:lang(vi-VN),
+.voting-system-question-title:lang(zh-cn),
+.voting-system-question-title:lang(zh-my),
+.voting-system-question-title:lang(zh-tw),
+.voting-system-result-heading:lang(el-gr),
+.voting-system-result-heading:lang(ja-jp),
+.voting-system-result-heading:lang(ko-kr),
+.voting-system-result-heading:lang(ro-ro),
+.voting-system-result-heading:lang(ru-ru),
+.voting-system-result-heading:lang(th-th),
+.voting-system-result-heading:lang(tr-tr),
+.voting-system-result-heading:lang(vi-VN),
+.voting-system-result-heading:lang(zh-cn),
+.voting-system-result-heading:lang(zh-my),
+.voting-system-result-heading:lang(zh-tw),
 .voting-system-time-tooltip-title:lang(el-gr),
 .voting-system-time-tooltip-title:lang(ja-jp),
 .voting-system-time-tooltip-title:lang(ko-kr),
@@ -30998,16 +31052,15 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-body-text,
 .voting-system-bullet-list li,
 .voting-system-confirmation-text,
-.voting-system-learn-more-text,
 .voting-system-link,
 .voting-system-result-name,
 .voting-system-result-pct,
 .voting-system-results-text,
+.voting-system-save-error,
 .voting-system-save-note,
 .voting-system-time-row .shared-reset-timer-component .reset-timer,
 .voting-system-time-tooltip-subtitle,
 .voting-system-toast-text,
-.voting-system-vote-answer,
 .voting-system-warning-text {
     font-family: var(--font-gill-sans-mt)
 }
@@ -31045,17 +31098,6 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-confirmation-text:lang(zh-cn),
 .voting-system-confirmation-text:lang(zh-my),
 .voting-system-confirmation-text:lang(zh-tw),
-.voting-system-learn-more-text:lang(el-gr),
-.voting-system-learn-more-text:lang(ja-jp),
-.voting-system-learn-more-text:lang(ko-kr),
-.voting-system-learn-more-text:lang(ro-ro),
-.voting-system-learn-more-text:lang(ru-ru),
-.voting-system-learn-more-text:lang(th-th),
-.voting-system-learn-more-text:lang(tr-tr),
-.voting-system-learn-more-text:lang(vi-VN),
-.voting-system-learn-more-text:lang(zh-cn),
-.voting-system-learn-more-text:lang(zh-my),
-.voting-system-learn-more-text:lang(zh-tw),
 .voting-system-link:lang(el-gr),
 .voting-system-link:lang(ja-jp),
 .voting-system-link:lang(ko-kr),
@@ -31100,6 +31142,17 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-results-text:lang(zh-cn),
 .voting-system-results-text:lang(zh-my),
 .voting-system-results-text:lang(zh-tw),
+.voting-system-save-error:lang(el-gr),
+.voting-system-save-error:lang(ja-jp),
+.voting-system-save-error:lang(ko-kr),
+.voting-system-save-error:lang(ro-ro),
+.voting-system-save-error:lang(ru-ru),
+.voting-system-save-error:lang(th-th),
+.voting-system-save-error:lang(tr-tr),
+.voting-system-save-error:lang(vi-VN),
+.voting-system-save-error:lang(zh-cn),
+.voting-system-save-error:lang(zh-my),
+.voting-system-save-error:lang(zh-tw),
 .voting-system-save-note:lang(el-gr),
 .voting-system-save-note:lang(ja-jp),
 .voting-system-save-note:lang(ko-kr),
@@ -31144,17 +31197,6 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-toast-text:lang(zh-cn),
 .voting-system-toast-text:lang(zh-my),
 .voting-system-toast-text:lang(zh-tw),
-.voting-system-vote-answer:lang(el-gr),
-.voting-system-vote-answer:lang(ja-jp),
-.voting-system-vote-answer:lang(ko-kr),
-.voting-system-vote-answer:lang(ro-ro),
-.voting-system-vote-answer:lang(ru-ru),
-.voting-system-vote-answer:lang(th-th),
-.voting-system-vote-answer:lang(tr-tr),
-.voting-system-vote-answer:lang(vi-VN),
-.voting-system-vote-answer:lang(zh-cn),
-.voting-system-vote-answer:lang(zh-my),
-.voting-system-vote-answer:lang(zh-tw),
 .voting-system-warning-text:lang(el-gr),
 .voting-system-warning-text:lang(ja-jp),
 .voting-system-warning-text:lang(ko-kr),
@@ -31170,13 +31212,16 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-modal {
-    background: linear-gradient(180deg, #152233, #090f18);
-    border: 1px solid #4d74a4;
+    align-items: center;
+    background: rgba(4, 13, 22, .85);
+    border: 1px solid #444750;
+    border-radius: 4px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-    width: 780px
+    overflow: hidden;
+    position: relative;
+    width: 800px
 }
 
 .voting-system-modal p {
@@ -31196,7 +31241,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     min-height: 0;
     overflow: hidden;
     position: relative;
-    width: 778px
+    width: 100%
 }
 
 .voting-system-intro-art {
@@ -31343,29 +31388,79 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-link {
-    color: #7d7d7d;
+    color: #16cae5;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: underline
+    font-weight: 500;
+    line-height: normal
 }
 
 .voting-system-link:hover {
-    color: #a0a0a0
+    color: #5fdcef
+}
+
+.voting-system-link-row {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.voting-system-link-icon {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 14px;
+    justify-content: center;
+    width: 14px
+}
+
+.voting-system-link-icon img {
+    height: 8.4px;
+    width: 8.4px
 }
 
 .voting-system-voting {
-    height: 520px;
+    height: 640px;
     position: relative
 }
 
 .voting-system-voting-header {
-    align-items: center;
+    align-items: flex-start;
+    border-radius: 4px 4px 0 0;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-    justify-content: space-between;
+    gap: 4px;
+    justify-content: center;
+    padding: 12px 20px;
+    position: relative;
     width: 100%
+}
+
+.voting-system-voting-header>.voting-system-btn-icon,
+.voting-system-voting-header>.voting-system-header-right {
+    position: absolute;
+    right: 8px;
+    top: 8px
+}
+
+.voting-system-voting-header:after {
+    background: linear-gradient(90deg, rgba(68, 71, 80, 0), #444750 15%, #444750 85%, rgba(68, 71, 80, 0));
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.voting-system-header-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap
 }
 
 .voting-system-header-left {
@@ -31376,6 +31471,12 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 
 .voting-system-header-left .voting-system-time-row {
     padding: 3px 0 0 2px
+}
+
+.voting-system-header-right {
+    align-items: center;
+    display: flex;
+    gap: 12px
 }
 
 .voting-system-btn-icon {
@@ -31422,28 +31523,42 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-voting-content {
-    align-items: center;
-    background: #040d16;
-    border: 1px solid #1f3859;
-    border-radius: 0 0 2px 2px;
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
     min-height: 0;
-    padding: 20px 40px
+    overflow: hidden;
+    width: 100%
 }
 
-.voting-system-voting-content>* {
-    flex-shrink: 0
-}
-
-.voting-system-question-section {
+.voting-system-question-block {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 4px
+    flex-shrink: 0;
+    gap: 8px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%
+}
+
+.voting-system-question-block:after {
+    background: linear-gradient(90deg, rgba(68, 71, 80, 0), #444750 15%, #444750 85%, rgba(68, 71, 80, 0));
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.voting-system-question-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 5px;
+    text-align: center
 }
 
 .voting-system-warning {
@@ -31469,10 +31584,11 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-options-row {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 12px;
+    justify-content: center;
     width: 698px
 }
 
@@ -31480,11 +31596,10 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     align-items: center;
     cursor: pointer;
     display: flex;
-    flex: 1;
+    flex: none;
     flex-direction: column;
     gap: 4px;
-    justify-content: center;
-    min-width: 0
+    width: 130px
 }
 
 .voting-system-option:hover .voting-system-option-frame-main {
@@ -31530,6 +31645,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     background: #1a1a2e;
     display: flex;
     flex-direction: column;
+    height: 195px;
     justify-content: flex-end;
     overflow: hidden;
     position: relative;
@@ -31582,6 +31698,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 
 .voting-system-option-label {
     align-items: center;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     padding: 4px;
@@ -31596,29 +31713,28 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     text-align: center
 }
 
-.voting-system-voting-footer {
+.voting-system-power-block {
     align-items: center;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     gap: 4px
 }
 
 .voting-system-power-row {
-    align-items: flex-start;
+    align-items: center;
+    background: #000;
+    border: 1px solid #383838;
+    border-radius: 100px;
     display: flex;
     gap: 4px;
+    padding: 4px 12px;
     white-space: nowrap
 }
 
-.voting-system-power-label {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: normal
-}
-
+.voting-system-power-label,
 .voting-system-power-value {
-    color: #fabe0a;
+    color: #d09a00;
     font-size: 18px;
     font-weight: 400;
     line-height: normal
@@ -31681,77 +31797,54 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     color: #fff
 }
 
-.voting-system-learn-more {
-    height: 491px
-}
-
-.voting-system-learn-more-content {
-    background: #040d16;
-    border: 1px solid #4d74a4;
-    border-radius: 2px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-height: 0;
-    overflow: hidden
-}
-
-.voting-system-vote-answer {
-    color: #7d7d7d;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap
-}
-
-.voting-system-learn-more-placeholder {
-    background: #575757;
-    flex-shrink: 0;
-    height: 157px;
-    width: 261px
-}
-
-.voting-system-learn-more-image {
-    flex-shrink: 0;
-    height: 157px;
-    object-fit: cover;
-    width: 261px
-}
-
-.voting-system-learn-more-text {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal
-}
-
 .voting-system-results {
     height: 491px
 }
 
 .voting-system-results-content {
-    background: #040d16;
-    border: 1px solid #4d74a4;
-    border-radius: 2px;
     display: flex;
     flex: 1;
     flex-direction: column;
     min-height: 0;
-    overflow: hidden
+    overflow: hidden;
+    width: 100%
 }
 
-.voting-system-results-placeholder {
-    background: #575757;
+.voting-system-result-block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-    height: 161px;
-    width: 268px
+    gap: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%
+}
+
+.voting-system-result-block:not(:last-child):after {
+    background: linear-gradient(90deg, rgba(68, 71, 80, 0), #444750 15%, #444750 85%, rgba(68, 71, 80, 0));
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.voting-system-result-heading {
+    color: #f0e6d2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 5px;
+    text-align: center
 }
 
 .voting-system-results-image {
     flex-shrink: 0;
-    height: 161px;
+    height: 180px;
     object-fit: cover;
-    width: 268px
+    width: 320px
 }
 
 .voting-system-results-bars {
@@ -31774,10 +31867,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
-    overflow: hidden;
+    overflow-wrap: break-word;
     text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 120px
 }
 
@@ -31841,7 +31932,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px 40px
+    padding: 20px 0
 }
 
 .voting-system lol-uikit-dialog-frame {
@@ -31919,15 +32010,29 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     align-items: center;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     gap: 8px
+}
+
+.voting-system-save-section .voting-system-btn-primary {
+    height: 32px;
+    width: 180px
+}
+
+.voting-system-save-error {
+    color: #ff2345
+}
+
+.voting-system-save-error,
+.voting-system-save-note {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center
 }
 
 .voting-system-save-note {
     color: #a09b8c;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: normal;
-    text-align: center;
     white-space: nowrap
 }
 

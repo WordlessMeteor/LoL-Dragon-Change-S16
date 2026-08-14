@@ -419,80 +419,17 @@
         "objectPath": "{3e3cc3c7}",
         "mScriptName": "Jade_BlitzcrankManaBarrierIcon",
         "mSpell": {
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "HealthThreshold",
                     "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ManaPercent",
-                    "values": [
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -525,24 +462,24 @@
                 {
                     "name": "ManaRatio",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "ShieldAmount": {
-                    "mSimpleTooltipCalculationDisplay": 6,
+                "MaxHealthThreshold": {
                     "mFormulaParts": [
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "AbilityResourceByCoefficientCalculationPart"
+                            "mStat": 12,
+                            "mDataValue": "HealthThreshold",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1024,6 +961,19 @@
                     "__type": "SpellDataValue"
                 },
                 {
+                    "name": "PassiveHitRate",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "ActiveRange",
                     "values": [
                         600.0,
@@ -1203,8 +1153,7 @@
                     "mLocKeys": {
                         "keyName": "Spell_BlitzcrankR_Jade_Name",
                         "keySummary": "Spell_BlitzcrankR_Jade_Summary",
-                        "keyTooltip": "Spell_BlitzcrankR_Jade_Tooltip",
-                        "keyTooltipExtended": "Spell_BlitzcrankR_Jade_ExtTooltip"
+                        "keyTooltip": "Spell_BlitzcrankR_Jade_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {

@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Akali Aguijón",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "La Orden de la gran avispa japonesa sigue un régimen de entrenamiento brutal y ancestral que les enseña a sus estudiantes a atacar con la furia de estas criaturas. Akali es su más grande campeona y su objetivo es llevar este arte a un nivel más alto."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Akali hace girar su kama hacia un enemigo para infligirle daño mágico y dejarle una marca durante 6 seg. Los ataques cuerpo a cuerpo de Akali contra un objetivo marcado activan y consumen la marca, infligen daño adicional, y restauran energía.",
-            "dynamicDescription": "Akali lanza su kama hacia un enemigo para infligirle <magicDamage>@InitialDamage@ de daño mágico</magicDamage> y dejarle una marca durante 6 seg.<br><br>Los ataques cuerpo a cuerpo de Akali contra un objetivo marcado consumen la marca, infligen <magicDamage>@ProcDamage@ de daño mágico</magicDamage> y restauran <keywordMajor>@EnergyReturn@ de energía</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_AkaliQ_Jade_Summary",
+            "dynamicDescription": "Spell_AkaliQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Akali lanza una cortina de humo. Mientras está dentro del área, Akali obtiene armadura y resistencia mágica y se vuelve invisible. Quedará revelada por un instante si ataca o usa habilidades. Se reduce la velocidad de movimiento de los enemigos dentro del humo.",
-            "dynamicDescription": "Akali lanza una cortina de humo que dura 8 seg. Mientras está dentro del área, Akali obtiene <scaleArmor>@TotalResists@ de Armadura</scaleArmor>, <scaleMR>@TotalResists@ de Resistencia Mágica</scaleMR> y se vuelve <keywordStealth>invisible</keywordStealth>. Quedará revelada por un instante si ataca o usa habilidades.<br><br>Los enemigos dentro del humo quedan <status>ralentizados</status> en un @SlowAmount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_AkaliW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

@@ -137,8 +137,8 @@
                     tra: _,
                     ComponentFactory: b
                 } = m,
-                v = m.Lodash,
-                y = a.PositionAssignmentPreloadVideos;
+                y = m.Lodash,
+                v = a.PositionAssignmentPreloadVideos;
             var S = new class {
                 constructor() {
                     const e = m.getProvider();
@@ -170,7 +170,7 @@
                     this._champSelectSkipApi = new o.default(n, this)
                 }
                 _handleVideoCache(e, t) {
-                    "Lobby" === e && "Lobby" !== t && this.largeAreaAnimationsEnabled && (this.champSelectVideoCache.release(), y.forEach(function(e) {
+                    "Lobby" === e && "Lobby" !== t && this.largeAreaAnimationsEnabled && (this.champSelectVideoCache.release(), v.forEach(function(e) {
                         this.champSelectVideoCache.cache(e)
                     }.bind(this)))
                 }
@@ -235,13 +235,13 @@
                             } = e.gameData.queue, p = m && o !== l.TIMER_PHASES.planning, h = r - (Date.now() - c), g = r - h >= .2 * r, {
                                 accountId: _,
                                 puuid: b,
-                                summonerId: v
-                            } = n, y = Array.isArray(s) ? s.length : 0, S = Array.isArray(a) ? a.filter((e => e.owned)).length : 0, x = JSON.stringify({
+                                summonerId: y
+                            } = n, v = Array.isArray(s) ? s.length : 0, S = Array.isArray(a) ? a.filter((e => e.owned)).length : 0, x = JSON.stringify({
                                 internalNowInEpochMs: c,
                                 timeRemainingForPlayerInMS: h,
                                 accountId: _,
                                 puuid: b,
-                                summonerId: v,
+                                summonerId: y,
                                 totalTimeInPhase: i,
                                 phase: o,
                                 queueId: d,
@@ -249,7 +249,7 @@
                                 adjustedTimeLeftInPhase: r,
                                 isRanked: m,
                                 previousPhase: this.previousPhase,
-                                numOfOwnedWardSkins: y,
+                                numOfOwnedWardSkins: v,
                                 numOfOwnedChamps: S
                             });
                             "GAME_STARTING" === o ? (f.recordTracingStepEvent("UI_entered-champ-select-in-phase-game-starting"), f.invokeWithLowProbability((function() {
@@ -318,7 +318,7 @@
                 }
                 getElementSelector(e) {
                     const t = ".champion-select ";
-                    switch (v.isString(e) ? e : e.name) {
+                    switch (y.isString(e) ? e : e.name) {
                         case "champion":
                             return t + '.grid-champion[data-id="' + e.championId + '"]';
                         case "champion-grid":
@@ -821,8 +821,8 @@
             t.ROLE_ASSASSIN = _;
             const b = "fighter";
             t.ROLE_FIGHTER = b;
-            const v = [b, g, _, p, f, h];
-            t.ROLES = v;
+            const y = [b, g, _, p, f, h];
+            t.ROLES = y;
             t.DRAFT_PICK_MODES = ["DraftModeSinglePickStrategy", "TeamBuilderSimulBanStrategy", "TeamBuilderDraftPickStrategy", "TournamentPickStrategy"];
             t.RUNES = {
                 minChooseRunesEnabledLevel: 8,
@@ -973,64 +973,64 @@
             }), t.EMBER_APP_NAME = void 0, t.getEmberApplicationArguments = function(e, t = null) {
                 return function(e, t = null) {
                     const m = s.Navigation.getMissionsButton();
-                    let v = {
+                    let y = {
                         name: x,
                         rootElement: t,
                         tra: e,
                         componentFactory: s.ComponentFactory,
-                        Router: n(42),
+                        Router: n(41),
                         ApplicationRoute: i.default,
                         IndexRoute: o.default,
                         ApplicationController: a.default,
                         ChampSelectRootComponent: l.default,
-                        ActionButtonComponent: n(43),
-                        AbilityPreviewsComponent: n(46).default,
-                        AutofillLpDescComponent: y,
-                        BanShowcaseComponent: n(49),
-                        BansContainerComponent: n(52),
+                        ActionButtonComponent: n(42),
+                        AbilityPreviewsComponent: n(45).default,
+                        AutofillLpDescComponent: v,
+                        BanShowcaseComponent: n(48),
+                        BansContainerComponent: n(51),
                         BoostNotificationComponent: n(25),
                         ButtonMaskIconComponent: d,
                         ChampionCardComponent: c.ChampionCardComponent,
                         ChampionCardSelectComponent: r.ChampionCardSelectComponent,
-                        ChampionShowcaseTeamComponent: n(55),
-                        ChampionShowcaseItemComponent: n(58),
-                        ChampionBenchComponent: n(60),
-                        ChampionBenchItemComponent: n(63),
-                        ChampionGridComponent: n(66),
-                        ChampionGridChampionComponent: n(77),
-                        ChampionSplashBackgroundComponent: n(80),
-                        ChampionSplashRingComponent: n(84),
-                        ChampionPreviewComponent: n(87),
-                        ChromaModalComponent: n(90),
-                        DisconnectNotificationComponent: n(93),
-                        EmotesEditComponent: n(96),
+                        ChampionShowcaseTeamComponent: n(54),
+                        ChampionShowcaseItemComponent: n(57),
+                        ChampionBenchComponent: n(59),
+                        ChampionBenchItemComponent: n(62),
+                        ChampionGridComponent: n(65),
+                        ChampionGridChampionComponent: n(76),
+                        ChampionSplashBackgroundComponent: n(79),
+                        ChampionSplashRingComponent: n(83),
+                        ChampionPreviewComponent: n(86),
+                        ChromaModalComponent: n(89),
+                        DisconnectNotificationComponent: n(92),
+                        EmotesEditComponent: n(95),
                         FramedIconButtonComponent: u,
-                        FlyoutSelectorPopupButtonComponent: n(101),
-                        FlyoutSelectorTriggerButtonComponent: n(104),
-                        FullScreenModalComponent: n(97),
-                        GameEventInfoCardComponent: n(107).default,
-                        GameInfoComponent: n(110),
-                        LockInButtonComponent: n(113),
-                        LoadoutsEditComponent: n(116).default,
+                        FlyoutSelectorPopupButtonComponent: n(100),
+                        FlyoutSelectorTriggerButtonComponent: n(103),
+                        FullScreenModalComponent: n(96),
+                        GameEventInfoCardComponent: n(106).default,
+                        GameInfoComponent: n(109),
+                        LockInButtonComponent: n(112),
+                        LoadoutsEditComponent: n(115).default,
                         PerkPageTooltipComponent: p,
-                        PerksPageDropdownComponent: n(119),
-                        PerksPageDropdownOptionComponent: n(122),
-                        PhaseTransitionComponent: n(125),
-                        PickBanRingComponent: n(128),
-                        PickPhaseComponent: n(131),
+                        PerksPageDropdownComponent: n(118),
+                        PerksPageDropdownOptionComponent: n(121),
+                        PhaseTransitionComponent: n(124),
+                        PickBanRingComponent: n(127),
+                        PickPhaseComponent: n(130),
                         PlayerNameComponent: h,
-                        PlayerNameWrapperComponent: n(134),
+                        PlayerNameWrapperComponent: n(133),
                         PositionAssignmentIntroComponent: n(5).default,
-                        QuitButtonComponent: n(137),
-                        RerollButtonComponent: n(140),
-                        RingGearComponent: n(143),
-                        RuneRecommenderButtonComponent: n(146).default,
-                        SkinButtonComponent: n(148),
-                        SkinCarouselComponent: n(151),
-                        SkinNameComponent: n(154),
-                        SkinPurchaseButtonComponent: n(157),
-                        SkinSelectComponent: n(160),
-                        SummonerArrayComponent: n(163),
+                        QuitButtonComponent: n(136),
+                        RerollButtonComponent: n(139),
+                        RingGearComponent: n(142),
+                        RuneRecommenderButtonComponent: n(145).default,
+                        SkinButtonComponent: n(147),
+                        SkinCarouselComponent: n(150),
+                        SkinNameComponent: n(153),
+                        SkinPurchaseButtonComponent: n(156),
+                        SkinSelectComponent: n(159),
+                        SummonerArrayComponent: n(162),
                         SummonerOverlayComponent: n(166),
                         SummonerObjectComponent: n(172),
                         SummonerSpellPopupComponent: n(176),
@@ -1050,9 +1050,9 @@
                         WardSkinPopupComponent: f,
                         WardSkinPopupButtonComponent: _,
                         WardSkinRendererComponent: b,
-                        AnimationDispatcherService: n(81).default,
+                        AnimationDispatcherService: n(80).default,
                         AwBoostService: n(212).default,
-                        ChampionAssetSubstitutionService: n(78).default,
+                        ChampionAssetSubstitutionService: n(77).default,
                         ChampionPreviewService: n(213).default,
                         ChampSelectSfxService: n(214).default,
                         ChampSelectDisconnectService: n(216).default,
@@ -1071,17 +1071,17 @@
                             index: n(250)
                         }
                     };
-                    v = s.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(v);
+                    y = s.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(y);
                     const E = n(251).default;
-                    return v = E.registerToFactoryDefinition(v), v
+                    return y = E.registerToFactoryDefinition(y), y
                 }(e, t)
             }, t.initSubComponents = function(e) {
                 s.EmberApplicationFactory.setFactoryDefinition({
                     name: "AutofillModalComponent",
                     tra: e,
                     ComponentFactory: s.ComponentFactory,
-                    AutofillModalComponent: v,
-                    AutofillLpDescComponent: y,
+                    AutofillModalComponent: y,
+                    AutofillLpDescComponent: v,
                     RankedAssetsService: S
                 })
             };
@@ -1090,8 +1090,8 @@
                 i = m(n(14)),
                 o = m(n(15)),
                 l = m(n(16)),
-                r = n(36),
-                c = n(39);
+                r = n(35),
+                c = n(38);
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -1108,8 +1108,8 @@
                 WardSkinPopupButtonComponent: _,
                 WardSkinRendererComponent: b
             } = s.SharedComponents.getSharedEmberComponents(), {
-                AutofillModalComponent: v,
-                AutofillLpDescComponent: y,
+                AutofillModalComponent: y,
+                AutofillLpDescComponent: v,
                 RankedAssetsService: S
             } = s.SharedComponents.getApi_SharedRankedComponents(), x = "rcp-fe-lol-champ-select";
             t.EMBER_APP_NAME = x
@@ -1158,30 +1158,29 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = m(n(17)),
-                i = m(n(4)),
-                o = m(n(28)),
+                a = c(n(17)),
+                i = c(n(4)),
+                o = c(n(28)),
                 l = n(6),
-                r = n(29),
-                c = n(30);
+                r = n(29);
 
-            function m(e) {
+            function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                RunMixin: d,
-                DomMixin: u
-            } = s.EmberAddons.EmberLifeline, p = s.UiKitPlugin.getModalManager(), h = s.PremadeVoice.voiceButton({
+                RunMixin: m,
+                DomMixin: d
+            } = s.EmberAddons.EmberLifeline, u = s.UiKitPlugin.getModalManager(), p = s.PremadeVoice.voiceButton({
                 position: "left"
-            }), g = s.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
-            n(31), n(32);
-            const f = [...Array(l.MAX_POSSIBLE_SLOTS).keys()];
-            var _ = s.Ember.Component.extend(d, u, a.default, o.default, {
+            }), h = s.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
+            n(30), n(31);
+            const g = [...Array(l.MAX_POSSIBLE_SLOTS).keys()];
+            var f = s.Ember.Component.extend(m, d, a.default, o.default, {
                 classNames: ["champion-select"],
                 classNameBindings: ["showEntryAnimation:entry-animation", "showPreAnimation:pre-animation", "enemyNamesJustCopied:enemy-names-copied", "champSelectScreen", "sessionActions.hasBans:has-bans", "currentSummoner.isActingNow:is-acting-now", "currentSummoner.isPickingNow:is-picking-now", "currentSummoner.isExclusivelyPickIntenting:is-pick-intenting-now", "isLockedInBravery:locked-in-bravery", "showCurrentSummonerBanning:is-banning-now", "sessionActions.currentBanAction:is-current-action", "isShowingGrid:is-showing-grid", "isSpectating", "session.timer.timerLessThan11Seconds:timer-less-than-11-seconds", "allowSubsetChampionPicks:allow-subset-champion-picks", "uxSettings.largeAreaAnimationsEnabled:large-area-animations:no-large-area-animations", "isViewingAbilityPreviews:is-viewing-ability-previews", "subteamSizeClass"],
-                layout: n(33),
+                layout: n(32),
                 isShown: !1,
                 isAnimatingIntro: !1,
                 sentGameStartingMessageId: null,
@@ -1206,7 +1205,7 @@
                     return (this.get("myTeamSummoners") || []).find((t => t.cellId === e))
                 })),
                 boosterPuuid: s.Ember.computed.alias("boostingSummoner.puuid"),
-                eyeImage: n(34),
+                eyeImage: n(33),
                 isViewingAbilityPreviews: s.Ember.computed.alias("championPreviewService.isViewingAbilityPreviews"),
                 shouldShowAbilityPreviews: s.Ember.computed("championPreviewService.isAbilityPreviewEnabled", "champSelectScreen", "currentSummoner.championId", (function() {
                     return this.get("championPreviewService.isAbilityPreviewEnabled") && this.get("champSelectScreen") === l.SCREENS.selected && this.get("currentSummoner.championId") > 0 && !this.get("isDemacia")
@@ -1216,7 +1215,7 @@
                 root: null,
                 init: function() {
                     this._super(...arguments), this._puuidToOriginalSlotId = {}, this._playerNames = s.playerNames, this.uxSettingsInit(), this.recordDidRequestSucceed = this._recordDidRequestSucceed.bind(this);
-                    this.set("sessionActions", n(35).create({
+                    this.set("sessionActions", n(34).create({
                         root: this
                     })), this.get("dynamicConfigService").initDynamicConfigs(), s.Telemetry.startTracingEvent("champ-select-init-ember-app-settle"), this.get("chatPublisherService").registerSessionChangeCallback("game-starting", this.gameStartDelayedSysMessage.bind(this)), this.get("champSelectSfxService").initDataBindings(), this.initChatBindings(), this.initChampSelectBindings(), this.initBugReportBindings(), this.championPreviewKeyUpHandler = this.championPreviewKeyUpHandler.bind(this), s.Ember.run.scheduleOnce("afterRender", this, this._syncVoiceNameOverrides)
                 },
@@ -1234,7 +1233,7 @@
                     }, this.element.addEventListener("click", this._swapModalClickHandler))
                 },
                 willDestroyElement: function() {
-                    this._super(...arguments), this.uxSettingsDestroy(), this.set("isShown", !1), this._hideDisconnectNotification(), this._deleteDelayedShowDisconnectNotificationIfExists(), this._swapModalClickHandler && this.element.removeEventListener("click", this._swapModalClickHandler), g.off("show", this._showHandler), g.off("hide", this._hideHandler), window.removeEventListener("keyup", this.championPreviewKeyUpHandler)
+                    this._super(...arguments), this.uxSettingsDestroy(), this.set("isShown", !1), this._hideDisconnectNotification(), this._deleteDelayedShowDisconnectNotificationIfExists(), this._swapModalClickHandler && this.element.removeEventListener("click", this._swapModalClickHandler), h.off("show", this._showHandler), h.off("hide", this._hideHandler), window.removeEventListener("keyup", this.championPreviewKeyUpHandler)
                 },
                 _resetSwapModal() {
                     this.set("showSwapSelectionDialog", !1), this.set("otherSummonerPuuid", null)
@@ -1262,7 +1261,7 @@
                     s.logger.info("champSelect received chatObfuscatedPuuids: " + e), this.set("chatObfuscatedPuuids", e)
                 },
                 _initSummonerObservers: function() {
-                    this.summonerBySlotId = {}, f.forEach((e => {
+                    this.summonerBySlotId = {}, g.forEach((e => {
                         this.summonerBySlotId[e] = s.Ember.Object.create(), this._champSelectBinding.observe(`/v1/summoners/${e}`, this, (t => this.handleSummoner(t, e)))
                     }))
                 },
@@ -1281,9 +1280,9 @@
                         summonerName: e.gameName
                     }).playerNameFull)).filter(Boolean).join(", ")
                 })),
-                isRoleSwapEnabled: s.Ember.computed("queue.id", (function() {
+                isRoleSwapEnabled: s.Ember.computed("queue.id", "dynamicConfigService.roleSwapEnabledQueueIds", (function() {
                     const e = this.get("queue.id");
-                    return r.ROLE_SWAP_ENABLED_QUEUES.includes(e)
+                    return (this.get("dynamicConfigService.roleSwapEnabledQueueIds") || []).includes(e)
                 })),
                 showSwapDialog: s.Ember.computed("activeSwap", "showSwapSelectionDialog", "showPositionAssignment", (function() {
                     return Boolean(this.get("activeSwap") || this.get("showSwapSelectionDialog")) && !this.get("showPositionAssignment")
@@ -1467,9 +1466,9 @@
                                 e()
                             }), 2e3)
                         }
-                    }, g.on("show", this._showHandler), this._hideHandler = () => {
+                    }, h.on("show", this._showHandler), this._hideHandler = () => {
                         this.isDestroyed || this.isDestroying || (this.get("championPreviewService")?.hideAllAbilityPreviewElements(), this.set("abilityPreviewPath", null), this._resetSwapModal(), this.set("isShown", !1), this.resetPuuidToOriginalSlotIdMap())
-                    }, g.on("hide", this._hideHandler), this.set("isShown", document.contains(this.get("element")))
+                    }, h.on("hide", this._hideHandler), this.set("isShown", document.contains(this.get("element")))
                 },
                 resetPuuidToOriginalSlotIdMap() {
                     this._puuidToOriginalSlotId = {}
@@ -1503,7 +1502,7 @@
                     return this.get("isShown") && this.get("uxSettings.largeAreaAnimationsEnabled")
                 })),
                 voiceButton: s.Ember.computed("isShown", (function() {
-                    return this.get("isShown") ? h : ""
+                    return this.get("isShown") ? p : ""
                 })),
                 shouldPlaySplashRingAnimation: s.Ember.computed("isShowingVoteCeremonies", "sessionActions.completedVoteRevealActions.length", (function() {
                     return !this.get("isShowingVoteCeremonies") && 0 === this.get("sessionActions.completedVoteRevealActions.length")
@@ -1753,7 +1752,7 @@
                     return this.get("shouldShowFirstPick") && this.get("sessionActions.leftSideFirstPick")
                 })),
                 teamSizeText: s.Ember.computed("queue.numPlayersPerTeam", "queue.gameMode", "queue.id", (function() {
-                    const e = (0, c.getGameModeSubteamDisplayData)(this.get("queue.gameMode"), this.get("queue.id"));
+                    const e = (0, r.getGameModeSubteamDisplayData)(this.get("queue.gameMode"), this.get("queue.id"));
                     return e ? this.get("tra").formatString(e.teamSizeLabel, {
                         size: e.teamSize
                     }) : this.get("tra").formatString("map_size", {
@@ -1834,7 +1833,7 @@
                         const t = this.get("isShown");
                         if (this.set("isShowingPerks", e), !(this.isDestroying || this.isDestroyed || e) && t && this.get("currentPerksPage.hasError")) {
                             const e = this.get("currentPerksPage.isValid") ? "error_could_not_set_perks_page" : "error_perks_page_contains_invalid_choices";
-                            p.add({
+                            u.add({
                                 type: "DialogAlert",
                                 data: {
                                     contents: this.get("tra.service").formatString(e, {
@@ -1913,7 +1912,7 @@
                 gameModeSupportsPerks: s.Ember.computed.not("gameflow.map.properties.suppressRunesMasteriesPerks"),
                 isRanked: s.Ember.computed.alias("gameflow.gameData.queue.isRanked"),
                 gameModeSubteamMetadata: s.Ember.computed("gameMode", "queue.id", "session.localPlayerCellId", (function() {
-                    const e = (0, c.getGameModeSubteamDisplayData)(this.get("queue.gameMode"), this.get("queue.id"));
+                    const e = (0, r.getGameModeSubteamDisplayData)(this.get("queue.gameMode"), this.get("queue.id"));
                     if (e) {
                         const t = this.get("session.localPlayerCellId");
                         return {
@@ -1921,7 +1920,7 @@
                                 ...e,
                                 isLocalSubteam: e.cellIds.includes(t)
                             }))),
-                            allSlotIds: f
+                            allSlotIds: g
                         }
                     }
                     return null
@@ -1930,7 +1929,7 @@
                     return this.get("gameModeSubteamMetadata.subteamDataList")
                 })),
                 subteamSizeClass: s.Ember.computed("gameMode", "queue.id", (function() {
-                    const e = (0, c.getGameModeSubteamDisplayData)(this.get("gameMode"), this.get("queue.id"));
+                    const e = (0, r.getGameModeSubteamDisplayData)(this.get("gameMode"), this.get("queue.id"));
                     return e ? `subteams-size-${e.teamSize}` : null
                 })),
                 rp: s.Ember.computed("walletRP.RP", (function() {
@@ -1965,7 +1964,7 @@
                     s.logger.trace("availableSpells changed, length is " + (this.get("availableSpells") || []).length)
                 }))
             });
-            t.default = _
+            t.default = f
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2887,66 +2886,6 @@
                 }))
             });
             t.default = u
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.ROLE_SWAP_ENABLED_QUEUES = t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.INVALID_SWAP_ID = t.CHAMPION_SWAP_ONLY_QUEUE_IDS = void 0, t.getOngoingSwapServiceCallPath = function(e) {
-                return o[e]
-            }, t.getSwapServiceCallPath = function(e) {
-                return i[e]
-            };
-            t.ROLE_SWAP_ENABLED_QUEUES = [400, 401, 402, 403, 420, 421, 422, 440, 441, 442, 480, 481, 482, 483, 490];
-            t.CHAMPION_SWAP_ONLY_QUEUE_IDS = [450, 451, 452, 720, 721, 860, 861, 862];
-            t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [1700, 1701, 1702, 1704, 1710, 1711, 1712, 1714, 1720, 1731, 1732, 1734, 1736, 1738, 1740, 1741, 1742, 1744, 1750, 1751, 1753, 1756, 1759, 1762, 1765, 1767];
-            t.SETTINGS_SWAP_TOGGLE_TOOLTIP = {
-                SEEN_KEY: "swapToggleTooltipSeen",
-                ICON_CLASS: ".swap-button-component",
-                TITLE_CLASS: "swapping-tooltip-title"
-            };
-            t.INVALID_SWAP_ID = -1;
-            t.SWAP_TYPES = {
-                CHAMPION: "CHAMPION",
-                PICK_ORDER: "PICK_ORDER",
-                POSITION: "POSITION"
-            };
-            const n = {
-                RECEIVED: "RECEIVED",
-                AVAILABLE: "AVAILABLE",
-                SENT: "SENT",
-                BUSY: "BUSY",
-                DECLINED: "DECLINED",
-                ACCEPTED: "ACCEPTED",
-                CANCELLED: "CANCELLED"
-            };
-            t.SWAP_STATES = n;
-            const s = [n.ACCEPTED, n.DECLINED, n.CANCELLED, n.BUSY];
-            t.SWAP_RESOLVED_STATES = s;
-            const a = [n.RECEIVED, n.SENT, n.BUSY];
-            t.SWAP_CREATED_STATES = a;
-            t.SWAP_SERVICE_CALL_METHODS = {
-                CANCEL: "cancel",
-                ACCEPT: "accept",
-                DECLINE: "decline",
-                CLEAR: "clear"
-            };
-            const i = {
-                CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
-                PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
-                POSITION: "/lol-champ-select/v1/session/position-swaps"
-            };
-            t.SWAP_SESSION_SERVICE_CALL_PATHS = i;
-            const o = {
-                CHAMPION: "/lol-champ-select/v1/ongoing-champion-swap",
-                PICK_ORDER: "/lol-champ-select/v1/ongoing-pick-order-swap",
-                POSITION: "/lol-champ-select/v1/ongoing-position-swap"
-            };
-            t.SWAP_ONGOING_SERVICE_CALL_PATHS = o;
-            t.SWAP_SERVICE_CALL_TIMEOUTS = {
-                CANCEL_MS: 15e3,
-                CLEAR_MS: 1700,
-                ACCEPTED_MS: 200
-            }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2968,8 +2907,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "G9CiZuUM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["position-assignment-intro-container ",["helper",["if"],[["get",["showPositionAssignmentBackground"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["append",["helper",["position-assignment-intro"],null,[["map","mapStaticPath","currentSideMapIntroVideo","isShown","hidePins","shouldPlayVideos","showPositionAssignment","skipChampSelectIntroAnimations","pinDropSummoners","mapSide","splashDefocus","isViewingAbilityPreviews","isRanked","isDemacia"],[["get",["map"]],["get",["champSelectBackground"]],["get",["currentSideMapIntroVideo"]],["get",["isShown"]],["get",["isNexusBlitz"]],["get",["showPlayPositionAssignmentVideos"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["pinDropSummoners"]],["get",["pinDropNotification","mapSide"]],["get",["splashDefocus"]],["get",["isViewingAbilityPreviews"]],["get",["isRanked"]],["get",["isDemacia"]]]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["champion-splash-background"],null,[["pickJustLockedIn","splashUnlocked","splashDefocus","hasBans","splashPath","showPositionAssignment","sessionActions","currentSummoner","champSelectScreen","isDraftMode","isShowingGrid","emblems","uxSettings","jmxSettings","isShowingVoteReveal","skinAguments","isViewingAbilityPreviews"],[["get",["pickJustLockedIn"]],["get",["splashUnlocked"]],["get",["splashDefocus"]],["get",["sessionActions","hasBans"]],["get",["splashPath"]],["get",["showPositionAssignment"]],["get",["sessionActions"]],["get",["currentSummoner"]],["get",["champSelectScreen"]],["get",["isDraftMode"]],["get",["isShowingGrid"]],["get",["viewSkin","emblems"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["isShowingVoteReveal"]],["get",["skinAguments"]],["get",["isViewingAbilityPreviews"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["showDemaciaBanBg"]]],null,21],["text","\\n"],["open-element","div",[]],["static-attr","class","top-darken"],["flush-element"],["close-element"],["text","\\n"],["append",["helper",["champion-splash-ring"],null,[["currentActions","champSelectScreen","uxSettings","isHeaderExpanded","shouldPlayIntroAnimation","isDemacia"],[["get",["sessionActions","currentActions"]],["get",["champSelectScreen"]],["get",["uxSettings"]],["get",["isHeaderExpanded"]],["get",["shouldPlaySplashRingAnimation"]],["get",["isDemacia"]]]]],false],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-select-summoner-array-container ",["helper",["if"],[["get",["session","timer","inFinalizationPhase"]],"in-finalization"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,20,19],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-select-main-container ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n    "],["append",["helper",["bans-container"],null,[["hasSimultaneousBans","myTeamBanActions","theirTeamBanActions","numBans","gameMode"],[["get",["session","hasSimultaneousBans"]],["get",["sessionActions","myTeamBanActions"]],["get",["sessionActions","theirTeamBanActions"]],["get",["session","bans","numBans"]],["get",["gameMode"]]]]],false],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,18,16],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["vote-showcase-visibility-wrapper ",["helper",["if"],[["get",["showVoteShowcase"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["champion-showcase-team"],null,[["showcaseActions","introAnimation"],[["get",["sessionActions","myTeamVoteActions"]],["get",["localSummonerActionComplete"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["vote-reveal-visibility-wrapper ",["helper",["if"],[["get",["isShowingVoteReveal"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["vote-reveal"],null,[["visible","activeAction","summoner"],[["get",["isShowingVoteReveal"]],["get",["sessionActions","activeAction"]],["get",["currentSummoner"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n\\n"],["block",["unless"],[["get",["isDemacia"]]],null,15],["block",["if"],[["get",["isLockedInBravery"]]],null,14],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loadouts-edit-wrapper ",["helper",["if"],[["get",["shouldShowLoadout"]],"visible","hidden"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["loadouts-edit"],null,[["localSummonerLevel","currentSummoner","champOrPickIntent","isUILockedForGameStart","showingPerksModalChanged","currentPerksPage","perksPages","perksSettings","perksTutorialSettings","gameModeSupportsPerks","map","queue","timer","jmxSettings","recordDidRequestSucceed","uxSettings","showPositionAssignment","availableSpells","perPositionRequiredSummonerSpells","perPositionDisallowedSummonerSpells","wardSkins","selectedWardSkin","accountLoadout","isCompanionsEnabled","isRuneRecommenderEnabled","unlockAllRunePageFunctionality","useRuneRecommenderAutoSelect","isRoleSwapEnabled","isDemacia"],[["get",["localSummoner","summonerLevel"]],["get",["currentSummoner"]],["get",["currentSummoner","champion","id"]],["get",["isUILockedForGameStart"]],"showingPerksModalChanged",["get",["currentPerksPage"]],["get",["perksPages"]],["get",["perksSettings"]],["get",["tutorial"]],["get",["gameModeSupportsPerks"]],["get",["map"]],["get",["queue"]],["get",["session","timer"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["availableSpells"]],["get",["perPositionRequiredSummonerSpells"]],["get",["perPositionDisallowedSummonerSpells"]],["get",["loadoutsService","wardSkins"]],["get",["selectedWardSkin"]],["get",["accountLoadout"]],["get",["isCompanionsEnabled"]],["get",["dynamicConfigService","runeRecommenderEnabled"]],["get",["dynamicConfigService","unlockAllRunePageFunctionality"]],["get",["useRuneRecommenderAutoSelect"]],["get",["isRoleSwapEnabled"]],["get",["isDemacia"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["game-info-container ",["helper",["if"],[["get",["isSpectating"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["game-info"],null,[["teamSize"],[["get",["queue","numPlayersPerTeam"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowAbilityPreviews"]]],null,12],["text","\\n"],["open-element","div",[]],["static-attr","class","champion-preview-hover-timer"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","champion-preview-eye-image"],["dynamic-attr","src",["unknown",["eyeImage"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","champion-preview-champion-difficulty-plate"],["flush-element"],["append",["unknown",["tra","champion_preview_champion_difficulty_descriptor_hard_to_play"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showGameEventInfoCard"]]],null,11],["text","\\n"],["block",["if"],[["get",["shouldShowChatRoom"]]],null,10],["text","\\n"],["open-element","div",[]],["static-attr","class","bottom-right-buttons"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showQuitButton"]]],null,7,6],["text","  "],["open-element","lol-social-chat-toggle-button",[]],["static-attr","position","inside"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickChat"],[["on"],["click"]]],null],["flush-element"],["close-element"],["text","\\n  "],["append",["helper",["missions-tracker"],null,[["jmxSettings","entitlements"],[["get",["jmxSettings"]],["get",["entitlements"]]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","champ-select-voice-button-wrapper"],["flush-element"],["append",["unknown",["voiceButton"]],false],["close-element"],["text","\\n\\n  "],["open-element","lc-toast",[]],["dynamic-attr","open",["unknown",["boostToastOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeBoostNotificationToast"],null],null],["flush-element"],["text","\\n    "],["open-element","lc-toast-content",[]],["flush-element"],["text","\\n      "],["append",["helper",["boost-notification"],null,[["boostedSkinsMessage"],[["get",["boostToastData","boostedSkinsMessage"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showSwapDialog"]]],null,4],["text","\\n"],["block",["if"],[["get",["shouldShowDisconnectNotification"]]],null,1],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isBugReportEnabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","button",[]],["static-attr","class","bug-reporter-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["disconnect-notification"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["swap-dialog"],null,[["swap","summoners","subteamDataList","otherSummonerPuuid","timeRemaining","inPlanningPhase","inBanPickPhase","inFinalPhase","isUILockedForGameStart","isFiveSecondsBeforeGameStart","recordDidRequestSucceed","toggleSwapSelectionModal"],[["get",["activeSwap"]],["get",["myTeamSummoners"]],["get",["subteamDataList"]],["get",["otherSummonerPuuid"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inPlanningPhase"]],["get",["session","timer","inBanPickPhase"]],["get",["session","timer","inFinalizationPhase"]],["get",["isUILockedForGameStart"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["recordDidRequestSucceed"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["demacia-swap-dialog"],null,[["swap","summoners","subteamDataList","otherSummonerPuuid","timeRemaining","inPlanningPhase","inBanPickPhase","inFinalPhase","isUILockedForGameStart","isFiveSecondsBeforeGameStart","recordDidRequestSucceed","toggleSwapSelectionModal"],[["get",["activeSwap"]],["get",["myTeamSummoners"]],["get",["subteamDataList"]],["get",["otherSummonerPuuid"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inPlanningPhase"]],["get",["session","timer","inBanPickPhase"]],["get",["session","timer","inFinalizationPhase"]],["get",["isUILockedForGameStart"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["recordDidRequestSucceed"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lc-layer",[]],["static-attr","index","0"],["dynamic-attr","open",true,null],["flush-element"],["text","\\n      "],["open-element","lc-layer-content",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","corner-game-info-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-size"],["flush-element"],["text","\\n        "],["append",["unknown",["teamSizeText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","queue-name"],["flush-element"],["text","\\n        "],["append",["unknown",["queueNameText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["queueNameText"]]],null,5]],"locals":[]},{"statements":[["text","    "],["append",["helper",["quit-button"],null,[["isLegacyChampSelect","isSpectating","disabled","recordDidRequestSucceed"],[["get",["session","isLegacyChampSelect"]],["get",["isSpectating"]],["get",["disableQuitButton"]],["get",["recordDidRequestSucceed"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-social-chat-room",[]],["static-attr","type","championSelect"],["dynamic-attr","room-changed-messages",["unknown",["humanoidNamesJoinedLobbyStringsJson"]],null],["dynamic-attr","summoner-ids-to-name-overrides-json",["unknown",["myTeamSummonerIdsToNamesJson"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-social-chat-room",[]],["static-attr","type","championSelect"],["dynamic-attr","room-changed-messages",["unknown",["humanoidNamesJoinedLobbyStringsJson"]],null],["dynamic-attr","puuids-to-name-overrides-json",["unknown",["myTeamPuuidsToNamesJson"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["pregame-chat-box ",["helper",["if"],[["get",["isSpectating"]],"hidden","visible"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIdRemovalEnabled"]]],null,9,8],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","game-event-info-card-container"],["flush-element"],["text","\\n    "],["append",["helper",["game-event-info-card"],null,[["map","eventIndex","shiftedToSide"],[["get",["map"]],["get",["lockedEventIndex"]],["get",["shiftGameEventInfoCard"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["ability-previews"],null,[["championAssets","isViewingAbilityPreviews","setAbilityPreviewPath"],[["get",["championAssets"]],["get",["isViewingAbilityPreviews"]],["helper",["action"],[["get",[null]],"setAbilityPreviewPath"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","bravery-champion-title"],["flush-element"],["append",["unknown",["tra","bravery-champion-selected-title"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["isShowingGrid"]]],null,13]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showSkinSelectComponent"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["skin-select"],null,[["summoner","map","timeRemaining","inFinalization","rootViewSkin","selectViewSkin","allActions","rerollsDisabled","showRerollButton","tbAllowRerolling","tbRerollsRemaining","uxSettings","jmxSettings","rootComponentShown","allowSkinSelection","ip","rp","timer","isSkinSelectVisible","isShowingGrid","isUILockedForGameStart","recordDidRequestSucceed","UseNewLoyaltyIcon","allowSubsetChampionPicks","setRerolledChampionId","clearRerolledChampionId"],[["get",["currentSummoner"]],["get",["map"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inFinalizationPhase"]],["get",["viewSkin"]],"selectViewSkin",["get",["sessionActions","allActions"]],["get",["rerollsDisabled"]],["get",["showRerollButton"]],["get",["session","allowRerolling"]],["get",["session","rerollsRemaining"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["isShown"]],["get",["session","allowSkinSelection"]],["get",["ip"]],["get",["rp"]],["get",["session","timer"]],["get",["showSkinSelectComponent"]],["get",["isShowingGrid"]],["get",["isUILockedForGameStart"]],["get",["recordDidRequestSucceed"]],["get",["dynamicConfigService","UseNewLoyaltyIcon"]],["get",["allowSubsetChampionPicks"]],["helper",["action"],[["get",[null]],"setRerolledChampionId"],null],["helper",["action"],[["get",[null]],"clearRerolledChampionId"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["timer-status"],null,[["allowSubsetChampionPicks","timer","summoner","allowSubsetChampionPicks","isDraftMode","activeAction","enemyActiveAction","alliedActiveAction","allPlayersActTogether","currentActions","activeActions","rerolledChampionId","champSelectScreen","isShowingPositionAssignment","isSpectating","isPlayingCeremony","inFinalizationPhase","isShowingVoteCeremonies","isTeamBuilderGame","formattedTime","displayTimeAsMinuteSecond","minuteSecondTime","isHeaderExpanded","showChampionBench","inventory","benchChampions","allowBattleBoost","isUILockedForGameStart","jmxSettings","isShowingPerksModal","boostableSkinCount","recordDidRequestSucceed","isViewingAbilityPreviews","isDemacia"],[["get",["allowSubsetChampionPicks"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["allowSubsetChampionPicks"]],["get",["isDraftMode"]],["get",["sessionActions","activeAction"]],["get",["sessionActions","enemyActiveAction"]],["get",["sessionActions","alliedActiveAction"]],["get",["sessionActions","allPlayersActTogether"]],["get",["sessionActions","currentActions"]],["get",["sessionActions","activeActions"]],["get",["rerolledChampionId"]],["get",["champSelectScreen"]],["get",["showPositionAssignment"]],["get",["isSpectating"]],["get",["isPlayingCeremony"]],["get",["session","timer","inFinalizationPhase"]],["get",["isShowingVoteCeremonies"]],["get",["queue","isTeamBuilderManaged"]],["get",["formattedTime"]],["get",["displayTimeAsMinuteSecond"]],["get",["minuteSecondTime"]],["get",["isHeaderExpanded"]],["get",["showChampionBench"]],["get",["inventory"]],["get",["benchChampions"]],["get",["session","allowBattleBoost"]],["get",["isUILockedForGameStart"]],["get",["jmxSettings"]],["get",["isShowingPerksModal"]],["get",["boostableSkinCount"]],["get",["recordDidRequestSucceed"]],["get",["isViewingAbilityPreviews"]],["get",["isDemacia"]]]]],false],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showPickPhaseComponent"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["pick-phase"],null,[["allowSubsetChampionPicks","summoner","sessionActions","actionWasJustCompleted","waitingForBanAnimation","waitingForPickAnimation","map","gameMode","isDraftMode","isSpectating","isPlayingSimulBanOutro","isPlayingCeremony","showVoteShowcase","champSelectScreen","splashPath","splashDefocus","splashUnlocked","timer","myTeam","theirTeam","gameId","uxSettings","jmxSettings","updateIsShowingGrid","updatePickJustLockedIn","isRandomChampionEnabled","randomChampionRateLimitConfig","isBraveryChampionEnabled","transitioningToSelectedScreen","recordDidRequestSucceed","UseNewLoyaltyIcon","isViewingAbilityPreviews"],[["get",["allowSubsetChampionPicks"]],["get",["currentSummoner"]],["get",["sessionActions"]],["get",["actionWasJustCompleted"]],["get",["waitingForBanAnimation"]],["get",["waitingForPickAnimation"]],["get",["map"]],["get",["gameMode"]],["get",["isDraftMode"]],["get",["isSpectating"]],["get",["isPlayingSimulBanOutro"]],["get",["isPlayingCeremony"]],["get",["showVoteShowcase"]],["get",["champSelectScreen"]],["get",["pickSplashPath"]],["get",["pickSplashDefocus"]],["get",["pickSplashUnlocked"]],["get",["session","timer"]],["get",["session","myTeam"]],["get",["session","theirTeam"]],["get",["session","gameId"]],["get",["uxSettings"]],["get",["jmxSettings"]],["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["isShowingGrid"]]],null]],null],["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["pickJustLockedIn"]]],null]],null],["get",["isRandomChampionEnabled"]],["get",["randomChampionRateLimitConfig"]],["get",["isBraveryChampionEnabled"]],["get",["transitioningToSelectedScreen"]],["get",["recordDidRequestSucceed"]],["get",["dynamicConfigService","UseNewLoyaltyIcon"]],["get",["isViewingAbilityPreviews"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","demacia-ban-icon demacia-ban-icon--left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","demacia-ban-icon demacia-ban-icon--right"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["demacia-timer-status"],null,[["formattedTime","champSelectScreen","summoner","enemyActiveAction","alliedActiveAction","isSelf","activeAction","phase","session","timer","uxSettings","isSpectating"],[["get",["formattedTime"]],["get",["champSelectScreen"]],["get",["currentSummoner"]],["get",["sessionActions","enemyActiveAction"]],["get",["sessionActions","alliedActiveAction"]],["get",["sessionActions","activeAction","actor","isSelf"]],["get",["sessionActions","activeAction"]],["get",["session","timer","phase"]],["get",["session"]],["get",["session","timer"]],["get",["uxSettings"]],["get",["isSpectating"]]]]],false],["text","\\n"],["block",["if"],[["get",["isDemaciaBanPhase"]]],null,17],["text","      "],["append",["helper",["champion-select-center-container"],null,[["summoner","champSelectScreen","allowSkinSelection","phase","timeRemaining","selectedChampionAssets","isSpectating","queue","map","teamSizeText"],[["get",["currentSummoner"]],["get",["champSelectScreen"]],["get",["session","allowSkinSelection"]],["get",["session","timer","phase"]],["get",["session","timer","timeRemaining"]],["get",["championAssets"]],["get",["isSpectating"]],["get",["queue"]],["get",["map"]],["get",["teamSizeText"]]]]],false],["text","\\n      "],["append",["helper",["demacia-ban-showcase"],null,[["myTeamBans","theirTeamBans","champSelectScreen","summoner"],[["get",["sessionActions","myTeamBanActions"]],["get",["sessionActions","theirTeamBanActions"]],["get",["champSelectScreen"]],["get",["currentSummoner"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","activeSwap","formattedTime","isPlayingSimulBanOutro","team","viewSkin","boosterPuuid","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["myTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],true,["get",["showLeftSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["activeSwap"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","myTeam"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["queue","id"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n\\n    "],["append",["helper",["summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","formattedTime","isPlayingSimulBanOutro","team","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["theirTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],false,["get",["showRightSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","theirTeam"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["queue","id"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["demacia-summoner-array"],null,[["summoners","isReportingEnabled","champSelectMutingEnabled","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","activeSwap","formattedTime","isPlayingSimulBanOutro","team","session","viewSkin","boosterPuuid","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","queueId","isSpectating","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal"],[["get",["myTeamSummoners"]],["get",["jmxSettings","LcuChampionSelect","ReportingEnabled"]],["get",["jmxSettings","LcuChampionSelect","ChampSelectMutingEnabled"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],true,["get",["showLeftSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["activeSwap"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","myTeam"]],["get",["session"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["queue","id"]],["get",["isSpectating"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n\\n    "],["append",["helper",["demacia-summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","formattedTime","isPlayingSimulBanOutro","team","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","queueId","isSpectating","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal"],[["get",["theirTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],false,["get",["showRightSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","theirTeam"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["queue","id"]],["get",["isSpectating"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","demacia-ban-bg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "74AX+dBL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["position-assignment-intro-container ",["helper",["if"],[["get",["showPositionAssignmentBackground"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["append",["helper",["position-assignment-intro"],null,[["map","mapStaticPath","currentSideMapIntroVideo","isShown","hidePins","shouldPlayVideos","showPositionAssignment","skipChampSelectIntroAnimations","pinDropSummoners","mapSide","splashDefocus","isViewingAbilityPreviews","isRanked","isDemacia"],[["get",["map"]],["get",["champSelectBackground"]],["get",["currentSideMapIntroVideo"]],["get",["isShown"]],["get",["isNexusBlitz"]],["get",["showPlayPositionAssignmentVideos"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["pinDropSummoners"]],["get",["pinDropNotification","mapSide"]],["get",["splashDefocus"]],["get",["isViewingAbilityPreviews"]],["get",["isRanked"]],["get",["isDemacia"]]]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["champion-splash-background"],null,[["pickJustLockedIn","splashUnlocked","splashDefocus","hasBans","splashPath","showPositionAssignment","sessionActions","currentSummoner","champSelectScreen","isDraftMode","isShowingGrid","emblems","uxSettings","jmxSettings","isShowingVoteReveal","skinAguments","isViewingAbilityPreviews"],[["get",["pickJustLockedIn"]],["get",["splashUnlocked"]],["get",["splashDefocus"]],["get",["sessionActions","hasBans"]],["get",["splashPath"]],["get",["showPositionAssignment"]],["get",["sessionActions"]],["get",["currentSummoner"]],["get",["champSelectScreen"]],["get",["isDraftMode"]],["get",["isShowingGrid"]],["get",["viewSkin","emblems"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["isShowingVoteReveal"]],["get",["skinAguments"]],["get",["isViewingAbilityPreviews"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["showDemaciaBanBg"]]],null,21],["text","\\n"],["open-element","div",[]],["static-attr","class","top-darken"],["flush-element"],["close-element"],["text","\\n"],["append",["helper",["champion-splash-ring"],null,[["currentActions","champSelectScreen","uxSettings","isHeaderExpanded","shouldPlayIntroAnimation","isDemacia"],[["get",["sessionActions","currentActions"]],["get",["champSelectScreen"]],["get",["uxSettings"]],["get",["isHeaderExpanded"]],["get",["shouldPlaySplashRingAnimation"]],["get",["isDemacia"]]]]],false],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-select-summoner-array-container ",["helper",["if"],[["get",["session","timer","inFinalizationPhase"]],"in-finalization"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,20,19],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-select-main-container ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n    "],["append",["helper",["bans-container"],null,[["hasSimultaneousBans","myTeamBanActions","theirTeamBanActions","numBans","gameMode"],[["get",["session","hasSimultaneousBans"]],["get",["sessionActions","myTeamBanActions"]],["get",["sessionActions","theirTeamBanActions"]],["get",["session","bans","numBans"]],["get",["gameMode"]]]]],false],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,18,16],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["vote-showcase-visibility-wrapper ",["helper",["if"],[["get",["showVoteShowcase"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["champion-showcase-team"],null,[["showcaseActions","introAnimation"],[["get",["sessionActions","myTeamVoteActions"]],["get",["localSummonerActionComplete"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["vote-reveal-visibility-wrapper ",["helper",["if"],[["get",["isShowingVoteReveal"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["vote-reveal"],null,[["visible","activeAction","summoner"],[["get",["isShowingVoteReveal"]],["get",["sessionActions","activeAction"]],["get",["currentSummoner"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["isDemacia"]]],null,15],["block",["if"],[["get",["isLockedInBravery"]]],null,14],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loadouts-edit-wrapper ",["helper",["if"],[["get",["shouldShowLoadout"]],"visible","hidden"],null]," ",["helper",["if"],[["get",["isDemacia"]],"is-Demacia"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["loadouts-edit"],null,[["localSummonerLevel","currentSummoner","champOrPickIntent","isUILockedForGameStart","showingPerksModalChanged","currentPerksPage","perksPages","perksSettings","perksTutorialSettings","gameModeSupportsPerks","map","queue","timer","jmxSettings","recordDidRequestSucceed","uxSettings","showPositionAssignment","availableSpells","perPositionRequiredSummonerSpells","perPositionDisallowedSummonerSpells","wardSkins","selectedWardSkin","accountLoadout","isCompanionsEnabled","isRuneRecommenderEnabled","unlockAllRunePageFunctionality","useRuneRecommenderAutoSelect","isRoleSwapEnabled","isDemacia"],[["get",["localSummoner","summonerLevel"]],["get",["currentSummoner"]],["get",["currentSummoner","champion","id"]],["get",["isUILockedForGameStart"]],"showingPerksModalChanged",["get",["currentPerksPage"]],["get",["perksPages"]],["get",["perksSettings"]],["get",["tutorial"]],["get",["gameModeSupportsPerks"]],["get",["map"]],["get",["queue"]],["get",["session","timer"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["availableSpells"]],["get",["perPositionRequiredSummonerSpells"]],["get",["perPositionDisallowedSummonerSpells"]],["get",["loadoutsService","wardSkins"]],["get",["selectedWardSkin"]],["get",["accountLoadout"]],["get",["isCompanionsEnabled"]],["get",["dynamicConfigService","runeRecommenderEnabled"]],["get",["dynamicConfigService","unlockAllRunePageFunctionality"]],["get",["useRuneRecommenderAutoSelect"]],["get",["isRoleSwapEnabled"]],["get",["isDemacia"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["game-info-container ",["helper",["if"],[["get",["isSpectating"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["helper",["game-info"],null,[["teamSize"],[["get",["queue","numPlayersPerTeam"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowAbilityPreviews"]]],null,12],["text","\\n"],["open-element","div",[]],["static-attr","class","champion-preview-hover-timer"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","champion-preview-eye-image"],["dynamic-attr","src",["unknown",["eyeImage"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","champion-preview-champion-difficulty-plate"],["flush-element"],["append",["unknown",["tra","champion_preview_champion_difficulty_descriptor_hard_to_play"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showGameEventInfoCard"]]],null,11],["text","\\n"],["block",["if"],[["get",["shouldShowChatRoom"]]],null,10],["text","\\n"],["open-element","div",[]],["static-attr","class","bottom-right-buttons"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showQuitButton"]]],null,7,6],["text","  "],["open-element","lol-social-chat-toggle-button",[]],["static-attr","position","inside"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickChat"],[["on"],["click"]]],null],["flush-element"],["close-element"],["text","\\n  "],["append",["helper",["missions-tracker"],null,[["jmxSettings","entitlements"],[["get",["jmxSettings"]],["get",["entitlements"]]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","champ-select-voice-button-wrapper"],["flush-element"],["append",["unknown",["voiceButton"]],false],["close-element"],["text","\\n\\n  "],["open-element","lc-toast",[]],["dynamic-attr","open",["unknown",["boostToastOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeBoostNotificationToast"],null],null],["flush-element"],["text","\\n    "],["open-element","lc-toast-content",[]],["flush-element"],["text","\\n      "],["append",["helper",["boost-notification"],null,[["boostedSkinsMessage"],[["get",["boostToastData","boostedSkinsMessage"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showSwapDialog"]]],null,4],["text","\\n"],["block",["if"],[["get",["shouldShowDisconnectNotification"]]],null,1],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isBugReportEnabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","button",[]],["static-attr","class","bug-reporter-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["disconnect-notification"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["swap-dialog"],null,[["swap","summoners","subteamDataList","otherSummonerPuuid","timeRemaining","inPlanningPhase","inBanPickPhase","inFinalPhase","isUILockedForGameStart","isFiveSecondsBeforeGameStart","recordDidRequestSucceed","toggleSwapSelectionModal"],[["get",["activeSwap"]],["get",["myTeamSummoners"]],["get",["subteamDataList"]],["get",["otherSummonerPuuid"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inPlanningPhase"]],["get",["session","timer","inBanPickPhase"]],["get",["session","timer","inFinalizationPhase"]],["get",["isUILockedForGameStart"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["recordDidRequestSucceed"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["demacia-swap-dialog"],null,[["swap","summoners","subteamDataList","otherSummonerPuuid","timeRemaining","inPlanningPhase","inBanPickPhase","inFinalPhase","isUILockedForGameStart","isFiveSecondsBeforeGameStart","recordDidRequestSucceed","toggleSwapSelectionModal"],[["get",["activeSwap"]],["get",["myTeamSummoners"]],["get",["subteamDataList"]],["get",["otherSummonerPuuid"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inPlanningPhase"]],["get",["session","timer","inBanPickPhase"]],["get",["session","timer","inFinalizationPhase"]],["get",["isUILockedForGameStart"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["recordDidRequestSucceed"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lc-layer",[]],["static-attr","index","0"],["dynamic-attr","open",true,null],["flush-element"],["text","\\n      "],["open-element","lc-layer-content",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","corner-game-info-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-size"],["flush-element"],["text","\\n        "],["append",["unknown",["teamSizeText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","queue-name"],["flush-element"],["text","\\n        "],["append",["unknown",["queueNameText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["queueNameText"]]],null,5]],"locals":[]},{"statements":[["text","    "],["append",["helper",["quit-button"],null,[["isLegacyChampSelect","isSpectating","disabled","recordDidRequestSucceed"],[["get",["session","isLegacyChampSelect"]],["get",["isSpectating"]],["get",["disableQuitButton"]],["get",["recordDidRequestSucceed"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-social-chat-room",[]],["static-attr","type","championSelect"],["dynamic-attr","room-changed-messages",["unknown",["humanoidNamesJoinedLobbyStringsJson"]],null],["dynamic-attr","summoner-ids-to-name-overrides-json",["unknown",["myTeamSummonerIdsToNamesJson"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-social-chat-room",[]],["static-attr","type","championSelect"],["dynamic-attr","room-changed-messages",["unknown",["humanoidNamesJoinedLobbyStringsJson"]],null],["dynamic-attr","puuids-to-name-overrides-json",["unknown",["myTeamPuuidsToNamesJson"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["pregame-chat-box ",["helper",["if"],[["get",["isSpectating"]],"hidden","visible"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIdRemovalEnabled"]]],null,9,8],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","game-event-info-card-container"],["flush-element"],["text","\\n    "],["append",["helper",["game-event-info-card"],null,[["map","eventIndex","shiftedToSide"],[["get",["map"]],["get",["lockedEventIndex"]],["get",["shiftGameEventInfoCard"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["ability-previews"],null,[["championAssets","isViewingAbilityPreviews","setAbilityPreviewPath"],[["get",["championAssets"]],["get",["isViewingAbilityPreviews"]],["helper",["action"],[["get",[null]],"setAbilityPreviewPath"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","bravery-champion-title"],["flush-element"],["append",["unknown",["tra","bravery-champion-selected-title"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["isShowingGrid"]]],null,13]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showSkinSelectComponent"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["skin-select"],null,[["summoner","map","timeRemaining","inFinalization","rootViewSkin","selectViewSkin","allActions","rerollsDisabled","showRerollButton","tbAllowRerolling","tbRerollsRemaining","uxSettings","jmxSettings","rootComponentShown","allowSkinSelection","ip","rp","timer","isSkinSelectVisible","isShowingGrid","isUILockedForGameStart","recordDidRequestSucceed","UseNewLoyaltyIcon","allowSubsetChampionPicks","setRerolledChampionId","clearRerolledChampionId"],[["get",["currentSummoner"]],["get",["map"]],["get",["session","timer","timeRemaining"]],["get",["session","timer","inFinalizationPhase"]],["get",["viewSkin"]],"selectViewSkin",["get",["sessionActions","allActions"]],["get",["rerollsDisabled"]],["get",["showRerollButton"]],["get",["session","allowRerolling"]],["get",["session","rerollsRemaining"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["isShown"]],["get",["session","allowSkinSelection"]],["get",["ip"]],["get",["rp"]],["get",["session","timer"]],["get",["showSkinSelectComponent"]],["get",["isShowingGrid"]],["get",["isUILockedForGameStart"]],["get",["recordDidRequestSucceed"]],["get",["dynamicConfigService","UseNewLoyaltyIcon"]],["get",["allowSubsetChampionPicks"]],["helper",["action"],[["get",[null]],"setRerolledChampionId"],null],["helper",["action"],[["get",[null]],"clearRerolledChampionId"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["timer-status"],null,[["allowSubsetChampionPicks","timer","summoner","allowSubsetChampionPicks","isDraftMode","activeAction","enemyActiveAction","alliedActiveAction","allPlayersActTogether","currentActions","activeActions","rerolledChampionId","champSelectScreen","isShowingPositionAssignment","isSpectating","isPlayingCeremony","inFinalizationPhase","isShowingVoteCeremonies","isTeamBuilderGame","formattedTime","displayTimeAsMinuteSecond","minuteSecondTime","isHeaderExpanded","showChampionBench","inventory","benchChampions","allowBattleBoost","isUILockedForGameStart","jmxSettings","isShowingPerksModal","boostableSkinCount","recordDidRequestSucceed","isViewingAbilityPreviews","isDemacia"],[["get",["allowSubsetChampionPicks"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["allowSubsetChampionPicks"]],["get",["isDraftMode"]],["get",["sessionActions","activeAction"]],["get",["sessionActions","enemyActiveAction"]],["get",["sessionActions","alliedActiveAction"]],["get",["sessionActions","allPlayersActTogether"]],["get",["sessionActions","currentActions"]],["get",["sessionActions","activeActions"]],["get",["rerolledChampionId"]],["get",["champSelectScreen"]],["get",["showPositionAssignment"]],["get",["isSpectating"]],["get",["isPlayingCeremony"]],["get",["session","timer","inFinalizationPhase"]],["get",["isShowingVoteCeremonies"]],["get",["queue","isTeamBuilderManaged"]],["get",["formattedTime"]],["get",["displayTimeAsMinuteSecond"]],["get",["minuteSecondTime"]],["get",["isHeaderExpanded"]],["get",["showChampionBench"]],["get",["inventory"]],["get",["benchChampions"]],["get",["session","allowBattleBoost"]],["get",["isUILockedForGameStart"]],["get",["jmxSettings"]],["get",["isShowingPerksModal"]],["get",["boostableSkinCount"]],["get",["recordDidRequestSucceed"]],["get",["isViewingAbilityPreviews"]],["get",["isDemacia"]]]]],false],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["showPickPhaseComponent"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["pick-phase"],null,[["allowSubsetChampionPicks","summoner","sessionActions","actionWasJustCompleted","waitingForBanAnimation","waitingForPickAnimation","map","gameMode","isDraftMode","isSpectating","isPlayingSimulBanOutro","isPlayingCeremony","showVoteShowcase","champSelectScreen","splashPath","splashDefocus","splashUnlocked","timer","myTeam","theirTeam","gameId","uxSettings","jmxSettings","updateIsShowingGrid","updatePickJustLockedIn","isRandomChampionEnabled","randomChampionRateLimitConfig","isBraveryChampionEnabled","transitioningToSelectedScreen","recordDidRequestSucceed","UseNewLoyaltyIcon","isViewingAbilityPreviews"],[["get",["allowSubsetChampionPicks"]],["get",["currentSummoner"]],["get",["sessionActions"]],["get",["actionWasJustCompleted"]],["get",["waitingForBanAnimation"]],["get",["waitingForPickAnimation"]],["get",["map"]],["get",["gameMode"]],["get",["isDraftMode"]],["get",["isSpectating"]],["get",["isPlayingSimulBanOutro"]],["get",["isPlayingCeremony"]],["get",["showVoteShowcase"]],["get",["champSelectScreen"]],["get",["pickSplashPath"]],["get",["pickSplashDefocus"]],["get",["pickSplashUnlocked"]],["get",["session","timer"]],["get",["session","myTeam"]],["get",["session","theirTeam"]],["get",["session","gameId"]],["get",["uxSettings"]],["get",["jmxSettings"]],["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["isShowingGrid"]]],null]],null],["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["pickJustLockedIn"]]],null]],null],["get",["isRandomChampionEnabled"]],["get",["randomChampionRateLimitConfig"]],["get",["isBraveryChampionEnabled"]],["get",["transitioningToSelectedScreen"]],["get",["recordDidRequestSucceed"]],["get",["dynamicConfigService","UseNewLoyaltyIcon"]],["get",["isViewingAbilityPreviews"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","demacia-ban-icon demacia-ban-icon--left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","demacia-ban-icon demacia-ban-icon--right"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["demacia-timer-status"],null,[["formattedTime","champSelectScreen","summoner","enemyActiveAction","alliedActiveAction","isSelf","activeAction","phase","session","timer","uxSettings","isSpectating"],[["get",["formattedTime"]],["get",["champSelectScreen"]],["get",["currentSummoner"]],["get",["sessionActions","enemyActiveAction"]],["get",["sessionActions","alliedActiveAction"]],["get",["sessionActions","activeAction","actor","isSelf"]],["get",["sessionActions","activeAction"]],["get",["session","timer","phase"]],["get",["session"]],["get",["session","timer"]],["get",["uxSettings"]],["get",["isSpectating"]]]]],false],["text","\\n"],["block",["if"],[["get",["isDemaciaBanPhase"]]],null,17],["text","      "],["append",["helper",["champion-select-center-container"],null,[["summoner","champSelectScreen","allowSkinSelection","phase","timeRemaining","selectedChampionAssets","isSpectating","queue","map","teamSizeText"],[["get",["currentSummoner"]],["get",["champSelectScreen"]],["get",["session","allowSkinSelection"]],["get",["session","timer","phase"]],["get",["session","timer","timeRemaining"]],["get",["championAssets"]],["get",["isSpectating"]],["get",["queue"]],["get",["map"]],["get",["teamSizeText"]]]]],false],["text","\\n      "],["append",["helper",["demacia-ban-showcase"],null,[["myTeamBans","theirTeamBans","champSelectScreen","summoner"],[["get",["sessionActions","myTeamBanActions"]],["get",["sessionActions","theirTeamBanActions"]],["get",["champSelectScreen"]],["get",["currentSummoner"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","activeSwap","formattedTime","isPlayingSimulBanOutro","team","viewSkin","boosterPuuid","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["myTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],true,["get",["showLeftSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["activeSwap"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","myTeam"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["dynamicConfigService","championSwapOnlyQueueIds"]],["get",["dynamicConfigService","pickOrderSwapOnlyQueueIds"]],["get",["queue","id"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n\\n    "],["append",["helper",["summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","formattedTime","isPlayingSimulBanOutro","team","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["theirTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],false,["get",["showRightSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","theirTeam"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["dynamicConfigService","championSwapOnlyQueueIds"]],["get",["dynamicConfigService","pickOrderSwapOnlyQueueIds"]],["get",["queue","id"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["demacia-summoner-array"],null,[["summoners","isReportingEnabled","champSelectMutingEnabled","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","activeSwap","formattedTime","isPlayingSimulBanOutro","team","session","viewSkin","boosterPuuid","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","queueId","isSpectating","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal"],[["get",["myTeamSummoners"]],["get",["jmxSettings","LcuChampionSelect","ReportingEnabled"]],["get",["jmxSettings","LcuChampionSelect","ChampSelectMutingEnabled"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],true,["get",["showLeftSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["activeSwap"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","myTeam"]],["get",["session"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["dynamicConfigService","championSwapOnlyQueueIds"]],["get",["dynamicConfigService","pickOrderSwapOnlyQueueIds"]],["get",["queue","id"]],["get",["isSpectating"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n\\n    "],["append",["helper",["demacia-summoner-array"],null,[["summoners","sessionActions","isUILockedForGameStart","uxSettings","showPositionAssignment","isLeft","showFirstPick","timer","currentSummoner","subteamDataList","formattedTime","isPlayingSimulBanOutro","team","jmxSettings","isCustomGame","recordDidRequestSucceed","championInventory","champSelectScreen","isRoleSwapEnabled","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","queueId","isSpectating","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal"],[["get",["theirTeamSummoners"]],["get",["sessionActions"]],["get",["isUILockedForGameStart"]],["get",["uxSettings"]],["get",["showPositionAssignment"]],false,["get",["showRightSideFirstPick"]],["get",["session","timer"]],["get",["currentSummoner"]],["get",["subteamDataList"]],["get",["formattedTime"]],["get",["isPlayingSimulBanOutro"]],["get",["session","theirTeam"]],["get",["jmxSettings"]],["get",["gameflow","gameData","isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["inventory"]],["get",["champSelectScreen"]],["get",["isRoleSwapEnabled"]],["get",["dynamicConfigService","championSwapOnlyQueueIds"]],["get",["dynamicConfigService","pickOrderSwapOnlyQueueIds"]],["get",["queue","id"]],["get",["isSpectating"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","demacia-ban-bg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2978,7 +2917,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(6),
-                a = n(30);
+                a = n(29);
             const i = n(1),
                 {
                     EmberHelpers: o
@@ -3222,14 +3161,14 @@
             }), t.ChampionCardSelectComponent = void 0;
             const a = n(1),
                 i = s(n(4));
-            n(37);
+            n(36);
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline;
             t.ChampionCardSelectComponent = a.Ember.Component.extend(o, {
                 classNames: ["champion-card-select-component"],
                 classNameBindings: ["hasLuckyCard:has-lucky-card", "hasCardSelected:has-card-selected"],
-                layout: n(38),
+                layout: n(37),
                 pendingRequest: !1,
                 champSelectService: a.Ember.inject.service("champ-select"),
                 cardsDisplayDetails: a.Ember.computed("champSelectService.subsetChampionIds", (function() {
@@ -3277,14 +3216,14 @@
             }), t.ChampionCardComponent = void 0;
             const a = n(1),
                 i = s(n(4));
-            n(40);
+            n(39);
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline;
             t.ChampionCardComponent = a.Ember.Component.extend(o, {
                 classNames: ["champion-card-component"],
                 classNameBindings: ["cardsRendered:card-visible", "cardIsHovered:card-hovered", "cardSelected:card-selected", "introAnimationComplete:card-interactable", "isLuckyCard:lucky-card"],
-                layout: n(41),
+                layout: n(40),
                 champSelectService: a.Ember.inject.service("champ-select"),
                 isAnimationsEnabled: a.Ember.computed.readOnly("uxSettings.largeAreaAnimationsEnabled"),
                 hasLuckyCard: !1,
@@ -3403,7 +3342,7 @@
             var s, a = (s = n(4)) && s.__esModule ? s : {
                 default: s
             };
-            n(44);
+            n(43);
             const i = n(1),
                 {
                     Ember: o
@@ -3411,7 +3350,7 @@
                 l = "sfx-ui";
             e.exports = o.Component.extend({
                 classNames: ["action-button-container"],
-                layout: n(45),
+                layout: n(44),
                 audioPool: a.default,
                 mouseEnter: function() {
                     this.get("disabled") || this.audioPool.playSound(l, "/fe/lol-champ-select/sounds/sfx-cs-lockin-button-hover.ogg")
@@ -3442,9 +3381,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(6);
-            n(47);
+            n(46);
             var i = s.Ember.Component.extend({
-                layout: n(48),
+                layout: n(47),
                 tra: s.tra,
                 championAssets: null,
                 isViewingAbilityPreviews: !1,
@@ -3549,7 +3488,7 @@
             var s, a = (s = n(4)) && s.__esModule ? s : {
                 default: s
             };
-            n(50);
+            n(49);
             const i = n(1),
                 {
                     Ember: o,
@@ -3561,7 +3500,7 @@
             e.exports = o.Component.extend(r, {
                 classNames: ["ban-showcase"],
                 classNameBindings: ["visible::removed", "waitingForBans::enemy-team-visible", "hideWaitingForTheirBansLabel::waiting-for-their-team-bans", "enemyTeamBansWrappable:enemy-team-bans-wrappable"],
-                layout: n(51),
+                layout: n(50),
                 waitingForBans: o.computed.or("waitingForMyTeamBans", "waitingForTheirTeamBans"),
                 waitingForMyTeamBans: o.computed.and("isSimultaneousBans", "myTeamIsBanning"),
                 waitingForTheirTeamBans: o.computed.and("isSimultaneousBans", "theirTeamIsBanning"),
@@ -3602,10 +3541,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(53), e.exports = s.Ember.Component.extend({
+            n(52), e.exports = s.Ember.Component.extend({
                 classNames: ["bans-container-component"],
                 classNameBindings: ["bansComponentClass"],
-                layout: n(54),
+                layout: n(53),
                 showGroupedBansWithHeader: s.Ember.computed("gameMode", (function() {
                     return "CHERRY" === this.get("gameMode")
                 })),
@@ -3625,7 +3564,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            n(56);
+            n(55);
             const s = n(1),
                 {
                     Ember: a
@@ -3633,7 +3572,7 @@
             e.exports = a.Component.extend({
                 classNames: ["ban-showcase-team"],
                 classNameBindings: ["theirTeam:their-team:my-team", "enemyBansHidden::enemy-bans-visible", "introAnimation", "type", "myTeamBanning"],
-                layout: n(57),
+                layout: n(56),
                 type: a.computed("showcaseActions.firstObject.type", (function() {
                     return this.get("showcaseActions.firstObject.type") || ""
                 })),
@@ -3663,7 +3602,7 @@
             var s, a = (s = n(4)) && s.__esModule ? s : {
                 default: s
             };
-            n(56);
+            n(55);
             const i = n(1),
                 {
                     Ember: o,
@@ -3675,7 +3614,7 @@
             e.exports = o.Component.extend(r, {
                 classNames: ["ban-champion"],
                 classNameBindings: ["showcaseAction.champion:selected", "showcaseAction.completed:locked-in", "showcaseAction.snipedPlayerPick:sniped-player-pick", "type"],
-                layout: n(59),
+                layout: n(58),
                 championAssetSubstitution: o.inject.service(),
                 squarePortraitPath: o.computed("showcaseAction.champion", "showcaseAction.champion.squarePortraitPath", (function() {
                     const e = this.get("showcaseAction.champion");
@@ -3716,7 +3655,7 @@
                     } s.default = e, n && n.set(e, s);
                 return s
             }(n(1));
-            n(61);
+            n(60);
             var a = l(n(2)),
                 i = n(6),
                 o = l(n(4));
@@ -3742,7 +3681,7 @@
             } = s.EmberAddons.EmberLifeline;
             e.exports = s.Ember.Component.extend(m, {
                 classNames: ["champion-bench"],
-                layout: n(62),
+                layout: n(61),
                 championPreviewService: s.Ember.inject.service("champion-preview"),
                 pendingRequest: !1,
                 isPlayingSound: !1,
@@ -3825,7 +3764,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(64);
+            n(63);
             const {
                 EmberHelpers: o
             } = s.default, {
@@ -3833,7 +3772,7 @@
             } = s.EmberAddons.EmberLifeline;
             e.exports = s.Ember.Component.extend(l, {
                 classNames: ["champion-bench-item"],
-                layout: n(65),
+                layout: n(64),
                 classNameBindings: ["isEmpty:empty-bench-item", "benchSwapOnCooldown:on-cooldown1", "showCooldownAnimation2:on-cooldown2", "showCooldownAnimation3:on-cooldown3", "canPlay::locked-out", "waitingOnFinalizationPhase:waiting-on-finalization"],
                 championPreviewService: s.Ember.inject.service("champion-preview"),
                 champSelectService: s.Ember.inject.service("champ-select"),
@@ -3961,12 +3900,12 @@
             var s = n(1),
                 a = u(n(4)),
                 i = n(6),
-                o = n(67),
-                l = n(68),
-                r = n(69),
-                c = n(71),
+                o = n(66),
+                l = n(67),
+                r = n(68),
+                c = n(70),
                 m = u(n(17)),
-                d = u(n(72));
+                d = u(n(71));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -3976,11 +3915,11 @@
             const {
                 RunMixin: p,
                 DomMixin: h
-            } = s.EmberAddons.EmberLifeline, g = "championFilterPreferenceKey", f = 3e3, _ = [], b = [], v = [];
-            n(73), n(74), n(75), e.exports = s.Ember.Component.extend(p, h, m.default, {
+            } = s.EmberAddons.EmberLifeline, g = "championFilterPreferenceKey", f = 3e3, _ = [], b = [], y = [];
+            n(72), n(73), n(74), e.exports = s.Ember.Component.extend(p, h, m.default, {
                 classNames: ["champion-grid"],
                 classNameBindings: ["visible:champion-grid-visible:champion-grid-hidden", "gridSoftSelected:champion-grid-selected", "hasChampionPicked:champion-grid-picked", "summoner.isBanningNow:champion-grid-banning", "sortByFavorites:sort-by-favorites", "isAnimating:champion-grid-animating"],
-                layout: n(76),
+                layout: n(75),
                 gridEstimatedClientWidth: 622,
                 gridEstimatedClientHeight: 440,
                 largeAreaAnimationsEnabled: s.Ember.computed.bool("uxSettings.largeAreaAnimationsEnabled"),
@@ -4228,7 +4167,7 @@
                 },
                 _recordTelemetryPick: function() {
                     const e = this.get("pickableChampionSet");
-                    this._firePickTelemetry(v, "champ-select-grid-m-pick", e, "pick")
+                    this._firePickTelemetry(y, "champ-select-grid-m-pick", e, "pick")
                 },
                 _firePickTelemetry: function(e, t, n, a) {
                     const i = this.get("champSelectGameId");
@@ -4499,7 +4438,7 @@
             }), t.ViewChampionClass = void 0;
             var s = n(1),
                 a = n(6);
-            const i = n(70),
+            const i = n(69),
                 o = s.Ember.Object.extend({
                     id: s.Ember.computed.alias("champion.id"),
                     favoritesEnabled: s.Ember.computed.alias("grid.favoritesEnabled"),
@@ -4641,7 +4580,7 @@
             "use strict";
             var s = n(1),
                 a = n(6),
-                i = n(78);
+                i = n(77);
             const {
                 RunMixin: o
             } = s.EmberAddons.EmberLifeline, l = s.UiKitPlugin.getContextMenuManager();
@@ -4649,7 +4588,7 @@
                 classNames: ["grid-champion"],
                 classNameBindings: ["championConfiguration.champion.selectionStatus.selectedByMe:grid-champion-selected", "championConfiguration.champion.selectionStatus.banIntentedByMe:grid-champion-ban-selected", "championConfiguration.champion.selectionStatus.banIntented", "championConfiguration.champion.selectionStatus.pickIntented", "championConfiguration.champion.selectionStatus.pickIntentedPosition", "championConfiguration.champion.selectionStatus.pickIntentedByMe:self-pick-intented", "favoriteIcon:grid-champion-favorite", "loyaltyIconClass", "championConfiguration.champion.freeToPlay:grid-champion-free-to-play", "isCrowdFavorite:grid-champion-crowd-favorite", "freeToPlayForQueueClass", "championConfiguration.champion.rented:grid-champion-rented", "championConfiguration.champion.selectionStatus.isBanned:grid-champion-banned"],
                 attributeBindings: ["championConfiguration.champion.id:data-id", "championConfiguration.disabledAttr:disabled"],
-                layout: n(79),
+                layout: n(78),
                 championAssetSubstitution: s.Ember.inject.service(),
                 championPreviewService: s.Ember.inject.service("champion-preview"),
                 champSelectService: s.Ember.inject.service("champ-select"),
@@ -4888,7 +4827,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(6),
-                a = n(81);
+                a = n(80);
             const i = n(1),
                 {
                     Ember: o,
@@ -4900,10 +4839,10 @@
                 {
                     RunMixin: c
                 } = l.EmberLifeline;
-            n(82), e.exports = o.Component.extend(c, {
+            n(81), e.exports = o.Component.extend(c, {
                 classNames: ["champion-splash-background"],
                 classNameBindings: ["champSelectScreen", "largeAreaAnimationsEnabled:large-area-animations-enabled:large-area-animations-disabled", "isAnimating:is-animating:is-pending", "lastCompletedBanIsPlayerTeam:is-player-team:is-enemy-team", "isRotating:is-rotating:is-not-rotating", "isShowingGrid:is-showing-grid:is-not-showing-grid", "isViewingAbilityPreviews:is-viewing-ability-previews", "newOutroLeft:new-pick-outro-left", "newOutroRight:new-pick-outro-right", "isNotPickingAndNotSelectedScreen:mask-splash", "currentNotification"],
-                layout: n(83),
+                layout: n(82),
                 isViewingAbilityPreviews: !1,
                 animationDispatcher: o.inject.service("animation-dispatcher"),
                 championAssetSubstitution: o.inject.service(),
@@ -5069,7 +5008,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            n(85);
+            n(84);
             const s = n(1),
                 {
                     Ember: a
@@ -5077,7 +5016,7 @@
             e.exports = a.Component.extend({
                 classNames: ["champion-splash-ring"],
                 classNameBindings: ["champSelectScreen", "actingSummonerCellClass", "largeAreaAnimationsEnabled:animation-enabled", "shouldPlayIntroAnimation:should-play-intro", "isHeaderExpanded:expanded-header", "isDemacia:is-Demacia"],
-                layout: n(86),
+                layout: n(85),
                 largeAreaAnimationsEnabled: a.computed.equal("uxSettings.largeAreaAnimationsEnabled", !0),
                 actingSummonerCellClass: a.computed("actingSummonerCell", (function() {
                     return "summoner-acting-now-" + this.get("actingSummonerCell")
@@ -5104,13 +5043,13 @@
             "use strict";
             var s = n(1),
                 a = n(6);
-            n(88);
+            n(87);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline;
             e.exports = s.Ember.Component.extend(i, {
                 classNames: ["champion-preview"],
-                layout: n(89),
+                layout: n(88),
                 tra: s.tra,
                 championData: null,
                 isTeammate: !1,
@@ -5276,11 +5215,11 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(91);
+            n(90);
             const a = s.Ember.Component.extend({
                 classNames: ["champ-select-chroma-modal"],
                 classNameBindings: ["baseSkin.chromaPreviewPath:chroma-view"],
-                layout: n(92),
+                layout: n(91),
                 didReceiveAttrs: function() {
                     this._super(...arguments);
                     const e = this.get("baseSkin"),
@@ -5337,8 +5276,8 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(94), e.exports = s.Ember.Component.extend({
-                layout: n(95),
+            n(93), e.exports = s.Ember.Component.extend({
+                layout: n(94),
                 classNames: ["disconnect-notification"],
                 champSelectDisconnectService: s.Ember.inject.service("champ-select-disconnect"),
                 init: function() {
@@ -5413,15 +5352,15 @@
                 i = (s = n(4)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(97),
+                o = n(96),
                 l = n(9),
                 r = n(6);
-            n(99);
+            n(98);
             const {
                 DomMixin: c
             } = a.EmberAddons.EmberLifeline, m = a.UiKitPlugin.getLayerManager(), d = a.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
             e.exports = a.Ember.Component.extend(c, {
-                layout: n(100),
+                layout: n(99),
                 classNames: ["emotes-edit-button-container"],
                 classNameBindings: ["disabled", "showingEmotes"],
                 showingEmotes: !1,
@@ -5489,7 +5428,7 @@
                 })
             };
             var s = n(1);
-            n(98);
+            n(97);
             s.ComponentFactory.setFactory("FullScreenModal", (function(e) {
                 const t = document.createElement("div");
                 t.className = e.elementClassName;
@@ -5512,7 +5451,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(102);
+            n(101);
             const {
                 RunMixin: a
             } = s.EmberAddons.EmberLifeline;
@@ -5521,7 +5460,7 @@
                 classNames: ["flyout-selector-button-container"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item"],
                 attributeBindings: ["data-id"],
-                layout: n(103),
+                layout: n(102),
                 isItemVisible: !1,
                 "data-id": s.Ember.computed.alias("item.id"),
                 isSelectedItem: s.Ember.computed("selectedItem", "item", (function() {
@@ -5572,9 +5511,9 @@
                 RunMixin: l,
                 DomMixin: r
             } = a.EmberAddons.EmberLifeline;
-            n(105);
+            n(104);
             e.exports = a.Ember.Component.extend(l, r, {
-                layout: n(106),
+                layout: n(105),
                 classNames: ["flyout-selector-trigger-button"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton", "isSpellLocked:locked", "isSpellLocked:swap-jungle-button"],
                 disabled: !1,
@@ -5633,7 +5572,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, n(108);
+            }), t.default = void 0, n(107);
             const s = n(1),
                 {
                     Ember: a,
@@ -5647,7 +5586,7 @@
                 } = s;
             var r = a.Component.extend(o, {
                 classNames: ["game-event-info-card"],
-                layout: n(109),
+                layout: n(108),
                 animationTimeline: null,
                 didInsertElement: function() {
                     const e = this.get("element"),
@@ -5741,8 +5680,8 @@
                     GAME_CFG_BLIND_DRAFT_ST: "blind_draft",
                     GAME_MUTATOR_OVERRIDE_SHOWDOWN: "showdown"
                 };
-            n(111), e.exports = a.Component.extend({
-                layout: n(112),
+            n(110), e.exports = a.Component.extend({
+                layout: n(111),
                 classNameBindings: ["mutatorName::hidden"],
                 teamSizeText: a.computed("teamSize", (function() {
                     return this.get("tra").formatString("map_size", {
@@ -5778,7 +5717,7 @@
                     default: e
                 }
             }
-            n(114);
+            n(113);
             const r = "sfx-ui",
                 c = a.default.createSound(r, "/fe/lol-champ-select/sounds/sfx-cs-draft-ban-button-hover.ogg"),
                 m = a.default.createSound(r, "/fe/lol-champ-select/sounds/sfx-cs-lockin-button-hover.ogg"),
@@ -5788,7 +5727,7 @@
             e.exports = s.Ember.Component.extend(o.default, {
                 classNames: ["lock-in"],
                 classNameBindings: ["visible:visible:hidden", "summoner.isPickingNow:picking", "summoner.isVotingNow:picking", "summoner.isBanningNow:banning"],
-                layout: n(115),
+                layout: n(114),
                 requestPending: !1,
                 disabled: s.Ember.computed("disabledReason", (function() {
                     return void 0 !== this.get("disabledReason")
@@ -5932,14 +5871,14 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(71),
+                a = n(70),
                 i = n(9),
                 o = n(6);
-            n(117);
+            n(116);
             const l = [11, 21, 453],
                 r = "/lol-client-config";
             var c = s.Ember.Component.extend({
-                layout: n(118),
+                layout: n(117),
                 classNames: ["loadouts-edit-component"],
                 classNameBindings: ["isDemacia:is-Demacia"],
                 loadoutsService: s.Ember.inject.service("champ-select-loadouts"),
@@ -6087,8 +6026,8 @@
                     RunMixin: g
                 } = m.EmberLifeline,
                 f = r("/lol-perks", u().getSocket());
-            n(120), e.exports = c.Component.extend(g, {
-                layout: n(121),
+            n(119), e.exports = c.Component.extend(g, {
+                layout: n(120),
                 classNames: ["perks-page-dropdown-container"],
                 classNameBindings: ["currentPerksPageInvalid"],
                 shouldShowDropdownHighlight: !1,
@@ -6259,9 +6198,9 @@
                 {
                     Ember: a
                 } = s;
-            n(123);
+            n(122);
             e.exports = a.Component.extend({
-                layout: n(124),
+                layout: n(123),
                 tagName: "lol-uikit-dropdown-option",
                 classNames: ["perks-page-dropdown-option"],
                 attributeBindings: ["isSelected:selected", "tagName:slot"],
@@ -6320,7 +6259,7 @@
             var s, a = (s = n(4)) && s.__esModule ? s : {
                 default: s
             };
-            n(126);
+            n(125);
             const i = n(1),
                 {
                     Ember: o,
@@ -6332,7 +6271,7 @@
             e.exports = o.Component.extend(r, {
                 classNames: ["phase-transition"],
                 classNameBindings: ["visible:visible:removed"],
-                layout: n(127),
+                layout: n(126),
                 phaseTransitionLabel: o.computed("ceremonyStringSuffix", "tra.phase_transition_finalization", "tra.phase_transition_one_ban_phase", "tra.phase_transition_one_pick_phase", "tra.phase_transition_one_vote_phase", "tra.phase_transition_ban_1", "tra.phase_transition_ban_2", "tra.phase_transition_pick_1", "tra.phase_transition_pick_2", (function() {
                     const e = `tra.phase_transition_${this.get("ceremonyStringSuffix")}`;
                     return this.get(e)
@@ -6363,9 +6302,9 @@
             var s, a = (s = n(4)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(81),
+                i = n(80),
                 o = n(6);
-            n(129);
+            n(128);
             const l = n(1),
                 {
                     Ember: r,
@@ -6380,7 +6319,7 @@
             e.exports = r.Component.extend(d, {
                 classNames: ["pick-ban-ring"],
                 classNameBindings: ["champSelectScreen", "isInit:is-init:is-waiting", "isAnimating:is-animating:is-pending", "isTeamBan:is-player-team:is-enemy-team", "shouldShowExpandedRing:expanded-ring", "largeAreaAnimationsEnabled:large-area-animations-enabled:large-area-animations-disabled"],
-                layout: n(130),
+                layout: n(129),
                 isAnimating: r.computed.equal("banSlashAnimationState", i.ANIMATION_STATES.STARTED),
                 banSlashAnimating: !1,
                 isInit: !1,
@@ -6452,7 +6391,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(6);
-            n(132);
+            n(131);
             const a = n(1),
                 {
                     Ember: i,
@@ -6468,7 +6407,7 @@
             e.exports = i.Component.extend(r, {
                 classNames: ["pick-phase"],
                 classNameBindings: ["shouldShow:pick-phase-visible:pick-phase-hidden", "shouldShowGrid:champion-grid-visible:champion-grid-hidden"],
-                layout: n(133),
+                layout: n(132),
                 championAssetSubstitution: i.inject.service(),
                 championPreviewService: i.inject.service("champion-preview"),
                 gridRequested: void 0,
@@ -6606,8 +6545,8 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(135), e.exports = s.Ember.Component.extend({
-                layout: n(136),
+            n(134), e.exports = s.Ember.Component.extend({
+                layout: n(135),
                 classNames: ["player-name-wrapper"]
             })
         }, (e, t, n) => {
@@ -6630,9 +6569,9 @@
                     datadogRum: o,
                     Ember: l
                 } = i;
-            n(138), e.exports = l.Component.extend({
+            n(137), e.exports = l.Component.extend({
                 classNameBindings: ["isSpectating:quit-spectate-button:quit-button"],
-                layout: n(139),
+                layout: n(138),
                 actions: {
                     quitCustom: function() {
                         o.startOperation(o.XP_CGL_PREGAME_CHAMP_SELECT_QUIT);
@@ -6670,12 +6609,12 @@
                     default: e
                 }
             }
-            n(141);
+            n(140);
             const {
                 RunMixin: r
             } = s.EmberAddons.EmberLifeline, c = s.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select"), m = "sfx-ui";
             e.exports = s.Ember.Component.extend(r, {
-                layout: n(142),
+                layout: n(141),
                 classNameBindings: [":reroll-button"],
                 didInsertElement() {
                     this._super(...arguments), this.setupResetHandler()
@@ -6748,8 +6687,8 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var s = n(81);
-            n(144);
+            var s = n(80);
+            n(143);
             const a = n(1),
                 {
                     Ember: i
@@ -6760,7 +6699,7 @@
             e.exports = i.Component.extend({
                 classNames: ["ring-gear-component"],
                 classNameBindings: ["champSelectScreen", "isInit:is-init:is-waiting", "shouldShowExpandedRing:expanded-ring:default-ring", "isAnimating:is-animating:is-pending", "isTeamBan:is-player-team:is-enemy-team", "isActive:is-active", "isRotating:is-rotating:is-not-rotating", "isBanCompleted:is-ban-completed", "largeAreaAnimationsEnabled:large-area-animations-enabled:large-area-animations-disabled", "isViewingAbilityPreviews:is-viewing-ability-previews"],
-                layout: n(145),
+                layout: n(144),
                 animationDispatcher: i.inject.service("animation-dispatcher"),
                 isAnimating: i.computed.equal("banLockedInAnimationState", s.ANIMATION_STATES.STARTED),
                 isRotating: i.computed.equal("banRotationAnimationState", s.ANIMATION_STATES.STARTED),
@@ -6804,7 +6743,7 @@
                 RunMixin: a
             } = s.EmberAddons.EmberLifeline, i = s.UiKitPlugin.getTemplateHelper();
             var o = s.Ember.Component.extend(a, {
-                layout: n(147),
+                layout: n(146),
                 classNames: ["rune-recommender-button-component"],
                 didUpdateAttrs: function() {
                     this._super(...arguments);
@@ -6857,7 +6796,7 @@
                 {
                     EmberHelpers: l
                 } = i;
-            n(149);
+            n(148);
             const r = i.EmberDataBinding({
                 Ember: o,
                 websocket: i.getProvider().getSocket(),
@@ -6867,7 +6806,7 @@
             });
             e.exports = o.Component.extend(r, {
                 tagName: "div",
-                layout: n(150),
+                layout: n(149),
                 skinPurchaseService: o.inject.service("skin-purchase"),
                 meetsChampionRequirement: o.computed.alias("skin.isChampionUnlocked"),
                 isSelected: o.computed("skin.id", "selectedSkinId", (function() {
@@ -6941,7 +6880,7 @@
                 {
                     RunMixin: r
                 } = s.EmberAddons.EmberLifeline;
-            n(90), n(152);
+            n(89), n(151);
             const c = s.Ember.Object.extend({
                     containerStyle: s.Ember.computed("offset", "faded", (function() {
                         const e = this.get("offset");
@@ -6980,7 +6919,7 @@
                     }))
                 });
             e.exports = s.Ember.Component.extend(r, {
-                layout: n(153),
+                layout: n(152),
                 classNames: ["skin-carousel"],
                 classNameBindings: ["willTransition"],
                 willTransition: !1,
@@ -7212,9 +7151,9 @@
                 {
                     EmberHelpers: i
                 } = s;
-            n(155), e.exports = a.Component.extend({
+            n(154), e.exports = a.Component.extend({
                 classNames: ["champion-skin-name"],
-                layout: n(156),
+                layout: n(155),
                 champSelectService: a.inject.service("champ-select"),
                 skinName: i.throttled("skin.name", 300),
                 fromLuckyCard: a.computed("allowSubsetChampionPicks", "skin.championId", "champSelectService.subsetChampionIds", (function() {
@@ -7233,7 +7172,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            n(158);
+            n(157);
             const s = n(1),
                 {
                     Ember: a
@@ -7250,7 +7189,7 @@
                 });
             e.exports = a.Component.extend(o, {
                 classNames: ["skin-purchase"],
-                layout: n(159),
+                layout: n(158),
                 skinPurchaseService: a.inject.service("skin-purchase"),
                 disabled: i.computedGate("skinInfo.active", "invalidPriceData", "viewSkin.isChampionUnlocked", "jmxSettings.LcuChampionSelect.SkinPurchaseEnabled", "jmxSettings.LcuChampionSelect.SkinPurchaseTime", "timeRemaining", "inFinalizationPhase", "invalidSkinInfoTag", (function() {
                     return !this.get("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled") || !!(!this.get("viewSkin.isChampionUnlocked") || !this.get("skinInfo.active") || this.get("timeRemaining") < this.get("jmxSettings.LcuChampionSelect.SkinPurchaseTime") && this.get("inFinalizationPhase") || this.get("invalidSkinInfoTag") || this.get("invalidPriceData"))
@@ -7305,10 +7244,10 @@
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline;
-            n(161), e.exports = a.Ember.Component.extend(o, {
+            n(160), e.exports = a.Ember.Component.extend(o, {
                 classNames: ["skin-select"],
                 classNameBindings: ["showRerollButton:has-reroll"],
-                layout: n(162),
+                layout: n(161),
                 skinCarouselViewSkinId: void 0,
                 parentSkinIdToSelectedChromaIdMap: {},
                 championAssetSubstitution: a.Ember.inject.service(),
@@ -7403,9 +7342,9 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                a = n(71),
+                a = n(70),
                 i = n(6),
-                o = n(29);
+                o = n(163);
             n(164);
             const {
                 RunMixin: l
@@ -7428,9 +7367,11 @@
                 shouldShowSwapTooltip: s.Ember.computed("isLeft", "swapTooltipShown", "showPositionAssignment", "team.length", "isRoleSwapEnabled", (function() {
                     return this.get("isLeft") && !this.get("swapTooltipShown") && !this.get("showPositionAssignment") && this.get("team.length") > 1 && this.get("isRoleSwapEnabled")
                 })),
-                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return o.CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e) || o.PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", "championSwapOnlyQueueIds", "pickOrderSwapOnlyQueueIds", (function() {
+                    const e = this.get("queueId"),
+                        t = this.get("championSwapOnlyQueueIds") || [],
+                        n = this.get("pickOrderSwapOnlyQueueIds") || [];
+                    return t.includes(e) || n.includes(e)
                 })),
                 init() {
                     this._super(...arguments), this.get("settingsService").observe("/v2/ready", this, this.handleSettingsReady)
@@ -7555,14 +7496,71 @@
                     }
                 }
             })
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.INVALID_SWAP_ID = void 0, t.getOngoingSwapServiceCallPath = function(e) {
+                return o[e]
+            }, t.getSwapServiceCallPath = function(e) {
+                return i[e]
+            };
+            t.SETTINGS_SWAP_TOGGLE_TOOLTIP = {
+                SEEN_KEY: "swapToggleTooltipSeen",
+                ICON_CLASS: ".swap-button-component",
+                TITLE_CLASS: "swapping-tooltip-title"
+            };
+            t.INVALID_SWAP_ID = -1;
+            t.SWAP_TYPES = {
+                CHAMPION: "CHAMPION",
+                PICK_ORDER: "PICK_ORDER",
+                POSITION: "POSITION"
+            };
+            const n = {
+                RECEIVED: "RECEIVED",
+                AVAILABLE: "AVAILABLE",
+                SENT: "SENT",
+                BUSY: "BUSY",
+                DECLINED: "DECLINED",
+                ACCEPTED: "ACCEPTED",
+                CANCELLED: "CANCELLED"
+            };
+            t.SWAP_STATES = n;
+            const s = [n.ACCEPTED, n.DECLINED, n.CANCELLED, n.BUSY];
+            t.SWAP_RESOLVED_STATES = s;
+            const a = [n.RECEIVED, n.SENT, n.BUSY];
+            t.SWAP_CREATED_STATES = a;
+            t.SWAP_SERVICE_CALL_METHODS = {
+                CANCEL: "cancel",
+                ACCEPT: "accept",
+                DECLINE: "decline",
+                CLEAR: "clear"
+            };
+            const i = {
+                CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
+                PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
+                POSITION: "/lol-champ-select/v1/session/position-swaps"
+            };
+            t.SWAP_SESSION_SERVICE_CALL_PATHS = i;
+            const o = {
+                CHAMPION: "/lol-champ-select/v1/ongoing-champion-swap",
+                PICK_ORDER: "/lol-champ-select/v1/ongoing-pick-order-swap",
+                POSITION: "/lol-champ-select/v1/ongoing-position-swap"
+            };
+            t.SWAP_ONGOING_SERVICE_CALL_PATHS = o;
+            t.SWAP_SERVICE_CALL_TIMEOUTS = {
+                CANCEL_MS: 15e3,
+                CLEAR_MS: 1700,
+                ACCEPTED_MS: 200
+            }
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "eeWRPDXL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["party ",["helper",["if"],[["get",["shouldShow"]],"visible","hidden"],null]]]],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldUseSubteamLayout"]]],null,6,1],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-timer-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["summoner-timer"],null,[["isInfinite","timerCellId","hideSummonerTimer","formattedTime","isMyTeam"],[["get",["timer","isInfinite"]],["get",["timerCellId"]],["get",["hideSummonerTimer"]],["get",["formattedTime"]],["get",["isLeft"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-wrapper ",["helper",["if"],[["get",["summoner","isPlaceholder"]],"removed","visible"],null]," ",["helper",["if"],[["get",["isLeft"]],"left","right"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lines ",["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["summoner-object"],null,[["team","summoner","champSelectScreen","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["team"]],["get",["summoner"]],["get",["champSelectScreen"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["summoner"]},{"statements":[["block",["each"],[["get",["summoners"]]],null,0]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-wrapper ",["helper",["if"],[["get",["summoner","isPlaceholder"]],"removed","visible"],null]," ",["helper",["if"],[["get",["isLeft"]],"left","right"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["lines ",["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["append",["helper",["summoner-object"],null,[["team","summoner","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","isLeft","showChampionIconTooltip","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["team"]],["get",["summoner"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["isLeft"]],true,["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["subteamSummonersData","subteamLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","subteam-summoners-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-wrapper"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],3],["text","          "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-arrow"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteamSummonersData","subteamIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["each"],[["get",["subteamSummonersData","summoners"]]],null,2],["text","      "],["close-element"],["text","\\n"]],"locals":["subteamSummonersData"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","subteams-current-action-type-header"],["flush-element"],["append",["unknown",["subteamsCurrentActionTypeHeader"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["subteamsCurrentActionTypeHeader"]]],null,5],["block",["each"],[["get",["subteamsSummonersData"]]],null,4]],"locals":[]}],"hasPartials":false}',
+                id: "AK8N4wOJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["party ",["helper",["if"],[["get",["shouldShow"]],"visible","hidden"],null]]]],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldUseSubteamLayout"]]],null,6,1],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-timer-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["summoner-timer"],null,[["isInfinite","timerCellId","hideSummonerTimer","formattedTime","isMyTeam"],[["get",["timer","isInfinite"]],["get",["timerCellId"]],["get",["hideSummonerTimer"]],["get",["formattedTime"]],["get",["isLeft"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-wrapper ",["helper",["if"],[["get",["summoner","isPlaceholder"]],"removed","visible"],null]," ",["helper",["if"],[["get",["isLeft"]],"left","right"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lines ",["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["summoner-object"],null,[["team","summoner","champSelectScreen","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["team"]],["get",["summoner"]],["get",["champSelectScreen"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["summoner"]},{"statements":[["block",["each"],[["get",["summoners"]]],null,0]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-wrapper ",["helper",["if"],[["get",["summoner","isPlaceholder"]],"removed","visible"],null]," ",["helper",["if"],[["get",["isLeft"]],"left","right"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["lines ",["helper",["if"],[["get",["showPositionAssignment"]],"hidden","visible"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["append",["helper",["summoner-object"],null,[["team","summoner","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","isLeft","showChampionIconTooltip","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","isFiveSecondsBeforeGameStart","toggleSwapSelectionModal","copyEnemyNames"],[["get",["team"]],["get",["summoner"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["isLeft"]],true,["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["isFiveSecondsBeforeGameStart"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["helper",["action"],[["get",[null]],"copyEnemyNames"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["subteamSummonersData","subteamLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","subteam-summoners-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-wrapper"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],3],["text","          "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-arrow"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteamSummonersData","subteamIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["each"],[["get",["subteamSummonersData","summoners"]]],null,2],["text","      "],["close-element"],["text","\\n"]],"locals":["subteamSummonersData"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","subteams-current-action-type-header"],["flush-element"],["append",["unknown",["subteamsCurrentActionTypeHeader"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["subteamsCurrentActionTypeHeader"]]],null,5],["block",["each"],[["get",["subteamsSummonersData"]]],null,4]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -7778,7 +7776,7 @@
                     default: s
                 },
                 o = n(6),
-                l = n(29);
+                l = n(163);
             n(174);
             e.exports = a.Ember.Component.extend({
                 layout: n(175),
@@ -8767,8 +8765,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "C6rdtCcD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showSubteamIcon"]]],null,14],["block",["if"],[["get",["uxSettings","largeAreaAnimationsEnabled"]]],null,12,11],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["active-bar ",["helper",["if"],[["get",["summoner","shouldShowActingBar"]],"","hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","active-bar-spacer"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-container-wrapper"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-spells ",["helper",["if"],[["get",["summoner","shouldShowSpells"]],"","removed"],null]," ",["helper",["unless"],[["get",["bright"]],"dim"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","spell spell1"],["dynamic-attr","src",["unknown",["summoner","spell1IconPath"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","spell spell2"],["dynamic-attr","src",["unknown",["summoner","spell2IconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-ban-item ",["helper",["if"],[["get",["summoner","shouldShowBanIntentIcon"]],"visible","removed"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champ-ban-icon"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","ban-icon-overlay"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","summoner-container-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-container ",["helper",["if"],[["get",["summoner","shouldShowExpanded"]],"expanded","collapsed"],null]]]],["flush-element"],["text","\\n    "],["open-element","lol-parties-comm-halo",[]],["dynamic-attr","puuid",["unknown",["summoner","puuid"]],null],["static-attr","size","medium"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-icon-container ",["helper",["unless"],[["get",["bright"]],"dim"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showChampionIconTooltip"]]],null,10],["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-pop-animation ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-shine-animation ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-glow-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-magic-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icons"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","champion-icons-bg"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["positionIconPath"]]],null,7],["block",["if"],[["get",["isBraveryChampion"]]],null,6,5],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","champion-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-ring-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-magic-animation"],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-magic-animation-inner ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-magic-animation-outer ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["image-ring-spinner\\n            ",["helper",["if"],[["get",["showSummonerActing"]],"visible","removed"],null],"\\n            ",["helper",["if"],[["get",["isLeft"]],"left-side","right-side"],null],"\\n            ",["helper",["if"],[["get",["summoner","isSelf"]],"is-self"],null],"\\n            ",["helper",["if"],[["get",["uxSettings","largeAreaAnimationsEnabled"]],"animated","not-animated"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["summoner-muted-icon ",["helper",["unless"],[["get",["summoner","showMuted"]],"removed"],null]]]],["static-attr","src","/fe/lol-champ-select/images/summoner-object/button-mute.svg"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showSwapButton"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-details-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-details"],["dynamic-attr","style",["unknown",["playerDetailsStyle"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-vote-projection ",["helper",["unless"],[["get",["voteProjectionText"]],"no-vote-percent"],null]]]],["flush-element"],["text","\\n        "],["append",["unknown",["voteProjectionText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-secondary-text ",["helper",["unless"],[["get",["summonerSecondaryText"]],"removed"],null]]]],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","summoner-secondary-text-inner"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-primary-text ",["helper",["unless"],[["get",["summonerPrimaryText"]],"hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["unknown",["summonerPrimaryText"]],false],["text","\\n"],["text","        "],["open-element","div",[]],["static-attr","class","summoner-primary-text-glow"],["flush-element"],["append",["unknown",["summonerPrimaryText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-name ",["helper",["if"],[["get",["showTeamBoostIcon"]],"showing-summoner-booster-icon"],null]]]],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","name-text"],["modifier",["action"],[["get",[null]],"copyEnemyName"]],["flush-element"],["text","\\n          "],["append",["helper",["player-name-wrapper"],null,[["displayName"],[["get",["summoner","summonerObjectDisplayName"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["showTeamBoostIcon"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["summoner-overlay"],null,[["displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","summoner-name-booster-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["swap-button"],null,[["summoner","toggleSwapSelectionModal","uxSettings","recordDidRequestSucceed","summonerHasActiveSwap","queueId"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["uxSettings"]],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["showFlyout"]],null],["dynamic-attr","didShow",["helper",["action"],[["get",[null]],"repositionCaret"],null],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"onFlyoutHide"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["flyoutOptions"]],null],["flush-element"],["text","\\n                    "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                      "],["append",["helper",["champion-preview"],null,[["championData","showPreview"],[["get",["championData"]],["get",["showFlyout"]]]]],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isChampionPreviewEnabled"]]],null,3]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","portrait-icon fit-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["unless"],[["get",["showChampionIconTooltip"]]],null,4],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","portrait-icon fit-icon"],["dynamic-attr","style",["concat",["background-image: url(","/fe/lol-champ-select/images/champion-grid/bravery-champion-circle.png",")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["positionIconPath"]],null],["static-attr","class","svg-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["summoner","championName"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],8]],"locals":[]},{"statements":[["block",["if"],[["get",["summoner","championName"]]],null,9]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["image-magic-background ",["unknown",["summoner","actingBackgroundAnimationState"]]," skin-showcase"]]],["dynamic-attr","style",["unknown",["skinShowcaseStyle"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","uikit-state-machine",[]],["static-attr","state","not-acting"],["dynamic-attr","acting-state",["unknown",["summoner","actingBackgroundAnimationState"]],null],["static-attr","class","video-magic-background-state-machine skin-showcase"],["dynamic-attr","style",["unknown",["skinShowcaseStyle"]],null],["flush-element"],["text","\\n    "],["open-element","uikit-states",[]],["flush-element"],["text","\\n      "],["open-element","uikit-state",[]],["static-attr","name","not-acting"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","intro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","is-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","intro"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","idle"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","outro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","idle"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","outro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","outro"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","not-acting"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","not-acting"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-intro-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","intro"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","intro"]]]]],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-idle-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","idle"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","idle"]]]]],["static-attr","loop","loop"],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-outro-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","outro"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","outro"]]]]],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["subteamLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-wrapper"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],13],["text","    "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-arrow"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteamIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "PSARNzH4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-champ-select\\\\src\\\\app\\\\summoner-object-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showSubteamIcon"]]],null,14],["block",["if"],[["get",["uxSettings","largeAreaAnimationsEnabled"]]],null,12,11],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["active-bar ",["helper",["if"],[["get",["summoner","shouldShowActingBar"]],"","hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","active-bar-spacer"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-container-wrapper"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-spells ",["helper",["if"],[["get",["summoner","shouldShowSpells"]],"","removed"],null]," ",["helper",["unless"],[["get",["bright"]],"dim"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","spell spell1"],["dynamic-attr","src",["unknown",["summoner","spell1IconPath"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","spell spell2"],["dynamic-attr","src",["unknown",["summoner","spell2IconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-ban-item ",["helper",["if"],[["get",["summoner","shouldShowBanIntentIcon"]],"visible","removed"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champ-ban-icon"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","ban-icon-overlay"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","summoner-container-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-container ",["helper",["if"],[["get",["summoner","shouldShowExpanded"]],"expanded","collapsed"],null]]]],["flush-element"],["text","\\n    "],["open-element","lol-parties-comm-halo",[]],["dynamic-attr","puuid",["unknown",["summoner","puuid"]],null],["static-attr","size","medium"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-icon-container ",["helper",["unless"],[["get",["bright"]],"dim"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showChampionIconTooltip"]]],null,10],["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-pop-animation ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-shine-animation ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-glow-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-magic-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icons"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","champion-icons-bg"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["positionIconPath"]]],null,7],["block",["if"],[["get",["isBraveryChampion"]]],null,6,5],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","champion-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-ring-animation"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","champion-icon-pick-snipe-magic-animation"],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-magic-animation-inner ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-ring-magic-animation-outer ",["helper",["if"],[["get",["summoner","shouldShowRingAnimations"]],"visible","removed"],null]]]],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["image-ring-spinner\\n            ",["helper",["if"],[["get",["showSummonerActing"]],"visible","removed"],null],"\\n            ",["helper",["if"],[["get",["isLeft"]],"left-side","right-side"],null],"\\n            ",["helper",["if"],[["get",["summoner","isSelf"]],"is-self"],null],"\\n            ",["helper",["if"],[["get",["uxSettings","largeAreaAnimationsEnabled"]],"animated","not-animated"],null]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["summoner-muted-icon ",["helper",["unless"],[["get",["summoner","showMuted"]],"removed"],null]]]],["static-attr","src","/fe/lol-champ-select/images/summoner-object/button-mute.svg"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showSwapButton"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-details-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-details"],["dynamic-attr","style",["unknown",["playerDetailsStyle"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-vote-projection ",["helper",["unless"],[["get",["voteProjectionText"]],"no-vote-percent"],null]]]],["flush-element"],["text","\\n        "],["append",["unknown",["voteProjectionText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-secondary-text ",["helper",["unless"],[["get",["summonerSecondaryText"]],"removed"],null]]]],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","summoner-secondary-text-inner"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-primary-text ",["helper",["unless"],[["get",["summonerPrimaryText"]],"hidden"],null]]]],["flush-element"],["text","\\n        "],["append",["unknown",["summonerPrimaryText"]],false],["text","\\n"],["text","        "],["open-element","div",[]],["static-attr","class","summoner-primary-text-glow"],["flush-element"],["append",["unknown",["summonerPrimaryText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-name ",["helper",["if"],[["get",["showTeamBoostIcon"]],"showing-summoner-booster-icon"],null]]]],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","name-text"],["modifier",["action"],[["get",[null]],"copyEnemyName"]],["flush-element"],["text","\\n          "],["append",["helper",["player-name-wrapper"],null,[["displayName"],[["get",["summoner","summonerObjectDisplayName"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["showTeamBoostIcon"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["summoner-overlay"],null,[["displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","summoner-name-booster-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["swap-button"],null,[["summoner","toggleSwapSelectionModal","uxSettings","recordDidRequestSucceed","summonerHasActiveSwap","queueId","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["uxSettings"]],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["queueId"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["showFlyout"]],null],["dynamic-attr","didShow",["helper",["action"],[["get",[null]],"repositionCaret"],null],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"onFlyoutHide"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["flyoutOptions"]],null],["flush-element"],["text","\\n                    "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                      "],["append",["helper",["champion-preview"],null,[["championData","showPreview"],[["get",["championData"]],["get",["showFlyout"]]]]],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isChampionPreviewEnabled"]]],null,3]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","portrait-icon fit-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["unless"],[["get",["showChampionIconTooltip"]]],null,4],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","portrait-icon fit-icon"],["dynamic-attr","style",["concat",["background-image: url(","/fe/lol-champ-select/images/champion-grid/bravery-champion-circle.png",")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["positionIconPath"]],null],["static-attr","class","svg-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["summoner","championName"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],8]],"locals":[]},{"statements":[["block",["if"],[["get",["summoner","championName"]]],null,9]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["image-magic-background ",["unknown",["summoner","actingBackgroundAnimationState"]]," skin-showcase"]]],["dynamic-attr","style",["unknown",["skinShowcaseStyle"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","uikit-state-machine",[]],["static-attr","state","not-acting"],["dynamic-attr","acting-state",["unknown",["summoner","actingBackgroundAnimationState"]],null],["static-attr","class","video-magic-background-state-machine skin-showcase"],["dynamic-attr","style",["unknown",["skinShowcaseStyle"]],null],["flush-element"],["text","\\n    "],["open-element","uikit-states",[]],["flush-element"],["text","\\n      "],["open-element","uikit-state",[]],["static-attr","name","not-acting"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","intro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","is-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","intro"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","idle"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-intro-vid"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","outro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","idle"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","outro"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-state",[]],["static-attr","name","outro"],["flush-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-idle-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","not-acting"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-media",[]],["static-attr","selector",".bg-outro-vid"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-transition",[]],["static-attr","next-state","not-acting"],["flush-element"],["text","\\n          "],["open-element","uikit-condition-parameter",[]],["static-attr","name","acting-state"],["static-attr","value","not-acting-background"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-intro-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","intro"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","intro"]]]]],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-idle-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","idle"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","idle"]]]]],["static-attr","loop","loop"],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["bg-outro-vid video-magic-background ",["helper",["unless"],[["get",["isLeft"]],"right"],null]]]],["static-attr","visible-state","outro"],["dynamic-attr","src",["concat",[["unknown",["banMagicVideo","outro"]]]]],["static-attr","cache-name","rcp-fe-lol-champ-select"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["subteamLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-wrapper"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],13],["text","    "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon-arrow"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-select-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteamIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -9437,7 +9435,7 @@
             var s = n(1),
                 a = r(n(2)),
                 i = r(n(4)),
-                o = n(29),
+                o = n(163),
                 l = n(200);
 
             function r(e) {
@@ -9456,13 +9454,13 @@
                 disabled: s.Ember.computed("requestInProgress", (function() {
                     return !!this.get("requestInProgress") || null
                 })),
-                hasChampionSwapOnly: s.Ember.computed("queueId", (function() {
+                hasChampionSwapOnly: s.Ember.computed("queueId", "championSwapOnlyQueueIds", (function() {
                     const e = this.get("queueId");
-                    return o.CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e)
+                    return (this.get("championSwapOnlyQueueIds") || []).includes(e)
                 })),
-                hasPickOrderSwapOnly: s.Ember.computed("queueId", (function() {
+                hasPickOrderSwapOnly: s.Ember.computed("queueId", "pickOrderSwapOnlyQueueIds", (function() {
                     const e = this.get("queueId");
-                    return o.PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                    return (this.get("pickOrderSwapOnlyQueueIds") || []).includes(e)
                 })),
                 swapButtonTooltipText: s.Ember.computed("tra", "tra.swap_tooltip", "swap_champion_tooltip", "hasChampionSwapOnly", "hasPickOrderSwapOnly", "summoner.summonerObjectDisplayName", (function() {
                     const e = this.get("summoner.summonerObjectDisplayName");
@@ -9565,7 +9563,7 @@
                 }(n(1)),
                 a = l(n(2)),
                 i = l(n(4)),
-                o = n(29);
+                o = n(163);
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -10480,6 +10478,18 @@
                     propName: "SkipIntroAnimationsThresholdSeconds",
                     defaultValue: void 0
                 }, {
+                    key: "lol.client_settings.champion_select.champion_swap_only_queue_ids",
+                    propName: "championSwapOnlyQueueIds",
+                    defaultValue: [450, 451, 452, 720, 721, 860, 861, 862]
+                }, {
+                    key: "lol.client_settings.champion_select.pick_order_swap_only_queue_ids",
+                    propName: "pickOrderSwapOnlyQueueIds",
+                    defaultValue: [1700, 1701, 1702, 1704, 1710, 1711, 1712, 1714, 1720, 1731, 1732, 1734, 1736, 1738, 1740, 1741, 1742, 1744, 1750, 1751, 1753, 1756, 1759, 1762, 1765, 1767]
+                }, {
+                    key: "lol.client_settings.champion_select.role_swap_enabled_queue_ids",
+                    propName: "roleSwapEnabledQueueIds",
+                    defaultValue: [400, 401, 402, 403, 420, 421, 422, 440, 441, 442, 480, 481, 482, 483, 490]
+                }, {
                     key: "lol.client_settings.navigation.enableRewardsProgram",
                     propName: "UseNewLoyaltyIcon",
                     defaultValue: !1
@@ -11132,8 +11142,8 @@
                 f = [m, d],
                 _ = [...g, ...f],
                 b = [...p, ...g],
-                v = [...f, ...h];
-            var y = {
+                y = [...f, ...h];
+            var v = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: s,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: i,
@@ -11150,10 +11160,10 @@
                 RATED_TFT_QUEUE_TYPES: f,
                 RANKED_AND_RATED_TFT_QUEUE_TYPES: _,
                 ALL_RANKED_QUEUE_TYPES: b,
-                ALL_RATED_QUEUE_TYPES: v,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...b, ...v]
+                ALL_RATED_QUEUE_TYPES: y,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...b, ...y]
             };
-            t.default = y
+            t.default = v
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12562,21 +12572,21 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.VOTING_PREFS_PATH = t.VOTING_PCO_PATH = t.VOTING_PCO_CATEGORY = t.TIMER_PHASES = t.SWAP_TYPES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.STANDARD_MAX_TEAM_SIZE = t.SOUNDS_PATH = t.SFX_CHANNEL = t.SCREENS = t.RANDOM_CHAMP = t.POSITION_TOP = t.POSITION_SUPPORT = t.POSITION_NONE = t.POSITION_MIDDLE = t.POSITION_JUNGLE = t.POSITION_ICON_PATHS = t.POSITION_BOTTOM = t.POSITION_ANY = t.POSITIONS = t.PLUGIN_NAME = t.PANE_STATES = t.PANES = t.NONE_CHAMP = t.MASTERY_WARNING_ICON = t.MASTERY_TREE_ICONS = t.MASTERY_PREREQ_BARS = t.JADE_SCREEN_NAME = t.JADE_QUEUE_ID = t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.JADE_NAV_ROUTES_CONFIG_PATH = t.JADE_NAV_ROUTES = t.JADE_MAP_ID = t.JADE_HOME_TEMPLATE_TYPES = t.JADE_HOME_TAB_IDS = t.JADE_HOME_STATES = t.JADE_GAME_MODE = t.JADE_CONSTANTS = t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = t.JADE_AUDIO_PATH = t.INVENTORY_TYPES = t.INVALID_SWAP_ID = t.INVALID_SPELL_ID = t.INVALID_SKIN_ID = t.DEFAULT_PANE_TABS = t.DEFAULT_JADE_NAV_ROUTES_CONFIG = t.BLADES_COMPONENT_TYPES = void 0, t.formatBlades = function(e = []) {
+            }), t.VOTING_VIEW_PATH = t.VOTING_PREFS_PATH = t.VOTING_PCO_PATH = t.VOTING_PCO_CATEGORY = t.VOTE_UNANSWERED = t.TIMER_PHASES = t.SWAP_TYPES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.STANDARD_MAX_TEAM_SIZE = t.SOUNDS_PATH = t.SFX_CHANNEL = t.SCREENS = t.RANDOM_CHAMP = t.POSITION_TOP = t.POSITION_SUPPORT = t.POSITION_NONE = t.POSITION_MIDDLE = t.POSITION_JUNGLE = t.POSITION_ICON_PATHS = t.POSITION_BOTTOM = t.POSITION_ANY = t.POSITIONS = t.PLUGIN_NAME = t.PANE_STATES = t.PANES = t.NONE_CHAMP = t.MASTERY_WARNING_ICON = t.MASTERY_TREE_ICONS = t.MASTERY_PREREQ_BARS = t.JADE_SCREEN_NAME = t.JADE_QUEUE_ID = t.JADE_NAV_ROUTES_CONFIG_PATH = t.JADE_NAV_ROUTES = t.JADE_MAP_ID = t.JADE_HOME_TEMPLATE_TYPES = t.JADE_HOME_TAB_IDS = t.JADE_HOME_STATES = t.JADE_GAME_MODE = t.JADE_CONSTANTS = t.JADE_AUDIO_PATH = t.INVENTORY_TYPES = t.INVALID_SWAP_ID = t.INVALID_SPELL_ID = t.INVALID_SKIN_ID = t.DEFAULT_PANE_TABS = t.DEFAULT_JADE_NAV_ROUTES_CONFIG = t.BLADES_COMPONENT_TYPES = void 0, t.formatBlades = function(e = []) {
                 const t = [],
                     n = {};
                 for (const s of e) s?.type === M.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === M.VOTING_CONTENT_BLOCK && (D(s) ? n.voting = s : n.votingError = !0);
                 return n.mastheadBlades = t, n
             }, t.getInventoryTypeUuidToPaw = function() {
-                if (!y) {
+                if (!v) {
                     const {
                         INVENTORY_TYPE_IDS: e
                     } = s.default.ShoppefrontComponents;
-                    y = Object.fromEntries(Object.entries(e).filter((([e]) => e in a.PAW.INVENTORY_TYPES)).map((([e, t]) => [t, a.PAW.INVENTORY_TYPES[e]])))
+                    v = Object.fromEntries(Object.entries(e).filter((([e]) => e in a.PAW.INVENTORY_TYPES)).map((([e, t]) => [t, a.PAW.INVENTORY_TYPES[e]])))
                 }
-                return y
+                return v
             }, t.getSwapServiceCallPath = function(e) {
-                return A[e]
+                return I[e]
             }, t.telemetryDataObjectFormatter = function(e, t, n, s) {
                 return {
                     eventName: e,
@@ -12621,12 +12631,12 @@
                 req_bar_long_max: p.default
             };
             t.MASTERY_PREREQ_BARS = b;
-            const v = {
+            const y = {
                 offense: i.default,
                 defense: o.default,
                 utility: l.default
             };
-            t.MASTERY_TREE_ICONS = v;
+            t.MASTERY_TREE_ICONS = y;
             t.MASTERY_WARNING_ICON = "/fe/lol-jade/images/jade-warning.png";
             t.JADE_AUDIO_PATH = "/fe/lol-jade/audio/";
             t.INVENTORY_TYPES = {
@@ -12639,7 +12649,7 @@
                 MASTERY: "JADE_MASTERY",
                 MASTERY_PAGE: "JADE_MASTERY_PAGE"
             };
-            let y = null;
+            let v = null;
             t.JADE_QUEUE_ID = 4310;
             t.JADE_MAP_ID = 453;
             t.JADE_GAME_MODE = "JADE";
@@ -12688,11 +12698,11 @@
             t.POSITION_JUNGLE = E;
             const k = "middle";
             t.POSITION_MIDDLE = k;
-            const P = "bottom";
-            t.POSITION_BOTTOM = P;
-            const w = "support";
-            t.POSITION_SUPPORT = w;
-            const C = ["top", E, k, P, w];
+            const w = "bottom";
+            t.POSITION_BOTTOM = w;
+            const P = "support";
+            t.POSITION_SUPPORT = P;
+            const C = ["top", E, k, w, P];
             t.POSITIONS = C;
             t.POSITION_NONE = "NONE";
             t.POSITION_ICON_PATHS = {
@@ -12705,14 +12715,12 @@
             t.SFX_CHANNEL = "sfx-ui";
             t.INVALID_SKIN_ID = 0;
             t.STANDARD_MAX_TEAM_SIZE = 5;
-            t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = [];
-            t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 4310, 3262];
-            const A = {
+            const I = {
                 CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
                 PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
                 POSITION: "/lol-champ-select/v1/session/position-swaps"
             };
-            t.SWAP_SESSION_SERVICE_CALL_PATHS = A;
+            t.SWAP_SESSION_SERVICE_CALL_PATHS = I;
             t.SWAP_TYPES = {
                 CHAMPION: "CHAMPION",
                 PICK_ORDER: "PICK_ORDER",
@@ -12729,10 +12737,12 @@
                 DEFAULT: "CLASSIC"
             };
             t.VOTING_PREFS_PATH = "/lol-settings/v2/account/VotingPreferences/jade-voting-system";
-            const I = "jade-voting";
-            t.VOTING_PCO_CATEGORY = I;
-            const T = `/lol-summoner-profiles/v1/pco/${I}`;
+            const A = "jade-voting";
+            t.VOTING_PCO_CATEGORY = A;
+            const T = `/lol-summoner-profiles/v1/pco/${A}`;
             t.VOTING_PCO_PATH = T;
+            t.VOTING_VIEW_PATH = "/lol-summoner-profiles/v1/get-jade-voting-view";
+            t.VOTE_UNANSWERED = -1;
             const M = {
                 MASTHEAD_CONTENT_BLOCK: "leagueClientMastheadContentBlock",
                 LEAGUE_CLIENT_TAB_CONTENT: "leagueClientTabContent",
@@ -12744,7 +12754,7 @@
             };
 
             function D(e) {
-                return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate)
+                return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate) && Array.isArray(e?.voting) && e.voting.length > 0
             }
             t.BLADES_COMPONENT_TYPES = M;
             const R = {
@@ -12756,18 +12766,18 @@
                 BATTLEPASS: "battlepass"
             };
             t.JADE_NAV_ROUTES = R;
-            const L = {
+            const O = {
                 HOME: R.HOME,
                 VOTING: "voting",
                 BATTLEPASS: R.BATTLEPASS
             };
-            t.JADE_HOME_TAB_IDS = L;
+            t.JADE_HOME_TAB_IDS = O;
             t.JADE_NAV_ROUTES_CONFIG_PATH = "/lol-client-config/v3/client-config/lol.client_settings.jade.navRoutes";
-            const O = Object.fromEntries(Object.entries(R).map((([e, t]) => [t, {
+            const L = Object.fromEntries(Object.entries(R).map((([e, t]) => [t, {
                 key: e,
                 enabled: !0
             }])));
-            t.DEFAULT_JADE_NAV_ROUTES_CONFIG = O
+            t.DEFAULT_JADE_NAV_ROUTES_CONFIG = L
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "mastery_icon_offense.png"
@@ -13334,11 +13344,12 @@
                 r = n(312);
             const c = "/lol-settings/v2/account/LCUPreferences/jade-ftux",
                 m = "jade-home",
-                d = "/lol-jade-dev/v1/force-error",
-                u = "/lol-jade-dev/v1/force-voting-error",
-                p = "/lol-jade-dev/v1/force-shop-error",
-                h = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
-            var g = s.Ember.Controller.extend(i.PurchaseModalMixin, {
+                d = "9ec524bf-3628-4f5a-9139-5db0eb650a3b",
+                u = "/lol-jade-dev/v1/force-error",
+                p = "/lol-jade-dev/v1/force-voting-error",
+                h = "/lol-jade-dev/v1/force-shop-error",
+                g = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
+            var f = s.Ember.Controller.extend(i.PurchaseModalMixin, {
                 jadeHomePcs: s.Ember.inject.service("jade-home-pcs"),
                 patcher: s.Ember.inject.service("patcher"),
                 state: a.JADE_HOME_STATES.INACTIVE,
@@ -13418,15 +13429,33 @@
                     }))
                 },
                 _loadVotingStatus() {
+                    this._loadHasVoted(), this._loadResultsSeen()
+                },
+                _loadHasVoted() {
+                    const e = this.get("votingData.votingSessionID");
+                    s.db.get(a.VOTING_VIEW_PATH, {
+                        skipCache: !0
+                    }).then((t => {
+                        if (this.isDestroying || this.isDestroyed) return;
+                        const n = t && t.votingEventId;
+                        if (n && e && n !== e) return void this.set("hasVoted", !1);
+                        const s = t && t.votingSelections || [];
+                        this.set("hasVoted", s.some((function(e) {
+                            return e && e.votingOptionId !== a.VOTE_UNANSWERED
+                        })))
+                    })).catch((e => {
+                        s.logger.error(`Failed to read ${a.VOTING_VIEW_PATH}; leaving hasVoted unchanged:`, e)
+                    }))
+                },
+                _loadResultsSeen() {
                     const e = this.get("votingData.votingSessionID");
                     s.db.get(a.VOTING_PREFS_PATH).then((t => {
                         if (this.isDestroying || this.isDestroyed) return;
                         const n = t && t.data,
                             s = n && n.eventId;
-                        if (s && s !== e) return this.set("hasVoted", !1), void this.set("hasSeenResults", !1);
-                        this.set("hasVoted", !(!n || !n.votedOptionId)), this.set("hasSeenResults", !(!n || !n.hasSeenResults))
-                    })).catch((() => {
-                        this.set("hasVoted", !1), this.set("hasSeenResults", !1)
+                        s && s !== e ? this.set("hasSeenResults", !1) : this.set("hasSeenResults", !(!n || !n.hasSeenResults))
+                    })).catch((e => {
+                        s.logger.error(`Failed to read ${a.VOTING_PREFS_PATH}; treating results as unseen:`, e), this.set("hasSeenResults", !1)
                     }))
                 },
                 async _loadPageContent() {
@@ -13442,29 +13471,29 @@
                         } = (0, a.formatBlades)(t.blades);
                         if (!n || 0 === n.length) return void this.set("state", a.JADE_HOME_STATES.ERROR);
                         const r = n.filter((e => "image" === e?.header?.media?.type)).map((e => e?.header?.media?.url));
-                        await s.Ember.RSVP.all([(0, l.preloadImages)(r), (0, l.preloadImages)(h)]), this.set("pages", n), this.set("votingData", i), this.set("votingError", !!o), i && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
+                        await s.Ember.RSVP.all([(0, l.preloadImages)(r), (0, l.preloadImages)(g)]), this.set("pages", n), this.set("votingData", i), this.set("votingError", !!o), i && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
                     } catch (e) {
                         s.logger.error(`Failed to load page content for ${m}`, e), this.set("state", a.JADE_HOME_STATES.ERROR)
                     }
                 },
                 _loadVotingPower() {
                     this._progressionBinding = (0, s.dataBinding)("/lol-progression", s.socket), (0, r.whenProgressionReady)(this, (() => {
-                        this._progressionBinding.observe("/v1/groups/9ec524bf-3628-4f5a-9139-5db0eb650a3b/instanceData", this, (e => {
+                        this._progressionBinding.observe(`/v1/groups/${d}/instanceData`, this, (e => {
                             this.set("votingPower", e?.counters?.[0]?.counterValue || 0)
                         }))
                     }))
                 },
                 _setupDevForceError() {
-                    s.db.observe(d, this, (e => {
+                    s.db.observe(u, this, (e => {
                         this.isDestroying || this.isDestroyed || (e ? this.set("state", a.JADE_HOME_STATES.ERROR) : this.get("isError") && (this.get("pages.length") ? this.set("state", a.JADE_HOME_STATES.READY) : this._loadPageContent()))
-                    })), s.db.observe(u, this, (e => {
-                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
                     })), s.db.observe(p, this, (e => {
+                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
+                    })), s.db.observe(h, this, (e => {
                         this.isDestroying || this.isDestroyed || this.set("forceShopError", !!e)
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), (0, r.unobserveProgressionReady)(this), s.db.unobserve(d, this), s.db.unobserve(u, this), s.db.unobserve(p, this)
+                    this._super(...arguments), (0, r.unobserveProgressionReady)(this), this._progressionBinding && this._progressionBinding.unobserve(`/v1/groups/${d}/instanceData`, this), s.db.unobserve(u, this), s.db.unobserve(p, this), s.db.unobserve(h, this)
                 },
                 actions: {
                     openVotingSystem() {
@@ -13492,7 +13521,7 @@
                     }
                 }
             });
-            t.default = g
+            t.default = f
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -13663,8 +13692,8 @@
                     if (s) return !t[i.CHAMPION_SKIN]?.has(s);
                     return !1
                 }(e, s), f = p(e, s), b = u && !f;
-                let v = null;
-                f ? v = o.get("shoppefront_error_requires_champion") : u && (v = o.get("shoppefront_error_requires_skin"));
+                let y = null;
+                f ? y = o.get("shoppefront_error_requires_champion") : u && (y = o.get("shoppefront_error_requires_skin"));
                 return {
                     modalItem: {
                         itemId: e.itemId,
@@ -13683,7 +13712,7 @@
                         prerequisites: r,
                         videoPath: l || null
                     },
-                    errorText: v
+                    errorText: y
                 }
             }, t.getMapAvailability = function(e, t) {
                 const n = e?.tags || e?.catalogItem?.tags || [],
@@ -13916,22 +13945,22 @@
                 [c.RUNE_TYPES.YELLOW]: m.INVENTORY_TYPES.RUNE_SEAL,
                 [c.RUNE_TYPES.BLUE]: m.INVENTORY_TYPES.RUNE_GLYPH,
                 [c.RUNE_TYPES.BLACK]: m.INVENTORY_TYPES.RUNE_QUINTESSENCE
-            }, b = "/lol-settings/v2/account/LCUPreferences/jade-ftux", v = -1;
+            }, b = "/lol-settings/v2/account/LCUPreferences/jade-ftux", y = -1;
 
-            function y(e, t) {
+            function v(e, t) {
                 return !e || (null == t || t >= e)
             }
 
             function S(e) {
                 const t = e?.itemId;
-                return !(!t || t === v || (!0 === e?.data?.default || "true" === e?.data?.default))
+                return !(!t || t === y || (!0 === e?.data?.default || "true" === e?.data?.default))
             }
 
             function x(e, t, n) {
                 if (!e) return !0;
                 for (let s = 0; s < f.length; s++) {
                     const a = f[s];
-                    if (!y(a.unlockLevel, n)) continue;
+                    if (!v(a.unlockLevel, n)) continue;
                     const i = (0, r.getColorAndSlotNum)(a.id);
                     if (!i) continue;
                     if (!S(e[(0, r.buildSlotKey)(t, i.color, i.slotNum)])) return !0
@@ -14583,7 +14612,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SMALL_SLOTS = t.SLOTS_BY_TYPE = t.RUNE_TYPE_ORDER = t.RUNE_TYPES = t.RUNE_PAGE_NAME_LENGTH = t.MAX_SMALL_SLOT_ID = t.MAX_RUNE_SLOTS = t.LARGE_SLOTS = t.GSD_RUNE_TYPE_TO_COLOR_MAP = t.FREE_RUNE_PAGES = void 0;
-            t.FREE_RUNE_PAGES = 1;
+            t.FREE_RUNE_PAGES = 3;
             t.RUNE_PAGE_NAME_LENGTH = 26;
             t.MAX_SMALL_SLOT_ID = 27;
             t.MAX_RUNE_SLOTS = 30;
@@ -15707,9 +15736,9 @@
                 {
                     STORES: _,
                     CATEGORIES: b,
-                    INVENTORY_TYPE_IDS: v
+                    INVENTORY_TYPE_IDS: y
                 } = a.ShoppefrontComponents,
-                y = [{
+                v = [{
                     flag: "championOwned",
                     predicate: e => e.isPortrait ? e.portraitChampionOwned : !e._prereqKey
                 }, {
@@ -15729,8 +15758,8 @@
                 x = S.CATEGORY_SORT_ORDER || [],
                 E = S.SUBCATEGORIES || {},
                 k = new Set(S.SUBCATEGORY_ONLY || []),
-                P = Object.fromEntries(Object.values(b).map((e => [e.ID, e.TITLE_TRA_KEY])));
-            var w = a.Ember.Controller.extend(l.EventPassMixin, r.PurchaseModalMixin, {
+                w = Object.fromEntries(Object.values(b).map((e => [e.ID, e.TITLE_TRA_KEY])));
+            var P = a.Ember.Controller.extend(l.EventPassMixin, r.PurchaseModalMixin, {
                 gameDataMapperService: a.Ember.inject.service("game-data-mapper"),
                 quantityPurchaseItem: null,
                 isQuantityPurchaseModalOpen: !1,
@@ -15760,7 +15789,7 @@
                     const e = this.get("lolInventoryService.ownedInventoryContent") || {},
                         t = this._localOwnedChampionIds;
                     if (!t || !t.size) return e;
-                    const n = v.CHAMPION,
+                    const n = y.CHAMPION,
                         s = new Set(e[n] || []);
                     return t.forEach((e => s.add(e))), Object.assign({}, e, {
                         [n]: s
@@ -15805,10 +15834,10 @@
                     }));
                     else {
                         const e = t.inventoryTypeId;
-                        if (e === v.CHAMPION_SKIN) {
+                        if (e === y.CHAMPION_SKIN) {
                             const e = s[0]?.fulfillment?.itemId;
                             e && (this._locallyOwnedItemIds.add(e), n = !0)
-                        } else e === v.CHAMPION && null != t.itemId && (this._localOwnedChampionIds.add(t.itemId), n = !0)
+                        } else e === y.CHAMPION && null != t.itemId && (this._localOwnedChampionIds.add(t.itemId), n = !0)
                     }
                     n && this.incrementProperty("_localOwnershipVersion")
                 },
@@ -15974,14 +16003,14 @@
                         t = this.get("tra");
                     return x.map((n => ({
                         id: n,
-                        label: P[n] ? t.get(P[n]) : n,
+                        label: w[n] ? t.get(w[n]) : n,
                         isActive: n === e
                     })))
                 })),
                 activeCategoryLabel: a.Ember.computed("activeCategory", (function() {
                     const e = this.get("activeCategory"),
                         t = this.get("tra");
-                    return P[e] ? t.get(P[e]) : e
+                    return w[e] ? t.get(w[e]) : e
                 })),
                 storeItems: a.Ember.computed("shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.currenciesByName", "lolInventoryService.ownedInventoryContent", "lolInventoryService.ownedItemInstanceIds", "_fiatPricePointsBySku", "model.classicExclusiveChampionSkinItemIds", "model.portraitGameDataByContentId", "runeInventoryCounts", "_localOwnershipVersion", (function() {
                     const e = this.get("shoppefrontService.categories") || [],
@@ -16026,7 +16055,7 @@
                     const s = this.get("tra");
                     return n.map((e => ({
                         id: e,
-                        label: s && P[e] ? s.get(P[e]) : e,
+                        label: s && w[e] ? s.get(w[e]) : e,
                         isActive: t === e
                     })))
                 })),
@@ -16061,7 +16090,7 @@
                         return t.includes(s) || n.includes(s)
                     })));
                     const o = !(!this.get("_deepLinkItemIds") || !this.get("_deepLinkItemIds").size);
-                    if (this.get("showOwned") || o || (e = e.filter((e => !e.isOwned))), y.forEach((({
+                    if (this.get("showOwned") || o || (e = e.filter((e => !e.isOwned))), v.forEach((({
                             flag: t,
                             predicate: n
                         }) => {
@@ -16133,7 +16162,7 @@
                             quantityPurchaseItem: e,
                             isQuantityPurchaseModalOpen: !0,
                             showClassicExclusiveFlagInModal: !0
-                        }) : e.hasFiatPrice || t.inventoryTypeId === v.EVENT_PASS || e.isBundle ? this.setProperties({
+                        }) : e.hasFiatPrice || t.inventoryTypeId === y.EVENT_PASS || e.isBundle ? this.setProperties({
                             fiatPurchaseItem: e,
                             isFiatPurchaseModalOpen: !0
                         }) : this._openPurchaseModal(t, n, {
@@ -16204,7 +16233,7 @@
                     }
                 }
             });
-            t.default = w
+            t.default = P
         }, (e, t) => {
             "use strict";
 
@@ -16348,20 +16377,20 @@
                     skuByItemId: a,
                     sharedPricesBySku: r,
                     fiatMap: h,
-                    currenciesByName: P,
-                    ownedItemInstanceIds: w,
+                    currenciesByName: w,
+                    ownedItemInstanceIds: P,
                     ownedInventoryContent: C,
-                    classicExclusiveChampionSkinItemIds: A,
-                    runeInventoryCounts: I,
+                    classicExclusiveChampionSkinItemIds: I,
+                    runeInventoryCounts: A,
                     portraitGameDataByContentId: T,
                     tra: M
-                } = n, D = (0, i.getItemCost)(e), R = a.get(e.id), L = R ? R.toUpperCase() : null, O = L ? h[L] : null;
-                if (null == D && !L) return null;
-                const N = (0, i.getPricesWithIcons)(e, P),
+                } = n, D = (0, i.getItemCost)(e), R = a.get(e.id), O = R ? R.toUpperCase() : null, L = O ? h[O] : null;
+                if (null == D && !O) return null;
+                const N = (0, i.getPricesWithIcons)(e, w),
                     j = N.length > 0 ? N : r.get(R) || [],
                     B = j.find((e => e.currency !== p)),
                     F = B?.currency ?? j[0]?.currency ?? (0, i.getItemCurrency)(e),
-                    H = P[F],
+                    H = w[F],
                     U = B?.cost ?? D ?? j[0]?.cost ?? null,
                     q = [...s.get(e.id) || []],
                     V = q.includes(u.PORTRAITS?.ID),
@@ -16386,18 +16415,18 @@
                             s = (n[a] || {})[e.itemId] || 0
                         }
                         return s
-                    }(e, Z, I) : 0,
+                    }(e, Z, A) : 0,
                     ne = function(e, t, n, s) {
                         const a = e && e.purchaseUnits && e.purchaseUnits[0] && e.purchaseUnits[0].fulfillment,
                             i = a && "number" == typeof a.maxQuantity ? a.maxQuantity : 0;
                         if (i > 0) return i;
-                        if (s) return y;
-                        if (t) return n ? b : v;
+                        if (s) return v;
+                        if (t) return n ? b : y;
                         return
                     }(e, Q, ee, Z),
                     se = x.has(e.inventoryTypeId),
                     ae = te === ne,
-                    ie = (0, o.isItemOwned)(e, w) || se && ae,
+                    ie = (0, o.isItemOwned)(e, P) || se && ae,
                     oe = !ie && !(0, o.hasUnsatisfiedPrerequisite)(e),
                     {
                         hasDiscount: le,
@@ -16405,12 +16434,12 @@
                         discountLabel: ce
                     } = (0, i.getDiscountInfo)(j),
                     me = (0, l.getDisplayType)(e, M),
-                    de = !!O,
-                    ue = O ? (0, i.formatFiatPrice)(O.realAmountCents, O.realCurrencyCode) : null,
+                    de = !!L,
+                    ue = L ? (0, i.formatFiatPrice)(L.realAmountCents, L.realCurrencyCode) : null,
                     pe = (e.purchaseUnits || []).length > 1,
                     he = f(e.id, M) || (pe ? e.name || e.traTitle || e.itemName : null),
                     ge = pe ? (0, i.getBundleTotalCost)(e, F) : null,
-                    fe = pe ? k(e, w) : 0,
+                    fe = pe ? k(e, P) : 0,
                     _e = null != ge ? ge - fe : U;
                 return {
                     id: e.id,
@@ -16451,16 +16480,16 @@
                     quantityPurchasableItemCount: te,
                     isMaxQuantityOwned: ae,
                     runeType: e.inventoryTypeId || null,
-                    showClassicExclusiveFlag: E(e, A),
+                    showClassicExclusiveFlag: E(e, I),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
                     portraitChampionOwned: J,
                     hasBlueEssencePrice: j.some((e => e.currency === p)),
                     costBE: (j.find((e => e.currency === p)) || {}).cost || 0,
                     hasFiatPrice: de,
                     fiatPriceFormatted: ue,
-                    fiatPricePointId: O ? O.id : null,
-                    fiatAmountCents: O ? O.realAmountCents : null,
-                    fiatCurrencyCode: O ? O.realCurrencyCode : null
+                    fiatPricePointId: L ? L.id : null,
+                    fiatAmountCents: L ? L.realAmountCents : null,
+                    fiatCurrencyCode: L ? L.realCurrencyCode : null
                 }
             }, t.enrichItemWithLimitedBadge = function(e, t, n) {
                 const s = e.catalogItem && e.catalogItem.endTime;
@@ -16511,8 +16540,8 @@
             }
             const _ = Object.fromEntries(Object.entries(c.RUNE_INVENTORY_TYPE_IDS).map((e => [e[1], e[0]]))),
                 b = 3,
-                v = 9,
-                y = 20,
+                y = 9,
+                v = 20,
                 S = new Set([c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_MARK, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_SEAL, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_GLYPH, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE]),
                 x = new Set(Object.values(c.RUNE_INVENTORY_TYPE_IDS));
 
@@ -16742,11 +16771,11 @@
                     requiredMilestone: 5
                 }];
 
-            function v(e) {
+            function y(e) {
                 return e?.purchaseUnits?.[0]?.fulfillment?.dropTableId || null
             }
 
-            function y(e) {
+            function v(e) {
                 return e && (e.gipName || e.title || e.name || e.formattedName || e.statName) || null
             }
 
@@ -16762,7 +16791,7 @@
                     return n && (n.title || n.name) || null
                 }(l, s);
                 if (c) return c;
-                const m = y(e && a && a[e.sourceId]);
+                const m = v(e && a && a[e.sourceId]);
                 if (m) return m;
                 return function(e) {
                     const t = Object.values(e && e.localizations || {}).find((e => e && e.name));
@@ -17169,41 +17198,41 @@
                             const d = (e.prerequisites || []).some((e => e.itemTypeId === c.EVENT_PASS_INVENTORY_TYPE_ID)),
                                 _ = d && !i,
                                 b = s.includes(e.id),
-                                v = (0, c.isOwnedByInventory)(e, g),
-                                y = (0, c.isPurchaseLimitReached)(e, o),
+                                y = (0, c.isOwnedByInventory)(e, g),
+                                v = (0, c.isPurchaseLimitReached)(e, o),
                                 S = h.has(e.id),
-                                x = b || y || !S && v,
+                                x = b || v || !S && y,
                                 E = (0, a.getItemCost)(e),
                                 k = (0, a.getItemCurrency)(e),
-                                P = (r[k] || 0) >= E,
-                                w = e.overrideTileSize || null,
+                                w = (r[k] || 0) >= E,
+                                P = e.overrideTileSize || null,
                                 C = e.purchaseUnits?.[0]?.fulfillment,
-                                A = C?.currencyId || null,
-                                I = A && (C.delta || C.finalDelta) || 0,
+                                I = C?.currencyId || null,
+                                A = I && (C.delta || C.finalDelta) || 0,
                                 T = (0, c.isVotingPowerGrant)(e),
                                 M = T && (C.delta || C.finalDelta) || 0,
                                 D = e.traTitle || u.get("battlepass_unknown_item");
-                            let R, L = D;
-                            A && I ? L = u.formatString("battlepass_currency_reward_name", {
-                                amount: I,
+                            let R, O = D;
+                            I && A ? O = u.formatString("battlepass_currency_reward_name", {
+                                amount: A,
                                 name: D
-                            }) : T && (L = u.formatString("battlepass_currency_reward_name", {
+                            }) : T && (O = u.formatString("battlepass_currency_reward_name", {
                                 amount: M,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), R = T ? u.get("battlepass_inventory_type_voting_power") : A ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
-                            const O = (0, c.getLocalTypeImage)(e);
+                            })), R = T ? u.get("battlepass_inventory_type_voting_power") : I ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            const L = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
-                                name: L,
+                                name: O,
                                 type: R,
                                 description: e.itemDescription,
                                 cost: E,
                                 currencyKey: k,
                                 currencyIconPath: (0, l.getCurrencyIconPath)(k, p),
                                 isChaseItem: 0 === t,
-                                tileSize: w,
-                                tileSizeClass: w ? "jade-tile-" + w : "",
+                                tileSize: P,
+                                tileSizeClass: P ? "jade-tile-" + P : "",
                                 isChaseTagged: S,
                                 chaseCategoryId: h.get(e.id) || null,
                                 isSelected: t === n,
@@ -17212,11 +17241,11 @@
                                 isPassGated: d,
                                 hasUnmetPrerequisites: _,
                                 isPremiumUnlocked: d && i,
-                                tileVideoPath: d && !x && f[w || ""] ? "/fe/lol-jade/videos/battlepass/" + f[w || ""] : null,
-                                purchaseLimitReached: y,
-                                canAfford: P,
-                                iconUrl: O || e.tilePath || null,
-                                previewUrl: O || e.splashPath || e.tilePath || null,
+                                tileVideoPath: d && !x && f[P || ""] ? "/fe/lol-jade/videos/battlepass/" + f[P || ""] : null,
+                                purchaseLimitReached: v,
+                                canAfford: w,
+                                iconUrl: L || e.tilePath || null,
+                                previewUrl: L || e.splashPath || e.tilePath || null,
                                 hasFullScreenSplash: (0, c.hasFullScreenSplash)(e),
                                 isPortrait: (0, c.isPortraitItem)(e)
                             }
@@ -17225,9 +17254,9 @@
                     _.forEach((e => {
                         e.chaseCategoryId && b.add(e.chaseCategoryId)
                     }));
-                    const v = this._findClaimedChaseItem(e, s, o, b, g);
-                    return v && _.forEach((e => {
-                        e.isChaseTagged && (e.iconUrl = v.iconUrl || e.iconUrl, e.previewUrl = v.previewUrl || e.previewUrl, e.isClaimed = !0, e.tileVideoPath = null, e.name = v.name)
+                    const y = this._findClaimedChaseItem(e, s, o, b, g);
+                    return y && _.forEach((e => {
+                        e.isChaseTagged && (e.iconUrl = y.iconUrl || e.iconUrl, e.previewUrl = y.previewUrl || e.previewUrl, e.isClaimed = !0, e.tileVideoPath = null, e.name = y.name)
                     })), _
                 })),
                 claimedCount: s.Ember.computed("items.@each.isClaimed", (function() {
@@ -17271,10 +17300,10 @@
                 selectedItemDropTableId: s.Ember.computed("selectedItem.catalogItem", "shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("selectedItem.catalogItem");
                     if (!e) return null;
-                    const t = v(e);
+                    const t = y(e);
                     if (t) return t;
                     const n = this._grantedCurrencyName(e);
-                    return n ? v(this._resolveDropCatalogItem(n)) : null
+                    return n ? y(this._resolveDropCatalogItem(n)) : null
                 })),
                 selectedItemHasDropRates: s.Ember.computed.notEmpty("selectedItemDropTableId"),
                 selectedItemOddsTree: null,
@@ -17296,7 +17325,7 @@
                     if (this._storeItemsPromise) return;
                     const t = this.get("_gameDataItemsByContentId") || {},
                         n = this.get("_storeItemsByInstanceId") || {},
-                        a = [...new Set(Object.values(e.nodes || {}).filter((e => "ENTITLEMENT_CREATE" === e.type && e.sourceId)).map((e => e.sourceId)))].filter((e => !n[e] && !y(t[e])));
+                        a = [...new Set(Object.values(e.nodes || {}).filter((e => "ENTITLEMENT_CREATE" === e.type && e.sourceId)).map((e => e.sourceId)))].filter((e => !n[e] && !v(t[e])));
                     if (!a.length) return;
                     const i = [];
                     for (let e = 0; e < a.length; e += 50) {
@@ -17432,7 +17461,7 @@
                         f = this.get("_eventPassSku"),
                         _ = this.get("_fiatPricePointsBySku") || {},
                         b = f ? _[f] : null,
-                        v = !!b;
+                        y = !!b;
                     return {
                         id: e.id,
                         name: h,
@@ -17447,7 +17476,7 @@
                         contentType: t.get("battlepass_inventory_type_event_pass"),
                         hasDiscount: m,
                         discountPercent: u,
-                        hasFiatPrice: v,
+                        hasFiatPrice: y,
                         fiatPriceFormatted: b ? (0, a.formatFiatPrice)(b.realAmountCents, b.realCurrencyCode) : null,
                         fiatPricePointId: b ? b.id : null,
                         fiatAmountCents: b ? b.realAmountCents : null,
@@ -19798,9 +19827,9 @@
                     propertyName: "backgroundData",
                     propertyPath: "/pass-background-data"
                 }],
-                v = "event-shop-offer-card";
-            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = v;
-            const y = {
+                y = "event-shop-offer-card";
+            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = y;
+            const v = {
                 [l.EVENT_SHOP]: {
                     displayGenericTitle: !1,
                     displayHeaderLogo: !0,
@@ -19850,13 +19879,13 @@
                     observers: [...d, ...p]
                 }
             };
-            t.EVENT_CONFIGS_BY_TYPE = y;
+            t.EVENT_CONFIGS_BY_TYPE = v;
             var S = {
                 CLAIM_ALL_REWARDS_PATH: a,
                 EVENT_HUB_API: n,
                 PASS_OWNERSHIP_TYPES: c,
                 REWARD_TRACK_ITEM_STATE: m,
-                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: v,
+                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: y,
                 ROUTES: o,
                 EVENT_HUB_TYPES: l
             };
@@ -21597,7 +21626,7 @@
             }), t.ViewChampionClass = void 0;
             var s = n(1),
                 a = n(278);
-            const i = n(70),
+            const i = n(69),
                 o = s.Ember.Object.extend({
                     id: s.Ember.computed.alias("champion.id"),
                     isFreeToPlay: s.Ember.computed("champion.id", "grid.freeToPlayByJadeId", (function() {
@@ -22315,21 +22344,21 @@
                             f = (0, i.isItemOwned)(e, s),
                             _ = !f && !(0, i.hasUnsatisfiedPrerequisite)(e),
                             b = (0, i.getRequirementText)(e, n),
-                            v = (0, a.getPricesWithIcons)(e, t),
+                            y = (0, a.getPricesWithIcons)(e, t),
                             {
-                                hasDiscount: y,
+                                hasDiscount: v,
                                 discountPercent: S,
                                 discountLabel: x
-                            } = (0, a.getDiscountInfo)(v),
+                            } = (0, a.getDiscountInfo)(y),
                             E = d.get(e.id),
                             k = E ? E.toUpperCase() : null,
-                            P = k ? u[k] : null,
-                            w = !!P,
+                            w = k ? u[k] : null,
+                            P = !!w,
                             C = (e.purchaseUnits || []).length > 1,
-                            A = C ? (0, a.getBundleTotalCost)(e, p) : null,
-                            I = C ? (0, l.getBundleSavings)(e, s) : 0,
+                            I = C ? (0, a.getBundleTotalCost)(e, p) : null,
+                            A = C ? (0, l.getBundleSavings)(e, s) : 0,
                             T = (0, l.getStoreItemTitleOverride)(e.id, r) || (C ? e.name || e.traTitle || e.itemName : null),
-                            M = null != A ? A - I : m,
+                            M = null != I ? I - A : m,
                             D = e.inventoryTypeId === c.PORTRAIT;
                         return {
                             id: e.id,
@@ -22339,16 +22368,16 @@
                             description: e.itemDescription,
                             contentType: (0, o.getDisplayType)(e, r),
                             cost: M,
-                            originalCost: null != A ? A : v[0] && v[0].originalCost || m,
-                            bundleSavings: I,
+                            originalCost: null != I ? I : y[0] && y[0].originalCost || m,
+                            bundleSavings: A,
                             currency: p,
                             currencyIconPath: h ? h.iconPath : null,
-                            prices: v.length > 1 ? v : null,
-                            hasMultiplePrices: v.length > 1,
-                            hasDiscount: y && !C,
+                            prices: y.length > 1 ? y : null,
+                            hasMultiplePrices: y.length > 1,
+                            hasDiscount: v && !C,
                             discountPercent: S,
                             discountLabel: x,
-                            salePrices: y && !C ? v : null,
+                            salePrices: v && !C ? y : null,
                             iconUrl: (0, l.getStoreItemImageOverride)(e.id) || e.tilePath || e.splashPath || null,
                             tileSize: g,
                             tileSizeClass: g ? "jade-tile-" + g : "",
@@ -22357,11 +22386,11 @@
                             isBundle: C,
                             _prereqKey: b,
                             catalogItem: e,
-                            hasFiatPrice: w,
-                            fiatPriceFormatted: P ? (0, a.formatFiatPrice)(P.realAmountCents, P.realCurrencyCode) : null,
-                            fiatPricePointId: P ? P.id : null,
-                            fiatAmountCents: P ? P.realAmountCents : null,
-                            fiatCurrencyCode: P ? P.realCurrencyCode : null
+                            hasFiatPrice: P,
+                            fiatPriceFormatted: w ? (0, a.formatFiatPrice)(w.realAmountCents, w.realCurrencyCode) : null,
+                            fiatPricePointId: w ? w.id : null,
+                            fiatAmountCents: w ? w.realAmountCents : null,
+                            fiatCurrencyCode: w ? w.realCurrencyCode : null
                         }
                     })).filter((e => null != e.cost || e.hasFiatPrice)).slice(0, this.get("maxItems") || 2)
                 })),
@@ -23508,40 +23537,46 @@
             n(453), e.exports = s.Ember.Component.extend({
                 layout: n(454),
                 classNames: ["jade-swap-button-component"],
-                classNameBindings: ["hidden"],
+                classNameBindings: ["showSwapButton::removed"],
                 requestInProgress: !1,
                 summonerHasActiveSwap: !1,
-                queueId: -1,
                 summoner: null,
-                isBanningNow: !1,
-                phase: null,
-                isIntentPhase: s.Ember.computed("phase", (function() {
-                    return this.get("phase") === o.TIMER_PHASES.planning
-                })),
                 showTooltip: s.Ember.computed("requestInProgress", "summonerHasActiveSwap", "swapButtonHovered", (function() {
                     return !this.get("requestInProgress") && !this.get("summonerHasActiveSwap") && this.get("swapButtonHovered")
                 })),
-                hidden: s.Ember.computed("summoner.isSelf", "isLeft", "hasPickOrderSwapOnly", "summoner.showSwaps", "requestInProgress", "summonerHasActiveSwap", "isIntentPhase", (function() {
-                    return !this.get("isIntentPhase") || !this.get("requestInProgress") && !this.get("summonerHasActiveSwap") && !(this.get("isLeft") && !this.get("summoner.isSelf") && this.get("hasPickOrderSwapOnly") && !1 !== this.get("summoner.showSwaps"))
+                canPickOrderSwap: s.Ember.computed("summoner.showSwaps", "timer.inPlanningPhase", (function() {
+                    return this.get("timer.inPlanningPhase") && this.get("summoner.showSwaps")
                 })),
-                hasChampionSwapOnly: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return o.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e)
+                canChampionSwap: s.Ember.computed("summoner.showTrades", "timer.inFinalizationPhase", (function() {
+                    return this.get("timer.inFinalizationPhase") && this.get("summoner.showTrades")
                 })),
-                hasPickOrderSwapOnly: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return o.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                showSwapButton: s.Ember.computed("canPickOrderSwap", "canChampionSwap", "requestInProgress", "summonerHasActiveSwap", (function() {
+                    return !(!this.get("requestInProgress") && !this.get("summonerHasActiveSwap")) || (this.get("canPickOrderSwap") || this.get("canChampionSwap"))
                 })),
-                swapButtonTooltipText: s.Ember.computed("tra", "tra.swap_tooltip", "swap_champion_tooltip", "hasChampionSwapOnly", "hasPickOrderSwapOnly", "summoner.summonerObjectDisplayName", (function() {
-                    const e = this.get("summoner.summonerObjectDisplayName");
-                    return this.get("hasChampionSwapOnly") ? this.get("tra").formatString("swap_champion_tooltip", {
-                        actor: e
-                    }) : this.get("hasPickOrderSwapOnly") ? this.get("tra").formatString("swap_pick_order_tooltip", {
-                        actor: e
-                    }) : this.get("tra.swap_tooltip")
+                pickOrderNumber: s.Ember.computed("summoner.cellId", "summoners", (function() {
+                    return (this.get("summoners") || []).findIndex((e => e.cellId === this.get("summoner.cellId"))) + 1
                 })),
-                swapButtonAction: s.Ember.computed("hasChampionSwapOnly", "hasPickOrderSwapOnly", (function() {
-                    return this.get("hasChampionSwapOnly") ? "initiateChampionSwap" : this.get("hasPickOrderSwapOnly") ? "initiatePickOrderSwap" : "toggleSwapSelectionModal"
+                swapContext: s.Ember.computed("canPickOrderSwap", "canChampionSwap", "pickOrderNumber", "summoner.championName", (function() {
+                    this.get("tra");
+                    if (this.get("canPickOrderSwap")) {
+                        const e = this.get("pickOrderNumber");
+                        return {
+                            tooltipText: this.get("tra").formatString("swap_pick_order_tooltip_specific_pick_order$html", {
+                                pickOrderNumber: e
+                            }),
+                            action: "initiatePickOrderSwap"
+                        }
+                    }
+                    if (this.get("canChampionSwap")) {
+                        const e = this.get("summoner.championName");
+                        return {
+                            tooltipText: this.get("tra").formatString("swap_champion_tooltip_champ_name$html", {
+                                championName: e
+                            }),
+                            action: "initiateChampionSwap"
+                        }
+                    }
+                    return {}
                 })),
                 initiateSwap(e, t) {
                     if (this.get("requestInProgress")) return;
@@ -23586,6 +23621,9 @@
                     initiatePickOrderSwap() {
                         this.initiateSwap(this.get("summoner.swapId"), o.SWAP_TYPES.PICK_ORDER)
                     },
+                    initiateChampionSwap() {
+                        this.initiateSwap(this.get("summoner.tradeId"), o.SWAP_TYPES.CHAMPION)
+                    },
                     onMouseMove(e) {
                         this.setProperties({
                             mouseX: e.clientX,
@@ -23600,8 +23638,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "ir/XU1mq",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-swap-button-component__button"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],true],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],false],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"onMouseMove"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"initiatePickOrderSwap"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-swap-button-component__tooltip"],["dynamic-attr","style",["helper",["concat"],["left: ",["helper",["add"],[["get",["mouseX"]],15],null],"px; top: ",["get",["mouseY"]],"px;"],null],null],["flush-element"],["text","\\n    "],["append",["unknown",["tra","champion_select_swap_pick_order_tooltip"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "TsblvrqJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-swap-button-component__button"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],true],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],false],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"onMouseMove"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],["get",["swapContext","action"]]],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-swap-button-component__tooltip"],["dynamic-attr","style",["helper",["concat"],["left: ",["helper",["add"],[["get",["mouseX"]],15],null],"px; top: ",["get",["mouseY"]],"px;"],null],null],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["swapContext","tooltipText"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -23669,6 +23707,12 @@
                     const e = this.get("summoners") || [],
                         t = this.get("otherSummonerPuuid");
                     return e.find((e => e?.puuid === t || e?.obfuscatedPuuid === t))
+                })),
+                shouldShowChampionImage: s.Ember.computed("swap.type", (function() {
+                    return this.get("swap.type") === o.SWAP_TYPES.CHAMPION
+                })),
+                championImage: s.Ember.computed("swap.initiatedByLocalPlayer", "swap.responderChampionSquarePortrait", "swap.requesterChampionSquarePortrait", (function() {
+                    return this.get("swap.initiatedByLocalPlayer") ? this.get("swap.responderChampionSquarePortrait") : this.get("swap.requesterChampionSquarePortrait")
                 })),
                 _cancelInBanPickPhase: s.Ember.observer("inBanPickPhase", (function() {
                     const e = this.get("swap");
@@ -23865,14 +23909,11 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.ROLE_SWAP_ENABLED_QUEUES = t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.INVALID_SWAP_ID = t.CHAMPION_SWAP_ONLY_QUEUE_IDS = void 0, t.getOngoingSwapServiceCallPath = function(e) {
+            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.INVALID_SWAP_ID = void 0, t.getOngoingSwapServiceCallPath = function(e) {
                 return o[e]
             }, t.getSwapServiceCallPath = function(e) {
                 return i[e]
             };
-            t.ROLE_SWAP_ENABLED_QUEUES = [];
-            t.CHAMPION_SWAP_ONLY_QUEUE_IDS = [];
-            t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 4310];
             t.SETTINGS_SWAP_TOGGLE_TOOLTIP = {
                 SEEN_KEY: "swapToggleTooltipSeen",
                 ICON_CLASS: ".swap-button-component",
@@ -23927,8 +23968,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "q7A/9bgE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog\\n    ",["helper",["if"],[["get",["isDisplayed"]],"active"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flyout-frame",[]],["static-attr","orientation","right"],["dynamic-attr","show",["unknown",["isDisplayed"]],null],["static-attr","animated","false"],["static-attr","dismissable","false"],["static-attr","close-event-name","jade-swap-dialog-close-clicked"],["flush-element"],["text","\\n   "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog__frame ",["helper",["if"],[["get",["isSwapInProgress"]],"jade-swap-dialog__frame--timer-active"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showSwapTitleString"]]],null,3],["block",["if"],[["get",["swapMessageString"]]],null,2],["block",["if"],[["get",["showAcceptSwapButton"]]],null,1],["text","\\n"],["block",["if"],[["get",["showCancelSwapButton"]]],null,0],["text","\\n   "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","     "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n       "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--cancel"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_cancel"]],false],["close-element"],["text","\\n       "],["close-element"],["text","\\n     "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--accept"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptSwap",["get",["swap","id"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_accept"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--decline"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_decline"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["swapMessageString"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__title"],["flush-element"],["append",["unknown",["swapTitleString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Z7veylZm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog\\n    ",["helper",["if"],[["get",["isDisplayed"]],"active"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flyout-frame",[]],["static-attr","orientation","right"],["dynamic-attr","show",["unknown",["isDisplayed"]],null],["static-attr","animated","false"],["static-attr","dismissable","false"],["static-attr","close-event-name","jade-swap-dialog-close-clicked"],["flush-element"],["text","\\n   "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog__frame ",["helper",["if"],[["get",["isSwapInProgress"]],"jade-swap-dialog__frame--timer-active"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showSwapTitleString"]]],null,4],["block",["if"],[["get",["swapMessageString"]]],null,3],["text","\\n"],["block",["if"],[["get",["shouldShowChampionImage"]]],null,2],["text","\\n"],["block",["if"],[["get",["showAcceptSwapButton"]]],null,1],["text","\\n"],["block",["if"],[["get",["showCancelSwapButton"]]],null,0],["text","\\n   "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","     "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n       "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--cancel"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_cancel"]],false],["close-element"],["text","\\n       "],["close-element"],["text","\\n     "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--accept"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptSwap",["get",["swap","id"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_accept"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--decline"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_decline"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","swap-dialog-champion-image-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championImage"]]]]],["static-attr","class","swap-dialog-champion-image"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["swapMessageString"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__title"],["flush-element"],["append",["unknown",["swapTitleString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -24383,7 +24424,7 @@
                                 f = (0, l.isOwnedByInventory)(e, d),
                                 _ = (0, a.getItemCost)(e),
                                 b = (0, a.getItemCurrency)(e),
-                                v = (m[b] || 0) >= _;
+                                y = (m[b] || 0) >= _;
                             return {
                                 id: e.id,
                                 catalogItem: e,
@@ -24397,7 +24438,7 @@
                                 isOwned: f,
                                 isSelectable: !g && !f && !u,
                                 hasUnmetPrerequisites: u,
-                                canAfford: v,
+                                canAfford: y,
                                 iconUrl: e.tilePath || null,
                                 previewUrl: e.splashPath || e.tilePath || null
                             }
@@ -24830,8 +24871,8 @@
                 f = "/v1/session",
                 _ = ["champion_ability_key_passive", "champion_ability_key_q", "champion_ability_key_w", "champion_ability_key_e", "champion_ability_key_r"],
                 b = "https://lol.dyn.riotcdn.net/x/videos/",
-                v = 112,
-                y = "abilities",
+                y = 112,
+                v = "abilities",
                 S = "/lol-client-config/v3/client-config/lol.client_settings.jade.tencentChampionLearnMoreUrl";
             var x = s.Ember.Component.extend(l.PurchaseModalMixin, {
                 layout: n(478),
@@ -24891,7 +24932,7 @@
                     return this.get("selectedAbility.videoImageUrl")
                 })),
                 showAbilityVideo: s.Ember.computed("selectedAbilityVideoUrl", "activeTab", (function() {
-                    return !!this.get("selectedAbilityVideoUrl") && this.get("activeTab") === y
+                    return !!this.get("selectedAbilityVideoUrl") && this.get("activeTab") === v
                 })),
                 selectedAbilityName: s.Ember.computed("selectedAbility", (function() {
                     return this.get("selectedAbility.name")
@@ -24952,7 +24993,7 @@
                     return ((this.get("champion.masteryPointsSinceLastLevel") || 0) + (this.get("champion.masteryPointsUntilNextLevel") || 0)).toLocaleString()
                 })),
                 isOverviewTab: s.Ember.computed.equal("activeTab", "overview"),
-                isAbilitiesTab: s.Ember.computed.equal("activeTab", y),
+                isAbilitiesTab: s.Ember.computed.equal("activeTab", v),
                 isSkinTab: s.Ember.computed.equal("activeTab", "skins"),
                 splashPath: s.Ember.computed("championData", (function() {
                     const e = this.get("championData.skins")?.[0];
@@ -25017,7 +25058,7 @@
                 })),
                 carouselContainerWidth: s.Ember.computed("skins.length", (function() {
                     const e = this.get("skins.length") || 0;
-                    return v * Math.min(e, 5)
+                    return y * Math.min(e, 5)
                 })),
                 carouselInitialOffset: s.Ember.computed("skins.length", (function() {
                     const e = this.get("skins.length") || 0;
@@ -25191,7 +25232,7 @@
                 },
                 actions: {
                     switchTab(e) {
-                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : e === y ? this._resumeVideo() : this._pauseVideo())
+                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : e === v ? this._resumeVideo() : this._pauseVideo())
                     },
                     selectAbility(e) {
                         if (!this.get("championData") || e === this.get("selectedAbilityIndex")) return;
@@ -25324,7 +25365,7 @@
                     e && e.play().catch((() => {}))
                 },
                 _applyVideoPlaybackForTab() {
-                    this.get("activeTab") === y ? this._resumeVideo() : this._pauseVideo()
+                    this.get("activeTab") === v ? this._resumeVideo() : this._pauseVideo()
                 },
                 _waitForVideoPlaying() {
                     const e = this._getVideoElement(),
@@ -25352,7 +25393,7 @@
                     const o = a.length,
                         l = this.get("carouselInitialOffset");
                     let r = this._carouselOffset;
-                    "right" === t && e < n ? (r += v * o, this._resetCarousel(r)) : "left" === t && e > n && (r -= v * o, this._resetCarousel(r));
+                    "right" === t && e < n ? (r += y * o, this._resetCarousel(r)) : "left" === t && e > n && (r -= y * o, this._resetCarousel(r));
                     const c = l + -112 * e;
                     this._carouselOffset = c;
                     const m = this._backdropEl?.querySelector(".jade-champion-modal__skin-track");
@@ -25570,77 +25611,99 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = r(n(1)),
-                a = r(n(423)),
-                i = n(324),
-                o = n(278),
-                l = n(276);
+            var s, a = function(e, t) {
+                    if (!t && e && e.__esModule) return e;
+                    if (null === e || "object" != typeof e && "function" != typeof e) return {
+                        default: e
+                    };
+                    var n = c(t);
+                    if (n && n.has(e)) return n.get(e);
+                    var s = {},
+                        a = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    for (var i in e)
+                        if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
+                            var o = a ? Object.getOwnPropertyDescriptor(e, i) : null;
+                            o && (o.get || o.set) ? Object.defineProperty(s, i, o) : s[i] = e[i]
+                        } s.default = e, n && n.set(e, s);
+                    return s
+                }(n(1)),
+                i = (s = n(423)) && s.__esModule ? s : {
+                    default: s
+                },
+                o = n(324),
+                l = n(278),
+                r = n(276);
 
-            function r(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
+            function c(e) {
+                if ("function" != typeof WeakMap) return null;
+                var t = new WeakMap,
+                    n = new WeakMap;
+                return (c = function(e) {
+                    return e ? n : t
+                })(e)
             }
             const {
-                Ember: c,
-                TelemetryService: m
-            } = s.default;
+                Ember: m,
+                TelemetryService: d
+            } = a.default;
             n(486);
-            const d = "jade-voting-system",
-                u = "voting_modal_opened",
-                p = "voting_modal_time_spent",
-                h = "vote_cast",
-                g = "vote_cleared",
-                f = "results_screen_opened",
-                _ = "learn_more_screen_opened",
-                b = "intro",
+            const u = "jade-voting-system",
+                p = "voting_modal_opened",
+                h = "voting_modal_time_spent",
+                g = "vote_cast",
+                f = "vote_cleared",
+                _ = "results_screen_opened",
+                b = "learn_more_clicked",
+                y = "intro",
                 v = "voting",
-                y = "learnMore",
                 S = "results";
-            var x = c.Component.extend({
+
+            function x(e) {
+                return null == e ? l.VOTE_UNANSWERED : e
+            }
+            var E = m.Component.extend({
                 layout: n(487),
                 classNames: ["voting-system"],
                 showModal: !1,
                 votingData: null,
-                currentScreen: b,
-                selectedOption: null,
-                _initialSelectedOption: null,
-                savedVoteName: null,
+                currentScreen: y,
+                _answers: null,
+                _initialAnswers: null,
+                _ballotLoadFailed: !1,
+                _saveFailed: !1,
+                _isSaving: !1,
                 hasSeenFtux: !1,
-                _hasInteractedWithVote: !1,
                 _showConfirmation: !1,
                 _showVoteSavedToast: !1,
                 _voteSavedToastTimer: null,
-                displayVoteName: c.computed("selectedOption", "savedVoteName", "_hasInteractedWithVote", (function() {
-                    const e = this.get("selectedOption");
-                    return e ? e.name : this.get("_hasInteractedWithVote") ? null : this.get("savedVoteName")
-                })),
-                isIntroScreen: c.computed.equal("currentScreen", b),
-                showIntroContinue: c.computed("isVotingActive", "isVotingConcluded", (function() {
+                isIntroScreen: m.computed.equal("currentScreen", y),
+                showIntroContinue: m.computed("isVotingActive", "isVotingConcluded", (function() {
                     return this.get("isVotingActive") || this.get("isVotingConcluded")
                 })),
-                isVotingScreen: c.computed.equal("currentScreen", v),
-                isLearnMoreScreen: c.computed.equal("currentScreen", y),
-                isResultsScreen: c.computed.equal("currentScreen", S),
-                hasUnsavedChanges: c.computed("selectedOption", "_initialSelectedOption", (function() {
-                    const e = this.get("selectedOption"),
-                        t = this.get("_initialSelectedOption");
-                    return (e ? e.id : null) !== (t ? t.id : null)
+                isVotingScreen: m.computed.equal("currentScreen", v),
+                isResultsScreen: m.computed.equal("currentScreen", S),
+                hasUnsavedChanges: m.computed("_answers", "_initialAnswers", (function() {
+                    return ! function(e, t) {
+                        const n = new Set(Object.keys(e || {}).concat(Object.keys(t || {})));
+                        for (const s of n)
+                            if (x((e || {})[s]) !== x((t || {})[s])) return !1;
+                        return !0
+                    }(this.get("_answers"), this.get("_initialAnswers"))
                 })),
-                isSaveEnabled: c.computed("hasVotingPower", "hasUnsavedChanges", (function() {
-                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges")
+                isSaveEnabled: m.computed("hasVotingPower", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
+                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
                 })),
-                showResults: c.computed.alias("votingData.isVotingResultsPhase"),
-                isVotingActive: c.computed.alias("votingData.isVotingActive"),
-                isVotingConcluded: c.computed.alias("votingData.isVotingConcluded"),
-                votingEndTimestamp: c.computed.alias("votingData.votingEndTimeStamp"),
-                votingEndFullText: c.computed("votingData.votingEndDate", "tra.metadata.locale.id", (function() {
+                showResults: m.computed.alias("votingData.isVotingResultsPhase"),
+                isVotingActive: m.computed.alias("votingData.isVotingActive"),
+                isVotingConcluded: m.computed.alias("votingData.isVotingConcluded"),
+                votingEndTimestamp: m.computed.alias("votingData.votingEndTimestamp"),
+                votingEndFullText: m.computed("votingData.votingEndDate", "tra.metadata.locale.id", (function() {
                     const e = this.get("votingData.votingEndDate");
                     if (!e) return "";
                     const t = new Date(e);
                     if (isNaN(t.getTime())) return "";
                     const n = this.get("tra.metadata.locale.id"),
-                        s = (0, l.formatLocalizedDate)(t, n);
+                        s = (0, r.formatLocalizedDate)(t, n);
                     let a = n || "en_US";
                     a = "ar_AE" === a ? "ar-tn" : a.toLowerCase().replace("_", "-");
                     const i = t.toLocaleTimeString(a, {
@@ -25654,237 +25717,242 @@
                         timeText: i
                     })
                 })),
-                questionText: c.computed("votingData", (function() {
-                    return this.get("votingData.voting.title") || ""
+                pollTitle: m.computed("votingData", (function() {
+                    return this.get("votingData.title") || ""
                 })),
                 votingPower: null,
-                hasVotingPower: c.computed("votingPower", (function() {
+                hasVotingPower: m.computed("votingPower", (function() {
                     return (this.get("votingPower") || 0) > 0
                 })),
-                displayVotingPower: c.computed("votingPower", (function() {
+                displayVotingPower: m.computed("votingPower", (function() {
                     return this.get("votingPower") || 0
                 })),
-                _eventId: c.computed("votingData", (function() {
+                _eventId: m.computed("votingData", (function() {
                     return this.get("votingData.votingSessionID") || null
                 })),
-                learnMoreData: c.computed("votingData.learnMore", (function() {
-                    const e = this.get("votingData.learnMore");
-                    if (!e) return null;
-                    const t = (e.assets || []).find((function(e) {
-                        return "image" === e.type
-                    }));
-                    return {
-                        title: e.title,
-                        description: e.description?.body || e.description,
-                        imageUrl: t ? t.url : null
-                    }
+                learnMoreUrl: m.computed("votingData.learnMore", (function() {
+                    const e = this.get("votingData.learnMore.assets") || [];
+                    return e.length && e[0].url || null
                 })),
-                votingResultsData: c.computed("votingData.votingResults", (function() {
-                    const e = this.get("votingData.votingResults");
-                    if (!e) return null;
-                    const t = (e.assets || []).find((function(e) {
-                        return "image" === e.type
-                    }));
-                    return {
-                        title: e.title,
-                        description: e.description?.body || e.description,
-                        imageUrl: t ? t.url : null
-                    }
-                })),
-                displayOptions: c.computed("votingData", (function() {
-                    return (this.get("votingData.voting.votes") || []).map((function(e) {
+                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", (function() {
+                    const e = this.get("votingData.voting") || [],
+                        t = this.get("_answers") || {},
+                        n = this.get("hasVotingPower");
+                    return e.map((function(e, s) {
+                        const a = x(t[e.questionID]);
                         return {
-                            id: e.voteID,
-                            name: e.title,
-                            imageUrl: e.asset ? e.asset.url : null,
-                            description: e.description
+                            questionID: e.questionID,
+                            number: s + 1,
+                            title: e.title,
+                            isAnswered: a !== l.VOTE_UNANSWERED,
+                            options: (e.votes || []).map((function(t) {
+                                return {
+                                    questionID: e.questionID,
+                                    id: t.voteID,
+                                    name: t.title,
+                                    imageUrl: t.asset ? t.asset.url : null,
+                                    description: t.description,
+                                    isSelected: t.voteID === a,
+                                    isDisabled: !n
+                                }
+                            }))
                         }
                     }))
                 })),
-                optionImageHeight: c.computed("displayOptions.length", (function() {
-                    const e = this.get("displayOptions.length") || 5;
-                    return e <= 2 ? 260 : e <= 3 ? 230 : e <= 5 ? 202 : 120
-                })),
-                resultEntries: c.computed("votingData", (function() {
-                    const e = this.get("votingData.votingResults");
-                    if (!e || !e.results) return [];
-                    const t = this.get("votingData.voting.votes") || [],
+                resultQuestions: m.computed("votingData", (function() {
+                    const e = this.get("votingData.votingResults") || [],
+                        t = this.get("votingData.voting") || [],
                         n = new Map(t.map((function(e) {
-                            return [e.voteID, e]
+                            return [e.questionID, e]
                         })));
-                    return e.results.map((function(e) {
-                        const t = n.get(e.voteID);
-                        if (!t) return null;
-                        const s = e.voteCount || 0;
+                    return e.map((function(e, t) {
+                        const s = n.get(e.questionID),
+                            a = new Map((s && s.votes || []).map((function(e) {
+                                return [e.voteID, e]
+                            }))),
+                            i = (e.assets || []).find((function(e) {
+                                return "image" === e.type
+                            })),
+                            o = (e.results || []).map((function(e) {
+                                const t = a.get(e.voteID);
+                                if (!t) return null;
+                                const n = e.votePercentage ?? 0;
+                                return {
+                                    name: t.title,
+                                    percentage: n,
+                                    barWidth: Math.round(4 * n)
+                                }
+                            })).filter(Boolean).sort((function(e, t) {
+                                return t.percentage - e.percentage
+                            }));
                         return {
-                            name: t.title,
-                            percentage: s,
-                            barWidth: Math.round(4 * s)
+                            questionID: e.questionID,
+                            number: t + 1,
+                            title: e.title || s && s.title,
+                            description: e.description?.body || e.description,
+                            imageUrl: i ? i.url : null,
+                            entries: o
                         }
-                    })).filter(Boolean).sort((function(e, t) {
-                        return t.percentage - e.percentage
                     }))
                 })),
                 didInsertElement() {
-                    this._super(...arguments), this._loadSavedVote()
+                    this._super(...arguments), this._loadPlayerPreferences(), this._loadBallot()
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._voteSavedToastTimer && (c.run.cancel(this._voteSavedToastTimer), this._voteSavedToastTimer = null)
+                    this._super(...arguments), this._voteSavedToastTimer && (m.run.cancel(this._voteSavedToastTimer), this._voteSavedToastTimer = null)
                 },
                 _getDb() {
-                    return this._db || (this._db = s.default.dataBinding.bindTo(s.default.socket)), this._db
+                    return this._db || (this._db = a.default.dataBinding.bindTo(a.default.socket)), this._db
                 },
-                _onShowModalChanged: c.observer("showModal", (function() {
-                    this.get("showModal") && (this._loadSavedVote(), m.startTelemetryTimerEvent(p), this._sendTelemetry(u, {
+                _onShowModalChanged: m.observer("showModal", (function() {
+                    this.get("showModal") && (this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
                         eventId: this.get("_eventId")
-                    }), this.get("showResults") ? (this.set("currentScreen", S), this._markResultsViewed(), this._sendTelemetry(f, {
+                    }), this.get("showResults") ? (this.set("currentScreen", S), this._markResultsViewed(), this._sendTelemetry(_, {
                         eventId: this.get("_eventId")
-                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", b) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? v : b) : this.set("currentScreen", b))
+                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", y) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? v : y) : this.set("currentScreen", y))
                 })),
-                _loadSavedVote() {
-                    this._getDb().get(o.VOTING_PREFS_PATH).then((e => {
-                        if (this.isDestroying || this.isDestroyed) return;
-                        this.set("hasSeenFtux", !!e?.data?.hasSeenFtux);
-                        const t = this.get("_eventId"),
-                            n = e?.data?.eventId;
-                        if (t && n && n !== t) return;
-                        const s = e?.data?.votedOptionId;
-                        if (s) {
-                            const t = (this.get("displayOptions") || []).find((function(e) {
-                                return e.id === s
-                            }));
-                            t && (this.set("savedVoteName", t.name), this.set("selectedOption", t), this.set("_initialSelectedOption", t), e.data.votedOptionName !== t.name && this._getDb().patch(o.VOTING_PREFS_PATH, {
-                                schemaVersion: 1,
-                                data: Object.assign({}, e.data, {
-                                    votedOptionName: t.name
-                                })
-                            }))
-                        }
+                _loadPlayerPreferences() {
+                    this._getDb().get(l.VOTING_PREFS_PATH).then((e => {
+                        this.isDestroying || this.isDestroyed || this.set("hasSeenFtux", !!e?.data?.hasSeenFtux)
                     })).catch((() => {}))
                 },
+                _loadBallot() {
+                    return this._getDb().get(l.VOTING_VIEW_PATH, {
+                        skipCache: !0
+                    }).then((e => {
+                        if (this.isDestroying || this.isDestroyed) return;
+                        const t = this.get("_eventId"),
+                            n = {};
+                        if (!e?.votingEventId || !t || e.votingEventId === t)
+                            for (const t of e?.votingSelections || []) t && x(t.votingOptionId) !== l.VOTE_UNANSWERED && (n[t.questionId] = t.votingOptionId);
+                        this.set("_answers", n), this.set("_initialAnswers", Object.assign({}, n)), this.set("_ballotLoadFailed", !1)
+                    })).catch((() => {
+                        this.isDestroying || this.isDestroyed || (this.set("_answers", {}), this.set("_initialAnswers", {}), this.set("_ballotLoadFailed", !0))
+                    }))
+                },
                 _markResultsViewed() {
-                    this._getDb().patch(o.VOTING_PREFS_PATH, {
+                    this._getDb().patch(l.VOTING_PREFS_PATH, {
                         schemaVersion: 1,
                         data: {
                             eventId: this.get("_eventId"),
                             hasSeenResults: !0
                         }
-                    });
+                    }).catch((e => {
+                        a.logger.error("[JadeVotingSystem] Failed to save hasSeenResults preference:", e)
+                    }));
                     const e = this.get("onResultsViewed");
                     e && e()
                 },
                 _sendTelemetry(e, t) {
-                    m.sendTelemetryEvent(e, e, d, t)
+                    d.sendTelemetryEvent(e, e, u, t)
                 },
-                _sendVotingPcoEvent(e, t) {
-                    const n = JSON.stringify({
-                        votingEventId: this.get("_eventId"),
-                        votingOptionId: e,
-                        votingOptionTitle: t
-                    });
-                    return a.default.ajax({
-                        url: o.VOTING_PCO_PATH,
+                _saveBallot() {
+                    const e = this.get("_eventId"),
+                        t = this.get("_answers") || {},
+                        n = this.get("_initialAnswers") || {},
+                        s = (this.get("votingData.voting") || []).map((function(e) {
+                            return {
+                                questionId: e.questionID,
+                                votingOptionId: x(t[e.questionID])
+                            }
+                        })),
+                        o = JSON.stringify({
+                            votingEventId: e,
+                            votingSelections: s,
+                            eventOriginLocation: u
+                        });
+                    return this.set("_isSaving", !0), this.set("_saveFailed", !1), i.default.ajax({
+                        url: l.VOTING_PCO_PATH,
                         contentType: "application/json",
-                        data: JSON.stringify(n),
+                        data: JSON.stringify(o),
                         method: "POST"
-                    })
+                    }).then((() => {
+                        if (this.isDestroying || this.isDestroyed) return !0;
+                        this._sendBallotTelemetry(e, t, n), this.set("_initialAnswers", Object.assign({}, t));
+                        const a = this.get("onVoteChanged");
+                        return a && a(s.some((function(e) {
+                            return e.votingOptionId !== l.VOTE_UNANSWERED
+                        }))), !0
+                    })).catch((t => (a.logger.error(`[JadeVotingSystem] Failed to save ballot for event ${e}:`, t), this.isDestroying || this.isDestroyed || (this.set("_isSaving", !1), this.set("_saveFailed", !0)), !1)))
                 },
-                _saveVote(e) {
-                    if (!e) return;
-                    const t = (new Date).toISOString(),
-                        n = this.get("_eventId");
-                    this._sendVotingPcoEvent(e.id, e.name), this._getDb().patch(o.VOTING_PREFS_PATH, {
-                        schemaVersion: 1,
-                        data: {
-                            eventId: n,
-                            votedOptionId: e.id,
-                            votedOptionName: e.name,
-                            votedAt: t
-                        }
-                    }), this.set("savedVoteName", e.name);
-                    const s = this.get("onVoteChanged");
-                    s && s(!0), this._sendTelemetry(h, {
-                        eventId: n,
-                        votingId: e.id
-                    })
-                },
-                _clearVote() {
-                    const e = this.get("_eventId");
-                    this._sendVotingPcoEvent(-1, ""), this._getDb().patch(o.VOTING_PREFS_PATH, {
-                        schemaVersion: 1,
-                        data: {
+                _sendBallotTelemetry(e, t, n) {
+                    const s = new Set(Object.keys(t).concat(Object.keys(n)));
+                    for (const a of s) {
+                        const s = x(t[a]);
+                        s !== x(n[a]) && (s === l.VOTE_UNANSWERED ? this._sendTelemetry(f, {
                             eventId: e,
-                            votedOptionId: null,
-                            votedOptionName: null,
-                            votedAt: null
-                        }
-                    }), this.set("savedVoteName", null);
-                    const t = this.get("onVoteChanged");
-                    t && t(!1), this._sendTelemetry(g, {
-                        eventId: e
-                    })
+                            questionId: a
+                        }) : this._sendTelemetry(g, {
+                            eventId: e,
+                            questionId: a,
+                            votingId: s
+                        }))
+                    }
                 },
                 _resetState() {
-                    this.set("currentScreen", b), this.set("selectedOption", null), this.set("_initialSelectedOption", null), this.set("_hasInteractedWithVote", !1), this.set("_showConfirmation", !1)
+                    this.set("currentScreen", y), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1)
                 },
                 _showSavedToast() {
-                    this._voteSavedToastTimer && c.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = c.run.later(this, (function() {
+                    this._voteSavedToastTimer && m.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = m.run.later(this, (function() {
                         this.isDestroying || this.isDestroyed || (this.set("_showVoteSavedToast", !1), this._voteSavedToastTimer = null)
                     }), 2e3)
                 },
                 _doClose() {
-                    m.stopTelemetryTimerEvent(p, "voting_modal_time_spent", d, {
+                    d.stopTelemetryTimerEvent(h, "voting_modal_time_spent", u, {
                         eventId: this.get("_eventId")
                     }), this.set("showModal", !1), this._resetState()
                 },
                 actions: {
                     closeModal() {
-                        i.MASTERY_SFX.removePoint.play(), this.get("hasUnsavedChanges") ? this.set("_showConfirmation", !0) : this._doClose()
+                        o.MASTERY_SFX.removePoint.play(), this.get("hasUnsavedChanges") ? this.set("_showConfirmation", !0) : this._doClose()
                     },
                     continueToVoting() {
-                        i.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", v), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(o.VOTING_PREFS_PATH, {
+                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", v), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(l.VOTING_PREFS_PATH, {
                             schemaVersion: 1,
                             data: {
                                 hasSeenFtux: !0
                             }
-                        }))
+                        }).catch((e => {
+                            a.logger.error("[JadeVotingSystem] Failed to save hasSeenFtux preference:", e)
+                        })))
                     },
                     openLearnMore() {
-                        i.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", y), this._sendTelemetry(_, {
-                            eventId: this.get("_eventId")
-                        })
-                    },
-                    backToVoting() {
-                        i.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", v)
+                        const e = this.get("learnMoreUrl");
+                        e ? (o.MASTERY_SFX.buttonPress.play(), window.open(e, "_blank"), this._sendTelemetry(b, {
+                            eventId: this.get("_eventId"),
+                            screen: this.get("currentScreen")
+                        })) : a.logger.warning("[JadeVotingSystem] No learn more URL in voting content; ignoring click")
                     },
                     selectOption(e) {
-                        this.get("hasVotingPower") && (i.MASTERY_SFX.buttonPress.play(), this.set("_hasInteractedWithVote", !0), this.get("selectedOption") === e ? this.set("selectedOption", null) : this.set("selectedOption", e))
+                        if (!this.get("hasVotingPower") || this.get("_ballotLoadFailed")) return;
+                        o.MASTERY_SFX.buttonPress.play();
+                        const t = Object.assign({}, this.get("_answers"));
+                        x(t[e.questionID]) === e.id ? t[e.questionID] = l.VOTE_UNANSWERED : t[e.questionID] = e.id, this.set("_answers", t)
                     },
                     saveAndClose() {
-                        if (!this.get("isSaveEnabled")) return;
-                        i.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("selectedOption");
-                        e ? this._saveVote(e) : this._clearVote(), this._doClose(), this._showSavedToast()
+                        this.get("isSaveEnabled") && (o.MASTERY_SFX.buttonPress.play(), this._saveBallot().then((e => {
+                            this.isDestroying || this.isDestroyed || !e || (this._doClose(), this._showSavedToast())
+                        })))
                     },
                     confirmSave() {
-                        i.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("selectedOption");
-                        e ? this._saveVote(e) : this._clearVote(), this.set("_showConfirmation", !1), this._doClose(), this._showSavedToast()
+                        o.MASTERY_SFX.buttonPress.play(), this._saveBallot().then((e => {
+                            this.isDestroying || this.isDestroyed || !e || (this.set("_showConfirmation", !1), this._doClose(), this._showSavedToast())
+                        }))
                     },
                     discardChanges() {
-                        i.MASTERY_SFX.removePoint.play(), this.set("_showConfirmation", !1), this._doClose()
+                        o.MASTERY_SFX.removePoint.play(), this.set("_showConfirmation", !1), this._doClose()
                     }
                 }
             });
-            t.default = x
+            t.default = E
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "dhBYM53B",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,18],["text","\\n"],["block",["if"],[["get",["_showVoteSavedToast"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","voting-system-toast-overlay"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","voting-system-toast"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","voting-system-toast-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting_system_overlay_checkmark.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","voting-system-toast-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_saved"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-result-row"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-result-name"],["flush-element"],["append",["unknown",["entry","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-result-bar"],["dynamic-attr","style",["concat",["width: ",["unknown",["entry","barWidth"]],"px"]]],["flush-element"],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-result-pct"],["flush-element"],["append",["unknown",["entry","percentage"]],false],["text","%"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":["entry"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-results-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","voting-system-results-image"],["dynamic-attr","src",["unknown",["votingResultsData","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-results"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-results-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["votingResultsData","title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingResultsData","imageUrl"]]],null,3,2],["text","              "],["open-element","div",[]],["static-attr","class","voting-system-results-bars"],["flush-element"],["text","\\n"],["block",["each"],[["get",["resultEntries"]]],null,1],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-results-text"],["flush-element"],["append",["unknown",["votingResultsData","description"]],true],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","voting-system-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"backToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_back_to_voting"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","voting-system-learn-more-image"],["dynamic-attr","src",["unknown",["learnMoreData","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-learn-more"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-question-section"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["questionText"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-vote-answer"],["flush-element"],["append",["unknown",["tra","jade_voting_council_your_vote_label"]],false],["text"," "],["append",["helper",["if"],[["get",["displayVoteName"]],["get",["displayVoteName"]],["get",["tra","jade_voting_council_your_vote_none"]]],null],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreData","imageUrl"]]],null,7,6],["text","              "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-text"],["flush-element"],["append",["unknown",["learnMoreData","description"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["isVotingActive"]]],null,5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-dialog"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-text"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line1"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line2"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-buttons"],["flush-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSave"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_yes"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-secondary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"discardChanges"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_no"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["option","imageUrl"]],null],["dynamic-attr","alt",["unknown",["option","name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["voting-system-option ",["helper",["if"],[["helper",["eq"],[["get",["selectedOption"]],["get",["option"]]],null],"voting-system-option--selected"],null]," ",["helper",["unless"],[["get",["hasVotingPower"]],"voting-system-option--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-option-image"],["dynamic-attr","style",["concat",["height: ",["unknown",["optionImageHeight"]],"px"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","imageUrl"]]],null,10],["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-option-frame"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-inner"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-main"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-outer"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-option-label"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["append",["unknown",["option","name"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_requires_voting_power"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","class","voting-system-time-tooltip"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-time-tooltip-block"],["flush-element"],["text","\\n                    "],["open-element","h5",[]],["static-attr","class","voting-system-time-tooltip-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_ends"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-time-tooltip-subtitle"],["flush-element"],["append",["unknown",["votingEndFullText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-voting"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-header-left"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-time-row"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],13],["text","              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-question-section"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["questionText"]],false],["close-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["hasVotingPower"]]],null,12],["text","          "],["open-element","div",[]],["static-attr","class","voting-system-options-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["displayOptions"]]],null,11],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-voting-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-power-row"],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-power-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_power"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-power-value"],["flush-element"],["append",["unknown",["displayVotingPower"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-save-section"],["flush-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["voting-system-btn-primary ",["helper",["unless"],[["get",["isSaveEnabled"]],"voting-system-btn-primary--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveAndClose"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","jade_voting_council_save"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-save-note"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_can_be_changed"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["_showConfirmation"]]],null,9],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"continueToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_continue"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-intro"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-intro-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-art"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-home/the_council.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-intro-shroud"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-overlay"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_heading"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-description"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-body-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_description"]],false],["close-element"],["text","\\n              "],["open-element","ul",[]],["static-attr","class","voting-system-bullet-list"],["flush-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_level5"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_improve"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_sway"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["showIntroContinue"]]],null,15],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isIntroScreen"]]],null,16],["text","\\n"],["block",["if"],[["get",["isVotingScreen"]]],null,14],["text","\\n"],["block",["if"],[["get",["isLearnMoreScreen"]]],null,8],["text","\\n"],["block",["if"],[["get",["isResultsScreen"]]],null,4]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","show","onClose","dismissibleType","closeButton","orientation","okText"],["DialogAlert",["get",["showModal"]],["helper",["action"],[["get",[null]],"closeModal"],null],"inside",false,"none",""]],17]],"locals":[]}],"hasPartials":false}',
+                id: "KIihG75o",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,20],["text","\\n"],["block",["if"],[["get",["_showVoteSavedToast"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","voting-system-toast-overlay"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","voting-system-toast"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","voting-system-toast-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting_system_overlay_checkmark.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","voting-system-toast-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_saved"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","voting-system-results-text"],["flush-element"],["append",["unknown",["result","description"]],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","voting-system-result-row"],["flush-element"],["text","\\n                        "],["open-element","p",[]],["static-attr","class","voting-system-result-name"],["flush-element"],["append",["unknown",["entry","name"]],false],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-result-bar"],["dynamic-attr","style",["concat",["width: ",["unknown",["entry","barWidth"]],"px"]]],["flush-element"],["close-element"],["text","\\n                        "],["open-element","p",[]],["static-attr","class","voting-system-result-pct"],["flush-element"],["append",["unknown",["entry","percentage"]],false],["text","%"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["entry"]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","voting-system-results-image"],["dynamic-attr","src",["unknown",["result","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-result-block"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-result-heading"],["flush-element"],["append",["unknown",["result","number"]],false],["text",". "],["append",["unknown",["result","title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["result","imageUrl"]]],null,3],["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-results-bars"],["flush-element"],["text","\\n"],["block",["each"],[["get",["result","entries"]]],null,2],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["result","description"]]],null,1],["text","                "],["close-element"],["text","\\n"]],"locals":["result"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-link-row"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-link"],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-link-icon"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting-system-external-link.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-results"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreUrl"]]],null,5],["text","          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-results-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n"],["block",["each"],[["get",["resultQuestions"]]],null,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-dialog"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-text"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line1"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line2"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-buttons"],["flush-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSave"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_yes"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-secondary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"discardChanges"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_no"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","p",[]],["static-attr","class","voting-system-save-error"],["flush-element"],["append",["unknown",["tra","jade_voting_council_save_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["option","imageUrl"]],null],["dynamic-attr","alt",["unknown",["option","name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["voting-system-option ",["helper",["if"],[["get",["option","isSelected"]],"voting-system-option--selected"],null]," ",["helper",["if"],[["get",["option","isDisabled"]],"voting-system-option--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-option-image"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","imageUrl"]]],null,9],["text","                          "],["open-element","div",[]],["static-attr","class","voting-system-option-frame"],["flush-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-inner"],["flush-element"],["close-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-main"],["flush-element"],["close-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-outer"],["flush-element"],["close-element"],["text","\\n                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-option-label"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["flush-element"],["append",["unknown",["option","name"]],true],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-question-block"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-question-title"],["flush-element"],["append",["unknown",["question","number"]],false],["text",". "],["append",["unknown",["question","title"]],true],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-options-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["question","options"]]],null,10],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["question"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_ballot_unavailable"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_requires_voting_power"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-link-row"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-link"],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-link-icon"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting-system-external-link.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","class","voting-system-time-tooltip"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-time-tooltip-block"],["flush-element"],["text","\\n                    "],["open-element","h5",[]],["static-attr","class","voting-system-time-tooltip-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_ends"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-time-tooltip-subtitle"],["flush-element"],["append",["unknown",["votingEndFullText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-voting"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-header-left"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-time-row"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],15],["text","              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreUrl"]]],null,14],["text","          "],["open-element","div",[]],["static-attr","class","voting-system-header-right"],["flush-element"],["text","\\n            "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-power-block"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-power-row"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","voting-system-power-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_power"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","voting-system-power-value"],["flush-element"],["append",["unknown",["displayVotingPower"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["unless"],[["get",["hasVotingPower"]]],null,13],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["_ballotLoadFailed"]]],null,12],["text","\\n"],["block",["each"],[["get",["displayQuestions"]]],null,11],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-save-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["_saveFailed"]]],null,8],["text","                "],["open-element","button",[]],["dynamic-attr","class",["concat",["voting-system-btn-primary ",["helper",["unless"],[["get",["isSaveEnabled"]],"voting-system-btn-primary--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveAndClose"],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","jade_voting_council_save"]],false],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-save-note"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_can_be_changed"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["_showConfirmation"]]],null,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"continueToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_continue"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-intro"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-intro-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-art"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-home/the_council.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-intro-shroud"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-overlay"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_heading"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-description"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-body-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_description"]],false],["close-element"],["text","\\n              "],["open-element","ul",[]],["static-attr","class","voting-system-bullet-list"],["flush-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_level5"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_improve"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_sway"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["showIntroContinue"]]],null,17],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isIntroScreen"]]],null,18],["text","\\n"],["block",["if"],[["get",["isVotingScreen"]]],null,16],["text","\\n"],["block",["if"],[["get",["isResultsScreen"]]],null,6]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","show","onClose","dismissibleType","closeButton","orientation","okText"],["DialogAlert",["get",["showModal"]],["helper",["action"],[["get",[null]],"closeModal"],null],"inside",false,"none",""]],19]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -27510,15 +27578,15 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "sBzw+DVt",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["header-title ",["unknown",["teamNameHeaderGlowClass"]]]]],["flush-element"],["append",["unknown",["teamNameHeaderTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","champion_select_summoner_array_first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","party"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["summoners"]]],[["key"],["slotId"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["demacia-summoner-object"],null,[["team","summoner","summonerName","champSelectScreen","phase","isSpectating","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","isFiveSecondsBeforeGameStart","reportingEnabled","champSelectMutingEnabled","toggleSwapSelectionModal"],[["get",["team"]],["get",["summoner"]],["get",["summoner","summonerObjectDisplayName"]],["get",["champSelectScreen"]],["get",["session","timer","phase"]],["get",["isSpectating"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["isReportingEnabled"]],["get",["champSelectMutingEnabled"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["summoner","isPlaceholder"]]],null,0]],"locals":["summoner"]}],"hasPartials":false}',
+                id: "4pJ7G7C6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["header-title ",["unknown",["teamNameHeaderGlowClass"]]]]],["flush-element"],["append",["unknown",["teamNameHeaderTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","champion_select_summoner_array_first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","party"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["summoners"]]],[["key"],["slotId"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["demacia-summoner-object"],null,[["team","summoner","summonerName","champSelectScreen","timer","isSpectating","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","summoners","isFiveSecondsBeforeGameStart","reportingEnabled","champSelectMutingEnabled","toggleSwapSelectionModal"],[["get",["team"]],["get",["summoner"]],["get",["summoner","summonerObjectDisplayName"]],["get",["champSelectScreen"]],["get",["session","timer"]],["get",["isSpectating"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["summoners"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["isReportingEnabled"]],["get",["champSelectMutingEnabled"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["summoner","isPlaceholder"]]],null,0]],"locals":["summoner"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "0wqYPZBc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\index.js\\" "],["text","\\n\\n"],["block",["if"],[["get",["showSelfActionFx"]]],null,5,4],["text","  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells-champion-content"],["flush-element"],["text","\\n\\n"],["block",["if"],[["helper",["and"],[["get",["isBanningNow"]],["get",["isLeft"]]],null]],null,2,1],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-name-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-text"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__role-text"],["flush-element"],["append",["unknown",["roleText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["demacia-swap-button"],null,[["summoner","isLeft","toggleSwapSelectionModal","recordDidRequestSucceed","summonerHasActiveSwap","queueId","isBanningNow","phase"],[["get",["summoner"]],["get",["isLeft"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["queueId"]],["get",["isBanningNow"]],["get",["phase"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["summoner-overlay"],null,[["isDemacia","displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[true,["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--primary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell1IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell1IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--secondary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell2IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell2IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-to-ban"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--other"],["flush-element"],["text","\\n      "],["open-element","video",[]],["dynamic-attr","class",["concat",["jade-summoner-object__action-fx-video-sheen ",["helper",["if"],[["get",["summoner","isOnPlayersTeam"]],"jade-summoner-object__action-fx-video-sheen--ally","jade-summoner-object__action-fx-video-sheen--enemy"],null]]]],["static-attr","src","/fe/lol-jade/videos/champselect/CS_ActivePlayerRectangle_Sheen.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showOtherActionFx"]]],null,3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--self"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","jade-summoner-object__action-fx-video"],["static-attr","src","/fe/lol-jade/videos/champselect/CS_SelfOrangeRectangleArrows.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "YDzCCg2K",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\index.js\\" "],["text","\\n\\n"],["block",["if"],[["get",["showSelfActionFx"]]],null,5,4],["text","  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells-champion-content"],["flush-element"],["text","\\n\\n"],["block",["if"],[["helper",["and"],[["get",["isBanningNow"]],["get",["isLeft"]]],null]],null,2,1],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-name-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-text"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__role-text"],["flush-element"],["append",["unknown",["roleText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["demacia-swap-button"],null,[["summoner","toggleSwapSelectionModal","recordDidRequestSucceed","summonerHasActiveSwap","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","summoners","timer"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["summoners"]],["get",["timer"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["summoner-overlay"],null,[["isDemacia","displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[true,["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--primary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell1IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell1IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--secondary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell2IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell2IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-to-ban"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--other"],["flush-element"],["text","\\n      "],["open-element","video",[]],["dynamic-attr","class",["concat",["jade-summoner-object__action-fx-video-sheen ",["helper",["if"],[["get",["summoner","isOnPlayersTeam"]],"jade-summoner-object__action-fx-video-sheen--ally","jade-summoner-object__action-fx-video-sheen--enemy"],null]]]],["static-attr","src","/fe/lol-jade/videos/champselect/CS_ActivePlayerRectangle_Sheen.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showOtherActionFx"]]],null,3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--self"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","jade-summoner-object__action-fx-video"],["static-attr","src","/fe/lol-jade/videos/champselect/CS_SelfOrangeRectangleArrows.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -27755,9 +27823,11 @@
                 shouldShowSwapTooltip: s.Ember.computed("isLeft", "swapTooltipShown", "showPositionAssignment", "team.length", "isRoleSwapEnabled", (function() {
                     return this.get("isLeft") && !this.get("swapTooltipShown") && !this.get("showPositionAssignment") && this.get("team.length") > 1 && this.get("isRoleSwapEnabled")
                 })),
-                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return o.CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e) || o.PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e) || i.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e) || i.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", "championSwapOnlyQueueIds", "pickOrderSwapOnlyQueueIds", (function() {
+                    const e = this.get("queueId"),
+                        t = this.get("championSwapOnlyQueueIds") || [],
+                        n = this.get("pickOrderSwapOnlyQueueIds") || [];
+                    return t.includes(e) || n.includes(e)
                 })),
                 headerTitle: s.Ember.computed("isLeft", (function() {
                     return this.get("isLeft") ? this.get("tra.champion_select_summoner_array_title_my_team") : this.get("tra.champion_select_summoner_array_title_enemy_team")
@@ -27933,8 +28003,8 @@
                 isBanningNow: s.Ember.computed.equal("summoner.activeActionType", "ban"),
                 isSpectating: !1,
                 largeAreaAnimationsEnabled: s.Ember.computed.equal("uxSettings.largeAreaAnimationsEnabled", !0),
-                showSelfActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "phase", "isSpectating", "champSelectScreen", "largeAreaAnimationsEnabled", (function() {
-                    return !(this.get("isSpectating") || !this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("champSelectScreen") !== a.SCREENS.positionAssignment && (this.get("isPickingNow") || this.get("isBanningNow") || this.get("phase") === a.TIMER_PHASES.planning))
+                showSelfActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "timer.inPlanningPhase", "isSpectating", "champSelectScreen", "largeAreaAnimationsEnabled", (function() {
+                    return !(this.get("isSpectating") || !this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("champSelectScreen") !== a.SCREENS.positionAssignment && (this.get("isPickingNow") || this.get("isBanningNow") || this.get("timer.inPlanningPhase")))
                 })),
                 showOtherActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "isSpectating", "largeAreaAnimationsEnabled", (function() {
                     return !(this.get("isSpectating") || this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("isPickingNow") || this.get("isBanningNow"))

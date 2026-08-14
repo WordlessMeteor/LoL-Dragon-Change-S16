@@ -579,8 +579,8 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.25,
-                "coefficient2": 1.25
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -611,58 +611,58 @@
                     6.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    30.0,
-                    40.0,
-                    50.0,
-                    60.0,
-                    60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    0.22,
-                    0.22,
-                    0.235,
-                    0.25,
-                    0.265,
-                    0.28,
-                    0.28
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.1,
-                    1.1,
-                    1.175,
-                    1.25,
-                    1.325,
-                    1.4,
-                    1.4
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -853,7 +853,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Each time Ashe kills a unit, she gains some extra gold. Ashe can activate to send her Hawk Spirit on a scouting mission.",
-            "dynamicDescription": "<mainText><spellPassive>Passive:</spellPassive> Ashe gains <gold>@AdditionalGold@ extra gold</gold> whenever she kills an enemy.<br><br><spellActive>Active:</spellActive> Ashe sends forth a hawk to grant vision in an area for 5 seconds. It also reveals the area as it flies through.",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Ashe gains <gold>@AdditionalGold@ extra gold</gold> whenever she kills an enemy.<br><br><spellActive>Active:</spellActive> Ashe sends forth a hawk to grant vision in an area for @RevealDuration@ seconds. It also reveals the area as it flies through.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -879,45 +879,45 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1003,7 +1003,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ashe fires a missile of ice in a straight line.  If the arrow collides with an enemy Champion, it deals damage and stuns the Champion for up to 3.5 seconds, based on how far the arrow has traveled.  In addition, surrounding enemy units take damage and are slowed.",
-            "dynamicDescription": "<mainText>Ashe launches a crystal arrow of ice in a line that <status>Stuns</status> an enemy Champion dealing <magicDamage>@RMainDamage@ magic damage</magicDamage>. <status>Stun</status> duration increases with distance travelled, up to @MaxStunDuration@ seconds. Surrounding enemies are <status>Slowed</status> by 50% for 3 seconds and take <magicDamage>@RMainDamageSplashTooltip@ damage.</magicDamage>",
+            "dynamicDescription": "Ashe launches a crystal arrow of ice in a line that <status>Stuns</status> an enemy Champion dealing <magicDamage>@RMainDamage@ magic damage</magicDamage>. <status>Stun</status> duration increases with distance travelled, up to @MaxStunDuration@ seconds. Surrounding enemies are <status>Slowed</status> by @MovementSpeedMod*-100@% for @SlowDuration@ seconds and take <magicDamage>@RAoEDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

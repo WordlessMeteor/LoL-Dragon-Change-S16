@@ -17967,11 +17967,11 @@
         ]
     },
     {
-        "display_name": "魔石巨兽",
+        "display_name": "魔岩巨兽",
         "trait_id": "DA_18_Battlemage",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Monolith.TFT_Set18.png",
-        "tooltip_text": "每成为1名敌人的目标，【魔石巨兽】获得@Resists@护甲和魔法抗性。",
+        "tooltip_text": "每成为1名敌人的目标，【魔岩巨兽】获得@Resists@护甲和魔法抗性。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18121,7 +18121,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.5
+                        "value": 0.45
                     }
                 ],
                 "min_units": 9,
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "【帝王斑蝶】的伤害会对敌人施加持续@ShredDuration@秒的@ShredPercent@%魔抗击碎与护甲击碎。",
+        "tooltip_text": "【帝王斑蝶】的伤害会对敌人施加持续@ShredDuration@秒的@ShredPercent@%魔抗击碎与护甲击碎。<br><br><rules>魔抗击碎：降低魔抗值</rules><br><rules>护甲击碎：降低护甲值。</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18246,11 +18246,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 1.0
+                        "value": 2.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 20.0
+                        "value": 18.0
                     }
                 ],
                 "min_units": 3,
@@ -18282,7 +18282,7 @@
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 30.0
+                        "value": 32.0
                     }
                 ],
                 "min_units": 5,
@@ -18298,7 +18298,7 @@
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 80.0
+                        "value": 60.0
                     }
                 ],
                 "min_units": 7,
@@ -18376,7 +18376,7 @@
                     },
                     {
                         "name": "EclipseBeamPeriod",
-                        "value": 4.0
+                        "value": 3.5
                     }
                 ]
             }
@@ -18422,7 +18422,7 @@
                 "constants": [
                     {
                         "name": "StonebarkTreeBonusHealth",
-                        "value": 150.0
+                        "value": 200.0
                     }
                 ],
                 "min_units": 5,
@@ -18562,7 +18562,7 @@
                 "constants": [
                     {
                         "name": "CombatStartSeeds",
-                        "value": 4.0
+                        "value": 3.0
                     },
                     {
                         "name": "SeedsPerCast",
@@ -18609,7 +18609,7 @@
                 "constants": [
                     {
                         "name": "HunterAD",
-                        "value": 0.15
+                        "value": 0.2
                     }
                 ],
                 "min_units": 2,
@@ -18621,7 +18621,7 @@
                 "constants": [
                     {
                         "name": "HunterAD",
-                        "value": 0.25
+                        "value": 0.3
                     }
                 ],
                 "min_units": 3,
@@ -18633,7 +18633,7 @@
                 "constants": [
                     {
                         "name": "HunterAD",
-                        "value": 0.4
+                        "value": 0.45
                     }
                 ],
                 "min_units": 4,
@@ -18645,7 +18645,7 @@
                 "constants": [
                     {
                         "name": "HunterAD",
-                        "value": 0.6
+                        "value": 0.65
                     }
                 ],
                 "min_units": 5,
@@ -18659,7 +18659,7 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "【地狱火】的伤害会对敌人施加持续@Duration@秒的<TFTKeyword>灼烧</TFTKeyword>和@WoundPercent@%<TFTKeyword>重伤</TFTKeyword>效果。【地狱火】的灼烧效果可以和其它灼烧效果叠加。<br><row>(@MinUnits@) @HPBurnPerSecond@%灼烧</row>效果<br><row>(@MinUnits@)在对战后，你的@LuckySlotCount@个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子。</row><br><row>(@MinUnits@)引燃@LuckySlotCount@个商店栏位，施加@HPBurnPerSecond@%灼烧效果</row><br><row>(@MinUnits@)引燃@LuckySlotCount@个商店栏位，施加@HPBurnPerSecond@%灼烧效果</row>",
+        "tooltip_text": "【地狱火】的伤害会对敌人施加持续@Duration@秒的<TFTKeyword>灼烧</TFTKeyword>和<TFTKeyword>重伤</TFTKeyword>效果。【地狱火】的灼烧效果可以和其它灼烧效果叠加。<br><row>(@MinUnits@) @HPBurnPerSecond@%灼烧效果，@WoundPercent@%重伤</row>效果<br><row>(@MinUnits@)在对战后，你的@LuckySlotCount@个不包含【地狱火】弈子的商店栏位会被引燃，刷新出高一阶的弈子。</row><br><row>(@MinUnits@)引燃@LuckySlotCount@个商店栏位，施加@HPBurnPerSecond@%灼烧效果</row><br><row>(@MinUnits@)引燃@LuckySlotCount@个商店栏位，施加@HPBurnPerSecond@%灼烧效果</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "每当@UniqueTraitHexRange@格内的1名敌人阵亡时，获得@UniqueTraitHealthPerStack@永久最大生命值。<br><br>当前：0",
+        "tooltip_text": "每当@UniqueTraitHexRange@格内的1名敌人阵亡时，你最强大的那个【远古树精】弈子获得@UniqueTraitHealthPerStack@永久最大生命值。<br><br>当前：0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19279,11 +19279,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeedIncrease",
-                        "value": 0.3
+                        "value": 0.35
                     },
                     {
                         "name": "HealthIncrease",
-                        "value": 0.3
+                        "value": 0.4
                     },
                     {
                         "name": "TeamwideRatio",

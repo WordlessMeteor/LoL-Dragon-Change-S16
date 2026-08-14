@@ -860,7 +860,7 @@
                     }
                 }
                 _updateMemberParticipant(e) {
-                    const t = this.shadowRoot.querySelector(`[participant-id="${e.puuid}"]`);
+                    const t = this.shadowRoot.querySelector(`[participant-id="${e.puuid}"]:not([data-team-participant="true"])`);
                     if (t) return t.updateSelf(e), !0;
                     {
                         const t = this.shadowRoot.querySelector(this._selectors.participants),

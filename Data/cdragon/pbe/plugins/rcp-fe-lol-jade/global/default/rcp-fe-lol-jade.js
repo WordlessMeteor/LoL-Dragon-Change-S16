@@ -41,10 +41,10 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.VOTING_PREFS_PATH = t.VOTING_PCO_PATH = t.VOTING_PCO_CATEGORY = t.TIMER_PHASES = t.SWAP_TYPES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.STANDARD_MAX_TEAM_SIZE = t.SOUNDS_PATH = t.SFX_CHANNEL = t.SCREENS = t.RANDOM_CHAMP = t.POSITION_TOP = t.POSITION_SUPPORT = t.POSITION_NONE = t.POSITION_MIDDLE = t.POSITION_JUNGLE = t.POSITION_ICON_PATHS = t.POSITION_BOTTOM = t.POSITION_ANY = t.POSITIONS = t.PLUGIN_NAME = t.PANE_STATES = t.PANES = t.NONE_CHAMP = t.MASTERY_WARNING_ICON = t.MASTERY_TREE_ICONS = t.MASTERY_PREREQ_BARS = t.JADE_SCREEN_NAME = t.JADE_QUEUE_ID = t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.JADE_NAV_ROUTES_CONFIG_PATH = t.JADE_NAV_ROUTES = t.JADE_MAP_ID = t.JADE_HOME_TEMPLATE_TYPES = t.JADE_HOME_TAB_IDS = t.JADE_HOME_STATES = t.JADE_GAME_MODE = t.JADE_CONSTANTS = t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = t.JADE_AUDIO_PATH = t.INVENTORY_TYPES = t.INVALID_SWAP_ID = t.INVALID_SPELL_ID = t.INVALID_SKIN_ID = t.DEFAULT_PANE_TABS = t.DEFAULT_JADE_NAV_ROUTES_CONFIG = t.BLADES_COMPONENT_TYPES = void 0, t.formatBlades = function(e = []) {
+            }), t.VOTING_VIEW_PATH = t.VOTING_PREFS_PATH = t.VOTING_PCO_PATH = t.VOTING_PCO_CATEGORY = t.VOTE_UNANSWERED = t.TIMER_PHASES = t.SWAP_TYPES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.STANDARD_MAX_TEAM_SIZE = t.SOUNDS_PATH = t.SFX_CHANNEL = t.SCREENS = t.RANDOM_CHAMP = t.POSITION_TOP = t.POSITION_SUPPORT = t.POSITION_NONE = t.POSITION_MIDDLE = t.POSITION_JUNGLE = t.POSITION_ICON_PATHS = t.POSITION_BOTTOM = t.POSITION_ANY = t.POSITIONS = t.PLUGIN_NAME = t.PANE_STATES = t.PANES = t.NONE_CHAMP = t.MASTERY_WARNING_ICON = t.MASTERY_TREE_ICONS = t.MASTERY_PREREQ_BARS = t.JADE_SCREEN_NAME = t.JADE_QUEUE_ID = t.JADE_NAV_ROUTES_CONFIG_PATH = t.JADE_NAV_ROUTES = t.JADE_MAP_ID = t.JADE_HOME_TEMPLATE_TYPES = t.JADE_HOME_TAB_IDS = t.JADE_HOME_STATES = t.JADE_GAME_MODE = t.JADE_CONSTANTS = t.JADE_AUDIO_PATH = t.INVENTORY_TYPES = t.INVALID_SWAP_ID = t.INVALID_SPELL_ID = t.INVALID_SKIN_ID = t.DEFAULT_PANE_TABS = t.DEFAULT_JADE_NAV_ROUTES_CONFIG = t.BLADES_COMPONENT_TYPES = void 0, t.formatBlades = function(e = []) {
                 const t = [],
                     n = {};
-                for (const s of e) s?.type === M.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === M.VOTING_CONTENT_BLOCK && (O(s) ? n.voting = s : n.votingError = !0);
+                for (const s of e) s?.type === M.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === M.VOTING_CONTENT_BLOCK && (D(s) ? n.voting = s : n.votingError = !0);
                 return n.mastheadBlades = t, n
             }, t.getInventoryTypeUuidToPaw = function() {
                 if (!y) {
@@ -184,8 +184,6 @@
             t.SFX_CHANNEL = "sfx-ui";
             t.INVALID_SKIN_ID = 0;
             t.STANDARD_MAX_TEAM_SIZE = 5;
-            t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = [];
-            t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 4310, 3262];
             const w = {
                 CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
                 PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
@@ -212,6 +210,8 @@
             t.VOTING_PCO_CATEGORY = T;
             const A = `/lol-summoner-profiles/v1/pco/${T}`;
             t.VOTING_PCO_PATH = A;
+            t.VOTING_VIEW_PATH = "/lol-summoner-profiles/v1/get-jade-voting-view";
+            t.VOTE_UNANSWERED = -1;
             const M = {
                 MASTHEAD_CONTENT_BLOCK: "leagueClientMastheadContentBlock",
                 LEAGUE_CLIENT_TAB_CONTENT: "leagueClientTabContent",
@@ -222,11 +222,11 @@
                 VOTING_CONTENT_BLOCK: "votingContentBlock"
             };
 
-            function O(e) {
-                return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate)
+            function D(e) {
+                return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate) && Array.isArray(e?.voting) && e.voting.length > 0
             }
             t.BLADES_COMPONENT_TYPES = M;
-            const D = {
+            const O = {
                 HOME: "home",
                 RUNES: "runes",
                 MASTERIES: "masteries",
@@ -234,15 +234,15 @@
                 STORE: "store",
                 BATTLEPASS: "battlepass"
             };
-            t.JADE_NAV_ROUTES = D;
+            t.JADE_NAV_ROUTES = O;
             const R = {
-                HOME: D.HOME,
+                HOME: O.HOME,
                 VOTING: "voting",
-                BATTLEPASS: D.BATTLEPASS
+                BATTLEPASS: O.BATTLEPASS
             };
             t.JADE_HOME_TAB_IDS = R;
             t.JADE_NAV_ROUTES_CONFIG_PATH = "/lol-client-config/v3/client-config/lol.client_settings.jade.navRoutes";
-            const j = Object.fromEntries(Object.entries(D).map((([e, t]) => [t, {
+            const j = Object.fromEntries(Object.entries(O).map((([e, t]) => [t, {
                 key: e,
                 enabled: !0
             }])));
@@ -2579,11 +2579,12 @@
                 r = n(87);
             const c = "/lol-settings/v2/account/LCUPreferences/jade-ftux",
                 m = "jade-home",
-                d = "/lol-jade-dev/v1/force-error",
-                u = "/lol-jade-dev/v1/force-voting-error",
-                p = "/lol-jade-dev/v1/force-shop-error",
-                h = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
-            var g = s.Ember.Controller.extend(o.PurchaseModalMixin, {
+                d = "9ec524bf-3628-4f5a-9139-5db0eb650a3b",
+                u = "/lol-jade-dev/v1/force-error",
+                p = "/lol-jade-dev/v1/force-voting-error",
+                h = "/lol-jade-dev/v1/force-shop-error",
+                g = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
+            var _ = s.Ember.Controller.extend(o.PurchaseModalMixin, {
                 jadeHomePcs: s.Ember.inject.service("jade-home-pcs"),
                 patcher: s.Ember.inject.service("patcher"),
                 state: a.JADE_HOME_STATES.INACTIVE,
@@ -2663,15 +2664,33 @@
                     }))
                 },
                 _loadVotingStatus() {
+                    this._loadHasVoted(), this._loadResultsSeen()
+                },
+                _loadHasVoted() {
+                    const e = this.get("votingData.votingSessionID");
+                    s.db.get(a.VOTING_VIEW_PATH, {
+                        skipCache: !0
+                    }).then((t => {
+                        if (this.isDestroying || this.isDestroyed) return;
+                        const n = t && t.votingEventId;
+                        if (n && e && n !== e) return void this.set("hasVoted", !1);
+                        const s = t && t.votingSelections || [];
+                        this.set("hasVoted", s.some((function(e) {
+                            return e && e.votingOptionId !== a.VOTE_UNANSWERED
+                        })))
+                    })).catch((e => {
+                        s.logger.error(`Failed to read ${a.VOTING_VIEW_PATH}; leaving hasVoted unchanged:`, e)
+                    }))
+                },
+                _loadResultsSeen() {
                     const e = this.get("votingData.votingSessionID");
                     s.db.get(a.VOTING_PREFS_PATH).then((t => {
                         if (this.isDestroying || this.isDestroyed) return;
                         const n = t && t.data,
                             s = n && n.eventId;
-                        if (s && s !== e) return this.set("hasVoted", !1), void this.set("hasSeenResults", !1);
-                        this.set("hasVoted", !(!n || !n.votedOptionId)), this.set("hasSeenResults", !(!n || !n.hasSeenResults))
-                    })).catch((() => {
-                        this.set("hasVoted", !1), this.set("hasSeenResults", !1)
+                        s && s !== e ? this.set("hasSeenResults", !1) : this.set("hasSeenResults", !(!n || !n.hasSeenResults))
+                    })).catch((e => {
+                        s.logger.error(`Failed to read ${a.VOTING_PREFS_PATH}; treating results as unseen:`, e), this.set("hasSeenResults", !1)
                     }))
                 },
                 async _loadPageContent() {
@@ -2687,29 +2706,29 @@
                         } = (0, a.formatBlades)(t.blades);
                         if (!n || 0 === n.length) return void this.set("state", a.JADE_HOME_STATES.ERROR);
                         const r = n.filter((e => "image" === e?.header?.media?.type)).map((e => e?.header?.media?.url));
-                        await s.Ember.RSVP.all([(0, i.preloadImages)(r), (0, i.preloadImages)(h)]), this.set("pages", n), this.set("votingData", o), this.set("votingError", !!l), o && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
+                        await s.Ember.RSVP.all([(0, i.preloadImages)(r), (0, i.preloadImages)(g)]), this.set("pages", n), this.set("votingData", o), this.set("votingError", !!l), o && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
                     } catch (e) {
                         s.logger.error(`Failed to load page content for ${m}`, e), this.set("state", a.JADE_HOME_STATES.ERROR)
                     }
                 },
                 _loadVotingPower() {
                     this._progressionBinding = (0, s.dataBinding)("/lol-progression", s.socket), (0, r.whenProgressionReady)(this, (() => {
-                        this._progressionBinding.observe("/v1/groups/9ec524bf-3628-4f5a-9139-5db0eb650a3b/instanceData", this, (e => {
+                        this._progressionBinding.observe(`/v1/groups/${d}/instanceData`, this, (e => {
                             this.set("votingPower", e?.counters?.[0]?.counterValue || 0)
                         }))
                     }))
                 },
                 _setupDevForceError() {
-                    s.db.observe(d, this, (e => {
+                    s.db.observe(u, this, (e => {
                         this.isDestroying || this.isDestroyed || (e ? this.set("state", a.JADE_HOME_STATES.ERROR) : this.get("isError") && (this.get("pages.length") ? this.set("state", a.JADE_HOME_STATES.READY) : this._loadPageContent()))
-                    })), s.db.observe(u, this, (e => {
-                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
                     })), s.db.observe(p, this, (e => {
+                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
+                    })), s.db.observe(h, this, (e => {
                         this.isDestroying || this.isDestroyed || this.set("forceShopError", !!e)
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), (0, r.unobserveProgressionReady)(this), s.db.unobserve(d, this), s.db.unobserve(u, this), s.db.unobserve(p, this)
+                    this._super(...arguments), (0, r.unobserveProgressionReady)(this), this._progressionBinding && this._progressionBinding.unobserve(`/v1/groups/${d}/instanceData`, this), s.db.unobserve(u, this), s.db.unobserve(p, this), s.db.unobserve(h, this)
                 },
                 actions: {
                     openVotingSystem() {
@@ -2737,7 +2756,7 @@
                     }
                 }
             });
-            t.default = g
+            t.default = _
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -3828,7 +3847,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SMALL_SLOTS = t.SLOTS_BY_TYPE = t.RUNE_TYPE_ORDER = t.RUNE_TYPES = t.RUNE_PAGE_NAME_LENGTH = t.MAX_SMALL_SLOT_ID = t.MAX_RUNE_SLOTS = t.LARGE_SLOTS = t.GSD_RUNE_TYPE_TO_COLOR_MAP = t.FREE_RUNE_PAGES = void 0;
-            t.FREE_RUNE_PAGES = 1;
+            t.FREE_RUNE_PAGES = 3;
             t.RUNE_PAGE_NAME_LENGTH = 26;
             t.MAX_SMALL_SLOT_ID = 27;
             t.MAX_RUNE_SLOTS = 30;
@@ -5600,14 +5619,14 @@
                     runeInventoryCounts: T,
                     portraitGameDataByContentId: A,
                     tra: M
-                } = n, O = (0, o.getItemCost)(e), D = a.get(e.id), R = D ? D.toUpperCase() : null, j = R ? h[R] : null;
-                if (null == O && !R) return null;
+                } = n, D = (0, o.getItemCost)(e), O = a.get(e.id), R = O ? O.toUpperCase() : null, j = R ? h[R] : null;
+                if (null == D && !R) return null;
                 const L = (0, o.getPricesWithIcons)(e, k),
-                    N = L.length > 0 ? L : r.get(D) || [],
+                    N = L.length > 0 ? L : r.get(O) || [],
                     B = N.find((e => e.currency !== p)),
-                    U = B?.currency ?? N[0]?.currency ?? (0, o.getItemCurrency)(e),
-                    F = k[U],
-                    H = B?.cost ?? O ?? N[0]?.cost ?? null,
+                    F = B?.currency ?? N[0]?.currency ?? (0, o.getItemCurrency)(e),
+                    U = k[F],
+                    H = B?.cost ?? D ?? N[0]?.cost ?? null,
                     V = [...s.get(e.id) || []],
                     q = V.includes(u.PORTRAITS?.ID),
                     G = e.overrideTileSize || (q ? "tall-tile" : null),
@@ -5654,7 +5673,7 @@
                     ue = j ? (0, o.formatFiatPrice)(j.realAmountCents, j.realCurrencyCode) : null,
                     pe = (e.purchaseUnits || []).length > 1,
                     he = _(e.id, M) || (pe ? e.name || e.traTitle || e.itemName : null),
-                    ge = pe ? (0, o.getBundleTotalCost)(e, U) : null,
+                    ge = pe ? (0, o.getBundleTotalCost)(e, F) : null,
                     _e = pe ? P(e, I) : 0,
                     fe = null != ge ? ge - _e : H;
                 return {
@@ -5666,8 +5685,8 @@
                     cost: fe,
                     originalCost: null != ge ? ge : B?.originalCost ?? N[0]?.originalCost ?? H,
                     bundleSavings: _e,
-                    currency: U,
-                    currencyIconPath: F ? F.iconPath : null,
+                    currency: F,
+                    currencyIconPath: U ? U.iconPath : null,
                     prices: N.length > 1 ? N : null,
                     hasMultiplePrices: N.length > 1,
                     hasDiscount: ie && !pe,
@@ -6427,21 +6446,21 @@
                                 T = w && (C.delta || C.finalDelta) || 0,
                                 A = (0, c.isVotingPowerGrant)(e),
                                 M = A && (C.delta || C.finalDelta) || 0,
-                                O = e.traTitle || u.get("battlepass_unknown_item");
-                            let D, R = O;
+                                D = e.traTitle || u.get("battlepass_unknown_item");
+                            let O, R = D;
                             w && T ? R = u.formatString("battlepass_currency_reward_name", {
                                 amount: T,
-                                name: O
+                                name: D
                             }) : A && (R = u.formatString("battlepass_currency_reward_name", {
                                 amount: M,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), D = A ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            })), O = A ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
                             const j = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
                                 name: R,
-                                type: D,
+                                type: O,
                                 description: e.itemDescription,
                                 cost: S,
                                 currencyKey: P,
@@ -11615,12 +11634,12 @@
                             T = C ? (0, i.getBundleSavings)(e, s) : 0,
                             A = (0, i.getStoreItemTitleOverride)(e.id, r) || (C ? e.name || e.traTitle || e.itemName : null),
                             M = null != w ? w - T : m,
-                            O = e.inventoryTypeId === c.PORTRAIT;
+                            D = e.inventoryTypeId === c.PORTRAIT;
                         return {
                             id: e.id,
                             name: A || e.traTitle || e.itemName,
                             formattedName: A || e.formattedName || e.traTitle || e.itemName,
-                            isPortrait: O,
+                            isPortrait: D,
                             description: e.itemDescription,
                             contentType: (0, l.getDisplayType)(e, r),
                             cost: M,
@@ -12793,40 +12812,46 @@
             n(229), e.exports = s.Ember.Component.extend({
                 layout: n(230),
                 classNames: ["jade-swap-button-component"],
-                classNameBindings: ["hidden"],
+                classNameBindings: ["showSwapButton::removed"],
                 requestInProgress: !1,
                 summonerHasActiveSwap: !1,
-                queueId: -1,
                 summoner: null,
-                isBanningNow: !1,
-                phase: null,
-                isIntentPhase: s.Ember.computed("phase", (function() {
-                    return this.get("phase") === l.TIMER_PHASES.planning
-                })),
                 showTooltip: s.Ember.computed("requestInProgress", "summonerHasActiveSwap", "swapButtonHovered", (function() {
                     return !this.get("requestInProgress") && !this.get("summonerHasActiveSwap") && this.get("swapButtonHovered")
                 })),
-                hidden: s.Ember.computed("summoner.isSelf", "isLeft", "hasPickOrderSwapOnly", "summoner.showSwaps", "requestInProgress", "summonerHasActiveSwap", "isIntentPhase", (function() {
-                    return !this.get("isIntentPhase") || !this.get("requestInProgress") && !this.get("summonerHasActiveSwap") && !(this.get("isLeft") && !this.get("summoner.isSelf") && this.get("hasPickOrderSwapOnly") && !1 !== this.get("summoner.showSwaps"))
+                canPickOrderSwap: s.Ember.computed("summoner.showSwaps", "timer.inPlanningPhase", (function() {
+                    return this.get("timer.inPlanningPhase") && this.get("summoner.showSwaps")
                 })),
-                hasChampionSwapOnly: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return l.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e)
+                canChampionSwap: s.Ember.computed("summoner.showTrades", "timer.inFinalizationPhase", (function() {
+                    return this.get("timer.inFinalizationPhase") && this.get("summoner.showTrades")
                 })),
-                hasPickOrderSwapOnly: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return l.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                showSwapButton: s.Ember.computed("canPickOrderSwap", "canChampionSwap", "requestInProgress", "summonerHasActiveSwap", (function() {
+                    return !(!this.get("requestInProgress") && !this.get("summonerHasActiveSwap")) || (this.get("canPickOrderSwap") || this.get("canChampionSwap"))
                 })),
-                swapButtonTooltipText: s.Ember.computed("tra", "tra.swap_tooltip", "swap_champion_tooltip", "hasChampionSwapOnly", "hasPickOrderSwapOnly", "summoner.summonerObjectDisplayName", (function() {
-                    const e = this.get("summoner.summonerObjectDisplayName");
-                    return this.get("hasChampionSwapOnly") ? this.get("tra").formatString("swap_champion_tooltip", {
-                        actor: e
-                    }) : this.get("hasPickOrderSwapOnly") ? this.get("tra").formatString("swap_pick_order_tooltip", {
-                        actor: e
-                    }) : this.get("tra.swap_tooltip")
+                pickOrderNumber: s.Ember.computed("summoner.cellId", "summoners", (function() {
+                    return (this.get("summoners") || []).findIndex((e => e.cellId === this.get("summoner.cellId"))) + 1
                 })),
-                swapButtonAction: s.Ember.computed("hasChampionSwapOnly", "hasPickOrderSwapOnly", (function() {
-                    return this.get("hasChampionSwapOnly") ? "initiateChampionSwap" : this.get("hasPickOrderSwapOnly") ? "initiatePickOrderSwap" : "toggleSwapSelectionModal"
+                swapContext: s.Ember.computed("canPickOrderSwap", "canChampionSwap", "pickOrderNumber", "summoner.championName", (function() {
+                    this.get("tra");
+                    if (this.get("canPickOrderSwap")) {
+                        const e = this.get("pickOrderNumber");
+                        return {
+                            tooltipText: this.get("tra").formatString("swap_pick_order_tooltip_specific_pick_order$html", {
+                                pickOrderNumber: e
+                            }),
+                            action: "initiatePickOrderSwap"
+                        }
+                    }
+                    if (this.get("canChampionSwap")) {
+                        const e = this.get("summoner.championName");
+                        return {
+                            tooltipText: this.get("tra").formatString("swap_champion_tooltip_champ_name$html", {
+                                championName: e
+                            }),
+                            action: "initiateChampionSwap"
+                        }
+                    }
+                    return {}
                 })),
                 initiateSwap(e, t) {
                     if (this.get("requestInProgress")) return;
@@ -12871,6 +12896,9 @@
                     initiatePickOrderSwap() {
                         this.initiateSwap(this.get("summoner.swapId"), l.SWAP_TYPES.PICK_ORDER)
                     },
+                    initiateChampionSwap() {
+                        this.initiateSwap(this.get("summoner.tradeId"), l.SWAP_TYPES.CHAMPION)
+                    },
                     onMouseMove(e) {
                         this.setProperties({
                             mouseX: e.clientX,
@@ -12885,8 +12913,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "ir/XU1mq",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-swap-button-component__button"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],true],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],false],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"onMouseMove"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"initiatePickOrderSwap"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-swap-button-component__tooltip"],["dynamic-attr","style",["helper",["concat"],["left: ",["helper",["add"],[["get",["mouseX"]],15],null],"px; top: ",["get",["mouseY"]],"px;"],null],null],["flush-element"],["text","\\n    "],["append",["unknown",["tra","champion_select_swap_pick_order_tooltip"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "TsblvrqJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-swap-button-component__button"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],true],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["swapButtonHovered"]]],null],false],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"onMouseMove"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],["get",["swapContext","action"]]],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-swap-button-component__tooltip"],["dynamic-attr","style",["helper",["concat"],["left: ",["helper",["add"],[["get",["mouseX"]],15],null],"px; top: ",["get",["mouseY"]],"px;"],null],null],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["swapContext","tooltipText"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -12954,6 +12982,12 @@
                     const e = this.get("summoners") || [],
                         t = this.get("otherSummonerPuuid");
                     return e.find((e => e?.puuid === t || e?.obfuscatedPuuid === t))
+                })),
+                shouldShowChampionImage: s.Ember.computed("swap.type", (function() {
+                    return this.get("swap.type") === l.SWAP_TYPES.CHAMPION
+                })),
+                championImage: s.Ember.computed("swap.initiatedByLocalPlayer", "swap.responderChampionSquarePortrait", "swap.requesterChampionSquarePortrait", (function() {
+                    return this.get("swap.initiatedByLocalPlayer") ? this.get("swap.responderChampionSquarePortrait") : this.get("swap.requesterChampionSquarePortrait")
                 })),
                 _cancelInBanPickPhase: s.Ember.observer("inBanPickPhase", (function() {
                     const e = this.get("swap");
@@ -13150,14 +13184,11 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.ROLE_SWAP_ENABLED_QUEUES = t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.INVALID_SWAP_ID = t.CHAMPION_SWAP_ONLY_QUEUE_IDS = void 0, t.getOngoingSwapServiceCallPath = function(e) {
+            }), t.SWAP_TYPES = t.SWAP_STATES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.SWAP_SERVICE_CALL_TIMEOUTS = t.SWAP_SERVICE_CALL_METHODS = t.SWAP_RESOLVED_STATES = t.SWAP_ONGOING_SERVICE_CALL_PATHS = t.SWAP_CREATED_STATES = t.SETTINGS_SWAP_TOGGLE_TOOLTIP = t.INVALID_SWAP_ID = void 0, t.getOngoingSwapServiceCallPath = function(e) {
                 return l[e]
             }, t.getSwapServiceCallPath = function(e) {
                 return o[e]
             };
-            t.ROLE_SWAP_ENABLED_QUEUES = [];
-            t.CHAMPION_SWAP_ONLY_QUEUE_IDS = [];
-            t.PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 4310];
             t.SETTINGS_SWAP_TOGGLE_TOOLTIP = {
                 SEEN_KEY: "swapToggleTooltipSeen",
                 ICON_CLASS: ".swap-button-component",
@@ -13212,8 +13243,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "q7A/9bgE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog\\n    ",["helper",["if"],[["get",["isDisplayed"]],"active"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flyout-frame",[]],["static-attr","orientation","right"],["dynamic-attr","show",["unknown",["isDisplayed"]],null],["static-attr","animated","false"],["static-attr","dismissable","false"],["static-attr","close-event-name","jade-swap-dialog-close-clicked"],["flush-element"],["text","\\n   "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog__frame ",["helper",["if"],[["get",["isSwapInProgress"]],"jade-swap-dialog__frame--timer-active"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showSwapTitleString"]]],null,3],["block",["if"],[["get",["swapMessageString"]]],null,2],["block",["if"],[["get",["showAcceptSwapButton"]]],null,1],["text","\\n"],["block",["if"],[["get",["showCancelSwapButton"]]],null,0],["text","\\n   "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","     "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n       "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--cancel"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_cancel"]],false],["close-element"],["text","\\n       "],["close-element"],["text","\\n     "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--accept"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptSwap",["get",["swap","id"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_accept"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--decline"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_decline"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["swapMessageString"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__title"],["flush-element"],["append",["unknown",["swapTitleString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Z7veylZm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-swap-dialog\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog\\n    ",["helper",["if"],[["get",["isDisplayed"]],"active"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flyout-frame",[]],["static-attr","orientation","right"],["dynamic-attr","show",["unknown",["isDisplayed"]],null],["static-attr","animated","false"],["static-attr","dismissable","false"],["static-attr","close-event-name","jade-swap-dialog-close-clicked"],["flush-element"],["text","\\n   "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-swap-dialog__frame ",["helper",["if"],[["get",["isSwapInProgress"]],"jade-swap-dialog__frame--timer-active"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showSwapTitleString"]]],null,4],["block",["if"],[["get",["swapMessageString"]]],null,3],["text","\\n"],["block",["if"],[["get",["shouldShowChampionImage"]]],null,2],["text","\\n"],["block",["if"],[["get",["showAcceptSwapButton"]]],null,1],["text","\\n"],["block",["if"],[["get",["showCancelSwapButton"]]],null,0],["text","\\n   "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","     "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n       "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--cancel"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_cancel"]],false],["close-element"],["text","\\n       "],["close-element"],["text","\\n     "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__button-group"],["flush-element"],["text","\\n         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--accept"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptSwap",["get",["swap","id"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_accept"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button jade-swap-dialog__action-button--decline"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeSwap",["get",["swap","id"]],["get",["swap","state"]],["get",["swap","type"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__action-button-text"],["flush-element"],["text"," "],["append",["unknown",["tra","jade_decline"]],false],["close-element"],["text","\\n         "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","swap-dialog-champion-image-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championImage"]]]]],["static-attr","class","swap-dialog-champion-image"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__message-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["swapMessageString"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         "],["open-element","div",[]],["static-attr","class","jade-swap-dialog__title"],["flush-element"],["append",["unknown",["swapTitleString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14855,77 +14886,99 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = r(n(1)),
-                a = r(n(199)),
-                o = n(99),
-                l = n(2),
-                i = n(61);
+            var s, a = function(e, t) {
+                    if (!t && e && e.__esModule) return e;
+                    if (null === e || "object" != typeof e && "function" != typeof e) return {
+                        default: e
+                    };
+                    var n = c(t);
+                    if (n && n.has(e)) return n.get(e);
+                    var s = {},
+                        a = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    for (var o in e)
+                        if ("default" !== o && Object.prototype.hasOwnProperty.call(e, o)) {
+                            var l = a ? Object.getOwnPropertyDescriptor(e, o) : null;
+                            l && (l.get || l.set) ? Object.defineProperty(s, o, l) : s[o] = e[o]
+                        } s.default = e, n && n.set(e, s);
+                    return s
+                }(n(1)),
+                o = (s = n(199)) && s.__esModule ? s : {
+                    default: s
+                },
+                l = n(99),
+                i = n(2),
+                r = n(61);
 
-            function r(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
+            function c(e) {
+                if ("function" != typeof WeakMap) return null;
+                var t = new WeakMap,
+                    n = new WeakMap;
+                return (c = function(e) {
+                    return e ? n : t
+                })(e)
             }
             const {
-                Ember: c,
-                TelemetryService: m
-            } = s.default;
+                Ember: m,
+                TelemetryService: d
+            } = a.default;
             n(262);
-            const d = "jade-voting-system",
-                u = "voting_modal_opened",
-                p = "voting_modal_time_spent",
-                h = "vote_cast",
-                g = "vote_cleared",
-                _ = "results_screen_opened",
-                f = "learn_more_screen_opened",
-                v = "intro",
-                b = "voting",
-                y = "learnMore",
+            const u = "jade-voting-system",
+                p = "voting_modal_opened",
+                h = "voting_modal_time_spent",
+                g = "vote_cast",
+                _ = "vote_cleared",
+                f = "results_screen_opened",
+                v = "learn_more_clicked",
+                b = "intro",
+                y = "voting",
                 E = "results";
-            var x = c.Component.extend({
+
+            function x(e) {
+                return null == e ? i.VOTE_UNANSWERED : e
+            }
+            var S = m.Component.extend({
                 layout: n(263),
                 classNames: ["voting-system"],
                 showModal: !1,
                 votingData: null,
-                currentScreen: v,
-                selectedOption: null,
-                _initialSelectedOption: null,
-                savedVoteName: null,
+                currentScreen: b,
+                _answers: null,
+                _initialAnswers: null,
+                _ballotLoadFailed: !1,
+                _saveFailed: !1,
+                _isSaving: !1,
                 hasSeenFtux: !1,
-                _hasInteractedWithVote: !1,
                 _showConfirmation: !1,
                 _showVoteSavedToast: !1,
                 _voteSavedToastTimer: null,
-                displayVoteName: c.computed("selectedOption", "savedVoteName", "_hasInteractedWithVote", (function() {
-                    const e = this.get("selectedOption");
-                    return e ? e.name : this.get("_hasInteractedWithVote") ? null : this.get("savedVoteName")
-                })),
-                isIntroScreen: c.computed.equal("currentScreen", v),
-                showIntroContinue: c.computed("isVotingActive", "isVotingConcluded", (function() {
+                isIntroScreen: m.computed.equal("currentScreen", b),
+                showIntroContinue: m.computed("isVotingActive", "isVotingConcluded", (function() {
                     return this.get("isVotingActive") || this.get("isVotingConcluded")
                 })),
-                isVotingScreen: c.computed.equal("currentScreen", b),
-                isLearnMoreScreen: c.computed.equal("currentScreen", y),
-                isResultsScreen: c.computed.equal("currentScreen", E),
-                hasUnsavedChanges: c.computed("selectedOption", "_initialSelectedOption", (function() {
-                    const e = this.get("selectedOption"),
-                        t = this.get("_initialSelectedOption");
-                    return (e ? e.id : null) !== (t ? t.id : null)
+                isVotingScreen: m.computed.equal("currentScreen", y),
+                isResultsScreen: m.computed.equal("currentScreen", E),
+                hasUnsavedChanges: m.computed("_answers", "_initialAnswers", (function() {
+                    return ! function(e, t) {
+                        const n = new Set(Object.keys(e || {}).concat(Object.keys(t || {})));
+                        for (const s of n)
+                            if (x((e || {})[s]) !== x((t || {})[s])) return !1;
+                        return !0
+                    }(this.get("_answers"), this.get("_initialAnswers"))
                 })),
-                isSaveEnabled: c.computed("hasVotingPower", "hasUnsavedChanges", (function() {
-                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges")
+                isSaveEnabled: m.computed("hasVotingPower", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
+                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
                 })),
-                showResults: c.computed.alias("votingData.isVotingResultsPhase"),
-                isVotingActive: c.computed.alias("votingData.isVotingActive"),
-                isVotingConcluded: c.computed.alias("votingData.isVotingConcluded"),
-                votingEndTimestamp: c.computed.alias("votingData.votingEndTimeStamp"),
-                votingEndFullText: c.computed("votingData.votingEndDate", "tra.metadata.locale.id", (function() {
+                showResults: m.computed.alias("votingData.isVotingResultsPhase"),
+                isVotingActive: m.computed.alias("votingData.isVotingActive"),
+                isVotingConcluded: m.computed.alias("votingData.isVotingConcluded"),
+                votingEndTimestamp: m.computed.alias("votingData.votingEndTimestamp"),
+                votingEndFullText: m.computed("votingData.votingEndDate", "tra.metadata.locale.id", (function() {
                     const e = this.get("votingData.votingEndDate");
                     if (!e) return "";
                     const t = new Date(e);
                     if (isNaN(t.getTime())) return "";
                     const n = this.get("tra.metadata.locale.id"),
-                        s = (0, i.formatLocalizedDate)(t, n);
+                        s = (0, r.formatLocalizedDate)(t, n);
                     let a = n || "en_US";
                     a = "ar_AE" === a ? "ar-tn" : a.toLowerCase().replace("_", "-");
                     const o = t.toLocaleTimeString(a, {
@@ -14939,237 +14992,242 @@
                         timeText: o
                     })
                 })),
-                questionText: c.computed("votingData", (function() {
-                    return this.get("votingData.voting.title") || ""
+                pollTitle: m.computed("votingData", (function() {
+                    return this.get("votingData.title") || ""
                 })),
                 votingPower: null,
-                hasVotingPower: c.computed("votingPower", (function() {
+                hasVotingPower: m.computed("votingPower", (function() {
                     return (this.get("votingPower") || 0) > 0
                 })),
-                displayVotingPower: c.computed("votingPower", (function() {
+                displayVotingPower: m.computed("votingPower", (function() {
                     return this.get("votingPower") || 0
                 })),
-                _eventId: c.computed("votingData", (function() {
+                _eventId: m.computed("votingData", (function() {
                     return this.get("votingData.votingSessionID") || null
                 })),
-                learnMoreData: c.computed("votingData.learnMore", (function() {
-                    const e = this.get("votingData.learnMore");
-                    if (!e) return null;
-                    const t = (e.assets || []).find((function(e) {
-                        return "image" === e.type
-                    }));
-                    return {
-                        title: e.title,
-                        description: e.description?.body || e.description,
-                        imageUrl: t ? t.url : null
-                    }
+                learnMoreUrl: m.computed("votingData.learnMore", (function() {
+                    const e = this.get("votingData.learnMore.assets") || [];
+                    return e.length && e[0].url || null
                 })),
-                votingResultsData: c.computed("votingData.votingResults", (function() {
-                    const e = this.get("votingData.votingResults");
-                    if (!e) return null;
-                    const t = (e.assets || []).find((function(e) {
-                        return "image" === e.type
-                    }));
-                    return {
-                        title: e.title,
-                        description: e.description?.body || e.description,
-                        imageUrl: t ? t.url : null
-                    }
-                })),
-                displayOptions: c.computed("votingData", (function() {
-                    return (this.get("votingData.voting.votes") || []).map((function(e) {
+                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", (function() {
+                    const e = this.get("votingData.voting") || [],
+                        t = this.get("_answers") || {},
+                        n = this.get("hasVotingPower");
+                    return e.map((function(e, s) {
+                        const a = x(t[e.questionID]);
                         return {
-                            id: e.voteID,
-                            name: e.title,
-                            imageUrl: e.asset ? e.asset.url : null,
-                            description: e.description
+                            questionID: e.questionID,
+                            number: s + 1,
+                            title: e.title,
+                            isAnswered: a !== i.VOTE_UNANSWERED,
+                            options: (e.votes || []).map((function(t) {
+                                return {
+                                    questionID: e.questionID,
+                                    id: t.voteID,
+                                    name: t.title,
+                                    imageUrl: t.asset ? t.asset.url : null,
+                                    description: t.description,
+                                    isSelected: t.voteID === a,
+                                    isDisabled: !n
+                                }
+                            }))
                         }
                     }))
                 })),
-                optionImageHeight: c.computed("displayOptions.length", (function() {
-                    const e = this.get("displayOptions.length") || 5;
-                    return e <= 2 ? 260 : e <= 3 ? 230 : e <= 5 ? 202 : 120
-                })),
-                resultEntries: c.computed("votingData", (function() {
-                    const e = this.get("votingData.votingResults");
-                    if (!e || !e.results) return [];
-                    const t = this.get("votingData.voting.votes") || [],
+                resultQuestions: m.computed("votingData", (function() {
+                    const e = this.get("votingData.votingResults") || [],
+                        t = this.get("votingData.voting") || [],
                         n = new Map(t.map((function(e) {
-                            return [e.voteID, e]
+                            return [e.questionID, e]
                         })));
-                    return e.results.map((function(e) {
-                        const t = n.get(e.voteID);
-                        if (!t) return null;
-                        const s = e.voteCount || 0;
+                    return e.map((function(e, t) {
+                        const s = n.get(e.questionID),
+                            a = new Map((s && s.votes || []).map((function(e) {
+                                return [e.voteID, e]
+                            }))),
+                            o = (e.assets || []).find((function(e) {
+                                return "image" === e.type
+                            })),
+                            l = (e.results || []).map((function(e) {
+                                const t = a.get(e.voteID);
+                                if (!t) return null;
+                                const n = e.votePercentage ?? 0;
+                                return {
+                                    name: t.title,
+                                    percentage: n,
+                                    barWidth: Math.round(4 * n)
+                                }
+                            })).filter(Boolean).sort((function(e, t) {
+                                return t.percentage - e.percentage
+                            }));
                         return {
-                            name: t.title,
-                            percentage: s,
-                            barWidth: Math.round(4 * s)
+                            questionID: e.questionID,
+                            number: t + 1,
+                            title: e.title || s && s.title,
+                            description: e.description?.body || e.description,
+                            imageUrl: o ? o.url : null,
+                            entries: l
                         }
-                    })).filter(Boolean).sort((function(e, t) {
-                        return t.percentage - e.percentage
                     }))
                 })),
                 didInsertElement() {
-                    this._super(...arguments), this._loadSavedVote()
+                    this._super(...arguments), this._loadPlayerPreferences(), this._loadBallot()
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._voteSavedToastTimer && (c.run.cancel(this._voteSavedToastTimer), this._voteSavedToastTimer = null)
+                    this._super(...arguments), this._voteSavedToastTimer && (m.run.cancel(this._voteSavedToastTimer), this._voteSavedToastTimer = null)
                 },
                 _getDb() {
-                    return this._db || (this._db = s.default.dataBinding.bindTo(s.default.socket)), this._db
+                    return this._db || (this._db = a.default.dataBinding.bindTo(a.default.socket)), this._db
                 },
-                _onShowModalChanged: c.observer("showModal", (function() {
-                    this.get("showModal") && (this._loadSavedVote(), m.startTelemetryTimerEvent(p), this._sendTelemetry(u, {
+                _onShowModalChanged: m.observer("showModal", (function() {
+                    this.get("showModal") && (this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
                         eventId: this.get("_eventId")
-                    }), this.get("showResults") ? (this.set("currentScreen", E), this._markResultsViewed(), this._sendTelemetry(_, {
+                    }), this.get("showResults") ? (this.set("currentScreen", E), this._markResultsViewed(), this._sendTelemetry(f, {
                         eventId: this.get("_eventId")
-                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", v) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? b : v) : this.set("currentScreen", v))
+                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", b) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? y : b) : this.set("currentScreen", b))
                 })),
-                _loadSavedVote() {
-                    this._getDb().get(l.VOTING_PREFS_PATH).then((e => {
-                        if (this.isDestroying || this.isDestroyed) return;
-                        this.set("hasSeenFtux", !!e?.data?.hasSeenFtux);
-                        const t = this.get("_eventId"),
-                            n = e?.data?.eventId;
-                        if (t && n && n !== t) return;
-                        const s = e?.data?.votedOptionId;
-                        if (s) {
-                            const t = (this.get("displayOptions") || []).find((function(e) {
-                                return e.id === s
-                            }));
-                            t && (this.set("savedVoteName", t.name), this.set("selectedOption", t), this.set("_initialSelectedOption", t), e.data.votedOptionName !== t.name && this._getDb().patch(l.VOTING_PREFS_PATH, {
-                                schemaVersion: 1,
-                                data: Object.assign({}, e.data, {
-                                    votedOptionName: t.name
-                                })
-                            }))
-                        }
+                _loadPlayerPreferences() {
+                    this._getDb().get(i.VOTING_PREFS_PATH).then((e => {
+                        this.isDestroying || this.isDestroyed || this.set("hasSeenFtux", !!e?.data?.hasSeenFtux)
                     })).catch((() => {}))
                 },
+                _loadBallot() {
+                    return this._getDb().get(i.VOTING_VIEW_PATH, {
+                        skipCache: !0
+                    }).then((e => {
+                        if (this.isDestroying || this.isDestroyed) return;
+                        const t = this.get("_eventId"),
+                            n = {};
+                        if (!e?.votingEventId || !t || e.votingEventId === t)
+                            for (const t of e?.votingSelections || []) t && x(t.votingOptionId) !== i.VOTE_UNANSWERED && (n[t.questionId] = t.votingOptionId);
+                        this.set("_answers", n), this.set("_initialAnswers", Object.assign({}, n)), this.set("_ballotLoadFailed", !1)
+                    })).catch((() => {
+                        this.isDestroying || this.isDestroyed || (this.set("_answers", {}), this.set("_initialAnswers", {}), this.set("_ballotLoadFailed", !0))
+                    }))
+                },
                 _markResultsViewed() {
-                    this._getDb().patch(l.VOTING_PREFS_PATH, {
+                    this._getDb().patch(i.VOTING_PREFS_PATH, {
                         schemaVersion: 1,
                         data: {
                             eventId: this.get("_eventId"),
                             hasSeenResults: !0
                         }
-                    });
+                    }).catch((e => {
+                        a.logger.error("[JadeVotingSystem] Failed to save hasSeenResults preference:", e)
+                    }));
                     const e = this.get("onResultsViewed");
                     e && e()
                 },
                 _sendTelemetry(e, t) {
-                    m.sendTelemetryEvent(e, e, d, t)
+                    d.sendTelemetryEvent(e, e, u, t)
                 },
-                _sendVotingPcoEvent(e, t) {
-                    const n = JSON.stringify({
-                        votingEventId: this.get("_eventId"),
-                        votingOptionId: e,
-                        votingOptionTitle: t
-                    });
-                    return a.default.ajax({
-                        url: l.VOTING_PCO_PATH,
+                _saveBallot() {
+                    const e = this.get("_eventId"),
+                        t = this.get("_answers") || {},
+                        n = this.get("_initialAnswers") || {},
+                        s = (this.get("votingData.voting") || []).map((function(e) {
+                            return {
+                                questionId: e.questionID,
+                                votingOptionId: x(t[e.questionID])
+                            }
+                        })),
+                        l = JSON.stringify({
+                            votingEventId: e,
+                            votingSelections: s,
+                            eventOriginLocation: u
+                        });
+                    return this.set("_isSaving", !0), this.set("_saveFailed", !1), o.default.ajax({
+                        url: i.VOTING_PCO_PATH,
                         contentType: "application/json",
-                        data: JSON.stringify(n),
+                        data: JSON.stringify(l),
                         method: "POST"
-                    })
+                    }).then((() => {
+                        if (this.isDestroying || this.isDestroyed) return !0;
+                        this._sendBallotTelemetry(e, t, n), this.set("_initialAnswers", Object.assign({}, t));
+                        const a = this.get("onVoteChanged");
+                        return a && a(s.some((function(e) {
+                            return e.votingOptionId !== i.VOTE_UNANSWERED
+                        }))), !0
+                    })).catch((t => (a.logger.error(`[JadeVotingSystem] Failed to save ballot for event ${e}:`, t), this.isDestroying || this.isDestroyed || (this.set("_isSaving", !1), this.set("_saveFailed", !0)), !1)))
                 },
-                _saveVote(e) {
-                    if (!e) return;
-                    const t = (new Date).toISOString(),
-                        n = this.get("_eventId");
-                    this._sendVotingPcoEvent(e.id, e.name), this._getDb().patch(l.VOTING_PREFS_PATH, {
-                        schemaVersion: 1,
-                        data: {
-                            eventId: n,
-                            votedOptionId: e.id,
-                            votedOptionName: e.name,
-                            votedAt: t
-                        }
-                    }), this.set("savedVoteName", e.name);
-                    const s = this.get("onVoteChanged");
-                    s && s(!0), this._sendTelemetry(h, {
-                        eventId: n,
-                        votingId: e.id
-                    })
-                },
-                _clearVote() {
-                    const e = this.get("_eventId");
-                    this._sendVotingPcoEvent(-1, ""), this._getDb().patch(l.VOTING_PREFS_PATH, {
-                        schemaVersion: 1,
-                        data: {
+                _sendBallotTelemetry(e, t, n) {
+                    const s = new Set(Object.keys(t).concat(Object.keys(n)));
+                    for (const a of s) {
+                        const s = x(t[a]);
+                        s !== x(n[a]) && (s === i.VOTE_UNANSWERED ? this._sendTelemetry(_, {
                             eventId: e,
-                            votedOptionId: null,
-                            votedOptionName: null,
-                            votedAt: null
-                        }
-                    }), this.set("savedVoteName", null);
-                    const t = this.get("onVoteChanged");
-                    t && t(!1), this._sendTelemetry(g, {
-                        eventId: e
-                    })
+                            questionId: a
+                        }) : this._sendTelemetry(g, {
+                            eventId: e,
+                            questionId: a,
+                            votingId: s
+                        }))
+                    }
                 },
                 _resetState() {
-                    this.set("currentScreen", v), this.set("selectedOption", null), this.set("_initialSelectedOption", null), this.set("_hasInteractedWithVote", !1), this.set("_showConfirmation", !1)
+                    this.set("currentScreen", b), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1)
                 },
                 _showSavedToast() {
-                    this._voteSavedToastTimer && c.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = c.run.later(this, (function() {
+                    this._voteSavedToastTimer && m.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = m.run.later(this, (function() {
                         this.isDestroying || this.isDestroyed || (this.set("_showVoteSavedToast", !1), this._voteSavedToastTimer = null)
                     }), 2e3)
                 },
                 _doClose() {
-                    m.stopTelemetryTimerEvent(p, "voting_modal_time_spent", d, {
+                    d.stopTelemetryTimerEvent(h, "voting_modal_time_spent", u, {
                         eventId: this.get("_eventId")
                     }), this.set("showModal", !1), this._resetState()
                 },
                 actions: {
                     closeModal() {
-                        o.MASTERY_SFX.removePoint.play(), this.get("hasUnsavedChanges") ? this.set("_showConfirmation", !0) : this._doClose()
+                        l.MASTERY_SFX.removePoint.play(), this.get("hasUnsavedChanges") ? this.set("_showConfirmation", !0) : this._doClose()
                     },
                     continueToVoting() {
-                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", b), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(l.VOTING_PREFS_PATH, {
+                        l.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", y), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(i.VOTING_PREFS_PATH, {
                             schemaVersion: 1,
                             data: {
                                 hasSeenFtux: !0
                             }
-                        }))
+                        }).catch((e => {
+                            a.logger.error("[JadeVotingSystem] Failed to save hasSeenFtux preference:", e)
+                        })))
                     },
                     openLearnMore() {
-                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", y), this._sendTelemetry(f, {
-                            eventId: this.get("_eventId")
-                        })
-                    },
-                    backToVoting() {
-                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", b)
+                        const e = this.get("learnMoreUrl");
+                        e ? (l.MASTERY_SFX.buttonPress.play(), window.open(e, "_blank"), this._sendTelemetry(v, {
+                            eventId: this.get("_eventId"),
+                            screen: this.get("currentScreen")
+                        })) : a.logger.warning("[JadeVotingSystem] No learn more URL in voting content; ignoring click")
                     },
                     selectOption(e) {
-                        this.get("hasVotingPower") && (o.MASTERY_SFX.buttonPress.play(), this.set("_hasInteractedWithVote", !0), this.get("selectedOption") === e ? this.set("selectedOption", null) : this.set("selectedOption", e))
+                        if (!this.get("hasVotingPower") || this.get("_ballotLoadFailed")) return;
+                        l.MASTERY_SFX.buttonPress.play();
+                        const t = Object.assign({}, this.get("_answers"));
+                        x(t[e.questionID]) === e.id ? t[e.questionID] = i.VOTE_UNANSWERED : t[e.questionID] = e.id, this.set("_answers", t)
                     },
                     saveAndClose() {
-                        if (!this.get("isSaveEnabled")) return;
-                        o.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("selectedOption");
-                        e ? this._saveVote(e) : this._clearVote(), this._doClose(), this._showSavedToast()
+                        this.get("isSaveEnabled") && (l.MASTERY_SFX.buttonPress.play(), this._saveBallot().then((e => {
+                            this.isDestroying || this.isDestroyed || !e || (this._doClose(), this._showSavedToast())
+                        })))
                     },
                     confirmSave() {
-                        o.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("selectedOption");
-                        e ? this._saveVote(e) : this._clearVote(), this.set("_showConfirmation", !1), this._doClose(), this._showSavedToast()
+                        l.MASTERY_SFX.buttonPress.play(), this._saveBallot().then((e => {
+                            this.isDestroying || this.isDestroyed || !e || (this.set("_showConfirmation", !1), this._doClose(), this._showSavedToast())
+                        }))
                     },
                     discardChanges() {
-                        o.MASTERY_SFX.removePoint.play(), this.set("_showConfirmation", !1), this._doClose()
+                        l.MASTERY_SFX.removePoint.play(), this.set("_showConfirmation", !1), this._doClose()
                     }
                 }
             });
-            t.default = x
+            t.default = S
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "dhBYM53B",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,18],["text","\\n"],["block",["if"],[["get",["_showVoteSavedToast"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","voting-system-toast-overlay"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","voting-system-toast"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","voting-system-toast-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting_system_overlay_checkmark.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","voting-system-toast-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_saved"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-result-row"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-result-name"],["flush-element"],["append",["unknown",["entry","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-result-bar"],["dynamic-attr","style",["concat",["width: ",["unknown",["entry","barWidth"]],"px"]]],["flush-element"],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-result-pct"],["flush-element"],["append",["unknown",["entry","percentage"]],false],["text","%"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":["entry"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-results-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","voting-system-results-image"],["dynamic-attr","src",["unknown",["votingResultsData","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-results"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-results-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["votingResultsData","title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingResultsData","imageUrl"]]],null,3,2],["text","              "],["open-element","div",[]],["static-attr","class","voting-system-results-bars"],["flush-element"],["text","\\n"],["block",["each"],[["get",["resultEntries"]]],null,1],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-results-text"],["flush-element"],["append",["unknown",["votingResultsData","description"]],true],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","voting-system-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"backToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_back_to_voting"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","voting-system-learn-more-image"],["dynamic-attr","src",["unknown",["learnMoreData","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-learn-more"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-question-section"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["questionText"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-vote-answer"],["flush-element"],["append",["unknown",["tra","jade_voting_council_your_vote_label"]],false],["text"," "],["append",["helper",["if"],[["get",["displayVoteName"]],["get",["displayVoteName"]],["get",["tra","jade_voting_council_your_vote_none"]]],null],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreData","imageUrl"]]],null,7,6],["text","              "],["open-element","div",[]],["static-attr","class","voting-system-learn-more-text"],["flush-element"],["append",["unknown",["learnMoreData","description"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["isVotingActive"]]],null,5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-dialog"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-text"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line1"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line2"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-buttons"],["flush-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSave"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_yes"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-secondary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"discardChanges"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_no"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["option","imageUrl"]],null],["dynamic-attr","alt",["unknown",["option","name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["voting-system-option ",["helper",["if"],[["helper",["eq"],[["get",["selectedOption"]],["get",["option"]]],null],"voting-system-option--selected"],null]," ",["helper",["unless"],[["get",["hasVotingPower"]],"voting-system-option--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-option-image"],["dynamic-attr","style",["concat",["height: ",["unknown",["optionImageHeight"]],"px"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","imageUrl"]]],null,10],["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-option-frame"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-inner"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-main"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-outer"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-option-label"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["append",["unknown",["option","name"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_requires_voting_power"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","class","voting-system-time-tooltip"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-time-tooltip-block"],["flush-element"],["text","\\n                    "],["open-element","h5",[]],["static-attr","class","voting-system-time-tooltip-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_ends"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-time-tooltip-subtitle"],["flush-element"],["append",["unknown",["votingEndFullText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-voting"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-header-left"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-time-row"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],13],["text","              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-question-section"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["questionText"]],false],["close-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["hasVotingPower"]]],null,12],["text","          "],["open-element","div",[]],["static-attr","class","voting-system-options-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["displayOptions"]]],null,11],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-voting-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-power-row"],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-power-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_power"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-power-value"],["flush-element"],["append",["unknown",["displayVotingPower"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-save-section"],["flush-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["voting-system-btn-primary ",["helper",["unless"],[["get",["isSaveEnabled"]],"voting-system-btn-primary--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveAndClose"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","jade_voting_council_save"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-save-note"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_can_be_changed"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["_showConfirmation"]]],null,9],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"continueToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_continue"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-intro"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-intro-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-art"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-home/the_council.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-intro-shroud"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-overlay"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_heading"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-description"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-body-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_description"]],false],["close-element"],["text","\\n              "],["open-element","ul",[]],["static-attr","class","voting-system-bullet-list"],["flush-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_level5"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_improve"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_sway"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["showIntroContinue"]]],null,15],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isIntroScreen"]]],null,16],["text","\\n"],["block",["if"],[["get",["isVotingScreen"]]],null,14],["text","\\n"],["block",["if"],[["get",["isLearnMoreScreen"]]],null,8],["text","\\n"],["block",["if"],[["get",["isResultsScreen"]]],null,4]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","show","onClose","dismissibleType","closeButton","orientation","okText"],["DialogAlert",["get",["showModal"]],["helper",["action"],[["get",[null]],"closeModal"],null],"inside",false,"none",""]],17]],"locals":[]}],"hasPartials":false}',
+                id: "KIihG75o",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\voting-system\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,20],["text","\\n"],["block",["if"],[["get",["_showVoteSavedToast"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","voting-system-toast-overlay"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","voting-system-toast"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","voting-system-toast-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting_system_overlay_checkmark.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","voting-system-toast-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_saved"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","voting-system-results-text"],["flush-element"],["append",["unknown",["result","description"]],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","voting-system-result-row"],["flush-element"],["text","\\n                        "],["open-element","p",[]],["static-attr","class","voting-system-result-name"],["flush-element"],["append",["unknown",["entry","name"]],false],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-result-bar"],["dynamic-attr","style",["concat",["width: ",["unknown",["entry","barWidth"]],"px"]]],["flush-element"],["close-element"],["text","\\n                        "],["open-element","p",[]],["static-attr","class","voting-system-result-pct"],["flush-element"],["append",["unknown",["entry","percentage"]],false],["text","%"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["entry"]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","voting-system-results-image"],["dynamic-attr","src",["unknown",["result","imageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-result-block"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-result-heading"],["flush-element"],["append",["unknown",["result","number"]],false],["text",". "],["append",["unknown",["result","title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["result","imageUrl"]]],null,3],["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-results-bars"],["flush-element"],["text","\\n"],["block",["each"],[["get",["result","entries"]]],null,2],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["result","description"]]],null,1],["text","                "],["close-element"],["text","\\n"]],"locals":["result"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-link-row"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-link"],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-link-icon"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting-system-external-link.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-results"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreUrl"]]],null,5],["text","          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-results-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n"],["block",["each"],[["get",["resultQuestions"]]],null,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-dialog"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-text"],["flush-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line1"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_unsaved_changes_line2"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-confirmation-buttons"],["flush-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSave"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_yes"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","voting-system-btn-secondary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"discardChanges"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_no"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","p",[]],["static-attr","class","voting-system-save-error"],["flush-element"],["append",["unknown",["tra","jade_voting_council_save_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["option","imageUrl"]],null],["dynamic-attr","alt",["unknown",["option","name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["voting-system-option ",["helper",["if"],[["get",["option","isSelected"]],"voting-system-option--selected"],null]," ",["helper",["if"],[["get",["option","isDisabled"]],"voting-system-option--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-option-image"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","imageUrl"]]],null,9],["text","                          "],["open-element","div",[]],["static-attr","class","voting-system-option-frame"],["flush-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-inner"],["flush-element"],["close-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-main"],["flush-element"],["close-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","voting-system-option-frame-outer"],["flush-element"],["close-element"],["text","\\n                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","voting-system-option-label"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["flush-element"],["append",["unknown",["option","name"]],true],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-question-block"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-question-title"],["flush-element"],["append",["unknown",["question","number"]],false],["text",". "],["append",["unknown",["question","title"]],true],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-options-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["question","options"]]],null,10],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["question"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_ballot_unavailable"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","voting-system-warning"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","voting-system-warning-icon"],["static-attr","src","/fe/lol-static-assets/images/red-warning.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-warning-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_requires_voting_power"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voting-system-link-row"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLearnMore"],null],null],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-link"],["flush-element"],["append",["unknown",["tra","jade_voting_council_learn_more"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","voting-system-link-icon"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/voting-system-external-link.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","class","voting-system-time-tooltip"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","voting-system-time-tooltip-block"],["flush-element"],["text","\\n                    "],["open-element","h5",[]],["static-attr","class","voting-system-time-tooltip-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_ends"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","voting-system-time-tooltip-subtitle"],["flush-element"],["append",["unknown",["votingEndFullText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-voting"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-header-left"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-time-row"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],15],["text","              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["learnMoreUrl"]]],null,14],["text","          "],["open-element","div",[]],["static-attr","class","voting-system-header-right"],["flush-element"],["text","\\n            "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-content-scroll"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-scroll-inner"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-power-block"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","voting-system-power-row"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","voting-system-power-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_voting_power"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","voting-system-power-value"],["flush-element"],["append",["unknown",["displayVotingPower"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["unless"],[["get",["hasVotingPower"]]],null,13],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["_ballotLoadFailed"]]],null,12],["text","\\n"],["block",["each"],[["get",["displayQuestions"]]],null,11],["text","\\n              "],["open-element","div",[]],["static-attr","class","voting-system-save-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["_saveFailed"]]],null,8],["text","                "],["open-element","button",[]],["dynamic-attr","class",["concat",["voting-system-btn-primary ",["helper",["unless"],[["get",["isSaveEnabled"]],"voting-system-btn-primary--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveAndClose"],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","jade_voting_council_save"]],false],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","voting-system-save-note"],["flush-element"],["append",["unknown",["tra","jade_voting_council_vote_can_be_changed"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["_showConfirmation"]]],null,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","button",[]],["static-attr","class","voting-system-btn-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"continueToVoting"],null],null],["flush-element"],["append",["unknown",["tra","jade_voting_council_continue"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","voting-system-modal voting-system-intro"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-voting-header"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","voting-system-header-title"],["flush-element"],["append",["unknown",["tra","jade_voting_council_modal_title"]],false],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","voting-system-btn-icon"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-close-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voting-system-intro-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-art"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-home/the_council.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-intro-shroud"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","voting-system-intro-overlay"],["flush-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","voting-system-heading"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_heading"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","voting-system-description"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","voting-system-body-text"],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_description"]],false],["close-element"],["text","\\n              "],["open-element","ul",[]],["static-attr","class","voting-system-bullet-list"],["flush-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_level5"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_improve"]],false],["close-element"],["text","\\n                "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","jade_voting_council_intro_bullet_sway"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["showIntroContinue"]]],null,17],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isIntroScreen"]]],null,18],["text","\\n"],["block",["if"],[["get",["isVotingScreen"]]],null,16],["text","\\n"],["block",["if"],[["get",["isResultsScreen"]]],null,6]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","show","onClose","dismissibleType","closeButton","orientation","okText"],["DialogAlert",["get",["showModal"]],["helper",["action"],[["get",[null]],"closeModal"],null],"inside",false,"none",""]],19]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16795,15 +16853,15 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "sBzw+DVt",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["header-title ",["unknown",["teamNameHeaderGlowClass"]]]]],["flush-element"],["append",["unknown",["teamNameHeaderTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","champion_select_summoner_array_first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","party"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["summoners"]]],[["key"],["slotId"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["demacia-summoner-object"],null,[["team","summoner","summonerName","champSelectScreen","phase","isSpectating","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","isFiveSecondsBeforeGameStart","reportingEnabled","champSelectMutingEnabled","toggleSwapSelectionModal"],[["get",["team"]],["get",["summoner"]],["get",["summoner","summonerObjectDisplayName"]],["get",["champSelectScreen"]],["get",["session","timer","phase"]],["get",["isSpectating"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["isReportingEnabled"]],["get",["champSelectMutingEnabled"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["summoner","isPlaceholder"]]],null,0]],"locals":["summoner"]}],"hasPartials":false}',
+                id: "4pJ7G7C6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-array-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["header-title ",["unknown",["teamNameHeaderGlowClass"]]]]],["flush-element"],["append",["unknown",["teamNameHeaderTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["first-pick ",["helper",["if"],[["get",["showFirstPick"]],"visible","removed"],null]]]],["flush-element"],["append",["unknown",["tra","champion_select_summoner_array_first_pick"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","party"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["summoners"]]],[["key"],["slotId"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["demacia-summoner-object"],null,[["team","summoner","summonerName","champSelectScreen","timer","isSpectating","currentSummonerChampionName","inFinalizationPhase","activeSwap","summonerId","subteamDataList","uxSettings","jmxSettings","showPositionAssignment","skipChampSelectIntroAnimations","isLeft","viewSkin","boosterPuuid","isUILockedForGameStart","isCustomGame","recordDidRequestSucceed","championInventory","queueId","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","summoners","isFiveSecondsBeforeGameStart","reportingEnabled","champSelectMutingEnabled","toggleSwapSelectionModal"],[["get",["team"]],["get",["summoner"]],["get",["summoner","summonerObjectDisplayName"]],["get",["champSelectScreen"]],["get",["session","timer"]],["get",["isSpectating"]],["get",["currentSummoner","champion","name"]],["get",["inFinalizationPhase"]],["get",["activeSwap"]],["get",["summoner","summonerId"]],["get",["subteamDataList"]],["get",["uxSettings"]],["get",["jmxSettings"]],["get",["showPositionAssignment"]],["get",["skipChampSelectIntroAnimations"]],["get",["isLeft"]],["get",["viewSkin"]],["get",["boosterPuuid"]],["get",["isUILockedForGameStart"]],["get",["isCustomGame"]],["get",["recordDidRequestSucceed"]],["get",["championInventory"]],["get",["queueId"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["summoners"]],["get",["isFiveSecondsBeforeGameStart"]],["get",["isReportingEnabled"]],["get",["champSelectMutingEnabled"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["summoner","isPlaceholder"]]],null,0]],"locals":["summoner"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "0wqYPZBc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\index.js\\" "],["text","\\n\\n"],["block",["if"],[["get",["showSelfActionFx"]]],null,5,4],["text","  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells-champion-content"],["flush-element"],["text","\\n\\n"],["block",["if"],[["helper",["and"],[["get",["isBanningNow"]],["get",["isLeft"]]],null]],null,2,1],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-name-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-text"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__role-text"],["flush-element"],["append",["unknown",["roleText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["demacia-swap-button"],null,[["summoner","isLeft","toggleSwapSelectionModal","recordDidRequestSucceed","summonerHasActiveSwap","queueId","isBanningNow","phase"],[["get",["summoner"]],["get",["isLeft"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["queueId"]],["get",["isBanningNow"]],["get",["phase"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["summoner-overlay"],null,[["isDemacia","displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[true,["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--primary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell1IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell1IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--secondary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell2IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell2IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-to-ban"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--other"],["flush-element"],["text","\\n      "],["open-element","video",[]],["dynamic-attr","class",["concat",["jade-summoner-object__action-fx-video-sheen ",["helper",["if"],[["get",["summoner","isOnPlayersTeam"]],"jade-summoner-object__action-fx-video-sheen--ally","jade-summoner-object__action-fx-video-sheen--enemy"],null]]]],["static-attr","src","/fe/lol-jade/videos/champselect/CS_ActivePlayerRectangle_Sheen.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showOtherActionFx"]]],null,3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--self"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","jade-summoner-object__action-fx-video"],["static-attr","src","/fe/lol-jade/videos/champselect/CS_SelfOrangeRectangleArrows.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "YDzCCg2K",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-summoner-object-component\\\\index.js\\" "],["text","\\n\\n"],["block",["if"],[["get",["showSelfActionFx"]]],null,5,4],["text","  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells-champion-content"],["flush-element"],["text","\\n\\n"],["block",["if"],[["helper",["and"],[["get",["isBanningNow"]],["get",["isLeft"]]],null]],null,2,1],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-icon"],["dynamic-attr","style",["helper",["sanitize"],[["get",["championIconStyle"]]],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-name-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__status-text"],["flush-element"],["append",["unknown",["summonerSecondaryText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__role-text"],["flush-element"],["append",["unknown",["roleText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["demacia-swap-button"],null,[["summoner","toggleSwapSelectionModal","recordDidRequestSucceed","summonerHasActiveSwap","championSwapOnlyQueueIds","pickOrderSwapOnlyQueueIds","summoners","timer"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"toggleSwapSelectionModal"],null],["get",["recordDidRequestSucceed"]],["get",["summonerHasActiveSwap"]],["get",["championSwapOnlyQueueIds"]],["get",["pickOrderSwapOnlyQueueIds"]],["get",["summoners"]],["get",["timer"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowOverlay"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["summoner-overlay"],null,[["isDemacia","displayName","isHumanoid","puuid","summonerId","obfuscatedPuuid","obfuscatedSummonerId","isMuted","isReportingEnabled","jmxSettings","recordDidRequestSucceed","queueId"],[true,["get",["summoner","summonerObjectDisplayName"]],["get",["summoner","isHumanoid"]],["get",["summoner","puuid"]],["get",["summoner","summonerId"]],["get",["summoner","obfuscatedPuuid"]],["get",["summoner","obfuscatedSummonerId"]],["get",["summoner","showMuted"]],["get",["isReportingEnabled"]],["get",["jmxSettings"]],["get",["recordDidRequestSucceed"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spells"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--primary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell1IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell1IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-summoner-object__spell jade-summoner-object__spell--secondary"],["dynamic-attr","style",["helper",["if"],[["get",["summoner","spell2IconPath"]],["helper",["concat"],["background-image: url(",["get",["summoner","spell2IconPath"]],")"],null]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-summoner-object__champion-to-ban"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["banIntentSquarePortraitPath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--other"],["flush-element"],["text","\\n      "],["open-element","video",[]],["dynamic-attr","class",["concat",["jade-summoner-object__action-fx-video-sheen ",["helper",["if"],[["get",["summoner","isOnPlayersTeam"]],"jade-summoner-object__action-fx-video-sheen--ally","jade-summoner-object__action-fx-video-sheen--enemy"],null]]]],["static-attr","src","/fe/lol-jade/videos/champselect/CS_ActivePlayerRectangle_Sheen.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showOtherActionFx"]]],null,3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-summoner-object__action-fx jade-summoner-object__action-fx--self"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","jade-summoner-object__action-fx-video"],["static-attr","src","/fe/lol-jade/videos/champselect/CS_SelfOrangeRectangleArrows.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["static-attr","preload","auto"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -17040,9 +17098,11 @@
                 shouldShowSwapTooltip: s.Ember.computed("isLeft", "swapTooltipShown", "showPositionAssignment", "team.length", "isRoleSwapEnabled", (function() {
                     return this.get("isLeft") && !this.get("swapTooltipShown") && !this.get("showPositionAssignment") && this.get("team.length") > 1 && this.get("isRoleSwapEnabled")
                 })),
-                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", (function() {
-                    const e = this.get("queueId");
-                    return l.CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e) || l.PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e) || o.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS.includes(e) || o.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS.includes(e)
+                onlyOneSwapTypeAllowed: s.Ember.computed("queueId", "championSwapOnlyQueueIds", "pickOrderSwapOnlyQueueIds", (function() {
+                    const e = this.get("queueId"),
+                        t = this.get("championSwapOnlyQueueIds") || [],
+                        n = this.get("pickOrderSwapOnlyQueueIds") || [];
+                    return t.includes(e) || n.includes(e)
                 })),
                 headerTitle: s.Ember.computed("isLeft", (function() {
                     return this.get("isLeft") ? this.get("tra.champion_select_summoner_array_title_my_team") : this.get("tra.champion_select_summoner_array_title_enemy_team")
@@ -17218,8 +17278,8 @@
                 isBanningNow: s.Ember.computed.equal("summoner.activeActionType", "ban"),
                 isSpectating: !1,
                 largeAreaAnimationsEnabled: s.Ember.computed.equal("uxSettings.largeAreaAnimationsEnabled", !0),
-                showSelfActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "phase", "isSpectating", "champSelectScreen", "largeAreaAnimationsEnabled", (function() {
-                    return !(this.get("isSpectating") || !this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("champSelectScreen") !== a.SCREENS.positionAssignment && (this.get("isPickingNow") || this.get("isBanningNow") || this.get("phase") === a.TIMER_PHASES.planning))
+                showSelfActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "timer.inPlanningPhase", "isSpectating", "champSelectScreen", "largeAreaAnimationsEnabled", (function() {
+                    return !(this.get("isSpectating") || !this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("champSelectScreen") !== a.SCREENS.positionAssignment && (this.get("isPickingNow") || this.get("isBanningNow") || this.get("timer.inPlanningPhase")))
                 })),
                 showOtherActionFx: s.Ember.computed("summoner.isSelf", "isPickingNow", "isBanningNow", "isSpectating", "largeAreaAnimationsEnabled", (function() {
                     return !(this.get("isSpectating") || this.get("summoner.isSelf") || !this.get("largeAreaAnimationsEnabled")) && (this.get("isPickingNow") || this.get("isBanningNow"))

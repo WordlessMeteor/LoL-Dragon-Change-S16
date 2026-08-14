@@ -579,8 +579,8 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.25,
-                "coefficient2": 1.25
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -611,58 +611,58 @@
                     6.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    30.0,
-                    40.0,
-                    50.0,
-                    60.0,
-                    60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    0.22,
-                    0.22,
-                    0.235,
-                    0.25,
-                    0.265,
-                    0.28,
-                    0.28
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.1,
-                    1.1,
-                    1.175,
-                    1.25,
-                    1.325,
-                    1.4,
-                    1.4
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -853,7 +853,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ユニットをキルするたびに、追加でゴールドを獲得する。「ホークスピリット」を放ち、視界を確保することができる。",
-            "dynamicDescription": "<mainText><spellPassive>自動効果:</spellPassive> 敵をキルするたびに、追加で<gold>@AdditionalGold@ゴールド</gold>を獲得する。<br><br><spellActive>発動効果:</spellActive> 鷹を放ち、指定した地点の視界を5秒間確保する。また、鷹は通過したエリアの視界も得る。",
+            "dynamicDescription": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -879,45 +879,45 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0,
-                    25000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1003,7 +1003,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一直線に氷の矢を放つ。矢は命中した敵チャンピオンにダメージを与え、飛距離に応じて最大3.5秒間のスタン効果を付与する。さらに、周囲の敵ユニットにはダメージとスロウ効果を与える。",
-            "dynamicDescription": "<mainText>アッシュが一直線に飛ぶ氷の矢を放ち、命中した敵チャンピオンに<status>スタン効果</status>と<magicDamage>@RMainDamage@の魔法ダメージ</magicDamage>を与える。<status>スタン</status>の効果時間は矢の移動距離に応じて最大@MaxStunDuration@秒まで増加する。周囲の敵に3秒間、50%の<status>スロウ効果</status>を与え、<magicDamage>@RMainDamageSplashTooltip@のダメージ</magicDamage>を与える。",
+            "dynamicDescription": "game_spell_tooltip_EnchantedCrystalArrow_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

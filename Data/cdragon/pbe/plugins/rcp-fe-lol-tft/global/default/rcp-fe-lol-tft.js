@@ -12321,16 +12321,17 @@
                 tier: "UNRANKED"
             };
             const r = "lastTFTBPSeen",
-                c = "tft_star_fragments",
-                m = "lcu-assets-tft-home-store-promos",
-                u = "lastUnlockCount",
-                d = {
+                c = "TFTCompensationTooltipViewed",
+                m = "tft_star_fragments",
+                u = "lcu-assets-tft-home-store-promos",
+                d = "lastUnlockCount",
+                p = {
                     GENERIC_ASSETS: "/lol-game-data/assets/v1/generic-assets.json",
                     MAP_DATA: "/lol-maps/v2/maps",
                     RP: "/lol-inventory/v1/wallet/RP",
                     SETTINGS_READY: "/lol-settings/v2/ready",
                     SETTINGS_USER_EXPERIENCE: "/lol-settings/v2/local/lol-user-experience",
-                    STAR_SHARDS: "/lol-inventory/v1/wallet/" + c,
+                    STAR_SHARDS: "/lol-inventory/v1/wallet/" + m,
                     STAR_SHARDS_TOGGLES: "/lol-platform-config/v1/namespaces/Loadouts",
                     TFT_BATTLE_PASS_PAGE: "/lol-tft/v1/tft/battlePassHub",
                     TFT_EVENTS: "/lol-tft/v1/tft/events",
@@ -12356,8 +12357,8 @@
                     ALL_MISSIONS: "/lol-missions/v1/missions",
                     LOYALTY_STATUS: "/lol-loyalty/v1/status-notification"
                 },
-                p = s.dataBinding.bindTo(s.socket);
-            var h = s.Ember.Service.extend({
+                h = s.dataBinding.bindTo(s.socket);
+            var g = s.Ember.Service.extend({
                 api: null,
                 isHidden: !1,
                 isLowSpecModeEnabled: !1,
@@ -12438,41 +12439,45 @@
                 _eventPassMilestoneStatusMap: new Map,
                 eventStoreMuted: !1,
                 compensationRewards: null,
+                compensationTooltipPreferenceLoaded: !1,
+                hasSeenCompensationTooltip: !1,
                 init() {
                     this._super(...arguments), (0, s.getProvider)().getOptional("rcp-fe-lol-tft").then((e => this.set("api", e))), this._setLocale(), this._initObservers(), this.sharedAudioManager = s.navigation?.activityCenter?.getHomeHubsSharedAudioManager()
                 },
                 willDestroy() {
-                    this._super(...arguments), p.removeObserver(d.GENERIC_ASSETS, this), p.removeObserver(d.MAP_DATA, this), p.removeObserver(d.RP, this), p.removeObserver(d.SETTINGS_READY, this), p.removeObserver(d.STAR_SHARDS, this), p.removeObserver(d.STAR_SHARDS_TOGGLES, this), p.removeObserver(d.TFT_BATTLE_PASS_PAGE, this), p.removeObserver(d.TFT_HOME, this), p.removeObserver(d.TFT_BACKGROUNDS, this), p.removeObserver(d.TFT_NEWS, this), p.removeObserver(d.TFT_LEVEL_PURCHASING_IS_ENABLED, this), p.removeObserver(d.TFT_AUGMENT_PILLAR_IS_ENABLED, this), p.removeObserver(d.TFT_PASS_IS_ENABLED, this), p.removeObserver(d.TFT_PASS_BATTLE_PASS, this), p.removeObserver(d.TFT_PASS_WELCOME_DATA_PATH, this), p.removeObserver(d.TFT_PASS_EVENT_PASS, this), p.removeObserver(d.TFT_PASS_DAILY_LOGIN_PASS, this), p.removeObserver(d.TFT_PLAYER_PREFERENCES, this), p.removeObserver(d.TFT_TEST_PAGE, this), p.removeObserver(d.TFT_EVENT_MISSIONS, this), p.removeObserver(d.TFT_EVENT__HUB_VERSIONS, this)
+                    this._super(...arguments), h.removeObserver(p.GENERIC_ASSETS, this), h.removeObserver(p.MAP_DATA, this), h.removeObserver(p.RP, this), h.removeObserver(p.SETTINGS_READY, this), h.removeObserver(p.STAR_SHARDS, this), h.removeObserver(p.STAR_SHARDS_TOGGLES, this), h.removeObserver(p.TFT_BATTLE_PASS_PAGE, this), h.removeObserver(p.TFT_HOME, this), h.removeObserver(p.TFT_BACKGROUNDS, this), h.removeObserver(p.TFT_NEWS, this), h.removeObserver(p.TFT_LEVEL_PURCHASING_IS_ENABLED, this), h.removeObserver(p.TFT_AUGMENT_PILLAR_IS_ENABLED, this), h.removeObserver(p.TFT_PASS_IS_ENABLED, this), h.removeObserver(p.TFT_PASS_BATTLE_PASS, this), h.removeObserver(p.TFT_PASS_WELCOME_DATA_PATH, this), h.removeObserver(p.TFT_PASS_EVENT_PASS, this), h.removeObserver(p.TFT_PASS_DAILY_LOGIN_PASS, this), h.removeObserver(p.TFT_PLAYER_PREFERENCES, this), h.removeObserver(p.TFT_TEST_PAGE, this), h.removeObserver(p.TFT_EVENT_MISSIONS, this), h.removeObserver(p.TFT_EVENT__HUB_VERSIONS, this)
                 },
                 _initObservers() {
-                    p.addObserver(d.STAR_SHARDS_TOGGLES, this, (e => {
+                    h.addObserver(p.STAR_SHARDS_TOGGLES, this, (e => {
                         e && this.set("starShardsEnabled", e.EnableStarShardsUpgradeFlow)
-                    })), p.addObserver(d.TFT_STORE_DIGITAL_GOODS_DISCLAIMER, this, (e => {
+                    })), h.addObserver(p.TFT_STORE_DIGITAL_GOODS_DISCLAIMER, this, (e => {
                         if (!e) return !1;
                         this.set("showDigitalGoodsDisclaimer", Boolean(e.enabled))
-                    })), p.addObserver(d.TFT_LEVEL_PURCHASING_IS_ENABLED, this, (e => {
+                    })), h.addObserver(p.TFT_LEVEL_PURCHASING_IS_ENABLED, this, (e => {
                         e && this.set("isLevelPurchasingEnabled", e)
-                    })), p.addObserver(d.TFT_AUGMENT_PILLAR_IS_ENABLED, this, (e => {
+                    })), h.addObserver(p.TFT_AUGMENT_PILLAR_IS_ENABLED, this, (e => {
                         e && this.set("isAugmentPillarEnabled", e)
-                    })), p.addObserver(d.TFT_PLAYER_PREFERENCES, this, (e => {
-                        e && e.data && (this.set("lastTFTBPSeen", e.data[r] || ""), this.set("lastTftGameQueueId", e.data.lastTftGameQueueId), this.set("lastUnlockCount", e.data[u]), this._checkBPAnnouncementSeen())
-                    })), p.addObserver(d.TFT_PASS_CONFIG_FETCHED, this, (e => {
+                    })), h.addObserver(p.TFT_PLAYER_PREFERENCES, this, (e => {
+                        if (!e) return;
+                        const t = e.data || {};
+                        this.set("lastTFTBPSeen", t[r] || ""), this.set("lastTftGameQueueId", t.lastTftGameQueueId), this.set("lastUnlockCount", t[d]), this.set("hasSeenCompensationTooltip", Boolean(t[c])), this.set("compensationTooltipPreferenceLoaded", !0), this._checkBPAnnouncementSeen()
+                    })), h.addObserver(p.TFT_PASS_CONFIG_FETCHED, this, (e => {
                         this.set("hasTFTPassConfigBeenFetched", Boolean(e))
-                    })), p.addObserver(d.TFT_BACKGROUNDS, this, (e => {
+                    })), h.addObserver(p.TFT_BACKGROUNDS, this, (e => {
                         e && this.set("backgrounds", e)
-                    })), p.addObserver(d.TFT_HOME, this, (e => {
+                    })), h.addObserver(p.TFT_HOME, this, (e => {
                         e && (this.set("battlePassOfferIds", e.battlePassOfferIds), this.set("fallbackStorePromoOfferIds", e.fallbackStorePromoOfferIds), this.set("homeOverrideUrl", e.overrideUrl), this.set("headerButtonsOverrideUrl", e.headerButtonsOverrideUrl), this.set("homePageEnabled", e.enabled), this.set("primeGamingPromoOffer", e.primeGamingPromoOffer), this.set("storePromoOfferIds", e.storePromoOfferIds), this.set("tacticianPromoOfferIds", e.tacticianPromoOfferIds), this.set("rotatingShopPromos", e.rotatingShopPromos))
-                    })), p.addObserver(d.RP, this, (e => {
+                    })), h.addObserver(p.RP, this, (e => {
                         if (!e) return;
                         const t = e.RP;
                         isNaN(t) ? this.set("rpAmount", 0) : this.set("rpAmount", t)
-                    })), p.addObserver(d.TFT_EVENTS, this, (e => {
+                    })), h.addObserver(p.TFT_EVENTS, this, (e => {
                         if (!e) return;
                         this.set("eventsData", e.subNavTabs);
                         const t = this.get("eventsData");
                         Array.isArray(t) && t.forEach(((e, t) => {
                             e.id = t, e.skillTreePassId && this.get("api")?.setSkillTreeRouteIdentifier(e.id)
-                        })), p.addObserver(d.TFT_EVENT_MISSIONS, this, (e => {
+                        })), h.addObserver(p.TFT_EVENT_MISSIONS, this, (e => {
                             if (e) {
                                 this.set("tftEventMissions", e);
                                 try {
@@ -12492,29 +12497,29 @@
                                 }
                             }
                         }))
-                    })), p.addObserver(d.TFT_PROMO_BUTTONS, this, this._handleUpdatePromoButtonsConfig), p.addObserver(d.TFT_TEST_PAGE, this, (e => {
+                    })), h.addObserver(p.TFT_PROMO_BUTTONS, this, this._handleUpdatePromoButtonsConfig), h.addObserver(p.TFT_TEST_PAGE, this, (e => {
                         e && this.set("testPageEnabled", e.enabled)
-                    })), p.addObserver(d.TFT_NEWS, this, (e => {
+                    })), h.addObserver(p.TFT_NEWS, this, (e => {
                         e && (this.set("newsEnabled", e.enabled), this.set("newsUrl", e.url))
-                    })), p.addObserver(d.GENERIC_ASSETS, this, (e => {
-                        e && (this.set("genericAssets", e), this.set("storePromoAssets", e[m]), this.set("eventPromoTileAssets", e["lcu-assets-tft-event-promo-tile"]), this.set("eventHubAssets", e[o.TFT_EVENT_HUB_ASSETS_DEFAULT_KEY]), this.set("rotationalShopAssets", e["lcu-assets-tft-rotational-shop"]), this.set("teamPlannerButtonAssets", e["lcu-assets-tft-team-planner-button"]))
-                    })), p.addObserver(d.MAP_DATA, this, (e => {
+                    })), h.addObserver(p.GENERIC_ASSETS, this, (e => {
+                        e && (this.set("genericAssets", e), this.set("storePromoAssets", e[u]), this.set("eventPromoTileAssets", e["lcu-assets-tft-event-promo-tile"]), this.set("eventHubAssets", e[o.TFT_EVENT_HUB_ASSETS_DEFAULT_KEY]), this.set("rotationalShopAssets", e["lcu-assets-tft-rotational-shop"]), this.set("teamPlannerButtonAssets", e["lcu-assets-tft-team-planner-button"]))
+                    })), h.addObserver(p.MAP_DATA, this, (e => {
                         if (e)
                             for (const t of e)
                                 if (22 === t.id && "TFT" === t.gameMode && "" === t.gameMutator) return void this.set("mapData", t)
-                    })), p.addObserver(d.STAR_SHARDS, this, (e => {
+                    })), h.addObserver(p.STAR_SHARDS, this, (e => {
                         if (!e) return;
-                        let t = e[c];
+                        let t = e[m];
                         this.set("starShardsAmount", t), isNaN(t) ? this.set("formattedStarShardsAmountString", "0") : t < 1e5 ? this.set("formattedStarShardsAmountString", t) : (t = 1e3 * Math.floor(t / 1e3), this.set("formattedStarShardsAmountString", this.get("tra").numeral(t).format("0a")))
-                    })), p.addObserver(d.TFT_BATTLE_PASS_PAGE, this, (e => {
+                    })), h.addObserver(p.TFT_BATTLE_PASS_PAGE, this, (e => {
                         e && this.set("isBattlePassXPBoosted", e.battlePassXPBoosted)
-                    })), p.addObserver(d.TFT_PASS_IS_ENABLED, this, (e => {
+                    })), h.addObserver(p.TFT_PASS_IS_ENABLED, this, (e => {
                         this.set("isBattlePassEnabled", Boolean(e))
-                    })), p.addObserver(d.TFT_PASS_BATTLE_PASS, this, (e => {
+                    })), h.addObserver(p.TFT_PASS_BATTLE_PASS, this, (e => {
                         e && (this.set("battlePassV2", e), this.set("currentTFTBP", e.info.passId), this._checkBPAnnouncementSeen(), this._handlePassV2Change(e, "showBpNavPip"))
-                    })), p.addObserver(d.TFT_PASS_WELCOME_DATA_PATH, this, (e => {
+                    })), h.addObserver(p.TFT_PASS_WELCOME_DATA_PATH, this, (e => {
                         e && this.set("bpAnnouncementData", e)
-                    })), p.addObserver(d.TFT_PASS_EVENT_PASS, this, (e => {
+                    })), h.addObserver(p.TFT_PASS_EVENT_PASS, this, (e => {
                         if (e) {
                             if (this.set("tftPassEventPass", e), Array.isArray(e?.milestones)) {
                                 const t = e.milestones.some((e => e.status === o.BP_V2_MILESTONE_CLAIMABLE));
@@ -12532,14 +12537,15 @@
                                 s.logger.error("event pass telemetry failed", e)
                             }
                         }
-                    })), p.addObserver(d.TFT_PASS_DAILY_LOGIN_PASS, this, (e => {
+                    })), h.addObserver(p.TFT_PASS_DAILY_LOGIN_PASS, this, (e => {
                         e && this.set("tftPassDailyLoginPass", e)
-                    })), p.addObserver(d.TFT_EVENT_TENCENT_CONFIGS, this, (e => {
+                    })), h.addObserver(p.TFT_EVENT_TENCENT_CONFIGS, this, (e => {
                         e && this.set("eventHubTencentConfigs", e.tencentEventhubConfigs)
-                    })), p.addObserver(d.SETTINGS_USER_EXPERIENCE, this, (e => {
+                    })), h.addObserver(p.SETTINGS_USER_EXPERIENCE, this, (e => {
                         this.set("isLowSpecModeEnabled", e?.data?.potatoModeEnabled)
-                    })), p.addObserver(d.TFT_EVENT_HUB_VERSIONS, this, (e => this.set("eventHubVersions", e?.data))), p.addObserver(d.ALL_MISSIONS, this, (e => this.fetchTFTMissions(e))), p.addObserver(d.LOYALTY_STATUS, this, (e => {
-                        e && e.rewards && e.rewards.tftCompensationRewards && this.set("compensationRewards", e.rewards.tftCompensationRewards)
+                    })), h.addObserver(p.TFT_EVENT_HUB_VERSIONS, this, (e => this.set("eventHubVersions", e?.data))), h.addObserver(p.ALL_MISSIONS, this, (e => this.fetchTFTMissions(e))), h.addObserver(p.LOYALTY_STATUS, this, (e => {
+                        const t = "REWARDS_GRANT" === e?.status && e.rewards?.tftCompensationRewards || [];
+                        this.set("compensationRewards", t)
                     }))
                 },
                 fetchTFTMissions(e) {
@@ -12549,8 +12555,8 @@
                         "Set17AGE" === e.eventId && (a = !0)
                     })), n = a ? e.filter((e => "TFT17_Age_Series" === e.seriesName)) : e.filter((e => "TFT16_Age_Champion_Used_Series" === e.seriesName)), this.set("unlockMissions", n)
                 },
-                getHomeHubConfig: () => s.db.get(d.TFT_HOME),
-                getStorePromoAssets: () => s.db.get(d.GENERIC_ASSETS).then((e => e ? e[m] : null)),
+                getHomeHubConfig: () => s.db.get(p.TFT_HOME),
+                getStorePromoAssets: () => s.db.get(p.GENERIC_ASSETS).then((e => e ? e[u] : null)),
                 isEventPassAutoClaim: s.Ember.computed("tftPassEventPass.info.passId", (function() {
                     return "0f23aca8-e833-4b86-b625-453c4308dbb3" === this.get("tftPassEventPass.info.passId")
                 })),
@@ -12567,6 +12573,14 @@
                     const e = {};
                     e[r] = this.currentTFTBP, (0, s.dataBinding)("/lol-settings", s.socket).patch("/v2/account/LCUPreferences/lol-tft", {
                         data: e,
+                        schemaVersion: 1
+                    })
+                },
+                recordCompensationTooltipSeen() {
+                    return this.set("hasSeenCompensationTooltip", !0), (0, s.dataBinding)("/lol-settings", s.socket).patch("/v2/account/LCUPreferences/lol-tft", {
+                        data: {
+                            [c]: !0
+                        },
                         schemaVersion: 1
                     })
                 },
@@ -12620,7 +12634,7 @@
                         missionIds: e,
                         serieIds: t
                     };
-                    p.put("/lol-missions/v1/player", n).catch((() => null))
+                    h.put("/lol-missions/v1/player", n).catch((() => null))
                 },
                 _handlePassV2Change(e, t) {
                     const {
@@ -12688,7 +12702,7 @@
                     const e = this.get("completedUnlockMissionsCount");
                     if (e !== this.get("lastUnlockCount")) {
                         const t = {};
-                        t[u] = e, (0, s.dataBinding)("/lol-settings", s.socket).patch("/v2/account/LCUPreferences/lol-tft", {
+                        t[d] = e, (0, s.dataBinding)("/lol-settings", s.socket).patch("/v2/account/LCUPreferences/lol-tft", {
                             data: t,
                             schemaVersion: 1
                         })
@@ -12734,7 +12748,7 @@
                     }))
                 }
             });
-            t.default = h
+            t.default = g
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

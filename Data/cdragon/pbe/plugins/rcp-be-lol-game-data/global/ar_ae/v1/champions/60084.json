@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "أكالي اللاسعة",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "تتبع جماعة نحلة العصفور الدوري العظيمة حمية تدريبية عريقة وقاسية، حيث يتم تعليم الطلاب اللدغ بشراسة دبور لا يكل. وتعد أكالي بطلتهم الأقوى، وهي تسعى لترقية الفن إلى مستويات أعلى."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تلوح أكالي بسلاح الكاما نحو عدو مستهدف لإلحاق ضرر السحر ووضع علامة على الهدف لمدة 6ث. تؤدي هجمات القتال القريب التي تنفذها أكالي ضد هدف يحمل العلامة إلى تفعيل العلامة واستهلاكها لإلحاق ضرر إضافي واستعادة الطاقة.",
-            "dynamicDescription": "ترمي أكالي سلاح الكاما على عدو مستهدف لإلحاق <magicDamage>@InitialDamage@ ضرر سحر</magicDamage> وتضع علامة على الهدف لمدة 6ث.<br><br>تؤدي هجمات القتال القريب لدى أكالي ضد هدف يحمل العلامة إلى استهلاك العلامة لإلحاق <magicDamage>@ProcDamage@ ضرر سحر</magicDamage> واستعادة <keywordMajor>@EnergyReturn@ طاقة</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_AkaliQ_Jade_Summary",
+            "dynamicDescription": "Spell_AkaliQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تنشر أكالي غطاءً من الدخان. أثناء وجودها داخل المنطقة، تكسب أكالي الدروع ومقاومة السحر وتصبح غير مرئية. ويؤدي الهجوم أو استخدام القدرات إلى كشفها لفترة قصيرة. تنخفض سرعة حركة الأعداء داخل الدخان.",
-            "dynamicDescription": "تنشر أكالي غطاءً من الدخان يستمر لمدة 8ث. أثناء وجودها داخل المنطقة، تكسب أكالي <scaleArmor>@TotalResists@ دروع</scaleArmor> و <scaleMR>@TotalResists@ مقاومة سحر</scaleMR> وتصبح <keywordStealth>غير مرئية</keywordStealth>. ويؤدي الهجوم أو استخدام القدرات إلى الكشف عنها لفترة وجيزة.<br><br>يخضع الأعداء داخل الدخان لتأثير <status>الإبطاء</status> بنسبة @SlowAmount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_AkaliW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

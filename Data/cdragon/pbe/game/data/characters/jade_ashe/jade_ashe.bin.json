@@ -1023,74 +1023,6 @@
         "mSpell": {
             "mAffectsTypeFlags": 16384,
             "mAlternateName": "Jade_AsheSpiritOfTheHawk",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        10.0,
-                        50.0,
-                        90.0,
-                        130.0,
-                        170.0,
-                        210.0,
-                        250.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseCooldown",
@@ -1117,6 +1049,19 @@
                         6.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RevealDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1139,7 +1084,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.75,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_Hawkshot.dds"
@@ -1288,20 +1232,20 @@
                         "keyName": "game_spell_displayname_AsheSpiritOfTheHawk_Jade",
                         "keySummary": "game_spell_description_AsheSpiritOfTheHawk_Jade",
                         "keyTooltip": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade",
-                        "keyTooltipExtended": "game_spell_tooltipextended_SpiritOfTheHawk_Jade"
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_AsheSpiritOfTheHawk_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "CastRange",
-                                    "nameOverride": "Spell_ListType_Range",
+                                    "type": "AdditionalGold",
+                                    "nameOverride": "Spell_AsheSpiritOfTheHawk_AdditionalGold_Jade",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "AdditionalGold",
-                                    "nameOverride": "Spell_AsheSpiritOfTheHawk_AdditionalGold_Jade",
+                                    "type": "CastRange",
+                                    "nameOverride": "Spell_ListType_Range",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1551,13 +1495,39 @@
                 {
                     "name": "RBaseDamage",
                     "values": [
-                        0.0,
+                        75.0,
                         250.0,
                         425.0,
                         600.0,
-                        800.0,
-                        1000.0,
-                        1200.0
+                        775.0,
+                        950.0,
+                        1125.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDurationPerDistance",
+                    "values": [
+                        0.0012499999720603228,
+                        0.0012499999720603228,
+                        0.0012499999720603228,
+                        0.0012499999720603228,
+                        0.0012499999720603228,
+                        0.0012499999720603228,
+                        0.0012499999720603228
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1601,33 +1571,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AoE",
+                    "name": "AreaDamageMod",
                     "values": [
-                        1.0,
                         0.5,
                         0.5,
                         0.5,
                         0.5,
                         0.5,
-                        1.0
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "APRatio",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "QMovespeedModifier",
+                    "name": "MovementSpeedMod",
                     "values": [
                         -0.5,
                         -0.5,
@@ -1636,6 +1593,19 @@
                         -0.5,
                         -0.5,
                         -0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1656,7 +1626,7 @@
                 },
                 "{6b932875}": {
                     "mMultiplier": {
-                        "mDataValue": "AoE",
+                        "mDataValue": "{d69c28d3}",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -1670,14 +1640,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{42e917e9}": {
-                    "mMultiplier": {
-                        "mNumber": 0.5,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "RMainDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell4",
@@ -2033,75 +1995,21 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        20.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        60.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.2199999988079071,
-                        0.2199999988079071,
-                        0.23499999940395355,
-                        0.25,
-                        0.26499998569488525,
-                        0.2800000011920929,
-                        0.2800000011920929
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.1749999523162842,
-                        1.25,
-                        1.3250000476837158,
-                        1.399999976158142,
-                        1.399999976158142
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -2136,8 +2044,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 0.25,
-            "mCoefficient2": 1.25,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.dds",
@@ -2228,6 +2134,7 @@
                                     "type": "SlowPercent",
                                     "multiplier": -100.0,
                                     "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

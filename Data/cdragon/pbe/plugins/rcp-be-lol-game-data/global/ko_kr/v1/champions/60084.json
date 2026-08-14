@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "독침 아칼리",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "말벌 결사단은 고대로부터 내려오는 무자비한 훈련법에 따라 수련생들에게 맹렬하고 집요한 말벌의 정신을 가르칩니다. 결사단의 가장 위대한 전사인 아칼리는 결사단의 무도를 더 높은 경지로 이끌고자 합니다."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "아칼리가 지정한 적에게 카마를 던져 마법 피해를 입히고 6초 동안 표식을 남깁니다. 표식이 남은 대상에게 아칼리가 기본 공격을 가하면 표식을 소모하여 추가 피해를 입히고 기력을 회복합니다.",
-            "dynamicDescription": "아칼리가 지정한 적에게 카마를 던져 <magicDamage>@InitialDamage@의 마법 피해</magicDamage>를 입히고 6초 동안 표식을 남깁니다.<br><br>표식이 남은 대상에게 아칼리가 기본 공격을 가하면 표식을 소모하여 <magicDamage>@ProcDamage@의 마법 피해</magicDamage>를 입히고 <keywordMajor>@EnergyReturn@의 기력</keywordMajor>을 회복합니다.@SpellModifierDescriptionAppend@",
+            "description": "Spell_AkaliQ_Jade_Summary",
+            "dynamicDescription": "Spell_AkaliQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아칼리가 연막탄을 던집니다. 연막 안에 있는 동안 아칼리가 방어력과 마법 저항력을 얻고 투명 상태가 됩니다. 기본 공격이나 스킬을 사용하면 잠시 위치가 드러납니다. 연막 안에 있는 적은 이동 속도가 감소합니다.",
-            "dynamicDescription": "아칼리가 8초 동안 지속되는 연막탄을 던집니다. 연막 안에 있는 동안 아칼리가 <scaleArmor>@TotalResists@의 방어력</scaleArmor>과 <scaleMR>@TotalResists@의 마법 저항력</scaleMR>을 얻고 <keywordStealth>투명</keywordStealth> 상태가 됩니다. 기본 공격이나 스킬을 사용하면 잠시 위치가 드러납니다.<br><br>연막 안에 있는 적은 @SlowAmount@% <status>둔화</status>됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_AkaliW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

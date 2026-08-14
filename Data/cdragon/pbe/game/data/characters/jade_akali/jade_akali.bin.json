@@ -38,101 +38,6 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "Jade_AkaliW",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        65.0,
-                        70.0,
-                        75.0,
-                        80.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.20000000298023224,
-                        0.30000001192092896,
-                        0.3499999940395355,
-                        0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.44999998807907104
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.5,
-                        6.0,
-                        6.5,
-                        7.0,
-                        7.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "MovementSpeed",
@@ -224,9 +129,21 @@
                         34.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CloudDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/AkaliTwilightShroud.dds"
@@ -378,7 +295,7 @@
                                 },
                                 {
                                     "type": "SlowAmount",
-                                    "nameOverride": "Spell_ListType_HweiE_SlowAmount",
+                                    "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2035,90 +1952,21 @@
                         0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MarkDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "BaseDamageNamed",
-                            "values": [
-                                40.0,
-                                70.0,
-                                100.0,
-                                130.0,
-                                160.0,
-                                190.0,
-                                220.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "tAD Ratio",
-                            "values": [
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                },
-                "ARAM": {
-                    "SpellDataValues": [
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                },
-                "{bffdf499}": {
-                    "SpellDataValues": [
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "InitialDamage": {
                     "mFormulaParts": [
@@ -2147,8 +1995,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
-            "mCoefficient2": 0.5,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/AkaliMota.dds"
@@ -3093,7 +2939,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "APPerOnHitPercent",
+                    "name": "ForceAPTooltip",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MightADTooltip",
                     "values": [
                         6.0,
                         6.0,

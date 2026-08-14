@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "When Blitzcrank life is brought below 20% health they activate Mana Barrier. This creates a mana shield equal to 50% of their mana for 10 seconds. Mana Barrier can only occur once every 90 seconds."
+        "description": "When taking damage at low Health, Blitzcrank is first Shielded for a percent of their current Mana. This effect has a cooldown."
     },
     "spells": [
         {
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Lightning arcs off of Blitzcrank to hit a random nearby enemy for <magicDamage>@PassiveDamage@ magic damage</magicDamage> every 2.5 seconds.<br><br><spellActive>Active: </spellActive>Deals <magicDamage>@ActiveDamage@ magic damage</magicDamage> and <status>Silences</status> surrounding enemy units for 0.5 seconds.@SpellModifierDescriptionAppend@",
+            "description": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and briefly silence them.",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Lightning arcs off of Blitzcrank to hit a random nearby enemy for <magicDamage>@PassiveDamage@ magic damage</magicDamage> every @PassiveHitRate@ seconds.<br><br><spellActive>Active: </spellActive>Deals <magicDamage>@ActiveDamage@ magic damage</magicDamage> and <status>Silences</status> surrounding enemy units for @SilenceDuration@ seconds. The passive is disabled while Static Field is on cooldown.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

@@ -14944,10 +14944,7 @@
                         this._tempSaveValue = n, this._keybindDiv.textContent = this._fromSavedToDisplay(n), this._unbindButton.disabled = !1, this._pttModal.enableAcceptButton()
                     },
                     _acceptPttModal() {
-                        if (document.removeEventListener("mousedown", this._handleMouseKeySet.bind(this)), this._tempSaveValue && this.get("onChange")) {
-                            const e = (this.get("key") || "").slice(this.get("primaryKey").length);
-                            this.get("onChange")(this._tempSaveValue + e)
-                        }
+                        document.removeEventListener("mousedown", this._handleMouseKeySet.bind(this)), this._tempSaveValue && this.get("onChange") && this.get("onChange")(this._tempSaveValue)
                     },
                     _cancelPttModal() {
                         document.removeEventListener("mousedown", this._handleMouseKeySet.bind(this))
