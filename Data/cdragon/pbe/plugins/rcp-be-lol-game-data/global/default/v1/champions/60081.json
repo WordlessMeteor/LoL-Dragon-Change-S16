@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 5 times."
+        "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell."
     },
     "spells": [
         {
@@ -976,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ezreal fires a fluctuating wave of energy, decreasing the Attack Speed and dealing magic damage to enemy champions, while healing and increasing the Attack Speed of allied champions.",
-            "dynamicDescription": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>@Damage@ magic damage</magicDamage> and reducing their <attackSpeed>Attack Speed</attackSpeed> by @AttackSpeed@% for 5 seconds. <br><br>Allied champions hit by the wave restore <healing>@TotalHeal@ Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by @AttackSpeed@% for 5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>@Damage@ magic damage</magicDamage> and reduces their <attackSpeed>Attack Speed</attackSpeed> by @AttackSpeed@% for @Duration@ seconds. <br><br>Allied champions hit by the wave restore <healing>@TotalHeal@ Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by @AttackSpeed@% for @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Ezreal channels for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).",
-            "dynamicDescription": "Ezreal channels for 1 second to fire a barrage of missiles dealing <magicDamage>@Damage@ magic damage</magicDamage> to each unit it passes through. However, it deals @DamageReductionPerHit*100@% less damage for each unit it hits (minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ezreal fires a powerful barrage of energy missiles which do massive damage to each unit it passes through.",
+            "dynamicDescription": "Ezreal fires a barrage of missiles dealing <magicDamage>@Damage@ magic damage</magicDamage> to each unit it passes through. However, it deals @DamageReductionPerHit*100@% less damage for each unit it hits (minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

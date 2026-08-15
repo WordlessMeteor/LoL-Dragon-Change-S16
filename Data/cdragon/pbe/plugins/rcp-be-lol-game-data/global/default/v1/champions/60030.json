@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Upon dying, Karthus enters a spirit form that allows him to continue casting spells."
+        "description": "Upon dying, Karthus enters a spirit form allowing him to continue casting spells while dead for a short time."
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus unleashes a delayed blast at a location, dealing damage to nearby enemies.",
-            "dynamicDescription": "Creates a delayed blast,  after 0.5 seconds, deals <magicDamage>@QDamage@ magic damage</magicDamage> to each nearby enemy, this deals double damage if it hits only a single unit.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Creates a delayed blast that deals <magicDamage>@QDamage@ magic damage</magicDamage> to each nearby enemy, this deals double damage if it hits only a single unit.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "After channeling for 3 seconds, Karthus deals damage to all enemy champions.",
-            "dynamicDescription": "After channeling for 3 seconds, Karthus deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to all enemy champions.@SpellModifierDescriptionAppend@",
+            "description": "After channeling, Karthus damages all enemy champions.",
+            "dynamicDescription": "After channeling for @ChannelDuration@ seconds, Karthus deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to all enemy champions.@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

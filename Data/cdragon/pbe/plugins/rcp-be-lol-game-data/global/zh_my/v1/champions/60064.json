@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "使用技能后，李星接下来的两次普攻将获得40%攻击速度，每次普攻都会回复15能量。"
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "虎啸龙吟：李星发出梵音来定位敌人，对首个命中的敌人造成物理伤害。如果“虎啸龙吟”命中敌人，李星可在接下来的3秒内施放“震惊百里”。<br>震惊百里：李星冲向被“虎啸龙吟”命中的敌人，造成物理伤害，并额外造成其已损失生命值8%的伤害。",
-            "dynamicDescription": "<spellName>虎啸龙吟：</spellName>李星发出梵音来定位敌人，对首个命中的敌人造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。如果<spellName>虎啸龙吟</spellName>命中一名敌人，李星可在接下来的3秒内施放<spellName>震惊百里</spellName>。<br><br><spellName>震惊百里：</spellName>李星冲向被“虎啸龙吟”命中的敌人，造成<physicalDamage>@RecastDamage@物理伤害</physicalDamage>外加8%已损失的生命值。@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "铁璧金身：李星冲向一名目标友军，并为双方提供一道可吸收伤害的护盾。使用“铁壁金身”后，李星可在接下来3秒内施放“易筋洗髓”。<br>易筋洗髓：李星接受过严格的肉体训练，使他在战斗中更为强健。李星获得普攻吸血、技能吸血和物理防御，持续4秒。",
-            "dynamicDescription": "<spellName>铁壁金身：</spellName>李星冲向一名目标友军，并为双方提供一道可吸收@ShieldAmount@伤害的<shield>护盾</shield>，持续5秒。使用<spellName>铁壁金身</spellName>后，李星可在接下来3秒内施放<spellName>易筋洗髓</spellName>。<br><br><spellName>易筋洗髓：</spellName>李星接受过严格的肉体训练，使他在战斗中更为强健。李星获得@LifestealAndSpellVamp@%普攻吸血、技能吸血和<scaleArmor>@ArmorBonus@物理防御</scaleArmor>，持续5秒。@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

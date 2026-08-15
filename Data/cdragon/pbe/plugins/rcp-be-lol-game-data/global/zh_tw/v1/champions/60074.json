@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "漢默丁格放置一座機槍防禦塔。防禦塔會隨著此技能等級提升獲得能力(防禦塔對建築造成的傷害減半)。",
-            "dynamicDescription": "漢默丁格建造一座機槍防禦塔，每次攻擊造成<magicDamage>@BonusDamage@魔法傷害</magicDamage>。此技能可以充能@MaxAmmo@次(刷新時間@AmmoRechargeTime@秒)。<br><br>此技能每升一級會獲得額外強化：<br><attention>2級：</attention>防禦塔攻擊會使目標的雙防降低1點(最多50點)<br><attention>3級：</attention>可同時存在的防禦塔數量提升至2座<br><attention>4級：</attention>防禦塔額外獲得<scaleHealth>125生命</scaleHealth><br><attention>5級：</attention>防禦塔攻擊會造成範圍傷害@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "漢默丁格發射長程火箭，攻擊最靠近他的敵軍。",
-            "dynamicDescription": "漢默丁格發射3枚追蹤敵軍的微型火箭(每位敵軍最多1枚)，攻擊最靠近他的目標。每枚火箭造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "漢默丁格向目標區域投擲暴風手雷，對敵方單位造成傷害，暈眩直接命中的目標，並致盲周圍單位。",
-            "dynamicDescription": "漢默丁格投擲一枚手榴彈，對敵方單位造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並<status>致盲</status>這些單位，持續@BlindDuration@秒。被直接命中的敵軍會<status>暈眩</status>1.5秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "被動/主動：被動增加冷卻時間減免。啟動時，所有活躍的進化砲臺會回復生命並發射冰霜射擊，短時間內降低跑速。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>@CooldownBonus*-100@%冷卻時間減免。<br><br><spellActive>主動：</spellActive>期間內強化所有技能和砲臺。<br><br><spellName>進化砲臺：</spellName>所有砲臺<healing>回復</healing>相當於100%最大生命的生命，且每次攻擊造成<status>@MovementSpeedMod*-100@%緩速</status>效果。<br><spellName>高科技微型火箭：</spellName>發射5枚火箭，而非3枚。<br><spellName>CH-1震盪手雷：</spellName>飛行速度增加33%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "หลังจากที่ Lee Sin ใช้สกิล การโจมตีปกติ 2 ครั้งถัดไปจะได้รับความเร็วโจมตี 40% และฟื้นฟู Energy 15 หน่วยต่อครั้ง"
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Sonic Wave: Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งศัตรู สร้างความเสียหายกายภาพให้กับศัตรูตัวแรกที่โดน หาก Sonic Wave โดนเป้าหมาย Lee Sin สามารถร่าย Resonating Strike ต่อได้ภายในเวลา 3 วินาที<br>Resonating Strike: Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave และสร้างความเสียหายกายภาพบวกกับ 8% ของพลังชีวิตที่หายไป",
-            "dynamicDescription": "<spellName>Sonic Wave: </spellName> Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งของศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @InitialDamage@ หน่วย</physicalDamage>แก่ศัตรูตัวแรกที่โดน หากใช้ <spellName>Sonic Wave</spellName> โดนเป้าหมาย Lee Sin สามารถใช้ <spellName>Resonating Strike</spellName> ต่อได้ภายในเวลา 3 วินาที<br><br><spellName>Resonating Strike: </spellName>Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave สร้าง<physicalDamage>ความเสียหายกายภาพ @RecastDamage@ หน่วย</physicalDamage> บวกกับ 8% ของพลังชีวิตที่หายไป@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Safeguard: Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม พร้อมสร้างโล่ป้องกันให้กับทั้งคู่ หลังจากที่ใช้ Safeguard ไปแล้ว Lee Sin สามารถใช้ Iron Will ต่อได้ภายในเวลา 3 วินาที<br>Iron Will: Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ Lee Sin ได้รับค่าดูดเลือด ดูดเลือดเวท และเกราะเป็นเวลา 4 วินาที",
-            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม มอบ<shield>โล่ป้องกัน</shield>ความเสียหาย @ShieldAmount@ หน่วยให้กับทั้งคู่เป็นเวลา 5 วินาที หลังจากที่ใช้ <spellName>Safeguard</spellName> ไปแล้ว Lee Sin สามารถใช้ <spellName>Iron Will</spellName> ต่อได้ภายในเวลา 3 วินาที<br><br><spellName>Iron Will: </spellName>Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ Lee Sin ได้รับค่าดูดเลือดและดูดเลือดเวท @LifestealAndSpellVamp@% อีกทั้งได้รับ<scaleArmor>เกราะ @ArmorBonus@ หน่วย</scaleArmor>เป็นเวลา 5 วินาที@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

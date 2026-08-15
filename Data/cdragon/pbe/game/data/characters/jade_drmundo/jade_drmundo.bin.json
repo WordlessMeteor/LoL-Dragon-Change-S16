@@ -17,13 +17,32 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "MaxHealthRatio",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "{0ee04500}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mCoefficient": 0.003000000026077032,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MaxHealthRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -154,6 +173,19 @@
                         85.0,
                         100.0,
                         115.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -803,6 +835,19 @@
                         50.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -929,7 +974,8 @@
                         "keyName": "Spell_DrMundoQ_Jade_Name",
                         "keySummary": "Spell_DrMundoQ_Jade_Summary",
                         "keyTooltip": "Spell_DrMundoQ_Jade_Tooltip",
-                        "keyCost": "Spell_DrMundo_Jade_Cost"
+                        "keyCost": "Spell_DrMundo_Jade_Cost",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_DrMundoQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -950,6 +996,11 @@
                                 {
                                     "type": "HealthCost",
                                     "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaxDamage",
+                                    "nameOverride": "Spell_ListType_MaximumDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1094,7 +1145,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1172,7 +1223,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1482,9 +1533,9 @@
         },
         "__type": "SpellObject"
     },
-    "{5871a0f7}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoShoseShop": {
         "ObjectName": "Jade_DrMundoShoseShop",
-        "objectPath": "{5871a0f7}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoShoseShop",
         "mScriptName": "Jade_DrMundoShoseShop",
         "mSpell": {
             "flags": 4,
@@ -1973,7 +2024,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1983,9 +2034,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c8b13159}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoSkin09_WeaponRotationManager": {
         "ObjectName": "Jade_DrMundoSkin09_WeaponRotationManager",
-        "objectPath": "{c8b13159}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoSkin09_WeaponRotationManager",
         "mScriptName": "Jade_DrMundoSkin09_WeaponRotationManager",
         "__type": "SpellObject"
     },
@@ -2318,7 +2369,7 @@
         "passiveLuaName": "Jade_DrMundoP",
         "passiveToolTip": "game_character_passiveDescription_Jade_DrMundo",
         "passiveSpell": "Jade_DrMundoP",
-        "passive1IconName": "ASSETS/Characters/Jade_DrMundo/HUD/Icons2D/Jade_DrMundo_P.dds",
+        "passive1IconName": "assets/characters/jade_drmundo/hud/icons2d/jade_drmundo_p.dds",
         "name": "game_character_displayname_Jade_DrMundo",
         "weaponMaterials": [
             "Jade_DrMundoBasicAttack"

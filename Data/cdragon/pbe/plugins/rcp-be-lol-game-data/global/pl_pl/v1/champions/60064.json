@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Po użyciu umiejętności przez Lee Sina, jego 2 następne ataki wykonywane są z premią 40% do prędkości ataku i przywracają mu po 15 pkt. energii."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Fala Dźwięku: Lee Sin tworzy dysonansową falę dźwięku, aby zlokalizować wrogów, zadając obrażenia fizyczne pierwszemu, którego fala napotka. Jeżeli Fala Dźwięku trafi, Lee Sin przez 3 sek. może użyć Uderzenia Rezonansu.<br>Uderzenie Rezonansu: Lee Sin doskakuje do wroga trafionego Falą Dźwięku, zadając obrażenia fizyczne plus 8% jego brakującego zdrowia.",
-            "dynamicDescription": "<spellName>Fala Dźwięku: </spellName>Lee Sin tworzy dysonansową falę dźwięku, aby zlokalizować wrogów, zadając <physicalDamage>@InitialDamage@ pkt. obrażeń fizycznych</physicalDamage> pierwszemu wrogowi, którego napotka. Jeżeli <spellName>Fala Dźwięku</spellName> trafi, Lee Sin przez 3 sek. może użyć <spellName>Uderzenia Rezonansu</spellName>.<br><br><spellName>Uderzenie Rezonansu: </spellName>Lee Sin przemieszcza się ku przeciwnikowi trafionemu Falą Dźwięku, zadając mu <physicalDamage>@RecastDamage@ pkt. obrażeń fizycznych</physicalDamage> plus 8% brakującego wrogowi zdrowia.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Osłona: Lee Sin doskakuje do sojusznika, osłaniając was oboje przed obrażeniami. Po użyciu Osłony Lee Sin przez 3 sek. może użyć Żelaznej Woli.<br>Żelazna Wola: Dzięki intensywnemu treningowi Lee Sin świetnie radzi sobie w walce i Na 4 sekundy zyskuje kradzież życia, wampiryzm zaklęć i pancerz.",
-            "dynamicDescription": "<spellName>Osłona: </spellName>Lee Sin doskakuje do sojusznika, <shield>osłaniając</shield> ich oboje tarczą o wartości @ShieldAmount@ pkt. obrażeń na 5 sek. Po użyciu <spellName>Osłony</spellName> Lee Sin przez 3 sekundy może użyć <spellName>Żelaznej Woli</spellName>.<br><br><spellName>Żelazna Wola: </spellName>Dzięki intensywnemu treningowi Lee Sin świetnie radzi sobie w walce. Na 5 sek. zyskuje @LifestealAndSpellVamp@% kradzieży życia, wampiryzm zaklęć i <scaleArmor>@ArmorBonus@ pkt. pancerza</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

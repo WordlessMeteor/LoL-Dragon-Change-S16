@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Sau khi Lee Sin sử dụng một kỹ năng, 2 đòn đánh thường kế tiếp được tăng 40% Tốc Độ Đánh và hồi 15 Nội Năng mỗi đòn."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Sóng Âm: Lee Sin chưởng ra một luồng sóng nghịch âm nhằm định vị kể địch, gây sát thương vật lý lên kẻ địch đầu tiên trúng phải. Nếu Sóng Âm trúng mục tiêu, Lee Sin có thể sử dụng Vô Ảnh Cước trong 3 giây kế tiếp.<br>Vô Ảnh Cước: Lee Sin lướt tới kẻ địch trúng phải Sóng Âm, gây sát thương vật lý + 8% Máu đã mất của chúng.",
-            "dynamicDescription": "<spellName>Sóng Âm: </spellName>Lee Sin chưởng ra một luồng sóng nghịch âm nhằm định vị kể địch, gây <physicalDamage>@InitialDamage@ sát thương vật lý</physicalDamage> lên kẻ địch đầu tiên trúng phải. Nếu <spellName>Sóng Âm</spellName> trúng mục tiêu, Lee Sin có thể sử dụng <spellName>Vô Ảnh Cước</spellName> trong 3 giây kế tiếp.<br><br><spellName>Vô Ảnh Cước: </spellName>Lee Sin lao tới kẻ địch bị trúng Sóng Âm, gây <physicalDamage>@RecastDamage@ sát thương vật lý</physicalDamage> + 8% Máu đã mất của mục tiêu.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Hộ Thể: Lee Sin lướt đến một đồng minh chỉ định, tạo lá chắn bảo vệ cả hai khỏi sát thương. Sau khi sử dụng Hộ Thể, Lee Sin có thể niệm Kiên Định trong 3 giây kế tiếp.<br>Kiên Định: Sự dày công khổ luyện giúp cho Lee Sin tung hoành trên chiến trường. Trong 4 giây, Lee Sin nhận Hút Máu, Hút Máu Phép và Giáp.",
-            "dynamicDescription": "<spellName>Hộ Thể: </spellName>Lee Sin lướt tới một đồng minh chỉ định, tạo <shield>lá chắn</shield> cho cả hai, hấp thụ @ShieldAmount@ sát thương trong vòng 5 giây tiếp theo. Sau khi sử dụng <spellName>Hộ Thể,</spellName> Lee Sin có thể niệm <spellName>Kiên Định</spellName> trong 3 giây kế tiếp.<br><br><spellName>Kiên Định: </spellName>Sự dày công khổ luyện giúp cho Lee Sin tung hoành trên chiến trường. Trong vòng 5 giây, Lee Sin nhận @LifestealAndSpellVamp@% Hút Máu, Hút Máu Phép và <scaleArmor>@ArmorBonus@ Giáp</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

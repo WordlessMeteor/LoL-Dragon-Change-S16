@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger elhelyez egy géppuskatornyot. A tornyok a képesség fejlesztésével új adottságokra tesznek szert. (A tornyok feleakkora sebzést okoznak más tornyoknak.)",
-            "dynamicDescription": "Heimerdinger géppuskatornyot épít, amely támadásonként <magicDamage>@BonusDamage@ varázssebzést</magicDamage> okoz. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>A képesség minden szintje egy további fejlesztést biztosít:<br><attention>2. szint:</attention> a torony támadásai 1 ponttal csökkentik a célpont páncélját és varázsellenállását (legfeljebb 50 pontig)<br><attention>3. szint:</attention> egyszerre 2 torony lehet aktív<br><attention>4. szint:</attention> a tornyok további <scaleHealth>125 életerőre</scaleHealth> tesznek szert<br><attention>5. szint:</attention> a tornyok területi sebzést okoznak@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger nagy hatótávolságú rakétákat lő ki, amelyek a Heimerdingerhez legközelebbi ellenfeleket találják el.",
-            "dynamicDescription": "Heimerdinger 3, ellenséges célpontokat kereső mikrorakétát lő ki (személyenként legfeljebb 1 darabot), amelyek a hozzá legközelebbi célpontokat találják el. Mindegyik rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger egy gránátot hajít a kijelölt helyre, amely megsebzi az ellenséges egységeket, elkábítja a közvetlenül eltalált célpontokat, a körülöttük állókat pedig elvakítja.",
-            "dynamicDescription": "Heimerdinger elhajít egy gránátot, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenséges egységeknek, és @BlindDuration@ másodpercre <status>elvakítja</status> őket.  A közvetlenül eltalált ellenfelek 1,5 másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Passzív/aktív: passzívan növeli a töltésiidő-csökkentést.  Aktiváláskor gyógyítja az összes aktív fejlesztett tornyot, amelyek fagyasztó lövedékekre váltanak, rövid időre csökkentve a célpont mozgási sebességét.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>@CooldownBonus*-100@% töltésiidő-csökkentés.<br><br><spellActive>Aktív: </spellActive>felerősít minden képességet és tornyot a hatás időtartama alatt.<br><br><spellName>Fejlesztett tornyok:</spellName> minden torony <healing>visszanyeri</healing> a maximális életereje 100%-át, és minden lövés <status>@MovementSpeedMod*-100@%-os lassítást</status> alkalmaz.<br><spellName>Hextech mikrorakéták:</spellName> 3 helyett 5 rakétát lő ki.<br><spellName>CH-1 sokkoló gránát:</spellName> 33%-kal gyorsabban repül.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Wenn Karthus stirbt, nimmt er die Form eines Geistes an. So kann er weitere Fähigkeiten einsetzen."
+        "description": "Spell_KarthusPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Karthus erzeugt eine verzögerte Explosion an einer Stelle, wodurch er an allen Gegnern in der Nähe Schaden verursacht.",
-            "dynamicDescription": "Erzeugt eine verzögerte Explosion, die nach 0,5 Sekunden an allen Gegnern in der Nähe <magicDamage>@QDamage@ magischen Schaden</magicDamage> verursacht. Dieser Schaden wird verdoppelt, wenn nur eine einzelne Einheit getroffen wird.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Nachdem Karthus sich 3 Sekunden lang kanalisiert hat, fügt er allen gegnerischen Champions Schaden zu.",
-            "dynamicDescription": "Nachdem Karthus 3 Sekunden lang kanalisiert hat, fügt er allen gegnerischen Champions <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KarthusR_Jade_Summary",
+            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

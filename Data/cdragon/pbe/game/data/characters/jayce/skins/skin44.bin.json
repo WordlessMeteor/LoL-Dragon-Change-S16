@@ -198,9 +198,9 @@
             "Idle1_flowerstill"
         ],
         "mContextualActionData": "Characters/Jayce/CAC/Jayce_Base",
-        "iconCircle": "ASSETS/Characters/Jayce/HUD/Jayce_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Jayce/HUD/Jayce_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Jayce/HUD/Jayce_Circle_38.tex",
+        "iconCircle": "assets/characters/jayce/hud/jayce_circle.tex",
+        "iconSquare": "assets/characters/jayce/hud/jayce_square.tex",
+        "iconAvatar": "assets/characters/jayce/hud/jayce_circle_38.tex",
         "emoteBuffbone": "",
         "godrayFXbone": "",
         "healthBarData": {
@@ -326,7 +326,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "BUFFBONE_CSTM_WEAPON_1",
-                        "effectKey": "{5373ef03}",
+                        "effectKey": "Jayce_Idle_HammerVFX",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -355,7 +355,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
-        "objectPath": "{120acea5}",
+        "objectPath": "Characters/Jayce/Skins/Skin44",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_StanceMelee": {
@@ -34323,12 +34323,12 @@
             "{c70c06e0}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_Q_JumpLandChildTree002",
             "{5f55dcb3}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_P_ChargedHitChild001",
             "{f8c80e2b}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire003",
-            "{d88e8d38}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_P_ChargedHitChild002",
-            "{6b7d2554}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Ground001",
+            "Jayce_P_ChargedHitChild002": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_P_ChargedHitChild002",
+            "Jayce_Recall_Ground001": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Ground001",
             "{ad42d2cc}": "{00000000}",
             "{39dd54cd}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_FinalWind",
-            "{ec9d3c22}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Petal",
-            "{3dcc35be}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Cup",
+            "Jayce_Recall_Petal": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Petal",
+            "Jayce_Recall_Cup": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_Cup",
             "{d4784b64}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_Recall_Cup02",
             "{762e47ee}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_Recall_CupAppear",
             "{3899374d}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_Recall_CupAppearPar001",
@@ -34343,12 +34343,12 @@
             "{366c2335}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_ModelSwapBackup",
             "{b9770a27}": "{00000000}",
             "{d0096dac}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Recall_FinalSnowDown",
-            "{d98e8ecb}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_P_ChargedHitChild003",
-            "{5373ef03}": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Idle_HammerVFX",
+            "Jayce_P_ChargedHitChild003": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_P_ChargedHitChild003",
+            "Jayce_Idle_HammerVFX": "Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_Idle_HammerVFX",
             "{15757f3c}": "{00000000}",
             "{93022836}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire003Shadow",
             "{a1251127}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire002Shadow",
-            "{cebb2be8}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire004",
+            "Jayce_W_RingTreeFire004": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire004",
             "{f801c9f1}": "Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_W_RingTreeFire004Shadow"
         },
         "__type": "ResourceResolver"
@@ -34358,29 +34358,29 @@
         "samplerValues": [
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Shared/Materials/PrestigeTexture/gold_matcap.tex",
+                "texturePath": "assets/shared/materials/prestigetexture/gold_matcap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MatCap_Mask",
-                "texturePath": "ASSETS/Characters/Jayce/Skins/Skin38/Jayce_Skin38_Matcap_TX_CM.tex",
+                "texturePath": "assets/characters/jayce/skins/skin38/jayce_skin38_matcap_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Jayce/Skins/Skin44/Jayce_Skin44_TX_CM.tex",
+                "texturePath": "assets/characters/jayce/skins/skin44/jayce_skin44_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/gradient_light_Dark.tex",
+                "texturePath": "assets/shared/materials/gradient_light_dark.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 2,
@@ -35008,29 +35008,29 @@
         "samplerValues": [
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Shared/Materials/PrestigeTexture/gold_matcap.tex",
+                "texturePath": "assets/shared/materials/prestigetexture/gold_matcap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MatCap_Mask",
-                "texturePath": "ASSETS/Characters/Jayce/Skins/Skin38/Jayce_Skin38_Weapon_matcap_TX_CM.tex",
+                "texturePath": "assets/characters/jayce/skins/skin38/jayce_skin38_weapon_matcap_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Jayce/Skins/Skin44/Jayce_Skin44_ChangeA_TX_CM.tex",
+                "texturePath": "assets/characters/jayce/skins/skin44/jayce_skin44_changea_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/gradient_light_Dark.tex",
+                "texturePath": "assets/shared/materials/gradient_light_dark.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 2,
@@ -35658,7 +35658,7 @@
                                 "mScriptName": "JayceIsMelee",
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "ASSETS/Characters/Jayce/Skins/Skin44/Jayce_Skin44_ChangeB_TX_CM.tex",
+                            "TextureName": "assets/characters/jayce/skins/skin44/jayce_skin44_changeb_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],

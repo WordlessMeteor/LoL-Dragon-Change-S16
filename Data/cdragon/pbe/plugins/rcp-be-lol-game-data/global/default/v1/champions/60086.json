@@ -706,7 +706,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Garen performs a dance of death with his sword, dealing damage around him for the duration.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Garen's gains an additional 20% value from bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.<br><br><spellActive>Active: </spellActive>Garen gains a defensive shield for @BuffDuration@ seconds, reducing incoming damage by @DamageReduction*100@% and granting 30% Crowd Control Reduction.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Garen's gains an additional @ResistanceScaling*100@% value from bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.<br><br><spellActive>Active: </spellActive>Garen gains a defensive shield for @BuffDuration@ seconds, reducing incoming damage by @DamageReduction*100@% and granting @TenacityBonus*100@% Crowd Control Reduction.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -856,7 +856,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Garen rapidly spins his sword around his body, dealing physical damage to nearby enemies.",
-            "dynamicDescription": "Garen rapidly spins his sword around his body for @Duration@ seconds, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> to nearby enemies every second. Garen can move through units while spinning but moves 20% slower when travelling directly through units.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Garen rapidly spins his sword around his body for @Duration@ seconds, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> to nearby enemies every second. (Maximum damage: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

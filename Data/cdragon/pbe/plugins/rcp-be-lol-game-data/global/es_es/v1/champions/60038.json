@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin recibe un 15% menos de <magicDamage>daño mágico</magicDamage> y transforma este daño en <attackSpeed>velocidad de ataque</attackSpeed> adicional."
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pasiva: Los ataques básicos de Kassadin restauran maná. El maná restaurado se triplica contra campeones enemigos. Activa: Los ataques básicos de Kassadin infligen daño mágico adicional.",
-            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los ataques básicos de Kassadin drenan energía del Vacío, lo que restaura <scaleMana>@ManaGainAmount@ de maná</scaleMana> con cada impacto. Si el objetivo es un campeón enemigo, el <scaleMana>maná</scaleMana> restaurado se triplica hasta @ManaGainAmount*3@.<br><br><spellActive>Activa: </spellActive>Kassadin carga su cuchilla infernal durante 5 s, lo que provoca que sus ataques básicos inflijan <magicDamage>@TotalDamage@ de daño mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Kassadin extrae energía de los hechizos que se lanzan cerca de él. Al cargarse, Kassadin puede utilizar Pulso de fuerza para infligir daño y ralentizar a los enemigos que se encuentren en un cono frente a él.",
-            "dynamicDescription": "Kassadin extrae la energía de los hechizos que se lanzan cerca de él (1800 de alcance) y obtiene una carga por cada uno. Tras alcanzar 6 cargas, puede utilizar <spellName>Pulso de fuerza</spellName> para infligir <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>ralentizar</status> un @MoveSpeedMod*-100@% durante 3 s a los enemigos que se encuentran en un cono frente a él.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Kassadin se teleporta a una ubicación cercana e inflige daño a las unidades enemigas cercanas. Además, si utiliza repetidamente Camino del Vacío en poco tiempo, costará más maná, pero también infligirá daño adicional.",
-            "dynamicDescription": "Kassadin se teleporta a una ubicación cercana e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades enemigas circundantes. Además, si se utiliza repetidamente <spellName>Camino del Vacío</spellName> en los siguientes 8 s, cuesta <scaleMana>100 de maná adicional</scaleMana>, pero inflige <magicDamage>@Damage@ de daño adicional</magicDamage>, que se acumula hasta 10 veces.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

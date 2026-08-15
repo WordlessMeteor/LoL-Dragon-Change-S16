@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Ο Δρ.Μούντο αναπληρώνει το 0,3% της μέγιστης Ζωής του κάθε δευτερόλεπτο."
+        "description": "Spell_DrMundoPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Ζωή</font>",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Δρ. Μούντο πετά τον μπαλτά του και προκαλεί ζημιά ανάλογα με τη μέγιστη Ζωή του θύματός του.",
-            "dynamicDescription": "<mainText>Ο Δρ. Μούντο πετά τον μπαλτά του και προκαλεί <magicDamage>Μαγική Ζημιά</magicDamage> ίση με το @DamageMod*100@% της τρέχουσας Ζωής του στόχου του (ελάχιστη ζημιά @MinDamage@). Παράλληλα <status>Επιβραδύνει</status> τον στόχο του κατά 40% για 2 δευτερόλεπτα.<br><br>Το μισό κόστος Ζωής επιστρέφεται αν ο μπαλτάς πετύχει έναν στόχο.",
+            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Ζωή</font>",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Μαζοχισμός αυξάνει τη Ζημιά Επίθεσης του Δρ. Μούντο κατά ένα σταθερό ποσό για 5 δευτερόλεπτα. Επιπλέον, ο Δρ. Μούντο αποκτά πρόσθετη Ζημιά Επίθεσης για κάθε ποσοστιαία μονάδα της Ζωής που του λείπει.",
-            "dynamicDescription": "Ο Δρ. Μούντο αποκτά <physicalDamage>@BaseIncrease@ Ζημιά Επίθεσης</physicalDamage> για 5 δευτερόλεπτα. Ο Δρ. Μούντο αποκτά επιπλέον <physicalDamage>+@DamageMod@ Ζημιά Επίθεσης</physicalDamage> για κάθε ποσοστιαία μονάδα Ζωής που έχει χάσει.@SpellModifierDescriptionAppend@",
+            "description": "Spell_DrMundoE_Jade_Summary",
+            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% της Τρέχουσας Ζωής</font>",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Δρ.Μούντο θυσιάζει ένα τμήμα από τη Ζωή του για να αποκτήσει Αύξηση ταχύτητας κίνησης και σημαντική αύξηση στην Αναπλήρωση Ζωής.",
-            "dynamicDescription": "<mainText>Ο Δρ. Μούντο αναπληρώνει <healing>@MaximumHealthRegen@ Ζωή</healing> σε 12 δευτερόλεπτα. Επιπλέον, αποκτά <speed>@SpeedMod*100@% Ταχύτητα Κίνησης</speed>.",
+            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

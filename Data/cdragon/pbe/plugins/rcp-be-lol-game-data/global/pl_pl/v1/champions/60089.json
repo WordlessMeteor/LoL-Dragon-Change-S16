@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Zadające obrażenia zaklęcia na 3,5 sek. oznaczają wrogów Słonecznym Blaskiem. Kiedy sojuszniczy bohaterowie zadają obrażenia oznaczonym celom, pochłaniają Słoneczny Blask i zadają dodatkowe obrażenia magiczne."
+        "description": "Spell_LeonaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leona wykonuje następny atak podstawowy za pomocą tarczy, zadając dodatkowe obrażenia magiczne i ogłuszając cel.",
-            "dynamicDescription": "Następny atak podstawowy zada dodatkowo <magicDamage>@TotalDamageTooltip@ pkt. obrażeń magicznych</magicDamage> i <status>ogłuszy</status> wroga na 1,25 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leona unosi swą tarczę, zyskując pancerz i odporność na magię.  Po upływie podstawowego czasu działania, o ile w pobliżu Leony będą wrogowie, zada im ona obrażenia magiczne i wydłuży czas trwania efektu.",
-            "dynamicDescription": "Zyskuje @BonusARMR@ pkt. dodatkowego <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR> na 3 sek. Kiedy efekt się skończy, pobliscy trafieni wrogowie otrzymują <magicDamage>@TotalDamageTooltip@ pkt. obrażeń magicznych</magicDamage>, a Leona zachowuje swój dodatkowy <scaleArmor>pancerz</scaleArmor> i <scaleMR>odporność na magię</scaleMR> na 3 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "英雄的击杀或助攻使卡特莲娜的冷却时间缩短15秒。"
+        "description": "Spell_KatarinaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特莲娜投掷一把匕首，匕首会在敌人之间弹跳，造成魔法伤害。",
-            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法伤害。匕首会弹跳至@MaxBounces@最近的敌人，每次弹跳造成的伤害会递减10%。<br><br>命中的敌人会被标记@MarkDuration@秒。卡特莲娜的普通攻击或技能会消耗印记，造成 <magicDamage>@TotalDamageMark@</magicDamage> 额外魔法伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡特莲娜化作刀刃风暴，以无与伦比的速度向附近最多三名英雄投掷匕首。",
-            "dynamicDescription": "化作刀刃风暴，朝距离最近的3名敌方英雄投掷匕首，在2.5秒内造成<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "Spell_KatarinaR_Jade_Summary",
+            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

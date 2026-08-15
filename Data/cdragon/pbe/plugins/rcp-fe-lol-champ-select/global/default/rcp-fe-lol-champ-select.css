@@ -33444,8 +33444,14 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .jade-default-template__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     height: 100%;
     inset-inline-start: 0;
+    justify-content: flex-end;
+    padding: 210px 46px 36px;
     position: absolute;
     top: 0;
     width: 100%
@@ -33455,9 +33461,16 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    inset-inline-start: 46px;
-    position: absolute;
-    top: calc(100% - 265px)
+    max-width: 635px;
+    min-height: 189px;
+    overflow: hidden;
+    overflow-wrap: break-word
+}
+
+.jade-default-template__cta,
+.jade-default-template__subtitle,
+.jade-default-template__title {
+    flex-shrink: 0
 }
 
 .jade-default-template__title {
@@ -33466,7 +33479,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    max-width: 540px;
+    max-width: 635px;
     text-shadow: 0 4px 6px rgba(0, 0, 0, .75);
     width: 964px
 }
@@ -33482,10 +33495,16 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 
 .jade-default-template__description {
     color: #9b9ea4;
+    display: -webkit-box;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%
+    line-height: 150%;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    min-height: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .jade-default-template__description p {

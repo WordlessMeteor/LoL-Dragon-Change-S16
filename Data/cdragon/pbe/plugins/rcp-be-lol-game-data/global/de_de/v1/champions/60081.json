@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal erhält zusätzliches Angriffstempo, jedes Mal wenn er erfolgreich mit einer Fähigkeit trifft. Dieser Effekt kann bis zu 5 Mal gesteigert werden."
+        "description": "Spell_EzrealPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -976,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ezreal verschießt eine fluktuierende Energiewelle, die das Angriffstempo gegnerischer Champions verringert und ihnen magischen Schaden zufügt. Gleichzeitig werden verbündete Champions geheilt und ihr Angriffstempo erhöht.",
-            "dynamicDescription": "Ezreal verschießt eine Energiewelle, die bei allen gegnerischen Champions, die sie durchdringt, <magicDamage>@Damage@ magischen Schaden</magicDamage> verursacht und ihr <attackSpeed>Angriffstempo</attackSpeed> 5 Sekunden lang um @AttackSpeed@ % verringert. <br><br>Verbündete Champions, die von der Welle getroffen werden, erhalten <healing>@TotalHeal@ Heilung</healing> und 5 Sekunden lang @AttackSpeed@ % mehr <attackSpeed>Angriffstempo</attackSpeed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Ezreal kanalisiert 1 Sekunde lang, um ein mächtiges Trommelfeuer aus Energiegeschossen abzufeuern, das bei jeder Einheit, die es durchdringt, massiven Schaden verursacht (mit jeder durchdrungenen Einheit verringert sich der Schaden um 10 %.)",
-            "dynamicDescription": "Ezreal kanalisiert 1 Sekunde lang, um ein Trommelfeuer aus Energiegeschossen abzufeuern, das bei jeder Einheit, die es durchdringt, <magicDamage>@Damage@ magischen Schaden</magicDamage> verursacht. Verursacht allerdings @DamageReductionPerHit*100@ % weniger Schaden pro getroffener Einheit (mindestens @MinimumDamagePercent*100@ %).@SpellModifierDescriptionAppend@",
+            "description": "Spell_EzrealR_Jade_Summary",
+            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

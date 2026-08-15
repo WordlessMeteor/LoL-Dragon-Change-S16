@@ -142,20 +142,20 @@
         "armorMaterial": "Flesh",
         "idleParticlesEffects": [
             {
-                "effectKey": "{26935a3e}",
+                "effectKey": "Janna_Idle_Glow",
                 "boneName": "Weapon_VFX",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{68804061}",
+                "effectKey": "Janna_Idle_Sparks",
                 "boneName": "Weapon_VFX",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
         "mContextualActionData": "Characters/Janna/CAC/Janna_Base",
-        "iconCircle": "ASSETS/Characters/Janna/HUD/Janna_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Janna/HUD/Janna_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Janna/HUD/Janna_Circle_36.tex",
+        "iconCircle": "assets/characters/janna/hud/janna_circle.tex",
+        "iconSquare": "assets/characters/janna/hud/janna_square.tex",
+        "iconAvatar": "assets/characters/janna/hud/janna_circle_36.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -167,7 +167,7 @@
             }
         ],
         "mResourceResolver": "Characters/Janna/Skins/Skin39/Resources",
-        "objectPath": "{c7f08539}",
+        "objectPath": "Characters/Janna/Skins/Skin39",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Janna/Skins/Skin39/Resources": {
@@ -207,13 +207,13 @@
             "Janna_Q_Tar": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Tar",
             "Janna_Z_WindChild_01": "Characters/Janna/Skins/Skin0/Particles/Janna_Base_Z_WindChild_01",
             "Janna_R_Heal_Tar": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_R_Heal_Tar",
-            "{808f2f53}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_Child_Trail",
-            "{991d7410}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Cas_child",
-            "{d75a45c4}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_mis_child",
-            "{f91c2242}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_mis_child2",
-            "{e5a202ba}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Mis_child",
-            "{0609fc18}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Mis_child2",
-            "{26935a3e}": "Characters/Janna/Skins/Skin39/Particles/Janna_Skin39_Idle_Glow",
+            "Janna_W_Child_Trail": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_Child_Trail",
+            "Janna_Q_Cas_child": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Cas_child",
+            "Janna_W_mis_child": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_mis_child",
+            "Janna_W_mis_child2": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_W_mis_child2",
+            "Janna_Q_Mis_child": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Mis_child",
+            "Janna_Q_Mis_child2": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Q_Mis_child2",
+            "Janna_Idle_Glow": "Characters/Janna/Skins/Skin39/Particles/Janna_Skin39_Idle_Glow",
             "{29cb89c1}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Z_Ray",
             "{c06581ed}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Z_Trail",
             "{49e3a08d}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Z_Sparks",
@@ -222,7 +222,7 @@
             "{83f45f0a}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Z_Glow",
             "{a4c3c428}": "Characters/Janna/Skins/Skin39/Particles/Janna_Skin39_Z_Submesh_rose",
             "{95f6b020}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Z_Sparks_02",
-            "{68804061}": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Idle_Sparks",
+            "Janna_Idle_Sparks": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Idle_Sparks",
             "Janna_Skin36_Emote_God_Ray": "Characters/Janna/Skins/Skin36/Particles/Janna_Skin36_Emote_God_Ray"
         },
         "__type": "ResourceResolver"
@@ -7224,7 +7224,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{808f2f53}",
+                            "effectKey": "Janna_W_Child_Trail",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -16131,7 +16131,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin39/Janna_Skin39_TX_CM.tex",
+                "texturePath": "assets/characters/janna/skins/skin39/janna_skin39_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16139,19 +16139,19 @@
             },
             {
                 "TextureName": "SS_Texture",
-                "texturePath": "ASSETS/Shared/Materials/SRX_Mountain_Noise.tex",
+                "texturePath": "assets/shared/materials/srx_mountain_noise.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask1",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin36/Particles/Material_Mask_2.tex",
+                "texturePath": "assets/characters/janna/skins/skin36/particles/material_mask_2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask2",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin36/Particles/Material_Mask.tex",
+                "texturePath": "assets/characters/janna/skins/skin36/particles/material_mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -16334,7 +16334,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin39/Janna_Skin39_TX_CM.tex",
+                "texturePath": "assets/characters/janna/skins/skin39/janna_skin39_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16342,19 +16342,19 @@
             },
             {
                 "TextureName": "SS_Texture",
-                "texturePath": "ASSETS/Shared/Materials/SRX_Mountain_Noise.tex",
+                "texturePath": "assets/shared/materials/srx_mountain_noise.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask1",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin36/Particles/Diamond_material_Fresnel_mask.tex",
+                "texturePath": "assets/characters/janna/skins/skin36/particles/diamond_material_fresnel_mask.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask2",
-                "texturePath": "ASSETS/Characters/Janna/Skins/Skin36/Particles/Diamond_material_mask.tex",
+                "texturePath": "assets/characters/janna/skins/skin36/particles/diamond_material_mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"

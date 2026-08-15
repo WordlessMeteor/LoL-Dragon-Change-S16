@@ -273,7 +273,7 @@
                         "fallbackDirection": 2,
                         "coneAngleDegrees": 50.0,
                         "coneRange": 550.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -581,7 +581,7 @@
                         "fallbackDirection": 2,
                         "coneAngleDegrees": 30.0,
                         "coneRange": 435.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -1226,7 +1226,7 @@
                         },
                         "coneAngleDegrees": 17.0,
                         "coneRange": 1400.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/MF_ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/mf_conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -2356,9 +2356,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8ddff82a}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneIsPirateHunter": {
         "ObjectName": "Jade_MissFortuneIsPirateHunter",
-        "objectPath": "{8ddff82a}",
+        "objectPath": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneIsPirateHunter",
         "mScriptName": "Jade_MissFortuneIsPirateHunter",
         "mSpell": {
             "mImgIconName": [
@@ -2497,6 +2497,47 @@
         "mSpell": {
             "mSpellTags": [
                 "Trait_NonPrimaryAttack"
+            ],
+            "DataValues": [
+                {
+                    "name": "MinimumSpeed",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumSpeed",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DurationMin",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
             ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.dds"
@@ -2736,7 +2777,7 @@
         "passiveLuaName": "Jade_MissFortunePassive_Jade",
         "passiveToolTip": "Spell_Jade_MissFortunePassive_Summary",
         "passiveSpell": "Jade_MissFortunePassive",
-        "passive1IconName": "ASSETS/Characters/Jade_MissFortune/HUD/Icons2D/Jade_MissFortune_W.dds",
+        "passive1IconName": "assets/characters/jade_missfortune/hud/icons2d/jade_missfortune_w.dds",
         "name": "game_character_displayname_Jade_MissFortune",
         "weaponMaterials": [
             "Jade_MissFortuneBasicAttack"
@@ -2832,7 +2873,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{8ddff82a}",
+                "mParentPassiveBuff": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneIsPirateHunter",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -3048,7 +3089,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c442335}"
+                                            "Characters/Jade_Evelynn/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3078,7 +3119,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{06436fd9}"
+                                            "Characters/Jade_Gangplank/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3108,7 +3149,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4ef8473d}"
+                                            "Characters/Jade_Garen/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3198,7 +3239,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{f0080945}"
+                                            "Characters/Jade_Katarina/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3263,7 +3304,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{6e7b06f0}"
+                                            "Characters/Jade_TwistedFate/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3732,7 +3773,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{2464ef80}"
+                                            "Characters/Jade_Blitzcrank/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -3852,7 +3893,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c442335}"
+                                            "Characters/Jade_Evelynn/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -3882,7 +3923,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{06436fd9}"
+                                            "Characters/Jade_Gangplank/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -3945,14 +3986,14 @@
                                             "Characters/Braum/CharacterRecords/Root",
                                             "Characters/Darius/CharacterRecords/Root",
                                             "Characters/Draven/CharacterRecords/Root",
-                                            "{3d1d2371}",
-                                            "{4ef8473d}",
-                                            "{9f7b14c3}",
+                                            "Characters/Jade_Ezreal/CharacterRecords/Root",
+                                            "Characters/Jade_Garen/CharacterRecords/Root",
+                                            "Characters/Jade_JarvanIV/CharacterRecords/Root",
                                             "Characters/Jayce/CharacterRecords/Root",
                                             "Characters/Kayn/CharacterRecords/Root",
-                                            "{61c598de}",
+                                            "Characters/Jade_LeeSin/CharacterRecords/Root",
                                             "Characters/Lucian/CharacterRecords/Root",
-                                            "{e63bb49d}",
+                                            "Characters/Jade_Pantheon/CharacterRecords/Root",
                                             "Characters/Rakan/CharacterRecords/Root",
                                             "Characters/Yasuo/CharacterRecords/Root",
                                             "Characters/Yone/CharacterRecords/Root",
@@ -4172,7 +4213,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{6e7b06f0}"
+                                            "Characters/Jade_TwistedFate/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },

@@ -152,47 +152,6 @@
         "mScriptName": "Jade_KatarinaQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -295,6 +254,19 @@
                         0.15000000596046448,
                         0.15000000596046448,
                         0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageFalloff",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -510,9 +482,9 @@
         "mName": "Jade_KatarinaWAbility",
         "__type": "AbilityObject"
     },
-    "{39035686}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaRSound": {
         "ObjectName": "Jade_KatarinaRSound",
-        "objectPath": "{39035686}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaRSound",
         "mScriptName": "Jade_KatarinaRSound",
         "mSpell": {
             "mImgIconName": [
@@ -690,6 +662,19 @@
                         10.0,
                         10.0,
                         10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxTargets",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1677,7 +1662,7 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "BonusGold",
+                    "name": "CooldownRefund",
                     "values": [
                         15.0,
                         15.0,
@@ -2314,15 +2299,15 @@
         },
         "__type": "SpellObject"
     },
-    "{99eadd0e}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaSkin29WeaponManager": {
         "ObjectName": "Jade_KatarinaSkin29WeaponManager",
-        "objectPath": "{99eadd0e}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaSkin29WeaponManager",
         "mScriptName": "Jade_KatarinaSkin29WeaponManager",
         "__type": "SpellObject"
     },
-    "{cf04987d}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaRunCycleManager": {
         "ObjectName": "Jade_KatarinaRunCycleManager",
-        "objectPath": "{cf04987d}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaRunCycleManager",
         "mScriptName": "Jade_KatarinaRunCycleManager",
         "__type": "SpellObject"
     },
@@ -3193,7 +3178,7 @@
         "passiveLuaName": "Jade_KatarinaPassive_Jade",
         "passiveToolTip": "",
         "passiveSpell": "Jade_KatarinaPassive_Jade",
-        "passive1IconName": "ASSETS/Characters/Jade_Katarina/HUD/Icons2D/Jade_Katarina_Passive.dds",
+        "passive1IconName": "assets/characters/jade_katarina/hud/icons2d/jade_katarina_passive.dds",
         "name": "game_character_displayname_Jade_Katarina",
         "weaponMaterials": [
             "Jade_KatarinaBasicAttack_Jade"
@@ -3336,7 +3321,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{99eadd0e}",
+                "mParentPassiveBuff": "Characters/Jade_Katarina/Spells/Jade_KatarinaSkin29WeaponManager",
                 "SkinFilter": {
                     "skinIds": [
                         29

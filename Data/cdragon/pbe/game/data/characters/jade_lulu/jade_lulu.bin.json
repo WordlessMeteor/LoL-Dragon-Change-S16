@@ -722,9 +722,10 @@
             "mSpellTags": [
                 "PositiveEffect_Boon"
             ],
-            "mEffectAmount": [
+            "DataValues": [
                 {
-                    "value": [
+                    "name": "AllyFollowDuration",
+                    "values": [
                         6.0,
                         6.0,
                         6.0,
@@ -733,109 +734,31 @@
                         6.0,
                         6.0
                     ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "DataValues": [
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        30.0,
-                        80.0,
-                        130.0,
-                        180.0,
-                        230.0,
-                        280.0,
-                        280.0
-                    ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "DamageAPRatio",
+                    "name": "ShieldDuration",
                     "values": [
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseShield",
                     "values": [
-                        30.0,
+                        15.0,
                         60.0,
                         105.0,
                         150.0,
                         195.0,
                         240.0,
-                        240.0
+                        285.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -853,7 +776,33 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ShieldDuration",
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyFollowDuration",
                     "values": [
                         6.0,
                         6.0,
@@ -1825,9 +1774,9 @@
         },
         "__type": "SpellObject"
     },
-    "{59aa2133}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluRunCycleManager": {
         "ObjectName": "Jade_LuluRunCycleManager",
-        "objectPath": "{59aa2133}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluRunCycleManager",
         "mScriptName": "Jade_LuluRunCycleManager",
         "__type": "SpellObject"
     },
@@ -2128,8 +2077,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/lulu_q_skillshot_base.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/lulu_q_skillshot_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2155,8 +2104,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/lulu_q_skillshot_base.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/lulu_q_skillshot_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2884,7 +2833,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -3574,7 +3523,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_LuluPassive_Summary",
         "passiveSpell": "Jade_LuluPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds",
+        "passive1IconName": "assets/characters/jade_lulu/hud/icons2d/jade_lulu_pixfaeriecompanion.dds",
         "name": "game_character_displayname_Jade_Lulu",
         "selectionHeight": 85.0,
         "selectionRadius": 100.0,
@@ -3651,7 +3600,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{59aa2133}",
+                "mParentPassiveBuff": "Characters/Jade_Lulu/Spells/Jade_LuluRunCycleManager",
                 "__type": "CharacterPassiveData"
             }
         ],

@@ -1628,7 +1628,7 @@
                             "__type": "DrawablePositionLocator"
                         },
                         "textureOrientation": 3,
-                        "textureRadiusOverrideName": "ASSETS/Characters/Jinx/HUD/Textures/AOE_Jinx.tex",
+                        "textureRadiusOverrideName": "assets/characters/jinx/hud/textures/aoe_jinx.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2232,7 +2232,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2419,7 +2419,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2606,7 +2606,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -3311,8 +3311,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/Jinx/HUD/Textures/Skillshot_Jinx_base_02.tex",
-                        "textureTargetOverrideName": "ASSETS/Characters/Jinx/HUD/Textures/Skillshot_Jinx_arrow_02.tex",
+                        "textureBaseOverrideName": "assets/characters/jinx/hud/textures/skillshot_jinx_base_02.tex",
+                        "textureTargetOverrideName": "assets/characters/jinx/hud/textures/skillshot_jinx_arrow_02.tex",
                         "__type": "TargeterDefinitionLine"
                     }
                 ],
@@ -4542,15 +4542,15 @@
         },
         "__type": "SpellObject"
     },
-    "{fbb1fc59}": {
+    "Characters/Jinx/Spells/JinxSkin60MultiKillTracker": {
         "ObjectName": "JinxSkin60MultiKillTracker",
-        "objectPath": "{fbb1fc59}",
+        "objectPath": "Characters/Jinx/Spells/JinxSkin60MultiKillTracker",
         "mScriptName": "JinxSkin60MultiKillTracker",
         "__type": "SpellObject"
     },
-    "{ffc12e05}": {
+    "Characters/Jinx/Spells/JinxSkin60Manager": {
         "ObjectName": "JinxSkin60Manager",
-        "objectPath": "{ffc12e05}",
+        "objectPath": "Characters/Jinx/Spells/JinxSkin60Manager",
         "mScriptName": "JinxSkin60Manager",
         "__type": "SpellObject"
     },
@@ -4948,7 +4948,7 @@
         "passiveName": "game_character_passiveName_Jinx",
         "passiveLuaName": "JinxPassiveMarker",
         "passiveToolTip": "game_character_passiveDescription_Jinx",
-        "passive1IconName": "ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_Passive.dds",
+        "passive1IconName": "assets/characters/jinx/hud/icons2d/jinx_passive.dds",
         "name": "game_character_displayname_Jinx",
         "mUseCCAnimations": true,
         "selectionHeight": 155.0,
@@ -5031,7 +5031,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{ffc12e05}",
+                "mParentPassiveBuff": "Characters/Jinx/Spells/JinxSkin60Manager",
                 "SkinFilter": {
                     "skinIds": [
                         60
@@ -5041,7 +5041,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{fbb1fc59}",
+                "mParentPassiveBuff": "Characters/Jinx/Spells/JinxSkin60MultiKillTracker",
                 "SkinFilter": {
                     "skinIds": [
                         60

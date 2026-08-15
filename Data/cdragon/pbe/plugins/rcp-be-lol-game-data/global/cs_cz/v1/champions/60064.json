@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Poté, co Lee Sin použije nějakou schopnost, získají jeho další 2 základní útoky 40 % k rychlosti útoků a každý z nich mu navrátí 15 bodů energie."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Zvuková vlna: Lee Sin vyšle disharmonickou zvukovou vlnu, pomocí které zjistí polohu svých nepřátel. Prvnímu nepříteli, kterého vlna zasáhne, způsobí fyzické poškození. Pokud Zvuková vlna někoho zasáhne, může Lee Sin v následujících 3 sek. seslat Rezonující úder.<br>Rezonující úder: Lee Sin se vrhne na nepřítele zasaženého Zvukovou vlnou, čímž mu způsobí fyzické poškození navýšené o 8 % chybějícího zdraví cíle.",
-            "dynamicDescription": "<spellName>Zvuková vlna: </spellName>Lee Sin vyšle disharmonickou zvukovou vlnu, pomocí které zjistí polohu svých nepřátel. Prvnímu nepříteli, kterého vlna zasáhne, způsobí <physicalDamage>@InitialDamage@ bodů fyzického poškození</physicalDamage>. Pokud <spellName>Zvuková vlna</spellName> někoho zasáhne, může Lee Sin v následujících 3 sek. seslat <spellName>Rezonující úder</spellName>.<br><br><spellName>Rezonující úder: </spellName>Lee Sin se vrhne na nepřítele zasaženého Zvukovou vlnou a způsobí mu <physicalDamage>fyzické poškození ve výši @RecastDamage@ bodů</physicalDamage> plus 8 % jeho chybějícího zdraví.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Zachránce: Lee Sin přispěchá k určenému spojenci a zaštítí sebe i jeho před poškozením. Po použití Zachránce může Lee Sin po dobu následujících 3 sek. seslat Železnou vůli.<br>Železná vůle: Lee Sin se díky svému intenzivnímu výcviku cítí v boji jako doma. Na 4 sek. získá bonus k léčení útoky, vysávání života a brnění.",
-            "dynamicDescription": "<spellName>Zachránce: </spellName>Lee Sin přispěchá k určenému spojenci a poskytne jemu i sobě na 5 sek. <shield>štít</shield> o síle @ShieldAmount@ bodů. Po použití <spellName>Zachránce</spellName> může Lee Sin po dobu následujících 3 sek. seslat <spellName>Železnou vůli</spellName>.<br><br><spellName>Železná vůle: </spellName>Lee Sin se díky svému intenzivnímu výcviku cítí v boji jako doma. Na 5 sek. získá @LifestealAndSpellVamp@ % k léčení útoky a vysávání života a <scaleArmor>@ArmorBonus@ brnění</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

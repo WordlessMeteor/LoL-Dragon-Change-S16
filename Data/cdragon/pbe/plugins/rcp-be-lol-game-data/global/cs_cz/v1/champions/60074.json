@@ -597,7 +597,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger rozloží kulometnou věžičku. S tím, jak se schopnost vylepšuje, získávají věžičky dodatečné efekty. (Věžím způsobují věžičky poloviční poškození.)",
-            "dynamicDescription": "Heimerdinger rozloží kulometnou věžičku, která každým útokem způsobí <magicDamage>@BonusDamage@ bodů magického poškození</magicDamage>. Tato schopnost má @MaxAmmo@ nabití (rychlost dobíjení @AmmoRechargeTime@ sek.).<br><br>Každý stupeň této schopnosti poskytuje další vylepšení:<br><attention>2. stupeň:</attention> Útoky věžičky snižují cíli hodnoty brnění a odolnosti vůči magii o 1 (max. 50).<br><attention>3. stupeň:</attention> Maximální počet věžiček se zvyšuje na 2.<br><attention>4. stupeň:</attention> Věžičky získají dalších <scaleHealth>125 zdraví</scaleHealth>.<br><attention>5. stupeň:</attention> Útoky věžiček způsobují plošné poškození.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger vystřelí rakety s dlouhým doletem, které zasáhnou nejbližší cíl.",
-            "dynamicDescription": "Heimerdinger vystřelí 3 samonaváděcí mikrorakety (maximálně 1 na osobu), které zasáhnou jemu nejbližší cíle. Každá raketa způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger do cílové oblasti hodí granát, který způsobí poškození nepřátelským jednotkám a také omráčí každého, koho přímo zasáhne, a oslepí okolní jednotky.",
-            "dynamicDescription": "Heimerdinger hodí granát, který nepřátelským jednotkám způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @BlindDuration@ sek. je <status>oslepí</status>.  Nepřátelé, kteří utrpí přímý zásah, budou na 1,5 sek. <status>omráčeni</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Pasivní efekt / aktivace: Pasivně zvyšuje zkrácení přebíjecích dob.  Aktivace vyléčí všechny aktivní Evoluční věžičky a na krátkou dobu jim udělí schopnost střílet mrazivé projektily, které snižují rychlost pohybu.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>@CooldownBonus*-100@ % ke zkrácení přebíjecích dob.<br><br><spellActive>Aktivace: </spellActive>Po dobu trvání dojde k posílení všech schopností i věžiček.<br><br><spellName>Evoluční věžičky:</spellName> Všechny věžičky si <healing>vyléčí</healing> 100 % svého maximálního zdraví a každým útokem způsobí <status>@MovementSpeedMod*-100@% zpomalení</status>.<br><spellName>Magitechnické mikrorakety:</spellName> Vystřelí 5 raket namísto 3.<br><spellName>Omračující granát CH-1:</spellName> Letí o 33 % rychleji.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -888,9 +888,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7e28ca8a}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenAttackSequencer": {
         "ObjectName": "Jade_GarenAttackSequencer",
-        "objectPath": "{7e28ca8a}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenAttackSequencer",
         "mScriptName": "Jade_GarenAttackSequencer",
         "__type": "SpellObject"
     },
@@ -941,14 +941,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{e6c493e1}": {
-                    "mMultiplier": {
-                        "mNumber": 5.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "{ee20c691}",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -1045,9 +1037,9 @@
         },
         "__type": "SpellObject"
     },
-    "{aa7d3fa7}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenRunCycleManager": {
         "ObjectName": "Jade_GarenRunCycleManager",
-        "objectPath": "{aa7d3fa7}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenRunCycleManager",
         "mScriptName": "Jade_GarenRunCycleManager",
         "__type": "SpellObject"
     },
@@ -1068,9 +1060,9 @@
         "mName": "Jade_GarenEAbility",
         "__type": "AbilityObject"
     },
-    "{be541c46}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenBasicAttack3": {
         "ObjectName": "Jade_GarenBasicAttack3",
-        "objectPath": "{be541c46}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenBasicAttack3",
         "mScriptName": "Jade_GarenBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1252,6 +1244,32 @@
             "mAffectsTypeFlags": 6154,
             "DataValues": [
                 {
+                    "name": "Duration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TickRate",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "MaxNumTicks",
                     "values": [
                         6.0,
@@ -1291,50 +1309,42 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Duration",
+                    "name": "MoveSpeedPenalty",
                     "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "CritBaseMult",
+                    "name": "CritDamageBonus",
                     "values": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MonsterMod",
+                    "name": "MinionMonsterDamageMod",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
                     ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MonsterBonus",
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "RefundRate",
                     "__type": "SpellDataValue"
                 }
             ],
@@ -1353,23 +1363,38 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "TotalDamageCrit": {
+                "{c6c2d6f4}": {
                     "mMultiplier": {
-                        "mStat": 9,
-                        "mDataValue": "CritBaseMult",
-                        "__type": "StatByNamedDataValueCalculationPart"
+                        "mSubparts": [
+                            {
+                                "mStat": 9,
+                                "mStatFormula": 2,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            {
+                                "mDataValue": "CritDamageBonus",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
                     },
-                    "mModifiedGameCalculation": "TotalDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "NumberOfStrikes": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "MaxNumTicks",
-                            "__type": "NamedDataValueCalculationPart"
+                            "mStat": 2,
+                            "mDataValue": "BaseADRatioPerSecond",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{442d07f7}": {
+                    "mMultiplier": {
+                        "mDataValue": "Duration",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "",
@@ -1479,7 +1504,7 @@
                         "keyTooltip": "Spell_GarenE_Jade_Tooltip",
                         "keySummary": "Spell_GarenE_Summary",
                         "keyCost": "Spell_Cost_NoCost",
-                        "keyTooltipExtended": "Spell_GarenE_Jade_TooltipEXt"
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_GarenE_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2836,7 +2861,7 @@
         "passiveLuaName": "Jade_GarenPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Garen",
         "passiveSpell": "Jade_GarenPassive_Jade",
-        "passive1IconName": "ASSETS/Characters/Jade_Garen/HUD/Icons2D/Jade_Garen_Passive.dds",
+        "passive1IconName": "assets/characters/jade_garen/hud/icons2d/jade_garen_passive.dds",
         "name": "game_character_displayname_Jade_Garen",
         "selectionHeight": 188.88890075683594,
         "selectionRadius": 120.0,
@@ -2946,7 +2971,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{7e28ca8a}",
+                "mParentPassiveBuff": "Characters/Jade_Garen/Spells/Jade_GarenAttackSequencer",
                 "__type": "CharacterPassiveData"
             }
         ],

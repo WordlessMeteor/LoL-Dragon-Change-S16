@@ -668,11 +668,11 @@
         }
     ],
     "passive": {
-        "name": "無視死亡！",
+        "name": "無視死亡",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "在死亡後，卡爾瑟斯會進入靈體型態，讓他可以繼續施放技能。"
+        "description": "Spell_KarthusPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡爾瑟斯釋放會延遲爆破的光點，對光點附近的敵軍造成傷害。",
-            "dynamicDescription": "創造一個延遲爆破的光點，0.5秒後對各個鄰近敵軍造成<magicDamage>@QDamage@魔法傷害</magicDamage>，如爆炸只擊中一個單位則造成雙倍傷害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡爾瑟斯吟唱安魂曲持續3秒後，對所有敵方英雄造成傷害。",
-            "dynamicDescription": "卡爾瑟斯吟唱安魂曲持續3秒後，對所有敵方英雄造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "Spell_KarthusR_Jade_Summary",
+            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

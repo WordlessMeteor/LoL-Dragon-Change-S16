@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo régénère 0.3% de ses PV max chaque seconde."
+        "description": "Spell_DrMundoPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ PV.</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Dr. Mundo lance son couperet, infligeant des dégâts en fonction des PV max de ses ennemis.",
-            "dynamicDescription": "<mainText>Dr. Mundo lance son couperet, infligeant des <magicDamage>dégâts magiques</magicDamage> équivalents à @DamageMod*100@% des PV actuels de la cible (@MinDamage@ pts de dégâts minimum) et la <status>ralentissant</status> de 40% pendant 2 sec.<br><br>La moitié du coût en PV est remboursée si le couperet touche une cible.",
+            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ PV.</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Masochisme augmente les dégâts d'attaque de Dr. Mundo d'un montant fixe pendant 5 sec. Dr. Mundo gagne aussi des dégâts d'attaque pour chaque pourcentage de PV qui lui manque.",
-            "dynamicDescription": "Dr. Mundo gagne <physicalDamage>@BaseIncrease@ dégâts d'attaque</physicalDamage> pendant 5 sec. Dr. Mundo gagne aussi <physicalDamage>+@DamageMod@ dégâts d'attaque</physicalDamage> pour chaque pourcent de PV qui lui manque.@SpellModifierDescriptionAppend@",
+            "description": "Spell_DrMundoE_Jade_Summary",
+            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% des PV actuels</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Dr. Mundo sacrifie une partie de ses PV pour améliorer sa vitesse de déplacement et augmenter nettement la régénération de ses PV.",
-            "dynamicDescription": "<mainText>Dr. Mundo récupère <healing>@MaximumHealthRegen@ PV</healing> en 12 sec. De plus, il gagne <speed>@SpeedMod*100@% de vitesse de déplacement</speed>.",
+            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

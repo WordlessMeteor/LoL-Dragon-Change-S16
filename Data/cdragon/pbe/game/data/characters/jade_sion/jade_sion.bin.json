@@ -1,7 +1,7 @@
 {
-    "{10964040}": {
+    "Characters/Jade_Sion/Spells/Jade_SionAttackSequencer": {
         "ObjectName": "Jade_SionAttackSequencer",
-        "objectPath": "{10964040}",
+        "objectPath": "Characters/Jade_Sion/Spells/Jade_SionAttackSequencer",
         "mScriptName": "Jade_SionAttackSequencer",
         "__type": "SpellObject"
     },
@@ -63,10 +63,21 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 0.4000000059604645,
-            "mCoefficient2": 0.800000011920929,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Sion_Cannibalism.dds",
@@ -226,9 +237,9 @@
         },
         "__type": "SpellObject"
     },
-    "{23167e19}": {
+    "Characters/Jade_Sion/Spells/Jade_SionRunCycleManager": {
         "ObjectName": "Jade_SionRunCycleManager",
-        "objectPath": "{23167e19}",
+        "objectPath": "Characters/Jade_Sion/Spells/Jade_SionRunCycleManager",
         "mScriptName": "Jade_SionRunCycleManager",
         "__type": "SpellObject"
     },
@@ -642,119 +653,6 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mEffectAmount": [
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        75.0,
-                        90.0,
-                        105.0,
-                        120.0,
-                        120.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        40.0,
-                        65.0,
-                        90.0,
-                        115.0,
-                        140.0,
-                        165.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        10.0,
-                        12.0,
-                        14.0,
-                        16.0,
-                        16.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        14.0,
-                        14.0,
-                        14.0,
-                        14.0,
-                        14.0,
-                        14.0,
-                        14.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseShield",
@@ -779,6 +677,32 @@
                         250.0,
                         300.0,
                         350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecastDelay",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -811,7 +735,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Sion_DeathsCaress.dds"
@@ -1261,83 +1184,6 @@
                 "Trait_ChannelSpell",
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        7.5,
-                        7.5,
-                        7.5,
-                        7.5,
-                        7.5,
-                        7.5,
-                        7.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        150.0,
-                        150.0,
-                        150.0,
-                        150.0,
-                        150.0,
-                        150.0,
-                        150.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        -0.800000011920929,
-                        -0.800000011920929,
-                        -0.800000011920929,
-                        -0.800000011920929,
-                        -0.800000011920929,
-                        -0.800000011920929,
-                        -0.800000011920929
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -1349,6 +1195,19 @@
                         240.0,
                         300.0,
                         345.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1368,7 +1227,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Sion_CrypticGaze.dds"
@@ -2613,7 +2471,7 @@
         "passiveName": "Spell_Jade_SionPassive_Name",
         "passiveLuaName": "Jade_SionPassive",
         "passiveToolTip": "Spell_Jade_SionPassive_Tooltip",
-        "passive1IconName": "ASSETS/Characters/Jade_Sion/HUD/Icons2D/Jade_Sion_Passive1.dds",
+        "passive1IconName": "assets/characters/jade_sion/hud/icons2d/jade_sion_passive1.dds",
         "name": "game_character_displayname_Jade_Sion",
         "weaponMaterials": [
             "DariusBasicAttack"
@@ -2693,11 +2551,11 @@
         "mCharacterPassiveSpell": "{641597ec}",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{23167e19}",
+                "mParentPassiveBuff": "Characters/Jade_Sion/Spells/Jade_SionRunCycleManager",
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{10964040}",
+                "mParentPassiveBuff": "Characters/Jade_Sion/Spells/Jade_SionAttackSequencer",
                 "__type": "CharacterPassiveData"
             },
             {

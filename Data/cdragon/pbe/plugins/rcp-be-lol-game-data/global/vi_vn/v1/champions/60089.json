@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Kỹ năng gây sát thương của Leona đặt hiệu ứng Ánh Sáng Mặt Trời lên kẻ địch trong 3,5 giây. Khi Tướng đồng minh gây sát thương lên những mục tiêu đó, họ tiêu hao bùa hại Ánh Sáng Mặt Trời để gây thêm sát thương phép."
+        "description": "Spell_LeonaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Leona dùng khiên để thực hiện đòn đánh thường tiếp theo, gây thêm sát thương phép và làm choáng mục tiêu.",
-            "dynamicDescription": "Đòn đánh thường tiếp theo gây thêm <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> và <status>Làm Choáng</status> kẻ địch trong 1,25 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Leona nâng cao chiếc khiên, gia tăng Giáp và Kháng Phép.  Khi hiệu ứng kết thúc lần đầu, nếu xung quanh có kẻ địch, cô sẽ gây sát thương phép lên chúng và kéo dài thêm thời gian hiệu lực của hiệu ứng.",
-            "dynamicDescription": "Nhận thêm @BonusARMR@ <scaleArmor>Giáp</scaleArmor> và <scaleMR>Kháng Phép</scaleMR> trong 3 giây. Khi hiệu ứng kết thúc, những kẻ địch bị trúng đòn ở gần sẽ chịu <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> và Leona giữ lại lượng <scaleArmor>Giáp</scaleArmor> và <scaleMR>Kháng Phép</scaleMR> cộng thêm trong 3 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

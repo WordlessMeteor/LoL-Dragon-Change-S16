@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Halálakor Karthus szellemalakot vesz fel, amely lehetővé teszi, hogy további varázslatokat süssön el."
+        "description": "Spell_KarthusPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Karthus egy késleltetett robbanást idéz elő a célterületen, amivel megsebzi a közelben tartózkodó ellenfeleket.",
-            "dynamicDescription": "Késleltetett robbanást idéz elő, amely 0,5 másodperc elteltével <magicDamage>@QDamage@ varázssebzést</magicDamage> okoz az összes közeli ellenfélnek, illetve kétszeres sebzést, ha csak egyetlen egységet talál el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "3 másodperces varázslást követően Karthus sebzést okoz az összes ellenséges hősnek.",
-            "dynamicDescription": "3 másodperces varázslás után Karthus <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz minden ellenséges hősnek.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KarthusR_Jade_Summary",
+            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

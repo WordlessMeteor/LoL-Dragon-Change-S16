@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 15 Energy each."
+        "description": "After Lee Sin uses an ability, his next basic attacks gain Attack Speed and return Energy."
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.<br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing health.",
-            "dynamicDescription": "<spellName>Sonic Wave: </spellName>Lee Sin projects a discordant wave of sound to locate his enemies, dealing <physicalDamage>@InitialDamage@ physical damage</physicalDamage> to the first enemy it encounters. If <spellName>Sonic Wave</spellName> hits, Lee Sin can cast <spellName>Resonating Strike</spellName> for the next 3 seconds.<br><br><spellName>Resonating Strike: </spellName>Lee Sin dashes to the enemy hit by Sonic Wave, dealing <physicalDamage>@RecastDamage@ physical damage</physicalDamage> plus 8% of their missing Health.@SpellModifierDescriptionAppend@",
+            "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, damaging the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike.<br><br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing more damage plus a portion of their missing health.",
+            "dynamicDescription": "<spellName>Sonic Wave: </spellName>Lee Sin projects a discordant wave of sound to locate his enemies, dealing <physicalDamage>@InitialDamage@ physical damage</physicalDamage> to the first enemy it encounters. If <spellName>Sonic Wave</spellName> hits, Lee Sin can cast <spellName>Resonating Strike</spellName> for the next 3 seconds.<br><br><spellName>Resonating Strike: </spellName>Lee Sin dashes to the enemy hit by Sonic Wave, dealing <physicalDamage>@RecastDamage@ physical damage</physicalDamage> plus @MissingHealthDamage*100@% of their missing Health.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Safeguard: Lee Sin rushes towards a target ally, shielding them both from damage. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.<br>Iron Will: Lee Sin's intense training allows him to thrive in battle. For 4 seconds, Lee Sin gains Life Steal, Spell Vamp, and Armor.",
-            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin rushes towards a target ally, <shield>shielding</shield> them both for @ShieldAmount@ damage over the next 5 seconds. After using <spellName>Safeguard</spellName>, Lee Sin can cast <spellName>Iron Will</spellName> for the next 3 seconds.<br><br><spellName>Iron Will: </spellName>Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains @LifestealAndSpellVamp@% Life Steal, Spell Vamp, and <scaleArmor>@ArmorBonus@ Armor</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Safeguard: Lee Sin rushes towards a target ally, shielding them both from damage. After using Safeguard, Lee Sin can cast Iron Will.<br><br>Iron Will: Lee Sin's intense training allows him to thrive in battle, gaining Life Steal, Spell Vamp, and Armor.",
+            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin rushes towards a target ally, <shield>shielding</shield> them both for @ShieldAmount@ damage over the next @ShieldDuration@ seconds. After using <spellName>Safeguard</spellName>, Lee Sin can cast <spellName>Iron Will</spellName> for the next @W1ReactivateTime@ seconds.<br><br><spellName>Iron Will: </spellName>Lee Sin's intense training allows him to thrive in battle. For @LifestealAndSpellVampTime@ seconds, Lee Sin gains @LifestealAndSpellVamp@% Life Steal, Spell Vamp, and <scaleArmor>@ArmorBonus@ Armor</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

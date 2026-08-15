@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Каждый раз, когда Эзреаль поражает врага умением, его скорость атаки растет (суммируется до 5 р.)."
+        "description": "Spell_EzrealPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -976,7 +976,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Эзреаль выпускает волну энергии, наносящую маг. урон вражеским чемпионам и снижающую их скорость атаки, а также восстанавливающую здоровье союзных чемпионов и повышающую их скорость атаки.",
-            "dynamicDescription": "Эзреаль выпускает волну энергии, наносящую <magicDamage>@Damage@ ед. маг. урона</magicDamage> вражеским чемпионам и снижающую их <attackSpeed>скорость атаки</attackSpeed> на @AttackSpeed@% на 5 сек.<br><br>Союзные чемпионы, задетые волной, восстанавливают <healing>@TotalHeal@ здоровья</healing>, получая @AttackSpeed@% <attackSpeed>скорости атаки</attackSpeed> на 5 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Эзреаль готовится 1 сек. и выпускает мощный залп энергии, наносящий большой урон каждой цели, сквозь которую проходит (каждая последующая цель получает на 10% меньше урона).",
-            "dynamicDescription": "Эзреаль готовится 1 сек. и выпускает залп снарядов, наносящий <magicDamage>@Damage@ ед. маг. урона</magicDamage> каждой цели, сквозь которую проходит. Каждая последующая цель получает на @DamageReductionPerHit*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "Spell_EzrealR_Jade_Summary",
+            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

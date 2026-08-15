@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "卡薩丁受到的<magicDamage>魔法傷害</magicDamage>減少15%，並將此傷害轉化為額外<attackSpeed>攻速</attackSpeed>。"
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "被動：卡薩丁的普攻會回復魔力。若目標為敵方英雄，則魔力回復量為三倍。主動：卡薩丁的普攻會額外造成魔法傷害。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>卡薩丁的普攻吸取來自虛空的能量，每次命中時回復<scaleMana>@ManaGainAmount@魔力</scaleMana>。若目標為敵方英雄，則<scaleMana>魔力</scaleMana>回復量為三倍，變成@ManaGainAmount*3@。<br><br><spellActive>主動：</spellActive>卡薩丁將力量灌注於虛空之刃5秒，使普攻額外造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "附近有單位施放技能時，卡薩丁會吸收其能量，充能完畢後，卡薩丁可釋放能量脈衝，對面前扇形範圍內的敵軍造成傷害和緩速效果。",
-            "dynamicDescription": "附近(1800距離單位內)有單位施放技能時，卡薩丁會吸收其能量，累加1層充能。達6層時，卡薩丁可釋放<spellName>能量脈衝</spellName>，對面前扇形範圍內的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>和@MoveSpeedMod*-100@%<status>緩速</status>效果，持續3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡薩丁傳送到鄰近位置，對鄰近敵方單位造成傷害。此外，短時間內連續使用「虛空行走」，將消耗額外的魔力並造成額外傷害。",
-            "dynamicDescription": "卡薩丁傳送到鄰近位置，對鄰近敵方單位造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。此外，接下來8秒內每次施放<spellName>虛空行走</spellName>都會額外消耗<scaleMana>100魔力</scaleMana>，並額外造成<magicDamage>@Damage@傷害</magicDamage>，最多累加10層。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

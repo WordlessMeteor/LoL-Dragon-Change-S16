@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Al morir, Karthus adopta una forma de espíritu que le permite seguir lanzando hechizos."
+        "description": "Spell_KarthusPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Karthus desata una explosión retardada en una ubicación, lo que inflige daño a los enemigos cercanos.",
-            "dynamicDescription": "Crea una explosión retardada que, tras 0,5 s, inflige <magicDamage>@QDamage@ de daño mágico</magicDamage> a los enemigos cercanos. Si la explosión solo alcanza a una unidad, inflige el doble de daño.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Después de canalizar durante 3 s, Karthus inflige daño a todos los campeones enemigos.",
-            "dynamicDescription": "Tras canalizar durante 3 s, Karthus inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a todos los campeones enemigos.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KarthusR_Jade_Summary",
+            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

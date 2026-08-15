@@ -47,11 +47,23 @@
                         0.3499999940395355
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxChannelDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "HealPerSecond": {
-                    "mExpandedTooltipCalculationDisplay": 7,
                     "mFormulaParts": [
                         {
                             "mDataValue": "HealBasePerSecond",
@@ -66,8 +78,8 @@
                 },
                 "TotalHeal": {
                     "mMultiplier": {
-                        "mNumber": 4.0,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "{b6402610}",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "HealPerSecond",
@@ -923,9 +935,9 @@
         },
         "__type": "SpellObject"
     },
-    "{59ee31d7}": {
+    "Characters/Jade_Janna/Spells/Jade_JannaDumbledoge": {
         "ObjectName": "Jade_JannaDumbledoge",
-        "objectPath": "{59ee31d7}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaDumbledoge",
         "mScriptName": "Jade_JannaDumbledoge",
         "mSpell": {
             "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/23.tex",
@@ -1059,59 +1071,19 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "MSPercentAlly",
+                    "name": "MSPercent",
                     "values": [
-                        0.05999999865889549,
-                        0.05999999865889549,
-                        0.05999999865889549,
-                        0.05999999865889549,
-                        0.05999999865889549,
-                        0.05999999865889549,
-                        0.05999999865889549
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MSPercentSelf",
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MSBonusMagicDamage",
-                    "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "MSToOnHitConversionRate": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "MSBonusMagicDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
-                },
-                "BonusDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mStat": 7,
-                            "mStatFormula": 2,
-                            "mDataValue": "MSBonusMagicDamage",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.dds"
             ],
@@ -2301,9 +2273,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e1c2871b}": {
+    "Characters/Jade_Janna/Spells/ForecastJade_JannaVO": {
         "ObjectName": "ForecastJade_JannaVO",
-        "objectPath": "{e1c2871b}",
+        "objectPath": "Characters/Jade_Janna/Spells/ForecastJade_JannaVO",
         "mScriptName": "ForecastJade_JannaVO",
         "__type": "SpellObject"
     },
@@ -2865,7 +2837,7 @@
         "passiveLuaName": "Jade_JannaTailwindSelf_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Janna",
         "passiveRange": 1250.0,
-        "passive1IconName": "ASSETS/Characters/Jade_Janna/HUD/Icons2D/Jade_JannaP.dds",
+        "passive1IconName": "assets/characters/jade_janna/hud/icons2d/jade_jannap.dds",
         "name": "game_character_displayname_Jade_Janna",
         "selectionHeight": 200.0,
         "selectionRadius": 125.0,
@@ -2995,7 +2967,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{e1c2871b}",
+                "mParentPassiveBuff": "Characters/Jade_Janna/Spells/ForecastJade_JannaVO",
                 "SkinFilter": {
                     "skinIds": [
                         5

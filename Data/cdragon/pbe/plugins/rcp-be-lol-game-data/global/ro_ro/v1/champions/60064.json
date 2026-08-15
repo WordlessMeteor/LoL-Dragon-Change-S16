@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "După ce Lee Sin folosește o abilitate, următoarele sale 2 atacuri de bază au 40% viteză de atac și îi refac 15 energie fiecare."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Undă sonică: pentru a-și depista inamicii, Lee Sin proiectează o undă sonică discordantă care-i provoacă daune fizice primului inamic pe care îl întâlnește. Dacă ''Unda sonică'' lovește un inamic, Lee Sin poate folosi ''Lovitura rezonantă'' în decurs de 3 secunde.<br>Lovitură rezonantă: Lee Sin se năpustește asupra inamicului lovit de ''Unda sonică'' și îi provoacă daune fizice plus daune în valoare de 8% din viața lipsă.",
-            "dynamicDescription": "<spellName>Undă sonică: </spellName>pentru a-și depista inamicii, Lee Sin proiectează o undă sonică discordantă care-i provoacă <physicalDamage>@InitialDamage@ daune fizice</physicalDamage> primului inamic pe care îl întâlnește. Dacă <spellName>''Unda sonică''</spellName> lovește un inamic, Lee Sin poate folosi <spellName>''Lovitura rezonantă''</spellName> în decurs de 3 secunde.<br><br><spellName>Lovitură rezonantă: </spellName>Lee Sin se năpustește asupra inamicului lovit de ''Unda sonică'' și îi provoacă <physicalDamage>@RecastDamage@ daune fizice</physicalDamage> plus daune în valoare de 8% din viața lipsă.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Gardă: Lee Sin se aruncă spre un aliat țintă, primind amândoi un scut care îi protejează de daune. După ce folosește ''Salvare'', Lee Sin poate activa ''Voința de fier'' în decurs de 3 secunde.<br>Voință de fier: datorită pregătirii sale intense, Lee Sin este foarte priceput în luptă. Timp de 4 secunde, Lee Sin primește furt de viață, vampirism magic și armură.",
-            "dynamicDescription": "<spellName>Gardă: </spellName>Lee Sin se aruncă spre un aliat țintă, primind amândoi un <shield>scut</shield> care îi protejează de @ShieldAmount@ daune în următoarele 5 secunde. După ce folosește <spellName>''Salvare''</spellName>, Lee Sin poate activa <spellName>''Voința de fier''</spellName> în următoarele 3 secunde.<br><br><spellName>Voință de fier: </spellName>datorită pregătirii sale intense, Lee Sin este foarte priceput în luptă. Timp de 5 secunde, Lee Sin primește @LifestealAndSpellVamp@% furt de viață, vampirism magic și <scaleArmor>@ArmorBonus@ armură</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

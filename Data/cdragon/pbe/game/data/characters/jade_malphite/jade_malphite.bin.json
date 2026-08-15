@@ -819,9 +819,9 @@
         },
         "__type": "SpellObject"
     },
-    "{366022fd}": {
+    "Characters/Jade_Malphite/Spells/Jade_MalphiteDoesNothing": {
         "ObjectName": "Jade_MalphiteDoesNothing",
-        "objectPath": "{366022fd}",
+        "objectPath": "Characters/Jade_Malphite/Spells/Jade_MalphiteDoesNothing",
         "mScriptName": "Jade_MalphiteDoesNothing",
         "mSpell": {
             "mImgIconName": [
@@ -882,31 +882,23 @@
         "objectPath": "{4409a561}",
         "mScriptName": "Jade_MalphiteShield",
         "mSpell": {
-            "mSpellCalculations": {
-                "PassiveCooldown": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 8.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 7,
-                                    "mAdditionalBonusAtThisLevel": -1.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 13,
-                                    "mAdditionalBonusAtThisLevel": -1.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        }
+            "DataValues": [
+                {
+                    "name": "PassiveCooldown",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
-                    "__type": "GameCalculation"
-                },
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
                 "TotalShield": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mStat": 12,
@@ -1182,6 +1174,19 @@
                         0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mAnimationName": "",
@@ -1411,9 +1416,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ceddf8d1}": {
+    "Characters/Jade_Malphite/Spells/Jade_MalphiteDamageBuff": {
         "ObjectName": "Jade_MalphiteDamageBuff",
-        "objectPath": "{ceddf8d1}",
+        "objectPath": "Characters/Jade_Malphite/Spells/Jade_MalphiteDamageBuff",
         "mScriptName": "Jade_MalphiteDamageBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Jade_MalphiteDamageBuff",
@@ -1436,65 +1441,6 @@
         "mScriptName": "Jade_MalphiteSeismicShard",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        20.0,
-                        70.0,
-                        120.0,
-                        170.0,
-                        220.0,
-                        270.0,
-                        320.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "SpeedSteal",
@@ -1551,7 +1497,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Malphite_SeismicShard.dds"
@@ -2245,7 +2190,7 @@
         "passiveName": "game_character_passiveName_Jade_Malphite",
         "passiveLuaName": "Jade_MalphiteShield_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Malphite",
-        "passive1IconName": "ASSETS/Characters/Jade_Malphite/HUD/Icons2D/Jade_Malphite_GraniteShield.dds",
+        "passive1IconName": "assets/characters/jade_malphite/hud/icons2d/jade_malphite_graniteshield.dds",
         "name": "game_character_displayname_Jade_Malphite",
         "weaponMaterials": [
             "Jade_MalphiteBasicAttack"

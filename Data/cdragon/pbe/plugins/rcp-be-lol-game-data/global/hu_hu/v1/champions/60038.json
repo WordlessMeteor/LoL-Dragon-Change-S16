@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "„Kassadin 15%-kal kisebb <magicDamage>varázssebzést</magicDamage> szenved el, és az elszenvedett sebzést bónusz <attackSpeed>támadási sebességgé</attackSpeed> alakítja.”"
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Passzív: Kassadin alaptámadásai manát töltenek vissza. A hősök elleni találatok háromszor több manát töltenek vissza. Aktív: Kassadin alaptámadásai további varázssebzést okoznak.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>Kassadin alaptámadásai az ürességből nyernek erőt, és <scaleMana>@ManaGainAmount@ manát</scaleMana> nyer vissza minden találattal. Ha a célpont egy ellenséges hős, háromszor annyi, @ManaGainAmount*3@ <scaleMana>manát</scaleMana> nyer vissza.<br><br><spellActive>Aktív: </spellActive>Kassadin 5 másodpercig tölti az alvilági pengéjét, így az alaptámadásai <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Kassadin energiát nyer a közelében használt varázslatokból. Ha feltöltődött, Kassadin bevetheti az Erőimpulzus képességet, ami egy tölcsér alakú hatóterületen megsebzi és lassítja az előtte álló ellenfeleket.",
-            "dynamicDescription": "Kassadin energiát nyer a közelében (1800 egységen belül) használt varázslatokból, és egy töltetre tesz szert, valahányszor elsütnek egy varázslatot a közelében. 6 töltet elérésekor Kassadin elsütheti az <spellName>Erőimpulzust</spellName>, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenfeleknek, és 3 másodpercre @MoveSpeedMod*-100@%-kal <status>lelassítja</status> őket egy tölcsér alakú területen maga előtt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Kassadin egy közeli helyre teleportál, és érkezéskor megsebzi a közeli ellenfeleket. A rövid időn belül többször elsütött Portálséta több manába kerül, de nagyobb sebzést is okoz.",
-            "dynamicDescription": "Kassadin egy közeli helyre teleportál, és érkezéskor <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek. A <spellName>Portálséta</spellName> minden, 8 másodpercen belüli aktiválása <scaleMana>100 további manába</scaleMana> kerül, és <magicDamage>@Damage@ további sebzést</magicDamage> okoz. (Legfeljebb 10 alkalommal halmozódhat.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

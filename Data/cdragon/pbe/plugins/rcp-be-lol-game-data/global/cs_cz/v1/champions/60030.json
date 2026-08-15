@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Po smrti se Karthus změní v ducha, který může pokračovat v sesílání kouzel."
+        "description": "Spell_KarthusPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Karthus v dané oblasti vyvolá opožděný výbuch, který poškodí okolní nepřátele.",
-            "dynamicDescription": "Po uplynutí 0,5 sekundy dojde k výbuchu, který okolním nepřátelům způsobí <magicDamage>@QDamage@ bodů magického poškození</magicDamage>. Pokud zasáhne jen jedinou jednotku, zvyšuje se poškození na dvojnásobek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Po 3sekundovém soustředění Karthus způsobí poškození všem nepřátelským šampionům.",
-            "dynamicDescription": "Po třech sekundách soustředění způsobí Karthus všem nepřátelským šampionům <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KarthusR_Jade_Summary",
+            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

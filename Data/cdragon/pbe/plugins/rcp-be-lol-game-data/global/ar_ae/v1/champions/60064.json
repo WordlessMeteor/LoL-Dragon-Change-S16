@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "بعد أن يستخدم لي سين قدرة، يكسب هجوماه الأساسيان التاليان 40% سرعة هجوم ويعيدان 15 طاقة."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "الموجة الصوتية: يرسل لي سين موجة تنافرية لتحديد موقع أعدائه، فتلحق ضررًا ماديًا بأول عدو تصادفه. إذا أصابت الموجة الصوتية هدفًا، يستطيع لي سين إلقاء الضربة الرنانة خلال الثواني الثلاث التالية.<br>الضربة الرنانة: يندفع لي سين نحو العدو المصاب بالموجة الصوتية، فيلحق به ضررًا ماديًا بالإضافة إلى 8% من صحته الناقصة.",
-            "dynamicDescription": "<spellName>الموجة الصوتية:</spellName> يرسل لي سين موجة تنافرية لتحديد موقع أعدائه، فتلحق <physicalDamage>@InitialDamage@ ضرر مادي</physicalDamage> بأول عدو تصادفه. إذا أصابت <spellName>الموجة الصوتية</spellName> هدفًا، يستطيع لي سين إلقاء <spellName>الضربة الرنانة</spellName> خلال الثواني الثلاث التالية.<br><br><spellName>الضربة الرنانة: </spellName>يندفع لي سين نحو العدو الذي أصابته الموجة الصوتية، فيلحق به <physicalDamage>@RecastDamage@ ضرر مادي</physicalDamage> بالإضافة إلى 8% من صحته الناقصة.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "الحماية: يندفع لي سين نحو حليف مستهدف، فيمنحه درعًا يحمي كليهما من الضرر. بعد استخدام قدرة الحماية، يستطيع لي سين إلقاء قدرة الإرادة الحديدية خلال الثواني الـ 3 التالية.<br>الإرادة الحديدية: يسمح التدريب المكثف الذي تلقاه لي سين له بالتفوق في القتال. يكسب لي سين سرقة صحة وعلاجًا بضرر التعويذة ودروعًا لمدة 4 ثوانٍ.",
-            "dynamicDescription": "<spellName>الحماية: </spellName>يندفع لي سين نحو حليف مستهدف، مما يمنحهما معًا <shield>درعًا</shield> يمتص @ShieldAmount@ ضرر خلال الثواني الـ 5 التالية. بعد استخدام <spellName>الحماية</spellName>، يستطيع لي سين إلقاء <spellName>الإرادة الحديدية</spellName> خلال الثواني الـ 3 التالية.<br><br><spellName>الإرادة الحديدية: </spellName>يسمح التدريب المكثف الذي تلقاه لي سين له بالتفوق في القتال. يكسب لي سين @LifestealAndSpellVamp@% سرقة صحة وعلاج بضرر التعويذة و <scaleArmor>@ArmorBonus@ دروع</scaleArmor> لمدة 5 ثوانٍ.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Получая урон от умений Леоны, цель помечается Сиянием солнца на 3.5 сек. Когда союзные чемпионы впервые наносят урон цели в этот срок, они снимают метку, дополнительно нанося маг. урон."
+        "description": "Spell_LeonaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "При следующей автоатаке Леона бьет цель щитом, дополнительно нанося ей маг. урон и оглушая ее.",
-            "dynamicDescription": "Следующая автоатака Леоны дополнительно наносит цели <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> и <status>оглушает</status> ее на 1.25 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Леона поднимает щит, получая броню и сопротивление магии. Если во время окончания эффекта рядом будут враги, они получат магический урон, а эффект продлится.",
-            "dynamicDescription": "Дополнительно получает @BonusARMR@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR> на 3 сек. По истечении срока щит взрывается, нанося <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> врагам вокруг. Если взрыв поразил врагов, бонус к <scaleArmor>броне</scaleArmor> и <scaleMR>сопр. магии</scaleMR> продлевается на 3 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

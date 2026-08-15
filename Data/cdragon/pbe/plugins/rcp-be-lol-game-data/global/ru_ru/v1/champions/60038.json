@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "''Кассадин получает на 15% меньше <magicDamage>маг. урона</magicDamage> и преобразует полученный урон в доп. <attackSpeed>скорость атаки</attackSpeed>.''"
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Пассивно: автоатаки Кассадина восстанавливают ману (при атаке чемпионов эффект втрое сильнее). Активно: автоатаки Кассадина дополнительно наносят маг. урон.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> при автоатаках Кассадин вытягивает энергию из Бездны, восстанавливая <scaleMana>@ManaGainAmount@ ед. маны</scaleMana>. Если он атакует вражеского чемпиона, он восстанавливает в 3 р. больше <scaleMana>маны</scaleMana> (@ManaGainAmount*3@).<br><br><spellActive>Активно:</spellActive> Кассадин на 5 сек. заряжает свой Клинок пустоты – его автоатаки дополнительно наносят <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Кассадин вытягивает энергию умений, применяющихся вокруг. Вытянув достаточно энергии, Кассадин может использовать Выброс силы, чтобы нанести урон и замедлить врагов перед собой.",
-            "dynamicDescription": "Каждое умение, примененное рядом с Кассадином (радиус 1800 ед.), дает ему 1 зар. энергии. Накопив 6 зар., Кассадин может использовать <spellName>Выброс силы</spellName>, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам в конусе перед собой и <status>замедляя</status> их на @MoveSpeedMod*-100@% на 3 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Кассадин телепортируется в указанную точку, нанося урон ближайшим врагам. Кроме того, последующие Шаги в Бездну в течение короткого промежутка времени требуют больше маны, но наносят больше урона.",
-            "dynamicDescription": "Кассадин телепортируется в указанную точку, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам вокруг. Кроме того, на каждый последующий <spellName>Шаг в Бездну</spellName> в течение 8 сек. Кассадин тратит на <scaleMana>100 ед. маны больше</scaleMana> и дополнительно наносит <magicDamage>@Damage@ ед. урона</magicDamage> (суммируется до 10 раз).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -1,5 +1,5 @@
 {
-    "{3be1f73f}": {
+    "Loadouts/SummonerEmotes/Particles/EM_Goldfish_Face": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7,22 +7,87 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "IntroAdd",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.1837037056684494,
+                            0.3437037169933319,
+                            0.44630277156829834,
+                            0.6371845006942749,
+                            0.8495395183563232,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                98.68995666503906,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                600.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                700.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                606.5502319335938,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -583.8427734375,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -449.7811584472656,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -60.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.917647123336792,
-                        0.003921568859368563,
+                        0.40000003576278687,
+                        0.9529412388801575,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -32,9 +97,16 @@
                         "times": [
                             0.0,
                             0.25,
-                            0.5
+                            0.5,
+                            1.0
                         ],
                         "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
                             [
                                 1.0,
                                 1.0,
@@ -60,6 +132,41 @@
                 },
                 "pass": -3,
                 "alphaRef": 0,
+                "isRotationEnabled": 1,
+                "rotation0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.33000001311302185,
+                            0.6600000262260437,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                -0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                -0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
                 "birthScale0": {
                     "constantValue": [
                         70.0,
@@ -71,38 +178,38 @@
                 "scale0": {
                     "dynamics": {
                         "times": [
-                            0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
+                            0.10000000149011612,
+                            0.2605007290840149,
+                            0.4572775959968567,
+                            0.6333051919937134,
+                            0.8578755855560303,
+                            1.0
                         ],
                         "values": [
                             [
-                                0.0,
-                                0.0,
+                                0.10000000149011612,
+                                0.10000000149011612,
                                 0.0
                             ],
                             [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
+                                0.10633188486099243,
+                                0.29868996143341064,
+                                1.0
                             ],
                             [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
+                                0.20000000298023224,
+                                0.512663722038269,
+                                1.0
                             ],
                             [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
+                                0.8620087504386902,
+                                0.8751091361045837,
+                                1.0
                             ],
                             [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
+                                0.9641921520233154,
+                                0.9633187651634216,
+                                1.0
                             ],
                             [
                                 1.0,
@@ -114,7 +221,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5164_I_Cant_Hear_You_VFX.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5165_Goldfish_Face_VFX.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -124,15 +231,80 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "IntroAlpha",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.1837037056684494,
+                            0.3437037169933319,
+                            0.44630277156829834,
+                            0.6371845006942749,
+                            0.8495395183563232,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                98.68995666503906,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                600.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                700.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                606.5502319335938,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -583.8427734375,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -449.7811584472656,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -60.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "blendMode": 1,
                 "Color": {
@@ -147,7 +319,7 @@
                                 1.0,
                                 1.0,
                                 1.0,
-                                1.0
+                                0.0
                             ],
                             [
                                 1.0,
@@ -168,98 +340,21 @@
                 },
                 "pass": -4,
                 "alphaRef": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        70.0,
-                        70.0,
-                        70.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
+                "isRotationEnabled": 1,
+                "rotation0": {
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
+                            0.33000001311302185,
+                            0.6600000262260437,
+                            1.0
                         ],
                         "values": [
                             [
-                                0.0,
+                                -0.0,
                                 0.0,
                                 0.0
                             ],
-                            [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
-                            ],
-                            [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
-                            ],
-                            [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
-                            ],
-                            [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5164_I_Cant_Hear_You_VFX.tex",
-                "uvMode": 2,
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.75,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.25,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.5,
-                "isSingleParticle": 1,
-                "emitterName": "Mid",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "blendMode": 1,
-                "pass": -4,
-                "alphaRef": 0,
-                "isUniformScale": 1,
-                "isRotationEnabled": 1,
-                "rotation0": {
-                    "constantValue": [
-                        0.5,
-                        0.0,
-                        0.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.5
-                        ],
-                        "values": [
                             [
                                 0.0,
                                 0.0,
@@ -267,6 +362,11 @@
                             ],
                             [
                                 -0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
                                 0.0,
                                 0.0
                             ]
@@ -278,12 +378,80 @@
                 "birthScale0": {
                     "constantValue": [
                         70.0,
-                        5.0,
-                        5.0
+                        70.0,
+                        70.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.10000000149011612,
+                            0.2605007290840149,
+                            0.4572775959968567,
+                            0.6333051919937134,
+                            0.8578755855560303,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.0
+                            ],
+                            [
+                                0.10633188486099243,
+                                0.29868996143341064,
+                                1.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.512663722038269,
+                                1.0
+                            ],
+                            [
+                                0.8620087504386902,
+                                0.8751091361045837,
+                                1.0
+                            ],
+                            [
+                                0.9641921520233154,
+                                0.9633187651634216,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5165_Goldfish_Face_VFX.tex",
+                "uvMode": 2,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.5,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.2999999523162842,
+                "isSingleParticle": 1,
+                "emitterName": "Mid",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
                     "dynamics": {
                         "times": [
                             0.0,
@@ -291,13 +459,13 @@
                         ],
                         "values": [
                             [
-                                1.0,
                                 0.0,
+                                10.0,
                                 0.0
                             ],
                             [
-                                1.100000023841858,
                                 0.0,
+                                15.0,
                                 0.0
                             ]
                         ],
@@ -305,7 +473,31 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5164_I_Cant_Hear_You_VFX.tex",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 1,
+                "pass": -4,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        70.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5165_Goldfish_Face_VFX.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -331,8 +523,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.20000000298023224,
-                            0.44999998807907104,
+                            0.17011477053165436,
+                            0.3477386236190796,
+                            0.5592173933982849,
                             0.699999988079071
                         ],
                         "values": [
@@ -343,7 +536,7 @@
                             ],
                             [
                                 0.0,
-                                -200.0,
+                                -151.52838134765625,
                                 0.0
                             ],
                             [
@@ -353,7 +546,12 @@
                             ],
                             [
                                 0.0,
-                                -850.0,
+                                -706.7685546875,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -1000.0,
                                 0.0
                             ]
                         ],
@@ -365,41 +563,13 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "SpawnShape": {
-                    "emitOffset": {
-                        "constantValue": [
-                            0.0,
-                            1.0,
-                            0.0
-                        ],
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.5,
-                                1.0
-                            ],
-                            "values": [
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    10.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector3fVariableData"
-                        },
-                        "__type": "ValueVector3"
-                    },
-                    "__type": "VfxShapeLegacy"
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "blendMode": 1,
                 "Color": {
@@ -435,21 +605,11 @@
                 },
                 "pass": -4,
                 "alphaRef": 0,
-                "isUniformScale": 1,
                 "isRotationEnabled": 1,
                 "rotation0": {
-                    "constantValue": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.0955175906419754,
-                            0.19172078371047974,
-                            0.379504531621933,
-                            0.6843319535255432,
                             1.0
                         ],
                         "values": [
@@ -459,27 +619,7 @@
                                 0.0
                             ],
                             [
-                                -3.004387855529785,
                                 0.0,
-                                0.0
-                            ],
-                            [
-                                -9.405426979064941,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                -0.9066449999809265,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                35.40352249145508,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                200.0,
                                 0.0,
                                 0.0
                             ]
@@ -491,8 +631,8 @@
                 "birthScale0": {
                     "constantValue": [
                         70.0,
-                        5.0,
-                        5.0
+                        70.0,
+                        70.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -500,24 +640,30 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.25,
-                            0.5,
+                            0.24022038280963898,
+                            0.5011019110679626,
+                            0.7048209309577942,
                             1.0
                         ],
                         "values": [
                             [
-                                1.100000023841858,
+                                1.0,
                                 1.0,
                                 1.0
                             ],
                             [
-                                1.1100000143051147,
-                                0.0,
-                                0.0
+                                1.107060432434082,
+                                1.114847183227539,
+                                0.5206156969070435
                             ],
                             [
                                 1.149999976158142,
-                                0.0,
+                                1.149999976158142,
+                                0.0
+                            ],
+                            [
+                                0.12554584443569183,
+                                0.4720523953437805,
                                 0.0
                             ],
                             [
@@ -530,7 +676,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5164_I_Cant_Hear_You_VFX.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5165_Goldfish_Face_VFX.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -548,7 +694,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "Loadouts/SummonerEmotes/Particles/Templates/EM_Template_HappyExcited_child_01",
+                            "effect": "Loadouts/SummonerEmotes/Particles/Templates/EM_Template_LoveCute_child_01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -661,31 +807,100 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.31700000166893005,
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 2.0,
+                    "constantValue": 2.0999999046325684,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 2.0,
+                "lifetime": 2.0999999046325684,
                 "isSingleParticle": 1,
                 "emitterName": "MidGlow",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.0430000014603138,
+                            0.0820000022649765,
+                            0.10599999874830246,
+                            0.15199999511241913,
+                            0.20200000703334808,
+                            0.23800000548362732,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                98.69000244140625,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                600.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                700.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                606.5499877929688,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -583.843017578125,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -449.781005859375,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                15.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -57.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "blendMode": 1,
                 "Color": {
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.11999999731779099,
-                            0.5,
-                            0.8500000238418579,
-                            0.8999999761581421
+                            0.20399999618530273,
+                            0.8999999761581421,
+                            1.0
                         ],
                         "values": [
                             [
@@ -695,21 +910,15 @@
                                 0.0
                             ],
                             [
-                                0.9215686321258545,
-                                0.9882352948188782,
+                                1.0,
+                                1.0,
                                 1.0,
                                 1.0
                             ],
                             [
-                                0.8313725590705872,
                                 1.0,
-                                0.8470588326454163,
-                                1.0
-                            ],
-                            [
                                 1.0,
-                                0.9647058844566345,
-                                0.9960784316062927,
+                                1.0,
                                 1.0
                             ],
                             [
@@ -725,34 +934,6 @@
                 },
                 "pass": -5,
                 "alphaRef": 0,
-                "isRotationEnabled": 1,
-                "rotation0": {
-                    "constantValue": [
-                        0.5,
-                        0.0,
-                        0.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.5
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                -0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "IntegratedValueVector3"
-                },
                 "birthScale0": {
                     "constantValue": [
                         70.0,
@@ -765,43 +946,61 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.12300000339746475,
-                            0.8399999737739563,
-                            0.8999999761581421
+                            0.024000000208616257,
+                            0.06199999898672104,
+                            0.1080000028014183,
+                            0.15000000596046448,
+                            0.20399999618530273,
+                            0.23800000548362732
                         ],
                         "values": [
                             [
-                                0.9300000071525574,
-                                0.8140000104904175,
-                                1.2059999704360962
+                                0.20000000298023224,
+                                0.5130000114440918,
+                                1.0
+                            ],
+                            [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                1.0
+                            ],
+                            [
+                                0.10599999874830246,
+                                0.29899999499320984,
+                                1.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.5130000114440918,
+                                1.0
+                            ],
+                            [
+                                0.8619999885559082,
+                                0.875,
+                                1.0
+                            ],
+                            [
+                                0.9639999866485596,
+                                0.9629999995231628,
+                                1.0
                             ],
                             [
                                 1.0,
                                 1.0,
                                 1.0
-                            ],
-                            [
-                                1.090000033378601,
-                                1.090000033378601,
-                                1.090000033378601
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5164_I_Cant_Hear_You_Glow.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Marketing/5165_Goldfish_Face_Glow.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
-        "particleName": "EM_I_Cant_Hear_You",
-        "particlePath": "Loadouts/SummonerEmotes/Particles/EM_I_Cant_Hear_You",
+        "particleName": "EM_Goldfish_Face",
+        "particlePath": "Loadouts/SummonerEmotes/Particles/EM_Goldfish_Face",
         "flags": 197,
         "transform": [
             [
@@ -830,10 +1029,10 @@
             ]
         ],
         "drawingLayer": 1,
-        "objectPath": "{3be1f73f}",
+        "objectPath": "Loadouts/SummonerEmotes/Particles/EM_Goldfish_Face",
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": [
-        "Loadouts/SummonerEmotes.3d87c17c.bin"
+        "Loadouts/SummonerEmotes.3c6d1721.bin"
     ]
 }

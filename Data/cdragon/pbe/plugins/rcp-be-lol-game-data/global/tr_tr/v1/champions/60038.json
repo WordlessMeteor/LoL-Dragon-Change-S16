@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "''Kassadin %15 daha az <magicDamage>büyü hasarı</magicDamage> alır ve bu hasarı ilave <attackSpeed>saldırı hızına</attackSpeed> dönüştürür.''"
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Pasif: Kassadin'in normal saldırıları mana yeniler. Yenilenen mana rakip şampiyonlara karşı üç katına çıkar. <br>Aktif: Kassadin'in normal saldırıları ilave büyü hasarı verir.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Kassadin'in normal saldırıları Hiçlik'ten enerji çeker ve her isabette <scaleMana>@ManaGainAmount@ Mana</scaleMana> yeniler. Hedef bir rakip şampiyonsa yenilenen <scaleMana>mana</scaleMana> üç katına çıkarak @ManaGainAmount*3@ olur.<br><br><spellActive>Aktif: </spellActive>Kassadin, Cehennem Kılıcı'nı 5 saniyeliğine güçlendirerek normal saldırılarıyla fazladan <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Kassadin çevresinde kullanılan yeteneklerden enerji çeker. Tam güce ulaştığında Kassadin Güç Darbesi'ni koni şeklindeki bir alana göndererek önündeki rakiplere hasar verebilir ve onları yavaşlatabilir.",
-            "dynamicDescription": "Kassadin 1800 birim yakınında kullanılan yeteneklerden enerji çeker ve yanında bir yetenek kullanıldığında bir yük kazanır. 6 yüke ulaştığında Kassadin <spellName>Güç Darbesi</spellName>'ni kullanarak önünde koni şeklindeki alanda bulunan rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verebilir ve onları 3 saniyeliğine %@MoveSpeedMod*-100@ <status>yavaşlatabilir</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Kassadin yakındaki bir konuma ışınlanarak etrafındaki rakip birimlere hasar verir. Ayrıca kısa zaman aralığında gerçekleştirilen birden fazla Boşluk Geçişi fazladan manaya mal olur ama ilave hasar verir.",
-            "dynamicDescription": "Kassadin yakındaki bir konuma ışınlanarak etrafındaki rakip birimlere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Ayrıca sonraki 8 saniye içinde kullanılan her ilave <spellName>Boşluk Geçişi</spellName> <scaleMana>fazladan 100 Mana</scaleMana> harcar ve <magicDamage>fazladan @Damage@ Hasar</magicDamage> verir. Bu 10 defaya kadar birikebilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

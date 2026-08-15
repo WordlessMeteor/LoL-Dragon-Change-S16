@@ -597,7 +597,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер сооружает турель со скорострельной пушкой. Возможности турелей растут с уровнем этого умения (турели наносят вдвое меньше урона башням).",
-            "dynamicDescription": "Хеймердингер сооружает турель со скорострельной пушкой, наносящую <magicDamage>@BonusDamage@ ед. маг. урона</magicDamage> при атаке. У этого умения @MaxAmmo@ зар. (перезарядка – @AmmoRechargeTime@ сек.).<br><br>С каждым уровнем умения турели усиливаются.<br><attention>Уровень 2:</attention> атаки турелей снижают броню и сопр. магии цели на 1 (макс. 50)<br><attention>Уровень 3:</attention> максимум 2 турели<br><attention>Уровень 4:</attention> здоровье турелей растет на <scaleHealth>125</scaleHealth><br><attention>Уровень 5:</attention> атаки турели наносят урон по площади@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер выпускает дальнобойные ракеты, которые летят в ближайших врагов.",
-            "dynamicDescription": "Хеймердингер выпускает 3 микроракеты, наводящиеся на ближайших врагов (по 1 на врага). Каждая наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер бросает гранату в указанную точку, нанося урон и ослепляя всех врагов в зоне поражения, а также оглушая врагов в эпицентре взрыва.",
-            "dynamicDescription": "Хеймердингер бросает гранату, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам и <status>ослепляя</status> их на @BlindDuration@ сек. Враги в эпицентре взрыва <status>оглушаются</status> на 1.5 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пассивно: увеличивает сокращение перезарядки. Активно: полностью восстанавливает здоровье всех активных эволюционирующих турелей, и они начинают стрелять замораживающими боеприпасами, ненадолго снижающими скорость передвижения целей.",
-            "dynamicDescription": "<spellPassive>Пассивно: </spellPassive>@CooldownBonus*-100@% сокращения перезарядки.<br><br><spellActive>Активно: </spellActive>усиливает все умения и турели до конца действия.<br><br><spellName>Эволюционирующие турели:</spellName> все турели <healing>восстанавливают</healing> 100% от макс. здоровья, их атаки <status>замедляют (@MovementSpeedMod*-100@%)</status> цели.<br><spellName>Хекстек-микроракеты:</spellName> выпускает 5 ракет вместо 3.<br><spellName>Оглушающая граната CH-1:</spellName> летит на 33% быстрее.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

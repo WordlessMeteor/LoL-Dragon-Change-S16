@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Μετά από την χρήση μιας ικανότητας, οι επόμενες 2 βασικές επιθέσεις του Λι Σιν αποκτούν αυξημένη Ταχύτητα Επίθεσης κατά 40% και αναπληρώνουν 15 πόντους Ενέργειας η κάθε μία."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ηχητικό Κύμα: Ο Λι Σιν εκπέμπει ένα παράφωνο ηχητικό κύμα για να εντοπίσει τους εχθρούς του, το οποίο προκαλεί Σωματική Ζημιά στον πρώτο εχθρό που θα συναντήσει. Αν το Ηχητικό Κύμα βρει στόχο, ο Λι Σιν μπορεί να χρησιμοποιεί το Χτύπημα Αντήχησης για τα επόμενα 3 δευτερόλεπτα.<br>Χτύπημα Αντήχησης: Ο Λι Σιν εφορμά προς τον εχθρό που χτυπήθηκε από το Ηχητικό Κύμα, προκαλώντας Σωματική Ζημιά και επιπλέον ζημιά ίση με το 8% της Ζωής που έχει χάσει.",
-            "dynamicDescription": "<spellName>Ηχητικό Κύμα: </spellName>Ο Λι Σιν εκπέμπει ένα παράφωνο ηχητικό κύμα για να εντοπίσει τους εχθρούς του, το οποίο προκαλεί <physicalDamage>@InitialDamage@ Σωματική Ζημιά</physicalDamage> στον πρώτο εχθρό που θα συναντήσει. Αν το <spellName>Ηχητικό Κύμα</spellName> πετύχει τον στόχο του, ο Λι Σιν μπορεί να χρησιμοποιήσει το <spellName>Χτύπημα Αντήχησης</spellName> για τα επόμενα 3 δευτερόλεπτα.<br><br><spellName>Χτύπημα Αντήχησης: </spellName>Ο Λι Σιν εκτινάσσεται προς τον εχθρό που χτυπήθηκε από το Ηχητικό Κύμα, προκαλώντας <physicalDamage>@RecastDamage@ Σωματική Ζημιά</physicalDamage> και επιπλέον ζημιά ίση με το 8% της Ζωής που έχει χάσει.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Προστασία: Ο Λι Σιν τρέχει προς έναν στοχευμένο σύμμαχο, προστατεύοντας τον σύμμαχο, αλλά και τον εαυτό του από ζημιά με μια Ασπίδα. Μετά τη χρήση της Περιφρούρησης, ο Λι Σιν μπορεί να χρησιμοποιεί τη Σιδερένια Θέληση για τα επόμενα 3 δευτερόλεπτα.<br>Σιδερένια Θέληση: Η σκληρή εκπαίδευση που έλαβε ο Λι Σιν του επιτρέπει να ξεχωρίζει στη μάχη. Για 4 δευτερόλεπτα, ο Λι Σιν αποκτά Αρπαγή Ζωής, Μαγική Αρπαγή Ζωής και Θωράκιση.",
-            "dynamicDescription": "<spellName>Περιφρούρηση: </spellName>Ο Λι Σιν ορμά προς έναν στοχευμένο σύμμαχο, προστατεύοντας τον στόχο του, αλλά και τον εαυτό του με μια <shield>Ασπίδα</shield> που απορροφά @ShieldAmount@ ζημιά στα επόμενα 5 δευτερόλεπτα. Μετά τη χρήση της <spellName>Περιφρούρησης</spellName>, ο Λι Σιν μπορεί να χρησιμοποιεί τη <spellName>Σιδερένια Θέληση</spellName> για τα επόμενα 3 δευτερόλεπτα.<br><br><spellName>Σιδερένια Θέληση: </spellName>Η σκληρή εκπαίδευση που έλαβε ο Λι Σιν τού επιτρέπει να ξεχωρίζει στη μάχη. Για 5 δευτερόλεπτα, ο Λι Σιν αποκτά @LifestealAndSpellVamp@% Αρπαγή Ζωής, Μαγική Αρπαγή Ζωής και <scaleArmor>@ArmorBonus@ Θωράκιση</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

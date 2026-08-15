@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Dopo che Lee Sin ha usato un'abilità, i suoi prossimi 2 attacchi base guadagnano il 40% di velocità d'attacco e ripristinano 15 energia ciascuno."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Onda sonica: Lee Sin proietta un'onda sonora dissonante per localizzare i suoi nemici, infliggendo danni fisici al primo nemico che colpisce. Se Onda sonica va a segno, Lee Sin può lanciare Colpo risonante nei 3 secondi successivi.<br>Colpo risonante: Lee Sin scatta verso il nemico colpito da Onda sonica, infliggendo danni fisici più l'8% della salute mancante del bersaglio.",
-            "dynamicDescription": "<spellName>Onda sonica: </spellName>Lee Sin proietta un'onda sonora dissonante per localizzare i suoi nemici, infliggendo <physicalDamage>@InitialDamage@ danni fisici</physicalDamage> al primo nemico che colpisce. Se <spellName>Onda sonica</spellName> colpisce, Lee Sin può lanciare <spellName>Colpo risonante</spellName> nei 3 secondi successivi.<br><br><spellName>Colpo risonante: </spellName>Lee Sin scatta verso il nemico colpito da Onda sonica, infliggendo <physicalDamage>@RecastDamage@ danni fisici</physicalDamage> più l'8% della salute mancante del bersaglio.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Salvaguardia: Lee Sin si lancia verso un alleato bersaglio, proteggendo entrambi dai danni con uno scudo. Dopo aver usato Salvaguardia, Lee Sin può lanciare Volontà di ferro nei successivi 3 secondi.<br>Volontà di ferro: l'intenso addestramento di Lee Sin gli permette di eccellere in battaglia. Per 4 secondi, Lee Sin ottiene rubavita, rubavita magico e armatura.",
-            "dynamicDescription": "<spellName>Salvaguardia: </spellName>Lee Sin si lancia verso un alleato bersaglio, <shield>proteggendo</shield> entrambi con uno scudo che assorbe @ShieldAmount@ danni nei prossimi 5 secondi. Dopo aver usato <spellName>Salvaguardia</spellName>, Lee Sin può lanciare <spellName>Volontà di ferro</spellName> nei 3 secondi successivi.<br><br><spellName>Volontà di ferro: </spellName>l'intenso addestramento di Lee Sin gli permette di eccellere in battaglia. Per 5 secondi, Lee Sin ottiene un @LifestealAndSpellVamp@% di rubavita e rubavita magico, e <scaleArmor>@ArmorBonus@ armatura</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

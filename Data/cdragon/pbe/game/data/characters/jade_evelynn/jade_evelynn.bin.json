@@ -152,68 +152,23 @@
             ],
             "mEffectAmount": [
                 {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
                     "value": [
                         0.0,
-                        125.0,
-                        250.0,
-                        375.0,
-                        500.0,
-                        650.0,
-                        775.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        150.0,
-                        150.0,
-                        225.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
                         5.0,
                         4.0,
                         3.0,
@@ -224,39 +179,12 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        30.0,
-                        30.0,
-                        45.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -359,7 +287,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient2": 0.029999999329447746,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Evelynn_AgonysEmbrace.dds"
@@ -551,9 +478,9 @@
         "mName": "Jade_EvelynnWAbility",
         "__type": "AbilityObject"
     },
-    "{2dd7fabf}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveStealthRing": {
         "ObjectName": "Jade_EvelynnPassiveStealthRing",
-        "objectPath": "{2dd7fabf}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveStealthRing",
         "mScriptName": "Jade_EvelynnPassiveStealthRing",
         "__type": "SpellObject"
     },
@@ -1394,9 +1321,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4593d9b4}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnVisualManager": {
         "ObjectName": "Jade_EvelynnVisualManager",
-        "objectPath": "{4593d9b4}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnVisualManager",
         "mScriptName": "Jade_EvelynnVisualManager",
         "__type": "SpellObject"
     },
@@ -1975,15 +1902,15 @@
         },
         "__type": "SpellObject"
     },
-    "{8862c452}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnAttackSequencer": {
         "ObjectName": "Jade_EvelynnAttackSequencer",
-        "objectPath": "{8862c452}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnAttackSequencer",
         "mScriptName": "Jade_EvelynnAttackSequencer",
         "__type": "SpellObject"
     },
-    "{8a20ee9d}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnFunctionModule": {
         "ObjectName": "Jade_EvelynnFunctionModule",
-        "objectPath": "{8a20ee9d}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnFunctionModule",
         "mScriptName": "Jade_EvelynnFunctionModule",
         "__type": "SpellObject"
     },
@@ -2087,59 +2014,42 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "TOOLTIP_ONLY_VARS",
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "DemonShadeTimer",
+                    "name": "StealthLockoutTimer",
                     "values": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "StealthDropTimer",
+                    "name": "ManaRegenRatio",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "HealingThresholdTOOLTIP": {
-                    "mSimpleTooltipCalculationDisplay": 6,
+                "{1200d33e}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 250.0,
-                            "mInitialBonusPerLevel": 20.0,
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 2.5,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "HealPerSecondTOOLTIP": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mFormulaParts": [
-                        {
-                            "mStartValue": 15.0,
-                            "mEndValue": 150.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{137cf12a}": "{0093fbb6}",
+                            "__type": "{2b25a73a}"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2313,9 +2223,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e0c83af5}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnNonDemonFX": {
         "ObjectName": "Jade_EvelynnNonDemonFX",
-        "objectPath": "{e0c83af5}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnNonDemonFX",
         "mScriptName": "Jade_EvelynnNonDemonFX",
         "mBuff": {
             "PersistentEffectConditions": [
@@ -2502,9 +2412,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f31f7551}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnSkin24Manager": {
         "ObjectName": "Jade_EvelynnSkin24Manager",
-        "objectPath": "{f31f7551}",
+        "objectPath": "Characters/Jade_Evelynn/Spells/Jade_EvelynnSkin24Manager",
         "mScriptName": "Jade_EvelynnSkin24Manager",
         "__type": "SpellObject"
     },
@@ -2678,7 +2588,7 @@
         "passiveLuaName": "Jade_EvelynnPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Evelynn",
         "passiveSpell": "Jade_EvelynnPassive_Jade",
-        "passive1IconName": "ASSETS/Characters/Jade_Evelynn/HUD/Icons2D/Jade_Evelynn_Passive.dds",
+        "passive1IconName": "assets/characters/jade_evelynn/hud/icons2d/jade_evelynn_passive.dds",
         "name": "game_character_displayname_Jade_Evelynn",
         "weaponMaterials": [
             "Jade_EvelynnBasicAttack"
@@ -2811,16 +2721,16 @@
             {
                 "mParentPassiveBuff": "{ca4ee24a}",
                 "mComponentBuffs": [
-                    "{2dd7fabf}"
+                    "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveStealthRing"
                 ],
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{8862c452}",
+                "mParentPassiveBuff": "Characters/Jade_Evelynn/Spells/Jade_EvelynnAttackSequencer",
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{f31f7551}",
+                "mParentPassiveBuff": "Characters/Jade_Evelynn/Spells/Jade_EvelynnSkin24Manager",
                 "__type": "CharacterPassiveData"
             }
         ],

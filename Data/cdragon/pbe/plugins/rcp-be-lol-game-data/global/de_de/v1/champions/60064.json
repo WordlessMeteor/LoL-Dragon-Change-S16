@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Nachdem Lee Sin eine Fähigkeit eingesetzt hat, ist das Angriffstempo seiner nächsten 2 normalen Angriffe um 40 % erhöht und er erhält jeweils 15 Energie zurück."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Schallwelle: Lee Sin erzeugt eine disharmonische Schallwelle, um seine Gegner aufzudecken, und verursacht am 1. getroffenen Gegner normalen Schaden. Trifft „Schallwelle“ einen Gegner, kann Lee Sin innerhalb von 3 Sekunden „Resonanzschlag“ einsetzen.<br>Resonanzschlag: Lee Sin springt zum von „Schallwelle“ getroffenen Gegner und verursacht normalen Schaden plus 8 % des fehlenden Lebens des Ziels.",
-            "dynamicDescription": "<spellName>Schallwelle: </spellName>Lee Sin erzeugt eine disharmonische Schallwelle, um seine Gegner aufzudecken, und verursacht am 1. getroffenen Gegner <physicalDamage>@InitialDamage@ normalen Schaden</physicalDamage>. Trifft <spellName>Schallwelle</spellName> einen Gegner, kann Lee Sin innerhalb von 3 Sekunden <spellName>Resonanzschlag</spellName> einsetzen.<br><br><spellName>Resonanzschlag: </spellName>Lee Sin springt zum von „Schallwelle“ getroffenen Gegner und verursacht <physicalDamage>@RecastDamage@ normalen Schaden</physicalDamage> plus 8 % des fehlenden Lebens des Ziels.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Lebensretter: Lee Sin springt zum anvisierten Verbündeten und schützt beide vor Schaden. Nach der Nutzung von „Lebensretter“ kann Lee Sin innerhalb von 3 Sekunden „Eiserner Wille“ einsetzen.<br>Eiserner Wille: Durch Lee Sins intensives Training entfalten sich seine Kampfkünste. Lee Sin erhält 4 Sekunden lang Lebensraub, Zaubervampir und Rüstung.",
-            "dynamicDescription": "<spellName>Lebensretter: </spellName>Lee Sin springt zum anvisierten Verbündeten und <shield>schirmt</shield> beide die nächsten 5 Sekunden lang vor @ShieldAmount@ Schaden ab. Nach der Nutzung von <spellName>Lebensretter</spellName> kann Lee Sin innerhalb von 3 Sekunden <spellName>Eiserner Wille</spellName> einsetzen.<br><br><spellName>Eiserner Wille: </spellName>Durch Lee Sins intensives Training entfalten sich seine Kampfkünste. Er erhält 5 Sekunden lang @LifestealAndSpellVamp@ % Lebensraub, Zaubervampir und <scaleArmor>@ArmorBonus@ Rüstung</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

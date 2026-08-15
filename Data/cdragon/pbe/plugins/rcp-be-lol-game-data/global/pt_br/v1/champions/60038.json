@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "''Kassadin sofre 15% a menos de <magicDamage>Dano Mágico</magicDamage> e transforma esse dano em <attackSpeed>Velocidade de Ataque</attackSpeed> adicional.''"
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passivo: os ataques básicos de Kassadin restauram Mana. O Mana restaurado é triplicado contra Campeões inimigos. Ativo: os ataques básicos de Kassadin causam Dano Mágico adicional.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>os ataques básicos de Kassadin extraem energia do Vazio, restaurando <scaleMana>@ManaGainAmount@ de Mana</scaleMana> a cada acerto. Se o alvo for um Campeão inimigo, o <scaleMana>Mana</scaleMana> restaurado é triplicado para @ManaGainAmount*3@.<br><br><spellActive>Ativo: </spellActive>Kassadin carrega a Lâmina Ínfera por 5s, fazendo com que seus ataques básicos causem <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kassadin drena energia das habilidades conjuradas nas proximidades. Após carregar, Kassadin pode usar Força de Pulso para causar dano e Lentidão a inimigos em uma área cônica à frente dele.",
-            "dynamicDescription": "Kassadin absorve a energia de Habilidades conjuradas nas proximidades (alcance de 1.800), recebendo uma carga sempre que uma Habilidade é conjurada perto dele. Ao atingir 6 cargas, Kassadin pode usar <spellName>Força de Pulso</spellName> para causar <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e aplicar @MoveSpeedMod*-100@% de <status>Lentidão</status> por 3s a inimigos em uma área cônica à frente dele.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kassadin se teleporta para um local próximo, causando dano a unidades inimigas próximas. Além disso, conjurar Caminhar na Fenda várias vezes em um curto período faz com que a habilidade custe mais Mana e cause mais dano.",
-            "dynamicDescription": "Kassadin se teleporta para um local próximo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a unidades inimigas ao redor dele. Além disso, cada <spellName>Caminhar na Fenda</spellName> subsequente nos próximos 8s custa mais <scaleMana>100 de Mana</scaleMana> e causa <magicDamage>mais @Damage@ de dano</magicDamage>. Acumula até 10 vezes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Vrăjile care provoacă daune le aplică inamicilor efectul ''Lumina soarelui'' timp de 3,5 secunde. Când campionii aliați le provoacă daune țintelor afectate, consumă debuff-ul ''Lumina soarelui'' pentru a provoca daune magice suplimentare."
+        "description": "Spell_LeonaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Leona își folosește scutul pentru a lansa următorul atac de bază, provocând daune magice bonus și amețindu-și ținta.",
-            "dynamicDescription": "Următorul atac de bază provoacă <magicDamage>@TotalDamageTooltip@ daune magice</magicDamage> suplimentare și <status>amețește</status> un inamic timp de 1,25 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Leona își ridică scutul și primește armură și rezistență la magie.  Când durata efectului se încheie, dacă există inamici în apropiere, aceștia suferă daune magice, iar durata efectului se prelungește.",
-            "dynamicDescription": "Primește @BonusARMR@ <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR> bonus timp de 3 secunde. La încheierea efectului, inamicii loviți aflați în apropiere suferă <magicDamage>@TotalDamageTooltip@ daune magice</magicDamage>, iar Leona își păstrează bonusul de <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR> timp de 3 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

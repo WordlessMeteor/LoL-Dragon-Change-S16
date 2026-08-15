@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin subisce il 15% di <magicDamage>danni magici</magicDamage> in meno e converte questi danni ricevuti in <attackSpeed>velocità d'attacco</attackSpeed> bonus."
+        "description": "Spell_KassadinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Passiva: gli attacchi base di Kassadin ripristinano mana. Il mana ripristinato è triplicato contro i campioni nemici. Attiva: gli attacchi base di Kassadin infliggono danni magici aggiuntivi.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>gli attacchi base di Kassadin attingono energia dal Vuoto, ripristinando <scaleMana>@ManaGainAmount@ mana</scaleMana> a ogni colpo. Se il bersaglio è un campione nemico, il <scaleMana>mana</scaleMana> ripristinato viene triplicato fino a @ManaGainAmount*3@.<br><br><spellActive>Attiva: </spellActive>Kassadin carica la sua lama degli inferi per 5 secondi, facendo sì che i suoi attacchi base infliggano <magicDamage>@TotalDamage@ danni magici</magicDamage> aggiuntivi.@SpellModifierDescriptionAppend@",
+            "description": "Spell_KassadinW_Jade_Summary",
+            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Kassadin attinge all'energia delle abilità lanciate nelle vicinanze. Una volta carico, Kassadin può usare Pulsar della forza per danneggiare e rallentare i nemici in un'area conica davanti a sé.",
-            "dynamicDescription": "Kassadin attinge all'energia delle abilità lanciate nelle vicinanze (gittata 1800), ottenendo una carica ogni volta che un'abilità viene lanciata vicino a lui. Una volta raggiunte le 6 cariche, Kassadin può usare <spellName>Pulsar della forza</spellName> per infliggere <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>rallentare</status> di un @MoveSpeedMod*-100@% i nemici in un cono davanti a sé per 3 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Kassadin si teletrasporta in una posizione vicina, infliggendo danni alle unità nemiche nelle vicinanze. Inoltre, sparare più Fratture spazio temporali in un breve periodo costa più mana e infligge più danni.",
-            "dynamicDescription": "Kassadin si teletrasporta in una posizione vicina, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> alle unità nemiche vicine. Inoltre, ogni successiva <spellName>Frattura spazio temporale</spellName> entro i prossimi 8 secondi costa <scaleMana>100 mana aggiuntivi</scaleMana> e infligge <magicDamage>@Damage@ danni aggiuntivi</magicDamage>, accumulandosi fino a 10 volte.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

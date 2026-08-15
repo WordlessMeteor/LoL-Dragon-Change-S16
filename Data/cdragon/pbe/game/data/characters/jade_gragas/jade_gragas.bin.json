@@ -87,7 +87,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -297,7 +297,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -876,19 +876,6 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "ArenaCooldownMod",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "HealRatio",
                     "values": [
                         0.019999999552965164,
@@ -898,6 +885,19 @@
                         0.019999999552965164,
                         0.019999999552965164,
                         0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -913,31 +913,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "HealCooldown": {
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 12.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 11,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 16,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                "{f5ba9851}": {
+                    "mMultiplier": {
+                        "mNumber": 0.25,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "HealAmount",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -954,15 +936,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
-                "{0a3e0478}": 12.0,
+                "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
             "castRange": [
@@ -2303,7 +2285,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -3645,7 +3627,7 @@
         "passiveName": "game_character_passiveName_Jade_Gragas",
         "passiveLuaName": "Jade_GragasPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Gragas",
-        "passive1IconName": "ASSETS/Characters/Jade_Gragas/HUD/Icons2D/Jade_GragasPassiveHeal.dds",
+        "passive1IconName": "assets/characters/jade_gragas/hud/icons2d/jade_gragaspassiveheal.dds",
         "name": "game_character_displayname_Jade_Gragas",
         "weaponMaterials": [
             "Jade_GragasBasicAttack"

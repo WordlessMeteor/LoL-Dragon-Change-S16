@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "毎秒、最大体力の0.3%分、体力が回復する。"
+        "description": "Spell_DrMundoPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>体力@HealthCost@</font>",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "巨大な包丁を投げ、対象の最大体力に応じたダメージを与える。",
-            "dynamicDescription": "<mainText>巨大な包丁を投げ、対象の現在体力の@DamageMod*100@%にあたる<magicDamage>魔法ダメージ</magicDamage>を与え(最小@MinDamage@ダメージ)、2秒間、40%の<status>スロウ効果</status>を付与する。<br>",
+            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>体力@HealthCost@</font>",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "5秒間、自身の攻撃力が一定量増加する。さらに、減少体力1%ごとに攻撃力が増加する。",
-            "dynamicDescription": "5秒間、<physicalDamage>攻撃力が@BaseIncrease@</physicalDamage>増加する。さらに減少体力1%ごとに攻撃力が<physicalDamage>+@DamageMod@</physicalDamage>増加する。@SpellModifierDescriptionAppend@",
+            "description": "Spell_DrMundoE_Jade_Summary",
+            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>現在体力の@HealthCost@%</font>",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身の体力を一部消費してから移動速度が増加し、さらに体力自動回復量が大幅に上昇する。",
-            "dynamicDescription": "<mainText>12秒かけて<healing>体力を@MaximumHealthRegen@</healing>回復する。さらに、<speed>移動速度が@SpeedMod*100@%</speed>増加する。",
+            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

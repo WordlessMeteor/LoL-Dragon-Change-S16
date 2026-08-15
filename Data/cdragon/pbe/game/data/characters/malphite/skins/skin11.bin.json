@@ -135,9 +135,9 @@
             }
         ],
         "mContextualActionData": "Characters/Malphite/CAC/Malphite_Base",
-        "iconCircle": "ASSETS/Characters/Malphite/HUD/Malphite_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Malphite/HUD/Malphite_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Malphite/HUD/Malphite_Circle_6.tex",
+        "iconCircle": "assets/characters/malphite/hud/malphite_circle.tex",
+        "iconSquare": "assets/characters/malphite/hud/malphite_square.tex",
+        "iconAvatar": "assets/characters/malphite/hud/malphite_circle_6.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -158,7 +158,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "R_BUFFBONE_GLB_HAND_LOC",
-                        "effectKey": "{2b1e0dfb}",
+                        "effectKey": "Malphite_W_buf_hands_R",
                         "__type": "PersistentVfxData"
                     },
                     {
@@ -193,7 +193,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
-        "objectPath": "{52216a91}",
+        "objectPath": "Characters/Malphite/Skins/Skin11",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Malphite/Skins/Skin11/Resources": {
@@ -214,7 +214,7 @@
             "Malphite_W_buf_Enrage_01": "Characters/Malphite/Skins/Skin6/Particles/Malphite_Skin06_W_buf_Enrage_01",
             "Malphite_W_buf_Enrage_glow_01": "Characters/Malphite/Skins/Skin6/Particles/Malphite_Skin06_W_buf_Enrage_glow_01",
             "Malphite_W_buf_Enrage_glow_02": "Characters/Malphite/Skins/Skin0/Particles/Malphite_Base_W_buf_Enrage_glow_02",
-            "{2b1e0dfb}": "Characters/Malphite/Skins/Skin6/Particles/Malphite_Skin06_W_buf_hands",
+            "Malphite_W_buf_hands_R": "Characters/Malphite/Skins/Skin6/Particles/Malphite_Skin06_W_buf_hands",
             "Malphite_W_Cleave": "Characters/Malphite/Skins/Skin0/Particles/Malphite_Base_W_Cleave",
             "Malphite_W_tar_1": "Characters/Malphite/Skins/Skin0/Particles/Malphite_Base_W_tar_1",
             "Malphite_W_tar_2": "Characters/Malphite/Skins/Skin6/Particles/Malphite_Skin06_W_tar_2",
@@ -478,29 +478,29 @@
         "samplerValues": [
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MatCap_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin11/malphite_skin11_TX_CM.tex",
+                "texturePath": "assets/characters/malphite/skins/skin11/malphite_skin11_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 2,
@@ -995,7 +995,7 @@
                                 "mScriptName": "malphiteshieldremoval",
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "ASSETS/Characters/Malphite/Skins/Skin11/Particles/Malphite_Skin11_Passive_Overlay_01.tex",
+                            "TextureName": "assets/characters/malphite/skins/skin11/particles/malphite_skin11_passive_overlay_01.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],

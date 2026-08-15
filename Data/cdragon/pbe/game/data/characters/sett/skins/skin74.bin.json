@@ -210,9 +210,9 @@
             "Cloud_Default"
         ],
         "mContextualActionData": "Characters/Sett/CAC/Sett_Base",
-        "iconCircle": "ASSETS/Characters/Sett/HUD/Sett_Circle_0.tex",
-        "iconSquare": "ASSETS/Characters/Sett/HUD/Sett_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Sett/HUD/Sett_Circle_67.tex",
+        "iconCircle": "assets/characters/sett/hud/sett_circle_0.tex",
+        "iconSquare": "assets/characters/sett/hud/sett_square.tex",
+        "iconAvatar": "assets/characters/sett/hud/sett_circle_67.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
@@ -222,7 +222,7 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
-                    "Spell": "{c969f3b0}",
+                    "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                     "__type": "HasBuffDynamicMaterialBoolDriver"
                 },
                 "PersistentVfxs": [
@@ -245,7 +245,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
-        "objectPath": "{a20fd412}",
+        "objectPath": "Characters/Sett/Skins/Skin74",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Sett/Skins/Skin74/Particles/Sett_Skin74_W_MaxAoEMisHead": {
@@ -4733,7 +4733,7 @@
             "Sett_Emote_Dance_Ab_Sparkle": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Emote_Dance_AbSparkle",
             "Sett_Emote_Dance_Ab_Sparkle_Child": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Emote_Dance_AbSparkleChild",
             "Sett_W_Shared_Warning_Allies": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_W_SharedWarningAllies",
-            "{0844785e}": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Q_Hit",
+            "Sett_Q_Hit_2": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Q_Hit",
             "{edca3dbd}": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Z__Ground",
             "{0f57cbd6}": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_R_CasBodyChild",
             "{7eb0b581}": "Characters/Sett/Skins/Skin67/Particles/Sett_Skin67_Z_TrailHand"
@@ -4745,7 +4745,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin74/Sett_Skin74_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin74/sett_skin74_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4753,49 +4753,49 @@
             },
             {
                 "TextureName": "NoiseDisturb",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Noise04.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/noise04.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_mask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "WaterShape",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Ahri_Skin88_WaterShapeMask_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/ahri_skin88_watershapemask_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "FlowmapTex",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/flowmap.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/flowmap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_AdditiveScrollCombo_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_additivescrollcombo_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "HighLightShape",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
-                "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "texturePath": "assets/shared/materials/rock_texture.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_PatternTexture",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "texturePath": "assets/shared/materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -5601,7 +5601,7 @@
                     "name": "AllFeatureOpener",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "{c969f3b0}",
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         },
                         "mTurnOnTimeSec": 0.5,
@@ -5620,7 +5620,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin74/Sett_Skin74_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin74/sett_skin74_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -5628,49 +5628,49 @@
             },
             {
                 "TextureName": "NoiseDisturb",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_TurbulDeform_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_turbuldeform_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_mask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "WaterShape",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_WaterShapeMask_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_watershapemask_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "FlowmapTex",
-                "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "texturePath": "assets/shared/materials/flowmap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_AdditiveScrollCombo_TX_CM.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/sett_skin67_additivescrollcombo_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/CaseTexture03.tex",
+                "texturePath": "assets/characters/sett/skins/skin67/casetexture03.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "HighLightShape",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
-                "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "texturePath": "assets/shared/materials/rock_texture.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_PatternTexture",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "texturePath": "assets/shared/materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -6486,7 +6486,7 @@
                     "name": "VertexDeformFeatureStrength",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "{c969f3b0}",
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         },
                         "mOffValue": 0.5,
@@ -6500,7 +6500,7 @@
                     "name": "TailTipShape",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "{c969f3b0}",
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         },
                         "mOnValue": 1.2000000476837158,
@@ -6514,7 +6514,7 @@
                     "name": "AllFeatureOpener",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "{c969f3b0}",
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         },
                         "mOffValue": 0.3700000047683716,
@@ -6526,7 +6526,7 @@
                     "name": "BloomIntensity",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "{c969f3b0}",
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         },
                         "mOnValue": 0.75,
@@ -6543,7 +6543,7 @@
                         "mElements": [
                             {
                                 "mCondition": {
-                                    "Spell": "{c969f3b0}",
+                                    "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
                                 "mValue": {

@@ -217,7 +217,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkEOne.dds"
@@ -906,15 +905,15 @@
             ],
             "DataValues": [
                 {
-                    "name": "LifestealAndSpellVamp",
+                    "name": "DashSpeed",
                     "values": [
-                        1.0,
-                        5.0,
-                        9.0,
-                        13.0,
-                        17.0,
-                        21.0,
-                        25.0
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -934,26 +933,13 @@
                 {
                     "name": "ShieldDuration",
                     "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "DashSpeed",
-                    "values": [
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -971,15 +957,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "W1CooldownRecovered",
+                    "name": "LifestealAndSpellVamp",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        1.0,
+                        5.0,
+                        9.0,
+                        13.0,
+                        17.0,
+                        21.0,
+                        25.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1026,7 +1012,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.dds"
             ],
@@ -1288,9 +1273,9 @@
         },
         "__type": "SpellObject"
     },
-    "{484d002e}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinBlindedEgg": {
         "ObjectName": "Jade_LeeSinBlindedEgg",
-        "objectPath": "{484d002e}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinBlindedEgg",
         "mScriptName": "Jade_LeeSinBlindedEgg",
         "mSpell": {
             "mImgIconName": [
@@ -1333,7 +1318,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "FirstHitEnergyMult",
+                    "name": "EnergyPerHit",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalHits",
                     "values": [
                         2.0,
                         2.0,
@@ -1346,39 +1344,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "EnergyReturn": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 10.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 7,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 13,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "TTFirstHitEnergy": {
-                    "mMultiplier": {
-                        "mDataValue": "FirstHitEnergyMult",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mModifiedGameCalculation": "EnergyReturn",
-                    "__type": "GameCalculationModified"
-                }
-            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.dds"
             ],
@@ -1542,15 +1507,15 @@
         },
         "__type": "SpellObject"
     },
-    "{637b7255}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin11Manager": {
         "ObjectName": "Jade_LeeSinSkin11Manager",
-        "objectPath": "{637b7255}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin11Manager",
         "mScriptName": "Jade_LeeSinSkin11Manager",
         "__type": "SpellObject"
     },
-    "{68448977}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin31Manager": {
         "ObjectName": "Jade_LeeSinSkin31Manager",
-        "objectPath": "{68448977}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin31Manager",
         "mScriptName": "Jade_LeeSinSkin31Manager",
         "__type": "SpellObject"
     },
@@ -1820,9 +1785,9 @@
         "mName": "Jade_LeeSinRAbility",
         "__type": "AbilityObject"
     },
-    "{ad38124e}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin52Manager": {
         "ObjectName": "Jade_LeeSinSkin52Manager",
-        "objectPath": "{ad38124e}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin52Manager",
         "mScriptName": "Jade_LeeSinSkin52Manager",
         "__type": "SpellObject"
     },
@@ -2016,7 +1981,7 @@
             "mAlternateName": "Jade_LeeSinQOne_Jade",
             "DataValues": [
                 {
-                    "name": "Q1BaseDamage",
+                    "name": "BaseDamage",
                     "values": [
                         20.0,
                         50.0,
@@ -2029,20 +1994,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Q2BaseDamage",
-                    "values": [
-                        20.0,
-                        50.0,
-                        80.0,
-                        110.0,
-                        140.0,
-                        170.0,
-                        200.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Q2ADRatio",
+                    "name": "ADRatio",
                     "values": [
                         0.8999999761581421,
                         0.8999999761581421,
@@ -2051,19 +2003,6 @@
                         0.8999999761581421,
                         0.8999999761581421,
                         0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Q2MaxMissingHealthMod",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2081,19 +2020,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "CherryBonusHaste",
-                    "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "DashSpeed",
                     "values": [
                         1350.0,
@@ -2105,67 +2031,66 @@
                         1350.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissingHealthDamage",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxMonsterHealthDamage",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        9.5,
-                        8.5,
-                        7.5,
-                        6.5,
-                        5.5,
-                        4.5,
-                        3.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "InitialDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "Q1BaseDamage",
+                            "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.8999999761581421,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "RecastDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "Q2BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "Q2ADRatio",
+                            "mDataValue": "ADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "EmpoweredDamage": {
-                    "mMultiplier": {
-                        "mNumber": 2.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "tooltipOnly": true,
-                    "mModifiedGameCalculation": "RecastDamage",
-                    "__type": "GameCalculationModified"
+                "RecastDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient2": 2.0,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.dds"
@@ -2183,14 +2108,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    11.0,
+                    12.0,
                     11.0,
                     10.0,
                     9.0,
                     8.0,
                     7.0,
-                    7.0
+                    6.0
                 ],
+                "{0a3e0478}": 12.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2328,22 +2254,17 @@
                     "mLocKeys": {
                         "keyName": "Spell_LeeSinQOne_Jade_Name",
                         "keySummary": "Spell_LeeSinQOne_Jade_Summary",
-                        "keyTooltip": "Spell_LeeSinQOne_Jade_Tooltip"
+                        "keyTooltip": "Spell_LeeSinQOne_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_LeeSinQOne_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Q1BaseDamage",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_LeeSinQSonicWaveDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Q2BaseDamage",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinResonatingStrikeMinimumBaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2413,7 +2334,7 @@
                                 "__type": "{f3cbe7b2}"
                             },
                             {
-                                "mSpellCalculationKey": "EmpoweredDamage",
+                                "mSpellCalculationKey": "RecastDamage",
                                 "__type": "{f3cbe7b2}"
                             }
                         ],
@@ -2531,9 +2452,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e23cabb2}": {
+    "Characters/Jade_LeeSin/Spells/Jade_Lee_200IQ": {
         "ObjectName": "Jade_Lee_200IQ",
-        "objectPath": "{e23cabb2}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_Lee_200IQ",
         "mScriptName": "Jade_Lee_200IQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3324,7 +3245,7 @@
         "passiveName": "game_character_passiveName_Jade_LeeSin",
         "passiveLuaName": "Jade_LeeSinPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_LeeSin",
-        "passive1IconName": "ASSETS/Characters/Jade_LeeSin/HUD/Icons2D/Jade_LeeSinPassive.dds",
+        "passive1IconName": "assets/characters/jade_leesin/hud/icons2d/jade_leesinpassive.dds",
         "name": "game_character_displayname_Jade_LeeSin",
         "weaponMaterials": [
             "Jade_LeeSinBasicAttack"
@@ -3462,21 +3383,21 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{637b7255}",
+                "mParentPassiveBuff": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin11Manager",
                 "SkinFilter": {
                     "__type": "SkinFilterData"
                 },
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{68448977}",
+                "mParentPassiveBuff": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin31Manager",
                 "SkinFilter": {
                     "__type": "SkinFilterData"
                 },
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{ad38124e}",
+                "mParentPassiveBuff": "Characters/Jade_LeeSin/Spells/Jade_LeeSinSkin52Manager",
                 "SkinFilter": {
                     "__type": "SkinFilterData"
                 },
@@ -4114,7 +4035,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{3d1d2371}"
+                                            "Characters/Jade_Ezreal/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -4149,7 +4070,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{ad55e39e}"
+                                            "Characters/Jade_MasterYi/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -4254,7 +4175,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c4529dc}"
+                                            "Characters/Jade_Janna/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -4649,7 +4570,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{3d1d2371}"
+                                            "Characters/Jade_Ezreal/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -4684,7 +4605,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c4529dc}"
+                                            "Characters/Jade_Janna/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -4719,7 +4640,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{ad55e39e}"
+                                            "Characters/Jade_MasterYi/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -5831,7 +5752,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{3d1d2371}"
+                                            "Characters/Jade_Ezreal/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -5866,7 +5787,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c4529dc}"
+                                            "Characters/Jade_Janna/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -5901,7 +5822,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{ad55e39e}"
+                                            "Characters/Jade_MasterYi/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -6482,7 +6403,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{3d1d2371}"
+                                            "Characters/Jade_Ezreal/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -6517,7 +6438,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{4c4529dc}"
+                                            "Characters/Jade_Janna/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -6552,7 +6473,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{ad55e39e}"
+                                            "Characters/Jade_MasterYi/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -7140,7 +7061,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{2d98f589}"
+                                            "Characters/Jade_Brand/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -7476,7 +7397,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{c2d67321}"
+                                            "Characters/Jade_Ashe/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -7546,7 +7467,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{2d98f589}"
+                                            "Characters/Jade_Brand/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -7914,7 +7835,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{c2d67321}"
+                                            "Characters/Jade_Ashe/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },
@@ -8014,7 +7935,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{2d98f589}"
+                                            "Characters/Jade_Brand/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },

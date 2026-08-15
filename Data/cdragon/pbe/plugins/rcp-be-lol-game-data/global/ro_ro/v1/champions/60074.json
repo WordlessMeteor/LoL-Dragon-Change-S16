@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger desfășoară o turelă cu mitralieră. Turelele primesc abilități pe măsură ce această abilitate este îmbunătățită. (Turelele provoacă jumătate din daune împotriva turnurilor).",
-            "dynamicDescription": "Heimerdinger construiește o turelă cu mitralieră care provoacă <magicDamage>@BonusDamage@ daune magice</magicDamage> la fiecare atac. Această abilitate are @MaxAmmo@ cumuluri (timp de reîncărcare: @AmmoRechargeTime@ sec.).<br><br>Fiecare nivel al acestei abilități oferă o îmbunătățire suplimentară:<br><attention>Nivelul 2:</attention> atacurile turelelor reduc armura și rezistența la magie a țintei cu 1 (maximum 50)<br><attention>Nivelul 3:</attention> numărul maxim de turele crește la 2<br><attention>Nivelul 4:</attention> turelele primesc încă <scaleHealth>125 viață</scaleHealth><br><attention>Nivelul 5:</attention> atacurile turelelor provoacă daune AoE@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger lansează rachete cu rază lungă care lovesc inamicii cei mai apropiați de Heimerdinger.",
-            "dynamicDescription": "Heimerdinger lansează 3 ''Micro-rachete'' care urmăresc inamicii (maximum 1 per unitate), lovind țintele cele mai apropiate de el. Fiecare rachetă provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger aruncă o grenadă spre locația-țintă, provocându-le daune unităților inamice, amețindu-le pe cele lovite direct și orbind unitățile din jur.",
-            "dynamicDescription": "Heimerdinger aruncă o grenadă, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> unităților inamice și <status>orbindu-le</status> timp de @BlindDuration@ secunde.  Inamicii loviți direct sunt <status>amețiți</status> timp de 1,5 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Pasivă / Activă: crește pasiv reducerea timpilor de reactivare.  Activează pentru a vindeca toate turelele perfecționate active și a le face să tragă cu lovituri de îngheț, care reduc viteza de mișcare pentru scurt timp.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>@CooldownBonus*-100@% reducerea timpilor de reactivare.<br><br><spellActive>Activă: </spellActive>îmbunătățește toate abilitățile și turelele pe durata efectului.<br><br><spellName>Turele perfecționate:</spellName> toate turelele sunt <healing>vindecate</healing> cu 100% din viața maximă, iar fiecare atac aplică o <status>încetinire de @MovementSpeedMod*-100@%</status>.<br><spellName>Micro-rachete hextech:</spellName> lansează 5 rachete în loc de 3.<br><spellName>Grenada CH-1:</spellName> se deplasează cu 33% mai repede.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

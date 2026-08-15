@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "A sebzést okozó varázslatok 3,5 másodpercre a Napfény jelzőjét teszik az ellenfelekre. Ha egy szövetséges hős megsebez egy megjelölt ellenfelet, a támadás felemészti a Napfény gyengítő hatását, és további varázssebzést okoz."
+        "description": "Spell_LeonaPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Leona a pajzsát használja a következő alaptámadás végrehajtásához, amellyel bónusz varázssebzést okoz, és elkábítja a célpontot.",
-            "dynamicDescription": "A következő alaptámadás további <magicDamage>@TotalDamageTooltip@ varázssebzést</magicDamage> okoz, és 1,25 másodpercre <status>elkábít</status> egy ellenfelet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Leona felemeli pajzsát, amitől megnő a páncélja és a varázsellenállása.  Ha vannak ellenséges egységek a közelben, amikor először lejár a hatóidő, ők varázssebzést szenvednek, a hatás időtartama pedig meghosszabbodik.",
-            "dynamicDescription": "3 másodpercre @BonusARMR@ bónusz <scaleArmor>páncélt</scaleArmor> és <scaleMR>varázsellenállást</scaleMR> biztosít. Amikor a hatás véget ér, a közelben tartózkodó eltalált ellenfelek <magicDamage>@TotalDamageTooltip@ varázssebzést</magicDamage> szenvednek el, és Leona még 3 másodpercig megtartja a bónusz <scaleArmor>páncélját</scaleArmor> és <scaleMR>varázsellenállását</scaleMR>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

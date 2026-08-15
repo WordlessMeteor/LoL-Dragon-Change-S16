@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Depois que Lee Sin usa uma Habilidade, seus próximos 2 Ataques básicos recebem 40% de Velocidade de Ataque e restauram 15 de Energia."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Onda Sônica: Lee Sin projeta uma onda sonora para localizar seus inimigos, causando Dano Físico ao primeiro inimigo que encontrar. Se Onda Sônica atinge um inimigo, Lee Sin pode conjurar Ataque Ressonante nos próximos 3s.<br>Ataque Ressonante: Lee Sin avança na direção do inimigo atingido por Onda Sônica, causando Dano Físico mais o equivalente a 8% da Vida perdida do alvo.",
-            "dynamicDescription": "<spellName>Onda Sônica: </spellName>Lee Sin emite uma onda dissonante para localizar inimigos e causar <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage> ao primeiro inimigo encontrado. Se <spellName>Onda Sônica</spellName> acerta um inimigo, Lee Sin pode conjurar <spellName>Ataque Ressonante</spellName> nos próximos 3s.<br><br><spellName>Ataque Ressonante: </spellName>Lee Sin avança na direção do inimigo atingido por Onda Sônica e causa <physicalDamage>@RecastDamage@ de Dano Físico</physicalDamage> mais o equivalente a 8% da Vida perdida do alvo.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Proteger: Lee Sin avança em direção ao aliado-alvo, concedendo Escudo a si e ao aliado. Após Proteger, Lee Sin pode conjurar Vontade de Ferro nos próximos 3s.<br>Vontade de Ferro: o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas. Lee Sin recebe Roubo de Vida, Vampirismo Mágico e Armadura por 4s.",
-            "dynamicDescription": "<spellName>Proteger: </spellName>Lee Sin avança em direção ao aliado-alvo, concedendo <shield>Escudo</shield> que previne @ShieldAmount@ de dano a si e ao aliado por 5s. Após <spellName>Proteger</spellName>, Lee Sin pode conjurar <spellName>Vontade de Ferro</spellName> nos próximos 3s.<br><br><spellName>Vontade de Ferro: </spellName>o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas. Lee Sin recebe @LifestealAndSpellVamp@% de Roubo de Vida, Vampirismo Mágico e <scaleArmor>@ArmorBonus@ de Armadura</scaleArmor> por 5s.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

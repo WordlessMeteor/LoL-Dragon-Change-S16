@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Après avoir utilisé une compétence, Lee Sin voit sa vitesse d'attaque augmenter de 40% pour ses 2 prochaines attaques de base. Chacune de ces attaques régénère 15 pts d'énergie."
+        "description": "Spell_LeeSinPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Onde sonore : Lee Sin émet une onde sonore pour localiser ses ennemis, infligeant des dégâts physiques au premier ennemi touché. Si Onde sonore touche un ennemi, Lee Sin peut lancer Coup résonant dans les 3 sec qui suivent.<br>Coup résonant : Lee Sin fonce vers l'ennemi touché par Onde sonore, lui infligeant des points de dégâts physiques plus 8% des PV manquants de l'ennemi.",
-            "dynamicDescription": "<spellName>Onde sonore : </spellName>Lee Sin émet une onde sonore pour localiser ses ennemis, infligeant <physicalDamage>@InitialDamage@ pts de dégâts physiques</physicalDamage> au premier ennemi touché. Si <spellName>Onde sonore</spellName> touche un ennemi, Lee Sin peut lancer <spellName>Coup résonant</spellName> dans les 3 secondes qui suivent.<br><br><spellName>Coup résonant : </spellName>Lee Sin se rue vers l'ennemi touché par Onde sonore, infligeant <physicalDamage>@RecastDamage@ pts de dégâts physiques</physicalDamage> plus 8% des PV manquants de l'ennemi.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinQOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Rempart : Lee Sin se rue vers un allié ciblé, conférant un bouclier à son allié ainsi qu'à lui-même. Après avoir lancé Rempart, Lee Sin peut lancer Force d'âme dans les 3 sec qui suivent.<br>Force d'âme : l'entraînement intense de Lee Sin lui permet de décupler ses forces pendant le combat. Pendant 4 sec, Lee Sin augmente son vol de vie, son sort vampirique et son armure.",
-            "dynamicDescription": "<spellName>Rempart : </spellName>Lee Sin se rue vers un allié ciblé, conférant un <shield>bouclier</shield> de @ShieldAmount@ PV à son allié ainsi qu'à lui-même pendant 5 sec. Après avoir lancé <spellName>Rempart</spellName>, Lee Sin peut lancer <spellName>Force d'âme</spellName> dans les 3 sec qui suivent.<br><br><spellName>Force d'âme : </spellName>l'entraînement intense de Lee Sin lui permet de décupler ses forces pendant le combat. Pendant 5 sec, Lee Sin augmente son vol de vie et son sort vampirique de @LifestealAndSpellVamp@% et son <scaleArmor>armure de @ArmorBonus@</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_LeeSinWOne_Jade_Summary",
+            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -672,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

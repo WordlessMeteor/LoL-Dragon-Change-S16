@@ -87,83 +87,6 @@
             "mSpellTags": [
                 "Trait_Ultimate"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        1.5,
-                        0.5,
-                        0.5,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -247,7 +170,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.10000000149011612,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_CannonBarrage.dds"
@@ -435,9 +357,9 @@
         },
         "__type": "SpellObject"
     },
-    "{02062618}": {
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankBilgewaterToken": {
         "ObjectName": "Jade_GangplankBilgewaterToken",
-        "objectPath": "{02062618}",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankBilgewaterToken",
         "mScriptName": "Jade_GangplankBilgewaterToken",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Jade_GangplankBilgewaterToken",
@@ -847,72 +769,20 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "Cooldown",
+                    "name": "MovementSpeedDebuff",
                     "values": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "OldMoveSpeed",
-                    "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MoveSpeedDuration",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "DoTDuration",
-                    "values": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TurretDamageMult",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseDamage",
+                    "name": "DebuffDuration",
                     "values": [
                         3.0,
                         3.0,
@@ -925,15 +795,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MovementSpeedDebuff",
+                    "name": "MaxStacksTooltip",
                     "values": [
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -947,17 +817,6 @@
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         }
                     ],
-                    "__type": "GameCalculation"
-                },
-                "MoveSpeed": {
-                    "mFormulaParts": [
-                        {
-                            "mStartValue": 0.15000000596046448,
-                            "mEndValue": 0.30000001192092896,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 }
             },
@@ -1497,9 +1356,9 @@
         "mName": "Jade_GangplankQAbility",
         "__type": "AbilityObject"
     },
-    "{4b70c950}": {
+    "Characters/Jade_Gangplank/Spells/Jade_Gangplank_IsBank": {
         "ObjectName": "Jade_Gangplank_IsBank",
-        "objectPath": "{4b70c950}",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_Gangplank_IsBank",
         "mScriptName": "Jade_Gangplank_IsBank",
         "mSpell": {
             "mImgIconName": [
@@ -1540,9 +1399,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b97caa03}": {
+    "Characters/Jade_Gangplank/Spells/Jade_Gangplank_IsPirate": {
         "ObjectName": "Jade_Gangplank_IsPirate",
-        "objectPath": "{b97caa03}",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_Gangplank_IsPirate",
         "mScriptName": "Jade_Gangplank_IsPirate",
         "mSpell": {
             "mImgIconName": [
@@ -2093,7 +1952,7 @@
         "passiveLuaName": "Jade_GangplankPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Gangplank",
         "passiveSpell": "Jade_GangplankPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Gangplank/HUD/Icons2D/Jade_Gangplank_Passive.dds",
+        "passive1IconName": "assets/characters/jade_gangplank/hud/icons2d/jade_gangplank_passive.dds",
         "name": "game_character_displayname_Jade_Gangplank",
         "weaponMaterials": [
             "PirateBasicAttack"

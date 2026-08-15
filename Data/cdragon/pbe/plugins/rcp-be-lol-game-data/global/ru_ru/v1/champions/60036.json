@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Доктор Мундо раз в секунду восстанавливает 0,3% от своего макс. здоровья."
+        "description": "Spell_DrMundoPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Доктор Мундо швыряет тесак, нанося урон, зависящий от макс. здоровья цели.",
-            "dynamicDescription": "<mainText>Доктор Мундо швыряет свой тесак, нанося цели <magicDamage>магический урон</magicDamage>, равный @DamageMod*100@% от ее текущего здоровья (мин. урон – @MinDamage@), и <status>замедляя</status> ее на 40% на 2 сек.<br><br>Половина затрат здоровья возмещается, если тесак находит цель.",
+            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Мазохизм на 5 сек. повышает силу атаки Доктора Мундо на фиксированную величину плюс некоторую величину, зависящую от его недостающего здоровья.",
-            "dynamicDescription": "Доктор Мундо получает <physicalDamage>@BaseIncrease@ силы атаки</physicalDamage> на 5 сек. Доктор Мундо получает еще <physicalDamage>@DamageMod@ силы атаки</physicalDamage> (зависит от его недостающего здоровья).@SpellModifierDescriptionAppend@",
+            "description": "Spell_DrMundoE_Jade_Summary",
+            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% от текущего здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Доктор Мундо жертвует частью своего здоровья, чтобы повысить скорость передвижения и значительно увеличить восстановление здоровья.",
-            "dynamicDescription": "<mainText>Доктор Мундо восстанавливает <healing>@MaximumHealthRegen@ здоровья</healing> за 12 сек. Также он получает <speed>@SpeedMod*100@% скорости передвижения</speed>.",
+            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

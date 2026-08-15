@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger piazza una torre mitragliatrice. Le torrette ottengono abilità man mano che questa abilità viene potenziata. (Le torrette infliggono metà dei danni alle torri).",
-            "dynamicDescription": "Heimerdinger costruisce una Torre mitragliatrice che infligge <magicDamage>@BonusDamage@ danni magici</magicDamage> per attacco. Questa abilità ha @MaxAmmo@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni livello di questa abilità fornisce un potenziamento aggiuntivo:<br><attention>Livello 2:</attention> gli attacchi della torretta riducono l'armatura e la resistenza magica del bersaglio di 1 (massimo 50)<br><attention>Livello 3:</attention> numero massimo di torrette aumentato a 2<br><attention>Livello 4:</attention> le torrette ottengono <scaleHealth>125 salute</scaleHealth> aggiuntiva<br><attention>Livello 5:</attention> gli attacchi della torretta infliggono danni ad area@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia razzi a lunga gittata che colpiscono i nemici più vicini a lui.",
-            "dynamicDescription": "Heimerdinger lancia 3 Micro-razzi a ricerca nemica (massimo 1 per persona), colpendo i bersagli più vicini a lui. Ogni razzo infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -762,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -773,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia una granata sulla posizione bersaglio, infliggendo danni alle unità nemiche, stordendo chi viene colpito direttamente e accecando le unità circostanti.",
-            "dynamicDescription": "Heimerdinger lancia una granata, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> alle unità nemiche e <status>accecandole</status> per @BlindDuration@ secondo/i.  I nemici colpiti direttamente subiscono <status>stordimento</status> per 1,5 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Passiva/Attiva: aumenta passivamente la riduzione ricarica.  Attiva per fornire guarigione a tutte le Torrette avanzate attive e far sparare loro colpi gelati, che riducono la velocità di movimento, per un breve periodo.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>@CooldownBonus*-100@% riduzione ricarica.<br><br><spellActive>Attiva: </spellActive>potenzia tutte le abilità e torrette per la durata.<br><br><spellName>Torrette avanzate:</spellName> tutte le torrette vengono <healing>curate</healing> del 100% della loro salute massima e ogni attacco applica un <status>@MovementSpeedMod*-100@% di rallentamento</status>.<br><spellName>Micro-razzi hextech:</spellName> spara 5 razzi invece di 3.<br><spellName>Granata stordente CH-1:</spellName> viaggia il 33% più velocemente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1073,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
