@@ -578,7 +578,7 @@
             };
             t.NONE_CHAMP_ID = -1;
             t.NEXUS_BLITZ_QUEUE_IDS = [1300, 1301, 1302, 1303, 1304];
-            t.ENEMY_NAMES_VISIBLE_QUEUE_IDS = [710, 402, 403];
+            t.ENEMY_NAMES_VISIBLE_QUEUE_IDS = [402, 403];
             const a = Object.freeze({
                 ARAM: !0,
                 KINGPORO: !0,
