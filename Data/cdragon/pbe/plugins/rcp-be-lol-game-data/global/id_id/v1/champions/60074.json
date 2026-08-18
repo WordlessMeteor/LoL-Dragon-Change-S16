@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Heimerdinger memasang machine gun turret. Turret mendapatkan ability seiring peningkatan skill ini. (Turret menghasilkan separuh damage pada turret).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger membangun Machine Gun Turret yang menghasilkan <magicDamage>@BonusDamage@ magic damage</magicDamage> per serangan. Turret mendapatkan <attackSpeed>@TurretBonusAttackSpeed*100@% attack speed</attackSpeed> selama @AttackSpeedDuration@ detik pertama setelah ditempatkan. Ability ini memiliki @MaxAmmo@ charge (direset setiap @AmmoRechargeTime@ detik).<br><br>Setiap rank skill ini memberikan peningkatan tambahan:<br><attention>Rank 2:</attention> Serangan Turret mengurangi Armor dan Magic Resist target sebesar @Level2ResistShred@ (maksimum @MaxShredCapTooltip@)<br><attention>Rank 3:</attention> Jumlah Turret maksimum meningkat jadi 2<br><attention>Rank 4:</attention> Turret mendapatkan tambahan <scaleHealth>@Level4HPTooltip@ Health</scaleHealth><br><attention>Rank 5:</attention> Serangan Turret menghasilkan @AoEDamageMod*100@% splash damage@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Heimerdinger menembakkan roket jarak jauh yang mengenai musuh terdekat dengan Heimerdinger.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger menembakkan Micro-Rocket yang mencari @MaxTargets@ musuh (maksimum 1 per orang), mengenai target terdekat dengannya. Setiap roket menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Heimerdinger melemparkan granat ke suatu lokasi, menghasilkan damage ke unit musuh, serta menerapkan stun ke siapa saja yang kena langsung dan menerapkan blind ke unit di sekelilingnya.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger melempar granat, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada unit musuh dan menerapkan <status>Blind</status> ke mereka selama @BlindDuration@ detik.  Musuh yang terkena hit langsung akan terkena <status>Stun</status> selama @StunDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Pasif/Aktif: Secara pasif meningkatkan Cooldown Reduction.  Aktifkan untuk heal semua Evolution Turret yang sedang aktif dan membuatnya menembakkan frost shot, yang mengurangi Movement Speed, selama beberapa saat.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>@CooldownBonus*-100@% Cooldown Reduction.<br><br><spellActive>Aktif: </spellActive>Memperkuat semua ability dan turret selama durasi berlangsung.<br><br><spellName>Evolution Turrets:</spellName> Semua turret mendapatkan <healing>heal</healing> hingga Health-nya penuh. Setiap serangan menerapkan <status>@MovementSpeedMod*-100@% Slow</status>.<br><spellName>Hextech Micro-Rockets:</spellName> Menembakkan @WMaxMissiles@ roket.<br><spellName>CH-1 Concussion Grenade:</spellName> Bergerak 33% lebih cepat.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

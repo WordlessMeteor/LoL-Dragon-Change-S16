@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Spell_KassadinPassive_Jade_Summary"
+        "description": "يتلقى كاسادين <magicDamage>ضرر سحرٍ</magicDamage> مقلصًا ويحول ضرر السحر المتلقى إلى <attackSpeed>سرعة هجوم</attackSpeed> إضافية."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_KassadinW_Jade_Summary",
-            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "تأثير كامن: تستعيد هجمات كاسادين الأساسية المانا. تأثير نشط: تلحق هجمات كاسادين الأساسية ضرر سحر إضافيًا.",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>تسحب هجمات كاسادين الأساسية الطاقة من الفويد، فتستعيد <scaleMana>@ManaGainAmount@ مانا</scaleMana> كل إصابة، وتزداد إلى <scaleMana>@ChampionManaRestore@ مانا</scaleMana> ضد الأبطال.<br><br><spellActive>تأثير نشط: </spellActive>يشحن كاسادين نصل العالم السفلي لمدة @BuffDuration@ث، مما يجعل هجماته الأساسية تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يسحب كاسادين الطاقة من التعويذات الملقاة بجواره. لدى اكتمال الشحن، يستطيع كاسادين استعمال نبضة القوة لإلحاق الضرر بالأعداء وإبطائهم في مخروط أمامه.",
-            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يسحب كاسادين الطاقة من التعويذات الملقاة بجواره فيكسب شحنةً كلما تم إلقاء تعويذةٍ قربه.<br><br>عند بلوغ @RequiredChargesTooltip@ من الشحنات، يستطيع كاسادين استخدام <spellName>نبضة القوة</spellName> لإلحاق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء، وكذلك <status>إبطائهم</status> بنسبة @MoveSpeedMod*-100@% لمدة @SlowDuration@ث في مخروط أمامه.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينفذ كاسادين الانتقال السريع إلى موقع في الجوار، فيلحق الضرر بوحدات العدو المجاورة. إضافةً إلى ذلك، تؤدي إلقاءات جولة الريفت المتعددة خلال فترة قصيرة إلى زيادة تكلفة المانا وإلحاق ضررٍ إضافي.",
-            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينفذ كاسادين الانتقال السريع إلى موقع في الجوار، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بوحدات العدو المحيطة. بالإضافة إلى ذلك، فإن كل إلقاء تالٍ لقدرة <spellName>جولة الريفت</spellName> خلال الـ @BuffDuration@ث التالية يكلف <scaleMana>@AdditionalManaPerCast@ مانا إضافية</scaleMana> ويلحق <magicDamage>@Damage@ ضرر إضافي</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

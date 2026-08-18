@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger piazza una torre mitragliatrice. Le torrette ottengono abilità man mano che questa abilità viene potenziata. (Le torrette infliggono metà dei danni alle torri).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger costruisce una Torre mitragliatrice che infligge <magicDamage>@BonusDamage@ danni magici</magicDamage> per attacco. Le torrette ottengono <attackSpeed>@TurretBonusAttackSpeed*100@% velocità d'attacco</attackSpeed> per i primi @AttackSpeedDuration@ secondi dopo essere state piazzate. Questa abilità ha @MaxAmmo@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni livello di questa abilità fornisce un potenziamento aggiuntivo:<br><attention>Livello 2:</attention> gli attacchi delle torrette riducono l'armatura e la resistenza magica del bersaglio di @Level2ResistShred@ (massimo @MaxShredCapTooltip@)<br><attention>Livello 3:</attention> numero massimo di torrette aumentato a 2<br><attention>Livello 4:</attention> le torrette ottengono <scaleHealth>@Level4HPTooltip@ salute</scaleHealth> aggiuntiva<br><attention>Livello 5:</attention> gli attacchi della torretta infliggono un @AoEDamageMod*100@% di danni ad area@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia razzi a lunga gittata che colpiscono i nemici più vicini a lui.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lancia @MaxTargets@ Micro-razzi a ricerca nemica (massimo 1 per persona), colpendo i bersagli più vicini a lui. Ogni razzo infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia una granata sulla posizione bersaglio, infliggendo danni alle unità nemiche, stordendo chi viene colpito direttamente e accecando le unità circostanti.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lancia una granata, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> alle unità nemiche e <status>accecandole</status> per @BlindDuration@ secondo/i.  I nemici colpiti direttamente subiscono <status>stordimento</status> per @StunDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Passiva/Attiva: aumenta passivamente la riduzione ricarica.  Attiva per fornire guarigione a tutte le Torrette avanzate attive e far sparare loro colpi gelati, che riducono la velocità di movimento, per un breve periodo.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>@CooldownBonus*-100@% riduzione ricarica.<br><br><spellActive>Attiva: </spellActive>potenzia tutte le abilità e torrette per la durata.<br><br><spellName>Torrette avanzate:</spellName> tutte le torrette si <healing>rigenerano completamente</healing>. Ogni attacco applica un <status>@MovementSpeedMod*-100@% di rallentamento</status>.<br><spellName>Micro-razzi hextech:</spellName> spara @WMaxMissiles@ razzi.<br><spellName>Granata stordente CH-1:</spellName> viaggia il 33% più velocemente.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

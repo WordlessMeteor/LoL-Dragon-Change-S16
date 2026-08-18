@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Tristana trage rapid, mărindu-și pentru scurt timp viteza de atac.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana primește <attackSpeed>@AttackSpeedMod*100@% viteză de atac</attackSpeed> timp de @BuffDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana trage spre sol pentru a se propulsa către o locație-țintă, provocând daune și încetinind inamicii din locul de aterizare.",
+            "dynamicDescription": "Tristana trage spre sol pentru a se propulsa către o locație-țintă, provocând <magicDamage>@LandingDamage@ daune magice</magicDamage> și <status>încetinind</status> cu @Slow@% unitățile din jurul locului de aterizare timp de @SlowDuration@ secunde. Când ucide sau participă la uciderea unui campion, timpul de reactivare al ''Săriturii rachetei'' este reîmprospătat.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Când Tristana ucide o unitate, obuzele ei explodează și împrăștie șrapnel, provocându-le daune inamicilor din zonă.  Abilitatea poate fi folosită pentru a provoca daune în timp unității țintă și pentru a reduce vindecarea primită.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>inamicii uciși de atacurile de bază ale Tristanei explodează, provocându-le <magicDamage>@PassiveDamage@ daune magice</magicDamage> inamicilor din apropiere.<br><br><spellActive>Activă: </spellActive>sfâșie inamicul-țintă, aplicând <keyword>''Răni grave'' de 50%</keyword> și provocând <magicDamage>@ActiveDamageTTOnly@ daune magice</magicDamage> de-a lungul a @GrievousDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

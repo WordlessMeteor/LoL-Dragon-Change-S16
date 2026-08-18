@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "Prędkość ataku Ezreala wzrasta wraz z każdym trafionym zaklęciem."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "Ezreal wystrzeliwuje zadający obrażenia pocisk energii, który trochę skraca czas odnowienia wszystkich jego umiejętności, jeśli trafi wrogą jednostkę.",
             "dynamicDescription": "Ezreal wystrzeliwuje pocisk energii, zadając <physicalDamage>@Damage@ pkt. obrażeń fizycznych</physicalDamage> (nakłada efekty przy trafieniu).<br><br>Czasy odnowienia umiejętności Ezreala zostają skrócone o 1 sek., kiedy <spellName>Mistyczny Strzał</spellName> trafi cel.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ezreal wystrzeliwuje pulsującą falę energii, która zmniejsza prędkość ataku wrogich bohaterów i zadaje im obrażenia magiczne, jednocześnie zwiększając prędkość ataku sojuszniczych bohaterów.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal wystrzeliwuje falę energii, która zadaje wszystkim trafionym wrogim bohaterom <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> i zmniejsza ich <attackSpeed>prędkość ataku</attackSpeed> o @AttackSpeed@% na @Duration@ sek.<br><br>Sojuszniczy bohaterowie trafieni falą odzyskują <healing>@TotalHeal@ pkt. zdrowia</healing> i zyskują @AttackSpeed@% <attackSpeed>prędkości ataku</attackSpeed> na @Duration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ezreal wystrzeliwuje potężną salwę pocisków energetycznych, które zadają olbrzymie obrażenia każdej jednostce, przez którą przenikną.",
+            "dynamicDescription": "Ezreal wystrzeliwuje salwę pocisków zadających <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> każdej jednostce, przez którą przenikną. Zadają o @DamageReductionPerHit*100@% mniej obrażeń każdej kolejnej jednostce (min. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

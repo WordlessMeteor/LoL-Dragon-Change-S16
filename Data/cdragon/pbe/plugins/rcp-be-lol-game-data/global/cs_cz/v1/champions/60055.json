@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "Likvidace šampionů zkracují Katarině přebíjecí doby."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina hodí svou dýku, která se bude odrážet od nepřítele k nepříteli, přičemž jim způsobí magické poškození.",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hodí dýku, která způsobí <magicDamage>@TotalDamage@</magicDamage> bodů magického poškození. Dýka se odrazí ke @MaxBounces@ nejbližším nepřátelům, způsobované poškození se s každým odrazem sníží o @DamageFalloff*100@ %.<br><br>Zasažení protivníci budou na @MarkDuration@ sek. označeni. Katarininy základní útoky a schopnosti tuto značku spotřebují a způsobí <magicDamage>@TotalDamageMark@</magicDamage> bodů dodatečného magického poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Katarina se promění ve vír čepelí a nesmírnou rychlostí vrhne dýky po okolních nepřátelských šampionech, čímž jim způsobí výrazné poškození a efekt zranění.",
+            "dynamicDescription": "Promění se ve vír čepelí a vrhne dýky po @MaxTargets@ nejbližších nepřátelských šampionech, kterým tak způsobí <magicDamage>@DamageCalcTooltipOnly@ bodů magického poškození</magicDamage> rozloženého do @ChannelDuration@ sek. Zasažení nepřátelé utrpí na @GrievousWoundsDuration@ sek. @GrievousWoundsAmount*100@% <status>zranění</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

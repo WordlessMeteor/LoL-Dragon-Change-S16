@@ -3075,19 +3075,6 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "ArenaCooldownMod",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "HealRatio",
                     "values": [
                         0.054999999701976776,
@@ -3099,8 +3086,71 @@
                         0.054999999701976776
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Level1Value",
+                    "values": [
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AdditionalBonusAtThisLevel",
+                    "values": [
+                        -2.0,
+                        -2.0,
+                        -2.0,
+                        -2.0,
+                        -2.0,
+                        -2.0,
+                        -2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusPerLevelAtAndAfter",
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Level1Value",
+                            "values": [
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "AdditionalBonusAtThisLevel",
+                            "values": [
+                                -1.5,
+                                -1.5,
+                                -1.5,
+                                -1.5,
+                                -1.5,
+                                -1.5,
+                                -1.5
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "HealAmount": {
                     "mFormulaParts": [
@@ -3115,25 +3165,29 @@
                 "HealCooldown": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 12.0,
-                            "mBreakpoints": [
+                            "{91d404a5}": "Level1Value",
+                            "{bbd778a2}": "{9c6fd5af}",
+                            "{9823b29a}": [
                                 {
-                                    "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
+                                    "level": 6,
+                                    "{ae9b464d}": "AdditionalBonusAtThisLevel",
+                                    "{b0d8b2ac}": "{9c6fd5af}",
+                                    "__type": "{0333530c}"
                                 },
                                 {
-                                    "mLevel": 11,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
+                                    "level": 11,
+                                    "{ae9b464d}": "AdditionalBonusAtThisLevel",
+                                    "{b0d8b2ac}": "{9c6fd5af}",
+                                    "__type": "{0333530c}"
                                 },
                                 {
-                                    "mLevel": 16,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
+                                    "level": 16,
+                                    "{ae9b464d}": "AdditionalBonusAtThisLevel",
+                                    "{b0d8b2ac}": "{9c6fd5af}",
+                                    "__type": "{0333530c}"
                                 }
                             ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                            "__type": "{4ce08984}"
                         }
                     ],
                     "__type": "GameCalculation"

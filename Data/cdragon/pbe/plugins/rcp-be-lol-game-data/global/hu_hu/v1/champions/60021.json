@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Miss Fortune mindaddig gyorsabban mozog, amíg harc közben el nem találják."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Miss Fortune minden egyes találattal passzívan növeli az ellenfélnek okozott sebzést.  A képesség aktiválásakor Miss Fortune támadási sebessége megnő, és a támadásai csökkentik a célpontra irányuló gyógyítás hatékonyságát.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Passzív:</font> Miss Fortune minden támadásával <magicDamage>@TotalDamageOnHIt@ varázssebzést</magicDamage> okoz a célpontjának, ami egy célponton legfeljebb @MaxStacks@ alkalommal halmozódhat.<br><magicDamage>Maximális bónusz sebzés: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Aktív:</font> Miss Fortune <attackSpeed>támadási sebessége</attackSpeed> @ActiveDuration@ másodpercre <attackSpeed>@ASMod@%-kal</attackSpeed> nő, és a támadásai 3 másodpercre <keyword>50%-os Súlyos seb</keyword> hatást alkalmaznak.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Miss Fortune golyózáport zúdít egy területre, hullámokban sebzést okoz az ott tartózkodó ellenfeleknek, és lelassítja őket.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune golyók százait lövi a levegőbe, amelyek a térképre záporoznak, és @Duration@ másodperc alatt <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak, valamint @MoveSpeedMod*-100@%-kal <status>lelassítják</status> az eltalált ellenfeleket.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Miss Fortune golyózáport zúdít egy tölcsér alakú területre maga előtt, és jelentős sebzést okoz az ott lévő ellenfeleknek.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune @ChannelDuration@ másodpercig golyózáport zúdít egy tölcsér alakú területre maga előtt, amivel golyónként <physicalDamage>@PhysicalDamagePerWave@ fizikai sebzést</physicalDamage> okoz. (<physicalDamage>Összes sebzés: @TotalDamage@</physicalDamage>.)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

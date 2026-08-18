@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Spell_LeeSinPassive_Jade_Summary"
+        "description": "Après avoir utilisé une compétence, les prochaines attaques de base de Lee Sin gagnent de la vitesse d'attaque et lui rendent de l'énergie."
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_LeeSinQOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Onde sonore : Lee Sin émet une onde sonore pour localiser ses ennemis, infligeant des dégâts au premier ennemi touché. Si Onde sonore touche un ennemi, Lee Sin peut lancer Coup résonant.<br><br>Coup résonant : Lee Sin se rue vers l'ennemi touché par Onde sonore, infligeant des dégâts bonus, et des dégâts proportionnels aux PV manquants de l'ennemi.",
+            "dynamicDescription": "<spellName>Onde sonore : </spellName>Lee Sin émet une onde sonore discordante pour localiser ses ennemis, infligeant <physicalDamage>@InitialDamage@ pts de dégâts physiques</physicalDamage> au premier ennemi touché. Si <spellName>Onde sonore</spellName> touche un ennemi, Lee Sin peut lancer <spellName>Coup résonant</spellName> dans les 3 secondes qui suivent.<br><br><spellName>Coup résonant : </spellName>Lee Sin fonce vers l'ennemi touché par Onde sonore, infligeant <physicalDamage>@RecastDamage@ pts de dégâts physiques</physicalDamage> plus @MissingHealthDamage*100@% des PV manquants de l'ennemi.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_LeeSinWOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Rempart : Lee Sin se rue vers un allié ciblé, conférant un bouclier à son allié ainsi qu'à lui-même. Après avoir lancé Rempart, Lee Sin peut lancer Force d'âme.<br><br>Force d'âme : l'entraînement intense de Lee Sin lui permet de décupler ses forces pendant le combat, lui octroyant du vol de vie, du sort vampirique et de l'armure.",
+            "dynamicDescription": "<spellName>Rempart : </spellName>Lee Sin se rue vers un allié ciblé, conférant un <shield>bouclier</shield> de @ShieldAmount@ PV à son allié ainsi qu'à lui-même pendant @ShieldDuration@ sec. Après avoir lancé <spellName>Rempart</spellName>, Lee Sin peut lancer <spellName>Force d'âme</spellName> dans les @W1ReactivateTime@ sec qui suivent.<br><br><spellName>Force d'âme : </spellName>l'entraînement intense de Lee Sin lui permet de décupler ses forces pendant le combat. Pendant @LifestealAndSpellVampTime@ sec, Lee Sin augmente son vol de vie et son sort vampirique de @LifestealAndSpellVamp@%, et gagne <scaleArmor>@ArmorBonus@ armure</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

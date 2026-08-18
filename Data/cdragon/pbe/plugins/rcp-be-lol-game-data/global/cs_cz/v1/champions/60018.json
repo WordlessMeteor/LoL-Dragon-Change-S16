@@ -850,7 +850,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Tristaně se na krátkou dobu zvýší rychlost útoků a může tak střílet s vyšší kadencí.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana získá na @BuffDuration@ sek. <attackSpeed>@AttackSpeedMod*100@ % k rychlosti útoků</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana vystřelí do země, čímž se přenese na vzdálenou pozici a nepřátelům v blízkosti místa dopadu způsobí poškození a zpomalí je.",
+            "dynamicDescription": "Tristana vystřelí do země, čímž se odrazí na cílové místo, na kterém při dopadu způsobí <magicDamage>@LandingDamage@ bodů magického poškození</magicDamage> a <status>zpomalení</status> o @Slow@ % trvající @SlowDuration@ sek. Při zabití šampiona nebo připsání asistence se přebíjecí doba Raketového skoku obnoví.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Když Tristana zabije nějakou jednotku, její dělové koule vybuchnou jako šrapnel a poškodí okolní nepřátele.  Schopnost lze i aktivovat a způsobit tak vybrané jednotce postupné poškození a snížit jí účinnost obdrženého léčení.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Nepřátelé, které Tristana zabije svým základním útokem, po smrti vybuchnou a způsobí okolním protivníkům <magicDamage>@PassiveDamage@ bodů magického poškození</magicDamage>.<br><br><spellActive>Aktivace: </spellActive>Sníží nepříteli obranu, umístí na něj <keyword>50% Vážné rány</keyword> a způsobí mu <magicDamage>@ActiveDamageTTOnly@ bodů magického poškození</magicDamage> rozloženého do @GrievousDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Spell_KassadinPassive_Jade_Summary"
+        "description": "Kassadin menerima lebih sedikit <magicDamage>magic damage</magicDamage> dan mengubah magic damage yang diterima menjadi <attackSpeed>Attack Speed</attackSpeed> bonus."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_KassadinW_Jade_Summary",
-            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Pasif: Basic attack Kassadin memulihkan Mana. Aktif: Basic attack Kassadin menghasilkan magic damage tambahan.",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Basic attack Kassadin menarik energi dari void, memulihkan <scaleMana>@ManaGainAmount@ Mana</scaleMana> tiap kali mengenai musuh, meningkat menjadi <scaleMana>@ChampionManaRestore@ Mana</scaleMana> jika mengenai Champion.<br><br><spellActive>Aktif: </spellActive>Kassadin charge Nether Blade-nya selama @BuffDuration@ detik, membuat basic attack-nya menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kassadin mengumpulkan energy dari cast spell di sekitarnya. Saat sedang charge, Kassadin bisa menggunakan Force Pulse untuk memberikan damage dan slow ke musuh dalam area kerucut di depannya.",
-            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin menyerap energi dari spell yang di-cast di sekitarnya, mendapatkan satu charge tiap kali ada spell yang di-cast di dekatnya.<br><br>Saat mencapai @RequiredChargesTooltip@ charge, Kassadin bisa menggunakan <spellName>Force Pulse</spellName> untuk menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> ke musuh sebesar @MoveSpeedMod*-100@% selama @SlowDuration@ detik dalam area berbentuk kerucut di depannya.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kassadin teleportasi ke lokasi di sekitar yang menghasilkan damage ke unit musuh di sekitar. Selain itu, penggunaan beberapa Riftwalk dalam waktu singkat akan menaikkan biaya Mana dan damage-nya.",
-            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin berteleportasi ke lokasi terdekat, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke unit musuh di sekitar. Selain itu, setiap <spellName>Riftwalk</spellName> berikutnya dalam @BuffDuration@ detik akan memerlukan <scaleMana>@AdditionalManaPerCast@ Mana tambahan</scaleMana> dan menghasilkan <magicDamage>@Damage@ damage tambahan</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

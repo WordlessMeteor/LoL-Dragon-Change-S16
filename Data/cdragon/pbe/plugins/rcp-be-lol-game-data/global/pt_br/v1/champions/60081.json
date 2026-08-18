@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "Ezreal recebe Velocidade de Ataque crescente a cada vez que acerta uma Habilidade."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "Ezreal faz um disparo de energia que reduz um pouco o Tempo de Recarga de todas as suas habilidades caso atinja uma unidade inimiga.",
             "dynamicDescription": "Ezreal faz um disparo de energia, causando <physicalDamage>@Damage@ de Dano Físico</physicalDamage> (aplica efeitos ao contato). <br><br>Os Tempos de Recarga das Habilidades de Ezreal são reduzidos em 1s se <spellName>Disparo Místico</spellName> atingir um alvo.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ezreal libera uma onda oscilante de energia. Essa onda diminui a Velocidade de Ataque e causa Dano Mágico a Campeões inimigos, enquanto cura e aumenta a Velocidade de Ataque de Campeões aliados.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal dispara uma onda de energia que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a todos os Campeões inimigos atravessados, além de reduzir a <attackSpeed>Velocidade de Ataque</attackSpeed> deles em @AttackSpeed@% por @Duration@s. <br><br>Campeões aliados atingidos pela onda curam <healing>@TotalHeal@ de Vida</healing> e recebem um aumento de @AttackSpeed@% na <attackSpeed>Velocidade de Ataque</attackSpeed> por @Duration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ezreal dispara uma poderosa barragem de mísseis de energia que causam dano massivo a todas as unidades atravessadas.",
+            "dynamicDescription": "Ezreal dispara uma barragem de mísseis que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a cada unidade atravessada. No entanto, o dano é reduzido em @DamageReductionPerHit*100@% a cada unidade atingida (mínimo de @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

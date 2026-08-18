@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Τριστάνα πυροβολεί γρήγορα με το όπλο της και αυξάνει την Ταχύτητα Επίθεσής της για μικρό χρονικό διάστημα.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Τριστάνα αποκτά <attackSpeed>@AttackSpeedMod*100@% Ταχύτητα Επίθεσης</attackSpeed> για @BuffDuration@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Η Τριστάνα πυροβολεί στο έδαφος για να εκτοξευτεί σε μια μακρινή θέση, προκαλώντας ζημιά και Επιβραδύνοντας τους εχθρούς στο σημείο όπου προσγειώνεται.",
+            "dynamicDescription": "Η Τριστάνα πυροβολεί στο έδαφος και εκτινάσσεται προς τη στοχευμένη θέση, προκαλώντας <magicDamage>@LandingDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνοντας</status> τους εχθρούς κατά @Slow@% για @SlowDuration@ δευτερόλεπτα όταν προσγειώνεται. Μετά από εκτέλεση Ήρωα ή βοήθεια, ο Χρόνος Επαναφόρτισης ανανεώνεται.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Όταν η Τριστάνα εκτελεί μια μονάδα, οι μπάλες κανονιού ανατινάζονται, προκαλώντας ζημιά στους γύρω εχθρούς.  Μπορεί να ενεργοποιηθεί για να προκαλέσει ζημιά σε μια στοχευμένη μονάδα με την πάροδο του χρόνου και να μειώσει τη Θεραπεία που δέχεται.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Οι εχθροί που σκοτώνονται από τις βασικές επιθέσεις της Τριστάνα εκρήγνυνται και προκαλούν <magicDamage>@PassiveDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς.<br><br><spellActive>Ενεργή: </spellActive>Ανοίγει πληγή στον στοχευμένο εχθρό, εφαρμόζοντας <keyword>Βαριά Τραύματα 50%</keyword> και προκαλώντας <magicDamage>@ActiveDamageTTOnly@ Μαγική Ζημιά</magicDamage> μέσα σε @GrievousDuration@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

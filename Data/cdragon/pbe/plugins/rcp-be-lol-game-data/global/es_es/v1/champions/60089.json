@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "Las habilidades de daño aplican Luz solar a los enemigos. Cuando algún campeón aliado inflige daño a los objetivos, consumen la debilitación de Luz solar para infligir daño mágico adicional."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Leona usa su escudo para realizar su siguiente ataque básico, lo que inflige daño mágico adicional y aturde al objetivo.",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "El siguiente ataque básico inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> adicional y <status>aturde</status> al enemigo durante @StunDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Leona alza su escudo, lo que le otorga armadura y resistencia mágica.  Cuando finaliza el efecto por primera vez, si hay enemigos cerca, les inflige daño mágico y prolonga la duración del efecto.",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona obtiene <scaleArmor>@BonusARMR@ de armadura</scaleArmor> y de <scaleMR>resistencia mágica</scaleMR> durante @BuffDuration@ s. Cuando se acaba el efecto, los enemigos cercanos golpeados reciben <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage>, y Leona mantiene su <scaleArmor>armadura</scaleArmor> y <scaleMR>resistencia mágica</scaleMR> adicionales durante @BuffDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

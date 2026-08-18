@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Heimerdinger despliega una torreta ametralladora. Las torretas obtienen habilidades a medida que aumenta el nivel de esta habilidad. (Las torretas infligen la mitad de daño a las torres).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger construye una torreta ametralladora que inflige <magicDamage>@BonusDamage@ de daño mágico</magicDamage> por ataque. Las torretas obtienen un <attackSpeed>@TurretBonusAttackSpeed*100@% de velocidad de ataque</attackSpeed> durante los primeros @AttackSpeedDuration@ s tras colocarlas. Esta habilidad tiene @MaxAmmo@ cargas (@AmmoRechargeTime@ s de recarga).<br><br>Cada nivel de esta habilidad otorga una mejora superior:<br><attention>Nivel 2:</attention> Los ataques de la torreta reducen la armadura y la resistencia mágica del objetivo en @Level2ResistShred@ (máximo: @MaxShredCapTooltip@).<br><attention>Nivel 3:</attention> El número máximo de torretas aumenta a 2.<br><attention>Nivel 4:</attention> Las torretas obtienen <scaleHealth>@Level4HPTooltip@ de vida</scaleHealth> adicional.<br><attention>Nivel 5:</attention> Los ataques de las torretas infligen un @AoEDamageMod*100@% de daño por salpicadura.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Heimerdinger dispara cohetes de largo alcance que impactan contra los enemigos más cercanos a Heimerdinger.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger dispara @MaxTargets@ microcohetes que rastrean a los enemigos (1 por persona como máximo) y golpean a los objetivos más cercanos a él. Cada cohete inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Heimerdinger lanza una granada que inflige daño, aturde a las unidades que reciben el impacto de forma directa y ciega a las unidades de alrededor.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lanza una granada que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades enemigas y las <status>ciega</status> durante @BlindDuration@ s.  Los enemigos alcanzados quedan <status>aturdidos</status> durante @StunDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Pasiva/activa: Aumenta la reducción de enfriamiento de forma pasiva.  Actívala para curar a todas las torretas evolucionadas activas y hacer que disparen proyectiles de escarcha, que reducen la velocidad de movimiento durante un breve periodo.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>@CooldownBonus*-100@% de reducción de enfriamiento.<br><br><spellActive>Activa: </spellActive>Potencia todas las habilidades y las torretas mientras dure el efecto.<br><br><spellName>Torretas evolucionadas:</spellName> Todas las torretas se <healing>curan</healing> por completo. Cada ataque aplica un <status>@MovementSpeedMod*-100@% de ralentización</status>.<br><spellName>Microcohetes hextech:</spellName> Dispara @WMaxMissiles@ cohetes.<br><spellName>Granada de conmoción CH-1:</spellName> Se desplaza un 33% más rápido.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

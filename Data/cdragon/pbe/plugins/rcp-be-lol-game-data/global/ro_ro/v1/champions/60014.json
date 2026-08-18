@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Sion are șanse să ignore o parte din daune la fiecare atac suferit."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Privirea lui Sion terifiază inamic, provocându-i daune și amețindu-l.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion lovește un inamic, provocându-i <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>amețindu-l</status> timp de @StunDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sion se înconjoară cu un scut care absoarbe daune.  Dacă scutul nu este distrus, va exploda și va provoca daune inamicilor din jur. Sion poate reactiva abilitatea pentru a detona scutul mai devreme.",
+            "dynamicDescription": "Sion se înconjoară cu un scut care absoarbe <shield>@TotalShield@ daune</shield>. Dacă scutul nu este distrus, va exploda după @ShieldDuration@ secunde, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere.<br><br><recast>Refolosește</recast> abilitatea după @RecastDelay@ secunde pentru a detona manual scutul.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Sion consumă o parte din forța vitală a inamicilor săi la fiecare atac, sorbind viața în folosul propriu și al aliaților din apropiere. Mirosul cărnii face sângele lui Sion să fiarbă în vene, mărindu-i viteza de atac.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion primește <lifeSteal>@LifestealPercent*100@% furt de viață</lifeSteal> și <attackSpeed>@AttackSpeedMod*100@% viteză de atac</attackSpeed> timp de @BuffDuration@ secunde. În plus, atacurile de bază ale lui Sion <healing>vindecă</healing> aliații din jur în valoare de @HealPercent*100@% din daunele provocate.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

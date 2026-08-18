@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Spell_LeeSinPassive_Jade_Summary"
+        "description": "Setelah Lee Sin menggunakan satu ability, basic attack berikutnya memperoleh Attack Speed dan mengembalikan Energy."
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_LeeSinQOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sonic Wave: Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh dan menghasilkan damage ke musuh pertama yang dihadapinya. Jika Sonic Wave mengenai musuh, Lee Sin bisa cast Resonating Strike.<br><br>Resonating Strike: Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan lebih banyak damage plus sebagian Health mereka yang hilang.",
+            "dynamicDescription": "<spellName>Sonic Wave: </spellName>Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh dan menghasilkan <physicalDamage>@InitialDamage@ physical damage</physicalDamage> ke musuh pertama yang dihadapinya. Jika <spellName>Sonic Wave</spellName> mengenai musuh, Lee Sin bisa cast <spellName>Resonating Strike</spellName> untuk 3 detik berikutnya.<br><br><spellName>Resonating Strike: </spellName>Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan <physicalDamage>@RecastDamage@ physical damage</physicalDamage> plus @MissingHealthDamage*100@% dari Health mereka yang hilang.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_LeeSinWOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Safeguard: Lee Sin melesat ke arah sekutu target, memberikan shield pada mereka berdua dari damage. Setelah menggunakan Safeguard, Lee Sin bisa cast Iron Will.<br><br>Iron Will: Latihan intens Lee Sin membuatnya kuat dalam pertempuran, memberinya Life Steal, Spell Vamp, dan Armor.",
+            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin melesat ke arah sekutu target, <shield>memberikan shield</shield> pada mereka berdua sebesar @ShieldAmount@ damage selama @ShieldDuration@ detik berikutnya. Setelah menggunakan <spellName>Safeguard</spellName>, Lee Sin bisa cast <spellName>Iron Will</spellName> selama @W1ReactivateTime@ detik berikutnya.<br><br><spellName>Iron Will: </spellName>Latihan intens Lee Sin membuatnya kuat dalam pertempuran. Selama @LifestealAndSpellVampTime@ detik, Lee Sin mendapatkan @LifestealAndSpellVamp@% Life Steal, Spell Vamp, dan <scaleArmor>@ArmorBonus@ Armor</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

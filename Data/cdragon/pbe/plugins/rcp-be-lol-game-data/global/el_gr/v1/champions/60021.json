@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Η Μις Φόρτσουν έχει αυξημένη Ταχύτητα Κίνησης μέχρι να δεχτεί χτύπημα στη μάχη."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν αυξάνει παθητικά τη ζημιά που προκαλεί σε ένα στόχο με κάθε χτύπημα.  Αυτή η ικανότητα μπορεί να ενεργοποιηθεί για να αυξήσει την Ταχύτητα Επίθεσης της Μις Φόρτσουν και να μειώσει μέσω των επιθέσεών της, τη Θεραπεία που λαμβάνει ο στόχος.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Παθητική:</font> Η Μις Φόρτσουν προκαλεί <magicDamage>@TotalDamageOnHIt@ Μαγική Ζημιά</magicDamage> στον στόχο της με κάθε επίθεση, η οποία συσσωρεύεται αθροιστικά έως και @MaxStacks@ φορές στον ίδιο στόχο.<br><magicDamage>Μέγιστη μπόνους ζημιά: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Ενεργή:</font> Η <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> της Μις Φόρτσουν αυξάνεται κατά <attackSpeed>@ASMod@%</attackSpeed> για @ActiveDuration@ δευτ. και οι επιθέσεις της εφαρμόζουν <keyword>Βαριά Τραύματα 50%</keyword> για 3 δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν εξαπολύει σφαίρες σε μια θέση και προκαλεί κύματα ζημιάς στους αντιπάλους της, ενώ παράλληλα τους επιβραδύνει.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Μις Φόρτσουν εκτοξεύει εκατοντάδες σφαίρες στον αέρα που πέφτουν σαν βροχή, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε διάστημα @Duration@ δευτερολέπτων και <status>Επιβραδύνουν</status> τους εχθρούς κατά @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν εξαπολύει σφαίρες σε έναν κώνο μπροστά της και προκαλεί τεράστια ζημιά στους εχθρούς.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Μις Φόρτσουν εξαπολύει έναν καταιγισμό από σφαίρες σε έναν κώνο μπροστά της για @ChannelDuration@ δευτερόλεπτα και προκαλεί <physicalDamage>@PhysicalDamagePerWave@ Σωματική Ζημιά</physicalDamage> ανά σφαίρα (<physicalDamage>Συνολική ζημιά: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

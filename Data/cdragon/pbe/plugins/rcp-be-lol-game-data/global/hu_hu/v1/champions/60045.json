@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "game_character_passiveDescription_Veigar_Jade"
+        "description": "Veigar mana-regenerálódása a hiányzó manájával arányosan növekszik."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Veigar rengeteg sötét anyagot idéz meg, amely az égből a célhelyre zuhan, és landoláskor varázssebzést okoz.",
-            "dynamicDescription": "game_spell_tooltip_VeigarDarkMatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ImpactDelay@ másodperc elteltével sötét anyag zúdul az égből a célterületre, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Veigar 3 másodpercre meghajlítja a teret a kijelölt terület körül, a határon átlépő egységeket pedig rövid időre elkábítja.",
-            "dynamicDescription": "game_spell_tooltip_VeigarEventHorizon_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Veigar @CageDuration@ másodpercre meghajlítja a teret a kijelölt terület körül, a határon átlépő egységeket pedig @StunDuration@ másodpercre <status>elkábítja</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Felrobbantja a célba vett ellenséges hőst, ezzel nagymértékű alap varázssebzést, illetve a célpont varázserejének 80%-át kitevő sebzést okoz.",
-            "dynamicDescription": "game_spell_tooltip_VeigarPrimordialBurst_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Veigar csapást mér egy ellenséges hősre, és <magicDamage>@MinDamage@ + a célpont varázserejének @EnemyAPRatio*100@%-ával megegyező varázssebzést</magicDamage> okoz neki.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Tristana melepaskan tembakan beruntun dari senjatanya, meningkatkan Attack Speed-nya beberapa saat.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana mendapatkan <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> selama @BuffDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana menembakkan senjatanya ke tanah untuk melontarkan dirinya ke lokasi yang jauh, menghasilkan damage dan menerapkan slow kepada musuh di tempat ia mendarat.",
+            "dynamicDescription": "Tristana menembak ke tanah untuk melontarkan diri ke lokasi target, menghasilkan <magicDamage>@LandingDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar @Slow@% selama @SlowDuration@ detik saat mendarat. Kill atau assist terhadap champion akan mereset cooldown Rocket Jump.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Saat Tristana membunuh satu unit, bola meriamnya meledak menjadi serpihan, menghasilkan damage ke musuh di sekeliling.  Ini bisa diaktifkan untuk menghasilkan damage berkelanjutan pada unit target, dan mengurangi heal yang diterima.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Musuh meledak saat terbunuh oleh basic attack Tristana, menghasilkan <magicDamage>@PassiveDamage@ magic damage</magicDamage> pada musuh di sekitar.<br><br><spellActive>Aktif: </spellActive>Mencabik musuh target, menerapkan <keyword>50% Grievous Wounds</keyword> dan menghasilkan <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> selama @GrievousDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

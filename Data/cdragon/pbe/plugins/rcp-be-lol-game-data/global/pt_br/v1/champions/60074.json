@@ -597,7 +597,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger posiciona uma torre metralhadora. As torres recebem habilidades conforme esta habilidade é aprimorada. (As torres do Heimerdinger causam metade do dano a torres do mapa.)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger constrói uma Torre Metralhadora que causa <magicDamage>@BonusDamage@ de Dano Mágico</magicDamage> por ataque. As torres recebem <attackSpeed>@TurretBonusAttackSpeed*100@% de Velocidade de Ataque</attackSpeed> nos primeiros @AttackSpeedDuration@s após serem posicionadas. A Habilidade tem @MaxAmmo@ cargas (recarrega a cada @AmmoRechargeTime@s).<br><br>Cada ranque desta Habilidade concede uma melhoria adicional:<br><attention>Ranque 2:</attention> os ataques das torres reduzem a Armadura e a Resistência Mágica do alvo em @Level2ResistShred@ (até @MaxShredCapTooltip@).<br><attention>Ranque 3:</attention> o máximo de torres aumenta para 2.<br><attention>Ranque 4:</attention> as torres recebem mais <scaleHealth>@Level4HPTooltip@ de Vida</scaleHealth>.<br><attention>Ranque 5:</attention> os ataques das torres causam @AoEDamageMod*100@% de dano de dispersão.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger dispara mísseis de longo alcance que atingem os inimigos mais próximos a ele.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger dispara @MaxTargets@ Micro-Mísseis teleguiados (máximo de 1 por pessoa), atingindo os alvos mais próximos a ele. Cada míssil causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lança uma granada em um local, causando dano a unidades inimigas, Atordoando todas as unidades diretamente atingidas e cegando as unidades próximas.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger arremessa uma granada, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a unidades inimigas e aplicando <status>Cegueira</status> a elas por @BlindDuration@s.  Inimigos atingidos diretamente sofrem <status>Atordoamento</status> por @StunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passivo/Ativo: aumenta passivamente a Redução do Tempo de Recarga.  Ative para curar todas as Torres Evolutivas ativas e fazer com que elas disparem projéteis de gelo, que reduzem a Velocidade de Movimento, por um curto período.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>@CooldownBonus*-100@% de Redução do Tempo de Recarga.<br><br><spellActive>Ativo: </spellActive>fortalece todas as Habilidades e torres durante o efeito.<br><br><spellName>Torres Evolutivas:</spellName> Todas as torres são totalmente <healing>curadas</healing>. Cada Ataque aplica <status>@MovementSpeedMod*-100@% de Lentidão</status>.<br><spellName>Micro-Mísseis Hextec:</spellName> dispara @WMaxMissiles@ mísseis.<br><spellName>Granada de Concussão CH-1:</spellName> percorre o trajeto 33% mais rápido.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

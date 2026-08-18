@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Spell_LeeSinPassive_Jade_Summary"
+        "description": "После использования любого умения скорость атаки для следующих нескольких автоатак Ли Сина растет, и он восстанавливает энергию."
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_LeeSinQOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Звуковая волна: Ли Син создает диссонирующую волну звука, позволяющую обнаружить врагов и наносящую физ. урон 1-му пораженному врагу. Поразив врага Звуковой волной, Ли Син может применить Резонирующий удар.<br><br>Резонирующий удар: Ли Син совершает рывок к пораженному Звуковой волной врагу, нанося ему доп. урон плюс урон в размере доли недост. здоровья цели.",
+            "dynamicDescription": "<spellName>Звуковая волна:</spellName> Ли Син создает диссонирующую волну звука, позволяющую обнаружить врагов и наносящую <physicalDamage>@InitialDamage@ ед. физ. урона</physicalDamage> 1-му пораженному врагу. Поразив врага <spellName>Звуковой волной</spellName>, Ли Син может применить <spellName>Резонирующий удар</spellName> в следующие 3 сек.<br><br><spellName>Резонирующий удар:</spellName> Ли Син совершает рывок к пораженному Звуковой волной врагу, нанося ему <physicalDamage>@RecastDamage@ ед. физ. урона</physicalDamage> плюс урон в размере @MissingHealthDamage*100@% от недост. здоровья цели.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_LeeSinWOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Защитник: Ли Син бросается к выбранному союзнику, давая ему и себе щит. Применив Защитника, Ли Син может применить Железную волю.<br><br>Железная воля: интенсивные тренировки позволяют Ли Сину прекрасно чувствовать себя в бою – он получает вампиризм, маг. вампиризм и броню.",
+            "dynamicDescription": "<spellName>Защитник:</spellName> Ли Син бросается к выбранному союзнику, давая ему и себе <shield>щит</shield> прочностью @ShieldAmount@ на @ShieldDuration@ сек. Применив <spellName>Защитника</spellName>, Ли Син может применить <spellName>Железную волю</spellName> в следующие @W1ReactivateTime@ сек.<br><br><spellName>Железная воля</spellName>: интенсивные тренировки позволяют Ли Сину прекрасно чувствовать себя в бою – он получает @LifestealAndSpellVamp@% вампиризма и маг. вампиризма и <scaleArmor>@ArmorBonus@ брони</scaleArmor> на @LifestealAndSpellVampTime@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

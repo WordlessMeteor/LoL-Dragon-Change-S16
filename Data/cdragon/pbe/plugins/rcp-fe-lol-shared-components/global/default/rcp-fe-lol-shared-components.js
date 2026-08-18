@@ -29591,7 +29591,9 @@
                         if (!e) return void n();
                         const a = `${r.SHOPPEFRONT_PATHS.PURCHASE_CATALOG_ITEM_PATH}/${e}`,
                             i = this.runTask((function() {
-                                this.db.unobserve(a, this), n()
+                                this.db.unobserve(a, this), this.db.get(a).then((e => {
+                                    e?.status === r.SHOPPEFRONT_PURCHASE_RESPONSES.SUCCESS ? t() : n()
+                                })).catch((() => n()))
                             }), s.STORES[this.get("shoppefrontId")].PURCHASE_TIMEOUT_MS + 1e3);
                         this.db.observe(a, this, (e => {
                             e?.status === r.SHOPPEFRONT_PURCHASE_RESPONSES.SUCCESS && t(), e?.status === r.SHOPPEFRONT_PURCHASE_RESPONSES.FAILURE && n(), [r.SHOPPEFRONT_PURCHASE_RESPONSES.SUCCESS, r.SHOPPEFRONT_PURCHASE_RESPONSES.FAILURE].includes(e?.status) && (this.cancelTask(i), this.db.unobserve(a, this))

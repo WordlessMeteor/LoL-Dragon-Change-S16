@@ -1784,7 +1784,6 @@
                 o = a.Ember.Component.extend(r, {
                     classNames: ["account-transfer-component"],
                     layout: n(41),
-                    transferred: a.Ember.computed.not("transferring"),
                     quitDisabled: a.Ember.computed.alias("transferring"),
                     onInit: a.Ember.on("init", (function() {
                         this.get("api.login").post("/v1/account-state")
@@ -1792,6 +1791,12 @@
                     transferring: a.Ember.computed("accountState.state", (function() {
                         const e = this.get("accountState.state");
                         return !e || "TRANSFERRING_OUT" === e
+                    })),
+                    transferFailed: a.Ember.computed("accountState.state", (function() {
+                        return "TRANSFER_FAILED" === this.get("accountState.state")
+                    })),
+                    transferred: a.Ember.computed("transferring", "transferFailed", (function() {
+                        return !this.get("transferring") && !this.get("transferFailed")
                     })),
                     actions: {
                         quit() {
@@ -1806,8 +1811,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Rge8vcND",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,2,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8eOz3+GC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,4,3],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transfer_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["transferFailed"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

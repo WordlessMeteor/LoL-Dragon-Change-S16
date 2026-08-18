@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "Takedown Champion mengurangi cooldown Katarina."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Katarina melempar dagger yang memantul dari satu musuh ke musuh lain, menghasilkan magic damage.",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Melempar dagger yang menghasilkan <magicDamage>@TotalDamage@</magicDamage> magic damage. Dagger memantul ke @MaxBounces@ musuh terdekat dan menghasilkan @DamageFalloff*100@% lebih sedikit damage pada setiap pantulan.<br><br>Musuh yang terkena akan ditandai selama @MarkDuration@ detik. Basic attack atau spell Katarina akan mengonsumsi tanda tersebut, menghasilkan <magicDamage>@TotalDamageMark@</magicDamage> magic damage tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Katarina berubah menjadi rentetan bilah, melemparkan dagger dengan kecepatan tak tertandingi ke Champion musuh di sekitarnya, menghasilkan damage besar dan menerapkan Wound.",
+            "dynamicDescription": "Berubah menjadi rentetan bilah, melemparkan dagger ke @MaxTargets@ Champion musuh terdekat dan menghasilkan <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> selama @ChannelDuration@ detik. Musuh yang terkena dagger akan mendapatkan <status>Wound</status> sebesar @GrievousWoundsAmount*100@% selama @GrievousWoundsDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Spell_DrMundoPassive_Jade_Summary"
+        "description": "يجدد د. موندو جزءًا من صحته القصوى كل ثانية."
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ صحة</font>",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يقذف د. موندو ساطوره، فيلحق ضررًا يعتمد على الصحة القصوى لضحاياه.",
-            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يقذف د. موندو ساطوره، فيلحق <magicDamage>ضرر سحر</magicDamage> يعادل @DamageMod*100@% من الصحة الحالية للهدف (الحد الأدنى للضرر @MinDamage@) و<status>يبطئه</status> بنسبة @MoveMod*-100@% لمدة @SlowDuration@ث.<br><br>يتم استرداد <healing>@HealthReturn@ صحة</healing> إذا أصاب الساطور هدفًا.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ صحة</font>",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_DrMundoE_Jade_Summary",
-            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "يكسب د. موندو ضرر هجوم لبضع ثوانٍ بناءً على مقدار صحته الناقصة.",
+            "dynamicDescription": "يكسب د. موندو <physicalDamage>@BaseIncrease@ ضرر هجوم</physicalDamage> لمدة @Duration@ث. يكسب د. موندو مقدارًا إضافيًا يبلغ <physicalDamage>+@DamageMod@ ضرر هجوم</physicalDamage> مقابل كل نسبة من الصحة المفقودة لديه.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% من الصحة الحالية</font>",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يضحي د. موندو بجزء من صحته للحصول على زيادةٍ في سرعة الحركة وزيادة هائلة في تجدد الصحة.",
-            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يجدد د. موندو <healing>@MaximumHealthRegen@ صحة</healing> ويكسب <speed>@SpeedMod*100@% سرعة حركة</speed> على مدار @Duration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

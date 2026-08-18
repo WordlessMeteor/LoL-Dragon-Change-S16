@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "Атакующие заклинания Леоны помечают врагов Сиянием солнца. Атака союзного чемпиона по такой цели снимет метку Сияния солнца, нанеся доп. урон."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "При следующей автоатаке Леона бьет цель щитом, дополнительно нанося ей маг. урон и оглушая ее.",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Следующая автоатака Леоны дополнительно наносит цели <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage>, <status>оглушая</status> ее на @StunDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Леона поднимает щит, получая броню и сопротивление магии. Если во время окончания эффекта рядом будут враги, они получат магический урон, а эффект продлится.",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Леона получает <scaleArmor>@BonusARMR@ брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR> на @BuffDuration@ сек. По истечении срока щит взрывается, нанося <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> врагам вокруг. Если взрыв поразил врагов, бонус к <scaleArmor>броне</scaleArmor> и <scaleMR>сопр. магии</scaleMR> продлевается на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

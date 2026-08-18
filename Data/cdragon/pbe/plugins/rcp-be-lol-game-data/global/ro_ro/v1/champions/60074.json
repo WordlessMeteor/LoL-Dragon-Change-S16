@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger desfășoară o turelă cu mitralieră. Turelele primesc abilități pe măsură ce această abilitate este îmbunătățită. (Turelele provoacă jumătate din daune împotriva turnurilor).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger construiește o turelă cu mitralieră care provoacă <magicDamage>@BonusDamage@ daune magice</magicDamage> la fiecare atac. Turnurile câștigă <attackSpeed>@TurretBonusAttackSpeed*100@% viteză de atac</attackSpeed> în primele @AttackSpeedDuration@ secunde după ce sunt plasate. Această abilitate are @MaxAmmo@ cumuluri (timp de reîncărcare: @AmmoRechargeTime@ sec.).<br><br>Fiecare nivel al acestei abilități oferă o îmbunătățire suplimentară:<br><attention>Nivelul 2:</attention> atacurile turelelor reduc armura și rezistența la magie a țintei cu @Level2ResistShred@ (maximum @MaxShredCapTooltip@)<br><attention>Nivelul 3:</attention> numărul maxim de turele crește la 2<br><attention>Nivelul 4:</attention> turelele primesc încă <scaleHealth>@Level4HPTooltip@ viață</scaleHealth><br><attention>Nivelul 5:</attention> atacurile turelelor provoacă @AoEDamageMod*100@% daune în zonă@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger lansează rachete cu rază lungă care lovesc inamicii cei mai apropiați de Heimerdinger.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lansează @MaxTargets@ ''Micro-rachete'' care urmăresc inamicii (maximum 1 per unitate), lovind țintele cele mai apropiate de el. Fiecare rachetă provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Heimerdinger aruncă o grenadă spre locația-țintă, provocându-le daune unităților inamice, amețindu-le pe cele lovite direct și orbind unitățile din jur.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger aruncă o grenadă, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> unităților inamice și <status>orbindu-le</status> timp de @BlindDuration@ secunde.  Inamicii loviți direct sunt <status>amețiți</status> timp de @StunDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Pasivă / Activă: crește pasiv reducerea timpilor de reactivare.  Activează pentru a vindeca toate turelele perfecționate active și a le face să tragă cu lovituri de îngheț, care reduc viteza de mișcare pentru scurt timp.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>@CooldownBonus*-100@% reducerea timpilor de reactivare.<br><br><spellActive>Activă: </spellActive>îmbunătățește toate abilitățile și turelele pe durata efectului.<br><br><spellName>Turele perfecționate:</spellName> toate turelele sunt <healing>vindecate</healing> complet. Fiecare atac aplică o <status>încetinire de @MovementSpeedMod*-100@%</status>.<br><spellName>Micro-rachete hextech:</spellName> lansează @WMaxMissiles@ rachete.<br><spellName>Grenada CH-1:</spellName> se deplasează cu 33% mai repede.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

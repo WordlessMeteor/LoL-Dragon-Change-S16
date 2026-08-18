@@ -484,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Spell_LeeSinPassive_Jade_Summary"
+        "description": "بعد أن يستخدم لي سين قدرة، تكسب هجماته الأساسية التالية سرعة هجوم وتستعيد الطاقة."
     },
     "spells": [
         {
@@ -495,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_LeeSinQOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "الموجة الصوتية: يرسل لي سين موجة تنافرية لتحديد موقع أعدائه، فتلحق الضرر بأول عدو تصادفه. إذا أصابت الموجة الصوتية هدفًا، يستطيع لي سين إلقاء الضربة الرنانة.<br><br>الضربة الرنانة: يندفع لي سين نحو العدو الذي أصابته الموجة الصوتية، فيلحق به ضررًا أكبر بالإضافة إلى جزء من صحته الناقصة.",
+            "dynamicDescription": "<spellName>الموجة الصوتية: </spellName>يرسل لي سين موجة تنافرية لتحديد موقع أعدائه، فتلحق <physicalDamage>@InitialDamage@ ضرر مادي</physicalDamage> بأول عدو تصادفه. إذا أصابت <spellName>الموجة الصوتية</spellName> هدفًا، يستطيع لي سين إلقاء <spellName>الضربة الرنانة</spellName> خلال الثواني الـ 3 التالية.<br><br><spellName>الضربة الرنانة: </spellName>يندفع لي سين نحو العدو الذي أصابته الموجة الصوتية، فيلحق به <physicalDamage>@RecastDamage@ ضرر مادي</physicalDamage> بالإضافة إلى @MissingHealthDamage*100@% من صحته الناقصة.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -645,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_LeeSinWOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "الحماية: يندفع لي سين نحو حليف مستهدف، فيمنحه درعًا يحمي كليهما من الضرر. وبعد استخدام قدرة الحماية، يستطيع لي سين إلقاء قدرة الإرادة الحديدية.<br><br>الإرادة الحديدية: يسمح التدريب المكثف الذي تلقاه لي سين له بالتفوق في القتال فيكسب سرقة صحة وعلاجًا بضرر التعويذة ودروعًا.",
+            "dynamicDescription": "<spellName>الحماية: </spellName>يندفع لي سين نحو حليف مستهدف، مما يمنحهما معًا <shield>درعًا</shield> يمتص @ShieldAmount@ ضرر خلال الـ @ShieldDuration@ث التالية. بعد استخدام قدرة <spellName>الحماية</spellName>، يستطيع لي سين إلقاء قدرة <spellName>الإرادة الحديدية</spellName> خلال الـ @W1ReactivateTime@ث التالية.<br><br><spellName>الإرادة الحديدية: </spellName>يسمح التدريب المكثف الذي تلقاه لي سين له بالتفوق في القتال. لمدة @LifestealAndSpellVampTime@ث، يكسب لي سين @LifestealAndSpellVamp@% سرقة صحة وعلاجًا بضرر التعويذة و <scaleArmor>@ArmorBonus@ دروع</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

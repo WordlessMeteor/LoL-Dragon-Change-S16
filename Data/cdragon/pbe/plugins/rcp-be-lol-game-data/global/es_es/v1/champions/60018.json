@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Tristana incrementa su velocidad de ataque durante un breve tiempo.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana obtiene un <attackSpeed>@AttackSpeedMod*100@% de velocidad de ataque</attackSpeed> durante @BuffDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana dispara al suelo para propulsarse a una ubicación lejana, lo que inflige daño y ralentiza a los enemigos donde aterrice.",
+            "dynamicDescription": "Tristana dispara al suelo para propulsarse hasta un lugar objetivo, lo que inflige <magicDamage>@LandingDamage@ de daño mágico</magicDamage> al aterrizar y <status>ralentiza</status> un @Slow@% durante @SlowDuration@ s. Al conseguir un asesinato o una asistencia, el enfriamiento de Salto misil se reinicia.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Cuando Tristana mata a una unidad, sus proyectiles estallan como metralla e infligen daño a los enemigos circundantes.  Se puede activar para infligir daño a lo largo del tiempo al objetivo y reducir la curación que reciba.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los enemigos explotan cuando Tristana los asesina con sus ataques básicos. La explosión inflige <magicDamage>@PassiveDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br><spellActive>Activa:</spellActive> Desgarra a un enemigo, lo que le aplica un <keyword>50% de heridas graves</keyword> y le inflige <magicDamage>@ActiveDamageTTOnly@ de daño mágico</magicDamage> a lo largo de @GrievousDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Tốc độ đánh của Tristana được tăng rất nhiều trong một khoảng thời gian ngắn.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana nhận <attackSpeed>@AttackSpeedMod*100@% Tốc Độ Đánh</attackSpeed> trong @BuffDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana bắn xuống đất để đẩy mình đến một vị trí xa, gây sát thương và làm chậm kẻ địch tại nơi cô đáp xuống.",
+            "dynamicDescription": "Tristana bắn xuống đất để đẩy mình tới vị trí chỉ định, gây <magicDamage>@LandingDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> @Slow@% trong @SlowDuration@ giây khi đáp xuống. Khi hạ gục hoặc hỗ trợ hạ gục tướng, Hồi Chiêu của Phóng Nhảy Tên Lửa sẽ được làm mới.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Khi Tristana tiêu diệt một đơn vị, phát đạn của cô bắn tung ra thành những mảnh nhỏ, gây sát thương lên kẻ địch xung quanh.  Có thể kích hoạt để gây sát thương theo thời gian lên mục tiêu chỉ định và giảm hồi máu nhận vào.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Kẻ địch sẽ phát nổ khi bị hạ gục bởi đòn đánh thường của Tristana, gây <magicDamage>@PassiveDamage@ sát thương phép</magicDamage> lên những kẻ địch xung quanh.<br><br><spellActive>Kích Hoạt: </spellActive>Giày vò kẻ địch chỉ định, áp dụng <keyword>Vết Thương Sâu 50%</keyword> và gây <magicDamage>@ActiveDamageTTOnly@ sát thương phép</magicDamage> trong vòng @GrievousDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

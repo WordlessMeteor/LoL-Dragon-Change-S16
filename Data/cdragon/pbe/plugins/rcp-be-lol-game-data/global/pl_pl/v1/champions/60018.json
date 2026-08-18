@@ -850,7 +850,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Prędkość ataku Tristany zwiększa się na pewien czas.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyskuje <attackSpeed>@AttackSpeedMod*100@% prędkości ataku</attackSpeed> na @BuffDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana strzela w ziemię, wyrzucając się w powietrze w stronę odległego miejsca. Po wylądowaniu zadaje obrażenia pobliskim wrogom i spowalnia ich.",
+            "dynamicDescription": "Tristana strzela w ziemię, wyrzucając się w powietrze w stronę wybranego miejsca. Po wylądowaniu zadaje wrogom <magicDamage>@LandingDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalnia</status> ich o @Slow@% na @SlowDuration@ sek. Zabicie bohatera lub asysta przy tym odświeżają czas odnowienia Rakietowego Skoku.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Po zabiciu jednostki pocisk Tristany wybucha, zadając obrażenia pobliskim wrogom.  Umiejętności można użyć w celu zadania jednostce obrażeń w czasie i obniżenia skuteczności leczenia.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>Wrogowie zabici atakami podstawowymi Tristany wybuchają, zadając pobliskim wrogom <magicDamage>@PassiveDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br><spellActive>Użycie: </spellActive>Rozdziera wroga, nakładając <keyword>50% Głębokich Ran</keyword> i zadając <magicDamage>@ActiveDamageTTOnly@ pkt. obrażeń magicznych</magicDamage> w ciągu @GrievousDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

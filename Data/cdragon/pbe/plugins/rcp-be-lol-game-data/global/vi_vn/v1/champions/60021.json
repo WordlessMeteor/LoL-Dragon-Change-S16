@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Miss Fortune tăng Tốc Độ Di Chuyển đến khi cô bị đánh trúng trong giao tranh."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Miss Fortune có nội tại tăng sát thương gây ra lên một mục tiêu với mỗi đòn đánh.  Kỹ năng này có thể được kích hoạt để tăng Tốc Độ Đánh của Miss Fortune và khiến đòn đánh của cô làm giảm lượng máu hồi phục mà mục tiêu nhận được.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Nội Tại:</font> Miss Fortune gây <magicDamage>@TotalDamageOnHIt@ sát thương phép</magicDamage> lên mục tiêu với mỗi đòn đánh, cộng dồn tối đa @MaxStacks@ lần trên cùng một mục tiêu.<br><magicDamage>Sát thương cộng thêm tối đa: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Kích Hoạt:</font> <attackSpeed>Tốc Độ Đánh</attackSpeed> của Miss Fortune được tăng thêm <attackSpeed>@ASMod@%</attackSpeed> trong @ActiveDuration@ giây và khiến đòn đánh của cô gây <keyword>Vết Thương Sâu 50%</keyword> trong 3 giây.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Miss Fortune trút cơn bão đạn vào một vị trí, gây nhiều đợt sát thương lên kẻ địch và làm chậm chúng.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune bắn hàng trăm viên đạn lên không trung rồi trút xuống, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong @Duration@ giây và <status>Làm Chậm</status> kẻ địch đi @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Miss Fortune bắn liên tục nhiều loạt đạn theo hình nón ra phía trước, gây lượng sát thương lớn lên kẻ địch.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune bắn liên tục nhiều loạt đạn theo hình nón ra phía trước mặt trong @ChannelDuration@ giây, gây <physicalDamage>@PhysicalDamagePerWave@ sát thương vật lý</physicalDamage> mỗi viên đạn (<physicalDamage>Tổng Sát Thương: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

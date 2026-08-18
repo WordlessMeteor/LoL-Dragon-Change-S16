@@ -266,13 +266,6 @@
                 },
                 {
                     "Filter": {
-                        "Map": "Maps/Shipping/Map21",
-                        "__type": "ViewControllerFilter_Map"
-                    },
-                    "__type": "ViewControllerFilter_Not"
-                },
-                {
-                    "Filter": {
                         "Filters": [
                             {
                                 "Mode": "Maps/Shipping/Map11/Modes/RUBY",
@@ -617,32 +610,6 @@
             "ClientStates/Gameplay/UX/Scoreboard",
             "ClientStates/Gameplay/UX/LoL/TeamFrames",
             "ClientStates/Gameplay/UX/LoL/EnemyRespawnTimers"
-        ],
-        "__type": "ViewControllerList"
-    },
-    "{32c45aba}": {
-        "Filter": {
-            "Filters": [
-                {
-                    "Filter": {
-                        "__type": "ViewControllerFilter_Spectator"
-                    },
-                    "__type": "ViewControllerFilter_Not"
-                },
-                {
-                    "Map": "Maps/Shipping/Map21",
-                    "__type": "ViewControllerFilter_Map"
-                }
-            ],
-            "__type": "ViewControllerFilter_And"
-        },
-        "ViewControllers": [
-            "ClientStates/Gameplay/UX/LoL/LoLNBNeutralTimerViewController",
-            "ClientStates/Gameplay/UX/LoL/NB/EventCards",
-            "ClientStates/Gameplay/UX/LoL/NB/TeamFightNB",
-            "ClientStates/Gameplay/UX/LoL/NB/BossHealthBarNB",
-            "ClientStates/Gameplay/UX/LoL/NB/CinematicBarsNB",
-            "ClientStates/Gameplay/UX/LoL/NB/LoLNBGameHeader"
         ],
         "__type": "ViewControllerList"
     },
@@ -1489,21 +1456,6 @@
         "ViewControllers": [
             "ClientStates/Gameplay/UX/LoL/PlayerStats",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiPlayerAugments"
-        ],
-        "__type": "ViewControllerList"
-    },
-    "{989b6675}": {
-        "Filter": {
-            "Filters": [
-                {
-                    "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSet4_Act2",
-                    "__type": "{349845d9}"
-                }
-            ],
-            "__type": "ViewControllerFilter_Or"
-        },
-        "ViewControllers": [
-            "ClientStates/Gameplay/UX/TFT/TFTGameStart"
         ],
         "__type": "ViewControllerList"
     },
@@ -2602,7 +2554,6 @@
             "{928279f3}",
             "{3fcf3af7}",
             "{8d15449c}",
-            "{32c45aba}",
             "{e7937f8d}",
             "{8baf4caa}",
             "{b18bf3c8}",
@@ -2660,7 +2611,6 @@
             "{f665c339}",
             "{20607cff}",
             "{928279f3}",
-            "{32c45aba}",
             "{e7937f8d}",
             "{b18bf3c8}",
             "{c4e5b6cf}",
@@ -2818,7 +2768,6 @@
             "{928279f3}",
             "{3fcf3af7}",
             "{8d15449c}",
-            "{32c45aba}",
             "{e7937f8d}",
             "{74c53618}",
             "{b18bf3c8}",
@@ -2882,7 +2831,6 @@
             "{928279f3}",
             "{3fcf3af7}",
             "{8d15449c}",
-            "{32c45aba}",
             "{e7937f8d}",
             "{74c53618}",
             "{b18bf3c8}",
@@ -2950,7 +2898,6 @@
             "{862591ad}",
             "{2aa4037d}",
             "{9129c87d}",
-            "{989b6675}",
             "{6a5cd88f}"
         ],
         "__type": "ViewControllerSet"
@@ -14674,62 +14621,6 @@
             {
                 "TextureName": "FrameTexture",
                 "texturePath": "assets/ux/tft/dynamicui/items/radiant_border.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TextureScale",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TextureOffset",
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/UI/TFT/UI_BorderItem",
-                        "depthEnable": false,
-                        "blendEnable": true,
-                        "cullEnable": false,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "ClientStates/Gameplay/UX/TFT/UiMaterials/Common/HexCore/TFT_Assist_Gold_5": {
-        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/Common/HexCore/TFT_Assist_Gold_5",
-        "type": 3,
-        "samplerValues": [
-            {
-                "TextureName": "MainItemTexture",
-                "texturePath": "assets/maps/particles/tft/item_icons/pairs/assistgivegold.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "FrameTexture",
-                "texturePath": "assets/ux/tft/dynamicui/alpha-mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,

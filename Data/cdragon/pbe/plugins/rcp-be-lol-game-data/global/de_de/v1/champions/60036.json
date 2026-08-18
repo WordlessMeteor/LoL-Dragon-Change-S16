@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Spell_DrMundoPassive_Jade_Summary"
+        "description": "Dr. Mundo regeneriert pro Sekunde einen Prozentsatz seines maximalen Lebens."
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Leben</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Dr. Mundo schleudert sein Beil und verursacht Schaden, der auf dem maximalen Leben seines Opfers basiert.",
-            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dr. Mundo schleudert sein Beil, verursacht <magicDamage>magischen Schaden</magicDamage> in Höhe von @DamageMod*100@ % des aktuellen Lebens des Ziels (mindestens @MinDamage@ Schaden) und <status>verlangsamt</status> das Ziel @SlowDuration@ Sekunden lang um @MoveMod*-100@ %.<br><br><healing>@HealthReturn@ Leben</healing> wird zurückerstattet, wenn das Beil ein Ziel trifft.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Leben</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_DrMundoE_Jade_Summary",
-            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo erhält abhängig von seinem fehlenden Leben für einige Sekunden Angriffsschaden.",
+            "dynamicDescription": "Dr. Mundo erhält @Duration@ Sekunden lang <physicalDamage>@BaseIncrease@ Angriffsschaden</physicalDamage>. Dr. Mundo erhält zusätzlich <physicalDamage>+@DamageMod@ Angriffsschaden</physicalDamage> für jedes ihm fehlende Prozent Leben.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ % des aktuellen Lebens</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Dr. Mundo opfert einen Teil seines Lebens, um ein höheres Lauftempo und eine stark erhöhte Lebensregeneration zu erhalten.",
-            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dr. Mundo regeneriert im Verlauf von @Duration@ Sekunden <healing>@MaximumHealthRegen@ Leben</healing> und erhält <speed>@SpeedMod*100@ % Lauftempo</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "تقلص عمليات الإطاحة بالأبطال فترات تبريد كاتارينا."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترمي كاتارينا خنجرًا يرتد من عدو إلى آخر، ملحقًا ضرر سحر.",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترمي خنجرًا يلحق <magicDamage>@TotalDamage@</magicDamage> ضرر سحر. يرتد الخنجر إلى أقرب @MaxBounces@ من الأعداء، ملحقًا ضررًا أقل بنسبة @DamageFalloff*100@% مع كل ارتداد.<br><br>يتم وسم الأعداء المصابين لمدة @MarkDuration@ث. تستهلك هجمات كاتارينا الأساسية أو تعويذاتها الوسم، فتلحق <magicDamage>@TotalDamageMark@</magicDamage> ضرر سحر إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "تصبح كاتارينا أشبه بوابلٍ من النصال، فترمي الخناجر بسرعة لا مثيل لها على أبطال الأعداء القريبين، فتلحق ضررًا كبيرًا وتطبق تأثير الجراح.",
+            "dynamicDescription": "تصبح أشبه بوابلٍ من النصال، فترمي الخناجر على أقرب @MaxTargets@ من أبطال الأعداء، فتلحق <magicDamage>@DamageCalcTooltipOnly@ ضرر سحر</magicDamage> على مدار @ChannelDuration@ث. يتعرض الأعداء المصابون لتأثير <status>الجراح</status> بنسبة @GrievousWoundsAmount*100@% لمدة @GrievousWoundsDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

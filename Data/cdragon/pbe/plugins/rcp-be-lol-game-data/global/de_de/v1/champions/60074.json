@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger platziert einen Geschützturm mit einem Maschinengewehr. Geschütztürme erhalten Fähigkeiten, wenn diese Fähigkeit verbessert wird. (Geschütztürme verursachen an Türmen nur halben Schaden).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger konstruiert einen Geschützturm mit einem Maschinengewehr, der pro Angriff <magicDamage>@BonusDamage@ magischen Schaden</magicDamage> verursacht. Geschütztürme erhalten in den ersten @AttackSpeedDuration@ Sekunden nach dem Platzieren <attackSpeed>@TurretBonusAttackSpeed*100@ % Angriffstempo</attackSpeed>. Diese Fähigkeit hat @MaxAmmo@ Aufladungen (@AmmoRechargeTime@ Sekunden Aufladungszeit).<br><br>Jede Stufe dieser Fähigkeit gewährt eine weitere Verbesserung:<br><attention>Stufe 2:</attention> Angriffe von Geschütztürmen verringern die Rüstung und Magieresistenz des Ziels um @Level2ResistShred@ (maximal @MaxShredCapTooltip@)<br><attention>Stufe 3:</attention> Die maximale Anzahl an Geschütztürmen wird auf 2 erhöht<br><attention>Stufe 4:</attention> Geschütztürme erhalten zusätzlich <scaleHealth>@Level4HPTooltip@ Leben</scaleHealth><br><attention>Stufe 5:</attention> Angriffe von Geschütztürmen verursachen @AoEDamageMod*100@ % Flächenschaden.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger feuert Raketen mit hoher Reichweite ab, die jene Gegner treffen, die Heimerdinger am nächsten sind.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger feuert @MaxTargets@ zielsuchende Mikro-Raketen auf Gegner ab (maximal 1 pro Ziel), die Ziele treffen, die ihm am nächsten sind. Jede Rakete verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger wirft eine Granate an einen Zielort, mit der er Schaden an gegnerischen Einheiten verursacht und alle direkt getroffenen Einheiten betäubt. Außerdem werden Einheiten in der Nähe geblendet.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger wirft eine Granate, die gegnerischen Einheiten <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und sie @BlindDuration@ Sekunden lang <status>blendet</status>.  Gegner, die direkt getroffen werden, werden @StunDuration@ Sekunden lang <status>betäubt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Passiv / Aktiv: Erhöht passiv die Abklingzeitverringerung.  Aktiviere die Fähigkeit, um alle aktiven Evolutions-Geschütztürme zu heilen und sie für kurze Zeit Frostschüsse abfeuern zu lassen, die das Lauftempo verringern.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>@CooldownBonus*-100@ % Abklingzeitverringerung.<br><br><spellActive>Aktiv: </spellActive>Verstärkt für die Wirkdauer alle Fähigkeiten und Geschütztürme.<br><br><spellName>Evolutions-Geschütztürme:</spellName> Alle Türme werden vollständig <healing>geheilt</healing>. Jeder Angriff <status>verlangsamt um @MovementSpeedMod*-100@%</status>.<br><spellName>Hextech-Mikroraketen:</spellName> Feuert @WMaxMissiles@ Raketen ab.<br><spellName>Schockgranate CH-1:</spellName> Fliegt um 33 % schneller.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

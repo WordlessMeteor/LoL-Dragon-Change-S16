@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق تريستانا سلاحها بسرعة، مما يزيد من سرعة هجومها لفترة قصيرة.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "- تكسب تريستانا <attackSpeed>@AttackSpeedMod*100@% سرعة هجوم</attackSpeed> لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها نحو موقع بعيد، فتلحق الضرر بالأعداء وتبطئهم في مكان هبوطها.",
+            "dynamicDescription": "تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها إلى الموقع المستهدف، فتلحق <magicDamage>@LandingDamage@ ضرر سحر</magicDamage> و<status>تبطئ</status> بنسبة @Slow@% لمدة @SlowDuration@ث عند هبوطها. عند قتل بطل أو المساعدة في قتله، تتم إعادة ضبط فترة تبريد القفزة الصاروخية.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "عندما تقتل تريستانا إحدى الوحدات، تنفجر قذائف مدفعها إلى شظايا، فتلحق الضرر بالأعداء المحيطين.  يمكن تفعيلها لإلحاق ضرر بالوحدة المستهدفة بمرور الوقت وتقليص العلاج الذي تتلقاه.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>ينفجر الأعداء عند قتلهم بفعل هجمات تريستانا الأساسية، مما يلحق <magicDamage>@PassiveDamage@ ضرر سحر</magicDamage> بالأعداء المجاورين.<br><br><spellActive>تأثير نشط: </spellActive>تمزّق العدو المستهدف، وتطبق عليه <keyword>الجراح الخطيرة بنسبة 50%</keyword> وتلحق به <magicDamage>@ActiveDamageTTOnly@ ضرر سحر</magicDamage> على مدار @GrievousDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

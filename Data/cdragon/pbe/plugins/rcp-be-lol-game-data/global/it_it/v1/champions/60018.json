@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tristana spara rapidamente con la sua arma, aumentando la sua velocità d'attacco per un breve periodo di tempo.",
-            "dynamicDescription": "Spell_TristanaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tristana ottiene <attackSpeed>@AttackSpeedMod*100@% velocità d'attacco</attackSpeed> per @BuffDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -861,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Spell_TristanaW_Jade_Summary",
-            "dynamicDescription": "Spell_TristanaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Tristana spara al suolo per lanciarsi in una posizione lontana, infliggendo danni e rallentando i nemici nel punto in cui atterra.",
+            "dynamicDescription": "Tristana spara al suolo per lanciarsi verso la posizione bersaglio, infliggendo <magicDamage>@LandingDamage@ danni magici</magicDamage> e <status>rallentando</status> di un @Slow@% per @SlowDuration@ secondo/i all'atterraggio. Se ottiene un'uccisione o un assist su un campione, il tempo di ricarica di Salto del razzo viene azzerato.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Quando Tristana uccide un'unità, le sue palle di cannone esplodono in schegge, infliggendo danni ai nemici circostanti.  Può essere attivato per infliggere danni nel tempo all'unità bersaglio e ridurre le cure che riceve.",
-            "dynamicDescription": "Spell_TristanaE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>i nemici che vengono uccisi dagli attacchi base di Tristana esplodono, infliggendo <magicDamage>@PassiveDamage@ danni magici</magicDamage> ai nemici vicini.<br><br><spellActive>Attiva: </spellActive>lacera il nemico bersaglio, applicando un <keyword>50% di Ferita grave</keyword> e infliggendo <magicDamage>@ActiveDamageTTOnly@ danni magici</magicDamage> nell'arco di @GrievousDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

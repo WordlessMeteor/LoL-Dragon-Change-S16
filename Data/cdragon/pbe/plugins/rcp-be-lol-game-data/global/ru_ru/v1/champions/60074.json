@@ -597,7 +597,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер сооружает турель со скорострельной пушкой. Возможности турелей растут с уровнем этого умения (турели наносят вдвое меньше урона башням).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Хеймердингер сооружает турель со скорострельной пушкой, наносящую <magicDamage>@BonusDamage@ ед. маг. урона</magicDamage> при атаке. Турели получают <attackSpeed>@TurretBonusAttackSpeed*100@% скорости атаки</attackSpeed> на @AttackSpeedDuration@ сек. после размещения. У этого умения @MaxAmmo@ зар. (перезарядка – @AmmoRechargeTime@ сек.).<br><br>С каждым уровнем умения турели усиливаются.<br><attention>Уровень 2:</attention> атаки турелей снижают броню и сопр. магии цели на @Level2ResistShred@ (макс. @MaxShredCapTooltip@)<br><attention>Уровень 3:</attention> макс. 2 турели<br><attention>Уровень 4:</attention> здоровье турелей растет на <scaleHealth>@Level4HPTooltip@</scaleHealth><br><attention>Уровень 5:</attention> атаки турели наносят @AoEDamageMod*100@% урона по площади@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер выпускает дальнобойные ракеты, которые летят в ближайших врагов.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Хеймердингер выпускает микроракеты, наводящиеся на ближайших врагов (@MaxTargets@, не более 1 на врага). Каждая наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Хеймердингер бросает гранату в указанную точку, нанося урон и ослепляя всех врагов в зоне поражения, а также оглушая врагов в эпицентре взрыва.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Хеймердингер бросает гранату, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам и <status>ослепляя</status> их на @BlindDuration@ сек. Враги в эпицентре взрыва <status>оглушаются</status> на @StunDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пассивно: увеличивает сокращение перезарядки. Активно: полностью восстанавливает здоровье всех активных эволюционирующих турелей, и они начинают стрелять замораживающими боеприпасами, ненадолго снижающими скорость передвижения целей.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно: </spellPassive>@CooldownBonus*-100@% сокращения перезарядки.<br><br><spellActive>Активно:</spellActive> усиливает все умения и турели до конца действия.<br><br><spellName>Эволюционирующие турели:</spellName> все турели полностью <healing>восстанавливают здоровье</healing>, их атаки <status>замедляют (@MovementSpeedMod*-100@%)</status> цели.<br><spellName>Хекстек-микроракеты:</spellName> выпускает больше ракет (@WMaxMissiles@).<br><spellName>Оглушающая граната CH-1:</spellName> летит на 33% быстрее.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

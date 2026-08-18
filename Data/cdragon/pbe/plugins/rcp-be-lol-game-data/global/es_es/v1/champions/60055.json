@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "Las eliminaciones de campeones reducen los enfriamientos de Katarina."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Katarina lanza una daga que rebota de un enemigo a otro, lo que inflige daño mágico.",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lanza una daga que inflige <magicDamage>@TotalDamage@</magicDamage> de daño mágico. La daga rebota hacia los @MaxBounces@ enemigos más cercanos e inflige un @DamageFalloff*100@% menos de daño con cada rebote.<br><br>Los enemigos golpeados quedan marcados durante @MarkDuration@ s. Los ataques básicos o habilidades de Katarina consumen la marca, lo que inflige <magicDamage>@TotalDamageMark@</magicDamage> de daño mágico adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Katarina se convierte en un torbellino de cuchillas que lanza dagas a una velocidad sin igual a los campeones cercanos, lo que inflige mucho daño y aplica heridas.",
+            "dynamicDescription": "Se convierte en un torbellino de cuchillas que lanza dagas a los @MaxTargets@ campeones enemigos más cercanos e inflige <magicDamage>@DamageCalcTooltipOnly@ de daño mágico</magicDamage> durante @ChannelDuration@ s. <status>Hiere</status> un @GrievousWoundsAmount*100@% a los enemigos golpeados durante @GrievousWoundsDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

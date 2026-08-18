@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Heimerdinger bir makine tüfekli taret kurar. Taretler, bu yetenek geliştirildikçe beceriler kazanır. (Taretler kulelere normalin yarısı hasar verir.)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger, saldırı başına <magicDamage>@BonusDamage@ Büyü Hasarı</magicDamage> veren bir makine tüfekli taret inşa eder. Taretler yerleştirildikten sonraki ilk @AttackSpeedDuration@ saniye boyunca <attackSpeed>%@TurretBonusAttackSpeed*100@ Saldırı Hızı</attackSpeed> kazanır. Bu yetenek @MaxAmmo@ yüke sahiptir (@AmmoRechargeTime@ saniye yenilenme süresi).<br><br>Bu yeteneğin her seviyesi fazladan bir geliştirme sağlar:<br><attention>2. Seviye:</attention> Taret saldırıları hedefin zırh ve büyü direncini @Level2ResistShred@ azaltır (azami @MaxShredCapTooltip@).<br><attention>3. Seviye:</attention> Azami taret sayısı 2'ye çıkar.<br><attention>4. Seviye:</attention> Taretler fazladan <scaleHealth>@Level4HPTooltip@ Can</scaleHealth> kazanır.<br><attention>5. Seviye:</attention> Taret saldırıları %@AoEDamageMod*100@ Saçılma Hasarı verir.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Heimerdinger kendisine en yakın rakiplere isabet eden uzun menzilli roketler ateşler.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger kendisine en yakın hedeflere isabet eden, güdümlü @MaxTargets@ Mikro Roket ateşler (rakip başına en fazla 1). Her roket <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Heimerdinger'in belli bir bölgeye attığı bomba, rakip birimlere hasar verir ve doğrudan vurduğu birimleri sersemletirken çevresindeki birimleri de kör eder.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger bir bomba fırlatarak rakip birimlere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onları @BlindDuration@ saniyeliğine <status>kör eder</status>.  Doğrudan isabet alan rakipler @StunDuration@ saniyeliğine <status>sersemler</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Pasif/Aktif: Bekleme süresinde azalmayı pasif olarak arttırır.  Etkinleştirildiğinde devredeki tüm Evrim Taretleri can yeniler ve kısa süreliğine hareket hızını azaltan buz atışları yapar.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Bekleme süresinde %@CooldownBonus*-100@ azalma sağlar.<br><br><spellActive>Aktif: </spellActive>Süre boyunca tüm yetenekleri ve taretleri güçlendirir.<br><br><spellName>Evrim Taretleri:</spellName> Tüm taretler tamamen <healing>iyileşir</healing>. Her saldırı <status>%@MovementSpeedMod*-100@ yavaşlatır</status>.<br><spellName>Hextech Mikro Roketler:</spellName> @WMaxMissiles@ roket ateşler.<br><spellName>CH-1 Şok Bombaları:</spellName> %33 daha hızlı hareket eder.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

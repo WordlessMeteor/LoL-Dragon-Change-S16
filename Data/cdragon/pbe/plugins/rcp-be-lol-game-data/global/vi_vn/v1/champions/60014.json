@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Sion có cơ hội bỏ qua một phần sát thương mỗi khi bị tấn công."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Cái nhìn của Sion gây kinh hãi lên một kẻ địch, gây sát thương và làm choáng chúng.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion công kích một kẻ địch, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Choáng</status> trong @StunDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sion bao bọc bản thân bằng một lá chắn chặn sát thương.  Nếu lá chắn không bị phá hủy, nó sẽ phát nổ, gây sát thương lên những kẻ địch xung quanh. Sion có thể kích hoạt lại kỹ năng để kích nổ lá chắn sớm.",
+            "dynamicDescription": "Sion bao bọc bản thân bằng một lá chắn giúp chặn <shield>@TotalShield@ sát thương</shield>. Nếu lá chắn không bị phá hủy trong vòng @ShieldDuration@ giây, nó sẽ phát nổ và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những kẻ địch xung quanh.<br><br><recast>Tái kích hoạt</recast> sau @RecastDelay@ giây để kích nổ sớm.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sion hấp thụ một phần sinh lực của kẻ địch trong mỗi đòn đánh, hút máu cho bản thân và các đồng minh ở gần. Mùi thịt tươi cũng kích thích nhiệt huyết của Sion, tăng Tốc Độ Đánh cho hắn.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion nhận <lifeSteal>@LifestealPercent*100@% Hút Máu</lifeSteal> và <attackSpeed>@AttackSpeedMod*100@% Tốc Độ Đánh</attackSpeed> trong @BuffDuration@ giây. Ngoài ra, đòn đánh thường của Sion <healing>hồi máu</healing> cho các đồng minh xung quanh bằng @HealPercent*100@% sát thương gây ra.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

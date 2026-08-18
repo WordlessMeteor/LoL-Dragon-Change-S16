@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "Участия в убийствах чемпионов сокращают перезарядку умений Катарины."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Катарина мечет во врага кинжал, рикошетом поражающий еще несколько целей, нанося маг. урон.",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мечет кинжал, нанося <magicDamage>@TotalDamage@</magicDamage> ед. маг. урона. Кинжал отскакивает еще @MaxBounces@ р., нанося на @DamageFalloff*100@% меньше урона за отскок.<br><br>Пораженные враги получают метку на @MarkDuration@ сек. Автоатаки и умения Катарины снимают метку, дополнительно нанося <magicDamage>@TotalDamageMark@</magicDamage> ед. маг. урона.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Катарина становится вихрем клинков и с непостижимой скоростью начинает метать кинжалы во вражеских чемпионов поблизости, нанося им существенный урон и накладывая Страшные раны.",
+            "dynamicDescription": "Становится вихрем клинков и с непостижимой скоростью начинает метать их в @MaxTargets@ вражеских чемпионов поблизости, нанося <magicDamage>@DamageCalcTooltipOnly@ ед. маг. урона</magicDamage> в течение @ChannelDuration@ сек. На пораженных врагов накладываются <status>Страшные раны</status> (@GrievousWoundsAmount*100@%) на @GrievousWoundsDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -597,7 +597,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger rozstawia działko strażnicze. Działka zyskują umiejętności w miarę rozwijania tej umiejętności. (Działka zadają wieżom połowę obrażeń).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger konstruuje działko strażnicze, które zadaje <magicDamage>@BonusDamage@ pkt. obrażeń magicznych</magicDamage> przy każdym ataku. Wieżyczki zyskują <attackSpeed>@TurretBonusAttackSpeed*100@% prędkości ataku</attackSpeed> przez pierwsze @AttackSpeedDuration@ sek. po ich umieszczeniu. Ta umiejętność ma następującą liczbę ładunków: @MaxAmmo@ (@AmmoRechargeTime@ sek. odnowienia).<br><br>Każdy poziom tej umiejętności zapewnia dodatkowe wzmocnienie:<br><attention>Poziom 2:</attention> Ataki działka zmniejszają pancerz i odporność na magię celu o @Level2ResistShred@ pkt. (maks. @MaxShredCapTooltip@)<br><attention>Poziom 3:</attention> Maksymalna liczba działek zostaje zwiększona do 2.<br><attention>Poziom 4:</attention> Działka zyskują dodatkowe <scaleHealth>@Level4HPTooltip@ pkt. zdrowia</scaleHealth><br><attention>Poziom 5:</attention> Ataki działek zadają @AoEDamageMod*100@% obrażeń rozpryskowych.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger wystrzeliwuje rakiety dalekiego zasięgu, które trafiają najbliższych wrogów.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger wystrzeliwuje samonaprowadzane Mikrorakiety w liczbie: @MaxTargets@ (maks. 1 na osobę), które trafiają najbliższe cele. Każda rakieta zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger rzuca granatem we wskazane miejsce, zadając obrażenia, ogłuszając bezpośrednio trafionych wrogów i oślepiając pobliskie jednostki.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger rzuca granatem, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogim jednostkom i <status>oślepiając</status> je na @BlindDuration@ sek.  Wrogowie trafieni bezpośrednio zostają <status>ogłuszeni</status> na @StunDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Biernie/użycie: Biernie zwiększa skrócenie czasu odnowienia.  Użyj, aby uzdrowić wszystkie Działka Rozwojowe i sprawić, że przez krótki czas będą strzelać Lodowymi Strzałami, które zmniejszają prędkość ruchu.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>@CooldownBonus*-100@% skrócenia czasu odnowienia.<br><br><spellActive>Użycie: </spellActive>Wzmocnienie wszystkich umiejętności i działek na czas działania.<br><br><spellName>Działka Rozwojowe:</spellName> Wszystkie działka zostają w pełni <healing>uleczone</healing>. Każdy atak nakłada <status>@MovementSpeedMod*-100@% spowolnienia</status>.<br><spellName>Minirakiety Hextech:</spellName> Wystrzeliwuje rakiety w liczbie: @WMaxMissiles@.<br><spellName>Granat Ogłuszający CH-1:</spellName> Porusza się o 33% szybciej.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

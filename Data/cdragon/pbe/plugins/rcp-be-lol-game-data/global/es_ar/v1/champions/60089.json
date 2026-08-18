@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "Los hechizos de daño aplican Luz Solar a los enemigos. Cuando los campeones aliados infligen daño a los objetivos marcados, consumen la debilitación de Luz Solar y les infligen daño adicional."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Leona usa su escudo para realizar su siguiente ataque básico, con el cual le inflige daño mágico adicional al objetivo y lo aturde.",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "El siguiente ataque básico de Leona le inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> adicional al objetivo y lo <status>aturde</status> durante @StunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Leona levanta el escudo y obtiene armadura y resistencia mágica.  Si hay enemigos cerca cuando el efecto termina, Leona les inflige daño mágico y la duración del efecto se extiende.",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona obtiene <scaleArmor>@BonusARMR@ de Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> durante @BuffDuration@ seg. Si hay enemigos cerca cuando el efecto termina, Leona les inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> y conserva tanto la <scaleArmor>armadura</scaleArmor> como la <scaleMR>resistencia mágica</scaleMR> adicionales durante @BuffDuration@ seg más.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

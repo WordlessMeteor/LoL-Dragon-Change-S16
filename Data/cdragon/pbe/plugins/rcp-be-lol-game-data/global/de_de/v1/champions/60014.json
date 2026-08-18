@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Sion hat eine Chance, jedes Mal, wenn er angegriffen wird, Schaden zu ignorieren."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Sions Blick versetzt einen einzelnen Gegner in Angst und Schrecken, fügt ihm Schaden zu und betäubt ihn.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion feuert auf einen einzelnen Gegner, fügt ihm <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und <status>betäubt</status> ihn @StunDuration@ Sekunden lang.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sion umgibt sich mit einem Schild, der Schaden absorbiert.  Wird der Schild nicht zerstört, explodiert er und fügt Gegnern in der Nähe Schaden zu. Sion kann die Fähigkeit reaktivieren, um den Schild frühzeitig explodieren zu lassen.",
+            "dynamicDescription": "Sion umgibt sich mit einem Schild, der <shield>@TotalShield@ Schaden</shield> absorbiert. Wird der Schild nicht innerhalb von @ShieldDuration@ Sekunden zerstört, explodiert er und fügt Gegnern in der Nähe <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu.<br><br><recast>Reaktiviere</recast> die Fähigkeit nach @RecastDelay@ Sekunden, um den Schild manuell explodieren zu lassen.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Sion entzieht seinen Gegnern bei jedem Angriff einen Teil ihrer Lebenskraft, wodurch er sich selbst und Verbündete in der Nähe mit Leben versorgt. Der Geruch von Fleisch erneuert außerdem Sions Inbrunst und erhöht sein Angriffstempo.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion erhält @BuffDuration@ Sekunden lang <lifeSteal>@LifestealPercent*100@ % Lebensraub</lifeSteal> und <attackSpeed>@AttackSpeedMod*100@ % Angriffstempo</attackSpeed>. Sions normale Angriffe <healing>heilen</healing> außerdem verbündete Einheiten in der Nähe um @HealPercent*100@ % des verursachten Schadens.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

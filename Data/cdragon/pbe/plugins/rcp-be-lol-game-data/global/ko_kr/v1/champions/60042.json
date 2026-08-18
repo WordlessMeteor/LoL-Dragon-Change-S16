@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "Spell_CorkiQ_Jade_Summary",
-            "dynamicDescription": "Spell_CorkiQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "코르키가 폭탄을 던져, 폭발 지점 주변의 적에게 피해를 입히고 위치를 드러냅니다.",
+            "dynamicDescription": "코르키가 폭탄을 던져 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 폭탄에 맞은 지점과 챔피언을 @RevealDuration@초 동안 드러냅니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "코르키가 정면에 원뿔 형태로 개틀링 건을 발사하여 적의 방어력을 낮추고 피해를 입힙니다.",
-            "dynamicDescription": "Spell_CorkiE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "코르키가 정면의 원뿔 범위에 @ActiveDuration@초 동안 개틀링 건을 발사하여, 매초 <physicalDamage>@DamagePerSecondCalc@의 물리 피해</physicalDamage>를 입히고 <status>방어력을 @ArmorMod*-1@</status> 감소시킵니다. 방어력 감소 효과는 중첩되며 @ShredDuration@초 동안 지속됩니다. (최대 피해량: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "Spell_CorkiR_Jade_Summary",
-            "dynamicDescription": "Spell_CorkiR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "코르키가 지정한 위치로 충돌 시 폭발하는 미사일을 발사해, 범위 내의 적에게 피해를 입힙니다. 어떤 미사일은 '큰 놈'으로, 추가 피해를 입힙니다.",
+            "dynamicDescription": "코르키가 지정한 위치로 미사일을 발사합니다. 미사일은 처음 적중하는 적과 충돌합니다. 각 미사일은 해당 지역에 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>이 스킬은 @MaxAmmoTooltip@회까지 충전됩니다. (@AmmoRechargeTime@초마다 충전)<br><br>세 번째로 사용할 때마다 거대한 미사일이 발사되어, 대신 <magicDamage>@TotalDamageBig@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

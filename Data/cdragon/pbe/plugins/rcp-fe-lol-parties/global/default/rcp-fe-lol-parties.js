@@ -221,22 +221,24 @@
                 }
                 _reportCreateLobbyFailure(e, t) {
                     const n = t?.data,
-                        o = {
+                        o = n?.implementationDetails,
+                        s = {
                             http_status: n?.httpStatus ?? null,
                             error_code: n?.errorCode || t?.message || ("string" == typeof t ? t : null),
                             message: n?.message ?? null,
-                            implementation_details: n?.implementationDetails ?? null
+                            implementation_details: o ?? null
                         };
                     i.logger.error("FAILED TO CREATE LOBBY", {
                         queue_id: e,
-                        ...o,
-                        error: t
+                        http_status: s.http_status,
+                        error_code: s.error_code || void 0,
+                        implementation_details: Object.keys(o ?? {}).length ? o : void 0
                     }), i.datadogRum.hasOngoingOperation(i.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE) && i.datadogRum.stopOperationWithError(i.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE, t, {
                         lobby_create: {
                             queue_id: e,
                             source: "party_api_create_lobby"
                         },
-                        error_details: o
+                        error_details: s
                     })
                 }
                 leaveLobby() {
@@ -595,7 +597,7 @@
             const l = i.default.getProvider().getSocket();
             var c = class {
                 constructor(e, t, n, o, s, a, r, c) {
-                    this._lobbyData = !1, this._currentPlayer = e, this._partyCreated = t, this._partyDestroyed = n, this._partyKicked = o, this._partyTimeout = s, this._partyGameStartError = a, this._partyServiceShutdown = r, this._partyServiceUnavailable = c, this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", l), this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", l), this._observeLobbies(), this._observeEligibilitiesReady(), this._observeLobbyNotifications()
+                    this._lobbyData = !1, this._reportedSwapPartyId = null, this._currentPlayer = e, this._partyCreated = t, this._partyDestroyed = n, this._partyKicked = o, this._partyTimeout = s, this._partyGameStartError = a, this._partyServiceShutdown = r, this._partyServiceUnavailable = c, this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", l), this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", l), this._observeLobbies(), this._observeEligibilitiesReady(), this._observeLobbyNotifications()
                 }
                 createLobby(e) {
                     return this._lobbyBinding.post("v2/lobby", {
@@ -634,12 +636,10 @@
                 }
                 _detectIgnoredLobbySwap(e) {
                     const t = this._lobbyData && this._lobbyData.partyId;
-                    t && e.partyId && t !== e.partyId && i.logger.error("LOBBY SWAP, IGNORED CHANGE EVENT", {
-                        current_party_id: t,
-                        received_party_id: e.partyId,
+                    t && e.partyId && (t !== e.partyId ? this._reportedSwapPartyId !== e.partyId && (this._reportedSwapPartyId = e.partyId, i.logger.error("LOBBY SWAP, IGNORED CHANGE EVENT", {
                         current_queue_id: this._lobbyData.gameConfig?.queueId ?? null,
                         received_queue_id: e.gameConfig?.queueId ?? null
-                    })
+                    })) : this._reportedSwapPartyId = null)
                 }
                 _handleLobbyNotification(e) {
                     if (!e || !e.length) return;
@@ -651,7 +651,7 @@
                     }
                 }
                 _deletedLobby() {
-                    this._partyDestroyed(), this._lobbyData = !1
+                    this._partyDestroyed(), this._lobbyData = !1, this._reportedSwapPartyId = null
                 }
                 _newLobby(e) {
                     this._lobbyData = e, this._partyCreated(this._lobbyData)
@@ -25726,7 +25726,7 @@
                     return n(630)
                 }
                 constructor() {
-                    super(), this._showNoneOption = null, this._sortByLastAcquiredBinding = (0, o.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_sortByLastAcquired", c), this._disabledContentIdsBinding = (0, o.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_disabled_content_by_queue", c), this._favorites = [], this._configAllowsSortByLastAcquired = !1, this._favoritesEnabled = !1, this._moonEnabled = !1, this._rarityTagEnabled = !1, this._rarityTags = null, this._hideUnowned = !0, this._isShardShardsEnabled = !1, this._isRewardsProgramEnabled = r.REWARDS_PROGRAM_STATUS.UNSET, this._searchString = "", this._sortType = r.SORTING_TYPES.DEFAULT, this._type = "", this._removedRecentHighlighting = [], this._starShardsAmount = 0, this._templateHelper = o.UIKit.getTemplateHelper(), this._tooltipManager = o.UIKit.getTooltipManager(), this._maxFavorites = 8, this._fallback = !1, this._alwaysShowWIPBadge = !1, this._disabledContentIds = [], this._queueId = null, o.db.get("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_favorites_max").then((e => {
+                    super(), this._showNoneOption = null, this._sortByLastAcquiredBinding = (0, o.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_sortByLastAcquired", c), this._disabledContentIdsBinding = (0, o.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_disabled_content_by_queue", c), this._favorites = [], this._configAllowsSortByLastAcquired = !1, this._favoritesEnabled = !1, this._moonEnabled = !1, this._rarityTagEnabled = !1, this._rarityTags = null, this._hideUnowned = !0, this._hideDisabled = !0, this._isShardShardsEnabled = !1, this._isRewardsProgramEnabled = r.REWARDS_PROGRAM_STATUS.UNSET, this._searchString = "", this._sortType = r.SORTING_TYPES.DEFAULT, this._type = "", this._removedRecentHighlighting = [], this._starShardsAmount = 0, this._templateHelper = o.UIKit.getTemplateHelper(), this._tooltipManager = o.UIKit.getTooltipManager(), this._maxFavorites = 8, this._fallback = !1, this._alwaysShowWIPBadge = !1, this._disabledContentIds = [], this._queueId = null, o.db.get("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_favorites_max").then((e => {
                         this._updateMaxFavorites(e.max)
                     })), o.db.get("/lol-client-config/v3/client-config/lol.client_settings.tft.always_show_wip_badge").then((e => {
                         this._alwaysShowWIPBadge = e
@@ -25902,9 +25902,8 @@
                     this._toggleClass("favorited", ".cosmetic-group-favorite-button", i);
                     const o = !n || i;
                     this._toggleClass("hasMaxFavorites", ".cosmetic-group-favorite-button", !o), o ? this._tooltipManager.disable(this._favoriteButton) : this._tooltipManager.enable(this._favoriteButton), e.toggleAttribute("disabled", !1);
-                    let s = !1;
-                    this._disabledContentIds.includes(t.contentId) && (s = !0);
-                    const r = this._favoritesEnabled && (this._isItemOwned(this._hoveredUpgrades) || i) && !s;
+                    const s = this._isItemDisabled(t),
+                        r = this._favoritesEnabled && (this._isItemOwned(this._hoveredUpgrades) || i) && !s;
                     this._toggleClass("hidden", ".cosmetic-group-favorite-button", !r)
                 }
                 _updateSortDropDown() {
@@ -26140,11 +26139,17 @@
                 }
                 _isItemShown(e) {
                     const t = this._isItemOwned(e) || !this._hideUnowned,
-                        n = e.name.toLowerCase().includes(this._searchString.toLowerCase());
-                    return t && n
+                        n = e.name.toLowerCase().includes(this._searchString.toLowerCase()),
+                        i = !this._hideDisabled || !this._isItemDisabled(e);
+                    return t && n && i
+                }
+                _isItemDisabled(e) {
+                    return this._disabledContentIds?.includes(e.contentId)
                 }
                 _isItemRendered(e) {
-                    return this._isItemOwned(e) || !this._hideUnowned
+                    const t = this._isItemOwned(e) || !this._hideUnowned,
+                        n = !this._hideDisabled || !this._isItemDisabled(e);
+                    return t && n
                 }
                 _updateSelectedItem(e) {
                     if (!e) return;
@@ -26153,11 +26158,10 @@
                         n = (0, a.getBaseLayoutItem)(e, this._inventory);
                     n.upgrades && n.upgrades.length;
                     this._toggleClass("locked", ".selected-cosmetic-header-group", !e.owned);
-                    let i = !1;
-                    this._disabledContentIds.includes(e.contentId) && (i = !0), i ? (this._toggleClass("hidden", ".selected-cosmetic-wip", !0), this._toggleClass("hidden", ".selected-cosmetic-disabled", !1)) : (this._toggleClass("hidden", ".selected-cosmetic-disabled", !0), this._alwaysShowWIPBadge ? this._toggleClass("hidden", ".selected-cosmetic-wip", !1) : 6110 === this._queueId ? this._toggleClass("hidden", ".selected-cosmetic-wip", !0) : this._toggleClass("hidden", ".selected-cosmetic-wip", !e.IsWIP)), t.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(1, 10, 19, .80) 85%, rgba(1, 10, 19, 1) 100%), center/cover no-repeat url(${e.loadoutsIcon})`;
-                    const o = this._querySelector(".selected-cosmetic-title"),
-                        s = e.name;
-                    o.innerHTML = s.trim(), this._removeClass("rarity-0", ".selected-cosmetic"), this._removeClass("rarity-1", ".selected-cosmetic"), this._removeClass("rarity-2", ".selected-cosmetic"), this._removeClass("rarity-3", ".selected-cosmetic"), this._removeClass("rarity-tag", ".selected-cosmetic"), this._removeProperty("--selected-cosmetic-rarity-tag", ".selected-cosmetic"), e.itemId > 1 && (this._rarityTagEnabled && e.TFTRarity ? (this._removeClass(`rarity-${e.rarityValue}`, ".selected-cosmetic"), this._setRarityTag(e), this._addClass("rarity-tag", ".selected-cosmetic-rarity"), this._setProperty("--selected-cosmetic-rarity-tag", `url("${e.rarityTag.iconBottom}")`, ".selected-cosmetic")) : this._fallback && (this._removeClass("rarity-tag", ".selected-cosmetic-rarity"), this._removeProperty("--selected-cosmetic-rarity-tag", ".selected-cosmetic"), this._addClass(`rarity-${e.rarityValue}`, ".selected-cosmetic")))
+                    this._isItemDisabled(e) ? (this._toggleClass("hidden", ".selected-cosmetic-wip", !0), this._toggleClass("hidden", ".selected-cosmetic-disabled", !1)) : (this._toggleClass("hidden", ".selected-cosmetic-disabled", !0), this._alwaysShowWIPBadge ? this._toggleClass("hidden", ".selected-cosmetic-wip", !1) : 6110 === this._queueId ? this._toggleClass("hidden", ".selected-cosmetic-wip", !0) : this._toggleClass("hidden", ".selected-cosmetic-wip", !e.IsWIP)), t.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(1, 10, 19, .80) 85%, rgba(1, 10, 19, 1) 100%), center/cover no-repeat url(${e.loadoutsIcon})`;
+                    const i = this._querySelector(".selected-cosmetic-title"),
+                        o = e.name;
+                    i.innerHTML = o.trim(), this._removeClass("rarity-0", ".selected-cosmetic"), this._removeClass("rarity-1", ".selected-cosmetic"), this._removeClass("rarity-2", ".selected-cosmetic"), this._removeClass("rarity-3", ".selected-cosmetic"), this._removeClass("rarity-tag", ".selected-cosmetic"), this._removeProperty("--selected-cosmetic-rarity-tag", ".selected-cosmetic"), e.itemId > 1 && (this._rarityTagEnabled && e.TFTRarity ? (this._removeClass(`rarity-${e.rarityValue}`, ".selected-cosmetic"), this._setRarityTag(e), this._addClass("rarity-tag", ".selected-cosmetic-rarity"), this._setProperty("--selected-cosmetic-rarity-tag", `url("${e.rarityTag.iconBottom}")`, ".selected-cosmetic")) : this._fallback && (this._removeClass("rarity-tag", ".selected-cosmetic-rarity"), this._removeProperty("--selected-cosmetic-rarity-tag", ".selected-cosmetic"), this._addClass(`rarity-${e.rarityValue}`, ".selected-cosmetic")))
                 }
                 _getMiscSection() {
                     return this._querySelector("div.cosmetic-misc")
@@ -26227,8 +26231,9 @@
                         const t = this._favorites?.some((t => t.contentId === e.contentId));
                         i.toggleFavoriteIcon(t)
                     }
-                    let o;
-                    return this._setRarityTag(e), this._fallback || i.disableFallback(), o = !!this._disabledContentIds?.includes(e.contentId), i.setAttribute("is-disabled", o), i.setData(e), i
+                    this._setRarityTag(e), this._fallback || i.disableFallback();
+                    const o = this._isItemDisabled(e);
+                    return i.setAttribute("is-disabled", o), i.setData(e), i
                 }
                 _setRarityTag(e) {
                     if (!this._rarityTagEnabled || !this._rarityTags || e?.rarityTag || !e?.TFTRarity) return;

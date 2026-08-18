@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Ο Σάιον έχει πιθανότητα να αγνοήσει μέρος της ζημιάς κάθε φορά που δέχεται επίθεση."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Το βλέμμα του Σάιον τρομοκρατεί έναν εχθρό, προκαλώντας του ζημιά και Ακινητοποιώντας τον.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ανατινάζει έναν εχθρό, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> και <status>Ακινητοποιώντας</status> τον για @StunDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ο Σάιον περιβάλλει τον εαυτό του με μια Ασπίδα που απορροφά ζημιά.  Αν η Ασπίδα δεν καταστραφεί, θα εκραγεί, προκαλώντας ζημιά στους γύρω εχθρούς. Ο Σάιον μπορεί να ενεργοποιήσει ξανά την ικανότητα για να ανατινάξει την Ασπίδα νωρίτερα.",
+            "dynamicDescription": "Ο Σάιον περιβάλλει τον εαυτό του με μια Ασπίδα που απορροφά <shield>@TotalShield@ ζημιά</shield>. Αν η Ασπίδα δεν καταστραφεί μέσα σε @ShieldDuration@ δευτερόλεπτα, θα εκραγεί, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους γύρω εχθρούς.<br><br><recast>Χρησιμοποιήστε ξανά</recast> την ικανότητα μετά από @RecastDelay@ δευτερόλεπτα για να την ανατινάξετε μη αυτόματα.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Σάιον καταναλώνει μέρος της ζωτικής ενέργειας των εχθρών του με κάθε επίθεση, απορροφώντας Ζωή για τον εαυτό του και τους κοντινούς συμμάχους του. Η μυρωδιά της σάρκας ανανεώνει επίσης τον ζήλο του Σάιον, αυξάνοντας την Ταχύτητα Επίθεσής του.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Σάιον αποκτά <lifeSteal>@LifestealPercent*100@% Αρπαγή Ζωής</lifeSteal> και <attackSpeed>@AttackSpeedMod*100@% Ταχύτητα Επίθεσης</attackSpeed> για @BuffDuration@ δευτερόλεπτα. Επιπλέον, οι βασικές επιθέσεις του Σάιον <healing>θεραπεύουν</healing> τους γύρω συμμάχους για το @HealPercent*100@% της ζημιάς που προκαλούν.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

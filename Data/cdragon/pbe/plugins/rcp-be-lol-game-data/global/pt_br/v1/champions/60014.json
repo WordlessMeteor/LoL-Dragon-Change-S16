@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Sion tem uma chance de ignorar parte do dano sempre que for atacado."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "O olhar de Sion aterroriza um único inimigo, causando dano e Atordoamento.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion atinge um único inimigo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>Atordoando-o</status> por @StunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sion é envolvido por um Escudo que absorve dano.  Se o Escudo não for destruído, ele explode, causando dano aos inimigos próximos. Sion pode reativar a Habilidade para detonar o escudo mais cedo.",
+            "dynamicDescription": "Sion é envolvido por um Escudo que absorve <shield>@TotalShield@ de dano</shield>. Se o Escudo não for destruído em @ShieldDuration@s, ele explode, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos.<br><br><recast>Reconjure</recast> após @RecastDelay@s para detonar manualmente.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sion consome parte da força vital de seus inimigos a cada ataque, drenando Vida para si e para aliados próximos. O cheiro de carne também renova os ânimos de Sion, aumentando sua Velocidade de Ataque.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion recebe <lifeSteal>@LifestealPercent*100@% de Roubo de Vida</lifeSteal> e <attackSpeed>@AttackSpeedMod*100@% de Velocidade de Ataque</attackSpeed> por @BuffDuration@s. Os Ataques básicos de Sion também <healing>curam</healing> aliados próximos em @HealPercent*100@% do dano causado.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

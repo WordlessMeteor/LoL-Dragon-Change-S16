@@ -597,7 +597,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger coloca una torreta ametralladora. Las torretas obtienen habilidades conforme subes de rango la habilidad. Las torretas de Heimerdinger infligen la mitad de daño contra las torretas.",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger construye una torreta ametralladora que inflige <magicDamage>@BonusDamage@ de daño mágico</magicDamage> por ataque. La torreta obtiene un <attackSpeed>@TurretBonusAttackSpeed*100@% de Velocidad de Ataque</attackSpeed> durante los próximos @AttackSpeedDuration@ seg tras colocarla. Esta habilidad tiene @MaxAmmo@ cargas (se recarga cada @AmmoRechargeTime@ seg).<br><br>Cada vez que la habilidad sube de rango, las torretas obtienen una mejora adicional:<br><attention>Rango 2:</attention> Los ataques de las torretas reducen la Armadura y la Resistencia Mágica del objetivo en @Level2ResistShred@ (máx.: @MaxShredCapTooltip@)<br><attention>Rango 3:</attention> La cantidad máxima de torretas aumenta a 2<br><attention>Rango 4:</attention> Las torretas obtienen <scaleHealth>@Level4HPTooltip@ de Vida</scaleHealth> adicional<br><attention>Rango 5:</attention> Los ataques de las torretas infligen un @AoEDamageMod*100@% de daño de área@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger dispara proyectiles de largo alcance que impactan a los enemigos más cercanos a él.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger dispara @MaxTargets@ microcohete(s) guiado(s) que rastrea(n) enemigos (máx.: 1 por unidad) e impactan a los objetivos más cercanos a él. Cada cohete inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger lanza una granada a una ubicación objetivo, lo que inflige daño, aturde a quien impacta directamente y ciega a las unidades en el área de explosión.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lanza una granada que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades enemigas y las <status>ciega</status> durante @BlindDuration@ seg.  Los enemigos que reciben el impacto directo de la granada quedan <status>aturdidos</status> durante @StunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Pasiva / Activa: El enfriamiento de las habilidades de Heimerdinger se reduce de forma pasiva.  Al lanzar la habilidad, Heimerdinger cura a todas las Torretas Evolutivas H-28 G activas y les ordena disparar proyectiles escarchados que reducen la velocidad de movimiento de los enemigos durante un lapso de tiempo breve.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>El enfriamiento de las habilidades de Heimerdinger se reduce un @CooldownBonus*-100@%.<br><br><spellActive>Activa: </spellActive>Todas las habilidades y las torretas de Heimerdinger se potencian mientras dure el efecto.<br><br><spellName>Torretas Evolutivas:</spellName> Todas las torretas <healing>se curan</healing> por completo. Cada ataque <status>@MovementSpeedMod*-100@ralentiza en un %</status>.<br><spellName>Microcohetes Hextech:</spellName> Dispara @WMaxMissiles@ cohetes.<br><spellName>Granada de Conmoción CH-1:</spellName> Se desplaza un 33% más rápido.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

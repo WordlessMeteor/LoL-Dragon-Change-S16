@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Miss Fortune gode di velocità di movimento aumentata finché non viene colpita in combattimento."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Miss Fortune aumenta passivamente i danni inflitti a un bersaglio con ogni colpo.  Questa abilità può essere attivata per aumentare la velocità d'attacco di Miss Fortune e far sì che i suoi attacchi riducano le cure ricevute dal bersaglio.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Passiva:</font> Miss Fortune infligge <magicDamage>@TotalDamageOnHIt@ danni magici</magicDamage> al suo bersaglio con ogni attacco, che si accumulano fino a @MaxStacks@ volte sullo stesso bersaglio.<br><magicDamage>Danni bonus massimi: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Attiva:</font> la <attackSpeed>velocità d'attacco</attackSpeed> di Miss Fortune aumenta di un <attackSpeed>@ASMod@%</attackSpeed> per @ActiveDuration@ secondo/i e i suoi attacchi applicano un <keyword>50% di Ferita grave</keyword> per 3 secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Miss Fortune scatena una pioggia di proiettili in un punto, infliggendo danni a ondate agli avversari e rallentandoli.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune spara centinaia di proiettili in aria che piovono sui nemici, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> nell'arco di @Duration@ secondi e <status>rallentandoli</status> di un @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Miss Fortune indirizza una raffica di proiettili in un'area conica davanti a sé, infliggendo una grande quantità di danni ai nemici.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune indirizza una raffica di proiettili in un'area conica davanti a sé per @ChannelDuration@ secondo/i, infliggendo <physicalDamage>@PhysicalDamagePerWave@ danni fisici</physicalDamage> per proiettile (<physicalDamage>danni totali: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

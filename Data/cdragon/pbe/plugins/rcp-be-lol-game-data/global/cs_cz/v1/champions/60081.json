@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "Ezreal získá bonus k rychlosti útoků pokaždé, když zasáhne cíl kouzlem."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "Ezreal vystřelí ničivý výboj energie, který v případě zásahu nepřátelské jednotky mírně zkrátí všechny jeho přebíjecí doby.",
             "dynamicDescription": "Ezreal vyšle energetický výboj, který způsobí <physicalDamage>@Damage@ bodů fyzického poškození</physicalDamage> (aplikuje zásahové efekty).<br><br>Pokud <spellName>Mystická střela</spellName> zasáhne nějaký cíl, Ezrealovi se zkrátí přebíjecí doby o 1 sekundu.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ezreal vystřelí kolísavou vlnu energie, která nepřátelským šampionům sníží rychlost útoků a způsobí jim magické poškození, spojenecké šampiony naopak vyléčí a rychlost útoků jim zvýší.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal vystřelí energetickou vlnu, která všem zasaženým nepřátelským šampionům způsobí<magicDamage>@Damage@ bodů magického poškození</magicDamage> a na @Duration@ sek. jim sníží <attackSpeed>rychlost útoků</attackSpeed> o @AttackSpeed@ %. <br><br>Spojenečtí šampioni zasažení vlnou si obnoví <healing>@TotalHeal@ zdraví</healing> a získají na @Duration@ sek. @AttackSpeed@ % k <attackSpeed>rychlosti útoků</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ezreal vypálí mocnou salvu energetických střel, které způsobí rozsáhlé poškození každé jednotce, kterou projdou.",
+            "dynamicDescription": "Ezreal vypálí salvu střel, která každé zasažené jednotce způsobí <magicDamage>@Damage@ bodů magického poškození</magicDamage>. Za každou zasaženou jednotku se však způsobené poškození snižuje o @DamageReductionPerHit*100@ % (až na minimum @MinimumDamagePercent*100@ %).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينصب هايمردينغر برج حماية مزودًا بمدفعٍ رشاش. تكسب أبراج الحماية قدرات مع ترقية هذه القدرة. (تلحق أبراج الحماية نصف الضرر بالأبراج).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينصب هايمردينغر برج حماية مزودًا بمدفع رشاش يلحق <magicDamage>@BonusDamage@ ضرر سحر</magicDamage> كل هجوم. تكسب أبراج الحماية <attackSpeed>@TurretBonusAttackSpeed*100@% سرعة هجوم</attackSpeed> لأول @AttackSpeedDuration@ث بعد وضعها. تمتلك هذه القدرة @MaxAmmo@ من الشحنات (فترة التجديد @AmmoRechargeTime@ث).<br><br>يمنح كل مستوى لهذه القدرة تحسينًا إضافيًا:<br><attention>المستوى 2:</attention> تقلص هجمات أبراج الحماية دروع ومقاومة سحر الهدف بمقدار @Level2ResistShred@ (الحد الأقصى @MaxShredCapTooltip@)<br><attention>المستوى 3:</attention> يزداد العدد الأقصى لأبراج الحماية إلى 2<br><attention>المستوى 4:</attention> تكسب أبراج الحماية <scaleHealth>@Level4HPTooltip@ صحة</scaleHealth> إضافية<br><attention>المستوى 5:</attention> تلحق هجمات أبراج الحماية @AoEDamageMod*100@% ضرر منتشر@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يُطلق هايمردينغر صواريخ بعيدة المدى تُصيب الأعداء الأقرب إلى هايمردينغر.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يُطلق هايمردينغر @MaxTargets@ من الصواريخ المصغّرة تطارد الأعداء (الحد الأقصى 1 لكل عدو)، فتصيب الأهداف الأقرب إليه. يلحق كل صاروخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرمي هايمردينغر قنبلة على موقع، فتلحق الضرر بالوحدات المعادية، كما تصعق كل من تصيبه مباشرة وتعمي الوحدات المحيطة.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي هايمردينغر قنبلة، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالوحدات المعادية كما تصيبها بتأثير <status>العمى</status> لمدة @BlindDuration@ث.  يتم <status>صعق</status> الأعداء الذين يتعرضون إلى إصابةٍ مباشرة لمدة @StunDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تأثير كامن / نشط: يزيد تقليص فترة التبريد تلقائيًا.  قم بالتفعيل لعلاج كل أبراج الحماية المتطورة النشطة وجعلها تطلق طلقات جليدية، لتتسبب في تقليص سرعة الحركة لفترةٍ وجيزة.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تقليص فترة التبريد بنسبة @CooldownBonus*-100@%.<br><br><spellActive>تأثير نشط: </spellActive>تعزز جميع القدرات وأبراج الحماية طوال المدة.<br><br><spellName>أبراج الحماية المتطورة:</spellName> يتم <healing>علاج</healing> جميع أبراج الحماية بالكامل. يطبق كل هجوم <status>@MovementSpeedMod*-100@% إبطاء</status>.<br><spellName>صواريخ الهيكستيك المصغرة:</spellName> تطلق @WMaxMissiles@ من الصواريخ.<br><spellName>القنبلة الارتجاجية سي إتش-1:</spellName> تتحرك بسرعة أكبر بنسبة 33%.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

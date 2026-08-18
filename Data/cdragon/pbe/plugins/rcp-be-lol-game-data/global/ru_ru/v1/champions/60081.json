@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "Когда Эзреаль поражает врага умением, его скорость атаки растет (бонус суммируется)."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "Эзреаль выстреливает энергетическим зарядом. Если заряд попадает в противника, тому наносится урон, а время перезарядки умений Эзреаля немного сокращается.",
             "dynamicDescription": "Эзреаль выпускает заряд энергии, наносящий <physicalDamage>@Damage@ ед. физ. урона</physicalDamage> (накладывает эффекты при попадании). <br><br>При попадании <spellName>Мистический выстрел</spellName> сокращает перезарядку умений Эзреаля на 1 сек.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Эзреаль выпускает волну энергии, наносящую маг. урон вражеским чемпионам и снижающую их скорость атаки, а также восстанавливающую здоровье союзных чемпионов и повышающую их скорость атаки.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Эзреаль выпускает волну энергии, наносящую <magicDamage>@Damage@ ед. маг. урона</magicDamage> вражеским чемпионам и снижающую их <attackSpeed>скорость атаки</attackSpeed> на @AttackSpeed@% на @Duration@ сек.<br><br>Союзные чемпионы, задетые волной, восстанавливают <healing>@TotalHeal@ здоровья</healing>, получая @AttackSpeed@% <attackSpeed>скорости атаки</attackSpeed> на @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Эзреаль выпускает залп снарядов, наносящий большой урон каждой цели, сквозь которую проходит.",
+            "dynamicDescription": "Эзреаль выпускает залп снарядов, наносящий <magicDamage>@Damage@ ед. маг. урона</magicDamage> каждой цели, сквозь которую проходит. Каждая последующая цель получает на @DamageReductionPerHit*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

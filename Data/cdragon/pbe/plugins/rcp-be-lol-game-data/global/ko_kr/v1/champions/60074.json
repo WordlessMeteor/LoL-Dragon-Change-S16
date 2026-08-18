@@ -597,7 +597,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 연사형 포탑을 설치합니다. 이 스킬의 레벨이 오르면 포탑이 능력을 얻습니다. (하이머딩거의 포탑은 적 포탑에 절반의 피해만 줍니다.)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 연사형 포탑을 세웁니다. 포탑은 공격을 가할 때마다 <magicDamage>@BonusDamage@의 마법 피해</magicDamage>를 입힙니다. 설치 직후의 포탑은 @AttackSpeedDuration@초에 걸쳐 점차 감소하는 <attackSpeed>@TurretBonusAttackSpeed*100@%의 추가 공격 속도</attackSpeed>를 갖습니다. 이 스킬은 @MaxAmmo@회까지 충전됩니다. (@AmmoRechargeTime@초마다 충전)<br><br>이 스킬은 스킬 레벨이 오를 때마다 추가로 강화됩니다.<br><attention>2레벨:</attention> 포탑의 공격이 대상의 방어력과 마법 저항력을 @Level2ResistShred@씩 감소시킵니다. (최대 @MaxShredCapTooltip@)<br><attention>3레벨:</attention> 최대 포탑 개수가 2개로 증가합니다.<br><attention>4레벨:</attention> 포탑이 추가로 <scaleHealth>@Level4HPTooltip@의 체력</scaleHealth>을 얻습니다.<br><attention>5레벨:</attention> 포탑의 공격이 @AoEDamageMod*100@%의 광역 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 가장 가까운 적에게 장거리 로켓을 발사합니다.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 가장 가까운 대상을 추적하는 @MaxTargets@발의 초소형 로켓을 발사합니다. (1명당 한 발) 로켓은 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 목표 위치에 수류탄을 던져 적에게 피해를 입힙니다. 수류탄에 직격당한 적은 기절하며, 빗겨맞은 유닛은 실명합니다.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 수류탄을 던져, 적 유닛에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @BlindDuration@초 동안 <status>실명</status>시킵니다.  직격당한 적은 @StunDuration@초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "기본 지속 효과 / 사용 시 효과: 기본 지속 효과로 재사용 대기시간 감소를 제공합니다.  사용 시 활성화되어 있는 모든 진화형 포탑의 체력을 회복시키고, 잠시 대상의 이동 속도를 감소시키는 냉동 탄환을 발사하게 합니다.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>재사용 대기시간이 @CooldownBonus*-100@% 감소합니다.<br><br><spellActive>사용 시: </spellActive>지속시간 동안 모든 스킬과 포탑을 강화합니다.<br><br><spellName>진화형 포탑:</spellName> 모든 포탑의 체력이 완전히 <healing>회복</healing>됩니다. 또한 포탑이 공격을 가할 때마다 <status>@MovementSpeedMod*-100@%의 둔화</status>를 적용합니다.<br><spellName>마법공학 초소형 로켓:</spellName> @WMaxMissiles@발의 로켓을 발사합니다.<br><spellName>CH-1 충격 수류탄:</spellName> 날아가는 속도가 33% 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

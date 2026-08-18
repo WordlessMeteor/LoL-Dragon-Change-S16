@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger elhelyez egy géppuskatornyot. A tornyok a képesség fejlesztésével új adottságokra tesznek szert. (A tornyok feleakkora sebzést okoznak más tornyoknak.)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger géppuskatornyot épít, amely támadásonként <magicDamage>@BonusDamage@ varázssebzést</magicDamage> okoz. A tornyok <attackSpeed>@TurretBonusAttackSpeed*100@% támadási sebességet</attackSpeed> kapnak a lehelyezésüket követő első @AttackSpeedDuration@ másodpercre. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>A képesség minden szintje egy további fejlesztést biztosít:<br><attention>2. szint:</attention> a torony támadásai @Level2ResistShred@ ponttal csökkentik a célpont páncélját és varázsellenállását (legfeljebb @MaxShredCapTooltip@ pontig)<br><attention>3. szint:</attention> egyszerre 2 torony lehet aktív<br><attention>4. szint:</attention> a tornyok további <scaleHealth>@Level4HPTooltip@ életerőre</scaleHealth> tesznek szert<br><attention>5. szint:</attention> a tornyok @AoEDamageMod*100@% szétterülő sebzést okoznak@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger nagy hatótávolságú rakétákat lő ki, amelyek a Heimerdingerhez legközelebbi ellenfeleket találják el.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger @MaxTargets@, ellenséges célpontokat kereső mikrorakétát lő ki (személyenként legfeljebb 1 darabot), amelyek a hozzá legközelebbi célpontokat találják el. Mindegyik rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger egy gránátot hajít a kijelölt helyre, amely megsebzi az ellenséges egységeket, elkábítja a közvetlenül eltalált célpontokat, a körülöttük állókat pedig elvakítja.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger elhajít egy gránátot, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenséges egységeknek, és @BlindDuration@ másodpercre <status>elvakítja</status> őket.  A közvetlenül eltalált ellenfelek @StunDuration@ másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Passzív/aktív: passzívan növeli a töltésiidő-csökkentést.  Aktiváláskor gyógyítja az összes aktív fejlesztett tornyot, amelyek fagyasztó lövedékekre váltanak, rövid időre csökkentve a célpont mozgási sebességét.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>@CooldownBonus*-100@% töltésiidő-csökkentés.<br><br><spellActive>Aktív: </spellActive>felerősít minden képességet és tornyot a hatás időtartama alatt.<br><br><spellName>Fejlesztett tornyok:</spellName> minden torony visszanyeri a teljes <healing>életerejét</healing>. Minden lövés <status>@MovementSpeedMod*-100@%-os lassítást</status> alkalmaz.<br><spellName>Hextech mikrorakéták:</spellName> @WMaxMissiles@ rakétát lő ki.<br><spellName>CH-1 sokkoló gránát:</spellName> 33%-kal gyorsabban repül.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

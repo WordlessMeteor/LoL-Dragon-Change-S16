@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_CorkiQ_Jade_Summary",
-            "dynamicDescription": "Spell_CorkiQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Корки выпускает бомбу, нанося врагам в области взрыва урон и раскрывая их.",
+            "dynamicDescription": "Корки выпускает бомбу, наносящую <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Область взрыва и пораженные чемпионы раскрываются на @RevealDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Корки ведет огонь из пулемета в конусе перед собой, нанося врагам урон и снижая их броню.",
-            "dynamicDescription": "Spell_CorkiE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Корки ведет огонь из пулемета в конусе перед собой в течение @ActiveDuration@ сек., нанося врагам <physicalDamage>@DamagePerSecondCalc@ ед. физ. урона</physicalDamage> и <status>снижая их броню на @ArmorMod*-1@</status> в секунду. Снижение брони суммируется, длясь @ShredDuration@ сек. (Макс. урон: <physicalDamage>@MaximumDamageTooltip@</physicalDamage> ед.)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_CorkiR_Jade_Summary",
-            "dynamicDescription": "Spell_CorkiR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Корки выпускает в указанном направлении ракету, взрывающуюся при попадании и наносящую урон врагам в области поражения. Часть ракет – мегаракеты, наносящие доп. урон.",
+            "dynamicDescription": "Корки выпускает ракету в выбранную область; она столкнется с первым врагом на пути. Каждая ракета наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> по площади.<br><br>У этого умения @MaxAmmoTooltip@ зар. (восстановление раз в @AmmoRechargeTime@ сек.).<br><br>Каждая 3-я ракета – мегаракета, наносящая <magicDamage>@TotalDamageBig@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

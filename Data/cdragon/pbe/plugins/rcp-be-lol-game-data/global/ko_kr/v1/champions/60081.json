@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "이즈리얼이 스킬을 맞힐 때마다 증가하는 공격 속도를 얻습니다."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "이즈리얼이 에너지로 이루어진 화살을 발사합니다. 적 유닛에게 명중하면 모든 스킬의 재사용 대기시간이 약간 감소합니다.",
             "dynamicDescription": "이즈리얼이 에너지 화살을 발사해 <physicalDamage>@Damage@의 물리 피해</physicalDamage>를 입힙니다. (적중 시 효과 적용) <br><br><spellName>신비한 화살</spellName> 적중 시 이즈리얼의 스킬 재사용 대기시간이 1초 감소합니다.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "이즈리얼이 넘실대는 에너지 파동을 발사합니다. 파동에 맞은 적 챔피언은 마법 피해를 받고 공격 속도가 감소하며, 아군 챔피언은 체력을 회복하고 공격 속도를 얻습니다.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "이즈리얼이 에너지 파동을 발사해, 경로상의 모든 적 챔피언에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입히고 @Duration@초 동안 <attackSpeed>공격 속도</attackSpeed>를 @AttackSpeed@% 감소시킵니다.<br><br>파동에 맞은 아군 챔피언은 <healing>@TotalHeal@의 체력</healing>을 회복하고 @Duration@초 동안 @AttackSpeed@%의 <attackSpeed>공격 속도</attackSpeed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "이즈리얼이 강력한 에너지 투사체를 발사해 경로상의 모든 유닛에게 막대한 피해를 입힙니다.",
+            "dynamicDescription": "이즈리얼이 에너지 투사체를 발사해 경로상의 모든 유닛에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입힙니다. 단, 유닛 하나를 맞힐 때마다 피해량이 @DamageReductionPerHit*100@%씩 감소합니다. (최소 @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

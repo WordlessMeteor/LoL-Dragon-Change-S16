@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Spell_DrMundoPassive_Jade_Summary"
+        "description": "Dr. Mundo regenera una parte de su vida máxima por seg."
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ de Vida</font>",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Dr. Mundo arroja su cuchilla, la cual inflige daño según la vida máxima de sus víctimas.",
-            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dr. Mundo arroja su cuchilla, lo que inflige <magicDamage>daño mágico</magicDamage> equivalente al @DamageMod*100@% de la Vida actual del objetivo (@MinDamage@ de daño como mínimo) y lo <status>ralentiza</status> en un @MoveMod*-100@% durante @SlowDuration@ seg.<br><br>Recupera <healing>@HealthReturn@ de Vida</healing> si la cuchilla impacta a un objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ de Vida</font>",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Spell_DrMundoE_Jade_Summary",
-            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo obtiene daño de ataque por unos seg según su vida faltante.",
+            "dynamicDescription": "Dr. Mundo obtiene <physicalDamage>@BaseIncrease@ de Daño de Ataque</physicalDamage> durante @Duration@ seg. Dr. Mundo obtiene <physicalDamage> +@DamageMod@ de Daño de Ataque</physicalDamage> adicional por cada porcentaje de vida que le falte.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% de la Vida actual</font>",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Dr. Mundo sacrifica una parte de su vida para aumentar su velocidad de movimiento y regeneración de vida de forma drástica.",
-            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dr. Mundo recupera <healing>@MaximumHealthRegen@ de Vida</healing> y obtiene un <speed>@SpeedMod*100@% de Velocidad de Movimiento</speed> a lo largo de @Duration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

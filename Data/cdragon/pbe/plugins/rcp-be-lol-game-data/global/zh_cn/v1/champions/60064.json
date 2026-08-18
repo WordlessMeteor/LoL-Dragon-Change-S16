@@ -538,7 +538,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Spell_LeeSinPassive_Jade_Summary"
+        "description": "在李青使用一次技能后，他的下几次攻击会获得攻速加成，且回复能量。"
     },
     "spells": [
         {
@@ -549,8 +549,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "Spell_LeeSinQOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinQOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成物理伤害。如果天音波击中敌人，李青可施放回音击。<br><br>回音击：李青冲向被天音波击中的敌人，造成基于该目标已损失生命值的额外伤害。",
+            "dynamicDescription": "<spellName>天音波：</spellName>李青发出刺耳的声波定位敌人，对首个敌人造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。如果天音波击中敌人，李青在接下来3秒可施放<spellName>回音击</spellName>。<br><br><spellName>回音击：</spellName>李青冲向被天音波击中的敌人，造成<physicalDamage>@RecastDamage@物理伤害</physicalDamage>外加其@MissingHealthDamage*100@%已损失生命值的额外伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -699,8 +699,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "Spell_LeeSinWOne_Jade_Summary",
-            "dynamicDescription": "Spell_LeeSinWOne_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "金钟罩：李青冲向一个目标友军，为二者提供护盾值。在使用金钟罩后，李青可以施放铁布衫。<br><br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能，从而获得生命偷取、技能吸血和护甲。",
+            "dynamicDescription": "<spellName>金钟罩：</spellName>李青冲向一个目标友军，为二者提供@ShieldAmount@<shield>护盾值</shield>，持续@ShieldDuration@秒。在使用<spellName>金钟罩</spellName>后，李青可以在接下来的@W1ReactivateTime@秒内施放<spellName>铁布衫</spellName>。<br><br><spellName>铁布衫：</spellName>李青艰苦卓绝的训练让他能在战斗中激发潜能。在@LifestealAndSpellVampTime@秒期间，李青获得@LifestealAndSpellVamp@%生命偷取、法术吸血和<scaleArmor>@ArmorBonus@护甲</scaleArmor>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

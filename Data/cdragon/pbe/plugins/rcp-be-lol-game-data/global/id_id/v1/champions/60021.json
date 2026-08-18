@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Miss Fortune mendapat tambahan Movement Speed hingga dia menerima damage dalam combat."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Miss Fortune secara pasif meningkatkan damage yang dihasilkan ke target tiap kali menyerang target tersebut.  Ability ini bisa diaktifkan untuk meningkatkan Attack Speed Miss Fortune dan membuat serangannya mengurangi heal yang diterima target.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Pasif:</font> Miss Fortune menghasilkan <magicDamage>@TotalDamageOnHIt@ magic damage</magicDamage> ke target tiap kali menyerang, bisa stack hingga @MaxStacks@ kali pada target yang sama.<br><magicDamage>Damage bonus maksimum: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Aktif:</font> <attackSpeed>Attack Speed</attackSpeed> Miss Fortune meningkat sebesar <attackSpeed>@ASMod@%</attackSpeed> selama @ActiveDuration@ detik dan serangannya menerapkan <keyword>50% Grievous Wounds</keyword> selama 3 detik.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Miss Fortune melepaskan rentetan peluru ke suatu lokasi, menghasilkan gelombang damage pada musuh dan menerapkan slow pada mereka.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune menembakkan ratusan peluru ke udara yang kemudian menghujani area, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @Duration@ detik dan menerapkan <status>Slow</status> pada musuh sebesar @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Miss Fortune melakukan channeling rentetan peluru yang menyebar di depannya dan menghasilkan damage besar pada musuh.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune melakukan channeling rentetan peluru ke area kerucut di depannya selama @ChannelDuration@ detik, menghasilkan <physicalDamage>@PhysicalDamagePerWave@ physical damage</physicalDamage> per peluru (<physicalDamage>Total Damage: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

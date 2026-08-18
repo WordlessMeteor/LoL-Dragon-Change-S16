@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "Ezreal augmente sa vitesse d'attaque chaque fois qu'il touche un ennemi avec une compétence."
     },
     "spells": [
         {
@@ -828,12 +828,12 @@
             "description": "Ezreal tire un trait d'énergie blessant qui, s'il touche un ennemi, réduit légèrement tous les délais de récupération d'Ezreal.",
             "dynamicDescription": "Ezreal tire un trait d'énergie, infligeant <physicalDamage>@Damage@ pts de dégâts physiques</physicalDamage> (applique les effets à l'impact). <br><br>Les délais de récupération d'Ezreal sont réduits de 1 sec si <spellName>Tir mystique</spellName> touche une cible.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -976,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ezreal envoie une vague d'énergie instable, réduisant la vitesse d'attaque et infligeant des dégâts magiques aux champions ennemis, tout en soignant et en augmentant la vitesse d'attaque des champions alliés.",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal envoie une vague d'énergie qui inflige <magicDamage>@Damage@ pts de dégâts magiques</magicDamage> à tous les champions ennemis traversés et qui réduit leur <attackSpeed>vitesse d'attaque</attackSpeed> de @AttackSpeed@% pendant @Duration@ sec.<br><br>Les champions alliés touchés par la vague d'énergie récupèrent <healing>@TotalHeal@ PV</healing> et gagnent @AttackSpeed@% de <attackSpeed>vitesse d'attaque</attackSpeed> pendant @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ezreal tire un puissant barrage de projectiles d'énergie qui infligent des dégâts massifs à chaque unité qu'il traverse.",
+            "dynamicDescription": "Ezreal tire un barrage de projectiles, infligeant <magicDamage>@Damage@ pts de dégâts magiques</magicDamage> à chaque unité qu'il traverse. Cependant, il inflige @DamageReductionPerHit*100@% de dégâts en moins pour chaque unité touchée (minimum de @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

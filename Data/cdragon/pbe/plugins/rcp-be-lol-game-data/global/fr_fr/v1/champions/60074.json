@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Heimerdinger déploie une tourelle mitrailleuse. Les tourelles gagnent des compétences à mesure que la compétence de Heimerdinger est améliorée. (Les tourelles infligent la moitié des dégâts aux tourelles.)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger construit une Tourelle mitrailleuse qui inflige <magicDamage>@BonusDamage@ pts de dégâts magiques</magicDamage> par attaque. Les tourelles gagnent <attackSpeed>@TurretBonusAttackSpeed*100@% de vitesse d'attaque</attackSpeed> pendant les @AttackSpeedDuration@ premières secondes après avoir été placées. Cette compétence a @MaxAmmo@ charges (@AmmoRechargeTime@ sec de rechargement).<br><br>Chaque rang de cette compétence octroie une amélioration supplémentaire :<br><attention>Rang 2 :</attention> les attaques des tourelles réduisent l'armure et la résistance magique de la cible de @Level2ResistShred@ (max @MaxShredCapTooltip@)<br><attention>Rang 3 :</attention> le nombre maximal de tourelles est augmenté et il passe à 2<br><attention>Rang 4 :</attention> les tourelles gagnent <scaleHealth>@Level4HPTooltip@ PV</scaleHealth> bonus<br><attention>Rang 5 :</attention> les attaques des tourelles infligent @AoEDamageMod*100@% de dégâts de zone@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Heimerdinger lance des roquettes à longue portée qui touchent les ennemis les plus proches de lui.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger tire @MaxTargets@ micro-roquettes à tête chercheuse sur des ennemis (max 1 roquette par personne), touchant les cibles les plus proches de lui. Chaque roquette inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Heimerdinger lance une grenade vers l'endroit ciblé, infligeant des dégâts aux unités ennemies. Cela étourdit aussi les unités touchées directement et aveugle les unités proches.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lance une grenade, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux unités ennemies et les <status>aveugle</status> pendant @BlindDuration@ sec.  Les ennemis touchés directement sont <status>étourdis</status> pendant @StunDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Passif/Actif : la réduction des délais de récupération augmente de manière passive.  Lorsque cette compétence est active, elle prodigue des soins à toutes les tourelles Évolution actives et leur permet de tirer des projectiles de givre, qui réduisent la vitesse de déplacement, pendant un court instant.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>@CooldownBonus*-100@% de réduction du délai de récupération.<br><br><spellActive>Actif : </spellActive>toutes les compétences d'Heimerdinger et les tourelles sont renforcées pendant la durée de cette compétence.<br><br><spellName>Tourelles H-28G Évolution :</spellName> toutes les tourelles sont entièrement <healing>soignées</healing>. Chaque attaque applique <status>@MovementSpeedMod*-100@% de ralentissement</status>.<br><spellName>Micro-roquettes Hextech :</spellName> tire @WMaxMissiles@ roquettes.<br><spellName>Grenade assommante CH-1 :</spellName> se déplace 33% plus vite.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

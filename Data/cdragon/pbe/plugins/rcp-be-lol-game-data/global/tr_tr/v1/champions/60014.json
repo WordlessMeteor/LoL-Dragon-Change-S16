@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "Sion saldırıya uğradığında hasarın bir kısmını yok sayabilir."
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Sion'un bakışı bir rakibi dehşete düşürerek ona hasar verir ve onu sersemletir.",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion bir rakibe saldırır, ona <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onu @StunDuration@ saniyeliğine <status>sersemletir</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Sion kendini hasar soğuran bir kalkanla çevreler.  Kalkan kırılmazsa patlar ve çevresindeki rakiplere hasar verir. Sion kalkanı erkenden patlatmak için yeteneği yeniden kullanabilir.",
+            "dynamicDescription": "Sion kendini <shield>@TotalShield@ Hasar</shield> soğuran bir kalkanla çevreler. Kalkan @ShieldDuration@ saniye içinde kırılmazsa patlar ve çevredeki rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br><recast>Kalkanı manuel olarak patlatmak için @RecastDelay@ saniye sonra yeteneği yeniden kullan</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Sion her saldırısında rakiplerinin yaşam gücünün bir kısmını emer ve kendisiyle yakındaki takım arkadaşlarının canını yeniler. Et kokusu Sion'un coşkusunu da tazeler ve saldırı hızını arttırır.",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sion @BuffDuration@ saniyeliğine <lifeSteal>%@LifestealPercent*100@ Can Çalma</lifeSteal> ve <attackSpeed>%@AttackSpeedMod*100@ Saldırı Hızı</attackSpeed> kazanır. Ayrıca Sion çevredeki takım arkadaşlarını normal saldırılarıyla verdiği hasarın %@HealPercent*100@ kadarına eşdeğer miktarda <healing>iyileştirir</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

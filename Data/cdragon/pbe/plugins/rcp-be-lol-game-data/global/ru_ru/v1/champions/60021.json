@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "Скорость передвижения Мисс Фортуны повышена, пока ее не поразит враг."
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мисс Фортуна пассивно наносит цели все больше урона с каждым выстрелом. При активации умение дает скорость атаки и снижает получаемое целью лечение.",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Пассивно:</font> с каждой автоатакой Мисс Фортуна дополнительно наносит своей цели <magicDamage>@TotalDamageOnHIt@ ед. маг. урона</magicDamage>. Эффект суммируется до @MaxStacks@ р. для 1 цели.<br><magicDamage>Макс. доп. урон: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Активно:</font> Мисс Фортуна получает <attackSpeed>@ASMod@%</attackSpeed> <attackSpeed>скорости атаки</attackSpeed> на @ActiveDuration@ сек., ее автоатаки накладывают <keyword>Страшные раны (50%)</keyword> на 3 сек.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мисс Фортуна обрушивает град пуль на выбранную область. Все противники там в течение нескольких секунд получают урон и замедляются.",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мисс Фортуна выпускает в воздух сотни пуль. Они обрушиваются дождем на выбранную область, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> в течение @Duration@ сек. и <status>замедляя</status> врагов на @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мисс Фортуна выпускает шквал пуль веером перед собой, нанося гигантский урон врагам.",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мисс Фортуна выпускает шквал пуль веером перед собой в течение @ChannelDuration@ сек. Каждая наносит <physicalDamage>@PhysicalDamagePerWave@ ед. физ. урона</physicalDamage> (<physicalDamage>сумм. урон: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Spell_KassadinPassive_Jade_Summary"
+        "description": "Ο Κάσαντιν δέχεται μειωμένη <magicDamage>Μαγική Ζημιά</magicDamage> και μετατρέπει την εισερχόμενη Μαγική Ζημιά σε μπόνους <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed>."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_KassadinW_Jade_Summary",
-            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Παθητική: Οι βασικές επιθέσεις του Κάσαντιν αναπληρώνουν Μάνα. Ενεργή: Οι βασικές επιθέσεις του Κάσαντιν προκαλούν επιπλέον Μαγική Ζημιά.",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Οι βασικές επιθέσεις του Κάσαντιν αντλούν ενέργεια από το Κενό, αναπληρώνοντας <scaleMana>@ManaGainAmount@ Μάνα</scaleMana> με κάθε χτύπημα. Αναπληρώνει <scaleMana>@ChampionManaRestore@ Μάνα</scaleMana> ενάντια σε Ήρωες.<br><br><spellActive>Ενεργή: </spellActive>Ο Κάσαντιν φορτίζει την απόκοσμη λεπίδα του για @BuffDuration@ δευτερόλεπτα, προκαλώντας επιπλέον <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> με τις βασικές επιθέσεις του.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Κάσαντιν αντλεί ενέργεια από τις ικανότητες που χρησιμοποιούνται στη γύρω περιοχή. Μόλις φορτίσει, ο Κάσαντιν μπορεί να χρησιμοποιήσει τον Παλμό Ενέργειας για να προκαλέσει ζημιά και να επιβραδύνει τους εχθρούς που βρίσκονται σε μια κωνική περιοχή μπροστά του.",
-            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Κάσαντιν αντλεί ενέργεια από τις ικανότητες που χρησιμοποιούνται στη γύρω περιοχή και αποκτά μία φόρτιση κάθε φορά που χρησιμοποιείται μια ικανότητα κοντά του.<br><br>Όταν φτάσει τις @RequiredChargesTooltip@ φορτίσεις, ο Κάσαντιν μπορεί να χρησιμοποιήσει τον <spellName>Παλμό Ενέργειας</spellName> για να προκαλέσει <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> και να <status>Επιβραδύνει</status> τους εχθρούς κατά @MoveSpeedMod*-100@% για @SlowDuration@ δευτερόλεπτα σε μια κωνική περιοχή μπροστά του.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Κάσαντιν τηλεμεταφέρεται σε μια κοντινή τοποθεσία και προκαλεί ζημιά στις κοντινές αντίπαλες μονάδες. Επιπλέον, η χρήση πολλών Μονοπατιών του Κενού σε σύντομο χρονικό διάστημα αυξάνει το κόστος Μάνα και προκαλεί επιπλέον ζημιά.",
-            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Κάσαντιν τηλεμεταφέρεται σε μια κοντινή τοποθεσία και προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στις εχθρικές μονάδες γύρω του. Επιπλέον, κάθε επόμενο <spellName>Μονοπάτι του Κενού</spellName> μέσα στα επόμενα @BuffDuration@ δευτερόλεπτα κοστίζει <scaleMana>@AdditionalManaPerCast@ επιπλέον Μάνα</scaleMana> και προκαλεί <magicDamage>@Damage@ επιπλέον ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
