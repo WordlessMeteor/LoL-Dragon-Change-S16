@@ -853,7 +853,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Позволяет Эш отправлять дух ястреба на разведку территории. Эш также получает доп. золото за убийства вражеских бойцов.",
-            "dynamicDescription": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Эш дополнительно получает <gold>@AdditionalGold@ золота</gold> при каждом убийстве врага.<br><br><spellActive>Активно:</spellActive> Эш посылает ястреба, раскрывающего область на @RevealDuration@ сек. Также он раскрывает область, над которой летит.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -1003,7 +1003,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Эш выпускает ледяную стрелу в указанном направлении. Попадая во вражеского чемпиона, стрела наносит урон и оглушает цель (время зависит от дальности полета стрелы, но не более 3,5 сек.). Враги рядом с целью получают урон и замедляются.",
-            "dynamicDescription": "game_spell_tooltip_EnchantedCrystalArrow_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Эш выпускает ледяную стрелу, <status>оглушающую</status> вражеского чемпиона и наносящую <magicDamage>@RMainDamage@ ед. маг. урона</magicDamage>. Срок <status>оглушения</status> зависит от дальности полета стрелы, до @MaxStunDuration@ сек. Враги поблизости <status>замедляются</status> на @MovementSpeedMod*-100@% на @SlowDuration@ сек. и получают <magicDamage>@RAoEDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -19,7 +19,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.skl",
             "simpleSkin": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.skn",
-            "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+            "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
                 150.0,
@@ -618,6 +618,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -1333,6 +1343,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -1627,6 +1647,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -2335,6 +2365,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

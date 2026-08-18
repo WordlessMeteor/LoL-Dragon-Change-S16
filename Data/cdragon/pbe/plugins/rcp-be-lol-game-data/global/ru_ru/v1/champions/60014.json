@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Сион с 40% шансом игнорирует 30/40/50 ед. урона каждый раз, когда его атакуют."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пугающий взгляд Сионa повергает цель в ужас, нанося урон и оглушая ее.",
-            "dynamicDescription": "<mainText>Наносит 1 цели <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>оглушает</status> ее на 1.5 сек.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Сион окружает себя щитом, поглощающим урон. Если щит не будет уничтожен в течение 10 сек., он взорвется, нанеся урон ближайшим врагам. Щит можно взорвать вручную, вновь применив умение спустя 4 сек.",
-            "dynamicDescription": "<mainText>Сион окружает себя щитом, поглощающим <shield>@TotalShield@ ед. урона</shield>. Если щит не будет уничтожен в течение 10 сек., он взорвется, нанеся <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> ближайшим врагам.<br><br><recast>Примените повторно</recast> в течение 4 сек., чтобы взорвать щит вручную.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Сион поглощает при каждом ударе часть жизненной энергии своих врагов, восстанавливая здоровье себе и союзникам поблизости. Запах плоти воодушевляет Сиона, что повышает его скорость атаки.",
-            "dynamicDescription": "<mainText>Дает Сиону <lifeSteal>@LifestealPercent*100@% вампиризма</lifeSteal> и <attackSpeed>@AttackSpeedMod*100@% скорости атаки</attackSpeed> на 20 сек. Также автоатаки Сиона <healing>восстанавливают</healing> союзникам рядом здоровье в размере @HealPercent*100@% от нанесенного урона.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

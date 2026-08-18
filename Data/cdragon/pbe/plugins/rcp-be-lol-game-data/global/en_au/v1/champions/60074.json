@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers).",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger constructs a Machine Gun Turret that deals <magicDamage>@BonusDamage@ magic damage</magicDamage> per attack. Turrets gain <attackSpeed>@TurretBonusAttackSpeed*100@% attack speed</attackSpeed> for the first @AttackSpeedDuration@ seconds after being placed. This ability has @MaxAmmo@ charges (@AmmoRechargeTime@ second refresh).<br><br>Each rank of this skill grants a further enhancement:<br><attention>Rank 2:</attention> Turret attacks reduce the target's Armor and Magic Resist by @Level2ResistShred@ (max @MaxShredCapTooltip@)<br><attention>Rank 3:</attention> Maximum turrets increased to 2<br><attention>Rank 4:</attention> Turrets gain an additional <scaleHealth>@Level4HPTooltip@ Health</scaleHealth><br><attention>Rank 5:</attention>  Turret attacks deal @AoEDamageMod*100@% splash damage@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger fires long-range rockets that hit the enemies closest to Heimerdinger.",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger fires @MaxTargets@ enemy seeking Micro-Rocket(s) (max 1 per person), hitting targets nearest to him. Each rocket deals <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units.",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger tosses a grenade, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemy units and <status>Blinding</status> them for @BlindDuration@ seconds.  Enemies who are directly hit are <status>Stunned</status> for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passive / Active: Passively increases Cooldown Reduction.  Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time.",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>@CooldownBonus*-100@% Cooldown Reduction.<br><br><spellActive>Active: </spellActive>Empower all abilities and turrets for the duration.<br><br><spellName>Evolution Turrets:</spellName> All turrets are fully <healing>healed</healing>. Each attack applies a <status>@MovementSpeedMod*-100@% Slow</status>.<br><spellName>Hextech Micro-Rockets:</spellName> Fire @WMaxMissiles@ rockets.<br><spellName>CH-1 Concussion Grenade:</spellName> Travels 33% faster.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

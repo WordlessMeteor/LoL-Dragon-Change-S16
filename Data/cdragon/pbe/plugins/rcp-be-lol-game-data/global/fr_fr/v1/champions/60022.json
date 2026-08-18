@@ -853,7 +853,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Chaque fois qu'Ashe élimine une unité, elle gagne des PO supplémentaires. Ashe peut activer cette compétence pour envoyer son faucon en reconnaissance.",
-            "dynamicDescription": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif :</spellPassive> Ashe gagne <gold>@AdditionalGold@ PO supplémentaires</gold> chaque fois qu'elle élimine un ennemi.<br><br><spellActive>Actif :</spellActive> Ashe envoie un faucon pour obtenir la vision de la zone pendant @RevealDuration@ sec. Le faucon révèle également les zones qu'il traverse.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -1003,7 +1003,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ashe tire un trait de glace en ligne droite.  Si la flèche touche un champion ennemi, elle le blesse et l'étourdit pendant un maximum de 3.5 sec, en fonction de la distance parcourue par la flèche avant l'impact.  De plus, les unités ennemies proches subissent des dégâts et sont ralenties.",
-            "dynamicDescription": "game_spell_tooltip_EnchantedCrystalArrow_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ashe tire une flèche de cristal de glace en ligne qui <status>étourdit</status> un champion ennemi et inflige <magicDamage>@RMainDamage@ pts de dégâts magiques</magicDamage>. La durée de l'<status>étourdissement</status> augmente avec la distance parcourue, jusqu'à un maximum de @MaxStunDuration@ sec. Les ennemis à proximité sont <status>ralentis</status> de @MovementSpeedMod*-100@% pendant @SlowDuration@ sec et subissent <magicDamage>@RAoEDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

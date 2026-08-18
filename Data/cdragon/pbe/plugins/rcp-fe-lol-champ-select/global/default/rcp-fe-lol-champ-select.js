@@ -137,8 +137,8 @@
                     tra: _,
                     ComponentFactory: b
                 } = m,
-                y = m.Lodash,
-                v = a.PositionAssignmentPreloadVideos;
+                v = m.Lodash,
+                y = a.PositionAssignmentPreloadVideos;
             var S = new class {
                 constructor() {
                     const e = m.getProvider();
@@ -170,7 +170,7 @@
                     this._champSelectSkipApi = new o.default(n, this)
                 }
                 _handleVideoCache(e, t) {
-                    "Lobby" === e && "Lobby" !== t && this.largeAreaAnimationsEnabled && (this.champSelectVideoCache.release(), v.forEach(function(e) {
+                    "Lobby" === e && "Lobby" !== t && this.largeAreaAnimationsEnabled && (this.champSelectVideoCache.release(), y.forEach(function(e) {
                         this.champSelectVideoCache.cache(e)
                     }.bind(this)))
                 }
@@ -235,13 +235,13 @@
                             } = e.gameData.queue, p = m && o !== l.TIMER_PHASES.planning, h = r - (Date.now() - c), g = r - h >= .2 * r, {
                                 accountId: _,
                                 puuid: b,
-                                summonerId: y
-                            } = n, v = Array.isArray(s) ? s.length : 0, S = Array.isArray(a) ? a.filter((e => e.owned)).length : 0, x = JSON.stringify({
+                                summonerId: v
+                            } = n, y = Array.isArray(s) ? s.length : 0, S = Array.isArray(a) ? a.filter((e => e.owned)).length : 0, x = JSON.stringify({
                                 internalNowInEpochMs: c,
                                 timeRemainingForPlayerInMS: h,
                                 accountId: _,
                                 puuid: b,
-                                summonerId: y,
+                                summonerId: v,
                                 totalTimeInPhase: i,
                                 phase: o,
                                 queueId: d,
@@ -249,7 +249,7 @@
                                 adjustedTimeLeftInPhase: r,
                                 isRanked: m,
                                 previousPhase: this.previousPhase,
-                                numOfOwnedWardSkins: v,
+                                numOfOwnedWardSkins: y,
                                 numOfOwnedChamps: S
                             });
                             "GAME_STARTING" === o ? (f.recordTracingStepEvent("UI_entered-champ-select-in-phase-game-starting"), f.invokeWithLowProbability((function() {
@@ -318,7 +318,7 @@
                 }
                 getElementSelector(e) {
                     const t = ".champion-select ";
-                    switch (y.isString(e) ? e : e.name) {
+                    switch (v.isString(e) ? e : e.name) {
                         case "champion":
                             return t + '.grid-champion[data-id="' + e.championId + '"]';
                         case "champion-grid":
@@ -578,7 +578,7 @@
             };
             t.NONE_CHAMP_ID = -1;
             t.NEXUS_BLITZ_QUEUE_IDS = [1300, 1301, 1302, 1303, 1304];
-            t.ENEMY_NAMES_VISIBLE_QUEUE_IDS = [710, 402, 403];
+            t.ENEMY_NAMES_VISIBLE_QUEUE_IDS = [402, 403];
             const a = Object.freeze({
                 ARAM: !0,
                 KINGPORO: !0,
@@ -821,8 +821,8 @@
             t.ROLE_ASSASSIN = _;
             const b = "fighter";
             t.ROLE_FIGHTER = b;
-            const y = [b, g, _, p, f, h];
-            t.ROLES = y;
+            const v = [b, g, _, p, f, h];
+            t.ROLES = v;
             t.DRAFT_PICK_MODES = ["DraftModeSinglePickStrategy", "TeamBuilderSimulBanStrategy", "TeamBuilderDraftPickStrategy", "TournamentPickStrategy"];
             t.RUNES = {
                 minChooseRunesEnabledLevel: 8,
@@ -973,7 +973,7 @@
             }), t.EMBER_APP_NAME = void 0, t.getEmberApplicationArguments = function(e, t = null) {
                 return function(e, t = null) {
                     const m = s.Navigation.getMissionsButton();
-                    let y = {
+                    let v = {
                         name: x,
                         rootElement: t,
                         tra: e,
@@ -985,7 +985,7 @@
                         ChampSelectRootComponent: l.default,
                         ActionButtonComponent: n(42),
                         AbilityPreviewsComponent: n(45).default,
-                        AutofillLpDescComponent: v,
+                        AutofillLpDescComponent: y,
                         BanShowcaseComponent: n(48),
                         BansContainerComponent: n(51),
                         BoostNotificationComponent: n(25),
@@ -1071,17 +1071,17 @@
                             index: n(250)
                         }
                     };
-                    y = s.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(y);
+                    v = s.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(v);
                     const E = n(251).default;
-                    return y = E.registerToFactoryDefinition(y), y
+                    return v = E.registerToFactoryDefinition(v), v
                 }(e, t)
             }, t.initSubComponents = function(e) {
                 s.EmberApplicationFactory.setFactoryDefinition({
                     name: "AutofillModalComponent",
                     tra: e,
                     ComponentFactory: s.ComponentFactory,
-                    AutofillModalComponent: y,
-                    AutofillLpDescComponent: v,
+                    AutofillModalComponent: v,
+                    AutofillLpDescComponent: y,
                     RankedAssetsService: S
                 })
             };
@@ -1108,8 +1108,8 @@
                 WardSkinPopupButtonComponent: _,
                 WardSkinRendererComponent: b
             } = s.SharedComponents.getSharedEmberComponents(), {
-                AutofillModalComponent: y,
-                AutofillLpDescComponent: v,
+                AutofillModalComponent: v,
+                AutofillLpDescComponent: y,
                 RankedAssetsService: S
             } = s.SharedComponents.getApi_SharedRankedComponents(), x = "rcp-fe-lol-champ-select";
             t.EMBER_APP_NAME = x
@@ -3915,7 +3915,7 @@
             const {
                 RunMixin: p,
                 DomMixin: h
-            } = s.EmberAddons.EmberLifeline, g = "championFilterPreferenceKey", f = 3e3, _ = [], b = [], y = [];
+            } = s.EmberAddons.EmberLifeline, g = "championFilterPreferenceKey", f = 3e3, _ = [], b = [], v = [];
             n(72), n(73), n(74), e.exports = s.Ember.Component.extend(p, h, m.default, {
                 classNames: ["champion-grid"],
                 classNameBindings: ["visible:champion-grid-visible:champion-grid-hidden", "gridSoftSelected:champion-grid-selected", "hasChampionPicked:champion-grid-picked", "summoner.isBanningNow:champion-grid-banning", "sortByFavorites:sort-by-favorites", "isAnimating:champion-grid-animating"],
@@ -4167,7 +4167,7 @@
                 },
                 _recordTelemetryPick: function() {
                     const e = this.get("pickableChampionSet");
-                    this._firePickTelemetry(y, "champ-select-grid-m-pick", e, "pick")
+                    this._firePickTelemetry(v, "champ-select-grid-m-pick", e, "pick")
                 },
                 _firePickTelemetry: function(e, t, n, a) {
                     const i = this.get("champSelectGameId");
@@ -11142,8 +11142,8 @@
                 f = [m, d],
                 _ = [...g, ...f],
                 b = [...p, ...g],
-                y = [...f, ...h];
-            var v = {
+                v = [...f, ...h];
+            var y = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: s,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: i,
@@ -11160,10 +11160,10 @@
                 RATED_TFT_QUEUE_TYPES: f,
                 RANKED_AND_RATED_TFT_QUEUE_TYPES: _,
                 ALL_RANKED_QUEUE_TYPES: b,
-                ALL_RATED_QUEUE_TYPES: y,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...b, ...y]
+                ALL_RATED_QUEUE_TYPES: v,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...b, ...v]
             };
-            t.default = v
+            t.default = y
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12412,8 +12412,36 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.EventPassMixin = void 0, t.ensurePassEventActive = async function(e) {
-                const t = await r(e);
+            }), t.EventPassMixin = void 0, t.countdownUnitsFor = function(e) {
+                const t = Math.max(0, e - Date.now()),
+                    n = Math.floor(t / r),
+                    s = Math.floor(t / l);
+                if (n >= 7) return {
+                    showDays: !0,
+                    showHours: !1,
+                    showMinutes: !1,
+                    showSeconds: !1
+                };
+                if (n >= 1) return {
+                    showDays: !0,
+                    showHours: !0,
+                    showMinutes: !1,
+                    showSeconds: !1
+                };
+                if (s >= 1) return {
+                    showDays: !1,
+                    showHours: !0,
+                    showMinutes: !0,
+                    showSeconds: !1
+                };
+                return {
+                    showDays: !1,
+                    showHours: !1,
+                    showMinutes: !0,
+                    showSeconds: !0
+                }
+            }, t.ensurePassEventActive = async function(e) {
+                const t = await m(e);
                 if (!t) return;
                 e.get("activeEventId") !== t && e.setActiveEvent(t)
             }, t.formatLocalizedDate = function(e, t, n = {
@@ -12426,7 +12454,7 @@
                 if (isNaN(s.getTime())) return null;
                 let a = t || "en_US";
                 return a = "ar_AE" === a ? "ar-tn" : a.toLowerCase().replace("_", "-"), s.toLocaleDateString(a, n)
-            }, t.getCurrencyIconPath = l, t.resolveJadeEventId = r;
+            }, t.getCurrencyIconPath = c, t.resolveJadeEventId = m;
             var s = function(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -12453,14 +12481,16 @@
                 })(e)
             }
             const i = s.default.Ember,
-                o = "kDemaciaPass";
+                o = "kDemaciaPass",
+                l = 36e5,
+                r = 24 * l;
 
-            function l(e, t) {
+            function c(e, t) {
                 if (!e || !t) return null;
                 const n = (Array.isArray(t) ? t : Object.values(t)).find((t => t.lolCurrencyId === e));
                 return n?.iconPath || null
             }
-            async function r(e) {
+            async function m(e) {
                 if (!e.get("events.length")) {
                     const {
                         socket: t
@@ -12485,7 +12515,7 @@
                 const i = a[0] || t[t.length - 1] || null;
                 return i ? i.eventId : null
             }
-            const c = i.Mixin.create({
+            const d = i.Mixin.create({
                 eventPassName: i.computed("eventHubService.info.localizedShortName", "eventHubService.eventDetailsData.eventName", (function() {
                     return this.get("eventHubService.info.localizedShortName") || this.get("eventHubService.eventDetailsData.eventName") || null
                 })),
@@ -12502,10 +12532,10 @@
                     }))), this.notifyPropertyChange("tokenBalance")
                 })),
                 tokenIconPath: i.computed("_primaryCurrency", "gameDataMapperService.gameDataCurrencies", (function() {
-                    return l(this.get("_primaryCurrency"), this.get("gameDataMapperService.gameDataCurrencies"))
+                    return c(this.get("_primaryCurrency"), this.get("gameDataMapperService.gameDataCurrencies"))
                 }))
             });
-            t.EventPassMixin = c
+            t.EventPassMixin = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12578,15 +12608,15 @@
                 for (const s of e) s?.type === M.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === M.VOTING_CONTENT_BLOCK && (D(s) ? n.voting = s : n.votingError = !0);
                 return n.mastheadBlades = t, n
             }, t.getInventoryTypeUuidToPaw = function() {
-                if (!v) {
+                if (!y) {
                     const {
                         INVENTORY_TYPE_IDS: e
                     } = s.default.ShoppefrontComponents;
-                    v = Object.fromEntries(Object.entries(e).filter((([e]) => e in a.PAW.INVENTORY_TYPES)).map((([e, t]) => [t, a.PAW.INVENTORY_TYPES[e]])))
+                    y = Object.fromEntries(Object.entries(e).filter((([e]) => e in a.PAW.INVENTORY_TYPES)).map((([e, t]) => [t, a.PAW.INVENTORY_TYPES[e]])))
                 }
-                return v
+                return y
             }, t.getSwapServiceCallPath = function(e) {
-                return I[e]
+                return A[e]
             }, t.telemetryDataObjectFormatter = function(e, t, n, s) {
                 return {
                     eventName: e,
@@ -12631,12 +12661,12 @@
                 req_bar_long_max: p.default
             };
             t.MASTERY_PREREQ_BARS = b;
-            const y = {
+            const v = {
                 offense: i.default,
                 defense: o.default,
                 utility: l.default
             };
-            t.MASTERY_TREE_ICONS = y;
+            t.MASTERY_TREE_ICONS = v;
             t.MASTERY_WARNING_ICON = "/fe/lol-jade/images/jade-warning.png";
             t.JADE_AUDIO_PATH = "/fe/lol-jade/audio/";
             t.INVENTORY_TYPES = {
@@ -12649,7 +12679,7 @@
                 MASTERY: "JADE_MASTERY",
                 MASTERY_PAGE: "JADE_MASTERY_PAGE"
             };
-            let v = null;
+            let y = null;
             t.JADE_QUEUE_ID = 4310;
             t.JADE_MAP_ID = 453;
             t.JADE_GAME_MODE = "JADE";
@@ -12715,12 +12745,12 @@
             t.SFX_CHANNEL = "sfx-ui";
             t.INVALID_SKIN_ID = 0;
             t.STANDARD_MAX_TEAM_SIZE = 5;
-            const I = {
+            const A = {
                 CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
                 PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
                 POSITION: "/lol-champ-select/v1/session/position-swaps"
             };
-            t.SWAP_SESSION_SERVICE_CALL_PATHS = I;
+            t.SWAP_SESSION_SERVICE_CALL_PATHS = A;
             t.SWAP_TYPES = {
                 CHAMPION: "CHAMPION",
                 PICK_ORDER: "PICK_ORDER",
@@ -12737,9 +12767,9 @@
                 DEFAULT: "CLASSIC"
             };
             t.VOTING_PREFS_PATH = "/lol-settings/v2/account/VotingPreferences/jade-voting-system";
-            const A = "jade-voting";
-            t.VOTING_PCO_CATEGORY = A;
-            const T = `/lol-summoner-profiles/v1/pco/${A}`;
+            const I = "jade-voting";
+            t.VOTING_PCO_CATEGORY = I;
+            const T = `/lol-summoner-profiles/v1/pco/${I}`;
             t.VOTING_PCO_PATH = T;
             t.VOTING_VIEW_PATH = "/lol-summoner-profiles/v1/get-jade-voting-view";
             t.VOTE_UNANSWERED = -1;
@@ -13396,6 +13426,9 @@
                         showPip: l && !r || c && !this.get("hasSeenResults")
                     }
                 })),
+                _onVotingModalClosed: s.Ember.observer("showVotingModal", (function() {
+                    this.get("showVotingModal") || this.notifyPropertyChange("votingData")
+                })),
                 isFoundationReady: s.Ember.computed.alias("jadeHomePcs.isFoundationReady"),
                 isTencentReady: s.Ember.computed.alias("jadeHomePcs.isTencentReady"),
                 isTencentRegion: s.Ember.computed((function() {
@@ -13692,8 +13725,8 @@
                     if (s) return !t[i.CHAMPION_SKIN]?.has(s);
                     return !1
                 }(e, s), f = p(e, s), b = u && !f;
-                let y = null;
-                f ? y = o.get("shoppefront_error_requires_champion") : u && (y = o.get("shoppefront_error_requires_skin"));
+                let v = null;
+                f ? v = o.get("shoppefront_error_requires_champion") : u && (v = o.get("shoppefront_error_requires_skin"));
                 return {
                     modalItem: {
                         itemId: e.itemId,
@@ -13712,7 +13745,7 @@
                         prerequisites: r,
                         videoPath: l || null
                     },
-                    errorText: y
+                    errorText: v
                 }
             }, t.getMapAvailability = function(e, t) {
                 const n = e?.tags || e?.catalogItem?.tags || [],
@@ -13945,22 +13978,22 @@
                 [c.RUNE_TYPES.YELLOW]: m.INVENTORY_TYPES.RUNE_SEAL,
                 [c.RUNE_TYPES.BLUE]: m.INVENTORY_TYPES.RUNE_GLYPH,
                 [c.RUNE_TYPES.BLACK]: m.INVENTORY_TYPES.RUNE_QUINTESSENCE
-            }, b = "/lol-settings/v2/account/LCUPreferences/jade-ftux", y = -1;
+            }, b = "/lol-settings/v2/account/LCUPreferences/jade-ftux", v = -1;
 
-            function v(e, t) {
+            function y(e, t) {
                 return !e || (null == t || t >= e)
             }
 
             function S(e) {
                 const t = e?.itemId;
-                return !(!t || t === y || (!0 === e?.data?.default || "true" === e?.data?.default))
+                return !(!t || t === v || (!0 === e?.data?.default || "true" === e?.data?.default))
             }
 
             function x(e, t, n) {
                 if (!e) return !0;
                 for (let s = 0; s < f.length; s++) {
                     const a = f[s];
-                    if (!v(a.unlockLevel, n)) continue;
+                    if (!y(a.unlockLevel, n)) continue;
                     const i = (0, r.getColorAndSlotNum)(a.id);
                     if (!i) continue;
                     if (!S(e[(0, r.buildSlotKey)(t, i.color, i.slotNum)])) return !0
@@ -15736,9 +15769,9 @@
                 {
                     STORES: _,
                     CATEGORIES: b,
-                    INVENTORY_TYPE_IDS: y
+                    INVENTORY_TYPE_IDS: v
                 } = a.ShoppefrontComponents,
-                v = [{
+                y = [{
                     flag: "championOwned",
                     predicate: e => e.isPortrait ? e.portraitChampionOwned : !e._prereqKey
                 }, {
@@ -15789,7 +15822,7 @@
                     const e = this.get("lolInventoryService.ownedInventoryContent") || {},
                         t = this._localOwnedChampionIds;
                     if (!t || !t.size) return e;
-                    const n = y.CHAMPION,
+                    const n = v.CHAMPION,
                         s = new Set(e[n] || []);
                     return t.forEach((e => s.add(e))), Object.assign({}, e, {
                         [n]: s
@@ -15834,10 +15867,10 @@
                     }));
                     else {
                         const e = t.inventoryTypeId;
-                        if (e === y.CHAMPION_SKIN) {
+                        if (e === v.CHAMPION_SKIN) {
                             const e = s[0]?.fulfillment?.itemId;
                             e && (this._locallyOwnedItemIds.add(e), n = !0)
-                        } else e === y.CHAMPION && null != t.itemId && (this._localOwnedChampionIds.add(t.itemId), n = !0)
+                        } else e === v.CHAMPION && null != t.itemId && (this._localOwnedChampionIds.add(t.itemId), n = !0)
                     }
                     n && this.incrementProperty("_localOwnershipVersion")
                 },
@@ -16091,7 +16124,7 @@
                         return t.includes(s) || n.includes(s)
                     })));
                     const o = !(!this.get("_deepLinkItemIds") || !this.get("_deepLinkItemIds").size);
-                    if (this.get("showOwned") || o || (e = e.filter((e => !e.isOwned))), v.forEach((({
+                    if (this.get("showOwned") || o || (e = e.filter((e => !e.isOwned))), y.forEach((({
                             flag: t,
                             predicate: n
                         }) => {
@@ -16163,7 +16196,7 @@
                             quantityPurchaseItem: e,
                             isQuantityPurchaseModalOpen: !0,
                             showClassicExclusiveFlagInModal: !0
-                        }) : e.hasFiatPrice || t.inventoryTypeId === y.EVENT_PASS || e.isBundle ? this.setProperties({
+                        }) : e.hasFiatPrice || t.inventoryTypeId === v.EVENT_PASS || e.isBundle ? this.setProperties({
                             fiatPurchaseItem: e,
                             isFiatPurchaseModalOpen: !0
                         }) : this._openPurchaseModal(t, n, {
@@ -16386,8 +16419,8 @@
                     currenciesByName: w,
                     ownedItemInstanceIds: P,
                     ownedInventoryContent: C,
-                    classicExclusiveChampionSkinItemIds: I,
-                    runeInventoryCounts: A,
+                    classicExclusiveChampionSkinItemIds: A,
+                    runeInventoryCounts: I,
                     portraitGameDataByContentId: T,
                     hideCountdownBadgeStoreIds: M,
                     tra: D
@@ -16422,13 +16455,13 @@
                             s = (n[a] || {})[e.itemId] || 0
                         }
                         return s
-                    }(e, ee, A) : 0,
+                    }(e, ee, I) : 0,
                     se = function(e, t, n, s) {
                         const a = e && e.purchaseUnits && e.purchaseUnits[0] && e.purchaseUnits[0].fulfillment,
                             i = a && "number" == typeof a.maxQuantity ? a.maxQuantity : 0;
                         if (i > 0) return i;
-                        if (s) return v;
-                        if (t) return n ? b : y;
+                        if (s) return y;
+                        if (t) return n ? b : v;
                         return
                     }(e, Z, te, ee),
                     ae = x.has(e.inventoryTypeId),
@@ -16487,7 +16520,7 @@
                     quantityPurchasableItemCount: ne,
                     isMaxQuantityOwned: ie,
                     runeType: e.inventoryTypeId || null,
-                    showClassicExclusiveFlag: E(e, I),
+                    showClassicExclusiveFlag: E(e, A),
                     hideCountDownBadge: !!M?.has(e.storeId),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
                     portraitChampionOwned: X,
@@ -16548,8 +16581,8 @@
             }
             const _ = Object.fromEntries(Object.entries(c.RUNE_INVENTORY_TYPE_IDS).map((e => [e[1], e[0]]))),
                 b = 3,
-                y = 9,
-                v = 20,
+                v = 9,
+                y = 20,
                 S = new Set([c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_MARK, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_SEAL, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_GLYPH, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE]),
                 x = new Set(Object.values(c.RUNE_INVENTORY_TYPE_IDS));
 
@@ -16779,11 +16812,11 @@
                     requiredMilestone: 5
                 }];
 
-            function y(e) {
+            function v(e) {
                 return e?.purchaseUnits?.[0]?.fulfillment?.dropTableId || null
             }
 
-            function v(e) {
+            function y(e) {
                 return e && (e.gipName || e.title || e.name || e.formattedName || e.statName) || null
             }
 
@@ -16799,7 +16832,7 @@
                     return n && (n.title || n.name) || null
                 }(l, s);
                 if (c) return c;
-                const m = v(e && a && a[e.sourceId]);
+                const m = y(e && a && a[e.sourceId]);
                 if (m) return m;
                 return function(e) {
                     const t = Object.values(e && e.localizations || {}).find((e => e && e.name));
@@ -17206,28 +17239,28 @@
                             const d = (e.prerequisites || []).some((e => e.itemTypeId === c.EVENT_PASS_INVENTORY_TYPE_ID)),
                                 _ = d && !i,
                                 b = s.includes(e.id),
-                                y = (0, c.isOwnedByInventory)(e, g),
-                                v = (0, c.isPurchaseLimitReached)(e, o),
+                                v = (0, c.isOwnedByInventory)(e, g),
+                                y = (0, c.isPurchaseLimitReached)(e, o),
                                 S = h.has(e.id),
-                                x = b || v || !S && y,
+                                x = b || y || !S && v,
                                 E = (0, a.getItemCost)(e),
                                 k = (0, a.getItemCurrency)(e),
                                 w = (r[k] || 0) >= E,
                                 P = e.overrideTileSize || null,
                                 C = e.purchaseUnits?.[0]?.fulfillment,
-                                I = C?.currencyId || null,
-                                A = I && (C.delta || C.finalDelta) || 0,
+                                A = C?.currencyId || null,
+                                I = A && (C.delta || C.finalDelta) || 0,
                                 T = (0, c.isVotingPowerGrant)(e),
                                 M = T && (C.delta || C.finalDelta) || 0,
                                 D = e.traTitle || u.get("battlepass_unknown_item");
                             let R, O = D;
-                            I && A ? O = u.formatString("battlepass_currency_reward_name", {
-                                amount: A,
+                            A && I ? O = u.formatString("battlepass_currency_reward_name", {
+                                amount: I,
                                 name: D
                             }) : T && (O = u.formatString("battlepass_currency_reward_name", {
                                 amount: M,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), R = T ? u.get("battlepass_inventory_type_voting_power") : I ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            })), R = T ? u.get("battlepass_inventory_type_voting_power") : A ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
                             const L = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
@@ -17250,7 +17283,7 @@
                                 hasUnmetPrerequisites: _,
                                 isPremiumUnlocked: d && i,
                                 tileVideoPath: d && !x && f[P || ""] ? "/fe/lol-jade/videos/battlepass/" + f[P || ""] : null,
-                                purchaseLimitReached: v,
+                                purchaseLimitReached: y,
                                 canAfford: w,
                                 iconUrl: L || e.tilePath || null,
                                 previewUrl: L || e.splashPath || e.tilePath || null,
@@ -17262,9 +17295,9 @@
                     _.forEach((e => {
                         e.chaseCategoryId && b.add(e.chaseCategoryId)
                     }));
-                    const y = this._findClaimedChaseItem(e, s, o, b, g);
-                    return y && _.forEach((e => {
-                        e.isChaseTagged && (e.iconUrl = y.iconUrl || e.iconUrl, e.previewUrl = y.previewUrl || e.previewUrl, e.isClaimed = !0, e.tileVideoPath = null, e.name = y.name)
+                    const v = this._findClaimedChaseItem(e, s, o, b, g);
+                    return v && _.forEach((e => {
+                        e.isChaseTagged && (e.iconUrl = v.iconUrl || e.iconUrl, e.previewUrl = v.previewUrl || e.previewUrl, e.isClaimed = !0, e.tileVideoPath = null, e.name = v.name)
                     })), _
                 })),
                 claimedCount: s.Ember.computed("items.@each.isClaimed", (function() {
@@ -17308,10 +17341,10 @@
                 selectedItemDropTableId: s.Ember.computed("selectedItem.catalogItem", "shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("selectedItem.catalogItem");
                     if (!e) return null;
-                    const t = y(e);
+                    const t = v(e);
                     if (t) return t;
                     const n = this._grantedCurrencyName(e);
-                    return n ? y(this._resolveDropCatalogItem(n)) : null
+                    return n ? v(this._resolveDropCatalogItem(n)) : null
                 })),
                 selectedItemHasDropRates: s.Ember.computed.notEmpty("selectedItemDropTableId"),
                 selectedItemOddsTree: null,
@@ -17333,7 +17366,7 @@
                     if (this._storeItemsPromise) return;
                     const t = this.get("_gameDataItemsByContentId") || {},
                         n = this.get("_storeItemsByInstanceId") || {},
-                        a = [...new Set(Object.values(e.nodes || {}).filter((e => "ENTITLEMENT_CREATE" === e.type && e.sourceId)).map((e => e.sourceId)))].filter((e => !n[e] && !v(t[e])));
+                        a = [...new Set(Object.values(e.nodes || {}).filter((e => "ENTITLEMENT_CREATE" === e.type && e.sourceId)).map((e => e.sourceId)))].filter((e => !n[e] && !y(t[e])));
                     if (!a.length) return;
                     const i = [];
                     for (let e = 0; e < a.length; e += 50) {
@@ -17469,7 +17502,7 @@
                         f = this.get("_eventPassSku"),
                         _ = this.get("_fiatPricePointsBySku") || {},
                         b = f ? _[f] : null,
-                        y = !!b;
+                        v = !!b;
                     return {
                         id: e.id,
                         name: h,
@@ -17484,7 +17517,7 @@
                         contentType: t.get("battlepass_inventory_type_event_pass"),
                         hasDiscount: m,
                         discountPercent: u,
-                        hasFiatPrice: y,
+                        hasFiatPrice: v,
                         fiatPriceFormatted: b ? (0, a.formatFiatPrice)(b.realAmountCents, b.realCurrencyCode) : null,
                         fiatPricePointId: b ? b.id : null,
                         fiatAmountCents: b ? b.realAmountCents : null,
@@ -19835,9 +19868,9 @@
                     propertyName: "backgroundData",
                     propertyPath: "/pass-background-data"
                 }],
-                y = "event-shop-offer-card";
-            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = y;
-            const v = {
+                v = "event-shop-offer-card";
+            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = v;
+            const y = {
                 [l.EVENT_SHOP]: {
                     displayGenericTitle: !1,
                     displayHeaderLogo: !0,
@@ -19887,13 +19920,13 @@
                     observers: [...d, ...p]
                 }
             };
-            t.EVENT_CONFIGS_BY_TYPE = v;
+            t.EVENT_CONFIGS_BY_TYPE = y;
             var S = {
                 CLAIM_ALL_REWARDS_PATH: a,
                 EVENT_HUB_API: n,
                 PASS_OWNERSHIP_TYPES: c,
                 REWARD_TRACK_ITEM_STATE: m,
-                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: y,
+                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: v,
                 ROUTES: o,
                 EVENT_HUB_TYPES: l
             };
@@ -22352,21 +22385,21 @@
                             f = (0, i.isItemOwned)(e, s),
                             _ = !f && !(0, i.hasUnsatisfiedPrerequisite)(e),
                             b = (0, i.getRequirementText)(e, n),
-                            y = (0, a.getPricesWithIcons)(e, t),
+                            v = (0, a.getPricesWithIcons)(e, t),
                             {
-                                hasDiscount: v,
+                                hasDiscount: y,
                                 discountPercent: S,
                                 discountLabel: x
-                            } = (0, a.getDiscountInfo)(y),
+                            } = (0, a.getDiscountInfo)(v),
                             E = d.get(e.id),
                             k = E ? E.toUpperCase() : null,
                             w = k ? u[k] : null,
                             P = !!w,
                             C = (e.purchaseUnits || []).length > 1,
-                            I = C ? (0, a.getBundleTotalCost)(e, p) : null,
-                            A = C ? (0, l.getBundleSavings)(e, s) : 0,
+                            A = C ? (0, a.getBundleTotalCost)(e, p) : null,
+                            I = C ? (0, l.getBundleSavings)(e, s) : 0,
                             T = (0, l.getStoreItemTitleOverride)(e.id, r) || (C ? e.name || e.traTitle || e.itemName : null),
-                            M = null != I ? I - A : m,
+                            M = null != A ? A - I : m,
                             D = e.inventoryTypeId === c.PORTRAIT;
                         return {
                             id: e.id,
@@ -22376,16 +22409,16 @@
                             description: e.itemDescription,
                             contentType: (0, o.getDisplayType)(e, r),
                             cost: M,
-                            originalCost: null != I ? I : y[0] && y[0].originalCost || m,
-                            bundleSavings: A,
+                            originalCost: null != A ? A : v[0] && v[0].originalCost || m,
+                            bundleSavings: I,
                             currency: p,
                             currencyIconPath: h ? h.iconPath : null,
-                            prices: y.length > 1 ? y : null,
-                            hasMultiplePrices: y.length > 1,
-                            hasDiscount: v && !C,
+                            prices: v.length > 1 ? v : null,
+                            hasMultiplePrices: v.length > 1,
+                            hasDiscount: y && !C,
                             discountPercent: S,
                             discountLabel: x,
-                            salePrices: v && !C ? y : null,
+                            salePrices: y && !C ? v : null,
                             iconUrl: (0, l.getStoreItemImageOverride)(e.id) || e.tilePath || e.splashPath || null,
                             tileSize: g,
                             tileSizeClass: g ? "jade-tile-" + g : "",
@@ -24432,7 +24465,7 @@
                                 f = (0, l.isOwnedByInventory)(e, d),
                                 _ = (0, a.getItemCost)(e),
                                 b = (0, a.getItemCurrency)(e),
-                                y = (m[b] || 0) >= _;
+                                v = (m[b] || 0) >= _;
                             return {
                                 id: e.id,
                                 catalogItem: e,
@@ -24446,7 +24479,7 @@
                                 isOwned: f,
                                 isSelectable: !g && !f && !u,
                                 hasUnmetPrerequisites: u,
-                                canAfford: y,
+                                canAfford: v,
                                 iconUrl: e.tilePath || null,
                                 previewUrl: e.splashPath || e.tilePath || null
                             }
@@ -24879,8 +24912,8 @@
                 f = "/v1/session",
                 _ = ["champion_ability_key_passive", "champion_ability_key_q", "champion_ability_key_w", "champion_ability_key_e", "champion_ability_key_r"],
                 b = "https://lol.dyn.riotcdn.net/x/videos/",
-                y = 112,
-                v = "abilities",
+                v = 112,
+                y = "abilities",
                 S = "/lol-client-config/v3/client-config/lol.client_settings.jade.tencentChampionLearnMoreUrl";
             var x = s.Ember.Component.extend(l.PurchaseModalMixin, {
                 layout: n(478),
@@ -24940,7 +24973,7 @@
                     return this.get("selectedAbility.videoImageUrl")
                 })),
                 showAbilityVideo: s.Ember.computed("selectedAbilityVideoUrl", "activeTab", (function() {
-                    return !!this.get("selectedAbilityVideoUrl") && this.get("activeTab") === v
+                    return !!this.get("selectedAbilityVideoUrl") && this.get("activeTab") === y
                 })),
                 selectedAbilityName: s.Ember.computed("selectedAbility", (function() {
                     return this.get("selectedAbility.name")
@@ -25001,7 +25034,7 @@
                     return ((this.get("champion.masteryPointsSinceLastLevel") || 0) + (this.get("champion.masteryPointsUntilNextLevel") || 0)).toLocaleString()
                 })),
                 isOverviewTab: s.Ember.computed.equal("activeTab", "overview"),
-                isAbilitiesTab: s.Ember.computed.equal("activeTab", v),
+                isAbilitiesTab: s.Ember.computed.equal("activeTab", y),
                 isSkinTab: s.Ember.computed.equal("activeTab", "skins"),
                 splashPath: s.Ember.computed("championData", (function() {
                     const e = this.get("championData.skins")?.[0];
@@ -25066,7 +25099,7 @@
                 })),
                 carouselContainerWidth: s.Ember.computed("skins.length", (function() {
                     const e = this.get("skins.length") || 0;
-                    return y * Math.min(e, 5)
+                    return v * Math.min(e, 5)
                 })),
                 carouselInitialOffset: s.Ember.computed("skins.length", (function() {
                     const e = this.get("skins.length") || 0;
@@ -25240,7 +25273,7 @@
                 },
                 actions: {
                     switchTab(e) {
-                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : e === v ? this._resumeVideo() : this._pauseVideo())
+                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : e === y ? this._resumeVideo() : this._pauseVideo())
                     },
                     selectAbility(e) {
                         if (!this.get("championData") || e === this.get("selectedAbilityIndex")) return;
@@ -25373,7 +25406,7 @@
                     e && e.play().catch((() => {}))
                 },
                 _applyVideoPlaybackForTab() {
-                    this.get("activeTab") === v ? this._resumeVideo() : this._pauseVideo()
+                    this.get("activeTab") === y ? this._resumeVideo() : this._pauseVideo()
                 },
                 _waitForVideoPlaying() {
                     const e = this._getVideoElement(),
@@ -25401,7 +25434,7 @@
                     const o = a.length,
                         l = this.get("carouselInitialOffset");
                     let r = this._carouselOffset;
-                    "right" === t && e < n ? (r += y * o, this._resetCarousel(r)) : "left" === t && e > n && (r -= y * o, this._resetCarousel(r));
+                    "right" === t && e < n ? (r += v * o, this._resetCarousel(r)) : "left" === t && e > n && (r -= v * o, this._resetCarousel(r));
                     const c = l + -112 * e;
                     this._carouselOffset = c;
                     const m = this._backdropEl?.querySelector(".jade-champion-modal__skin-track");
@@ -25568,22 +25601,26 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1);
+            var s = n(1),
+                a = n(276);
             n(483);
-            var a = s.Ember.Component.extend({
+            var i = s.Ember.Component.extend({
                 layout: n(484),
                 classNames: ["jade-home-voting-card-component"],
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
                 votingInactiveStatusLoc: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
-                    const e = this.get("votingData.isVotingConcluded"),
-                        t = this.get("votingData.isVotingResultsPhase");
-                    return e ? this.get("tra.jade_voting_tile_voting_concluded") : t ? this.get("tra.jade_voting_tile_voting_results_available") : this.get("tra.jade_voting_tile_voting_inactive_no_event")
+                    const e = this.get("votingData.isVotingConcluded");
+                    return this.get("votingData.isVotingResultsPhase") ? this.get("tra.jade_voting_tile_voting_results_available") : e ? this.get("tra.jade_voting_tile_voting_concluded") : this.get("tra.jade_voting_tile_voting_inactive_no_event")
                 })),
                 showVoteStatus: s.Ember.computed("votingData.isVotingActive", "votingData.isVotingResultsPhase", "votingData.isVotingConcluded", (function() {
                     const e = this.get("votingData.isVotingActive"),
                         t = this.get("votingData.isVotingResultsPhase"),
                         n = this.get("votingData.isVotingConcluded");
                     return e || t || n
+                })),
+                showCountdown: s.Ember.computed.not("votingData.isVotingConcluded"),
+                countdownUnits: s.Ember.computed("votingData.votingEndTimestamp", (function() {
+                    return (0, a.countdownUnitsFor)(this.get("votingData.votingEndTimestamp"))
                 })),
                 votingLockedText: s.Ember.computed("summonersJourneyService.currentLevel", (function() {
                     const e = this.get("summonersJourneyService").getUnlockLevels().VOTING;
@@ -25601,17 +25638,34 @@
                     return this.get("tra").formatString("jade_voting_council_voting_power_embedded_power", {
                         votingPower: this.get("votingPower")
                     })
-                }))
+                })),
+                learnMoreUrl: s.Ember.computed("votingData.learnMore", (function() {
+                    const e = this.get("votingData.learnMore.assets") || [];
+                    return e.length && e[0].url || null
+                })),
+                isAwaitingResults: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
+                    return Boolean(this.get("votingData.isVotingConcluded") && !this.get("votingData.isVotingResultsPhase"))
+                })),
+                actions: {
+                    cardClick() {
+                        if (this.get("isAwaitingResults")) {
+                            const e = this.get("learnMoreUrl");
+                            return void(e ? window.open(e, "_blank") : s.logger.warning("[JadeHomeVotingCard] Voting has closed with no learn more URL; the tile has nothing to open"))
+                        }
+                        const e = this.get("onOpenVotingSystem");
+                        e && e()
+                    }
+                }
             });
-            t.default = a
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "dZr819qY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home-voting-card"],["dynamic-attr","onclick",["unknown",["onOpenVotingSystem"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["noVotingPower"]]],null,6,5],["text","    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-time-remaining"],["flush-element"],["text","\\n      "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer"],[["get",["votingData","votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingData","showPip"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["votingData","isVotingActive"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-right-caret-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-inactive-status"],["flush-element"],["append",["unknown",["votingInactiveStatusLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-text"],["flush-element"],["append",["unknown",["votingPowerLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-header-placeholder"],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-home-voting-card-voted-checkbox ",["helper",["if"],[["get",["hasVoted"]],"checked"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-text"],["flush-element"],["append",["unknown",["voteStatusText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showVoteStatus"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-text"],["flush-element"],["append",["unknown",["votingLockedText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "mWV1lMh+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home-voting-card"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cardClick"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["noVotingPower"]]],null,7,6],["block",["if"],[["get",["showCountdown"]]],null,3],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingData","showPip"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["votingData","isVotingActive"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-right-caret-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-inactive-status"],["flush-element"],["append",["unknown",["votingInactiveStatusLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-text"],["flush-element"],["append",["unknown",["votingPowerLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-time-remaining"],["flush-element"],["text","\\n        "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer"],[["get",["votingData","votingEndTimestamp"]],["get",["countdownUnits","showDays"]],["get",["countdownUnits","showHours"]],["get",["countdownUnits","showMinutes"]],["get",["countdownUnits","showSeconds"]],true,1," ","{{remainingTime}}",true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-header-placeholder"],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-home-voting-card-voted-checkbox ",["helper",["if"],[["get",["hasVoted"]],"checked"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-text"],["flush-element"],["append",["unknown",["voteStatusText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showVoteStatus"]]],null,5,4]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-text"],["flush-element"],["append",["unknown",["votingLockedText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -25662,8 +25716,8 @@
                 f = "vote_cleared",
                 _ = "results_screen_opened",
                 b = "learn_more_clicked",
-                y = "intro",
-                v = "voting",
+                v = "intro",
+                y = "voting",
                 S = "results";
 
             function x(e) {
@@ -25674,7 +25728,7 @@
                 classNames: ["voting-system"],
                 showModal: !1,
                 votingData: null,
-                currentScreen: y,
+                currentScreen: v,
                 _answers: null,
                 _initialAnswers: null,
                 _ballotLoadFailed: !1,
@@ -25684,11 +25738,12 @@
                 _showConfirmation: !1,
                 _showVoteSavedToast: !1,
                 _voteSavedToastTimer: null,
-                isIntroScreen: m.computed.equal("currentScreen", y),
+                _votingActiveAtOpen: !1,
+                isIntroScreen: m.computed.equal("currentScreen", v),
                 showIntroContinue: m.computed("isVotingActive", "isVotingConcluded", (function() {
                     return this.get("isVotingActive") || this.get("isVotingConcluded")
                 })),
-                isVotingScreen: m.computed.equal("currentScreen", v),
+                isVotingScreen: m.computed.equal("currentScreen", y),
                 isResultsScreen: m.computed.equal("currentScreen", S),
                 hasUnsavedChanges: m.computed("_answers", "_initialAnswers", (function() {
                     return ! function(e, t) {
@@ -25698,8 +25753,11 @@
                         return !0
                     }(this.get("_answers"), this.get("_initialAnswers"))
                 })),
-                isSaveEnabled: m.computed("hasVotingPower", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
-                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
+                isSaveEnabled: m.computed("hasVotingPower", "canCastVotes", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
+                    return this.get("hasVotingPower") && this.get("canCastVotes") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
+                })),
+                canCastVotes: m.computed("isVotingActive", "_votingActiveAtOpen", (function() {
+                    return Boolean(this.get("isVotingActive") || this.get("_votingActiveAtOpen"))
                 })),
                 showResults: m.computed.alias("votingData.isVotingResultsPhase"),
                 isVotingActive: m.computed.alias("votingData.isVotingActive"),
@@ -25742,10 +25800,10 @@
                     const e = this.get("votingData.learnMore.assets") || [];
                     return e.length && e[0].url || null
                 })),
-                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", (function() {
+                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", "canCastVotes", (function() {
                     const e = this.get("votingData.voting") || [],
                         t = this.get("_answers") || {},
-                        n = this.get("hasVotingPower");
+                        n = this.get("hasVotingPower") && this.get("canCastVotes");
                     return e.map((function(e, s) {
                         const a = x(t[e.questionID]);
                         return {
@@ -25813,11 +25871,11 @@
                     return this._db || (this._db = a.default.dataBinding.bindTo(a.default.socket)), this._db
                 },
                 _onShowModalChanged: m.observer("showModal", (function() {
-                    this.get("showModal") && (this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
+                    this.get("showModal") && (this.set("_votingActiveAtOpen", Boolean(this.get("isVotingActive"))), this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
                         eventId: this.get("_eventId")
                     }), this.get("showResults") ? (this.set("currentScreen", S), this._markResultsViewed(), this._sendTelemetry(_, {
                         eventId: this.get("_eventId")
-                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", y) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? v : y) : this.set("currentScreen", y))
+                    })) : this.get("isVotingConcluded") ? this.set("currentScreen", v) : this.get("isVotingActive") ? this.set("currentScreen", this.get("hasSeenFtux") ? y : v) : this.set("currentScreen", v))
                 })),
                 _loadPlayerPreferences() {
                     this._getDb().get(l.VOTING_PREFS_PATH).then((e => {
@@ -25898,7 +25956,7 @@
                     }
                 },
                 _resetState() {
-                    this.set("currentScreen", y), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1)
+                    this.set("currentScreen", v), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1), this.set("_votingActiveAtOpen", !1)
                 },
                 _showSavedToast() {
                     this._voteSavedToastTimer && m.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = m.run.later(this, (function() {
@@ -25915,7 +25973,7 @@
                         o.MASTERY_SFX.removePoint.play(), this.get("hasUnsavedChanges") ? this.set("_showConfirmation", !0) : this._doClose()
                     },
                     continueToVoting() {
-                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", v), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(l.VOTING_PREFS_PATH, {
+                        o.MASTERY_SFX.buttonPress.play(), this.set("currentScreen", y), this.get("hasSeenFtux") || (this.set("hasSeenFtux", !0), this._getDb().patch(l.VOTING_PREFS_PATH, {
                             schemaVersion: 1,
                             data: {
                                 hasSeenFtux: !0
@@ -25932,7 +25990,7 @@
                         })) : a.logger.warning("[JadeVotingSystem] No learn more URL in voting content; ignoring click")
                     },
                     selectOption(e) {
-                        if (!this.get("hasVotingPower") || this.get("_ballotLoadFailed")) return;
+                        if (!this.get("hasVotingPower") || !this.get("canCastVotes") || this.get("_ballotLoadFailed")) return;
                         o.MASTERY_SFX.buttonPress.play();
                         const t = Object.assign({}, this.get("_answers"));
                         x(t[e.questionID]) === e.id ? t[e.questionID] = l.VOTE_UNANSWERED : t[e.questionID] = e.id, this.set("_answers", t)

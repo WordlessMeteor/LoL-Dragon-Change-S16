@@ -55,7 +55,7 @@
                 }
                 return y
             }, t.getSwapServiceCallPath = function(e) {
-                return w[e]
+                return C[e]
             }, t.telemetryDataObjectFormatter = function(e, t, n, s) {
                 return {
                     eventName: e,
@@ -171,8 +171,8 @@
             t.POSITION_BOTTOM = k;
             const I = "support";
             t.POSITION_SUPPORT = I;
-            const C = ["top", S, P, k, I];
-            t.POSITIONS = C;
+            const w = ["top", S, P, k, I];
+            t.POSITIONS = w;
             t.POSITION_NONE = "NONE";
             t.POSITION_ICON_PATHS = {
                 top: "/fe/lol-jade/images/champion-select/filter-top.svg",
@@ -184,12 +184,12 @@
             t.SFX_CHANNEL = "sfx-ui";
             t.INVALID_SKIN_ID = 0;
             t.STANDARD_MAX_TEAM_SIZE = 5;
-            const w = {
+            const C = {
                 CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
                 PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
                 POSITION: "/lol-champ-select/v1/session/position-swaps"
             };
-            t.SWAP_SESSION_SERVICE_CALL_PATHS = w;
+            t.SWAP_SESSION_SERVICE_CALL_PATHS = C;
             t.SWAP_TYPES = {
                 CHAMPION: "CHAMPION",
                 PICK_ORDER: "PICK_ORDER",
@@ -1884,8 +1884,36 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.EventPassMixin = void 0, t.ensurePassEventActive = async function(e) {
-                const t = await r(e);
+            }), t.EventPassMixin = void 0, t.countdownUnitsFor = function(e) {
+                const t = Math.max(0, e - Date.now()),
+                    n = Math.floor(t / r),
+                    s = Math.floor(t / i);
+                if (n >= 7) return {
+                    showDays: !0,
+                    showHours: !1,
+                    showMinutes: !1,
+                    showSeconds: !1
+                };
+                if (n >= 1) return {
+                    showDays: !0,
+                    showHours: !0,
+                    showMinutes: !1,
+                    showSeconds: !1
+                };
+                if (s >= 1) return {
+                    showDays: !1,
+                    showHours: !0,
+                    showMinutes: !0,
+                    showSeconds: !1
+                };
+                return {
+                    showDays: !1,
+                    showHours: !1,
+                    showMinutes: !0,
+                    showSeconds: !0
+                }
+            }, t.ensurePassEventActive = async function(e) {
+                const t = await m(e);
                 if (!t) return;
                 e.get("activeEventId") !== t && e.setActiveEvent(t)
             }, t.formatLocalizedDate = function(e, t, n = {
@@ -1898,7 +1926,7 @@
                 if (isNaN(s.getTime())) return null;
                 let a = t || "en_US";
                 return a = "ar_AE" === a ? "ar-tn" : a.toLowerCase().replace("_", "-"), s.toLocaleDateString(a, n)
-            }, t.getCurrencyIconPath = i, t.resolveJadeEventId = r;
+            }, t.getCurrencyIconPath = c, t.resolveJadeEventId = m;
             var s = function(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -1925,14 +1953,16 @@
                 })(e)
             }
             const o = s.default.Ember,
-                l = "kDemaciaPass";
+                l = "kDemaciaPass",
+                i = 36e5,
+                r = 24 * i;
 
-            function i(e, t) {
+            function c(e, t) {
                 if (!e || !t) return null;
                 const n = (Array.isArray(t) ? t : Object.values(t)).find((t => t.lolCurrencyId === e));
                 return n?.iconPath || null
             }
-            async function r(e) {
+            async function m(e) {
                 if (!e.get("events.length")) {
                     const {
                         socket: t
@@ -1957,7 +1987,7 @@
                 const o = a[0] || t[t.length - 1] || null;
                 return o ? o.eventId : null
             }
-            const c = o.Mixin.create({
+            const d = o.Mixin.create({
                 eventPassName: o.computed("eventHubService.info.localizedShortName", "eventHubService.eventDetailsData.eventName", (function() {
                     return this.get("eventHubService.info.localizedShortName") || this.get("eventHubService.eventDetailsData.eventName") || null
                 })),
@@ -1974,10 +2004,10 @@
                     }))), this.notifyPropertyChange("tokenBalance")
                 })),
                 tokenIconPath: o.computed("_primaryCurrency", "gameDataMapperService.gameDataCurrencies", (function() {
-                    return i(this.get("_primaryCurrency"), this.get("gameDataMapperService.gameDataCurrencies"))
+                    return c(this.get("_primaryCurrency"), this.get("gameDataMapperService.gameDataCurrencies"))
                 }))
             });
-            t.EventPassMixin = c
+            t.EventPassMixin = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2630,6 +2660,9 @@
                         votingEndTimestamp: s ? o.getTime() : 0,
                         showPip: i && !r || c && !this.get("hasSeenResults")
                     }
+                })),
+                _onVotingModalClosed: s.Ember.observer("showVotingModal", (function() {
+                    this.get("showVotingModal") || this.notifyPropertyChange("votingData")
                 })),
                 isFoundationReady: s.Ember.computed.alias("jadeHomePcs.isFoundationReady"),
                 isTencentReady: s.Ember.computed.alias("jadeHomePcs.isTencentReady"),
@@ -5620,8 +5653,8 @@
                     fiatMap: h,
                     currenciesByName: k,
                     ownedItemInstanceIds: I,
-                    ownedInventoryContent: C,
-                    classicExclusiveChampionSkinItemIds: w,
+                    ownedInventoryContent: w,
+                    classicExclusiveChampionSkinItemIds: C,
                     runeInventoryCounts: T,
                     portraitGameDataByContentId: A,
                     hideCountdownBadgeStoreIds: M,
@@ -5642,8 +5675,8 @@
                     J = A && A.get(K),
                     $ = G && J?.holoFoilPath || "",
                     X = !!$,
-                    z = G && C[d.CHAMPION]?.has(J?.championId),
-                    Q = (0, l.getRequirementText)(e, C),
+                    z = G && w[d.CHAMPION]?.has(J?.championId),
+                    Q = (0, l.getRequirementText)(e, w),
                     Z = E.has(e.inventoryTypeId),
                     ee = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
                     te = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE,
@@ -5722,7 +5755,7 @@
                     quantityPurchasableItemCount: ne,
                     isMaxQuantityOwned: oe,
                     runeType: e.inventoryTypeId || null,
-                    showClassicExclusiveFlag: S(e, w),
+                    showClassicExclusiveFlag: S(e, C),
                     hideCountDownBadge: !!M?.has(e.storeId),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
                     portraitChampionOwned: z,
@@ -6449,20 +6482,20 @@
                                 P = (0, a.getItemCurrency)(e),
                                 k = (r[P] || 0) >= S,
                                 I = e.overrideTileSize || null,
-                                C = e.purchaseUnits?.[0]?.fulfillment,
-                                w = C?.currencyId || null,
-                                T = w && (C.delta || C.finalDelta) || 0,
+                                w = e.purchaseUnits?.[0]?.fulfillment,
+                                C = w?.currencyId || null,
+                                T = C && (w.delta || w.finalDelta) || 0,
                                 A = (0, c.isVotingPowerGrant)(e),
-                                M = A && (C.delta || C.finalDelta) || 0,
+                                M = A && (w.delta || w.finalDelta) || 0,
                                 D = e.traTitle || u.get("battlepass_unknown_item");
                             let O, R = D;
-                            w && T ? R = u.formatString("battlepass_currency_reward_name", {
+                            C && T ? R = u.formatString("battlepass_currency_reward_name", {
                                 amount: T,
                                 name: D
                             }) : A && (R = u.formatString("battlepass_currency_reward_name", {
                                 amount: M,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), O = A ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            })), O = A ? u.get("battlepass_inventory_type_voting_power") : C ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
                             const j = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
@@ -11637,11 +11670,11 @@
                             P = S ? S.toUpperCase() : null,
                             k = P ? u[P] : null,
                             I = !!k,
-                            C = (e.purchaseUnits || []).length > 1,
-                            w = C ? (0, a.getBundleTotalCost)(e, p) : null,
-                            T = C ? (0, i.getBundleSavings)(e, s) : 0,
-                            A = (0, i.getStoreItemTitleOverride)(e.id, r) || (C ? e.name || e.traTitle || e.itemName : null),
-                            M = null != w ? w - T : m,
+                            w = (e.purchaseUnits || []).length > 1,
+                            C = w ? (0, a.getBundleTotalCost)(e, p) : null,
+                            T = w ? (0, i.getBundleSavings)(e, s) : 0,
+                            A = (0, i.getStoreItemTitleOverride)(e.id, r) || (w ? e.name || e.traTitle || e.itemName : null),
+                            M = null != C ? C - T : m,
                             D = e.inventoryTypeId === c.PORTRAIT;
                         return {
                             id: e.id,
@@ -11651,22 +11684,22 @@
                             description: e.itemDescription,
                             contentType: (0, l.getDisplayType)(e, r),
                             cost: M,
-                            originalCost: null != w ? w : b[0] && b[0].originalCost || m,
+                            originalCost: null != C ? C : b[0] && b[0].originalCost || m,
                             bundleSavings: T,
                             currency: p,
                             currencyIconPath: h ? h.iconPath : null,
                             prices: b.length > 1 ? b : null,
                             hasMultiplePrices: b.length > 1,
-                            hasDiscount: y && !C,
+                            hasDiscount: y && !w,
                             discountPercent: E,
                             discountLabel: x,
-                            salePrices: y && !C ? b : null,
+                            salePrices: y && !w ? b : null,
                             iconUrl: (0, i.getStoreItemImageOverride)(e.id) || e.tilePath || e.splashPath || null,
                             tileSize: g,
                             tileSizeClass: g ? "jade-tile-" + g : "",
                             isOwned: _,
                             isPurchasable: f,
-                            isBundle: C,
+                            isBundle: w,
                             _prereqKey: v,
                             catalogItem: e,
                             hasFiatPrice: I,
@@ -14843,22 +14876,26 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1);
+            var s = n(1),
+                a = n(61);
             n(259);
-            var a = s.Ember.Component.extend({
+            var o = s.Ember.Component.extend({
                 layout: n(260),
                 classNames: ["jade-home-voting-card-component"],
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
                 votingInactiveStatusLoc: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
-                    const e = this.get("votingData.isVotingConcluded"),
-                        t = this.get("votingData.isVotingResultsPhase");
-                    return e ? this.get("tra.jade_voting_tile_voting_concluded") : t ? this.get("tra.jade_voting_tile_voting_results_available") : this.get("tra.jade_voting_tile_voting_inactive_no_event")
+                    const e = this.get("votingData.isVotingConcluded");
+                    return this.get("votingData.isVotingResultsPhase") ? this.get("tra.jade_voting_tile_voting_results_available") : e ? this.get("tra.jade_voting_tile_voting_concluded") : this.get("tra.jade_voting_tile_voting_inactive_no_event")
                 })),
                 showVoteStatus: s.Ember.computed("votingData.isVotingActive", "votingData.isVotingResultsPhase", "votingData.isVotingConcluded", (function() {
                     const e = this.get("votingData.isVotingActive"),
                         t = this.get("votingData.isVotingResultsPhase"),
                         n = this.get("votingData.isVotingConcluded");
                     return e || t || n
+                })),
+                showCountdown: s.Ember.computed.not("votingData.isVotingConcluded"),
+                countdownUnits: s.Ember.computed("votingData.votingEndTimestamp", (function() {
+                    return (0, a.countdownUnitsFor)(this.get("votingData.votingEndTimestamp"))
                 })),
                 votingLockedText: s.Ember.computed("summonersJourneyService.currentLevel", (function() {
                     const e = this.get("summonersJourneyService").getUnlockLevels().VOTING;
@@ -14876,17 +14913,34 @@
                     return this.get("tra").formatString("jade_voting_council_voting_power_embedded_power", {
                         votingPower: this.get("votingPower")
                     })
-                }))
+                })),
+                learnMoreUrl: s.Ember.computed("votingData.learnMore", (function() {
+                    const e = this.get("votingData.learnMore.assets") || [];
+                    return e.length && e[0].url || null
+                })),
+                isAwaitingResults: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
+                    return Boolean(this.get("votingData.isVotingConcluded") && !this.get("votingData.isVotingResultsPhase"))
+                })),
+                actions: {
+                    cardClick() {
+                        if (this.get("isAwaitingResults")) {
+                            const e = this.get("learnMoreUrl");
+                            return void(e ? window.open(e, "_blank") : s.logger.warning("[JadeHomeVotingCard] Voting has closed with no learn more URL; the tile has nothing to open"))
+                        }
+                        const e = this.get("onOpenVotingSystem");
+                        e && e()
+                    }
+                }
             });
-            t.default = a
+            t.default = o
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "dZr819qY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home-voting-card"],["dynamic-attr","onclick",["unknown",["onOpenVotingSystem"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["noVotingPower"]]],null,6,5],["text","    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-time-remaining"],["flush-element"],["text","\\n      "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer"],[["get",["votingData","votingEndTimestamp"]],true,false,false,false,true,1," ","{{remainingTime}}",true]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingData","showPip"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["votingData","isVotingActive"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-right-caret-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-inactive-status"],["flush-element"],["append",["unknown",["votingInactiveStatusLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-text"],["flush-element"],["append",["unknown",["votingPowerLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-header-placeholder"],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-home-voting-card-voted-checkbox ",["helper",["if"],[["get",["hasVoted"]],"checked"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-text"],["flush-element"],["append",["unknown",["voteStatusText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showVoteStatus"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-text"],["flush-element"],["append",["unknown",["votingLockedText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "mWV1lMh+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-voting-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home-voting-card"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cardClick"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["noVotingPower"]]],null,7,6],["block",["if"],[["get",["showCountdown"]]],null,3],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-council-label"],["flush-element"],["append",["unknown",["tra","jade_voting_council_title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["votingData","showPip"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["votingData","isVotingActive"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-right-caret-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-inactive-status"],["flush-element"],["append",["unknown",["votingInactiveStatusLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-power-text"],["flush-element"],["append",["unknown",["votingPowerLoc"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-vote-time-remaining"],["flush-element"],["text","\\n        "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer"],[["get",["votingData","votingEndTimestamp"]],["get",["countdownUnits","showDays"]],["get",["countdownUnits","showHours"]],["get",["countdownUnits","showMinutes"]],["get",["countdownUnits","showSeconds"]],true,1," ","{{remainingTime}}",true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-header-placeholder"],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-home-voting-card-voted-checkbox ",["helper",["if"],[["get",["hasVoted"]],"checked"],null]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voted-checkbox-text"],["flush-element"],["append",["unknown",["voteStatusText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showVoteStatus"]]],null,5,4]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-home-voting-card-voting-locked-text"],["flush-element"],["append",["unknown",["votingLockedText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14959,6 +15013,7 @@
                 _showConfirmation: !1,
                 _showVoteSavedToast: !1,
                 _voteSavedToastTimer: null,
+                _votingActiveAtOpen: !1,
                 isIntroScreen: m.computed.equal("currentScreen", b),
                 showIntroContinue: m.computed("isVotingActive", "isVotingConcluded", (function() {
                     return this.get("isVotingActive") || this.get("isVotingConcluded")
@@ -14973,8 +15028,11 @@
                         return !0
                     }(this.get("_answers"), this.get("_initialAnswers"))
                 })),
-                isSaveEnabled: m.computed("hasVotingPower", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
-                    return this.get("hasVotingPower") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
+                isSaveEnabled: m.computed("hasVotingPower", "canCastVotes", "hasUnsavedChanges", "_ballotLoadFailed", "_isSaving", (function() {
+                    return this.get("hasVotingPower") && this.get("canCastVotes") && this.get("hasUnsavedChanges") && !this.get("_ballotLoadFailed") && !this.get("_isSaving")
+                })),
+                canCastVotes: m.computed("isVotingActive", "_votingActiveAtOpen", (function() {
+                    return Boolean(this.get("isVotingActive") || this.get("_votingActiveAtOpen"))
                 })),
                 showResults: m.computed.alias("votingData.isVotingResultsPhase"),
                 isVotingActive: m.computed.alias("votingData.isVotingActive"),
@@ -15017,10 +15075,10 @@
                     const e = this.get("votingData.learnMore.assets") || [];
                     return e.length && e[0].url || null
                 })),
-                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", (function() {
+                displayQuestions: m.computed("votingData", "_answers", "hasVotingPower", "canCastVotes", (function() {
                     const e = this.get("votingData.voting") || [],
                         t = this.get("_answers") || {},
-                        n = this.get("hasVotingPower");
+                        n = this.get("hasVotingPower") && this.get("canCastVotes");
                     return e.map((function(e, s) {
                         const a = x(t[e.questionID]);
                         return {
@@ -15088,7 +15146,7 @@
                     return this._db || (this._db = a.default.dataBinding.bindTo(a.default.socket)), this._db
                 },
                 _onShowModalChanged: m.observer("showModal", (function() {
-                    this.get("showModal") && (this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
+                    this.get("showModal") && (this.set("_votingActiveAtOpen", Boolean(this.get("isVotingActive"))), this._loadPlayerPreferences(), this._loadBallot(), d.startTelemetryTimerEvent(h), this._sendTelemetry(p, {
                         eventId: this.get("_eventId")
                     }), this.get("showResults") ? (this.set("currentScreen", E), this._markResultsViewed(), this._sendTelemetry(f, {
                         eventId: this.get("_eventId")
@@ -15173,7 +15231,7 @@
                     }
                 },
                 _resetState() {
-                    this.set("currentScreen", b), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1)
+                    this.set("currentScreen", b), this.set("_showConfirmation", !1), this.set("_isSaving", !1), this.set("_saveFailed", !1), this.set("_votingActiveAtOpen", !1)
                 },
                 _showSavedToast() {
                     this._voteSavedToastTimer && m.run.cancel(this._voteSavedToastTimer), this.set("_showVoteSavedToast", !0), this._voteSavedToastTimer = m.run.later(this, (function() {
@@ -15207,7 +15265,7 @@
                         })) : a.logger.warning("[JadeVotingSystem] No learn more URL in voting content; ignoring click")
                     },
                     selectOption(e) {
-                        if (!this.get("hasVotingPower") || this.get("_ballotLoadFailed")) return;
+                        if (!this.get("hasVotingPower") || !this.get("canCastVotes") || this.get("_ballotLoadFailed")) return;
                         l.MASTERY_SFX.buttonPress.play();
                         const t = Object.assign({}, this.get("_answers"));
                         x(t[e.questionID]) === e.id ? t[e.questionID] = i.VOTE_UNANSWERED : t[e.questionID] = e.id, this.set("_answers", t)

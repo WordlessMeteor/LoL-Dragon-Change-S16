@@ -157,7 +157,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.skl",
             "simpleSkin": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.skn",
-            "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_TX_CM.tex",
+            "texture": "assets/characters/warwick/skins/skin58/warwick_skin58_tx_cm.tex",
             "skinScale": 0.75,
             "selfIllumination": 0.5,
             "reflectionFresnelColor": [
@@ -169,7 +169,7 @@
             "initialSubmeshToHide": "Recall VFXTail1",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Recall_TX_CM.tex",
+                    "texture": "assets/characters/warwick/skins/skin58/warwick_skin58_recall_tx_cm.tex",
                     "submesh": "Recall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -7258,6 +7258,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -7995,6 +8005,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

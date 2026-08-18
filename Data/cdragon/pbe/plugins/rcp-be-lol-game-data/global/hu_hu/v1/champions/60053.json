@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Spell_BlitzcrankPassive_Jade_Summary"
+        "description": "Ha Blitzcrank alacsony életerőn sebzést szenved el, először egy, az aktuális manájával arányos erejű pajzsot kap. A hatásnak töltési ideje van."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank kilövi a jobb kezét, hogy megragadjon egy útjába eső ellenfelet. Az elkapott ellenfelet magához húzza, és sebzést okoz neki.",
             "dynamicDescription": "Blitzcrank kilövi a jobb kezét, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, valamint <status>elkábítja</status> és <status>magához húzza</status> a célpontot.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Blitzcrank feltölti az öklét, hogy következő támadásánál dupla sebzést okozzon, és ellenfelét a levegőbe repítse.",
-            "dynamicDescription": "Blitzcrank feltölti az öklét, hogy következő támadásánál <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okozzon, a célpont pedig @CCDuration@ másodpercre a <status>levegőbe repül</status>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_BlitzcrankE_Jade_Summary",
+            "dynamicDescription": "Spell_BlitzcrankE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Spell_BlitzcrankR_Jade_Summary",
-            "dynamicDescription": "Spell_BlitzcrankR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Passzívan villámokat gerjeszt, amelyek sebzést okoznak egy közeli ellenfélnek. Blitzcrank úgy is aktiválhatja a képességet, hogy sebzést okozzon a közelben tartózkodó ellenfeleknek, és rövid időre elnémítsa őket.",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> villámkisülések indulnak ki Blitzcrankből, amelyek véletlenszerűen eltalálnak egy közeli ellenfelet, @PassiveHitRate@ másodpercenként <magicDamage>@PassiveDamage@ varázssebzést</magicDamage> okozva.<br><br><spellActive>Aktív:</spellActive> <magicDamage>@ActiveDamage@ varázssebzést okoz</magicDamage> a közeli ellenfeleknek, és @SilenceDuration@ másodpercre <status>elnémítja</status> őket. A passzív képesség nem működik, amíg a Statikus mező töltődik.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

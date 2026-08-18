@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Sion ma 40% szans na zignorowanie do 30/40/50 pkt. obrażeń za każdym razem, gdy zostanie zaatakowany."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Spojrzenie Siona przeraża pojedynczego wroga, zadając mu obrażenia i ogłuszając go.",
-            "dynamicDescription": "<mainText>Uderza jednego wroga, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>ogłuszając</status> go na 1,5 sek.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Sion osłania się tarczą, która pochłania obrażenia.  Jeśli tarcza nie zostanie zniszczona w ciągu 10 sek., wybuchnie, zadając obrażenia pobliskim wrogom. Można użyć ponownie po 4 sek., aby zdetonować ją ręcznie.",
-            "dynamicDescription": "<mainText>Sion osłania się tarczą, która pochłania <shield>@TotalShield@ pkt. obrażeń</shield>. Jeśli tarcza nie zostanie zniszczona w ciągu 10 sek., wybuchnie, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> pobliskim wrogom.<br><br>Można <recast>użyć ponownie</recast> po 4 sek., aby zdetonować ją ręcznie.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Przy każdym ataku Sion pochłania część siły życiowej swoich wrogów, wysysając zdrowie dla siebie i pobliskich sojuszników. Zapach świeżego mięsa odnawia też zapał Siona, zwiększając jego prędkość ataku.",
-            "dynamicDescription": "<mainText>Zapewnia Sionowi <lifeSteal>@LifestealPercent*100@% kradzieży życia</lifeSteal> i <attackSpeed>@AttackSpeedMod*100@% prędkości ataku</attackSpeed> na 20 sek. Dodatkowo ataki podstawowe Siona <healing>leczą</healing> pobliskich sojuszników o @HealPercent*100@% zadanych obrażeń.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

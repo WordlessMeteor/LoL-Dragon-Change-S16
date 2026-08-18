@@ -212,7 +212,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42.skl",
             "simpleSkin": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42.skn",
-            "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+            "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
             "skinScale": 0.925000011920929,
             "selfIllumination": 0.699999988079071,
             "reflectionFresnelColor": [
@@ -224,12 +224,12 @@
             "initialSubmeshToHide": "cane RecallA RecallB RecallC Recall Bow RecallApron",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Cane_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_cane_tx_cm.tex",
                     "submesh": "cane",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
                     "submesh": "Rib",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -239,7 +239,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -249,22 +249,22 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
                     "submesh": "Head",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Raven_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_raven_tx_cm.tex",
                     "submesh": "RecallA",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Raven_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_raven_tx_cm.tex",
                     "submesh": "RecallB",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Raven_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_raven_tx_cm.tex",
                     "submesh": "RecallC",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -279,7 +279,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_TX_CM.tex",
+                    "texture": "assets/characters/swain/skins/skin42/swain_skin42_tx_cm.tex",
                     "submesh": "Bow",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -426,6 +426,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -1140,6 +1150,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
@@ -1436,6 +1456,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -2149,6 +2179,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

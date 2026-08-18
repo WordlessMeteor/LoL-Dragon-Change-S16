@@ -61,7 +61,8 @@
                         viewport: e => e.get("rcp-fe-lol-shared-components").getApi_Viewport(),
                         websocket: e => e.getSocket(),
                         ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
-                        htmlSanitizer: e => e.get("rcp-fe-common-libs").getHtmlSanitizer(1)
+                        htmlSanitizer: e => e.get("rcp-fe-common-libs").getHtmlSanitizer(1),
+                        logger: e => e.get("rcp-fe-common-libs").logging.create(c.pluginName)
                     }), await e.getOptional("rcp-fe-lol-tft-team-planner").then((e => r.default.add({
                         TeamPlanner: e
                     }))), await e.getOptional("rcp-fe-lol-objectives").then((e => r.default.add({
@@ -128,7 +129,8 @@
                             return {
                                 BridgeService: n(11).default,
                                 TftPersistentTooltipComponent: n(12).default,
-                                PardonOurDustButtonComponent: n(15).default
+                                PardonOurDustButtonComponent: n(15).default,
+                                TftBridgeAnnouncementModalComponent: n(43).default
                             }
                         },
                         getFullLaunchComponents: function() {
@@ -402,11 +404,13 @@
                 s = l + "lol.client_settings.tft.bridge_tooltips_enabled",
                 o = "/lol-settings/v2/local/lol-user-experience",
                 r = "/lol-gameflow/v1/session",
-                c = "/riotclient/region-locale";
+                c = "/riotclient/region-locale",
+                d = "/lol-settings/v2/account/LCUPreferences/lol-tft",
+                u = "tftBridgeAnnouncementSeen";
             t.default = a.Ember.Service.extend({
                 locale: null,
                 init: function() {
-                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), a.dataBinding.observe(i, this, (e => {
+                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), this.set("isProfileOverlayShowing", !1), this._subscribeToProfileOverlay(), a.dataBinding.observe(i, this, (e => {
                         this.set("bridgeEnabled", e), this.set("showPardonOurDustButton", e)
                     })), a.dataBinding.observe(s, this, (e => {
                         this.set("bridgeTooltipsEnabled", e)
@@ -421,10 +425,17 @@
                         this.set("hasSeenBridgeTftTooltip", e?.data?.hasSeenBridgeTftTooltip ?? !1)
                     })), a.dataBinding.observe(o, this, (e => {
                         this.set("showPardonOurDustPip", e?.data?.showPardonOurDustPip ?? !0)
+                    })), a.dataBinding.observe(d, this, (e => {
+                        this.set("bridgeAnnouncementSeen", Boolean(e?.data?.[u]))
                     })), a.dataBinding.addObserver(r, this, (e => {
                         const t = "TFT" === e?.gameData?.queue?.gameMode,
                             n = e?.phase;
                         t && ("GameStart" === n || ("WaitingForStats" === n || "PreEndOfGame" === n || "EndOfGame" === n)) && this.recordPersistedSeenBridgeTooltip()
+                    }))
+                },
+                _subscribeToProfileOverlay: function() {
+                    this._onProfileOverlayShown = () => this.set("isProfileOverlayShowing", !0), this._onProfileOverlayHidden = () => this.set("isProfileOverlayShowing", !1), (0, a.getProvider)().getOptional("rcp-fe-lol-profiles").then((e => {
+                        this.isDestroying || this.isDestroyed || (this._profileOverlaySubnavigationApi = e.overlaySection(), this._profileOverlaySubnavigationApi.addEventListener("screenShown", this._onProfileOverlayShown), this._profileOverlaySubnavigationApi.addEventListener("screenHidden", this._onProfileOverlayHidden))
                     }))
                 },
                 shouldBlockPartyInvites: function() {
@@ -447,6 +458,14 @@
                         schemaVersion: 3
                     })
                 },
+                recordBridgeAnnouncementSeen() {
+                    this.set("bridgeAnnouncementSeen", !0);
+                    const e = {};
+                    e[u] = !0, a.dataBinding.patch(d, {
+                        data: e,
+                        schemaVersion: 1
+                    })
+                },
                 recordPersistedClickedPardonOurDustButton() {
                     this.get("showPardonOurDustPip") && a.dataBinding.patch(o, {
                         data: {
@@ -456,7 +475,7 @@
                     })
                 },
                 willDestroy: function() {
-                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(o, this), a.dataBinding.removeObserver(r, this)
+                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(o, this), a.dataBinding.removeObserver(r, this), a.dataBinding.unobserve(d, this), this._profileOverlaySubnavigationApi && (this._profileOverlaySubnavigationApi.removeEventListener("screenShown", this._onProfileOverlayShown), this._profileOverlaySubnavigationApi.removeEventListener("screenHidden", this._onProfileOverlayHidden))
                 }
             })
         }, (e, t, n) => {
@@ -595,7 +614,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                d = e
+                h = e
             };
             const a = n(1),
                 l = "/lol-client-config/v3/client-config/",
@@ -603,13 +622,16 @@
                 s = "/lol-settings/v2/account/LCUPreferences/lol-tft",
                 o = "tftFullLaunchAnnouncementSeen",
                 r = "/lol-maps/v2/maps",
-                c = l + "lol.client_settings.tft.new_tab.overrideUrl";
-            let d = null;
+                c = l + "lol.client_settings.tft.new_tab.overrideUrl",
+                d = l + "lol.client_settings.deepLinks",
+                u = "/deep-links/v1/settings",
+                m = "/riotclient/region-locale";
+            let h = null;
             t.default = a.Ember.Service.extend({
                 mapData: null,
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), d && (d._registerLaunchTFTCallback(this.launchTFT.bind(this)), d._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this))), this.set("fullLaunchEnabled", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("fullLaunchAnnouncementSeen", !1), a.dataBinding.observe(i, this, (e => {
+                    this._super(...arguments), h && (h._registerLaunchTFTCallback(this.launchTFT.bind(this)), h._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this))), this.set("fullLaunchEnabled", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("fullLaunchAnnouncementSeen", !1), this.set("isTencentRegion", !1), a.dataBinding.observe(i, this, (e => {
                         this.set("fullLaunchEnabled", e)
                     })), a.dataBinding.observe(s, this, (e => {
                         e && e.data && this.set("fullLaunchAnnouncementSeen", e.data[o] || !1)
@@ -619,7 +641,17 @@
                                 if (22 === t.id && "TFT" === t.gameMode && "" === t.gameMutator) return void this.set("mapData", t)
                     })), a.dataBinding.observe(c, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager()
+                    })), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), a.dataBinding.observe(m, this, (e => {
+                        this.set("isTencentRegion", "TENCENT" === e?.region)
+                    })), this.handleExternalLinksSettingsChanged = e => {
+                        if (!e) return void a.logger.warning("No external link settings received.");
+                        const t = e.externalClientScheme;
+                        a.dataBinding.get(d).then((e => {
+                            if (!e || !e.launchTftUrl) return void a.logger.warning("No product launch settings received or configured.");
+                            const n = `${t}://${e.launchTftUrl}`;
+                            a.logger.info(`Saving launchUrl product with link: ${n}`), this.set("launchLink", n)
+                        }))
+                    }, a.dataBinding.observe(u, this, this.handleExternalLinksSettingsChanged)
                 },
                 isFullLaunchEnabled: function() {
                     return this.get("fullLaunchEnabled")
@@ -628,10 +660,12 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(r, this), a.dataBinding.unobserve(c, this), d && d._unregisterLaunchTFTCallback()
+                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(r, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(m, this), a.dataBinding.unobserve(u, this), h && h._unregisterLaunchTFTCallback()
                 },
-                launchTFT: function() {
-                    a.dataBinding.post("/lol-gameflow/v1/launch-tft")
+                launchTFT: async function() {
+                    if (this.get("isTencentRegion")) return a.logger.info("Launching bundled executable for Tencent."), void a.dataBinding.post("/lol-gameflow/v1/launch-tft");
+                    const e = this.get("launchLink");
+                    e || a.logger.warning("No external product link found"), a.logger.info(`Launching external product with link: ${e}`), window.open(e)
                 },
                 setTFTNewTabVisible: function(e) {
                     this.set("TFTNewTabVisible", e), !e && this.sharedAudioManager && this.sharedAudioManager.stopAll({
@@ -1044,6 +1078,48 @@
             e.exports = a.HTMLBars.template({
                 id: "HJcThe1F",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["tft-home-content"],null,[["pageContent","isLoading"],[["get",["pageContent"]],["get",["isLoading"]]]]],false],["text","\\n"],["append",["unknown",["tft-full-launch-announcement-modal"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            const a = n(1);
+            n(44), t.default = a.Ember.Component.extend({
+                classNames: ["tft-bridge-announcement-modal"],
+                tra: a.tra,
+                layout: n(45),
+                bridgeService: a.Ember.inject.service("bridge"),
+                didInsertElement() {
+                    this._super(...arguments)
+                },
+                willDestroyElement() {
+                    this._super(...arguments)
+                },
+                hasNotSeenAnnouncement: a.Ember.computed.not("bridgeService.bridgeAnnouncementSeen"),
+                showBridgeAnnouncement: a.Ember.computed.and("bridgeService.bridgeEnabled", "hasNotSeenAnnouncement"),
+                bridgeAnnouncementBody: a.Ember.computed((function() {
+                    const e = `<a class='' href='${this.get("tra.pardon_our_dust_link")}' target='_blank'>${this.get("tra.pardon_our_dust_link_text")}</a>`,
+                        t = this.get("tra").formatString("pardon_our_dust_modal_body", {
+                            link: e
+                        });
+                    return a.htmlSanitizer.sanitize(t)
+                })),
+                actions: {
+                    confirm: function() {
+                        this.get("bridgeService").recordBridgeAnnouncementSeen()
+                    }
+                }
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "qyKg2O5i",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-bridge-announcement-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-bridge-announcement-modal.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lc-alert-modal",[]],["dynamic-attr","open",["unknown",["showBridgeAnnouncement"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"confirm"],null],null],["dynamic-attr","okText",["unknown",["tra","dialog_accept"]],null],["dynamic-attr","dismissible",true,null],["static-attr","dismissibleType","inside"],["flush-element"],["text","\\n  "],["open-element","lc-modal-content",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n      "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","pardon_our_dust_modal_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["bridgeAnnouncementBody"]],true],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }],

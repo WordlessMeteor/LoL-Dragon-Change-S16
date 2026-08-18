@@ -565,7 +565,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LuxIlluminatingFraulein.project_jade.png",
         "abilityVideoPath": "champion-abilities/60099/ability_60099_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60099/ability_60099_P1.jpg",
-        "description": "Les compétences de Lux infligeant des dégâts chargent la cible en énergie pendant 6 sec. La prochaine attaque de Lux embrase l'énergie, infligeant des dégâts magiques bonus à la cible (en fonction du niveau de Lux)."
+        "description": "Buff_LuxPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,36 +603,36 @@
                 11.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -877,7 +877,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lux crée une anomalie composée de lumière dans une zone, ralentissant les ennemis proches. Lux peut la faire exploser pour blesser les ennemis dans la zone d'effet.",
-            "dynamicDescription": "Lux crée une zone qui <status>ralentit</status> les ennemis de @SlowPercent@%. Après 5 sec, la zone explose et inflige <magicDamage>@TotalDamageTT@ pts de dégâts magiques</magicDamage>.<br><br><recast>Réactivez</recast> la compétence pour faire exploser la zone plus tôt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LuxE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

@@ -1502,7 +1502,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana.",
-            "dynamicDescription": "<mainText>Dark chains latch onto nearby enemy Champions dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> them by 20% for 3 seconds. After @ChainDuration@ seconds, they are dealt an additional  <magicDamage>@TotalDamage@ magic damage</magicDamage> and are stunned for @StunDuration@ seconds.<br><br>Enemy Champions can break the chains by moving away from Morgana.",
+            "dynamicDescription": "Dark chains latch onto nearby enemy Champions dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> them by @SlowPercent*-100@%. After @ChainDuration@ seconds, they are dealt an additional  <magicDamage>@TotalDamage@ magic damage</magicDamage> and are stunned for @StunDuration@ seconds.<br><br>Enemy Champions can break the chains by moving away from Morgana.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Spell_BlitzcrankPassive_Jade_Summary"
+        "description": "블리츠크랭크는 체력이 낮을 때 피해를 받으면 현재 마나에 비례하는 보호막을 얻습니다. 이 효과에는 재사용 대기시간이 적용됩니다."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "블리츠크랭크가 오른손을 발사하여 앞에 있는 적을 붙잡아 당기면서 피해를 입힙니다.",
             "dynamicDescription": "블리츠크랭크가 오른손을 발사하여 대상에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 <status>기절</status>시킨 후 <status>끌어당깁니다</status>.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "블리츠크랭크가 주먹에 힘을 모아 다음 공격 시 적에게 두 배의 피해를 입히고 적을 공중으로 띄웁니다.",
-            "dynamicDescription": "블리츠크랭크가 주먹에 힘을 모아 다음 공격 시 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 @CCDuration@초 동안 <status>공중으로 띄워 올립니다</status>.@SpellModifierDescriptionAppend@",
+            "description": "Spell_BlitzcrankE_Jade_Summary",
+            "dynamicDescription": "Spell_BlitzcrankE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "Spell_BlitzcrankR_Jade_Summary",
-            "dynamicDescription": "Spell_BlitzcrankR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "기본 지속 효과로 번개가 떨어져 주변 적에게 피해를 입힙니다. 사용 시 블리츠크랭크가 주변 적에게 피해를 입히고 잠시 침묵시킵니다.",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>@PassiveHitRate@초에 한 번씩, 번개가 블리츠크랭크 주변의 적을 무작위로 내리쳐 <magicDamage>@PassiveDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시: </spellActive>주변 적 유닛에게 <magicDamage>@ActiveDamage@의 마법 피해</magicDamage>를 입히고 @SilenceDuration@초 동안 <status>침묵</status>시킵니다. 정전기장이 재사용 대기 중일 때는 기본 지속 효과가 비활성화됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

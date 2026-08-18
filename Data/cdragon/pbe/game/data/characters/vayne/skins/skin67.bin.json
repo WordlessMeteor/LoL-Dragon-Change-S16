@@ -180,7 +180,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67.skl",
             "simpleSkin": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67.skn",
-            "texture": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67_TX_CM.tex",
+            "texture": "assets/characters/vayne/skins/skin67/vayne_skin67_tx_cm.tex",
             "skinScale": 1.1200000047683716,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -225,7 +225,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67_Crossbow_TX_CM.tex",
+                    "texture": "assets/characters/vayne/skins/skin67/vayne_skin67_crossbow_tx_cm.tex",
                     "submesh": "Crossbow",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -2198,6 +2198,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -2930,6 +2940,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -3273,6 +3293,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -4005,6 +4035,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
@@ -5798,6 +5838,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -6529,6 +6579,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

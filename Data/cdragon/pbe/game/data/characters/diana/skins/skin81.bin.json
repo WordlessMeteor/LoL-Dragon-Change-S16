@@ -182,7 +182,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76.skl",
             "simpleSkin": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76.skn",
-            "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Main_TX_CM.tex",
+            "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1main_tx_cm.tex",
             "skinScale": 1.2000000476837158,
             "selfIllumination": 0.8500000238418579,
             "Material": "Characters/Diana/Skins/Skin0/Materials/Diana_Bloom_Mat_inst",
@@ -201,27 +201,27 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Main_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1main_tx_cm.tex",
                     "submesh": "Form1Armor",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Weapon_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1weapon_tx_cm.tex",
                     "submesh": "Form1WeaponBlade",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Weapon_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1weapon_tx_cm.tex",
                     "submesh": "Form1WeaponMetal",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Weapon_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1weapon_tx_cm.tex",
                     "submesh": "Form1WeaponBladeR",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1Weapon_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1weapon_tx_cm.tex",
                     "submesh": "Form1WeaponMetalR",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -266,12 +266,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1RMain_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1rmain_tx_cm.tex",
                     "submesh": "Form1Ribbon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Diana/Skins/Skin81/Diana_Skin81_Form1RMain_TX_CM.tex",
+                    "texture": "assets/characters/diana/skins/skin81/diana_skin81_form1rmain_tx_cm.tex",
                     "submesh": "Form1RArmor",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -832,6 +832,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -1522,6 +1532,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
@@ -2359,6 +2379,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -3049,6 +3079,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -3340,6 +3380,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -4031,6 +4081,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -4322,6 +4382,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -5012,6 +5082,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

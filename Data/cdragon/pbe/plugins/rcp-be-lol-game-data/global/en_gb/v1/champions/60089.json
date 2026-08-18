@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "Damaging spells afflict enemies with Sunlight. When allied Champions deal damage to those targets, they consume the Sunlight debuff to deal additional damage."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target.",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "The next basic attack deals an additional <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> and <status>Stuns</status> an enemy for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Leona raises her shield to gain Armor and Magic Resistance.  When the duration first ends, if there are nearby enemies she will deal magic damage to them and prolong the duration of the effect.",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona gains <scaleArmor>@BonusARMR@ Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for @BuffDuration@ seconds. When the effect ends, nearby enemies struck take <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> and Leona retains her bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for another @BuffDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

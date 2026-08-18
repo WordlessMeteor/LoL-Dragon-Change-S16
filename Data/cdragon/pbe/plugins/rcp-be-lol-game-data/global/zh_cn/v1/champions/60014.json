@@ -792,7 +792,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "赛恩每次受到攻击时，有40%几率无视最多30/40/50伤害。"
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -804,7 +804,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "赛恩以恐怖目光震慑一名敌人，对其造成伤害和晕眩。",
-            "dynamicDescription": "<mainText>轰击一名敌人，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和1.5秒<status>晕眩</status> 。",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -953,8 +953,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "赛恩生成一道可吸收伤害的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成伤害。4秒后再次施放可手动引爆护盾。",
-            "dynamicDescription": "<mainText>赛恩生成一道可吸收<shield>@TotalShield@伤害</shield>的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>4秒后<recast>再次施放</recast>可手动引爆护盾。",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1254,7 +1254,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "赛恩每次攻击都会吸取敌人的部分生命力，为自己和附近友军回复生命值。鲜肉的气息也会激发赛恩的狂热，提升他的攻击速度。",
-            "dynamicDescription": "<mainText>赛恩获得<lifeSteal>@LifestealPercent*100@%生命偷取</lifeSteal>和<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续20秒。此外，赛恩的普通攻击会为附近友军<healing>回复</healing>相当于@HealPercent*100@%造成伤害的生命值。",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

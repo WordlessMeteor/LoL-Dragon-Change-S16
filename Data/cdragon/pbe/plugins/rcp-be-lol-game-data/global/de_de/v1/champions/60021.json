@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Wenn Miss Fortune 5 Sekunden nicht angegriffen wird, erhält sie zusätzlich <speed>25 Lauftempo</speed>. Dieser Bonus erhöht sich jede Sekunde um 9, bis zu einem Maximum von 70."
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Miss Fortune erhöht mit jedem Angriff passiv den verursachten Schaden am Ziel.  Diese Fähigkeit kann aktiviert werden, um Miss Fortunes Angriffstempo zu erhöhen und zu bewirken, dass ihre Angriffe die erhaltene Heilung des Ziels verringern.",
-            "dynamicDescription": "<font color='#FF9900'>Passiv:</font> Miss Fortune fügt ihrem Ziel mit jedem Angriff <magicDamage>@TotalDamageOnHIt@&nbsp;magischen Schaden</magicDamage> zu. Dieser Effekt ist beim selben Ziel bis zu @MaxStacks@-mal steigerbar.<br><magicDamage>Maximaler zusätzlicher Schaden: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Aktiv:</font> Miss Fortunes <attackSpeed>Angriffstempo</attackSpeed> wird 6 Sekunden lang um <attackSpeed>@ASMod@ %</attackSpeed> erhöht und ihre Angriffe belegen Gegner 3 Sekunden lang mit <keyword>50 % „Klaffende Wunden“</keyword>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Miss Fortune belegt einen Bereich mit einem Kugelhagel, wodurch getroffene Gegner mehrmals Schaden erleiden und verlangsamt werden.",
-            "dynamicDescription": "Miss Fortune lässt Hunderte von Kugeln auf einen Bereich niederprasseln, die nach 0,5 Sekunden Verzögerung 2 Sekunden lang <magicDamage>@TotalDamagePerSecond@ magischen Schaden</magicDamage> verursachen und getroffene Gegner 1 Sekunde lang um @TotalSlowAmount@ <status>verlangsamen</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Miss Fortune kanalisiert einen Kugelhagel in einem kegelförmigen Bereich vor sich und fügt getroffenen Gegnern enormen Schaden zu.",
-            "dynamicDescription": "Miss Fortune kanalisiert 2 Sekunden lang einen Kugelhagel in einem kegelförmigen Bereich vor sich, der pro Kugel <physicalDamage>@PhysicalDamagePerWave@ normalen Schaden</physicalDamage> verursacht (<physicalDamage>Gesamtschaden: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

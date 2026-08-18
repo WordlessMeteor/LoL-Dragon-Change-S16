@@ -12639,10 +12639,8 @@
                     const e = window.RIOT.CONSTANTS.regionLocale.region,
                         t = window.RIOT.CONSTANTS.regionData[e],
                         n = t?.rso_platform_id,
-                        i = (0, r.getServerTimeZone)(n);
-                    let o = t?.default_locale;
-                    o = "ar_AE" === o ? "ar-tn" : o.toLowerCase().replace("_", "-");
-                    const s = new Intl.DateTimeFormat(o, {
+                        i = (0, r.getServerTimeZone)(n),
+                        o = new Intl.DateTimeFormat("en-US", {
                             timeZone: i,
                             year: "numeric",
                             month: "2-digit",
@@ -12650,37 +12648,39 @@
                             hour: "2-digit",
                             minute: "2-digit",
                             second: "2-digit",
-                            hour12: !1,
+                            hourCycle: "h23",
                             timeZoneName: "longOffset"
                         }),
-                        a = e => Object.fromEntries(s.formatToParts(e).filter((({
+                        s = e => Object.fromEntries(o.formatToParts(e).filter((({
                             type: e
                         }) => "literal" !== e)).map((({
                             type: e,
                             value: t
                         }) => [e, t]))),
-                        l = (e, t = e.hour, n = e.minute, i = e.second) => {
+                        a = (e, t = e.hour, n = e.minute, i = e.second) => {
                             const o = e.timeZoneName.replace("GMT", "");
                             return `${e.year}-${e.month}-${e.day}T${t}:${n}:${i}${o}`
                         },
-                        c = a(new Date),
-                        m = l(c),
+                        l = new Date,
+                        c = s(l),
+                        m = a(c),
                         u = new Date(m),
-                        d = u.getUTCDay(),
+                        d = new Date(Date.UTC(Number(c.year), Number(c.month) - 1, Number(c.day))).getUTCDay(),
                         p = Number(c.hour),
                         h = new Date(u);
-                    if (1 === d && p > 1 || d > 1 && d < 5) {
+                    if (1 === d && p >= 1 || d > 1 && d < 5) {
                         const e = 5 - d;
                         h.setUTCDate(h.getUTCDate() + e)
                     }
-                    const g = l(a(h), "20", "00", "00");
+                    const g = e => a(s(e), "20", "00", "00"),
+                        b = g(new Date(g(h)));
                     this.set("serverTime", {
                         time: m,
                         day: d,
                         hour: p
-                    }), this.set("serverTimeTarget", g)
+                    }), this.set("serverTimeTarget", b)
                 },
-                isQueueActive: i.Ember.computed("serverTime", "serverTime.day", "servertTime.hour", (function() {
+                isQueueActive: i.Ember.computed("serverTime", (function() {
                     if (!this.get("serverTime")) return !1;
                     const e = this.get("serverTime.day"),
                         t = this.get("serverTime.hour");
@@ -14818,8 +14818,8 @@
                 confirmButtonShowBridgeTooltip: i.Ember.computed("bridgeService.hasSeenBridgeTftTooltip", "bridgeService.bridgeEnabled", "bridgeService.bridgeTooltipsEnabled", "bridgeService.isTencentRegion", "confirmButtonShowTooltip", "confirmButtonDisabled", "showingState.isShowingParty", "showingState.isInViewport", (function() {
                     return this.get("bridgeService.bridgeEnabled") && !this.get("bridgeService.hasSeenBridgeTftTooltip") && this.get("bridgeService.bridgeTooltipsEnabled") && !this.get("bridgeService.isTencentRegion") && !this.get("confirmButtonShowTooltip") && !this.get("confirmButtonDisabled") && this.get("showingState.isShowingParty") && this.get("showingState.isInViewport")
                 })),
-                confirmButtonShowTencentOsWarningTooltip: i.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.isTencentRegion", "confirmButtonShowTooltip", "confirmButtonDisabled", "showingState.isShowingParty", "showingState.isInViewport", (function() {
-                    return this.get("bridgeService.bridgeEnabled") && this.get("bridgeService.isTencentRegion") && !this.get("confirmButtonShowTooltip") && !this.get("confirmButtonDisabled") && this.get("showingState.isShowingParty") && this.get("showingState.isInViewport")
+                confirmButtonShowTencentOsWarningTooltip: i.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.isTencentRegion", "bridgeService.isProfileOverlayShowing", "confirmButtonShowTooltip", "confirmButtonDisabled", "showingState.isShowingParty", "showingState.isInViewport", (function() {
+                    return this.get("bridgeService.bridgeEnabled") && this.get("bridgeService.isTencentRegion") && !this.get("bridgeService.isProfileOverlayShowing") && !this.get("confirmButtonShowTooltip") && !this.get("confirmButtonDisabled") && this.get("showingState.isShowingParty") && this.get("showingState.isInViewport")
                 })),
                 tencentOsWarningTooltipText: i.Ember.computed("tra.tft_lobby_tencent_os_warning_tooltip", (function() {
                     const e = `<a href="${this.get("tra.tft_lobby_tencent_os_warning_link")}" target="_blank">${this.get("tra.tft_lobby_tencent_os_warning_link_text")}</a>`;

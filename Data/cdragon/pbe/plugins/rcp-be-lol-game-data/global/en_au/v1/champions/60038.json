@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Spell_KassadinPassive_Jade_Summary"
+        "description": "Kassadin takes reduced <magicDamage>magic damage</magicDamage> and transforms incoming magic damage into bonus <attackSpeed>Attack Speed</attackSpeed>."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_KassadinW_Jade_Summary",
-            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Passive: Kassadin's basic attacks restore Mana. Active: Kassadin's basic attacks deal additional magic damage.",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Kassadin's basic attacks draw energy from the void, restoring <scaleMana>@ManaGainAmount@ Mana</scaleMana> each hit, increased to <scaleMana>@ChampionManaRestore@ Mana</scaleMana> against Champions.<br><br><spellActive>Active: </spellActive>Kassadin charges his nether blade for @BuffDuration@ seconds causing his basic attacks to deal an additional <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him.",
-            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin draws energy from spells cast in his vicinity, gaining a charge whenever a spell is cast near him.<br><br>Upon reaching @RequiredChargesTooltip@ charges, Kassadin can use <spellName>Force Pulse</spellName> to deal <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slow</status> enemies by @MoveSpeedMod*-100@% for @SlowDuration@ seconds in a cone in front of him.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kassadin teleports to a nearby location dealing damage to nearby enemy units. Additionally, multiple Riftwalks in a short period of time cause them to cost additional Mana and deal additional damage.",
-            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin teleports to a nearby location dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to surrounding enemy units. Additionally, each subsequent <spellName>Riftwalk</spellName> within the next @BuffDuration@ seconds costs <scaleMana>@AdditionalManaPerCast@ additional Mana</scaleMana> and deals <magicDamage>@Damage@ additional damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

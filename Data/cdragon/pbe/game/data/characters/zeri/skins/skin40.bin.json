@@ -179,7 +179,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40.skl",
             "simpleSkin": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40.skn",
-            "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_TX_CM.tex",
+            "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_tx_cm.tex",
             "skinScale": 1.100000023841858,
             "selfIllumination": 0.699999988079071,
             "brushAlphaOverride": 0.4000000059604645,
@@ -187,7 +187,7 @@
             "submeshRenderOrder": "Hair Backpack Eyes Stars GunC Gun GunGlassBall IceBlade Body Cloth Snowflake GlassBall Ribbon SnowflakeA BodyA GlassBallA ClothA RibbonA HairA CrystalA IceCubeA Prop",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_TX_CM.tex",
+                    "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_tx_cm.tex",
                     "submesh": "Snowflake",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -217,12 +217,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_Snowflake_TX_CM.tex",
+                    "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_snowflake_tx_cm.tex",
                     "submesh": "CrystalA",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_Snowflake_TX_CM.tex",
+                    "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_snowflake_tx_cm.tex",
                     "submesh": "SnowflakeA",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -262,7 +262,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_TX_CM.tex",
+                    "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_tx_cm.tex",
                     "submesh": "Stars",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -277,7 +277,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Zeri_Skin40_Snowflake_TX_CM.tex",
+                    "texture": "assets/characters/zeri/skins/skin40/zeri_skin40_snowflake_tx_cm.tex",
                     "submesh": "Prop",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -2949,6 +2949,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -3674,6 +3684,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

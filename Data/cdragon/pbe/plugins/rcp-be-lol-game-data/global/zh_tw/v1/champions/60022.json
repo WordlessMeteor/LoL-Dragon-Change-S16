@@ -853,7 +853,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "每當艾希擊殺單位時，便會額外獲得金錢。使用時，艾希會釋放獵鷹之靈進行偵察，範圍可達全地圖。",
-            "dynamicDescription": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>每當艾希擊殺敵軍，額外獲得<gold>@AdditionalGold@金錢</gold>。<br><br><spellActive>主動：</spellActive>艾希釋放獵鷹，獲得範圍內的視野，持續@RevealDuration@秒。此外，也會揭露獵鷹飛過的區域。@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -1003,7 +1003,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "艾希射出直線飛行的魔法水晶箭。如果箭矢擊中敵方英雄，造成傷害並暈眩該英雄；根據箭矢飛行距離，暈眩時間最長可達3.5秒。同時，對該英雄附近的敵軍造成傷害和緩速效果。",
-            "dynamicDescription": "game_spell_tooltip_EnchantedCrystalArrow_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "艾希射出一支直線飛行的水晶箭，<status>暈眩</status>命中的敵方英雄並造成<magicDamage>@RMainDamage@魔法傷害</magicDamage>。飛行距離越長，<status>暈眩</status>越久，最久達@MaxStunDuration@秒。周圍敵軍會被<status>緩速</status>@MovementSpeedMod*-100@%，持續@SlowDuration@秒，並受到<magicDamage>@RAoEDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -1904,6 +1904,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Fresnel_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fresnel_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Distortion_Tiling_02",
                 "data": [
                     1.0,
@@ -2478,6 +2495,14 @@
             {
                 "name": "USE_PANNER",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -93272,6 +93297,17 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "MinWaterDisturbanceToShow",
+                "logicalParameters": [
+                    {
+                        "name": "MinWaterDisturbanceToShow",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "WaterDisturbanceEdgeOffset",
                 "data": [
                     2.0,
@@ -94004,6 +94040,10 @@
         "staticSwitches": [
             {
                 "name": "USE_WATER",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "SAND_DISTURBANCE",
                 "__type": "ShaderStaticSwitch"
             },
             {

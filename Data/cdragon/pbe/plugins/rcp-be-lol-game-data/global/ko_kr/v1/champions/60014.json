@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "사이온은 기본 공격으로 받는 피해를 40%의 확률로 최대 30/40/50만큼 무시합니다."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "사이온의 시선이 지정한 적을 공포에 빠뜨려 피해를 입히고 기절시킵니다.",
-            "dynamicDescription": "<mainText>지정한 적을 무시무시하게 노려봐, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 1.5초 동안 <status>기절</status>시킵니다.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "사이온이 피해를 흡수하는 보호막으로 자신을 감쌉니다.  보호막은 10초가 지날 때까지 파괴되지 않으면 폭발하여 주변 적에게 피해를 입힙니다. 4초 후에 재사용하면 보호막을 직접 폭파할 수 있습니다.",
-            "dynamicDescription": "<mainText>사이온이 <shield>@TotalShield@의 피해</shield>를 흡수하는 보호막으로 자신을 감쌉니다. 보호막은 10초가 지날 때까지 파괴되지 않으면 폭발하여 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>4초 후에 <recast>재사용</recast>하면 보호막을 직접 폭파할 수 있습니다.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "사이온이 기본 공격을 가할 때마다 적의 생명력을 일부 흡수해, 자신과 주변 아군의 체력을 회복시킵니다. 또한 피와 살점의 냄새가 투지를 일깨워, 사이온의 공격 속도가 증가합니다.",
-            "dynamicDescription": "<mainText>사이온이 20초 동안 <lifeSteal>@LifestealPercent*100@%의 생명력 흡수</lifeSteal>와 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다. 또한 기본 공격으로 입힌 피해의 @HealPercent*100@%만큼 주변 아군의 <healing>체력을 회복</healing>시킵니다.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

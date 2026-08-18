@@ -565,7 +565,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LuxIlluminatingFraulein.project_jade.png",
         "abilityVideoPath": "champion-abilities/60099/ability_60099_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60099/ability_60099_P1.jpg",
-        "description": "攻撃スキルが命中した対象を6秒間「イルミネーション」でマークする。マークした対象にラックスの攻撃が命中すると、エネルギーが爆発して追加魔法ダメージを与える(追加ダメージの量はラックスのレベルに比例する)。"
+        "description": "Buff_LuxPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,36 +603,36 @@
                 11.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -877,7 +877,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に特異な光の玉を放ち、範囲内の敵にスロウ効果を付与する。効果時間内に再度発動すると光の玉が爆発し、範囲内の敵にダメージを与える。",
-            "dynamicDescription": "敵に@SlowPercent@%の<status>スロウ効果</status>を与えるゾーンを発生させる。5秒後にゾーンは爆発して<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>を与える。<br><br><recast>再発動</recast>すると、すぐに爆発を起こせる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_LuxE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

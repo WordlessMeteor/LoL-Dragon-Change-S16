@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "墨菲特受岩石護盾保護，最多可吸收最大生命10%的傷害，若10秒內未受到攻擊，護盾將重置。"
+        "description": "Spell_MalphitePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "墨菲特使用元素原力，將一塊岩石碎片從地下射向敵人，對其造成傷害並偷取其跑速4秒。",
+            "description": "Spell_MalphiteQ_Jade_Summary",
             "dynamicDescription": "造成<magicDamage>@QDamageCalc@魔法傷害</magicDamage>，並偷取目標<speed>@SpeedSteal@%跑速</speed>，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "墨菲特使用全力攻擊，對所有前方敵人造成傷害。啟動野蠻衝擊會在短時間內大幅提升他的物防和物攻。",
-            "dynamicDescription": "<spellPassive>被動</spellPassive>：墨菲特的普攻會對目標鄰近單位造成等同於其@Jade_MalphiteObduracyPercentDamage*100@%<physicalDamage>物攻</physicalDamage>。<br><br><spellActive>主動：</spellActive>墨菲特的<scaleArmor>物防</scaleArmor>和<physicalDamage>物攻</physicalDamage>提升@ArmorBonus*100@%，持續6秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MalphiteW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

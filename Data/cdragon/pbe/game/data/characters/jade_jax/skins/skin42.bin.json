@@ -169,7 +169,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Jax/Skins/Skin42/Jax_Skin42.skl",
             "simpleSkin": "ASSETS/Characters/Jax/Skins/Skin42/Jax_Skin42.skn",
-            "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_TX_CM.tex",
+            "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_tx_cm.tex",
             "skinScale": 0.8999999761581421,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -196,37 +196,37 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Body_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_body_tx_cm.tex",
                     "submesh": "NeckPieceinner",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "Weapon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "WeaponPoro",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "RecallPoro1",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "RecallPoro2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "RecallPoro3",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Body_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_body_tx_cm.tex",
                     "submesh": "VFXHead",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -236,12 +236,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Fish_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_fish_tx_cm.tex",
                     "submesh": "Bluefish",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_Weapon_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_weapon_tx_cm.tex",
                     "submesh": "Goldfish",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -251,7 +251,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Jax/Skins/Skin42/Jade_Jax_Skin42_DeathCoal_TX_CM.tex",
+                    "texture": "assets/characters/jade_jax/skins/skin42/jade_jax_skin42_deathcoal_tx_cm.tex",
                     "submesh": "Deathcoal",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -1768,6 +1768,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -2481,6 +2491,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

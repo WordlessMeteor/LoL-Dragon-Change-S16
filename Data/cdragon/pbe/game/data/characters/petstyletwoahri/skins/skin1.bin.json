@@ -52,7 +52,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/PetStyleTwoAhri/Themes/Base/Tier1/PetStyleTwoAhri_Base_Tier1.skl",
             "simpleSkin": "ASSETS/Characters/PetStyleTwoAhri/Themes/Base/Tier1/PetStyleTwoAhri_Base_Tier1.skn",
-            "texture": "ASSETS/Characters/PetStyleTwoAhri/Themes/Base/PetStyleTwoAhri_Base_Classic_Head_TX_CM.tex",
+            "texture": "assets/characters/petstyletwoahri/themes/base/petstyletwoahri_base_classic_head_tx_cm.tex",
             "selfIllumination": 1.5,
             "initialSubmeshToHide": "Tail2",
             "materialOverride": [
@@ -102,7 +102,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/PetStyleTwoAhri/Themes/Base/PetStyleTwoAhri_Base_Classic_Head_TX_CM.tex",
+                    "texture": "assets/characters/petstyletwoahri/themes/base/petstyletwoahri_base_classic_head_tx_cm.tex",
                     "submesh": "Teeth",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -73242,6 +73242,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -73985,6 +73995,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

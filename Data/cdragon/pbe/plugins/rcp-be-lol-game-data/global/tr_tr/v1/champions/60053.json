@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Spell_BlitzcrankPassive_Jade_Summary"
+        "description": "Blitzcrank canı düşükken hasar aldığında ilk olarak mevcut manasının belli bir yüzdesine eşdeğer miktarda kalkan kazanır. Bu etkinin bekleme süresi vardır."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank'in ateşlediği sağ eli, yoluna çıkan ilk rakibe hasar verir ve onu Blitzcrank'e doğru çeker.",
             "dynamicDescription": "Blitzcrank sağ elini ateşleyerek hedefe <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir, onu <status>sersemletir</status> ve kendisine doğru <status>çeker</status>.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Blitzcrank yumruğunu güçlendirerek bir sonraki saldırısının iki kat hasar vermesini ve hedefini havaya savurmasını sağlar.",
-            "dynamicDescription": "Blitzcrank yumruğunu güçlendirerek bir sonraki saldırısının <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> vermesini ve hedefini @CCDuration@ saniyeliğine <status>havaya savurmasını</status> sağlar.@SpellModifierDescriptionAppend@",
+            "description": "Spell_BlitzcrankE_Jade_Summary",
+            "dynamicDescription": "Spell_BlitzcrankE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Spell_BlitzcrankR_Jade_Summary",
-            "dynamicDescription": "Spell_BlitzcrankR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Pasif olarak yıldırımların yakındaki bir rakibe hasar vermesini sağlar. Ayrıca Blitzcrank bu yeteneği etkinleştirerek yakınındaki rakiplere hasar verip onları kısa süreliğine susturabilir.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Blitzcrank ara sıra elektrik kaçırarak yakındaki rakiplerden rasgele birini çarpar ve ona her @PassiveHitRate@ saniyede bir <magicDamage>@PassiveDamage@ Büyü Hasarı</magicDamage> verir.<br><br><spellActive>Aktif:</spellActive> Yakınındaki rakip birimlere <magicDamage>@ActiveDamage@ Büyü Hasarı</magicDamage> verir ve onları @SilenceDuration@ saniyeliğine <status>susturur</status>. Statik Alan bekleme süresindeyken pasif etkisi devre dışı kalır.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

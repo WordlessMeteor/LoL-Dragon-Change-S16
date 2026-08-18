@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "Malphite dilindungi selapis batu yang menyerap damage hingga 10% Health maksimumnya. Jika Malphite belum terkena serangan dalam 10 detik, efek ini akan terisi kembali."
+        "description": "Spell_MalphitePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Dengan sihir elemen primitifnya, Malphite melesatkan pecahan tanah yang meluncur di atas tanah kepada lawan, menghasilkan damage saat mengenai musuh, dan mencuri movement speed selama 4 detik.",
+            "description": "Spell_MalphiteQ_Jade_Summary",
             "dynamicDescription": "Menghasilkan <magicDamage>@QDamageCalc@ magic damage</magicDamage> dan mencuri <speed>@SpeedSteal@% Movement Speed</speed> dari target selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Malphite mulai menyerang dengan dahsyat yang membuat serangannya menghasilkan damage ke semua unit di depannya. Saat Brutal Strikes diaktifkan, Armor dan Attack Damage meningkat secara drastis untuk sementara waktu.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Basic attack Malphite mengenai unit di sekitar targetnya sebesar @Jade_MalphiteObduracyPercentDamage*100@% dari <physicalDamage>Attack Damage</physicalDamage>-nya.<br><br><spellActive>Aktif: </spellActive><scaleArmor>Armor</scaleArmor> dan <physicalDamage>Attack Damage</physicalDamage> Malphite meningkat sebesar @ArmorBonus*100@% selama 6 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MalphiteW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

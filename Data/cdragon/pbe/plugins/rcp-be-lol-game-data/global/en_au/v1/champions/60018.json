@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tristana fires her weapon rapidly, increasing her attack speed for a short time.",
-            "dynamicDescription": "<mainText>Increases Tristana's <attackSpeed>Attack Speed by @AttackSpeedMod*100@%</attackSpeed> for 7 seconds.",
+            "dynamicDescription": "Tristana gains <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> for @BuffDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -999,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Tristana fires at the ground to propel herself to a distant location, dealing damage and slowing surrounding units for 3 seconds where she lands.",
-            "dynamicDescription": "<mainText>Tristana fires at the ground to propel herself to target location, dealing <magicDamage>@LandingDamage@ magic damage</magicDamage> and <status>Slows</status> by 60% for 2.5 seconds when she lands.<br>On a champion kill or assist, the Cooldown is refreshed.",
+            "description": "Tristana fires at the ground to propel herself to a distant location, damaging and slowing enemies where she lands.",
+            "dynamicDescription": "Tristana fires at the ground to propel herself to target location, dealing <magicDamage>@LandingDamage@ magic damage</magicDamage> and <status>Slows</status> by @Slow@% for @SlowDuration@ seconds when she lands. On a champion kill or assist, Rocket Jump's Cooldown is refreshed.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1150,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies.  Can be activated to deal damage to target unit over time, and reduce healing received.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>@PassiveDamage@ magic damage</magicDamage> to nearby enemies.<br><br><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> over 5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>@PassiveDamage@ magic damage</magicDamage> to nearby enemies.<br><br><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> over @GrievousDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

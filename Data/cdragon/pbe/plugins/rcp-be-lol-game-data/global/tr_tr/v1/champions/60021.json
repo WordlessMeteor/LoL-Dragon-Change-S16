@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Miss Fortune 5 saniye boyunca saldırıya uğramadığında fazladan <speed>25 Hareket Hızı</speed> kazanır. Bu ilave, en fazla 70 olacak şekilde her saniye 9 artar."
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Miss Fortune her vuruşta hedefe verdiği hasarı pasif olarak artırır.  Bu yetenek, Miss Fortune'un saldırı hızını artırmak ve saldırılarının hedefin aldığı iyileştirmeyi azaltmasını sağlamak için etkinleştirilebilir.",
-            "dynamicDescription": "<font color='#FF9900'>Pasif:</font> Miss Fortune her saldırısında hedefine <magicDamage>@TotalDamageOnHIt@ Büyü Hasarı</magicDamage> verir ve bu hasar aynı hedef üzerinde @MaxStacks@ defaya kadar birikir.<br><magicDamage>Azami ilave hasar: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Aktif:</font> Miss Fortune'un <attackSpeed>saldırı hızı</attackSpeed> 6 saniyeliğine <attackSpeed>%@ASMod@</attackSpeed> artar ve saldırıları 3 saniyeliğine <keyword>%50 Ağır Yara</keyword> uygular.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Miss Fortune bir bölgenin üzerine kurşun yağdırır, rakiplerine dalga dalga hasar verir ve onları yavaşlatır.",
-            "dynamicDescription": "Miss Fortune havaya yüzlerce mermi ateşler. Bu mermiler 0,5 saniye sonra bir bölgeye yağarak 2 saniye boyunca <magicDamage>@TotalDamagePerSecond@ Büyü Hasarı</magicDamage> verir ve isabet alan rakipleri 1 saniyeliğine @TotalSlowAmount@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Miss Fortune, koni şeklinde bir yaylım ateşine başlar ve rakiplerine yüksek miktarda hasar verir.",
-            "dynamicDescription": "Miss Fortune 2 saniye boyunca önündeki koni şeklindeki alana yaylım ateşi açarak mermi başına <physicalDamage>@PhysicalDamagePerWave@ Fiziksel Hasar</physicalDamage> verir (<physicalDamage>Toplam Hasar: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

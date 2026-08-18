@@ -437,7 +437,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "未受到攻击5秒后，厄运小姐额外获得<speed>25移动速度</speed>。该加成每秒提升9，最高可达70。"
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -464,7 +464,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -599,7 +599,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐攻击同一目标时，每次命中造成的伤害会被动提升。该技能可激活，提升厄运小姐的攻击速度，并使她的攻击降低目标受到的治疗效果。",
-            "dynamicDescription": "<font color='#FF9900'>被动：</font>厄运小姐每次攻击会对她的目标造成<magicDamage>@TotalDamageOnHIt@魔法伤害</magicDamage>，对同一目标至多叠加@MaxStacks@层。<br><magicDamage>最大额外伤害：@MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>主动：</font>厄运小姐的<attackSpeed>攻击速度</attackSpeed>提升<attackSpeed>@ASMod@%</attackSpeed>，持续6秒，并使她的攻击施加持续3秒的<keyword>50%重伤</keyword>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -749,7 +749,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐向目标区域释放一阵弹雨，对敌人造成数波伤害并减缓其移动速度。",
-            "dynamicDescription": "厄运小姐向空中发射数百枚子弹，在0.5秒后在指定区域倾泻而下，在2秒内造成<magicDamage>@TotalDamagePerSecond@魔法伤害</magicDamage>，并对击中的敌人造成持续1秒的@TotalSlowAmount@<status>减速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -759,12 +759,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -899,7 +899,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐向面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。",
-            "dynamicDescription": "厄运小姐向面前的锥形范围内引导一阵持续2秒的子弹风暴，每颗子弹造成<physicalDamage>@PhysicalDamagePerWave@物理伤害</physicalDamage>(<physicalDamage>总伤害：@TotalDamage@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

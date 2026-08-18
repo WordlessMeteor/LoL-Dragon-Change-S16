@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "5秒內未受攻擊後，好運姐額外獲得<speed>25跑速</speed>。此加成每秒增加9，最高可達70。"
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "好運姐每次攻擊同一目標時，會逐步提升對其造成的傷害。主動施放可提升攻速，且普攻會降低目標受到的治療效果。",
-            "dynamicDescription": "<font color='#FF9900'>被動：</font>好運姐每次攻擊都會對目標造成<magicDamage>@TotalDamageOnHIt@魔法傷害</magicDamage>，可在同一目標身上累積最多@MaxStacks@層。<br><magicDamage>最大額外傷害：@MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>主動：</font>好運姐的<attackSpeed>攻速</attackSpeed>提升<attackSpeed>@ASMod@%</attackSpeed>，持續6秒，且普攻會在3秒內施加<keyword>50%重創效果</keyword>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "好運姐朝指定位置傾瀉一陣彈雨，對敵軍造成數波傷害，並使其緩速。",
-            "dynamicDescription": "好運姐朝空中射出數百發子彈，0.5秒後傾瀉在指定位置，於2秒內對擊中的敵軍造成<magicDamage>@TotalDamagePerSecond@魔法傷害</magicDamage>，並<status>緩速</status>@TotalSlowAmount@，持續1秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "好運姐向她前方的扇形範圍掃射強力彈幕，對敵軍造成大量傷害。",
-            "dynamicDescription": "好運姐向她前方的扇形範圍掃射強力彈幕，持續2秒，每波子彈對敵軍造成<physicalDamage>@PhysicalDamagePerWave@物理傷害</physicalDamage>(<physicalDamage>總傷害：@TotalDamage@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

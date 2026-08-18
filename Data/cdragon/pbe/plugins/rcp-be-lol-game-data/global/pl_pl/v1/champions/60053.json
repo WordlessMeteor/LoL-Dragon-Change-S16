@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Spell_BlitzcrankPassive_Jade_Summary"
+        "description": "Gdy Blitzcrank odnosi obrażenia, mając mało zdrowia, najpierw otrzymuje tarczę o wartości równej procentowi jego obecnej many. Ten efekt ma czas odnowienia."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank wystrzeliwuje prawą rękę, próbując chwycić przeciwnika, zadając mu obrażenia i przyciągając go.",
             "dynamicDescription": "Blitzcrank wystrzeliwuje prawą dłoń, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>, <status>ogłuszając</status> cel i <status>przyciągając</status> go do siebie.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Blitzcrank ładuje pięść, aby jego następny atak zadał podwójne obrażenia i wyrzucił jego cel w powietrze.",
-            "dynamicDescription": "Blitzcrank ładuje pięść, aby jego następny atak zadał <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> i <status>podrzucił</status> jego cel w powietrze na @CCDuration@ sek.@SpellModifierDescriptionAppend@",
+            "description": "Spell_BlitzcrankE_Jade_Summary",
+            "dynamicDescription": "Spell_BlitzcrankE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_BlitzcrankR_Jade_Summary",
-            "dynamicDescription": "Spell_BlitzcrankR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Biernie wywołuje błyskawice, które zadają obrażenia pobliskiemu wrogowi. Ponadto Blitzcrank może użyć tej umiejętności, by zadać pobliskim wrogom obrażenia i na krótko ich uciszyć.",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Co @PassiveHitRate@ sek. z Blitzcranka przeskakuje błyskawica, która trafia losowego pobliskiego wroga, zadając mu <magicDamage>@PassiveDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br><spellActive>Użycie:</spellActive> Zadaje <magicDamage>@ActiveDamage@ pkt. obrażeń magicznych</magicDamage> i <status>ucisza</status> pobliskie wrogie jednostki na @SilenceDuration@ sek. Bierny efekt jest wyłączony, gdy Pole Statyczne się odnawia.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

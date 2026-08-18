@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "Мальфит защищен каменным щитом, поглощающим урон в размере 10% от его макс. здоровья. Если в течение 10 сек. Мальфит не получает урона, щит возникает вновь."
+        "description": "Spell_MalphitePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Используя магию стихий, Мальфит швыряет во врага осколок скалы, нанося ему урон и похищая у него часть скорости передвижения на 4 секунды.",
+            "description": "Spell_MalphiteQ_Jade_Summary",
             "dynamicDescription": "Наносит цели <magicDamage>@QDamageCalc@ ед. маг. урона</magicDamage> и похищает <speed>@SpeedSteal@% скорости передвижения</speed> на @SlowDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -754,7 +754,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мальфит бьет с такой силой, что его атаки наносят урон всем бойцам перед ним. Активация Жестоких ударов значительно повышает его броню и силу атаки на короткое время.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Мальфита наносят врагам рядом с целью урон в размере @Jade_MalphiteObduracyPercentDamage*100@% от его <physicalDamage>силы атаки</physicalDamage>.<br><br><spellActive>Активно:</spellActive> <scaleArmor>броня</scaleArmor> и <physicalDamage>сила атаки</physicalDamage> Мальфита растут на @ArmorBonus*100@% на 6 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MalphiteW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

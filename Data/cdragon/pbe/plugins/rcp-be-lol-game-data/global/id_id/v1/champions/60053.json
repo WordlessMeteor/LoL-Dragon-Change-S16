@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Spell_BlitzcrankPassive_Jade_Summary"
+        "description": "Saat menerima damage dalam kondisi Health rendah, Blitzcrank akan mendapatkan Shield dulu sebesar persentase dari Mana-nya saat ini. Efek ini memiliki cooldown."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank menembakkan tangan kanannya untuk menangkap musuh di depannya, lalu menghasilkan damage sambil menariknya ke posisinya.",
             "dynamicDescription": "Blitzcrank menembakkan tangan kanannya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>, menerapkan <status>Stun</status> ke target, dan <status>Pull</status> target ke arahnya.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Blitzcrank memperkuat tinjunya agar serangan berikutnya menghasilkan damage ganda dan mengangkat target ke udara.",
-            "dynamicDescription": "Blitzcrank memperkuat tinjunya agar serangan berikutnya menghasilkan <physicalDamage>@TotalDamage@ Physical Damage</physicalDamage> dan targetnya akan terkena <status>Knock Up</status> selama @CCDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Spell_BlitzcrankE_Jade_Summary",
+            "dynamicDescription": "Spell_BlitzcrankE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_BlitzcrankR_Jade_Summary",
-            "dynamicDescription": "Spell_BlitzcrankR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Pasif menyebabkan lightning bolt menghasilkan damage pada musuh di sekitar. Selain itu, Blitzcrank bisa mengaktifkan ability ini untuk menghasilkan damage dan sejenak menerapkan silence pada musuh di sekitar.",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Petir menyambar dari Blitzcrank dan mengenai musuh random di sekitar dengan <magicDamage>@PassiveDamage@ magic damage</magicDamage> tiap @PassiveHitRate@ detik.<br><br><spellActive>Aktif: </spellActive>Menghasilkan <magicDamage>@ActiveDamage@ magic damage</magicDamage> dan menerapkan <status>Silence</status> pada unit musuh di sekitar selama @SilenceDuration@ detik. Efek pasif akan nonaktif saat Static Field sedang cooldown.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

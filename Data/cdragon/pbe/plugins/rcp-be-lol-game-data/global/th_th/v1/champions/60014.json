@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Sion มีโอกาส 40% ที่จะไม่รับความเสียหาย 30/40/50 หน่วยเมื่อถูกโจมตีในแต่ละครั้ง"
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "การจ้องมองของ Sion ทำให้ศัตรูหนึ่งตัวเกิดอาการหวาดกลัว สร้างความเสียหายและทำให้ติดสตัน",
-            "dynamicDescription": "<mainText>จ้องมองศัตรูหนึ่งตัว สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สตัน</status>ศัตรูเป็นเวลา 1.5 วินาที",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Sion ปกคลุมตนเองด้วยโล่ป้องกันความเสียหาย  หากโล่ป้องกันนี้ไม่ถูกทำลายภายใน 10 วินาที มันจะระเบิดและสร้างความเสียหายแก่ศัตรูโดยรอบ กดใช้อีกครั้งหลังจาก 4 วินาทีเพื่อให้โล่ระเบิดเอง",
-            "dynamicDescription": "<mainText>Sion ปกคลุมตนเองด้วยโล่ป้องกันที่รับ<shield>ความเสียหายได้ @TotalShield@ หน่วย</shield> หากโล่ป้องกันนี้ไม่ถูกทำลายภายใน 10 วินาที มันจะระเบิดและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูโดยรอบ<br><br><recast>กดใช้ซ้ำ</recast>หลังจาก 4 วินาทีเพื่อให้โล่ระเบิดเอง",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sion ดูดกลืนพลังชีวิตบางส่วนของศัตรูเมื่อโจมตี ส่งผลให้ตัวเขาและเพื่อนร่วมทีมฟื้นฟูพลังชีวิต โดยกลิ่นเนื้อสดจะช่วยปลุกความคลั่งของ Sion ขึ้นมาอีกครั้ง และเพิ่มความเร็วโจมตีให้กับเขาด้วย",
-            "dynamicDescription": "<mainText>Sion ได้รับ<lifeSteal>ดูดเลือด @LifestealPercent*100@%</lifeSteal> และ<attackSpeed>ความเร็วโจมตี @AttackSpeedMod*100@%</attackSpeed> เป็นเวลา 20 วินาที นอกจากนี้ การโจมตีปกติของ Sion จะ<healing>ฮีล</healing>เพื่อนร่วมทีมโดยรอบเป็นจำนวน @HealPercent*100@% ของความเสียหายที่ทำได้",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Sion 40% eséllyel figyelmen kívül hagyhat legfeljebb 30/40/50 sebzést, amikor támadás éri őt."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Sion megrémít egy ellenfelet a tekintetével, sebzést és kábítást okozva neki.",
-            "dynamicDescription": "<mainText>Lesújt egy ellenfélre, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz neki, és 1,5 másodpercre <status>elkábítja</status> őt.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Sion egy sebzést elnyelő pajzzsal veszi körbe magát.  Ha a pajzs 10 másodpercen belül nem semmisül meg, felrobban, és sebzést okoz a közeli ellenfeleknek. A képesség 4 másodpercen belüli ismételt elsütésével manuálisan felrobbantható.",
-            "dynamicDescription": "<mainText>Sion egy pajzzsal veszi körbe magát, amely elnyel <shield>@TotalShield@ sebzést</shield>. Ha a pajzs 10 másodpercen belül nem semmisül meg, felrobban, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek.<br><br><recast>Újraaktiválhatod</recast> 4 másodperc után, hogy manuálisan felrobbantsd.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Sion minden támadással elfogyasztja az ellenfelei életerejének egy részét, amivel életerőt tölt vissza magának és a közeli szövetségeseknek. A hús szaga fellelkesíti Siont, és megnöveli a támadási sebességét.",
-            "dynamicDescription": "<mainText>Sion 20 másodpercre <lifeSteal>@LifestealPercent*100@% életlopást</lifeSteal> és <attackSpeed>@AttackSpeedMod*100@% támadási sebességet</attackSpeed> kap. Sion alaptámadásai emellett az okozott sebzés @HealPercent*100@%-ával <healing>gyógyítják</healing> a közeli szövetségeseket.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

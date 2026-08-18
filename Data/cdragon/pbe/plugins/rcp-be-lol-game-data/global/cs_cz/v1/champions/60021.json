@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Když na Miss Fortune po dobu 5 sek. nikdo nezaútočí, zvýší se jí <speed>rychlost pohybu o 25 bodů</speed>. Tento bonus se pak každou sekundu zvyšuje o dalších 9 bodů až do maxima 70 bodů."
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Miss Fortune pasivně zvyšuje poškození, které cíli s každým zásahem způsobí.  Tuto schopnost lze aktivovat, čímž Miss Fortune získá bonus k rychlosti útoků a její útoky budou cílům snižovat léčivé účinky.",
-            "dynamicDescription": "<font color='#FF9900'>Pasivní efekt:</font> Miss Fortune každým útokem způsobí cíli <magicDamage>@TotalDamageOnHIt@ bodů magického poškození</magicDamage>, tento efekt se může vůči každému cíli až @MaxStacks@x kumulativně nasčítat.<br><magicDamage>Maximální bonusové poškození: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Aktivace:</font> Miss Fortune se na 6 sek. zvýší <attackSpeed>rychlost útoků</attackSpeed> o <attackSpeed>@ASMod@ %</attackSpeed> a její útoky způsobují <keyword>50% Vážné rány</keyword> trvající 3 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Miss Fortune vypálí do dané oblasti krupobití střel, které způsobí všem protivníkům několik vln poškození a navíc je zpomalí.",
-            "dynamicDescription": "Miss Fortune vystřelí do vzduchu stovky kulek, které za 0,5 sek. dopadnou na zvolenou pozici, kde v průběhu 2 sek. způsobí <magicDamage>@TotalDamagePerSecond@ bodů magického poškození</magicDamage> a zasažené nepřátele na 1 sek. <status>zpomalí</status> o @TotalSlowAmount@.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Miss Fortune soustředí do výseče před sebou roj střel, čímž nepřátelům způsobí rozsáhlé poškození.",
-            "dynamicDescription": "Miss Fortune soustředí po dobu 2 sek. do výseče před sebou salvu střel, přičemž každá kulka způsobí <physicalDamage>@PhysicalDamagePerWave@ bodů fyzického poškození</physicalDamage>. (<physicalDamage>Celkové poškození: @TotalDamage@</physicalDamage>)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

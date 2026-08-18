@@ -194,7 +194,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Leona/Skins/Skin64/Leona_Skin64.skl",
             "simpleSkin": "ASSETS/Characters/Leona/Skins/Skin64/Leona_Skin64.skn",
-            "texture": "ASSETS/Characters/Leona/Skins/Skin65/Leona_Skin65_TX_CM.tex",
+            "texture": "assets/characters/leona/skins/skin65/leona_skin65_tx_cm.tex",
             "skinScale": 1.3700000047683716,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -269,7 +269,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Leona_Skin65_LegF_TX_CM.tex",
+                    "texture": "assets/characters/leona/skins/skin65/leona_skin65_legf_tx_cm.tex",
                     "submesh": "BodyFresnel",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -284,7 +284,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Particles/Leona_Skin65_E_LW014.tex",
+                    "texture": "assets/characters/leona/skins/skin65/particles/leona_skin65_e_lw014.tex",
                     "submesh": "FlashCore",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -294,7 +294,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Leona_Skin65_R_TX_CM.tex",
+                    "texture": "assets/characters/leona/skins/skin65/leona_skin65_r_tx_cm.tex",
                     "submesh": "RUnit",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -309,22 +309,22 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Leona_Skin65_ShieldSplitting_TX_CM.tex",
+                    "texture": "assets/characters/leona/skins/skin65/leona_skin65_shieldsplitting_tx_cm.tex",
                     "submesh": "ShieldSplitting",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Particles/Leona_Skin65_R_TX_01.tex",
+                    "texture": "assets/characters/leona/skins/skin65/particles/leona_skin65_r_tx_01.tex",
                     "submesh": "Rock1",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Particles/Leona_Skin65_R_TX_01.tex",
+                    "texture": "assets/characters/leona/skins/skin65/particles/leona_skin65_r_tx_01.tex",
                     "submesh": "Rock2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Leona/Skins/Skin65/Particles/Leona_Skin65_R_TX_01.tex",
+                    "texture": "assets/characters/leona/skins/skin65/particles/leona_skin65_r_tx_01.tex",
                     "submesh": "Rock11",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -1864,6 +1864,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -2553,6 +2563,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
@@ -3937,6 +3957,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -4675,6 +4705,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -4986,6 +5026,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -5713,6 +5763,16 @@
         ],
         "switches": [
             {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
                 "Group": "Holographic",
@@ -6357,6 +6417,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Holographic_Tiling",
                 "value": [
@@ -7095,6 +7165,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,
@@ -8043,6 +8123,16 @@
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Holographic_Tiling",
                 "value": [
                     77.0,
@@ -8750,6 +8840,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "PATTERN_ONE_MASK_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_ONE_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_HOLOGRAPHIC_MATRIX",
                 "on": false,

@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "5초 동안 공격받지 않으면 미스 포츈이 추가로 <speed>25의 이동 속도</speed>를 얻습니다. 이 추가 능력치는 매초 9씩 최대 70까지 증가합니다."
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "미스 포츈이 대상에게 기본 공격을 맞힐 때마다 기본 지속 효과로 증가한 피해를 입힙니다.  이 스킬을 사용하면 미스 포츈의 공격 속도가 증가하고, 기본 공격 시 대상이 받는 체력 회복 효과를 감소시킵니다.",
-            "dynamicDescription": "<font color='#FF9900'>기본 지속 효과:</font> 미스 포츈이 대상에게 기본 공격을 맞힐 때마다 <magicDamage>@TotalDamageOnHIt@의 마법 피해</magicDamage>를 추가로 입힙니다. 이 피해는 동일한 대상에 대해 @MaxStacks@회까지 중첩됩니다.<br><magicDamage>최대 추가 피해량: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>사용 시:</font> 미스 포츈의 <attackSpeed>공격 속도</attackSpeed>가 6초 동안 <attackSpeed>@ASMod@%</attackSpeed> 증가하고, 기본 공격 시 3초간 <keyword>50%의 고통스러운 상처</keyword>를 적용합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "미스 포츈이 지정한 위치에 총알을 퍼부어, 적에게 여러 차례 피해를 입히고 둔화시킵니다.",
-            "dynamicDescription": "미스 포츈이 공중으로 무수한 총알을 발사해, 0.5초 뒤 지정한 위치에 쏟아지게 합니다. 총알에 맞은 적은 2초에 걸쳐 <magicDamage>@TotalDamagePerSecond@의 마법 피해</magicDamage>를 받고 1초 동안 @TotalSlowAmount@만큼 <status>둔화</status>됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "미스 포츈이 정신 집중 상태로 정면의 부채꼴 범위에 총알을 난사해 적에게 큰 피해를 입힙니다.",
-            "dynamicDescription": "미스 포츈이 정신 집중 상태로 2초 동안 정면의 부채꼴 범위에 총알을 난사해, 한 발당 <physicalDamage>@PhysicalDamagePerWave@의 물리 피해</physicalDamage>를 입힙니다. (<physicalDamage>전체 피해량: @TotalDamage@</physicalDamage>)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

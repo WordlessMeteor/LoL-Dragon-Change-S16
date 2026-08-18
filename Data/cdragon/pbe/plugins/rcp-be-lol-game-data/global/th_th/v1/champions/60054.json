@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "Malphite สร้างเกราะหินขึ้นมาเพื่อช่วยรับความเสียหาย โดยเกราะนี้มีพลังเท่ากับ 10% ของพลังชีวิตสูงสุด และหาก Malphite ไม่ถูกโจมตีเป็นระยะเวลา 10 วินาที เขาจะสร้างเกราะหินขึ้นมาใหม่"
+        "description": "Spell_MalphitePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Malphite ส่งพลังแห่งปฐพี ผ่านผืนดินไปหาศัตรู สร้างความเสียหาย และขโมยความเร็วเคลื่อนที่ของศัตรูเป็นเวลา 4 วินาที",
+            "description": "Spell_MalphiteQ_Jade_Summary",
             "dynamicDescription": "สร้าง<magicDamage>ความเสียหายเวท @QDamageCalc@ หน่วย</magicDamage> และขโมย<speed>ความเร็วเคลื่อนที่ @SpeedSteal@%</speed> ของเป้าหมายเป็นเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Malphite โจมตีสร้างความเสียหายใส่ศัตรูทุกตัวด้านหน้า การใช้งาน Brutal Strikes จะเพิ่มเกราะและพลังโจมตีของเขาอย่างมหาศาลเป็นเวลาสั้น ๆ",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Malphite สร้างความเสียหาย @Jade_MalphiteObduracyPercentDamage*100@% ของ<physicalDamage>พลังโจมตี</physicalDamage>ให้กับยูนิตที่อยู่ใกล้เป้าหมาย<br><br><spellActive>กดใช้: </spellActive> <scaleArmor>เกราะ</scaleArmor> และ <physicalDamage>พลังโจมตี</physicalDamage> ของ Malphite จะเพิ่มขึ้น @ArmorBonus*100@% เป็นเวลา 6 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MalphiteW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

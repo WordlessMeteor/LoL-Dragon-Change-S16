@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Sion memiliki 40% peluang mengabaikan hingga 30/40/50 damage setiap kali diserang."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Tatapan Sion menakuti satu musuh, menghasilkan damage dan menerapkan stun pada musuh.",
-            "dynamicDescription": "<mainText>Menyerang satu musuh, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Stun</status> selama 1,5 detik.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Sion melindungi dirinya dengan shield yang menyerap damage.  Jika shield tidak hancur dalam 10 detik, shield akan meledak dan menghasilkan damage ke musuh di sekitarnya. Cast lagi setelah 4 detik untuk meledakkan secara manual.",
-            "dynamicDescription": "<mainText>Sion melindungi dirinya dengan shield yang menyerap <shield>@TotalShield@ damage</shield>. Jika shield tidak hancur dalam 10 detik, shield akan meledak dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitarnya.<br><br><recast>Recast</recast> setelah 4 detik untuk meledakkan secara manual.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sion mengonsumsi sebagian daya hidup musuhnya setiap kali menyerang, mencuri health untuk dirinya sendiri dan sekutu di sekitarnya. Aroma daging juga membangkitkan semangat Sion dan meningkatkan Attack Speed-nya.",
-            "dynamicDescription": "<mainText>Memberikan <lifeSteal>@LifestealPercent*100@% Lifesteal</lifeSteal> dan <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> kepada Sion selama 20 detik. Basic attack Sion juga akan memberikan <healing>heal</healing> ke sekutu di sekitar sebesar @HealPercent*100@% damage yang dia hasilkan.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

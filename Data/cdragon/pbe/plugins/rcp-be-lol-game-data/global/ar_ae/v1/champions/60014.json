@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "يمتلك سايون فرصة بنسبة 40% لتجاهل ما يصل إلى 30\\40\\50 من الضرر كلما تعرض للهجوم."
+        "description": "Spell_SionPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تصيب نظرة سايون عدوًا واحدًا بالرعب، فتلحق به الضرر وتصعقه.",
-            "dynamicDescription": "<mainText>يضرب عدوًا واحدًا، فيلحق به <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>يصعقه</status> لمدة 1.5ث.",
+            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يحيط سايون نفسه بدرع يمتص الضرر.  إذا لم يتم تدمير الدرع خلال 10 ثوانٍ، ينفجر فيلحق الضرر بالأعداء المحيطين. يمكن الإلقاء مرة أخرى بعد 4 ثوانٍ للتفجير اليدوي.",
-            "dynamicDescription": "<mainText>يحيط سايون نفسه بدرع يمتص <shield>@TotalShield@ ضرر</shield>. إذا لم يتم تدمير الدرع خلال 10 ثوانٍ، ينفجر فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء المحيطين.<br><br><recast>أعد الإلقاء</recast> بعد 4 ثوانٍ لتفجيره يدويًا.",
+            "description": "Spell_SionW_Jade_Summary",
+            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يستهلك سايون جزءًا من طاقة حياة أعدائه مع كل هجوم، فيمد نفسه وحلفاءه في الجوار بالصحة. كما تجدد رائحة اللحم حماس سايون، مما يزيد من سرعة الهجوم لديه.",
-            "dynamicDescription": "<mainText>تمنح سايون <lifeSteal>@LifestealPercent*100@% سرقة صحة</lifeSteal> و <attackSpeed>@AttackSpeedMod*100@% سرعة هجوم</attackSpeed> لمدة 20ث. بالإضافة إلى ذلك، <healing>تعالج</healing> هجمات سايون الأساسية الحلفاء في الجوار بنسبة @HealPercent*100@% من الضرر الملحق.",
+            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

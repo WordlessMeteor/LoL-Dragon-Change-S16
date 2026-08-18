@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Miss Fortune unleashes a flurry of bullets at a location, dealing waves of damage to opponents and slowing them.",
-            "dynamicDescription": "Miss Fortune fires hundreds of bullets into the air that rain down at a location after 0.5 seconds, dealing <magicDamage>@TotalDamagePerSecond@ magic damage</magicDamage> over 2 seconds and <status>Slowing</status> enemies hit by @TotalSlowAmount@ for 1 second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune fires hundreds of bullets into the air that rain down, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> over @Duration@ seconds and <status>Slowing</status> enemies by @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Miss Fortune channels a flurry of bullets into a cone in front of her, dealing large amounts of damage to enemies.",
-            "dynamicDescription": "Miss Fortune channels a barrage of bullets into a cone in front of her for 2 seconds, dealing <physicalDamage>@PhysicalDamagePerWave@ physical damage</physicalDamage> per bullet (<physicalDamage>Total Damage: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune channels a barrage of bullets into a cone in front of her for @ChannelDuration@ seconds, dealing <physicalDamage>@PhysicalDamagePerWave@ physical damage</physicalDamage> per bullet (<physicalDamage>Total Damage: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "După 5 secunde în care nu este atacată, Miss Fortune câștigă <speed>25 viteză de mișcare</speed> suplimentară. Acest bonus crește cu 9 în fiecare secundă, până la un bonus maxim de 70."
+        "description": "Spell_MissFortunePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Daunele provocate de Miss Fortune unei ținte cresc pasiv cu fiecare lovitură.  Această abilitate poate fi activată pentru a mări viteza de atac a lui Miss Fortune și pentru a face ca atacurile ei să reducă efectele de vindecare primite de țintă.",
-            "dynamicDescription": "<font color='#FF9900'>Pasivă:</font> Miss Fortune provoacă <magicDamage>@TotalDamageOnHIt@ daune magice</magicDamage> țintei sale cu fiecare atac, acestea cumulându-se până la @MaxStacks@ ori pe aceeași țintă.<br><magicDamage>Daune bonus maxime: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Activă:</font> <attackSpeed>viteza de atac</attackSpeed> a lui Miss Fortune este crescută cu <attackSpeed>@ASMod@%</attackSpeed> timp de 6 secunde, iar atacurile sale aplică <keyword>''Răni grave'' de 50%</keyword> timp de 3 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Miss Fortune dezlănțuie o rafală de gloanțe asupra unei locații, provocând valuri de daune adversarilor și încetinindu-i.",
-            "dynamicDescription": "Miss Fortune trage în aer sute de gloanțe care cad după 0,5 secunde într-o anumită locație, provocând <magicDamage>@TotalDamagePerSecond@ daune magice</magicDamage> timp de 2 secunde și <status>încetinind</status> inamicii loviți cu @TotalSlowAmount@ timp de 1 secundă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Miss Fortune dezlănțuie o rafală de gloanțe într-o zonă în formă de con aflată în fața ei, provocându-le daune mari inamicilor.",
-            "dynamicDescription": "Miss Fortune trage o rafală de gloanțe într-o zonă în formă de con aflată în fața ei timp de 2 secunde, provocând <physicalDamage>@PhysicalDamagePerWave@ daune fizice</physicalDamage> per glonț (<physicalDamage>daune totale: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -853,7 +853,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ユニットをキルするたびに、追加でゴールドを獲得する。「ホークスピリット」を放ち、視界を確保することができる。",
-            "dynamicDescription": "game_spell_tooltip_AsheSpiritOfTheHawk_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 敵をキルするたびに、追加で<gold>@AdditionalGold@ゴールド</gold>を獲得する。<br><br><spellActive>発動効果:</spellActive> 鷹を放ち、指定した地点の視界を@RevealDuration@秒間確保する。また、鷹は通過したエリアの視界も得る。@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 3250.0,
@@ -1003,7 +1003,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一直線に氷の矢を放つ。矢は命中した敵チャンピオンにダメージを与え、飛距離に応じて最大3.5秒間のスタン効果を付与する。さらに、周囲の敵ユニットにはダメージとスロウ効果を与える。",
-            "dynamicDescription": "game_spell_tooltip_EnchantedCrystalArrow_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "アッシュが一直線に飛ぶ氷の矢を放ち、命中した敵チャンピオンに<status>スタン効果</status>と<magicDamage>@RMainDamage@の魔法ダメージ</magicDamage>を与える。<status>スタン</status>の効果時間は矢の移動距離に応じて最大@MaxStunDuration@秒まで増加する。周囲の敵は@SlowDuration@秒間、@MovementSpeedMod*-100@%の<status>スロウ効果</status>を受け、<magicDamage>@RAoEDamage@の魔法ダメージ</magicDamage>を受ける。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

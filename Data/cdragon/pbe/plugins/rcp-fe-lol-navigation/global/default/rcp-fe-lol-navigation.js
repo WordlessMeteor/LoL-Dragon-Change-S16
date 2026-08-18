@@ -25805,12 +25805,15 @@
                     const e = this.get("mapData.assets.set-announcement-icon");
                     return e ? this.get("tftService").getLocalizedAssetPath(e) : ""
                 })),
-                showSetAnnouncement: a.Ember.computed("tftHomeSeen", "lastTFTSetSeen", "currentDefaultTFTSet", "setAnnouncementSeen", "setAnnouncementData", (function() {
+                showSetAnnouncement: a.Ember.computed("tftHomeSeen", "lastTFTSetSeen", "currentDefaultTFTSet", "setAnnouncementSeen", "setAnnouncementData", "tftService.bridgeEnabled", "tftService.bridgeAnnouncementSeen", (function() {
                     if (!1 === this.get("tftHomeSeen")) return !1;
+                    const e = this.get("tftService.bridgeEnabled");
+                    if (null === e) return !1;
+                    if (e && !this.get("tftService.bridgeAnnouncementSeen")) return !1;
                     if (!0 === this.get("setAnnouncementSeen") || !this.get("setAnnouncementData")) return !1;
-                    const e = this.get("lastTFTSetSeen"),
-                        t = this.get("currentDefaultTFTSet");
-                    return null !== e && null !== t && e !== t
+                    const t = this.get("lastTFTSetSeen"),
+                        n = this.get("currentDefaultTFTSet");
+                    return null !== t && null !== n && t !== n
                 })),
                 useCustomLayout: a.Ember.computed("currentDefaultTFTSet", (function() {
                     return "TFTSet13" === this.get("currentDefaultTFTSet") || "TFTSet14" === this.get("currentDefaultTFTSet") || "TFTSet18" === this.get("currentDefaultTFTSet")
@@ -28519,8 +28522,9 @@
                 l = "/lol-game-data/assets/v1/tftsets.json",
                 c = "/lol-maps/v2/maps",
                 d = "temp_set_seen",
-                u = "/lol-lobby/v2/lobby";
-            var m = i.Ember.Service.extend({
+                u = "/lol-lobby/v2/lobby",
+                m = "/lol-client-config/v3/client-config/lol.client_settings.tft.bridge_enabled";
+            var p = i.Ember.Service.extend({
                 lastTftSetCoreNameSeen: null,
                 setAnnouncementSeenLocal: null,
                 currentDefaultTFTSet: null,
@@ -28528,11 +28532,13 @@
                 tftHomeSeen: !1,
                 tftNewTabEnabled: !1,
                 wasInTFTLobby: !1,
+                bridgeAnnouncementSeen: !1,
+                bridgeEnabled: null,
                 init() {
                     this._super(...arguments), this._setLocale(), this.handleWalletChanged = this.handleWalletChanged.bind(this), this.initDataBindings(), this.initGenericAssets()
                 },
                 initDataBindings() {
-                    i.db.observe(a, this, this.handleWalletChanged), i.db.observe(s, this, this.handleTFTPreferencesChanged), i.db.observe(l, this, this.handleTFTSetChanged), i.db.observe(c, this, this.handleTFTMapDataChanged), i.db.observe(o, this, this.handleFirstTouchChanged), i.db.observe(u, this, this.handleLobby)
+                    i.db.observe(a, this, this.handleWalletChanged), i.db.observe(s, this, this.handleTFTPreferencesChanged), i.db.observe(l, this, this.handleTFTSetChanged), i.db.observe(c, this, this.handleTFTMapDataChanged), i.db.observe(o, this, this.handleFirstTouchChanged), i.db.observe(u, this, this.handleLobby), i.db.observe(m, this, this.handleBridgeEnabledChanged)
                 },
                 initGenericAssets() {
                     i.db.get("/lol-game-data/assets/v1/generic-assets.json").then((e => {
@@ -28550,7 +28556,7 @@
                             if (22 === t.id && "TFT" === t.gameMode && "" === t.gameMutator) return void this.set("mapData", t)
                 },
                 handleTFTPreferencesChanged(e) {
-                    e && e.data && (this.set("lastTftSetCoreNameSeen", e.data[r] || ""), this._checkSetAnnouncementSeen())
+                    e && e.data && (this.set("lastTftSetCoreNameSeen", e.data[r] || ""), this.set("bridgeAnnouncementSeen", Boolean(e.data.tftBridgeAnnouncementSeen)), this._checkSetAnnouncementSeen())
                 },
                 handleTFTSetChanged(e) {
                     e && (this.set("currentDefaultTFTSet", e.LCTFTModeData.mDefaultSet.SetCoreName), this._checkSetAnnouncementSeen())
@@ -28576,8 +28582,11 @@
                 handleLobby(e) {
                     "TFT" === e?.gameConfig?.gameMode && this.set("wasInTFTLobby", !0)
                 },
+                handleBridgeEnabledChanged(e) {
+                    this.set("bridgeEnabled", Boolean(e))
+                },
                 willDestroy() {
-                    this._super(...arguments), i.db.unobserve(a, this), i.db.unobserve(s, this), i.db.unobserve(l, this), i.db.unobserve(c, this), i.db.unobserve(o, this), i.db.unobserve(u, this)
+                    this._super(...arguments), i.db.unobserve(a, this), i.db.unobserve(s, this), i.db.unobserve(l, this), i.db.unobserve(c, this), i.db.unobserve(o, this), i.db.unobserve(u, this), i.db.unobserve(m, this)
                 },
                 _setLocale() {
                     i.db.get("/riotclient/region-locale").then((e => {
@@ -28615,7 +28624,7 @@
                     i.Telemetry.sendCustomData("screen_load", a)
                 }
             });
-            t.default = m
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
