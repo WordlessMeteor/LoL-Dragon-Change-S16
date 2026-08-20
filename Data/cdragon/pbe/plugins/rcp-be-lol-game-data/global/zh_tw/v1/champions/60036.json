@@ -524,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Spell_DrMundoPassive_Jade_Summary"
+        "description": "蒙多醫生每秒回復一定比例的最大生命。"
     },
     "spells": [
         {
@@ -536,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@生命</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "蒙多醫生投擲屠刀，根據目標的最大生命對其造成傷害。",
-            "dynamicDescription": "Spell_DrMundoQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蒙多醫生投擲屠刀，造成等同目標當前生命@DamageMod*100@%的<magicDamage>魔法傷害</magicDamage>(至少@MinDamage@傷害)，並使其<status>緩速</status>@MoveMod*-100@%，持續@SlowDuration@秒。<br><br><healing>若屠刀擊中目標，將返還@HealthReturn@生命</healing>消耗。@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -835,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@生命</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_DrMundoE_Jade_Summary",
-            "dynamicDescription": "Spell_DrMundoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "蒙多醫生根據自身已損失生命，在數秒內提升物理傷害。",
+            "dynamicDescription": "蒙多醫生增加<physicalDamage>@BaseIncrease@物攻</physicalDamage>，持續@Duration@秒。蒙多醫生每失去1%生命，額外獲得<physicalDamage>@DamageMod@物攻</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -986,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@%當前生命</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "蒙多醫生消耗部分生命，提升跑速並大幅提升生命回復。",
-            "dynamicDescription": "Spell_DrMundoR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蒙多醫生會回復<healing>@MaximumHealthRegen@生命</healing>，並在@Duration@秒內獲得<speed>@SpeedMod*100@%跑速</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

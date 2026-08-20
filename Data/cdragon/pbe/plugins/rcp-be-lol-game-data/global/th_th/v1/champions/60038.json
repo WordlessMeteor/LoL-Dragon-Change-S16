@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Spell_KassadinPassive_Jade_Summary"
+        "description": "Kassadin ได้รับ<magicDamage>ความเสียหายเวท</magicDamage>ลดลง และเปลี่ยนความเสียหายเวทที่ได้รับเป็นโบนัส<attackSpeed>ความเร็วโจมตี</attackSpeed>"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Spell_KassadinW_Jade_Summary",
-            "dynamicDescription": "Spell_KassadinW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "ติดตัว: การโจมตีปกติของ Kassadin จะฟื้นฟูมานา กดใช้: การโจมตีปกติของ Kassadin จะสร้างความเสียหายเวทเพิ่มเติม",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Kassadin จะดึงพลังงานจาก Void เพื่อฟื้นฟู<scaleMana>มานา @ManaGainAmount@ หน่วย</scaleMana>เมื่อโจมตี เพิ่มขึ้นเป็น <scaleMana>@ChampionManaRestore@ หน่วย</scaleMana>เมื่อโจมตีแชมเปี้ยน<br><br><spellActive>กดใช้: </spellActive>Kassadin ชาร์จพลังให้กับ Nether Blade เป็นเวลา @BuffDuration@ วินาที ทำให้การโจมตีปกติของเขาสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kassadin ดูดพลังงานจากสกิลที่ถูกร่ายในบริเวณใกล้เคียง เมื่อสะสมครบ Kassadin จะสามารถใช้ Force Pulse สร้างความเสียหาย และลดความเร็วเคลื่อนที่ศัตรูด้านหน้าเป็นรูปกรวย",
-            "dynamicDescription": "Spell_KassadinE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin ดูดพลังงานจากสกิลที่ถูกร่ายในบริเวณใกล้เคียง และจะได้รับชาร์จทุกครั้งที่มีการร่ายสกิลใกล้ ๆ เขา<br><br>เมื่อสะสมครบ @RequiredChargesTooltip@ ชาร์จ Kassadin จะสามารถใช้ <spellName>Force Pulse</spellName> เพื่อสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @MoveSpeedMod*-100@% เป็นเวลา @SlowDuration@ วินาทีด้านหน้าเป็นรูปกรวย@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kassadin วาร์ปไปยังตำแหน่งใกล้เคียงและสร้างความเสียหายให้กับศัตรูโดยรอบ นอกจากนี้ การใช้ Riftwalk หลายครั้งในช่วงเวลาสั้น ๆ จะเสียมานามากขึ้น แต่ก็สร้างความเสียหายเพิ่มเติมเช่นกัน",
-            "dynamicDescription": "Spell_KassadinR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin วาร์ปไปยังตำแหน่งใกล้เคียงและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูโดยรอบ นอกจากนี้ การใช้ <spellName>Riftwalk</spellName> แต่ละครั้งภายใน @BuffDuration@ วินาที จะใช้<scaleMana>มานาเพิ่มขึ้น @AdditionalManaPerCast@ หน่วย</scaleMana> แต่จะสร้าง<magicDamage>ความเสียหายเพิ่มเติม @Damage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

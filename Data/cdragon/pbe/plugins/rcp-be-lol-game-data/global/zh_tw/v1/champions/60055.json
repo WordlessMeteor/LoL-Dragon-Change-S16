@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "參與擊殺英雄會縮短卡特蓮娜的冷卻時間。"
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特蓮娜投擲一把匕首，匕首會在敵軍之間彈射，造成魔法傷害。",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "投擲一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法傷害。匕首會彈射至@MaxBounces@名最近的敵軍，每次彈射造成的傷害都會減少@DamageFalloff*100@%。<br><br>匕首命中的敵軍會被標記@MarkDuration@秒。卡特蓮娜的普攻或技能會消耗標記，造成<magicDamage>@TotalDamageMark@</magicDamage>額外魔法傷害。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "卡特蓮娜化身為刀刃旋風，以無與倫比的速度向附近敵方英雄投擲匕首，造成大量傷害並施加重創。",
+            "dynamicDescription": "化身為刀刃旋風，對最靠近的@MaxTargets@名敵方英雄投擲匕首，@ChannelDuration@秒內造成<magicDamage>@DamageCalcTooltipOnly@魔法傷害</magicDamage>。命中的敵軍會受到@GrievousWoundsAmount*100@%<status>重創</status>，持續@GrievousWoundsDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

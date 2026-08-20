@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "赛恩每次受到攻击时，有机率无视一部分伤害。"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赛恩的凝视会使一名敌人惊恐，并造成伤害和晕眩效果。",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赛恩轰击一名敌人，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@StunDuration@秒<status>晕眩</status>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "赛恩为自己施加一道可吸收伤害的护盾。如果护盾未被摧毁，则会爆炸并对周围敌人造成伤害。赛恩可以再次激活该技能，提前引爆护盾。",
+            "dynamicDescription": "赛恩为自己施加一道可吸收<shield>@TotalShield@伤害</shield>的护盾。如果护盾在@ShieldDuration@秒内未被摧毁，则会爆炸并对周围敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>@RecastDelay@秒后可<recast>重施技能</recast>，手动引爆护盾。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赛恩的每次攻击都会夺取敌人的生命力，为自己和附近友军回复生命值。血肉的气息也会激发赛恩的狂热，并提升他的攻击速度。",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赛恩获得<lifeSteal>@LifestealPercent*100@%普攻吸血</lifeSteal>和<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续@BuffDuration@秒。此外，赛恩的普攻也会为周围的友军提供相当于造成伤害@HealPercent*100@%的<healing>治疗</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

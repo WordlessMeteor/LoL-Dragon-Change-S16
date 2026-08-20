@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "伊泽瑞尔每次使用技能命中目标时，都会提升自身攻速。"
     },
     "spells": [
         {
@@ -976,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "伊泽瑞尔发射一道能量波，降低敌方英雄的攻击速度并造成魔法伤害，同时治疗友方英雄并提升其攻击速度。",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "伊泽瑞尔发射一道能量波，对沿途经过的所有敌方英雄造成<magicDamage>@Damage@魔法伤害</magicDamage>，并使其<attackSpeed>攻击速度</attackSpeed>降低@AttackSpeed@%，持续@Duration@秒。<br><br>被能量波击中的友方英雄会回复<healing>@TotalHeal@生命值</healing>，并使其<attackSpeed>攻击速度</attackSpeed>提升@AttackSpeed@%，持续@Duration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "伊泽瑞尔发射一道强力能量弹幕，对沿途经过的每个单位造成大量伤害。",
+            "dynamicDescription": "伊泽瑞尔发射一道能量弹幕，对沿途经过的每个单位造成<magicDamage>@Damage@魔法伤害</magicDamage>。每命中一个单位，伤害就会递减@DamageReductionPerHit*100@%（最低为@MinimumDamagePercent*100@%）@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

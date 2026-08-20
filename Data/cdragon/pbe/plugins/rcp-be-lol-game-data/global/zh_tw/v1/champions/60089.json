@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "傷害性技能會對敵軍施加「烈陽之力」。友方英雄對這些目標造成傷害時，會消耗他們身上的烈陽之力減益，造成額外傷害。"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜下一次普攻會施展盾擊，造成額外魔法傷害並暈眩目標。",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "下一次普攻額外造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>，並<status>暈眩</status>敵軍@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜舉起盾牌，強化雙防。技能時間首次結束時，如果周圍還有敵軍，則對敵軍造成魔法傷害，且延長技能持續時間。",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷歐娜獲得<scaleArmor>@BonusARMR@物防</scaleArmor>與<scaleMR>魔防</scaleMR>，持續@BuffDuration@秒。技能結束時，對鄰近命中的敵軍造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>，雷歐娜將繼續保留額外<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，持續@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

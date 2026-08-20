@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Spell_MissFortunePassive_Jade_Summary"
+        "description": "ความเร็วเคลื่อนที่ของ Miss Fortune เพิ่มขึ้น จนกว่าจะถูกโจมตี"
     },
     "spells": [
         {
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Miss Fortune สร้างความเสียหายเพิ่มขึ้นแบบติดตัวเมื่อโจมตีเป้าหมายต่อเนื่อง  สามารถกดใช้สกิลนี้เพื่อเพิ่มความเร็วโจมตีให้กับ Miss Fortune และทำให้การโจมตีของเธอลดการฟื้นฟูที่เป้าหมายได้รับ",
-            "dynamicDescription": "Spell_MissFortuneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>ติดตัว:</font> Miss Fortune สร้าง<magicDamage>ความเสียหายเวท @TotalDamageOnHIt@ หน่วย</magicDamage>แก่เป้าหมายของเธอในแต่ละครั้งที่โจมตี สแตคได้สูงสุด @MaxStacks@ ครั้งบนเป้าหมายเดียวกัน<br><magicDamage>โบนัสความเสียหายสูงสุด: @MaximumTotalDamageOnHit@ หน่วย</magicDamage><br><br><font color='#FF9900'>กดใช้:</font> Miss Fortune ได้รับ<attackSpeed>ความเร็วโจมตี</attackSpeed> <attackSpeed>@ASMod@%</attackSpeed> เป็นเวลา @ActiveDuration@ วินาที และทำให้การโจมตีของเธอติด <keyword>Grievous Wounds 50%</keyword> เป็นเวลา 3 วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Miss Fortune ละเลงกระสุนไปยังพื้นที่เป้าหมาย สร้างความเสียหายเป็นระลอกแก่ศัตรูและสโลว์พวกเขา",
-            "dynamicDescription": "Spell_MissFortuneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune ยิงกระสุนขึ้นฟ้าให้ตกลงมาเป็นฝน <magicDamage>สร้างความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>เป็นเวลา @Duration@ วินาที และ<status>สโลว์</status>ศัตรู @MoveSpeedMod*-100@%@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Miss Fortune ยิงกระสุนจำนวนมากออกไปด้านหน้าเป็นพื้นที่รูปกรวย สร้างความเสียหายอย่างมากให้กับศัตรู",
-            "dynamicDescription": "Spell_MissFortuneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune ยิงกระสุนจำนวนมากออกไปด้านหน้าเป็นพื้นที่รูปกรวยเป็นเวลา @ChannelDuration@ วินาที สร้าง<physicalDamage>ความเสียหายกายภาพ @PhysicalDamagePerWave@ หน่วย</physicalDamage> ต่อนัด (<physicalDamage>ความเสียหายทั้งหมด: @TotalDamage@ หน่วย</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

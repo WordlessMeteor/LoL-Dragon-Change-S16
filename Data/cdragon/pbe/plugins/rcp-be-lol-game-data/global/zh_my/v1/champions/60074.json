@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "汉默丁格部署一座机枪炮台。炮台会随着技能等级的提升而获得新能力。（炮台对防御塔造成的伤害减半。）",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "汉默丁格构建一座机关枪炮台，每次攻击造成<magicDamage>@BonusDamage@魔法伤害</magicDamage>。防御塔在被放置后的前@AttackSpeedDuration@秒内获得 <attackSpeed>@TurretBonusAttackSpeed*100@%攻击速度</attackSpeed> 。此技能有@MaxAmmo@次充能（@AmmoRechargeTime@秒刷新时间）。<br><br>此技能每次升级都会获得新的强化：<br><attention>2级：</attention>炮台攻击会使目标的物理防御和魔法防御减少@Level2ResistShred@点（最多@MaxShredCapTooltip@点）<br><attention>3级：</attention>炮台数量上限提升至2座<br><attention>4级：</attention>炮台额外获得<scaleHealth>@Level4HPTooltip@生命值</scaleHealth><br><attention>5级：</attention>炮台攻击会造成@AoEDamageMod*100@%溅射伤害@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "汉默丁格发射长程火箭，命中距离最近的敌人。",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "汉默丁格发射@MaxTargets@枚可追踪敌人的微型火箭（每名敌人最多命中1枚），优先攻击距离最近的目标。每枚火箭造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "汉默丁格朝目标区域投掷一颗手雷，对敌方单位造成伤害，击晕直接命中的目标，并使附近单位致盲。",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "汉默丁格扔出一颗手雷，对敌方单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@BlindDuration@秒的<status>致盲</status>效果。被直接命中的敌人会被<status>晕眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "被动/主动：被动提升冷却时间减免。激活后，为所有已激活的进化炮台回复生命值，并使其在短时间内发射冰霜射击，降低敌人的移动速度。",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>@CooldownBonus*-100@%冷却时间减免。<br><br><spellActive>主动：</spellActive>在一段时间内强化所有技能和炮台。<br><br><spellName>进化防御塔：</spellName>所有防御塔都会完全<healing>回复生命值</healing>，且每次攻击都会造成<status>@MovementSpeedMod*-100@%减速</status>效果。<br><spellName>海克斯科技微型火箭：</spellName>发射@WMaxMissiles@枚火箭。<br><spellName>CH-1震荡手雷：</spellName>飞行速度提升33%。@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

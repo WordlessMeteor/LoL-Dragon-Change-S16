@@ -4428,14 +4428,13 @@ div.player-name-input__split-inputs-wrapper {
 
 .tft-compensation-tooltip {
     box-sizing: border-box;
-    font-family: Spiegel, Arial, sans-serif;
     min-height: 180px;
     width: 360px
 }
 
 .tft-compensation-tooltip__title {
     color: #f0e6d2;
-    font-family: Beaufort for LOL, Georgia, serif;
+    font-family: var(--font-display);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: .04em;
@@ -4452,6 +4451,7 @@ div.player-name-input__split-inputs-wrapper {
 .tft-compensation-tooltip__body {
     box-sizing: border-box;
     color: hsla(40, 50%, 88%, .65);
+    font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 22px;
@@ -4474,8 +4474,8 @@ div.player-name-input__split-inputs-wrapper {
 
 .tft-compensation-tooltip__available-cosmetics-title {
     color: #f0e6d2;
-    font-family: Beaufort for LOL, Georgia, serif;
-    font-size: 16px;
+    font-family: var(--font-display);
+    font-size: 20px;
     font-weight: 700;
     margin: 0 0 14px;
     text-align: left
@@ -4485,6 +4485,7 @@ div.player-name-input__split-inputs-wrapper {
     align-items: center;
     color: #f0e6d2;
     display: flex;
+    font-family: Spiegel, sans-serif;
     font-size: 16px;
     text-align: left
 }
@@ -4506,18 +4507,19 @@ div.player-name-input__split-inputs-wrapper {
 .tft-compensation-tooltip__prestige-icon,
 .tft-compensation-tooltip__rarity-icon {
     display: block;
-    flex: 0 0 16px;
-    height: 16px !important;
-    max-height: 16px !important;
-    max-width: 16px !important;
-    min-height: 16px !important;
-    min-width: 16px !important;
+    flex: 0 0 20px;
+    height: 20px !important;
+    max-height: 20px !important;
+    max-width: 20px !important;
+    min-height: 20px !important;
+    min-width: 20px !important;
     object-fit: contain;
-    width: 16px !important
+    width: 20px !important
 }
 
 .tft-compensation-tooltip__asterisk {
     color: hsla(40, 50%, 88%, .65);
+    font-family: Spiegel, sans-serif;
     font-size: 14px;
     line-height: 1.4;
     margin: 18px 0 14px;
@@ -4527,6 +4529,7 @@ div.player-name-input__split-inputs-wrapper {
 .tft-compensation-tooltip__more-details {
     color: #60ecff;
     cursor: pointer;
+    font-family: Spiegel, sans-serif;
     font-size: 16px;
     text-decoration: none
 }

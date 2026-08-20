@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Spell_KatarinaPassive_Jade_Summary"
+        "description": "参与击杀/助攻英雄会缩短卡特莲娜的冷却时间。"
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特莲娜投掷一把匕首，匕首会在敌人之间弹跳，造成魔法伤害。",
-            "dynamicDescription": "Spell_KatarinaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法伤害。匕首会弹跳至@MaxBounces@最近的敌人，每次弹跳造成的伤害会递减@DamageFalloff*100@%。<br><br>命中的敌人会被标记@MarkDuration@秒。卡特莲娜的普攻或技能会消耗印记，造成<magicDamage>@TotalDamageMark@</magicDamage>额外魔法伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_KatarinaR_Jade_Summary",
-            "dynamicDescription": "Spell_KatarinaR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "卡特莲娜化作刀刃风暴，以无与伦比的速度向附近敌方英雄投掷匕首，造成大量伤害并施加重创效果。",
+            "dynamicDescription": "化作刀刃风暴，朝距离最近的@MaxTargets@名敌方英雄投掷匕首，在@ChannelDuration@秒内造成<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。被命中的敌人会被施加@GrievousWoundsAmount*100@%<status>重创</status>效果，持续@GrievousWoundsDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

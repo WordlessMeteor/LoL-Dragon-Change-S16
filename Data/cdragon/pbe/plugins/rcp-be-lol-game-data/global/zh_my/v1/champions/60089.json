@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell_LeonaPassive_Jade_Summary"
+        "description": "伤害性技能会使敌人被烈阳之力标记。友方英雄对这些目标造成伤害时，会消耗烈阳之力并造成额外伤害。"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷欧娜会使用盾牌进行下一次普攻，造成额外魔法伤害并晕眩目标。",
-            "dynamicDescription": "Spell_LeonaQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "下一次普攻会额外造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并使一名敌人<status>晕眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷欧娜举起盾牌，获得物理防御和魔法防御。首次结束时，如果附近有敌人，则对敌人造成魔法伤害并延长此效果的持续时间。",
-            "dynamicDescription": "Spell_LeonaW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷欧娜获得<scaleArmor>@BonusARMR@物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>，持续@BuffDuration@秒。效果结束时，附近被命中的敌人会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，雷欧娜会在接下来的@BuffDuration@秒内保留她获得的<scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>加成。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

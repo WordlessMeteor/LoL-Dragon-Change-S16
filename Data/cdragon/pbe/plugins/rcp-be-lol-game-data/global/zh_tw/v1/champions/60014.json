@@ -774,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Spell_SionPassive_Jade_Summary"
+        "description": "賽恩每次受到攻擊時，有機會無視部分傷害。"
     },
     "spells": [
         {
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "賽恩的凝視會使單一敵人感到恐懼，造成傷害並使其暈眩。",
-            "dynamicDescription": "Spell_SionQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "賽恩轟擊單一敵軍，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>並使其<status>暈眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -935,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "Spell_SionW_Jade_Summary",
-            "dynamicDescription": "Spell_SionW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "賽恩為自己套上可吸收傷害的護盾。如果護盾沒有被摧毀，將會爆炸，對周圍的敵軍造成傷害。賽恩可以再次啟動技能，提前引爆護盾。",
+            "dynamicDescription": "賽恩為自己套上可吸收<shield>@TotalShield@傷害</shield>的護盾。如果護盾在@ShieldDuration@秒內未被摧毀，就會爆炸並對周圍敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>@RecastDelay@秒後可<recast>重施技能</recast>，手動引爆護盾。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1236,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "賽恩每次普攻都會吞噬敵軍部分生命力，汲取生命來治癒自己與鄰近友軍。血肉的氣味重燃了賽恩的狂熱，提升他的攻速。",
-            "dynamicDescription": "Spell_SionR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "賽恩獲得<lifeSteal>@LifestealPercent*100@普攻吸血</lifeSteal>與<attackSpeed>@AttackSpeedMod*100@%攻速</attackSpeed>@BuffDuration@秒。此外，賽恩的普攻會<healing>治療</healing>周圍友軍，治療量等同於所造成傷害的@HealPercent*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,

@@ -3,15 +3,15 @@
         "mRootSpell": "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenQ",
         "mChildSpells": [
             "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenQ",
-            "{03365992}",
-            "{20b8a68c}"
+            "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenQAttack",
+            "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenFastMove"
         ],
         "mName": "Jade_GarenQAbility",
         "__type": "AbilityObject"
     },
-    "{03365992}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenQAttack": {
         "ObjectName": "Jade_GarenQAttack",
-        "objectPath": "{03365992}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenQAttack",
         "mScriptName": "Jade_GarenQAttack",
         "mSpell": {
             "flags": 4,
@@ -198,9 +198,9 @@
         },
         "__type": "SpellObject"
     },
-    "{20b8a68c}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenFastMove": {
         "ObjectName": "Jade_GarenFastMove",
-        "objectPath": "{20b8a68c}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenQAbility/Jade_GarenFastMove",
         "mScriptName": "Jade_GarenFastMove",
         "mSpell": {
             "mImgIconName": [
@@ -597,10 +597,10 @@
         "__type": "SpellObject"
     },
     "{20d6fe90}": {
-        "mRootSpell": "{9fc45fb2}",
+        "mRootSpell": "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive",
         "mChildSpells": [
-            "{9fc45fb2}",
-            "{b026a074}"
+            "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive",
+            "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassiveHeal"
         ],
         "mName": "Jade_GarenPassiveAbility",
         "__type": "AbilityObject"
@@ -669,13 +669,13 @@
                 {
                     "name": "ResistanceScaling",
                     "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -894,9 +894,9 @@
         "mScriptName": "Jade_GarenAttackSequencer",
         "__type": "SpellObject"
     },
-    "{9fc45fb2}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive": {
         "ObjectName": "Jade_GarenPassive",
-        "objectPath": "{9fc45fb2}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive",
         "mScriptName": "Jade_GarenPassive",
         "mSpell": {
             "DataValues": [
@@ -1010,9 +1010,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b026a074}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassiveHeal": {
         "ObjectName": "Jade_GarenPassiveHeal",
-        "objectPath": "{b026a074}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassiveHeal",
         "mScriptName": "Jade_GarenPassiveHeal",
         "mSpell": {
             "mImgIconName": [
@@ -1055,7 +1055,7 @@
         "mRootSpell": "Characters/Jade_Garen/Spells/Jade_GarenEAbility/Jade_GarenE",
         "mChildSpells": [
             "Characters/Jade_Garen/Spells/Jade_GarenEAbility/Jade_GarenE",
-            "{f828937c}"
+            "Characters/Jade_Garen/Spells/Jade_GarenEAbility/Jade_GarenECancel"
         ],
         "mName": "Jade_GarenEAbility",
         "__type": "AbilityObject"
@@ -1298,13 +1298,13 @@
                 {
                     "name": "BaseADRatioPerSecond",
                     "values": [
-                        0.6000000238418579,
                         0.699999988079071,
                         0.800000011920929,
                         0.8999999761581421,
                         1.0,
                         1.100000023841858,
-                        1.2000000476837158
+                        1.2000000476837158,
+                        1.2999999523162842
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1568,9 +1568,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f828937c}": {
+    "Characters/Jade_Garen/Spells/Jade_GarenEAbility/Jade_GarenECancel": {
         "ObjectName": "Jade_GarenECancel",
-        "objectPath": "{f828937c}",
+        "objectPath": "Characters/Jade_Garen/Spells/Jade_GarenEAbility/Jade_GarenECancel",
         "mScriptName": "Jade_GarenECancel",
         "mSpell": {
             "flags": 4,
@@ -2736,7 +2736,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 55.5,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
@@ -2748,7 +2748,7 @@
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
-            "baseValue": 2.700000047683716,
+            "baseValue": 3.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
@@ -2964,10 +2964,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{9fc45fb2}",
+        "mCharacterPassiveSpell": "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{9fc45fb2}",
+                "mParentPassiveBuff": "Characters/Jade_Garen/Spells/Jade_GarenPassiveAbility/Jade_GarenPassive",
                 "__type": "CharacterPassiveData"
             },
             {

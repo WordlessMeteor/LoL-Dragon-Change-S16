@@ -597,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger วางป้อมปืนกล โดยป้อมปืนกลจะได้รับความสามารถเมื่อสกิลนี้เพิ่มเลเวล (ป้อมปืนสร้างความเสียหายเพียงครึ่งเดียวให้กับป้อมปราการ)",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger สร้างป้อมปืนกลที่สร้าง<magicDamage>ความเสียหายเวท @BonusDamage@ หน่วย</magicDamage>ต่อการโจมตีแต่ละครั้ง ป้อมปืนกลได้รับ<attackSpeed>ความเร็วโจมตี @TurretBonusAttackSpeed*100@%</attackSpeed> เป็นเวลา @AttackSpeedDuration@ วินาทีแรกหลังจากที่ถูกวาง สกิลนี้สามารถเก็บสะสมได้ @MaxAmmo@ ชาร์จ (รีเฟรช @AmmoRechargeTime@ วินาที)<br><br>สกิลแต่ละเลเวลจะเสริมพลังป้อมปืน:<br><attention>เลเวล 2:</attention> การโจมตีของป้อมปืนจะลดเกราะและต้านทานเวทของเป้าหมายลง @Level2ResistShred@ หน่วย (สูงสุด @MaxShredCapTooltip@ หน่วย)<br><attention>เลเวล 3:</attention> เพิ่มจำนวนป้อมปืนสูงสุดเป็น 2 ป้อม<br><attention>เลเวล 4:</attention> ป้อมปืนได้รับ<scaleHealth>พลังชีวิตเพิ่มเติม @Level4HPTooltip@ หน่วย</scaleHealth><br><attention>เลเวล 5:</attention> การโจมตีของป้อมปืนจะสร้างความเสียหายเป็นวงกว้าง @AoEDamageMod*100@%@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger ยิงจรวดพิสัยไกลเพื่อโจมตีศัตรูที่อยู่ใกล้กับ Heimerdinger มากที่สุด",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger ยิง Micro-Rocket ที่จะติดตามศัตรู @MaxTargets@ ตัว (สูงสุด 1 ลูกต่อคน) โดยจะโจมตีเป้าหมายที่อยู่ใกล้เขาที่สุด จรวดแต่ละลูกสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger โยนลูกระเบิดไปยังพื้นที่เป้าหมาย สร้างความเสียหายให้กับศัตรูทุกตัวที่อยู่ในรัศมี พร้อมทั้งสตันศัตรูที่อยู่กลางวง และทำให้ศัตรูรอบข้างตาบอด",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger โยนระเบิด สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับยูนิตศัตรู และทำให้พวกเขา<status>ตาบอด</status>เป็นเวลา @BlindDuration@ วินาที  ศัตรูที่โดนระเบิดโดยตรงจะถูก<status>สตัน</status>เป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ติดตัว / กดใช้: เพิ่มการลดคูลดาวน์แบบติดตัว  หากกดใช้จะฮีล Evolution Turret ที่ทำงานอยู่ทั้งหมด และทำให้พวกมันยิงกระสุนน้ำแข็งซึ่งจะลดความเร็วเคลื่อนที่เป็นเวลาสั้น ๆ",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>ลดคูลดาวน์ @CooldownBonus*-100@%<br><br><spellActive>กดใช้: </spellActive>เสริมพลังให้กับสกิลและป้อมปืนทั้งหมดในช่วงเวลาหนึ่ง<br><br><spellName>Evolution Turrets:</spellName> ป้อมปืนทั้งหมดจะ<healing>ฟื้นฟูพลังชีวิต</healing>จนเต็ม การโจมตีแต่ละครั้งจะ<status>สโลว์ @MovementSpeedMod*-100@%</status><br><spellName>Hextech Micro-Rockets:</spellName> ยิงจรวด @WMaxMissiles@ ลูก<br><spellName>CH-1 Concussion Grenade:</spellName> ระเบิดเดินทางเร็วขึ้น 33%@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
