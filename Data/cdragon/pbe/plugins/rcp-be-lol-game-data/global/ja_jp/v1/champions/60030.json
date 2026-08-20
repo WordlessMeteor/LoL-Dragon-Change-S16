@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Spell_KarthusPassive_Jade_Summary"
+        "description": "死亡すると同時に霊体化し、死亡中もその場で短時間スキルを発動できるようになる。"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点を時間差で爆発させ、周囲の敵にダメージを与える。",
-            "dynamicDescription": "Spell_KarthusQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "時間差で爆発を発生させ、周囲の敵にそれぞれ<magicDamage>@QDamage@の魔法ダメージ</magicDamage>を与える。命中したのが1体であればダメージは2倍になる。@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "Spell_KarthusR_Jade_Summary",
-            "dynamicDescription": "Spell_KarthusR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "詠唱後、すべての敵チャンピオンにダメージを与える。",
+            "dynamicDescription": "@ChannelDuration@秒間の詠唱後、すべての敵チャンピオンに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,

@@ -814,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Spell_EzrealPassive_Jade_Summary"
+        "description": "スキルを命中させるたびに攻撃速度が増加していく。"
     },
     "spells": [
         {
@@ -976,7 +976,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "エネルギーの波動を放つ。この波動は敵チャンピオンの攻撃速度を低下させて、対象に魔法ダメージを与え、味方チャンピオンの体力を回復して、その攻撃速度を増加させる。",
-            "dynamicDescription": "Spell_EzrealW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "エネルギーの波動を放ち、触れたすべての敵チャンピオンに<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@Duration@秒間、対象の<attackSpeed>攻撃速度</attackSpeed>を@AttackSpeed@%低下させる。<br><br>この波動に当たった味方チャンピオンは<healing>@TotalHeal@体力が</healing>回復し、@Duration@秒間、<attackSpeed>攻撃速度</attackSpeed>が@AttackSpeed@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1275,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "Spell_EzrealR_Jade_Summary",
-            "dynamicDescription": "Spell_EzrealR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "敵を貫通する強力なエネルギーミサイルを発射する。このミサイルは触れた敵ユニットに大ダメージを与える。",
+            "dynamicDescription": "敵を貫通するエネルギーミサイルを発射する。このミサイルは触れた敵ユニットにそれぞれ<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。ただし、敵ユニットに命中するたびに与えるダメージが@DamageReductionPerHit*100@%低下する(最低@MinimumDamagePercent*100@%)。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

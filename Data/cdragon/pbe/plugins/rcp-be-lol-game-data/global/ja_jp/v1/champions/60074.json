@@ -597,7 +597,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "機関銃砲台を設置する。このスキルが強化されると、砲台がスキルを獲得する(砲台は、タワーに対して与えるダメージが半分になる)。",
-            "dynamicDescription": "Spell_HeimerdingerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "機関銃砲台を設置する。砲台は攻撃ごとに<magicDamage>@BonusDamage@の魔法ダメージ</magicDamage>を与える。砲台は設置後の最初の@AttackSpeedDuration@秒間、<attackSpeed>攻撃速度が@TurretBonusAttackSpeed*100@%</attackSpeed>増加する。このスキルは@MaxAmmo@発までチャージ可能(@AmmoRechargeTime@秒でリチャージ)。<br><br>このスキルはランクが上がるたびに次の強化効果を得る:<br><attention>ランク2:</attention> 砲台の攻撃が対象の物理防御と魔法防御を@Level2ResistShred@低下させる(最大@MaxShredCapTooltip@)<br><attention>ランク3:</attention> 砲台の最大設置数が2基に増加する<br><attention>ランク4:</attention> 砲台の<scaleHealth>体力が@Level4HPTooltip@</scaleHealth>増加する<br><attention>ランク5:</attention> 砲台の攻撃が@AoEDamageMod*100@%の範囲ダメージを与える@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "長射程のロケットを数発発射する。ロケットは最も近くにいる敵に命中する。",
-            "dynamicDescription": "Spell_HeimerdingerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵を追尾する小型ロケットを@MaxTargets@発発射する(1つの対象につき最大1発)。ロケットは最も近くにいる対象に命中する。各ロケットは<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点にグレネード弾を投げ、敵ユニットにダメージを与える。さらに中心で直撃した敵をスタンさせ、周囲の敵にブラインド効果を与える。",
-            "dynamicDescription": "Spell_HeimerdingerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "グレネードを投げ、敵ユニットに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与えて、@BlindDuration@秒間<status>ブラインド</status>状態にする。直接命中した敵は@StunDuration@秒間<status>スタン</status>する。@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1047,7 +1047,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果/発動効果: 自動効果でクールダウン短縮量が増加する。発動すると起動中のすべての革新砲の体力を回復し、短時間、移動速度を低下させる凍結弾を発射させる。",
-            "dynamicDescription": "Spell_HeimerdingerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>クールダウン短縮 @CooldownBonus*-100@%。<br><br><spellActive>発動効果: </spellActive>効果時間中、すべてのスキルと砲台を強化する。<br><br><spellName>革新砲台:</spellName> すべての砲台の体力が完全に<healing>回復</healing>する。それぞれの攻撃が<status>@MovementSpeedMod*-100@%のスロウ効果</status>を付与する。<br><spellName>ヘクステック小型ロケット:</spellName> @WMaxMissiles@発のロケットを発射する。<br><spellName>CH-1衝撃グレネード:</spellName> 弾速が33%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
