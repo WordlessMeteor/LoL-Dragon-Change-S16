@@ -230223,67 +230223,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_h_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT",
         "type": 0,
@@ -234767,47 +234706,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlane_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
         "type": 0,
@@ -236297,6 +236195,47 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_a2_ordertop_a.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlanecaps_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -282736,138 +282675,6 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{42d14817}": {
-        "items": {
-            "{d249aaf9}": null,
-            "{e153eb9f}": null,
-            "{741aa255}": null,
-            "{d7fdf25b}": null,
-            "{50d04bf1}": null,
-            "{c25b023c}": null,
-            "{91208934}": null,
-            "{9e7c7836}": null,
-            "{b68346e2}": null,
-            "{884d864f}": null,
-            "{89d72870}": null,
-            "{5c515909}": null,
-            "{51cb6850}": null,
-            "{767330da}": null,
-            "{225c12e7}": null,
-            "{376b7e9e}": null,
-            "{7dda9020}": null,
-            "{d4386834}": null,
-            "{e337ce53}": null,
-            "{7c005243}": null,
-            "{bf94bdb5}": null,
-            "{ad7bccd9}": null,
-            "{c7955e56}": null,
-            "{7c03ca30}": null,
-            "{0371b443}": null,
-            "{22575efa}": null,
-            "{8400d2f5}": null,
-            "{d8c7ec74}": null,
-            "{0be3f29e}": null,
-            "{7cb383a5}": null,
-            "{dc7019e2}": null,
-            "{8487c17a}": null,
-            "{b44650a4}": null,
-            "{212544dd}": null,
-            "{60a494b4}": null,
-            "{42081aaf}": null,
-            "{f63a0650}": null,
-            "{9bf75be4}": null,
-            "{8cc8cd56}": null,
-            "{3058a852}": null,
-            "{3bc3a9ef}": null,
-            "{83ea468c}": null,
-            "{63b5f2c1}": null,
-            "{2e95de35}": null,
-            "{2f7f3a26}": null,
-            "{872dfede}": null,
-            "{c3e587d4}": null,
-            "{5bfc5ac0}": null,
-            "{2ede06e1}": null,
-            "{e1ed5f2e}": null,
-            "{807945ec}": null,
-            "{fc059ab4}": null,
-            "{ccf34d67}": null,
-            "{d937ce99}": null,
-            "{3cde5e70}": null,
-            "{d7a9e845}": null,
-            "{9bbf3826}": null,
-            "{a2e19ed5}": null,
-            "{0863395f}": null,
-            "{6af28661}": null,
-            "{16568df3}": null,
-            "{26c8f4b8}": null,
-            "{986318bd}": null,
-            "{e89f0d3f}": null,
-            "{46a3e764}": null,
-            "{0a040285}": null,
-            "{1c679a68}": null,
-            "{93678da0}": null,
-            "{2d3532ca}": null,
-            "{6e122a03}": null,
-            "{72fa51c7}": null,
-            "{7b6b1b59}": null,
-            "{10a53e1d}": null,
-            "{b634c28e}": null,
-            "{394e09ce}": null,
-            "{fb872a71}": null,
-            "{6f7dc97c}": null,
-            "{4845aee6}": null,
-            "{175ff32c}": null,
-            "{5c28abbb}": null,
-            "{da6d7d06}": null,
-            "{405b45d7}": null,
-            "{80e0246a}": null,
-            "{2de9f9e9}": null,
-            "{266e1020}": null,
-            "{4f080b49}": null,
-            "{d71fa294}": null,
-            "{55878fc5}": null,
-            "{c90ddf00}": null,
-            "{0739773b}": null,
-            "{0df6c2c4}": null,
-            "{fb9fff27}": null,
-            "{223ba4ba}": {
-                "transform": [
-                    [
-                        1.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    [
-                        7431.9404296875,
-                        111.0997543334961,
-                        7393.24609375,
-                        1.0
-                    ]
-                ],
-                "name": "CubemapProbe1",
-                "mVisibilityFlags": 1,
-                "CubemapProbePath": "ASSETS/Maps/CubeMaps/Maps/MapGeometry/Map11/Base_SRX/b2ebdf57-0589-4b33-a3ba-0acba7004df3_cubemap.dds",
-                "CubemapProbeScale": 3.462409019470215,
-                "__type": "MapCubemapProbe"
-            },
-            "{c9fe1b77}": null,
-            "{e0bf5a83}": null
-        },
-        "__type": "MapPlaceableContainer"
-    },
     "Maps/MapGeometry/Map11/Chunks/SRX_VFX_Fire": {
         "items": {
             "{10314fc4}": {
@@ -283378,6 +283185,210 @@
                 "VisibilityController": "{9f32344a}",
                 "__type": "MapParticle"
             }
+        },
+        "__type": "MapPlaceableContainer"
+    },
+    "{d3d72048}": {
+        "items": {
+            "{d3e6a20d}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        1978.0775146484375,
+                        -172.86065673828125,
+                        14465.3056640625,
+                        1.0
+                    ]
+                ],
+                "name": "2024_Hall_of_Legends_Ahri_Godrays1",
+                "system": "Maps/Particles/SR/SRT_2024/2024_Hall_of_Legends_Ahri_Godrays",
+                "VisibilityController": "{76c50391}",
+                "__type": "MapParticle"
+            },
+            "{b7ee17f2}": null,
+            "{8bfba8d4}": null,
+            "{e00e67de}": null,
+            "{567e1d79}": null,
+            "{ed41a404}": null
+        },
+        "__type": "MapPlaceableContainer"
+    },
+    "{5396008d}": {
+        "items": {
+            "{5da5b0b0}": null,
+            "{bf990d35}": null,
+            "{85ebd9a1}": null,
+            "{fd32bfee}": null,
+            "{0b996fe8}": null,
+            "{7472a6cf}": null,
+            "{b46025ca}": null,
+            "{418a4039}": null,
+            "{f4d6c296}": null,
+            "{b169fe52}": null,
+            "{889d51ed}": null,
+            "{04e4a1d9}": null,
+            "{cc9a9e8b}": null,
+            "{a3fee36c}": null,
+            "{2f229462}": null,
+            "{fbabed05}": null,
+            "{4633ebe9}": null,
+            "{8339fe67}": null,
+            "{786eb761}": null,
+            "{553f47bd}": null,
+            "{3003f2aa}": null,
+            "{c43f553d}": null,
+            "{efb0b1f3}": null,
+            "{f398ec65}": null,
+            "{8807b064}": null
+        },
+        "__type": "MapPlaceableContainer"
+    },
+    "{a334bc26}": {
+        "items": {
+            "{d249aaf9}": null,
+            "{e153eb9f}": null,
+            "{741aa255}": null,
+            "{d7fdf25b}": null,
+            "{50d04bf1}": null,
+            "{c25b023c}": null,
+            "{91208934}": null,
+            "{9e7c7836}": null,
+            "{b68346e2}": null,
+            "{884d864f}": null,
+            "{89d72870}": null,
+            "{5c515909}": null,
+            "{51cb6850}": null,
+            "{767330da}": null,
+            "{225c12e7}": null,
+            "{376b7e9e}": null,
+            "{7dda9020}": null,
+            "{d4386834}": null,
+            "{e337ce53}": null,
+            "{7c005243}": null,
+            "{bf94bdb5}": null,
+            "{ad7bccd9}": null,
+            "{c7955e56}": null,
+            "{7c03ca30}": null,
+            "{0371b443}": null,
+            "{22575efa}": null,
+            "{8400d2f5}": null,
+            "{d8c7ec74}": null,
+            "{0be3f29e}": null,
+            "{7cb383a5}": null,
+            "{dc7019e2}": null,
+            "{8487c17a}": null,
+            "{b44650a4}": null,
+            "{212544dd}": null,
+            "{60a494b4}": null,
+            "{42081aaf}": null,
+            "{f63a0650}": null,
+            "{9bf75be4}": null,
+            "{8cc8cd56}": null,
+            "{3058a852}": null,
+            "{3bc3a9ef}": null,
+            "{83ea468c}": null,
+            "{63b5f2c1}": null,
+            "{2e95de35}": null,
+            "{2f7f3a26}": null,
+            "{872dfede}": null,
+            "{c3e587d4}": null,
+            "{5bfc5ac0}": null,
+            "{2ede06e1}": null,
+            "{e1ed5f2e}": null,
+            "{807945ec}": null,
+            "{fc059ab4}": null,
+            "{ccf34d67}": null,
+            "{d937ce99}": null,
+            "{3cde5e70}": null,
+            "{d7a9e845}": null,
+            "{9bbf3826}": null,
+            "{a2e19ed5}": null,
+            "{0863395f}": null,
+            "{6af28661}": null,
+            "{16568df3}": null,
+            "{26c8f4b8}": null,
+            "{986318bd}": null,
+            "{e89f0d3f}": null,
+            "{46a3e764}": null,
+            "{0a040285}": null,
+            "{1c679a68}": null,
+            "{93678da0}": null,
+            "{2d3532ca}": null,
+            "{6e122a03}": null,
+            "{72fa51c7}": null,
+            "{7b6b1b59}": null,
+            "{10a53e1d}": null,
+            "{b634c28e}": null,
+            "{394e09ce}": null,
+            "{fb872a71}": null,
+            "{6f7dc97c}": null,
+            "{4845aee6}": null,
+            "{175ff32c}": null,
+            "{5c28abbb}": null,
+            "{da6d7d06}": null,
+            "{405b45d7}": null,
+            "{80e0246a}": null,
+            "{2de9f9e9}": null,
+            "{266e1020}": null,
+            "{4f080b49}": null,
+            "{d71fa294}": null,
+            "{55878fc5}": null,
+            "{c90ddf00}": null,
+            "{0739773b}": null,
+            "{0df6c2c4}": null,
+            "{fb9fff27}": null,
+            "{223ba4ba}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        7431.9404296875,
+                        111.0997543334961,
+                        7393.24609375,
+                        1.0
+                    ]
+                ],
+                "name": "CubemapProbe1",
+                "mVisibilityFlags": 1,
+                "CubemapProbePath": "ASSETS/Maps/CubeMaps/Maps/MapGeometry/Map11/Base_SRX/b2ebdf57-0589-4b33-a3ba-0acba7004df3_cubemap.dds",
+                "CubemapProbeScale": 3.462409019470215,
+                "__type": "MapCubemapProbe"
+            },
+            "{c9fe1b77}": null,
+            "{e0bf5a83}": null
         },
         "__type": "MapPlaceableContainer"
     },
@@ -308771,36 +308782,6 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{a02abdb0}": {
-        "items": {
-            "{5da5b0b0}": null,
-            "{bf990d35}": null,
-            "{85ebd9a1}": null,
-            "{fd32bfee}": null,
-            "{0b996fe8}": null,
-            "{7472a6cf}": null,
-            "{b46025ca}": null,
-            "{418a4039}": null,
-            "{f4d6c296}": null,
-            "{b169fe52}": null,
-            "{889d51ed}": null,
-            "{04e4a1d9}": null,
-            "{cc9a9e8b}": null,
-            "{a3fee36c}": null,
-            "{2f229462}": null,
-            "{fbabed05}": null,
-            "{4633ebe9}": null,
-            "{8339fe67}": null,
-            "{786eb761}": null,
-            "{553f47bd}": null,
-            "{3003f2aa}": null,
-            "{c43f553d}": null,
-            "{efb0b1f3}": null,
-            "{f398ec65}": null,
-            "{8807b064}": null
-        },
-        "__type": "MapPlaceableContainer"
-    },
     "{a3047a68}": {
         "__type": "MapPlaceableContainer"
     },
@@ -313621,48 +313602,6 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{d3d72048}": {
-        "items": {
-            "{d3e6a20d}": {
-                "transform": [
-                    [
-                        1.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    [
-                        0.0,
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    [
-                        1978.0775146484375,
-                        -172.86065673828125,
-                        14465.3056640625,
-                        1.0
-                    ]
-                ],
-                "name": "2024_Hall_of_Legends_Ahri_Godrays1",
-                "system": "Maps/Particles/SR/SRT_2024/2024_Hall_of_Legends_Ahri_Godrays",
-                "VisibilityController": "{76c50391}",
-                "__type": "MapParticle"
-            },
-            "{b7ee17f2}": null,
-            "{8bfba8d4}": null,
-            "{e00e67de}": null,
-            "{567e1d79}": null,
-            "{ed41a404}": null
-        },
-        "__type": "MapPlaceableContainer"
-    },
     "{e438d143}": {
         "items": {
             "{dbb15f46}": null,
@@ -318147,8 +318086,8 @@
         "ParentMode": 1,
         "__type": "ChildMapVisibilityController"
     },
-    "Maps/MapGeometry/Map11/SR_Seasonal_Map": {
-        "mapPath": "Maps/MapGeometry/Map11/SR_Seasonal_Map",
+    "{667d936f}": {
+        "mapPath": "Maps/MapGeometry/Map11/Hall_Of_Legends",
         "components": [
             {
                 "lightGridSize": 256,
@@ -318248,8 +318187,8 @@
             "SRX_Chemtech_VFX": "Maps/MapGeometry/Map11/Chunks/SRX_Chemtech_VFX",
             "SRU_VFX_Chemtech": "Maps/MapGeometry/Map11/Chunks/SRU_VFX_Chemtech",
             "Plants": "Maps/MapGeometry/Map11/Chunks/Plants",
-            "{a881576d}": "{a02abdb0}",
-            "{a3bef106}": "{42d14817}",
+            "{a881576d}": "{5396008d}",
+            "{a3bef106}": "{a334bc26}",
             "{4df19e10}": "{e438d143}",
             "{2961af46}": "{ecac3e2b}",
             "{68eff4f3}": "{b77a2a06}",
