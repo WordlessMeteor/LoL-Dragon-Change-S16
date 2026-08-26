@@ -2676,19 +2676,19 @@
     "Characters/RekSai/Spells/RekSaiRAbility": {
         "mRootSpell": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR",
         "mChildSpells": [
-            "{36cd608e}",
-            "{3e616bcb}",
-            "{d00ab09c}",
+            "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRWrapper",
+            "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRPrey",
+            "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRSpellPassive",
             "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR",
-            "{6a816c9f}"
+            "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR2"
         ],
         "mName": "RekSaiRAbility",
         "mType": 2,
         "__type": "AbilityObject"
     },
-    "{36cd608e}": {
+    "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRWrapper": {
         "ObjectName": "RekSaiRWrapper",
-        "objectPath": "{36cd608e}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRWrapper",
         "mScriptName": "RekSaiRWrapper",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -3006,9 +3006,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3e616bcb}": {
+    "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRPrey": {
         "ObjectName": "RekSaiRPrey",
-        "objectPath": "{3e616bcb}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRPrey",
         "mScriptName": "RekSaiRPrey",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiRPrey",
@@ -3016,9 +3016,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6a816c9f}": {
+    "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR2": {
         "ObjectName": "RekSaiR2",
-        "objectPath": "{6a816c9f}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR2",
         "mScriptName": "RekSaiR2",
         "mSpell": {
             "flags": 36,
@@ -3196,7 +3196,7 @@
                 "__type": "Area"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{36cd608e}",
+                "mUseTooltipFromAnotherSpell": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRWrapper",
                 "mTargeterDefinitions": [
                     {
                         "__type": "TargeterDefinitionRange"
@@ -3215,9 +3215,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d00ab09c}": {
+    "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRSpellPassive": {
         "ObjectName": "RekSaiRSpellPassive",
-        "objectPath": "{d00ab09c}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiRSpellPassive",
         "mScriptName": "RekSaiRSpellPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiRPrey",
@@ -4828,7 +4828,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -4899,7 +4899,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -4925,7 +4925,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -4965,7 +4965,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             5000,
             13000,
@@ -4993,7 +4993,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             175,
             425,
@@ -5021,7 +5021,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             35,
             85,
@@ -5063,7 +5063,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             4,
             10,
@@ -5091,7 +5091,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             10,
             25,
@@ -5119,7 +5119,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             20,
             55,
@@ -5197,11 +5197,11 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 10,
+                "Camp": 11,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 11,
+                "Camp": 10,
                 "__type": "TakeCamp"
             },
             {

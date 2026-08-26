@@ -614,6 +614,12 @@
         },
         "__type": "SpellObject"
     },
+    "{289015f1}": {
+        "ObjectName": "Skin80JumpResetTracker",
+        "objectPath": "{289015f1}",
+        "mScriptName": "Skin80JumpResetTracker",
+        "__type": "SpellObject"
+    },
     "Characters/Tristana/Spells/TristanaWAbility": {
         "mRootSpell": "Characters/Tristana/Spells/TristanaWAbility/TristanaW",
         "mChildSpells": [
@@ -1360,6 +1366,69 @@
         },
         "__type": "SpellObject"
     },
+    "{7445cf5f}": {
+        "ObjectName": "TristanaSkin80Manager",
+        "objectPath": "{7445cf5f}",
+        "mScriptName": "TristanaSkin80Manager",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "GoldToNextForm",
+                    "values": [
+                        2000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillTransform",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillEmote",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WEmpoweredFormDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Tristana/Spells/TristanaWAbility/TristanaW": {
         "ObjectName": "TristanaW",
         "objectPath": "Characters/Tristana/Spells/TristanaWAbility/TristanaW",
@@ -1935,6 +2004,12 @@
         },
         "__type": "SpellObject"
     },
+    "{e0c26b04}": {
+        "ObjectName": "SkinProxy",
+        "objectPath": "{e0c26b04}",
+        "mScriptName": "SkinProxy",
+        "__type": "SpellObject"
+    },
     "{9c1ce2f7}": {
         "name": "stat_stone_set_name_1",
         "catalogEntry": {
@@ -1964,7 +2039,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             15,
             35,
@@ -1992,7 +2067,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             9,
             20,
@@ -2020,7 +2095,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             5,
             15,
@@ -2049,7 +2124,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             25,
             60,
@@ -2091,7 +2166,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             3,
             8,
@@ -2119,7 +2194,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             125,
             325,
@@ -2147,7 +2222,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             50,
             125,
@@ -2203,7 +2278,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -2274,7 +2349,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -2300,7 +2375,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -2540,6 +2615,21 @@
             {
                 "mParentPassiveBuff": "Characters/Tristana/Spells/TristanaPassiveAbility/TristanaPassive",
                 "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{e0c26b04}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{7445cf5f}",
+                "SkinFilter": {
+                    "skinIds": [
+                        80,
+                        79
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
             }
         ],
         "{c5c48b41}": 1,
@@ -2623,23 +2713,6 @@
                 "MapId": 11,
                 "Position": "bottom",
                 "IsDefaultRecommendation": true,
-                "mDefaultPriority": [
-                    3,
-                    2,
-                    0,
-                    1
-                ],
-                "mEarlyLevelOverrides": [
-                    2,
-                    1,
-                    0,
-                    2
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
-                "MapId": 11,
-                "Position": "middle",
                 "mDefaultPriority": [
                     3,
                     2,

@@ -20,45 +20,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "MaxAmmo",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ArmTime",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MushroomDuration",
-                    "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BaseDamage",
                     "values": [
                         75.0,
@@ -68,6 +29,19 @@
                         575.0,
                         700.0,
                         825.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -98,28 +72,28 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "APRatioPerTick",
+                    "name": "MaxAmmo",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MaxTraps",
+                    "name": "MushroomDuration",
                     "values": [
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -132,7 +106,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "APRatioPerTick",
+                            "mDataValue": "APRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -279,8 +253,7 @@
                     "mLocKeys": {
                         "keyName": "Spell_TeemoR_Jade_Name",
                         "keySummary": "Spell_TeemoR_Jade_Summary",
-                        "keyTooltip": "Spell_TeemoR_Jade_Tooltip",
-                        "keyTooltipExtended": "Spell_TeemoR_Jade_ExtTooltip"
+                        "keyTooltip": "Spell_TeemoR_Jade_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -366,18 +339,18 @@
         "__type": "SpellObject"
     },
     "{bdbce814}": {
-        "mRootSpell": "{0603243f}",
+        "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
         "mChildSpells": [
-            "{0603243f}",
-            "{f2e902e2}",
-            "{750d44d4}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPAttackSpeedBuff"
         ],
         "mName": "Jade_TeemoPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{0603243f}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive": {
         "ObjectName": "Jade_TeemoPassive",
-        "objectPath": "{0603243f}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
         "mScriptName": "Jade_TeemoPassive",
         "mSpell": {
             "DataValues": [
@@ -470,9 +443,9 @@
         },
         "__type": "SpellObject"
     },
-    "{750d44d4}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPAttackSpeedBuff": {
         "ObjectName": "Jade_TeemoPAttackSpeedBuff",
-        "objectPath": "{750d44d4}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPAttackSpeedBuff",
         "mScriptName": "Jade_TeemoPAttackSpeedBuff",
         "mSpell": {
             "mImgIconName": [
@@ -486,9 +459,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e0ca128e}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_Teemo_CamouflageBuff": {
         "ObjectName": "Jade_Teemo_CamouflageBuff",
-        "objectPath": "{e0ca128e}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_Teemo_CamouflageBuff",
         "mScriptName": "Jade_Teemo_CamouflageBuff",
         "mSpell": {
             "DataValues": [
@@ -607,9 +580,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f2e902e2}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff": {
         "ObjectName": "Jade_TeemoPassive_StealthBuff",
-        "objectPath": "{f2e902e2}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff",
         "mScriptName": "Jade_TeemoPassive_StealthBuff",
         "mSpell": {
             "mImgIconName": [
@@ -643,7 +616,7 @@
         "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE",
         "mChildSpells": [
             "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE",
-            "{601e987c}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE_Attack"
         ],
         "mName": "Jade_TeemoEAbility",
         "__type": "AbilityObject"
@@ -778,7 +751,7 @@
         "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW",
         "mChildSpells": [
             "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW",
-            "{6b9f3e30}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoWPassive"
         ],
         "mName": "Jade_TeemoWAbility",
         "__type": "AbilityObject"
@@ -1030,9 +1003,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6b9f3e30}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoWPassive": {
         "ObjectName": "Jade_TeemoWPassive",
-        "objectPath": "{6b9f3e30}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoWPassive",
         "mScriptName": "Jade_TeemoWPassive",
         "mSpell": {
             "mImgIconName": [
@@ -1046,9 +1019,9 @@
         },
         "__type": "SpellObject"
     },
-    "{601e987c}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE_Attack": {
         "ObjectName": "Jade_TeemoE_Attack",
-        "objectPath": "{601e987c}",
+        "objectPath": "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE_Attack",
         "mScriptName": "Jade_TeemoE_Attack",
         "mSpell": {
             "flags": 2,
@@ -3521,7 +3494,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3551,7 +3524,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3581,7 +3554,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3611,7 +3584,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3641,7 +3614,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3671,7 +3644,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3701,7 +3674,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3731,7 +3704,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3761,7 +3734,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3791,7 +3764,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3821,7 +3794,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3850,7 +3823,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3879,7 +3852,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3908,7 +3881,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3932,7 +3905,7 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4150,7 +4123,7 @@
                         "mRuleName": "P Start",
                         "mConditions": [
                             {
-                                "SpellBuff": "{f2e902e2}",
+                                "SpellBuff": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff",
                                 "__type": "ContextualConditionSpellBuffName"
                             },
                             {
@@ -4178,7 +4151,7 @@
                         "mRuleName": "P Start",
                         "mConditions": [
                             {
-                                "SpellBuff": "{f2e902e2}",
+                                "SpellBuff": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff",
                                 "__type": "ContextualConditionSpellBuffName"
                             },
                             {
@@ -4725,7 +4698,7 @@
                         "mRuleName": "E Attack",
                         "mConditions": [
                             {
-                                "mSpell": "{601e987c}",
+                                "mSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE_Attack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4896,7 +4869,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4931,7 +4904,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4966,7 +4939,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5001,7 +4974,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5036,7 +5009,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5071,7 +5044,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5106,7 +5079,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5130,7 +5103,7 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -5763,13 +5736,13 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{0603243f}",
+        "mCharacterPassiveSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{0603243f}",
+                "mParentPassiveBuff": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
                 "mComponentBuffs": [
-                    "{750d44d4}",
-                    "{f2e902e2}"
+                    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPAttackSpeedBuff",
+                    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive_StealthBuff"
                 ],
                 "__type": "CharacterPassiveData"
             },

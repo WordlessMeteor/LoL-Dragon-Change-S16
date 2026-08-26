@@ -882,14 +882,76 @@
         "sequences": {
             "{6a7835b9}": {
                 "blocks": [
+                    null,
                     {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "a96ef11a-45db-40b0-a15a-db8f307691c8",
-                        "ToSay": {
-                            "value": "Jade Chaos Melee",
-                            "__type": "StringGet"
+                        "{d851ffa3}": "89112fe9-18fa-4d02-a035-70a5fec53cf6",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{50f0bcb0}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
                         },
-                        "__type": "DebugPrintToChatBlock"
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "f86861ac-4e49-4c9b-99eb-3c2252088b0c",
+                                    "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                                    "Dest": {
+                                        "Var": "FreeUpgrades",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "bf9150e8-9f3b-46e0-bfb7-5475a7f936d3",
+                                    "Formula": "1.2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeExp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "51ce91b2-c33a-442c-b482-1f2d0e3b5f7b",
+                                    "Formula": "0.2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeGold",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "5e8256ba-2889-4ef9-8cc8-f7ec70a85a99",
+                                    "Formula": "15*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeHealth",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "a8d82e6a-60d8-41c0-ad36-efe9f0f6f9da",
+                                    "Formula": "0.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeDamage",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
                     },
                     {
                         "IsDisabled": true,

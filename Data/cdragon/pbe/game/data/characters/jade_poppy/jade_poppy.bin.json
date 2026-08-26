@@ -1,0 +1,2802 @@
+{
+    "{15bc1079}": {
+        "mRootSpell": "{36c53b2b}",
+        "mChildSpells": [
+            "{36c53b2b}",
+            "{188cf385}"
+        ],
+        "mName": "Jade_PoppyRAbility",
+        "__type": "AbilityObject"
+    },
+    "{188cf385}": {
+        "ObjectName": "Jade_PoppyR_Target",
+        "objectPath": "{188cf385}",
+        "mScriptName": "Jade_PoppyR_Target",
+        "mSpell": {
+            "mAffectsTypeFlags": 2,
+            "mExcludedUnitTags": {
+                "mObjectTagList": [
+                    "{003a1b93}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "DmgMult",
+                    "values": [
+                        1.100000023841858,
+                        1.2000000476837158,
+                        1.2999999523162842,
+                        1.399999976158142,
+                        1.5,
+                        1.600000023841858,
+                        1.7000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0,
+                        10.0,
+                        11.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DmgMultTT",
+                    "values": [
+                        0.10000000149011612,
+                        0.20000000298023224,
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mCoefficient": 0.8999999761581421,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.dds",
+                ""
+            ],
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "mChannelDuration": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "cooldownTime": [
+                10.0,
+                140.0,
+                120.0,
+                100.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    140.0,
+                    120.0,
+                    100.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCastRangeGrowthStartTime": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mUseChargeChanneling": true,
+            "mCanMoveWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0
+                ],
+                "{0a3e0478}": 900.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mLineWidth": 90.0,
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "{8958fee2}": {
+                "__type": "{8958fee2}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_Poppy_Jade_PoppyPassiveShield_OnBuffDeactivate_enemy",
+                "18": "Play_sfx_Poppy_Jade_PoppyPassiveShield_OnBuffActivate_enemy",
+                "13": "Play_sfx_Poppy_PoppyRMissile_hit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyR_Target",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyR_Jade_Name",
+                        "keySummary": "Spell_PoppyR_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Duration",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DmgMultTT",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyR_Target_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{36c53b2b}": {
+        "ObjectName": "Jade_PoppyR",
+        "objectPath": "{36c53b2b}",
+        "mScriptName": "Jade_PoppyR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 2,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "DamageMulti",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0,
+                        10.0,
+                        11.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.dds",
+                ""
+            ],
+            "cooldownTime": [
+                10.0,
+                140.0,
+                120.0,
+                100.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    160.0,
+                    140.0,
+                    120.0,
+                    100.0,
+                    80.0,
+                    60.0,
+                    40.0
+                ],
+                "{0a3e0478}": 160.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0
+                ],
+                "{0a3e0478}": 900.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "{8958fee2}": {
+                "__type": "{8958fee2}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Poppy_PoppyR_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyR_Jade_Name",
+                        "keySummary": "Spell_PoppyR_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Duration",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Duration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageMulti",
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{2804ae2d}": {
+        "ObjectName": "Jade_PoppyBasicAttack",
+        "objectPath": "{2804ae2d}",
+        "mScriptName": "Jade_PoppyBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "spellCastTime": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{23f578b8}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Poppy_PoppyBasicAttack_OnCast",
+                "13": "Play_sfx_Poppy_PoppyBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "centerLocator": {
+                            "orientationType": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{512bc03e}": {
+        "mRootSpell": "{c0fda0a9}",
+        "mChildSpells": [
+            "{c0fda0a9}"
+        ],
+        "mName": "Jade_PoppyEAbility",
+        "__type": "AbilityObject"
+    },
+    "{3d79f99a}": {
+        "ObjectName": "Jade_PoppyEStunVO",
+        "objectPath": "{3d79f99a}",
+        "mScriptName": "Jade_PoppyEStunVO",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c0fda0a9}": {
+        "ObjectName": "Jade_PoppyE",
+        "objectPath": "{c0fda0a9}",
+        "mScriptName": "Jade_PoppyE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "InitialDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WallDamage",
+                    "values": [
+                        25.0,
+                        75.0,
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0,
+                        325.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyPushSpeed",
+                    "values": [
+                        1400.0,
+                        1400.0,
+                        1400.0,
+                        1400.0,
+                        1400.0,
+                        1400.0,
+                        1400.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "InitialDamageCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "InitialDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{f846fa4d}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "WallDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.dds"
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "castRangeUseBoundingBoxes": true,
+            "castRange": [
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    525.0,
+                    525.0,
+                    525.0,
+                    525.0,
+                    525.0,
+                    525.0,
+                    525.0
+                ],
+                "{0a3e0478}": 525.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castFrame": 10.0,
+            "mana": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "manaValues": {
+                "values": [
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Poppy_PoppyE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyE_Jade_Name",
+                        "keySummary": "Spell_PoppyE_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "InitialDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_InitialDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "WallDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_PoppyEWallDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "startLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 2,
+                            "distanceOffset": 100.0,
+                            "orientationType": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                40.0,
+                                40.0,
+                                40.0,
+                                40.0,
+                                40.0,
+                                40.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                450.0,
+                                450.0,
+                                450.0,
+                                450.0,
+                                450.0,
+                                450.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 4,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4194304,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 5,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{45cb49b4}": {
+        "mRootSpell": "{f1e62045}",
+        "mChildSpells": [
+            "{f1e62045}"
+        ],
+        "mName": "Jade_PoppyPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{b1f1428c}": {
+        "mRootSpell": "{5d0ab86d}",
+        "mChildSpells": [
+            "{5d0ab86d}",
+            "{66b01589}",
+            "{be77a9ed}"
+        ],
+        "mName": "Jade_PoppyWAbility",
+        "__type": "AbilityObject"
+    },
+    "{5d0ab86d}": {
+        "ObjectName": "Jade_PoppyW",
+        "objectPath": "{5d0ab86d}",
+        "mScriptName": "Jade_PoppyW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_AttackBuff_Duration"
+            ],
+            "DataValues": [
+                {
+                    "name": "Speed",
+                    "values": [
+                        0.15000000596046448,
+                        0.17000000178813934,
+                        0.1899999976158142,
+                        0.20999999344348907,
+                        0.23000000417232513,
+                        0.25,
+                        0.27000001072883606
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusStats",
+                    "values": [
+                        1.0,
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.dds",
+                ""
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "manaValues": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Poppy_PoppyW_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyW_Jade_Name",
+                        "keySummary": "Spell_PoppyW_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BonusStats",
+                                    "nameOverride": "Spell_ListType_ArmorandDamage_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Speed",
+                                    "typeIndex": 5,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeedMax",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "{7b80c780}",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{66b01589}": {
+        "ObjectName": "Jade_PoppyW_Speed",
+        "objectPath": "{66b01589}",
+        "mScriptName": "Jade_PoppyW_Speed",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "Speed",
+                    "values": [
+                        0.15000000596046448,
+                        0.17000000178813934,
+                        0.1899999976158142,
+                        0.20999999344348907,
+                        0.23000000417232513,
+                        0.25,
+                        0.27000001072883606
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmDmg",
+                    "values": [
+                        1.0,
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.dds",
+                ""
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "manaValues": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_PoppySkin301_PoppyWZone_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyW_Speed",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyW_Jade_Name",
+                        "keySummary": "Spell_PoppyW_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Speed",
+                                    "typeIndex": 5,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeedMax",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmDmg",
+                                    "nameOverride": "Spell_ListType_ArmorandDamage_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyW_Speed_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{be77a9ed}": {
+        "ObjectName": "Jade_PoppyW_Stats",
+        "objectPath": "{be77a9ed}",
+        "mScriptName": "Jade_PoppyW_Stats",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "Speed",
+                    "values": [
+                        0.15000000596046448,
+                        0.17000000178813934,
+                        0.1899999976158142,
+                        0.20999999344348907,
+                        0.23000000417232513,
+                        0.25,
+                        0.27000001072883606
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmDmg",
+                    "values": [
+                        1.0,
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.dds",
+                ""
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "manaValues": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyW_Stats",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyW_Jade_Name",
+                        "keySummary": "Spell_PoppyW_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Speed",
+                                    "typeIndex": 5,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeedMax",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmDmg",
+                                    "nameOverride": "Spell_ListType_ArmorandDamage_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{60d39da3}": {
+        "ObjectName": "Jade_PoppyRunCycleManager",
+        "objectPath": "{60d39da3}",
+        "mScriptName": "Jade_PoppyRunCycleManager",
+        "__type": "SpellObject"
+    },
+    "{6e518ece}": {
+        "ObjectName": "Jade_PoppyAttackSequencer",
+        "objectPath": "{6e518ece}",
+        "mScriptName": "Jade_PoppyAttackSequencer",
+        "__type": "SpellObject"
+    },
+    "{d3a4da62}": {
+        "mRootSpell": "{8826e411}",
+        "mChildSpells": [
+            "{8826e411}"
+        ],
+        "mName": "Jade_PoppyQAbility",
+        "__type": "AbilityObject"
+    },
+    "{8826e411}": {
+        "ObjectName": "Jade_PoppyQ",
+        "objectPath": "{8826e411}",
+        "mScriptName": "Jade_PoppyQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        30.0,
+                        55.0,
+                        80.0,
+                        105.0,
+                        130.0,
+                        130.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        50.0,
+                        50.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        170.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        0.0,
+                        20.0,
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthDamageCap",
+                    "values": [
+                        0.0,
+                        55.0,
+                        110.0,
+                        165.0,
+                        220.0,
+                        275.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthRatio",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalADRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "MaxHealthDamageCalc": {
+                    "mFormulaParts": [
+                        {
+                            "{a8cb9c14}": true,
+                            "mStat": 12,
+                            "mDataValue": "HealthRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "FlatDamageCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "TotalADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.0,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.dds",
+                ""
+            ],
+            "spellCastTime": 0.33249998092651367,
+            "spellTotalTime": 1.3199999332427979,
+            "cooldownTime": [
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0
+            ],
+            "Cooldown": {
+                "values": [
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0
+                ],
+                "{0a3e0478}": 9.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "mIgnoreRangeCheck": true,
+            "mMinimapIconDisplayFlag": 3,
+            "castRange": [
+                430.0,
+                430.0,
+                430.0,
+                430.0,
+                430.0,
+                430.0,
+                430.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    430.0,
+                    430.0,
+                    430.0,
+                    430.0,
+                    430.0,
+                    430.0,
+                    430.0
+                ],
+                "{0a3e0478}": 430.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castFrame": 10.0,
+            "mLineWidth": 100.0,
+            "mana": [
+                55.0,
+                55.0,
+                55.0,
+                55.0,
+                55.0,
+                55.0
+            ],
+            "manaValues": {
+                "values": [
+                    55.0,
+                    55.0,
+                    55.0,
+                    55.0,
+                    55.0,
+                    55.0
+                ],
+                "{0a3e0478}": 55.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "20": "Play_sfx_Poppy_PoppyPassiveBuff_OnBuffActivate",
+                "12": "Play_sfx_Poppy_PoppyQSpell_OnCast",
+                "18": "Play_sfx_Poppy_Jade_PoppyQSpell_OnBuffActivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyQ_Jade_Name",
+                        "keySummary": "Spell_PoppyQ_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthDamageCap",
+                                    "nameOverride": "Spell_ListType_MaximumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 33554432,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d98a6f2d}": {
+        "ObjectName": "Jade_PoppyCritAttack",
+        "objectPath": "{d98a6f2d}",
+        "mScriptName": "Jade_PoppyCritAttack",
+        "mSpell": {
+            "mAnimationName": "crit",
+            "bHaveHitEffect": true,
+            "castFrame": 15.0,
+            "mHitEffectKey": "{514dcf6d}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Poppy_PoppyCritAttack_OnCast",
+                "13": "Play_sfx_Poppy_PoppyCritAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f1e62045}": {
+        "ObjectName": "Jade_PoppyPassive",
+        "objectPath": "{f1e62045}",
+        "mScriptName": "Jade_PoppyPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "HealthThreshold",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageReduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_PoppyPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_PoppyPassive_Jade_Name",
+                        "keySummary": "Spell_PoppyPassive_Jade_Summary",
+                        "keyTooltip": "Spell_PoppyPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_PoppyPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{51a98e17}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{bb3c6a3a}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{d26926ce}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{582ed897}": {
+        "ScriptName": "charscriptJade_Poppy",
+        "path": "{582ed897}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "da5709aa-906b-41dd-8562-54b20d0cc97a",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "DamageCount",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "63d69005-e07f-40cc-9b37-8fd45786ce94",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ArmorCount",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "c4a9b363-0d1e-491a-945a-ca56fa578e89",
+                        "Src": {
+                            "value": 1,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "AttackAnimState",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{dd84d169}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "9f173dce-3b8a-4b43-b97e-c87fbc66ebf7",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "CharacterVars"
+                                },
+                                "Var": "{91e99d1d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "5493777c-09c7-4f8a-a608-d3a731d81dba",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "CharacterVars"
+                                },
+                                "Var": "{91e99d1d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 2,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "9d6fd47d-8229-4877-8f5d-9543d7518f97",
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{647fae64}": {
+        "mCharacterName": "Jade_Poppy",
+        "baseHPModifiable": {
+            "baseValue": 504.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 81.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.600000023841858,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 80.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 215.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 30.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.3700000047683716,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 59.67499923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.375,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 26.0,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 4.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.3499999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.600000023841858,
+            "mAttackCastTime": 0.375,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_PoppyBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "critAttacks": [
+            {
+                "mAttackName": "Jade_PoppyCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_PoppyQAbility/Jade_PoppyQ",
+            "Jade_PoppyWAbility/Jade_PoppyW",
+            "Jade_PoppyEAbility/Jade_PoppyE",
+            "Jade_PoppyRAbility/Jade_PoppyR"
+        ],
+        "spells": [
+            "{8826e411}",
+            "{5d0ab86d}",
+            "{c0fda0a9}",
+            "{36c53b2b}"
+        ],
+        "extraSpells": [
+            "Jade_PoppyPassiveAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{45cb49b4}",
+            "{d3a4da62}",
+            "{b1f1428c}",
+            "{512bc03e}",
+            "{15bc1079}"
+        ],
+        "passiveName": "Spell_Jade_PoppyPassive_Name",
+        "passiveLuaName": "",
+        "passiveToolTip": "Spell_Jade_PoppyPassive_Summary",
+        "passiveSpell": "Jade_PoppyPassive",
+        "passiveRange": 525.0,
+        "passive1IconName": "{0e5145eced55e686}",
+        "name": "game_character_displayname_Jade_Poppy",
+        "weaponMaterials": [
+            "Jade_PoppyBasicAttack"
+        ],
+        "charAudioNameOverride": "Jade_Poppy_FUTURE",
+        "selectionHeight": 115.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 35.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            16,
+            0
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "searchTags": "tank",
+            "searchTagsSecondary": "fighter",
+            "championId": 60078,
+            "roles": "TANK",
+            "magicRank": 2,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 6,
+            "description": "game_character_description_Jade_Poppy",
+            "defenseRank": 7,
+            "classification": "Strong",
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 6,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mCharacterPassiveSpell": "{f1e62045}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{60d39da3}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{582ed897}",
+        "__type": "CharacterRecord"
+    },
+    "{afd0b666}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6632",
+                            "Items/6662",
+                            "Items/3068"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3009"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6632",
+                            "Items/6662",
+                            "Items/6665",
+                            "Items/3084",
+                            "Items/6667"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3742",
+                            "Items/3075",
+                            "Items/4401",
+                            "Items/3110",
+                            "Items/3143"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/3065",
+                            "Items/3053",
+                            "Items/3083",
+                            "Items/8001",
+                            "Items/3143"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3877"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/6660"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3105"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3068",
+                            "Items/6662",
+                            "Items/6664"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3075",
+                            "Items/4401"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/4401",
+                            "Items/3143",
+                            "Items/3001"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3050"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{eaffacc2}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

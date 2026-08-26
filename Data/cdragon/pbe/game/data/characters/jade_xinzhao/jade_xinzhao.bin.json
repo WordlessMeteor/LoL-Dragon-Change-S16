@@ -1,0 +1,3138 @@
+{
+    "{12489a7e}": {
+        "mRootSpell": "{65bbe52a}",
+        "mChildSpells": [
+            "{65bbe52a}"
+        ],
+        "mName": "Jade_XinZhaoEAbility",
+        "__type": "AbilityObject"
+    },
+    "{e6a88cb9}": {
+        "mRootSpell": "{268cac9c}",
+        "mChildSpells": [
+            "{268cac9c}"
+        ],
+        "mName": "Jade_XinZhaoRAbility",
+        "__type": "AbilityObject"
+    },
+    "{268cac9c}": {
+        "ObjectName": "Jade_XinZhaoR",
+        "objectPath": "{268cac9c}",
+        "mScriptName": "Jade_XinZhaoR",
+        "mSpell": {
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_XinZhaoR",
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        -25.0,
+                        75.0,
+                        175.0,
+                        275.0,
+                        375.0,
+                        475.0,
+                        575.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PercentCurrentHealthDamage",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileDefenseBaseDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileDefenseRadius",
+                    "values": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MarkDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ScalingResist",
+                    "values": [
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ResistDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_CrescentSweep.dds"
+            ],
+            "spellCastTime": 0.32499998807907104,
+            "spellTotalTime": 1.2999999523162842,
+            "cooldownTime": [
+                120.0,
+                120.0,
+                110.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    120.0,
+                    110.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "{0a3e0478}": 500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 347.79998779296875,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoR_OnCast",
+                "18": "Play_sfx_XinZhao_XinZhaoRRangedImmunity_OnBuffActivate",
+                "19": "Play_sfx_XinZhao_XinZhaoRRangedImmunity_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XinZhaoR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XinZhaoR_Jade_Name",
+                        "keySummary": "Spell_XinZhaoR_Jade_Summary",
+                        "keyTooltip": "Spell_XinZhaoR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4194304,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{55ddab96}": {
+        "mRootSpell": "{57bc99dc}",
+        "mChildSpells": [
+            "{57bc99dc}"
+        ],
+        "mName": "Jade_XinZhaoPassive",
+        "__type": "AbilityObject"
+    },
+    "{57bc99dc}": {
+        "ObjectName": "Jade_XinZhaoPassive",
+        "objectPath": "{57bc99dc}",
+        "mScriptName": "Jade_XinZhaoPassive",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "DataValues": [
+                {
+                    "name": "Duration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorReductionPercent",
+                    "values": [
+                        -0.15000000596046448,
+                        -0.15000000596046448,
+                        -0.15000000596046448,
+                        -0.15000000596046448,
+                        -0.15000000596046448,
+                        -0.15000000596046448,
+                        -0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mSubpart": {
+                                "mLevel1Value": 0.15000000596046448,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 6,
+                                        "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 11,
+                                        "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 16,
+                                        "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 21,
+                                        "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 26,
+                                        "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalHealing": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 12,
+                            "mSubpart": {
+                                "mLevel1Value": 0.029999999329447746,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 6,
+                                        "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 11,
+                                        "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        },
+                        {
+                            "mSubpart": {
+                                "mSpellCalculationKey": "HealAPRatio",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HealHPRatio": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.029999999329447746,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HealAPRatio": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.5,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.25,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_TirelessWarrior.dds"
+            ],
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 20.209999084472656,
+            "missileSpeed": 347.79998779296875,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XinZhaoPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XinZhaoPassive_Jade_Name",
+                        "keySummary": "Spell_XinZhaoPassive_Jade_Summary",
+                        "keyTooltip": "Spell_XinZhaoPassive_Jade_Tooltip",
+                        "keyTooltipExtended": "Spell_XinZhaoPassive_Jade_Extended"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_XinZhaoPassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{eceb60ba}": {
+        "ObjectName": "Jade_XinZhaoPassiveDebuff",
+        "objectPath": "{eceb60ba}",
+        "mScriptName": "Jade_XinZhaoPassiveDebuff",
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{6d36decc}": {
+        "mRootSpell": "{6378c39e}",
+        "mChildSpells": [
+            "{6378c39e}"
+        ],
+        "mName": "Jade_XinZhaoWAbility",
+        "__type": "AbilityObject"
+    },
+    "{6378c39e}": {
+        "ObjectName": "Jade_XinZhaoW",
+        "objectPath": "{6378c39e}",
+        "mScriptName": "Jade_XinZhaoW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_XinZhaoW",
+            "DataValues": [
+                {
+                    "name": "HealAmount",
+                    "values": [
+                        20.0,
+                        26.0,
+                        32.0,
+                        38.0,
+                        44.0,
+                        50.0,
+                        56.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedBonus",
+                    "values": [
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealAPMod",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalHealAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "HealAmount",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{d054599e}",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_BattleCry.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_BattleCry.dds"
+            ],
+            "mCastTime": 0.6000000238418579,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0
+                ],
+                "{0a3e0478}": 17.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mLineWidth": 70.0,
+            "mHitEffectName": "doesnotexist.troy",
+            "mAfterEffectKey": "{ebb24eab}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_HEAD_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                60.0,
+                55.0,
+                50.0,
+                45.0,
+                40.0,
+                40.0
+            ],
+            "manaValues": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_Jade_XinZhaoW_OnCast",
+                "18": "Play_sfx_XinZhao_Jade_XinZhaoW_loop_buffactivate"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.30000001192092896,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XinZhaoW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XinZhaoW_Jade_Name",
+                        "keySummary": "Spell_XinZhaoW_Jade_Summary",
+                        "keyTooltip": "Spell_XinZhaoW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "HealAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_XinZhaoW_listtype_PassiveHeal_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AttackSpeedBonus",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_ActiveAttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{79df95cc}": {
+        "ObjectName": "Jade_XinZhaoW_Passive",
+        "objectPath": "{79df95cc}",
+        "mScriptName": "Jade_XinZhaoW_Passive",
+        "__type": "SpellObject"
+    },
+    "{65bbe52a}": {
+        "ObjectName": "Jade_XinZhaoE",
+        "objectPath": "{65bbe52a}",
+        "mScriptName": "Jade_XinZhaoE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 22538,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "{c02a7870}",
+                    "minion",
+                    "Monster"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mExcludedUnitTags": {
+                "mObjectTagList": [
+                    "structure",
+                    "{ef81aaeb}",
+                    "{71053582}",
+                    "{6f573685}",
+                    "{e6dcb4a5}",
+                    "{e450217e}",
+                    "{5edd4d7c}",
+                    "{ef3d2759}",
+                    "{01006209}",
+                    "Ward"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_XinZhaoE",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
+            "DataValues": [
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        70.0,
+                        105.0,
+                        140.0,
+                        175.0,
+                        210.0,
+                        245.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        3000.0,
+                        3000.0,
+                        3000.0,
+                        3000.0,
+                        3000.0,
+                        3000.0,
+                        3000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoERadius",
+                    "values": [
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalMagicDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.800000011920929,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_Charge.dds"
+            ],
+            "spellCastTime": 0.0,
+            "cooldownTime": [
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0
+            ],
+            "Cooldown": {
+                "values": [
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0
+                ],
+                "{0a3e0478}": 15.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "cantCastWhileRooted": true,
+            "mDisableCastBar": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castRadiusSecondary": [
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 20.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+            ],
+            "manaValues": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoEDash_cast",
+                "13": "Play_sfx_XinZhao_XinZhaoEDash_hit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XinZhaoE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XinZhaoE_Jade_Name",
+                        "keySummary": "Spell_XinZhaoE_Jade_Summary",
+                        "keyTooltip": "Spell_XinZhaoE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowAmount",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                250.0,
+                                250.0,
+                                250.0,
+                                250.0,
+                                250.0,
+                                250.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalMagicDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{686cdc6d}": {
+        "ObjectName": "Jade_XinZhaoCritAttack",
+        "objectPath": "{686cdc6d}",
+        "mScriptName": "Jade_XinZhaoCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.360000133514404,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{e76f431c}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoCritAttack_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9d0be18d}": {
+        "ObjectName": "Jade_XinZhaoBasicAttack2",
+        "objectPath": "{9d0be18d}",
+        "mScriptName": "Jade_XinZhaoBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.800000190734863,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{66661e9b}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoBasicAttack2_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ca48cda2}": {
+        "mRootSpell": "{d9373522}",
+        "mChildSpells": [
+            "{d9373522}",
+            "{f716e374}",
+            "{b5dcb945}",
+            "{c177f655}",
+            "{c077f4c2}"
+        ],
+        "mName": "Jade_XinZhaoQAbility",
+        "__type": "AbilityObject"
+    },
+    "{b5dcb945}": {
+        "ObjectName": "Jade_XinZhaoQ_Thrust",
+        "objectPath": "{b5dcb945}",
+        "mScriptName": "Jade_XinZhaoQ_Thrust",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_XinZhaoQ",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        25.0,
+                        85.0,
+                        145.0,
+                        205.0,
+                        265.0,
+                        325.0,
+                        385.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "Spell1_Attack1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_ThreeTalon.dds"
+            ],
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 1.399999976158142,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 0.0,
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoQThrust1_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoQThrust1_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c077f4c2}": {
+        "ObjectName": "Jade_XinZhaoQ_Thrust3",
+        "objectPath": "{c077f4c2}",
+        "mScriptName": "Jade_XinZhaoQ_Thrust3",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_XinZhaoQ",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        12.0,
+                        24.0,
+                        36.0,
+                        48.0,
+                        60.0,
+                        72.0,
+                        84.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        6.0,
+                        9.0,
+                        12.0,
+                        15.0,
+                        18.0,
+                        21.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        65.0,
+                        110.0,
+                        155.0,
+                        200.0,
+                        245.0,
+                        290.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "Spell1_Attack3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_ThreeTalon.dds"
+            ],
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 1.399999976158142,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 1500.0,
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoQThrust3_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoQThrust3_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c177f655}": {
+        "ObjectName": "Jade_XinZhaoQ_Thrust2",
+        "objectPath": "{c177f655}",
+        "mScriptName": "Jade_XinZhaoQ_Thrust2",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_XinZhaoQ",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        240.0,
+                        300.0,
+                        350.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0,
+                        4.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "Spell1_Attack2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_ThreeTalon.dds"
+            ],
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 1.399999976158142,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoQThrust2_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoQThrust2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d9373522}": {
+        "ObjectName": "Jade_XinZhaoQ",
+        "objectPath": "{d9373522}",
+        "mScriptName": "Jade_XinZhaoQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_XinZhaoQ",
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        0.0,
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockUpDuration",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownReduction",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{9e8f4b61}": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "{72c5c2a8}": 0,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_ThreeTalon.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                6.5,
+                6.0,
+                5.5,
+                5.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    375.0,
+                    375.0,
+                    375.0,
+                    375.0,
+                    375.0,
+                    375.0,
+                    375.0
+                ],
+                "{0a3e0478}": 375.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.394999980926514,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                30.0,
+                30.0,
+                30.0,
+                30.0,
+                30.0,
+                30.0
+            ],
+            "manaValues": {
+                "values": [
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0
+                ],
+                "{0a3e0478}": 30.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoQ_OnCast",
+                "18": "Play_sfx_XinZhao_XinZhaoQ_OnBuffActivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XinZhaoQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XinZhaoQ_Jade_Name",
+                        "keySummary": "Spell_XinZhaoQ_Jade_Summary",
+                        "keyTooltip": "Spell_XinZhaoQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Effect%dAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "{9e8f4b61}",
+                        "__type": "{f3cbe7b2}"
+                    },
+                    {
+                        "mEffectIndex": 1,
+                        "__type": "EffectValueCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16777216,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f716e374}": {
+        "ObjectName": "Jade_XinZhaoQ_Knockup",
+        "objectPath": "{f716e374}",
+        "mScriptName": "Jade_XinZhaoQ_Knockup",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_XinZhaoQKnockup",
+            "mCoefficient": 0.4000000059604645,
+            "mCoefficient2": 0.20000000298023224,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/XinZhao_ThreeTalon.dds"
+            ],
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
+            "cooldownTime": [
+                17.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 20.209999084472656,
+            "missileSpeed": 347.79998779296875,
+            "mFloatVarsDecimals": [
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "manaValues": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XinZhaoQKnockup_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e107046d}": {
+        "ObjectName": "Jade_XinZhaoBasicAttack",
+        "objectPath": "{e107046d}",
+        "mScriptName": "Jade_XinZhaoBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.100000381469727,
+            "missileSpeed": 20.0,
+            "mHitEffectKey": "{66661e9b}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_XinZhao_XinZhaoBasicAttack_OnCast",
+                "13": "Play_sfx_XinZhao_XinZhaoBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{2abff697}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{61f1ca94}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{87f525c9}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{46b7e6f9}": {
+        "mCharacterName": "Jade_XinZhao",
+        "baseHPModifiable": {
+            "baseValue": 532.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 87.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.600000023841858,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.14000000059604645,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 92.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 250.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 35.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.2999999523162842,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 55.0,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 24.0,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "mrPerLevel": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 175.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.671999990940094,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.671999990940094,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.5999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.5499999523162842,
+            "mAttackCastTime": 0.28999999165534973,
+            "mAttackDelayCastOffsetPercent": 0.09700000286102295,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_XinZhaoBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.28999999165534973,
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_XinZhaoBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.28999999165534973,
+                "mAttackName": "Jade_XinZhaoPassiveCritAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.28999999165534973,
+                "mAttackName": "Jade_XinZhaoEBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.3199999928474426,
+                "mAttackDelayCastOffsetPercent": 0.07699999958276749,
+                "mAttackName": "Jade_XinZhaoCritAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.20000000298023224,
+                "mAttackName": "Jade_XinZhaoQ_Thrust3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackTotalTime": 1.5499999523162842,
+                "mAttackCastTime": 0.28999999165534973,
+                "mAttackName": "Jade_XinZhaoPassiveCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_XinZhaoQAbility/Jade_XinZhaoQ",
+            "Jade_XinZhaoWAbility/Jade_XinZhaoW",
+            "Jade_XinZhaoEAbility/Jade_XinZhaoE",
+            "Jade_XinZhaoRAbility/Jade_XinZhaoR"
+        ],
+        "spells": [
+            "{d9373522}",
+            "{6378c39e}",
+            "{65bbe52a}",
+            "{268cac9c}"
+        ],
+        "extraSpells": [
+            "Jade_XinZhaoQThrust1",
+            "Jade_XinZhaoQThrust2",
+            "Jade_XinZhaoQThrust3",
+            "Jade_XinZhaoEDash",
+            "Jade_XinZhaoESpellCastTrigger",
+            "Jade_XinZhaoEBasicAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_XinZhaoPassiveCritAttack",
+            "Jade_XinZhaoWMissile",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "{b5dcb945}",
+            "{c177f655}",
+            "{c077f4c2}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{55ddab96}",
+            "{ca48cda2}",
+            "{6d36decc}",
+            "{12489a7e}",
+            "{e6a88cb9}"
+        ],
+        "passiveName": "Spell_Jade_XinZhaoPassive_Name",
+        "passiveLuaName": "",
+        "passiveToolTip": "Spell_Jade_XinZhaoPassive_Summary",
+        "passiveSpell": "Jade_XinZhaoPassive",
+        "passive1IconName": "{44543e97063e1b61}",
+        "name": "game_character_displayname_Jade_XinZhao",
+        "weaponMaterials": [
+            "XenZhaoBasicAttack"
+        ],
+        "mUseCCAnimations": true,
+        "selectionHeight": 138.88890075683594,
+        "selectionRadius": 108.33329772949219,
+        "pathfindingCollisionRadius": 35.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            8,
+            0,
+            0,
+            7
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "Spell_Jade_XinZhaoPassive_Name",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "searchTagsSecondary": "tank",
+            "championId": 60005,
+            "roles": "BRAWLER",
+            "magicRank": 3,
+            "difficultyRank": 2,
+            "description": "game_character_description_Jade_XinZhao",
+            "defenseRank": 6,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.30000001192092896,
+            "attackRank": 8,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "useRiotRelationships": true,
+        "flags": 8414472,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Domination",
+        "mCharacterPassiveSpell": "{57bc99dc}",
+        "{c5c48b41}": 1,
+        "Script": "{4fae1835}",
+        "__type": "CharacterRecord"
+    },
+    "{4fae1835}": {
+        "ScriptName": "charscriptJade_XinZhao",
+        "path": "{4fae1835}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "040d1534-cc53-4709-92eb-5fbbe9ce16e9",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ComboCounter",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "ce1b6901-41d5-4a7e-bc89-fd42daf79281",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 3,
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "24ea9c4d-a04a-4857-9dc8-ec80611c5bd7",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{54757ad9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "510afdac-1f77-47ec-8d88-01734866416e",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ComboCounter",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{419e53ac}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "8ee4533e-d20e-4662-8c84-f2a07f260ccd",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{b2036774}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "IsDisabled": true,
+                                    "{d851ffa3}": "f47831be-b69b-4706-a39b-1b1f8cbf14a8",
+                                    "__type": "{66cbd003}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "2d5d2056-e2a4-48bb-bc35-7dc68b31fe1b",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "63dfd30c-3464-44a8-bbd2-213c97158c59",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "5a5d980e-00b1-4a16-9494-09e81d88031b",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "2ad50de2-73a4-4e99-9095-8ca293cb564a",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Var": "EndEvent",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "1307ae2c-60fe-4cd6-90a0-763a71b258a1",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Order",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 2,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "IsDisabled": true,
+                                    "{d851ffa3}": "2cc66aae-b058-46b9-833e-127e3d2fd2a6",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Table": {
+                                                "__type": "CharacterVars"
+                                            },
+                                            "Var": "{30aeddd4}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": true,
+                                            "__type": "BoolGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "1e32e6a0-bad0-4e7d-ab45-9402316bb03f",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null,
+                                                        {
+                                                            "IsDisabled": true,
+                                                            "{d851ffa3}": "12cfeab1-d799-4830-afe7-3d737c85ad55",
+                                                            "Condition": {
+                                                                "Value1": {
+                                                                    "Var": "Distance",
+                                                                    "__type": "ScriptTableGet"
+                                                                },
+                                                                "Operation": 2,
+                                                                "Value2": {
+                                                                    "value": 400,
+                                                                    "__type": "IntGet"
+                                                                },
+                                                                "__type": "ComparisonScriptCondition"
+                                                            },
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    {
+                                                                        "IsDisabled": true,
+                                                                        "{d851ffa3}": "548c29ef-a84e-4560-8404-9d8d302133a0",
+                                                                        "Src": {
+                                                                            "__type": "BoolGet"
+                                                                        },
+                                                                        "Dest": {
+                                                                            "Table": {
+                                                                                "__type": "CharacterVars"
+                                                                            },
+                                                                            "Var": "XinZhaoDoEBuffer",
+                                                                            "__type": "ScriptTableSet"
+                                                                        },
+                                                                        "__type": "SetVarInTableBlock"
+                                                                    }
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "11d8e0c5-e44a-4e22-a400-c9f352daf604",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{f92c5c91}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 2,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                {
+                                    "IsDisabled": true,
+                                    "{d851ffa3}": "acd14c73-3825-44df-84c4-55e466e8da1a",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{a2565446}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": true,
+                                            "__type": "BoolGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "89fc7aa4-7099-4a0f-b6d0-acdc63e2a65b",
+                                                "__type": "{66cbd003}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{a04b2f59}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

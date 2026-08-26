@@ -526,7 +526,7 @@
     },
     "Characters/SRU_ChaosMinionSiege/Spells/SRU_ChaosMinionSiegeBasicAttack": {
         "ObjectName": "SRU_ChaosMinionSiegeBasicAttack",
-        "objectPath": "{149feebd}",
+        "objectPath": "Characters/SRU_ChaosMinionSiege/Spells/SRU_ChaosMinionSiegeBasicAttack",
         "mScriptName": "SRU_ChaosMinionSiegeBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -564,7 +564,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -784,6 +784,77 @@
                             "__type": "StringGet"
                         },
                         "__type": "DebugPrintToChatBlock"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "f1694ee9-b4a9-421c-a8ac-afd73d862cdf",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{50f0bcb0}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "b778bc0b-0cde-499d-9ca5-20ce14a5c5b5",
+                                    "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                                    "Dest": {
+                                        "Var": "FreeUpgrades",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "6c22c3fb-7d01-43bb-b3f6-dda8f40f7cb5",
+                                    "Formula": "2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeExp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "aa7d97e7-9e5b-4b06-b5f8-973d29dc1314",
+                                    "Formula": "0.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeGold",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "d2d82615-5783-4b0a-afab-0e8498558120",
+                                    "Formula": "37.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeHealth",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "e90b49d0-4e25-48bd-8cf8-cd9a9963ac12",
+                                    "Formula": "2.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeDamage",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
                     },
                     {
                         "IsDisabled": true,

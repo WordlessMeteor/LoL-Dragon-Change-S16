@@ -487,7 +487,78 @@
                     null,
                     null,
                     null,
-                    null
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "36737fd9-b07b-4178-94ed-4efbf4a6cbbe",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{50f0bcb0}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "483e62fe-2282-4d12-8325-c408dcc4c9c9",
+                                    "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                                    "Dest": {
+                                        "Var": "FreeUpgrades",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "6eda5319-4460-4647-a2b7-172abfb03288",
+                                    "Formula": "2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeExp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "6015d571-d3dc-473c-bc5b-67de73b41f8a",
+                                    "Formula": "0.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeGold",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "8cab8f4d-5f9b-45f8-af3b-7149c3b69721",
+                                    "Formula": "60*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeHealth",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "f1aeadb8-53ea-475b-a581-8d128cc45d58",
+                                    "Formula": "5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeDamage",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
                 ],
                 "__type": "RootScriptSequence"
             },

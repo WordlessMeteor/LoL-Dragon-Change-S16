@@ -1,0 +1,187 @@
+{
+    "{862364bc}": {
+        "skinClassification": 2,
+        "championSkinName": "Jade_Karthus_Classic_grimReaper",
+        "metaDataTags": "faction:shadowisles,gender:male,race:undead,element:dark",
+        "{c3a944e7}": {
+            "{7dd33afb}": 1,
+            "__type": "{e7ee4f28}"
+        },
+        "loadscreen": {
+            "image": "assets/characters/jade_karthus/skins/skin301/jade_karthusloadscreen_301.tex",
+            "UncensoredImages": {
+                "{a113bfb4}": "assets/characters/jade_karthus/skins/skin301/jade_karthusloadscreen_uc_301.tex"
+            },
+            "__type": "CensoredImage"
+        },
+        "loadscreenVintage": {
+            "image": "assets/characters/jade_karthus/skins/skin301/jade_karthusloadscreen_301_le.tex",
+            "UncensoredImages": {
+                "{a113bfb4}": "assets/characters/jade_karthus/skins/skin301/jade_karthusloadscreen_uc_301_le.tex"
+            },
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Karthus",
+                "KarthusSkin301"
+            ],
+            "bankUnits": [
+                {
+                    "name": "MODE_Jade_Karthus_Skin301_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_Karthus_Skin301_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_Karthus_Skin301_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Karthus_Skin301_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Karthus/Skins/Skin301/Karthus_Skin301_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Karthus/Skins/Skin301/Karthus_Skin301_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Karthus/Skins/Skin301/Karthus_Skin301_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_KarthusSkin301_Attack2DGeneral",
+                        "Play_vo_KarthusSkin301_Death3D",
+                        "Play_vo_KarthusSkin301_Joke3DGeneral",
+                        "Play_vo_KarthusSkin301_Laugh3DGeneral",
+                        "Play_vo_KarthusSkin301_Move2DStandard",
+                        "Play_vo_KarthusSkin301_Spell3DBasic",
+                        "Play_vo_KarthusSkin301_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Jade_Karthus/Animations/Skin301",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Karthus/Skins/Skin303/karthus_grimreaper_RG_Classic.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Karthus/Skins/Skin303/karthus_grimreaper_RG_Classic.skn",
+            "texture": "{c63049b75950b3a7}",
+            "skinScale": 1.2999999523162842,
+            "selfIllumination": 1.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "OutlineCategorySubmeshes": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "baby_ma_Ungorth1_UngorthM",
+                    "__type": "CharacterOutlineSubmeshes"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mContextualActionData": "Characters/Jade_Karthus/CAC/Jade_Karthus_Skin301",
+        "iconCircle": "assets/characters/jade_karthus/hud/jade_karthus_circle_301.tex",
+        "iconSquare": "assets/characters/jade_karthus/hud/jade_karthus_square_301.tex",
+        "uncensoredIconCircles": {
+            "{a113bfb4}": "assets/characters/jade_karthus/hud/jade_karthus_uncensored_circle_301.tex"
+        },
+        "uncensoredIconSquares": {
+            "{a113bfb4}": "assets/characters/jade_karthus/hud/jade_karthus_uncensored_square_301.tex"
+        },
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "{ba2fd27e}",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mScriptName": "Jade_KarthusDefile",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Jade_Karthus_E_Cas",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "objectPath": "{862364bc}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{ba2fd27e}": {
+        "resourceMap": {
+            "Jade_Karthus_AA_Cas": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LichBasicAttack_cas",
+            "Jade_Karthus_AA_Mis": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LichBasicAttack_mis",
+            "Jade_Karthus_AA_Tar": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LichBasicAttack_tar",
+            "Jade_Karthus_Crit_Mis": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LichBasicAttack_mis",
+            "Jade_Karthus_Crit_Tar": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LichBasicAttack_tar",
+            "Jade_Karthus_emote_joke_sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_base_emote_joke_sound",
+            "Jade_Karthus_emote_taunt_sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_base_emote_taunt_sound",
+            "Jade_Karthus_E_Cas": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Defile_glow",
+            "Jade_Karthus_E_Defile": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Defile_green_cas",
+            "Jade_Karthus_e_Defile_Cas": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Defile_cas",
+            "Jade_Karthus_e_Defile_Cas_Red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Defile_cas",
+            "Jade_Karthus_E_Defile_Red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Defile_red_cas",
+            "Jade_Karthus_E_Passive_Buff": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Empty",
+            "Jade_Karthus_E_Tar_Hit": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_E_Hit_Tar",
+            "Jade_Karthus_P_Avatar": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_P_Avatar",
+            "Jade_Karthus_P_Death_Fade": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_P_Death_Fade",
+            "Jade_Karthus_P_Defile": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_P_Defile",
+            "Jade_Karthus_P_Defile_Red": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_P_Defile_Red",
+            "Jade_Karthus_Q_Explosion": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_tar",
+            "Jade_Karthus_Q_Explosion_Sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Q_Explosion_Sound",
+            "Jade_Karthus_Q_Hand_Glow": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_glow",
+            "Jade_Karthus_Q_Hit_Many": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Q_Hit_Many",
+            "Jade_Karthus_Q_Hit_Miss": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Q_Hit_Miss",
+            "Jade_Karthus_Q_Hit_Single": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Q_Hit_Single",
+            "Jade_Karthus_Q_Point": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_point",
+            "Jade_Karthus_Q_Point_red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_point",
+            "Jade_Karthus_Q_Ring": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Q_Ring",
+            "Jade_Karthus_Q_Ring_red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_Q_Ring_Red",
+            "Jade_Karthus_Q_Skull_Child": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Q_Skull_Child",
+            "Jade_Karthus_Q_Tar": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_tar",
+            "Jade_Karthus_Q_Tar_red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_LayWaste_tar",
+            "Jade_Karthus_recall_leadout_sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_base_recall_leadout_sound",
+            "Jade_Karthus_recall_loop_sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_base_recall_loop_sound",
+            "Jade_Karthus_recall_start_sound": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_base_recall_start_sound",
+            "Jade_Karthus_R_Cas": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_FallenOne_cas",
+            "Jade_Karthus_R_Cas_Hand_Glow": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_FallenOne_glow",
+            "Jade_Karthus_R_Explosion": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_FallenOne_nova",
+            "Jade_Karthus_R_Target": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_FallenOne_tar",
+            "Jade_Karthus_R_Target_Green": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_FallenOne_tar",
+            "Jade_Karthus_Taunt_ArmGlow_Left": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Taunt_ArmGlow_Left",
+            "Jade_Karthus_Taunt_ArmGlow_Right": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Taunt_ArmGlow_Right",
+            "Jade_Karthus_Taunt_HandGlow": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Taunt_HandGlow",
+            "Jade_Karthus_Taunt_StaffGlow": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Taunt_StaffGlow",
+            "Jade_Karthus_Taunt_StaffTop": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_Taunt_StaffTop",
+            "Jade_Karthus_W_Cas": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_W_Cas",
+            "Jade_Karthus_W_Hand_Glow": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_W_Hand_Glow",
+            "Jade_Karthus_W_Post": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_wallofpain_new_post_green",
+            "Jade_Karthus_W_Post_Red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_wallofpain_new_post_red",
+            "Jade_Karthus_W_Tar_Slow": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_W_Slow_Tar",
+            "Jade_Karthus_W_Wall": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_wallofpain_new_beam",
+            "Jade_Karthus_W_Wall_Red": "Characters/Jade_Karthus/Skins/Skin301/Particles/Jade_Karthus_Skin301_wallofpain_new_beam",
+            "{716d5d57}": "Characters/Jade_Karthus/Skins/Skin0/Particles/LayWaste_point",
+            "Jade_Karthus_P_DistortAvatar": "Shared/Particles/Empty",
+            "Jade_Karthus_W_Debuff_MR_Shred": "Characters/Jade_Karthus/Skins/Skin0/Particles/Jade_Karthus_Base_W_Debuff_MR_Shred"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Karthus/Jade_Karthus.bin",
+        "DATA/Characters/Jade_Karthus/Animations/Skin301.bin",
+        "DATA/Characters/Jade_Karthus/Jade_Karthus_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin3_Skins_Skin301_Skins_Skin302_Skins_Skin303_Skins_Skin4_Skins_Skin6_Skins_Skin7_Skins_Skin8.bin",
+        "DATA/Characters/Jade_Karthus/Jade_Karthus_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin301_Skins_Skin302_Skins_Skin303_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin4_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Karthus/Jade_Karthus_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin3_Skins_Skin301_Skins_Skin302_Skins_Skin303_Skins_Skin4_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Karthus/Jade_Karthus_Multi_Skins_Skin301_Skins_Skin302_Skins_Skin303.bin"
+    ]
+}

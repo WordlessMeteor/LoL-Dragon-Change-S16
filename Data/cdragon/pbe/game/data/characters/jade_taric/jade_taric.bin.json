@@ -3,8 +3,8 @@
         "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR",
         "mChildSpells": [
             "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR",
-            "{4ac17987}",
-            "{b5e15a69}"
+            "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRBuff",
+            "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRAura"
         ],
         "mName": "Jade_TaricRAbility",
         "__type": "AbilityObject"
@@ -111,8 +111,8 @@
         "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW",
         "mChildSpells": [
             "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW",
-            "{fe5f10c3}",
-            "{53e8151d}"
+            "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWAura",
+            "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWSelfBonus"
         ],
         "mName": "Jade_TaricWAbility",
         "__type": "AbilityObject"
@@ -439,9 +439,9 @@
         },
         "__type": "SpellObject"
     },
-    "{53e8151d}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWSelfBonus": {
         "ObjectName": "Jade_TaricWSelfBonus",
-        "objectPath": "{53e8151d}",
+        "objectPath": "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWSelfBonus",
         "mScriptName": "Jade_TaricWSelfBonus",
         "mSpell": {
             "mImgIconName": [
@@ -455,9 +455,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fe5f10c3}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWAura": {
         "ObjectName": "Jade_TaricWAura",
-        "objectPath": "{fe5f10c3}",
+        "objectPath": "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricWAura",
         "mScriptName": "Jade_TaricWAura",
         "mSpell": {
             "mImgIconName": [
@@ -1176,9 +1176,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4ac17987}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRBuff": {
         "ObjectName": "Jade_TaricRBuff",
-        "objectPath": "{4ac17987}",
+        "objectPath": "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRBuff",
         "mScriptName": "Jade_TaricRBuff",
         "mSpell": {
             "mImgIconName": [
@@ -1454,9 +1454,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b5e15a69}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRAura": {
         "ObjectName": "Jade_TaricRAura",
-        "objectPath": "{b5e15a69}",
+        "objectPath": "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricRAura",
         "mScriptName": "Jade_TaricRAura",
         "mSpell": {
             "mImgIconName": [
@@ -1479,16 +1479,16 @@
         "__type": "AbilityObject"
     },
     "{97b93084}": {
-        "mRootSpell": "{84804140}",
+        "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive",
         "mChildSpells": [
-            "{84804140}"
+            "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive"
         ],
         "mName": "Jade_TaricPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{84804140}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive": {
         "ObjectName": "Jade_TaricPassive",
-        "objectPath": "{84804140}",
+        "objectPath": "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive",
         "mScriptName": "Jade_TaricPassive",
         "mSpell": {
             "DataValues": [
@@ -2950,6 +2950,8 @@
         "characterToolData": {
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
@@ -3006,10 +3008,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{84804140}",
+        "mCharacterPassiveSpell": "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{84804140}",
+                "mParentPassiveBuff": "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive",
                 "__type": "CharacterPassiveData"
             }
         ],

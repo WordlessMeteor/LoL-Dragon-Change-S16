@@ -523,7 +523,7 @@
                 73.9000015258789,
                 73.9000015258789
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     73.9000015258789,
                     73.9000015258789,
@@ -600,7 +600,7 @@
                 73.9000015258789,
                 73.9000015258789
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     73.9000015258789,
                     73.9000015258789,
@@ -783,7 +783,78 @@
                     null,
                     null,
                     null,
-                    null
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "b5c47a5d-b889-4bcf-b121-d2308f035741",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{50f0bcb0}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "212df63e-e68b-4ef3-87c0-f32c4eb6a830",
+                                    "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                                    "Dest": {
+                                        "Var": "FreeUpgrades",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "b74250e5-3299-4362-aceb-1b02d6d7017c",
+                                    "Formula": "2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeExp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "3804851a-3cd3-4a32-8b8f-f121441facdd",
+                                    "Formula": "0.5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeGold",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "a4e5e1cd-aa65-4fdb-ae77-18fedb74c674",
+                                    "Formula": "60*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeHealth",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "921d1331-1764-43ee-98e5-98d9cd08181a",
+                                    "Formula": "5*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeDamage",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
                 ],
                 "__type": "RootScriptSequence"
             },

@@ -1317,18 +1317,18 @@
         "__type": "SpellObject"
     },
     "{925cdef4}": {
-        "mRootSpell": "{f0b57975}",
+        "mRootSpell": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
         "mChildSpells": [
-            "{f0b57975}",
-            "{404f42d6}",
-            "{3d2bab57}"
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrikeIcon",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrike"
         ],
         "mName": "Jade_MasterYiPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{3d2bab57}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrike": {
         "ObjectName": "Jade_MasterYiDoubleStrike",
-        "objectPath": "{3d2bab57}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrike",
         "mScriptName": "Jade_MasterYiDoubleStrike",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -1432,9 +1432,9 @@
         },
         "__type": "SpellObject"
     },
-    "{404f42d6}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrikeIcon": {
         "ObjectName": "Jade_MasterYiDoubleStrikeIcon",
-        "objectPath": "{404f42d6}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrikeIcon",
         "mScriptName": "Jade_MasterYiDoubleStrikeIcon",
         "mSpell": {
             "mImgIconName": [
@@ -1456,9 +1456,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f0b57975}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive": {
         "ObjectName": "Jade_MasterYiPassive",
-        "objectPath": "{f0b57975}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
         "mScriptName": "Jade_MasterYiPassive",
         "mSpell": {
             "DataValues": [
@@ -2879,7 +2879,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -2914,7 +2914,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -2949,7 +2949,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -2984,7 +2984,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3019,7 +3019,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3054,7 +3054,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3083,7 +3083,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3576,7 +3576,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{3d2bab57}",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrike",
             "{e7b05216}",
             "{0a658535}",
             "Shared/Spells/BaseSpell",
@@ -3642,6 +3642,8 @@
             ],
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
@@ -3720,10 +3722,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{f0b57975}",
+        "mCharacterPassiveSpell": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{f0b57975}",
+                "mParentPassiveBuff": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
                 "__type": "CharacterPassiveData"
             },
             {

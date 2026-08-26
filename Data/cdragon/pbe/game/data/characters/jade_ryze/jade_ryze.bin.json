@@ -3,22 +3,22 @@
         "mRootSpell": "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeE",
         "mChildSpells": [
             "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeE",
-            "{59318a4b}"
+            "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeEMissile"
         ],
         "mName": "Jade_RyzeEAbility",
         "__type": "AbilityObject"
     },
     "{701c0fe4}": {
-        "mRootSpell": "{1757a021}",
+        "mRootSpell": "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive",
         "mChildSpells": [
-            "{1757a021}"
+            "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive"
         ],
         "mName": "Jade_RyzePassiveAbility",
         "__type": "AbilityObject"
     },
-    "{1757a021}": {
+    "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive": {
         "ObjectName": "Jade_RyzePassive",
-        "objectPath": "{1757a021}",
+        "objectPath": "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive",
         "mScriptName": "Jade_RyzePassive",
         "mSpell": {
             "flags": 4,
@@ -947,9 +947,9 @@
         },
         "__type": "SpellObject"
     },
-    "{59318a4b}": {
+    "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeEMissile": {
         "ObjectName": "Jade_RyzeEMissile",
-        "objectPath": "{59318a4b}",
+        "objectPath": "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeEMissile",
         "mScriptName": "Jade_RyzeEMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6155,
@@ -1866,7 +1866,7 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{9517430c}",
+            "mMissileEffectKey": "Jade_Ryze_Q_Mis",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -2854,7 +2854,7 @@
         "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
-            "{59318a4b}",
+            "Characters/Jade_Ryze/Spells/Jade_RyzeEAbility/Jade_RyzeEMissile",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2922,6 +2922,8 @@
             ],
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
@@ -2987,10 +2989,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{1757a021}",
+        "mCharacterPassiveSpell": "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{1757a021}",
+                "mParentPassiveBuff": "Characters/Jade_Ryze/Spells/Jade_RyzePassiveAbility/Jade_RyzePassive",
                 "__type": "CharacterPassiveData"
             }
         ],

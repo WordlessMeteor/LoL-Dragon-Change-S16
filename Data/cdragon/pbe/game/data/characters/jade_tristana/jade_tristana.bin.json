@@ -111,7 +111,7 @@
         "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
         "mChildSpells": [
             "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
-            "{990d44ac}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff"
         ],
         "mName": "Jade_TristanaEAbility",
         "__type": "AbilityObject"
@@ -228,7 +228,7 @@
         "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
         "mChildSpells": [
             "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
-            "{fbb089bb}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow"
         ],
         "mName": "Jade_TristanaWAbility",
         "__type": "AbilityObject"
@@ -781,9 +781,9 @@
         },
         "__type": "SpellObject"
     },
-    "{990d44ac}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff": {
         "ObjectName": "Jade_TristanaE_Debuff",
-        "objectPath": "{990d44ac}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff",
         "mScriptName": "Jade_TristanaE_Debuff",
         "mSpell": {
             "mImgIconName": [
@@ -1371,9 +1371,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fbb089bb}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow": {
         "ObjectName": "Jade_TristanaW_Slow",
-        "objectPath": "{fbb089bb}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow",
         "mScriptName": "Jade_TristanaW_Slow",
         "mBuff": {
             "mDescription": "Buff_TristanaW_Jade_Tooltip",
@@ -1432,9 +1432,9 @@
         "__type": "SpellObject"
     },
     "{bbd819cc}": {
-        "mRootSpell": "{fd6d02a1}",
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "mChildSpells": [
-            "{fd6d02a1}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive"
         ],
         "mName": "Jade_TristanaPassiveAbility",
         "__type": "AbilityObject"
@@ -1546,9 +1546,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fd6d02a1}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive": {
         "ObjectName": "Jade_TristanaPassive",
-        "objectPath": "{fd6d02a1}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "mScriptName": "Jade_TristanaPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -2323,6 +2323,8 @@
             ],
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
@@ -2378,7 +2380,7 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mCharacterPassiveSpell": "{fd6d02a1}",
+        "mCharacterPassiveSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "{c5c48b41}": 1,
         "Script": "{835de583}",
         "__type": "CharacterRecord"

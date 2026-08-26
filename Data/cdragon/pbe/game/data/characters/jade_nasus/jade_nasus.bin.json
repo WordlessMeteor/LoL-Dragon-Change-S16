@@ -442,9 +442,9 @@
         "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
         "mChildSpells": [
             "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
-            "{d1c0cb81}",
-            "{a884c2d6}",
-            "{6201ac59}"
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack"
         ],
         "mName": "Jade_NasusQAbility",
         "__type": "AbilityObject"
@@ -480,16 +480,16 @@
         "__type": "SpellObject"
     },
     "{7f98aae4}": {
-        "mRootSpell": "{be31b2f7}",
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mChildSpells": [
-            "{be31b2f7}"
+            "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive"
         ],
         "mName": "Jade_NasusPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{5cf1a812}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_Nasus_Susan0175_Egg": {
         "ObjectName": "Jade_Nasus_Susan0175_Egg",
-        "objectPath": "{5cf1a812}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_Nasus_Susan0175_Egg",
         "mScriptName": "Jade_Nasus_Susan0175_Egg",
         "mSpell": {
             "mImgIconName": [
@@ -511,9 +511,9 @@
         },
         "__type": "SpellObject"
     },
-    "{be31b2f7}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive": {
         "ObjectName": "Jade_NasusPassive",
-        "objectPath": "{be31b2f7}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mScriptName": "Jade_NasusPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -587,9 +587,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6201ac59}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack": {
         "ObjectName": "Jade_NasusSiphoningStrikeAttack",
-        "objectPath": "{6201ac59}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack",
         "mScriptName": "Jade_NasusSiphoningStrikeAttack",
         "mSpell": {
             "flags": 4,
@@ -688,7 +688,7 @@
                 "13": "Play_sfx_Nasus_NasusQAttack_OnHit"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{d1c0cb81}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
                 "mTargeterDefinitions": [
                     {
                         "__type": "TargeterDefinitionRange"
@@ -1044,9 +1044,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a884c2d6}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks": {
         "ObjectName": "Jade_NasusQStacks",
-        "objectPath": "{a884c2d6}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks",
         "mScriptName": "Jade_NasusQStacks",
         "mSpell": {
             "mImgIconName": [
@@ -1061,9 +1061,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d1c0cb81}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike": {
         "ObjectName": "Jade_NasusSiphoningStrike",
-        "objectPath": "{d1c0cb81}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
         "mScriptName": "Jade_NasusSiphoningStrike",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -2456,7 +2456,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{6201ac59}",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2551,6 +2551,8 @@
             ],
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
@@ -2628,10 +2630,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{be31b2f7}",
+        "mCharacterPassiveSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{be31b2f7}",
+                "mParentPassiveBuff": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
                 "__type": "CharacterPassiveData"
             },
             {

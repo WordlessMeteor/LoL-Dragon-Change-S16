@@ -1,0 +1,403 @@
+{
+    "{d66e5b6b}": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "Spawn": {
+                "mFlags": 8,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{624c9004}": {
+                        "mShowSubmeshList": [
+                            "GoldMine_MAT"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{4205452b}": {
+                        "mShow": true,
+                        "__type": "IdleParticlesVisibilityEventData"
+                    },
+                    "{37e09466}": {
+                        "mEffectKey": "{37e09466}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{dbf6348f}": {
+                        "mSoundName": "Play_sfx_tft_goldmineskin133_spawn_away",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{3f1eb0283dcfa095}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{5467c38ad32d3b8d}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{f318e52f}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{8b090b57}": {
+                        "mEffectKey": "{8b090b57}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{d7c03c69dd56141b}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{b1c2fdf7}": {
+                "mClipNameList": [
+                    "Spawn",
+                    "Idle1"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "GainGold": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{578a0e70}": {
+                        "mEffectKey": "{a096c3ba}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "VFX_GainGold",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{5467c38ad32d3b8d}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle_Off1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{307248be}": {
+                        "mHideSubmeshList": [
+                            "GoldMine_MAT"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{ba9341e5f98c7754}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{c2d0dec0}": {
+                "mClipNameList": [
+                    "{f318e52f}",
+                    "Idle_Off1"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "{bac7a329}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{c16e0735}": {
+                        "mEffectKey": "{c16e0735}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{63a6ea0d}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{2247128a}": {
+                        "mEffectKey": "{2247128a}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{4b43b976}": {
+                        "mSoundName": "Play_sfx_tft_goldmineskin133_click_away",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{3e588071210d0d79}",
+                    "__type": "AnimationResourceData"
+                },
+                "startFrame": 1.0,
+                "__type": "AtomicClipData"
+            },
+            "Click": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "{f318e52f}",
+                            "Idle_Off1"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle_Off1",
+                "mFalseConditionClipName": "{bac7a329}",
+                "__type": "ConditionBoolClipData"
+            },
+            "Death": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "Idle_Off1"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle_Off1",
+                "mFalseConditionClipName": "{f318e52f}",
+                "__type": "ConditionBoolClipData"
+            },
+            "Win": {
+                "mClipNameList": [
+                    "{bac7a329}",
+                    "{bac7a329}",
+                    "{bac7a329}",
+                    "{bac7a329}"
+                ],
+                "__type": "SequencerClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "11374364252228812800": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254877113350": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253204139416": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995918638350336": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995921286650886": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995919613676952": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14586015598856261016": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14586015597880934400": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14586015601277005800": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14586015599432738927": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015601014580009": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015601054498125": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015601959429423": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015601149402816": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015598934784540": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015600529234950": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "14586015600863280631": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "17517002743332068358": {
+                "mClipName": "Idle_Off1",
+                "__type": "TransitionClipBlendData"
+            },
+            "6664949693450537817": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13458905408109792089": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352410847726425": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17517002740884556633": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14037964954929711961": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4526251886385810265": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364252429601625": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14586015598081723225": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995918839139161": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12809079527694650201": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253780617327": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6664949694801553519": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13458905409460807791": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412198742127": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17517002742235572335": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14037964956280727663": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4526251887736825967": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6664949696383394601": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13458905411042648873": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413780583209": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17517002743817413417": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14037964957862568745": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4526251889318667049": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255362458409": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995920190154863": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12809079529045665903": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "862381438329071727": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "862381436978056025": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4188995921771995945": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12809079530627506985": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "862381439910912809": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            }
+        },
+        "objectPath": "{d66e5b6b}",
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

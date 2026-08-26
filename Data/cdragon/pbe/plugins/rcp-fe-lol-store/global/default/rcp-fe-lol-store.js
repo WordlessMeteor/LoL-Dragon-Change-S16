@@ -1003,20 +1003,37 @@
                     })) : r.logger.error(`Received ${e} message with no hub id`) : r.logger.error(`Received ${e} message with invalid hub type '${n}'`)
                 };
             t.routeToHub = V;
-            const K = (e, t) => {
-                const n = r.ComponentFactory.create("ShoppefrontContainerComponent", {
-                    shoppefrontId: t.shoppefrontId,
-                    customizations: {
-                        onModalCloseAfterPurchaseSuccess: () => {
-                            const e = r.ComponentFactory.create("AccountTransfer");
-                            r.UIKit.getLayerManager().addLayer(e.domNode)
-                        },
-                        termsAndConditions: r.ComponentFactory.create("AccountTransferConditions").domNode
-                    }
-                });
+            const K = async (e, t) => {
+                const n = await (async () => {
+                        const e = await r.DataLayer.getEndpoint("/lol-client-config", "/v3/client-config/operational.transfers"),
+                            t = e?.maxRpToPurchaseTransfer ?? null,
+                            n = r.tra.metadata?.locale?.id?.toLowerCase().replace("_", "-"),
+                            a = new Intl.NumberFormat(n, {
+                                notation: "compact",
+                                minimumFractionDigits: 1,
+                                maximumFractionDigits: 1,
+                                maximumSignificantDigits: 3,
+                                roundingMode: "floor",
+                                numberingSystem: "latn"
+                            });
+                        return (e, n) => e?.isTransfer && null !== t ? (n?.RP ?? 0) <= t ? null : r.tra.formatString("account_transfer_too_much_rp", {
+                            maxRp: a.format(t)
+                        }) : null
+                    })(),
+                    a = r.ComponentFactory.create("ShoppefrontContainerComponent", {
+                        shoppefrontId: t.shoppefrontId,
+                        customizations: {
+                            onModalCloseAfterPurchaseSuccess: () => {
+                                const e = r.ComponentFactory.create("AccountTransfer");
+                                r.UIKit.getLayerManager().addLayer(e.domNode)
+                            },
+                            termsAndConditions: r.ComponentFactory.create("AccountTransferConditions").domNode,
+                            additionalCatalogItemValidator: n
+                        }
+                    });
                 r.fullPageModalManager.open({
                     data: {
-                        contents: n.domNode
+                        contents: a.domNode
                     }
                 })
             };
@@ -1811,8 +1828,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "hq176gcv",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,4,3],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transfer_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["transferFailed"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8eOz3+GC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,4,3],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transfer_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["transferFailed"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1830,8 +1847,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "tlJizIux",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "Ox1mVZ5A",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }],
