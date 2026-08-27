@@ -131,6 +131,37 @@
             "description": null
         },
         {
+            "id": 60086002,
+            "contentId": "4f1dab6d-ed8c-4918-a119-439293756327",
+            "relatedPrimeContentId": "1fe63e8e-1dc9-43fb-8f69-e9aa5a7eef95",
+            "relatedPrimeItemId": 86002,
+            "isBase": false,
+            "name": "Çöl Askeri Garen",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Jade_GarenLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 167
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60086005,
             "contentId": "087c644d-dc63-4089-b87b-8d61c01d9fca",
             "relatedPrimeContentId": "093bfaff-5446-46de-97f6-de4eec36e682",
@@ -675,7 +706,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Garen kılıcıyla bir ölüm dansı yaparak, çevresindekilere hasar verir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Garen ilave <scaleArmor>zırh</scaleArmor> ve <scaleMR>büyü direnci</scaleMR> niteliklerinden %20 İlave Değer kazanır.<br><br><spellActive>Aktif:</spellActive> Garen @BuffDuration@ saniyeliğine bir savunma kalkanı kazanarak alınan hasarı %@DamageReduction*100@ azaltır ve %30 Kitle Kontrolü Azaltması sağlar.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Garen ilave <scaleArmor>zırh</scaleArmor> ve <scaleMR>büyü direnci</scaleMR> niteliklerinden %@ResistanceScaling*100@ İlave Değer kazanır.<br><br><spellActive>Aktif:</spellActive> Garen @BuffDuration@ saniyeliğine bir savunma kalkanı kazanarak alınan hasarı %@DamageReduction*100@ azaltır ve %@TenacityBonus*100@ Kitle Kontrolü Azaltması sağlar.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -825,7 +856,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Garen kılıcını hızla çevirerek yakındaki rakiplere fiziksel hasar verir.",
-            "dynamicDescription": "Garen, kılıcını @Duration@ saniye boyunca hızla etrafında döndürerek yakındaki rakiplere her saniye <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Garen dönerken birimlerin içinden geçebilir ancak doğrudan birimlerin içinden geçerken %20 daha yavaş hareket eder.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Garen, kılıcını @Duration@ saniye boyunca hızla etrafında döndürerek yakındaki rakiplere her saniye <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. (Azami Hasar: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

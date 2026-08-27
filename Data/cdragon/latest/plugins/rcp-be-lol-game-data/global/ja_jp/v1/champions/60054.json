@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "自身の最大体力の10%までのダメージを吸収する岩のシールドを生成する。このシールドは10秒間攻撃を受けずにいると再生する。"
+        "description": "ダメージを吸収する岩のシールドを生成する。このシールドはしばらく攻撃を受けずにいると再生する。"
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "指定した対象に向かって岩の円盤を転がし、魔法ダメージと4秒間のスロウ効果を与える。効果時間中自身の移動速度は、対象のスロウ効果によって下がった移動速度分だけ増加する。",
+            "description": "指定した対象に向かって岩の円盤を転がし、魔法ダメージとスロウ効果を与える。効果時間中自身の移動速度は、対象のスロウ効果によって下がった移動速度分だけ増加する。",
             "dynamicDescription": "対象に<magicDamage>@QDamageCalc@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間、対象の<speed>移動速度を@SpeedSteal@%</speed>奪う。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -630,36 +630,36 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    70.0,
-                    120.0,
-                    170.0,
-                    220.0,
-                    270.0,
-                    320.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "通常攻撃の際に対象だけでなく、その周囲にいるユニットにもダメージを与えるようになる。「ブルータルストライク」を発動すると、短時間、物理防御と攻撃力が大幅に増加する。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>通常攻撃が、対象の周囲のユニットに<physicalDamage>攻撃力</physicalDamage>の@Jade_MalphiteObduracyPercentDamage*100@%にあたるダメージを与える。<br><br><spellActive>発動効果: </spellActive>6秒間、<scaleArmor>物理防御</scaleArmor>と<physicalDamage>攻撃力</physicalDamage>が@ArmorBonus*100@%増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>通常攻撃が、対象の周囲のユニットに<physicalDamage>攻撃力</physicalDamage>の@Jade_MalphiteObduracyPercentDamage*100@%にあたるダメージを与える。<br><br><spellActive>発動効果: </spellActive>@BuffDuration@秒間、<scaleArmor>物理防御</scaleArmor>と<physicalDamage>攻撃力</physicalDamage>が@ArmorBonus*100@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

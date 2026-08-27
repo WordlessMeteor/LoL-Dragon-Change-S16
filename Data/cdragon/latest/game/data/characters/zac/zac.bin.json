@@ -1015,17 +1015,17 @@
         "mRootSpell": "Characters/Zac/Spells/ZacQAbility/ZacQ",
         "mChildSpells": [
             "Characters/Zac/Spells/ZacQAbility/ZacQ",
-            "{6771dc74}",
-            "{45a34608}"
+            "Characters/Zac/Spells/ZacQAbility/ZacQMissile",
+            "Characters/Zac/Spells/ZacQAbility/ZacQAttack"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "ZacQAbility",
         "AbilityTraits": 2560,
         "__type": "AbilityObject"
     },
-    "{45a34608}": {
+    "Characters/Zac/Spells/ZacQAbility/ZacQAttack": {
         "ObjectName": "ZacQAttack",
-        "objectPath": "{45a34608}",
+        "objectPath": "Characters/Zac/Spells/ZacQAbility/ZacQAttack",
         "mScriptName": "ZacQAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6831,
@@ -1651,9 +1651,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6771dc74}": {
+    "Characters/Zac/Spells/ZacQAbility/ZacQMissile": {
         "ObjectName": "ZacQMissile",
-        "objectPath": "{6771dc74}",
+        "objectPath": "Characters/Zac/Spells/ZacQAbility/ZacQMissile",
         "mScriptName": "ZacQMissile",
         "mSpell": {
             "flags": 4,
@@ -2314,8 +2314,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureOverrideName": "ASSETS/Characters/Zac/HUD/QuarterCircle.tex",
-                        "textureMaxGrowName": "ASSETS/Characters/Zac/HUD/Textures/QuarterCircle_Dark.tex",
+                        "textureOverrideName": "assets/characters/zac/hud/quartercircle.tex",
+                        "textureMaxGrowName": "assets/characters/zac/hud/textures/quartercircle_dark.tex",
                         "__type": "TargeterDefinitionRange"
                     },
                     {
@@ -2351,7 +2351,7 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2383,9 +2383,9 @@
         },
         "__type": "SpellObject"
     },
-    "{52fe2b21}": {
+    "Characters/Zac/Spells/ZacEAbility/ZacEMove": {
         "ObjectName": "ZacEMove",
-        "objectPath": "{52fe2b21}",
+        "objectPath": "Characters/Zac/Spells/ZacEAbility/ZacEMove",
         "mScriptName": "ZacEMove",
         "__type": "SpellObject"
     },
@@ -3202,7 +3202,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -3273,7 +3273,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -3313,7 +3313,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -3353,7 +3353,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             15,
             35,
@@ -3381,7 +3381,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             20,
             50,
@@ -3409,7 +3409,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             7,
             20,
@@ -3452,7 +3452,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             7,
             15,
@@ -3480,7 +3480,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             400,
             1000,
@@ -3508,7 +3508,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             15,
             40,
@@ -3537,7 +3537,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             15,
             35,
@@ -3648,23 +3648,6 @@
                     0,
                     2,
                     1
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
-                "MapId": 11,
-                "Position": "utility",
-                "mDefaultPriority": [
-                    3,
-                    2,
-                    1,
-                    0
-                ],
-                "mEarlyLevelOverrides": [
-                    0,
-                    2,
-                    1,
-                    2
                 ],
                 "__type": "RecSpellRankUpInfo"
             },
@@ -3817,7 +3800,7 @@
         ],
         "extraSpellsList": [
             "Characters/Zac/Spells/ZacETimingMissile",
-            "{45a34608}",
+            "Characters/Zac/Spells/ZacQAbility/ZacQAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3844,7 +3827,7 @@
         "passiveLuaName": "ZacPassiveChunkDrop",
         "passiveToolTip": "game_character_passiveDescription_Zac",
         "passiveSpell": "ZacPassiveChunkDrop",
-        "passive1IconName": "ASSETS/Characters/Zac/HUD/Icons2D/ZacPassive.dds",
+        "passive1IconName": "assets/characters/zac/hud/icons2d/zacpassive.dds",
         "name": "game_character_displayname_Zac",
         "weaponMaterials": [
             "ZacBasicAttack"

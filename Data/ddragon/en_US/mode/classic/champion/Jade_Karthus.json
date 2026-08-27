@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Karthus": {
             "id": "Jade_Karthus",
@@ -248,7 +248,7 @@
                     "id": "Jade_KarthusLayWaste",
                     "name": "Lay Waste",
                     "description": "Karthus unleashes a delayed blast at a location, dealing damage to nearby enemies.",
-                    "tooltip": "Creates a delayed blast,  after 0.5 seconds, deals <magicDamage>{{ qdamage }} magic damage</magicDamage> to each nearby enemy, this deals double damage if it hits only a single unit.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Creates a delayed blast that deals <magicDamage>{{ qdamage }} magic damage</magicDamage> to each nearby enemy, this deals double damage if it hits only a single unit.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -280,11 +280,11 @@
                     "effect": [
                         null,
                         [
-                            45,
-                            65,
-                            85,
-                            105,
-                            125
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -352,7 +352,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "45/65/85/105/125",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -672,8 +672,8 @@
                 {
                     "id": "Jade_KarthusFallenOne",
                     "name": "Requiem",
-                    "description": "After channeling for 3 seconds, Karthus deals damage to all enemy champions.",
-                    "tooltip": "After channeling for 3 seconds, Karthus deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to all enemy champions.{{ spellmodifierdescriptionappend }}",
+                    "description": "After channeling, Karthus damages all enemy champions.",
+                    "tooltip": "After channeling for {{ channelduration }} seconds, Karthus deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to all enemy champions.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -789,7 +789,7 @@
             ],
             "passive": {
                 "name": "Death Defied",
-                "description": "Upon dying, Karthus enters a spirit form that allows him to continue casting spells.",
+                "description": "Upon dying, Karthus enters a spirit form allowing him to continue casting spells while dead for a short time.",
                 "image": {
                     "full": "Jade_Karthus_Passive.png",
                     "sprite": "passive0.png",

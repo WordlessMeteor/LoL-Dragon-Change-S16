@@ -647,7 +647,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Anivia_Rebirth.project_jade.png",
         "abilityVideoPath": "champion-abilities/60034/ability_60034_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60034/ability_60034_P1.jpg",
-        "description": "Quando muore, Anivia regredisce a un uovo. Se l'uovo sopravvive per sei secondi, rinasce in maniera gloriosa."
+        "description": "Quando muore, Anivia regredisce a un uovo. Se l'uovo sopravvive, rinasce in maniera gloriosa."
     },
     "spells": [
         {
@@ -659,7 +659,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Anivia unisce le sue ali ed evoca una sfera di ghiaccio che vola verso gli avversari, gelando e danneggiando tutto ciò che incontra. Quando la sfera esplode, infligge danni ad area moderati, stordendo le vittime coinvolte.",
-            "dynamicDescription": "Un enorme blocco di ghiaccio vola verso la posizione bersaglio, infliggendo <magicDamage>@TotalPassthroughDamage@ danni magici</magicDamage> e congelando i bersagli, <status>rallentando</status> la loro velocità di movimento del 20%. <br><br>Alla fine della sua gittata o se Anivia <recast>lancia nuovamente</recast> l'abilità, il blocco esplode, infliggendo <magicDamage>@TotalExplosionDamage@ danni magici</magicDamage> in una piccola area e <status>stordendo</status> le unità per @StunDuration@ secondo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Un enorme blocco di ghiaccio vola verso la posizione bersaglio, infliggendo <magicDamage>@TotalPassthroughDamage@ danni magici</magicDamage> e congelando i bersagli, <status>rallentando</status> la loro velocità di movimento di un @MovementSpeedMod*-100@% per @SlowDuration@ secondi.<br><br>Alla fine della sua gittata o se Anivia <recast>lancia nuovamente</recast> l'abilità, il blocco esplode, infliggendo <magicDamage>@TotalExplosionDamage@ danni magici</magicDamage> in una piccola area e <status>stordendo</status> le unità per @StunDuration@ secondo.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,

@@ -621,7 +621,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "Brands Zauber hüllen seine Ziele in Flammen, wodurch diese über 4 Sekunden 8 % ihres maximalen Lebens als magischen Schaden erleiden."
+        "description": "Brands Zauber hüllen seine Ziele in Flammen, wodurch diese einen Prozentsatz ihres maximalen Lebens als magischen Schaden erleiden."
     },
     "spells": [
         {
@@ -633,7 +633,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Brand schleudert einen Feuerball, der magischen Schaden verursacht. Ist das Ziel in Flammen gehüllt, wird es durch „Versengen“ betäubt.",
-            "dynamicDescription": "<mainText>Brand schleudert einen Feuerball, der <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht.<br><br><spellPassive>Glut:</spellPassive> Ist das Ziel <keywordMajor>in Flammen gehüllt</keywordMajor>, wird es durch <spellName>Versengen</spellName> 2 Sekunden lang <status>betäubt</status>.",
+            "dynamicDescription": "Brand schleudert einen Feuerball, der <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht.<br><br><spellPassive>Glut:</spellPassive> Ist das Ziel <keywordMajor>in Flammen gehüllt</keywordMajor>, wird es durch <spellName>Versengen</spellName> @StunDuration@ Sekunden lang <status>betäubt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -659,18 +659,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

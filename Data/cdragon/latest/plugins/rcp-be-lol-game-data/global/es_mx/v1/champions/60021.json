@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Tras 5 seg de no recibir ataques, Miss Fortune obtiene <speed>25 de Velocidad de Movimiento</speed> adicional. El efecto aumenta en 9 cada seg y se acumula hasta llegar a una bonificación máxima de 70."
+        "description": "Miss Fortune tiene velocidad de movimiento aumentada hasta que reciba un impacto en combate."
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Cada vez que Miss Fortune impacta a un objetivo, el daño que le inflige aumenta de forma pasiva.  Al lanzar esta habilidad, Miss Fortune obtiene velocidad de ataque adicional y sus ataques reducen la curación que recibe el objetivo.",
-            "dynamicDescription": "<font color='#FF9900'>Pasiva:</font> Miss Fortune inflige <magicDamage>@TotalDamageOnHIt@ de daño mágico</magicDamage> al objetivo con cada ataque. El daño aumenta hasta @MaxStacks@ veces si ataca al mismo enemigo reiteradamente.<br><magicDamage>Daño adicional máximo: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Activa:</font> Miss Fortune obtiene un <attackSpeed>@ASMod@%</attackSpeed> de <attackSpeed>Velocidad de Ataque</attackSpeed> adicional durante 6 seg. Además, sus ataques aplican un <keyword>50% de Heridas Graves</keyword> durante 3 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Pasiva:</font> Miss Fortune inflige <magicDamage>@TotalDamageOnHIt@ de daño mágico</magicDamage> al objetivo con cada ataque. El daño aumenta hasta @MaxStacks@ veces contra el mismo objetivo.<br><magicDamage>Daño adicional máximo: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Activa:</font> Miss Fortune aumenta su <attackSpeed>Velocidad de Ataque</attackSpeed> en un <attackSpeed>@ASMod@%</attackSpeed> adicional durante @ActiveDuration@ seg. Además, sus ataques aplican un <keyword>50% de Heridas Graves</keyword> durante 3 seg.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Miss Fortune hace llover balas en una ubicación, lo que inflige oleadas de daño a los enemigos y los ralentiza.",
-            "dynamicDescription": "Miss Fortune dispara cientos de balas al aire que caen en una ubicación tras 0.5 seg, lo que inflige <magicDamage>@TotalDamagePerSecond@ de daño mágico</magicDamage> a lo largo de 2 seg a los enemigos impactados y los <status>ralentiza</status> en @TotalSlowAmount@ durante 1 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune dispara cientos de balas al aire que caen como lluvia, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> durante @Duration@ seg y <status>ralentiza</status> a los enemigos un @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Miss Fortune dispara una ráfaga de balas que cubre un área en forma de cono frente a ella, lo que inflige una gran cantidad de daño a los enemigos.",
-            "dynamicDescription": "Miss Fortune dispara una ráfaga de balas que cubre un área en forma de cono frente a ella durante 2 seg, lo que inflige <physicalDamage>@PhysicalDamagePerWave@ de daño físico</physicalDamage> por bala (<physicalDamage>@TotalDamage@ de daño físico en total</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune dispara una ráfaga de balas que cubre un área en forma de cono frente a ella durante @ChannelDuration@ seg, lo que inflige <physicalDamage>@PhysicalDamagePerWave@ de daño físico</physicalDamage> por bala (<physicalDamage>@TotalDamage@ de daño total</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

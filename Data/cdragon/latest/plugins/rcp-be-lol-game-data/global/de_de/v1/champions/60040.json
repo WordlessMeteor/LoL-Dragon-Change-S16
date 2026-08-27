@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "Janna und ihre verbündeten Champions erhalten 3 % erhöhtes Lauftempo."
+        "description": "Janna und ihre verbündeten Champions erhalten erhöhtes Lauftempo."
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Indem Janna Druck und Temperatur an einem Ort ändert, kann sie einen kleinen Sturm erzeugen, der mit der Zeit an Größe zunimmt. Sie kann die Fähigkeit noch einmal aktivieren, um den Sturm freizusetzen. Nach dem Freisetzen bewegt sich der Sturm in die Richtung, in die er gewirkt wurde. Dabei schleudert er alle Gegner auf seinem Weg in die Luft und fügt ihnen Schaden zu.",
-            "dynamicDescription": "Beschwört einen Wirbelwind, der allen Gegnern auf seinem Weg <magicDamage>@MinimumDamage@ magischen Schaden</magicDamage> zufügt und sie in die Luft <status>schleudert</status>. Der Wirbelwind legt eine größere Distanz zurück, verursacht <magicDamage>@ChargeDamage@ zusätzlichen Schaden</magicDamage> und <status>schleudert</status> Gegner für jede Sekunde, die er aufgeladen wird (bis maximal 3 Sekunden), höher in die Luft.<br><br><recast>Reaktivieren</recast>, um den Wirbelwind vorzeitig freizusetzen.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Beschwört einen Wirbelwind, der allen Gegnern auf seinem Weg <magicDamage>@MinimumDamage@ magischen Schaden</magicDamage> zufügt und sie in die Luft <status>schleudert</status>. Der Wirbelwind legt eine größere Distanz zurück, verursacht <magicDamage>@ChargeDamage@ zusätzlichen Schaden</magicDamage> und <status>schleudert</status> Gegner für jede Sekunde, die er aufgeladen wird (bis maximal @MaxDuration@ Sekunden), höher in die Luft.<br><br><recast>Reaktivieren</recast>, um den Wirbelwind vorzeitig freizusetzen.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Janna umgibt sich mit einem magischen Sturm, der Gegner zurückwirft. Nach dem Abklingen des Sturms werden Verbündete in der Nähe durch lindernde Winde geheilt, solange die Fähigkeit aktiv ist.",
-            "dynamicDescription": "Beschwört die Macht des Sturms, um Gegner in der Umgebung <recast>zurückzustoßen</recast>, und stellt bei Verbündeten in der Nähe über 4 Sekunden hinweg <healing>@TotalHeal@ Leben</healing> wieder her.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Beschwört die Macht des Sturms, um Gegner in der Umgebung <recast>zurückzustoßen</recast>, und stellt bei Verbündeten in der Nähe über @MaxChannelDuration@ Sekunden hinweg <healing>@TotalHeal@ Leben</healing> wieder her. (Maximale Heilung: <healing>@TotalHeal@</healing>)@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

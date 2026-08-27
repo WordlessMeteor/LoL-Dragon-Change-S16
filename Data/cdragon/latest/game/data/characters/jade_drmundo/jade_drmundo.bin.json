@@ -3,27 +3,46 @@
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{beb59620}": {
-        "mRootSpell": "{01b253f8}",
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoPassiveAbility/Jade_DrMundoPassive",
         "mChildSpells": [
-            "{01b253f8}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoPassiveAbility/Jade_DrMundoPassive"
         ],
         "mName": "Jade_DrMundoPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{01b253f8}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoPassiveAbility/Jade_DrMundoPassive": {
         "ObjectName": "Jade_DrMundoPassive",
-        "objectPath": "{01b253f8}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoPassiveAbility/Jade_DrMundoPassive",
         "mScriptName": "Jade_DrMundoPassive",
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "MaxHealthRatio",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "{0ee04500}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mCoefficient": 0.003000000026077032,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MaxHealthRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -156,6 +175,19 @@
                         115.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mImgIconName": [
@@ -279,14 +311,14 @@
         "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
         "mChildSpells": [
             "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
-            "{3486c2c3}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ_Missile"
         ],
         "mName": "Jade_DrMundoQAbility",
         "__type": "AbilityObject"
     },
-    "{3486c2c3}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ_Missile": {
         "ObjectName": "Jade_DrMundoQ_Missile",
-        "objectPath": "{3486c2c3}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ_Missile",
         "mScriptName": "Jade_DrMundoQ_Missile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -803,6 +835,19 @@
                         50.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -929,7 +974,8 @@
                         "keyName": "Spell_DrMundoQ_Jade_Name",
                         "keySummary": "Spell_DrMundoQ_Jade_Summary",
                         "keyTooltip": "Spell_DrMundoQ_Jade_Tooltip",
-                        "keyCost": "Spell_DrMundo_Jade_Cost"
+                        "keyCost": "Spell_DrMundo_Jade_Cost",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_DrMundoQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -950,6 +996,11 @@
                                 {
                                     "type": "HealthCost",
                                     "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaxDamage",
+                                    "nameOverride": "Spell_ListType_MaximumDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1094,7 +1145,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1172,7 +1223,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1501,7 +1552,7 @@
                     "__type": "GameCalculation"
                 }
             },
-            "ImgIconPath": "ASSETS/Items/Icons2D/Jade/DrMundo_Shose_Shop.tex",
+            "ImgIconPath": "assets/items/icons2d/jade/drmundo_shose_shop.tex",
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1973,7 +2024,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2161,11 +2212,11 @@
     "Characters/Jade_DrMundo/CharacterRecords/Root": {
         "mCharacterName": "Jade_DrMundo",
         "baseHPModifiable": {
-            "baseValue": 522.0,
+            "baseValue": 560.0,
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 89.0,
+            "baseValue": 90.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
@@ -2222,7 +2273,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.625,
+            "baseValue": 0.6579999923706055,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -2318,7 +2369,7 @@
         "passiveLuaName": "Jade_DrMundoP",
         "passiveToolTip": "game_character_passiveDescription_Jade_DrMundo",
         "passiveSpell": "Jade_DrMundoP",
-        "passive1IconName": "ASSETS/Characters/Jade_DrMundo/HUD/Icons2D/Jade_DrMundo_P.dds",
+        "passive1IconName": "assets/characters/jade_drmundo/hud/icons2d/jade_drmundo_p.dds",
         "name": "game_character_displayname_Jade_DrMundo",
         "weaponMaterials": [
             "Jade_DrMundoBasicAttack"
@@ -2433,7 +2484,7 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{01b253f8}",
+        "mCharacterPassiveSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoPassiveAbility/Jade_DrMundoPassive",
         "{c5c48b41}": 1,
         "Script": "{a756de61}",
         "__type": "CharacterRecord"

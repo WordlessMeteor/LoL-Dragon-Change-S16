@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Gangplank": {
             "id": "Jade_Gangplank",
@@ -28,6 +28,12 @@
                     "id": "60041001",
                     "num": 1,
                     "name": "幽灵船长 普朗克",
+                    "chromas": false
+                },
+                {
+                    "id": "60041002",
+                    "num": 2,
+                    "name": "老兵 普朗克",
                     "chromas": false
                 },
                 {
@@ -66,14 +72,14 @@
                     "id": "60041011",
                     "num": 11,
                     "name": "恐惧新星 普朗克“贪婪黑洞号”船长",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 8
                 },
                 {
                     "id": "60041012",
                     "num": 12,
                     "name": "恐惧新星 普朗克“皇家私掠号”船长",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 8
                 },
                 {
@@ -107,14 +113,14 @@
                     "id": "60041017",
                     "num": 17,
                     "name": "泳池派对 普朗克 菠萝毁灭者",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 14
                 },
                 {
                     "id": "60041018",
                     "num": 18,
                     "name": "泳池派对 普朗克 海滩主宰者",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 14
                 },
                 {
@@ -477,7 +483,7 @@
                     "id": "Jade_GangplankE",
                     "name": "鼓舞士气",
                     "description": "普朗克朝空中鸣枪，为附近友方英雄提升攻击力和移动速度。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>普朗克获得<physicalDamage>{{ passivead }}攻击力</physicalDamage>和<speed>{{ passivems*100 }}%移动速度</speed>。<br /><br /><spellActive>主动：</spellActive>普朗克朝空中鸣枪，暂时失去被动加成，但获得持续{{ duration }}秒的<physicalDamage>{{ activead }}攻击力</physicalDamage>和<speed>{{ activems*100 }}%移动速度</speed>。附近友方英雄获得持续{{ duration }}秒的(一半该加成)<physicalDamage>{{ allyactivead }}攻击力</physicalDamage>和<speed>{{ allyactivems*100 }}%移动速度</speed>，。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>普朗克获得<physicalDamage>{{ passivead }}攻击力</physicalDamage>和<speed>{{ passivems*100 }}%移动速度</speed>。<br /><br /><spellActive>主动：</spellActive>普朗克朝空中鸣枪，暂时失去被动加成，但获得持续{{ duration }}秒的<physicalDamage>{{ activead }}攻击力</physicalDamage>和<speed>{{ activems*100 }}%移动速度</speed>。附近友方英雄获得持续{{ duration }}秒的(一半该加成)<physicalDamage>{{ allyactivead }}攻击力</physicalDamage>和<speed>{{ allyactivems*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "主动攻击力",
@@ -623,7 +629,7 @@
                 {
                     "id": "Jade_GangplankR",
                     "name": "加农炮幕",
-                    "description": "普朗克命令战舰对目标区域进行持续7秒的炮击，对敌人造成减速，并在区域内随机位置造成伤害。",
+                    "description": "普朗克命令战舰对地图上的任意区域进行炮击，从而对敌人们造成减速和持续伤害。",
                     "tooltip": "命令普朗克的战舰对目标区域进行持续{{ duration }}秒的炮击，期间使区域内的敌人<status>减速</status>{{ slow*100 }}%。炮弹不断落入该区域，每发炮弹造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -672,9 +678,9 @@
                             0
                         ],
                         [
-                            1.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -682,24 +688,24 @@
                             0
                         ],
                         [
-                            300,
-                            300,
-                            300
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            75,
-                            75,
-                            75
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -708,12 +714,12 @@
                         "0",
                         "0",
                         "0",
-                        "1.5/0.5/0.5",
                         "0",
-                        "300",
-                        "75",
-                        "1",
-                        "40"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

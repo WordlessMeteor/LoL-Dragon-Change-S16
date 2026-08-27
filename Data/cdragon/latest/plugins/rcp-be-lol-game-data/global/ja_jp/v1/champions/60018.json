@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "女海賊トリスターナ",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "砲撃手の登場だ！トリスターナは大洋へ飛び出し、バンドルの境界を越えて新たな冒険を求める船旅に出た。帽子は倒した海賊から拝借した(盗んだ)もので、眼帯は見せかけだが、彼女の断固とした強い意志と自慢の大砲は、ビルジウォーターのどの船長にも負けないほど多くの船を沈めている。"
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "高速で連射を行い、攻撃速度が数秒間増加する。",
-            "dynamicDescription": "<mainText>7秒間、<attackSpeed>攻撃速度が@AttackSpeedMod*100@%</attackSpeed>増加する。",
+            "dynamicDescription": "@BuffDuration@秒間、<attackSpeed>攻撃速度が@AttackSpeedMod*100@%</attackSpeed>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "地面を砲撃した反動で指定地点へジャンプし、着地と同時に周囲のすべてのユニットにダメージを与え、3秒間スロウ効果を付与する。",
-            "dynamicDescription": "<mainText>地面を砲撃した反動で指定地点までジャンプし、着地時に<magicDamage>@LandingDamage@の魔法ダメージ</magicDamage>を与え、2.5秒間、60%の<status>スロウ効果</status>を付与する。<br>チャンピオンからキルまたはアシストを獲得すると、このスキルのクールダウンが解消される。",
+            "description": "地面を砲撃した反動で指定地点へジャンプし、着地地点の敵にダメージを与え、スロウ効果を付与する。",
+            "dynamicDescription": "地面を砲撃した反動で指定地点までジャンプし、着地時に<magicDamage>@LandingDamage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間、@Slow@%の<status>スロウ効果</status>を付与する。チャンピオンのキルまたはアシストを獲得すると、「ロケットジャンプ」のクールダウンが解消される。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ユニットを倒すと砲弾が炸裂して金属片が飛び散り、周辺の敵にダメージを与える。発動すると対象に継続ダメージを与え、対象が受ける体力回復効果を低下させる。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>通常攻撃で敵を倒すと爆発が起き、周囲の敵に<magicDamage>@PassiveDamage@の魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果: </spellActive>炸裂弾を破裂させ、対象の敵に<keyword>50%の重傷効果</keyword>を付与し、5秒かけて<magicDamage>@ActiveDamageTTOnly@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>通常攻撃で敵を倒すと爆発が起き、周囲の敵に<magicDamage>@PassiveDamage@の魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果: </spellActive>炸裂弾を破裂させ、対象の敵に<keyword>50%の負傷</keyword>を付与し、@GrievousDuration@秒かけて<magicDamage>@ActiveDamageTTOnly@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

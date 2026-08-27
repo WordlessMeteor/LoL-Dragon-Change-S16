@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Heimerdinger Esperimento Fallito",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Un eccentrico scienziato che vive nella Nuova Repubblica di Bandle, Heimerdinger non ha ancora detto a nessuno che potrebbe aver realizzato ''una o due grandi bombe pre-belliche'' per ''uno o due governi canaglia''. Preferirebbe stare in una città che non prova a farlo fuori."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger piazza una torre mitragliatrice. Le torrette ottengono abilità man mano che questa abilità viene potenziata. (Le torrette infliggono metà dei danni alle torri).",
-            "dynamicDescription": "Heimerdinger costruisce una Torre mitragliatrice che infligge <magicDamage>@BonusDamage@ danni magici</magicDamage> per attacco. Questa abilità ha @MaxAmmo@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni livello di questa abilità fornisce un potenziamento aggiuntivo:<br><attention>Livello 2:</attention> gli attacchi della torretta riducono l'armatura e la resistenza magica del bersaglio di 1 (massimo 50)<br><attention>Livello 3:</attention> numero massimo di torrette aumentato a 2<br><attention>Livello 4:</attention> le torrette ottengono <scaleHealth>125 salute</scaleHealth> aggiuntiva<br><attention>Livello 5:</attention> gli attacchi della torretta infliggono danni ad area@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger costruisce una Torre mitragliatrice che infligge <magicDamage>@BonusDamage@ danni magici</magicDamage> per attacco. Le torrette ottengono <attackSpeed>@TurretBonusAttackSpeed*100@% velocità d'attacco</attackSpeed> per i primi @AttackSpeedDuration@ secondi dopo essere state piazzate. Questa abilità ha @MaxAmmo@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni livello di questa abilità fornisce un potenziamento aggiuntivo:<br><attention>Livello 2:</attention> gli attacchi delle torrette riducono l'armatura e la resistenza magica del bersaglio di @Level2ResistShred@ (massimo @MaxShredCapTooltip@)<br><attention>Livello 3:</attention> numero massimo di torrette aumentato a 2<br><attention>Livello 4:</attention> le torrette ottengono <scaleHealth>@Level4HPTooltip@ salute</scaleHealth> aggiuntiva<br><attention>Livello 5:</attention> gli attacchi della torretta infliggono un @AoEDamageMod*100@% di danni ad area@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia razzi a lunga gittata che colpiscono i nemici più vicini a lui.",
-            "dynamicDescription": "Heimerdinger lancia 3 Micro-razzi a ricerca nemica (massimo 1 per persona), colpendo i bersagli più vicini a lui. Ogni razzo infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lancia @MaxTargets@ Micro-razzi a ricerca nemica (massimo 1 per persona), colpendo i bersagli più vicini a lui. Ogni razzo infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Heimerdinger lancia una granata sulla posizione bersaglio, infliggendo danni alle unità nemiche, stordendo chi viene colpito direttamente e accecando le unità circostanti.",
-            "dynamicDescription": "Heimerdinger lancia una granata, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> alle unità nemiche e <status>accecandole</status> per @BlindDuration@ secondo/i.  I nemici colpiti direttamente subiscono <status>stordimento</status> per 1,5 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lancia una granata, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> alle unità nemiche e <status>accecandole</status> per @BlindDuration@ secondo/i. I nemici colpiti direttamente subiscono <status>stordimento</status> per @StunDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Passiva/Attiva: aumenta passivamente la riduzione ricarica.  Attiva per fornire guarigione a tutte le Torrette avanzate attive e far sparare loro colpi gelati, che riducono la velocità di movimento, per un breve periodo.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>@CooldownBonus*-100@% riduzione ricarica.<br><br><spellActive>Attiva: </spellActive>potenzia tutte le abilità e torrette per la durata.<br><br><spellName>Torrette avanzate:</spellName> tutte le torrette vengono <healing>curate</healing> del 100% della loro salute massima e ogni attacco applica un <status>@MovementSpeedMod*-100@% di rallentamento</status>.<br><spellName>Micro-razzi hextech:</spellName> spara 5 razzi invece di 3.<br><spellName>Granata stordente CH-1:</spellName> viaggia il 33% più velocemente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>@CooldownBonus*-100@% riduzione ricarica.<br><br><spellActive>Attiva: </spellActive>potenzia tutte le abilità e torrette per la durata.<br><br><spellName>Torrette avanzate:</spellName> tutte le torrette si <healing>rigenerano completamente</healing>. Ogni attacco applica un <status>@MovementSpeedMod*-100@% di rallentamento</status>.<br><spellName>Micro-razzi hextech:</spellName> spara @WMaxMissiles@ razzi.<br><spellName>Granata stordente CH-1:</spellName> viaggia il 33% più velocemente.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

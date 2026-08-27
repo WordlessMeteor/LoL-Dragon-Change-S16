@@ -646,7 +646,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "伤害类技能会在敌人身上施加持续3.5秒的日光效果。在此期间，当友方英雄对被标记的敌人造成伤害时，会消耗日光减益来使目标受到额外的魔法伤害。"
+        "description": "伤害类技能将对敌人施加日光效果。当友方英雄对这些目标造成伤害时，会消耗该日光减益以造成额外的伤害。"
     },
     "spells": [
         {
@@ -658,7 +658,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "蕾欧娜用盾进行下次普通攻击，造成额外魔法伤害并晕眩目标。",
-            "dynamicDescription": "下一次普通攻击会额外造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并使敌人<status>晕眩</status>1.25秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "下一次普攻对一个敌人造成额外的<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>和@StunDuration@秒<status>晕眩</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -684,21 +684,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -808,7 +808,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "蕾欧娜举起盾牌，获得护甲和魔法抗性。第一段持续时间结束时，如果附近有敌人，则蕾欧娜对其造成魔法伤害，并延长此效果的持续时间。",
-            "dynamicDescription": "获得@BonusARMR@额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>，持续3秒。此效果结束时，周围被击中的敌人会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并且蕾欧娜会使自己的额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>延长3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蕾欧娜获得<scaleArmor>@BonusARMR@护甲</scaleArmor>与<scaleMR>魔抗</scaleMR>，持续@BuffDuration@秒。当此效果结束时，周围被击中的敌人会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并且蕾欧娜会使她的额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>延长@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -834,12 +834,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -848,7 +848,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -857,16 +857,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

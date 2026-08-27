@@ -1105,7 +1105,7 @@
             "cost": "Costa <font color='#FF3300'>@BaseHealthCost@ salute</font>",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tryndamere rotea la sua spada verso l'unità bersaglio, infliggendo danni sulla sua traiettoria.",
-            "dynamicDescription": "Tryndamere si lancia tra i nemici, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici sul suo percorso.<br><br>Il tempo di ricarica di <spellName>Attacco del turbine</spellName> si riduce di 2 secondi ogni volta che Tryndamere infligge un colpo critico.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere si lancia tra i nemici, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici sul suo percorso.<br><br>Il tempo di ricarica di <spellName>Attacco del turbine</spellName> si riduce di @CooldownRefund@ secondo/i ogni volta che Tryndamere infligge un colpo critico.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1273,12 +1273,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                110.0,
+                130.0,
+                115.0,
                 100.0,
-                90.0,
-                80.0,
+                85.0,
                 70.0,
-                60.0
+                55.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

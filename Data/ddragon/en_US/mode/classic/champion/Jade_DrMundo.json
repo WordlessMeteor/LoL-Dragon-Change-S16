@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_DrMundo": {
             "id": "Jade_DrMundo",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60036001",
+                    "num": 1,
+                    "name": "Toxic Dr. Mundo",
+                    "chromas": false
+                },
+                {
                     "id": "60036002",
                     "num": 2,
                     "name": "Mr. Mundoverse",
@@ -34,13 +40,13 @@
                     "id": "60036003",
                     "num": 3,
                     "name": "Corporate Mundo",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60036008",
                     "num": 8,
                     "name": "Pool Party Mundo",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60036016",
@@ -169,8 +175,8 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 522,
-                "hpperlevel": 89,
+                "hp": 560,
+                "hpperlevel": 90,
                 "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 345,
@@ -188,24 +194,26 @@
                 "attackdamage": 59.23,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.8,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             },
             "spells": [
                 {
                     "id": "Jade_DrMundoQ",
                     "name": "Infected Cleaver",
                     "description": "Dr. Mundo hurls his cleaver, dealing damage based on his victims maximum health.",
-                    "tooltip": "Dr. Mundo hurls his cleaver, dealing <magicDamage>magic damage</magicDamage> equal to {{ damagemod*100 }}% of the target's current health ({{ mindamage }} damage minimum) and <status>Slowing</status> them by 40% for 2 seconds.<br /><br />Half of the health cost is refunded if the cleaver hits a target.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Dr. Mundo hurls his cleaver, dealing <magicDamage>magic damage</magicDamage> equal to {{ damagemod*100 }}% of the target's current health ({{ mindamage }} damage minimum) and <status>Slowing</status> them by {{ movemod*-100 }}% for {{ slowduration }} seconds.<br /><br /><healing>{{ healthreturn }} Health</healing> is refunded if the cleaver hits a target.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Minimum Damage",
                             "Damage Percentage",
-                            "Health Cost"
+                            "Health Cost",
+                            "Maximum Damage"
                         ],
                         "effect": [
                             "{{ mindamage }} -> {{ mindamageNL }}",
                             "{{ damagemod*100.000000 }}% -> {{ damagemodnl*100.000000 }}%",
-                            "{{ healthcost }} -> {{ healthcostNL }}"
+                            "{{ healthcost }} -> {{ healthcostNL }}",
+                            "{{ maxdamage }} -> {{ maxdamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -480,8 +488,8 @@
                 {
                     "id": "Jade_DrMundoE",
                     "name": "Masochism",
-                    "description": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 second. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing.",
-                    "tooltip": "Dr. Mundo gains <physicalDamage>{{ baseincrease }} Attack Damage</physicalDamage> for 5 seconds. Dr. Mundo gains an additional <physicalDamage>+{{ damagemod }} Attack Damage</physicalDamage> for each percentage of Health he is missing.{{ spellmodifierdescriptionappend }}",
+                    "description": "Dr. Mundo's gains Attack Damage for a few seconds based on his missing health.",
+                    "tooltip": "Dr. Mundo gains <physicalDamage>{{ baseincrease }} Attack Damage</physicalDamage> for {{ duration }} seconds. Dr. Mundo gains an additional <physicalDamage>+{{ damagemod }} Attack Damage</physicalDamage> for each percentage of Health he is missing.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Attack Damage",
@@ -624,7 +632,7 @@
                     "id": "Jade_DrMundoR",
                     "name": "Sadism",
                     "description": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration.",
-                    "tooltip": "Dr. Mundo regenerates <healing>{{ maximumhealthregen }} Health</healing> over 12 seconds. Additionally, he gains <speed>{{ speedmod*100 }}% Movement Speed</speed>.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Dr. Mundo regenerates <healing>{{ maximumhealthregen }} Health</healing> and gains <speed>{{ speedmod*100 }}% Movement Speed</speed> over {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Heal",
@@ -738,7 +746,7 @@
             ],
             "passive": {
                 "name": "Adrenaline Rush",
-                "description": "Dr. Mundo regenerates 0.3% of his maximum Health each second.",
+                "description": "Dr. Mundo regenerates a portion of his maximum Health each second.",
                 "image": {
                     "full": "Jade_DrMundo_P.png",
                     "sprite": "passive0.png",

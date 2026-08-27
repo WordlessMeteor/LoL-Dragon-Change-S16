@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Heimerdinger": {
             "id": "Jade_Heimerdinger",
@@ -22,6 +22,12 @@
                     "id": "60074000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60074002",
+                    "num": 2,
+                    "name": "Blast Zone Heimerdinger",
                     "chromas": false
                 },
                 {
@@ -115,14 +121,14 @@
                     "id": "60074026",
                     "num": 26,
                     "name": "Heimerstinger (Sapphire)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 24
                 },
                 {
                     "id": "60074027",
                     "num": 27,
                     "name": "Heimerstinger (Tanzanite)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 24
                 },
                 {
@@ -216,7 +222,7 @@
                     "id": "Jade_HeimerdingerQ",
                     "name": "H-28G Evolution Turret",
                     "description": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers).",
-                    "tooltip": "Heimerdinger constructs a Machine Gun Turret that deals <magicDamage>{{ bonusdamage }} magic damage</magicDamage> per attack. This ability has {{ maxammo }} charges ({{ ammorechargetime }} second refresh).<br /><br />Each rank of this skill grants a further enhancement:<br /><attention>Rank 2:</attention> Turret attacks reduce the target's Armor and Magic Resist by 1 (max 50)<br /><attention>Rank 3:</attention> Maximum turrets increased to 2<br /><attention>Rank 4:</attention> Turrets gain an additional <scaleHealth>125 Health</scaleHealth><br /><attention>Rank 5:</attention>  Turret attacks deal area damage{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Heimerdinger constructs a Machine Gun Turret that deals <magicDamage>{{ bonusdamage }} magic damage</magicDamage> per attack. Turrets gain <attackSpeed>{{ turretbonusattackspeed*100 }}% attack speed</attackSpeed> for the first {{ attackspeedduration }} seconds after being placed. This ability has {{ maxammo }} charges ({{ ammorechargetime }} second refresh).<br /><br />Each rank of this skill grants a further enhancement:<br /><attention>Rank 2:</attention> Turret attacks reduce the target's Armor and Magic Resist by {{ level2resistshred }} (max {{ maxshredcaptooltip }})<br /><attention>Rank 3:</attention> Maximum turrets increased to 2<br /><attention>Rank 4:</attention> Turrets gain an additional <scaleHealth>{{ level4hptooltip }} Health</scaleHealth><br /><attention>Rank 5:</attention>  Turret attacks deal {{ aoedamagemod*100 }}% splash damage{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -357,7 +363,7 @@
                     "id": "Jade_HeimerdingerW",
                     "name": "Hextech Micro-Rockets",
                     "description": "Heimerdinger fires long-range rockets that hit the enemies closest to Heimerdinger.",
-                    "tooltip": "Heimerdinger fires 3 enemy seeking Micro-Rocket(s) (max 1 per person), hitting targets nearest to him. Each rocket deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Heimerdinger fires {{ maxtargets }} enemy seeking Micro-Rocket(s) (max 1 per person), hitting targets nearest to him. Each rocket deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -476,13 +482,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1100,
-                        1100,
-                        1100,
-                        1100,
-                        1100
+                        950,
+                        950,
+                        950,
+                        950,
+                        950
                     ],
-                    "rangeBurn": "1100",
+                    "rangeBurn": "950",
                     "image": {
                         "full": "Jade_HeimerdingerW.png",
                         "sprite": "spell2.png",
@@ -498,7 +504,7 @@
                     "id": "Jade_HeimerdingerE",
                     "name": "CH-1 Concussion Grenade",
                     "description": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units.",
-                    "tooltip": "Heimerdinger tosses a grenade, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemy units and <status>Blinding</status> them for {{ blindduration }} seconds.  Enemies who are directly hit are <status>Stunned</status> for 1.5 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Heimerdinger tosses a grenade, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemy units and <status>Blinding</status> them for {{ blindduration }} seconds.  Enemies who are directly hit are <status>Stunned</status> for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -643,7 +649,7 @@
                     "id": "Jade_HeimerdingerR",
                     "name": "UPGRADE!!!",
                     "description": "Passive / Active: Passively increases Cooldown Reduction.  Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>{{ cooldownbonus*-100 }}% Cooldown Reduction.<br /><br /><spellActive>Active: </spellActive>Empower all abilities and turrets for the duration.<br /><br /><spellName>Evolution Turrets:</spellName> All turrets are <healing>healed</healing> for 100% of their maximum health and each attack applies a <status>{{ movementspeedmod*-100 }}% Slow</status>.<br /><spellName>Hextech Micro-Rockets:</spellName> Fire 5 rockets instead of 3.<br /><spellName>CH-1 Concussion Grenade:</spellName> Travels 33% faster.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>{{ cooldownbonus*-100 }}% Cooldown Reduction.<br /><br /><spellActive>Active: </spellActive>Empower all abilities and turrets for the duration.<br /><br /><spellName>Evolution Turrets:</spellName> All turrets are fully <healing>healed</healing>. Each attack applies a <status>{{ movementspeedmod*-100 }}% Slow</status>.<br /><spellName>Hextech Micro-Rockets:</spellName> Fire {{ wmaxmissiles }} rockets.<br /><spellName>CH-1 Concussion Grenade:</spellName> Travels 33% faster.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -673,68 +679,68 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            140,
-                            180
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            80,
-                            80
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.12,
-                            0.12,
-                            0.12
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            500,
-                            690,
-                            865
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.45,
-                            0.45,
-                            0.45
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            100,
-                            120
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            135,
-                            180,
-                            225
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            28,
-                            39,
-                            49
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "100/140/180",
-                        "80",
-                        "1.5",
-                        "0.12",
-                        "500/690/865",
-                        "0.45",
-                        "80/100/120",
-                        "135/180/225",
-                        "28/39/49",
-                        "150/250/350"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

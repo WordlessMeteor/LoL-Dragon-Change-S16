@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ashe": {
             "id": "Jade_Ashe",
@@ -199,7 +199,7 @@
                             "Slow"
                         ],
                         "effect": [
-                            "{{ slowpercent*-100.000000 }} -> {{ slowpercentnl*-100.000000 }}"
+                            "{{ slowpercent*-100.000000 }}% -> {{ slowpercentnl*-100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -244,46 +244,46 @@
                             6
                         ],
                         [
-                            20,
-                            30,
-                            40,
-                            50,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.22,
-                            0.235,
-                            0.25,
-                            0.265,
-                            0.28
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.1,
-                            1.175,
-                            1.25,
-                            1.325,
-                            1.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -298,12 +298,12 @@
                         "4",
                         "4",
                         "6",
-                        "20/30/40/50/60",
-                        "0.22/0.235/0.25/0.265/0.28",
-                        "1.1/1.175/1.25/1.325/1.4",
-                        "1",
-                        "1",
-                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -451,13 +451,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1200,
-                        1200,
-                        1200,
-                        1200,
-                        1200
+                        1250,
+                        1250,
+                        1250,
+                        1250,
+                        1250
                     ],
-                    "rangeBurn": "1200",
+                    "rangeBurn": "1250",
                     "image": {
                         "full": "Jade_AsheVolley.png",
                         "sprite": "spell1.png",
@@ -473,15 +473,15 @@
                     "id": "Jade_AsheSpiritOfTheHawk",
                     "name": "Hawkshot",
                     "description": "Each time Ashe kills a unit, she gains some extra gold. Ashe can activate to send her Hawk Spirit on a scouting mission.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Ashe gains <gold>{{ additionalgold }} extra gold</gold> whenever she kills an enemy.<br /><br /><spellActive>Active:</spellActive> Ashe sends forth a hawk to grant vision in an area for 5 seconds. It also reveals the area as it flies through.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Ashe gains <gold>{{ additionalgold }} extra gold</gold> whenever she kills an enemy.<br /><br /><spellActive>Active:</spellActive> Ashe sends forth a hawk to grant vision in an area for {{ revealduration }} seconds. It also reveals the area as it flies through.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Range",
-                            "Bonus Gold"
+                            "Bonus Gold",
+                            "Range"
                         ],
                         "effect": [
-                            "{{ castrange }} -> {{ castrangeNL }}",
-                            "{{ additionalgold }} -> {{ additionalgoldNL }}"
+                            "{{ additionalgold }} -> {{ additionalgoldNL }}",
+                            "{{ castrange }} -> {{ castrangeNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -505,32 +505,32 @@
                     "effect": [
                         null,
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            90,
-                            130,
-                            170,
-                            210
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25000,
-                            25000,
-                            25000,
-                            25000,
-                            25000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -577,10 +577,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "3",
-                        "50/90/130/170/210",
-                        "25000",
-                        "5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -614,7 +614,7 @@
                     "id": "Jade_AsheEnchantedCrystalArrow",
                     "name": "Enchanted Crystal Arrow",
                     "description": "Ashe fires a missile of ice in a straight line.  If the arrow collides with an enemy Champion, it deals damage and stuns the Champion for up to 3.5 seconds, based on how far the arrow has traveled.  In addition, surrounding enemy units take damage and are slowed.",
-                    "tooltip": "Ashe launches a crystal arrow of ice in a line that <status>Stuns</status> an enemy Champion dealing <magicDamage>{{ rmaindamage }} magic damage</magicDamage>. <status>Stun</status> duration increases with distance travelled, up to {{ maxstunduration }} seconds. Surrounding enemies are <status>Slowed</status> by 50% for 3 seconds and take <magicDamage>{{ rmaindamagesplashtooltip }} damage.</magicDamage></mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ashe launches a crystal arrow of ice in a line that <status>Stuns</status> an enemy Champion dealing <magicDamage>{{ rmaindamage }} magic damage</magicDamage>. <status>Stun</status> duration increases with distance travelled, up to {{ maxstunduration }} seconds. Surrounding enemies are <status>Slowed</status> by {{ movementspeedmod*-100 }}% for {{ slowduration }} seconds and take <magicDamage>{{ raoedamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",

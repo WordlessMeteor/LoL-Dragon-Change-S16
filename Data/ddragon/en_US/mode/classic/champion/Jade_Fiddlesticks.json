@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Fiddlesticks": {
             "id": "Jade_Fiddlesticks",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60009001",
+                    "num": 1,
+                    "name": "Spectral Fiddlesticks",
+                    "chromas": false
+                },
+                {
                     "id": "60009003",
                     "num": 3,
                     "name": "Bandito Fiddlesticks",
@@ -34,13 +40,13 @@
                     "id": "60009006",
                     "num": 6,
                     "name": "Surprise Party Fiddlesticks",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60009016",
                     "num": 16,
                     "name": "Surprise Party Fiddlesticks (Ruby)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 6
                 },
                 {
@@ -54,14 +60,14 @@
                     "id": "60009018",
                     "num": 18,
                     "name": "Surprise Party Fiddlesticks (Amethyst)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 6
                 },
                 {
                     "id": "60009019",
                     "num": 19,
                     "name": "Bandito Fiddlesticks (Ruby)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 3
                 },
                 {
@@ -199,14 +205,14 @@
                     "id": "60009048",
                     "num": 48,
                     "name": "Flora Fatalis Fiddlesticks (Sapphire)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 46
                 },
                 {
                     "id": "60009049",
                     "num": 49,
                     "name": "Flora Fatalis Fiddlesticks (Emerald)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 46
                 },
                 {
@@ -588,7 +594,7 @@
                     "id": "Jade_FiddlesticksE",
                     "name": "Dark Wind",
                     "description": "A wisp of wind strikes an enemy unit and then bounces to nearby enemy units, dealing damage and silencing the victims.",
-                    "tooltip": "A wisp of wind strikes an enemy target and then bounces up to 5 times to nearby enemy units. Deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Silences</status> for {{ silenceduration }} seconds for each strike.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "A wisp of wind strikes an enemy target and then bounces up to {{ maxbouncestooltip }} times to nearby enemy units. Deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Silences</status> for {{ silenceduration }} seconds for each strike.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",

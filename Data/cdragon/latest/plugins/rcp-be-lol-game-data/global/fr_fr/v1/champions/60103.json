@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "Renarde à neuf queues",
-    "shortBio": "- Vol essentiel (P) se cumule en infligeant des dégâts aux ennemis<br>- Assaut spirituel (R) ne se réinitialise pas",
+    "shortBio": "- Vol essentiel (P) se cumule en infligeant des dégâts aux ennemis<br>- Assaut spirituel (R) ne se réinitialise pas<br>- Charme (E) augmente les dégâts qu'Ahri inflige à sa cible",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ahri se jette en avant et tire des traits spirituels, infligeant des dégâts à 3 ennemis proches (les champions en priorité). Assaut spirituel peut être lancé jusqu'à 3 fois avant d'entrer en récupération.",
-            "dynamicDescription": "Ahri se rue dans une direction en tirant 3 projectiles essentiels sur les ennemis proches (les champions en priorité). Ces projectiles infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> chacun. <spellName>Assaut spirituel</spellName> peut être <recast>réactivé</recast> jusqu'à 2 fois supplémentaires dans les 10 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri se rue dans une direction en tirant 3 projectiles essentiels sur les ennemis proches (les champions en priorité). Ces projectiles infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> chacun. <spellName>Assaut spirituel</spellName> peut être <recast>réactivé</recast> jusqu'à 2 fois supplémentaires dans les @RecastDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

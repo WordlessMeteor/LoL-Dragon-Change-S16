@@ -10980,19 +10980,21 @@
                     }).playerNameFull;
                 s && i || r.logger.error("Error setting name for confirm report friend modal: missing gameName and tagLine");
                 const c = r.templateHelper.contentBlockDialog(r.tra.get("roster_confirm_report_dm_title"), r.tra.formatString("roster_confirm_report_dm_text", {
-                    name: l
-                }), "dialog-medium", "confirm-unfriend-block-report-action");
-                let d = !1;
-                if ("function" == typeof n) {
+                        name: l
+                    }), "dialog-medium", "confirm-unfriend-block-report-action"),
+                    d = "function" == typeof n;
+                let p = d;
+                if (d) {
                     const e = document.createElement("lol-uikit-flat-checkbox"),
                         t = document.createElement("input");
-                    t.slot = "input", t.type = "checkbox", t.addEventListener("change", (e => {
-                        d = !!e?.target?.checked
+                    t.slot = "input", t.type = "checkbox", t.checked = p, t.addEventListener("change", (e => {
+                        p = !!e?.target?.checked
                     }));
                     const n = document.createElement("label");
                     n.slot = "label", n.textContent = r.tra.get("roster_confirm_report_dm_also_block"), e.appendChild(t), e.appendChild(n), c.appendChild(e)
                 }
                 r.datadogRum.startOperation(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM), r.SocialTelemetry.recordDmReportInitiated();
+                let u = !1;
                 return r.modalManager.add({
                     type: "DialogConfirm",
                     data: {
@@ -11003,7 +11005,7 @@
                     },
                     show: !0
                 }).acceptPromise.then((() => {
-                    if ("function" == typeof t) return t(e);
+                    if (u = !0, "function" == typeof t) return t(e);
                     throw new Error("submitReport must be a function")
                 })).then((() => {
                     ! function(e) {
@@ -11033,7 +11035,7 @@
                         dismissable: !1
                     })
                 }(e, t), Promise.resolve()) : (r.datadogRum.stopOperationWithAbort(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM), Promise.resolve()))).then((() => {
-                    d && "function" == typeof n && n(e)
+                    u && p && "function" == typeof n && n(e)
                 })).catch((e => {
                     r.logger.error("Error blocking friend after report", e)
                 }))

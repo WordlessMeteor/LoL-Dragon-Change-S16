@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ezreal": {
             "id": "Jade_Ezreal",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60081001",
+                    "num": 1,
+                    "name": "Nottingham Ezreal",
+                    "chromas": false
+                },
+                {
                     "id": "60081003",
                     "num": 3,
                     "name": "Frosted Ezreal",
@@ -34,13 +40,13 @@
                     "id": "60081005",
                     "num": 5,
                     "name": "Pulsefire Ezreal",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60081043",
                     "num": 43,
                     "name": "HEARTSTEEL Ezreal",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60081044",
@@ -378,13 +384,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1150,
-                        1150,
-                        1150,
-                        1150,
-                        1150
+                        1050,
+                        1050,
+                        1050,
+                        1050,
+                        1050
                     ],
-                    "rangeBurn": "1150",
+                    "rangeBurn": "1050",
                     "image": {
                         "full": "Jade_EzrealQ.png",
                         "sprite": "spell1.png",
@@ -400,7 +406,7 @@
                     "id": "Jade_EzrealW",
                     "name": "Essence Flux",
                     "description": "Ezreal fires a fluctuating wave of energy, decreasing the Attack Speed and dealing magic damage to enemy champions, while healing and increasing the Attack Speed of allied champions.",
-                    "tooltip": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>{{ damage }} magic damage</magicDamage> and reducing their <attackSpeed>Attack Speed</attackSpeed> by {{ attackspeed }}% for 5 seconds. <br /><br />Allied champions hit by the wave restore <healing>{{ totalheal }} Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by {{ attackspeed }}% for 5 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>{{ damage }} magic damage</magicDamage> and reduces their <attackSpeed>Attack Speed</attackSpeed> by {{ attackspeed }}% for {{ duration }} seconds. <br /><br />Allied champions hit by the wave restore <healing>{{ totalheal }} Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by {{ attackspeed }}% for {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -683,8 +689,8 @@
                 {
                     "id": "Jade_EzrealR",
                     "name": "Trueshot Barrage",
-                    "description": "Ezreal channels for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).",
-                    "tooltip": "Ezreal channels for 1 second to fire a barrage of missiles dealing <magicDamage>{{ damage }} magic damage</magicDamage> to each unit it passes through. However, it deals {{ damagereductionperhit*100 }}% less damage for each unit it hits (minimum {{ minimumdamagepercent*100 }}%){{ spellmodifierdescriptionappend }}",
+                    "description": "Ezreal fires a powerful barrage of energy missiles which do massive damage to each unit it passes through.",
+                    "tooltip": "Ezreal fires a barrage of missiles dealing <magicDamage>{{ damage }} magic damage</magicDamage> to each unit it passes through. However, it deals {{ damagereductionperhit*100 }}% less damage for each unit it hits (minimum {{ minimumdamagepercent*100 }}%){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage"
@@ -796,7 +802,7 @@
             ],
             "passive": {
                 "name": "Rising Spell Force",
-                "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 5 times.",
+                "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell.",
                 "image": {
                     "full": "Jade_Ezreal_RisingSpellForce.png",
                     "sprite": "passive0.png",

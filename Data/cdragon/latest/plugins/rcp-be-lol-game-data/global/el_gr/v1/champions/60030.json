@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Όταν πεθάνει, ο Κάρθους αποκτά μορφή πνεύματος και συνεχίζει να κάνει χρήση ικανοτήτων."
+        "description": "Όταν πεθάνει, ο Κάρθους αποκτά τη μορφή ενός πνεύματος και συνεχίζει να χρησιμοποιεί ικανότητες όσο είναι νεκρός, για σύντομο χρονικό διάστημα."
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Μετά από μια μικρή καθυστέρηση, ο Κάρθους προκαλεί έκρηξη σε μια περιοχή, η οποία κάνει ζημιά στους γύρω εχθρούς.",
-            "dynamicDescription": "Μετά από 0,5 δευτ., προκαλεί μια έκρηξη η οποία προκαλεί <magicDamage>@QDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους κοντινούς εχθρούς. Αν χτυπήσει μόνο μία μονάδα, προκαλεί διπλάσια ζημιά.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Μετά από 0,5 δευτ., προκαλεί μια έκρηξη η οποία κάνει <magicDamage>@QDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους κοντινούς εχθρούς. Αν χτυπήσει μόνο μία μονάδα, προκαλεί διπλάσια ζημιά.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Μετά από διοχέτευση 3 δευτερολέπτων, ο Κάρθους προκαλεί ζημιά σε όλους τους αντίπαλους Ήρωες.",
-            "dynamicDescription": "Μετά από διοχέτευση 3 δευτερολέπτων, ο Κάρθους προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους αντίπαλους Ήρωες.@SpellModifierDescriptionAppend@",
+            "description": "Αφού διοχετεύσει ενέργεια, ο Κάρθους προκαλεί ζημιά σε όλους τους αντίπαλους Ήρωες.",
+            "dynamicDescription": "Μετά από διοχέτευση @ChannelDuration@ δευτερολέπτων, ο Κάρθους προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους αντίπαλους Ήρωες.@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

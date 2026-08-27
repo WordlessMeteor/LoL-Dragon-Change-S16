@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ezreal": {
             "id": "Jade_Ezreal",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60081001",
+                    "num": 1,
+                    "name": "冒险精神 伊泽瑞尔",
+                    "chromas": false
+                },
+                {
                     "id": "60081003",
                     "num": 3,
                     "name": "冰川勇者 伊泽瑞尔",
@@ -34,13 +40,13 @@
                     "id": "60081005",
                     "num": 5,
                     "name": "未来战士 伊泽瑞尔",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60081043",
                     "num": 43,
                     "name": "心之钢 伊泽瑞尔",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60081044",
@@ -378,13 +384,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1150,
-                        1150,
-                        1150,
-                        1150,
-                        1150
+                        1050,
+                        1050,
+                        1050,
+                        1050,
+                        1050
                     ],
-                    "rangeBurn": "1150",
+                    "rangeBurn": "1050",
                     "image": {
                         "full": "Jade_EzrealQ.png",
                         "sprite": "spell1.png",
@@ -400,7 +406,7 @@
                     "id": "Jade_EzrealW",
                     "name": "精华跃动",
                     "description": "伊泽瑞尔发射一道起伏的能量波，降低途经敌方英雄的攻击速度并对其造成魔法伤害，同时为途经友方英雄回复生命值并提升其攻击速度。",
-                    "tooltip": "伊泽瑞尔发射一道能量波，对途经的所有敌方英雄造成<magicDamage>{{ damage }}魔法伤害</magicDamage>和持续5秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>削减。<br /><br />音波在命中友军时会为其回复<healing>{{ totalheal }}生命值</healing>和持续5秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>提升。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "伊泽瑞尔发射一道能量波，对它途经的所有敌方英雄造成<magicDamage>{{ damage }}魔法伤害</magicDamage>和持续{{ duration }}秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>削减。<br /><br />被命中的友方英雄会回复<healing>{{ totalheal }}生命值</healing>并获得持续{{ duration }}秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>提升。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -683,8 +689,8 @@
                 {
                     "id": "Jade_EzrealR",
                     "name": "精准弹幕",
-                    "description": "伊泽瑞尔引导1秒，发射一个强力的能量弹幕，弹幕将对它途经的每一个敌人造成魔法伤害。（每穿过一个单位，弹幕造成的伤害就会降低10%）。",
-                    "tooltip": "伊泽瑞尔引导1秒，发射一串弹幕，弹幕将对它途经的每一个单位造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。但每命中一个单位，弹幕造成的伤害就会降低{{ damagereductionperhit*100 }}%（最低{{ minimumdamagepercent*100 }}%）{{ spellmodifierdescriptionappend }}",
+                    "description": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成高额伤害。",
+                    "tooltip": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。不过，每穿过一个单位，它造成的伤害就会降低{{ damagereductionperhit*100 }}%(最小值为{{ minimumdamagepercent*100 }}%){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -796,7 +802,7 @@
             ],
             "passive": {
                 "name": "咒能高涨",
-                "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度（最多可叠加5次）。",
+                "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度。",
                 "image": {
                     "full": "Jade_Ezreal_RisingSpellForce.png",
                     "sprite": "passive0.png",

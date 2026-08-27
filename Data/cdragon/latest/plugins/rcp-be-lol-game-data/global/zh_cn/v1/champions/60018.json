@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "约德尔海贼团 崔丝塔娜",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "枪手们，啊嘿！崔丝塔娜跳到公海上，为了新的冒险而驶出了班德尔的边界。她的帽子是从一位被她引爆的海盗那里借（偷）来的，而眼罩纯属是为了好看。但她赶尽杀绝的态度和可靠的加农炮击沉的舰船数量要多于比尔吉沃特的绝大多数船长。"
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -846,7 +877,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "崔丝塔娜迅速开火，短时间内提升攻击速度。",
-            "dynamicDescription": "<mainText>崔丝塔娜<attackSpeed>攻击速度提升@AttackSpeedMod*100@%</attackSpeed>，持续7秒。",
+            "dynamicDescription": "崔丝塔娜获得持续@BuffDuration@秒的<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -857,11 +888,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -995,8 +1026,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人，持续3秒。",
-            "dynamicDescription": "<mainText>崔丝塔娜朝地面开火，将自己弹射至目标位置，落地时造成<magicDamage>@LandingDamage@魔法伤害</magicDamage>和持续2.5秒的60%<status>减速</status>。<br>参与击杀英雄时，这个冷却时间会被重置。",
+            "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人。",
+            "dynamicDescription": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成<magicDamage>@LandingDamage@魔法伤害</magicDamage>和持续@SlowDuration@秒的@Slow@%<status>减速</status>效果。击杀或协助击杀一个英雄时，火箭跳跃的冷却时间会得到刷新。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1146,7 +1177,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "崔丝塔娜击杀一个单位时，她的炮弹会爆炸成弹片，对周围敌人造成伤害。可主动施放，对目标单位造成持续伤害，并减少其受到的治疗效果。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>@PassiveDamage@魔法伤害</magicDamage>。<br><br><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在5秒内持续造成<magicDamage>@ActiveDamageTTOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>@PassiveDamage@魔法伤害</magicDamage>。<br><br><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在@GrievousDuration@秒内持续造成<magicDamage>@ActiveDamageTTOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

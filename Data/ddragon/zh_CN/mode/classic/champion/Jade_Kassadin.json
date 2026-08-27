@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Kassadin": {
             "id": "Jade_Kassadin",
@@ -308,16 +308,16 @@
                 {
                     "id": "Jade_KassadinW",
                     "name": "虚空之刃",
-                    "description": "被动：卡萨丁的普通攻击回复法力值。攻击敌方英雄时，法力值回复量提升至三倍。主动：卡萨丁的普通攻击造成额外魔法伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁的普通攻击从虚空中汲取能量，每次命中都会回复<scaleMana>{{ managainamount }}法力值</scaleMana>。如果目标是敌方英雄，则<scaleMana>法力值</scaleMana>回复量会提升至三倍，达到{{ managainamount*3 }}。<br /><br /><spellActive>主动：</spellActive>卡萨丁为他的虚空之刃充能，使他的普通攻击额外造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，持续5秒。{{ spellmodifierdescriptionappend }}",
+                    "description": "被动：卡萨丁的普攻回复法力值。主动：卡萨丁的普攻造成额外魔法伤害。",
+                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁的普通攻击从虚空中吸取法力，从而每次命中都会回复<scaleMana>{{ managainamount }}法力值</scaleMana>，对抗英雄时提升至<scaleMana>{{ championmanarestore }}法力值</scaleMana>。<br /><br /><spellActive>主动：</spellActive>卡萨丁给他的虚空之刃充能{{ buffduration }}秒，使他的下次普通攻击造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "基础伤害",
-                            "基础法力回复"
+                            "基础法力回复",
+                            "基础伤害"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ managainamount }} -> {{ managainamountNL }}"
+                            "{{ managainamount }} -> {{ managainamountNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -341,32 +341,32 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            4.5,
-                            5,
-                            5.5,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            75,
-                            100,
-                            125,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            22.5,
-                            25,
-                            27.5,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -413,10 +413,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/4.5/5/5.5/6",
-                        "20",
-                        "50/75/100/125/150",
-                        "20/22.5/25/27.5/30",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -450,7 +450,7 @@
                     "id": "Jade_KassadinE",
                     "name": "能量脉冲",
                     "description": "附近有单位施放法术技能时，卡萨丁将吸收能量。当充能完毕后，吸收的能量可转化为脉冲，对面前锥形区域内敌人造成伤害并减速。",
-                    "tooltip": "卡萨丁会从临近(1800码内)的每次施法中吸收能量，附近每有一次技能施放，就会获得一层效果。当效果到达6层后，卡萨丁就可以使用<spellName>能量脉冲</spellName>，来对前方锥形范围内的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>以及持续3秒的{{ movespeedmod*-100 }}%<status>减速</status>效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡萨丁会从临近的每次施法中吸收能量，附近每有一次技能施放，就会获得一层效果。<br /><br />当效果到达{{ requiredchargestooltip }}层后，卡萨丁就可以使用<spellName>能量脉冲</spellName>，来对前方锥形范围内的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>以及持续{{ slowduration }}秒的{{ movespeedmod*-100 }}%<status>减速</status>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -489,18 +489,18 @@
                             0
                         ],
                         [
-                            50,
-                            60,
-                            70,
-                            80,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -555,8 +555,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50/60/70/80/90",
-                        "1",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -591,7 +591,7 @@
                     "id": "Jade_KassadinR",
                     "name": "虚空行走",
                     "description": "卡萨丁传送到附近区域，对区域内的敌方单位造成魔法伤害。此外，在一段时间内连续施放虚空行走技能会消耗更多的法力值，并造成额外伤害。",
-                    "tooltip": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。此外，在接下来8秒内每次施放<spellName>虚空行走</spellName>会额外消耗<scaleMana>100法力值</scaleMana>，并造成<magicDamage>{{ damage }}额外伤害</magicDamage>，最多叠加10层。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。此外，接下来{{ buffduration }}秒内的每次后续<spellName>虚空行走</spellName>消耗<scaleMana>{{ additionalmanapercast }}额外法力值</scaleMana>并造成<magicDamage>{{ damage }}额外伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -705,7 +705,7 @@
             ],
             "passive": {
                 "name": "虚空之石",
-                "description": "卡萨丁受到的<magicDamage>魔法伤害</magicDamage>减少15%，并将该伤害转化为额外<attackSpeed>攻击速度</attackSpeed>。",
+                "description": "卡萨丁所受的<magicDamage>魔法伤害</magicDamage>减少，并将即将到来的魔法伤害转化为额外<attackSpeed>攻击速度</attackSpeed>。",
                 "image": {
                     "full": "Jade_Kassadin_Passive.png",
                     "sprite": "passive0.png",

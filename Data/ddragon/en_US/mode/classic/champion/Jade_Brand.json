@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Brand": {
             "id": "Jade_Brand",
@@ -230,7 +230,7 @@
                     "id": "Jade_BrandQ",
                     "name": "Sear",
                     "description": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target.",
-                    "tooltip": "Brand launches a ball of fire forward that deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br /><spellPassive>Blaze:</spellPassive> If the target is <keywordMajor>Ablaze</keywordMajor>, <spellName>Sear</spellName> will <status>Stun</status> the target for 2 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Brand launches a ball of fire forward that deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br /><spellPassive>Blaze:</spellPassive> If the target is <keywordMajor>Ablaze</keywordMajor>, <spellName>Sear</spellName> will <status>Stun</status> the target for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -262,11 +262,11 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            100,
-                            130,
-                            160,
-                            190
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -334,7 +334,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/100/130/160/190",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -769,7 +769,7 @@
             ],
             "passive": {
                 "name": "Blaze",
-                "description": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds.",
+                "description": "Brand's spells light his targets ablaze, dealing a portion of their maximum Health in magic damage.",
                 "image": {
                     "full": "Jade_BrandP.png",
                     "sprite": "passive0.png",

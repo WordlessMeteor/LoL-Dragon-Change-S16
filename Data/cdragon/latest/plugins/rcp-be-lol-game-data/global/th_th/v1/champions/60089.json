@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "สกิลที่สร้างความเสียหายจะทำให้ศัตรูติด Sunlight เป็นเวลา 3.5 วินาที เมื่อแชมเปี้ยนร่วมทีมสร้างความเสียหายแก่เป้าหมายเหล่านั้น พวกเขาจะใช้ดีบัฟ Sunlight เพื่อสร้างความเสียหายเวทเพิ่มเติม"
+        "description": "สกิลสร้างความเสียหายจะทำให้ศัตรูติด Sunlight เมื่อแชมเปี้ยนร่วมทีมสร้างความเสียหายแก่เป้าหมายเหล่านั้น พวกเขาจะใช้ดีบัฟ Sunlight เพื่อสร้างความเสียหายเพิ่มเติม"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Leona ใช้โล่แทนการโจมตีปกติครั้งถัดไป สร้างโบนัสความเสียหายเวทและสตันเป้าหมาย",
-            "dynamicDescription": "การโจมตีปกติครั้งถัดไปจะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamageTooltip@ หน่วย</magicDamage> และ<status>สตัน</status>ศัตรูเป็นเวลา 1.25 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "การโจมตีปกติครั้งถัดไปจะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamageTooltip@ หน่วย</magicDamage> และ<status>สตัน</status>ศัตรูเป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Leona ยกโล่ขึ้นเพื่อเพิ่มเกราะและต้านทานเวท  เมื่อระยะเวลาสิ้นสุดลง หากมีศัตรูอยู่ใกล้เคียง เธอจะสร้างความเสียหายเวทแก่พวกเขาและยืดระยะเวลาของเอฟเฟกต์",
-            "dynamicDescription": "ได้รับโบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR> @BonusARMR@ หน่วยเป็นเวลา 3 วินาที เมื่อเอฟเฟกต์สิ้นสุดลง ศัตรูใกล้เคียงที่โดนสกิลจะได้รับ<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage> และ Leona จะยังคงได้รับโบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>เป็นเวลา 3 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona ได้รับ<scaleArmor>เกราะ</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusARMR@ หน่วย</scaleMR>เป็นเวลา @BuffDuration@ วินาที เมื่อเอฟเฟกต์สิ้นสุดลง ศัตรูใกล้เคียงที่โดนสกิลจะได้รับ<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage> และ Leona จะยังคงได้รับโบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>ต่อไปเป็นเวลา @BuffDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

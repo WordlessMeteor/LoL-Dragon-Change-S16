@@ -586,7 +586,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of all enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path.",
-            "dynamicDescription": "Extends Jarvan IV's lance dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and lowering the Armor of all enemies hit by @ArmorShredPercent@% for 3 seconds.<br><br>If the lance contacts <spellName>Demacian Standard</spellName> it will pull Jarvan IV to its location, <status>Knocking Up</status> enemies in his path.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Extends Jarvan IV's lance dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and lowering the Armor of all enemies hit by @ArmorShredPercent@% for @ArmorShredDuration@ seconds.<br><br>If the lance contacts <spellName>Demacian Standard</spellName> it will pull Jarvan IV to its location, <status>Knocking Up</status> enemies in his path.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -736,7 +736,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies.",
-            "dynamicDescription": "Temporarily gains a <shield>shield</shield> that absorbs up to @ShieldAmount@ (+@ShieldBonus@ damage for each nearby enemy champion) damage for 5 seconds, and <status>Slows</status> surrounding enemies by @SlowAmount@% for 2 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Temporarily gains a <shield>shield</shield> that absorbs up to @ShieldAmount@ (+@ShieldBonus@ damage for each nearby enemy champion) damage for @ShieldDuration@ seconds, and <status>Slows</status> surrounding enemies by @SlowAmount@% for @SlowDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1036,7 +1036,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV heroically leaps into battle at a target with such force that he terraforms the surrounding area to create an arena around them.",
-            "dynamicDescription": "Heroically leaps to an enemy Champion dealing <physicalDamage>@DamageCalc@ physical damage</physicalDamage> and creating an arena of impassable terrain around them for 3.5 seconds.<br><br><recast>Recast</recast> again to collapse the terrain.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heroically leaps to an enemy Champion dealing <physicalDamage>@DamageCalc@ physical damage</physicalDamage> and creating an arena of impassable terrain around them for @WallDuration@ seconds.<br><br><recast>Recast</recast> again to collapse the terrain.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

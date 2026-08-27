@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_MasterYi": {
             "id": "Jade_MasterYi",
@@ -22,6 +22,12 @@
                     "id": "60011000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60011001",
+                    "num": 1,
+                    "name": "暗影 易",
                     "chromas": false
                 },
                 {
@@ -87,13 +93,13 @@
                     "id": "60011052",
                     "num": 52,
                     "name": "灵魂莲华 易",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60011053",
                     "num": 53,
                     "name": "至臻 灵魂莲华 易",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60011080",
@@ -359,7 +365,7 @@
                     "id": "Jade_MasterYiMeditate",
                     "name": "冥想",
                     "description": "易集中念力、活化身体，短时间内回复生命值并减少所受的伤害。",
-                    "tooltip": "易开始引导，5秒内持续回复共<healing>{{ totalheal }}生命值</healing> 。引导期间，易获得<scaleArmor>{{ defensestat }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "易开始引导，{{ duration }}秒内持续回复共<healing>{{ totalheal }}生命值</healing>。引导期间，易获得<scaleArmor>{{ defensestat }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "生命值已回复",

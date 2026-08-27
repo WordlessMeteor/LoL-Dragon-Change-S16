@@ -528,7 +528,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "维迦每损失1%法力值，法力回复便提升1%。"
+        "description": "维迦的法力回复会基于他的已损失法力值得到提升。"
     },
     "spells": [
         {
@@ -690,7 +690,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "维迦召唤一大团黑暗物质轰击目标区域，落地造成魔法伤害。",
-            "dynamicDescription": "<mainText>1.2秒后，黑暗物质从天而降，对目标区域的单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。",
+            "dynamicDescription": "@ImpactDelay@秒后，黑暗物质将从天而降，对目标区域的单位造成 <magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -730,22 +730,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -840,7 +840,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会被短暂晕眩。",
-            "dynamicDescription": "<mainText>维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会受到@StunDuration@秒的<status>晕眩</status>效果。",
+            "dynamicDescription": "维迦在目标区域创造一个能够维持@CageDuration@秒的扭曲空间，穿过此区域边界的敌人将会受到持续@StunDuration@秒的<status>晕眩</status>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -866,27 +866,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -990,7 +990,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "引爆目标敌方英雄，造成大量基础魔法伤害，并额外造成目标80%法术强度的伤害。",
-            "dynamicDescription": "<mainText>引爆目标敌方英雄，造成<magicDamage>@MinDamage@伤害，并额外造成目标80%法术强度的魔法伤害</magicDamage>。",
+            "dynamicDescription": "维迦引爆目标一名敌方英雄，造成<magicDamage>@MinDamage@外加目标@EnemyAPRatio*100@%法术强度的魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

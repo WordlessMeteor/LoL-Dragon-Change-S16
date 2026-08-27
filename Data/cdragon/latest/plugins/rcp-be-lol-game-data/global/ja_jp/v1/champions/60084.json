@@ -6,7 +6,7 @@
     "name": "アカリ",
     "alias": "Jade_Akali",
     "title": "影の拳",
-    "shortBio": "- アカリの固有スキルは増加攻撃力と魔力に応じてボーナスを得る\\n- アカリのQは対象指定スキル\\n- アカリのEは自身の周囲に範囲ダメージを与える\\n- アカリのRは対象指定のダッシュ",
+    "shortBio": "- アカリの固有スキルは増加攻撃力と魔力に応じてボーナスを得る<br>- アカリのQは対象指定スキル<br>- アカリのEは自身の周囲に範囲ダメージを与える<br>- アカリのRは対象指定のダッシュ",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 7,
@@ -60,6 +60,33 @@
             "rarityGemPath": null,
             "skinLines": null,
             "description": null
+        },
+        {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "刺突の暗殺者アカリ",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "オオスズメバチ団は昔から続く由緒ある荒行を弟子たちに受けさせる。弟子たちはそこでスズメバチの獰猛さをもって執拗に何発も刺し続けることを教わる。その中でも最高の弟子がアカリであり、彼女はその技術をさらなる高みに押し上げるつもりだ。"
         },
         {
             "id": 60084002,
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "対象の敵に向かって鎌を回転させて魔法ダメージを与え、6秒間、対象をマークする。マークを受けた対象に近接攻撃を行うと、マークを消費して追加ダメージを与え、気を回復する。",
-            "dynamicDescription": "対象の敵に向かって鎌を投げ、<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与え、6秒間、対象をマークする。<br><br>マークを受けた対象に近接攻撃を行うと、マークを消費して<magicDamage>@ProcDamage@の魔法ダメージ</magicDamage>を与え、<keywordMajor>気を@EnergyReturn@</keywordMajor>回復する。@SpellModifierDescriptionAppend@",
+            "description": "対象の敵に向かって鎌を回転させて魔法ダメージを与え、対象をマークする。マークを受けた対象への次の近接攻撃でマークを消費して追加ダメージを与え、気を回復する。",
+            "dynamicDescription": "対象の敵に向かって鎌を投げ、<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与え@MarkDuration@秒間、対象をマークする。<br><br>マークを受けた対象に近接攻撃を行うと、マークを消費して<magicDamage>@ProcDamage@の魔法ダメージ</magicDamage>を与え、<keywordMajor>気を@EnergyReturn@</keywordMajor>回復する。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "煙玉を投げて煙幕を張る。この範囲内にいる間は物理防御と魔法防御が増加し、インビジブル状態になる。通常攻撃を行うかスキルを使用すると、少しの間だけ姿が見える。煙幕のなかにいる敵は移動速度が低下する。",
-            "dynamicDescription": "煙玉を投げて、8秒間持続する煙幕を張る。この範囲内にいる間は<scaleArmor>物理防御が@TotalResists@</scaleArmor>と<scaleMR>魔法防御が@TotalResists@</scaleMR>増加し、<keywordStealth>インビジブル</keywordStealth>状態になる。通常攻撃を行うかスキルを使用すると、少しの間だけ姿が見える。<br><br>煙幕のなかにいる敵は@SlowAmount@%の<status>スロウ効果</status>を受ける。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "煙玉を投げて@CloudDuration@秒間持続する煙幕を張る。この範囲内にいる間は<scaleArmor>物理防御が@TotalResists@</scaleArmor>と<scaleMR>魔法防御が@TotalResists@</scaleMR>増加し、<keywordStealth>インビジブル</keywordStealth>状態になる。通常攻撃を行うかスキルを使用すると、少しの間だけ姿が見える。<br><br>煙幕の中にいる敵は@SlowAmount@%の<status>スロウ効果</status>を受ける。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1065,7 +1092,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/AkaliShadowDance.project_jade.png",
             "abilityVideoPath": "champion-abilities/60084/ability_60084_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_R1.jpg",
-            "cost": "1 影の真髄",
+            "cost": "1影の真髄",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "影の中を移動して素早く対象を攻撃し、ダメージを与えて「影の真髄」のチャージを1つ消費する。「影の真髄」のチャージは一定時間ごと、またはキルかアシスト獲得時に回復する(最大3スタック)。",
             "dynamicDescription": "影の中を移動して素早く対象を攻撃し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>キルかアシストを獲得時、または@AmmoRechargeTime@秒経過するごとに、<spellName>影の真髄</spellName>のチャージが最大3つまで回復する。@SpellModifierDescriptionAppend@",

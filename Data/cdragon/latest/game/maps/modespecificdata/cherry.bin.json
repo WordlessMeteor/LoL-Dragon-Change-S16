@@ -5433,6 +5433,11 @@
                 "{f248d989}": "{743cc8bf}",
                 "{bac86ec1}": 1,
                 "__type": "{4ec57116}"
+            },
+            {
+                "{f248d989}": "{498c06b5}",
+                "{a4aaab62}": 1,
+                "__type": "{b92b9eee}"
             }
         ],
         "{5ff6cd50}": [
@@ -5682,21 +5687,6 @@
                 "{f248d989}": "{e3a324ce}",
                 "{6cb6c4fd}": 10.0,
                 "__type": "{d8c76385}"
-            },
-            {
-                "{5ff6cd50}": [
-                    {
-                        "{fd36c650}": true,
-                        "{5e3d5ec0}": [
-                            2,
-                            6
-                        ],
-                        "__type": "{2152c2a1}"
-                    }
-                ],
-                "{f248d989}": "{498c06b5}",
-                "{a4aaab62}": 1,
-                "__type": "{b92b9eee}"
             }
         ],
         "{5ff6cd50}": [
@@ -5759,6 +5749,11 @@
                 "{f248d989}": "{743cc8bf}",
                 "{bac86ec1}": 1,
                 "__type": "{4ec57116}"
+            },
+            {
+                "{f248d989}": "{498c06b5}",
+                "{a4aaab62}": 1,
+                "__type": "{b92b9eee}"
             }
         ],
         "{5ff6cd50}": [
@@ -11547,9 +11542,9 @@
         "NameTra": "Kiwi_VeilOfWarding_Name",
         "DescriptionTra": "Kiwi_VeilOfWarding_Summary",
         "AugmentTooltipTra": "Kiwi_VeilOfWarding_Summary",
-        "RootSpell": "{014afaad}",
-        "{40c7b66f}": [
-            "{3934db3f}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding_Cooldown"
         ],
         "{3696d198}": {
             "{c4182067}": "Kiwi_VeilOfWarding_Summary",
@@ -11558,8 +11553,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Poltergeist_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Poltergeist_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/poltergeist_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/poltergeist_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -11567,9 +11562,9 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/VeilOfWarding/Resources",
         "__type": "AugmentData"
     },
-    "{014afaad}": {
+    "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding": {
         "ObjectName": "Augment_VeilOfWarding",
-        "objectPath": "{014afaad}",
+        "objectPath": "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding",
         "mScriptName": "Augment_VeilOfWarding",
         "mSpell": {
             "DataValues": [
@@ -11665,9 +11660,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3934db3f}": {
+    "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding_Cooldown": {
         "ObjectName": "Augment_VeilOfWarding_Cooldown",
-        "objectPath": "{3934db3f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/VeilOfWarding/Augment_VeilOfWarding_Cooldown",
         "mScriptName": "Augment_VeilOfWarding_Cooldown",
         "mBuff": {
             "mTooltipData": {
@@ -12304,7 +12299,7 @@
         "DescriptionTra": "Cherry_DemonicClasp_Summary",
         "AugmentTooltipTra": "Cherry_DemonicClasp_Tooltip",
         "RootSpell": "Maps/ModeSpecificData/Augments/DemonicClasp/Augment_DemonicClasp",
-        "{40c7b66f}": [
+        "AdditionalSpells": [
             "{7c0a43c9}",
             "{13c48948}",
             "{4da75196}"
@@ -12323,8 +12318,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Demonic_Clasp.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Demonic_Clasp_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/demonic_clasp.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/demonic_clasp_small.tex",
         "AugmentDisplayTags": [
             3
         ],
@@ -12564,7 +12559,7 @@
                 "mTargeterDefinitions": [
                     {
                         "textureOrientation": 3,
-                        "textureOverrideName": "ASSETS/Spells/Textures/Mordekaiser_Base_E_RangeIndicator.tex",
+                        "textureOverrideName": "assets/spells/textures/mordekaiser_base_e_rangeindicator.tex",
                         "__type": "TargeterDefinitionRange"
                     },
                     {
@@ -12599,7 +12594,7 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/Mordekaiser_Base_E_AOEIndicator.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/mordekaiser_base_e_aoeindicator.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -34541,7 +34536,7 @@
                 "mTargeterDefinitions": [
                     {
                         "textureOrientation": 3,
-                        "textureOverrideName": "ASSETS/Spells/Textures/Mordekaiser_Base_E_RangeIndicator.tex",
+                        "textureOverrideName": "assets/spells/textures/mordekaiser_base_e_rangeindicator.tex",
                         "__type": "TargeterDefinitionRange"
                     },
                     {
@@ -34576,7 +34571,7 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/Mordekaiser_Base_E_AOEIndicator.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/mordekaiser_base_e_aoeindicator.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -34695,9 +34690,9 @@
         "NameTra": "Kiwi_ARAM_GetExcited_Name",
         "DescriptionTra": "Kiwi_GetExcited_Summary",
         "AugmentTooltipTra": "Kiwi_GetExcited_Tooltip",
-        "RootSpell": "{6f703849}",
-        "{40c7b66f}": [
-            "{4aabf237}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited_Buff"
         ],
         "mBuildTags": 82,
         "{3696d198}": {
@@ -34712,8 +34707,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GetExcited_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GetExcited_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/getexcited_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/getexcited_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -35934,9 +35929,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{4aabf237}": {
+    "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited_Buff": {
         "ObjectName": "Augment_ARAM_GetExcited_Buff",
-        "objectPath": "{4aabf237}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited_Buff",
         "mScriptName": "Augment_ARAM_GetExcited_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -35961,9 +35956,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6f703849}": {
+    "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited": {
         "ObjectName": "Augment_ARAM_GetExcited",
-        "objectPath": "{6f703849}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Augment_ARAM_GetExcited",
         "mScriptName": "Augment_ARAM_GetExcited",
         "mSpell": {
             "DataValues": [
@@ -36105,9 +36100,9 @@
         "NameTra": "Kiwi_FinalForm_Name",
         "DescriptionTra": "Kiwi_FinalForm_Summary",
         "AugmentTooltipTra": "Kiwi_FinalForm_Tooltip",
-        "RootSpell": "{66651199}",
-        "{40c7b66f}": [
-            "{5b78f167}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm_Buff"
         ],
         "mAugmentTags": 512,
         "mBuildTags": 290,
@@ -36118,8 +36113,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/FinalForm_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/FinalForm_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/finalform_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/finalform_small.tex",
         "AugmentDisplayTags": [
             3,
             1
@@ -42479,9 +42474,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/FinalForm/Particles/Augment_FinalForm_EmpoweredState",
         "__type": "VfxSystemDefinitionData"
     },
-    "{5b78f167}": {
+    "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm_Buff": {
         "ObjectName": "Augment_FinalForm_Buff",
-        "objectPath": "{5b78f167}",
+        "objectPath": "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm_Buff",
         "mScriptName": "Augment_FinalForm_Buff",
         "mSpell": {
             "DataValues": [
@@ -42593,9 +42588,9 @@
         },
         "__type": "SpellObject"
     },
-    "{66651199}": {
+    "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm": {
         "ObjectName": "Augment_FinalForm",
-        "objectPath": "{66651199}",
+        "objectPath": "Maps/ModeSpecificData/Augments/FinalForm/Augment_FinalForm",
         "mScriptName": "Augment_FinalForm",
         "mSpell": {
             "DataValues": [
@@ -42786,15 +42781,15 @@
         "NameTra": "Kiwi_ARAM_Quest_VoidImmolation_Name",
         "DescriptionTra": "Kiwi_ARAM_Quest_VoidImmolation_Summary",
         "AugmentTooltipTra": "Kiwi_ARAM_Quest_VoidImmolation_Tooltip",
-        "RootSpell": "{0de8568f}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/Quest_VoidImmolation/Augment_Quest_VoidImmolation",
+        "AdditionalSpells": [
             "{bb7e94ef}",
             "{79d43d63}"
         ],
         "mAugmentTags": 512,
         "mBuildTags": 2308,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Quest_VoidImmolation_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Quest_VoidImmolation_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/quest_voidimmolation_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/quest_voidimmolation_small.tex",
         "AugmentDisplayTags": [
             1,
             3,
@@ -42804,9 +42799,9 @@
         "AugmentPlatformId": 393,
         "__type": "AugmentData"
     },
-    "{0de8568f}": {
+    "Maps/ModeSpecificData/Augments/Quest_VoidImmolation/Augment_Quest_VoidImmolation": {
         "ObjectName": "Augment_Quest_VoidImmolation",
-        "objectPath": "{0de8568f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Quest_VoidImmolation/Augment_Quest_VoidImmolation",
         "mScriptName": "Augment_Quest_VoidImmolation",
         "mSpell": {
             "mImgIconName": [
@@ -42824,7 +42819,7 @@
         "NameTra": "Kiwi_ARAM_CrackOpenThatEgg_Name",
         "DescriptionTra": "Kiwi_CrackOpenThatEgg_Summary",
         "AugmentTooltipTra": "Kiwi_CrackOpenThatEgg_Tooltip",
-        "RootSpell": "{63028ced}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_CrackOpenThatEgg/Augment_ARAM_CrackOpenThatEgg",
         "mAugmentTags": 6144,
         "mBuildTags": 8,
         "{3696d198}": {
@@ -42834,8 +42829,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/CrackOpenThatEgg_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/CrackOpenThatEgg_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/crackopenthategg_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/crackopenthategg_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -52202,9 +52197,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/ARAM_CrackOpenThatEgg/Particles/Kiwi_Augment_CrackOpenThatEgg_ShieldExplosion_Small",
         "__type": "VfxSystemDefinitionData"
     },
-    "{63028ced}": {
+    "Maps/ModeSpecificData/Augments/ARAM_CrackOpenThatEgg/Augment_ARAM_CrackOpenThatEgg": {
         "ObjectName": "Augment_ARAM_CrackOpenThatEgg",
-        "objectPath": "{63028ced}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_CrackOpenThatEgg/Augment_ARAM_CrackOpenThatEgg",
         "mScriptName": "Augment_ARAM_CrackOpenThatEgg",
         "mSpell": {
             "DataValues": [
@@ -52357,7 +52352,7 @@
         "NameTra": "Kiwi_OminousPact_Name",
         "DescriptionTra": "Kiwi_OminousPact_Summary",
         "AugmentTooltipTra": "Kiwi_OmninousPact_Tooltip",
-        "RootSpell": "{748963e5}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/OminousPact/Augment_OminousPact",
         "mAugmentTags": 2,
         "mBuildTags": 40,
         "{3696d198}": {
@@ -52367,8 +52362,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/WisdomOfAges_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/WisdomOfAges_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/wisdomofages_large.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/wisdomofages_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -52386,9 +52381,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{748963e5}": {
+    "Maps/ModeSpecificData/Augments/OminousPact/Augment_OminousPact": {
         "ObjectName": "Augment_OminousPact",
-        "objectPath": "{748963e5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/OminousPact/Augment_OminousPact",
         "mScriptName": "Augment_OminousPact",
         "mSpell": {
             "DataValues": [
@@ -61040,7 +61035,7 @@
         "NameTra": "Kiwi_Juiced_Name",
         "DescriptionTra": "Kiwi_Juiced_Summary",
         "AugmentTooltipTra": "Kiwi_Juiced_Tooltip",
-        "RootSpell": "{b0ef2279}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_Juiced/Augment_ARAM_Juiced",
         "mAugmentTags": 8,
         "mBuildTags": 512,
         "{3696d198}": {
@@ -61055,8 +61050,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Juiced_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Juiced_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/juiced_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/juiced_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -61068,8 +61063,8 @@
         "NameTra": "Cherry_Spellcraft_Name",
         "DescriptionTra": "Cherry_Spellcraft_Summary",
         "AugmentTooltipTra": "Chrry_Spellcraft_tooltip",
-        "RootSpell": "{a249e673}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/Spellcraft/Augment_Spellcraft",
+        "AdditionalSpells": [
             "{7389a6c0}",
             "{8777a9c1}"
         ],
@@ -61078,8 +61073,8 @@
             "{c4182067}": "Chrry_Spellcraft_tooltip",
             "__type": "{5b441d9b}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Spell_Craft.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Spell_Craft_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/spell_craft.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/spell_craft_small.tex",
         "AugmentDisplayTags": [
             5,
             1
@@ -69134,9 +69129,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a249e673}": {
+    "Maps/ModeSpecificData/Augments/Spellcraft/Augment_Spellcraft": {
         "ObjectName": "Augment_Spellcraft",
-        "objectPath": "{a249e673}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Spellcraft/Augment_Spellcraft",
         "mScriptName": "Augment_Spellcraft",
         "mSpell": {
             "flags": 4,
@@ -69615,9 +69610,9 @@
         "NameTra": "Kiwi_ARAM_LittleDevil_Name",
         "DescriptionTra": "Kiwi_Augment_LittleDevil_Summary",
         "AugmentTooltipTra": "Kiwi_Augment_LittleDevil_Tooltip",
-        "RootSpell": "{c4edf223}",
-        "{40c7b66f}": [
-            "{a5fe512c}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil_Remnant_Missile"
         ],
         "{3696d198}": {
             "{c4182067}": "Kiwi_Augment_LittleDevil_Tooltip",
@@ -69626,8 +69621,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/LittleDevil_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/LittleDevil_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/littledevil_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/littledevil_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -85014,9 +85009,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Particles/LittleDevil_Remnant_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a5fe512c}": {
+    "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil_Remnant_Missile": {
         "ObjectName": "Augment_ARAM_LittleDevil_Remnant_Missile",
-        "objectPath": "{a5fe512c}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil_Remnant_Missile",
         "mScriptName": "Augment_ARAM_LittleDevil_Remnant_Missile",
         "mSpell": {
             "flags": 4,
@@ -85134,9 +85129,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c4edf223}": {
+    "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil": {
         "ObjectName": "Augment_ARAM_LittleDevil",
-        "objectPath": "{c4edf223}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_LittleDevil/Augment_ARAM_LittleDevil",
         "mScriptName": "Augment_ARAM_LittleDevil",
         "mSpell": {
             "DataValues": [
@@ -85507,9 +85502,9 @@
         "NameTra": "Kiwi_DustToDiamonds_Name",
         "DescriptionTra": "Kiwi_DustToDiamonds_Description",
         "AugmentTooltipTra": "Kiwi_DustToDiamonds_Tooltip",
-        "RootSpell": "{741c1387}",
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Dust_to_Diamonds.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Dust_to_Diamonds_small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/DustToDiamonds/Augment_DustToDiamonds",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/dust_to_diamonds.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/dust_to_diamonds_small.tex",
         "AugmentPlatformId": 394,
         "__type": "AugmentData"
     },
@@ -85518,8 +85513,8 @@
         "NameTra": "Kiwi_ARAM_SpeedDemon_Name",
         "DescriptionTra": "Kiwi_ARAM_SpeedDemon_Description",
         "AugmentTooltipTra": "Kiwi_ARAM_SpeedDemon_Description",
-        "RootSpell": "{7f848d61}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_SpeedDemon/Augment_ARAM_SpeedDemon",
+        "AdditionalSpells": [
             "{ad632975}"
         ],
         "mBuildTags": 304,
@@ -85530,8 +85525,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/SpeedDemon_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/SpeedDemon_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/speeddemon_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/speeddemon_small.tex",
         "AugmentDisplayTags": [
             4
         ],
@@ -85544,9 +85539,9 @@
         "NameTra": "Cherry_TransmuteSilver_Name",
         "DescriptionTra": "Cherry_TransmuteSilver_Tooltip",
         "AugmentTooltipTra": "Cherry_TransmuteSilver_Tooltip",
-        "RootSpell": "{18ae7835}",
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Transmute_Silver.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Transmute_Silver_Small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/TransmuteSilver/Augment_TransmuteSilver",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/transmute_silver.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/transmute_silver_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -85555,9 +85550,9 @@
         "AugmentPlatformId": 378,
         "__type": "AugmentData"
     },
-    "{18ae7835}": {
+    "Maps/ModeSpecificData/Augments/TransmuteSilver/Augment_TransmuteSilver": {
         "ObjectName": "Augment_TransmuteSilver",
-        "objectPath": "{18ae7835}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TransmuteSilver/Augment_TransmuteSilver",
         "mScriptName": "Augment_TransmuteSilver",
         "mSpell": {
             "DataValues": [
@@ -85599,9 +85594,9 @@
         "NameTra": "Kiwi_GrowthSpurt_Name",
         "DescriptionTra": "Kiwi_GrowthSpurt_Summary",
         "AugmentTooltipTra": "Kiwi_GrowthSpurt_Tooltip",
-        "RootSpell": "{508931c1}",
-        "{40c7b66f}": [
-            "{1996330f}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt_Buff"
         ],
         "mAugmentTags": 64,
         "{3696d198}": {
@@ -85611,8 +85606,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GrowthSpurt_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GrowthSpurt_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/growthspurt_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/growthspurt_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -85621,9 +85616,9 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/GrowthSpurt/Resources",
         "__type": "AugmentData"
     },
-    "{1996330f}": {
+    "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt_Buff": {
         "ObjectName": "Augment_GrowthSpurt_Buff",
-        "objectPath": "{1996330f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt_Buff",
         "mScriptName": "Augment_GrowthSpurt_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -95084,9 +95079,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/GrowthSpurt/Particles/Kiwi_Augment_GrowthSpurt_Knockup",
         "__type": "VfxSystemDefinitionData"
     },
-    "{508931c1}": {
+    "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt": {
         "ObjectName": "Augment_GrowthSpurt",
-        "objectPath": "{508931c1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GrowthSpurt/Augment_GrowthSpurt",
         "mScriptName": "Augment_GrowthSpurt",
         "mSpell": {
             "flags": 4,
@@ -95363,7 +95358,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -95385,10 +95380,10 @@
         "NameTra": "Kiwi_KillSecured_Name",
         "DescriptionTra": "Kiwi_ARAM_KillSecured_Summary",
         "AugmentTooltipTra": "Kiwi_ARAM_KillSecured_Tooltip",
-        "RootSpell": "{7fcc6375}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/KillSecured/Augment_KillSecured",
         "mBuildTags": 2,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/KillSecure_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/KillSecure_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/killsecure_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/killsecure_small.tex",
         "AugmentDisplayTags": [
             4
         ],
@@ -97362,9 +97357,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/KillSecured/Particles/Augment_KillSecured_Cross",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7fcc6375}": {
+    "Maps/ModeSpecificData/Augments/KillSecured/Augment_KillSecured": {
         "ObjectName": "Augment_KillSecured",
-        "objectPath": "{7fcc6375}",
+        "objectPath": "Maps/ModeSpecificData/Augments/KillSecured/Augment_KillSecured",
         "mScriptName": "Augment_KillSecured",
         "mSpell": {
             "DataValues": [
@@ -97475,18 +97470,18 @@
         "NameTra": "Kiwi_Purist_Caster_Name",
         "DescriptionTra": "Kiwi_Purist_Caster_Summary",
         "AugmentTooltipTra": "Kiwi_Purist_Caster_Tooltip",
-        "RootSpell": "{1b7f06cb}",
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/PuristCaster_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/PuristCaster_small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_Purist_Caster/Augment_ARAM_Purist_Caster",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/puristcaster_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/puristcaster_small.tex",
         "AugmentDisplayTags": [
             2
         ],
         "AugmentPlatformId": 2018,
         "__type": "AugmentData"
     },
-    "{1b7f06cb}": {
+    "Maps/ModeSpecificData/Augments/ARAM_Purist_Caster/Augment_ARAM_Purist_Caster": {
         "ObjectName": "Augment_ARAM_Purist_Caster",
-        "objectPath": "{1b7f06cb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_Purist_Caster/Augment_ARAM_Purist_Caster",
         "mScriptName": "Augment_ARAM_Purist_Caster",
         "mSpell": {
             "DataValues": [
@@ -97608,19 +97603,19 @@
         "NameTra": "Kiwi_YouSpinMeRightRound_Name",
         "DescriptionTra": "Kiwi_ARAM_YouSpinMeRightRound_Tooltip",
         "AugmentTooltipTra": "Kiwi_ARAM_YouSpinMeRightRound_Tooltip",
-        "RootSpell": "{bf82b6fd}",
-        "{40c7b66f}": [
-            "{49c5c7dd}",
-            "{48c5c64a}",
-            "{1c8dcae5}",
-            "{8cccd50b}",
-            "{2e22cbe4}",
-            "{43860074}",
-            "{9f016416}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound2",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound3",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundAttack",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundMissile",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalClockwise",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalCounterClockwise",
+            "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundPassive"
         ],
         "mAugmentTags": 64,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/YouSpinMeRightRound_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/YouSpinMeRightRound_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/youspinmerightround_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/youspinmerightround_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -97628,9 +97623,9 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Resources",
         "__type": "AugmentData"
     },
-    "{1c8dcae5}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundAttack": {
         "ObjectName": "Augment_YouSpinMeRightRoundAttack",
-        "objectPath": "{1c8dcae5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundAttack",
         "mScriptName": "Augment_YouSpinMeRightRoundAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7407,
@@ -102717,9 +102712,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{2e22cbe4}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalClockwise": {
         "ObjectName": "Augment_YouSpinMeRightRoundOrbitalClockwise",
-        "objectPath": "{2e22cbe4}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalClockwise",
         "mScriptName": "Augment_YouSpinMeRightRoundOrbitalClockwise",
         "mSpell": {
             "flags": 4,
@@ -102805,9 +102800,9 @@
         },
         "__type": "SpellObject"
     },
-    "{43860074}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalCounterClockwise": {
         "ObjectName": "Augment_YouSpinMeRightRoundOrbitalCounterClockwise",
-        "objectPath": "{43860074}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundOrbitalCounterClockwise",
         "mScriptName": "Augment_YouSpinMeRightRoundOrbitalCounterClockwise",
         "mSpell": {
             "flags": 4,
@@ -102893,9 +102888,9 @@
         },
         "__type": "SpellObject"
     },
-    "{48c5c64a}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound3": {
         "ObjectName": "Augment_YouSpinMeRightRound3",
-        "objectPath": "{48c5c64a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound3",
         "mScriptName": "Augment_YouSpinMeRightRound3",
         "mSpell": {
             "flags": 36,
@@ -102971,9 +102966,9 @@
         },
         "__type": "SpellObject"
     },
-    "{49c5c7dd}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound2": {
         "ObjectName": "Augment_YouSpinMeRightRound2",
-        "objectPath": "{49c5c7dd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound2",
         "mScriptName": "Augment_YouSpinMeRightRound2",
         "mSpell": {
             "flags": 36,
@@ -103070,9 +103065,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8cccd50b}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundMissile": {
         "ObjectName": "Augment_YouSpinMeRightRoundMissile",
-        "objectPath": "{8cccd50b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundMissile",
         "mScriptName": "Augment_YouSpinMeRightRoundMissile",
         "mSpell": {
             "flags": 4,
@@ -103170,15 +103165,15 @@
         },
         "__type": "SpellObject"
     },
-    "{9f016416}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundPassive": {
         "ObjectName": "Augment_YouSpinMeRightRoundPassive",
-        "objectPath": "{9f016416}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRoundPassive",
         "mScriptName": "Augment_YouSpinMeRightRoundPassive",
         "__type": "SpellObject"
     },
-    "{bf82b6fd}": {
+    "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound": {
         "ObjectName": "Augment_YouSpinMeRightRound",
-        "objectPath": "{bf82b6fd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/YouSpinMeRightRound/Augment_YouSpinMeRightRound",
         "mScriptName": "Augment_YouSpinMeRightRound",
         "mSpell": {
             "flags": 4,
@@ -103570,20 +103565,20 @@
         "NameTra": "Kiwi_Zealot_Name",
         "DescriptionTra": "Kiwi_Zealot_Summary",
         "AugmentTooltipTra": "Kiwi_Zealot_Tooltip",
-        "RootSpell": "{20eb7d29}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_Zealot/Augment_ARAM_Zealot",
         "mAugmentTags": 2,
         "mBuildTags": 576,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Zealot_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Zealot_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/zealot_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/zealot_small.tex",
         "AugmentDisplayTags": [
             2
         ],
         "AugmentPlatformId": 2009,
         "__type": "AugmentData"
     },
-    "{20eb7d29}": {
+    "Maps/ModeSpecificData/Augments/ARAM_Zealot/Augment_ARAM_Zealot": {
         "ObjectName": "Augment_ARAM_Zealot",
-        "objectPath": "{20eb7d29}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_Zealot/Augment_ARAM_Zealot",
         "mScriptName": "Augment_ARAM_Zealot",
         "mSpell": {
             "DataValues": [
@@ -103793,11 +103788,11 @@
         "NameTra": "Kiwi_ARAM_ProteinShake_Name",
         "DescriptionTra": "Kiwi_ProteinShake_Summary",
         "AugmentTooltipTra": "Kiwi_ProteinShake_Tooltip",
-        "RootSpell": "{f2dc9ef5}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_ProteinShake/Augment_ARAM_ProteinShake",
         "mAugmentTags": 4096,
         "mBuildTags": 2312,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/ProteinShake_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/ProteinShake_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/proteinshake_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/proteinshake_small.tex",
         "AugmentDisplayTags": [
             5,
             3
@@ -103812,20 +103807,20 @@
         "NameTra": "Kiwi_WindBeneathBlade_Name",
         "DescriptionTra": "Kiwi_WindBeneathBlade_Summary",
         "AugmentTooltipTra": "Kiwi_WindBeneathBlade_Tooltip",
-        "RootSpell": "{274b7249}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/WindBeneathBlade/Augment_WindBeneathBlade",
         "mAugmentTags": 32,
         "mBuildTags": 2066,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/WindBeneathBlade_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/WindBeneathBlade_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/windbeneathblade_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/windbeneathblade_small.tex",
         "AugmentDisplayTags": [
             4
         ],
         "AugmentPlatformId": 1316,
         "__type": "AugmentData"
     },
-    "{274b7249}": {
+    "Maps/ModeSpecificData/Augments/WindBeneathBlade/Augment_WindBeneathBlade": {
         "ObjectName": "Augment_WindBeneathBlade",
-        "objectPath": "{274b7249}",
+        "objectPath": "Maps/ModeSpecificData/Augments/WindBeneathBlade/Augment_WindBeneathBlade",
         "mScriptName": "Augment_WindBeneathBlade",
         "mSpell": {
             "DataValues": [
@@ -103910,7 +103905,7 @@
         "NameTra": "Cherry_CombinationFriedRice_Name",
         "DescriptionTra": "Cherry_CombinationFriedRice_Tooltip",
         "AugmentTooltipTra": "Cherry_CombinationFriedRice_Tooltip",
-        "RootSpell": "{d03c8817}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/CombinationFriedRice/Augment_CombinationFriedRice",
         "{3696d198}": {
             "{c4182067}": "Cherry_CombinationFriedRice_Tooltip",
             "__type": "{5b441d9b}"
@@ -103918,8 +103913,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Combination_Fried_Rice.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Combination_Fried_Rice_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/combination_fried_rice.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/combination_fried_rice_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -113618,9 +113613,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{d03c8817}": {
+    "Maps/ModeSpecificData/Augments/CombinationFriedRice/Augment_CombinationFriedRice": {
         "ObjectName": "Augment_CombinationFriedRice",
-        "objectPath": "{d03c8817}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CombinationFriedRice/Augment_CombinationFriedRice",
         "mScriptName": "Augment_CombinationFriedRice",
         "mSpell": {
             "DataValues": [
@@ -113749,8 +113744,8 @@
         "NameTra": "Kiwi_ARAM_WeightedPopoffs_Name",
         "DescriptionTra": "Kiwi_Augment_WeightedPopoffs_Summary",
         "AugmentTooltipTra": "Kiwi_Augment_WeightedPopoffs_Tooltip",
-        "RootSpell": "{e5d62c2b}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_WeightedPopoffs/Augment_ARAM_WeightedPopoffs",
+        "AdditionalSpells": [
             "{307bdcb5}"
         ],
         "mBuildTags": 48,
@@ -113761,8 +113756,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/WeightedPopoffs_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/WeightedPopoffs_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/weightedpopoffs_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/weightedpopoffs_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -115794,9 +115789,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{e5d62c2b}": {
+    "Maps/ModeSpecificData/Augments/ARAM_WeightedPopoffs/Augment_ARAM_WeightedPopoffs": {
         "ObjectName": "Augment_ARAM_WeightedPopoffs",
-        "objectPath": "{e5d62c2b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_WeightedPopoffs/Augment_ARAM_WeightedPopoffs",
         "mScriptName": "Augment_ARAM_WeightedPopoffs",
         "mSpell": {
             "DataValues": [
@@ -116027,9 +116022,9 @@
         "NameTra": "Kiwi_ShrinkEngine_Name",
         "DescriptionTra": "Kiwi_ShrinkEngine_Summary",
         "AugmentTooltipTra": "Kiwi_ShrinkEngine_Tooltip",
-        "RootSpell": "{327bf81d}",
-        "{40c7b66f}": [
-            "{ca954a86}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine_Counter"
         ],
         "{3696d198}": {
             "{c4182067}": "Kiwi_ShrinkEngine_Tooltip",
@@ -116038,8 +116033,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/ShrinkEngine_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/ShrinkEngine_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/shrinkengine_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/shrinkengine_small.tex",
         "AugmentDisplayTags": [
             5,
             4
@@ -116048,9 +116043,9 @@
         "AugmentPlatformId": 1373,
         "__type": "AugmentData"
     },
-    "{327bf81d}": {
+    "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine": {
         "ObjectName": "Augment_ShrinkEngine",
-        "objectPath": "{327bf81d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine",
         "mScriptName": "Augment_ShrinkEngine",
         "mSpell": {
             "DataValues": [
@@ -116221,9 +116216,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ca954a86}": {
+    "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine_Counter": {
         "ObjectName": "Augment_ShrinkEngine_Counter",
-        "objectPath": "{ca954a86}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ShrinkEngine/Augment_ShrinkEngine_Counter",
         "mScriptName": "Augment_ShrinkEngine_Counter",
         "mSpell": {
             "mImgIconName": [
@@ -116250,7 +116245,7 @@
         "NameTra": "Cherry_RiceAndFish_Name",
         "DescriptionTra": "Cherry_RiceAndFish_Tooltip",
         "AugmentTooltipTra": "Cherry_RiceAndFish_Tooltip",
-        "RootSpell": "{529adfe1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/RiceAndFish/Augment_RiceAndFish",
         "{3696d198}": {
             "{c4182067}": "Cherry_RiceAndFish_Tooltip",
             "__type": "{5b441d9b}"
@@ -116263,8 +116258,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Fish.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Fish_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/rice_and_fish.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/rice_and_fish_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -116277,14 +116272,14 @@
         "NameTra": "Kiwi_ARAM_StuckInHereWithMe_Name",
         "DescriptionTra": "Kiwi_StuckInHereWithMe_Summary",
         "AugmentTooltipTra": "Kiwi_StuckInHereWithMe_Tooltip",
-        "RootSpell": "{d2d8b16d}",
-        "{40c7b66f}": [
-            "{780f83ff}",
-            "{84963a28}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_Cooldown",
+            "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_TauntDR"
         ],
         "mAugmentTags": 512,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/StuckInHereWithMe_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/StuckInHereWithMe_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/stuckinherewithme_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/stuckinherewithme_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -116298,13 +116293,13 @@
         "NameTra": "Cherry_Scavenger_Name",
         "DescriptionTra": "Cherry_Scavenger_Summary",
         "AugmentTooltipTra": "Cherry_Scavenger_Tooltip",
-        "RootSpell": "{3b70f58d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Scavenger/Augment_Scavenger",
         "{3696d198}": {
             "{c4182067}": "Cherry_Scavenger_Tooltip",
             "__type": "{5b441d9b}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Scavenger.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Scavenger_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/scavenger.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/scavenger_small.tex",
         "AugmentDisplayTags": [
             5,
             7
@@ -116313,9 +116308,9 @@
         "AugmentPlatformId": 381,
         "__type": "AugmentData"
     },
-    "{3b70f58d}": {
+    "Maps/ModeSpecificData/Augments/Scavenger/Augment_Scavenger": {
         "ObjectName": "Augment_Scavenger",
-        "objectPath": "{3b70f58d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Scavenger/Augment_Scavenger",
         "mScriptName": "Augment_Scavenger",
         "mSpell": {
             "DataValues": [
@@ -127785,9 +127780,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{780f83ff}": {
+    "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_Cooldown": {
         "ObjectName": "Augment_ARAM_StuckInHereWithMe_Cooldown",
-        "objectPath": "{780f83ff}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_Cooldown",
         "mScriptName": "Augment_ARAM_StuckInHereWithMe_Cooldown",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -127806,9 +127801,9 @@
         },
         "__type": "SpellObject"
     },
-    "{84963a28}": {
+    "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_TauntDR": {
         "ObjectName": "Augment_ARAM_StuckInHereWithMe_TauntDR",
-        "objectPath": "{84963a28}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe_TauntDR",
         "mScriptName": "Augment_ARAM_StuckInHereWithMe_TauntDR",
         "mSpell": {
             "mImgIconName": [
@@ -127822,9 +127817,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d2d8b16d}": {
+    "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe": {
         "ObjectName": "Augment_ARAM_StuckInHereWithMe",
-        "objectPath": "{d2d8b16d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_StuckInHereWithMe/Augment_ARAM_StuckInHereWithMe",
         "mScriptName": "Augment_ARAM_StuckInHereWithMe",
         "mSpell": {
             "DataValues": [
@@ -127983,8 +127978,8 @@
         "NameTra": "Cherry_ChromaFlux_Name",
         "DescriptionTra": "Cherry_ChromaFlux_Summary",
         "AugmentTooltipTra": "Cherry_ChromaFlux_Tooltip",
-        "RootSpell": "{ce8f735d}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/ChromaFlux/Augment_ChromaFlux",
+        "AdditionalSpells": [
             "{aff5618c}"
         ],
         "mBuildTags": 1024,
@@ -127993,8 +127988,8 @@
             "{231af825}": "Cherry_ChromaFlux_Tracker",
             "__type": "{5b441d9b}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Chroma_Flux.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Chroma_Flux_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/chroma_flux.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/chroma_flux_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -128008,22 +128003,22 @@
         "NameTra": "Cherry_TrashToTreasure_Name",
         "DescriptionTra": "Cherry_TrashToTreasure_Summary",
         "AugmentTooltipTra": "Cherry_TrashToTreasure_Summary",
-        "RootSpell": "{438fc9b1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/TrashToTreasure/Augment_TrashToTreasure",
         "{3696d198}": {
             "{c4182067}": "Cherry_TrashToTreasure_Summary",
             "__type": "{5b441d9b}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Trash_Treasure.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Trash_Treasure_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/trash_treasure.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/trash_treasure_small.tex",
         "AugmentDisplayTags": [
             2
         ],
         "AugmentPlatformId": 389,
         "__type": "AugmentData"
     },
-    "{438fc9b1}": {
+    "Maps/ModeSpecificData/Augments/TrashToTreasure/Augment_TrashToTreasure": {
         "ObjectName": "Augment_TrashToTreasure",
-        "objectPath": "{438fc9b1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TrashToTreasure/Augment_TrashToTreasure",
         "mScriptName": "Augment_TrashToTreasure",
         "mSpell": {
             "DataValues": [
@@ -128065,12 +128060,12 @@
         "NameTra": "Kiwi_EscapePlan_Name",
         "DescriptionTra": "Kiwi_EscapePlan_Summary",
         "AugmentTooltipTra": "Kiwi_EscapePlan_Tooltip",
-        "RootSpell": "{f4bb32bb}",
-        "{40c7b66f}": [
-            "{47e9d805}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan_Cooldown"
         ],
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/EscapePlan_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/EscapePlan_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/escapeplan_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/escapeplan_small.tex",
         "AugmentDisplayTags": [
             4,
             3
@@ -128079,9 +128074,9 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/EscapePlan/Resources",
         "__type": "AugmentData"
     },
-    "{47e9d805}": {
+    "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan_Cooldown": {
         "ObjectName": "Augment_EscapePlan_Cooldown",
-        "objectPath": "{47e9d805}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan_Cooldown",
         "mScriptName": "Augment_EscapePlan_Cooldown",
         "mSpell": {
             "mImgIconName": [
@@ -132011,9 +132006,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{f4bb32bb}": {
+    "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan": {
         "ObjectName": "Augment_EscapePlan",
-        "objectPath": "{f4bb32bb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EscapePlan/Augment_EscapePlan",
         "mScriptName": "Augment_EscapePlan",
         "mSpell": {
             "DataValues": [
@@ -132145,8 +132140,8 @@
         "NameTra": "Cherry_WildFire_Name",
         "DescriptionTra": "Cherry_WildFire_Summary",
         "AugmentTooltipTra": "Cherry_WildFire_Tooltip",
-        "RootSpell": "{9b4a9653}",
-        "{40c7b66f}": [
+        "RootSpell": "Maps/ModeSpecificData/Augments/WildFire/Augment_WildFire",
+        "AdditionalSpells": [
             "{f0c1f860}"
         ],
         "mBuildTags": 1024,
@@ -132163,8 +132158,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Wild_Fire.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Wild_Fire_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/wild_fire.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/wild_fire_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -141792,9 +141787,9 @@
         "objectPath": "Maps/ModeSpecificData/Augments/WildFire/Particles/WildFire_mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9b4a9653}": {
+    "Maps/ModeSpecificData/Augments/WildFire/Augment_WildFire": {
         "ObjectName": "Augment_WildFire",
-        "objectPath": "{9b4a9653}",
+        "objectPath": "Maps/ModeSpecificData/Augments/WildFire/Augment_WildFire",
         "mScriptName": "Augment_WildFire",
         "mSpell": {
             "DataValues": [
@@ -142121,9 +142116,9 @@
         },
         "__type": "SpellObject"
     },
-    "{529adfe1}": {
+    "Maps/ModeSpecificData/Augments/RiceAndFish/Augment_RiceAndFish": {
         "ObjectName": "Augment_RiceAndFish",
-        "objectPath": "{529adfe1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/RiceAndFish/Augment_RiceAndFish",
         "mScriptName": "Augment_RiceAndFish",
         "mSpell": {
             "DataValues": [
@@ -142252,9 +142247,9 @@
         "NameTra": "Cherry_UnstableTransmutation_Name",
         "DescriptionTra": "Cherry_UnstableTransmutation_Summary",
         "AugmentTooltipTra": "Cherry_UnstableTransmutation_Summary",
-        "RootSpell": "{55e71159}",
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/UnstableTransmutation_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/UnstableTransmutation_small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/UnstableTransmutation/Augment_UnstableTransmutation",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/unstabletransmutation_large.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/unstabletransmutation_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -142263,9 +142258,9 @@
         "AugmentPlatformId": 390,
         "__type": "AugmentData"
     },
-    "{55e71159}": {
+    "Maps/ModeSpecificData/Augments/UnstableTransmutation/Augment_UnstableTransmutation": {
         "ObjectName": "Augment_UnstableTransmutation",
-        "objectPath": "{55e71159}",
+        "objectPath": "Maps/ModeSpecificData/Augments/UnstableTransmutation/Augment_UnstableTransmutation",
         "mScriptName": "Augment_UnstableTransmutation",
         "mSpell": {
             "DataValues": [
@@ -142307,9 +142302,9 @@
         "NameTra": "Kiwi_CriticalRhythm_Name",
         "DescriptionTra": "Kiwi_CriticalRhythm_Summary",
         "AugmentTooltipTra": "Kiwi_CriticalRhythm_Tooltip",
-        "RootSpell": "{571137d5}",
-        "{40c7b66f}": [
-            "{fc43a43c}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythm",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythmBuff"
         ],
         "mAugmentTags": 260,
         "mBuildTags": 576,
@@ -142325,8 +142320,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/CriticalRhythm_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/CriticalRhythm_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/criticalrhythm_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/criticalrhythm_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -142334,9 +142329,9 @@
         "AugmentPlatformId": 1328,
         "__type": "AugmentData"
     },
-    "{571137d5}": {
+    "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythm": {
         "ObjectName": "Augment_CriticalRhythm",
-        "objectPath": "{571137d5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythm",
         "mScriptName": "Augment_CriticalRhythm",
         "mSpell": {
             "DataValues": [
@@ -142467,9 +142462,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fc43a43c}": {
+    "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythmBuff": {
         "ObjectName": "Augment_CriticalRhythmBuff",
-        "objectPath": "{fc43a43c}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CriticalRhythm/Augment_CriticalRhythmBuff",
         "mScriptName": "Augment_CriticalRhythmBuff",
         "mSpell": {
             "DataValues": [
@@ -142550,7 +142545,7 @@
         "NameTra": "Cherry_RiceAndPork_Name",
         "DescriptionTra": "Cherry_RiceAndPork_Tooltip",
         "AugmentTooltipTra": "Cherry_RiceAndPork_Tooltip",
-        "RootSpell": "{c0a34459}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/RiceAndPork/Augment_RiceAndPork",
         "{3696d198}": {
             "{c4182067}": "Cherry_RiceAndPork_Tooltip",
             "__type": "{5b441d9b}"
@@ -142563,8 +142558,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Pork.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Pork_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/rice_and_pork.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/rice_and_pork_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -142577,7 +142572,7 @@
         "NameTra": "Kiwi_GlassCannon_Name",
         "DescriptionTra": "Kiwi_GlassCannon_Summary",
         "AugmentTooltipTra": "Kiwi_GlassCannon_Tooltip",
-        "RootSpell": "{5f69dfc1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/GlassCannon/Augment_GlassCannon",
         "mBuildTags": 626,
         "{3696d198}": {
             "{c4182067}": "Kiwi_GlassCannon_Tooltip",
@@ -142586,8 +142581,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GlassCannon_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/GlassCannon_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/glasscannon_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/glasscannon_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -142595,9 +142590,9 @@
         "AugmentPlatformId": 1325,
         "__type": "AugmentData"
     },
-    "{5f69dfc1}": {
+    "Maps/ModeSpecificData/Augments/GlassCannon/Augment_GlassCannon": {
         "ObjectName": "Augment_GlassCannon",
-        "objectPath": "{5f69dfc1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GlassCannon/Augment_GlassCannon",
         "mScriptName": "Augment_GlassCannon",
         "mSpell": {
             "DataValues": [
@@ -142746,7 +142741,7 @@
         "NameTra": "Cherry_RiceAndChicken_Name",
         "DescriptionTra": "Cherry_RiceAndChicken_Tooltip",
         "AugmentTooltipTra": "Cherry_RiceAndChicken_Tooltip",
-        "RootSpell": "{92709ea1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/RiceAndChicken/Augment_RiceAndChicken",
         "{3696d198}": {
             "{c4182067}": "Cherry_RiceAndChicken_Tooltip",
             "__type": "{5b441d9b}"
@@ -142759,8 +142754,8 @@
             },
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Chicken.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rice_And_Chicken_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/rice_and_chicken.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/rice_and_chicken_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -142773,22 +142768,22 @@
         "NameTra": "Cherry_RagsToRiches_Name",
         "DescriptionTra": "Cherry_RagsToRiches_Summary",
         "AugmentTooltipTra": "Cherry_RagsToRiches_Summary",
-        "RootSpell": "{6037d25f}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/RagsToRiches/Augment_RagsToRiches",
         "{3696d198}": {
             "{c4182067}": "Cherry_RagsToRiches_Summary",
             "__type": "{5b441d9b}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rags_to_Riches.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Rags_to_Riches_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/rags_to_riches.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/rags_to_riches_small.tex",
         "AugmentDisplayTags": [
             7
         ],
         "AugmentPlatformId": 391,
         "__type": "AugmentData"
     },
-    "{6037d25f}": {
+    "Maps/ModeSpecificData/Augments/RagsToRiches/Augment_RagsToRiches": {
         "ObjectName": "Augment_RagsToRiches",
-        "objectPath": "{6037d25f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/RagsToRiches/Augment_RagsToRiches",
         "mScriptName": "Augment_RagsToRiches",
         "mSpell": {
             "DataValues": [
@@ -142843,9 +142838,9 @@
         "NameTra": "Kiwi_ARAM_Upgrade_Collector_Name",
         "DescriptionTra": "Kiwi_Upgrade_Collector_Summary",
         "AugmentTooltipTra": "Kiwi_Upgrade_Collector_Tooltip",
-        "RootSpell": "{61ee7f13}",
-        "{40c7b66f}": [
-            "{ebd69518}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector_Counter"
         ],
         "mAugmentTags": 4,
         "mBuildTags": 578,
@@ -142856,8 +142851,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/UpgradeCollector_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/UpgradeCollector_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/upgradecollector_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/upgradecollector_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -142865,9 +142860,9 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Resources",
         "__type": "AugmentData"
     },
-    "{61ee7f13}": {
+    "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector": {
         "ObjectName": "Augment_ARAM_Upgrade_Collector",
-        "objectPath": "{61ee7f13}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector",
         "mScriptName": "Augment_ARAM_Upgrade_Collector",
         "mSpell": {
             "DataValues": [
@@ -144815,9 +144810,9 @@
         },
         "__type": "ResourceResolver"
     },
-    "{ebd69518}": {
+    "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector_Counter": {
         "ObjectName": "Augment_ARAM_Upgrade_Collector_Counter",
-        "objectPath": "{ebd69518}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector/Augment_ARAM_Upgrade_Collector_Counter",
         "mScriptName": "Augment_ARAM_Upgrade_Collector_Counter",
         "mSpell": {
             "mImgIconName": [
@@ -144844,7 +144839,7 @@
         "NameTra": "Kiwi_DoubleTap_Name",
         "DescriptionTra": "Kiwi_DoubleTap_Summary",
         "AugmentTooltipTra": "Kiwi_DoubleTap_Tooltip",
-        "RootSpell": "{b7a5c2fb}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_DoubleTap/Augment_ARAM_DoubleTap",
         "mBuildTags": 512,
         "{3696d198}": {
             "{c4182067}": "Kiwi_DoubleTap_Tooltip",
@@ -144853,12 +144848,12 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/DoubleTap_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/DoubleTap_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/dualwield_large.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/dualwield_small.tex",
         "AugmentDisplayTags": [
             1
         ],
-        "rarity": 1,
+        "rarity": 2,
         "AugmentPlatformId": 2010,
         "__type": "AugmentData"
     },
@@ -144868,9 +144863,9 @@
         "NameTra": "Kiwi_Adamant_Name",
         "DescriptionTra": "Kiwi_Adamant_Summary",
         "AugmentTooltipTra": "Kiwi_Adamant_Tooltip",
-        "RootSpell": "{a8b3ec61}",
-        "{40c7b66f}": [
-            "{7478d0bb}"
+        "RootSpell": "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant",
+        "AdditionalSpells": [
+            "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant/Augment_AdamantBuff"
         ],
         "mAugmentTags": 16,
         "mBuildTags": 296,
@@ -144881,8 +144876,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Adamant_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/Adamant_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/adamant_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/adamant_small.tex",
         "AugmentDisplayTags": [
             3
         ],
@@ -144893,9 +144888,9 @@
     "Maps/ModeSpecificData/Augments/Adamant/Resources": {
         "__type": "ResourceResolver"
     },
-    "{a8b3ec61}": {
+    "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant": {
         "ObjectName": "Augment_Adamant",
-        "objectPath": "{a8b3ec61}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant",
         "mScriptName": "Augment_Adamant",
         "mSpell": {
             "DataValues": [
@@ -145029,9 +145024,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7478d0bb}": {
+    "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant/Augment_AdamantBuff": {
         "ObjectName": "Augment_AdamantBuff",
-        "objectPath": "{7478d0bb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Adamant/Augment_Adamant/Augment_AdamantBuff",
         "mScriptName": "Augment_AdamantBuff",
         "mSpell": {
             "mImgIconName": [
@@ -145058,10 +145053,10 @@
         "NameTra": "Cherry_BigDragonEnergy_Name",
         "DescriptionTra": "Cherry_BigDragonEnergy_Summary",
         "AugmentTooltipTra": "Cherry_BigDragonEnergy_Tooltip",
-        "RootSpell": "{6dbfce45}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BigDragonEnergy/Augment_BigDragonEnergy",
         "mBuildTags": 64,
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/FromBeginningToEnd_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/FromBeginningToEnd_small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/frombeginningtoend_large.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/frombeginningtoend_small.tex",
         "AugmentDisplayTags": [
             2
         ],
@@ -145069,9 +145064,9 @@
         "AugmentPlatformId": 387,
         "__type": "AugmentData"
     },
-    "{6dbfce45}": {
+    "Maps/ModeSpecificData/Augments/BigDragonEnergy/Augment_BigDragonEnergy": {
         "ObjectName": "Augment_BigDragonEnergy",
-        "objectPath": "{6dbfce45}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigDragonEnergy/Augment_BigDragonEnergy",
         "mScriptName": "Augment_BigDragonEnergy",
         "mSpell": {
             "DataValues": [
@@ -145108,9 +145103,9 @@
         },
         "__type": "SpellObject"
     },
-    "{741c1387}": {
+    "Maps/ModeSpecificData/Augments/DustToDiamonds/Augment_DustToDiamonds": {
         "ObjectName": "Augment_DustToDiamonds",
-        "objectPath": "{741c1387}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DustToDiamonds/Augment_DustToDiamonds",
         "mScriptName": "Augment_DustToDiamonds",
         "mSpell": {
             "DataValues": [
@@ -145132,9 +145127,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7f848d61}": {
+    "Maps/ModeSpecificData/Augments/ARAM_SpeedDemon/Augment_ARAM_SpeedDemon": {
         "ObjectName": "Augment_ARAM_SpeedDemon",
-        "objectPath": "{7f848d61}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_SpeedDemon/Augment_ARAM_SpeedDemon",
         "mScriptName": "Augment_ARAM_SpeedDemon",
         "mSpell": {
             "DataValues": [
@@ -146663,9 +146658,9 @@
         "NameTra": "Kiwi_HextechSoul_Name",
         "DescriptionTra": "Kiwi_HextechSoul_Summary",
         "AugmentTooltipTra": "Kiwi_HextechSoul_Summary",
-        "RootSpell": "{97582331}",
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/InfernalSoul_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/InfernalSoul_small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/HextechSoul/Augment_HextechSoul",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/infernalsoul_large.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/infernalsoul_small.tex",
         "AugmentDisplayTags": [
             1
         ],
@@ -146677,9 +146672,9 @@
         "NameTra": "Kiwi_Upgrade_SwordOfBlossom_Name",
         "DescriptionTra": "Kiwi_Upgrade_SwordOfBlossom_Summary",
         "AugmentTooltipTra": "Kiwi_Upgrade_SwordOfBlossom_Tooltip",
-        "RootSpell": "{bb10280f}",
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/UpgradeMikaelsBlessing_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/UpgradeMikaelsBlessing_small.tex",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Upgrade_SwordOfBlossom/Augment_Upgrade_SwordOfBlossom",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/upgrademikaelsblessing_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/upgrademikaelsblessing_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -146687,9 +146682,9 @@
         "AugmentPlatformId": 1379,
         "__type": "AugmentData"
     },
-    "{92709ea1}": {
+    "Maps/ModeSpecificData/Augments/RiceAndChicken/Augment_RiceAndChicken": {
         "ObjectName": "Augment_RiceAndChicken",
-        "objectPath": "{92709ea1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/RiceAndChicken/Augment_RiceAndChicken",
         "mScriptName": "Augment_RiceAndChicken",
         "mSpell": {
             "DataValues": [
@@ -146813,9 +146808,9 @@
         },
         "__type": "SpellObject"
     },
-    "{97582331}": {
+    "Maps/ModeSpecificData/Augments/HextechSoul/Augment_HextechSoul": {
         "ObjectName": "Augment_HextechSoul",
-        "objectPath": "{97582331}",
+        "objectPath": "Maps/ModeSpecificData/Augments/HextechSoul/Augment_HextechSoul",
         "mScriptName": "Augment_HextechSoul",
         "mSpell": {
             "mResourceResolvers": [
@@ -159797,9 +159792,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ce8f735d}": {
+    "Maps/ModeSpecificData/Augments/ChromaFlux/Augment_ChromaFlux": {
         "ObjectName": "Augment_ChromaFlux",
-        "objectPath": "{ce8f735d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ChromaFlux/Augment_ChromaFlux",
         "mScriptName": "Augment_ChromaFlux",
         "mSpell": {
             "mAffectsTypeFlags": 2690,
@@ -160371,9 +160366,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b0ef2279}": {
+    "Maps/ModeSpecificData/Augments/ARAM_Juiced/Augment_ARAM_Juiced": {
         "ObjectName": "Augment_ARAM_Juiced",
-        "objectPath": "{b0ef2279}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_Juiced/Augment_ARAM_Juiced",
         "mScriptName": "Augment_ARAM_Juiced",
         "mSpell": {
             "DataValues": [
@@ -160579,9 +160574,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b7a5c2fb}": {
+    "Maps/ModeSpecificData/Augments/ARAM_DoubleTap/Augment_ARAM_DoubleTap": {
         "ObjectName": "Augment_ARAM_DoubleTap",
-        "objectPath": "{b7a5c2fb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_DoubleTap/Augment_ARAM_DoubleTap",
         "mScriptName": "Augment_ARAM_DoubleTap",
         "mSpell": {
             "DataValues": [
@@ -160744,9 +160739,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bb10280f}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_SwordOfBlossom/Augment_Upgrade_SwordOfBlossom": {
         "ObjectName": "Augment_Upgrade_SwordOfBlossom",
-        "objectPath": "{bb10280f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_SwordOfBlossom/Augment_Upgrade_SwordOfBlossom",
         "mScriptName": "Augment_Upgrade_SwordOfBlossom",
         "mSpell": {
             "DataValues": [
@@ -160812,7 +160807,7 @@
         "NameTra": "Cherry_Mercy_Name",
         "DescriptionTra": "Cherry_Mercy_Summary",
         "AugmentTooltipTra": "Cherry_Mercy_Tooltip",
-        "RootSpell": "{d4f88a95}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Mercy/Augment_Mercy",
         "mAugmentTags": 16,
         "mBuildTags": 256,
         "{3696d198}": {
@@ -160822,8 +160817,8 @@
         "{791eb92e}": {
             "__type": "{21dad86e}"
         },
-        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Mercy.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Mercy_Small.tex",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/mercy.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/mercy_small.tex",
         "AugmentDisplayTags": [
             1,
             3
@@ -160832,9 +160827,9 @@
         "AugmentPlatformId": 380,
         "__type": "AugmentData"
     },
-    "{c0a34459}": {
+    "Maps/ModeSpecificData/Augments/RiceAndPork/Augment_RiceAndPork": {
         "ObjectName": "Augment_RiceAndPork",
-        "objectPath": "{c0a34459}",
+        "objectPath": "Maps/ModeSpecificData/Augments/RiceAndPork/Augment_RiceAndPork",
         "mScriptName": "Augment_RiceAndPork",
         "mSpell": {
             "DataValues": [
@@ -160958,9 +160953,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d4f88a95}": {
+    "Maps/ModeSpecificData/Augments/Mercy/Augment_Mercy": {
         "ObjectName": "Augment_Mercy",
-        "objectPath": "{d4f88a95}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Mercy/Augment_Mercy",
         "mScriptName": "Augment_Mercy",
         "mSpell": {
             "DataValues": [
@@ -161039,10 +161034,10 @@
         "NameTra": "Kiwi_PinballSnowball_Name",
         "DescriptionTra": "Kiwi_PinballSnowball_Summary",
         "AugmentTooltipTra": "Kiwi_PinballSnowball_Tooltip",
-        "RootSpell": "{d892109d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/PinballSnowball/Augment_PinballSnowball",
         "mAugmentTags": 64,
-        "AugmentLargeIconPath": "ASSETS/UX/Kiwi/Augments/Icons/PinballSnowball_large.tex",
-        "AugmentSmallIconPath": "ASSETS/UX/Kiwi/Augments/Icons/PinballSnowball_small.tex",
+        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/pinballsnowball_large.tex",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pinballsnowball_small.tex",
         "AugmentDisplayTags": [
             5
         ],
@@ -161050,9 +161045,9 @@
         "AugmentPlatformId": 1358,
         "__type": "AugmentData"
     },
-    "{d892109d}": {
+    "Maps/ModeSpecificData/Augments/PinballSnowball/Augment_PinballSnowball": {
         "ObjectName": "Augment_PinballSnowball",
-        "objectPath": "{d892109d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/PinballSnowball/Augment_PinballSnowball",
         "mScriptName": "Augment_PinballSnowball",
         "mSpell": {
             "DataValues": [
@@ -161165,9 +161160,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f2dc9ef5}": {
+    "Maps/ModeSpecificData/Augments/ARAM_ProteinShake/Augment_ARAM_ProteinShake": {
         "ObjectName": "Augment_ARAM_ProteinShake",
-        "objectPath": "{f2dc9ef5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_ProteinShake/Augment_ARAM_ProteinShake",
         "mScriptName": "Augment_ARAM_ProteinShake",
         "mSpell": {
             "DataValues": [
@@ -161283,7 +161278,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Cherry_GoH_Atakhan/HUD/Atakhan_R_circle_128.tex",
+        "{982aa425}": "assets/characters/cherry_goh_atakhan/hud/atakhan_r_circle_128.tex",
         "__type": "{05c8aed6}"
     },
     "{0ed59d65}": {
@@ -161295,7 +161290,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Riven/HUD/Riven_Circle.tex",
+        "{982aa425}": "assets/characters/riven/hud/riven_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{0f441c63}": {
@@ -161307,7 +161302,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Trundle/HUD/Trundle_Circle.tex",
+        "{982aa425}": "assets/characters/trundle/hud/trundle_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{1424765b}": {
@@ -161319,7 +161314,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Elise/HUD/Elise_Circle_34.tex",
+        "{982aa425}": "assets/characters/elise/hud/elise_circle_34.tex",
         "__type": "{05c8aed6}"
     },
     "{19928b36}": {
@@ -161331,7 +161326,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Lux/HUD/Lux_Circle_0.tex",
+        "{982aa425}": "assets/characters/lux/hud/lux_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{1a612907}": {
@@ -161343,7 +161338,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Vladimir/HUD/Vladimir_Circle_48.tex",
+        "{982aa425}": "assets/characters/vladimir/hud/vladimir_circle_48.tex",
         "__type": "{05c8aed6}"
     },
     "{1c4b84b2}": {
@@ -161355,7 +161350,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/TahmKench/HUD/TahmKench_Circle.tex",
+        "{982aa425}": "assets/characters/tahmkench/hud/tahmkench_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{1e7b2095}": {
@@ -161367,7 +161362,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Mordekaiser/HUD/Mordekaiser_Circle_0.tex",
+        "{982aa425}": "assets/characters/mordekaiser/hud/mordekaiser_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{224f7513}": {
@@ -161379,7 +161374,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Kled/HUD/Kled_Circle.tex",
+        "{982aa425}": "assets/characters/kled/hud/kled_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{233c6a8b}": {
@@ -161391,7 +161386,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Poppy/HUD/Poppy_Circle.tex",
+        "{982aa425}": "assets/characters/poppy/hud/poppy_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{28235c68}": {
@@ -161403,7 +161398,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Leblanc/HUD/Leblanc_Circle_0.tex",
+        "{982aa425}": "assets/characters/leblanc/hud/leblanc_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{29f3d834}": {
@@ -161415,7 +161410,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Taric/HUD/Taric_Circle.tex",
+        "{982aa425}": "assets/characters/taric/hud/taric_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{3e54f0e0}": {
@@ -161427,7 +161422,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Morgana/HUD/Morgana_Circle_0.tex",
+        "{982aa425}": "assets/characters/morgana/hud/morgana_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{44a484b6}": {
@@ -161439,7 +161434,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Vayne/HUD/Vayne_Circle_67.tex",
+        "{982aa425}": "assets/characters/vayne/hud/vayne_circle_67.tex",
         "__type": "{05c8aed6}"
     },
     "{4a8c2c97}": {
@@ -161451,7 +161446,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Briar/HUD/Briar_Circle_0.tex",
+        "{982aa425}": "assets/characters/briar/hud/briar_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{5448e903}": {
@@ -161463,7 +161458,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Ambessa/HUD/Ambessa_Circle_0.tex",
+        "{982aa425}": "assets/characters/ambessa/hud/ambessa_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{55792938}": {
@@ -161475,7 +161470,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Yone/HUD/Yone_Circle_0.tex",
+        "{982aa425}": "assets/characters/yone/hud/yone_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{55b86738}": {
@@ -161487,7 +161482,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Rell_30.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/portrait_rell_30.tex",
         "__type": "{05c8aed6}"
     },
     "{5c4a7d1f}": {
@@ -161499,7 +161494,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Nocturne/HUD/Nocturne_Circle_0.tex",
+        "{982aa425}": "assets/characters/nocturne/hud/nocturne_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{5d2e1fb2}": {
@@ -161511,7 +161506,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Katarina/HUD/Katarina_Circle_60.tex",
+        "{982aa425}": "assets/characters/katarina/hud/katarina_circle_60.tex",
         "__type": "{05c8aed6}"
     },
     "{622293c7}": {
@@ -161523,7 +161518,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Darius_65.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/portrait_darius_65.tex",
         "__type": "{05c8aed6}"
     },
     "{69f0cf55}": {
@@ -161535,7 +161530,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Locke/HUD/Locke_Circle_0.tex",
+        "{982aa425}": "assets/characters/locke/hud/locke_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{6a701716}": {
@@ -161547,7 +161542,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Cherry_GoH_XinZhao/HUD/Cherry_GoH_XinZhao_Circle_3.tex",
+        "{982aa425}": "assets/characters/cherry_goh_xinzhao/hud/cherry_goh_xinzhao_circle_3.tex",
         "__type": "{05c8aed6}"
     },
     "{7118e24a}": {
@@ -161559,7 +161554,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Garen/HUD/Garen_Circle.tex",
+        "{982aa425}": "assets/characters/garen/hud/garen_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{75e13f00}": {
@@ -161571,7 +161566,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Ornn/HUD/Ornn_Circle.tex",
+        "{982aa425}": "assets/characters/ornn/hud/ornn_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{7a18ae27}": {
@@ -161583,7 +161578,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Talon_59.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/portrait_talon_59.tex",
         "__type": "{05c8aed6}"
     },
     "{8a0dec86}": {
@@ -161595,7 +161590,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Cassiopeia/HUD/Cassiopeia_Circle_0.tex",
+        "{982aa425}": "assets/characters/cassiopeia/hud/cassiopeia_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{8c30cbe2}": {
@@ -161607,7 +161602,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Annie/HUD/Annie_Circle_59.tex",
+        "{982aa425}": "assets/characters/annie/hud/annie_circle_59.tex",
         "__type": "{05c8aed6}"
     },
     "{9a76acd3}": {
@@ -161619,7 +161614,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Draven/HUD/Draven_Circle_58.tex",
+        "{982aa425}": "assets/characters/draven/hud/draven_circle_58.tex",
         "__type": "{05c8aed6}"
     },
     "{9ac64f42}": {
@@ -161631,7 +161626,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Samira/HUD/Samira_Circle_33.tex",
+        "{982aa425}": "assets/characters/samira/hud/samira_circle_33.tex",
         "__type": "{05c8aed6}"
     },
     "{9edcbb69}": {
@@ -161643,7 +161638,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Mordekaiser_Circle_54_Form2.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/mordekaiser_circle_54_form2.tex",
         "__type": "{05c8aed6}"
     },
     "{a002d6c2}": {
@@ -161655,7 +161650,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Evelynn/HUD/Evelynn_Circle.tex",
+        "{982aa425}": "assets/characters/evelynn/hud/evelynn_circle.tex",
         "__type": "{05c8aed6}"
     },
     "{a08008f7}": {
@@ -161667,7 +161662,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Alistar_39.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/portrait_alistar_39.tex",
         "__type": "{05c8aed6}"
     },
     "{c2d8d1c1}": {
@@ -161679,7 +161674,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Mel/HUD/Mel_Circle_0.tex",
+        "{982aa425}": "assets/characters/mel/hud/mel_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{c7abe032}": {
@@ -161691,7 +161686,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Fiddlesticks/HUD/FiddleSticks_Circle_0.tex",
+        "{982aa425}": "assets/characters/fiddlesticks/hud/fiddlesticks_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{c9fd64ec}": {
@@ -161703,7 +161698,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Sion_49.tex",
+        "{982aa425}": "assets/ux/narrativebarks/cherry/portrait_sion_49.tex",
         "__type": "{05c8aed6}"
     },
     "{ebb3292b}": {
@@ -161715,7 +161710,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Kayle/HUD/Kayle_Circle_0_lvl11.tex",
+        "{982aa425}": "assets/characters/kayle/hud/kayle_circle_0_lvl11.tex",
         "__type": "{05c8aed6}"
     },
     "{eed4e0f0}": {
@@ -161727,7 +161722,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/JarvanIV/HUD/JarvanIV_Circle_0.tex",
+        "{982aa425}": "assets/characters/jarvaniv/hud/jarvaniv_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{f76edd32}": {
@@ -161739,7 +161734,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Kindred/HUD/Kindred_Circle_45.tex",
+        "{982aa425}": "assets/characters/kindred/hud/kindred_circle_45.tex",
         "__type": "{05c8aed6}"
     },
     "{f7fc437d}": {
@@ -161751,7 +161746,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Nilah/HUD/Nilah_Circle_0.tex",
+        "{982aa425}": "assets/characters/nilah/hud/nilah_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{faf56805}": {
@@ -161763,7 +161758,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Swain/HUD/Swain_Circle_0.tex",
+        "{982aa425}": "assets/characters/swain/hud/swain_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{feda48f2}": {
@@ -161775,7 +161770,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Hwei/HUD/Hwei_Circle_0.tex",
+        "{982aa425}": "assets/characters/hwei/hud/hwei_circle_0.tex",
         "__type": "{05c8aed6}"
     },
     "{ffcbc04f}": {
@@ -161787,7 +161782,7 @@
             "__type": "{fa33a427}"
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
-        "{982aa425}": "ASSETS/Characters/Shaco/HUD/Shaco_Circle_71.tex",
+        "{982aa425}": "assets/characters/shaco/hud/shaco_circle_71.tex",
         "__type": "{05c8aed6}"
     },
     "{33022444}": {

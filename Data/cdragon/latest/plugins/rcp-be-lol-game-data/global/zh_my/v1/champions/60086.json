@@ -131,6 +131,37 @@
             "description": null
         },
         {
+            "id": 60086002,
+            "contentId": "4f1dab6d-ed8c-4918-a119-439293756327",
+            "relatedPrimeContentId": "1fe63e8e-1dc9-43fb-8f69-e9aa5a7eef95",
+            "relatedPrimeItemId": 86002,
+            "isBase": false,
+            "name": "沙漠骑兵 盖伦",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Jade_GarenLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 167
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60086005,
             "contentId": "087c644d-dc63-4089-b87b-8d61c01d9fca",
             "relatedPrimeContentId": "093bfaff-5446-46de-97f6-de4eec36e682",
@@ -675,7 +706,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "盖伦挥舞长剑跳起死亡之舞，在持续时间内对周围敌人造成伤害。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>盖伦从额外<scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>中获得的数值额外提升20%。<br><br><spellActive>主动：</spellActive>盖伦获得一道防御护盾，持续@BuffDuration@秒，使即将受到的伤害降低@DamageReduction*100@%，并获得30%的控制效果减免。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>盖伦从额外<scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>中获得的数值额外提升@ResistanceScaling*100@%。<br><br><spellActive>主动：</spellActive>盖伦获得一道防御护盾，持续@BuffDuration@秒，使即将受到的伤害降低@DamageReduction*100@%，并获得@TenacityBonus*100@%的控制效果减免。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -825,7 +856,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "盖伦在他的身边迅速旋转大剑，对附近敌人造成物理伤害。",
-            "dynamicDescription": "盖伦在他的身边迅速旋转大剑，每秒对附近敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，持续@Duration@秒。盖伦在旋转时可以穿越单位，但在直接穿越单位时的移动速度会降低20%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "盖伦在他的身边迅速旋转大剑，每秒对附近敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，持续@Duration@秒。（最大伤害：<physicalDamage>@MaximumDamageTooltip@</physicalDamage>）@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

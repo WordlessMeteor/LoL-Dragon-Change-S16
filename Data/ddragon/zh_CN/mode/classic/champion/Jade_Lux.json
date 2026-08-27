@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Lux": {
             "id": "Jade_Lux",
@@ -201,7 +201,7 @@
                 "critperlevel": 0,
                 "attackdamage": 53.3,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 1.36,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.625
             },
             "spells": [
@@ -243,25 +243,25 @@
                     "effect": [
                         null,
                         [
-                            80,
-                            120,
-                            160,
-                            200,
-                            240
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -315,9 +315,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "80/120/160/200/240",
-                        "50",
-                        "2",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -493,7 +493,7 @@
                     "id": "Jade_LuxLightStrikeKugel",
                     "name": "透光奇点",
                     "description": "向指定区域释放一道不规则的扭曲之光，减速附近的敌人。拉克丝可随后将其引爆，对范围内敌人造成伤害。",
-                    "tooltip": "创造一片区域，使敌人们减速<status></status>{{ slowpercent }}%。5秒后区域引爆，造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。<br /><br /><recast>再次施放</recast>可提前引爆。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "拉克丝创造一个光明地带，显形该区域并使区域中的敌人<status>减速</status>{{ slowpercent }}%。在{{ slowzoneduration }}秒后，它会爆炸，从而造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br /><recast>再次施放</recast>可提前引爆。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -527,32 +527,32 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            105,
-                            150,
-                            215,
-                            265
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            310,
-                            310,
-                            310,
-                            310,
-                            310
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -599,10 +599,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "60/105/150/215/265",
-                        "5",
-                        "310",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -750,7 +750,7 @@
             ],
             "passive": {
                 "name": "光芒四射",
-                "description": "拉克丝的伤害类技能会将能量注入敌人，持续6秒。拉克丝的下一次攻击将会点燃这股能量，对目标造成额外魔法伤害（基于拉克丝的等级）。",
+                "description": "拉克丝的伤害类技能会将能量注入敌人的体内。拉克丝的下一次攻击将会点燃这股能量，以对目标造成额外魔法伤害。",
                 "image": {
                     "full": "Jade_LuxIlluminatingFraulein.png",
                     "sprite": "passive1.png",

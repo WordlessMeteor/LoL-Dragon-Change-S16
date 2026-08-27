@@ -1105,7 +1105,7 @@
             "cost": "Costă <font color='#FF3300'>@BaseHealthCost@ viață</font>",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Tryndamere se îndreaptă către o țintă, provocând daune tuturor inamicilor din calea sa.",
-            "dynamicDescription": "Tryndamere se rotește printre inamici, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor de pe traiectoria sa.<br><br>Timpul de reactivare al <spellName>''Loviturii rotite''</spellName> este redus cu 2 secunde ori de câte ori Tryndamere lovește critic.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere se rotește printre inamici, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor de pe traiectoria sa.<br><br>Timpul de reactivare al <spellName>''Loviturii rotite''</spellName> este redus cu @CooldownRefund@ secunde ori de câte ori Tryndamere lovește critic.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1273,12 +1273,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                110.0,
+                130.0,
+                115.0,
                 100.0,
-                90.0,
-                80.0,
+                85.0,
                 70.0,
-                60.0
+                55.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

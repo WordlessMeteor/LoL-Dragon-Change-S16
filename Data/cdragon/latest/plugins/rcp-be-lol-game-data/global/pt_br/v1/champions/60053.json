@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Quando a Vida de Blitzcrank chega a menos de 20% do total, ele ativa a Barreira de Mana. Isso cria um Escudo de Mana equivalente a 50% do Mana de Blitzcrank por 10s. A Barreira de Mana só pode ocorrer uma vez a cada 90s."
+        "description": "Ao sofrer dano com pouca Vida, Blitzcrank recebe primeiro um Escudo com base em seu Mana atual. Este efeito tem um Tempo de Recarga."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank dispara a mão direita para pegar um inimigo no trajeto, causando dano e puxando-o em sua direção.",
             "dynamicDescription": "Blitzcrank dispara a mão direita, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>, <status>Atordoando</status> o alvo e <status>Puxando-o</status> em sua direção.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Blitzcrank carrega seu punho para fazer com que o próximo ataque cause o dobro de dano e arremesse o alvo ao ar.",
-            "dynamicDescription": "Blitzcrank carrega seu punho para fazer com que o próximo ataque cause <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e seu alvo seja <status>Arremessado ao ar</status> por @CCDuration@s.@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank carrega seu punho para fazer com que o próximo Ataque cause dano adicional e o alvo seja Arremessado ao ar.",
+            "dynamicDescription": "Blitzcrank carrega seu punho para fazer com que o próximo Ataque cause <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e o alvo seja <status>Arremessado ao ar</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passivamente faz com que relâmpagos causem dano a um inimigo próximo. Além disso, Blitzcrank pode ativar esta habilidade para causar dano a inimigos próximos e Silenciá-los por 0,5s. Contudo, fazer isso remove os relâmpagos do efeito passivo até que Campo Estático esteja disponível novamente.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>arcos de eletricidade são disparados por Blitzcrank para atingir um inimigo próximo aleatório, causando <magicDamage>@PassiveDamage@ de Dano Mágico</magicDamage> a cada 2,5s.<br><br><spellActive>Ativo: </spellActive>causa <magicDamage>@ActiveDamage@ de Dano Mágico</magicDamage> e <status>Silencia</status> unidades inimigas próximas por 0,5s.@SpellModifierDescriptionAppend@",
+            "description": "Passivamente faz com que relâmpagos causem dano a um inimigo próximo. Blitzcrank também pode ativar esta Habilidade para causar dano a inimigos próximos e silenciá-los por um curto período.",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>arcos de eletricidade são disparados por Blitzcrank para atingir um inimigo próximo aleatório, causando <magicDamage>@PassiveDamage@ de Dano Mágico</magicDamage> a cada @PassiveHitRate@s.<br><br><spellActive>Ativo: </spellActive>causa <magicDamage>@ActiveDamage@ de Dano Mágico</magicDamage> e <status>Silencia</status> unidades inimigas próximas por @SilenceDuration@s. O efeito passivo é desativado enquanto Campo Estático está em Tempo de Recarga.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

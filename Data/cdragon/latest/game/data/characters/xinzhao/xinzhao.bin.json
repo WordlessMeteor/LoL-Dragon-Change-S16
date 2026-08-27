@@ -514,14 +514,14 @@
         "mRootSpell": "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE",
         "mChildSpells": [
             "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE",
-            "{80a34ef0}"
+            "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEPassive"
         ],
         "mName": "XinZhaoEAbility",
         "__type": "AbilityObject"
     },
-    "{1a00c948}": {
+    "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoESpellCastTrigger": {
         "ObjectName": "XinZhaoESpellCastTrigger",
-        "objectPath": "{1a00c948}",
+        "objectPath": "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoESpellCastTrigger",
         "mScriptName": "XinZhaoESpellCastTrigger",
         "mSpell": {
             "flags": 4,
@@ -577,9 +577,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4cb7b363}": {
+    "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEDash": {
         "ObjectName": "XinZhaoEDash",
-        "objectPath": "{4cb7b363}",
+        "objectPath": "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEDash",
         "mScriptName": "XinZhaoEDash",
         "mSpell": {
             "flags": 4,
@@ -614,9 +614,9 @@
         },
         "__type": "SpellObject"
     },
-    "{80a34ef0}": {
+    "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEPassive": {
         "ObjectName": "XinZhaoEPassive",
-        "objectPath": "{80a34ef0}",
+        "objectPath": "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEPassive",
         "mScriptName": "XinZhaoEPassive",
         "mBuff": {
             "__type": "BuffData"
@@ -1038,7 +1038,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1507,7 +1507,7 @@
         "mRootSpell": "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoW",
         "mChildSpells": [
             "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoW",
-            "{edb8babd}"
+            "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoWMissile"
         ],
         "mName": "XinZhaoWAbility",
         "__type": "AbilityObject"
@@ -1976,8 +1976,8 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/XinZhao/HUD/Textures/SemiCircleMeleeIndicator.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/blank.tex",
+                        "textureBaseOverrideName": "assets/characters/xinzhao/hud/textures/semicirclemeleeindicator.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/blank.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2015,8 +2015,8 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/LocalLineMissileBase.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/blank.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/locallinemissilebase.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/blank.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2055,8 +2055,8 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/blank.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/LocalLineMissileTarget.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/blank.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/locallinemissiletarget.tex",
                         "__type": "TargeterDefinitionLine"
                     }
                 ],
@@ -2098,9 +2098,9 @@
         },
         "__type": "SpellObject"
     },
-    "{edb8babd}": {
+    "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoWMissile": {
         "ObjectName": "XinZhaoWMissile",
-        "objectPath": "{edb8babd}",
+        "objectPath": "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoWMissile",
         "mScriptName": "XinZhaoWMissile",
         "mSpell": {
             "flags": 4,
@@ -3904,13 +3904,13 @@
             "Characters/XinZhao/Spells/XinZhaoQThrust1",
             "Characters/XinZhao/Spells/XinZhaoQThrust2",
             "Characters/XinZhao/Spells/XinZhaoQThrust3",
-            "{4cb7b363}",
-            "{1a00c948}",
+            "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoEDash",
+            "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoESpellCastTrigger",
             "Characters/XinZhao/Spells/XinZhaoEBasicAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Characters/XinZhao/Spells/XinZhaoPassiveCritAttack",
-            "{edb8babd}",
+            "Characters/XinZhao/Spells/XinZhaoWAbility/XinZhaoWMissile",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3929,7 +3929,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_XinZhaoP_Summary",
         "passiveSpell": "XinZhaoP",
-        "passive1IconName": "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.dds",
+        "passive1IconName": "assets/characters/xinzhao/hud/icons2d/xinzhaoreworkp.dds",
         "name": "game_character_displayname_XinZhao",
         "weaponMaterials": [
             "XenZhaoBasicAttack"
@@ -4083,7 +4083,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             25,
             55,
@@ -4111,7 +4111,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             7500,
             19000,
@@ -4139,7 +4139,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             1000,
             3000,
@@ -4226,7 +4226,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -4266,7 +4266,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -4292,7 +4292,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -4332,7 +4332,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             15,
             30,
@@ -4360,7 +4360,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             3,
             7,
@@ -4388,7 +4388,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             20,
             55,

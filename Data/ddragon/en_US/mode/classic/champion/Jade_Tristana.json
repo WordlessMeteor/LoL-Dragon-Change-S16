@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Tristana": {
             "id": "Jade_Tristana",
@@ -22,6 +22,12 @@
                     "id": "60018000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60018005",
+                    "num": 5,
+                    "name": "Buccaneer Tristana",
                     "chromas": false
                 },
                 {
@@ -55,13 +61,13 @@
                     "id": "60018010",
                     "num": 10,
                     "name": "Dragon Trainer Tristana",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60018018",
                     "num": 18,
                     "name": "Dragon Trainer Tristana (Ruby)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -82,14 +88,14 @@
                     "id": "60018021",
                     "num": 21,
                     "name": "Dragon Trainer Tristana (Rainbow)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 10
                 },
                 {
                     "id": "60018022",
                     "num": 22,
                     "name": "Dragon Trainer Tristana (Obsidian)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -177,14 +183,14 @@
                     "id": "60018052",
                     "num": 52,
                     "name": "Spirit Blossom Tristana (Ruby)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 51
                 },
                 {
                     "id": "60018053",
                     "num": 53,
                     "name": "Spirit Blossom Tristana (Citrine)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 51
                 },
                 {
@@ -276,7 +282,7 @@
                 "hp": 497,
                 "hpperlevel": 82,
                 "mp": 225,
-                "mpperlevel": 32,
+                "mpperlevel": 40,
                 "movespeed": 325,
                 "armor": 22,
                 "armorperlevel": 3,
@@ -291,7 +297,7 @@
                 "critperlevel": 0,
                 "attackdamage": 49.5,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 4,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.656
             },
             "spells": [
@@ -299,13 +305,15 @@
                     "id": "Jade_TristanaQ",
                     "name": "Rapid Fire",
                     "description": "Tristana fires her weapon rapidly, increasing her attack speed for a short time.",
-                    "tooltip": "Increases Tristana's <attackSpeed>Attack Speed by {{ attackspeedmod*100 }}%</attackSpeed> for 7 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Tristana gains <attackSpeed>{{ attackspeedmod*100 }}% Attack Speed</attackSpeed> for {{ buffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Attack Speed"
+                            "Attack Speed",
+                            "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -319,12 +327,12 @@
                     "cooldownBurn": "20",
                     "cost": [
                         50,
-                        50,
-                        50,
-                        50,
-                        50
+                        60,
+                        70,
+                        80,
+                        90
                     ],
-                    "costBurn": "50",
+                    "costBurn": "50/60/70/80/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -437,8 +445,8 @@
                 {
                     "id": "Jade_TristanaW",
                     "name": "Rocket Jump",
-                    "description": "Tristana fires at the ground to propel herself to a distant location, dealing damage and slowing surrounding units for 3 seconds where she lands.",
-                    "tooltip": "Tristana fires at the ground to propel herself to target location, dealing <magicDamage>{{ landingdamage }} magic damage</magicDamage> and <status>Slows</status> by 60% for 2.5 seconds when she lands.<br />On a champion kill or assist, the Cooldown is refreshed.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "Tristana fires at the ground to propel herself to a distant location, damaging and slowing enemies where she lands.",
+                    "tooltip": "Tristana fires at the ground to propel herself to target location, dealing <magicDamage>{{ landingdamage }} magic damage</magicDamage> and <status>Slows</status> by {{ slow }}% for {{ slowduration }} seconds when she lands. On a champion kill or assist, Rocket Jump's Cooldown is refreshed.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -579,7 +587,7 @@
                     "id": "Jade_TristanaE",
                     "name": "Explosive Shot",
                     "description": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies.  Can be activated to deal damage to target unit over time, and reduce healing received.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>{{ passivedamage }} magic damage</magicDamage> to nearby enemies.<br /><br /><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>{{ activedamagettonly }} magic damage</magicDamage> over 5 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>{{ passivedamage }} magic damage</magicDamage> to nearby enemies.<br /><br /><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>{{ activedamagettonly }} magic damage</magicDamage> over {{ grievousduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Passive Explosion Damage",
@@ -588,7 +596,7 @@
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
-                            "{{ activedottotal }} -> {{ activedottotalNL }}",
+                            "{{ activedot }} -> {{ activedotNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },

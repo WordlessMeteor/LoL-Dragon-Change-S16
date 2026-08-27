@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Akali": {
             "id": "Jade_Akali",
@@ -22,6 +22,12 @@
                     "id": "60084000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60084001",
+                    "num": 1,
+                    "name": "蜂刺 阿卡丽",
                     "chromas": false
                 },
                 {
@@ -220,8 +226,8 @@
                 {
                     "id": "Jade_AkaliQ",
                     "name": "奥义！绯叶",
-                    "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个持续6秒的绯叶印。阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
-                    "tooltip": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>，并在目标身上施加一个持续6秒的绯叶印。<br /><br />阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>{{ procdamage }}魔法伤害</magicDamage>并回复<keywordMajor>{{ energyreturn }}能量</keywordMajor>。{{ spellmodifierdescriptionappend }}",
+                    "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个绯叶印。阿卡丽对被标记单位的下一个近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
+                    "tooltip": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>，并在目标身上施加一个持续{{ markduration }}秒的绯叶印。<br /><br />阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>{{ procdamage }}魔法伤害</magicDamage>并回复<keywordMajor>{{ energyreturn }}能量</keywordMajor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "初始伤害",
@@ -366,12 +372,12 @@
                     "id": "Jade_AkaliW",
                     "name": "我流奥义！霞阵",
                     "description": "阿卡丽扔下一枚烟幕弹。当处于这个区域内时，阿卡丽获得护甲和魔法抗性并进入隐形状态。攻击或使用技能会短暂地使她显形。烟幕弹之中的敌人们会被降低移动速度。",
-                    "tooltip": "阿卡丽扔下一枚持续8秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>{{ totalresists }}护甲</scaleArmor>和<scaleMR>{{ totalresists }}魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br /><br />烟幕弹之中的敌人们会被<status>减速</status>{{ slowamount }}%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿卡丽扔下一枚持续{{ cloudduration }}秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>{{ totalresists }}护甲</scaleArmor>和<scaleMR>{{ totalresists }}魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br /><br />烟幕弹之中的敌人们会被<status>减速</status>{{ slowamount }}%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护甲加成",
                             "魔法抗性加成",
-                            "减速幅度",
+                            "减速",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
@@ -402,18 +408,11 @@
                     "effect": [
                         null,
                         [
-                            140,
-                            140,
-                            140,
-                            140,
-                            140
-                        ],
-                        [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -423,32 +422,11 @@
                             0
                         ],
                         [
-                            250,
-                            250,
-                            250,
-                            250,
-                            250
-                        ],
-                        [
-                            60,
-                            65,
-                            70,
-                            75,
-                            80
-                        ],
-                        [
-                            0.3,
-                            0.35,
-                            0.4,
-                            0.45,
-                            0.5
-                        ],
-                        [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -458,11 +436,39 @@
                             0
                         ],
                         [
-                            5,
-                            5.5,
-                            6,
-                            6.5,
-                            7
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -474,15 +480,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "140",
-                        "4",
                         "0",
-                        "250",
-                        "60/65/70/75/80",
-                        "0.3/0.35/0.4/0.45/0.5",
-                        "1",
                         "0",
-                        "5/5.5/6/6.5/7",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],

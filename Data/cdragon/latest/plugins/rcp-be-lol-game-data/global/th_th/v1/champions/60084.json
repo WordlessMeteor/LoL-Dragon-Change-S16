@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Stinger Akali",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "ภาคีแห่ง Great Sparrow Bee ยังคงสั่งสอนศิษย์รุ่นใหม่ด้วยวิถีตามธรรมเนียมเดิมที่ออกจะรุนแรงไปเสียหน่อย พวกเขาสอนวิธีการใช้เข็มทิ่มแทงศัตรูไม่ยั้ง Akali คือนักเรียนที่พวกเขาภาคภูมิใจมากที่สุด และเธอจะยังไม่หยุดเติบโตเพียงเท่านี้แน่นอน"
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Akali เหวี่ยงเคียวของเธอใส่ศัตรูเป้าหมาย สร้างความเสียหายเวท และทิ้งเครื่องหมายไว้บนตัวพวกเขาเป็นเวลา 6 วินาที โดยเครื่องหมายจะทำงานเมื่อ Akali โจมตีระยะใกล้ใส่เป้าหมาย สร้างความเสียหายเพิ่มเติมและฟื้นฟู Energy ให้กับเธอ",
-            "dynamicDescription": "Akali เหวี่ยงเคียวของเธอใส่ศัตรูเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> และทิ้งเครื่องหมายไว้บนตัวพวกเขาเป็นเวลา 6 วินาที<br><br>โดยเครื่องหมายจะทำงานเมื่อ Akali โจมตีระยะใกล้ใส่เป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @ProcDamage@ หน่วย</magicDamage> และฟื้นฟู <keywordMajor>Energy @EnergyReturn@ หน่วย</keywordMajor>ให้กับเธอ@SpellModifierDescriptionAppend@",
+            "description": "Akali เหวี่ยงเคียวของเธอใส่เป้าหมายศัตรู สร้างความเสียหายเวทและทิ้งเครื่องหมายไว้บนตัวพวกเขา โดยเครื่องหมายจะทำงานเมื่อ Akali โจมตีระยะใกล้ใส่เป้าหมาย สร้างความเสียหายเพิ่มเติมและฟื้นฟู Energy ให้กับเธอ",
+            "dynamicDescription": "Akali เหวี่ยงเคียวของเธอใส่เป้าหมายศัตรู สร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> และทิ้งเครื่องหมายไว้บนตัวพวกเขาเป็นเวลา @MarkDuration@ วินาที<br><br>โดยเครื่องหมายจะทำงานเมื่อ Akali โจมตีระยะใกล้ใส่เป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @ProcDamage@ หน่วย</magicDamage> และฟื้นฟู <keywordMajor>Energy @EnergyReturn@ หน่วย</keywordMajor>ให้กับเธอ@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Akali โยนระเบิดควันลงพื้น โดยขณะอยู่ในควัน Akali จะได้รับเกราะกับต้านทานเวท และเข้าสู่สถานะล่องหน การโจมตีหรือใช้สกิลจะเปิด‍เผยตำแหน่งของเธอชั่วครู่ ศัตรูที่อยู่ในควันจะถูกลดความเร็วเคลื่อนที่",
-            "dynamicDescription": "Akali ขว้างระเบิดควันลงพื้นซึ่งคงอยู่เป็นเวลา 8 วินาที โดยขณะอยู่ในควัน Akali จะได้รับ<scaleArmor>เกราะ @TotalResists@ หน่วย</scaleArmor>และ<scaleMR>ต้านทานเวท @TotalResists@ หน่วย</scaleMR> พร้อมทั้ง<keywordStealth>ล่องหน</keywordStealth> การโจมตีหรือใช้สกิลจะเปิดเผยตำแหน่งของเธอชั่วครู่<br><br>ศัตรูที่อยู่ในควันจะถูก<status>สโลว์</status> @SlowAmount@%@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Akali ขว้างระเบิดควันลงพื้นซึ่งคงอยู่เป็นเวลา @CloudDuration@ วินาที โดยขณะอยู่ในควัน Akali จะได้รับ<scaleArmor>เกราะ @TotalResists@ หน่วย</scaleArmor>และ<scaleMR>ต้านทานเวท @TotalResists@ หน่วย</scaleMR> พร้อมทั้ง<keywordStealth>ล่องหน</keywordStealth> การโจมตีหรือใช้สกิลจะเปิดเผยตำแหน่งของเธอชั่วครู่<br><br>ศัตรูที่อยู่ในควันจะถูก<status>สโลว์</status> @SlowAmount@%@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

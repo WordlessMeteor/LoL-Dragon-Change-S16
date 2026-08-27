@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "Malphite được bảo hộ bởi một lớp đá có thể hấp thụ sát thương bằng 10% máu tối đa của hắn. Nếu Malphite không bị tấn công trong vòng 10 giây, hiệu ứng tự động lặp lại."
+        "description": "Malphite được bảo hộ bởi một lớp đá có thể hấp thụ sát thương. Nếu Malphite không bị tấn công trước đó, hiệu ứng tự động lặp lại."
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Sử dụng phép thuật nguyên thủy của bản thân, Malphite bắn một mảnh vỡ mặt đất đến kẻ địch, gây sát thương khi va chạm và đánh cắp tốc độ di chuyển của nạn nhân trong 4 giây.",
+            "description": "Sử dụng phép thuật nguyên thủy của bản thân, Malphite bắn một mảnh vỡ mặt đất đến kẻ địch, gây sát thương khi va chạm và đánh cắp tốc độ di chuyển của nạn nhân.",
             "dynamicDescription": "Gây <magicDamage>@QDamageCalc@ sát thương phép</magicDamage> và đánh cắp <speed>@SpeedSteal@% Tốc Độ Di Chuyển</speed> từ mục tiêu trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -630,36 +630,36 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    70.0,
-                    120.0,
-                    170.0,
-                    220.0,
-                    270.0,
-                    320.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Malphite bắt đầu tấn công với sức mạnh ghê gớm đến nỗi đòn đánh gây sát thương lên tất cả đơn vị trước mặt. Kích hoạt Nắm Đấm Dung Nham sẽ tăng mạnh Giáp và Sức Mạnh Công Kích trong một khoảng thời gian ngắn.",
-            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Đòn đánh thường của Malphite gây sát thương lên các đơn vị gần mục tiêu bằng @Jade_MalphiteObduracyPercentDamage*100@% <physicalDamage>Sức Mạnh Công Kích</physicalDamage> của hắn.<br><br><spellActive>Kích Hoạt: </spellActive><scaleArmor>Giáp</scaleArmor> và <physicalDamage>Sức Mạnh Công Kích</physicalDamage> của Malphite tăng thêm @ArmorBonus*100@% trong 6 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Đòn đánh thường của Malphite gây sát thương lên các đơn vị gần mục tiêu bằng @Jade_MalphiteObduracyPercentDamage*100@% <physicalDamage>Sức Mạnh Công Kích</physicalDamage> của hắn.<br><br><spellActive>Kích Hoạt: </spellActive><scaleArmor>Giáp</scaleArmor> và <physicalDamage>Sức Mạnh Công Kích</physicalDamage> của Malphite được tăng thêm @ArmorBonus*100@% trong @BuffDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

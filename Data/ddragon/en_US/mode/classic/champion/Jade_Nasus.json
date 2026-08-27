@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Nasus": {
             "id": "Jade_Nasus",
@@ -22,6 +22,12 @@
                     "id": "60075000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60075001",
+                    "num": 1,
+                    "name": "Galactic Nasus",
                     "chromas": false
                 },
                 {
@@ -86,14 +92,14 @@
                     "id": "60075026",
                     "num": 26,
                     "name": "Space Groove Nasus (Ruby)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 25
                 },
                 {
                     "id": "60075027",
                     "num": 27,
                     "name": "Space Groove Nasus (Catseye)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 25
                 },
                 {
@@ -628,7 +634,7 @@
                     "id": "Jade_NasusR",
                     "name": "Fury of the Sands",
                     "description": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, cast ranges, and drains nearby enemies' max Health converting into bonus damage for the duration.",
-                    "tooltip": "Nasus becomes empowered in the sandstorm for 15 seconds, increasing his <scaleHealth>Maximum Health by {{ bonushealth }}</scaleHealth>, Attack Range by {{ attackrangeincrease }}, and Cast Ranges by 100.<br /><br />While the storm rages, he deals <magicDamage>{{ damagecalc }} of enemy Maximum Health magic damage</magicDamage> ({{ maxdamagecap }} damage max per second) and converts 5% into bonus <physicalDamage>Attack Damage</physicalDamage>.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nasus becomes empowered in the sandstorm for {{ duration }} seconds, increasing his <scaleHealth>Maximum Health by {{ bonushealth }}</scaleHealth>, Attack Range by {{ attackrangeincrease }}, and Cast Ranges by 100.<br /><br />While the storm rages, he deals <magicDamage>{{ damagecalc }} of enemy Maximum Health magic damage</magicDamage> ({{ maxdamagecap }} damage max per second) and converts {{ damagetoad*100 }}% into bonus <physicalDamage>Attack Damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Health",

@@ -10,7 +10,7 @@
         "{55bb9b57}": 25,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_Feeney.tex",
+            "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "Portrait"
@@ -26,7 +26,7 @@
         "{55bb9b57}": 24,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_LoR_01.tex",
+            "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_lor_01.tex",
             "__type": "CensoredImage"
         },
         "__type": "Portrait"
@@ -173,7 +173,7 @@
         "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
         "mChildSpells": [
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
-            "{17e52b5e}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereSlash"
         ],
         "mName": "Jade_TryndamereEAbility",
         "__type": "AbilityObject"
@@ -487,9 +487,9 @@
         },
         "__type": "SpellObject"
     },
-    "{17e52b5e}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereSlash": {
         "ObjectName": "Jade_TryndamereSlash",
-        "objectPath": "{17e52b5e}",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereSlash",
         "mScriptName": "Jade_TryndamereSlash",
         "mSpell": {
             "flags": 4,
@@ -598,7 +598,7 @@
         "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
         "mChildSpells": [
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
-            "{b8e06586}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_Tryndamere_MockingShoutSlow"
         ],
         "mName": "Jade_TryndamereWAbility",
         "__type": "AbilityObject"
@@ -690,16 +690,16 @@
         "__type": "SpellObject"
     },
     "{5e3d26be}": {
-        "mRootSpell": "{b6ce403c}",
+        "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive",
         "mChildSpells": [
-            "{b6ce403c}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive"
         ],
         "mName": "Jade_TryndamerePassiveAbility",
         "__type": "AbilityObject"
     },
-    "{4f16daa3}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamereQPassive": {
         "ObjectName": "Jade_TryndamereQPassive",
-        "objectPath": "{4f16daa3}",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamereQPassive",
         "mScriptName": "Jade_TryndamereQPassive",
         "mSpell": {
             "mImgIconName": [
@@ -713,9 +713,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b6ce403c}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive": {
         "ObjectName": "Jade_TryndamerePassive",
-        "objectPath": "{b6ce403c}",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive",
         "mScriptName": "Jade_TryndamerePassive",
         "mSpell": {
             "DataValues": [
@@ -735,13 +735,26 @@
                 {
                     "name": "MaximumCrit",
                     "values": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthPctForMaxCrit",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1216,15 +1229,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    120.0,
-                    110.0,
+                    145.0,
+                    130.0,
+                    115.0,
                     100.0,
-                    90.0,
-                    80.0,
+                    85.0,
                     70.0,
-                    60.0
+                    55.0
                 ],
-                "{0a3e0478}": 120.0,
+                "{0a3e0478}": 145.0,
                 "__type": "{0a0eddc9}"
             },
             "cannotBeSuppressed": true,
@@ -1340,9 +1353,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b8e06586}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_Tryndamere_MockingShoutSlow": {
         "ObjectName": "Jade_Tryndamere_MockingShoutSlow",
-        "objectPath": "{b8e06586}",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_Tryndamere_MockingShoutSlow",
         "mScriptName": "Jade_Tryndamere_MockingShoutSlow",
         "mSpell": {
             "mImgIconName": [
@@ -1707,11 +1720,11 @@
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
-            "baseValue": 2.0,
+            "baseValue": 1.5,
             "__type": "ModifiableFloat"
         },
         "hpRegenPerLevelModifiable": {
-            "baseValue": 0.18000000715255737,
+            "baseValue": 0.15000000596046448,
             "__type": "ModifiableFloat"
         },
         "primaryAbilityResource": {
@@ -1827,7 +1840,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{17e52b5e}",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereSlash",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -1854,7 +1867,7 @@
         "passiveName": "game_character_passiveName_Jade_Tryndamere",
         "passiveLuaName": "Jade_TryndamerePassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Tryndamere",
-        "passive1IconName": "ASSETS/Characters/Jade_Tryndamere/HUD/Icons2D/Jade_Tryndamere_Passive.dds",
+        "passive1IconName": "assets/characters/jade_tryndamere/hud/icons2d/jade_tryndamere_passive.dds",
         "name": "game_character_displayname_Jade_Tryndamere",
         "weaponMaterials": [
             "Jade_TryndamereBasicAttack"
@@ -1958,10 +1971,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mCharacterPassiveSpell": "{b6ce403c}",
+        "mCharacterPassiveSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{b6ce403c}",
+                "mParentPassiveBuff": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive",
                 "__type": "CharacterPassiveData"
             }
         ],

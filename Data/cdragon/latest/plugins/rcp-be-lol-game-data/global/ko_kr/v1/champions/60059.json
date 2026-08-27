@@ -586,7 +586,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "자르반 4세가 창을 길게 늘여 경로상의 모든 적에게 물리 피해를 입히고 방어력을 감소시킵니다. 또한 이 스킬을 데마시아의 깃발에 사용하면 자르반이 그 위치로 이동하며 경로상의 적을 공중에 띄웁니다.",
-            "dynamicDescription": "자르반 4세가 창을 길게 늘여, 창에 맞는 모든 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 3초 동안 방어력을 @ArmorShredPercent@% 감소시킵니다.<br><br>창이 <spellName>데마시아의 깃발</spellName>에 맞으면 자르반 4세가 그 위치로 이동하며 경로상의 적을 <status>공중으로 띄웁니다</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "자르반 4세가 창을 길게 늘여, 창에 맞는 모든 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 @ArmorShredDuration@초 동안 방어력을 @ArmorShredPercent@% 감소시킵니다.<br><br>창이 <spellName>데마시아의 깃발</spellName>에 맞으면 자르반 4세가 그 위치로 이동하며 경로상의 적을 <status>공중으로 띄웁니다</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -736,7 +736,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "자르반 4세가 데마시아의 선왕들로부터 힘을 빌려, 피해를 흡수하는 보호막을 얻고 주변 적을 둔화시킵니다.",
-            "dynamicDescription": "5초 동안 최대 @ShieldAmount@의 피해(근처의 적 챔피언 1명당 +@ShieldBonus@)를 흡수하는 <shield>보호막</shield>을 얻고, 주변 적을 2초간 @SlowAmount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ShieldDuration@초 동안 최대 @ShieldAmount@의 피해(근처의 적 챔피언 1명당 +@ShieldBonus@)를 흡수하는 <shield>보호막</shield>을 얻고, 주변 적을 @SlowDuration@초간 @SlowAmount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1036,7 +1036,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "자르반 4세가 적을 향해 용감하게 뛰어들어, 엄청난 기세로 주변 지역을 결투장으로 만듭니다.",
-            "dynamicDescription": "적 챔피언을 향해 용감하게 뛰어들어 <physicalDamage>@DamageCalc@의 물리 피해</physicalDamage>를 입히고 3.5초 동안 지나갈 수 없는 지형으로 이뤄진 결투장을 생성합니다.<br><br>스킬을 <recast>재사용</recast>하면 지형을 무너뜨릴 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "적 챔피언을 향해 용감하게 뛰어들어, <physicalDamage>@DamageCalc@의 물리 피해</physicalDamage>를 입히고 @WallDuration@초 동안 지나갈 수 없는 지형으로 이뤄진 결투장을 생성합니다.<br><br>스킬을 <recast>재사용</recast>하면 지형을 무너뜨릴 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

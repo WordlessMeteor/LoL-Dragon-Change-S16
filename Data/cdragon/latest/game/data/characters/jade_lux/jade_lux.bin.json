@@ -146,65 +146,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.0,
-                        80.0,
-                        120.0,
-                        160.0,
-                        200.0,
-                        240.0,
-                        240.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -258,7 +199,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/LuxCrashingBlitz2.dds",
@@ -680,13 +620,13 @@
                 {
                     "name": "ShieldDuration",
                     "values": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1518,7 +1458,7 @@
         "mRootSpell": "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxR",
         "mChildSpells": [
             "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxR",
-            "{c576baa7}"
+            "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxRMis"
         ],
         "mName": "Jade_LuxRAbility",
         "__type": "AbilityObject"
@@ -1752,8 +1692,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/skillshot_Rectangle_Base_r01_v01.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/skillshot_Rectangle_tip_r01_v01.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/skillshot_rectangle_base_r01_v01.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/skillshot_rectangle_tip_r01_v01.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -1808,9 +1748,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c576baa7}": {
+    "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxRMis": {
         "ObjectName": "Jade_LuxRMis",
-        "objectPath": "{c576baa7}",
+        "objectPath": "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxRMis",
         "mScriptName": "Jade_LuxRMis",
         "mSpell": {
             "flags": 4194304,
@@ -2367,75 +2307,36 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mEffectAmount": [
+            "mSpellTags": [
+                "Trait_RecastOrReplaceSpell"
+            ],
+            "DataValues": [
                 {
-                    "value": [
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
+                    "name": "Damage",
+                    "values": [
+                        15.0,
                         60.0,
                         105.0,
                         150.0,
-                        215.0,
-                        265.0,
-                        315.0
+                        195.0,
+                        240.0,
+                        285.0
                     ],
-                    "__type": "SpellEffectAmount"
+                    "__type": "SpellDataValue"
                 },
                 {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
                     ],
-                    "__type": "SpellEffectAmount"
+                    "__type": "SpellDataValue"
                 },
-                {
-                    "value": [
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "DataValues": [
                 {
                     "name": "VisionRadius",
                     "values": [
@@ -2450,28 +2351,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SlowLingerDuration",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "SlowPercent",
                     "values": [
-                        20.0,
+                        16.0,
                         20.0,
                         24.0,
                         28.0,
                         32.0,
                         36.0,
-                        36.0
+                        40.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2489,19 +2377,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Damage",
-                    "values": [
-                        60.0,
-                        60.0,
-                        105.0,
-                        150.0,
-                        195.0,
-                        240.0,
-                        240.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "ECooldown",
                     "values": [
                         10.0,
@@ -2515,34 +2390,21 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SlowPercentNeg",
-                    "values": [
-                        -0.1599999964237213,
-                        -0.20000000298023224,
-                        -0.23999999463558197,
-                        -0.2800000011920929,
-                        -0.3199999928474426,
-                        -0.36000001430511475,
-                        -0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "AOEradius",
                     "values": [
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0,
-                        310.0
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamageTT": {
+                "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
@@ -2550,8 +2412,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2570,7 +2432,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/LuxLightStrikeKugel.dds",
@@ -2603,13 +2464,13 @@
                 "__type": "{0a0eddc9}"
             },
             "castRadius": [
-                295.0,
-                295.0,
-                295.0,
-                295.0,
-                295.0,
-                295.0,
-                295.0
+                335.0,
+                335.0,
+                335.0,
+                335.0,
+                335.0,
+                335.0,
+                335.0
             ],
             "castConeDistance": 100.0,
             "castTargetAdditionalUnitsRadius": 250.0,
@@ -2734,7 +2595,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamageTT",
+                        "mSpellCalculationKey": "TotalDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -2791,6 +2652,9 @@
                 "__type": "ObjectTags"
             },
             "mAlternateName": "Jade_LuxLightstrikeKugel",
+            "mSpellTags": [
+                "Trait_FreeRecast"
+            ],
             "mEffectAmount": [
                 {
                     "value": [
@@ -4570,11 +4434,11 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
-            "baseValue": 0.625,
+            "baseValue": 0.6579999923706055,
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 1.3600000143051147,
+            "baseValue": 3.0,
             "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
@@ -4632,7 +4496,7 @@
         "extraSpellsList": [
             "{c4c9df76}",
             "{0651ed91}",
-            "{c576baa7}",
+            "Characters/Jade_Lux/Spells/Jade_LuxRAbility/Jade_LuxRMis",
             "{b4017c12}",
             "{5428b36e}",
             "Characters/Jade_Lux/Spells/Jade_LuxRVfxMis",
@@ -4657,7 +4521,7 @@
         "passiveName": "Spell_Jade_LuxIlluminationPassive_Name",
         "passiveLuaName": "Jade_LuxIlluminationPassive",
         "passiveToolTip": "Spell_Jade_LuxIlluminationPassive_Summary",
-        "passive1IconName": "ASSETS/Characters/Jade_Lux/HUD/Icons2D/Jade_LuxIlluminatingFraulein.dds",
+        "passive1IconName": "assets/characters/jade_lux/hud/icons2d/jade_luxilluminatingfraulein.dds",
         "name": "game_character_displayname_Jade_Lux",
         "selectionHeight": 85.0,
         "selectionRadius": 100.0,

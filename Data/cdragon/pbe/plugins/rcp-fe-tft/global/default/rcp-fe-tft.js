@@ -410,7 +410,7 @@
             t.default = a.Ember.Service.extend({
                 locale: null,
                 init: function() {
-                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), this.set("isProfileOverlayShowing", !1), this._subscribeToProfileOverlay(), a.dataBinding.observe(i, this, (e => {
+                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), a.dataBinding.observe(i, this, (e => {
                         this.set("bridgeEnabled", e), this.set("showPardonOurDustButton", e)
                     })), a.dataBinding.observe(s, this, (e => {
                         this.set("bridgeTooltipsEnabled", e)
@@ -431,11 +431,6 @@
                         const t = "TFT" === e?.gameData?.queue?.gameMode,
                             n = e?.phase;
                         t && ("GameStart" === n || ("WaitingForStats" === n || "PreEndOfGame" === n || "EndOfGame" === n)) && this.recordPersistedSeenBridgeTooltip()
-                    }))
-                },
-                _subscribeToProfileOverlay: function() {
-                    this._onProfileOverlayShown = () => this.set("isProfileOverlayShowing", !0), this._onProfileOverlayHidden = () => this.set("isProfileOverlayShowing", !1), (0, a.getProvider)().getOptional("rcp-fe-lol-profiles").then((e => {
-                        this.isDestroying || this.isDestroyed || (this._profileOverlaySubnavigationApi = e.overlaySection(), this._profileOverlaySubnavigationApi.addEventListener("screenShown", this._onProfileOverlayShown), this._profileOverlaySubnavigationApi.addEventListener("screenHidden", this._onProfileOverlayHidden))
                     }))
                 },
                 shouldBlockPartyInvites: function() {
@@ -475,7 +470,7 @@
                     })
                 },
                 willDestroy: function() {
-                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(o, this), a.dataBinding.removeObserver(r, this), a.dataBinding.unobserve(d, this), this._profileOverlaySubnavigationApi && (this._profileOverlaySubnavigationApi.removeEventListener("screenShown", this._onProfileOverlayShown), this._profileOverlaySubnavigationApi.removeEventListener("screenHidden", this._onProfileOverlayHidden))
+                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(o, this), a.dataBinding.removeObserver(r, this), a.dataBinding.unobserve(d, this)
                 }
             })
         }, (e, t, n) => {

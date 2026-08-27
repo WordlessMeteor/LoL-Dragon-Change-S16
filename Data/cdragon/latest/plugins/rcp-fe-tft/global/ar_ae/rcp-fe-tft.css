@@ -86,6 +86,7 @@ lol-uikit-content-block.tft-persistent-tooltip-wide[type=tooltip-small] {
     min-width: 228px;
     overflow-wrap: break-word;
     padding: 18px 12px;
+    pointer-events: auto;
     white-space: normal;
     width: max-content;
     word-break: normal
@@ -198,9 +199,9 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 }
 
 .tft-pardon-our-dust-button-wrapper {
-    align-self: flex-end;
+    align-self: flex-start;
     height: 83px;
-    margin-top: 0;
+    margin-top: 50px;
     position: relative
 }
 
@@ -286,9 +287,9 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 }
 
 .tft-home-content__main-content {
-    left: 50px;
+    left: 25px;
     max-width: 400px;
-    padding-top: 60px;
+    padding-top: 20px;
     pointer-events: auto;
     position: absolute
 }
@@ -310,13 +311,9 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     gap: 8px
 }
 
-.tft-home-content .tft-launch-button {
-    height: 50px;
-    width: 200px
-}
-
-.tft-home-content .tft-launch-button[disabled] {
-    pointer-events: none
+.tft-home-content .tft-launch-button-wrapper {
+    height: 67px;
+    width: 211px
 }
 
 .tft-home-card__card-label,
@@ -603,6 +600,13 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     width: auto
 }
 
+.tft-home-header_image {
+    display: block;
+    height: auto;
+    margin: 0 0 6px;
+    width: 100%
+}
+
 .tft-home-header h1,
 .tft-home-header h4,
 .tft-home-header h5,
@@ -681,8 +685,13 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 .tft-home-background__image {
     height: 639px;
     object-fit: cover;
+    object-position: left bottom;
     padding-top: 79px;
-    width: 1055px
+    width: 100%
+}
+
+.tft-home-background__image--default {
+    height: 720px
 }
 
 .tft-home-loading-screen {
@@ -696,8 +705,7 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading,
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button-text,
-.tft-full-launch-announcement .tft-full-launch-announcement-right-footer {
+.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-title {
     font-family: var(--font-display)
 }
 
@@ -709,8 +717,7 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased;
-    text-transform: uppercase
+    -webkit-font-smoothing: antialiased
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(el-gr),
@@ -735,10 +742,9 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 }
 
 .tft-full-launch-announcement {
-    background-image: url(/fe/tft/images/full-launch-announcement-background.png);
+    background-color: #d9d9d9;
     display: inline-flex;
-    height: 600px;
-    width: 1159px
+    width: 1024px
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left {
@@ -748,119 +754,167 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     flex-direction: column;
     flex-shrink: 0;
     gap: 12px;
-    height: 100%;
     justify-content: center;
+    padding: 40px 0 20px;
     position: relative;
-    width: 480px
+    width: 100%
 }
 
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button {
-    align-items: center;
-    background-image: url(/fe/tft/images/full-launch-announcement-button-default.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 20px;
-    cursor: pointer;
-    display: flex;
-    height: 77.471px;
-    justify-content: center;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 298px
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button:after {
-    content: url(/fe/tft/images/full-launch-announcement-button-hover.png) url(/fe/tft/images/full-launch-announcement-button-clicked.png);
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 0;
-    z-index: -1
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button:hover {
-    background-image: url(/fe/tft/images/full-launch-announcement-button-hover.png)
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button:active {
-    background-image: url(/fe/tft/images/full-launch-announcement-button-clicked.png)
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button:active .tft-full-launch-announcement-ok-button-text {
-    color: #785a28
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-ok-button-text {
-    color: #f0e6d2;
-    font-size: 16px;
-    font-style: normal;
+.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-title {
+    color: #111;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: .98px;
-    line-height: 24px;
-    padding-top: 25px;
+    letter-spacing: .5px;
+    line-height: 32px;
     text-align: center;
     text-transform: uppercase
 }
 
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-logo-image {
-    width: 320px
-}
-
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body {
     align-items: flex-start;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    flex-direction: row;
+    gap: 16px;
     justify-content: center;
-    width: 416px
+    padding: 0 40px;
+    width: 100%
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item {
-    align-items: left;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    justify-content: center
+    gap: 16px;
+    justify-content: flex-start;
+    text-align: center;
+    width: 33%
+}
+
+.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-image {
+    background-color: #000;
+    border-radius: 50%;
+    height: 200px;
+    object-fit: cover;
+    width: 200px
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading {
-    align-items: center;
-    color: #16d647;
-    display: flex;
-    gap: 12px
+    color: #111;
+    text-transform: uppercase
 }
 
 .tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-text {
-    color: #cdbe91;
-    font-size: 16px;
+    color: #666;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: .48px;
-    line-height: 24px;
-    text-align: left
+    letter-spacing: .24px;
+    line-height: 20px;
+    text-align: center
 }
 
-.tft-full-launch-announcement .tft-full-launch-announcement-left div[type=dialog-frame] {
-    height: 70px
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
 }
 
-.tft-full-launch-announcement .tft-full-launch-announcement-right {
-    background-position: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 773px
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(el-gr),
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(ja-jp),
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(ko-kr),
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(th-th),
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(tr-tr),
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(zh-tw) {
+    text-transform: none
 }
 
-.tft-full-launch-announcement .tft-full-launch-announcement-right-footer {
-    color: #f0e6d2;
-    display: flex;
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn {
+    color: #c8aa6e;
+    font-size: 14px;
     font-weight: 700;
-    gap: 10px;
+    letter-spacing: .0325em
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:hover {
+    color: #f0e6d2
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:disabled,
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:disabled:hover,
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn[disabled=true],
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn[disabled=true]:hover {
+    color: #5c5b57;
+    cursor: default
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:active {
+    color: #785a28
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container {
+    margin-top: 20px;
+    position: relative
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg {
+    background-image: url(/fe/lol-tft/quick_play_default.png);
+    background-repeat: no-repeat;
+    background-size: 211px;
+    height: 67px;
+    width: 211px
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg:hover {
+    background-image: url(/fe/lol-tft/quick_play_hover.png)
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg:active {
+    background-image: url(/fe/lol-tft/quick_play_clicked.png)
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg.disabled,
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg.disabled:active,
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-bg.disabled:hover {
+    background-image: url(/fe/lol-tft/quick_play_disabled.png)
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: #a3c7c7;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 67px;
     justify-content: center;
-    letter-spacing: .8px;
-    line-height: 24px;
-    margin-bottom: 23px;
-    text-align: center;
-    text-shadow: 0 0 10px hsla(40, 50%, 88%, .44)
+    outline: 0;
+    padding: 0;
+    position: relative;
+    width: 211px
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn:active {
+    color: #005a82
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn.disabled {
+    color: #5c5b57;
+    cursor: default
+}
+
+.tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn.disabled:active {
+    color: #5c5b57
+}
+
+.tft-bridge-announcement-modal {
+    display: contents
 }

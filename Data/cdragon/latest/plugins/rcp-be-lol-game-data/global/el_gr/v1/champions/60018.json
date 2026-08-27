@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Κουρσάρος Τριστάνα",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Έρχεται το πυροβολικό! Η Τριστάνα ξεχύνεται στην ανοικτή θάλασσα, αναζητώντας περιπέτειες πέρα από τα σύνορα του Μπαντλ. Το καπέλο της το δανείστηκε (βασικά, το έκλεψε) από έναν πειρατή που σκότωσε και το κάλυμμα στο μάτι είναι μόνο για επίδειξη. Όμως, με τον δυναμισμό και το τεράστιο κανόνι της έχει καταφέρει να βυθίσει περισσότερα πλοία από τους πιο τρομερούς πειρατές του Μπίλτζγουοτερ."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Τριστάνα πυροβολεί γρήγορα με το όπλο της και αυξάνει την Ταχύτητα Επίθεσής της για μικρό χρονικό διάστημα.",
-            "dynamicDescription": "<mainText>Αυξάνει την <attackSpeed>Ταχύτητα Επίθεσης της Τριστάνα κατά @AttackSpeedMod*100@%</attackSpeed> για 7 δευτερόλεπτα.",
+            "dynamicDescription": "Η Τριστάνα αποκτά <attackSpeed>@AttackSpeedMod*100@% Ταχύτητα Επίθεσης</attackSpeed> για @BuffDuration@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Τριστάνα πυροβολεί στο έδαφος, για να εκτοξευθεί σε μια μακρινή θέση. Κατά την προσγείωση, προκαλεί ζημιά και επιβραδύνει τις γύρω μονάδες για 3 δευτερόλεπτα.",
-            "dynamicDescription": "<mainText>Η Τριστάνα πυροβολεί στο έδαφος και εκτινάσσεται προς τη στοχευμένη θέση, προκαλώντας <magicDamage>@LandingDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνει</status> κατά 60% για 2,5 δευτερόλεπτα όταν προσγειώνεται.<br>Μετά από εκτέλεση Ήρωα ή βοήθεια, ο Χρόνος Επαναφόρτισης ανανεώνεται.",
+            "description": "Η Τριστάνα πυροβολεί στο έδαφος για να εκτοξευτεί σε μια μακρινή θέση, προκαλώντας ζημιά και Επιβραδύνοντας τους εχθρούς στο σημείο όπου προσγειώνεται.",
+            "dynamicDescription": "Η Τριστάνα πυροβολεί στο έδαφος και εκτινάσσεται προς τη στοχευμένη θέση, προκαλώντας <magicDamage>@LandingDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνοντας</status> τους εχθρούς κατά @Slow@% για @SlowDuration@ δευτερόλεπτα όταν προσγειώνεται. Μετά από εκτέλεση Ήρωα ή βοήθεια, ο Χρόνος Επαναφόρτισης ανανεώνεται.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Όταν η Τριστάνα εκτελεί μια μονάδα, οι μπάλες κανονιού ανατινάζονται, προκαλώντας ζημιά στους γύρω εχθρούς.  Μπορεί να ενεργοποιηθεί για να προκαλέσει ζημιά σε μια στοχευμένη μονάδα με την πάροδο του χρόνου και να μειώσει τη Θεραπεία που δέχεται.",
-            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Οι εχθροί που σκοτώνονται από τις βασικές επιθέσεις της Τριστάνα εκρήγνυνται και προκαλούν <magicDamage>@PassiveDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς.<br><br><spellActive>Ενεργή: </spellActive>Ανοίγει πληγή στον στοχευμένο εχθρό, εφαρμόζοντας <keyword>50% Βαριά Τραύματα</keyword> και προκαλώντας <magicDamage>@ActiveDamageTTOnly@ Μαγική Ζημιά</magicDamage> μέσα σε 5 δευτερόλεπτα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Οι εχθροί που σκοτώνονται από τις βασικές επιθέσεις της Τριστάνα εκρήγνυνται και προκαλούν <magicDamage>@PassiveDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς.<br><br><spellActive>Ενεργή: </spellActive>Ανοίγει πληγή στον στοχευμένο εχθρό, εφαρμόζοντας <keyword>Βαριά Τραύματα 50%</keyword> και προκαλώντας <magicDamage>@ActiveDamageTTOnly@ Μαγική Ζημιά</magicDamage> μέσα σε @GrievousDuration@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

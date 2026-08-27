@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "« Kassadin absorbe 15% des <magicDamage>dégâts magiques</magicDamage> qu'il subit et les convertit en <attackSpeed>vitesse d'attaque</attackSpeed> bonus. »"
+        "description": "Kassadin subit moins de <magicDamage>dégâts magiques</magicDamage> et transforme les dégâts magiques reçus en bonus de <attackSpeed>vitesse d'attaque</attackSpeed>."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Passif : les attaques de base de Kassadin lui permettent de récupérer du mana. Le mana restauré est triplé lorsque les attaques touchent des champions ennemis. Actif : les attaques de base de Kassadin infligent des dégâts magiques bonus.",
-            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les attaques de base de Kassadin puisent de l'énergie dans le Néant, lui permettant de récupérer <scaleMana>@ManaGainAmount@ de mana</scaleMana> à chaque coup. Si la cible est un champion ennemi, le <scaleMana>mana</scaleMana> restauré est triplé et passe à @ManaGainAmount*3@.<br><br><spellActive>Actif : </spellActive>Kassadin charge sa lame éthérée pendant 5 sec, ce qui fait que ses attaques de base infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> bonus.@SpellModifierDescriptionAppend@",
+            "description": "Passif : les attaques de base de Kassadin lui permettent de récupérer du mana. Actif : les attaques de base de Kassadin infligent des dégâts magiques bonus.",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les attaques de base de Kassadin puisent de l'énergie dans le Néant, lui permettant de récupérer <scaleMana>@ManaGainAmount@ pts de mana</scaleMana> à chaque coup, augmenté à <scaleMana>@ChampionManaRestore@ pts de mana</scaleMana> contre les champions.<br><br><spellActive>Actif : </spellActive>Kassadin charge sa lame éthérée pendant @BuffDuration@ sec, ce qui fait que ses attaques de base infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Kassadin tire de l'énergie des sorts lancés près de lui. Après avoir tiré assez d'énergie, Kassadin peut utiliser Pulsation pour blesser et ralentir les ennemis dans une zone en forme de cône devant lui.",
-            "dynamicDescription": "Kassadin exploite l'énergie de la magie qui l'entoure (1800 de portée), gagnant une charge à chaque fois qu'une compétence est lancée près de lui. Au bout de 6 charges, Kassadin peut utiliser <spellName>Pulsation</spellName> pour infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>ralentir</status> de @MoveSpeedMod*-100@% pendant 3 sec les ennemis dans une zone en forme de cône devant lui.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin exploite l'énergie des compétences lancées autour de lui, gagnant une charge à chaque fois qu'une compétence est lancée près de lui.<br><br>Au bout de @RequiredChargesTooltip@ charges, Kassadin peut utiliser <spellName>Pulsation</spellName> pour infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>ralentir</status> de @MoveSpeedMod*-100@% pendant @SlowDuration@ sec les ennemis dans une zone en forme de cône devant lui.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Kassadin se téléporte vers une destination proche, blessant les ennemis se trouvant à proximité. Utiliser plusieurs fois Fissure en peu de temps augmente progressivement le coût en mana des utilisations supplémentaires et inflige des dégâts bonus.",
-            "dynamicDescription": "Kassadin se téléporte dans une zone proche et inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux unités ennemies proches. De plus, chaque <spellName>Fissure</spellName> supplémentaire dans les 8 prochaines secondes coûte <scaleMana>100 mana supplémentaire</scaleMana> et inflige <magicDamage>@Damage@ pts de dégâts bonus</magicDamage>, cumulable jusqu'à 10 fois.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin se téléporte dans une zone proche et inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux unités ennemies proches. De plus, chaque <spellName>Fissure</spellName> lancée dans les @BuffDuration@ secondes suivantes coûte <scaleMana>@AdditionalManaPerCast@ pts de mana supplémentaires</scaleMana> et inflige <magicDamage>@Damage@ pts de dégâts bonus</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

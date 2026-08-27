@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Veigar obtiene un 1% de Regeneración de Maná adicional por cada 1% de Maná que le falte."
+        "description": "La regeneración de maná de Veigar aumenta según su maná faltante."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Veigar invoca una gran masa de materia oscura que cae en una ubicación objetivo e inflige daño mágico al caer.",
-            "dynamicDescription": "<mainText>Tras 1.2 seg, Veigar hace caer una masa de materia oscura en una ubicación objetivo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.",
+            "dynamicDescription": "Tras @ImpactDelay@ seg, una masa de materia oscura cae en una ubicación objetivo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Veigar manipula los bordes del espacio alrededor de una ubicación objetivo durante 3 seg, lo que aturde brevemente a los enemigos que atraviesen el perímetro.",
-            "dynamicDescription": "<mainText>Veigar manipula los bordes del espacio alrededor de una ubicación objetivo durante 3 seg, lo que <status>aturde</status> durante @StunDuration@ seg",
+            "dynamicDescription": "Veigar manipula los bordes del espacio alrededor de una ubicación objetivo durante @CageDuration@ seg, lo que <status>aturde</status> durante @StunDuration@ seg a los enemigos que atraviesen el perímetro.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Veigar ataca a un campeón enemigo, lo que le inflige una gran cantidad de daño mágico más un 80% del Poder de Habilidad del objetivo como daño.",
-            "dynamicDescription": "<mainText>Veigar ataca a un campeón enemigo, lo que inflige <magicDamage>@MinDamage@ más un 80% del Poder de Habilidad del objetivo como daño mágico</magicDamage>.",
+            "dynamicDescription": "Veigar ataca a un campeón enemigo, lo que inflige <magicDamage>@MinDamage@ más un @EnemyAPRatio*100@% del Poder de Habilidad del objetivo como daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

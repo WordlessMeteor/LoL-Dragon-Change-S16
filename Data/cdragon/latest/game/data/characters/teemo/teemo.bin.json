@@ -485,9 +485,9 @@
         "mRootSpell": "Characters/Teemo/Spells/TeemoWAbility/TeemoW",
         "mChildSpells": [
             "Characters/Teemo/Spells/TeemoWAbility/TeemoW",
-            "{a6e2eb54}",
-            "{d137b140}",
-            "{30c4f72d}"
+            "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveBuff",
+            "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveCooldown",
+            "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassive"
         ],
         "mName": "TeemoWAbility",
         "__type": "AbilityObject"
@@ -742,15 +742,15 @@
         },
         "__type": "SpellObject"
     },
-    "{30c4f72d}": {
+    "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassive": {
         "ObjectName": "TeemoWPassive",
-        "objectPath": "{30c4f72d}",
+        "objectPath": "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassive",
         "mScriptName": "TeemoWPassive",
         "__type": "SpellObject"
     },
-    "{a6e2eb54}": {
+    "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveBuff": {
         "ObjectName": "TeemoWPassiveBuff",
-        "objectPath": "{a6e2eb54}",
+        "objectPath": "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveBuff",
         "mScriptName": "TeemoWPassiveBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TeemoWPassive",
@@ -769,9 +769,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d137b140}": {
+    "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveCooldown": {
         "ObjectName": "TeemoWPassiveCooldown",
-        "objectPath": "{d137b140}",
+        "objectPath": "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassiveCooldown",
         "mScriptName": "TeemoWPassiveCooldown",
         "mSpell": {
             "mImgIconName": [
@@ -789,8 +789,8 @@
         "mRootSpell": "Characters/Teemo/Spells/TeemoRAbility/TeemoR",
         "mChildSpells": [
             "Characters/Teemo/Spells/TeemoRAbility/TeemoR",
-            "{cde85647}",
-            "{51a365a3}"
+            "Characters/Teemo/Spells/TeemoRAbility/TeemoRTrap",
+            "Characters/Teemo/Spells/TeemoRAbility/TeemoRDot"
         ],
         "mName": "TeemoRAbility",
         "mType": 2,
@@ -1466,9 +1466,9 @@
         },
         "__type": "SpellObject"
     },
-    "{51a365a3}": {
+    "Characters/Teemo/Spells/TeemoRAbility/TeemoRDot": {
         "ObjectName": "TeemoRDot",
-        "objectPath": "{51a365a3}",
+        "objectPath": "Characters/Teemo/Spells/TeemoRAbility/TeemoRDot",
         "mScriptName": "TeemoRDot",
         "mSpell": {
             "DataValues": [
@@ -1541,9 +1541,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cde85647}": {
+    "Characters/Teemo/Spells/TeemoRAbility/TeemoRTrap": {
         "ObjectName": "TeemoRTrap",
-        "objectPath": "{cde85647}",
+        "objectPath": "Characters/Teemo/Spells/TeemoRAbility/TeemoRTrap",
         "mScriptName": "TeemoRTrap",
         "mSpell": {
             "flags": 4194308,
@@ -1768,15 +1768,15 @@
         "mRootSpell": "Characters/Teemo/Spells/TeemoEAbility/TeemoE",
         "mChildSpells": [
             "Characters/Teemo/Spells/TeemoEAbility/TeemoE",
-            "{7daaa1b4}",
-            "{a4dd13df}"
+            "Characters/Teemo/Spells/TeemoEAbility/TeemoEAttack",
+            "Characters/Teemo/Spells/TeemoEAbility/TeemoEDot"
         ],
         "mName": "TeemoEAbility",
         "__type": "AbilityObject"
     },
-    "{38aed395}": {
+    "Characters/Teemo/Spells/TeemoEAbility/TeemoEShared": {
         "ObjectName": "TeemoEShared",
-        "objectPath": "{38aed395}",
+        "objectPath": "Characters/Teemo/Spells/TeemoEAbility/TeemoEShared",
         "mScriptName": "TeemoEShared",
         "__type": "SpellObject"
     },
@@ -2140,9 +2140,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7daaa1b4}": {
+    "Characters/Teemo/Spells/TeemoEAbility/TeemoEAttack": {
         "ObjectName": "TeemoEAttack",
-        "objectPath": "{7daaa1b4}",
+        "objectPath": "Characters/Teemo/Spells/TeemoEAbility/TeemoEAttack",
         "mScriptName": "TeemoEAttack",
         "mSpell": {
             "flags": 2,
@@ -2274,9 +2274,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a4dd13df}": {
+    "Characters/Teemo/Spells/TeemoEAbility/TeemoEDot": {
         "ObjectName": "TeemoEDot",
-        "objectPath": "{a4dd13df}",
+        "objectPath": "Characters/Teemo/Spells/TeemoEAbility/TeemoEDot",
         "mScriptName": "TeemoEDot",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2443,9 +2443,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c82ad54c}": {
+    "Characters/Teemo/Spells/TeemoEAbility/TeemoECrit": {
         "ObjectName": "TeemoECrit",
-        "objectPath": "{c82ad54c}",
+        "objectPath": "Characters/Teemo/Spells/TeemoEAbility/TeemoECrit",
         "mScriptName": "TeemoECrit",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -2647,19 +2647,6 @@
             "DataValuesModeOverride": {
                 "cherry": {
                     "SpellDataValues": [
-                        {
-                            "name": "BaseDamage",
-                            "values": [
-                                30.0,
-                                70.0,
-                                110.0,
-                                150.0,
-                                190.0,
-                                230.0,
-                                270.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
                         {
                             "name": "APRatio",
                             "values": [
@@ -2930,20 +2917,20 @@
         "__type": "SpellObject"
     },
     "{76605772}": {
-        "mRootSpell": "{5a629d30}",
+        "mRootSpell": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive",
         "mChildSpells": [
-            "{5a629d30}",
-            "{8c6c59f1}",
-            "{818b50bd}"
+            "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive",
+            "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPAttackSpeedBuff",
+            "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPStealthBuff"
         ],
         "mName": "TeemoPassiveAbility",
         "mType": 3,
         "AbilityTraits": 128,
         "__type": "AbilityObject"
     },
-    "{5a629d30}": {
+    "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive": {
         "ObjectName": "TeemoPassive",
-        "objectPath": "{5a629d30}",
+        "objectPath": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive",
         "mScriptName": "TeemoPassive",
         "mSpell": {
             "mSpellTags": [
@@ -3056,9 +3043,9 @@
         },
         "__type": "SpellObject"
     },
-    "{818b50bd}": {
+    "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPStealthBuff": {
         "ObjectName": "TeemoPStealthBuff",
-        "objectPath": "{818b50bd}",
+        "objectPath": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPStealthBuff",
         "mScriptName": "TeemoPStealthBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TeemoPStealthBuff",
@@ -3082,9 +3069,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8c6c59f1}": {
+    "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPAttackSpeedBuff": {
         "ObjectName": "TeemoPAttackSpeedBuff",
-        "objectPath": "{8c6c59f1}",
+        "objectPath": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPAttackSpeedBuff",
         "mScriptName": "TeemoPAttackSpeedBuff",
         "mSpell": {
             "mImgIconName": [
@@ -3372,7 +3359,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             30,
             75,
@@ -3400,7 +3387,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             4,
             10,
@@ -3428,7 +3415,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             55,
             150,
@@ -3484,7 +3471,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -3510,7 +3497,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -3581,7 +3568,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -3621,7 +3608,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             17000,
             42000,
@@ -3649,7 +3636,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             100,
             275,
@@ -3678,7 +3665,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             2,
             6,
@@ -3821,9 +3808,9 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{7daaa1b4}",
-            "{c82ad54c}",
-            "{cde85647}",
+            "Characters/Teemo/Spells/TeemoEAbility/TeemoEAttack",
+            "Characters/Teemo/Spells/TeemoEAbility/TeemoECrit",
+            "Characters/Teemo/Spells/TeemoRAbility/TeemoRTrap",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3848,7 +3835,7 @@
         "passiveName": "game_character_passiveName_Teemo",
         "passiveLuaName": "TeemoPassive",
         "passiveToolTip": "game_character_passiveDescription_Teemo",
-        "passive1IconName": "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.dds",
+        "passive1IconName": "assets/characters/teemo/hud/icons2d/teemopassive.dds",
         "name": "game_character_displayname_Teemo",
         "mUseCCAnimations": true,
         "selectionHeight": 100.0,
@@ -3975,13 +3962,13 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{5a629d30}",
+        "mCharacterPassiveSpell": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{5a629d30}",
+                "mParentPassiveBuff": "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPassive",
                 "mComponentBuffs": [
-                    "{8c6c59f1}",
-                    "{818b50bd}"
+                    "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPAttackSpeedBuff",
+                    "Characters/Teemo/Spells/TeemoPassiveAbility/TeemoPStealthBuff"
                 ],
                 "__type": "CharacterPassiveData"
             },

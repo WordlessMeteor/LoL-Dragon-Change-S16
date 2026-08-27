@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Nidalee": {
             "id": "Jade_Nidalee",
@@ -22,6 +22,12 @@
                     "id": "60076000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60076003",
+                    "num": 3,
+                    "name": "French Maid Nidalee",
                     "chromas": false
                 },
                 {
@@ -66,14 +72,14 @@
                     "id": "60076013",
                     "num": 13,
                     "name": "Dawnbringer Nidalee (Amethyst)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076014",
                     "num": 14,
                     "name": "Dawnbringer Nidalee (Peridot)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -87,14 +93,14 @@
                     "id": "60076016",
                     "num": 16,
                     "name": "Dawnbringer Nidalee (Rose Quartz)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076017",
                     "num": 17,
                     "name": "Dawnbringer Nidalee (Pearl)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -356,7 +362,7 @@
                     "id": "Jade_NidaleeBushwhack",
                     "name": "Bushwhack / Pounce",
                     "description": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, reveals the target and reduces their Armor and Magic Resist for 12 seconds. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
-                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>{{ damagepersecond }} magic damage</magicDamage> over 2 seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by {{ resistdecreases*100 }}% for 12 seconds. <br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }} magic damage</magicDamage> to surrounding enemies.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>{{ damagepersecond }} magic damage</magicDamage> over 2 seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by {{ resistdecreases*100 }}% for 12 seconds. Traps last for 4 minutes. <br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }} magic damage</magicDamage> to surrounding enemies.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Trap Damage",

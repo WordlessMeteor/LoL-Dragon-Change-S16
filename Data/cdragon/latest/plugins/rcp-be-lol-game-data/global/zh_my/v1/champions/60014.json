@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60014001,
+            "contentId": "ba022c8c-1427-4257-a080-4651e2442e93",
+            "relatedPrimeContentId": "cfd9de78-5f04-4a20-950a-fcd7edb0ab61",
+            "relatedPrimeItemId": 14001,
+            "isBase": false,
+            "name": "海克斯科技 赛恩",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Jade_SionLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 40
+                }
+            ],
+            "description": "多年来许多人都在质疑一件事 － 艺术究竟是否该被世俗道德局限？或是科学究竟该不该被人类制定的律法规范？有些人相信若是一直故步自封，这世界将不会有所进步。尽管我们创造的是怪物…海克斯科技也将引领我们走向未来。"
+        },
+        {
             "id": 60014003,
             "contentId": "07b30dea-dd76-4364-8b72-bbc11ae33720",
             "relatedPrimeContentId": "277e69dc-f3b0-4dbc-af88-ec1a83df1f25",
@@ -743,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "赛恩每次受到攻击时，有40%机率无视最多30/40/50点伤害。"
+        "description": "赛恩每次受到攻击时，有机率无视一部分伤害。"
     },
     "spells": [
         {
@@ -755,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赛恩的凝视会使一名敌人惊恐，并造成伤害和晕眩效果。",
-            "dynamicDescription": "<mainText>轰击一名敌人，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和1.5秒<status>晕眩</status>效果。",
+            "dynamicDescription": "赛恩轰击一名敌人，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@StunDuration@秒<status>晕眩</status>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -781,7 +812,7 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,13 +853,13 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -840,40 +871,40 @@
                     0.0
                 ],
                 "Effect7Amount": [
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {
@@ -904,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "赛恩为自己施加一道可吸收伤害的护盾。如果护盾在10秒内未被摧毁，则会爆炸并对周围敌人造成伤害。4秒后可再次施放，手动引爆护盾。",
-            "dynamicDescription": "<mainText>赛恩为自己施加一道可吸收<shield>@TotalShield@伤害</shield>的护盾。如果护盾在10秒内未被摧毁，则会爆炸并对周围敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>4秒后可<recast>重施技能</recast>，手动引爆护盾。",
+            "description": "赛恩为自己施加一道可吸收伤害的护盾。如果护盾未被摧毁，则会爆炸并对周围敌人造成伤害。赛恩可以再次激活该技能，提前引爆护盾。",
+            "dynamicDescription": "赛恩为自己施加一道可吸收<shield>@TotalShield@伤害</shield>的护盾。如果护盾在@ShieldDuration@秒内未被摧毁，则会爆炸并对周围敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>@RecastDelay@秒后可<recast>重施技能</recast>，手动引爆护盾。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -931,90 +962,90 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
-                    60.0,
-                    75.0,
-                    90.0,
-                    105.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    15.0,
-                    40.0,
-                    65.0,
-                    90.0,
-                    115.0,
-                    140.0,
-                    165.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    10.0,
-                    12.0,
-                    14.0,
-                    16.0,
-                    16.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1205,7 +1236,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赛恩的每次攻击都会夺取敌人的生命力，为自己和附近友军回复生命值。血肉的气息也会激发赛恩的狂热，并提升他的攻击速度。",
-            "dynamicDescription": "<mainText>赛恩获得<lifeSteal>@LifestealPercent*100@%普攻吸血</lifeSteal>和<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续20秒。此外，赛恩的普攻也会为周围的友军提供相当于造成伤害@HealPercent*100@%的<healing>治疗</healing>。",
+            "dynamicDescription": "赛恩获得<lifeSteal>@LifestealPercent*100@%普攻吸血</lifeSteal>和<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续@BuffDuration@秒。此外，赛恩的普攻也会为周围的友军提供相当于造成伤害@HealPercent*100@%的<healing>治疗</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1231,8 +1262,8 @@
                 90.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

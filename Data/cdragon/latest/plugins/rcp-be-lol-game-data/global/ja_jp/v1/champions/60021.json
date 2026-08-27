@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "5秒間ダメージを受けずにいると<speed>移動速度が25</speed>増加する。この増加移動速度は毎秒9ずつ増加し、最大70まで増加する。"
+        "description": "移動速度が増加中。効果はダメージを受けるまで持続する。"
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果により、通常攻撃を行うたびに対象に与えるダメージが増加していく。発動すると、自身の攻撃速度が増加し、通常攻撃で対象が受ける回復効果を低下させる。",
-            "dynamicDescription": "<font color='#FF9900'>自動効果:</font> 通常攻撃を行うたびに、対象に<magicDamage>@TotalDamageOnHIt@の魔法ダメージ</magicDamage>を与える。この効果は同じ対象に対して@MaxStacks@回まで累積してスタックする。<br><magicDamage>最大追加ダメージ: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>発動効果:</font> 6秒間、<attackSpeed>攻撃速度</attackSpeed>が<attackSpeed>@ASMod@%</attackSpeed>増加し、通常攻撃が3秒間、<keyword>50%の「重傷」</keyword>を付与するようになる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>自動効果:</font> 通常攻撃を行うたびに、対象に<magicDamage>@TotalDamageOnHIt@の魔法ダメージ</magicDamage>を与える。この効果は同じ対象に対して@MaxStacks@回まで累積してスタックする。<br><magicDamage>最大追加ダメージ: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>発動効果:</font> @ActiveDuration@秒間、<attackSpeed>攻撃速度</attackSpeed>が<attackSpeed>@ASMod@%</attackSpeed>増加し、通常攻撃が3秒間、<keyword>50%の負傷</keyword>を付与するようになる。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に弾丸の雨を降らせて、範囲内の敵に継続ダメージを与えてスロウ効果を付与する。",
-            "dynamicDescription": "0.5秒後、指定地点に無数の弾丸の雨を降らせ、2秒かけて<magicDamage>@TotalDamagePerSecond@の魔法ダメージ</magicDamage>を与え、命中した敵に1秒間、@TotalSlowAmount@の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "無数の弾丸の雨を降らせ、@Duration@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、敵に@MoveSpeedMod*-100@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "前方の扇状範囲に大量の銃弾を放ち、範囲内にいる敵に大量のダメージを与える。",
-            "dynamicDescription": "2秒間、前方の扇状範囲に大量の銃弾を放ち、銃弾ごとに<physicalDamage>@PhysicalDamagePerWave@の物理ダメージ</physicalDamage>を与える(<physicalDamage>合計ダメージ: @TotalDamage@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ChannelDuration@秒間、前方の扇状範囲に大量の銃弾を放ち、銃弾ごとに<physicalDamage>@PhysicalDamagePerWave@の物理ダメージ</physicalDamage>を与える(<physicalDamage>合計ダメージ: @TotalDamage@</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

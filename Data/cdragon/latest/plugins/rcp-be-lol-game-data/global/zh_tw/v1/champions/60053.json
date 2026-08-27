@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "當布里茨的生命低於20%時會自動開啟法力屏障。此法力護盾可以吸收最多50%當前魔力的傷害，持續10秒。法力屏障每90秒只能作用一次。"
+        "description": "布里茨若在生命值低落時受到傷害，會先獲得護盾，護盾值為目前魔力的一定百分比。此效果有冷卻時間。"
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "布里茨發射他的右拳抓取路徑中的目標，造成傷害並且將目標拖引至面前。",
             "dynamicDescription": "布里茨發射他的右拳，對目標造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>和<status>暈眩</status>效果，並將目標<status>拖引</status>至面前。@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "布里茨為機械手臂充能，下次普攻造成雙倍傷害並擊飛目標。",
-            "dynamicDescription": "布里茨為機械手臂充能，下次普攻造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，並<status>擊飛</status>目標@CCDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "布里茨為機械手臂充能，下次普攻造成額外傷害並擊飛目標。",
+            "dynamicDescription": "布里茨為機械手臂充能，下次普攻造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，並<status>擊飛</status>目標。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "布里茨製造一個靜電力場，隨機對一位鄰近敵軍造成閃電傷害。主動使用會對鄰近敵軍造成傷害和0.5秒沉默效果，主動施放後移除被動效果，直到技能冷卻結束。",
-            "dynamicDescription": "<spellPassive>被動</spellPassive>布里茨每2.5秒釋放閃電，隨機命中一位鄰近敵軍，造成<magicDamage>@PassiveDamage@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>對鄰近敵軍造成<magicDamage>@ActiveDamage@魔法傷害</magicDamage>和<status>沉默效果</status>0.5秒。@SpellModifierDescriptionAppend@",
+            "description": "被動發出閃電霹靂，對鄰近敵軍造成傷害。此外，布里茨可以發動此技能來傷害鄰近敵軍，並造成短暫的的沉默效果。",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>布里茨每@PassiveHitRate@秒釋放閃電，隨機命中一位鄰近敵軍，造成<magicDamage>@PassiveDamage@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>對鄰近敵軍造成<magicDamage>@ActiveDamage@魔法傷害</magicDamage>和<status>沉默效果</status>，持續@SilenceDuration@秒。靜電力場冷卻時，不會提供被動效果。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

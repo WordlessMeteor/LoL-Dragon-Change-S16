@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "チャンピオンからキルまたはアシストを獲得すると、スキルのクールダウンが15秒短縮される。"
+        "description": "チャンピオンのキルまたはアシストでクールダウンが短縮される。"
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "短剣を投げる。短剣は敵から敵へと跳ね返って魔法ダメージを与える。",
-            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage>の魔法ダメージを与える短剣を投げる。短剣が近くの敵@MaxBounces@体に跳ね返り、跳ね返るたびにダメージが10%減少する。<br><br>命中した敵に@MarkDuration@秒間マークを付与する。マークはカタリナの通常攻撃またはスキルで消費され、<magicDamage>@TotalDamageMark@</magicDamage>の追加魔法ダメージを与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage>の魔法ダメージを与える短剣を投げる。短剣が近くの敵@MaxBounces@体に跳ね返り、跳ね返るたびにダメージが@DamageFalloff*100@%減少する。<br><br>命中した敵に@MarkDuration@秒間マークを付与する。マークはカタリナの通常攻撃またはスキルで消費され、<magicDamage>@TotalDamageMark@</magicDamage>の追加魔法ダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "刃の嵐と化し、周囲にいる敵チャンピオン(最大3体)に目にも止まらぬ速さで短剣を投げる。",
-            "dynamicDescription": "刃の嵐と化し、最も近くにいる敵チャンピオン3体に短剣を投げ、2.5秒間かけて<magicDamage>@DamageCalcTooltipOnly@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "description": "刃の嵐と化し、周囲にいる敵チャンピオンに目にも止まらぬ速さで短剣を投げて大きなダメージを与え、「負傷」を付与する。",
+            "dynamicDescription": "刃の嵐と化し、最も近くにいる敵チャンピオン@MaxTargets@体に短剣を投げ、@ChannelDuration@秒間かけて<magicDamage>@DamageCalcTooltipOnly@の魔法ダメージ</magicDamage>を与える。命中した敵に@GrievousWoundsDuration@秒間、@GrievousWoundsAmount*100@%の<status>負傷</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

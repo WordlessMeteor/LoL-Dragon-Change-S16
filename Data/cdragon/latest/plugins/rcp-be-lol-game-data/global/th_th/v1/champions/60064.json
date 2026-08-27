@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Acolyte Lee Sin",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "ชุดแบบดั้งเดิมสำหรับสาวกของโชจินนั้นไม่เคยดูเข้ากันกับ Lee Sin ผู้เยาว์วัยที่เปี่ยมล้นไปด้วยความทะเยอทะยานและศักยภาพที่ไม่เคยมีเพื่อนสาวกคนใดเคยคิดใฝ่ฝัน แม้กระนั้น เขาก็เติบโตจนสมกับชุดที่เขาใส่และพลังจากมังกรที่เขามี "
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "หลังจากที่ Lee Sin ใช้สกิล การโจมตีปกติ 2 ครั้งถัดไปจะได้รับความเร็วโจมตี 40% และฟื้นฟู Energy 15 หน่วยต่อครั้ง"
+        "description": "หลังจากที่ Lee Sin ใช้สกิล การโจมตีปกติครั้งถัดไปจะได้รับความเร็วโจมตีและคืน Energy"
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Sonic Wave: Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งศัตรู สร้างความเสียหายกายภาพให้กับศัตรูตัวแรกที่โดน หาก Sonic Wave โดนเป้าหมาย Lee Sin สามารถร่าย Resonating Strike ต่อได้ภายในเวลา 3 วินาที<br>Resonating Strike: Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave และสร้างความเสียหายกายภาพบวกกับ 8% ของพลังชีวิตที่หายไป",
-            "dynamicDescription": "<spellName>Sonic Wave: </spellName> Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งของศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @InitialDamage@ หน่วย</physicalDamage>แก่ศัตรูตัวแรกที่โดน หากใช้ <spellName>Sonic Wave</spellName> โดนเป้าหมาย Lee Sin สามารถใช้ <spellName>Resonating Strike</spellName> ต่อได้ภายในเวลา 3 วินาที<br><br><spellName>Resonating Strike: </spellName>Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave สร้าง<physicalDamage>ความเสียหายกายภาพ @RecastDamage@ หน่วย</physicalDamage> บวกกับ 8% ของพลังชีวิตที่หายไป@SpellModifierDescriptionAppend@",
+            "description": "Sonic Wave: Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งของศัตรู สร้างความเสียหายแก่ศัตรูตัวแรกที่โดน หากใช้ Sonic Wave โดนเป้าหมาย Lee Sin สามารถใช้ Resonating Strike ต่อได้<br><br>Resonating Strike: Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave สร้างความเสียหายได้มากขึ้น โดยจะบวกกับสัดส่วนพลังชีวิตที่หายไปของศัตรู",
+            "dynamicDescription": "<spellName>Sonic Wave: </spellName> Lee Sin ยิงคลื่นเสียงออกไปเพื่อค้นหาตำแหน่งของศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @InitialDamage@ หน่วย</physicalDamage>แก่ศัตรูตัวแรกที่โดน หากใช้ <spellName>Sonic Wave</spellName> โดนเป้าหมาย Lee Sin สามารถใช้ <spellName>Resonating Strike</spellName> ต่อได้ภายในเวลา 3 วินาที<br><br><spellName>Resonating Strike: </spellName>Lee Sin พุ่งเข้าหาศัตรูที่โดน Sonic Wave สร้าง<physicalDamage>ความเสียหายกายภาพ @RecastDamage@ หน่วย</physicalDamage> บวกกับ @MissingHealthDamage*100@% ของพลังชีวิตที่หายไป@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Safeguard: Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม พร้อมสร้างโล่ป้องกันให้กับทั้งคู่ หลังจากที่ใช้ Safeguard ไปแล้ว Lee Sin สามารถใช้ Iron Will ต่อได้ภายในเวลา 3 วินาที<br>Iron Will: Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ Lee Sin ได้รับค่าดูดเลือด ดูดเลือดเวท และเกราะเป็นเวลา 4 วินาที",
-            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม มอบ<shield>โล่ป้องกัน</shield>ความเสียหาย @ShieldAmount@ หน่วยให้กับทั้งคู่เป็นเวลา 5 วินาที หลังจากที่ใช้ <spellName>Safeguard</spellName> ไปแล้ว Lee Sin สามารถใช้ <spellName>Iron Will</spellName> ต่อได้ภายในเวลา 3 วินาที<br><br><spellName>Iron Will: </spellName>Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ Lee Sin ได้รับค่าดูดเลือดและดูดเลือดเวท @LifestealAndSpellVamp@% อีกทั้งได้รับ<scaleArmor>เกราะ @ArmorBonus@ หน่วย</scaleArmor>เป็นเวลา 5 วินาที@SpellModifierDescriptionAppend@",
+            "description": "Safeguard: Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม พร้อมสร้างโล่ป้องกันให้กับทั้งคู่ หลังจากที่ใช้ Safeguard ไปแล้ว Lee Sin จะสามารถใช้ Iron Will ต่อได้<br><br>Iron Will: Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ ได้รับดูดเลือด ดูดเลือดเวท และเกราะ",
+            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin พุ่งเข้าหาเป้าหมายเพื่อนร่วมทีม มอบ<shield>โล่ป้องกัน</shield>ความเสียหาย @ShieldAmount@ หน่วยให้กับทั้งคู่เป็นเวลา @ShieldDuration@ วินาที หลังจากที่ใช้ <spellName>Safeguard</spellName> ไปแล้ว Lee Sin จะสามารถใช้ <spellName>Iron Will</spellName> ต่อได้ภายในเวลา @W1ReactivateTime@ วินาที<br><br><spellName>Iron Will: </spellName>Lee Sin ฝึกฝนมาอย่างหนักหน่วง ทำให้เขาประสบความสำเร็จในการต่อสู้ Lee Sin ได้รับดูดเลือดและดูดเลือดเวท @LifestealAndSpellVamp@% อีกทั้งได้รับ<scaleArmor>เกราะ @ArmorBonus@ หน่วย</scaleArmor>เป็นเวลา @LifestealAndSpellVampTime@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

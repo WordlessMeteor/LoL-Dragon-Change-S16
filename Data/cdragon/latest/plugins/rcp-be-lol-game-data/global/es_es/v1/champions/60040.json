@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "Janna y los campeones aliados obtienen un 3% de velocidad de movimiento adicional."
+        "description": "Janna y los campeones aliados obtienen velocidad de movimiento adicional."
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Cambiando puntualmente la presión y la temperatura, Janna crea una pequeña tormenta que aumenta de tamaño con el tiempo. La tormenta se lanza al activar de nuevo la habilidad. Al lanzarla, esta tormenta se desplaza hacia la dirección en que fue arrojada, lo que inflige daño y lanza por los aires a los enemigos que se encuentren en su camino.",
-            "dynamicDescription": "Invoca un torbellino que inflige <magicDamage>@MinimumDamage@ de daño mágico</magicDamage> a todos los enemigos que encuentre a su paso y los <status>lanza por los aires</status>. Por cada segundo de carga (hasta un máximo de 3 s), el torbellino llega más lejos, inflige <magicDamage>@ChargeDamage@ de daño adicional</magicDamage> y <status>lanza</status> más alto a los enemigos.<br><br><recast>Al reactivarla</recast>, el torbellino se lanza antes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Invoca un torbellino que inflige <magicDamage>@MinimumDamage@ de daño mágico</magicDamage> a todos los enemigos que encuentre a su paso y los <status>lanza por los aires</status>. Por cada segundo de carga (hasta un máximo de @MaxDuration@ s), el torbellino llega más lejos, inflige <magicDamage>@ChargeDamage@ de daño adicional</magicDamage> y <status>lanza</status> más alto a los enemigos.<br><br><recast>Al reactivarla</recast>, el torbellino se lanza antes.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Janna se envuelve con una tormenta mágica que repele a sus enemigos. Una vez pasada la tormenta, unos vientos reparadores curan a los aliados cercanos mientras la habilidad se encuentra activa.",
-            "dynamicDescription": "Invoca el poder del viento para <recast>empujar</recast> a los enemigos cercanos y restaura <healing>@TotalHeal@ de vida</healing> a los aliados cercanos a lo largo de 4 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Invoca el poder del viento para <recast>empujar</recast> a los enemigos cercanos y restaura <healing>@TotalHeal@ de vida</healing> a los aliados cercanos a lo largo de @MaxChannelDuration@ s (curación máxima: <healing>@TotalHeal@</healing>).@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

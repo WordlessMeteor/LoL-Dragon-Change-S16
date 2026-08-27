@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Nidalee": {
             "id": "Jade_Nidalee",
@@ -22,6 +22,12 @@
                     "id": "60076000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60076003",
+                    "num": 3,
+                    "name": "法国女仆 奈德丽",
                     "chromas": false
                 },
                 {
@@ -66,14 +72,14 @@
                     "id": "60076013",
                     "num": 13,
                     "name": "黎明使者 奈德丽 祥辉",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076014",
                     "num": 14,
                     "name": "黎明使者 奈德丽 灵辉",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -87,14 +93,14 @@
                     "id": "60076016",
                     "num": 16,
                     "name": "黎明使者 奈德丽 霞辉",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076017",
                     "num": 17,
                     "name": "黎明使者 奈德丽 雪辉",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -356,7 +362,7 @@
                     "id": "Jade_NidaleeBushwhack",
                     "name": "丛林伏击/猛扑",
                     "description": "人类形态下，奈德丽为粗心大意的对手布置一个伤害陷阱，敌人触发后会被其显形，并在12秒内降低护甲和魔法抗性。美洲狮形态下，奈德丽向前跃击，在落地时造成少量伤害。",
-                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽布置一个陷阱，它可在2秒内持续造成<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，并且，使目标显形并<status>削减</status>其{{ resistdecreases*100 }}%的<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>，持续12秒。<br /><br /><keywordMajor>美洲狮形态：</keywordMajor>奈德丽向前跃击，对周围敌人们造成<magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽布置一个陷阱，它可在2秒内持续造成<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，并且，使目标显形并<status>削减</status>其{{ resistdecreases*100 }}%的<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>，持续12秒。陷阱可持续4分钟。<br /><br /><keywordMajor>美洲狮形态：</keywordMajor>奈德丽向前跃击，对周围敌人们造成<magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "陷阱伤害",

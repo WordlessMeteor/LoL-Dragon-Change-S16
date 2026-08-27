@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "เมื่อพลังชีวิตของ Blitzcrank ลดลงต่ำกว่า 20% Mana Barrier ก็จะทำงาน ทำให้เกิดโล่มานาเท่ากับ 50% ของมานาที่มีเป็นเวลา 10 วินาที Mana Barrier สามารถทำงานได้เพียงหนึ่งครั้งในทุก ๆ 90 วินาที"
+        "description": "เมื่อได้รับความเสียหายขณะมีพลังชีวิตต่ำ Blitzcrank จะได้รับโล่⁠ป้อง⁠กันตามเปอร์เซ็นต์มานาปัจจุบันของเขา เอฟเฟกต์นี้มีคูล⁠ดาวน์"
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank ยิงมือขวาออกไปจับศัตรู สร้างความเสียหายและดึงศัตรูกลับมาหาเขา",
             "dynamicDescription": "Blitzcrank ยิงมือขวาออกไป สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> <status>สตัน</status>เป้าหมาย และ<status>ดึง</status>พวกเขาเข้ามาหาตัวเอง@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Blitzcrank ชาร์จพลังไปที่หมัดเพื่อทำให้การโจมตีครั้งถัดไปสร้างความเสียหายสองเท่า และส่งศัตรูให้ลอยบนอากาศ",
-            "dynamicDescription": "Blitzcrank ชาร์จพลังที่หมัดของเขาเพื่อทำให้การโจมตีครั้งถัดไปสร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และเป้าหมายจะถูก<status>กระแทกให้ลอยขึ้น</status>เป็นเวลา @CCDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank ชาร์จพลังที่หมัดเพื่อให้การโจมตีครั้งถัดไปสร้างโบนัสความเสียหาย และส่งศัตรูให้ลอยบนอากาศ",
+            "dynamicDescription": "Blitzcrank ชาร์จพลังที่หมัดของเขาเพื่อทำให้การโจมตีครั้งถัดไปสร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และเป้าหมายจะถูก<status>กระแทกลอย</status>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ทำให้เกิดสายฟ้าโจมตีศัตรูใกล้เคียงเป็นระยะ อีกทั้ง Blitzcrank ยังสามารถใช้สกิลนี้สร้างความเสียหาย พร้อมทั้งทำให้ศัตรูเป็นใบ้ 0.5 วินาที แต่จะทำให้ฟ้าผ่าหายไป จนกว่าจะกลับมาใช้ Static Field ได้อีกครั้ง",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>สายฟ้าจะกระจายออกจาก Blitzcrank ไปโจมตีศัตรูใกล้เคียงแบบสุ่ม สร้าง<magicDamage>ความเสียหายเวท @PassiveDamage@ หน่วย</magicDamage>ทุก ๆ 2.5 วินาที<br><br><spellActive>กดใช้: </spellActive>สร้าง<magicDamage>ความเสียหายเวท @ActiveDamage@ หน่วย</magicDamage> และ<status>ใบ้</status>ยูนิตศัตรูโดยรอบเป็นเวลา 0.5 วินาที@SpellModifierDescriptionAppend@",
+            "description": "ทำให้เกิดสายฟ้าโจมตีศัตรูใกล้เคียงเป็นระยะ นอกจากนี้ Blitzcrank สามารถกดใช้สกิลเพื่อสร้างความ⁠เสีย⁠หายให้กับศัตรูใกล้เคียง และทำให้ศัตรูติดใบ้เป็นเวลาสั้น ๆ",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>Blitzcrank ปล่อยสายฟ้าโจมตีศัตรูใกล้เคียงแบบสุ่ม สร้าง<magicDamage>ความเสียหายเวท @PassiveDamage@ หน่วย</magicDamage>ทุก ๆ @PassiveHitRate@ วินาที<br><br><spellActive>กดใช้: </spellActive>สร้าง<magicDamage>ความเสียหายเวท @ActiveDamage@ หน่วย</magicDamage> และ<status>ใบ้</status>ยูนิตศัตรูโดยรอบเป็นเวลา @SilenceDuration@ วินาที เอฟเฟกต์ติดตัวจะถูกปิดใช้งานในขณะที่ Static Field ติดคูลดาวน์@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

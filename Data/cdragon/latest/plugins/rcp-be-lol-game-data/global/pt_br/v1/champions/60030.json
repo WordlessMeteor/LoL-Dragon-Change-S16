@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "Ao morrer, Karthus entra em forma de espírito e pode continuar conjurando habilidades."
+        "description": "Ao morrer, Karthus assume a forma de espírito e pode continuar conjurando Habilidades por um curto período."
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus provoca uma explosão em um local após um intervalo, causando dano a inimigos próximos.",
-            "dynamicDescription": "Cria uma explosão que, após um intervalo de 0,5s, causa <magicDamage>@QDamage@ de Dano Mágico</magicDamage> a cada inimigo próximo. Causa o dobro de dano se atingir apenas uma unidade.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Cria uma explosão que causa <magicDamage>@QDamage@ de Dano Mágico</magicDamage> a cada inimigo próximo. Causa o dobro de dano se atingir apenas uma unidade.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Após canalizar por 3s, Karthus causa dano a todos os Campeões inimigos.",
-            "dynamicDescription": "Após canalizar por 3s, Karthus causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os Campeões inimigos.@SpellModifierDescriptionAppend@",
+            "description": "Após canalizar, Karthus causa dano a todos os Campeões inimigos.",
+            "dynamicDescription": "Após canalizar por @ChannelDuration@s, Karthus causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os Campeões inimigos.@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

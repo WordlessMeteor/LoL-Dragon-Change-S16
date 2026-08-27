@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Brand": {
             "id": "Jade_Brand",
@@ -230,7 +230,7 @@
                     "id": "Jade_BrandQ",
                     "name": "火焰烙印",
                     "description": "布兰德向前方放出一团可造成魔法伤害的火球。如果目标带有烈焰焚身效果，则火焰烙印将使目标晕眩。",
-                    "tooltip": "布兰德向前方放出一团可造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>的火球。<br /><br /><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，则<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>2秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布兰德向前方放出一团可造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>的火球。<br /><br /><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，那么<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -262,11 +262,11 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            100,
-                            130,
-                            160,
-                            190
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -334,7 +334,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/100/130/160/190",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -769,7 +769,7 @@
             ],
             "passive": {
                 "name": "炽热之焰",
-                "description": "布兰德的技能会对目标施加烈焰焚身效果，在4秒内持续造成共8%目标最大生命值的魔法伤害。",
+                "description": "布兰德的技能会对他的目标施加【烈焰焚身】效果，造成目标一部分最大生命值的魔法伤害。",
                 "image": {
                     "full": "Jade_BrandP.png",
                     "sprite": "passive0.png",

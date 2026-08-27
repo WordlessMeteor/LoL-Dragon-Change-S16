@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Seeräuber-Tristana",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Kanoniere ahoi! Tristana wagt sich auf hohe See und sucht fern von Bandle nach neuen Abenteuern. Der Hut ist geliehen (gestohlen) von einem Piraten, den sie weggesprengt hat, und die Augenklappe ist nur zur Deko. Mit ihrer kompromisslosen Einstellung und ihrer zuverlässigen Kanone hat sie mehr Schiffe versenkt als manch anderer Kapitän in Bilgewasser."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Tristana feuert ihre Waffe schnell ab, um ihr Angriffstempo für kurze Zeit zu erhöhen.",
-            "dynamicDescription": "<mainText>Erhöht 7 Sekunden lang Tristanas <attackSpeed>Angriffstempo um @AttackSpeedMod*100@ %</attackSpeed>.",
+            "dynamicDescription": "Tristana erhält @BuffDuration@ Sekunden lang <attackSpeed>@AttackSpeedMod*100@ % Angriffstempo</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Tristana feuert auf den Boden, um sich an einen entfernten Ort zu schleudern, wo sie bei der Landung den nahen Einheiten Schaden zufügt und Einheiten in der Umgebung 3 Sekunden lang verlangsamt.",
-            "dynamicDescription": "<mainText>Tristana feuert auf den Boden, um sich zum Zielort zu katapultieren. Bei der Landung fügt sie Gegnern <magicDamage>@LandingDamage@ magischen Schaden</magicDamage> zu und <status>verlangsamt</status> sie 2,5 Sekunden lang um 60 %.<br>Bei einem Champion-Kill oder einer Unterstützung wird die Abklingzeit zurückgesetzt.",
+            "description": "Tristana feuert auf den Boden, um sich an einen weiter entfernten Ort zu katapultieren. Gegner, die sich bei ihrer Landung in der Nähe befinden, erleiden Schaden und werden verlangsamt.",
+            "dynamicDescription": "Tristana feuert auf den Boden, um sich zum Zielort zu katapultieren. Bei der Landung fügt sie Gegnern <magicDamage>@LandingDamage@ magischen Schaden</magicDamage> zu und <status>verlangsamt</status> sie @SlowDuration@ Sekunden lang um @Slow@ %. Bei einem Champion-Kill oder -Assist wird die Abklingzeit von „Raketensprung“ zurückgesetzt.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Wenn Tristana eine Einheit tötet, zerspringen ihre Kanonenkugeln in Schrapnelle und verursachen Schaden an nahen Gegnern.  Kann aktiviert werden, um einer Zieleinheit über Zeit Schaden zuzufügen und ihre erhaltene Heilung zu verringern.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Gegner explodieren, wenn sie von Tristanas Angriffen getötet werden, was Gegnern in der Nähe <magicDamage>@PassiveDamage@ magischen Schaden</magicDamage> zufügt.<br><br><spellActive>Aktiv: </spellActive>Zerreißt das gegnerische Ziel, belegt es mit <keyword>50 % Klaffende Wunden</keyword> und fügt ihm über 5 Sekunden <magicDamage>@ActiveDamageTTOnly@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Gegner explodieren, wenn sie von Tristanas Angriffen getötet werden, was Gegnern in der Nähe <magicDamage>@PassiveDamage@ magischen Schaden</magicDamage> zufügt.<br><br><spellActive>Aktiv: </spellActive>Zerreißt das gegnerische Ziel, belegt es mit <keyword>50 % Klaffende Wunden</keyword> und fügt ihm über @GrievousDuration@ Sekunden <magicDamage>@ActiveDamageTTOnly@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

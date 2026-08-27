@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Egy szövetségesre alkalmazva arra utasítja Pixet, hogy ugorjon az adott szövetségeshez, és védje meg őt. Ezután Pix követni fogja a hőst, és segíti őt a támadásban. Ellenfél esetében arra utasítja Pixet, hogy ugorjon az adott ellenségre, és sebezze meg. Pix ezután követi a célpontot, amely látható marad Lulu számára.",
-            "dynamicDescription": "<mainText>Szövetségesen alkalmazva: arra utasítja Pixet, hogy ugorjon oda egy szövetségeshez, és Lulu helyett őt kövesse és segítse 6 másodpercig. Megérkezéskor Pix 6 másodpercre egy <shield>@TotalShield@ sebzést elnyelő pajzsot</shield> biztosít.<br><br>Ellenségen alkalmazva: Pix <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a kijelölt ellenséges egységnek. Ezután Pix követi az egységet, és 6 másodpercre felfedi őt.",
+            "dynamicDescription": "Szövetségesen alkalmazva: arra utasítja Pixet, hogy ugorjon oda egy szövetségeshez, és Lulu helyett őt kövesse és segítse @AllyFollowDuration@ másodpercig. Megérkezéskor Pix @ShieldDuration@ másodpercre egy <shield>@TotalShield@ sebzést elnyelő pajzsot</shield> biztosít.<br><br>Ellenségen alkalmazva: Pix <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a kijelölt ellenséges egységnek. Ezután Pix követi az egységet, és @EnemyFollowDuration@ másodpercre felfedi őt.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Lulu megnöveszt egy szövetségest, aki ezáltal a levegőbe löki a közelében lévő ellenfeleket, életereje pedig jelentősen megnő. A következő néhány másodpercre a szövetségest egy aura veszi körül, amely lelassítja a közelben tartózkodó ellenfeleket.",
-            "dynamicDescription": "<mainText>Lulu megnöveszt egy szövetségest, amivel <status>a levegőbe löki</status> a közelében lévő ellenfeleket. Szövetségese @BuffDuration@ másodpercre <scaleHealth>@TotalBonusHealth@ bónusz életerőt</scaleHealth> szerez, és 1 másodpercig @SlowPercent@%-kal <status>lassítja</status> a környéken tartózkodó ellenfeleket.",
+            "dynamicDescription": "Lulu megnöveszt egy szövetségest, amivel <status>a levegőbe löki</status> a közelében lévő ellenfeleket. Szövetségese @BuffDuration@ másodpercre <scaleHealth>@TotalBonusHealth@ bónusz életerőt</scaleHealth> szerez, és @SlowPercent@%-kal <status>lassítja</status> a környéken tartózkodó ellenfeleket.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

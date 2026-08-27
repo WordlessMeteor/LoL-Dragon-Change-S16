@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Janna": {
             "id": "Jade_Janna",
@@ -250,7 +250,7 @@
                     "id": "Jade_JannaHowlingGale",
                     "name": "飓风呼啸",
                     "description": "迦娜改变气压和温度，在目标区域召唤小型风暴，对沿途的所有单位造成伤害和击飞效果。召唤风暴时，迦娜可以再次使用此技能来立刻施放风暴，造成的伤害取决于蓄力时间的长短。",
-                    "tooltip": "召唤一道旋风，对沿途的所有敌人造成<magicDamage>{{ minimumdamage }}魔法伤害</magicDamage>和<status>击飞</status>。旋风的充能时间每延长一秒（最多3秒），飞行距离就会变远，造成<magicDamage>{{ chargedamage }}额外伤害</magicDamage>，并将敌人<status>击飞</status>得更高。<br /><br /><recast>再次施放</recast>可提前释放旋风。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "召唤一道旋风，对沿途的所有敌人造成<magicDamage>{{ minimumdamage }}魔法伤害</magicDamage>和<status>击飞</status>。旋风的充能时间每延长一秒（最多{{ maxduration }}秒），飞行距离就会变远，造成<magicDamage>{{ chargedamage }}额外伤害</magicDamage>，并将敌人<status>击飞</status>得更高。<br /><br /><recast>再次施放</recast>可提前释放旋风。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -685,7 +685,7 @@
                     "id": "Jade_JannaReapTheWhirlwind",
                     "name": "复苏季风",
                     "description": "迦娜召唤魔法风暴围绕自己，将敌人击退。唤出风暴后会刮起治愈之风，在持续时间内为附近的友军回复生命值。",
-                    "tooltip": "迦娜召唤风之力，将附近的敌人<recast>击退</recast>，并在4秒内为周围的友军回复<healing>{{ totalheal }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "迦娜召唤风之力，将周围的敌人<recast>击退</recast>，并且每秒为周围的友军回复<healing>{{ totalheal }}生命值</healing>，持续{{ maxchannelduration }}秒。(最大治疗量：<healing>{{ totalheal }}</healing>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每秒治疗",
@@ -801,7 +801,7 @@
             ],
             "passive": {
                 "name": "顺风而行",
-                "description": "迦娜和友方英雄的移动速度提升3%。",
+                "description": "迦娜和她的友方英雄获得移动速度提升。",
                 "image": {
                     "full": "Jade_JannaP.png",
                     "sprite": "passive0.png",

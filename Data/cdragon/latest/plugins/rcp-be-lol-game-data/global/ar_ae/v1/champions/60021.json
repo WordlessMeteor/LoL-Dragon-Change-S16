@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "بعد 5ث من عدم تلقي أي هجوم، تكسب ميس فورتشن <speed>25 سرعة حركة</speed> إضافية. تكبر هذه الزيادة بمقدار 9 كل ثانية، وصولًا إلى حد أقصى يبلغ 70."
+        "description": "تمتلك ميس فورتشن زيادة في سرعة الحركة حتى تتلقى إصابة في القتال."
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تزيد ميس فورتشن بشكل تلقائي من الضرر الملحق بكل هدف مع كل ضربة.  يمكن تفعيل هذه القدرة لزيادة سرعة الهجوم لدى ميس فورتشن وجعل هجماتها تقلل من العلاج الذي يتلقاه الهدف.",
-            "dynamicDescription": "<font color='#FF9900'>تأثير كامن:</font> تلحق ميس فورتشن <magicDamage>@TotalDamageOnHIt@ ضرر سحر</magicDamage> بهدفها مع كل هجوم، ويتكدس التأثير تراكميًا حتى @MaxStacks@ من المرات على نفس الهدف.<br><magicDamage>الحد الأقصى من الضرر الإضافي: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>تأثير نشط:</font> تزداد <attackSpeed>سرعة الهجوم</attackSpeed> لدى ميس فورتشن بنسبة <attackSpeed>@ASMod@%</attackSpeed> لمدة 6ث وتتسبب هجماتها في تطبيق <keyword>الجراح الخطيرة بنسبة 50%</keyword> لمدة 3ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>تأثير كامن:</font> تلحق ميس فورتشن <magicDamage>@TotalDamageOnHIt@ ضرر سحر</magicDamage> بهدفها مع كل هجوم، ويتكدس التأثير تراكميًا حتى @MaxStacks@ من المرات على نفس الهدف.<br><magicDamage>الضرر الإضافي الأقصى: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>تأثير نشط:</font> تزداد <attackSpeed>سرعة هجوم</attackSpeed> ميس فورتشن بنسبة <attackSpeed>@ASMod@%</attackSpeed> لمدة @ActiveDuration@ث وتتسبب هجماتها في تطبيق <keyword>الجراح الخطيرة بنسبة 50%</keyword> لمدة 3ث.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق ميس فورتشن وابلًا من الطلقات في موقع معين، فتلحق موجات من الضرر بالخصوم وتبطئ حركتهم.",
-            "dynamicDescription": "تطلق ميس فورتشن مئات الرصاصات في الهواء لتنهمر على موقع معين بعد 0.5ث، فتلحق <magicDamage>@TotalDamagePerSecond@ ضرر سحر</magicDamage> على مدار 2ث، كما <status>تبطئ</status> الأعداء المصابين بمقدار @TotalSlowAmount@ لمدة 1ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق ميس فورتشن مئات الرصاصات في الهواء لتنهمر كالمطر وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> على مدار @Duration@ث، و<status>تبطئ</status> الأعداء بنسبة @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "توجه ميس فورتشن وابلًا من الطلقات ضمن مخروط أمامها، فتلحق كميات كبيرة من الضرر بالأعداء.",
-            "dynamicDescription": "تطلق ميس فورتشن وابلًا من الرصاص في شكل مخروطي أمامها لمدة 2ث، فتُلحق <physicalDamage>@PhysicalDamagePerWave@ ضرر مادي</physicalDamage> لكل رصاصة (<physicalDamage>إجمالي الضرر: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق ميس فورتشن وابلًا من الرصاص في شكل مخروطي أمامها لمدة @ChannelDuration@ث فتلحق <physicalDamage>@PhysicalDamagePerWave@ ضرر مادي</physicalDamage> لكل رصاصة (<physicalDamage>إجمالي الضرر: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

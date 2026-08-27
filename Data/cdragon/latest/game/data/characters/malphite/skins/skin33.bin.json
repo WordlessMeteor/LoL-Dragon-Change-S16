@@ -12,11 +12,11 @@
             "__type": "{e7ee4f28}"
         },
         "loadscreen": {
-            "image": "ASSETS/Characters/Malphite/Skins/Skin27/MalphiteLoadscreen_27.tex",
+            "image": "assets/characters/malphite/skins/skin27/malphiteloadscreen_27.tex",
             "__type": "CensoredImage"
         },
         "loadscreenVintage": {
-            "image": "ASSETS/Characters/Malphite/Skins/Skin27/MalphiteLoadscreen_27_LE.tex",
+            "image": "assets/characters/malphite/skins/skin27/malphiteloadscreen_27_le.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -93,7 +93,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Malphite/Skins/Skin27/Malphite_Skin27.skl",
             "simpleSkin": "ASSETS/Characters/Malphite/Skins/Skin27/Malphite_Skin27.skn",
-            "texture": "ASSETS/Characters/Malphite/Skins/Skin33/Malphite_Skin33_TX_CM.tex",
+            "texture": "assets/characters/malphite/skins/skin33/malphite_skin33_tx_cm.tex",
             "skinScale": 1.75,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -104,7 +104,7 @@
             "initialSubmeshToHide": "Recall_Stone Recall_Spurs Armor",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Malphite/Skins/Skin33/Malphite_Skin33_Recall_TX_CM.tex",
+                    "texture": "assets/characters/malphite/skins/skin33/malphite_skin33_recall_tx_cm.tex",
                     "submesh": "Recall_Spurs",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -119,7 +119,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Malphite/Skins/Skin33/Malphite_Skin33_Recall_TX_CM.tex",
+                    "texture": "assets/characters/malphite/skins/skin33/malphite_skin33_recall_tx_cm.tex",
                     "submesh": "Recall_Stone",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -143,9 +143,9 @@
             }
         ],
         "mContextualActionData": "Characters/Malphite/CAC/Malphite_Base",
-        "iconCircle": "ASSETS/Characters/Malphite/HUD/Malphite_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Malphite/HUD/Malphite_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Malphite/HUD/Malphite_Circle_27.tex",
+        "iconCircle": "assets/characters/malphite/hud/malphite_circle.tex",
+        "iconSquare": "assets/characters/malphite/hud/malphite_square.tex",
+        "iconAvatar": "assets/characters/malphite/hud/malphite_circle_27.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
@@ -17859,6 +17859,7 @@
                         "mSubmeshesToDrawAlways": [
                             "Armor"
                         ],
+                        "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveAttachedMesh"
@@ -17997,11 +17998,12 @@
                         "mSubmeshesToDrawAlways": [
                             "Armor"
                         ],
+                        "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
-                "blendMode": 3,
+                "blendMode": 1,
                 "pass": 9,
                 "depthBiasFactors": [
                     -1.0,
@@ -18044,6 +18046,7 @@
                         "mSubmeshesToDrawAlways": [
                             "BODY"
                         ],
+                        "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveAttachedMesh"
@@ -18070,7 +18073,7 @@
         ],
         "particleName": "Malphite_Skin33_P_Armour",
         "particlePath": "Characters/Malphite/Skins/Skin33/Particles/Malphite_Skin33_P_Armour",
-        "flags": 192,
+        "flags": 1220,
         "objectPath": "Characters/Malphite/Skins/Skin33/Particles/Malphite_Skin33_P_Armour",
         "__type": "VfxSystemDefinitionData"
     },
@@ -21005,7 +21008,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin33/Malphite_Skin33_TX_CM.tex",
+                "texturePath": "assets/characters/malphite/skins/skin33/malphite_skin33_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -21013,7 +21016,7 @@
             },
             {
                 "TextureName": "Mask_Texture_red",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin27/Particles/Malphite_Skin27_Glow_Mask.tex",
+                "texturePath": "assets/characters/malphite/skins/skin27/particles/malphite_skin27_glow_mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -21148,22 +21151,22 @@
         "samplerValues": [
             {
                 "TextureName": "Eyelid_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin33/Malphite_Skin33_TX_CM.tex",
+                "texturePath": "assets/characters/malphite/skins/skin33/malphite_skin33_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Eyes_Mask",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin27/Particles/Malphite_Skin27_Eyes_Mask.tex",
+                "texturePath": "assets/characters/malphite/skins/skin27/particles/malphite_skin27_eyes_mask.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Blink_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin27/Malphite_Skin27_skin35_Eyes_Blink.tex",
+                "texturePath": "assets/characters/malphite/skins/skin27/malphite_skin27_skin35_eyes_blink.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],

@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "The Nine-Tailed Fox",
-    "shortBio": "- Essence Theft (P) akan di-stack saat memberikan damage ke musuh<br>- Spirit Rush (R) tidak akan reset",
+    "shortBio": "- Essence Theft (P) akan di-stack saat menghasilkan damage ke musuh<br>- Spirit Rush (R) tidak akan direset<br>- Charm (E) meningkatkan damage Ahri ke target",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ahri dash ke depan dan menembakkan essence bolt, memberi damage ke 3 musuh di sekitar (memprioritaskan Champion). Spirit Rush bisa di-cast hingga tiga kali sebelum memasuki cooldown.",
-            "dynamicDescription": "Ahri dengan lincah melakukan dash, menembakkan 3 essence bolt ke musuh di sekitar, memprioritaskan champion. Masing-masing bolt menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. <spellName>Spirit Rush</spellName> bisa di-<recast>Recast</recast> hingga 2 kali lagi dalam 10 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri dengan lincah melakukan dash, menembakkan 3 essence bolt ke musuh di sekitar, memprioritaskan champion. Setiap bolt menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. <spellName>Spirit Rush</spellName> bisa di-<recast>Recast</recast> hingga 2 kali lagi dalam @RecastDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

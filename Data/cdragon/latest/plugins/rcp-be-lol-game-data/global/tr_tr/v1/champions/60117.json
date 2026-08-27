@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Bir takım arkadaşı üzerinde kullanılırsa Pix'e bu takım arkadaşının üstüne atlayarak ona kalkan vermesini emreder. Ardından Pix bu takım arkadaşını takip ederek saldırılarına destek olur. Bir rakip üzerinde kullanılırsa da Pix'e bu rakibin üstüne atlayarak ona hasar vermesini emreder. Ardından Pix bu rakibi takip ederek ona yönelik görüş sağlar.",
-            "dynamicDescription": "<mainText>Hedef Takım Arkadaşıysa: Pix'e hedef takım arkadaşının üstüne sıçrayarak 6 saniye boyunca Lulu yerine hedefin saldırılarına destek olmasını emreder. Pix ulaştığında 6 saniyeliğine <shield>@TotalShield@ Hasar soğuran bir kalkan</shield> sağlar.<br><br>Hedef Rakipse: Pix hedef rakip birime <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Ardından Pix bu rakibi takip ederek 6 saniyeliğine ona yönelik görüş sağlar.",
+            "dynamicDescription": "Hedef Takım Arkadaşıysa: Pix'e hedef takım arkadaşının üstüne sıçrayarak @AllyFollowDuration@ saniye boyunca Lulu yerine hedefin saldırılarına destek olmasını emreder. Pix ulaştığında @ShieldDuration@ saniyeliğine <shield>@TotalShield@ Hasar soğuran bir kalkan</shield> sağlar.<br><br>Hedef Rakipse: Pix hedef rakip birime <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Ardından Pix bu rakibi takip ederek @EnemyFollowDuration@ saniyeliğine ona yönelik görüş sağlar.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lulu, bir takım arkadaşını büyüterek büyük miktarda ilave can kazanmasına ve yakınındaki rakiplerin havaya savrulmalarına yol açar. Sonraki birkaç saniye boyunca Lulu'nun takım arkadaşı yakındaki rakipleri yavaşlatan bir hareye sahip olur.",
-            "dynamicDescription": "<mainText>Lulu takım arkadaşını büyüterek onun yakınındaki rakipleri <status>havaya savurmasını</status> sağlar. Takım arkadaşı @BuffDuration@ saniyeliğine <scaleHealth>@TotalBonusHealth@ İlave Can</scaleHealth> kazanır ve yakınındaki rakipler 1 saniyeliğine %@SlowPercent@ <status>yavaşlar</status>.",
+            "dynamicDescription": "Lulu takım arkadaşını büyüterek onun yakınındaki rakipleri <status>havaya savurmasını</status> sağlar. Takım arkadaşı @BuffDuration@ saniyeliğine <scaleHealth>@TotalBonusHealth@ İlave Can</scaleHealth> kazanır ve yakınındaki rakipler %@SlowPercent@ <status>yavaşlar</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

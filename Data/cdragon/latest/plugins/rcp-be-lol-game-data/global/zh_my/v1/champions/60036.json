@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "俺不是浩克！ 俺是蒙多！",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "蒙多不恶毒，蒙多有很健康的情绪管理机制—噢，你是指这些紫色黏液吗？蒙多很确定这也没问题。"
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "蒙多医生每秒回复0.3%的最大生命值。"
+        "description": "蒙多医生每秒回复一部分的最大生命值。"
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@生命值</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "多医生投掷病毒屠刀，根据目标的最大生命值造成伤害。",
-            "dynamicDescription": "<mainText>蒙多医生投掷病毒屠刀，造成相当于@DamageMod*100@%目标当前生命值的<magicDamage>魔法伤害</magicDamage>（最低造成@MinDamage@伤害）和40%<status>减速</status>效果，持续2秒。<br><br>如果屠刀命中目标，则会返还一半的生命值消耗。",
+            "dynamicDescription": "蒙多医生投掷病毒屠刀，造成相当于@DamageMod*100@%目标当前生命值的<magicDamage>魔法伤害</magicDamage>（最低造成@MinDamage@伤害）和@MoveMod*-100@%<status>减速</status>效果，持续@SlowDuration@秒。<br><br>如果屠刀命中目标，则会返还<healing>@HealthReturn@生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@生命值</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "“潜能激发”会使蒙多医生获得固定数值的物理攻击加成，持续5秒。此外，蒙多医生每损失1%生命值，就会获得额外物理攻击。",
-            "dynamicDescription": "蒙多医生获得<physicalDamage>@BaseIncrease@物理攻击</physicalDamage>，持续5秒。蒙多医生每损失1%生命值，就会额外获得<physicalDamage>+@DamageMod@物理攻击</physicalDamage>。@SpellModifierDescriptionAppend@",
+            "description": "蒙多医生会根据已损失生命值获得物理攻击，持续数秒。",
+            "dynamicDescription": "蒙多医生获得<physicalDamage>@BaseIncrease@物理攻击</physicalDamage>，持续@Duration@秒。蒙多医生每损失1%生命值，就会额外获得<physicalDamage>+@DamageMod@物理攻击</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@%当前生命值</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "蒙多医生消耗部分生命值，短暂提升移动速度并大幅提升生命回复。",
-            "dynamicDescription": "<mainText>蒙多医生会在12秒内回复<healing>@MaximumHealthRegen@生命值</healing>。此外，他还会获得<speed>@SpeedMod*100@%移动速度</speed>。",
+            "dynamicDescription": "蒙多医生在@Duration@内回复<healing>@MaximumHealthRegen@生命值</healing>，并获得<speed>@SpeedMod*100@%移动速度</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

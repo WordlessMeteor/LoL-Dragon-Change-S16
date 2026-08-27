@@ -155,61 +155,20 @@
         "__type": "JunglePathRecommendation"
     },
     "{eb21ad80}": {
-        "mRootSpell": "{251beeae}",
+        "mRootSpell": "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive",
         "mChildSpells": [
-            "{251beeae}",
-            "{4011e894}"
+            "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive",
+            "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandAblaze"
         ],
         "mName": "Jade_BrandPassiveAbility",
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{251beeae}": {
+    "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive": {
         "ObjectName": "Jade_BrandPassive",
-        "objectPath": "{251beeae}",
+        "objectPath": "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive",
         "mScriptName": "Jade_BrandPassive",
         "mSpell": {
-            "mEffectAmount": [
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        40.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "PercentHealthDamage",
@@ -298,9 +257,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4011e894}": {
+    "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandAblaze": {
         "ObjectName": "Jade_BrandAblaze",
-        "objectPath": "{4011e894}",
+        "objectPath": "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandAblaze",
         "mScriptName": "Jade_BrandAblaze",
         "mSpell": {
             "flags": 4,
@@ -505,7 +464,7 @@
         "mRootSpell": "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQ",
         "mChildSpells": [
             "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQ",
-            "{4c12d14e}"
+            "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQMissile"
         ],
         "mName": "Jade_BrandQAbility",
         "AbilityTraits": 2048,
@@ -515,7 +474,7 @@
         "mRootSpell": "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandE",
         "mChildSpells": [
             "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandE",
-            "{7d3dee1e}"
+            "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandEMissile"
         ],
         "mName": "Jade_BrandEAbility",
         "__type": "AbilityObject"
@@ -764,7 +723,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     },
                     {
@@ -801,9 +760,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7d3dee1e}": {
+    "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandEMissile": {
         "ObjectName": "Jade_BrandEMissile",
-        "objectPath": "{7d3dee1e}",
+        "objectPath": "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandEMissile",
         "mScriptName": "Jade_BrandEMissile",
         "mSpell": {
             "flags": 4,
@@ -960,7 +919,7 @@
         "mRootSpell": "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandR",
         "mChildSpells": [
             "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandR",
-            "{cd9cde40}"
+            "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandRMissile"
         ],
         "mName": "Jade_BrandRAbility",
         "mType": 2,
@@ -1085,9 +1044,9 @@
         "mName": "Jade_BrandWAbility",
         "__type": "AbilityObject"
     },
-    "{4c12d14e}": {
+    "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQMissile": {
         "ObjectName": "Jade_BrandQMissile",
-        "objectPath": "{4c12d14e}",
+        "objectPath": "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQMissile",
         "mScriptName": "Jade_BrandQMissile",
         "mSpell": {
             "flags": 4,
@@ -1282,47 +1241,6 @@
                 "Trait_ImmobilizingCCSpell",
                 "Trait_DamageAbility"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        70.0,
-                        70.0,
-                        100.0,
-                        130.0,
-                        160.0,
-                        190.0,
-                        190.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "StunDuration",
@@ -1379,7 +1297,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6499999761581421,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BrandSear.dds"
@@ -1881,7 +1798,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1904,9 +1821,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cd9cde40}": {
+    "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandRMissile": {
         "ObjectName": "Jade_BrandRMissile",
-        "objectPath": "{cd9cde40}",
+        "objectPath": "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandRMissile",
         "mScriptName": "Jade_BrandRMissile",
         "mSpell": {
             "flags": 4,
@@ -2288,7 +2205,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     },
                     {
@@ -2689,9 +2606,9 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{4c12d14e}",
-            "{cd9cde40}",
-            "{7d3dee1e}",
+            "Characters/Jade_Brand/Spells/Jade_BrandQAbility/Jade_BrandQMissile",
+            "Characters/Jade_Brand/Spells/Jade_BrandRAbility/Jade_BrandRMissile",
+            "Characters/Jade_Brand/Spells/Jade_BrandEAbility/Jade_BrandEMissile",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2717,7 +2634,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_BrandPassive_Summary",
         "passiveSpell": "Jade_BrandPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Brand/HUD/Icons2D/Jade_BrandP.dds",
+        "passive1IconName": "assets/characters/jade_brand/hud/icons2d/jade_brandp.dds",
         "name": "game_character_displayname_Jade_Brand",
         "selectionHeight": 302.7778015136719,
         "selectionRadius": 120.0,
@@ -2795,10 +2712,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{251beeae}",
+        "mCharacterPassiveSpell": "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{251beeae}",
+                "mParentPassiveBuff": "Characters/Jade_Brand/Spells/Jade_BrandPassiveAbility/Jade_BrandPassive",
                 "__type": "CharacterPassiveData"
             }
         ],

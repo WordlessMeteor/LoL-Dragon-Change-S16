@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Tryndamere": {
             "id": "Jade_Tryndamere",
@@ -256,8 +256,8 @@
                 "spellblock": 31.25,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
-                "hpregen": 10,
-                "hpregenperlevel": 0.9,
+                "hpregen": 7.5,
+                "hpregenperlevel": 0.75,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
@@ -554,7 +554,7 @@
                     "id": "Jade_TryndamereE",
                     "name": "旋风斩",
                     "description": "泰达米尔挥舞大剑冲向目标，对冲锋路线上所有敌人造成伤害。",
-                    "tooltip": "泰达米尔挥舞大剑冲向目标，对他途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />泰达米尔每次造成暴击时，<spellName>旋风斩</spellName>的冷却时间缩短2秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泰达米尔挥舞大剑冲向目标，对他途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />泰达米尔每次造成暴击时，<spellName>旋风斩</spellName>的冷却时间缩短{{ cooldownrefund }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -708,11 +708,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        110,
-                        100,
-                        90
+                        130,
+                        115,
+                        100
                     ],
-                    "cooldownBurn": "110/100/90",
+                    "cooldownBurn": "130/115/100",
                     "cost": [
                         0,
                         0,

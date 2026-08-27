@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Quando la sua salute scende sotto il 20%, Blitzcrank attiva Barriera di mana. Questo crea uno scudo di mana equivalente al 50% del suo mana per 10 secondi. Barriera di mana può essere attivata solo una volta ogni 90 secondi."
+        "description": "Quando subisce danni con poca salute, Blitzcrank ottiene prima uno scudo pari a una percentuale del suo mana attuale. Questo effetto ha un tempo di ricarica."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank spara la sua mano destra alla ricerca di un avversario da afferrare, infliggendogli danni e portandolo a sé.",
             "dynamicDescription": "Blitzcrank spara la mano destra, che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>, <status>stordisce</status> il bersaglio e lo <status>attira</status> verso di sé.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Blitzcrank carica il suo pugno in modo che il prossimo attacco infligga il doppio dei danni e lanci il bersaglio in aria.",
-            "dynamicDescription": "Blitzcrank carica il suo pugno in modo che il prossimo attacco infligga <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e lanci il bersaglio <status>in aria</status> per @CCDuration@ secondo.@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank carica il suo pugno in modo che il prossimo attacco infligga danni bonus e lanci il bersaglio in aria.",
+            "dynamicDescription": "Blitzcrank carica il suo pugno in modo che il prossimo attacco infligga <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e <status>lanci il bersaglio in aria</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Colpisce passivamente un nemico vicino con dei fulmini. In più, Blitzcrank può attivare questa abilità per infliggere danni ai nemici vicini e silenziarli per 0,5 secondi, ma facendo questo rimuove i fulmini della passiva di Campo statico finché l'abilità non torna di nuovo disponibile.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>un fulmine si sprigiona da Blitzcrank colpendo un nemico casuale nelle vicinanze, infliggendo <magicDamage>@PassiveDamage@ danni magici</magicDamage> ogni 2,5 secondi.<br><br><spellActive>Attiva: </spellActive>infligge <magicDamage>@ActiveDamage@ danni magici</magicDamage> e <status>silenzia</status> le unità nemiche vicine per 0,5 secondi.@SpellModifierDescriptionAppend@",
+            "description": "Colpisce passivamente un nemico vicino con dei fulmini. In più, Blitzcrank può attivare questa abilità per infliggere danni ai nemici vicini e silenziarli brevemente.",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>un fulmine si sprigiona da Blitzcrank colpendo un nemico casuale nelle vicinanze, infliggendo <magicDamage>@PassiveDamage@ danni magici</magicDamage> ogni @PassiveHitRate@ secondi.<br><br><spellActive>Attiva: </spellActive>infligge <magicDamage>@ActiveDamage@ danni magici</magicDamage> e <status>silenzia</status> le unità nemiche vicine per @SilenceDuration@ secondi. La passiva è disattivata mentre Campo statico è in ricarica.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

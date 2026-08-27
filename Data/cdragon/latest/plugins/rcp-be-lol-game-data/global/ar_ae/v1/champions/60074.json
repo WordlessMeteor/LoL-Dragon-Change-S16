@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "هايمردينغر نطاق الانفجار",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "باعتباره عالمًا غريب الأطوار يعيش في جمهورية باندل الجديدة، لم يخبر هايمردينغر أحدًا بعد عن تمكنه من تطوير \"قنبلة أو اثنتين من قنابل ما قبل الحرب الضخمة\" من أجل \"واحدة أو اثنتين من الحكومات المارقة\". فلا شك أنه يفضل العمل على مخترعاته في مدينة لا يحاول أهلها قتله بأي ثمن."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينصب هايمردينغر برج حماية مزودًا بمدفعٍ رشاش. تكسب أبراج الحماية قدرات مع ترقية هذه القدرة. (تلحق أبراج الحماية نصف الضرر بالأبراج).",
-            "dynamicDescription": "ينصب هايمردينغر برج حماية مزودًا بمدفع رشاش يلحق <magicDamage>@BonusDamage@ ضرر سحر</magicDamage> كل هجوم. تمتلك هذه القدرة @MaxAmmo@ من الشحنات (فترة التجديد @AmmoRechargeTime@ث).<br><br>يمنح كل مستوى لهذه القدرة زيادةً إضافية:<br><attention>المستوى 2:</attention> تؤدي هجمات برج الحماية إلى تقليص دروع ومقاومة سحر الهدف بمقدار 1 (الحد الأقصى 50)<br><attention>المستوى 3:</attention> يزداد العدد الأقصى لأبراج الحماية إلى 2<br><attention>المستوى 4:</attention> تكسب أبراج الحماية <scaleHealth>125 صحة</scaleHealth> إضافية<br><attention>المستوى 5:</attention> تلحق هجمات أبراج الحماية ضررًا في منطقة@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينصب هايمردينغر برج حماية مزودًا بمدفع رشاش يلحق <magicDamage>@BonusDamage@ ضرر سحر</magicDamage> كل هجوم. تكسب أبراج الحماية <attackSpeed>@TurretBonusAttackSpeed*100@% سرعة هجوم</attackSpeed> لأول @AttackSpeedDuration@ث بعد وضعها. تمتلك هذه القدرة @MaxAmmo@ من الشحنات (فترة التجديد @AmmoRechargeTime@ث).<br><br>يمنح كل مستوى لهذه القدرة تحسينًا إضافيًا:<br><attention>المستوى 2:</attention> تقلص هجمات أبراج الحماية دروع ومقاومة سحر الهدف بمقدار @Level2ResistShred@ (الحد الأقصى @MaxShredCapTooltip@)<br><attention>المستوى 3:</attention> يزداد العدد الأقصى لأبراج الحماية إلى 2<br><attention>المستوى 4:</attention> تكسب أبراج الحماية <scaleHealth>@Level4HPTooltip@ صحة</scaleHealth> إضافية<br><attention>المستوى 5:</attention> تلحق هجمات أبراج الحماية @AoEDamageMod*100@% ضرر منتشر@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يُطلق هايمردينغر صواريخ بعيدة المدى تُصيب الأعداء الأقرب إلى هايمردينغر.",
-            "dynamicDescription": "يُطلق هايمردينغر 3 صواريخ مصغّرة تطارد الأعداء (الحد الأقصى 1 لكل عدو)، فتصيب الأهداف الأقرب إليه. يلحق كل صاروخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يُطلق هايمردينغر @MaxTargets@ من الصواريخ المصغّرة تطارد الأعداء (الحد الأقصى 1 لكل عدو)، فتصيب الأهداف الأقرب إليه. يلحق كل صاروخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرمي هايمردينغر قنبلة على موقع، فتلحق الضرر بالوحدات المعادية، كما تصعق كل من تصيبه مباشرة وتعمي الوحدات المحيطة.",
-            "dynamicDescription": "يرمي هايمردينغر قنبلة، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالوحدات المعادية كما تصيبها بتأثير <status>العمى</status> لمدة @BlindDuration@ث.  يتم <status>صعق</status> الأعداء الذين يتعرضون إلى إصابةٍ مباشرة لمدة 1.5ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي هايمردينغر قنبلة، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالوحدات المعادية كما تصيبها بتأثير <status>العمى</status> لمدة @BlindDuration@ث.  يتم <status>صعق</status> الأعداء الذين يتعرضون إلى إصابةٍ مباشرة لمدة @StunDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تأثير كامن / نشط: يزيد تقليص فترة التبريد تلقائيًا.  قم بالتفعيل لعلاج كل أبراج الحماية المتطورة النشطة وجعلها تطلق طلقات جليدية، لتتسبب في تقليص سرعة الحركة لفترةٍ وجيزة.",
-            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تقليص فترة التبريد بنسبة @CooldownBonus*-100@%.<br><br><spellActive>تأثير نشط: </spellActive>تعزز جميع القدرات وأبراج الحماية طوال المدة.<br><br><spellName>أبراج الحماية المتطورة:</spellName> يتم <healing>علاج</healing> جميع أبراج الحماية بنسبة 100% من صحتها القصوى، ويطبق كل هجوم <status>@MovementSpeedMod*-100@% إبطاء</status>.<br><spellName>صواريخ الهيكستيك المصغّرة:</spellName> تطلق 5 صواريخ بدلًا من 3.<br><spellName>القنبلة الارتجاجية سي إتش-1:</spellName> تتحرك بسرعة أكبر بنسبة 33%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تقليص فترة التبريد بنسبة @CooldownBonus*-100@%.<br><br><spellActive>تأثير نشط: </spellActive>تعزز جميع القدرات وأبراج الحماية طوال المدة.<br><br><spellName>أبراج الحماية المتطورة:</spellName> يتم <healing>علاج</healing> جميع أبراج الحماية بالكامل. يطبق كل هجوم <status>@MovementSpeedMod*-100@% إبطاء</status>.<br><spellName>صواريخ الهيكستيك المصغرة:</spellName> تطلق @WMaxMissiles@ من الصواريخ.<br><spellName>القنبلة الارتجاجية سي إتش-1:</spellName> تتحرك بسرعة أكبر بنسبة 33%.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

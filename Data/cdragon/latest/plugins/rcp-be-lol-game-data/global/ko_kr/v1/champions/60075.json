@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60075001,
+            "contentId": "6f16915c-ff41-47f6-94d3-7abd1a526deb",
+            "relatedPrimeContentId": "26e0fce9-2297-4842-a587-9e72bd07f663",
+            "relatedPrimeItemId": 75001,
+            "isBase": false,
+            "name": "은하계 나서스",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Jade_NasusLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 136
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60075002,
             "contentId": "4fa50f96-83a2-451d-b05a-df8207defbfd",
             "relatedPrimeContentId": "437da20a-9be9-4e4c-b9f2-548cd2b1345a",
@@ -1016,7 +1047,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "나서스가 강력한 모래 폭풍을 소환하여 주변의 적을 강타합니다. 나서스는 폭풍이 부는 동안 체력, 공격 사거리, 스킬 사거리가 증가하며, 적의 최대 체력을 흡수해 추가 피해량으로 전환합니다.",
-            "dynamicDescription": "<mainText>나서스가 15초 동안 모래 폭풍 속에서 힘을 얻어 <scaleHealth>최대 체력이 @BonusHealth@</scaleHealth>, 공격 사거리가 @AttackRangeIncrease@, 스킬 사거리가 100 증가합니다.<br><br>폭풍이 부는 동안 나서스는 주변에 <magicDamage>적 최대 체력의 @DamageCalc@에 해당하는 마법 피해</magicDamage>를 입히고(초당 최대 @MaxDamageCap@의 피해), 입힌 피해의 5%를 <physicalDamage>추가 공격력</physicalDamage>으로 전환합니다.",
+            "dynamicDescription": "나서스가 @Duration@초 동안 모래 폭풍 속에서 힘을 얻어 <scaleHealth>최대 체력이 @BonusHealth@</scaleHealth>, 공격 사거리가 @AttackRangeIncrease@, 스킬 사거리가 100 증가합니다.<br><br>폭풍이 부는 동안 나서스는 주변에 <magicDamage>적 최대 체력의 @DamageCalc@에 해당하는 마법 피해</magicDamage>를 입히고(초당 최대 @MaxDamageCap@의 피해), 입힌 피해의 @DamageToAD*100@%를 <physicalDamage>추가 공격력</physicalDamage>으로 전환합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

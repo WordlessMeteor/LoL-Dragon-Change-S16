@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Tristana": {
             "id": "Jade_Tristana",
@@ -22,6 +22,12 @@
                     "id": "60018000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60018005",
+                    "num": 5,
+                    "name": "约德尔海贼团 崔丝塔娜",
                     "chromas": false
                 },
                 {
@@ -55,13 +61,13 @@
                     "id": "60018010",
                     "num": 10,
                     "name": "驯龙炮手 崔丝塔娜",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60018018",
                     "num": 18,
                     "name": "驯龙炮手 崔丝塔娜 狂傲红龙",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -82,14 +88,14 @@
                     "id": "60018021",
                     "num": 21,
                     "name": "驯龙炮手 崔丝塔娜 庄严银龙",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 10
                 },
                 {
                     "id": "60018022",
                     "num": 22,
                     "name": "驯龙炮手 崔丝塔娜 狡黠黑龙",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -177,14 +183,14 @@
                     "id": "60018052",
                     "num": 52,
                     "name": "灵魂莲华 崔丝塔娜 流火",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 51
                 },
                 {
                     "id": "60018053",
                     "num": 53,
                     "name": "灵魂莲华 崔丝塔娜 鸣蜩",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 51
                 },
                 {
@@ -276,7 +282,7 @@
                 "hp": 497,
                 "hpperlevel": 82,
                 "mp": 225,
-                "mpperlevel": 32,
+                "mpperlevel": 40,
                 "movespeed": 325,
                 "armor": 22,
                 "armorperlevel": 3,
@@ -291,7 +297,7 @@
                 "critperlevel": 0,
                 "attackdamage": 49.5,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 4,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.656
             },
             "spells": [
@@ -299,13 +305,15 @@
                     "id": "Jade_TristanaQ",
                     "name": "急速射击",
                     "description": "崔丝塔娜迅速开火，短时间内提升攻击速度。",
-                    "tooltip": "崔丝塔娜<attackSpeed>攻击速度提升{{ attackspeedmod*100 }}%</attackSpeed>，持续7秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "崔丝塔娜获得持续{{ buffduration }}秒的<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "攻击速度"
+                            "攻击速度",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -319,12 +327,12 @@
                     "cooldownBurn": "20",
                     "cost": [
                         50,
-                        50,
-                        50,
-                        50,
-                        50
+                        60,
+                        70,
+                        80,
+                        90
                     ],
-                    "costBurn": "50",
+                    "costBurn": "50/60/70/80/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -437,8 +445,8 @@
                 {
                     "id": "Jade_TristanaW",
                     "name": "火箭跳跃",
-                    "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人，持续3秒。",
-                    "tooltip": "崔丝塔娜朝地面开火，将自己弹射至目标位置，落地时造成<magicDamage>{{ landingdamage }}魔法伤害</magicDamage>和持续2.5秒的60%<status>减速</status>。<br />参与击杀英雄时，这个冷却时间会被重置。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人。",
+                    "tooltip": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成<magicDamage>{{ landingdamage }}魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slow }}%<status>减速</status>效果。击杀或协助击杀一个英雄时，火箭跳跃的冷却时间会得到刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -579,7 +587,7 @@
                     "id": "Jade_TristanaE",
                     "name": "爆炸射击",
                     "description": "崔丝塔娜击杀一个单位时，她的炮弹会爆炸成弹片，对周围敌人造成伤害。可主动施放，对目标单位造成持续伤害，并减少其受到的治疗效果。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在5秒内持续造成<magicDamage>{{ activedamagettonly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在{{ grievousduration }}秒内持续造成<magicDamage>{{ activedamagettonly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动爆炸伤害",
@@ -588,7 +596,7 @@
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
-                            "{{ activedottotal }} -> {{ activedottotalNL }}",
+                            "{{ activedot }} -> {{ activedotNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },

@@ -3,8 +3,8 @@
         "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW",
         "mChildSpells": [
             "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW",
-            "{af1a2650}",
-            "{f1e12655}"
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWBuff",
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWTwo"
         ],
         "mName": "Jade_LuluWAbility",
         "__type": "AbilityObject"
@@ -272,9 +272,9 @@
         },
         "__type": "SpellObject"
     },
-    "{af1a2650}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWBuff": {
         "ObjectName": "Jade_LuluWBuff",
-        "objectPath": "{af1a2650}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWBuff",
         "mScriptName": "Jade_LuluWBuff",
         "mSpell": {
             "mImgIconName": [
@@ -293,9 +293,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c2447e8b}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWDebuff": {
         "ObjectName": "Jade_LuluWDebuff",
-        "objectPath": "{c2447e8b}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWDebuff",
         "mScriptName": "Jade_LuluWDebuff",
         "mSpell": {
             "mAffectsTypeFlags": 5135,
@@ -499,9 +499,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f1e12655}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWTwo": {
         "ObjectName": "Jade_LuluWTwo",
-        "objectPath": "{f1e12655}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWTwo",
         "mScriptName": "Jade_LuluWTwo",
         "mSpell": {
             "mAffectsTypeFlags": 5135,
@@ -705,8 +705,8 @@
         "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE",
         "mChildSpells": [
             "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE",
-            "{3db8b26b}",
-            "{25ef7fdf}"
+            "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieShield",
+            "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieBurn"
         ],
         "mName": "Jade_LuluEAbility",
         "__type": "AbilityObject"
@@ -722,9 +722,10 @@
             "mSpellTags": [
                 "PositiveEffect_Boon"
             ],
-            "mEffectAmount": [
+            "DataValues": [
                 {
-                    "value": [
+                    "name": "AllyFollowDuration",
+                    "values": [
                         6.0,
                         6.0,
                         6.0,
@@ -733,109 +734,31 @@
                         6.0,
                         6.0
                     ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "DataValues": [
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        30.0,
-                        80.0,
-                        130.0,
-                        180.0,
-                        230.0,
-                        280.0,
-                        280.0
-                    ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "DamageAPRatio",
+                    "name": "ShieldDuration",
                     "values": [
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseShield",
                     "values": [
-                        30.0,
+                        15.0,
                         60.0,
                         105.0,
                         150.0,
                         195.0,
                         240.0,
-                        240.0
+                        285.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -853,7 +776,33 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ShieldDuration",
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyFollowDuration",
                     "values": [
                         6.0,
                         6.0,
@@ -1050,9 +999,9 @@
         },
         "__type": "SpellObject"
     },
-    "{25ef7fdf}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieBurn": {
         "ObjectName": "Jade_LuluFaerieBurn",
-        "objectPath": "{25ef7fdf}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieBurn",
         "mScriptName": "Jade_LuluFaerieBurn",
         "mSpell": {
             "mImgIconName": [
@@ -1066,9 +1015,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3db8b26b}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieShield": {
         "ObjectName": "Jade_LuluFaerieShield",
-        "objectPath": "{3db8b26b}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluFaerieShield",
         "mScriptName": "Jade_LuluFaerieShield",
         "mSpell": {
             "mImgIconName": [
@@ -1083,18 +1032,18 @@
         "__type": "SpellObject"
     },
     "{7ac12ce4}": {
-        "mRootSpell": "{232600f1}",
+        "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
         "mChildSpells": [
-            "{232600f1}",
-            "{7aad00cf}",
-            "{e5b124f3}"
+            "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
+            "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissile",
+            "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissileController"
         ],
         "mName": "Jade_LuluPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{232600f1}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive": {
         "ObjectName": "Jade_LuluPassive",
-        "objectPath": "{232600f1}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
         "mScriptName": "Jade_LuluPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -1204,9 +1153,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7aad00cf}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissile": {
         "ObjectName": "Jade_LuluPassiveMissile",
-        "objectPath": "{7aad00cf}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissile",
         "mScriptName": "Jade_LuluPassiveMissile",
         "mSpell": {
             "flags": 4194308,
@@ -1391,9 +1340,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e5b124f3}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissileController": {
         "ObjectName": "Jade_LuluPassiveMissileController",
-        "objectPath": "{e5b124f3}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissileController",
         "mScriptName": "Jade_LuluPassiveMissileController",
         "mSpell": {
             "flags": 4,
@@ -1567,7 +1516,7 @@
                 "15": "Play_sfx_Lulu_LuluPassiveMissileController_OnMissileCast"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{232600f1}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
                 "mTargeterDefinitions": [
                     {
                         "hideWithLineIndicator": true,
@@ -1835,16 +1784,16 @@
         "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ",
         "mChildSpells": [
             "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ",
-            "{87b7c583}",
-            "{6dfab280}",
-            "{ba1eee5b}"
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissileTwo",
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQSlow",
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissile"
         ],
         "mName": "Jade_LuluQAbility",
         "__type": "AbilityObject"
     },
-    "{6dfab280}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQSlow": {
         "ObjectName": "Jade_LuluQSlow",
-        "objectPath": "{6dfab280}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQSlow",
         "mScriptName": "Jade_LuluQSlow",
         "mSpell": {
             "mImgIconName": [
@@ -2128,8 +2077,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/lulu_q_skillshot_base.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/lulu_q_skillshot_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2155,8 +2104,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "textureBaseOverrideName": "assets/spells/textures/lulu_q_skillshot_base.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/lulu_q_skillshot_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -2214,9 +2163,9 @@
         },
         "__type": "SpellObject"
     },
-    "{87b7c583}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissileTwo": {
         "ObjectName": "Jade_LuluQMissileTwo",
-        "objectPath": "{87b7c583}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissileTwo",
         "mScriptName": "Jade_LuluQMissileTwo",
         "mSpell": {
             "flags": 4,
@@ -2403,9 +2352,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ba1eee5b}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissile": {
         "ObjectName": "Jade_LuluQMissile",
-        "objectPath": "{ba1eee5b}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissile",
         "mScriptName": "Jade_LuluQMissile",
         "mSpell": {
             "flags": 4,
@@ -2596,7 +2545,7 @@
         "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR",
         "mChildSpells": [
             "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR",
-            "{dc8e4d28}"
+            "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluRSlow"
         ],
         "mName": "Jade_LuluRAbility",
         "__type": "AbilityObject"
@@ -2884,7 +2833,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2969,9 +2918,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bc756b9a}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluRBoom": {
         "ObjectName": "Jade_LuluRBoom",
-        "objectPath": "{bc756b9a}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluRBoom",
         "mScriptName": "Jade_LuluRBoom",
         "mSpell": {
             "mImgIconName": [
@@ -2994,9 +2943,9 @@
         },
         "__type": "SpellObject"
     },
-    "{dc8e4d28}": {
+    "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluRSlow": {
         "ObjectName": "Jade_LuluRSlow",
-        "objectPath": "{dc8e4d28}",
+        "objectPath": "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluRSlow",
         "mScriptName": "Jade_LuluRSlow",
         "mSpell": {
             "mImgIconName": [
@@ -3546,12 +3495,12 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{7aad00cf}",
-            "{ba1eee5b}",
-            "{87b7c583}",
-            "{e5b124f3}",
+            "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissile",
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissile",
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQMissileTwo",
+            "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassiveMissileController",
             "Shared/Spells/BaseSpell",
-            "{f1e12655}",
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluWTwo",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3574,7 +3523,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_LuluPassive_Summary",
         "passiveSpell": "Jade_LuluPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds",
+        "passive1IconName": "assets/characters/jade_lulu/hud/icons2d/jade_lulu_pixfaeriecompanion.dds",
         "name": "game_character_displayname_Jade_Lulu",
         "selectionHeight": 85.0,
         "selectionRadius": 100.0,
@@ -3644,10 +3593,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{232600f1}",
+        "mCharacterPassiveSpell": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{232600f1}",
+                "mParentPassiveBuff": "Characters/Jade_Lulu/Spells/Jade_LuluPassiveAbility/Jade_LuluPassive",
                 "__type": "CharacterPassiveData"
             },
             {

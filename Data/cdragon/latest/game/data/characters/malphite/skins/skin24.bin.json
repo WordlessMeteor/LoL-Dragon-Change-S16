@@ -4,11 +4,11 @@
         "championSkinName": "MalphiteSkin24",
         "metaDataTags": "gender:male,element:earth,skinline:darkstar",
         "loadscreen": {
-            "image": "ASSETS/Characters/Malphite/Skins/Skin24/MalphiteLoadscreen_24.tex",
+            "image": "assets/characters/malphite/skins/skin24/malphiteloadscreen_24.tex",
             "__type": "CensoredImage"
         },
         "loadscreenVintage": {
-            "image": "ASSETS/Characters/Malphite/Skins/Skin24/MalphiteLoadscreen_24_LE.tex",
+            "image": "assets/characters/malphite/skins/skin24/malphiteloadscreen_24_le.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -93,7 +93,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24.skl",
             "simpleSkin": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24.skn",
-            "texture": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_TX_CM.tex",
+            "texture": "assets/characters/malphite/skins/skin24/malphite_skin24_tx_cm.tex",
             "skinScale": 1.75,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -104,7 +104,7 @@
             "initialSubmeshToHide": "Recall Passive",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_recall_TM_CM.tex",
+                    "texture": "assets/characters/malphite/skins/skin24/malphite_skin24_recall_tm_cm.tex",
                     "submesh": "Recall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -158,9 +158,9 @@
             }
         ],
         "mContextualActionData": "Characters/Malphite/CAC/Malphite_Base",
-        "iconCircle": "ASSETS/Characters/Malphite/HUD/Malphite_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Malphite/HUD/Malphite_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Malphite/HUD/Malphite_Circle_24.tex",
+        "iconCircle": "assets/characters/malphite/hud/malphite_circle.tex",
+        "iconSquare": "assets/characters/malphite/hud/malphite_square.tex",
+        "iconAvatar": "assets/characters/malphite/hud/malphite_circle_24.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
@@ -15829,85 +15829,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.47999998927116394,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 15000.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Submesh_Diffuse2",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "Passive"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "Passive"
-                        ],
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.34000152349472046
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "constantValue": [
-                        1.0,
-                        0.5568627715110779,
-                        0.41960784792900085,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 10,
-                "reflectionDefinition": {
-                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.dds",
-                    "reflectionOpacityDirect": -1.2000000476837158,
-                    "reflectionOpacityGlancing": 0.30000001192092896,
-                    "reflectionFresnel": 0.20000000298023224,
-                    "reflectionFresnelColor": [
-                        0.7607843279838562,
-                        0.062745101749897,
-                        0.9529411792755127,
-                        0.2705882489681244
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "depthBiasFactors": [
-                    -1.0,
-                    -1.0
-                ],
-                "disableBackfaceCull": true,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        180.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Granite_Shield_03.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -16092,6 +16013,16 @@
                 },
                 "blendMode": 1,
                 "pass": 9,
+                "reflectionDefinition": {
+                    "fresnel": 0.05000000074505806,
+                    "fresnelColor": [
+                        1.0,
+                        0.4312504827976227,
+                        0.18710613250732422,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
                 "depthBiasFactors": [
                     -1.0,
                     -1.0
@@ -16113,7 +16044,7 @@
         ],
         "particleName": "Malphite_Skin24_P_Armour",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_P_Armour",
-        "flags": 192,
+        "flags": 1220,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_P_Armour",
         "__type": "VfxSystemDefinitionData"
     },
@@ -24618,6 +24549,7 @@
         ],
         "particleName": "Malphite_Skin24_P_shield_break",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_P_shield_break",
+        "flags": 1236,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_P_shield_break",
         "__type": "VfxSystemDefinitionData"
     },
@@ -25516,7 +25448,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "particleColorTexture": "ASSETS/Shared/Particles/common_color-hold.tex",
-                "blendMode": 3,
+                "blendMode": 1,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "dynamics": {
@@ -25544,6 +25476,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -26380,6 +26313,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -27587,6 +27521,7 @@
         ],
         "particleName": "Malphite_Skin24_W_buf_hands_NextHit_L",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands_NextHit_L",
+        "flags": 1236,
         "scaleDynamicallyWithAttachedBone": true,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands_NextHit_L",
         "__type": "VfxSystemDefinitionData"
@@ -32808,6 +32743,7 @@
         ],
         "particleName": "Malphite_Skin24_Idle_Trail",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Trail",
+        "flags": 1236,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Trail",
         "__type": "VfxSystemDefinitionData"
     },
@@ -39278,6 +39214,16 @@
                     "__type": "ValueColor"
                 },
                 "pass": 10,
+                "reflectionDefinition": {
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        0.7600061297416687,
+                        0.4000000059604645,
+                        0.25999847054481506,
+                        0.7499961853027344
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -39322,7 +39268,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "particleColorTexture": "ASSETS/Shared/Particles/common_color-hold.tex",
-                "blendMode": 3,
+                "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
                         1.0,
@@ -39791,6 +39737,7 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "Edge_Additive",
+                "disabled": true,
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -41739,7 +41686,7 @@
         ],
         "particleName": "Malphite_Skin24_Idle_ne",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_ne",
-        "flags": 197,
+        "flags": 1221,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_ne",
         "__type": "VfxSystemDefinitionData"
     },
@@ -44314,7 +44261,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "particleColorTexture": "ASSETS/Shared/Particles/common_color-hold.tex",
-                "blendMode": 3,
+                "blendMode": 1,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "dynamics": {
@@ -44342,6 +44289,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -44928,6 +44876,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -44977,6 +44926,7 @@
         "particleName": "Malphite_Skin24_W_buf_hands",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands",
         "soundPersistentDefault": "Play_sfx_Malphite_MalphiteThunderclap_buffactivate",
+        "flags": 1236,
         "scaleDynamicallyWithAttachedBone": true,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands",
         "__type": "VfxSystemDefinitionData"
@@ -48399,6 +48349,7 @@
         ],
         "particleName": "Malphite_Skin24_Idle_Arm_trail_R",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Arm_trail_R",
+        "flags": 1236,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Arm_trail_R",
         "__type": "VfxSystemDefinitionData"
     },
@@ -49445,6 +49396,7 @@
         ],
         "particleName": "Malphite_Skin24_Idle_Arm_trail_L",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Arm_trail_L",
+        "flags": 1236,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_Arm_trail_L",
         "__type": "VfxSystemDefinitionData"
     },
@@ -50595,7 +50547,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 2,
+                "pass": 1,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -50789,7 +50741,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "particleColorTexture": "ASSETS/Shared/Particles/common_color-hold.tex",
-                "blendMode": 3,
+                "blendMode": 1,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "dynamics": {
@@ -50817,6 +50769,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -52788,6 +52741,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -52836,6 +52790,7 @@
         ],
         "particleName": "Malphite_Skin24_W_buf_hands_NextHit",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands_NextHit",
+        "flags": 1236,
         "scaleDynamicallyWithAttachedBone": true,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hands_NextHit",
         "__type": "VfxSystemDefinitionData"
@@ -53449,7 +53404,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "particleColorTexture": "ASSETS/Shared/Particles/common_color-hold.tex",
-                "blendMode": 3,
+                "blendMode": 1,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "dynamics": {
@@ -53477,6 +53432,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -54063,6 +54019,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "{cb13aff1}": -30.0,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
                 "birthRotation0": {
@@ -54111,6 +54068,7 @@
         ],
         "particleName": "Malphite_Skin24_W_buf_hand_L",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hand_L",
+        "flags": 1236,
         "scaleDynamicallyWithAttachedBone": true,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_W_buf_hand_L",
         "__type": "VfxSystemDefinitionData"
@@ -64614,7 +64572,7 @@
         ],
         "particleName": "Malphite_Skin24_Idle_T",
         "particlePath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_T",
-        "flags": 197,
+        "flags": 1221,
         "objectPath": "Characters/Malphite/Skins/Skin24/Particles/Malphite_Skin24_Idle_T",
         "__type": "VfxSystemDefinitionData"
     },
@@ -64694,37 +64652,37 @@
         "samplerValues": [
             {
                 "TextureName": "Outline_Bloom_Mask",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_Arms_Fresnel_Mask.tex",
+                "texturePath": "assets/characters/malphite/skins/skin24/malphite_skin24_arms_fresnel_mask.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_TX_CM.tex",
+                "texturePath": "assets/characters/malphite/skins/skin24/malphite_skin24_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "EmissionR_DistortionG_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_Arms_Fresnel_Mask.tex",
+                "texturePath": "assets/characters/malphite/skins/skin24/malphite_skin24_arms_fresnel_mask.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "RMA_Texture",
-                "texturePath": "ASSETS/Characters/Malphite/Skins/Skin24/Malphite_Skin24_RMA.tex",
+                "texturePath": "assets/characters/malphite/skins/skin24/malphite_skin24_rma.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "ScreenSpaceTex",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "texturePath": "assets/shared/materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "ScreenSpace_Mask",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "texturePath": "assets/shared/materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Malphite": {
             "id": "Jade_Malphite",
@@ -221,7 +221,7 @@
                 {
                     "id": "Jade_MalphiteSeismicShard",
                     "name": "地震碎片",
-                    "description": "墨菲特使用原初元素魔法，发出一块大地碎片穿过敌人处的地面，在碰撞时造成伤害并且偷取移动速度4秒。",
+                    "description": "墨菲特使用原初元素魔法，将一块大地碎片从地下射向目标，命中时造成伤害并且偷取目标的移动速度。",
                     "tooltip": "墨菲特将一块岩石碎片从地下射向目标，造成<magicDamage>{{ qdamagecalc }}魔法伤害</magicDamage>，并偷取目标<speed>{{ speedsteal }}%移动速度</speed>，持续{{ slowduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -255,25 +255,25 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            120,
-                            170,
-                            220,
-                            270
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            25,
-                            30,
-                            35,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -327,9 +327,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/120/170/220/270",
-                        "20/25/30/35/40",
-                        "3",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -364,7 +364,7 @@
                     "id": "Jade_MalphiteObduracy",
                     "name": "野蛮打击",
                     "description": "墨菲特开始以巨大力量进行挥击，攻击对前方的所有敌人造成伤害。激活【野蛮打击】会使墨菲特的护甲和攻击力会在短时间内大幅提升。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>墨菲特的普通攻击会对目标附近敌人造成相当于自身{{ jade_malphiteobduracypercentdamage*100 }}%<physicalDamage>攻击力</physicalDamage>的伤害。<br /><br /><spellActive>主动：</spellActive>墨菲特的<scaleArmor>护甲</scaleArmor>和<physicalDamage>攻击力</physicalDamage>提升{{ armorbonus*100 }}%，持续6秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>墨菲特的普通攻击会对目标附近敌人造成相当于自身{{ jade_malphiteobduracypercentdamage*100 }}%<physicalDamage>攻击力</physicalDamage>的伤害。<br /><br /><spellActive>主动：</spellActive>墨菲特的<scaleArmor>护甲</scaleArmor>和<physicalDamage>攻击力</physicalDamage>提升{{ armorbonus*100 }}%，持续{{ buffduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "@AbilityResourceName@消耗",
@@ -766,7 +766,7 @@
             ],
             "passive": {
                 "name": "花岗岩护盾",
-                "description": "墨菲特被岩石护盾保护，最多吸收10%最大生命值的伤害。若10秒内未受到攻击，这个护盾将重置。",
+                "description": "墨菲特被一层可吸收伤害的岩石护盾保护。若墨菲特近期未受到攻击，这个效果将重置。",
                 "image": {
                     "full": "Jade_Malphite_GraniteShield.png",
                     "sprite": "passive1.png",

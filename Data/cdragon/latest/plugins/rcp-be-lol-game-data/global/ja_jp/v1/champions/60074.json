@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "大爆発ハイマーディンガー",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "ニューバンドル共和国の変わり者の科学者であるハイマーディンガーは、“戦前最大規模の巨大な爆弾を一つか二つ”、“どこかのならず者政府”のために開発したかもしれないことを誰にも話していない。彼を暗殺しようとする政府に研究の邪魔をされるのはゴメンだからだ。"
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "機関銃砲台を設置する。このスキルが強化されると、砲台がスキルを獲得する(砲台は、タワーに対して与えるダメージが半分になる)。",
-            "dynamicDescription": "機関銃砲台を設置する。砲台は攻撃ごとに<magicDamage>@BonusDamage@の魔法ダメージ</magicDamage>を与える。このスキルは@MaxAmmo@発までチャージ可能(@AmmoRechargeTime@秒でリチャージ)。<br><br>このスキルはランクが上がるたびに次の強化効果を得る:<br><attention>ランク2:</attention> 砲台の攻撃が対象の物理防御と魔法防御を1低下させる(最大50)<br><attention>ランク3:</attention> 砲台の最大設置数が2基に増加する<br><attention>ランク4:</attention> 砲台の<scaleHealth>体力が125</scaleHealth>増加する<br><attention>ランク5:</attention> 砲台の攻撃が範囲ダメージを与える@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "機関銃砲台を設置する。砲台は攻撃ごとに<magicDamage>@BonusDamage@の魔法ダメージ</magicDamage>を与える。砲台は設置後の最初の@AttackSpeedDuration@秒間、<attackSpeed>攻撃速度が@TurretBonusAttackSpeed*100@%</attackSpeed>増加する。このスキルは@MaxAmmo@発までチャージ可能(@AmmoRechargeTime@秒でリチャージ)。<br><br>このスキルはランクが上がるたびに次の強化効果を得る:<br><attention>ランク2:</attention> 砲台の攻撃が対象の物理防御と魔法防御を@Level2ResistShred@低下させる(最大@MaxShredCapTooltip@)<br><attention>ランク3:</attention> 砲台の最大設置数が2基に増加する<br><attention>ランク4:</attention> 砲台の<scaleHealth>体力が@Level4HPTooltip@</scaleHealth>増加する<br><attention>ランク5:</attention> 砲台の攻撃が@AoEDamageMod*100@%の範囲ダメージを与える@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "長射程のロケットを数発発射する。ロケットは最も近くにいる敵に命中する。",
-            "dynamicDescription": "敵を追尾する小型ロケットを3発発射する(1つの対象につき最大1発)。ロケットは最も近くにいる対象に命中する。各ロケットは<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵を追尾する小型ロケットを@MaxTargets@発発射する(1つの対象につき最大1発)。ロケットは最も近くにいる対象に命中する。各ロケットは<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点にグレネード弾を投げ、敵ユニットにダメージを与える。さらに中心で直撃した敵をスタンさせ、周囲の敵にブラインド効果を与える。",
-            "dynamicDescription": "グレネードを投げ、敵ユニットに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与えて、@BlindDuration@秒間<status>ブラインド</status>状態にする。直接命中した敵は1.5秒間<status>スタン</status>する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "グレネードを投げ、敵ユニットに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与えて、@BlindDuration@秒間<status>ブラインド</status>状態にする。直接命中した敵は@StunDuration@秒間<status>スタン</status>する。@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果/発動効果: 自動効果でクールダウン短縮量が増加する。発動すると起動中のすべての革新砲の体力を回復し、短時間、移動速度を低下させる凍結弾を発射させる。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>クールダウンが@CooldownBonus*-100@%短縮される。<br><br><spellActive>発動効果: </spellActive>効果時間中、すべてのスキルと砲台を強化する。<br><br><spellName>革新砲:</spellName>すべての砲台が最大体力の100%にあたる体力を<healing>回復</healing>し、それぞれの攻撃が<status>@MovementSpeedMod*-100@%のスロウ効果</status>を付与する。<br><spellName>ヘクステック小型ロケット:</spellName> 発射するロケットが3発から5発に増加する。<br><spellName>CH-1衝撃グレネード:</spellName> 弾速が33%増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>クールダウン短縮 @CooldownBonus*-100@%。<br><br><spellActive>発動効果: </spellActive>効果時間中、すべてのスキルと砲台を強化する。<br><br><spellName>革新砲台:</spellName> すべての砲台の体力が完全に<healing>回復</healing>する。それぞれの攻撃が<status>@MovementSpeedMod*-100@%のスロウ効果</status>を付与する。<br><spellName>ヘクステック小型ロケット:</spellName> @WMaxMissiles@発のロケットを発射する。<br><spellName>CH-1衝撃グレネード:</spellName> 弾速が33%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

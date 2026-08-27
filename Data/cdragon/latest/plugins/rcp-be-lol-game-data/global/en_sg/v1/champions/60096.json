@@ -1675,7 +1675,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.project_jade.png",
         "abilityVideoPath": "champion-abilities/60096/ability_60096_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60096/ability_60096_P1.jpg",
-        "description": "Upon dying, Kog'Maw starts a chain reaction in his body which causes him to detonate after 4 seconds; dealing magic damage to surrounding enemies."
+        "description": "Upon dying, Kog'Maw starts a chain reaction in his body which causes him to detonate after a few seconds, damaging surrounding enemies."
     },
     "spells": [
         {
@@ -1686,7 +1686,7 @@
             "abilityVideoImagePath": "champion-abilities/60096/ability_60096_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passive: Increases Kog'Maw's Attack Speed. <br><br>Active: Kog'Maw launches a corrosive projectile which deals magic damage and corrodes the target's Armor and Magic Resist for 4 seconds.",
+            "description": "Kog'Maw launches a corrosive projectile that damages his target and corrodes their Armor and Magic Resist.",
             "dynamicDescription": "<spellPassive>Passive:</spellPassive> Kog'Maw gains <attackSpeed>@PassiveAttackSpeed*100@% Attack Speed</attackSpeed>.<br><br><spellActive>Active:</spellActive> Kog'Maw vomits a corrosive projectile that deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to the first enemy hit and shreds <scaleArmor>@ArmorShred@ Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for @DebuffDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -1713,45 +1713,45 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    10.0,
-                    60.0,
-                    110.0,
-                    160.0,
-                    210.0,
-                    260.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    5.0,
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    5.0,
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,

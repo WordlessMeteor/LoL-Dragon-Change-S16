@@ -565,7 +565,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LuxIlluminatingFraulein.project_jade.png",
         "abilityVideoPath": "champion-abilities/60099/ability_60099_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60099/ability_60099_P1.jpg",
-        "description": "럭스의 공격 스킬은 6초 동안 대상을 빛의 에너지로 가득 채웁니다. 럭스가 다음 기본 공격 시 이 에너지를 불태워, 자신의 레벨에 비례하는 추가 마법 피해를 입힙니다."
+        "description": "럭스의 공격 스킬은 대상을 빛의 에너지로 가득 채웁니다. 럭스가 다음 기본 공격을 가할 때 이 에너지를 불태워 추가 마법 피해를 입힙니다."
     },
     "spells": [
         {
@@ -603,36 +603,36 @@
                 11.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -877,7 +877,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "지정한 지역에 뒤틀린 빛의 구체를 띄워 주변 적을 둔화시킵니다. 럭스는 이 구체를 폭발시켜 광역 피해를 입힐 수 있습니다.",
-            "dynamicDescription": "적을 @SlowPercent@% <status>둔화</status>시키는 구역을 생성합니다. 5초 후 해당 구역이 폭발하며 <magicDamage>@TotalDamageTT@의 마법 피해</magicDamage>를 입힙니다.<br><br><recast>재사용</recast>하면 더 빨리 폭발시킬 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "럭스가 빛의 구역을 생성하여, 적을 @SlowPercent@% <status>둔화</status>시키고 주변을 드러냅니다. 빛의 구역은 @SlowZoneDuration@초 후 폭발하여 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><recast>재사용</recast>하면 더 빨리 폭발시킬 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -903,45 +903,45 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    60.0,
-                    60.0,
-                    105.0,
-                    150.0,
-                    215.0,
-                    265.0,
-                    315.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    310.0,
-                    310.0,
-                    310.0,
-                    310.0,
-                    310.0,
-                    310.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,

@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "La Mujer Zorro de Nueve Colas",
-    "shortBio": "- Robo de esencias (P) se acumula al infligir daño a enemigos.<br>- Impulso espiritual (R) no se reinicia.",
+    "shortBio": "- Robo de esencias (P) se acumula al infligir daño a enemigos.<br>- Impulso espiritual (R) no se reinicia.<br>- Hechizar (E) aumenta el daño que Ahri inflige a su objetivo.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Ahri se desliza hacia delante y lanza rayos de esencia que infligen daño a 3 enemigos cercanos (priorizando a los campeones). Impulso espiritual puede usarse hasta tres veces antes de entrar en enfriamiento.",
-            "dynamicDescription": "Ahri se desliza ágilmente y dispara 3 rayos de esencia a los enemigos cercanos, priorizando a los campeones. Estos rayos infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage> cada uno. <spellName>Impulso espiritual</spellName> se puede <recast>reactivar</recast> hasta 2 veces más durante 10 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri se desliza ágilmente y dispara 3 rayos de esencia a los enemigos cercanos, priorizando a los campeones. Estos rayos infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage> cada uno. <spellName>Impulso espiritual</spellName> se puede <recast>reactivar</recast> hasta 2 veces más durante @RecastDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

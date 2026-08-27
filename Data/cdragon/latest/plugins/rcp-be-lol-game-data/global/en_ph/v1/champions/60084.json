@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Stinger Akali",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "The Order of the Great Sparrow Bee follows a brutal, time-honored training regimen, teaching students to sting with the ferocity and ceaselessness of a hornet. Akali is their greatest champion, and she intends to take the art to even greater heights."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Akali spins her kama at a target enemy to deal magic damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy.",
-            "dynamicDescription": "Akali throws her kama at a target enemy to deal <magicDamage>@InitialDamage@ magic damage</magicDamage> and mark the target for 6 seconds.<br><br>Akali's melee attacks against a marked target will consume the mark to cause <magicDamage>@ProcDamage@ magic damage</magicDamage> and restore <keywordMajor>@EnergyReturn@ Energy</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Akali spins her kama at a target enemy to deal magic damage and mark the target. Akali's next melee attack against a marked target will consume the mark to cause additional damage and restore Energy.",
+            "dynamicDescription": "Akali throws her kama at a target enemy to deal <magicDamage>@InitialDamage@ magic damage</magicDamage> and mark the target for @MarkDuration@ seconds.<br><br>Akali's melee attacks against a marked target will consume the mark to cause <magicDamage>@ProcDamage@ magic damage</magicDamage> and restore <keywordMajor>@EnergyReturn@ Energy</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Akali throws down a cover of smoke. While inside the area, Akali gains Armor and Magic Resist and becomes invisible. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced.",
-            "dynamicDescription": "Akali throws down a cover of smoke that lasts for 8 seconds. While inside the area, Akali gains <scaleArmor>@TotalResists@ Armor</scaleArmor> and <scaleMR>@TotalResists@ Magic Resist</scaleMR> and becomes <keywordStealth>Invisible</keywordStealth>. Attacking or using abilities will briefly reveal her.<br><br>Enemies inside the smoke are <status>Slowed</status> by @SlowAmount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Akali throws down a cover of smoke that lasts for @CloudDuration@ seconds. While inside the area, Akali gains <scaleArmor>@TotalResists@ Armor</scaleArmor> and <scaleMR>@TotalResists@ Magic Resist</scaleMR> and becomes <keywordStealth>Invisible</keywordStealth>. Attacking or using abilities will briefly reveal her.<br><br>Enemies inside the smoke are <status>Slowed</status> by @SlowAmount@%.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

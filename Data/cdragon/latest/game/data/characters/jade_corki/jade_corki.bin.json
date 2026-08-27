@@ -114,10 +114,10 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
-            "{111cf174}",
-            "{f48f518f}",
-            "{b3a1b264}",
-            "{1d8bbd62}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2"
         ],
         "mName": "Jade_CorkiRAbility",
         "__type": "AbilityObject"
@@ -126,15 +126,15 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
-            "{64e9dcb0}",
-            "{0f4b80df}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray"
         ],
         "mName": "Jade_CorkiEAbility",
         "__type": "AbilityObject"
     },
-    "{0f4b80df}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray": {
         "ObjectName": "Jade_CorkiE_Spray",
-        "objectPath": "{0f4b80df}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray",
         "mScriptName": "Jade_CorkiE_Spray",
         "mSpell": {
             "flags": 4,
@@ -273,9 +273,9 @@
         },
         "__type": "SpellObject"
     },
-    "{64e9dcb0}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff": {
         "ObjectName": "Jade_CorkiE_Debuff",
-        "objectPath": "{64e9dcb0}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff",
         "mScriptName": "Jade_CorkiE_Debuff",
         "mSpell": {
             "mImgIconName": [
@@ -298,6 +298,45 @@
             "mAffectsTypeFlags": 23759,
             "DataValues": [
                 {
+                    "name": "ActiveDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDPS",
+                    "values": [
+                        8.0,
+                        20.0,
+                        32.0,
+                        44.0,
+                        56.0,
+                        68.0,
+                        80.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADperSecond",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "ArmorMod",
                     "values": [
                         0.0,
@@ -311,63 +350,42 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BaseDamage",
+                    "name": "ShredDuration",
                     "values": [
-                        4.0,
-                        10.0,
-                        16.0,
-                        22.0,
-                        28.0,
-                        34.0,
-                        40.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TooltipDamage",
-                    "values": [
-                        8.0,
-                        20.0,
-                        32.0,
-                        44.0,
-                        56.0,
-                        68.0,
-                        80.0
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamage": {
+                "{5f73bdfe}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseDamage",
+                            "mDataValue": "BaseDPS",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "ADperSecond",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "{e927e79d}": {
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "TooltipDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                "{442d07f7}": {
+                    "mMultiplier": {
+                        "mDataValue": "ActiveDuration",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{5f73bdfe}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Attack2",
@@ -495,7 +513,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "TooltipDamage",
+                                    "type": "BaseDPS",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
@@ -541,7 +559,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamage",
+                        "mSpellCalculationKey": "{5f73bdfe}",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -553,15 +571,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mPart1": {
-                                    "mSpellCalculationKey": "TotalDamage",
-                                    "__type": "{f3cbe7b2}"
-                                },
-                                "mPart2": {
-                                    "mNumber": 0.06300000101327896,
-                                    "__type": "NumberCalculationPart"
-                                },
-                                "__type": "ProductOfSubPartsCalculationPart"
+                                "mSpellCalculationKey": "{5f73bdfe}",
+                                "__type": "{f3cbe7b2}"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -600,9 +611,9 @@
         },
         "__type": "SpellObject"
     },
-    "{111cf174}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check": {
         "ObjectName": "Jade_CorkiR_Check",
-        "objectPath": "{111cf174}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check",
         "mScriptName": "Jade_CorkiR_Check",
         "mSpell": {
             "mImgIconName": [
@@ -616,9 +627,9 @@
         },
         "__type": "SpellObject"
     },
-    "{1d8bbd62}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2": {
         "ObjectName": "Jade_CorkiR_Missile2",
-        "objectPath": "{1d8bbd62}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2",
         "mScriptName": "Jade_CorkiR_Missile2",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -846,6 +857,19 @@
                         330.0,
                         400.0,
                         470.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxAmmoTooltip",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1115,9 +1139,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b3a1b264}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile": {
         "ObjectName": "Jade_CorkiR_Missile",
-        "objectPath": "{b3a1b264}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
         "mScriptName": "Jade_CorkiR_Missile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1323,9 +1347,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f48f518f}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC": {
         "ObjectName": "Jade_CorkiR_NC",
-        "objectPath": "{f48f518f}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC",
         "mScriptName": "Jade_CorkiR_NC",
         "mSpell": {
             "mImgIconName": [
@@ -1343,7 +1367,7 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
-            "{bb1744cd}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound"
         ],
         "mName": "Jade_CorkiWAbility",
         "__type": "AbilityObject"
@@ -1662,9 +1686,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bb1744cd}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound": {
         "ObjectName": "Jade_CorkiW_Sound",
-        "objectPath": "{bb1744cd}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound",
         "mScriptName": "Jade_CorkiW_Sound",
         "mSpell": {
             "mImgIconName": [
@@ -1793,9 +1817,9 @@
         "__type": "SpellObject"
     },
     "{40c3de80}": {
-        "mRootSpell": "{ede48645}",
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "mChildSpells": [
-            "{ede48645}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive"
         ],
         "mName": "Jade_CorkiPassiveAbility",
         "__type": "AbilityObject"
@@ -1814,14 +1838,14 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
-            "{57214631}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind"
         ],
         "mName": "Jade_CorkiQAbility",
         "__type": "AbilityObject"
     },
-    "{57214631}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind": {
         "ObjectName": "Jade_CorkiQ_Blind",
-        "objectPath": "{57214631}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind",
         "mScriptName": "Jade_CorkiQ_Blind",
         "mSpell": {
             "mImgIconName": [
@@ -1866,6 +1890,19 @@
                         0.5,
                         0.5,
                         0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RevealDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2002,7 +2039,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_CorkiQ_Jade_Name",
                         "keySummary": "Spell_CorkiQ_Jade_Summary",
-                        "keyTooltip": "Spell_CorkiQ_Jade_Tooltip"
+                        "keyTooltip": "Spell_CorkiQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_CorkiQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2034,7 +2072,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2172,9 +2210,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ede48645}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive": {
         "ObjectName": "Jade_CorkiPassive",
-        "objectPath": "{ede48645}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "mScriptName": "Jade_CorkiPassive",
         "mSpell": {
             "DataValues": [
@@ -3187,9 +3225,9 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{0f4b80df}",
-            "{b3a1b264}",
-            "{1d8bbd62}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3214,7 +3252,7 @@
         "passiveName": "game_character_passiveName_Jade_Corki",
         "passiveLuaName": "Jade_Corki_RapidReload",
         "passiveToolTip": "game_character_passiveDescription_Jade_Corki",
-        "passive1IconName": "ASSETS/Characters/Jade_Corki/HUD/Icons2D/Jade_Corki_RapidReload.dds",
+        "passive1IconName": "assets/characters/jade_corki/hud/icons2d/jade_corki_rapidreload.dds",
         "name": "game_character_displayname_Jade_Corki",
         "selectionHeight": 170.0,
         "selectionRadius": 135.0,
@@ -3330,7 +3368,7 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{ede48645}",
+        "mCharacterPassiveSpell": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "{c5c48b41}": 1,
         "Script": "{2c54c4b7}",
         "__type": "CharacterRecord"

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "발파실패 하이머딩거",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "뉴 밴들 공화국에 사는 괴짜 과학자 하이머딩거는 자신이 '하나 이상의 악당 국가'에 '전쟁을 일으킬 수 있는 대형 폭탄 두어 개'를 개발했을지도 모른다는 사실을 아직 아무에게도 말하지 않았습니다. 자신을 살해하려 드는 도시에서 실험하는 게 좋을 리는 없으니까요."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 연사형 포탑을 설치합니다. 이 스킬의 레벨이 오르면 포탑이 능력을 얻습니다. (하이머딩거의 포탑은 적 포탑에 절반의 피해만 줍니다.)",
-            "dynamicDescription": "하이머딩거가 연사형 포탑을 세웁니다. 포탑은 공격당 <magicDamage>@BonusDamage@의 마법 피해</magicDamage>를 입힙니다. 이 스킬은 @MaxAmmo@회 충전됩니다. (@AmmoRechargeTime@초마다 충전)<br><br>이 스킬의 레벨이 오를 때마다 추가로 강화됩니다.<br><attention>2레벨:</attention> 포탑 공격 시 대상의 방어력과 마법 저항력이 1 감소합니다. (최대 50)<br><attention>3레벨:</attention> 최대 포탑 개수가 2개로 증가합니다.<br><attention>4레벨:</attention> 포탑이 추가로 <scaleHealth>125의 체력</scaleHealth>을 얻습니다.<br><attention>5레벨:</attention> 포탑 공격이 광역 피해를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 연사형 포탑을 세웁니다. 포탑은 공격을 가할 때마다 <magicDamage>@BonusDamage@의 마법 피해</magicDamage>를 입힙니다. 설치 직후의 포탑은 @AttackSpeedDuration@초에 걸쳐 점차 감소하는 <attackSpeed>@TurretBonusAttackSpeed*100@%의 추가 공격 속도</attackSpeed>를 갖습니다. 이 스킬은 @MaxAmmo@회까지 충전됩니다. (@AmmoRechargeTime@초마다 충전)<br><br>이 스킬은 스킬 레벨이 오를 때마다 추가로 강화됩니다.<br><attention>2레벨:</attention> 포탑의 공격이 대상의 방어력과 마법 저항력을 @Level2ResistShred@씩 감소시킵니다. (최대 @MaxShredCapTooltip@)<br><attention>3레벨:</attention> 최대 포탑 개수가 2개로 증가합니다.<br><attention>4레벨:</attention> 포탑이 추가로 <scaleHealth>@Level4HPTooltip@의 체력</scaleHealth>을 얻습니다.<br><attention>5레벨:</attention> 포탑의 공격이 @AoEDamageMod*100@%의 광역 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 가장 가까운 적에게 장거리 로켓을 발사합니다.",
-            "dynamicDescription": "하이머딩거가 가장 가까운 대상을 추적하는 3발의 초소형 로켓을 발사합니다. (1명당 한 발) 로켓은 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 가장 가까운 대상을 추적하는 @MaxTargets@발의 초소형 로켓을 발사합니다. (1명당 한 발) 로켓은 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "하이머딩거가 목표 위치에 수류탄을 던져 적에게 피해를 입힙니다. 수류탄에 직격당한 적은 기절하며, 빗겨맞은 유닛은 실명합니다.",
-            "dynamicDescription": "하이머딩거가 수류탄을 던져 적 유닛에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @BlindDuration@초 동안 <status>실명</status>시킵니다. 직격당한 적은 1.5초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "하이머딩거가 수류탄을 던져, 적 유닛에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @BlindDuration@초 동안 <status>실명</status>시킵니다.  직격당한 적은 @StunDuration@초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "기본 지속 효과 / 사용 시 효과: 기본 지속 효과로 재사용 대기시간 감소를 제공합니다.  사용 시 활성화되어 있는 모든 진화형 포탑의 체력을 회복시키고, 잠시 대상의 이동 속도를 감소시키는 냉동 탄환을 발사하게 합니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>재사용 대기시간이 @CooldownBonus*-100@% 감소합니다.<br><br><spellActive>사용 시: </spellActive>지속시간 동안 모든 스킬과 포탑을 강화합니다.<br><br><spellName>진화형 포탑:</spellName> 모든 포탑의 체력이 100% <healing>회복</healing>되고, 공격당 <status>@MovementSpeedMod*-100@%의 둔화</status>를 적용합니다.<br><spellName>마법공학 초소형 로켓:</spellName> 3발이 아닌 5발의 로켓을 발사합니다.<br><spellName>CH-1 충격 수류탄:</spellName> 날아가는 속도가 33% 증가합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>재사용 대기시간이 @CooldownBonus*-100@% 감소합니다.<br><br><spellActive>사용 시: </spellActive>지속시간 동안 모든 스킬과 포탑을 강화합니다.<br><br><spellName>진화형 포탑:</spellName> 모든 포탑의 체력이 완전히 <healing>회복</healing>됩니다. 또한 포탑이 공격을 가할 때마다 <status>@MovementSpeedMod*-100@%의 둔화</status>를 적용합니다.<br><spellName>마법공학 초소형 로켓:</spellName> @WMaxMissiles@발의 로켓을 발사합니다.<br><spellName>CH-1 충격 수류탄:</spellName> 날아가는 속도가 33% 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Ezreal de Nottingham",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Um elfo aventureiro dos reinos das florestas distantes, Ezreal gosta de se apresentar como um “ladino paladino bonitão\" chamado Jarro Plumaluz. Pouquíssimas pessoas acreditam em suas alegações de ser um cavaleiro, mas elas não são nada mais do que mera distração entre suas catastróficas desventuras."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal recebe Velocidade de Ataque crescente cada vez que acerta uma Habilidade, acumulando até 5x."
+        "description": "Ezreal recebe Velocidade de Ataque crescente a cada vez que acerta uma Habilidade."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal faz um disparo de energia que reduz um pouco o Tempo de Recarga de todas as suas habilidades caso atinja uma unidade inimiga.",
             "dynamicDescription": "Ezreal faz um disparo de energia, causando <physicalDamage>@Damage@ de Dano Físico</physicalDamage> (aplica efeitos ao contato). <br><br>Os Tempos de Recarga das Habilidades de Ezreal são reduzidos em 1s se <spellName>Disparo Místico</spellName> atingir um alvo.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ezreal libera uma onda oscilante de energia. Essa onda diminui a Velocidade de Ataque e causa Dano Mágico a Campeões inimigos, enquanto cura e aumenta a Velocidade de Ataque de Campeões aliados.",
-            "dynamicDescription": "Ezreal libera uma onda de energia que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a todos os Campeões inimigos atravessados por ela, além de reduzir a <attackSpeed>Velocidade de Ataque</attackSpeed> deles em @AttackSpeed@% por 5s. <br><br>Campeões aliados atingidos pela onda curam <healing>@TotalHeal@ de Vida</healing> e recebem aumento de @AttackSpeed@% na <attackSpeed>Velocidade de Ataque</attackSpeed> por 5s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal dispara uma onda de energia que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a todos os Campeões inimigos atravessados, além de reduzir a <attackSpeed>Velocidade de Ataque</attackSpeed> deles em @AttackSpeed@% por @Duration@s. <br><br>Campeões aliados atingidos pela onda curam <healing>@TotalHeal@ de Vida</healing> e recebem um aumento de @AttackSpeed@% na <attackSpeed>Velocidade de Ataque</attackSpeed> por @Duration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Ezreal canaliza por 1s e dispara uma poderosa barragem de energia que causa dano massivo a todas as unidades que atravessa (10% a menos de dano a cada unidade atravessada).",
-            "dynamicDescription": "Ezreal canaliza por 1s e dispara uma barragem de mísseis que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a cada unidade atravessada. No entanto, o dano é reduzido em @DamageReductionPerHit*100@% a cada unidade atingida (mínimo de @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "Ezreal dispara uma poderosa barragem de mísseis de energia que causam dano massivo a todas as unidades atravessadas.",
+            "dynamicDescription": "Ezreal dispara uma barragem de mísseis que causa <magicDamage>@Damage@ de Dano Mágico</magicDamage> a cada unidade atravessada. No entanto, o dano é reduzido em @DamageReductionPerHit*100@% a cada unidade atingida (mínimo de @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

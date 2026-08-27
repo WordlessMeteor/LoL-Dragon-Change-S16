@@ -401,7 +401,7 @@
         "mRootSpell": "Characters/Locke/Spells/LockeWAbility/LockeW",
         "mChildSpells": [
             "Characters/Locke/Spells/LockeWAbility/LockeW",
-            "{c467fdb2}"
+            "Characters/Locke/Spells/LockeWAbility/LockeWRecast"
         ],
         "mName": "LockeWAbility",
         "AbilityTraits": 32768,
@@ -411,17 +411,17 @@
         "mRootSpell": "Characters/Locke/Spells/LockeEAbility/LockeE",
         "mChildSpells": [
             "Characters/Locke/Spells/LockeEAbility/LockeE",
-            "{cabdaa68}",
-            "{1f220483}",
-            "{db850a14}"
+            "Characters/Locke/Spells/LockeEAbility/LockeEDashOut",
+            "Characters/Locke/Spells/LockeEAbility/LockeEAttackReady",
+            "Characters/Locke/Spells/LockeEAbility/LockeEAttack"
         ],
         "mName": "LockeEAbility",
         "AbilityTraits": 128,
         "__type": "AbilityObject"
     },
-    "{1f220483}": {
+    "Characters/Locke/Spells/LockeEAbility/LockeEAttackReady": {
         "ObjectName": "LockeEAttackReady",
-        "objectPath": "{1f220483}",
+        "objectPath": "Characters/Locke/Spells/LockeEAbility/LockeEAttackReady",
         "mScriptName": "LockeEAttackReady",
         "mSpell": {
             "mImgIconName": [
@@ -647,9 +647,9 @@
                 {
                     "mParentPassiveBuff": "Characters/Locke/Spells/LockeEAbility/LockeE",
                     "mComponentBuffs": [
-                        "{1f220483}",
-                        "{cabdaa68}",
-                        "{db850a14}"
+                        "Characters/Locke/Spells/LockeEAbility/LockeEAttackReady",
+                        "Characters/Locke/Spells/LockeEAbility/LockeEDashOut",
+                        "Characters/Locke/Spells/LockeEAbility/LockeEAttack"
                     ],
                     "mAllowOnClones": false,
                     "__type": "CharacterPassiveData"
@@ -815,9 +815,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cabdaa68}": {
+    "Characters/Locke/Spells/LockeEAbility/LockeEDashOut": {
         "ObjectName": "LockeEDashOut",
-        "objectPath": "{cabdaa68}",
+        "objectPath": "Characters/Locke/Spells/LockeEAbility/LockeEDashOut",
         "mScriptName": "LockeEDashOut",
         "mSpell": {
             "flags": 36,
@@ -937,9 +937,9 @@
         },
         "__type": "SpellObject"
     },
-    "{db850a14}": {
+    "Characters/Locke/Spells/LockeEAbility/LockeEAttack": {
         "ObjectName": "LockeEAttack",
-        "objectPath": "{db850a14}",
+        "objectPath": "Characters/Locke/Spells/LockeEAbility/LockeEAttack",
         "mScriptName": "LockeEAttack",
         "mSpell": {
             "flags": 4,
@@ -1028,9 +1028,9 @@
         "AbilityTraits": 2,
         "__type": "AbilityObject"
     },
-    "{2350efeb}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRSpellPassive": {
         "ObjectName": "LockeRSpellPassive",
-        "objectPath": "{2350efeb}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRSpellPassive",
         "mScriptName": "LockeRSpellPassive",
         "mBuff": {
             "CanTimeoutWhileCasting": false,
@@ -1040,9 +1040,9 @@
         },
         "__type": "SpellObject"
     },
-    "{2e984c15}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRExecuteTracker": {
         "ObjectName": "LockeRExecuteTracker",
-        "objectPath": "{2e984c15}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRExecuteTracker",
         "mScriptName": "LockeRExecuteTracker",
         "mSpell": {
             "mImgIconName": [
@@ -1064,9 +1064,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8cff8cc0}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRExecuteVO": {
         "ObjectName": "LockeRExecuteVO",
-        "objectPath": "{8cff8cc0}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRExecuteVO",
         "mScriptName": "LockeRExecuteVO",
         "mSpell": {
             "flags": 4194444,
@@ -1136,9 +1136,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9b4c6fd1}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRSlow": {
         "ObjectName": "LockeRSlow",
-        "objectPath": "{9b4c6fd1}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRSlow",
         "mScriptName": "LockeRSlow",
         "mSpell": {
             "mImgIconName": [
@@ -1160,9 +1160,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a9f38c0c}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRStack": {
         "ObjectName": "LockeRStack",
-        "objectPath": "{a9f38c0c}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRStack",
         "mScriptName": "LockeRStack",
         "mSpell": {
             "mImgIconName": [
@@ -1236,9 +1236,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b98e1078}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeRNailMissile": {
         "ObjectName": "LockeRNailMissile",
-        "objectPath": "{b98e1078}",
+        "objectPath": "Characters/Locke/Spells/LockeRAbility/LockeRNailMissile",
         "mScriptName": "LockeRNailMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2335,9 +2335,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c467fdb2}": {
+    "Characters/Locke/Spells/LockeWAbility/LockeWRecast": {
         "ObjectName": "LockeWRecast",
-        "objectPath": "{c467fdb2}",
+        "objectPath": "Characters/Locke/Spells/LockeWAbility/LockeWRecast",
         "mScriptName": "LockeWRecast",
         "mSpell": {
             "flags": 4,
@@ -2622,15 +2622,15 @@
     "Characters/Locke/Spells/LockeQAbility": {
         "mRootSpell": "Characters/Locke/Spells/LockeQAbility/LockeQ",
         "mChildSpells": [
-            "{ad71c860}"
+            "Characters/Locke/Spells/LockeQAbility/LockeQMissile"
         ],
         "mName": "LockeQAbility",
         "AbilityTraits": 256,
         "__type": "AbilityObject"
     },
-    "{42ee5c34}": {
+    "Characters/Locke/Spells/LockeQAbility/LockeQNailsReady": {
         "ObjectName": "LockeQNailsReady",
-        "objectPath": "{42ee5c34}",
+        "objectPath": "Characters/Locke/Spells/LockeQAbility/LockeQNailsReady",
         "mScriptName": "LockeQNailsReady",
         "mSpell": {
             "mImgIconName": [
@@ -3135,9 +3135,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8051c8fd}": {
+    "Characters/Locke/Spells/LockeQAbility/LockeQSlow": {
         "ObjectName": "LockeQSlow",
-        "objectPath": "{8051c8fd}",
+        "objectPath": "Characters/Locke/Spells/LockeQAbility/LockeQSlow",
         "mScriptName": "LockeQSlow",
         "mSpell": {
             "mImgIconName": [
@@ -3159,9 +3159,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ad71c860}": {
+    "Characters/Locke/Spells/LockeQAbility/LockeQMissile": {
         "ObjectName": "LockeQMissile",
-        "objectPath": "{ad71c860}",
+        "objectPath": "Characters/Locke/Spells/LockeQAbility/LockeQMissile",
         "mScriptName": "LockeQMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3353,14 +3353,14 @@
         "__type": "SpellObject"
     },
     "{e9b7db02}": {
-        "mRootSpell": "{7531bb00}",
+        "mRootSpell": "Characters/Locke/Spells/LockePassiveAbility/LockePassive",
         "mName": "LockePassiveAbility",
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{7531bb00}": {
+    "Characters/Locke/Spells/LockePassiveAbility/LockePassive": {
         "ObjectName": "LockePassive",
-        "objectPath": "{7531bb00}",
+        "objectPath": "Characters/Locke/Spells/LockePassiveAbility/LockePassive",
         "mScriptName": "LockePassive",
         "mSpell": {
             "DataValues": [
@@ -4003,7 +4003,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             3,
             9,
@@ -4030,7 +4030,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             150000,
             400000,
@@ -4058,7 +4058,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             20,
             50,
@@ -4099,7 +4099,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             10000,
             25000,
@@ -4126,7 +4126,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             5,
             12,
@@ -4153,7 +4153,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             80,
             200,
@@ -4239,7 +4239,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -4279,7 +4279,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -4305,7 +4305,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -4505,7 +4505,7 @@
         "passiveLuaName": "LockePassive",
         "passiveToolTip": "",
         "passiveSpell": "LockePassive",
-        "passive1IconName": "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.dds",
+        "passive1IconName": "assets/characters/locke/hud/icons2d/locke_passive.dds",
         "name": "game_character_displayname_Locke",
         "weaponMaterials": [
             "LockeBasicAttack"
@@ -4576,10 +4576,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{7531bb00}",
+        "mCharacterPassiveSpell": "Characters/Locke/Spells/LockePassiveAbility/LockePassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{7531bb00}",
+                "mParentPassiveBuff": "Characters/Locke/Spells/LockePassiveAbility/LockePassive",
                 "__type": "CharacterPassiveData"
             }
         ],

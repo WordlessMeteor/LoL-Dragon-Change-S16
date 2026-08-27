@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Морская разбойница Тристана",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Салют, канониры! В поисках приключений Тристана покинула Бандл Сити и отправилась покорять морские просторы. Шляпу она позаимствовала (украла) у одного пирата, которому крепко от нее досталось, а повязку на глазу носит просто для красоты. Тристана пленных не берет – ее верная пушка отправила на дно больше вражеских кораблей, чем иные билджвотерские капитаны."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тристана готовится открыть беглый огонь, увеличивая свою скорость атаки на короткое время.",
-            "dynamicDescription": "<mainText><attackSpeed>Скорость атаки Тристаны растет на @AttackSpeedMod*100@%</attackSpeed> на 7 сек.",
+            "dynamicDescription": "Тристана получает <attackSpeed>@AttackSpeedMod*100@% скорости атаки</attackSpeed> на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Тристана делает выстрел в землю и подлетает в воздух, чтобы приземлиться в указанное место, нанеся урон врагам в зоне приземления и замедлив их на 3 сек.",
-            "dynamicDescription": "<mainText>Тристана стреляет в землю, чтобы отбросить себя к выбранной точке, при приземлении нанеся <magicDamage>@LandingDamage@ ед. маг. урона</magicDamage> и <status>замедлив</status> врагов на 60% на 2.5 сек.<br>Если она убивает или помогает убить чемпиона, перезарядка обновляется.",
+            "description": "Тристана делает выстрел в землю и подлетает в воздух, чтобы приземлиться в указанное место, нанеся урон врагам в зоне приземления и замедлив их.",
+            "dynamicDescription": "Тристана стреляет в землю, чтобы отбросить себя к выбранной точке, при приземлении нанеся <magicDamage>@LandingDamage@ ед. маг. урона</magicDamage> и <status>замедлив</status> врагов на @Slow@% на @SlowDuration@ сек. Если она убивает или помогает убить чемпиона, перезарядка Ракетного прыжка сбрасывается.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Когда Тристана убивает противника, ее пушечные ядра взрываются шрапнелью, нанося урон окружающим врагам. Умение может быть активировано и тогда наносит цели периодический урон и уменьшает эффективность получаемого ею лечения.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> при гибели от автоатак Тристаны враги взрываются, нанося <magicDamage>@PassiveDamage@ ед. маг. урона</magicDamage> ближайшим врагам.<br><br><spellActive>Активно:</spellActive> раздирает выбранного врага, накладывая <keyword>Страшные раны (50%)</keyword> и нанося <magicDamage>@ActiveDamageTTOnly@ ед. маг. урона</magicDamage> в течение 5 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> при гибели от автоатак Тристаны враги взрываются, нанося <magicDamage>@PassiveDamage@ ед. маг. урона</magicDamage> ближайшим врагам.<br><br><spellActive>Активно:</spellActive> раздирает выбранного врага, накладывая <keyword>Страшные раны (50%)</keyword> и нанося <magicDamage>@ActiveDamageTTOnly@ ед. маг. урона</magicDamage> в течение @GrievousDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

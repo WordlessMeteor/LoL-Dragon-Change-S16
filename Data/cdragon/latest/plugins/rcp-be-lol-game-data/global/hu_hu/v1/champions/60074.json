@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Robbantó Heimerdinger",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Heimerdinger egy különc tudós, aki az Új Bandle Köztársaságban él, és egyelőre senkinek sem vallotta be, hogy „egy-két hatalmas, háború előtti bombát” fejlesztett „egy-két lator államnak”. Szeret olyan városban dolgozni, ahol nem akarják meglincselni."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger elhelyez egy géppuskatornyot. A tornyok a képesség fejlesztésével új adottságokra tesznek szert. (A tornyok feleakkora sebzést okoznak más tornyoknak.)",
-            "dynamicDescription": "Heimerdinger géppuskatornyot épít, amely támadásonként <magicDamage>@BonusDamage@ varázssebzést</magicDamage> okoz. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>A képesség minden szintje egy további fejlesztést biztosít:<br><attention>2. szint:</attention> a torony támadásai 1 ponttal csökkentik a célpont páncélját és varázsellenállását (legfeljebb 50 pontig)<br><attention>3. szint:</attention> egyszerre 2 torony lehet aktív<br><attention>4. szint:</attention> a tornyok további <scaleHealth>125 életerőre</scaleHealth> tesznek szert<br><attention>5. szint:</attention> a tornyok területi sebzést okoznak@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger géppuskatornyot épít, amely támadásonként <magicDamage>@BonusDamage@ varázssebzést</magicDamage> okoz. A tornyok <attackSpeed>@TurretBonusAttackSpeed*100@% támadási sebességet</attackSpeed> kapnak a lehelyezésüket követő első @AttackSpeedDuration@ másodpercre. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>A képesség minden szintje egy további fejlesztést biztosít:<br><attention>2. szint:</attention> a torony támadásai @Level2ResistShred@ ponttal csökkentik a célpont páncélját és varázsellenállását (legfeljebb @MaxShredCapTooltip@ pontig)<br><attention>3. szint:</attention> egyszerre 2 torony lehet aktív<br><attention>4. szint:</attention> a tornyok további <scaleHealth>@Level4HPTooltip@ életerőre</scaleHealth> tesznek szert<br><attention>5. szint:</attention> a tornyok @AoEDamageMod*100@% szétterülő sebzést okoznak@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger nagy hatótávolságú rakétákat lő ki, amelyek a Heimerdingerhez legközelebbi ellenfeleket találják el.",
-            "dynamicDescription": "Heimerdinger 3, ellenséges célpontokat kereső mikrorakétát lő ki (személyenként legfeljebb 1 darabot), amelyek a hozzá legközelebbi célpontokat találják el. Mindegyik rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger @MaxTargets@, ellenséges célpontokat kereső mikrorakétát lő ki (személyenként legfeljebb 1 darabot), amelyek a hozzá legközelebbi célpontokat találják el. Mindegyik rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Heimerdinger egy gránátot hajít a kijelölt helyre, amely megsebzi az ellenséges egységeket, elkábítja a közvetlenül eltalált célpontokat, a körülöttük állókat pedig elvakítja.",
-            "dynamicDescription": "Heimerdinger elhajít egy gránátot, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenséges egységeknek, és @BlindDuration@ másodpercre <status>elvakítja</status> őket.  A közvetlenül eltalált ellenfelek 1,5 másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger elhajít egy gránátot, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenséges egységeknek, és @BlindDuration@ másodpercre <status>elvakítja</status> őket.  A közvetlenül eltalált ellenfelek @StunDuration@ másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Passzív/aktív: passzívan növeli a töltésiidő-csökkentést.  Aktiváláskor gyógyítja az összes aktív fejlesztett tornyot, amelyek fagyasztó lövedékekre váltanak, rövid időre csökkentve a célpont mozgási sebességét.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>@CooldownBonus*-100@% töltésiidő-csökkentés.<br><br><spellActive>Aktív: </spellActive>felerősít minden képességet és tornyot a hatás időtartama alatt.<br><br><spellName>Fejlesztett tornyok:</spellName> minden torony <healing>visszanyeri</healing> a maximális életereje 100%-át, és minden lövés <status>@MovementSpeedMod*-100@%-os lassítást</status> alkalmaz.<br><spellName>Hextech mikrorakéták:</spellName> 3 helyett 5 rakétát lő ki.<br><spellName>CH-1 sokkoló gránát:</spellName> 33%-kal gyorsabban repül.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>@CooldownBonus*-100@% töltésiidő-csökkentés.<br><br><spellActive>Aktív: </spellActive>felerősít minden képességet és tornyot a hatás időtartama alatt.<br><br><spellName>Fejlesztett tornyok:</spellName> minden torony visszanyeri a teljes <healing>életerejét</healing>. Minden lövés <status>@MovementSpeedMod*-100@%-os lassítást</status> alkalmaz.<br><spellName>Hextech mikrorakéták:</spellName> @WMaxMissiles@ rakétát lő ki.<br><spellName>CH-1 sokkoló gránát:</spellName> 33%-kal gyorsabban repül.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Gangplank": {
             "id": "Jade_Gangplank",
@@ -28,6 +28,12 @@
                     "id": "60041001",
                     "num": 1,
                     "name": "Spooky Gangplank",
+                    "chromas": false
+                },
+                {
+                    "id": "60041002",
+                    "num": 2,
+                    "name": "Minuteman Gangplank",
                     "chromas": false
                 },
                 {
@@ -66,14 +72,14 @@
                     "id": "60041011",
                     "num": 11,
                     "name": "Dreadnova Gangplank (Sapphire)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 8
                 },
                 {
                     "id": "60041012",
                     "num": 12,
                     "name": "Dreadnova Gangplank (Tanzanite)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 8
                 },
                 {
@@ -107,14 +113,14 @@
                     "id": "60041017",
                     "num": 17,
                     "name": "Pool Party Gangplank (Ruby)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 14
                 },
                 {
                     "id": "60041018",
                     "num": 18,
                     "name": "Pool Party Gangplank (Citrine)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 14
                 },
                 {
@@ -623,7 +629,7 @@
                 {
                     "id": "Jade_GangplankR",
                     "name": "Cannon Barrage",
-                    "description": "Gangplank signals his ship to fire upon an area for 7 seconds, slowing enemies and dealing damage in random locations within the area.",
+                    "description": "Gangplank signals his ship to fire upon an area anywhere on the map, slowing enemies and dealing damage over time.",
                     "tooltip": "Signals Gangplank's ship to fire upon an area for {{ duration }} seconds, <status>Slowing</status> enemies in the area by {{ slow*100 }}% for the duration. Cannonballs rain upon the area, each causing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -672,9 +678,9 @@
                             0
                         ],
                         [
-                            1.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -682,24 +688,24 @@
                             0
                         ],
                         [
-                            300,
-                            300,
-                            300
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            75,
-                            75,
-                            75
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -708,12 +714,12 @@
                         "0",
                         "0",
                         "0",
-                        "1.5/0.5/0.5",
                         "0",
-                        "300",
-                        "75",
-                        "1",
-                        "40"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

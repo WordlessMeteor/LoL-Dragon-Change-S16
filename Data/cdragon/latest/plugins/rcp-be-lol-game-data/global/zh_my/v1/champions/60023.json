@@ -1105,7 +1105,7 @@
             "cost": "消耗<font color='#FF3300'>@BaseHealthCost@生命值</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "泰达米尔挥刀冲向目标单位，对沿途经过的敌人造成伤害。",
-            "dynamicDescription": "泰达米尔旋转穿过敌人，对沿途经过的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>每当泰达米尔触发暴击时，<spellName>旋风斩</spellName>的冷却时间都会缩短2秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰达米尔旋转穿过敌人，对沿途经过的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br><spellName>每当泰达米尔触发暴击时，旋风斩</spellName>的冷却时间都会缩短@CooldownRefund@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1273,12 +1273,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                110.0,
+                130.0,
+                115.0,
                 100.0,
-                90.0,
-                80.0,
+                85.0,
                 70.0,
-                60.0
+                55.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

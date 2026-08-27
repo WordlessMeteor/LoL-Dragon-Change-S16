@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "จิ้งจอกเก้าหาง",
-    "shortBio": "- Essence Theft (P) จะสแตคเมื่อสร้างความเสียหายแก่ศัตรู<br>- Spirit Rush (R) จะไม่รีเซ็ต",
+    "shortBio": "- Essence Theft (P) จะสแตคเมื่อสร้างความเสียหายแก่ศัตรู<br>- Spirit Rush (R) จะไม่รีเซ็ต<br>- Charm (E) จะเพิ่มความเสียหายที่ Ahri ทำใส่เป้าหมายของเธอ",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ahri พุ่งไปด้านหน้าและปล่อยกระสุนวิญญาณ สร้างความเสียหายให้กับศัตรูใกล้เคียง 3 ตัว (เล็งแชมเปี้ยนก่อน) สามารถร่าย Spirit Rush ได้สูงสุด 3 ครั้งก่อนที่จะติดคูลดาวน์",
-            "dynamicDescription": "Ahri พุ่งไปข้างหน้า และยิงกระสุนวิญญาณ 3 ลูกใส่ศัตรูใกล้เคียง โดยจะเล็งที่แชมเปี้ยนก่อนเสมอ กระสุนวิญญาณเหล่านี้สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ต่อลูก <spellName>Spirit Rush</spellName> สามารถ<recast>กดใช้ซ้ำ</recast>ได้อีก 2 ครั้งภายใน 10 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri พุ่งไปข้างหน้า และยิงกระสุนวิญญาณ 3 ลูกใส่ศัตรูใกล้เคียง โดยจะเล็งที่แชมเปี้ยนก่อนเสมอ กระสุนวิญญาณเหล่านี้สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ต่อลูก <spellName>Spirit Rush</spellName> สามารถ<recast>กดใช้ซ้ำ</recast>ได้อีก 2 ครั้งภายใน @RecastDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Ezreal z Nottingham",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Ezreal, uwielbiający przygody elf z leśnych królestw na prowincji, lubi przedstawiać się jako „przystojny łotrzyk-paladyn” o imieniu Jarro Światłopióry. Niewielu wierzy w jego zapewnienia o byciu rycerzem, ale służą one za wystarczająco dobrą zmyłkę między jego katastrofalnymi, fatalnymi przygodami."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal zyskuje prędkość ataku z każdym trafionym zaklęciem. Efekt kumuluje się do 5 razy."
+        "description": "Prędkość ataku Ezreala wzrasta wraz z każdym trafionym zaklęciem."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal wystrzeliwuje zadający obrażenia pocisk energii, który trochę skraca czas odnowienia wszystkich jego umiejętności, jeśli trafi wrogą jednostkę.",
             "dynamicDescription": "Ezreal wystrzeliwuje pocisk energii, zadając <physicalDamage>@Damage@ pkt. obrażeń fizycznych</physicalDamage> (nakłada efekty przy trafieniu).<br><br>Czasy odnowienia umiejętności Ezreala zostają skrócone o 1 sek., kiedy <spellName>Mistyczny Strzał</spellName> trafi cel.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ezreal wystrzeliwuje pulsującą falę energii, która zmniejsza prędkość ataku wrogich bohaterów i zadaje im obrażenia magiczne, jednocześnie zwiększając prędkość ataku sojuszniczych bohaterów.",
-            "dynamicDescription": "Ezreal wystrzeliwuje falę energii, która zadaje wszystkim trafionym wrogim bohaterom <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> i zmniejsza ich <attackSpeed>prędkość ataku</attackSpeed> o @AttackSpeed@% na 5 sek.<br><br>Sojuszniczy bohaterowie trafieni falą odzyskują <healing>@TotalHeal@ pkt. zdrowia</healing> i zyskują @AttackSpeed@% <attackSpeed>prędkości ataku</attackSpeed> na 5 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal wystrzeliwuje falę energii, która zadaje wszystkim trafionym wrogim bohaterom <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> i zmniejsza ich <attackSpeed>prędkość ataku</attackSpeed> o @AttackSpeed@% na @Duration@ sek.<br><br>Sojuszniczy bohaterowie trafieni falą odzyskują <healing>@TotalHeal@ pkt. zdrowia</healing> i zyskują @AttackSpeed@% <attackSpeed>prędkości ataku</attackSpeed> na @Duration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Ezreal skupia się przez 1 sek. i wystrzeliwuje potężną salwę pocisków zadających olbrzymie obrażenia każdej jednostce, przez którą przenikną (zadaje o 10% mniej obrażeń każdej kolejnej jednostce).",
-            "dynamicDescription": "Ezreal skupia się przez 1 sek. i wystrzeliwuje salwę pocisków zadających <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> każdej jednostce, przez którą przenikną. Zadają o @DamageReductionPerHit*100@% mniej obrażeń każdej kolejnej jednostce (min. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "Ezreal wystrzeliwuje potężną salwę pocisków energetycznych, które zadają olbrzymie obrażenia każdej jednostce, przez którą przenikną.",
+            "dynamicDescription": "Ezreal wystrzeliwuje salwę pocisków zadających <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage> każdej jednostce, przez którą przenikną. Zadają o @DamageReductionPerHit*100@% mniej obrażeń każdej kolejnej jednostce (min. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

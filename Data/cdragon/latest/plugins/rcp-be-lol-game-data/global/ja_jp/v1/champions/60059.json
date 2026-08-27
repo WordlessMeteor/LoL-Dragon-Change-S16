@@ -586,7 +586,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "槍を伸ばして貫通したすべての敵ユニットに物理ダメージを与え、物理防御を低下させる。さらに「デマーシアの旗印」にこのスキルが命中した場合、自身をそこまで引き寄せ、通り道にいた敵をノックアップさせる。",
-            "dynamicDescription": "槍を伸ばして貫通したすべての敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、3秒間物理防御を@ArmorShredPercent@%低下させる。<br><br>槍が<spellName>デマーシアの旗印</spellName>に触れるとジャーヴァンⅣが旗の位置まで移動し、触れた敵ユニットを<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "槍を伸ばして貫通したすべての敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@ArmorShredDuration@秒間物理防御を@ArmorShredPercent@%低下させる。<br><br>槍が<spellName>「デマーシアの旗印」</spellName>に触れるとジャーヴァンⅣが旗の位置まで移動し、触れた敵ユニットを<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -736,7 +736,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "デマーシアの歴代王の力を借りて、ダメージを防ぐシールドを発生させ、周囲の敵にスロウを与える。",
-            "dynamicDescription": "5秒間、最大@ShieldAmount@(+周囲の敵チャンピオン1体ごとに@ShieldBonus@)の耐久値を持つ<shield>シールド</shield>を獲得し、周囲の敵に2秒間、@SlowAmount@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ShieldDuration@秒間、最大@ShieldAmount@(+周囲の敵チャンピオン1体ごとに@ShieldBonus@)の耐久値を持つ<shield>シールド</shield>を獲得し、周囲の敵に@SlowDuration@秒間、@SlowAmount@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1036,7 +1036,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ジャーヴァンⅣが対象に向かって雄々しく跳躍して、物理ダメージを与える。着地と同時に猛烈な力で地面を踏みつけ、周囲の地形を変化させて対象を囲い込む。",
-            "dynamicDescription": "敵チャンピオンに向かって雄々しく跳躍し、<physicalDamage>@DamageCalc@の物理ダメージ</physicalDamage>を与え、3.5秒間、周囲を通り抜けられない障壁で囲む。<br><br><recast>再発動</recast>すると障壁が消滅する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵チャンピオンに向かって雄々しく跳躍し、<physicalDamage>@DamageCalc@の物理ダメージ</physicalDamage>を与え、@WallDuration@秒間、周囲を通り抜けられない障壁で囲む。<br><br><recast>再発動</recast>すると障壁が消滅する。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

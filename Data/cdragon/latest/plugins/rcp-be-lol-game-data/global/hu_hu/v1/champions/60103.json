@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "A kilencfarkú róka",
-    "shortBio": "– Az Esszencialopás (P) az ellenfelek sebzésekor halmozódik<br>– A Lélekroham (R) nem áll vissza",
+    "shortBio": "– Az Esszencialopás (P) az ellenfelek sebzésekor halmozódik<br>– A Lélekroham (R) nem áll vissza<br>– A Csábítás (E) növeli Ahri a célpontnak okozott sebzését",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ahri előretör, és energialövedékeket bocsát ki, amelyek megsebzik a közelben tartózkodó 3 ellenfelet (elsősorban a hősöket). A Lélekroham háromszor alkalmazható, mielőtt elkezdene újratöltődni.",
-            "dynamicDescription": "Ahri fürgén előretör, és 3 energialövedéket lő ki, amelyek elsősorban hősöket céloznak meg. A lövedékek egyenként <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. A <spellName>Lélekroham</spellName> még legfeljebb 2 alkalommal <recast>süthető el újra</recast> 10 másodpercen belül.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri fürgén előretör, és 3 energialövedéket lő ki, amelyek elsősorban hősöket céloznak meg. A lövedékek egyenként <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. A <spellName>Lélekroham</spellName> még legfeljebb 2 alkalommal <recast>süthető el újra</recast> @RecastDuration@ másodpercen belül.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

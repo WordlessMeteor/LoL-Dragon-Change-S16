@@ -8157,11 +8157,23 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     left: 0;
     max-height: 180px;
     max-width: 480px;
+    padding-left: 20px;
     position: absolute;
     top: 475px
 }
 
-.rcp-fe-lol-tft-home .tft-events-promo-wrapper .tft-event-promo,
+.rcp-fe-lol-tft-home .tft-events-promo-wrapper .tft-event-promo {
+    position: relative
+}
+
+.rcp-fe-lol-tft-home .tft-events-promo-wrapper .tft-event-promo .event-promo-container {
+    margin-left: 0
+}
+
+.rcp-fe-lol-tft-home .tft-events-promo-wrapper .tft-event-promo:not(:has(.event-promo-container)) {
+    display: none
+}
+
 .rcp-fe-lol-tft-home .tft-events-promo-wrapper .tft-prime-promo-wrapper {
     position: relative
 }

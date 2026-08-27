@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Spell yang memberikan damage akan menandai musuh dengan Sunlight selama 3,5 detik. Saat Champion sekutu menghasilkan damage pada target yang ditandai, debuff Sunlight akan dikonsumsi untuk menghasilkan tambahan magic damage."
+        "description": "Spell penghasil damage menerapkan efek Sunlight pada musuh. Saat Champion sekutu menghasilkan damage pada target yang ditandai, debuff Sunlight akan dikonsumsi untuk menghasilkan tambahan damage."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Leona menggunakan shield untuk melakukan basic attack berikutnya, menghasilkan magic damage bonus dan stun ke target.",
-            "dynamicDescription": "Basic attack berikutnya memberikan tambahan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan menerapkan <status>stun</status> pada musuh selama 1,25 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Basic attack berikutnya memberikan tambahan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan menerapkan <status>stun</status> pada musuh selama @StunDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Leona mengangkat shield untuk memperoleh Armor dan Magic Resistance.  Saat durasi yang pertama berakhir, jika ada musuh di sekitar, dia akan menghasilkan magic damage ke mereka dan memperpanjang durasi efek ini.",
-            "dynamicDescription": "Mendapatkan @BonusARMR@ <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> bonus selama 3 detik. Saat efek berakhir, musuh di sekitar yang kena menerima <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan Leona mempertahankan <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> bonus selama 3 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona mendapatkan <scaleArmor>@BonusARMR@ Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> selama @BuffDuration@ detik. Saat efek berakhir, musuh di sekitar yang kena menerima <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan Leona mempertahankan <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> bonus selama @BuffDuration@ detik lagi.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

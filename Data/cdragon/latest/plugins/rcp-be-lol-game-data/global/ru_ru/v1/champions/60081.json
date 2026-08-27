@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Эзреаль из Ноттингема",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Эльф Эзреаль, искатель приключений из приграничных лесных королевств, нередко представляется ''неотразимым вором-паладином'' по имени Джарро Перышко. Мало кто верит, что он посвящен в рыцари, но  разговоры об этом отлично помогают ему скоротать время до очередных нелепых злоключений."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Каждый раз, когда Эзреаль поражает врага умением, его скорость атаки растет (суммируется до 5 р.)."
+        "description": "Когда Эзреаль поражает врага умением, его скорость атаки растет (бонус суммируется)."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Эзреаль выстреливает энергетическим зарядом. Если заряд попадает в противника, тому наносится урон, а время перезарядки умений Эзреаля немного сокращается.",
             "dynamicDescription": "Эзреаль выпускает заряд энергии, наносящий <physicalDamage>@Damage@ ед. физ. урона</physicalDamage> (накладывает эффекты при попадании). <br><br>При попадании <spellName>Мистический выстрел</spellName> сокращает перезарядку умений Эзреаля на 1 сек.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Эзреаль выпускает волну энергии, наносящую маг. урон вражеским чемпионам и снижающую их скорость атаки, а также восстанавливающую здоровье союзных чемпионов и повышающую их скорость атаки.",
-            "dynamicDescription": "Эзреаль выпускает волну энергии, наносящую <magicDamage>@Damage@ ед. маг. урона</magicDamage> вражеским чемпионам и снижающую их <attackSpeed>скорость атаки</attackSpeed> на @AttackSpeed@% на 5 сек.<br><br>Союзные чемпионы, задетые волной, восстанавливают <healing>@TotalHeal@ здоровья</healing>, получая @AttackSpeed@% <attackSpeed>скорости атаки</attackSpeed> на 5 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Эзреаль выпускает волну энергии, наносящую <magicDamage>@Damage@ ед. маг. урона</magicDamage> вражеским чемпионам и снижающую их <attackSpeed>скорость атаки</attackSpeed> на @AttackSpeed@% на @Duration@ сек.<br><br>Союзные чемпионы, задетые волной, восстанавливают <healing>@TotalHeal@ здоровья</healing>, получая @AttackSpeed@% <attackSpeed>скорости атаки</attackSpeed> на @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Эзреаль готовится 1 сек. и выпускает мощный залп энергии, наносящий большой урон каждой цели, сквозь которую проходит (каждая последующая цель получает на 10% меньше урона).",
-            "dynamicDescription": "Эзреаль готовится 1 сек. и выпускает залп снарядов, наносящий <magicDamage>@Damage@ ед. маг. урона</magicDamage> каждой цели, сквозь которую проходит. Каждая последующая цель получает на @DamageReductionPerHit*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "Эзреаль выпускает залп снарядов, наносящий большой урон каждой цели, сквозь которую проходит.",
+            "dynamicDescription": "Эзреаль выпускает залп снарядов, наносящий <magicDamage>@Damage@ ед. маг. урона</magicDamage> каждой цели, сквозь которую проходит. Каждая последующая цель получает на @DamageReductionPerHit*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "蜂刺 阿卡丽",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "大雀蜂之序遵循着一套残酷且历史悠久的训练体系，教导门徒们像大雀蜂一样凶狠不断地进攻。阿卡丽是其中最伟大的门徒，并且期望将这门艺术推向新的高度。"
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -644,8 +671,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个持续6秒的绯叶印。阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
-            "dynamicDescription": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>@InitialDamage@魔法伤害</magicDamage>，并在目标身上施加一个持续6秒的绯叶印。<br><br>阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>@ProcDamage@魔法伤害</magicDamage>并回复<keywordMajor>@EnergyReturn@能量</keywordMajor>。@SpellModifierDescriptionAppend@",
+            "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个绯叶印。阿卡丽对被标记单位的下一个近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
+            "dynamicDescription": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>@InitialDamage@魔法伤害</magicDamage>，并在目标身上施加一个持续@MarkDuration@秒的绯叶印。<br><br>阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>@ProcDamage@魔法伤害</magicDamage>并回复<keywordMajor>@EnergyReturn@能量</keywordMajor>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -671,8 +698,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -795,7 +822,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "阿卡丽扔下一枚烟幕弹。当处于这个区域内时，阿卡丽获得护甲和魔法抗性并进入隐形状态。攻击或使用技能会短暂地使她显形。烟幕弹之中的敌人们会被降低移动速度。",
-            "dynamicDescription": "阿卡丽扔下一枚持续8秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>@TotalResists@护甲</scaleArmor>和<scaleMR>@TotalResists@魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br><br>烟幕弹之中的敌人们会被<status>减速</status>@SlowAmount@%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿卡丽扔下一枚持续@CloudDuration@秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>@TotalResists@护甲</scaleArmor>和<scaleMR>@TotalResists@魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br><br>烟幕弹之中的敌人们会被<status>减速</status>@SlowAmount@%。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -821,27 +848,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -853,40 +880,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -898,13 +925,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Corki villanógránátot lő a célterületre. Ez a támadás 6 másodpercre felfedi a robbanás közelében lévő, nem láthatatlan egységeket és a hősöket.",
-            "dynamicDescription": "<mainText><magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a célterületen lévő ellenfeleknek. Továbbá a robbanás 6 másodpercre <status>felfedi</status> a területet és az eltalált hősöket (a láthatatlanokat nem).",
+            "description": "Corki kilő egy bombát, amely megsebzi és felfedi a robbanás közelében lévő ellenfeleket.",
+            "dynamicDescription": "Corki kilő egy bombát, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz. Az eltalált terület és az eltalált hősök @RevealDuration@ másodpercre láthatóvá válnak.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Corki a golyószórójával tölcsér alakban gyorstüzelés alá vonja az előtte fekvő területet, és megsebzi az ott tartózkodókat, illetve csökkenti az ellenfelek páncélját.",
-            "dynamicDescription": "<mainText>Corki a golyószórójával 4 másodpercig tölcsér alakban az előtte fekvő területre lő, és <physicalDamage>@TotalDamageTooltipOnly@ fizikai sebzést</physicalDamage> okoz az ott tartózkodóknak, illetve másodpercenként <status>@ArmorMod*-1@ értékkel csökkenti az ellenfelek páncélját</status>. A páncélcsökkentés halmozódik, és 2 másodpercig tart.",
+            "dynamicDescription": "Corki a golyószórójával @ActiveDuration@ másodpercig tölcsér alakban az előtte fekvő területre lő, és <physicalDamage>@DamagePerSecondCalc@ fizikai sebzést</physicalDamage> okoz az ott tartózkodóknak, illetve másodpercenként <status>@ArmorMod*-1@ értékkel csökkenti az ellenfelek páncélját</status>. A páncélcsökkentés halmozódik, és @ShredDuration@ másodpercig tart. (Maximális sebzés: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Corki egy rakétát lő ki a célterületre, amely a becsapódáskor felrobban, és sebzést okoz a hatóterületen tartózkodó ellenfeleknek. Corki 12 másodpercenként eltárol egy rakétát, és összesen legfeljebb 7 tárolt rakétája lehet. Minden harmadik rakéta egy Nagy Bumm lesz, amely extra sebzést okoz.",
-            "dynamicDescription": "<mainText>Corki egy rakétát lő ki a célterületre, amely az első eltalált ellenfélnél becsapódik. Minden rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a területen.<br><br>A képességnek 7 töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>Minden harmadik rakéta egy Nagy Bumm lesz, amely <magicDamage>@TotalDamageBig@ varázssebzést</magicDamage> okoz.",
+            "description": "Corki egy rakétát lő ki a célterületre, amely a becsapódáskor felrobban, és sebzést okoz a hatóterületen tartózkodó ellenfeleknek. Néhány rakéta egy Nagy Bumm lesz, amely extra sebzést okoz.",
+            "dynamicDescription": "Corki egy rakétát lő ki a célterületre, amely az első eltalált ellenfélnél becsapódik. Minden rakéta <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a területen.<br><br>A képességnek @MaxAmmoTooltip@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br><br>Minden harmadik rakéta egy Nagy Bumm lesz, amely <magicDamage>@TotalDamageBig@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

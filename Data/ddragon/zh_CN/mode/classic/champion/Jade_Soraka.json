@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Soraka": {
             "id": "Jade_Soraka",
@@ -22,6 +22,12 @@
                     "id": "60016000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60016001",
+                    "num": 1,
+                    "name": "森林女神 索拉卡",
                     "chromas": false
                 },
                 {
@@ -151,6 +157,68 @@
                     "name": "花仙子 索拉卡 翠蓝",
                     "chromas": false,
                     "parentSkin": 44
+                },
+                {
+                    "id": "60016063",
+                    "num": 63,
+                    "name": "海之歌 索拉卡",
+                    "chromas": false
+                },
+                {
+                    "id": "60016064",
+                    "num": 64,
+                    "name": "海之歌 索拉卡 迷人晚霞",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016065",
+                    "num": 65,
+                    "name": "海之歌 索拉卡 逐浪流沙",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016066",
+                    "num": 66,
+                    "name": "海之歌 索拉卡 葱郁椰林",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016067",
+                    "num": 67,
+                    "name": "海之歌 索拉卡 随波海草",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016068",
+                    "num": 68,
+                    "name": "海之歌 索拉卡 清凉海风",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016069",
+                    "num": 69,
+                    "name": "海之歌 索拉卡 浪漫氛围",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016070",
+                    "num": 70,
+                    "name": "海之歌 索拉卡 月夜潮汐",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016071",
+                    "num": 71,
+                    "name": "海之歌 索拉卡 拾音",
+                    "chromas": false,
+                    "parentSkin": 63
                 },
                 {
                     "id": "60016301",
@@ -349,9 +417,9 @@
                 },
                 {
                     "id": "Jade_SorakaW",
-                    "name": "星界恩典",
+                    "name": "星之祝福",
                     "description": "索拉卡为一名友方单位赐福，为其回复生命值并暂时提升护甲。",
-                    "tooltip": "为一名友军回复<healing>{{ totalheal }}生命值</healing>，并在3秒内临时为其提升<scaleArmor>{{ armour }}护甲</scaleArmor>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "索拉卡为一名友军回复<healing>{{ totalheal }}生命值</healing>并为其提供持续{{ buffduration }}秒的<scaleArmor>{{ armour }}护甲</scaleArmor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "治疗效果",
@@ -753,7 +821,7 @@
             ],
             "passive": {
                 "name": "奉献",
-                "description": "使周围友军提高16魔法抗性。",
+                "description": "提升身边友军们的魔法抗性。",
                 "image": {
                     "full": "Jade_Soraka_Passive.png",
                     "sprite": "passive1.png",

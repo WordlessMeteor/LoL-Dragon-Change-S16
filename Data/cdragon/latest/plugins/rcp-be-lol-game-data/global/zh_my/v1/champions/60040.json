@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "珍娜和她的友方英雄获得3%额外移动速度。"
+        "description": "珍娜和她的友方英雄获得额外移动速度。"
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "通过引起局部气压和温度变化，珍娜能够召唤出一场随时间不断扩大的小型风暴。她可以再次激活该技能来释放风暴。释放时，风暴会朝着施法方向飞行，对沿途经过的敌人造成伤害和击退效果。",
-            "dynamicDescription": "召唤一道旋风，对沿途经过的所有敌人造成<magicDamage>@MinimumDamage@魔法伤害</magicDamage>和<status>击飞</status>效果。旋风每充能一秒（最多可充能3秒），其飞行距离就会更远，造成<magicDamage>@ChargeDamage@额外伤害</magicDamage>，并将敌人<status>击退</status>得更远。<br><br><recast>重施技能</recast>可提前释放旋风。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "召唤一道旋风，对沿途经过的所有敌人造成<magicDamage>@MinimumDamage@魔法伤害</magicDamage>和<status>击飞</status>效果。旋风每充能一秒（最多可充能@MaxDuration@秒），其飞行距离就会更远，造成<magicDamage>@ChargeDamage@额外伤害</magicDamage>，并将敌人<status>击退</status>得更远。<br><br><recast>重施技能</recast>可提前释放旋风。@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "珍娜在自身周围召唤一道魔法风暴，击退敌人，风暴平息后，在技能激活期间，舒缓之风会治疗附近友军。",
-            "dynamicDescription": "召唤一道魔法风暴<recast>击退</recast>周围敌人，并在4秒内为附近的友军回复<healing>@TotalHeal@生命值</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "召唤一道魔法风暴<recast>击退</recast>周围敌人，并在@MaxChannelDuration@秒内为附近的友军回复<healing>@TotalHeal@生命值</healing>。（最大治疗量：<healing>@TotalHeal@</healing>）@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

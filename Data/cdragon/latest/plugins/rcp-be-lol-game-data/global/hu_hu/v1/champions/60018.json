@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Kalóz Tristana",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Ágyúsok! Tristana tengerre szál, hogy Bandle határain túl keressen kalandokat. A kalapot egy felrobbantott kalóztól kölcsönözte (lopta), a szemkötő pedig csak dísznek van. Viszont nem ejt foglyokat, és megbízható ágyújával több hajót süllyesztett el, mint bármelyik bilgewateri kapitány."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Tristana gyors ütemben elsüti a fegyverét, így egy rövid időre megnöveli a támadási sebességét.",
-            "dynamicDescription": "<mainText>7 másodpercre <attackSpeed>@AttackSpeedMod*100@%-kal növeli Tristana támadási sebességét</attackSpeed>.",
+            "dynamicDescription": "Tristana @BuffDuration@ másodpercig <attackSpeed>@AttackSpeedMod*100@% támadási sebességre</attackSpeed> tesz szert.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Tristana a földre lő, hogy ezzel egy távolabbi helyre repítse magát. Landoláskor sebzést okoz a körülötte lévő egységeknek, és 3 másodpercre lelassítja őket.",
-            "dynamicDescription": "<mainText>Tristana a földre lő, hogy ezzel a célterületre repítse magát. Landoláskor <magicDamage>@LandingDamage@ varázssebzést</magicDamage> okoz, és 2,5 másodpercig 60%-os <status>lassítást</status> alkalmaz.<br>Egy hős megölésekor vagy assziszt szerzésekor a töltési idő frissül.",
+            "description": "Tristana a földre lő, hogy ezzel egy távolabbi helyre repítse magát, a landolás helyén pedig sebzést és lassítást okoz az ellenfeleknek.",
+            "dynamicDescription": "Tristana a földre lő, hogy ezzel a célterületre repítse magát. Landoláskor <magicDamage>@LandingDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercig @Slow@%-os <status>lassítást</status> alkalmaz. Egy hős elleni gyilkosságkor vagy assziszt szerzésekor a Rakétaugrás töltési ideje lenullázódik.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Amikor Tristana megöl egy egységet, az ágyúgolyói repeszekre robbannak szét, és megsebzik a közelben tartózkodó ellenfeleket.  Aktiváláskor folyamatos sebzést okoz a megcélzott egységnek, és csökkenti az általa kapott gyógyítást.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>a Tristana alaptámadásai által megölt ellenfelek felrobbannak, amivel <magicDamage>@PassiveDamage@ varázssebzést</magicDamage> okoznak a közeli ellenfeleknek.<br><br><spellActive>Aktív: </spellActive>szétszaggatja a célpontot, amivel <keyword>50%-os Súlyos seb</keyword> hatást alkalmaz, és 5 másodperc alatt <magicDamage>@ActiveDamageTTOnly@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>a Tristana alaptámadásai által megölt ellenfelek felrobbannak, amivel <magicDamage>@PassiveDamage@ varázssebzést</magicDamage> okoznak a közeli ellenfeleknek.<br><br><spellActive>Aktív: </spellActive>szétszaggatja a célpontot, amivel <keyword>50%-os Súlyos seb</keyword> hatást alkalmaz, és @GrievousDuration@ másodperc alatt <magicDamage>@ActiveDamageTTOnly@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Leona": {
             "id": "Jade_Leona",
@@ -223,17 +223,17 @@
                     "id": "Jade_LeonaShieldOfDaybreak",
                     "name": "Shield of Daybreak",
                     "description": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target.",
-                    "tooltip": "The next basic attack deals an additional <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Stuns</status> an enemy for 1.25 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "The next basic attack deals an additional <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Stuns</status> an enemy for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "@AbilityResourceName@ Cost",
-                            "Cooldown"
+                            "Cooldown",
+                            "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
                             "{{ damage }} -> {{ damageNL }}",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -257,11 +257,11 @@
                     "effect": [
                         null,
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             10,
@@ -329,7 +329,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "1",
+                        "0",
                         "10/35/60/85/110",
                         "0",
                         "0",
@@ -366,7 +366,7 @@
                     "id": "Jade_LeonaSolarBarrier",
                     "name": "Eclipse",
                     "description": "Leona raises her shield to gain Armor and Magic Resistance.  When the duration first ends, if there are nearby enemies she will deal magic damage to them and prolong the duration of the effect.",
-                    "tooltip": "Gains {{ bonusarmr }} bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for 3 seconds. When the effect ends, nearby enemies struck take <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and Leona retains her bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for 3 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Leona gains <scaleArmor>{{ bonusarmr }} Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for {{ buffduration }} seconds. When the effect ends, nearby enemies struck take <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and Leona retains her bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for another {{ buffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -412,11 +412,11 @@
                             70
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -472,7 +472,7 @@
                         null,
                         "60/110/160/210/260",
                         "30/40/50/60/70",
-                        "3",
+                        "0",
                         "30/40/50/60/70",
                         "0",
                         "0",
@@ -764,7 +764,7 @@
             ],
             "passive": {
                 "name": "Sunlight",
-                "description": "Damaging spells afflict enemies with Sunlight for 3.5 seconds. When allied Champions deal damage to those targets, they consume the Sunlight debuff to deal additional magic damage.",
+                "description": "Damaging spells afflict enemies with Sunlight. When allied Champions deal damage to those targets, they consume the Sunlight debuff to deal additional damage.",
                 "image": {
                     "full": "Jade_LeonaSunlight.png",
                     "sprite": "passive0.png",

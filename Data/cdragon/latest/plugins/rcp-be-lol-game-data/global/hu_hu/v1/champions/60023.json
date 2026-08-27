@@ -1105,7 +1105,7 @@
             "cost": "A költsége <font color='#FF3300'>@BaseHealthCost@ életerő</font>",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Tryndamere egy ellenséges egység felé vág, és sebzést okoz az útjában álló ellenfeleknek.",
-            "dynamicDescription": "Tryndamere átpörög az ellenséges egységeken, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az útjába kerülő ellenfeleknek.<br><br>Amikor Tryndamere kritikus csapást visz be, a <spellName>Pörgő csapás</spellName> töltési ideje 2 másodperccel csökken.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere átpörög az ellenséges egységeken, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az útjába kerülő ellenfeleknek.<br><br><spellName>Amikor Tryndamere kritikus csapást visz be, a Pörgő csapás</spellName> töltési ideje @CooldownRefund@ másodperccel csökken.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1273,12 +1273,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                110.0,
+                130.0,
+                115.0,
                 100.0,
-                90.0,
-                80.0,
+                85.0,
                 70.0,
-                60.0
+                55.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

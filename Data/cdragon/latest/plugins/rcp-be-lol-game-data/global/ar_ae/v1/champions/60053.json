@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "يُفعل بليتزكرانك حاجز المانا عندما تنخفض صحته تحت 20%. ينشئ هذا درع مانا يعادل 50% من المانا لديه لمدة 10ث. لا يمكن تفعيل حاجز المانا سوى مرة كل 90 ثانية."
+        "description": "عندما يتلقى بليتزكرانك ضررًا أثناء انخفاض صحته، يحصل أولاً على درع يعادل نسبة مئوية من المانا الحالية لديه. يمتلك هذا التأثير فترة تبريد."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "يطلق بليتزكرانك يده اليمنى للقبض على خصمٍ في طريقه، فيلحق الضرر به ويسحبه عائدًا إليه.",
             "dynamicDescription": "يطلق بليتزكرانك يده اليمنى، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> و<status>يصعق</status> الهدف و<status>يسحبه</status> إليه.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يشحن بليتزكرانك قبضته لجعل هجومه التالي يلحق ضررًا مضاعفًا، ويقذف هدفه في الهواء.",
-            "dynamicDescription": "يشحن بليتزكرانك قبضته لجعل هجومه التالي يلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> و<status>يطيح في الهواء</status> بالهدف لمدة @CCDuration@ث.@SpellModifierDescriptionAppend@",
+            "description": "يشحن بليتزكرانك قبضته لجعل هجومه التالي يلحق ضررًا إضافيًا، ويقذف هدفه في الهواء.",
+            "dynamicDescription": "يشحن بليتزكرانك قبضته لجعل هجومه التالي يلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> و<status>يطيح إلى الأعلى</status> بالهدف.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يجعل صواعق البرق تلحق الضرر تلقائيًا بعدو في الجوار. بالإضافة إلى ذلك، يستطيع بليتزكرانك تفعيل هذه القدرة لإلحاق الضرر بالأعداء في الجوار وإسكاتهم لمدة 0.5 ثانية، ولكن هذا يزيل تأثير البرق الكامن حتى يصبح الحقل الساكن متوفرًا من جديد.",
-            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>تنطلق أقواس برق من بليتزكرانك لتصيب عدوًا عشوائيًا في الجوار، فتلحق به <magicDamage>@PassiveDamage@ ضرر سحر</magicDamage> كل 2.5ث.<br><br><spellActive>تأثير نشط: </spellActive>يلحق <magicDamage>@ActiveDamage@ ضرر سحر</magicDamage> و<status>يسكت</status> وحدات العدو المحيطة لمدة 0.5ث.@SpellModifierDescriptionAppend@",
+            "description": "يجعل صواعق البرق تلحق الضرر تلقائيًا بعدو في الجوار. كما يستطيع بليتزكرانك تفعيل هذه القدرة لإلحاق الضرر بالأعداء القريبين وإسكاتهم لفترة وجيزة.",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>تنطلق أقواس برق من بليتزكرانك لتصيب عدوًا عشوائيًا في الجوار، فتلحق به <magicDamage>@PassiveDamage@ ضرر سحر</magicDamage> كل @PassiveHitRate@ث.<br><br><spellActive>تأثير نشط: </spellActive>يلحق <magicDamage>@ActiveDamage@ ضرر سحر</magicDamage> و<status>يسكت</status> وحدات العدو المحيطة لمدة @SilenceDuration@ث. يتم تعطيل التأثير الكامن أثناء فترة تبريد الحقل الساكن.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -840,56 +840,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        1.25,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25,
-                        2.5,
-                        2.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "StunDuration",
@@ -901,6 +851,19 @@
                         2.25,
                         2.5,
                         2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CageDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -955,7 +918,6 @@
                     "__type": "SpellEffectAmount"
                 }
             },
-            "mCoefficient": 0.20000000298023224,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarEventHorizon.dds"
@@ -1082,14 +1044,15 @@
                     "mLocKeys": {
                         "keyName": "game_spell_displayname_VeigarEventHorizon_Jade",
                         "keySummary": "game_spell_description_VeigarEventHorizon_Jade",
-                        "keyTooltip": "game_spell_tooltip_VeigarEventHorizon_Jade"
+                        "keyTooltip": "game_spell_tooltip_VeigarEventHorizon_Jade",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_VeigarEventHorizon_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "StunDuration",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_StunDuration",
                                     "__type": "TooltipInstanceListElement"
@@ -1544,26 +1507,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        100.0,
+                        125.0,
                         250.0,
                         375.0,
                         500.0,
-                        400.0,
-                        475.0,
-                        550.0
+                        625.0,
+                        750.0,
+                        875.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MaxExecuteMult",
+                    "name": "EnemyAPRatio",
                     "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1581,14 +1544,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "MaxDamage": {
-                    "mMultiplier": {
-                        "mNumber": 2.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "MinDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell4",
@@ -1757,10 +1712,11 @@
             "__type": "SpellDataResource"
         },
         "BotData": {
+            "DamageTag": 1,
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "MaxDamage",
+                        "mSpellCalculationKey": "MinDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -1768,12 +1724,7 @@
             },
             "{38382c53}": [
                 {
-                    "{e38f54f7}": 8,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 4096,
+                    "{e38f54f7}": 2,
                     "{0717e686}": false,
                     "__type": "{150d1b92}"
                 }
@@ -1858,9 +1809,9 @@
         "__type": "AbilityObject"
     },
     "{c9889cd8}": {
-        "mRootSpell": "{e8ac51fb}",
+        "mRootSpell": "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive",
         "mChildSpells": [
-            "{e8ac51fb}"
+            "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive"
         ],
         "mName": "Jade_VeigarPassiveAbility",
         "__type": "AbilityObject"
@@ -2129,11 +2080,26 @@
         },
         "__type": "SpellObject"
     },
-    "{e8ac51fb}": {
+    "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive": {
         "ObjectName": "Jade_VeigarPassive",
-        "objectPath": "{e8ac51fb}",
+        "objectPath": "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive",
         "mScriptName": "Jade_VeigarPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MaximumRegenPercent",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.dds"
             ],
@@ -2222,56 +2188,6 @@
         "mScriptName": "Jade_VeigarDarkMatter",
         "mSpell": {
             "mAffectsTypeFlags": 14474,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "APRatio",
@@ -2289,13 +2205,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        30.0,
+                        70.0,
                         120.0,
                         170.0,
                         220.0,
                         270.0,
                         320.0,
-                        360.0
+                        370.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ImpactDelay",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3235,7 +3164,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3270,7 +3199,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3305,7 +3234,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3340,7 +3269,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3370,7 +3299,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3394,7 +3323,7 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4147,7 +4076,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "game_character_passiveDescription_Jade_Veigar",
         "passiveSpell": "Jade_VeigarPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarEntropy.dds",
+        "passive1IconName": "assets/characters/jade_veigar/hud/icons2d/jade_veigarentropy.dds",
         "name": "game_character_displayname_Jade_Veigar",
         "selectionHeight": 140.0,
         "selectionRadius": 100.0,
@@ -4254,10 +4183,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{e8ac51fb}",
+        "mCharacterPassiveSpell": "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{e8ac51fb}",
+                "mParentPassiveBuff": "Characters/Jade_Veigar/Spells/Jade_VeigarPassiveAbility/Jade_VeigarPassive",
                 "__type": "CharacterPassiveData"
             },
             {

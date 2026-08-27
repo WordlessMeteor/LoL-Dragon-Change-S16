@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60014001,
+            "contentId": "ba022c8c-1427-4257-a080-4651e2442e93",
+            "relatedPrimeContentId": "cfd9de78-5f04-4a20-950a-fcd7edb0ab61",
+            "relatedPrimeItemId": 14001,
+            "isBase": false,
+            "name": "마법공학 사이온",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Jade_SionLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 40
+                }
+            ],
+            "description": "오랫동안 많은 이들이 이런 질문을 던졌습니다. 예술이 도덕이라는 뜬구름 같은 개념 때문에 구속 받아야만 할까요? 과학이 인간의 법에 무릎을 꿇어야만 할까요? 어떤 이들은 진보란 억제를 통해서는 결코 이룰 수 없다고 생각합니다. 때로는 괴물을 만들어 낼지라도… 마법공학이 우리의 길을 인도할 것이라고 믿습니다."
+        },
+        {
             "id": 60014003,
             "contentId": "07b30dea-dd76-4364-8b72-bbc11ae33720",
             "relatedPrimeContentId": "277e69dc-f3b0-4dbc-af88-ec1a83df1f25",
@@ -743,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "사이온은 기본 공격으로 받는 피해를 40%의 확률로 최대 30/40/50만큼 무시합니다."
+        "description": "사이온은 기본 공격으로 받는 피해를 일정 확률로 무시합니다."
     },
     "spells": [
         {
@@ -755,7 +786,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "사이온의 시선이 지정한 적을 공포에 빠뜨려 피해를 입히고 기절시킵니다.",
-            "dynamicDescription": "<mainText>지정한 적을 무시무시하게 노려봐, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 1.5초 동안 <status>기절</status>시킵니다.",
+            "dynamicDescription": "사이온이 지정한 적을 무시무시하게 노려봐, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @StunDuration@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -781,7 +812,7 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,13 +853,13 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -840,40 +871,40 @@
                     0.0
                 ],
                 "Effect7Amount": [
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {
@@ -904,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "사이온이 피해를 흡수하는 보호막으로 자신을 감쌉니다.  보호막은 10초가 지날 때까지 파괴되지 않으면 폭발하여 주변 적에게 피해를 입힙니다. 4초 후에 재사용하면 보호막을 직접 폭파할 수 있습니다.",
-            "dynamicDescription": "<mainText>사이온이 <shield>@TotalShield@의 피해</shield>를 흡수하는 보호막으로 자신을 감쌉니다. 보호막은 10초가 지날 때까지 파괴되지 않으면 폭발하여 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>4초 후에 <recast>재사용</recast>하면 보호막을 직접 폭파할 수 있습니다.",
+            "description": "사이온이 피해를 흡수하는 보호막으로 자신을 감쌉니다.  보호막은 파괴되지 않으면 폭발하여 주변 적에게 피해를 입힙니다. 재사용하면 보호막을 일찍 폭발시킬 수 있습니다.",
+            "dynamicDescription": "사이온이 <shield>@TotalShield@의 피해</shield>를 흡수하는 보호막으로 자신을 감쌉니다. 보호막은 @ShieldDuration@초가 지날 때까지 파괴되지 않으면 폭발하여 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>@RecastDelay@초 후에 <recast>재사용</recast>하면 보호막을 직접 폭파할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -931,90 +962,90 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
-                    60.0,
-                    75.0,
-                    90.0,
-                    105.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    15.0,
-                    40.0,
-                    65.0,
-                    90.0,
-                    115.0,
-                    140.0,
-                    165.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    10.0,
-                    12.0,
-                    14.0,
-                    16.0,
-                    16.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1205,7 +1236,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "사이온이 기본 공격을 가할 때마다 적의 생명력을 일부 흡수해, 자신과 주변 아군의 체력을 회복시킵니다. 또한 피와 살점의 냄새가 투지를 일깨워, 사이온의 공격 속도가 증가합니다.",
-            "dynamicDescription": "<mainText>사이온이 20초 동안 <lifeSteal>@LifestealPercent*100@%의 생명력 흡수</lifeSteal>와 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다. 또한 기본 공격으로 입힌 피해의 @HealPercent*100@%만큼 주변 아군의 <healing>체력을 회복</healing>시킵니다.",
+            "dynamicDescription": "사이온이 @BuffDuration@초 동안 <lifeSteal>@LifestealPercent*100@%의 생명력 흡수</lifeSteal>와 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다. 또한 기본 공격으로 입힌 피해의 @HealPercent*100@%만큼 주변 아군의 <healing>체력을 회복</healing>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1231,8 +1262,8 @@
                 90.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

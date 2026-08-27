@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "Скорость передвижения Жанны и союзных чемпионов растет на 3%."
+        "description": "Скорость передвижения Жанны и союзных чемпионов растет."
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Меняя в данной точке атмосферное давление и температуру, Жанна создает маленький смерч, быстро увеличивающийся в размере. Она может активировать умение повторно, чтобы запустить смерч. После этого смерч летит в заданном направлении, нанося урон и подбрасывая в воздух всех врагов на пути.",
-            "dynamicDescription": "Призывает смерч, наносящий <magicDamage>@MinimumDamage@ ед. маг. урона</magicDamage> всем врагам на пути и <status>подбрасывающий</status> их в воздух. За каждую секунду призыва (до 3 сек.) смерч перемещается дальше, дополнительно наносит <magicDamage>@ChargeDamage@ ед. урона</magicDamage> и <status>подбрасывает</status> врагов выше.<br><br><recast>Примените повторно</recast>, чтобы выпустить смерч сразу.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Призывает смерч, наносящий <magicDamage>@MinimumDamage@ ед. маг. урона</magicDamage> всем врагам на пути и <status>подбрасывающий</status> их в воздух. За каждую секунду призыва (до @MaxDuration@ сек.) смерч перемещается дальше, дополнительно наносит <magicDamage>@ChargeDamage@ ед. урона</magicDamage> и <status>подбрасывает</status> врагов выше.<br><br><recast>Примените повторно</recast>, чтобы выпустить смерч сразу.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Жанна окружает себя магическим штормом, разбрасывая противников. По окончании шторма появляется ласкающий ветер, лечащий находящихся рядом союзников, пока умение активно.",
-            "dynamicDescription": "Жанна взывает к силе ветра, <recast>отбрасывая</recast> врагов вокруг и восстанавливая союзникам рядом <healing>@TotalHeal@ здоровья</healing> в течение 4 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Жанна взывает к силе ветра, <recast>отбрасывая</recast> врагов вокруг и восстанавливая союзникам рядом <healing>@TotalHeal@ здоровья</healing> в течение @MaxChannelDuration@ сек. (макс. <healing>@TotalHeal@</healing> здоровья).@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

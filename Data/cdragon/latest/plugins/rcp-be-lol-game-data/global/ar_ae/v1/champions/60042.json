@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يطلق كوركي قنبلة ضوئية على موقع مستهدف. يكشف هذا الهجوم الوحدات خارج طور التخفي حول موقع الانفجار والأبطال لمدة 6 ثوان.",
-            "dynamicDescription": "<mainText>يلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء داخل المنطقة المستهدفة. إضافة إلى ذلك، <status>يكشف</status> الانفجار المنطقة والأبطال المصابين به لمدة 6 ثوانٍ (لا يكشف من في طور التخفي).",
+            "description": "يطلق كوركي قنبلة تلحق الضرر بالأعداء حول موقع الانفجار وتكشفهم.",
+            "dynamicDescription": "يطلق كوركي قنبلة، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. يتم كشف المنطقة والأبطال المصابين لمدة @RevealDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق كوركي النار بسرعة أمامه ضمن مخروط باستخدام بندقية غاتلينغ، فيلحق الضرر ويقلص دروع العدو.",
-            "dynamicDescription": "<mainText>يطلق كوركي النار أمامه ضمن مخروط باستخدام بندقية غاتلينغ لمدة 4ث، فيلحق <physicalDamage>@TotalDamageTooltipOnly@ ضرر مادي</physicalDamage> و<status>يقلص الدروع بمقدار @ArmorMod*-1@</status> كل ثانية. يتكدس تأثير تقليص الدروع ويدوم لمدة 2ث.",
+            "dynamicDescription": "يطلق كوركي النار أمامه ضمن مخروط باستخدام بندقية غاتلينغ لمدة @ActiveDuration@ث، فيلحق <physicalDamage>@DamagePerSecondCalc@ ضرر مادي</physicalDamage> و<status>يقلص الدروع بمقدار @ArmorMod*-1@</status> كل ثانية. يتكدس تأثير تقليص الدروع ويدوم لمدة @ShredDuration@ث. (الضرر الأقصى: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يطلق كوركي صاروخًا نحو الموقع المستهدف ينفجر عند الاصطدام، فيلحق الضرر بالأعداء ضمن منطقة. يخزن كوركي صاروخًا واحدًا كل 12ث حتى يصل إلى 7 صواريخ كحد أقصى. يتحول كل ثالث صاروخ إلى صاروخ ضخم، ويلحق ضررًا إضافيًا.",
-            "dynamicDescription": "<mainText>يطلق كوركي صاروخًا نحو الموقع المستهدف يصطدم بأول عدو يصيبه. يلحق كل صاروخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ضمن منطقة معينة.<br><br>تمتلك هذه القدرة 7 شحنات (تتجدد كل @AmmoRechargeTime@ث).<br><br>يتحول كل ثالث صاروخ يتم إطلاقه إلى صاروخ ضخم، فيلحق <magicDamage>@TotalDamageBig@ ضرر سحر</magicDamage> بدلًا من ذلك.",
+            "description": "يطلق كوركي صاروخًا نحو الموقع المستهدف ينفجر عند الاصطدام، فيلحق الضرر بالأعداء ضمن منطقة. يتحول بعض الصواريخ إلى صاروخ ضخم يلحق ضررًا إضافيًا.",
+            "dynamicDescription": "يطلق كوركي صاروخًا نحو الموقع المستهدف يصطدم بأول عدو يصيبه. يلحق كل صاروخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ضمن منطقة.<br><br>تمتلك هذه القدرة @MaxAmmoTooltip@ من الشحنات (تبلغ فترة التجديد @AmmoRechargeTime@ث).<br><br>يتحول كل ثالث صاروخ يتم إطلاقه إلى صاروخ ضخم، فيلحق <magicDamage>@TotalDamageBig@ ضرر سحر</magicDamage> بدل ذلك.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

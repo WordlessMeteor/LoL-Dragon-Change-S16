@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Anivia": {
             "id": "Jade_Anivia",
@@ -216,7 +216,7 @@
                     "id": "Jade_AniviaFlashFrost",
                     "name": "Flash Frost",
                     "description": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area.",
-                    "tooltip": "A massive chunk of ice flies toward target location, dealing <magicDamage>{{ totalpassthroughdamage }} magic damage</magicDamage> and chilling targets, <status>Slowing</status> their Movement Speed by 20%. <br /><br />At the end of its range or if Anivia <recast>recasts</recast> the spell, the missile detonates, doing <magicDamage>{{ totalexplosiondamage }} magic damage</magicDamage> in a small area and <status>Stunning</status> units for {{ stunduration }} second.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "A massive chunk of ice flies toward target location, dealing <magicDamage>{{ totalpassthroughdamage }} magic damage</magicDamage> and chilling targets, <status>Slowing</status> their Movement Speed by {{ movementspeedmod*-100 }}% for {{ slowduration }} seconds.<br /><br />At the end of its range or if Anivia <recast>recasts</recast> the spell, the missile detonates, doing <magicDamage>{{ totalexplosiondamage }} magic damage</magicDamage> in a small area and <status>Stunning</status> units for {{ stunduration }} second.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -755,7 +755,7 @@
             ],
             "passive": {
                 "name": "Rebirth",
-                "description": "Upon dying, Anivia will revert into an egg. If the egg can survive for six seconds, she is gloriously reborn.",
+                "description": "Upon dying, Anivia will revert into an egg. If the egg can survive, she is gloriously reborn.",
                 "image": {
                     "full": "Jade_Anivia_P.png",
                     "sprite": "passive0.png",

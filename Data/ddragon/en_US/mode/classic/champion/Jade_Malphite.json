@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Malphite": {
             "id": "Jade_Malphite",
@@ -221,7 +221,7 @@
                 {
                     "id": "Jade_MalphiteSeismicShard",
                     "name": "Seismic Shard",
-                    "description": "Using his primal elemental magic, Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing movement speed for 4 seconds.",
+                    "description": "Using his primal elemental magic, Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing their movement speed.",
                     "tooltip": "Deals <magicDamage>{{ qdamagecalc }} magic damage</magicDamage> and steals <speed>{{ speedsteal }}% Movement Speed</speed> from the target for {{ slowduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -255,25 +255,25 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            120,
-                            170,
-                            220,
-                            270
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            25,
-                            30,
-                            35,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -327,9 +327,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/120/170/220/270",
-                        "20/25/30/35/40",
-                        "3",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -364,7 +364,7 @@
                     "id": "Jade_MalphiteObduracy",
                     "name": "Brutal Strikes",
                     "description": "Malphite starts to hit with such force that his attacks deal damage to all units in front of him. Activating Brutal Strikes greatly increases his Armor and Attack Damage for a short amount of time.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Malphite's basic attacks hit units near his target for {{ jade_malphiteobduracypercentdamage*100 }}% of his <physicalDamage>Attack Damage</physicalDamage>.<br /><br /><spellActive>Active: </spellActive>Malphite's <scaleArmor>Armor</scaleArmor> and <physicalDamage>Attack Damage</physicalDamage> increase by {{ armorbonus*100 }}% for 6 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Malphite's basic attacks hit units near his target for {{ jade_malphiteobduracypercentdamage*100 }}% of his <physicalDamage>Attack Damage</physicalDamage>.<br /><br /><spellActive>Active: </spellActive>Malphite's <scaleArmor>Armor</scaleArmor> and <physicalDamage>Attack Damage</physicalDamage> increase by {{ armorbonus*100 }}% for {{ buffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "@AbilityResourceName@ Cost",
@@ -766,7 +766,7 @@
             ],
             "passive": {
                 "name": "Granite Shield",
-                "description": "Malphite is shielded by a layer of rock which absorbs damage up to 10% of his maximum Health. If Malphite has not been hit for 10 seconds, this effect recharges.",
+                "description": "Malphite is shielded by a layer of rock which absorbs damage. If Malphite has not been hit recently, this effect recharges.",
                 "image": {
                     "full": "Jade_Malphite_GraniteShield.png",
                     "sprite": "passive1.png",

@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Les éliminations de champion ou assistances réduisent les délais de récupération de Katarina de 15 sec."
+        "description": "Les éliminations de champions réduisent les délais de récupération de Katarina."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Katarina lance une dague qui rebondit d'ennemi en ennemi, infligeant des dégâts magiques.",
-            "dynamicDescription": "Katarina lance une dague, infligeant <magicDamage>@TotalDamage@</magicDamage> pts de dégâts magiques. La dague rebondit vers les @MaxBounces@ ennemis les plus proches, infligeant 10% de dégâts en moins à chaque rebond.<br><br>Les ennemis touchés sont marqués pendant @MarkDuration@ sec. Les attaques de base ou les compétences de Katarina consomment la marque, infligeant <magicDamage>@TotalDamageMark@</magicDamage> pts de dégâts magiques bonus.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Katarina lance une dague, infligeant <magicDamage>@TotalDamage@</magicDamage> pts de dégâts magiques. La dague rebondit vers les @MaxBounces@ ennemis les plus proches, infligeant @DamageFalloff*100@% de dégâts en moins à chaque rebond.<br><br>Les ennemis touchés sont marqués pendant @MarkDuration@ sec. Les attaques de base ou les compétences de Katarina consomment la marque, infligeant <magicDamage>@TotalDamageMark@</magicDamage> pts de dégâts magiques bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Katarina tournoie et projette des dagues à une vitesse incroyable sur trois champions proches maximum.",
-            "dynamicDescription": "Katarina tournoie et projette des dagues sur les 3 champions ennemis les plus proches, infligeant <magicDamage>@DamageCalcTooltipOnly@ pts de dégâts magiques</magicDamage> en 2.5 sec.@SpellModifierDescriptionAppend@",
+            "description": "Katarina devient une rafale de lames, lançant des dagues avec une vitesse inégalée sur les champions ennemis à proximité, infligeant des dégâts importants et appliquant Hémorragie.",
+            "dynamicDescription": "Katarina tournoie et projette des dagues sur les @MaxTargets@ champions ennemis les plus proches, infligeant <magicDamage>@DamageCalcTooltipOnly@ pts de dégâts magiques</magicDamage> en @ChannelDuration@ sec. Les ennemis touchés subissent @GrievousWoundsAmount*100@% d'<status>Hémorragie</status> pendant @GrievousWoundsDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

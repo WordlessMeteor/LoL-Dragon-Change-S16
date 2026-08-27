@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Dr. Mundo Độc Dược",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo hổng có độc hại đâu, Mundo có cơ chế kiểm soát cảm xúc lành mạnh đó—ồ, ý cậu là chất nhầy màu tím này hả? Mundo thề là nó hổng có gì nguy hiểm luôn. "
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo hồi 0,3% Máu tối đa mỗi giây."
+        "description": "Dr. Mundo hồi lại một phần Máu tối đa mỗi giây."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Máu</font>",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Dr. Mundo ném chiếc dao phay của mình, gây sát thương dựa trên lượng máu tối đa của kẻ địch.",
-            "dynamicDescription": "<mainText>Dr. Mundo ném chiếc dao phay của mình, gây <magicDamage>sát thương phép</magicDamage> bằng @DamageMod*100@% máu hiện tại của mục tiêu (@MinDamage@ sát thương tối thiểu) và <status>Làm Chậm</status> chúng đi 40% trong 2 giây.<br><br>Một nửa lượng máu tiêu hao sẽ được hoàn lại nếu lưỡi dao trúng mục tiêu.",
+            "dynamicDescription": "Dr. Mundo ném chiếc dao phay của mình, gây <magicDamage>sát thương phép</magicDamage> bằng @DamageMod*100@% máu hiện tại của mục tiêu (@MinDamage@ sát thương tối thiểu) và <status>Làm Chậm</status> nạn nhân đi @MoveMod*-100@% trong @SlowDuration@ giây.<br><br><healing>@HealthReturn@ Máu</healing> sẽ được hoàn lại nếu lưỡi dao trúng mục tiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Máu</font>",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Cuồng Bạo tăng một lượng Sức Mạnh Công Kích cố định cho Dr. Mundo trong 5 giây. Ngoài ra, Dr. Mundo còn nhận thêm một lượng Sức Mạnh Công Kích cho mỗi phần trăm Máu đã mất.",
-            "dynamicDescription": "Dr. Mundo nhận được <physicalDamage>@BaseIncrease@ Sức Mạnh Công Kích</physicalDamage> trong 5 giây. Dr. Mundo nhận thêm <physicalDamage>+@DamageMod@ Sức Mạnh Công Kích</physicalDamage> cho mỗi phần trăm Máu đã mất.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo nhận thêm Sức Mạnh Công Kích trong vài giây dựa trên lượng máu đã mất.",
+            "dynamicDescription": "Dr. Mundo nhận được <physicalDamage>@BaseIncrease@ Sức Mạnh Công Kích</physicalDamage> trong @Duration@ giây. Dr. Mundo nhận thêm <physicalDamage>+@DamageMod@ Sức Mạnh Công Kích</physicalDamage> cho mỗi phần trăm Máu đã mất.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": " <font color='#CC3300'>@HealthCost@% Máu hiện tại</font>",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Dr. Mundo hy sinh một phần máu của hắn để tăng Tốc Độ Di Chuyển và tăng mạnh Tốc Độ Hồi Máu.",
-            "dynamicDescription": "<mainText>Dr. Mundo hồi lại <healing>@MaximumHealthRegen@ Máu</healing> trong 12 giây. Ngoài ra, hắn tăng thêm <speed>@SpeedMod*100@% Tốc Độ Di Chuyển</speed>.",
+            "dynamicDescription": "Dr. Mundo hồi phục <healing>@MaximumHealthRegen@ Máu</healing> và nhận thêm <speed>@SpeedMod*100@% Tốc Độ Di Chuyển</speed> trong @Duration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

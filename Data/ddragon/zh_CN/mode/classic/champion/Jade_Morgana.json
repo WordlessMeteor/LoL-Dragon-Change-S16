@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Morgana": {
             "id": "Jade_Morgana",
@@ -23,6 +23,12 @@
                     "num": 0,
                     "name": "default",
                     "chromas": true
+                },
+                {
+                    "id": "60025001",
+                    "num": 1,
+                    "name": "杀戮天使昔拉 莫甘娜",
+                    "chromas": false
                 },
                 {
                     "id": "60025005",
@@ -88,14 +94,14 @@
                     "id": "60025021",
                     "num": 21,
                     "name": "玉剑传说 苍鸾 青竹",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 17
                 },
                 {
                     "id": "60025022",
                     "num": 22,
                     "name": "玉剑传说 苍鸾 紫檀",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 17
                 },
                 {
@@ -129,14 +135,14 @@
                     "id": "60025027",
                     "num": 27,
                     "name": "至尊魔女 莫甘娜 愤怒",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 26
                 },
                 {
                     "id": "60025028",
                     "num": 28,
                     "name": "至尊魔女 莫甘娜 饕餮",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 26
                 },
                 {
@@ -192,14 +198,14 @@
                     "id": "60025036",
                     "num": 36,
                     "name": "魅惑女巫 莫甘娜 浪漫化身",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60025037",
                     "num": 37,
                     "name": "魅惑女巫 莫甘娜 纯真化身",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -774,7 +780,7 @@
                     "id": "Jade_MorganaR",
                     "name": "灵魂镣铐",
                     "description": "用能量拴住附近的敌方英雄，对其造成初始伤害和减速效果；一段时间后，仍然留在莫甘娜身边的敌人会再次受到伤害和晕眩。",
-                    "tooltip": "将自己与附近的敌方英雄用黑暗锁链拴在一起，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和持续3秒的20%<status>减速</status>效果。{{ chainduration }}秒后，对锁链缠住的敌人造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒晕眩。<br /><br />敌方英雄可以通过远离莫甘娜来挣脱锁链。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "将黑暗锁链拷在附近的敌方英雄们身上，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ slowpercent*-100 }}%<status>减速</status>效果。{{ chainduration }}秒后，对锁链缠住的敌人造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒晕眩。<br /><br />敌方英雄可以通过远离莫甘娜来挣脱锁链。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",

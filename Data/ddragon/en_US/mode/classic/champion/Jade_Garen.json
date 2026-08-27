@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Garen": {
             "id": "Jade_Garen",
@@ -23,6 +23,12 @@
                     "num": 0,
                     "name": "default",
                     "chromas": true
+                },
+                {
+                    "id": "60086002",
+                    "num": 2,
+                    "name": "Desert Trooper Garen",
+                    "chromas": false
                 },
                 {
                     "id": "60086005",
@@ -109,14 +115,14 @@
                     "id": "60086021",
                     "num": 21,
                     "name": "Demacia Vice Garen (Neon Noir)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 14
                 },
                 {
                     "id": "60086022",
                     "num": 22,
                     "name": "Mecha Kingdoms Garen",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60086023",
@@ -166,7 +172,7 @@
                 "mpperlevel": 0,
                 "movespeed": 345,
                 "armor": 25.7,
-                "armorperlevel": 2.7,
+                "armorperlevel": 3,
                 "spellblock": 31.25,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
@@ -176,7 +182,7 @@
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 55.5,
+                "attackdamage": 60,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.9,
                 "attackspeed": 0.625
@@ -329,7 +335,7 @@
                     "id": "Jade_GarenW",
                     "name": "Courage",
                     "description": "Garen performs a dance of death with his sword, dealing damage around him for the duration.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Garen's gains an additional 20% value from bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.<br /><br /><spellActive>Active: </spellActive>Garen gains a defensive shield for {{ buffduration }} seconds, reducing incoming damage by {{ damagereduction*100 }}% and granting 30% Crowd Control Reduction.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Garen's gains an additional {{ resistancescaling*100 }}% value from bonus <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.<br /><br /><spellActive>Active: </spellActive>Garen gains a defensive shield for {{ buffduration }} seconds, reducing incoming damage by {{ damagereduction*100 }}% and granting {{ tenacitybonus*100 }}% Crowd Control Reduction.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Duration",
@@ -470,7 +476,7 @@
                     "id": "Jade_GarenE",
                     "name": "Judgment",
                     "description": "Garen rapidly spins his sword around his body, dealing physical damage to nearby enemies.",
-                    "tooltip": "Garen rapidly spins his sword around his body for {{ duration }} seconds, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to nearby enemies every second. Garen can move through units while spinning but moves 20% slower when travelling directly through units.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Garen rapidly spins his sword around his body for {{ duration }} seconds, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to nearby enemies every second. (Maximum damage: <physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage per Second",

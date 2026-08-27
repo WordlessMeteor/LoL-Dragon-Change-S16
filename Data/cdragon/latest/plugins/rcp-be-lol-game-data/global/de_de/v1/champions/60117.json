@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nach dem Wirken auf einen Verbündeten springt Pix zu diesem und beschützt ihn. Er folgt ihm dann und unterstützt seine Angriffe. Nach dem Wirken auf einen Gegner springt Pix zu diesem und fügt ihm Schaden zu. Er folgt ihm dann und gewährt Sicht auf ihn.",
-            "dynamicDescription": "<mainText>Auf Verbündeten: Befiehlt Pix, zu einem Verbündeten zu springen und diesen anstelle von Lulu 6 Sekunden lang zu unterstützen. Bei seiner Ankunft gewährt Pix 6 Sekunden lang einen <shield>Schild, der @TotalShield@ Schaden absorbiert</shield>.<br><br>Auf Gegnern: Pix fügt der gegnerischen Zieleinheit <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu. Pix folgt dann der Einheit und gewährt 6 Sekunden lang Sicht auf sie.",
+            "dynamicDescription": "Auf Verbündeten: Befiehlt Pix, zu einem Verbündeten zu springen und diesen anstelle von Lulu @AllyFollowDuration@ Sekunden lang zu unterstützen. Bei seiner Ankunft gewährt Pix @ShieldDuration@ Sekunden lang einen <shield>Schild, der @TotalShield@ Schaden absorbiert</shield>.<br><br>Auf Gegnern: Pix fügt der gegnerischen Zieleinheit <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu. Pix folgt dann der Einheit und gewährt @EnemyFollowDuration@ Sekunden lang Sicht auf sie.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Lulu vergrößert einen Verbündeten, was Gegner in dessen Nähe in die Luft schleudert und das Leben des Verbündeten sehr stark erhöht. Einige Sekunden lang erhält der Verbündete zudem eine Aura, die Gegner in der Nähe verlangsamt.",
-            "dynamicDescription": "<mainText>Lulu vergrößert ihren Verbündeten, was nahe Gegner <status>in die Luft schleudert</status>. Ihr Verbündeter erhält @BuffDuration@ Sekunden lang <scaleHealth>@TotalBonusHealth@ zusätzliches Leben</scaleHealth> und Gegner in der Nähe werden 1 Sekunde lang um @SlowPercent@ % <status>verlangsamt</status>.",
+            "dynamicDescription": "Lulu vergrößert ihren Verbündeten, was nahe Gegner <status>in die Luft schleudert</status>. Ihr Verbündeter erhält @BuffDuration@ Sekunden lang <scaleHealth>@TotalBonusHealth@ zusätzliches Leben</scaleHealth> und Gegner in der Nähe werden um @SlowPercent@ % <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

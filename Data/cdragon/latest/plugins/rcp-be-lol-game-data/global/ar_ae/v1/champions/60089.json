@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "تُخضِع تعويذات الضرر الأعداء لتأثير ضوء الشمس لمدة 3.5ث. عندما يلحق أبطال الحلفاء الضرر بتلك الأهداف، يستهلكون تثبيط تأثير ضوء الشمس لإلحاق ضرر سحر إضافي."
+        "description": "تُخضِع تعويذات الضرر الأعداء لتأثير ضوء الشمس. عندما يلحق أبطال الحلفاء الضرر بتلك الأهداف، يستهلكون تأثير تعطيل ضوء الشمس لإلحاق ضرر إضافي."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تستخدم ليونا درعها لتنفيذ هجومها الأساسي التالي، فتلحق ضرر سحر إضافيًا وتصعق الهدف.",
-            "dynamicDescription": "يلحق الهجوم الأساسي التالي <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> إضافي و<status>يصعق</status> أحد الأعداء لمدة 1.25 ثانية.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يلحق الهجوم الأساسي التالي <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> إضافي و<status>يصعق</status> أحد الأعداء لمدة @StunDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترفع ليونا درعها لكسب الدروع ومقاومة السحر.  عند انتهاء التأثير لأول مرة، إذا كان هناك أعداء قريبون، تلحق ضرر السحر بهم وتطيل مدة التأثير.",
-            "dynamicDescription": "تكسب @BonusARMR@ <scaleArmor>دروع</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR> إضافية لمدة 3ث. عند انتهاء التأثير، يتلقى الأعداء القريبون المصابون <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> وتحتفظ ليونا <scaleArmor>بالدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> الإضافية لديها لمدة 3ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تكسب ليونا <scaleArmor>@BonusARMR@ دروع</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR> لمدة @BuffDuration@ث. عند انتهاء التأثير، يتلقى الأعداء القريبون المصابون <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> وتحتفظ ليونا <scaleArmor>بالدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> الإضافية لديها لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

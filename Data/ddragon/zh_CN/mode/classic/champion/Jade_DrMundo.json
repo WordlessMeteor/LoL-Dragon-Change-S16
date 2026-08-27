@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_DrMundo": {
             "id": "Jade_DrMundo",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60036001",
+                    "num": 1,
+                    "name": "战栗之毒 蒙多",
+                    "chromas": false
+                },
+                {
                     "id": "60036002",
                     "num": 2,
                     "name": "健美教练 蒙多",
@@ -34,13 +40,13 @@
                     "id": "60036003",
                     "num": 3,
                     "name": "律政大亨 蒙多",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60036008",
                     "num": 8,
                     "name": "泳池派对 蒙多",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60036016",
@@ -169,8 +175,8 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 522,
-                "hpperlevel": 89,
+                "hp": 560,
+                "hpperlevel": 90,
                 "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 345,
@@ -188,24 +194,26 @@
                 "attackdamage": 59.23,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.8,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             },
             "spells": [
                 {
                     "id": "Jade_DrMundoQ",
                     "name": "病毒屠刀",
                     "description": "蒙多医生掷出他的屠刀，对目标造成基于其最大生命值的伤害。",
-                    "tooltip": "蒙多医生掷出他的屠刀，造成相当于目标{{ damagemod*100 }}%当前生命值的<magicDamage>魔法伤害</magicDamage>（最低造成{{ mindamage }}伤害），以及持续2秒的40%<status>减速</status>。<br /><br />如果屠刀命中目标，则会返还一半生命消耗。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蒙多医生挥出他的屠刀，造成目标{{ damagemod*100 }}%当前生命值的<magicDamage>魔法伤害</magicDamage>(不会小于{{ mindamage }})和持续{{ slowduration }}秒的{{ movemod*-100 }}%<status>减速</status>效果。<br /><br />如果屠刀命中了一个目标，就会返还<healing>{{ healthreturn }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",
                             "伤害百分比",
-                            "生命值消耗"
+                            "生命值消耗",
+                            "最大伤害"
                         ],
                         "effect": [
                             "{{ mindamage }} -> {{ mindamageNL }}",
                             "{{ damagemod*100.000000 }}% -> {{ damagemodnl*100.000000 }}%",
-                            "{{ healthcost }} -> {{ healthcostNL }}"
+                            "{{ healthcost }} -> {{ healthcostNL }}",
+                            "{{ maxdamage }} -> {{ maxdamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -480,8 +488,8 @@
                 {
                     "id": "Jade_DrMundoE",
                     "name": "潜能激发",
-                    "description": "潜能激发会在5秒内提升蒙多医生的攻击力。此外，蒙多医生每损失一定百分比的生命值，还会获得额外攻击力。",
-                    "tooltip": "蒙多医生获得<physicalDamage>{{ baseincrease }}攻击力</physicalDamage>，持续5秒。祖安蒙多医生每损失一定百分比的生命值，还会额外获得<physicalDamage>+{{ damagemod }}攻击力</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "蒙多医生获得持续若干秒的攻击力，数额基于他的已损失生命值。",
+                    "tooltip": "蒙多医生获得持续{{ duration }}秒的<physicalDamage>{{ baseincrease }}攻击力</physicalDamage>。蒙多医生每损失1%生命值，就会获得额外的<physicalDamage>+{{ damagemod }}攻击力</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外攻击力",
@@ -624,7 +632,7 @@
                     "id": "Jade_DrMundoR",
                     "name": "背水一战",
                     "description": "蒙多医生消耗部分生命值来提升移动速度，并巨幅提升生命回复速度。",
-                    "tooltip": "蒙多医生在12秒内持续回复共<healing>{{ maximumhealthregen }}生命值</healing>。此外，他还会获得<speed>{{ speedmod*100 }}%移动速度</speed>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蒙多医生在{{ duration }}秒里持续回复共<healing>{{ maximumhealthregen }}生命值</healing>和<speed>{{ speedmod*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "治疗术",
@@ -738,7 +746,7 @@
             ],
             "passive": {
                 "name": "肾上腺激素",
-                "description": "蒙多医生每秒回复0.3%的最大生命值。",
+                "description": "蒙多医生每秒回复一部分最大生命值。",
                 "image": {
                     "full": "Jade_DrMundo_P.png",
                     "sprite": "passive0.png",

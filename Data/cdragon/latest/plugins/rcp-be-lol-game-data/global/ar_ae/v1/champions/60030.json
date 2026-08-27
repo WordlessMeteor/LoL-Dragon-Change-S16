@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "عند موته، يدخل كارثوس في هيئة روح تسمح له بمواصلة إلقاء التعويذات."
+        "description": "عند موت كارثوس، يدخل في هيئة روحية تسمح له بمواصلة إلقاء التعويذات أثناء موته لفترة قصيرة."
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق كارثوس العنان لانفجارٍ بعد مهلة في موضع معين، مما يلحق الضرر بالأعداء القريبين.",
-            "dynamicDescription": "ينشئ انفجارًا يتم تفعيله بعد مهلة تبلغ 0.5 ثانية، فيلحق <magicDamage>@QDamage@ ضرر سحر</magicDamage> بكل عدو قريب، ويتسبب في ضرر مضاعف إذا أصاب وحدةً واحدةً فقط.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينشئ انفجارًا يتم تفعيله بعد مهلة، فيلحق <magicDamage>@QDamage@ ضرر سحر</magicDamage> بكل عدو قريب، ويتسبب في ضرر مضاعف إذا أصاب وحدةً واحدةً فقط.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "بعد التحضير لمدة 3 ثوان، يلحق كارثوس الضرر بكل الأبطال المعادين.",
-            "dynamicDescription": "بعد التحضير لمدة 3 ثوان، يلحق كارثوس <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بكل الأبطال المعادين.@SpellModifierDescriptionAppend@",
+            "description": "بعد التحضير، يلحق كارثوس الضرر بكل الأبطال المعادين.",
+            "dynamicDescription": "بعد التحضير لمدة @ChannelDuration@ث، يلحق كارثوس <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بكل الأبطال المعادين.@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

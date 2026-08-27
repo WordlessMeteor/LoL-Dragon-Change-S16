@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Fiddlesticks": {
             "id": "Jade_Fiddlesticks",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60009001",
+                    "num": 1,
+                    "name": "幽魂 费德提克",
+                    "chromas": false
+                },
+                {
                     "id": "60009003",
                     "num": 3,
                     "name": "荒野幽灵 费德提克",
@@ -34,13 +40,13 @@
                     "id": "60009006",
                     "num": 6,
                     "name": "惊悚派对 费德提克",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60009016",
                     "num": 16,
                     "name": "惊悚派对 费德提克 吓吓红",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 6
                 },
                 {
@@ -54,14 +60,14 @@
                     "id": "60009018",
                     "num": 18,
                     "name": "惊悚派对 费德提克 怕怕蓝",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 6
                 },
                 {
                     "id": "60009019",
                     "num": 19,
                     "name": "荒野幽灵 费德提克 贝列之锐",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 3
                 },
                 {
@@ -199,14 +205,14 @@
                     "id": "60009048",
                     "num": 48,
                     "name": "绝命花妖 费德提克 冷艳绽放",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 46
                 },
                 {
                     "id": "60009049",
                     "num": 49,
                     "name": "绝命花妖 费德提克 葱茏绽放",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 46
                 },
                 {
@@ -588,7 +594,7 @@
                     "id": "Jade_FiddlesticksE",
                     "name": "黑暗之风",
                     "description": "一阵黑暗之风袭向目标敌人，并在附近敌人之间弹射，对命中的敌人造成伤害并施加沉默效果。",
-                    "tooltip": "一阵黑暗之风袭向目标敌人，并在附近敌人之间最多弹射5次。每次命中都会造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "一阵黑暗之风袭向目标敌人，并在附近敌人之间最多弹射{{ maxbouncestooltip }}次。每次打击都会造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",

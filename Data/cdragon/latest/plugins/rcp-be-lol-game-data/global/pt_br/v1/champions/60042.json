@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Corki dispara uma bomba luminosa em um local-alvo. Este ataque revela unidades não furtivas ao redor da explosão e Campeões por 6s.",
-            "dynamicDescription": "<mainText>Causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos em uma área-alvo. A explosão também <status>revela</status> a área e os Campeões atingidos por 6s (não revela unidades furtivas).",
+            "description": "Corki dispara uma bomba, causando dano e revelando inimigos ao redor da explosão.",
+            "dynamicDescription": "Corki dispara uma bomba, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. A área e os Campeões atingidos são revelados por @RevealDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "A metralhadora de Corki dispara rapidamente em uma área cônica à frente, causando dano e reduzindo a Armadura do inimigo.",
-            "dynamicDescription": "<mainText>A metralhadora de Corki dispara em uma área cônica à frente por 4s, causando <physicalDamage>@TotalDamageTooltipOnly@ de Dano Físico</physicalDamage> e <status>reduzindo @ArmorMod*-1@ de Armadura</status> por segundo. A redução de Armadura acumula e dura 2s.",
+            "dynamicDescription": "A metralhadora de Corki dispara em uma área cônica à frente por @ActiveDuration@s, causando <physicalDamage>@DamagePerSecondCalc@ de Dano Físico</physicalDamage> e <status>reduzindo @ArmorMod*-1@ de Armadura</status> por segundo. A redução de Armadura acumula e dura @ShredDuration@s. (Dano máximo: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Corki dispara um míssil em direção ao local-alvo que explode com o impacto, causando dano aos inimigos na área. Corki armazena um míssil a cada 12s, até um total de 7 mísseis. Cada 3º projétil armazenado é Grandão e causa dano adicional.",
-            "dynamicDescription": "<mainText>Corki dispara um míssil em direção ao local-alvo que colide com o primeiro inimigo que atingir. Cada míssil causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> em uma área.<br><br>A Habilidade tem 7 cargas (recarrega a cada @AmmoRechargeTime@s).<br><br>Cada 3º míssil armazenado será um Grandão, que causará <magicDamage>@TotalDamageBig@ de Dano Mágico</magicDamage>.",
+            "description": "Corki dispara um míssil em direção ao local-alvo que explode com o impacto, causando dano aos inimigos na área. Alguns mísseis armazenados serão Grandões e causarão dano adicional.",
+            "dynamicDescription": "Corki dispara um míssil em direção ao local-alvo que colide com o primeiro inimigo que atingir. Cada míssil causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> em uma área.<br><br>A Habilidade tem @MaxAmmoTooltip@ cargas (recarrega a cada @AmmoRechargeTime@s).<br><br>Cada 3º míssil armazenado será um Grandão, que causará <magicDamage>@TotalDamageBig@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

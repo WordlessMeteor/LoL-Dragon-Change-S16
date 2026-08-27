@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Beavatott Lee Sin",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "A shojin tanoncok hagyományos ruházata sosem tetszett a nagyravágyó Lee Sinnek, akinek nyers tehetsége messze felülmúlta tanulótársaiét. Idővel mégis méltóvá vált rá: a ruhára és a sárkány erejére is."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Miután Lee Sin használta egy képességét, a következő 2 alaptámadására 40% bónusz támadási sebességet kap, és mindegyikkel 15 egységnyi energiát nyer vissza."
+        "description": "Miután Lee Sin használta egy képességét, a következő alaptámadásaira bónusz támadási sebességet kap, és energiát nyer vissza velük."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Hanghullám: Lee Sin disszonáns hanghullámot bocsát ki, amely felfedi az ellenfeleket, és fizikai sebzést okoz az első ellenfélnek, akit elér. Ha a Hanghullám eltalál valakit, Lee Sin 3 másodpercre képessé válik a Rezonáns csapás használatára.<br>Rezonáns csapás: Lee Sin lerohanja a Hanghullámmal eltalált ellenfelet, és az ellenfél hiányzó életerejének 8%-ával megnövelt mértékű fizikai sebzést okoz.",
-            "dynamicDescription": "<spellName>Hanghullám: </spellName>Lee Sin disszonáns hanghullámot bocsát ki, amely felfedi az ellenfeleket, és <physicalDamage>@InitialDamage@ fizikai sebzést</physicalDamage> okoz az első ellenfélnek, akit elér. Ha a <spellName>Hanghullám</spellName> eltalál egy ellenfelet, Lee Sin a következő 3 másodpercben használhatja a <spellName>Rezonáns csapás</spellName> képességet.<br><br><spellName>Rezonáns csapás: </spellName>Lee Sin lerohanja a Hanghullámmal eltalált ellenfelet, és <physicalDamage>@RecastDamage@ fizikai sebzést</physicalDamage> okoz, az ellenfél hiányzó életerejének 8%-ával megnövelve.@SpellModifierDescriptionAppend@",
+            "description": "Hanghullám: Lee Sin disszonáns hanghullámot bocsát ki, amely felfedi az ellenfeleket, és sebzést okoz az első ellenfélnek, akit elér. Ha a Hanghullám eltalál egy ellenfelet, Lee Sin használhatja a Rezonáns csapás képességet.<br><br>Rezonáns csapás: Lee Sin lerohanja a Hanghullámmal eltalált ellenfelet, és nagyobb fizikai sebzést okoz, amihez az ellenfél hiányzó életerejének adott százaléka is hozzáadódik.",
+            "dynamicDescription": "<spellName>Hanghullám: </spellName>Lee Sin disszonáns hanghullámot bocsát ki, amely felfedi az ellenfeleket, és <physicalDamage>@InitialDamage@ fizikai sebzést</physicalDamage> okoz az első ellenfélnek, akit elér. Ha a <spellName>Hanghullám</spellName> eltalál egy ellenfelet, Lee Sin a következő 3 másodpercben használhatja a <spellName>Rezonáns csapás</spellName> képességet.<br><br><spellName>Rezonáns csapás: </spellName>Lee Sin lerohanja a Hanghullámmal eltalált ellenfelet, és <physicalDamage>@RecastDamage@ fizikai sebzést</physicalDamage> okoz, amihez az ellenfél hiányzó életerejének @MissingHealthDamage*100@%-a is hozzáadódik.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Oltalom: Lee Sin a kijelölt szövetségeshez siet, és védelmet biztosít mindkettőjüknek a sebzés ellen. Az Oltalom alkalmazása után Lee Sin 3 másodpercre képessé válik a Vasakarat használatára.<br>Vasakarat: Lee Sin alapos kiképzése lehetővé teszi a számára, hogy fejlődjön a harcban. Ezáltal 4 másodpercre életlopást, életvarázst és páncélt nyer.",
-            "dynamicDescription": "<spellName>Oltalom: </spellName>Lee Sin a kijelölt szövetségeshez siet, és 5 másodpercre <shield>védelmet</shield> biztosít mindkettőjüknek @ShieldAmount@ sebzés ellen. Az <spellName>Oltalom</spellName> alkalmazása után Lee Sin 3 másodpercre képessé válik a <spellName>Vasakarat</spellName> használatára.<br><br><spellName>Vasakarat: </spellName>Lee Sin alapos kiképzése lehetővé teszi a számára, hogy fejlődjön a harcban. Ezáltal 5 másodpercre @LifestealAndSpellVamp@% életlopást és életvarázst, valamint <scaleArmor>@ArmorBonus@ páncélt</scaleArmor> nyer.@SpellModifierDescriptionAppend@",
+            "description": "Oltalom: Lee Sin a kijelölt szövetségeshez siet, és védelmet biztosít mindkettőjüknek a sebzés ellen. Az Oltalom alkalmazása után Lee Sin képessé válik a Vasakarat használatára.<br><br>Vasakarat: Lee Sin alapos kiképzése lehetővé teszi a számára, hogy fejlődjön a harcban, amivel életlopásra, életvarázsra és páncélra tesz szert.",
+            "dynamicDescription": "<spellName>Oltalom: </spellName>Lee Sin a kijelölt szövetségeshez siet, és @ShieldDuration@ másodpercre <shield>védelmet</shield> biztosít mindkettőjüknek @ShieldAmount@ sebzés ellen. Az <spellName>Oltalom</spellName> alkalmazása után Lee Sin @W1ReactivateTime@ másodpercre képessé válik a <spellName>Vasakarat</spellName> használatára.<br><br><spellName>Vasakarat: </spellName>Lee Sin alapos kiképzése lehetővé teszi a számára, hogy fejlődjön a harcban. Lee Sin @LifestealAndSpellVampTime@ másodpercre @LifestealAndSpellVamp@% életlopást és életvarázst, valamint <scaleArmor>@ArmorBonus@ páncélt</scaleArmor> nyer.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

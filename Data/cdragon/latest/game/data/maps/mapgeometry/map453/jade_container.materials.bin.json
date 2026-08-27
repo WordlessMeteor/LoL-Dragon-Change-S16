@@ -5,7 +5,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Foliage_SR_leaves.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/foliage_sr_leaves.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -47,31 +47,31 @@
         "samplerValues": [
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/jade_ground_blends.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/jade_ground_blends.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Bottom_Texture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_tile_floor.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_tile_floor.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Middle_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/gravel_stone_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/gravel_stone_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Top_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/order_dirt.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/order_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Extras_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/grass_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/grass_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -225,7 +225,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Stonehenge_Revised_02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/stonehenge_revised_02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -262,7 +262,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/chaosGate.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaosgate.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -299,7 +299,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/OrderPantheon.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/orderpantheon.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -352,7 +352,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Plant01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/plant01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -394,7 +394,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Shrine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shrine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -425,13 +425,71 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_BA_MAT": {
+        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_BA_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/turret_stonebase_hq.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.004999999888241291,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5199969410896301,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Props_Torch_AA_MAT": {
         "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Props_Torch_AA_MAT",
         "type": 0,
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/OrderTorch01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/ordertorch01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -468,7 +526,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Stonehenge_03.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/stonehenge_03.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -505,7 +563,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/OrderGate.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/ordergate.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -542,7 +600,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/river_corner.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/river_corner.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -579,7 +637,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/TallRock02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tallrock02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -616,7 +674,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/MushroomPatch02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroompatch02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -653,7 +711,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/MushroomPatch02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroompatch02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -690,7 +748,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shieldladderbook_stacksignshield_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shieldladderbook_stacksignshield_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -727,7 +785,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/creep_camp_base.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/creep_camp_base.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -764,7 +822,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/stone_steps.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/stone_steps.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -801,7 +859,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_stonesb.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_stonesb.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -838,7 +896,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Tree01_md.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tree01_md.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -875,7 +933,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Fire_Cauldron.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/fire_cauldron.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -912,7 +970,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/barrel_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/barrel_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -949,7 +1007,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Tree02_.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tree02_.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -986,7 +1044,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/mushroom_cap1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroom_cap1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1023,7 +1081,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/MushroomPatch03.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroompatch03.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1076,7 +1134,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/TreeStump02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/treestump02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1113,7 +1171,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/TombStone01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tombstone01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1150,7 +1208,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flower_SR_Xaos2.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flower_sr_xaos2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1192,7 +1250,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flowerz3.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flowerz3.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1246,7 +1304,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flower_SR_Xaos1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flower_sr_xaos1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1288,7 +1346,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/SwampLog01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/swamplog01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1325,7 +1383,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Btown_Brown.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/btown_brown.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1362,7 +1420,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/DryBush01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/drybush01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1420,7 +1478,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_Shrine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_shrine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1457,7 +1515,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/WallOfGrass_A.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/wallofgrass_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1494,7 +1552,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/wagon_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/wagon_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1531,7 +1589,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Stonehenge_Revised.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/stonehenge_revised.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1568,7 +1626,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flower_SR_Order2.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flower_sr_order2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1622,7 +1680,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/wagon_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/wagon_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1659,7 +1717,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/RiverBed_cliff_blend.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/riverbed_cliff_blend.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1696,7 +1754,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shop_base.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shop_base.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1733,7 +1791,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_dirt.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1770,7 +1828,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flower012.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flower012.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1812,7 +1870,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/ChaosHouse02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaoshouse02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1849,7 +1907,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/GoodStatue01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/goodstatue01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1886,7 +1944,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/MushroomPatch03.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroompatch03.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1940,44 +1998,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Shared/Materials/gray.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Shop_Trol_Prop_AA_Mat": {
-        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Shop_Trol_Prop_AA_Mat",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shop_trol_prop.tex",
+                "texturePath": "assets/shared/materials/gray.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2014,31 +2035,31 @@
         "samplerValues": [
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/jade_ground_blends.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/jade_ground_blends.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Bottom_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/Chaos_dirt.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/chaos_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Middle_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/gravel_stone_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/gravel_stone_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Top_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/order_dirt.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/order_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Extras_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/grass_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/grass_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2192,7 +2213,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/mushroom_cap1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroom_cap1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2229,7 +2250,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_dirt.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2260,13 +2281,71 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_AA_MAT": {
+        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_AA_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/turret_stonebase.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.004999999888241291,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5300068855285645,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Foliage_Flower_BE_MAT": {
         "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Foliage_Flower_BE_MAT",
         "type": 0,
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flowerz4.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flowerz4.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2320,7 +2399,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/mushroom_cap2.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/mushroom_cap2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2357,7 +2436,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Bcolumn_blue_vine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/bcolumn_blue_vine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2394,7 +2473,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/TreeLogFallen03.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/treelogfallen03.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2431,7 +2510,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Fence01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/fence01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2468,7 +2547,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Sign01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/sign01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2505,7 +2584,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/TorchSet01.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/torchset01.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2542,7 +2621,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/pole_with_3_helmets_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/pole_with_3_helmets_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2579,7 +2658,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shrineVine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shrinevine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2635,7 +2714,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/ChaosHouse02.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaoshouse02.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2672,7 +2751,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shrineVine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shrinevine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2730,7 +2809,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Flower_SR_Order1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/flower_sr_order1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2785,7 +2864,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/rock_lane.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/rock_lane.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2822,7 +2901,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/SR_River_Mask_TX.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/sr_river_mask_tx.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2864,7 +2943,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shop_diffuse.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shop_diffuse.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2901,7 +2980,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/base_stone_steps.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/base_stone_steps.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -2938,31 +3017,31 @@
         "samplerValues": [
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/jade_ground_blends.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/jade_ground_blends.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Bottom_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/Chaos_dirt.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/chaos_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Middle_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/gravel_stone_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/gravel_stone_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Top_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/order_dirt.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/order_dirt.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Extras_Texture",
-                "texturePath": "ASSETS/Shared/Materials/TerrainBlending/Jade/grass_TX_CM.tex",
+                "texturePath": "assets/shared/materials/terrainblending/jade/grass_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3116,7 +3195,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Tree01_Burned.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tree01_burned.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3172,7 +3251,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_dirt_grass_blend.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_dirt_grass_blend.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3209,7 +3288,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/blueTower_decal.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/bluetower_decal.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3268,7 +3347,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/inhibitor_stoneBase.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/inhibitor_stonebase.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3288,7 +3367,7 @@
                 "name": "TintColor",
                 "value": [
                     0.5000076293945312,
-                    0.5100023150444031,
+                    0.5000076293945312,
                     0.5100023150444031,
                     1.0
                 ],
@@ -3327,7 +3406,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Tree01_md_1bitalpha.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tree01_md_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3380,7 +3459,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Chaos_Shrine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_shrine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3417,7 +3496,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/new_stone_road.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/new_stone_road.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3476,7 +3555,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/nexus_stoneBase.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/nexus_stonebase.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3495,9 +3574,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5199969410896301,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -3535,7 +3614,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Decal_Purple_Flower.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/decal_purple_flower.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3594,7 +3673,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/chaos_root_base_decal_mid.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/chaos_root_base_decal_mid.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3653,7 +3732,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/base_center_mark3.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/base_center_mark3.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3712,7 +3791,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Tree02__1bitalpha.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/tree02__1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3759,72 +3838,13 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/TestMaps/Base/Materials/Default/turret_stoneBase_hq_": {
-        "name": "Maps/KitPieces/TestMaps/Base/Materials/Default/turret_stoneBase_hq_",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/turret_stoneBase.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.004999999888241291,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/TestMaps/Base/Materials/Default/flowerb_decalVersion3_no_shadow": {
         "name": "Maps/KitPieces/TestMaps/Base/Materials/Default/flowerb_decalVersion3_no_shadow",
         "type": 0,
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Decal_Blue_Flower.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/decal_blue_flower.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3883,7 +3903,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_seam.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_seam.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3942,7 +3962,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/base_chasm1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/base_chasm1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -3961,9 +3981,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5199969410896301,
-                    0.5400015115737915,
-                    0.5400015115737915,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -4001,7 +4021,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_tile_floor_mark2_1bitalpha.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_tile_floor_mark2_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4060,7 +4080,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_tile_floor_border.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_tile_floor_border.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4119,7 +4139,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/Shrine.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/shrine.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4156,7 +4176,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_ground_mix2.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_ground_mix2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4216,7 +4236,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/base_chasm2.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/base_chasm2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4235,9 +4255,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5199969410896301,
-                    0.5400015115737915,
-                    0.5400015115737915,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -4275,7 +4295,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_base_decal_mid.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_base_decal_mid.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4334,7 +4354,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/SR_Firepit_Ash_decal_TX_DM.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/sr_firepit_ash_decal_tx_dm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -4393,7 +4413,7 @@
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/order_ground_moss_patch1.tex",
+                "texturePath": "assets/maps/kitpieces/jade/base/textures/order_ground_moss_patch1.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -21297,37 +21317,37 @@
         "soundOnCreateDefault": "Play_sfx_S5_VoidGateSpawn_cast",
         "assetRemappingTable": [
             {
-                "oldAsset": "{86cbfd9b}",
+                "oldAsset": "assets/shared/particles/sru_order_basedoor_glow.tex",
                 "newAsset": "ASSETS/Maps/Particles/Default/SRU_Chaos_BaseDoor_Glow.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{c6181238}",
+                "oldAsset": "assets/shared/particles/sru_order_basedoor_barrier_mult.tex",
                 "newAsset": "ASSETS/Maps/Particles/Jade/SOG_Chaos_Ceremony_Barrier_AreaSphere_mult.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{50b81491}",
+                "oldAsset": "assets/shared/particles/sru_order_basedoor_arearing.tex",
                 "newAsset": "ASSETS/Maps/Particles/Jade/SRU_JADE_Chaos_BaseDoor_AreaRing.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{cff1b87d}",
+                "oldAsset": "assets/shared/particles/sru_order_sparkles.tex",
                 "newAsset": "ASSETS/Maps/Particles/Jade/SRU_JADE_Chaos_sparkles.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{e3ee8af8}",
+                "oldAsset": "assets/shared/particles/sru_order_basedoor_groundglow_bottom.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_BaseDoor_GroundGlow_Bottom_red.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{e37fa41f}",
+                "oldAsset": "assets/shared/particles/sru_order_color.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Chaos_Color.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{7b450f77}",
+                "oldAsset": "assets/shared/particles/sru_order_basedoor_barrier.tex",
                 "newAsset": "ASSETS/Maps/Particles/Jade/SOG_JADE_Chaos_Ceremony_Barrier_AreaSphere.tex",
                 "__type": "VfxAssetRemap"
             }
@@ -28421,22 +28441,22 @@
         "soundOnCreateDefault": "Play_sfx_S5_VoidGateSpawn_cast",
         "assetRemappingTable": [
             {
-                "oldAsset": "{ad8f13db}",
+                "oldAsset": "assets/maps/particles/default/sru_chaos_basedoor_glow.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_BaseDoor_Glow.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{6aa4c0d8}",
+                "oldAsset": "assets/maps/particles/jade/sog_chaos_ceremony_barrier_areasphere_mult.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_BaseDoor_Barrier_Mult.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{31008913}",
+                "oldAsset": "assets/maps/particles/jade/sru_jade_chaos_basedoor_arearing.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_BaseDoor_AreaRing.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{39e53443}",
+                "oldAsset": "assets/maps/particles/jade/sru_jade_chaos_sparkles.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_sparkles.tex",
                 "__type": "VfxAssetRemap"
             },
@@ -28445,12 +28465,12 @@
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{3e6f5b5f}",
+                "oldAsset": "assets/shared/particles/sru_chaos_color.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_Color.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{18baaa32}",
+                "oldAsset": "assets/maps/particles/jade/sog_jade_chaos_ceremony_barrier_areasphere.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_BaseDoor_Barrier.tex",
                 "__type": "VfxAssetRemap"
             }
@@ -35991,8 +36011,8 @@
                         0.0
                     ],
                     [
-                        14849.8681640625,
-                        119.9776611328125,
+                        14845.7255859375,
+                        199.2158203125,
                         9317.8017578125,
                         1.0
                     ]
@@ -36239,8 +36259,8 @@
                         0.0
                     ],
                     [
-                        13064.875,
-                        91.77391052246094,
+                        13063.1083984375,
+                        123.2484359741211,
                         8016.29736328125,
                         1.0
                     ]
@@ -44354,6 +44374,68 @@
                 ],
                 "name": "SRU_WaterBugs9",
                 "system": "Maps/Shipping/Map453/Particles/Jade_WaterBugs_env",
+                "__type": "MapParticle"
+            },
+            "{afd4da3d}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        7034.00732421875,
+                        219.29745483398438,
+                        2264.46240234375,
+                        1.0
+                    ]
+                ],
+                "name": "Sru_torch_fire114",
+                "system": "Maps/Shipping/Map453/Particles/Jade_FireTorch_small",
+                "__type": "MapParticle"
+            },
+            "{48398e5c}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        6947.29248046875,
+                        242.43093872070312,
+                        5741.11328125,
+                        1.0
+                    ]
+                ],
+                "name": "Sru_torch_fire119",
+                "system": "Maps/Shipping/Map453/Particles/Jade_FireTorch_small",
                 "__type": "MapParticle"
             }
         },
@@ -64324,7 +64406,8 @@
             "{3eab19cc}": null,
             "{c98d1326}": null,
             "{4a7241ac}": null,
-            "{87368690}": null
+            "{87368690}": null,
+            "{f8392a48}": null
         },
         "__type": "MapPlaceableContainer"
     },
@@ -67302,7 +67385,36 @@
             "{69534524}": null,
             "{0878adc1}": null,
             "{bf15eb43}": null,
-            "{5239c3fc}": null
+            "{5239c3fc}": null,
+            "{e8ef772f}": null,
+            "{697fadd8}": null,
+            "{941c3f12}": null,
+            "{e2349d0a}": null,
+            "{49116b8d}": null,
+            "{cdeb8860}": null,
+            "{a7b5e2b0}": null,
+            "{3afc2ea6}": null,
+            "{395a621c}": null,
+            "{85411c9e}": null,
+            "{e87c332b}": null,
+            "{74264e72}": null,
+            "{ded9a6ca}": null,
+            "{b6cb1719}": null,
+            "{3882b003}": null,
+            "{49c83c37}": null,
+            "{58b9b8c4}": null,
+            "{c48e7f34}": null,
+            "{0631d20f}": null,
+            "{a21533bd}": null,
+            "{55b77e68}": null,
+            "{5f90e974}": null,
+            "{3c96800d}": null,
+            "{9a059c6b}": null,
+            "{032e896c}": null,
+            "{069919b8}": null,
+            "{c3a6c1d0}": null,
+            "{f673a219}": null,
+            "{42011bf3}": null
         },
         "__type": "MapPlaceableContainer"
     },
@@ -71431,37 +71543,37 @@
         "particlePath": "Maps/Particles/SR/SRUAP_Chaos_Inhibitor_idle",
         "assetRemappingTable": [
             {
-                "oldAsset": "{f6113390}",
+                "oldAsset": "assets/particles/sru_chaos_sparks.tex",
                 "newAsset": "ASSETS/Particles/SRU_Order_Sparks.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{d49d77c9}",
+                "oldAsset": "assets/shared/particles/sru_chaos_ambientglow.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_ambientGlow.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{f40755cf}",
+                "oldAsset": "assets/shared/particles/sru_chaos_sparklesmult.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_sparklesMult.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{3e6f5b5f}",
+                "oldAsset": "assets/shared/particles/sru_chaos_color.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_Color.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{f57ca228}",
+                "oldAsset": "assets/shared/particles/sru_chaos_clouds.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_clouds.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{c10ef75b}",
+                "oldAsset": "assets/shared/particles/sru_chaos_laser.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_Laser.tex",
                 "__type": "VfxAssetRemap"
             },
             {
-                "oldAsset": "{f10f5f6f}",
+                "oldAsset": "assets/maps/particles/default/sru_chaos_supertrail.tex",
                 "newAsset": "ASSETS/Shared/Particles/SRU_Order_trail.tex",
                 "__type": "VfxAssetRemap"
             }

@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "إن تم إلقاؤها على حليف، تأمر بيكس بالقفز نحو الحليف ومنحه درعًا. ثم يتبعه ويعاونه في هجماته. إن تم إلقاؤها على عدو، تأمر بيكس بالقفز نحو العدو وإلحاق الضرر به. ثم يلاحقه ويسمح لك برؤية ذلك العدو.",
-            "dynamicDescription": "<mainText>عند الإلقاء على حليف: تأمر بيكس بالقفز إلى حليف ثم ملاحقته ومساندة هجماته بدلًا من لولو لمدة 6ث. وعند الوصول، يمنح بيكس <shield>درعًا ضد @TotalShield@ من الضرر</shield> لمدة 6ث.<br><br>عند الإلقاء على عدو: يلحق بيكس <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بوحدة العدو المستهدفة. ثم يلاحقها بيكس ويمنح رؤية لها لمدة 6ث.",
+            "dynamicDescription": "عند الإلقاء على حليف: تأمر بيكس بالقفز إلى حليف ثم ملاحقته ومساندة هجماته بدلًا من لولو لمدة @AllyFollowDuration@ث. وعند الوصول، يمنح بيكس <shield>درعًا ضد @TotalShield@ من الضرر</shield> لمدة @ShieldDuration@ث.<br><br>عند الإلقاء على عدو: يلحق بيكس <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بوحدة العدو المستهدفة. ثم يلاحقها بيكس ويمنح رؤية لها لمدة @EnemyFollowDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تزيد لولو من حجم أحد الحلفاء، ليطيح بالأعداء المحيطين في الهواء وتمنح الحليف قدرًا كبيرًا من الصحة الإضافية. خلال الثواني القليلة التالية، يكسب ذلك الحليف هالة تبطئ الأعداء في الجوار.",
-            "dynamicDescription": "<mainText>تضخم لولو جسم حليفها، <status>فتطيح إلى الأعلى</status> بالأعداء في الجوار. لمدة @BuffDuration@ث، يكسب حليفها <scaleHealth>@TotalBonusHealth@ صحة إضافية</scaleHealth> ويخضع الأعداء في الجوار لتأثير <status>الإبطاء</status> بنسبة @SlowPercent@% لمدة 1ث.",
+            "dynamicDescription": "تضخم لولو جسم حليفها، مما <status>يطيح إلى الأعلى</status> بالأعداء في الجوار. لمدة @BuffDuration@ث، يكسب حليفها <scaleHealth>@TotalBonusHealth@ صحة إضافية</scaleHealth> ويخضع الأعداء في الجوار لتأثير <status>الإبطاء</status> بنسبة @SlowPercent@%.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

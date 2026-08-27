@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Se lanciata su un alleato, ordina a Pix di raggiungerlo e proteggerlo. Poi lo segue e sostiene i suoi attacchi. Se lanciata su un nemico, ordina a Pix di saltargli addosso e danneggiarlo. Poi lo segue e ti fornisce visione di quel nemico.",
-            "dynamicDescription": "<mainText>Al lancio su un alleato: ordina a Pix di seguire e aiutare un alleato ad attaccare invece di Lulu per 6 secondi. All'arrivo, Pix <shield>protegge da @TotalShield@ danni</shield> per 6 secondi.<br><br>Al lancio sul nemico: Pix infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> all'unità nemica bersaglio. Pix poi la insegue e conferisce visione su di essa per 6 secondi.",
+            "dynamicDescription": "Al lancio su un alleato: ordina a Pix di seguire e aiutare un alleato ad attaccare invece di Lulu per @AllyFollowDuration@ secondo/i. All'arrivo, Pix <shield>protegge da @TotalShield@ danni</shield> per @ShieldDuration@ secondo/i.<br><br>Al lancio sul nemico: Pix infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> all'unità nemica bersaglio. Pix poi la insegue e conferisce visione su di essa per @EnemyFollowDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Lulu ingigantisce un alleato, lanciando in aria i nemici nelle vicinanze e conferendo al bersaglio una grande quantità di salute bonus. Per i prossimi secondi, quell'alleato ottiene un'aura che rallenta i nemici nelle vicinanze.",
-            "dynamicDescription": "<mainText>Lulu ingigantisce un suo alleato, <status>lanciando in aria</status> i nemici nelle vicinanze. Per @BuffDuration@ secondo/i, il suo alleato ottiene <scaleHealth>@TotalBonusHealth@ salute bonus</scaleHealth> e i nemici vicini subiscono <status>rallentamento</status> di un @SlowPercent@% per 1 secondo.",
+            "dynamicDescription": "Lulu ingigantisce un suo alleato, <status>lanciando in aria</status> i nemici nelle vicinanze. Per @BuffDuration@ secondo/i, il suo alleato ottiene <scaleHealth>@TotalBonusHealth@ salute bonus</scaleHealth> e i nemici vicini subiscono un @SlowPercent@% di <status>rallentamento</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

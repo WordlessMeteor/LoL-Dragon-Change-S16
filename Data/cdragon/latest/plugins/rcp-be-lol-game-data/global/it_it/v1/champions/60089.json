@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Le abilità che infliggono danni applicano Luce del sole sui nemici per 3,5 secondi. Quando i campioni alleati infliggono danni a questi bersagli, consumano il debuff di Luce del sole per infliggere danni magici aggiuntivi."
+        "description": "Le abilità che infliggono danni applicano Luce del sole sui nemici. Quando i campioni alleati infliggono danni a questi bersagli, consumano il debuff di Luce del sole per infliggere danni aggiuntivi."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Leona usa il suo scudo per compiere il prossimo attacco base, infliggendo danni magici bonus e stordendo il bersaglio.",
-            "dynamicDescription": "Il prossimo attacco base infligge <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> aggiuntivi e <status>stordisce</status> un nemico per 1,25 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "L'attacco base successivo infligge <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> aggiuntivi e <status>stordisce</status> un nemico per @StunDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Leona alza lo scudo per ottenere armatura e resistenza magica.  Quando finisce la prima durata, se ci sono dei nemici nelle vicinanze, Leona infligge loro danni magici e prolunga l'effetto.",
-            "dynamicDescription": "Ottiene @BonusARMR@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> bonus per 3 secondi. Quando l'effetto finisce, i nemici nelle vicinanze colpiti subiscono <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> e Leona mantiene il suo bonus all'<scaleArmor>armatura</scaleArmor> e alla <scaleMR>resistenza magica</scaleMR> per 3 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona ottiene <scaleArmor>@BonusARMR@ armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> per @BuffDuration@ secondo/i. Quando l'effetto finisce, i nemici nelle vicinanze colpiti subiscono <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> e Leona mantiene il suo bonus all'<scaleArmor>armatura</scaleArmor> e alla <scaleMR>resistenza magica</scaleMR> per altri @BuffDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

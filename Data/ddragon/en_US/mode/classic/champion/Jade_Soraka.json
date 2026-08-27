@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Soraka": {
             "id": "Jade_Soraka",
@@ -22,6 +22,12 @@
                     "id": "60016000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60016001",
+                    "num": 1,
+                    "name": "Dryad Soraka",
                     "chromas": false
                 },
                 {
@@ -151,6 +157,68 @@
                     "name": "Faerie Court Soraka (Tanzanite)",
                     "chromas": false,
                     "parentSkin": 44
+                },
+                {
+                    "id": "60016063",
+                    "num": 63,
+                    "name": "Ocean Song Soraka",
+                    "chromas": false
+                },
+                {
+                    "id": "60016064",
+                    "num": 64,
+                    "name": "Ocean Song Soraka (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016065",
+                    "num": 65,
+                    "name": "Ocean Song Soraka (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016066",
+                    "num": 66,
+                    "name": "Ocean Song Soraka (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016067",
+                    "num": 67,
+                    "name": "Ocean Song Soraka (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016068",
+                    "num": 68,
+                    "name": "Ocean Song Soraka (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016069",
+                    "num": 69,
+                    "name": "Ocean Song Soraka (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016070",
+                    "num": 70,
+                    "name": "Ocean Song Soraka (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016071",
+                    "num": 71,
+                    "name": "Ocean Song Soraka (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 63
                 },
                 {
                     "id": "60016301",
@@ -351,7 +419,7 @@
                     "id": "Jade_SorakaW",
                     "name": "Astral Blessing",
                     "description": "Soraka blesses a friendly unit, restoring health and increasing Armor for a short time.",
-                    "tooltip": "Restores <healing>{{ totalheal }} Health</healing>, and temporarily grants <scaleArmor>{{ armour }} Armor</scaleArmor> to an ally for 3 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Soraka restores <healing>{{ totalheal }} Health</healing> to an ally and grants them <scaleArmor>{{ armour }} Armor</scaleArmor> for {{ buffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Healing",
@@ -753,7 +821,7 @@
             ],
             "passive": {
                 "name": "Consecration",
-                "description": "Increases surrounding allies' Magic Resist by 16.",
+                "description": "Increases surrounding allies' Magic Resist.",
                 "image": {
                     "full": "Jade_Soraka_Passive.png",
                     "sprite": "passive1.png",

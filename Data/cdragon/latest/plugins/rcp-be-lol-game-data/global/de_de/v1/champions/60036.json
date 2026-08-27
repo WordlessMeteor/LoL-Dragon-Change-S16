@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Giftiger Dr. Mundo",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo nicht toxisch, Mundo haben gesunde emotionale Bewältigungsmechanismen – ach, du reden von lila Glibber? Mundo sein sicher, dass dieser ungefährlich ist."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo regeneriert pro Sekunde 0,3 % seines maximalen Lebens."
+        "description": "Dr. Mundo regeneriert pro Sekunde einen Prozentsatz seines maximalen Lebens."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Leben</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Dr. Mundo schleudert sein Beil und verursacht Schaden, der auf dem maximalen Leben seines Opfers basiert.",
-            "dynamicDescription": "<mainText>Dr. Mundo schleudert sein Beil, verursacht <magicDamage>magischen Schaden</magicDamage> in Höhe von @DamageMod*100@ % des aktuellen Lebens des Ziels (mindestens @MinDamage@ Schaden) und <status>verlangsamt</status> das Ziel 2 Sekunden lang um 40 %.<br><br>Die Hälfte der Lebenskosten wird zurückerstattet, wenn das Beil ein Ziel trifft.",
+            "dynamicDescription": "Dr. Mundo schleudert sein Beil, verursacht <magicDamage>magischen Schaden</magicDamage> in Höhe von @DamageMod*100@ % des aktuellen Lebens des Ziels (mindestens @MinDamage@ Schaden) und <status>verlangsamt</status> das Ziel @SlowDuration@ Sekunden lang um @MoveMod*-100@ %.<br><br><healing>@HealthReturn@ Leben</healing> wird zurückerstattet, wenn das Beil ein Ziel trifft.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Leben</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "„Masochismus“ erhöht Dr. Mundos Angriffsschaden 5 Sekunden lang um einen festen Betrag. Dr. Mundo erhält außerdem zusätzlichen Angriffsschaden für jedes ihm fehlende Prozent Leben.",
-            "dynamicDescription": "Dr. Mundo erhält 5 Sekunden lang <physicalDamage>@BaseIncrease@ Angriffsschaden</physicalDamage>. Dr. Mundo erhält zusätzlich <physicalDamage>+@DamageMod@ Angriffsschaden</physicalDamage> für jedes ihm fehlende Prozent Leben.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo erhält abhängig von seinem fehlenden Leben für einige Sekunden Angriffsschaden.",
+            "dynamicDescription": "Dr. Mundo erhält @Duration@ Sekunden lang <physicalDamage>@BaseIncrease@ Angriffsschaden</physicalDamage>. Dr. Mundo erhält zusätzlich <physicalDamage>+@DamageMod@ Angriffsschaden</physicalDamage> für jedes ihm fehlende Prozent Leben.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ % des aktuellen Lebens</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Dr. Mundo opfert einen Teil seines Lebens, um ein höheres Lauftempo und eine stark erhöhte Lebensregeneration zu erhalten.",
-            "dynamicDescription": "<mainText>Dr. Mundo stellt über 12 Sekunden hinweg <healing>@MaximumHealthRegen@ Leben</healing> wieder her. Außerdem erhält er <speed>@SpeedMod*100@ % Lauftempo</speed>.",
+            "dynamicDescription": "Dr. Mundo regeneriert im Verlauf von @Duration@ Sekunden <healing>@MaximumHealthRegen@ Leben</healing> und erhält <speed>@SpeedMod*100@ % Lauftempo</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

@@ -217,7 +217,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkEOne.dds"
@@ -906,15 +905,15 @@
             ],
             "DataValues": [
                 {
-                    "name": "LifestealAndSpellVamp",
+                    "name": "DashSpeed",
                     "values": [
-                        1.0,
-                        5.0,
-                        9.0,
-                        13.0,
-                        17.0,
-                        21.0,
-                        25.0
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -934,26 +933,13 @@
                 {
                     "name": "ShieldDuration",
                     "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "DashSpeed",
-                    "values": [
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0,
-                        1350.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -971,15 +957,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "W1CooldownRecovered",
+                    "name": "LifestealAndSpellVamp",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        1.0,
+                        5.0,
+                        9.0,
+                        13.0,
+                        17.0,
+                        21.0,
+                        25.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1026,7 +1012,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.dds"
             ],
@@ -1305,17 +1290,17 @@
         "__type": "SpellObject"
     },
     "{ad637654}": {
-        "mRootSpell": "{4bf7ce09}",
+        "mRootSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive",
         "mChildSpells": [
-            "{4bf7ce09}",
-            "{80daf119}"
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive_Cosmetic"
         ],
         "mName": "Jade_LeeSinPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{4bf7ce09}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive": {
         "ObjectName": "Jade_LeeSinPassive",
-        "objectPath": "{4bf7ce09}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive",
         "mScriptName": "Jade_LeeSinPassive",
         "mSpell": {
             "DataValues": [
@@ -1333,7 +1318,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "FirstHitEnergyMult",
+                    "name": "EnergyPerHit",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalHits",
                     "values": [
                         2.0,
                         2.0,
@@ -1346,39 +1344,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "EnergyReturn": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 10.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 7,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 13,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "TTFirstHitEnergy": {
-                    "mMultiplier": {
-                        "mDataValue": "FirstHitEnergyMult",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mModifiedGameCalculation": "EnergyReturn",
-                    "__type": "GameCalculationModified"
-                }
-            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.dds"
             ],
@@ -1424,9 +1389,9 @@
         },
         "__type": "SpellObject"
     },
-    "{80daf119}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive_Cosmetic": {
         "ObjectName": "Jade_LeeSinPassive_Cosmetic",
-        "objectPath": "{80daf119}",
+        "objectPath": "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive_Cosmetic",
         "mScriptName": "Jade_LeeSinPassive_Cosmetic",
         "mSpell": {
             "mImgIconName": [
@@ -2016,7 +1981,7 @@
             "mAlternateName": "Jade_LeeSinQOne_Jade",
             "DataValues": [
                 {
-                    "name": "Q1BaseDamage",
+                    "name": "BaseDamage",
                     "values": [
                         20.0,
                         50.0,
@@ -2029,20 +1994,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Q2BaseDamage",
-                    "values": [
-                        20.0,
-                        50.0,
-                        80.0,
-                        110.0,
-                        140.0,
-                        170.0,
-                        200.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Q2ADRatio",
+                    "name": "ADRatio",
                     "values": [
                         0.8999999761581421,
                         0.8999999761581421,
@@ -2051,19 +2003,6 @@
                         0.8999999761581421,
                         0.8999999761581421,
                         0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Q2MaxMissingHealthMod",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2081,19 +2020,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "CherryBonusHaste",
-                    "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "DashSpeed",
                     "values": [
                         1350.0,
@@ -2105,67 +2031,66 @@
                         1350.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissingHealthDamage",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxMonsterHealthDamage",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        9.5,
-                        8.5,
-                        7.5,
-                        6.5,
-                        5.5,
-                        4.5,
-                        3.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "InitialDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "Q1BaseDamage",
+                            "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.8999999761581421,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "RecastDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "Q2BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "Q2ADRatio",
+                            "mDataValue": "ADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "EmpoweredDamage": {
-                    "mMultiplier": {
-                        "mNumber": 2.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "tooltipOnly": true,
-                    "mModifiedGameCalculation": "RecastDamage",
-                    "__type": "GameCalculationModified"
+                "RecastDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient2": 2.0,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.dds"
@@ -2183,14 +2108,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    11.0,
+                    12.0,
                     11.0,
                     10.0,
                     9.0,
                     8.0,
                     7.0,
-                    7.0
+                    6.0
                 ],
+                "{0a3e0478}": 12.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2328,22 +2254,17 @@
                     "mLocKeys": {
                         "keyName": "Spell_LeeSinQOne_Jade_Name",
                         "keySummary": "Spell_LeeSinQOne_Jade_Summary",
-                        "keyTooltip": "Spell_LeeSinQOne_Jade_Tooltip"
+                        "keyTooltip": "Spell_LeeSinQOne_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_LeeSinQOne_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Q1BaseDamage",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_LeeSinQSonicWaveDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Q2BaseDamage",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinResonatingStrikeMinimumBaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2413,7 +2334,7 @@
                                 "__type": "{f3cbe7b2}"
                             },
                             {
-                                "mSpellCalculationKey": "EmpoweredDamage",
+                                "mSpellCalculationKey": "RecastDamage",
                                 "__type": "{f3cbe7b2}"
                             }
                         ],
@@ -2557,7 +2478,7 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.dds"
             ],
-            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.tex",
+            "ImgIconPath": "assets/ux/jade/s3icons/samesized/blindmonk_hardiness.tex",
             "spellCastTime": 0.25,
             "spellTotalTime": 1.0,
             "cooldownTime": [
@@ -3324,7 +3245,7 @@
         "passiveName": "game_character_passiveName_Jade_LeeSin",
         "passiveLuaName": "Jade_LeeSinPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_LeeSin",
-        "passive1IconName": "ASSETS/Characters/Jade_LeeSin/HUD/Icons2D/Jade_LeeSinPassive.dds",
+        "passive1IconName": "assets/characters/jade_leesin/hud/icons2d/jade_leesinpassive.dds",
         "name": "game_character_displayname_Jade_LeeSin",
         "weaponMaterials": [
             "Jade_LeeSinBasicAttack"
@@ -3448,10 +3369,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{4bf7ce09}",
+        "mCharacterPassiveSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{4bf7ce09}",
+                "mParentPassiveBuff": "Characters/Jade_LeeSin/Spells/Jade_LeeSinPassiveAbility/Jade_LeeSinPassive",
                 "__type": "CharacterPassiveData"
             },
             {
@@ -4624,7 +4545,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4659,7 +4580,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4694,7 +4615,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4729,7 +4650,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4764,7 +4685,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4799,7 +4720,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4828,7 +4749,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6335,7 +6256,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6364,7 +6285,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6393,7 +6314,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6422,7 +6343,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6457,7 +6378,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6492,7 +6413,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6527,7 +6448,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6562,7 +6483,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6597,7 +6518,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6632,7 +6553,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -6661,7 +6582,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -7924,7 +7845,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -7959,7 +7880,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -7989,7 +7910,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -8024,7 +7945,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -8059,7 +7980,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -8089,7 +8010,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -8190,7 +8111,7 @@
         "{55bb9b57}": 12,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Feeney.tex",
+            "image": "assets/characters/jade_leesin/skins/base/jade_leesinloadscreen_feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "Portrait"
@@ -8206,7 +8127,7 @@
         "{55bb9b57}": 11,
         "{ff3c9ff8}": "{79c259f7}",
         "image": {
-            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Legacy_01.tex",
+            "image": "assets/characters/jade_leesin/skins/base/jade_leesinloadscreen_legacy_01.tex",
             "__type": "CensoredImage"
         },
         "__type": "Portrait"

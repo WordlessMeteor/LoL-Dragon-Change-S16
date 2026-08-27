@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Tristana Cướp Biển",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Các tay súng, sẵn sàng! Tristana nhảy thẳng ra biển khơi, dong buồm tìm kiếm những cuộc phiêu lưu mới ngoài biên giới Bandle. Đội chiếc mũ mượn (trộm) từ một hải tặc đã bị cô bắn hạ, và đeo miếng bịt mắt chỉ để làm màu. Nhưng với thái độ không-cần-tù-binh cùng khẩu súng trứ danh của mình, cô đã đánh chìm nhiều tàu bè hơn hầu hết các thuyền trưởng ở Bilgewater."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Tốc độ đánh của Tristana được tăng rất nhiều trong một khoảng thời gian ngắn.",
-            "dynamicDescription": "<mainText>Tăng <attackSpeed>Tốc Độ Đánh của Tristana lên @AttackSpeedMod*100@%</attackSpeed> trong 7 giây.",
+            "dynamicDescription": "Tristana nhận <attackSpeed>@AttackSpeedMod*100@% Tốc Độ Đánh</attackSpeed> trong @BuffDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Tristana nhảy đến vị trí mục tiêu, gây sát thương và làm chậm các đơn vị xung quanh nơi tiếp đất trong 3 giây.",
-            "dynamicDescription": "<mainText>Tristana bắn xuống đất để đẩy mình tới vị trí chỉ định, gây <magicDamage>@LandingDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> 60% trong 2,5 giây khi đáp xuống.<br>Khi hạ gục hoặc hỗ trợ hạ gục tướng, thời gian Hồi Chiêu được làm mới.",
+            "description": "Tristana bắn xuống đất để đẩy mình đến một vị trí xa, gây sát thương và làm chậm kẻ địch tại nơi cô đáp xuống.",
+            "dynamicDescription": "Tristana bắn xuống đất để đẩy mình tới vị trí chỉ định, gây <magicDamage>@LandingDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> @Slow@% trong @SlowDuration@ giây khi đáp xuống. Khi hạ gục hoặc hỗ trợ hạ gục tướng, Hồi Chiêu của Phóng Nhảy Tên Lửa sẽ được làm mới.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Khi Tristana tiêu diệt một đơn vị, phát đạn của cô bắn tung ra thành những mảnh nhỏ, gây sát thương lên kẻ địch xung quanh.  Có thể kích hoạt để gây sát thương theo thời gian lên mục tiêu chỉ định và giảm hồi máu nhận vào.",
-            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Kẻ địch sẽ phát nổ khi bị hạ gục bởi đòn đánh thường của Tristana, gây <magicDamage>@PassiveDamage@ sát thương phép</magicDamage> lên những kẻ địch xung quanh.<br><br><spellActive>Kích Hoạt: </spellActive>Giày vò kẻ địch chỉ định, áp dụng <keyword>Vết Thương Sâu 50%</keyword> và gây <magicDamage>@ActiveDamageTTOnly@ sát thương phép</magicDamage> trong vòng 5 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Kẻ địch sẽ phát nổ khi bị hạ gục bởi đòn đánh thường của Tristana, gây <magicDamage>@PassiveDamage@ sát thương phép</magicDamage> lên những kẻ địch xung quanh.<br><br><spellActive>Kích Hoạt: </spellActive>Giày vò kẻ địch chỉ định, áp dụng <keyword>Vết Thương Sâu 50%</keyword> và gây <magicDamage>@ActiveDamageTTOnly@ sát thương phép</magicDamage> trong vòng @GrievousDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

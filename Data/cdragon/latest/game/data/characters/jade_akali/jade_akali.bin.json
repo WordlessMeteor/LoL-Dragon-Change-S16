@@ -3,21 +3,21 @@
         "mRootSpell": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW",
         "mChildSpells": [
             "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW",
-            "{52d4a4b6}",
-            "{475db9f2}",
-            "{3fc0435c}",
-            "{d2d54570}",
-            "{a790efd0}",
-            "{00b994ab}",
-            "{26e9c5a8}",
-            "{acb33692}"
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParent",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissile",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissileRiver",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBBuff",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBStealth",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBDebuff",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParentRiver",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWTimer"
         ],
         "mName": "Jade_AkaliWAbility",
         "__type": "AbilityObject"
     },
-    "{00b994ab}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBDebuff": {
         "ObjectName": "Jade_AkaliSBDebuff",
-        "objectPath": "{00b994ab}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBDebuff",
         "mScriptName": "Jade_AkaliSBDebuff",
         "mSpell": {
             "mImgIconName": [
@@ -38,101 +38,6 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "Jade_AkaliW",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0,
-                        140.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        65.0,
-                        70.0,
-                        75.0,
-                        80.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.20000000298023224,
-                        0.30000001192092896,
-                        0.3499999940395355,
-                        0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.44999998807907104
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.5,
-                        6.0,
-                        6.5,
-                        7.0,
-                        7.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "MovementSpeed",
@@ -224,9 +129,21 @@
                         34.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CloudDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/AkaliTwilightShroud.dds"
@@ -378,7 +295,7 @@
                                 },
                                 {
                                     "type": "SlowAmount",
-                                    "nameOverride": "Spell_ListType_HweiE_SlowAmount",
+                                    "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -427,9 +344,9 @@
         },
         "__type": "SpellObject"
     },
-    "{26e9c5a8}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParentRiver": {
         "ObjectName": "Jade_AkaliWSmokeParentRiver",
-        "objectPath": "{26e9c5a8}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParentRiver",
         "mScriptName": "Jade_AkaliWSmokeParentRiver",
         "mSpell": {
             "flags": 32,
@@ -621,7 +538,7 @@
                 },
                 "missileGroupSpawners": [
                     {
-                        "mChildMissileSpell": "{3fc0435c}",
+                        "mChildMissileSpell": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissileRiver",
                         "__type": "MissileGroupSpawnerSpec"
                     }
                 ],
@@ -646,9 +563,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3fc0435c}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissileRiver": {
         "ObjectName": "Jade_AkaliWSmokeMissileRiver",
-        "objectPath": "{3fc0435c}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissileRiver",
         "mScriptName": "Jade_AkaliWSmokeMissileRiver",
         "mSpell": {
             "mAlternateName": "Jade_AkaliW",
@@ -755,9 +672,9 @@
         },
         "__type": "SpellObject"
     },
-    "{475db9f2}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissile": {
         "ObjectName": "Jade_AkaliWSmokeMissile",
-        "objectPath": "{475db9f2}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissile",
         "mScriptName": "Jade_AkaliWSmokeMissile",
         "mSpell": {
             "mAlternateName": "Jade_AkaliW",
@@ -864,9 +781,9 @@
         },
         "__type": "SpellObject"
     },
-    "{52d4a4b6}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParent": {
         "ObjectName": "Jade_AkaliWSmokeParent",
-        "objectPath": "{52d4a4b6}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeParent",
         "mScriptName": "Jade_AkaliWSmokeParent",
         "mSpell": {
             "flags": 32,
@@ -1058,7 +975,7 @@
                 },
                 "missileGroupSpawners": [
                     {
-                        "mChildMissileSpell": "{475db9f2}",
+                        "mChildMissileSpell": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWSmokeMissile",
                         "__type": "MissileGroupSpawnerSpec"
                     }
                 ],
@@ -1083,9 +1000,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a790efd0}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBStealth": {
         "ObjectName": "Jade_AkaliSBStealth",
-        "objectPath": "{a790efd0}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBStealth",
         "mScriptName": "Jade_AkaliSBStealth",
         "mSpell": {
             "mImgIconName": [
@@ -1103,9 +1020,9 @@
         },
         "__type": "SpellObject"
     },
-    "{acb33692}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWTimer": {
         "ObjectName": "Jade_AkaliWTimer",
-        "objectPath": "{acb33692}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliWTimer",
         "mScriptName": "Jade_AkaliWTimer",
         "mSpell": {
             "mCoefficient2": 0.15000000596046448,
@@ -1259,9 +1176,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d2d54570}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBBuff": {
         "ObjectName": "Jade_AkaliSBBuff",
-        "objectPath": "{d2d54570}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliSBBuff",
         "mScriptName": "Jade_AkaliSBBuff",
         "mSpell": {
             "mImgIconName": [
@@ -1544,9 +1461,9 @@
         "mName": "Jade_AkaliRAbility",
         "__type": "AbilityObject"
     },
-    "{10d740d3}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliRWithQLingering": {
         "ObjectName": "Jade_AkaliRWithQLingering",
-        "objectPath": "{10d740d3}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliRWithQLingering",
         "mScriptName": "Jade_AkaliRWithQLingering",
         "__type": "SpellObject"
     },
@@ -1926,15 +1843,15 @@
         "mName": "Jade_AkaliQAbility",
         "__type": "AbilityObject"
     },
-    "{3b9e957e}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQLingeringTrigger": {
         "ObjectName": "Jade_AkaliQLingeringTrigger",
-        "objectPath": "{3b9e957e}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQLingeringTrigger",
         "mScriptName": "Jade_AkaliQLingeringTrigger",
         "__type": "SpellObject"
     },
-    "{48203dcd}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQTargetInternal": {
         "ObjectName": "Jade_AkaliQTargetInternal",
-        "objectPath": "{48203dcd}",
+        "objectPath": "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQTargetInternal",
         "mScriptName": "Jade_AkaliQTargetInternal",
         "__type": "SpellObject"
     },
@@ -2035,90 +1952,21 @@
                         0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MarkDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "BaseDamageNamed",
-                            "values": [
-                                40.0,
-                                70.0,
-                                100.0,
-                                130.0,
-                                160.0,
-                                190.0,
-                                220.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "tAD Ratio",
-                            "values": [
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75,
-                                0.75
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                },
-                "ARAM": {
-                    "SpellDataValues": [
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                },
-                "{bffdf499}": {
-                    "SpellDataValues": [
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "InitialDamage": {
                     "mFormulaParts": [
@@ -2147,8 +1995,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
-            "mCoefficient2": 0.5,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/AkaliMota.dds"
@@ -3013,92 +2859,6 @@
         "objectPath": "{f3e3777b}",
         "mScriptName": "Jade_AkaliP",
         "mSpell": {
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        36.0,
-                        36.0,
-                        36.0,
-                        36.0,
-                        36.0,
-                        36.0,
-                        36.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        13.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamageOnHit",
@@ -3175,6 +2935,32 @@
                         20.0,
                         20.0,
                         20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ForceAPTooltip",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MightADTooltip",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3930,7 +3716,7 @@
         "passiveLuaName": "Jade_AkaliP_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Akali",
         "passiveSpell": "Jade_AkaliP_Jade",
-        "passive1IconName": "ASSETS/Characters/Jade_Akali/HUD/Icons2D/Jade_Akali_P.dds",
+        "passive1IconName": "assets/characters/jade_akali/hud/icons2d/jade_akali_p.dds",
         "name": "game_character_displayname_Jade_Akali",
         "weaponMaterials": [
             "Jade_AkaliBasicAttack",

@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Când viața lui Blitzcrank este sub 20%, își activează ''Bariera de mană''. Aceasta creează un scut de mană în valoare de 50% din mana sa care rezistă cel mult 10 secunde. ''Bariera de mană'' se poate activa o dată la 90 de secunde."
+        "description": "Când are viață puțină și suferă daune, Blitzcrank primește mai întâi un scut egal cu un procent din mana actuală. Acest efect are un timp de reactivare."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank își aruncă înainte pumnul drept pentru a prinde un adversar de pe traiectorie, provocându-i daune și trăgându-l spre el.",
             "dynamicDescription": "Blitzcrank își aruncă înainte pumnul drept, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage>, <status>amețind</status> ținta și <status>trăgând-o</status> spre el.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Blitzcrank își încarcă pumnul pentru ca următorul lui atac să provoace daune duble și să arunce ținta în sus.",
-            "dynamicDescription": "Blitzcrank își încarcă pumnul pentru ca următorul lui atac să provoace <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>, iar ținta lui să fie <status>aruncată în sus</status> timp de @CCDuration@ secundă.@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank își încarcă pumnul pentru ca următorul lui atac să provoace daune bonus și să arunce ținta în sus.",
+            "dynamicDescription": "Blitzcrank își încarcă pumnul pentru ca următorul lui atac să provoace <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>, iar ținta lui să fie <status>aruncată în sus</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Produce în mod pasiv fulgere care provoacă daune unui inamic din apropiere. În plus, Blitzcrank poate activa această abilitate pentru a le provoca daune inamicilor din apropiere și pentru a-i amuți timp de 0,5 secunde, dar această acțiune elimină fulgerele pasive până când ''Câmpul static'' este disponibil din nou.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>la fiecare 2,5 secunde, din Blitzcrank sar fulgere care lovesc un inamic aleatoriu din apropiere în valoare de <magicDamage>@PassiveDamage@ daune magice</magicDamage>.<br><br><spellActive>Activă: </spellActive>provoacă <magicDamage>@ActiveDamage@ daune magice</magicDamage> și <status>amuțește</status> unitățile inamice din jur timp de 0,5 secunde.@SpellModifierDescriptionAppend@",
+            "description": "Produce în mod pasiv fulgere care provoacă daune unui inamic din apropiere. În plus, Blitzcrank poate activa această abilitate pentru a le provoca daune inamicilor din apropiere și pentru a-i amuți pentru scurt timp.",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>la fiecare @PassiveHitRate@ secunde, din Blitzcrank sar fulgere care lovesc un inamic aleatoriu din apropiere în valoare de <magicDamage>@PassiveDamage@ daune magice</magicDamage>.<br><br><spellActive>Activă: </spellActive>provoacă <magicDamage>@ActiveDamage@ daune magice</magicDamage> și <status>amuțește</status> unitățile inamice din jur timp de @SilenceDuration@ secunde. Pasiva este dezactivată cât timp ''Câmpul static'' este în perioada de reactivare.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

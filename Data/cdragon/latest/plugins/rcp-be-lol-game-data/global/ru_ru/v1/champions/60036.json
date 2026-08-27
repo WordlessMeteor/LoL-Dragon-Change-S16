@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Токсичный доктор Мундо",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Мундо не токсичный – он прекрасно контролировать эмоции. А, вы про эту фиолетовую жижу? Ее он тоже контролировать."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Доктор Мундо раз в секунду восстанавливает 0,3% от своего макс. здоровья."
+        "description": "Доктор Мундо раз в секунду восстанавливает долю своего макс. здоровья."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Доктор Мундо швыряет тесак, нанося урон, зависящий от макс. здоровья цели.",
-            "dynamicDescription": "<mainText>Доктор Мундо швыряет свой тесак, нанося цели <magicDamage>магический урон</magicDamage>, равный @DamageMod*100@% от ее текущего здоровья (мин. урон – @MinDamage@), и <status>замедляя</status> ее на 40% на 2 сек.<br><br>Половина затрат здоровья возмещается, если тесак находит цель.",
+            "dynamicDescription": "Доктор Мундо швыряет свой тесак, нанося цели <magicDamage>маг. урон</magicDamage>, равный @DamageMod*100@% от ее текущего здоровья (мин. урон – @MinDamage@), и <status>замедляя</status> ее на @MoveMod*-100@% на @SlowDuration@ сек.<br><br><healing>@HealthReturn@ здоровья</healing> возмещается, если тесак находит цель.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Мазохизм на 5 сек. повышает силу атаки Доктора Мундо на фиксированную величину плюс некоторую величину, зависящую от его недостающего здоровья.",
-            "dynamicDescription": "Доктор Мундо получает <physicalDamage>@BaseIncrease@ силы атаки</physicalDamage> на 5 сек. Доктор Мундо получает еще <physicalDamage>@DamageMod@ силы атаки</physicalDamage> (зависит от его недостающего здоровья).@SpellModifierDescriptionAppend@",
+            "description": "Доктор Мундо на несколько секунд получает силу атаки, зависящую от недост. здоровья.",
+            "dynamicDescription": "Доктор Мундо получает <physicalDamage>@BaseIncrease@ силы атаки</physicalDamage> на @Duration@ сек. Доктор Мундо получает еще <physicalDamage>@DamageMod@ силы атаки</physicalDamage> (зависит от его недост. здоровья).@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% от текущего здоровья</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Доктор Мундо жертвует частью своего здоровья, чтобы повысить скорость передвижения и значительно увеличить восстановление здоровья.",
-            "dynamicDescription": "<mainText>Доктор Мундо восстанавливает <healing>@MaximumHealthRegen@ здоровья</healing> за 12 сек. Также он получает <speed>@SpeedMod*100@% скорости передвижения</speed>.",
+            "dynamicDescription": "Доктор Мундо восстанавливает <healing>@MaximumHealthRegen@ здоровья</healing> и получает <speed>@SpeedMod*100@% скорости передвижения</speed> в течение @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

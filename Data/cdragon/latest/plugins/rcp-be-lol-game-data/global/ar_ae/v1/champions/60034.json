@@ -647,7 +647,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Anivia_Rebirth.project_jade.png",
         "abilityVideoPath": "champion-abilities/60034/ability_60034_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60034/ability_60034_P1.jpg",
-        "description": "عند موتها، تعود أنيفيا إلى هيئة بيضة. إذا تمكنت البيضة من الصمود لمدة ست ثوان، تولد من جديد بشكل مهيب."
+        "description": "عند موتها، تعود أنيفيا إلى هيئة بيضة. إذا تمكنت البيضة من الصمود، تولد من جديد بشكل مهيب."
     },
     "spells": [
         {
@@ -659,7 +659,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تضم أنيفيا جناحيها معًا وتستدعي كرة جليدية تطير نحو خصومها، فتطبق تأثير القشعريرة على كل من في طريقها وتلحق بهم الضرر. وعندما تنفجر الكرة، تلحق ضررًا متوسطًا ضمن نطاق، فتصعق كل من في المنطقة.",
-            "dynamicDescription": "تطير كتلة جليدية ضخمة نحو الموقع المستهدف، فتلحق <magicDamage>@TotalPassthroughDamage@ ضرر سحر</magicDamage> وتطبق تأثير القشعريرة على الأهداف و<status>تبطئ</status> سرعة حركتها بنسبة 20%. <br><br>وعند الوصول إلى مداها الأقصى، أو إذا قامت أنيفيا <recast>بإعادة إلقاء</recast> التعويذة، تنفجر القذيفة، فتلحق <magicDamage>@TotalExplosionDamage@ ضرر سحر</magicDamage> ضمن منطقة صغيرة و<status>تصعق</status> الوحدات لمدة @StunDuration@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطير كتلة جليدية ضخمة نحو الموقع المستهدف، فتلحق <magicDamage>@TotalPassthroughDamage@ ضرر سحر</magicDamage> وتطبق تأثير القشعريرة على الأهداف و<status>تبطئ</status> سرعة حركتها بنسبة @MovementSpeedMod*-100@% لمدة @SlowDuration@ث.<br><br>وعند الوصول إلى مداها الأقصى، أو إذا قامت أنيفيا <recast>بإعادة إلقاء</recast> التعويذة، تنفجر القذيفة، فتلحق <magicDamage>@TotalExplosionDamage@ ضرر سحر</magicDamage> ضمن منطقة صغيرة و<status>تصعق</status> الوحدات لمدة @StunDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,

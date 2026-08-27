@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Toxic Dr. Mundo",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo ไม่มีพิษภัย Mundo มีวิธีการจัดการอารมณ์ที่ดี—โอ้ เจ้าหมายถึงเมือกม่วง ๆ เหรอ? Mundo ว่ามันก็เข้าท่าเหมือนกัน"
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo ฟื้นฟูพลังชีวิต 0.3% ของพลังชีวิตสูงสุดทุก ๆ วินาที"
+        "description": "Dr. Mundo ฟื้นฟูพลังชีวิตส่วนหนึ่งของพลังชีวิตสูงสุดทุก ๆ วินาที"
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>พลังชีวิต @HealthCost@ หน่วย</font>",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Dr. Mundo ขว้างมีดปังตอ สร้างความเสียหายตามพลังชีวิตสูงสุดของเป้าหมาย",
-            "dynamicDescription": "<mainText>Dr. Mundo ขว้างมีดปังตอของเขา สร้าง<magicDamage>ความเสียหายเวท</magicDamage>เท่ากับ @DamageMod*100@% ของพลังชีวิตปัจจุบันของเป้าหมาย (ความเสียหายขั้นต่ำ @MinDamage@ หน่วย) และ<status>สโลว์</status>พวกเขา 40% เป็นเวลา 2 วินาที<br><br>ได้รับพลังชีวิตคืนครึ่งหนึ่งหากขว้างปังตอโดนเป้าหมาย",
+            "dynamicDescription": "Dr. Mundo ขว้างมีดปังตอของเขา สร้าง<magicDamage>ความเสียหายเวท</magicDamage>เท่ากับ @DamageMod*100@% ของพลังชีวิตปัจจุบันของเป้าหมาย (ความเสียหายขั้นต่ำ @MinDamage@ หน่วย) และ<status>สโลว์</status>พวกเขา @MoveMod*-100@% เป็นเวลา @SlowDuration@ วินาที<br><br>ได้รับ<healing>พลังชีวิตคืน @HealthReturn@ หน่วย</healing>หากขว้างปังตอโดนเป้าหมาย@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>พลังชีวิต @HealthCost@ หน่วย</font>",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Masochism จะเพิ่มพลังโจมตีของ Dr. Mundo เป็นค่าคงที่ เป็นเวลา 5 วินาที นอกจากนี้ Dr. Mundo จะได้รับพลังโจมตีเพิ่มเติมตามเปอร์เซ็นต์พลังชีวิตที่เสียไป",
-            "dynamicDescription": "Dr. Mundo ได้รับ<physicalDamage>พลังโจมตี @BaseIncrease@ หน่วย</physicalDamage> เป็นเวลา 5 วินาที นอกจากนี้ Dr. Mundo จะได้รับ<physicalDamage>พลังโจมตีเพิ่มเติม +@DamageMod@ หน่วย</physicalDamage> ตามเปอร์เซ็นต์พลังชีวิตที่เสียไป@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo ได้รับพลังโจมตีเพิ่มขึ้นชั่วขณะตามพลังชีวิตที่เสียไป",
+            "dynamicDescription": "Dr. Mundo ได้รับ<physicalDamage>พลังโจมตี @BaseIncrease@ หน่วย</physicalDamage> เป็นเวลา @Duration@ วินาที นอกจากนี้ Dr. Mundo จะได้รับ<physicalDamage>พลังโจมตีเพิ่มเติม +@DamageMod@ หน่วย</physicalDamage> ตามเปอร์เซ็นต์พลังชีวิตที่เสียไป@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% ของพลังชีวิตปัจจุบัน</font>",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Dr. Mundo สละพลังชีวิตส่วนหนึ่งเพื่อแลกกับความเร็วในการเคลื่อนที่ พร้อมทั้งฟื้นฟูพลังชีวิตอย่างมาก",
-            "dynamicDescription": "<mainText>Dr. Mundo ฟื้นฟู<healing>พลังชีวิต @MaximumHealthRegen@ หน่วย</healing>เป็นเวลา 12 วินาที นอกจากนี้ เขายังได้รับ<speed>ความเร็วเคลื่อนที่ @SpeedMod*100@%</speed>",
+            "dynamicDescription": "Dr. Mundo ฟื้นฟู<healing>พลังชีวิต @MaximumHealthRegen@ หน่วย</healing> และได้รับ<speed>ความเร็วเคลื่อนที่ @SpeedMod*100@%</speed> เป็นเวลา @Duration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

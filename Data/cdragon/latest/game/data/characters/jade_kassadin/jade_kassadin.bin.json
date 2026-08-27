@@ -86,7 +86,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -100,7 +100,7 @@
         "mRootSpell": "Characters/Jade_Kassadin/Spells/Jade_KassadinWAbility/Jade_KassadinW",
         "mChildSpells": [
             "Characters/Jade_Kassadin/Spells/Jade_KassadinWAbility/Jade_KassadinW",
-            "{c3d462df}"
+            "Characters/Jade_Kassadin/Spells/Jade_KassadinWAbility/Jade_KassadinW_Buff"
         ],
         "mName": "Jade_KassadinWAbility",
         "__type": "AbilityObject"
@@ -122,74 +122,6 @@
                 "PositiveEffect_EmpowerAttack",
                 "Trait_AttackReset"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.5,
-                        5.0,
-                        5.5,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        50.0,
-                        75.0,
-                        100.0,
-                        125.0,
-                        150.0,
-                        175.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        22.5,
-                        25.0,
-                        27.5,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "ManaGainAmount",
@@ -205,6 +137,19 @@
                     "__type": "SpellDataValue"
                 },
                 {
+                    "name": "ChampionManaMod",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "BaseDamage",
                     "values": [
                         15.0,
@@ -216,11 +161,10 @@
                         105.0
                     ],
                     "__type": "SpellDataValue"
-                }
-            ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
                         5.0,
                         5.0,
                         5.0,
@@ -229,9 +173,9 @@
                         5.0,
                         5.0
                     ],
-                    "__type": "SpellEffectAmount"
+                    "__type": "SpellDataValue"
                 }
-            },
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -245,10 +189,22 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{d2436d75}": {
+                    "mMultiplier": {
+                        "mDataValue": "ChampionManaMod",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ManaGainAmount",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.10000000149011612,
-            "mCoefficient2": 0.800000011920929,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.dds"
@@ -367,15 +323,15 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "BaseDamage",
-                                    "typeIndex": 3,
-                                    "nameOverride": "Spell_ListType_BaseDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "ManaGainAmount",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_KassadinBaseManaRestore",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -438,9 +394,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c3d462df}": {
+    "Characters/Jade_Kassadin/Spells/Jade_KassadinWAbility/Jade_KassadinW_Buff": {
         "ObjectName": "Jade_KassadinW_Buff",
-        "objectPath": "{c3d462df}",
+        "objectPath": "Characters/Jade_Kassadin/Spells/Jade_KassadinWAbility/Jade_KassadinW_Buff",
         "mScriptName": "Jade_KassadinW_Buff",
         "mSpell": {
             "flags": 4,
@@ -860,7 +816,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -958,7 +914,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -972,15 +928,15 @@
         "mRootSpell": "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE",
         "mChildSpells": [
             "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE",
-            "{a427ec3b}",
-            "{5d0f24de}"
+            "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_CanCast",
+            "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_Counter"
         ],
         "mName": "Jade_KassadinEAbility",
         "__type": "AbilityObject"
     },
-    "{5d0f24de}": {
+    "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_Counter": {
         "ObjectName": "Jade_KassadinE_Counter",
-        "objectPath": "{5d0f24de}",
+        "objectPath": "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_Counter",
         "mScriptName": "Jade_KassadinE_Counter",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1233,9 +1189,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a427ec3b}": {
+    "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_CanCast": {
         "ObjectName": "Jade_KassadinE_CanCast",
-        "objectPath": "{a427ec3b}",
+        "objectPath": "Characters/Jade_Kassadin/Spells/Jade_KassadinEAbility/Jade_KassadinE_CanCast",
         "mScriptName": "Jade_KassadinE_CanCast",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1494,56 +1450,6 @@
         "mScriptName": "Jade_KassadinE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0,
-                        80.0,
-                        90.0,
-                        100.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "Damage",
@@ -1568,6 +1474,45 @@
                         -0.5,
                         -0.6000000238418579,
                         -0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RequiredChargesTooltip",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeRange",
+                    "values": [
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1670,7 +1615,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_KassadinE_Jade_Name",
                         "keySummary": "Spell_KassadinE_Jade_Summary",
-                        "keyTooltip": "Spell_KassadinE_Jade_Tooltip"
+                        "keyTooltip": "Spell_KassadinE_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_KassadinE_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -1850,10 +1796,10 @@
         "__type": "SpellObject"
     },
     "{84758534}": {
-        "mRootSpell": "{e9d4bf21}",
+        "mRootSpell": "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive",
         "mChildSpells": [
-            "{e9d4bf21}",
-            "{a307fe40}"
+            "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive",
+            "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive_AttackSpeedBoost"
         ],
         "mName": "Jade_KassadinPassiveAbility",
         "__type": "AbilityObject"
@@ -2327,6 +2273,45 @@
                         0.699999988079071
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AdditionalManaPerCast",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2502,7 +2487,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_KassadinR_Jade_Name",
                         "keySummary": "Spell_KassadinR_Jade_Summary",
-                        "keyTooltip": "Spell_KassadinR_Jade_Tooltip"
+                        "keyTooltip": "Spell_KassadinR_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_KassadinR_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2562,9 +2548,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a307fe40}": {
+    "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive_AttackSpeedBoost": {
         "ObjectName": "Jade_KassadinPassive_AttackSpeedBoost",
-        "objectPath": "{a307fe40}",
+        "objectPath": "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive_AttackSpeedBoost",
         "mScriptName": "Jade_KassadinPassive_AttackSpeedBoost",
         "mSpell": {
             "mImgIconName": [
@@ -2613,11 +2599,52 @@
         },
         "__type": "SpellObject"
     },
-    "{e9d4bf21}": {
+    "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive": {
         "ObjectName": "Jade_KassadinPassive",
-        "objectPath": "{e9d4bf21}",
+        "objectPath": "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive",
         "mScriptName": "Jade_KassadinPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MagicDamageReduction",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedConversion",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedBuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.dds"
             ],
@@ -2779,15 +2806,6 @@
                 "__type": "RootScriptSequence"
             },
             "{012590a0}": {
-                "__type": "RootScriptSequence"
-            },
-            "{3ab2bdd3}": {
-                "__type": "RootScriptSequence"
-            },
-            "{f25fa290}": {
-                "__type": "RootScriptSequence"
-            },
-            "{6a420564}": {
                 "__type": "RootScriptSequence"
             }
         },
@@ -2963,7 +2981,7 @@
         "passiveName": "game_character_passiveName_Jade_Kassadin",
         "passiveLuaName": "Jade_Kassadin_VoidStone",
         "passiveToolTip": "game_character_passiveDescription_Jade_Kassadin",
-        "passive1IconName": "ASSETS/Characters/Jade_Kassadin/HUD/Icons2D/Jade_Kassadin_Passive.dds",
+        "passive1IconName": "assets/characters/jade_kassadin/hud/icons2d/jade_kassadin_passive.dds",
         "name": "game_character_displayname_Jade_Kassadin",
         "weaponMaterials": [
             "ArmsmasterBasicAttack"
@@ -3053,7 +3071,7 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{e9d4bf21}",
+        "mCharacterPassiveSpell": "Characters/Jade_Kassadin/Spells/Jade_KassadinPassiveAbility/Jade_KassadinPassive",
         "mCharacterPassiveBuffs": [
             {
                 "mParentPassiveBuff": "Characters/Jade_Kassadin/Spells/Jade_KassadinAttackSequencer",

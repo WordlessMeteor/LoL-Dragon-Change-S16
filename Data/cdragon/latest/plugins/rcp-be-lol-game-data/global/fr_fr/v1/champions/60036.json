@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Dr. Mundo toxique",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo pas toxique, Mundo a très bon mécanisme de défense émotionnelle. Oh, vous voulez parler de ce machin gluant violet ? Mundo est sûr que c'est pas toxique non plus."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo régénère 0.3% de ses PV max chaque seconde."
+        "description": "Dr. Mundo régénère une portion de ses PV max chaque seconde."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ PV.</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Dr. Mundo lance son couperet, infligeant des dégâts en fonction des PV max de ses ennemis.",
-            "dynamicDescription": "<mainText>Dr. Mundo lance son couperet, infligeant des <magicDamage>dégâts magiques</magicDamage> équivalents à @DamageMod*100@% des PV actuels de la cible (@MinDamage@ pts de dégâts minimum) et la <status>ralentissant</status> de 40% pendant 2 sec.<br><br>La moitié du coût en PV est remboursée si le couperet touche une cible.",
+            "dynamicDescription": "Dr. Mundo lance son couperet, infligeant des <magicDamage>dégâts magiques</magicDamage> équivalents à @DamageMod*100@% des PV actuels de la cible (@MinDamage@ pts de dégâts minimum) et la <status>ralentissant</status> de @MoveMod*-100@% pendant @SlowDuration@ sec.<br><br><healing>@HealthReturn@ PV</healing> sont remboursés si le couperet touche une cible.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ PV.</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Masochisme augmente les dégâts d'attaque de Dr. Mundo d'un montant fixe pendant 5 sec. Dr. Mundo gagne aussi des dégâts d'attaque pour chaque pourcentage de PV qui lui manque.",
-            "dynamicDescription": "Dr. Mundo gagne <physicalDamage>@BaseIncrease@ dégâts d'attaque</physicalDamage> pendant 5 sec. Dr. Mundo gagne aussi <physicalDamage>+@DamageMod@ dégâts d'attaque</physicalDamage> pour chaque pourcent de PV qui lui manque.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo gagne des dégâts d'attaque pendant quelques secondes en fonction de ses PV manquants.",
+            "dynamicDescription": "Dr. Mundo gagne <physicalDamage>@BaseIncrease@ dégâts d'attaque</physicalDamage> pendant @Duration@ sec. Dr. Mundo gagne aussi <physicalDamage>@DamageMod@ dégâts d'attaque</physicalDamage> pour chaque pourcent de PV qui lui manque.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% des PV actuels</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Dr. Mundo sacrifie une partie de ses PV pour améliorer sa vitesse de déplacement et augmenter nettement la régénération de ses PV.",
-            "dynamicDescription": "<mainText>Dr. Mundo récupère <healing>@MaximumHealthRegen@ PV</healing> en 12 sec. De plus, il gagne <speed>@SpeedMod*100@% de vitesse de déplacement</speed>.",
+            "dynamicDescription": "Dr. Mundo régénère <healing>@MaximumHealthRegen@ PV</healing> et gagne <speed>@SpeedMod*100@% de vitesse de déplacement</speed> en @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Když Blitzcrankovo zdraví klesne pod 20 %, aktivuje se mu Manová bariéra. Tím si na 10 sekund vytvoří manový štít o síle 50 % své many. Manová bariéra se může aktivovat jen jednou za 90 sekund."
+        "description": "Pokud by měl Blitzcrank utrpět poškození při nízké hodnotě zdraví, získá nejprve štít, jehož síla se odvíjí od určitého procenta jeho aktuální many. Tento efekt má vlastní přebíjecí dobu."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank vystřelí svou pravačku, která popadne prvního protivníka, na nějž narazí. Způsobí mu tím poškození a přitáhne si ho k sobě.",
             "dynamicDescription": "Blitzcrank vystřelí svou pravačku, čímž cíli způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>, <status>omráčí</status> ho a <status>přitáhne</status> si ho k sobě.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Blitzcrank nabije svou pěst, jeho následující útok tak způsobí dvojnásobné poškození a vyhodí cíl do vzduchu.",
-            "dynamicDescription": "Blitzcrank si nabije pěst, jeho následující útok tak způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a vyhodí cíl na @CCDuration@ sek. <status>do vzduchu</status>.@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank nabije svou pěst, jeho následující útok tak způsobí bonusové poškození a vyhodí cíl do vzduchu.",
+            "dynamicDescription": "Blitzcrank si nabije pěst, jeho následující útok tak způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a vyhodí cíl <status>do vzduchu</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pasivně zasahuje okolní nepřátele energetickými výboji. Pokud Blitzcrank tuto schopnost aktivuje, způsobí okolním protivníkům další poškození a na 0,5 sekundy je umlčí. Zruší tím však pasivní výboje do doby, než se Statické pole opět dobije.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Z Blitzcranka každých 2,5 sek. vystřelí blesk, který zasáhne náhodného protivníka v jeho okolí a způsobí mu <magicDamage>@PassiveDamage@ bodů magického poškození</magicDamage>.<br><br><spellActive>Aktivace: </spellActive> Blitzcrank způsobí okolním nepřátelským jednotkám <magicDamage>@ActiveDamage@ bodů magického poškození</magicDamage> a na 0,5 sekundy je <status>umlčí</status>.@SpellModifierDescriptionAppend@",
+            "description": "Pasivně zasahuje okolní nepřátele energetickými výboji. Blitzcrank může také tuto schopnost aktivovat, čímž způsobí poškození okolním nepřátelům a na chvíli je umlčí.",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Z Blitzcranka v pravidelném intervalu @PassiveHitRate@ sek. vystřelí blesk, který zasáhne náhodného protivníka v jeho okolí a způsobí mu <magicDamage>@PassiveDamage@ bodů magického poškození</magicDamage>.<br><br><spellActive>Aktivace: </spellActive>Blitzcrank způsobí okolním nepřátelským jednotkám <magicDamage>@ActiveDamage@ bodů magického poškození</magicDamage> a na @SilenceDuration@ sek. je <status>umlčí</status>. Pokud Statickému poli běží přebíjecí doba, pasivní efekt nepůsobí.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

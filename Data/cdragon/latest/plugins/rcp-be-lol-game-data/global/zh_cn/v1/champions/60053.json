@@ -697,7 +697,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "布里茨的生命值降到20%以下时，法力屏障就会激活，生成一道相当于其50%法力值的护盾，持续10秒。法力屏障每90秒内只能触发一次。"
+        "description": "在低生命值状态受到伤害时，布里茨会先获得护盾，数额相当于它的一部分当前法力值。这个效果有一段冷却时间。"
     },
     "spells": [
         {
@@ -711,20 +711,20 @@
             "description": "布里茨发射右手，对命中的第一个敌人造成伤害，并将其拉到自己面前。",
             "dynamicDescription": "布里茨发射右手，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，<status>晕眩</status>目标并将其<status>拉拽</status>到自己身边。@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -1008,8 +1008,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "布里茨为机械手臂充能，下次攻击造成双倍伤害并击飞目标。",
-            "dynamicDescription": "布里茨为机械手臂充能，使下次攻击造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，并将目标<status>击飞</status>@CCDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "布里茨为它的机械手臂充能，以使它的下次攻击造成额外伤害并击飞目标。",
+            "dynamicDescription": "布里茨为它的机械手臂充能，以使它的下次攻击造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并<status>击飞</status>目标。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1032,7 +1032,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1158,8 +1158,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "被动生成电弧，对附近的一名敌人造成伤害。此外，主动施放时对周围的敌人造成伤害和0.5秒沉默，但在施放后会暂时禁用被动电弧效果，直到技能冷却完毕。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>布里茨周身生成电弧，每2.5秒对附近一名随机敌人造成<magicDamage>@PassiveDamage@魔法伤害</magicDamage>。<br><br><spellActive>主动：</spellActive>对周围敌方单位造成<magicDamage>@ActiveDamage@魔法伤害</magicDamage>和0.5秒<status>沉默</status>。@SpellModifierDescriptionAppend@",
+            "description": "被动地引发闪电弹来伤害一个附近的敌人。此外，布里茨可以主动激活这个技能来对附近的敌人造成伤害和短暂的沉默效果。",
+            "dynamicDescription": "<spellPassive>被动效果：</spellPassive>布里茨每@PassiveHitRate@秒会释放一道电弧，对附近的随机一个单位造成<magicDamage>@PassiveDamage@魔法伤害</magicDamage>。<br><br><spellActive>主动效果：</spellActive>对周围的敌方单位们造成<magicDamage>@ActiveDamage@魔法伤害</magicDamage>和@SilenceDuration@秒<status>沉默</status>。该被动效果会在【静电力场】尚未冷却完毕时失效。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1177,12 +1177,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

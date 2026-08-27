@@ -621,7 +621,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "Le abilità di Brand infiammano i suoi bersagli, infliggendo l'8% della loro salute massima in danni magici nell'arco di 4 secondi."
+        "description": "Le abilità di Brand infiammano i suoi bersagli, infliggendo una parte della loro salute massima in danni magici."
     },
     "spells": [
         {
@@ -633,7 +633,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Brand lancia in avanti una palla di fuoco che infligge danni magici. Se il bersaglio è in fiamme, Fuoco ardente lo stordisce.",
-            "dynamicDescription": "<mainText>Brand lancia in avanti una palla di fuoco che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.<br><br><spellPassive>Fiammata:</spellPassive> se il bersaglio è <keywordMajor>in fiamme</keywordMajor>, <spellName>Fuoco ardente</spellName> lo <status>stordisce</status> per 2 secondi.",
+            "dynamicDescription": "Brand lancia in avanti una palla di fuoco che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>.<br><br><spellPassive>Fiammata:</spellPassive> se il bersaglio è <keywordMajor>in fiamme</keywordMajor>, <spellName>Fuoco ardente</spellName> lo <status>stordisce</status> per @StunDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -659,18 +659,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

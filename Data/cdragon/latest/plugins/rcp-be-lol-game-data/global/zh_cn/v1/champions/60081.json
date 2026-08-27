@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "冒险精神 伊泽瑞尔",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "伊泽瑞尔是一名充满冒险精神的精灵，来自边远的森林王国。他喜欢把自己当作一个名为贾洛·轻羽的“英俊的游侠骑士”。极少有人相信他自称的骑士身份，但这些身份在他的每次悲惨的失败冒险之间起到了足够体面的消遣作用。"
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -819,7 +850,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度（最多可叠加5次）。"
+        "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度。"
     },
     "spells": [
         {
@@ -833,12 +864,12 @@
             "description": "伊泽瑞尔发射一枚能量弹，如果它击中一个敌方单位，那么它将略微减少伊泽瑞尔所有技能的冷却时间。",
             "dynamicDescription": "伊泽瑞尔发射一枚能量弹，造成<physicalDamage>@Damage@物理伤害</physicalDamage>（附带命中特效）。<br>如果<spellName>秘术射击</spellName>命中一个敌方单位，则减少伊泽瑞尔所有技能1秒冷却时间。<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -981,7 +1012,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "伊泽瑞尔发射一道起伏的能量波，降低途经敌方英雄的攻击速度并对其造成魔法伤害，同时为途经友方英雄回复生命值并提升其攻击速度。",
-            "dynamicDescription": "伊泽瑞尔发射一道能量波，对途经的所有敌方英雄造成<magicDamage>@Damage@魔法伤害</magicDamage>和持续5秒的@AttackSpeed@%<attackSpeed>攻击速度</attackSpeed>削减。<br><br>音波在命中友军时会为其回复<healing>@TotalHeal@生命值</healing>和持续5秒的@AttackSpeed@%<attackSpeed>攻击速度</attackSpeed>提升。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "伊泽瑞尔发射一道能量波，对它途经的所有敌方英雄造成<magicDamage>@Damage@魔法伤害</magicDamage>和持续@Duration@秒的@AttackSpeed@%<attackSpeed>攻击速度</attackSpeed>削减。<br><br>被命中的友方英雄会回复<healing>@TotalHeal@生命值</healing>并获得持续@Duration@秒的@AttackSpeed@%<attackSpeed>攻击速度</attackSpeed>提升。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1280,8 +1311,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "伊泽瑞尔引导1秒，发射一个强力的能量弹幕，弹幕将对它途经的每一个敌人造成魔法伤害。（每穿过一个单位，弹幕造成的伤害就会降低10%）。",
-            "dynamicDescription": "伊泽瑞尔引导1秒，发射一串弹幕，弹幕将对它途经的每一个单位造成<magicDamage>@Damage@魔法伤害</magicDamage>。但每命中一个单位，弹幕造成的伤害就会降低@DamageReductionPerHit*100@%（最低@MinimumDamagePercent*100@%）@SpellModifierDescriptionAppend@",
+            "description": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成高额伤害。",
+            "dynamicDescription": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成<magicDamage>@Damage@魔法伤害</magicDamage>。不过，每穿过一个单位，它造成的伤害就会降低@DamageReductionPerHit*100@%(最小值为@MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

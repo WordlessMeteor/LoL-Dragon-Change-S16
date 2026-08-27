@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Acolyte Lee Sin",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "Pakaian tradisional pengikut Shojin tidak pernah cocok di pundak Lee Sin muda yang ambisius, yang penuh dengan potensi kasar yang jauh lebih besar daripada yang dapat diimpikan oleh rekan pengikutnya. Namun, dia mulai terbiasa dengan pakaiannya dan juga kekuatan naganya."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Setelah Lee Sin menggunakan satu ability, 2 basic attack berikutnya memperoleh 40% Attack Speed dan mengembalikan 15 Energy setiap serangannya."
+        "description": "Setelah Lee Sin menggunakan satu ability, basic attack berikutnya memperoleh Attack Speed dan mengembalikan Energy."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Sonic Wave: Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh-musuhnya dan menghasilkan physical damage ke musuh pertama yang dihadapinya. Jika Sonic Wave mengenai musuh, Lee Sin bisa cast Resonating Strike dalam 3 detik berikutnya.<br>Resonating Strike: Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan physical damage plus 8% dari health mereka yang hilang.",
-            "dynamicDescription": "<spellName>Sonic Wave: </spellName>Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh-musuhnya dan menghasilkan <physicalDamage>@InitialDamage@ physical damage</physicalDamage> ke musuh pertama yang dihadapinya. Jika <spellName>Sonic Wave</spellName> mengenai musuh, Lee Sin bisa cast <spellName>Resonating Strike</spellName> untuk 3 detik berikutnya.<br><br><spellName>Resonating Strike: </spellName>Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan <physicalDamage>@RecastDamage@ physical damage</physicalDamage> plus 8% dari Health mereka yang hilang.@SpellModifierDescriptionAppend@",
+            "description": "Sonic Wave: Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh dan menghasilkan damage ke musuh pertama yang dihadapinya. Jika Sonic Wave mengenai musuh, Lee Sin bisa cast Resonating Strike.<br><br>Resonating Strike: Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan lebih banyak damage plus sebagian Health mereka yang hilang.",
+            "dynamicDescription": "<spellName>Sonic Wave: </spellName>Lee Sin memproyeksikan gelombang suara sumbang untuk menemukan musuh dan menghasilkan <physicalDamage>@InitialDamage@ physical damage</physicalDamage> ke musuh pertama yang dihadapinya. Jika <spellName>Sonic Wave</spellName> mengenai musuh, Lee Sin bisa cast <spellName>Resonating Strike</spellName> untuk 3 detik berikutnya.<br><br><spellName>Resonating Strike: </spellName>Lee Sin dash ke musuh yang terkena Sonic Wave, menghasilkan <physicalDamage>@RecastDamage@ physical damage</physicalDamage> plus @MissingHealthDamage*100@% dari Health mereka yang hilang.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Safeguard: Lee Sin melesat ke arah sekutu target, memberikan shield pada mereka berdua dari damage. Setelah menggunakan Safeguard, Lee Sin bisa cast Iron Will selama 3 detik berikutnya.<br>Iron Will: Latihan intens Lee Sin membuatnya kuat dalam pertempuran. Selama 4 detik, Lee Sin mendapatkan Lifesteal, Spell Vamp, dan Armor.",
-            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin melesat ke arah sekutu target, <shield>memberikan shield</shield> pada mereka berdua sebesar @ShieldAmount@ damage selama 5 detik berikutnya. Setelah menggunakan <spellName>Safeguard</spellName>, Lee Sin bisa cast <spellName>Iron Will</spellName> selama 3 detik berikutnya.<br><br><spellName>Iron Will: </spellName>Latihan intens Lee Sin membuatnya kuat dalam pertempuran. Selama 5 detik, Lee Sin mendapatkan @LifestealAndSpellVamp@% Lifesteal, Spell Vamp, dan <scaleArmor>@ArmorBonus@ Armor</scaleArmor>.@SpellModifierDescriptionAppend@",
+            "description": "Safeguard: Lee Sin melesat ke arah sekutu target, memberikan shield pada mereka berdua dari damage. Setelah menggunakan Safeguard, Lee Sin bisa cast Iron Will.<br><br>Iron Will: Latihan intens Lee Sin membuatnya kuat dalam pertempuran, memberinya Life Steal, Spell Vamp, dan Armor.",
+            "dynamicDescription": "<spellName>Safeguard: </spellName>Lee Sin melesat ke arah sekutu target, <shield>memberikan shield</shield> pada mereka berdua sebesar @ShieldAmount@ damage selama @ShieldDuration@ detik berikutnya. Setelah menggunakan <spellName>Safeguard</spellName>, Lee Sin bisa cast <spellName>Iron Will</spellName> selama @W1ReactivateTime@ detik berikutnya.<br><br><spellName>Iron Will: </spellName>Latihan intens Lee Sin membuatnya kuat dalam pertempuran. Selama @LifestealAndSpellVampTime@ detik, Lee Sin mendapatkan @LifestealAndSpellVamp@% Life Steal, Spell Vamp, dan <scaleArmor>@ArmorBonus@ Armor</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

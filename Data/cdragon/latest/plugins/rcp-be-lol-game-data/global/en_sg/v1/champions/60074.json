@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Blast Zone Heimerdinger",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "An eccentric scientist living in the New Bandle Republic, Heimerdinger has not yet told anyone he may have developed “a large pre-war bomb or two” for “one or more rogue governments”. He would prefer tinkering in a city that is not actively trying to kill him."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lays down a machine gun turret. Turrets gain abilities as this skill is increased. (Turrets deal half damage to towers).",
-            "dynamicDescription": "Heimerdinger constructs a Machine Gun Turret that deals <magicDamage>@BonusDamage@ magic damage</magicDamage> per attack. This ability has @MaxAmmo@ charges (@AmmoRechargeTime@ second refresh).<br><br>Each rank of this skill grants a further enhancement:<br><attention>Rank 2:</attention> Turret attacks reduce the target's Armor and Magic Resist by 1 (max 50)<br><attention>Rank 3:</attention> Maximum turrets increased to 2<br><attention>Rank 4:</attention> Turrets gain an additional <scaleHealth>125 Health</scaleHealth><br><attention>Rank 5:</attention>  Turret attacks deal area damage@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger constructs a Machine Gun Turret that deals <magicDamage>@BonusDamage@ magic damage</magicDamage> per attack. Turrets gain <attackSpeed>@TurretBonusAttackSpeed*100@% attack speed</attackSpeed> for the first @AttackSpeedDuration@ seconds after being placed. This ability has @MaxAmmo@ charges (@AmmoRechargeTime@ second refresh).<br><br>Each rank of this skill grants a further enhancement:<br><attention>Rank 2:</attention> Turret attacks reduce the target's Armor and Magic Resist by @Level2ResistShred@ (max @MaxShredCapTooltip@)<br><attention>Rank 3:</attention> Maximum turrets increased to 2<br><attention>Rank 4:</attention> Turrets gain an additional <scaleHealth>@Level4HPTooltip@ Health</scaleHealth><br><attention>Rank 5:</attention>  Turret attacks deal @AoEDamageMod*100@% splash damage@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger fires long-range rockets that hit the enemies closest to Heimerdinger.",
-            "dynamicDescription": "Heimerdinger fires 3 enemy seeking Micro-Rocket(s) (max 1 per person), hitting targets nearest to him. Each rocket deals <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger fires @MaxTargets@ enemy seeking Micro-Rocket(s) (max 1 per person), hitting targets nearest to him. Each rocket deals <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units as well as stunning anyone directly hit and blinding surrounding units.",
-            "dynamicDescription": "Heimerdinger tosses a grenade, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemy units and <status>Blinding</status> them for @BlindDuration@ seconds.  Enemies who are directly hit are <status>Stunned</status> for 1.5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger tosses a grenade, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemy units and <status>Blinding</status> them for @BlindDuration@ seconds.  Enemies who are directly hit are <status>Stunned</status> for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passive / Active: Passively increases Cooldown Reduction.  Activate to heal all active Evolution Turrets and cause them to fire frost shots, which reduce Movement Speed, for a short time.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>@CooldownBonus*-100@% Cooldown Reduction.<br><br><spellActive>Active: </spellActive>Empower all abilities and turrets for the duration.<br><br><spellName>Evolution Turrets:</spellName> All turrets are <healing>healed</healing> for 100% of their maximum health and each attack applies a <status>@MovementSpeedMod*-100@% Slow</status>.<br><spellName>Hextech Micro-Rockets:</spellName> Fire 5 rockets instead of 3.<br><spellName>CH-1 Concussion Grenade:</spellName> Travels 33% faster.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>@CooldownBonus*-100@% Cooldown Reduction.<br><br><spellActive>Active: </spellActive>Empower all abilities and turrets for the duration.<br><br><spellName>Evolution Turrets:</spellName> All turrets are fully <healing>healed</healing>. Each attack applies a <status>@MovementSpeedMod*-100@% Slow</status>.<br><spellName>Hextech Micro-Rockets:</spellName> Fire @WMaxMissiles@ rockets.<br><spellName>CH-1 Concussion Grenade:</spellName> Travels 33% faster.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

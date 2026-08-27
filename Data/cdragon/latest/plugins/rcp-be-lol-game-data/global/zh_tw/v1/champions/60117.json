@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "對友軍施放時，皮克斯會跳到一名友軍身上賦予護盾，接著他會附身對方，協助其攻擊。對敵軍施放時，皮克斯會跳到一名敵軍身上造成傷害，接著他會附身對方，讓你獲得該敵軍的視野。",
-            "dynamicDescription": "<mainText>對友軍施放時：指揮皮克斯跳到一名友軍身上，在接下來6秒內附身對方，由協助露璐攻擊改為協助該友軍攻擊。皮克斯開始附身後6秒內，會提供<shield>@TotalShield@護盾</shield>。<br><br>對敵軍施放時：皮克斯對目標敵方單位造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。接著，皮克斯會附身到目標身上，讓你獲得該敵軍的視野6秒。",
+            "dynamicDescription": "對友軍施放時：指揮皮克斯跳到一名友軍身上，在接下來@AllyFollowDuration@秒內附身對方，由協助露璐攻擊改為協助該友軍攻擊。皮克斯開始附身後@ShieldDuration@秒內，會提供<shield>@TotalShield@護盾</shield>。<br><br>對敵軍施放時：皮克斯對目標敵方單位造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。接著，皮克斯會附身到目標身上，讓你獲得該敵軍的視野@EnemyFollowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "露璐使一位友軍巨大化，將鄰近敵軍擊飛至空中，同時使該名友軍增加大量額外生命。接下來數秒內，該友軍周圍會產生可以緩速鄰近敵軍的靈氣。",
-            "dynamicDescription": "<mainText>露璐將一名友軍變大，<status>擊飛</status>鄰近敵軍。該友軍獲得持續@BuffDuration@秒的<scaleHealth>@TotalBonusHealth@額外生命</scaleHealth>，鄰近敵軍則會<status>緩速</status>@SlowPercent@%，持續1秒。",
+            "dynamicDescription": "露璐將一名友軍變大，<status>擊飛</status>鄰近敵軍。該友軍獲得<scaleHealth>@TotalBonusHealth@額外生命</scaleHealth>，鄰近敵軍則會<status>緩速</status>@SlowPercent@%，持續@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

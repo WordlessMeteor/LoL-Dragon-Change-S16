@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Когда у Блицкранка менее 20% здоровья, он активирует Щит маны, на 10 сек. окружая себя щитом, поглощающим урон, равный 50% от его текущего запаса маны. Щит маны можно активировать не чаще 1 р. в 90 сек."
+        "description": "Перед получением урона при низком здоровье Блицкранк получает щит прочностью в долю текущ. маны. Эффект имеет перезарядку."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Блицкранк выстреливает правой рукой, притягивая первого пораженного врага к себе и нанося ему урон.",
             "dynamicDescription": "Блицкранк выпускает правую руку, нанося <magicDamage>@TotalDamage@ магического урона</magicDamage>, <status>оглушая</status> цель и <status>притягивая</status> ее к себе.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Блицкранк заряжает кулак энергией, чтобы нанести двойной урон и подбросить противника в воздух при следующей атаке.",
-            "dynamicDescription": "Блицкранк заряжает свой кулак, и его следующая автоатака наносит <physicalDamage>@TotalDamage@ физического урона</physicalDamage> и <status>подбрасывает</status> цель на @CCDuration@ сек.@SpellModifierDescriptionAppend@",
+            "description": "Блицкранк заряжает кулак энергией, чтобы нанести доп. урон и подбросить противника в воздух при следующей атаке.",
+            "dynamicDescription": "Блицкранк заряжает свой кулак, и его следующая автоатака дополнительно наносит <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> и <status>подбрасывает</status> цель.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Блицкранк пассивно бьет молниями в случайного врага неподалеку раз в несколько секунд. Умение можно активировать, чтобы нанести урон всем врагам поблизости и заставить их замолчать на 0.5 секунды, потеряв при этом пассивный эффект на время перезарядки.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Блицкранк бьет молниями в случайного врага поблизости, нанося <magicDamage>@PassiveDamage@ маг. урона</magicDamage> раз в 2.5 сек.<br><br><spellActive>Активно:</spellActive> Блицкранк наносит <magicDamage>@ActiveDamage@ маг. урона</magicDamage> всем окружающим врагам и на 0.5 сек. заставляет их <status>замолчать</status>.@SpellModifierDescriptionAppend@",
+            "description": "Блицкранк пассивно бьет молниями в случайного врага неподалеку раз в несколько секунд. При активации умения наносит урон врагам поблизости и ненадолго накладывает на них безмолвие.",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Блицкранк бьет молниями в случ. врага поблизости, нанося <magicDamage>@PassiveDamage@ ед. маг. урона</magicDamage> раз в @PassiveHitRate@ сек.<br><br><spellActive>Активно:</spellActive> наносит <magicDamage>@ActiveDamage@ ед. маг. урона</magicDamage> и накладывает <status>безмолвие</status> на врагов поблизости на @SilenceDuration@ сек. Во время перезарядки Статического поля его пасс. эффект не действует.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

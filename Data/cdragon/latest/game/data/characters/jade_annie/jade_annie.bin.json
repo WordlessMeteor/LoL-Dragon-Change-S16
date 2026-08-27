@@ -1,17 +1,17 @@
 {
     "{ce7fc548}": {
-        "mRootSpell": "{f939baba}",
+        "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive",
         "mChildSpells": [
-            "{f939baba}",
-            "{08683855}",
-            "{88742e5f}"
+            "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive",
+            "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunBuildupBuff",
+            "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunReadyBuff"
         ],
         "mName": "Jade_AnniePassiveAbility",
         "__type": "AbilityObject"
     },
-    "{08683855}": {
+    "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunBuildupBuff": {
         "ObjectName": "Jade_AnniePassive_StunBuildupBuff",
-        "objectPath": "{08683855}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunBuildupBuff",
         "mScriptName": "Jade_AnniePassive_StunBuildupBuff",
         "mSpell": {
             "mImgIconName": [
@@ -33,9 +33,9 @@
         },
         "__type": "SpellObject"
     },
-    "{88742e5f}": {
+    "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunReadyBuff": {
         "ObjectName": "Jade_AnniePassive_StunReadyBuff",
-        "objectPath": "{88742e5f}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive_StunReadyBuff",
         "mScriptName": "Jade_AnniePassive_StunReadyBuff",
         "mSpell": {
             "mImgIconName": [
@@ -57,9 +57,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f939baba}": {
+    "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive": {
         "ObjectName": "Jade_AnniePassive",
-        "objectPath": "{f939baba}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive",
         "mScriptName": "Jade_AnniePassive",
         "mSpell": {
             "mSpellTags": [
@@ -82,9 +82,10 @@
             ],
             "mSpellCalculations": {
                 "StunDuration": {
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mNumber": 1.5,
+                            "mNumber": 1.75,
                             "__type": "NumberCalculationPart"
                         }
                     ],
@@ -254,16 +255,16 @@
         "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR",
         "mChildSpells": [
             "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR",
-            "{4914638d}",
-            "{8ed4e0a4}",
-            "{9664479d}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianGuide",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianTimer",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_infernalguardianburning_jade"
         ],
         "mName": "Jade_AnnieRAbility",
         "__type": "AbilityObject"
     },
-    "{4914638d}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianGuide": {
         "ObjectName": "Jade_Annie_InfernalGuardianGuide",
-        "objectPath": "{4914638d}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianGuide",
         "mScriptName": "Jade_Annie_InfernalGuardianGuide",
         "mSpell": {
             "flags": 36,
@@ -817,9 +818,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8ed4e0a4}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianTimer": {
         "ObjectName": "Jade_Annie_InfernalGuardianTimer",
-        "objectPath": "{8ed4e0a4}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianTimer",
         "mScriptName": "Jade_Annie_InfernalGuardianTimer",
         "mSpell": {
             "mImgIconName": [
@@ -833,9 +834,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9664479d}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_infernalguardianburning_jade": {
         "ObjectName": "Jade_Annie_infernalguardianburning_jade",
-        "objectPath": "{9664479d}",
+        "objectPath": "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_infernalguardianburning_jade",
         "mScriptName": "Jade_Annie_infernalguardianburning_jade",
         "mSpell": {
             "mImgIconName": [
@@ -986,26 +987,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        40.0,
-                        85.0,
-                        125.0,
-                        165.0,
-                        205.0,
-                        245.0,
-                        280.0
+                        50.0,
+                        90.0,
+                        130.0,
+                        170.0,
+                        210.0,
+                        250.0,
+                        290.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "APRatio",
                     "values": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1025,7 +1026,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Q.dds"
@@ -1368,19 +1368,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "DamageReduction",
-                    "values": [
-                        9.0,
-                        13.0,
-                        17.0,
-                        21.0,
-                        25.0,
-                        29.0,
-                        33.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "DamageReflection",
                     "values": [
                         10.0,
@@ -1394,72 +1381,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MovementSpeed",
-                    "values": [
-                        0.10000000149011612,
-                        0.15000000596046448,
-                        0.20000000298023224,
-                        0.25,
-                        0.30000001192092896,
-                        0.3499999940395355,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MovementSpeedDuration",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ShieldAmount",
-                    "values": [
-                        25.0,
-                        60.0,
-                        95.0,
-                        130.0,
-                        165.0,
-                        200.0,
-                        235.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CastRangeGenerosity",
-                    "values": [
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "Resistances",
-                    "values": [
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ReturnDamage",
                     "values": [
                         10.0,
                         20.0,
@@ -1634,7 +1556,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "ShieldAmount",
+                                "mDataValue": "Resistances",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -1658,26 +1580,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        30.0,
-                        80.0,
-                        130.0,
-                        180.0,
-                        230.0,
-                        280.0,
-                        270.0
+                        35.0,
+                        85.0,
+                        135.0,
+                        185.0,
+                        235.0,
+                        285.0,
+                        335.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "APRatio",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1829,7 +1751,7 @@
                         },
                         "coneAngleDegrees": 27.5,
                         "coneRange": 690.0,
-                        "textureConeOverrideName": "ASSETS/Spells/Textures/Annie_W.tex",
+                        "textureConeOverrideName": "assets/spells/textures/annie_w.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -2336,7 +2258,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{4914638d}",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_Annie_InfernalGuardianGuide",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2364,7 +2286,7 @@
         "passiveLuaName": "Jade_AnniePassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Annie",
         "passiveSpell": "Jade_AnniePassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.dds",
+        "passive1IconName": "assets/characters/jade_annie/hud/icons2d/jade_annie_passive.dds",
         "name": "game_character_displayname_Jade_Annie",
         "mUseCCAnimations": true,
         "selectionHeight": 85.0,
@@ -2458,10 +2380,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{f939baba}",
+        "mCharacterPassiveSpell": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{f939baba}",
+                "mParentPassiveBuff": "Characters/Jade_Annie/Spells/Jade_AnniePassiveAbility/Jade_AnniePassive",
                 "__type": "CharacterPassiveData"
             }
         ],

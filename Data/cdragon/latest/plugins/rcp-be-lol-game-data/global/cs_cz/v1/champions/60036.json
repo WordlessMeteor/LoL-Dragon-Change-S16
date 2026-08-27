@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Toxický Mundo",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo není toxický, Mundo má zdravý mechanismus, jak nakládat s pocity. Jo ty myslíš ten fialový sliz? Ten je také v pohodě, za to dá Mundo ruku do ohně. Něčí."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo si každou sekundu obnoví 0,3 % maximálního zdraví."
+        "description": "Dr. Mundo si každou sekundu obnoví část maximálního zdraví."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ zdraví</font>",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Dr. Mundo vrhne svůj sekáček, který způsobuje nepřátelům poškození odvíjející se od jejich maximálního zdraví.",
-            "dynamicDescription": "<mainText>Dr. Mundo vrhne svůj sekáček, čímž nepříteli způsobí <magicDamage>magické poškození</magicDamage> ve výši @DamageMod*100@ % aktuálního zdraví cíle (nejméně však @MinDamage@ bodů) a na 2 sekundy jej <status>zpomalí</status> o 40 %.<br><br>Pokud sekáček zasáhne cíl, získá Dr. Mundo zpět polovinu zdraví spotřebovaného na seslání schopnosti.",
+            "dynamicDescription": "Dr. Mundo vrhne svůj sekáček, čímž nepříteli způsobí <magicDamage>magické poškození</magicDamage> ve výši @DamageMod*100@ % aktuálního zdraví cíle (nejméně však @MinDamage@ bodů) a na @SlowDuration@ sek. jej <status>zpomalí</status> o @MoveMod*-100@ %.<br><br>Pokud sekáček zasáhne cíl, získá Dr. Mundo zpět <healing>@HealthReturn@ zdraví</healing> spotřebovaného na seslání schopnosti.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ zdraví</font>",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Díky Masochismu získává Dr. Mundo jednorázový bonus k útočnému poškození, který působí 5 sekund. Dr. Mundo navíc získává další bonus k útočnému poškození za každé procento zdraví, které mu schází.",
-            "dynamicDescription": "Dr. Mundo získá na 5 sekund <physicalDamage>@BaseIncrease@ k útočnému poškození</physicalDamage>. Dr. Mundo navíc dostane dalších <physicalDamage>+@DamageMod@ k útočnému poškození</physicalDamage> za každé procento zdraví, které mu schází.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo na několik sekund získá bonus k útočnému poškození, který se odvíjí od jeho chybějícího zdraví.",
+            "dynamicDescription": "Dr. Mundo získá na @Duration@ sek. <physicalDamage>@BaseIncrease@ k útočnému poškození</physicalDamage>. Dr. Mundo navíc dostane dalších <physicalDamage>+@DamageMod@ k útočnému poškození</physicalDamage> za každé procento zdraví, které mu schází.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ % aktuálního zdraví</font>",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Dr. Mundo obětuje část svého zdraví na úkor zvýšení rychlosti pohybu a výrazného navýšení regenerace zdraví.",
-            "dynamicDescription": "<mainText>Dr. Mundo si během 12 sekund obnoví <healing>@MaximumHealthRegen@ zdraví</healing>. Navíc získá <speed>@SpeedMod*100@ % k rychlosti pohybu</speed>.",
+            "dynamicDescription": "Dr. Mundo si během @Duration@ sek. obnoví <healing>@MaximumHealthRegen@ zdraví</healing> a získá na tuto dobu <speed>@SpeedMod*100@ % k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

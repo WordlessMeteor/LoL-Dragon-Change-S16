@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60014001,
+            "contentId": "ba022c8c-1427-4257-a080-4651e2442e93",
+            "relatedPrimeContentId": "cfd9de78-5f04-4a20-950a-fcd7edb0ab61",
+            "relatedPrimeItemId": 14001,
+            "isBase": false,
+            "name": "Sion Hextech",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Images/Jade_Sion_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sion/Skins/Skin01/Jade_SionLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 40
+                }
+            ],
+            "description": "A lo largo de la historia, muchos se han preguntado: ¿el arte debería depender del efímero concepto de la moral? ¿La ciencia debería doblegarse ante las leyes de los humanos? Algunos creen que el progreso no es resultado de contener nuestros impulsos, y, aunque podemos traer monstruos a este mundo... La Hextech siempre guiará nuestros pasos..."
+        },
+        {
             "id": 60014003,
             "contentId": "07b30dea-dd76-4364-8b72-bbc11ae33720",
             "relatedPrimeContentId": "277e69dc-f3b0-4dbc-af88-ec1a83df1f25",
@@ -743,7 +774,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.png",
         "abilityVideoPath": "champion-abilities/60014/ability_60014_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60014/ability_60014_P1.jpg",
-        "description": "Sion tiene un 40% de probabilidad de ignorar hasta 30/40/50 de daño cada vez que lo atacan."
+        "description": "Sion tiene una probabilidad de ignorar parte del daño cada vez que lo atacan."
     },
     "spells": [
         {
@@ -755,7 +786,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "La mirada de Sion aterroriza a un enemigo, lo que le inflige daño y lo aturde.",
-            "dynamicDescription": "<mainText>Sion lanza un proyectil a un enemigo, lo que le inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y lo <status>aturde</status> durante 1.5 seg.",
+            "dynamicDescription": "Sion lanza un proyectil a un enemigo, lo que le inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y lo <status>aturde</status> durante @StunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -781,7 +812,7 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -822,13 +853,13 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -840,40 +871,40 @@
                     0.0
                 ],
                 "Effect7Amount": [
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8,
-                    -0.8
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {
@@ -904,8 +935,8 @@
             "abilityVideoImagePath": "champion-abilities/60014/ability_60014_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Sion se protege con un escudo que absorbe daño.  Si el escudo no es destruido en 10 seg, explota e inflige daño a los enemigos cercanos. Tras 4 seg, puedes volver a lanzar la habilidad para que el escudo explote antes de tiempo.",
-            "dynamicDescription": "<mainText>Sion se protege con un escudo que absorbe <shield>@TotalShield@ de daño</shield>. Si el escudo no es destruido en 10 seg, explota e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br>Tras 4 seg, puedes <recast>volver a lanzar</recast> la habilidad para que el escudo explote antes de tiempo.",
+            "description": "Sion se protege con un escudo que absorbe daño.  Si el escudo no se destruye, explotará y dañará a los enemigos cercanos. Sion puede reactivar la habilidad para detonar el escudo antes de tiempo.",
+            "dynamicDescription": "Sion se protege con un escudo que absorbe <shield>@TotalShield@ de daño</shield>. Si el escudo no es destruido en @ShieldDuration@ seg, explota e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br><recast>Tras @RecastDelay@ seg, puedes volver a lanzar</recast> la habilidad para que el escudo explote antes de tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -931,90 +962,90 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
-                    60.0,
-                    75.0,
-                    90.0,
-                    105.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    15.0,
-                    40.0,
-                    65.0,
-                    90.0,
-                    115.0,
-                    140.0,
-                    165.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    10.0,
-                    12.0,
-                    14.0,
-                    16.0,
-                    16.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1205,7 +1236,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Sion consume parte de la fuerza vital de sus enemigos con cada ataque, lo que cura tanto a él como a los aliados cercanos. Además, el olor a carne renueva el fervor de Sion y le otorga velocidad de ataque.",
-            "dynamicDescription": "<mainText>Sion obtiene un <lifeSteal>@LifestealPercent*100@% de robo de vida</lifeSteal> y un <attackSpeed>@AttackSpeedMod*100@% de Velocidad de Ataque</attackSpeed> durante 20 seg. Además, los ataques básicos de Sion <healing>restauran la Vida</healing> de los aliados cercanos en un @HealPercent*100@% del daño infligido.",
+            "dynamicDescription": "Sion obtiene un <lifeSteal>@LifestealPercent*100@% de Robo de Vida</lifeSteal> y un <attackSpeed>@AttackSpeedMod*100@% de Velocidad de Ataque</attackSpeed> durante @BuffDuration@ seg. Además, los ataques básicos de Sion <healing>curan</healing> a los aliados a su alrededor en un @HealPercent*100@% del daño infligido.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1231,8 +1262,8 @@
                 90.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

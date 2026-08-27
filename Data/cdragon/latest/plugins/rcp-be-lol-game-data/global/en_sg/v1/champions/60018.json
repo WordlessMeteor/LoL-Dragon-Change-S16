@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Buccaneer Tristana",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Gunners ahoy! Tristana leaps onto the high seas, sailing for new adventures beyond the Bandle borders. The hat's borrowed (stolen) from a pirate she blasted, and the eyepatch is purely for show. But her take-no-prisoner attitude and trusty cannon gun have sunk more ships than most captains in Bilgewater."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tristana fires her weapon rapidly, increasing her attack speed for a short time.",
-            "dynamicDescription": "<mainText>Increases Tristana's <attackSpeed>Attack Speed by @AttackSpeedMod*100@%</attackSpeed> for 7 seconds.",
+            "dynamicDescription": "Tristana gains <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> for @BuffDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Tristana fires at the ground to propel herself to a distant location, dealing damage and slowing surrounding units for 3 seconds where she lands.",
-            "dynamicDescription": "<mainText>Tristana fires at the ground to propel herself to target location, dealing <magicDamage>@LandingDamage@ magic damage</magicDamage> and <status>Slows</status> by 60% for 2.5 seconds when she lands.<br>On a champion kill or assist, the Cooldown is refreshed.",
+            "description": "Tristana fires at the ground to propel herself to a distant location, damaging and slowing enemies where she lands.",
+            "dynamicDescription": "Tristana fires at the ground to propel herself to target location, dealing <magicDamage>@LandingDamage@ magic damage</magicDamage> and <status>Slows</status> by @Slow@% for @SlowDuration@ seconds when she lands. On a champion kill or assist, Rocket Jump's Cooldown is refreshed.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies.  Can be activated to deal damage to target unit over time, and reduce healing received.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>@PassiveDamage@ magic damage</magicDamage> to nearby enemies.<br><br><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> over 5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Enemies explode when slain by Tristana's basic attacks, dealing <magicDamage>@PassiveDamage@ magic damage</magicDamage> to nearby enemies.<br><br><spellActive>Active: </spellActive>Rends target enemy, applying <keyword>50% Grievous Wounds</keyword> and dealing <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> over @GrievousDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

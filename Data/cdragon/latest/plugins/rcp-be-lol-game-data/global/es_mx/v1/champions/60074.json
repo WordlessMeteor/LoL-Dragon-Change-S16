@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Heimerdinger Estallido",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Heimerdinger, un científico excéntrico que vive en la Nueva República de Bandle, todavía no le ha dicho a nadie que es posible que haya desarrollado ''una o dos enormes bombas antes de la guerra'' para ''uno o más gobiernos deshonestos''. Preferiría ser un inventor en una ciudad que no intente matarlo."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger coloca una torreta ametralladora. Las torretas obtienen habilidades conforme subes de rango la habilidad. Las torretas de Heimerdinger infligen la mitad de daño contra las torretas.",
-            "dynamicDescription": "Heimerdinger construye una torreta ametralladora que inflige <magicDamage>@BonusDamage@ de daño mágico</magicDamage> por ataque. Esta habilidad tiene @MaxAmmo@ cargas (@AmmoRechargeTime@ seg de enfriamiento).<br><br>Cada vez que subes de rango esta habilidad, las torretas obtienen una mejora adicional:<br><attention>Rango 2:</attention> Los ataques de las torretas reducen la Armadura y la Resistencia Mágica del objetivo en 1 (máx.: 50)<br><attention>Rango 3:</attention> La cantidad máxima de torretas aumenta a 2<br><attention>Rango 4:</attention> Las torretas obtienen <scaleHealth>125 de Vida</scaleHealth> adicional<br><attention>Rango 5:</attention> Los ataques de las torretas infligen daño de área@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger construye una torreta ametralladora que inflige <magicDamage>@BonusDamage@ de daño mágico</magicDamage> por ataque. La torreta obtiene un <attackSpeed>@TurretBonusAttackSpeed*100@% de Velocidad de Ataque</attackSpeed> durante los próximos @AttackSpeedDuration@ seg tras colocarla. Esta habilidad tiene @MaxAmmo@ carga(s) (se recarga cada @AmmoRechargeTime@ seg).<br><br>Cada vez que la habilidad sube de rango, las torretas obtienen una mejora adicional:<br><attention>Rango 2:</attention> Los ataques de las torretas reducen la Armadura y la Resistencia Mágica del objetivo en @Level2ResistShred@ (máx.: @MaxShredCapTooltip@)<br><attention>Rango 3:</attention> La cantidad máxima de torretas aumenta a 2<br><attention>Rango 4:</attention> Las torretas obtienen <scaleHealth>@Level4HPTooltip@ de Vida</scaleHealth> adicional<br><attention>Rango 5:</attention> Los ataques de las torretas infligen un @AoEDamageMod*100@% de daño de área@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger dispara proyectiles de largo alcance que impactan a los enemigos más cercanos a él.",
-            "dynamicDescription": "Heimerdinger dispara 3 microcohetes guiados que buscan a los enemigos (máx.: 1 por unidad) e impactan a los objetivos más cercanos a él. Cada cohete inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger dispara @MaxTargets@ microcohete(s) guiado(s) que rastrea(n) enemigos (máx.: 1 por unidad) e impactan a los objetivos más cercanos a él. Cada cohete inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Heimerdinger lanza una granada a una ubicación objetivo, lo que inflige daño, aturde a quien impacta directamente y ciega a las unidades en el área de explosión.",
-            "dynamicDescription": "Heimerdinger lanza una granada que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades enemigas y las <status>ciega</status> durante @BlindDuration@ seg.  Los enemigos que reciben el impacto directo de la granada quedan <status>aturdidos</status> durante 1.5 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger lanza una granada que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades enemigas y las <status>ciega</status> durante @BlindDuration@ seg.  Los enemigos que reciben el impacto directo de la granada quedan <status>aturdidos</status> durante @StunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Pasiva / Activa: El enfriamiento de las habilidades de Heimerdinger se reduce de forma pasiva.  Al lanzar la habilidad, Heimerdinger cura a todas las Torretas Evolutivas H-28 G activas y les ordena disparar proyectiles escarchados que reducen la velocidad de movimiento de los enemigos durante un lapso de tiempo breve.",
-            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>El enfriamiento de las habilidades de Heimerdinger se reduce un @CooldownBonus*-100@%.<br><br><spellActive>Activa: </spellActive>Todas las habilidades y las torretas de Heimerdinger se potencian mientras dure el efecto.<br><br><spellName>Torretas Evolutivas H-28 G:</spellName> Todas las torretas <healing>recuperan</healing> un 100% de su Vida Máxima. Además, sus ataques <status>ralentizan en un @MovementSpeedMod*-100@%</status>.<br><spellName>Microcohetes Hextech:</spellName> Dispara 5 cohetes en lugar de 3.<br><spellName>Granada de Conmoción CH-1:</spellName> Se desplaza un 33% más rápido.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>El enfriamiento de las habilidades de Heimerdinger se reduce un @CooldownBonus*-100@%.<br><br><spellActive>Activa: </spellActive>Todas las habilidades y las torretas de Heimerdinger se potencian mientras dure el efecto.<br><br><spellName>Torretas Evolutivas:</spellName> Todas las torretas <healing>se curan</healing> por completo. Cada ataque <status>ralentiza en un @MovementSpeedMod*-100@%</status>.<br><spellName>Microcohetes Hextech:</spellName> Dispara @WMaxMissiles@ cohetes.<br><spellName>Granada de Conmoción CH-1:</spellName> Se desplaza un 33% más rápido.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

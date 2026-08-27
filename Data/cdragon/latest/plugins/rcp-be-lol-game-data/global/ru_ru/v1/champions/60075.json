@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60075001,
+            "contentId": "6f16915c-ff41-47f6-94d3-7abd1a526deb",
+            "relatedPrimeContentId": "26e0fce9-2297-4842-a587-9e72bd07f663",
+            "relatedPrimeItemId": 75001,
+            "isBase": false,
+            "name": "Галактический Насус",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Jade_NasusLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 136
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60075002,
             "contentId": "4fa50f96-83a2-451d-b05a-df8207defbfd",
             "relatedPrimeContentId": "437da20a-9be9-4e4c-b9f2-548cd2b1345a",
@@ -1016,7 +1047,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Насус призывает сильнейшую песчаную бурю, обрушивающуюся на ближайших противников. Пока буря бушует, его запас здоровья, дальность действия умений и дальность атаки увеличены. Насус наносит окружающим врагам урон, зависящий от их макс. запаса здоровья, и превращает часть его в доп. силу атаки.",
-            "dynamicDescription": "<mainText>Насус призывает сильнейшую песчаную бурю на 15 сек., повышая свое <scaleHealth>макс. здоровье на @BonusHealth@</scaleHealth>, дальность атаки – на @AttackRangeIncrease@, а дальность действия умений – на 100.<br><br>Пока буря бушует, Насус наносит окружающим врагам <magicDamage>маг. урон, равный @DamageCalc@ от их макс. здоровья</magicDamage> (но не более @MaxDamageCap@ ед. урона в секунду) и превращает 5% его в доп. <physicalDamage>силу атаки</physicalDamage>.",
+            "dynamicDescription": "Насус призывает сильнейшую песчаную бурю на @Duration@ сек., повышая свое <scaleHealth>макс. здоровье на @BonusHealth@</scaleHealth>, дальность атаки – на @AttackRangeIncrease@, а дальность действия умений – на 100.<br><br>Пока буря бушует, Насус наносит окружающим врагам <magicDamage>маг. урон, равный @DamageCalc@ от их макс. здоровья</magicDamage> (но не более @MaxDamageCap@ ед. урона в секунду) и превращает @DamageToAD*100@% его в доп. <physicalDamage>силу атаки</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

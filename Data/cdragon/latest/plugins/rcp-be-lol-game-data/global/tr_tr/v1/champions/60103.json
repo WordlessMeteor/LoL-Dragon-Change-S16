@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "Dokuz Kuyruklu Tilki",
-    "shortBio": "- Öz Hırsızı (P) rakiplere hasar verildiğinde yük biriktirir.<br>- Ruh Saldırısı (R) sıfırlanmaz.",
+    "shortBio": "- Öz Hırsızı (P) rakiplere hasar verildiğinde yük biriktirir.<br>- Ruh Saldırısı (R) sıfırlanmaz.<br>- Ayartan Öpücük (E) Ahri'nin hedefine verdiği hasarı arttırır.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -572,7 +572,7 @@
                     "id": 91
                 }
             ],
-            "description": "Ahri, K/DA'le birlikte konser vermek için sahneye çıktığında son derece yetenekli insanlarla çevrelendiğini biliyor. Farklı kişiliklere sahip bu kadınların her biri alanlarının en iyisi. Ahri bu divaların hem liderleri hem de arkadaşları olarak zirve yolculukları sırasında onlara rehberlik etmeye ve izleyicilerin nefesini bir kez daha kesmeye hazır."
+            "description": "Ahri, K/DA'yle birlikte konser vermek için sahneye çıktığında son derece yetenekli insanlarla çevrelendiğini biliyor. Farklı kişiliklere sahip bu kadınların her biri alanlarının en iyisi. Ahri bu divaların hem liderleri hem de arkadaşları olarak zirve yolculukları sırasında onlara rehberlik etmeye ve izleyicilerin nefesini bir kez daha kesmeye hazır."
         },
         {
             "id": 60103088,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ahri ileri atılarak yakınındaki 3 rakibe hasar veren öz ışınları fırlatır. Bu atışlar şampiyonlara öncelik verir. Ruh Saldırısı bekleme süresine girmeden önce üç defa kullanılabilir.",
-            "dynamicDescription": "Ahri kıvrakça ileri atılarak yakındaki rakiplere 3 öz ışını fırlatır. Bu atışlar şampiyonlara öncelik verir. Işınların her biri <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. <spellName>Ruh Saldırısı</spellName> 10 saniye içinde 2 defaya kadar daha <recast>yeniden kullanılabilir</recast>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri kıvrakça ileri atılarak yakındaki rakiplere 3 öz ışını fırlatır. Bu atışlar şampiyonlara öncelik verir. Işınların her biri <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. <spellName>Ruh Saldırısı</spellName> @RecastDuration@ saniye içinde 2 defaya kadar daha <recast>yeniden kullanılabilir</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

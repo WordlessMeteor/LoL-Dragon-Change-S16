@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Nottingham Ezreal",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Ezreal เป็นเอลฟ์นักผจญภัยจากดินแดนแห่งป่าไม้อันห่างไกล เขาชอบที่จะนำเสนอตัวเองเป็น \"โจรครึ่งพาลาดินสุดหล่อ\" นาม จาร์โร ไลท์เฟเธอร์ น้อยคนนักจะเชื่อในตำแหน่งอัศวินของเขา แต่มันก็เป็นตัวดึงความสนใจที่ดีเลยระหว่างที่เขาออกเดินทางผจญภัยอย่างวุ่นวายไปทั่ว"
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal ได้รับความเร็วโจมตีเพิ่มขึ้นทุกครั้งที่เขาใช้สกิลโดน สแตคได้สูงสุด 5 ครั้ง"
+        "description": "Ezreal ได้รับความเร็วโจมตีทุกครั้งที่เขายิงสกิลโดนเป้าหมาย"
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal ยิงกระสุนพลังงานที่จะสร้างความเสียหายออกไป ซึ่งมันจะลดคูลดาวน์ของเขาลงเล็กน้อยหากมันกระทบกับยูนิตศัตรู",
             "dynamicDescription": "Ezreal ยิงกระสุนพลังงาน สร้าง<physicalDamage>ความเสียหายกายภาพ @Damage@ หน่วย</physicalDamage> (ส่งผลเอฟเฟกต์ On-Hit) <br><br>คูลดาวน์ของ Ezreal จะลดลง 1 วินาที หากยิง <spellName>Mystic Shot</spellName> โดนเป้าหมาย<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ezreal ยิงคลื่นพลังงานไม่เสถียรออกไปเพื่อลดความเร็วโจมตีและสร้างความเสียหายเวทให้กับแชมเปี้ยนศัตรู พร้อมทั้งฮีลและเพิ่มความเร็วโจมตีให้กับแชมเปี้ยนร่วมทีม",
-            "dynamicDescription": "Ezreal ยิงคลื่นพลังงานใส่แชมเปี้ยนศัตรูทั้งหมดที่คลื่นพลังงานพุ่งผ่าน สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage> และลด<attackSpeed>ความเร็วโจมตี</attackSpeed> @AttackSpeed@% เป็นเวลา 5 วินาที<br><br>แชมเปี้ยนร่วมทีมที่โดนคลื่นพลังงานจะฟื้นฟู<healing>พลังชีวิต @TotalHeal@ หน่วย</healing> และเพิ่ม<attackSpeed>ความเร็วโจมตี</attackSpeed> @AttackSpeed@% เป็นเวลา 5 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal ยิงคลื่นพลังงานใส่แชมเปี้ยนศัตรูทั้งหมดที่คลื่นพลังงานพุ่งผ่าน สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage> และลด<attackSpeed>ความเร็วโจมตี</attackSpeed> @AttackSpeed@% เป็นเวลา @Duration@ วินาที<br><br>แชมเปี้ยนร่วมทีมที่โดนคลื่นพลังงานจะฟื้นฟู<healing>พลังชีวิต @TotalHeal@ หน่วย</healing> และเพิ่ม<attackSpeed>ความเร็วโจมตี</attackSpeed> @AttackSpeed@% เป็นเวลา @Duration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Ezreal ร่ายเป็นเวลา 1 วินาทีเพื่อยิงคลื่นพลังงานทรงพลังที่จะสร้างความเสียหายมหาศาลแก่ศัตรูทุกตัวที่สกิลพุ่งผ่าน (ความเสียหายจะลดลง 10% ต่อศัตรูแต่ละตัวที่สกิลพุ่งผ่าน)",
-            "dynamicDescription": "Ezreal ร่ายเป็นเวลา 1 วินาทีเพื่อยิงคลื่นพลังงาน สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage> แก่ศัตรูทุกตัวที่สกิลพุ่งผ่าน อย่างไรก็ตาม สกิลจะสร้างความเสียหายลดลง @DamageReductionPerHit*100@% ต่อแต่ละยูนิตที่โดน (ลดต่ำสุด @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ezreal ยิงคลื่นพลังงานทรงพลังที่สร้างความเสียหายมหาศาลแก่ศัตรูทุกตัวที่สกิลพุ่งผ่าน",
+            "dynamicDescription": "Ezreal ยิงคลื่นพลังงาน สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage>แก่ศัตรูทุกตัวที่สกิลพุ่งผ่าน อย่างไรก็ตาม สกิลจะสร้างความเสียหายลดลง @DamageReductionPerHit*100@% ต่อแต่ละยูนิตที่โดน (ลดต่ำสุด @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

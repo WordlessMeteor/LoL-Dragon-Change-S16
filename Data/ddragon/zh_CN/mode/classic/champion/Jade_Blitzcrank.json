@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Blitzcrank": {
             "id": "Jade_Blitzcrank",
@@ -255,13 +255,13 @@
                     ],
                     "cooldownBurn": "22/21/20/19/18",
                     "cost": [
-                        120,
-                        120,
-                        120,
-                        120,
-                        120
+                        140,
+                        140,
+                        140,
+                        140,
+                        140
                     ],
-                    "costBurn": "120",
+                    "costBurn": "140",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -353,13 +353,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1079,
-                        1079,
-                        1079,
-                        1079,
-                        1079
+                        1025,
+                        1025,
+                        1025,
+                        1025,
+                        1025
                     ],
-                    "rangeBurn": "1079",
+                    "rangeBurn": "1025",
                     "image": {
                         "full": "Jade_BlitzcrankRocketGrab.png",
                         "sprite": "spell1.png",
@@ -515,8 +515,8 @@
                 {
                     "id": "Jade_BlitzcrankPowerFist",
                     "name": "能量铁拳",
-                    "description": "布里茨为机械手臂充能，下次攻击造成双倍伤害并击飞目标。",
-                    "tooltip": "布里茨为机械手臂充能，使下次攻击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并将目标<status>击飞</status>{{ ccduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "description": "布里茨为它的机械手臂充能，以使它的下次攻击造成额外伤害并击飞目标。",
+                    "tooltip": "布里茨为它的机械手臂充能，以使它的下次攻击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并<status>击飞</status>目标。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间"
@@ -654,8 +654,8 @@
                 {
                     "id": "Jade_BlitzcrankStaticField",
                     "name": "静电力场",
-                    "description": "被动生成电弧，对附近的一名敌人造成伤害。此外，主动施放时对周围的敌人造成伤害和0.5秒沉默，但在施放后会暂时禁用被动电弧效果，直到技能冷却完毕。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>布里茨周身生成电弧，每2.5秒对附近一名随机敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>对周围敌方单位造成<magicDamage>{{ activedamage }}魔法伤害</magicDamage>和0.5秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
+                    "description": "被动地引发闪电弹来伤害一个附近的敌人。此外，布里茨可以主动激活这个技能来对附近的敌人造成伤害和短暂的沉默效果。",
+                    "tooltip": "<spellPassive>被动效果：</spellPassive>布里茨每{{ passivehitrate }}秒会释放一道电弧，对附近的随机一个单位造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动效果：</spellActive>对周围的敌方单位们造成<magicDamage>{{ activedamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。该被动效果会在【静电力场】尚未冷却完毕时失效。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "电弧伤害",
@@ -668,11 +668,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        30,
-                        30,
-                        30
+                        40,
+                        40,
+                        40
                     ],
-                    "cooldownBurn": "30",
+                    "cooldownBurn": "40",
                     "cost": [
                         150,
                         150,
@@ -769,7 +769,7 @@
             ],
             "passive": {
                 "name": "法力屏障",
-                "description": "布里茨的生命值降到20%以下时，法力屏障就会激活，生成一道相当于其50%法力值的护盾，持续10秒。法力屏障每90秒内只能触发一次。",
+                "description": "在低生命值状态受到伤害时，布里茨会先获得护盾，数额相当于它的一部分当前法力值。这个效果有一段冷却时间。",
                 "image": {
                     "full": "Jade_Blitzcrank_ManaBarrier.png",
                     "sprite": "passive0.png",

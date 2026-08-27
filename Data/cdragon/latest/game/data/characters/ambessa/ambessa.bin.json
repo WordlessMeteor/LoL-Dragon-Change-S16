@@ -809,9 +809,9 @@
         "__type": "SpellObject"
     },
     "{da8ca51e}": {
-        "mRootSpell": "{3f70c67a}",
+        "mRootSpell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
         "mChildSpells": [
-            "{6dfeb97a}",
+            "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveDash",
             "{e0c413bf}",
             "{f1a0ac27}"
         ],
@@ -819,9 +819,9 @@
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{14a1d4d5}": {
+    "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveAttackEmpower": {
         "ObjectName": "AmbessaPassiveAttackEmpower",
-        "objectPath": "{14a1d4d5}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveAttackEmpower",
         "mScriptName": "AmbessaPassiveAttackEmpower",
         "mSpell": {
             "mImgIconName": [
@@ -879,9 +879,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3f70c67a}": {
+    "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive": {
         "ObjectName": "AmbessaPassive",
-        "objectPath": "{3f70c67a}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
         "mScriptName": "AmbessaPassive",
         "mSpell": {
             "DataValues": [
@@ -1200,9 +1200,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6dfeb97a}": {
+    "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveDash": {
         "ObjectName": "AmbessaPassiveDash",
-        "objectPath": "{6dfeb97a}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveDash",
         "mScriptName": "AmbessaPassiveDash",
         "mSpell": {
             "flags": 32,
@@ -1307,8 +1307,8 @@
             },
             "mCastingBreaksStealth": true,
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{3f70c67a}",
-                "mUseDeathRecapTooltipFromAnotherSpell": "{3f70c67a}",
+                "mUseTooltipFromAnotherSpell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
+                "mUseDeathRecapTooltipFromAnotherSpell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
                 "mTargeterDefinitions": [
                     {
                         "hideWithLineIndicator": true,
@@ -1348,7 +1348,7 @@
     "Characters/Ambessa/Spells/AmbessaEAbility": {
         "mRootSpell": "Characters/Ambessa/Spells/AmbessaEAbility/AmbessaE",
         "mChildSpells": [
-            "{91cebd6f}"
+            "Characters/Ambessa/Spells/AmbessaEAbility/AmbessaESlow"
         ],
         "mName": "AmbessaEAbility",
         "__type": "AbilityObject"
@@ -1356,24 +1356,24 @@
     "Characters/Ambessa/Spells/AmbessaQAbility": {
         "mRootSpell": "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ",
         "mChildSpells": [
-            "{ff33e675}",
-            "{fc33e1bc}",
-            "{db953014}",
+            "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ1",
+            "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ2",
+            "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQEmpowerReady",
             "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ",
-            "{283b1613}"
+            "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQPassive"
         ],
         "mName": "AmbessaQAbility",
         "__type": "AbilityObject"
     },
-    "{283b1613}": {
+    "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQPassive": {
         "ObjectName": "AmbessaQPassive",
-        "objectPath": "{283b1613}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQPassive",
         "mScriptName": "AmbessaQPassive",
         "__type": "SpellObject"
     },
-    "{db953014}": {
+    "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQEmpowerReady": {
         "ObjectName": "AmbessaQEmpowerReady",
-        "objectPath": "{db953014}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQEmpowerReady",
         "mScriptName": "AmbessaQEmpowerReady",
         "mSpell": {
             "mImgIconName": [
@@ -2010,7 +2010,7 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/SemicircleRangeIndicator.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/semicirclerangeindicator.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2040,7 +2040,7 @@
                                     "mValueType": 1,
                                     "__type": "FloatPerSpellLevel"
                                 },
-                                "textureRadiusOverrideName": "ASSETS/Spells/Textures/SemicircleRangeIndicator.tex",
+                                "textureRadiusOverrideName": "assets/spells/textures/semicirclerangeindicator.tex",
                                 "__type": "TargeterDefinitionAoe"
                             }
                         ],
@@ -2129,9 +2129,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fc33e1bc}": {
+    "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ2": {
         "ObjectName": "AmbessaQ2",
-        "objectPath": "{fc33e1bc}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ2",
         "mScriptName": "AmbessaQ2",
         "mSpell": {
             "flags": 32,
@@ -2248,9 +2248,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ff33e675}": {
+    "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ1": {
         "ObjectName": "AmbessaQ1",
-        "objectPath": "{ff33e675}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ1",
         "mScriptName": "AmbessaQ1",
         "mSpell": {
             "flags": 32,
@@ -2372,17 +2372,17 @@
     "Characters/Ambessa/Spells/AmbessaRAbility": {
         "mRootSpell": "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaR",
         "mChildSpells": [
-            "{84c6e77c}",
-            "{6a23e673}"
+            "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRBuffSuppressing",
+            "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRSuppressionDebuff"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "AmbessaRAbility",
         "mType": 2,
         "__type": "AbilityObject"
     },
-    "{6a23e673}": {
+    "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRSuppressionDebuff": {
         "ObjectName": "AmbessaRSuppressionDebuff",
-        "objectPath": "{6a23e673}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRSuppressionDebuff",
         "mScriptName": "AmbessaRSuppressionDebuff",
         "mSpell": {
             "mImgIconName": [
@@ -2440,9 +2440,9 @@
         },
         "__type": "SpellObject"
     },
-    "{84c6e77c}": {
+    "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRBuffSuppressing": {
         "ObjectName": "AmbessaRBuffSuppressing",
-        "objectPath": "{84c6e77c}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRBuffSuppressing",
         "mScriptName": "AmbessaRBuffSuppressing",
         "mSpell": {
             "mImgIconName": [
@@ -2504,9 +2504,9 @@
         },
         "__type": "SpellObject"
     },
-    "{99426203}": {
+    "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRPassive": {
         "ObjectName": "AmbessaRPassive",
-        "objectPath": "{99426203}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaRAbility/AmbessaRPassive",
         "mScriptName": "AmbessaRPassive",
         "__type": "SpellObject"
     },
@@ -2642,6 +2642,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Armor_Penetration",
+                            "values": [
+                                0.0,
+                                0.07500000298023224,
+                                0.15000000596046448,
+                                0.22499999403953552,
+                                0.30000001192092896,
+                                0.375,
+                                0.44999998807907104
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "ADRatio",
+                            "values": [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "Calc_Damage": {
                     "mFormulaParts": [
@@ -2906,20 +2939,20 @@
     "Characters/Ambessa/Spells/AmbessaWAbility": {
         "mRootSpell": "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaW",
         "mChildSpells": [
-            "{8eb7957f}"
+            "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaWShield"
         ],
         "mName": "AmbessaWAbility",
         "__type": "AbilityObject"
     },
-    "{8eb7957f}": {
+    "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaWShield": {
         "ObjectName": "AmbessaWShield",
-        "objectPath": "{8eb7957f}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaWShield",
         "mScriptName": "AmbessaWShield",
         "mSpell": {
             "mImgIconName": [
                 "ASSETS/Characters/Ambessa/HUD/Icons2D/Icon_Ambessa_W.dds"
             ],
-            "ImgIconPath": "ASSETS/Characters/Ambessa/HUD/Icons2D/Icon_Ambessa_W.dds",
+            "ImgIconPath": "assets/characters/ambessa/hud/icons2d/icon_ambessa_w.dds",
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3332,9 +3365,9 @@
         },
         "__type": "SpellObject"
     },
-    "{91cebd6f}": {
+    "Characters/Ambessa/Spells/AmbessaEAbility/AmbessaESlow": {
         "ObjectName": "AmbessaESlow",
-        "objectPath": "{91cebd6f}",
+        "objectPath": "Characters/Ambessa/Spells/AmbessaEAbility/AmbessaESlow",
         "mScriptName": "AmbessaESlow",
         "mSpell": {
             "mImgIconName": [
@@ -3456,6 +3489,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        15.0,
+                        15.0,
+                        14.0,
+                        13.0,
+                        12.0,
+                        11.0,
+                        10.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "Calc_Damage_Flat": {
                     "mFormulaParts": [
@@ -3734,7 +3781,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -3805,7 +3852,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -3845,7 +3892,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -3885,7 +3932,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             5,
             15,
@@ -3913,7 +3960,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             15,
             35,
@@ -3941,7 +3988,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             3,
             7,
@@ -3983,7 +4030,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             200,
             500,
@@ -4011,7 +4058,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             30,
             70,
@@ -4039,7 +4086,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             17000,
             42000,
@@ -4057,7 +4104,7 @@
         "mCharacterName": "Ambessa",
         "{dd661aab}": {
             "params": {
-                "Spell": "{3f70c67a}",
+                "Spell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
                 "{a2877ddb}": "Buffer_Dash_Time",
                 "{d00e123a}": "Buffer_Dash_Forgiveness_Window",
                 "{e5bc4229}": "Buffer_Dash_Min_Distance",
@@ -4084,7 +4131,7 @@
                     },
                     "{6cd45762}": true,
                     "{da1ee5bc}": true,
-                    "{96e77860}": "{6dfeb97a}",
+                    "{96e77860}": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveDash",
                     "TriggerSpells": [
                         "Characters/Ambessa/Spells/AmbessaQAbility/AmbessaQ",
                         "Characters/Ambessa/Spells/AmbessaEAbility/AmbessaE",
@@ -4100,7 +4147,7 @@
                 },
                 {
                     "OverrideParams": {
-                        "Spell": "{3f70c67a}",
+                        "Spell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
                         "{a2877ddb}": "Buffer_Dash_Time",
                         "{d00e123a}": "Buffer_Dash_W_Forgiveness_Window",
                         "{e5bc4229}": "Buffer_Dash_Min_Distance",
@@ -4125,7 +4172,7 @@
                     },
                     "{6cd45762}": true,
                     "{da1ee5bc}": true,
-                    "{96e77860}": "{6dfeb97a}",
+                    "{96e77860}": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassiveDash",
                     "TriggerSpells": [
                         "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaW"
                     ],
@@ -4296,7 +4343,7 @@
         "passiveLuaName": "AmbessaPassive",
         "passiveToolTip": "Spell_AmbessaPassive_Summary",
         "passiveSpell": "AmbessaPassive",
-        "passive1IconName": "ASSETS/Characters/Ambessa/HUD/Icons2D/Icon_Ambessa_Passive.dds",
+        "passive1IconName": "assets/characters/ambessa/hud/icons2d/icon_ambessa_passive.dds",
         "name": "game_character_displayname_Ambessa",
         "weaponMaterials": [
             "AmbessaBasicAttack",
@@ -4363,10 +4410,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{3f70c67a}",
+        "mCharacterPassiveSpell": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{3f70c67a}",
+                "mParentPassiveBuff": "Characters/Ambessa/Spells/AmbessaPassiveAbility/AmbessaPassive",
                 "__type": "CharacterPassiveData"
             },
             {

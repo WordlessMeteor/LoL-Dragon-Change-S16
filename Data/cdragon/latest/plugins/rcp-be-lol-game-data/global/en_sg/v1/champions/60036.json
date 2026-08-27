@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Toxic Dr. Mundo",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo not toxic, Mundo has healthy emotional coping mechanisms—oh, you mean purple goo? Mundo is sure that's fine, too."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo regenerates 0.3% of his maximum Health each second."
+        "description": "Dr. Mundo regenerates a portion of his maximum Health each second."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Health</font>",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Dr. Mundo hurls his cleaver, dealing damage based on his victims maximum health.",
-            "dynamicDescription": "<mainText>Dr. Mundo hurls his cleaver, dealing <magicDamage>magic damage</magicDamage> equal to @DamageMod*100@% of the target's current health (@MinDamage@ damage minimum) and <status>Slowing</status> them by 40% for 2 seconds.<br><br>Half of the health cost is refunded if the cleaver hits a target.",
+            "dynamicDescription": "Dr. Mundo hurls his cleaver, dealing <magicDamage>magic damage</magicDamage> equal to @DamageMod*100@% of the target's current health (@MinDamage@ damage minimum) and <status>Slowing</status> them by @MoveMod*-100@% for @SlowDuration@ seconds.<br><br><healing>@HealthReturn@ Health</healing> is refunded if the cleaver hits a target.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Health</font>",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 second. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing.",
-            "dynamicDescription": "Dr. Mundo gains <physicalDamage>@BaseIncrease@ Attack Damage</physicalDamage> for 5 seconds. Dr. Mundo gains an additional <physicalDamage>+@DamageMod@ Attack Damage</physicalDamage> for each percentage of Health he is missing.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo's gains Attack Damage for a few seconds based on his missing health.",
+            "dynamicDescription": "Dr. Mundo gains <physicalDamage>@BaseIncrease@ Attack Damage</physicalDamage> for @Duration@ seconds. Dr. Mundo gains an additional <physicalDamage>+@DamageMod@ Attack Damage</physicalDamage> for each percentage of Health he is missing.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% of Current Health</font>",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration.",
-            "dynamicDescription": "<mainText>Dr. Mundo regenerates <healing>@MaximumHealthRegen@ Health</healing> over 12 seconds. Additionally, he gains <speed>@SpeedMod*100@% Movement Speed</speed>.",
+            "dynamicDescription": "Dr. Mundo regenerates <healing>@MaximumHealthRegen@ Health</healing> and gains <speed>@SpeedMod*100@% Movement Speed</speed> over @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

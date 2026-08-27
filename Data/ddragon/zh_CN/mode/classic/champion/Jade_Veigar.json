@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Veigar": {
             "id": "Jade_Veigar",
@@ -354,7 +354,7 @@
                     "id": "Jade_VeigarDarkMatter",
                     "name": "黑暗物质",
                     "description": "维迦召唤一大团黑暗物质轰击目标区域，落地造成魔法伤害。",
-                    "tooltip": "1.2秒后，黑暗物质从天而降，对目标区域的单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "{{ impactdelay }}秒后，黑暗物质将从天而降，对目标区域的单位造成 <magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -393,18 +393,18 @@
                             0
                         ],
                         [
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            8,
-                            8,
-                            8,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -459,8 +459,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "1.2",
-                        "8",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -495,7 +495,7 @@
                     "id": "Jade_VeigarEventHorizon",
                     "name": "扭曲空间",
                     "description": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会被短暂晕眩。",
-                    "tooltip": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会受到{{ stunduration }}秒的<status>晕眩</status>效果。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "维迦在目标区域创造一个能够维持{{ cageduration }}秒的扭曲空间，穿过此区域边界的敌人将会受到持续{{ stunduration }}秒的<status>晕眩</status>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "晕眩时长：",
@@ -503,7 +503,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -529,18 +529,18 @@
                     "effect": [
                         null,
                         [
-                            1.5,
-                            1.75,
-                            2,
-                            2.25,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -601,8 +601,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "1.5/1.75/2/2.25/2.5",
-                        "0.5",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -638,7 +638,7 @@
                     "id": "Jade_VeigarR",
                     "name": "能量爆裂",
                     "description": "引爆目标敌方英雄，造成大量基础魔法伤害，并额外造成目标80%法术强度的伤害。",
-                    "tooltip": "引爆目标敌方英雄，造成<magicDamage>{{ mindamage }}伤害，并额外造成目标80%法术强度的魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "维迦引爆目标一名敌方英雄，造成<magicDamage>{{ mindamage }}外加目标{{ enemyapratio*100 }}%法术强度的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -754,7 +754,7 @@
             ],
             "passive": {
                 "name": "均衡",
-                "description": "维迦每损失1%法力值，法力回复便提升1%。",
+                "description": "维迦的法力回复会基于他的已损失法力值得到提升。",
                 "image": {
                     "full": "Jade_VeigarEntropy.png",
                     "sprite": "passive1.png",

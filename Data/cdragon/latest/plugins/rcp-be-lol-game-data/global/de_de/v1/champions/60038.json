@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin erleidet 15 % weniger <magicDamage>magischen Schaden</magicDamage> und wandelt diesen Schaden in zusätzliches <attackSpeed>Angriffstempo</attackSpeed> um."
+        "description": "Kassadin erleidet weniger <magicDamage>magischen Schaden</magicDamage> und wandelt erlittenen Schaden in zusätzliches <attackSpeed>Angriffstempo</attackSpeed> um."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Passiv: Kassadins normale Angriffe stellen Mana wieder her. Die Manawiederherstellung ist bei Angriffen gegen gegnerische Champions verdreifacht. Aktiv: Kassadins normale Angriffe verursachen zusätzlichen magischen Schaden.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Kassadins normale Angriffe ziehen Energie aus der Leere und stellen bei jedem Treffer <scaleMana>@ManaGainAmount@ Mana</scaleMana> wieder her. Wenn das Ziel ein gegnerischer Champion ist, wird die Wiederherstellung von <scaleMana>Mana</scaleMana> auf @ManaGainAmount*3@ verdreifacht.<br><br><spellActive>Aktiv: </spellActive>Kassadin lädt seine Leerenklinge 5 Sekunden lang auf, um mit seinen normalen Angriffen zusätzlich <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu verursachen.@SpellModifierDescriptionAppend@",
+            "description": "Passiv: Kassadins normale Angriffe stellen Mana wieder her. Aktiv: Kassadins normale Angriffe verursachen zusätzlichen magischen Schaden.",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Kassadins normale Angriffe ziehen Energie aus der Leere und stellen bei jedem Treffer <scaleMana>@ManaGainAmount@ Mana</scaleMana> wieder her, das bei Treffern gegen Champions auf <scaleMana>@ChampionManaRestore@ Mana</scaleMana> erhöht wird.<br><br><spellActive>Aktiv: </spellActive>Kassadin lädt seine Leerenklinge @BuffDuration@ Sekunden lang auf, um mit seinen normalen Angriffen zusätzlich <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu verursachen.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Kassadin schöpft Energie aus Fähigkeiten, die in seiner näheren Umgebung gewirkt werden. Nachdem Kassadin sich aufgeladen hat, kann er mit einer kegelförmigen Energiewelle Schaden an Gegnern vor ihm verursachen und sie verlangsamen.",
-            "dynamicDescription": "Kassadin schöpft Energie aus Fähigkeiten, die in seiner Nähe (1.800 Reichweite) gewirkt werden, und erhält jedes Mal eine Aufladung, wenn eine Fähigkeit in seiner näheren Umgebung gewirkt wird. Sobald Kassadin 6 Aufladungen erreicht, kann er seine <spellName>Energiewelle</spellName> einsetzen, die Gegnern in einem kegelförmigen Bereich vor ihm <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und sie 3 Sekunden lang um @MoveSpeedMod*-100@ % <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin schöpft Energie aus Fähigkeiten, die in seiner Nähe gewirkt werden, und erhält jedes Mal eine Aufladung, wenn eine Fähigkeit in seiner näheren Umgebung gewirkt wird.<br><br>Sobald Kassadin @RequiredChargesTooltip@ Aufladungen erreicht, kann er seine <spellName>Energiewelle</spellName> einsetzen, die Gegnern in einem kegelförmigen Bereich vor ihm <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und sie @SlowDuration@ Sekunden lang um @MoveSpeedMod*-100@ % <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Kassadin teleportiert sich an einen Ort in der Nähe und fügt gegnerischen Einheiten im Umkreis Schaden zu. Wird Leerenwanderer wiederholt schnell nacheinander eingesetzt, steigen die zusätzlichen Manakosten immer weiter an und es wird zusätzlicher Schaden verursacht.",
-            "dynamicDescription": "Kassadin teleportiert sich zu einem Zielort in der Nähe und verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> an gegnerischen Einheiten in der Umgebung. Jeder weitere <spellName>Leerenwanderer</spellName> innerhalb der nächsten 8 Sekunden kostet <scaleMana>100 zusätzliches Mana</scaleMana> und verursacht <magicDamage>@Damage@ zusätzlichen Schaden</magicDamage>. Kann bis zu 10-mal gesteigert werden.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin teleportiert sich zu einem Zielort in der Nähe und verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> an gegnerischen Einheiten in der Umgebung. Jeder weitere <spellName>Leerenwanderer</spellName> innerhalb der nächsten @BuffDuration@ Sekunden kostet <scaleMana>@AdditionalManaPerCast@ zusätzliches Mana</scaleMana> und verursacht <magicDamage>@Damage@ zusätzlichen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

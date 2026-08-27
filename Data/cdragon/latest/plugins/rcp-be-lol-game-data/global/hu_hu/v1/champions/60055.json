@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "A hősgyilkosságok és az asszisztok 15 másodperccel csökkentik Katarina töltési idejét."
+        "description": "A hősök kiiktatása csökkenti Katarina képességeinek töltési idejét."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Katarina eldob egy tőrt, ami ellenfélről ellenfélre pattan, miközben varázssebzést okoz.",
-            "dynamicDescription": "Elhajít egy tőrt, <magicDamage>@TotalDamage@</magicDamage> varázssebzést okozva. A tőr továbbpattan a legközelebbi @MaxBounces@ ellenfélre, és minden ugrás után 10%-kal csökken a sebzése.<br><br>Az eltalált ellenfelek @MarkDuration@ másodpercre meg lesznek jelölve. Katarina alaptámadásai vagy varázslatai felhasználják ezeket a jeleket, ezzel <magicDamage>@TotalDamageMark@</magicDamage> további varázssebzést okozva a célpontnak.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Elhajít egy tőrt, <magicDamage>@TotalDamage@</magicDamage> varázssebzést okozva. A tőr továbbpattan a legközelebbi @MaxBounces@ ellenfélre, és minden ugrás után @DamageFalloff*100@%-kal csökken a sebzése.<br><br>Az eltalált ellenfelek @MarkDuration@ másodpercre meg lesznek jelölve. Katarina alaptámadásai vagy varázslatai felhasználják ezeket a jeleket, ezzel <magicDamage>@TotalDamageMark@</magicDamage> további varázssebzést okozva a célpontnak.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Katarina valóságos pengehurrikánná alakul, és elképesztő tempóban dobálja a tőreit legfeljebb három közeli hősre.",
-            "dynamicDescription": "Tőrzáport zúdít a legközelebbi 3 ellenséges hősre, 2,5 másodperc alatt <magicDamage>@DamageCalcTooltipOnly@ varázssebzést</magicDamage> okozva.@SpellModifierDescriptionAppend@",
+            "description": "Katarina valóságos pengehurrikánná alakul, és elképesztő tempóban dobálja a tőreit a közeli ellenséges hősökre, amivel komoly sebzést okoz, és Seb hatást alkalmaz.",
+            "dynamicDescription": "Tőrzáport zúdít a legközelebbi @MaxTargets@ ellenséges hősre, @ChannelDuration@ másodperc alatt <magicDamage>@DamageCalcTooltipOnly@ varázssebzést</magicDamage> okozva. Az eltalált ellenfelek @GrievousWoundsDuration@ másodpercre @GrievousWoundsAmount*100@%-os <status>Seb</status> hatást szenvednek el.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin ได้รับ<magicDamage>ความเสียหายเวท</magicDamage>ลดลง 15% และเปลี่ยนความเสียหายนี้เป็นโบนัส<attackSpeed>ความเร็วโจมตี</attackSpeed>"
+        "description": "Kassadin ได้รับ<magicDamage>ความเสียหายเวท</magicDamage>ลดลง และเปลี่ยนความเสียหายเวทที่ได้รับเป็นโบนัส<attackSpeed>ความเร็วโจมตี</attackSpeed>"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ติดตัว: การโจมตีปกติของ Kassadin จะฟื้นฟูมานา โดยจะฟื้นฟูมานาเพิ่มขึ้นสามเท่าเมื่อใช้กับแชมเปี้ยนศัตรู กดใช้: การโจมตีปกติของ Kassadin จะสร้างความเสียหายเวทเพิ่มเติม",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Kassadin จะดึงพลังงานจาก Void เพื่อฟื้นฟู<scaleMana>มานา @ManaGainAmount@ หน่วย</scaleMana> เมื่อโจมตี หากเป้าหมายเป็นแชมเปี้ยนศัตรู จะฟื้นฟู<scaleMana>มานา</scaleMana>เพิ่มขึ้นสามเท่าเป็น @ManaGainAmount*3@ หน่วย<br><br><spellActive>กดใช้: </spellActive>Kassadin ชาร์จพลังให้กับ Nether Blade เป็นเวลา 5 วินาที ทำให้การโจมตีปกติของเขาสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "description": "ติดตัว: การโจมตีปกติของ Kassadin จะฟื้นฟูมานา กดใช้: การโจมตีปกติของ Kassadin จะสร้างความเสียหายเวทเพิ่มเติม",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Kassadin จะดึงพลังงานจาก Void เพื่อฟื้นฟู<scaleMana>มานา @ManaGainAmount@ หน่วย</scaleMana>เมื่อโจมตี เพิ่มขึ้นเป็น <scaleMana>@ChampionManaRestore@ หน่วย</scaleMana>เมื่อโจมตีแชมเปี้ยน<br><br><spellActive>กดใช้: </spellActive>Kassadin ชาร์จพลังให้กับ Nether Blade เป็นเวลา @BuffDuration@ วินาที ทำให้การโจมตีปกติของเขาสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kassadin ดูดพลังงานจากสกิลที่ถูกร่ายในบริเวณใกล้เคียง เมื่อสะสมครบ Kassadin จะสามารถใช้ Force Pulse สร้างความเสียหาย และลดความเร็วเคลื่อนที่ศัตรูด้านหน้าเป็นรูปกรวย",
-            "dynamicDescription": "Kassadin ดูดพลังงานจากสกิลที่ถูกร่ายในบริเวณใกล้เคียง (ระยะ 1800 หน่วย) และจะได้รับชาร์จทุกครั้งที่มีการร่ายสกิลใกล้ ๆ เขา เมื่อสะสมครบ 6 ชาร์จ Kassadin จะสามารถใช้ <spellName>Force Pulse</spellName> เพื่อสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @MoveSpeedMod*-100@% เป็นเวลา 3 วินาทีด้านหน้าเป็นรูปกรวย@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin ดูดพลังงานจากสกิลที่ถูกร่ายในบริเวณใกล้เคียง และจะได้รับชาร์จทุกครั้งที่มีการร่ายสกิลใกล้ ๆ เขา<br><br>เมื่อสะสมครบ @RequiredChargesTooltip@ ชาร์จ Kassadin จะสามารถใช้ <spellName>Force Pulse</spellName> เพื่อสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @MoveSpeedMod*-100@% เป็นเวลา @SlowDuration@ วินาทีด้านหน้าเป็นรูปกรวย@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kassadin วาร์ปไปยังตำแหน่งใกล้เคียงและสร้างความเสียหายให้กับศัตรูโดยรอบ นอกจากนี้ การใช้ Riftwalk หลายครั้งในช่วงเวลาสั้น ๆ จะเสียมานามากขึ้น แต่ก็สร้างความเสียหายเพิ่มเติมเช่นกัน",
-            "dynamicDescription": "Kassadin วาร์ปไปยังตำแหน่งใกล้เคียงและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ให้กับศัตรูโดยรอบ นอกจากนี้ การใช้ <spellName>Riftwalk</spellName> แต่ละครั้งภายใน 8 วินาทีถัดมา จะใช้<scaleMana>มานาเพิ่มขึ้น 100 หน่วย</scaleMana> แต่จะสร้าง<magicDamage>ความเสียหายเพิ่มเติม @Damage@ หน่วย</magicDamage> สแตคได้สูงสุด 10 ครั้ง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin วาร์ปไปยังตำแหน่งใกล้เคียงและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูโดยรอบ นอกจากนี้ การใช้ <spellName>Riftwalk</spellName> แต่ละครั้งภายใน @BuffDuration@ วินาที จะใช้<scaleMana>มานาเพิ่มขึ้น @AdditionalManaPerCast@ หน่วย</scaleMana> แต่จะสร้าง<magicDamage>ความเสียหายเพิ่มเติม @Damage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

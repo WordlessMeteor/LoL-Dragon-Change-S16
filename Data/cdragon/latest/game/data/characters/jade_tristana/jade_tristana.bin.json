@@ -111,7 +111,7 @@
         "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
         "mChildSpells": [
             "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
-            "{990d44ac}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff"
         ],
         "mName": "Jade_TristanaEAbility",
         "__type": "AbilityObject"
@@ -228,7 +228,7 @@
         "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
         "mChildSpells": [
             "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
-            "{fbb089bb}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow"
         ],
         "mName": "Jade_TristanaWAbility",
         "__type": "AbilityObject"
@@ -358,11 +358,11 @@
             "manaValues": {
                 "values": [
                     50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    60.0,
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0
                 ],
                 "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
@@ -395,6 +395,10 @@
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -478,20 +482,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ActiveDot",
+                    "name": "PassiveAPRatio",
                     "values": [
-                        14.0,
-                        22.0,
-                        30.0,
-                        38.0,
-                        46.0,
-                        54.0,
-                        62.0
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ActiveDotTotal",
+                    "name": "ActiveDot",
                     "values": [
                         70.0,
                         110.0,
@@ -500,6 +504,19 @@
                         230.0,
                         270.0,
                         310.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveAPRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -538,38 +555,32 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.25,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "PassiveAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "{fd502790}": {
+                "{8b3077db}": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "ActiveDot",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "ActiveAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "{bac8cb48}": {
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "ActiveDotTotal",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                "{5948c87d}": {
+                    "mMultiplier": {
+                        "mNumber": 0.20000000298023224,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{8b3077db}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Crit",
@@ -731,7 +742,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "ActiveDotTotal",
+                                    "type": "ActiveDot",
                                     "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_DamageOverTime",
                                     "__type": "TooltipInstanceListElement"
@@ -760,7 +771,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "{fd502790}",
+                        "mSpellCalculationKey": "{8b3077db}",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -770,9 +781,9 @@
         },
         "__type": "SpellObject"
     },
-    "{990d44ac}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff": {
         "ObjectName": "Jade_TristanaE_Debuff",
-        "objectPath": "{990d44ac}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE_Debuff",
         "mScriptName": "Jade_TristanaE_Debuff",
         "mSpell": {
             "mImgIconName": [
@@ -1023,7 +1034,7 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_brand.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -1099,6 +1110,32 @@
                         0.800000011920929,
                         0.800000011920929,
                         0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Slow",
+                    "values": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1334,9 +1371,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fbb089bb}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow": {
         "ObjectName": "Jade_TristanaW_Slow",
-        "objectPath": "{fbb089bb}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW_Slow",
         "mScriptName": "Jade_TristanaW_Slow",
         "mBuff": {
             "mDescription": "Buff_TristanaW_Jade_Tooltip",
@@ -1395,9 +1432,9 @@
         "__type": "SpellObject"
     },
     "{bbd819cc}": {
-        "mRootSpell": "{fd6d02a1}",
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "mChildSpells": [
-            "{fd6d02a1}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive"
         ],
         "mName": "Jade_TristanaPassiveAbility",
         "__type": "AbilityObject"
@@ -1509,9 +1546,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fd6d02a1}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive": {
         "ObjectName": "Jade_TristanaPassive",
-        "objectPath": "{fd6d02a1}",
+        "objectPath": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "mScriptName": "Jade_TristanaPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -2126,7 +2163,7 @@
                 "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "baseValue": 32.0,
+                "baseValue": 40.0,
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
@@ -2177,7 +2214,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 4.0,
+            "baseValue": 3.0,
             "__type": "ModifiableFloat"
         },
         "acquisitionRange": 800.0,
@@ -2242,7 +2279,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "game_character_passiveDescription_Jade_Tristana",
         "passiveSpell": "Jade_TristanaPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Tristana/HUD/Icons2D/Jade_Tristana_Passive.dds",
+        "passive1IconName": "assets/characters/jade_tristana/hud/icons2d/jade_tristana_passive.dds",
         "name": "game_character_displayname_Jade_Tristana",
         "mUseCCAnimations": true,
         "selectionHeight": 110.0,
@@ -2341,7 +2378,7 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mCharacterPassiveSpell": "{fd6d02a1}",
+        "mCharacterPassiveSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaPassiveAbility/Jade_TristanaPassive",
         "{c5c48b41}": 1,
         "Script": "{835de583}",
         "__type": "CharacterRecord"

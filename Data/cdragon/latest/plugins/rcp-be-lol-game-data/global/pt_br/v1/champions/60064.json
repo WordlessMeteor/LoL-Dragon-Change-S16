@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Lee Sin Acólito",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "A vestimenta tradicional dos acólitos Shojin nunca caiu bem nos ombros ambiciosos do jovem Lee Sin, que transbordava mais potencial bruto do que qualquer um de seus companheiros acólitos jamais poderia sonhar. E, no entanto, ele se adaptou... tanto ao traje quanto ao poder do dragão."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Depois que Lee Sin usa uma Habilidade, seus próximos 2 Ataques básicos recebem 40% de Velocidade de Ataque e restauram 15 de Energia."
+        "description": "Após Lee Sin usar uma Habilidade, seus próximos Ataques básicos recebem Velocidade de Ataque e recuperam Energia."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Onda Sônica: Lee Sin projeta uma onda sonora para localizar seus inimigos, causando Dano Físico ao primeiro inimigo que encontrar. Se Onda Sônica atinge um inimigo, Lee Sin pode conjurar Ataque Ressonante nos próximos 3s.<br>Ataque Ressonante: Lee Sin avança na direção do inimigo atingido por Onda Sônica, causando Dano Físico mais o equivalente a 8% da Vida perdida do alvo.",
-            "dynamicDescription": "<spellName>Onda Sônica: </spellName>Lee Sin emite uma onda dissonante para localizar inimigos e causar <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage> ao primeiro inimigo encontrado. Se <spellName>Onda Sônica</spellName> acerta um inimigo, Lee Sin pode conjurar <spellName>Ataque Ressonante</spellName> nos próximos 3s.<br><br><spellName>Ataque Ressonante: </spellName>Lee Sin avança na direção do inimigo atingido por Onda Sônica e causa <physicalDamage>@RecastDamage@ de Dano Físico</physicalDamage> mais o equivalente a 8% da Vida perdida do alvo.@SpellModifierDescriptionAppend@",
+            "description": "Onda Sônica: Lee Sin emite uma onda dissonante para localizar inimigos e causar dano ao primeiro inimigo encontrado. Se Onda Sônica acerta um inimigo, Lee Sin pode conjurar Ataque Ressonante.<br><br>Ataque Ressonante: Lee Sin avança na direção do inimigo atingido por Onda Sônica e causa dano adicional somado a parte da Vida perdida do alvo.",
+            "dynamicDescription": "<spellName>Onda Sônica: </spellName>Lee Sin emite uma onda dissonante para localizar inimigos e causar <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage> ao primeiro inimigo encontrado. Se <spellName>Onda Sônica</spellName> acerta um inimigo, Lee Sin pode conjurar <spellName>Ataque Ressonante</spellName> nos próximos 3s.<br><br><spellName>Ataque Ressonante: </spellName>Lee Sin avança na direção do inimigo atingido por Onda Sônica e causa <physicalDamage>@RecastDamage@ de Dano Físico</physicalDamage> mais o equivalente a @MissingHealthDamage*100@% da Vida perdida do alvo.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Proteger: Lee Sin avança em direção ao aliado-alvo, concedendo Escudo a si e ao aliado. Após Proteger, Lee Sin pode conjurar Vontade de Ferro nos próximos 3s.<br>Vontade de Ferro: o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas. Lee Sin recebe Roubo de Vida, Vampirismo Mágico e Armadura por 4s.",
-            "dynamicDescription": "<spellName>Proteger: </spellName>Lee Sin avança em direção ao aliado-alvo, concedendo <shield>Escudo</shield> que previne @ShieldAmount@ de dano a si e ao aliado por 5s. Após <spellName>Proteger</spellName>, Lee Sin pode conjurar <spellName>Vontade de Ferro</spellName> nos próximos 3s.<br><br><spellName>Vontade de Ferro: </spellName>o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas. Lee Sin recebe @LifestealAndSpellVamp@% de Roubo de Vida, Vampirismo Mágico e <scaleArmor>@ArmorBonus@ de Armadura</scaleArmor> por 5s.@SpellModifierDescriptionAppend@",
+            "description": "Proteger: Lee Sin avança em direção ao aliado-alvo, concedendo Escudo a si e ao aliado. Após usar Proteger, Lee Sin pode conjurar Vontade de Ferro.<br><br>Vontade de Ferro: o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas, recebendo Roubo de Vida, Vampirismo Mágico e Armadura.",
+            "dynamicDescription": "<spellName>Proteger: </spellName>Lee Sin avança em direção ao aliado-alvo, concedendo <shield>Escudo</shield> que previne @ShieldAmount@ de dano a si e ao aliado por @ShieldDuration@s. Após usar <spellName>Proteger</spellName>, Lee Sin pode conjurar <spellName>Vontade de Ferro</spellName> nos próximos @W1ReactivateTime@s.<br><br><spellName>Vontade de Ferro: </spellName>o treinamento intenso de Lee Sin faz com que ele se destaque nas batalhas. Lee Sin recebe @LifestealAndSpellVamp@% de Roubo de Vida, Vampirismo Mágico e <scaleArmor>@ArmorBonus@ de Armadura</scaleArmor> por @LifestealAndSpellVampTime@s.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

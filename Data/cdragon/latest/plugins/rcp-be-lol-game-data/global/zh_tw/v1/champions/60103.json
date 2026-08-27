@@ -6,7 +6,7 @@
     "name": "阿璃",
     "alias": "Jade_Ahri",
     "title": "九尾妖狐",
-    "shortBio": "- 銷魂(P)可透過對敵軍造成傷害來累加<br>- 飛仙(R)不會重置",
+    "shortBio": "- 銷魂(P)可透過對敵軍造成傷害來累加<br>- 飛仙(R)不會重置<br>- 傾城(E)提高阿璃對目標的傷害",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿璃向前衝刺並發射魔法彈，對3名鄰近敵軍造成傷害(優先鎖定英雄)。飛仙在進入冷卻前最多可施放三次。",
-            "dynamicDescription": "阿璃敏捷地衝刺，對鄰近敵軍發射3枚魔法彈，優先攻擊英雄。每發魔法彈造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<spellName>飛仙</spellName>10秒內最多可<recast>重施</recast>2次。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿璃敏捷地衝刺，對鄰近敵軍發射3發魔法彈，優先攻擊英雄。每發魔法彈造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<spellName>飛仙</spellName>在@RecastDuration@秒內最多可<recast>重施</recast>2次。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

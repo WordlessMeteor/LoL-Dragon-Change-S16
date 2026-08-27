@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "傷害性技能對敵軍施加烈陽之力，持續3.5秒。友方英雄對這些目標造成傷害時，會消耗他們身上的烈陽之力減益，造成額外魔法傷害。"
+        "description": "傷害性技能會對敵軍施加「烈陽之力」。友方英雄對這些目標造成傷害時，會消耗他們身上的烈陽之力減益，造成額外傷害。"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜下一次普攻會施展盾擊，造成額外魔法傷害並暈眩目標。",
-            "dynamicDescription": "下一次普攻額外造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>，並<status>暈眩</status>敵軍1.25秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "下一次普攻額外造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>，並<status>暈眩</status>敵軍@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜舉起盾牌，強化雙防。技能時間首次結束時，如果周圍還有敵軍，則對敵軍造成魔法傷害，且延長技能持續時間。",
-            "dynamicDescription": "增加@BonusARMR@額外<scaleArmor>物防</scaleArmor>與<scaleMR>魔防</scaleMR>，持續3秒。技能結束時，對鄰近敵軍造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>。若命中敵軍，雷歐娜將繼續保留額外<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，持續3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷歐娜獲得<scaleArmor>@BonusARMR@物防</scaleArmor>與<scaleMR>魔防</scaleMR>，持續@BuffDuration@秒。技能結束時，對鄰近命中的敵軍造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>，雷歐娜將繼續保留額外<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，持續@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

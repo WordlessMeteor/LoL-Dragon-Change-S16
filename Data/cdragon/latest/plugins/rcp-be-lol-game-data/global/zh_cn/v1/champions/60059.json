@@ -613,7 +613,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "嘉文四世的长矛穿透敌人，对它途经的所有敌人造成物理伤害和护甲击碎效果。此外，该技能还会将嘉文四世引向德邦军旗，并击飞他途经的所有敌人。",
-            "dynamicDescription": "用嘉文四世的长矛穿透敌人，对命中的所有敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>和持续3秒的@ArmorShredPercent@%护甲击碎效果。<br><br>如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>他途经的所有敌人。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "将嘉文四世的长矛延伸出去，对命中的所有敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>和持续@ArmorShredDuration@秒的@ArmorShredPercent@%护甲削减。<br><br>如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>沿途的所有敌人。@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -763,7 +763,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "嘉文四世召唤古德玛西亚列王保护自己，提供护盾吸收伤害并减速附近敌人。",
-            "dynamicDescription": "临时获得一个持续5秒的<shield>护盾</shield>，可吸收最多@ShieldAmount@伤害（附近每有一名敌方英雄，额外吸收@ShieldBonus@伤害），并对周围敌人造成持续2秒的@SlowAmount@%<status>减速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "提供一个可吸收至多@ShieldAmount@(+@ShieldBonus@x周围敌方英雄数)伤害的<shield>护盾</shield>，持续@ShieldDuration@秒，并对周围的敌人们造成持续@SlowDuration@秒的@SlowAmount@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1063,7 +1063,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "嘉文四世勇猛地跃向目标敌方英雄，对其造成物理伤害，并在敌人周围形成环形障碍，持续数秒。",
-            "dynamicDescription": "勇猛地跃向目标敌方英雄，造成<physicalDamage>@DamageCalc@物理伤害</physicalDamage>，并在目标周围形成环形障碍，持续3.5秒。<br><br><recast>再次施放</recast>即可使障碍倒塌。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "勇猛地跃向目标敌方英雄，对目标及附近的敌人造成<physicalDamage>@DamageCalc@物理伤害</physicalDamage>，并在目标周围形成持续@WallDuration@秒的环形障碍。<br><br><recast>再次施放</recast>将使该障碍倒塌。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

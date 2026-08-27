@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ashe": {
             "id": "Jade_Ashe",
@@ -199,7 +199,7 @@
                             "减速"
                         ],
                         "effect": [
-                            "{{ slowpercent*-100.000000 }} -> {{ slowpercentnl*-100.000000 }}"
+                            "{{ slowpercent*-100.000000 }}% -> {{ slowpercentnl*-100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -244,46 +244,46 @@
                             6
                         ],
                         [
-                            20,
-                            30,
-                            40,
-                            50,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.22,
-                            0.235,
-                            0.25,
-                            0.265,
-                            0.28
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.1,
-                            1.175,
-                            1.25,
-                            1.325,
-                            1.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -298,12 +298,12 @@
                         "4",
                         "4",
                         "6",
-                        "20/30/40/50/60",
-                        "0.22/0.235/0.25/0.265/0.28",
-                        "1.1/1.175/1.25/1.325/1.4",
-                        "1",
-                        "1",
-                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -451,13 +451,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1200,
-                        1200,
-                        1200,
-                        1200,
-                        1200
+                        1250,
+                        1250,
+                        1250,
+                        1250,
+                        1250
                     ],
-                    "rangeBurn": "1200",
+                    "rangeBurn": "1250",
                     "image": {
                         "full": "Jade_AsheVolley.png",
                         "sprite": "spell1.png",
@@ -473,15 +473,15 @@
                     "id": "Jade_AsheSpiritOfTheHawk",
                     "name": "鹰击长空",
                     "description": "艾希每次击杀单位都会获得额外金币。艾希可以激活技能，派遣她的猎鹰之灵去执行侦查任务。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>艾希每次击杀敌人都会额外获得<gold>{{ additionalgold }}金币</gold>。<br /><br /><spellActive>主动：</spellActive>艾希派出一只猎鹰，为指定区域提供5秒视野。它还会在飞行时显形途经的区域。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>艾希在每次击杀一个敌人时获得<gold>{{ additionalgold }}额外金币</gold>。<br /><br /><spellActive>主动：</spellActive>艾希派出一只鹰，以在一个区域提供{{ revealduration }}秒视野。它还会在飞行时显形附近的区域。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "距离",
-                            "额外金币"
+                            "额外金币",
+                            "距离"
                         ],
                         "effect": [
-                            "{{ castrange }} -> {{ castrangeNL }}",
-                            "{{ additionalgold }} -> {{ additionalgoldNL }}"
+                            "{{ additionalgold }} -> {{ additionalgoldNL }}",
+                            "{{ castrange }} -> {{ castrangeNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -505,32 +505,32 @@
                     "effect": [
                         null,
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            90,
-                            130,
-                            170,
-                            210
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25000,
-                            25000,
-                            25000,
-                            25000,
-                            25000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -577,10 +577,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "3",
-                        "50/90/130/170/210",
-                        "25000",
-                        "5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -614,7 +614,7 @@
                     "id": "Jade_AsheEnchantedCrystalArrow",
                     "name": "魔法水晶箭",
                     "description": "艾希射出一支沿直线飞行的魔法水晶箭。如果水晶箭命中了一名敌方英雄，则对该英雄造成伤害和晕眩效果，晕眩时长取决于水晶箭的飞行距离，最多持续3.5秒。此外，附近的敌方单位会受到伤害并减速。",
-                    "tooltip": "艾希射出沿直线飞行的魔法水晶箭，<status>晕眩</status>命中的敌方英雄并造成<magicDamage>{{ rmaindamage }}魔法伤害</magicDamage>。<status>晕眩</status>时长随飞行距离提升，最多{{ maxstunduration }}秒。附近敌人被<status>减速</status>50%，持续3秒，并受到<magicDamage>{{ rmaindamagesplashtooltip }}伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "艾希射出魔法水晶箭，<status>晕眩</status>命中的第一个敌方英雄，并造成<magicDamage>{{ rmaindamage }}魔法伤害</magicDamage>。<status>晕眩</status>时长取决于飞行距离，至多{{ maxstunduration }}秒。还会对目标周围的敌人们造成持续{{ slowduration }}秒的{{ movementspeedmod*-100 }}%<status>减速</status>和<magicDamage>{{ raoedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",

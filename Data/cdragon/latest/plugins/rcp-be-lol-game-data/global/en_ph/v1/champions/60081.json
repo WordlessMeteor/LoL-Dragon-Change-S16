@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Nottingham Ezreal",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "An adventuring elf from the outlying forest kingdoms, Ezreal likes to present himself as a “handsome rogue-paladin” named Jarro Lightfeather. Very few people believe his claims of knighthood, but they serve as a decent enough distraction between his disastrous misadventures."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 5 times."
+        "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns slightly if it strikes an enemy unit.",
             "dynamicDescription": "Ezreal fires a bolt of energy, dealing <physicalDamage>@Damage@ physical damage</physicalDamage> (applies on-hit effects). <br><br>Ezreal's cooldowns are reduced by 1 second if <spellName>Mystic Shot</spellName> hits a target.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ezreal fires a fluctuating wave of energy, decreasing the Attack Speed and dealing magic damage to enemy champions, while healing and increasing the Attack Speed of allied champions.",
-            "dynamicDescription": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>@Damage@ magic damage</magicDamage> and reducing their <attackSpeed>Attack Speed</attackSpeed> by @AttackSpeed@% for 5 seconds. <br><br>Allied champions hit by the wave restore <healing>@TotalHeal@ Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by @AttackSpeed@% for 5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal fires a wave of energy that damages all enemy champions it passes through for <magicDamage>@Damage@ magic damage</magicDamage> and reduces their <attackSpeed>Attack Speed</attackSpeed> by @AttackSpeed@% for @Duration@ seconds. <br><br>Allied champions hit by the wave restore <healing>@TotalHeal@ Health</healing> and have their <attackSpeed>Attack Speed</attackSpeed> increased by @AttackSpeed@% for @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Ezreal channels for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).",
-            "dynamicDescription": "Ezreal channels for 1 second to fire a barrage of missiles dealing <magicDamage>@Damage@ magic damage</magicDamage> to each unit it passes through. However, it deals @DamageReductionPerHit*100@% less damage for each unit it hits (minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ezreal fires a powerful barrage of energy missiles which do massive damage to each unit it passes through.",
+            "dynamicDescription": "Ezreal fires a barrage of missiles dealing <magicDamage>@Damage@ magic damage</magicDamage> to each unit it passes through. However, it deals @DamageReductionPerHit*100@% less damage for each unit it hits (minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

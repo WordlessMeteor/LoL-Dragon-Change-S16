@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "La Barrière de mana de Blitzcrank s'active lorsqu'il tombe à moins de 20% de ses PV max. Cela génère un bouclier dont les PV sont équivalents à 50% de son mana et qui dure jusqu'à 10 sec. La Barrière de mana ne peut être activée qu'une fois toutes les 90 sec."
+        "description": "Lorsqu'il subit des dégâts alors qu'il a peu de PV, Blitzcrank bénéficie d'abord d'un bouclier équivalent à un pourcentage de son mana actuel. Cet effet a un délai de récupération."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Blitzcrank tire sa main droite pour attraper un adversaire, lui infliger des dégâts et l'attirer vers lui.",
             "dynamicDescription": "Blitzcrank lance sa main droite, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en plus d'<status>étourdir</status> la cible et de <status>l'attirer</status> vers lui.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Blitzcrank charge son poing pour que sa prochaine attaque inflige le double de dégâts et projette la cible dans les airs.",
-            "dynamicDescription": "Blitzcrank charge son poing pour que sa prochaine attaque inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et <status>projette la cible en l'air</status> pendant @CCDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Blitzcrank charge son poing pour que sa prochaine attaque inflige des dégâts bonus et projette la cible dans les airs.",
+            "dynamicDescription": "Blitzcrank charge son poing pour que sa prochaine attaque inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et <status>projette la cible en l'air</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Invoque passivement des éclairs qui infligent des dégâts à un ennemi à proximité. De plus, Blitzcrank peut activer cette compétence pour infliger des dégâts aux ennemis proches et les réduire au silence pendant 0.5 sec (annule le passif jusqu'à la fin du délai de récupération).",
-            "dynamicDescription": "<spellPassive>Passif : </spellPassive>des arcs d'éclairs jaillissent de Blitzcrank pour frapper un ennemi proche aléatoire et lui infliger <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> toutes les 2.5 sec.<br><br><spellActive>Actif : </spellActive>inflige <magicDamage>@ActiveDamage@ pts de dégâts magiques</magicDamage> et <status>réduit au silence</status> les unités ennemies proches pendant 0.5 sec.@SpellModifierDescriptionAppend@",
+            "description": "Invoque passivement des éclairs qui infligent des dégâts à un ennemi à proximité. De plus, Blitzcrank peut activer cette compétence pour blesser les ennemis proches et les réduire brièvement au silence.",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>des arcs d'éclairs jaillissent de Blitzcrank pour frapper un ennemi proche aléatoire et lui infliger <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> toutes les @PassiveHitRate@ sec.<br><br><spellActive>Actif : </spellActive>inflige <magicDamage>@ActiveDamage@ pts de dégâts magiques</magicDamage> et <status>réduit au silence</status> les unités ennemies proches pendant @SilenceDuration@ sec. La compétence passive est désactivée lorsque Champ de stase est en récupération.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

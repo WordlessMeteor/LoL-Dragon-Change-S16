@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin otrzymuje o 15% mniej <magicDamage>obrażeń magicznych</magicDamage> i zamienia te obrażenia na dodatkową <attackSpeed>prędkość ataku</attackSpeed>."
+        "description": "Kassadin otrzymuje zmniejszone <magicDamage>obrażenia magiczne</magicDamage> i zamienia je na dodatkową <attackSpeed>prędkość ataku</attackSpeed>."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Biernie: Ataki podstawowe Kassadina przywracają manę. Przywracana mana zostaje potrojona przy atakowaniu wrogich bohaterów. Użycie: Ataki podstawowe Kassadina zadają dodatkowe obrażenia magiczne.",
-            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>Ataki podstawowe Kassadina czerpią energię z Pustki, przywracając mu przy każdym trafieniu <scaleMana>@ManaGainAmount@ pkt. many</scaleMana>. Jeśli celem jest wrogi bohater, przywracana <scaleMana>mana</scaleMana> zostaje potrojona do @ManaGainAmount*3@ pkt.<br><br><spellActive>Użycie:</spellActive> Kassadin naładowuje swoje piekielne ostrze, dzięki czemu przez 5 sek. jego ataki podstawowe zadają dodatkowo <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Biernie: Ataki podstawowe Kassadina przywracają manę.<br>Użycie: Ataki podstawowe Kassadina zadają dodatkowe obrażenia magiczne.",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>Ataki podstawowe Kassadina czerpią energię z Pustki, przywracając mu przy każdym trafieniu <scaleMana>@ManaGainAmount@ pkt. many</scaleMana>. Efekt jest zwiększony do <scaleMana>@ChampionManaRestore@ pkt. many</scaleMana> przeciwko bohaterom.<br><br><spellActive>Użycie:</spellActive> Kassadin naładowuje swoje piekielne ostrze, dzięki czemu przez @BuffDuration@ sek. jego ataki podstawowe zadają dodatkowo <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kassadin pochłania energię ze wszystkich zaklęć użytych w jego pobliżu. Po naładowaniu Kassadin może użyć Pulsu Mocy, aby spowolnić wszystkich wrogów znajdujących się na obszarze w kształcie stożka przed nim i zadać im obrażenia.",
-            "dynamicDescription": "Gdy w promieniu 1800 jedn. zostanie użyte zaklęcie, Kassadin pochłania z niego energię i zyskuje ładunek. Po zgromadzeniu 6 ładunków Kassadin może użyć <spellName>Pulsu Mocy</spellName>, by zadać <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom w stożku przed nim i <status>spowolnić</status> ich o @MoveSpeedMod*-100@% na 3 sekundy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gdy w pobliżu zostanie użyte zaklęcie, Kassadin pochłania z niego energię i zyskuje ładunek.<br><br>Po zgromadzeniu @RequiredChargesTooltip@ ładunków Kassadin może użyć <spellName>Pulsu Mocy</spellName>, by zadać <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom w stożku przed nim i <status>spowolnić</status> ich o @MoveSpeedMod*-100@% na @SlowDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kassadin teleportuje się w pobliskie miejsce, zadając obrażenia znajdującym się tam wrogim jednostkom. Użycie kilku Kroków przez Wymiary w krótkim okresie powoduje, że kosztują więcej many i zadają dodatkowe obrażenia.",
-            "dynamicDescription": "Kassadin teleportuje się w pobliskie miejsce, zadając pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Każdy kolejny <spellName>Krok przez Wymiary</spellName> w ciągu następnych 8 sekund kosztuje <scaleMana>dodatkowe 100 pkt. many</scaleMana> i zadaje <magicDamage>@Damage@ pkt. dodatkowych obrażeń</magicDamage>. Kumuluje się 10 razy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin teleportuje się w pobliskie miejsce, zadając pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Dodatkowo każdy kolejny <spellName>Krok przez Wymiary</spellName> w ciągu następnych @BuffDuration@ sek. kosztuje <scaleMana>@AdditionalManaPerCast@ pkt. dodatkowej many</scaleMana> i zadaje <magicDamage>@Damage@ pkt. dodatkowych obrażeń</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

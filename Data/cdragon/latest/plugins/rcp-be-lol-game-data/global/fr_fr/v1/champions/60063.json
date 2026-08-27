@@ -621,7 +621,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "Les compétences de Brand enflamment ses cibles, leur infligeant des dégâts magiques équivalents à 8% de leurs PV max en 4 sec."
+        "description": "Les compétences de Brand enflamment ses cibles, leur infligeant des dégâts magiques équivalents à une portion de leurs PV max."
     },
     "spells": [
         {
@@ -633,7 +633,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Brand lance une boule de feu devant lui, infligeant des dégâts magiques. Si la cible est en flammes, Brûlure l'étourdit.",
-            "dynamicDescription": "<mainText>Brand lance une boule de feu devant lui, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br><spellPassive>Flammes :</spellPassive> si la cible est en <keywordMajor>flammes</keywordMajor>, <spellName>Brûlure</spellName> <status>l'étourdit</status> pendant 2 sec.",
+            "dynamicDescription": "Brand lance une boule de feu devant lui, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br><spellPassive>Flammes !</spellPassive> Si la cible est <keywordMajor>en flammes</keywordMajor>, <spellName>Brûlure</spellName> lui infligera un <status>étourdissement</status> pendant @StunDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -659,18 +659,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

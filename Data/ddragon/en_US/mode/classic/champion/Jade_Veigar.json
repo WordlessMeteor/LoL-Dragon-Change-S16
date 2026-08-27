@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Veigar": {
             "id": "Jade_Veigar",
@@ -354,7 +354,7 @@
                     "id": "Jade_VeigarDarkMatter",
                     "name": "Dark Matter",
                     "description": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands.",
-                    "tooltip": "After 1.2 seconds, dark matter falls from the sky to the target location, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "After {{ impactdelay }} seconds, dark matter falls from the sky to the target location, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -393,18 +393,18 @@
                             0
                         ],
                         [
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            8,
-                            8,
-                            8,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -459,8 +459,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "1.2",
-                        "8",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -495,7 +495,7 @@
                     "id": "Jade_VeigarEventHorizon",
                     "name": "Event Horizon",
                     "description": "Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter for a short duration.",
-                    "tooltip": "Veigar twists the edges of space around the target location for 3 seconds, <status>Stunning</status> enemies who pass through the perimeter for {{ stunduration }} seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Veigar twists the edges of space around the target location for {{ cageduration }} seconds, <status>Stunning</status> enemies who pass through the perimeter for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Stun Duration:",
@@ -503,7 +503,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -529,18 +529,18 @@
                     "effect": [
                         null,
                         [
-                            1.5,
-                            1.75,
-                            2,
-                            2.25,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -601,8 +601,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "1.5/1.75/2/2.25/2.5",
-                        "0.5",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -638,7 +638,7 @@
                     "id": "Jade_VeigarR",
                     "name": "Primordial Burst",
                     "description": "Blasts target enemy champion, dealing a large base amount of magic damage plus 80% of his target's AP.",
-                    "tooltip": "Blasts an enemy champion, dealing <magicDamage>{{ mindamage }} plus 80% of his target's Ability Power in magic damage</magicDamage>.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Veigar blasts an enemy champion, dealing <magicDamage>{{ mindamage }} plus {{ enemyapratio*100 }}% of his target's Ability Power in magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -754,7 +754,7 @@
             ],
             "passive": {
                 "name": "Equilibrium",
-                "description": "Veigar's mana regeneration increases by 1% for each 1% of mana missing.",
+                "description": "Veigar's mana regeneration increases based on his missing mana.",
                 "image": {
                     "full": "Jade_VeigarEntropy.png",
                     "sprite": "passive1.png",

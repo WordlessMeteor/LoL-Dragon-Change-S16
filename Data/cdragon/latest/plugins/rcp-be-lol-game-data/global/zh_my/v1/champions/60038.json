@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "“卡萨丁承受的<magicDamage>魔法伤害</magicDamage>减少15%，并将承受的这部分伤害转化为额外<attackSpeed>攻速</attackSpeed>。”"
+        "description": "卡萨丁会承受较低的<magicDamage>魔法伤害</magicDamage>，并将即将受到的魔法伤害转化为额外<attackSpeed>攻速</attackSpeed>。"
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "被动：卡萨丁的普攻会回复法力值。如果目标为敌方英雄时，则回复的法力值会提升至三倍。主动：卡萨丁的普攻会造成额外魔法伤害。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>卡萨丁的普攻会从虚空中汲取能量，每次命中都会回复<scaleMana>@ManaGainAmount@法力值</scaleMana>。如果目标是敌方英雄，则回复的<scaleMana>法力值</scaleMana>会提升三倍（@ManaGainAmount*3@）。<br><br><spellActive>主动：</spellActive>卡萨丁为虚空之刃充能5秒，使他的普攻额外造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "被动：卡萨丁的普攻会回复魔力值。主动：卡萨丁的普攻会造成额外魔法伤害。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>卡萨丁的普攻会从虚空中汲取能量，每次命中都会回复<scaleMana>@ManaGainAmount@魔力值</scaleMana>，命中英雄时提高至<scaleMana>@ChampionManaRestore@魔力</scaleMana>。<br><br><spellActive>主动：</spellActive>卡萨丁为虚空之刃充能@BuffDuration@秒，使他的普攻额外造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡萨丁会从附近施放的技能中汲取能量。充能完毕后，卡萨丁可以使用“能量脉冲”，对前方锥形区域内的敌人造成伤害和减速效果。",
-            "dynamicDescription": "卡萨丁会从附近（1800距离）施放的技能中汲取能量，每当附近有技能施放时，他就会获得一层充能。当卡萨丁获得6层充能后，即可施放<spellName>能量脉冲</spellName>，对前方锥形范围内的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@MoveSpeedMod*-100@%<status>减速</status>效果，持续3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡萨丁会从附近施放的技能中汲取能量，每当附近有技能施放时，他就会获得一层充能。<br><br>当卡萨丁获得@RequiredChargesTooltip@层充能后，即可施放<spellName>能量脉冲</spellName>，对前方锥形范围内的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@MoveSpeedMod*-100@%<status>减速</status>效果，持续@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡萨丁传送到附近位置，对周围敌方单位造成伤害。此外，在短时间内连续使用“虚空行走”，则会消耗额外魔力。",
-            "dynamicDescription": "卡萨丁传送到附近位置，对周围敌方单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。此外，在接下来的8秒内，每连续施放一次<spellName>虚空行走</spellName>，就会消耗<scaleMana>额外100法力值</scaleMana>，并造成<magicDamage>@Damage@额外伤害</magicDamage>，最多可叠加10次。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡萨丁传送到附近位置，对周围敌方单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。此外，在接下来的@BuffDuration@秒内，每连续施放一次<spellName>虚空行走</spellName>，就会消耗<scaleMana>@AdditionalManaPerCast@额外魔力值</scaleMana>，并造成<magicDamage>@Damage@额外伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

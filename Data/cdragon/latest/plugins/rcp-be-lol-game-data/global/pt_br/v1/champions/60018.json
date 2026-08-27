@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Tristana Bucaneira",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Arrrr... tilheiros! Tristana salta para o alto-mar, navegando em busca de novas aventuras muito além das fronteiras de Bandópolis. Ela pegou emprestado (roubou) o chapéu de um pirata que explodiu por aí. Já o tapa-olho é puramente estético, mas seu fiel canhão e o hábito de eliminar todos que cruzam seu caminho afundaram mais navios do que muitos capitães das Águas de Sentina."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tristana dispara rapidamente com seu canhão, aumentando sua Velocidade de Ataque por um breve período.",
-            "dynamicDescription": "<mainText>Aumenta a <attackSpeed>Velocidade de Ataque de Tristana em @AttackSpeedMod*100@%</attackSpeed> por 7s.",
+            "dynamicDescription": "Tristana recebe <attackSpeed>@AttackSpeedMod*100@% de Velocidade de Ataque</attackSpeed> por @BuffDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Tristana dispara no chão para lançar-se a um local distante, causando dano e Lentidão às unidades ao redor por 3s ao aterrissar.",
-            "dynamicDescription": "<mainText>Tristana dispara no chão para lançar-se até o local-alvo, causando <magicDamage>@LandingDamage@ de Dano Mágico</magicDamage> e 60% de <status>Lentidão</status> por 2,5s ao aterrissar.<br>O Tempo de Recarga é zerado ao abater um Campeão ou conseguir uma assistência.",
+            "description": "Tristana dispara no chão para se lançar a um local distante, causando dano e Lentidão a inimigos onde aterrissa.",
+            "dynamicDescription": "Tristana dispara no chão para lançar-se até o local-alvo, causando <magicDamage>@LandingDamage@ de Dano Mágico</magicDamage> e @Slow@% de <status>Lentidão</status> por @SlowDuration@s ao aterrissar. Ao abater um Campeão ou realizar uma assistência, o Tempo de Recarga de Salto-foguete é zerado.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Quando Tristana abate uma unidade, seus projéteis explodem em estilhaços, causando dano a inimigos próximos.  É possível ativar para causar dano ao longo do tempo à unidade-alvo e reduzir a cura recebida.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>inimigos explodem quando abatidos pelos Ataques básicos de Tristana, causando <magicDamage>@PassiveDamage@ de Dano Mágico</magicDamage> a inimigos próximos.<br><br><spellActive>Ativo: </spellActive>causa Laceração a um inimigo-alvo, aplicando <keyword>50% de Feridas Dolorosas</keyword> e causando <magicDamage>@ActiveDamageTTOnly@ de Dano Mágico</magicDamage> ao longo de 5s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>inimigos explodem quando eliminados pelos Ataques básicos de Tristana, causando <magicDamage>@PassiveDamage@ de Dano Mágico</magicDamage> a inimigos próximos.<br><br><spellActive>Ativo: </spellActive>causa Laceração a um inimigo-alvo, aplicando <keyword>50% de Feridas Dolorosas</keyword> e causando <magicDamage>@ActiveDamageTTOnly@ de Dano Mágico</magicDamage> ao longo de @GrievousDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Nottingham Ezreal",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Seorang elf petualang dari kerajaan hutan pinggiran, Ezreal suka menyebut dirinya sebagai “pendekar tampan” bernama Jarro Lightfeather. Sangat sedikit orang yang memercayai klaimnya sebagai seorang ksatria, tetapi cerita itu cukup baik sebagai pengalih perhatian di antara petualangannya yang penuh bencana."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ezreal mendapatkan peningkatan Attack Speed tiap spell miliknya berhasil mengenai target, di-stack hingga 5 kali."
+        "description": "Attack Speed Ezreal meningkat setiap kali berhasil mendaratkan spell."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal menembakkan bolt energi dengan damage yang mengurangi semua cooldown miliknya jika serangan itu mengenai unit musuh.",
             "dynamicDescription": "Ezreal menembakkan bolt energi, memberikan <physicalDamage>@Damage@ physical damage</physicalDamage> (menerapkan efek on-hit). <br><br>Cooldown Ezreal berkurang 1 detik jika <spellName>Mystic Shot</spellName> mengenai target.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ezreal menembakkan gelombang energi yang berfluktuasi, mengurangi Attack Speed dan menghasilkan magic damage ke champion musuh. Selain itu, memberi heal serta meningkatkan Attack Speed champion sekutu.",
-            "dynamicDescription": "Ezreal menembakkan gelombang energi yang menghasilkan damage ke semua champion musuh yang dilewatinya sebesar <magicDamage>@Damage@ magic damage</magicDamage> serta mengurangi <attackSpeed>Attack Speed</attackSpeed> sebesar @AttackSpeed@% selama 5 detik. <br><br>Champion sekutu yang terkena gelombang akan memulihkan <healing>@TotalHeal@ Health</healing> dan mendapatkan peningkatan <attackSpeed>Attack Speed</attackSpeed> sebesar @AttackSpeed@% selama 5 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal menembakkan gelombang energi yang menghasilkan damage ke semua champion musuh yang dilewatinya sebesar <magicDamage>@Damage@ magic damage</magicDamage> serta mengurangi <attackSpeed>Attack Speed</attackSpeed> sebesar @AttackSpeed@% selama @Duration@ detik. <br><br>Champion sekutu yang terkena gelombang akan memulihkan <healing>@TotalHeal@ Health</healing> dan mendapatkan peningkatan <attackSpeed>Attack Speed</attackSpeed> sebesar @AttackSpeed@% selama @Duration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Ezreal channeling selama 1 detik untuk menembakkan rentetan misil energi yang kuat, memberikan damage besar ke tiap unit yang dilewati (memberikan 10% lebih sedikit damage ke tiap unit berikutnya yang dilewati).",
-            "dynamicDescription": "Ezreal channeling selama 1 detik untuk menembakkan rentetan misil yang memberikan <magicDamage>@Damage@ magic damage</magicDamage> ke tiap unit yang dilewatinya. Namun, serangan memberikan @DamageReductionPerHit*100@% lebih sedikit damage untuk tiap unit yang kena (Minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ezreal menembakkan rentetan misil energi yang kuat, menghasilkan damage besar ke tiap unit yang dilaluinya.",
+            "dynamicDescription": "Ezreal menembakkan rentetan misil yang menghasilkan <magicDamage>@Damage@ magic damage</magicDamage> ke tiap unit yang dilewatinya. Namun, serangan memberikan @DamageReductionPerHit*100@% lebih sedikit damage untuk tiap unit yang kena (Minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

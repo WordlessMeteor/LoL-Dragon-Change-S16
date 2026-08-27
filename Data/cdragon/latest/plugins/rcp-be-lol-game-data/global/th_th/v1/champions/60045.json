@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "การฟื้นฟูมานาของ Veigar จะเพิ่มขึ้น 1% ต่อทุก ๆ มานาที่หายไป 1%"
+        "description": "การฟื้นฟูมานาของ Veigar จะเพิ่มขึ้นตามปริมาณมานาที่หายไป"
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Veigar เรียกสสารแห่งความมืดลงมาจากฟากฟ้า สร้างความเสียหายเวทเมื่อมันตกถึงพื้น",
-            "dynamicDescription": "<mainText>เรียกสสารแห่งความมืดลงมาจากฟากฟ้าใส่พื้นที่เป้าหมายหลังผ่านไป 1.2 วินาที สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>",
+            "dynamicDescription": "เรียกสสารแห่งความมืดลงมาจากฟากฟ้าใส่พื้นที่เป้าหมายหลังผ่านไป @ImpactDelay@ วินาที สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Veigar บิดผันมิติรอบ ๆ พื้นที่เป้าหมายเป็นเวลา 3 วินาที สตันศัตรูทุกตัวที่เดินผ่านเส้นรอบนอกชั่วขณะ",
-            "dynamicDescription": "<mainText>Veigar บิดผันมิติรอบ ๆ พื้นที่เป้าหมายเป็นเวลา 3 วินาที <status>สตันศัตรู</status>ทุกตัวที่เดินผ่านเส้นรอบนอกเป็นเวลา @StunDuration@ วินาที",
+            "dynamicDescription": "Veigar บิดผันมิติรอบ ๆ พื้นที่เป้าหมายเป็นเวลา @CageDuration@ วินาที <status>สตันศัตรู</status>ทุกตัวที่เดินผ่านเส้นรอบนอกเป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ปลดปล่อยพลังงานใส่แชมเปี้ยนศัตรูเป้าหมาย สร้างความเสียหายเวทรุนแรง บวกด้วย 80% จากพลังเวทของเป้าหมาย",
-            "dynamicDescription": "<mainText>ปลดปล่อยพลังงานใส่แชมเปี้ยนศัตรู สร้าง<magicDamage>ความเสียหายเวท @MinDamage@ หน่วย บวกด้วย 80% จากพลังเวทของเป้าหมาย</magicDamage>",
+            "dynamicDescription": "ปลดปล่อยพลังงานใส่แชมเปี้ยนศัตรู สร้าง<magicDamage>ความเสียหายเวท @MinDamage@ หน่วย บวกด้วย @EnemyAPRatio*100@% จากพลังเวทของเป้าหมาย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

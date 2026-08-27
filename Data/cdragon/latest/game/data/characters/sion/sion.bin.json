@@ -653,8 +653,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_E_Skillshot_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_E_Skillshot_Tip.tex",
+                        "textureBaseOverrideName": "assets/characters/sion/hud/textures/sion_e_skillshot_base.tex",
+                        "textureTargetOverrideName": "assets/characters/sion/hud/textures/sion_e_skillshot_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -1429,7 +1429,7 @@
         "mRootSpell": "Characters/Sion/Spells/SionPassiveAbility/SionPassive",
         "mChildSpells": [
             "Characters/Sion/Spells/SionPassiveAbility/SionPassive",
-            "{302032d8}"
+            "Characters/Sion/Spells/SionPassiveAbility/SionPassiveSpeed"
         ],
         "mName": "SionPassiveAbility",
         "mType": 3,
@@ -2729,7 +2729,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_TrueshotBarrage.dds"
             ],
-            "mMinimapIconName": "ASSETS/Characters/Ezreal/HUD/Ezreal_TrueshotBarrage_Circle.tex",
+            "mMinimapIconName": "assets/characters/ezreal/hud/ezreal_trueshotbarrage_circle.tex",
             "spellCastTime": 1.0,
             "spellTotalTime": 1.0,
             "cooldownTime": [
@@ -2908,9 +2908,9 @@
         },
         "__type": "SpellObject"
     },
-    "{302032d8}": {
+    "Characters/Sion/Spells/SionPassiveAbility/SionPassiveSpeed": {
         "ObjectName": "SionPassiveSpeed",
-        "objectPath": "{302032d8}",
+        "objectPath": "Characters/Sion/Spells/SionPassiveAbility/SionPassiveSpeed",
         "mScriptName": "SionPassiveSpeed",
         "mSpell": {
             "flags": 4,
@@ -4560,8 +4560,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_R_Line_Large_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_R_Line_Large_Tip.tex",
+                        "textureBaseOverrideName": "assets/characters/sion/hud/textures/sion_r_line_large_base.tex",
+                        "textureTargetOverrideName": "assets/characters/sion/hud/textures/sion_r_line_large_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     },
                     {
@@ -4599,8 +4599,8 @@
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_R_Line_Small_Base.tex",
-                        "textureTargetOverrideName": "ASSETS/Characters/Sion/HUD/Textures/Sion_R_Line_Small_Tip.tex",
+                        "textureBaseOverrideName": "assets/characters/sion/hud/textures/sion_r_line_small_base.tex",
+                        "textureTargetOverrideName": "assets/characters/sion/hud/textures/sion_r_line_small_tip.tex",
                         "__type": "TargeterDefinitionLine"
                     }
                 ],
@@ -6041,7 +6041,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             5500,
             14000,
@@ -6069,7 +6069,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             15,
             40,
@@ -6097,7 +6097,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             14000,
             36000,
@@ -6139,7 +6139,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -6179,7 +6179,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -6250,7 +6250,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -6290,7 +6290,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             2000,
             5500,
@@ -6318,7 +6318,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             35,
             90,
@@ -6346,7 +6346,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             3,
             9,
@@ -6520,15 +6520,10 @@
     "{582cc26b}": {
         "OrderJunglePath": [
             {
-                "Camp": 4,
+                "Camp": 1,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
@@ -6536,10 +6531,15 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 1,
+                "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {
@@ -7026,7 +7026,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_SionPassive_Tooltip",
         "passiveSpell": "SionPassive",
-        "passive1IconName": "ASSETS/Characters/Sion/HUD/Icons2D/Sion_Passive1.dds",
+        "passive1IconName": "assets/characters/sion/hud/icons2d/sion_passive1.dds",
         "name": "game_character_displayname_Sion",
         "weaponMaterials": [
             "DariusBasicAttack"

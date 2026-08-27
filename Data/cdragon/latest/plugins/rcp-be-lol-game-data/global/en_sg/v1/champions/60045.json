@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Veigar's mana regeneration increases by 1% for each 1% of mana missing."
+        "description": "Veigar's mana regeneration increases based on his missing mana."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands.",
-            "dynamicDescription": "<mainText>After 1.2 seconds, dark matter falls from the sky to the target location, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>.",
+            "dynamicDescription": "After @ImpactDelay@ seconds, dark matter falls from the sky to the target location, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter for a short duration.",
-            "dynamicDescription": "<mainText>Veigar twists the edges of space around the target location for 3 seconds, <status>Stunning</status> enemies who pass through the perimeter for @StunDuration@ seconds.",
+            "dynamicDescription": "Veigar twists the edges of space around the target location for @CageDuration@ seconds, <status>Stunning</status> enemies who pass through the perimeter for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Blasts target enemy champion, dealing a large base amount of magic damage plus 80% of his target's AP.",
-            "dynamicDescription": "<mainText>Blasts an enemy champion, dealing <magicDamage>@MinDamage@ plus 80% of his target's Ability Power in magic damage</magicDamage>.",
+            "dynamicDescription": "Veigar blasts an enemy champion, dealing <magicDamage>@MinDamage@ plus @EnemyAPRatio*100@% of his target's Ability Power in magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

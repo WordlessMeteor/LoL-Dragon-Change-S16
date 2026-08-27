@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "수행사제 리 신",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "다른 수련생은 꿈도 꾸지 못할 만큼 잠재력이 넘쳤던 젊은 리 신의 야심 찬 어깨에는 쇼진 수련생의 전통 의복이 잘 맞지 않았습니다. 하지만 그는 결국 의복에도 용의 힘에도 걸맞은 자로 성장했죠."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "리 신은 스킬을 사용하면 다음 2회의 기본 공격 시 40%의 공격 속도를 얻고, 15의 기력을 돌려받습니다."
+        "description": "리 신은 스킬을 사용하면 다음 기본 공격 시 공격 속도를 얻고 기력을 회복합니다."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "음파: 리 신이 불협화음으로 된 음파를 발사하여 적의 위치를 드러내고, 처음 적중한 적에게 물리 피해를 입힙니다. 음파를 맞혔다면 다음 3초 내로 공명의 일격을 사용할 수 있습니다.<br>공명의 일격: 리 신이 음파에 맞은 적에게 돌진하여, 기본 물리 피해+대상이 잃은 체력의 8%에 해당하는 추가 피해를 입힙니다.",
-            "dynamicDescription": "<spellName>음파: </spellName>리 신이 불협화음으로 된 음파를 발사하여 적의 위치를 드러내고, 처음 적중한 적에게 <physicalDamage>@InitialDamage@의 물리 피해</physicalDamage>를 입힙니다. <spellName>음파</spellName>를 맞혔다면 다음 3초 내로 <spellName>공명의 일격</spellName>을 사용할 수 있습니다.<br><br><spellName>공명의 일격: </spellName>리 신이 음파에 맞은 적에게 돌진하여, <physicalDamage>@RecastDamage@의 물리 피해</physicalDamage>+대상이 잃은 체력의 8%에 해당하는 추가 피해를 입힙니다.@SpellModifierDescriptionAppend@",
+            "description": "음파: 리 신이 불협화음으로 된 음파를 발사하여 적의 위치를 드러내고, 처음 적중한 적에게 피해를 입힙니다. 음파를 맞혔다면 공명의 일격을 사용할 수 있습니다.<br><br>공명의 일격: 리 신이 음파에 맞은 적에게 돌진하여 피해를 입힙니다. 대상의 잃은 체력에 비례하여 피해량이 증가합니다.",
+            "dynamicDescription": "<spellName>음파: </spellName>리 신이 불협화음으로 된 음파를 발사하여 적의 위치를 드러내고, 처음 적중한 적에게 <physicalDamage>@InitialDamage@의 물리 피해</physicalDamage>를 입힙니다. <spellName>음파</spellName>를 맞혔다면 다음 3초 내로 <spellName>공명의 일격</spellName>을 사용할 수 있습니다.<br><br><spellName>공명의 일격: </spellName>리 신이 음파에 맞은 적에게 돌진하여, <physicalDamage>@RecastDamage@의 물리 피해</physicalDamage>+대상이 잃은 체력의 @MissingHealthDamage*100@%에 해당하는 추가 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "방호: 리 신이 지정한 아군에게 돌진하여, 대상과 자신에게 보호막을 부여합니다. 방호를 사용하면 다음 3초 내로 강철의 의지를 사용할 수 있습니다.<br>강철의 의지: 리 신의 고된 수행이 전투에서 진가를 발휘합니다. 4초 동안 리 신이 생명력 흡수, 주문 흡혈, 방어력을 얻습니다.",
-            "dynamicDescription": "<spellName>방호: </spellName>리 신이 지정한 아군에게 돌진하여, 대상과 자신에게 다음 5초 동안 @ShieldAmount@의 피해를 흡수하는 <shield>보호막</shield>을 부여합니다. <spellName>방호</spellName>를 사용하면 다음 3초 내로 <spellName>강철의 의지</spellName>를 사용할 수 있습니다.<br><br><spellName>강철의 의지: </spellName>리 신의 고된 수행이 전투에서 진가를 발휘합니다. 5초 동안 리 신이 @LifestealAndSpellVamp@%의 생명력 흡수와 주문 흡혈, <scaleArmor>@ArmorBonus@의 방어력</scaleArmor>을 얻습니다.@SpellModifierDescriptionAppend@",
+            "description": "방호: 리 신이 지정한 아군에게 돌진하여, 대상과 자신에게 보호막을 부여합니다. 방호를 사용하면 강철의 의지를 사용할 수 있습니다.<br><br>강철의 의지: 고된 수행이 전투에서 진가를 발휘하여, 리 신이 생명력 흡수, 주문 흡혈, 방어력을 얻습니다.",
+            "dynamicDescription": "<spellName>방호: </spellName>리 신이 지정한 아군에게 돌진하여, 대상과 자신에게 다음 @ShieldDuration@초 동안 @ShieldAmount@의 피해를 흡수하는 <shield>보호막</shield>을 부여합니다. <spellName>방호</spellName>를 사용하면 다음 @W1ReactivateTime@초 내로 <spellName>강철의 의지</spellName>를 사용할 수 있습니다.<br><br><spellName>강철의 의지: </spellName>리 신의 고된 수행이 전투에서 진가를 발휘합니다. 리 신이 @LifestealAndSpellVampTime@초 동안 @LifestealAndSpellVamp@%의 생명력 흡수와 주문 흡혈, <scaleArmor>@ArmorBonus@의 방어력</scaleArmor>을 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -668,11 +668,11 @@
         }
     ],
     "passive": {
-        "name": "无视死亡！",
+        "name": "无视死亡",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "在死亡后，卡尔瑟斯会进入灵体型态，让他可以继续施放技能。"
+        "description": "在死亡后，卡尔瑟斯会进入灵体形态，在短时间内能够继续施放技能。"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡尔瑟斯释放会延迟的爆破光点，对光点范围附近的敌人造成伤害。",
-            "dynamicDescription": "制造延迟爆炸，0.5秒后对每名附近敌人造成<magicDamage>@QDamage@魔法伤害</magicDamage>，如果只命中一个单位，则造成双倍伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "制造延迟爆炸，对每名附近敌人造成<magicDamage>@QDamage@魔法伤害</magicDamage>，如果只命中一个单位，则造成双倍伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "在引导3秒后，卡尔瑟斯就会对所有敌方英雄造成伤害。",
-            "dynamicDescription": "在引导3秒后，卡尔瑟斯就会对所有敌方英雄造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "引导结束后，卡尔瑟斯会对所有敌方英雄造成伤害。",
+            "dynamicDescription": "在引导@ChannelDuration@秒后，卡尔瑟斯就会对所有敌方英雄造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

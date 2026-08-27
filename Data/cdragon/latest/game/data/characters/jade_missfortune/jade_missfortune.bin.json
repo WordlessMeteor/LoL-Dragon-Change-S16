@@ -273,7 +273,7 @@
                         "fallbackDirection": 2,
                         "coneAngleDegrees": 50.0,
                         "coneRange": 550.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -310,13 +310,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        -10.0,
-                        25.0,
-                        60.0,
-                        95.0,
-                        130.0,
-                        165.0,
-                        200.0
+                        0.0,
+                        35.0,
+                        70.0,
+                        105.0,
+                        140.0,
+                        175.0,
+                        210.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -521,8 +521,9 @@
                     80.0,
                     85.0,
                     90.0,
-                    40.0
+                    95.0
                 ],
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -581,7 +582,7 @@
                         "fallbackDirection": 2,
                         "coneAngleDegrees": 30.0,
                         "coneRange": 435.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -941,58 +942,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "BaseWaves",
-                    "values": [
-                        12.0,
-                        14.0,
-                        16.0,
-                        18.0,
-                        20.0,
-                        22.0,
-                        24.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseChannelDuration",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "tADRatio",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "APRatio",
-                    "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BaseDamagePerWave",
                     "values": [
                         35.0,
@@ -1002,6 +951,58 @@
                         155.0,
                         185.0,
                         215.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChannelDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalWaves",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1016,7 +1017,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "tADRatio",
+                            "mDataValue": "ADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
@@ -1026,47 +1027,10 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "TotalWaves": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseWaves",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "TotalChannelDuration": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseChannelDuration",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "mPrecision": 1,
-                    "__type": "GameCalculation"
-                },
-                "TotalPhysicalDamage": {
-                    "mMultiplier": {
-                        "mSubparts": [
-                            {
-                                "mStat": 2,
-                                "mDataValue": "tADRatio",
-                                "__type": "StatByNamedDataValueCalculationPart"
-                            },
-                            {
-                                "mDataValue": "APRatio",
-                                "__type": "StatByNamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "SumOfSubPartsCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TotalWaves",
-                    "__type": "GameCalculationModified"
-                },
                 "TotalDamage": {
                     "mMultiplier": {
-                        "mNumber": 8.0,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "TotalWaves",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "PhysicalDamagePerWave",
@@ -1226,7 +1190,7 @@
                         },
                         "coneAngleDegrees": 17.0,
                         "coneRange": 1400.0,
-                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/MF_ConicRangeIndicator.tex",
+                        "textureConeOverrideName": "assets/characters/jade_missfortune/hud/textures/mf_conicrangeindicator.tex",
                         "__type": "TargeterDefinitionCone"
                     }
                 ],
@@ -1239,15 +1203,8 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mPart1": {
-                            "mSpellCalculationKey": "PhysicalDamagePerWave",
-                            "__type": "{f3cbe7b2}"
-                        },
-                        "mPart2": {
-                            "mSpellCalculationKey": "TotalWaves",
-                            "__type": "{f3cbe7b2}"
-                        },
-                        "__type": "ProductOfSubPartsCalculationPart"
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -1893,46 +1850,20 @@
             "mAlternateName": "Jade_MissFortuneScattershot",
             "DataValues": [
                 {
-                    "name": "BaseDamagePerSecond",
+                    "name": "BaseDamage",
                     "values": [
-                        0.0,
-                        90.0,
-                        145.0,
-                        200.0,
-                        255.0,
-                        310.0,
-                        330.0
+                        35.0,
+                        95.0,
+                        155.0,
+                        215.0,
+                        275.0,
+                        335.0,
+                        395.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BaseDuration",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseSlowAmount",
-                    "values": [
-                        0.11999999731779099,
-                        0.20000000298023224,
-                        0.2800000011920929,
-                        0.36000001430511475,
-                        0.4399999976158142,
-                        0.5199999809265137,
-                        0.6000000238418579
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "APRatioPerSecond",
+                    "name": "APRatio",
                     "values": [
                         0.800000011920929,
                         0.800000011920929,
@@ -1941,6 +1872,45 @@
                         0.800000011920929,
                         0.800000011920929,
                         0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedMod",
+                    "values": [
+                        -0.11999999731779099,
+                        -0.20000000298023224,
+                        -0.2800000011920929,
+                        -0.36000001430511475,
+                        -0.4399999976158142,
+                        -0.5199999809265137,
+                        -0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1956,66 +1926,22 @@
                         4.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CastDelay",
-                    "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SlowPer100AP",
-                    "values": [
-                        0.0006000000284984708,
-                        0.0006000000284984708,
-                        0.0006000000284984708,
-                        0.0006000000284984708,
-                        0.0006000000284984708,
-                        0.0006000000284984708,
-                        0.0006000000284984708
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamagePerSecond": {
+                "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseDamagePerSecond",
+                            "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "APRatioPerSecond",
+                            "mDataValue": "APRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "TotalSlowAmount": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseSlowAmount",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
-                },
-                "TotalDamage": {
-                    "mMultiplier": {
-                        "mDataValue": "BaseDuration",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TotalDamagePerSecond",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -2112,14 +2038,14 @@
             ],
             "manaValues": {
                 "values": [
+                    70.0,
+                    75.0,
                     80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0
+                    85.0,
+                    90.0,
+                    95.0
                 ],
-                "{0a3e0478}": 80.0,
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 2,
@@ -2144,16 +2070,20 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "BaseDamagePerSecond",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_DamagePerSecond",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseSlowAmount",
-                                    "multiplier": 100.0,
+                                    "type": "MoveSpeedMod",
+                                    "multiplier": -100.0,
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2196,7 +2126,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamagePerSecond",
+                        "mSpellCalculationKey": "TotalDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -2208,8 +2138,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mSpellCalculationKey": "TotalSlowAmount",
-                                "__type": "{f3cbe7b2}"
+                                "mDataValue": "MoveSpeedMod",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2483,20 +2413,61 @@
         "__type": "SpellObject"
     },
     "{ba8eac88}": {
-        "mRootSpell": "{b9cc5b22}",
+        "mRootSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive",
         "mChildSpells": [
-            "{b9cc5b22}"
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive"
         ],
         "mName": "Jade_MissFortunePassiveAbility",
         "__type": "AbilityObject"
     },
-    "{b9cc5b22}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive": {
         "ObjectName": "Jade_MissFortunePassive",
-        "objectPath": "{b9cc5b22}",
+        "objectPath": "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive",
         "mScriptName": "Jade_MissFortunePassive",
         "mSpell": {
             "mSpellTags": [
                 "Trait_NonPrimaryAttack"
+            ],
+            "DataValues": [
+                {
+                    "name": "MinimumSpeed",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumSpeed",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DurationMin",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
             ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.dds"
@@ -2569,7 +2540,7 @@
                 "mFormat": "{b34f999a}",
                 "mLocKeys": {
                     "keyName": "Spell_MissFortunePassive_Jade_Name",
-                    "keyTooltip": "Spell_MissFortunePassive_Jade_Buff_Tooltip"
+                    "keyTooltip": "Spell_MissFortunePassive_Jade_Summary"
                 },
                 "__type": "TooltipInstanceBuff"
             },
@@ -2637,7 +2608,7 @@
         },
         "critDamageMultiplier": 2.0,
         "baseMoveSpeedModifiable": {
-            "baseValue": 325.0,
+            "baseValue": 335.0,
             "__type": "ModifiableFloat"
         },
         "attackRangeModifiable": {
@@ -2736,7 +2707,7 @@
         "passiveLuaName": "Jade_MissFortunePassive_Jade",
         "passiveToolTip": "Spell_Jade_MissFortunePassive_Summary",
         "passiveSpell": "Jade_MissFortunePassive",
-        "passive1IconName": "ASSETS/Characters/Jade_MissFortune/HUD/Icons2D/Jade_MissFortune_W.dds",
+        "passive1IconName": "assets/characters/jade_missfortune/hud/icons2d/jade_missfortune_w.dds",
         "name": "game_character_displayname_Jade_MissFortune",
         "weaponMaterials": [
             "Jade_MissFortuneBasicAttack"
@@ -2825,10 +2796,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{b9cc5b22}",
+        "mCharacterPassiveSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{b9cc5b22}",
+                "mParentPassiveBuff": "Characters/Jade_MissFortune/Spells/Jade_MissFortunePassiveAbility/Jade_MissFortunePassive",
                 "__type": "CharacterPassiveData"
             },
             {
@@ -3707,7 +3678,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3737,7 +3708,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3767,7 +3738,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3797,7 +3768,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3827,7 +3798,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3857,7 +3828,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3887,7 +3858,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3917,7 +3888,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3962,7 +3933,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3992,7 +3963,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4022,7 +3993,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4057,7 +4028,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4087,7 +4058,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4117,7 +4088,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4147,7 +4118,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4177,7 +4148,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4207,7 +4178,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4237,7 +4208,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4266,7 +4237,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4295,7 +4266,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4324,7 +4295,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4353,7 +4324,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"

@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Tốc độ hồi năng lượng của Veigar tăng 1% với mỗi 1% năng lượng đã mất."
+        "description": "Tốc độ hồi năng lượng của Veigar tăng dựa trên lượng năng lượng đã mất."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Veigar gọi một thiên thạch đen khổng lồ rơi xuống địa điểm chỉ định, gây sát thương phép khi chạm đất.",
-            "dynamicDescription": "<mainText>Sau 1,2 giây, thiên thạch đen rơi từ bầu trời xuống vị trí chỉ định, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.",
+            "dynamicDescription": "Sau @ImpactDelay@ giây, thiên thạch đen rơi từ bầu trời xuống vị trí chỉ định, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Veigar xoắn vặn không gian quanh vị trí mục tiêu trong 3 giây, làm choáng những kẻ địch bước qua vành đai trong một thời gian ngắn.",
-            "dynamicDescription": "<mainText>Veigar xoắn vặn không gian quanh vị trí mục tiêu trong 3 giây, <status>Làm Choáng</status> những kẻ địch bước qua vành đai trong @StunDuration@ giây.",
+            "dynamicDescription": "Veigar xoắn vặn không gian quanh vị trí mục tiêu trong @CageDuration@ giây, <status>Làm Choáng</status> những kẻ địch bước qua vành đai trong @StunDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Phóng chưởng vào tướng địch chỉ định, gây lượng sát thương phép cơ bản cực lớn, cộng thêm 80% SMPT của mục tiêu.",
-            "dynamicDescription": "<mainText>Phóng chưởng vào tướng địch, gây <magicDamage>sát thương phép bằng @MinDamage@ + 80% SMPT của mục tiêu</magicDamage>.",
+            "dynamicDescription": "Veigar phóng chưởng vào tướng địch, gây <magicDamage>@MinDamage@ sát thương phép + @EnemyAPRatio*100@% SMPT của mục tiêu</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

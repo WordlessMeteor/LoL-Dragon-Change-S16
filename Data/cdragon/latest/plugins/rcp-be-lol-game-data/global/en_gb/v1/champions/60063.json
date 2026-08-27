@@ -621,7 +621,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds."
+        "description": "Brand's spells light his targets ablaze, dealing a portion of their maximum Health in magic damage."
     },
     "spells": [
         {
@@ -633,7 +633,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target.",
-            "dynamicDescription": "<mainText>Brand launches a ball of fire forward that deals <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br><spellPassive>Blaze:</spellPassive> If the target is <keywordMajor>Ablaze</keywordMajor>, <spellName>Sear</spellName> will <status>Stun</status> the target for 2 seconds.",
+            "dynamicDescription": "Brand launches a ball of fire forward that deals <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br><spellPassive>Blaze:</spellPassive> If the target is <keywordMajor>Ablaze</keywordMajor>, <spellName>Sear</spellName> will <status>Stun</status> the target for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -659,18 +659,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

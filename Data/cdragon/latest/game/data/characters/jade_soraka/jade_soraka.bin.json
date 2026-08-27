@@ -1937,17 +1937,17 @@
         "__type": "SpellObject"
     },
     "{abcb655e}": {
-        "mRootSpell": "{985fedb6}",
+        "mRootSpell": "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive",
         "mChildSpells": [
-            "{985fedb6}",
-            "{5a840f56}"
+            "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive",
+            "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive_Buff"
         ],
         "mName": "Jade_SorakaPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{5a840f56}": {
+    "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive_Buff": {
         "ObjectName": "Jade_SorakaPassive_Buff",
-        "objectPath": "{5a840f56}",
+        "objectPath": "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive_Buff",
         "mScriptName": "Jade_SorakaPassive_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -1961,35 +1961,22 @@
         },
         "__type": "SpellObject"
     },
-    "{985fedb6}": {
+    "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive": {
         "ObjectName": "Jade_SorakaPassive",
-        "objectPath": "{985fedb6}",
+        "objectPath": "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive",
         "mScriptName": "Jade_SorakaPassive",
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "MovementSpeed",
+                    "name": "MagicResist",
                     "values": [
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "HealthThreshold",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3027,7 +3014,7 @@
         "passiveLuaName": "Jade_Soraka_Consecration_Self",
         "passiveToolTip": "game_character_passiveDescription_Jade_Soraka",
         "passiveRange": 1000.0,
-        "passive1IconName": "ASSETS/Characters/Jade_Soraka/HUD/Icons2D/Jade_Soraka_Passive.dds",
+        "passive1IconName": "assets/characters/jade_soraka/hud/icons2d/jade_soraka_passive.dds",
         "name": "game_character_displayname_Jade_Soraka",
         "selectionHeight": 145.0,
         "selectionRadius": 110.0,
@@ -3127,7 +3114,7 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{985fedb6}",
+        "mCharacterPassiveSpell": "Characters/Jade_Soraka/Spells/Jade_SorakaPassiveAbility/Jade_SorakaPassive",
         "{c5c48b41}": 1,
         "Script": "{b0b601cf}",
         "__type": "CharacterRecord"

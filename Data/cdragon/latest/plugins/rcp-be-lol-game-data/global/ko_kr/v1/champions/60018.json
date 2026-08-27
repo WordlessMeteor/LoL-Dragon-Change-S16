@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "해적 트리스타나",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "사수들, 주목! 새로운 모험을 위해 밴들 시티를 떠난 트리스타나가 바다에 나타났습니다. 자신이 무찌른 해적에게서 빼앗은 모자와(본인은 빌렸다고 주장하지만) 안대로 멋을 냈군요. 하지만 포로 따위는 거두지 않는 무자비함과 든든한 대포로 무장한 그녀는 빌지워터에 있는 대다수의 해적 선장들보다 더 많은 배를 침몰시켰습니다."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트리스타나가 짧은 시간 동안 공격 속도를 높이며 빠르게 탄환을 발사합니다.",
-            "dynamicDescription": "<mainText>7초 동안 트리스타나의 <attackSpeed>공격 속도가 @AttackSpeedMod*100@%</attackSpeed> 증가합니다.",
+            "dynamicDescription": "트리스타나가 @BuffDuration@초 동안 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "트리스타나가 땅에 대포를 쏴 추진력을 얻어 먼 곳으로 이동합니다. 착륙한 지점 근처의 적 유닛에게 피해를 주며 3초 동안 둔화시킵니다.",
-            "dynamicDescription": "<mainText>트리스타나가 땅에 대포를 발사해 대상 위치로 도약합니다. 착지 시 <magicDamage>@LandingDamage@의 마법 피해</magicDamage>를 입히고 2.5초 동안 60% <status>둔화</status>시킵니다.<br>챔피언 처치 또는 어시스트 시 재사용 대기시간이 초기화됩니다.",
+            "description": "트리스타나가 땅에 대포를 쏴 먼 곳으로 이동하며 착지한 지점의 적에게 피해를 입히고 둔화시킵니다.",
+            "dynamicDescription": "트리스타나가 땅에 대포를 발사해 지정한 위치로 도약합니다. 착지 시 <magicDamage>@LandingDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @Slow@% <status>둔화</status>시킵니다. 챔피언 킬 또는 어시스트를 기록하면 재사용 대기시간이 초기화됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트리스타나가 적을 처치할 때마다 대포알이 조각조각 터지면서 주변 적에게 피해를 입힙니다.  사용 시 대상 유닛에게 지속 피해를 입히고 받는 체력 회복량을 감소시킵니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>트리스타나가 기본 공격으로 처치한 적이 폭발하면서 주변 적에게 <magicDamage>@PassiveDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시: </spellActive>지정한 적을 분쇄해, 5초 동안 <keyword>50%의 고통스러운 상처</keyword>를 적용하고 <magicDamage>@ActiveDamageTTOnly@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>트리스타나가 기본 공격으로 처치한 적이 폭발하면서 주변 적에게 <magicDamage>@PassiveDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시: </spellActive>지정한 적을 분쇄해, @GrievousDuration@초 동안 <keyword>50%의 고통스러운 상처</keyword>를 적용하고 <magicDamage>@ActiveDamageTTOnly@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60075001,
+            "contentId": "6f16915c-ff41-47f6-94d3-7abd1a526deb",
+            "relatedPrimeContentId": "26e0fce9-2297-4842-a587-9e72bd07f663",
+            "relatedPrimeItemId": 75001,
+            "isBase": false,
+            "name": "星際之門 納瑟斯",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Images/Jade_Nasus_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nasus/Skins/Skin01/Jade_NasusLoadScreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 136
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60075002,
             "contentId": "4fa50f96-83a2-451d-b05a-df8207defbfd",
             "relatedPrimeContentId": "437da20a-9be9-4e4c-b9f2-548cd2b1345a",
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "納瑟斯釋放出強大的沙塵暴，攻擊鄰近敵軍。在沙塵暴期間，納瑟斯的生命、攻擊和施放距離會增加，並會汲取鄰近敵軍的最大生命，將其轉化為額外傷害，直到沙塵暴結束。",
-            "dynamicDescription": "<mainText>納瑟斯在沙塵暴期間獲得強化效果，持續15秒，<scaleHealth>最大生命加@BonusHealth@</scaleHealth>、攻擊距離加@AttackRangeIncrease@，施放距離加100。<br><br>在沙塵暴期間，納瑟斯造成等同<magicDamage>@DamageCalc@敵軍最大生命的魔法傷害</magicDamage>(每秒最多@MaxDamageCap@傷害)，並將5%轉化為額外<physicalDamage>物理傷害</physicalDamage>。",
+            "dynamicDescription": "納瑟斯在沙塵暴期間獲得強化效果，持續@Duration@秒，<scaleHealth>最大生命加@BonusHealth@</scaleHealth>、攻擊距離加@AttackRangeIncrease@，施放距離加100。<br><br>在沙塵暴期間，納瑟斯造成等同<magicDamage>@DamageCalc@敵軍最大生命的魔法傷害</magicDamage>(每秒最多@MaxDamageCap@傷害)，並將@DamageToAD*100@%轉化為額外<physicalDamage>物理傷害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -648,7 +648,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "布兰德的技能会对目标施加烈焰焚身效果，在4秒内持续造成共8%目标最大生命值的魔法伤害。"
+        "description": "布兰德的技能会对他的目标施加【烈焰焚身】效果，造成目标一部分最大生命值的魔法伤害。"
     },
     "spells": [
         {
@@ -660,7 +660,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "布兰德向前方放出一团可造成魔法伤害的火球。如果目标带有烈焰焚身效果，则火焰烙印将使目标晕眩。",
-            "dynamicDescription": "<mainText>布兰德向前方放出一团可造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>的火球。<br><br><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，则<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>2秒。",
+            "dynamicDescription": "布兰德向前方放出一团可造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>的火球。<br><br><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，那么<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -686,18 +686,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

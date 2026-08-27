@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Corki lancia una bomba accecante verso una posizione bersaglio. Questo attacco rivela le unità non invisibili intorno all'esplosione e i campioni per 6 secondi.",
-            "dynamicDescription": "<mainText>Infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici in un'area bersaglio. In più, l'esplosione <status>rivela</status> l'area e i campioni investiti per 6 secondi (non rivela le unità invisibili).",
+            "description": "Corki lancia una bomba, infliggendo danni e rivelando i nemici nell'area dell'esplosione.",
+            "dynamicDescription": "Corki lancia una bomba, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage>. L'area e i campioni colpiti vengono rivelati per @RevealDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "La Gatling di Corki spara velocemente in un'area conica davanti a sé, infliggendo danni e riducendo l'armatura nemica.",
-            "dynamicDescription": "<mainText>Corki spara con la sua Gatling in un'area conica davanti a sé per 4 secondi, infliggendo <physicalDamage>@TotalDamageTooltipOnly@ danni fisici</physicalDamage> e <status>riducendo di @ArmorMod*-1@ l'armatura nemica</status> ogni secondo. La riduzione dell'armatura si accumula e dura 2 secondi.",
+            "dynamicDescription": "Corki spara con la sua Gatling in un'area conica davanti a sé per @ActiveDuration@ secondi, infliggendo <physicalDamage>@DamagePerSecondCalc@ danni fisici</physicalDamage> e <status>riducendo di @ArmorMod*-1@ l'armatura</status> ogni secondo. La riduzione dell'armatura si accumula e dura @ShredDuration@ secondo/i. (Danni massimi: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Corki spara verso la posizione bersaglio un missile che esplode all'impatto, infliggendo danni a tutti i nemici nell'area. Corki immagazzina un missile ogni 12 secondi, fino a un massimo di 7 missili. Ogni 3 missili lancia un Super missile, che infligge danni extra.",
-            "dynamicDescription": "<mainText>Corki spara verso la posizione bersaglio un missile che esplode all'impatto con il primo nemico colpito. Ciascun missile infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> in un'area.<br><br>Quest'abilità ha 7 cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni 3 missili lancia un Super missile, che infligge invece <magicDamage>@TotalDamageBig@ danni magici</magicDamage>.",
+            "description": "Corki spara verso la posizione bersaglio un missile che esplode all'impatto, infliggendo danni a tutti i nemici nell'area. Alcuni missili saranno un Super missile, che infligge danni extra.",
+            "dynamicDescription": "Corki spara verso la posizione bersaglio un missile che esplode all'impatto con il primo nemico colpito. Ciascun missile infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> in un'area.<br><br>Questa abilità ha @MaxAmmoTooltip@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>Ogni 3 missili, lancia un Super missile, che infligge invece <magicDamage>@TotalDamageBig@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

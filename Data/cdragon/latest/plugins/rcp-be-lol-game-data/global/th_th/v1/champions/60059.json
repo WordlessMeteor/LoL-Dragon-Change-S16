@@ -586,7 +586,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV ยืดหอกออกไปข้างหน้า สร้างความเสียหายกายภาพและลดเกราะของศัตรูทุกตัวในเส้นทาง และหาก Jarvan ใช้สกิลนี้ไปยังธงของ Demacian Standard เขาจะดึงตนเองเข้าหาธง และกระแทกศัตรูในเส้นทางให้ลอยขึ้น",
-            "dynamicDescription": "ยืดหอกของ Jarvan IV ออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และลดเกราะของศัตรูทั้งหมดที่โดนลง @ArmorShredPercent@% เป็นเวลา 3 วินาที<br><br>หากหอกปะทะกับ <spellName>Demacian Standard</spellName> จะดึง Jarvan IV ไปยังตำแหน่งของธง และ<status>กระแทก</status>ลอยศัตรูในเส้นทาง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ยืดหอกของ Jarvan IV ออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และลดเกราะของศัตรูทั้งหมดที่โดนลง @ArmorShredPercent@% เป็นเวลา @ArmorShredDuration@ วินาที<br><br>หากหอกปะทะกับ <spellName>Demacian Standard</spellName> จะดึง Jarvan IV ไปยังตำแหน่งของธง และ<status>กระแทกลอย</status>ศัตรูในเส้นทาง@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -736,7 +736,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV อัญเชิญเหล่าราชันย์บรรพชนแห่ง Demacia เพื่อสร้างโล่ป้องกันและสโลว์ศัตรูโดยรอบ",
-            "dynamicDescription": "ได้รับ<shield>โล่ป้องกัน</shield>ชั่วคราวที่รับความเสียหายได้สูงสุด @ShieldAmount@ หน่วย (+@ShieldBonus@ หน่วยต่อจำนวนแชมเปี้ยนศัตรูใกล้เคียง) เป็นเวลา 5 วินาที และ<status>สโลว์</status>ศัตรูรอบข้าง @SlowAmount@% เป็นเวลา 2 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ได้รับ<shield>โล่ป้องกัน</shield>ชั่วคราวที่รับความเสียหายได้สูงสุด @ShieldAmount@ หน่วย (+@ShieldBonus@ หน่วยต่อจำนวนแชมเปี้ยนศัตรูใกล้เคียง) เป็นเวลา @ShieldDuration@ วินาที และ<status>สโลว์</status>ศัตรูรอบข้าง @SlowAmount@% เป็นเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1036,7 +1036,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV กระโจนสู่สนามรบอย่างกล้าหาญด้วยความรุนแรง จนพื้นที่รอบ ๆ กลายเป็นสนามต่อสู้รอบตัวเขา",
-            "dynamicDescription": "กระโจนเข้าหาแชมเปี้ยนศัตรูอย่างกล้าหาญ สร้าง<physicalDamage>ความเสียหายกายภาพ @DamageCalc@ หน่วย</physicalDamage> และสร้างสนามต่อสู้ที่ไม่มีใครผ่านเข้าออกได้เป็นเวลา 3.5 วินาที<br><br><recast>กดใช้ซ้ำ</recast>เพื่อทำให้ลานประลองถล่ม@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "กระโจนเข้าหาแชมเปี้ยนศัตรูอย่างกล้าหาญ สร้าง<physicalDamage>ความเสียหายกายภาพ @DamageCalc@ หน่วย</physicalDamage> และสร้างสนามต่อสู้ที่ไม่มีใครผ่านเข้าออกได้เป็นเวลา @WallDuration@ วินาที<br><br><recast>กดใช้ซ้ำ</recast>เพื่อทำให้ลานประลองถล่ม@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

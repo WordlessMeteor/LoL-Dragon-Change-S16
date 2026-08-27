@@ -6,7 +6,7 @@
     "name": "フィオラ",
     "alias": "Jade_Fiora",
     "title": "",
-    "shortBio": "",
+    "shortBio": "- 「ファント(Q)」は対象指定のダッシュで、再発動が可能<br>- 「リポスト(W)」は自動効果で攻撃力が増加し、突きにはスタン効果もスロウ効果も付与されない<br>- 「スピードバースト(E)」は通常攻撃で移動速度が増加し、キルで効果時間がリフレッシュされる<br>- 自動効果とRは完全に異なる。詳細はスキル説明を参照",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 3,
@@ -252,7 +252,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "フィオラはダメージを与えると時間をかけて体力を自動回復する。チャンピオンに攻撃を命中させると、この効果が複数回スタックする。"
+        "description": "ダメージを与えると時間をかけて体力を自動回復する。チャンピオンに攻撃を命中させると、この効果が複数回スタックする。"
     },
     "spells": [
         {
@@ -413,8 +413,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "攻撃力が増加する。発動すると、次の通常攻撃をパリイして、攻撃者に魔法ダメージを反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive><physicalDamage>攻撃力</physicalDamage>が<physicalDamage>@BonusAD@</physicalDamage>増加する。<br><br><spellActive>発動効果: </spellActive>1.5秒間、次の通常攻撃をパリイして、攻撃者に<magicDamage>@ReflectionDamage@の魔法ダメージ</magicDamage>を反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。@SpellModifierDescriptionAppend@",
+            "description": "攻撃力が増加する。発動すると、次の通常攻撃を受け流して、攻撃者に魔法ダメージを反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive><physicalDamage>攻撃力</physicalDamage>が<physicalDamage>@BonusAD@</physicalDamage>増加する。<br><br><spellActive>発動効果: </spellActive>1.5秒間、次の通常攻撃を受け流して、攻撃者に<magicDamage>@ReflectionDamage@の魔法ダメージ</magicDamage>を反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -713,7 +713,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "戦場をダッシュして、敵チャンピオンに物理ダメージを与える同じ対象に連続で命中すると、与えるダメージが低下する。",
+            "description": "戦場をダッシュして、敵チャンピオンに物理ダメージを与える。同じ対象に連続で命中すると、与えるダメージが低下する。",
             "dynamicDescription": "戦場をダッシュして、ランダムなチャンピオンを5回攻撃し、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。同じ対象に連続で攻撃すると、代わりに<physicalDamage>@TotalDamageReduced@の物理ダメージ</physicalDamage>を与える。<br><br>最初と最後の攻撃は同じ対象に行われる。それぞれの攻撃は通常攻撃時効果を適用する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

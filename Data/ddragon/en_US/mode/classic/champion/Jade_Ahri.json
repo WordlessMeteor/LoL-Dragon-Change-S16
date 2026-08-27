@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ahri": {
             "id": "Jade_Ahri",
@@ -235,8 +235,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- Essence Theft (P) is stacked on damaging enemies<br>- Spirit Rush (R) doesn't reset",
-            "blurb": "- Essence Theft (P) is stacked on damaging enemies<br>- Spirit Rush (R) doesn't reset",
+            "lore": "- Essence Theft (P) is stacked on damaging enemies<br>- Spirit Rush (R) doesn't reset<br>- Charm (E) increases Ahri's damage to her target",
+            "blurb": "- Essence Theft (P) is stacked on damaging enemies<br>- Spirit Rush (R) doesn't reset<br>- Charm (E) increases Ahri's damage to her target",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -251,7 +251,7 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 460,
+                "hp": 440,
                 "hpperlevel": 80,
                 "mp": 280,
                 "mpperlevel": 50,
@@ -261,8 +261,8 @@
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
-                "hpregen": 6.1,
-                "hpregenperlevel": 0.6,
+                "hpregen": 4.5,
+                "hpregenperlevel": 0.45,
                 "mpregen": 6.85,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
@@ -702,7 +702,7 @@
                     "id": "Jade_AhriR",
                     "name": "Spirit Rush",
                     "description": "Ahri dashes forward and fires essence bolts, damaging 3 nearby enemies (prioritizes Champions). Spirit Rush can be cast up to three times before going on cooldown.",
-                    "tooltip": "Ahri nimbly dashes, firing 3 essence bolts at nearby enemies, prioritizing champions. These bolts deal <magicDamage>{{ totaldamage }} magic damage</magicDamage> each. <spellName>Spirit Rush</spellName> can be <recast>Recast</recast> up to 2 more times within 10 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ahri nimbly dashes, firing 3 essence bolts at nearby enemies, prioritizing champions. These bolts deal <magicDamage>{{ totaldamage }} magic damage</magicDamage> each. <spellName>Spirit Rush</spellName> can be <recast>Recast</recast> up to 2 more times within {{ recastduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -715,11 +715,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        110,
-                        95,
+                        120,
+                        100,
                         80
                     ],
-                    "cooldownBurn": "110/95/80",
+                    "cooldownBurn": "120/100/80",
                     "cost": [
                         100,
                         100,

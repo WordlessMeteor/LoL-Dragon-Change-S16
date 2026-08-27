@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Blast Zone Heimerdinger",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "ไฮเมอร์ดิงเจอร์เป็นนักวิทยาศาสตร์ผู้แสนเอาแต่ใจ เขาอาศัยอยู่ในสาธารณรัฐนิวแบนเดิ้ล และเขาก็ยังไม่ได้บอกใครว่าเขาอาจจะพัฒนา \"ระเบิดสงครามซักสองสามลูก\" ให้กับ \"รัฐบาลทหารของประเทศหนึ่งหรือมากกว่านั้น\" เพราะว่าเขายังอยากจะสร้างสิ่งประดิษฐ์อยู่ในเมืองที่ไม่ได้พยายามจะฆ่าเขาตลอดเวลา"
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger วางป้อมปืนกล โดยป้อมปืนกลจะได้รับความสามารถเมื่อสกิลนี้เพิ่มเลเวล (ป้อมปืนสร้างความเสียหายเพียงครึ่งเดียวให้กับป้อมปราการ)",
-            "dynamicDescription": "Heimerdinger สร้างป้อมปืนกลที่สร้าง<magicDamage>ความเสียหายเวท @BonusDamage@ หน่วย</magicDamage>ต่อการโจมตีแต่ละครั้ง สกิลนี้สามารถเก็บสะสมได้ @MaxAmmo@ ชาร์จ (รีเฟรช @AmmoRechargeTime@ วินาที)<br><br>สกิลแต่ละเลเวลจะเสริมพลังป้อมปืน:<br><attention>เลเวล 2:</attention> การโจมตีของป้อมปืนจะลดเกราะและต้านทานเวทของเป้าหมายลง 1 หน่วย (สูงสุด 50 หน่วย)<br><attention>เลเวล 3:</attention> เพิ่มจำนวนป้อมปืนสูงสุดเป็น 2 ป้อม<br><attention>เลเวล 4:</attention> ป้อมปืนได้รับ<scaleHealth>พลังชีวิตเพิ่มเติม 125 หน่วย</scaleHealth><br><attention>เลเวล 5:</attention> การโจมตีของป้อมปืนจะสร้างความเสียหายเป็นวงกว้าง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger สร้างป้อมปืนกลที่สร้าง<magicDamage>ความเสียหายเวท @BonusDamage@ หน่วย</magicDamage>ต่อการโจมตีแต่ละครั้ง ป้อมปืนกลได้รับ<attackSpeed>ความเร็วโจมตี @TurretBonusAttackSpeed*100@%</attackSpeed> เป็นเวลา @AttackSpeedDuration@ วินาทีแรกหลังจากที่ถูกวาง สกิลนี้สามารถเก็บสะสมได้ @MaxAmmo@ ชาร์จ (รีเฟรช @AmmoRechargeTime@ วินาที)<br><br>สกิลแต่ละเลเวลจะเสริมพลังป้อมปืน:<br><attention>เลเวล 2:</attention> การโจมตีของป้อมปืนจะลดเกราะและต้านทานเวทของเป้าหมายลง @Level2ResistShred@ หน่วย (สูงสุด @MaxShredCapTooltip@ หน่วย)<br><attention>เลเวล 3:</attention> เพิ่มจำนวนป้อมปืนสูงสุดเป็น 2 ป้อม<br><attention>เลเวล 4:</attention> ป้อมปืนได้รับ<scaleHealth>พลังชีวิตเพิ่มเติม @Level4HPTooltip@ หน่วย</scaleHealth><br><attention>เลเวล 5:</attention> การโจมตีของป้อมปืนจะสร้างความเสียหายเป็นวงกว้าง @AoEDamageMod*100@%@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger ยิงจรวดพิสัยไกลเพื่อโจมตีศัตรูที่อยู่ใกล้กับ Heimerdinger มากที่สุด",
-            "dynamicDescription": "Heimerdinger ยิง Micro-Rocket ที่จะติดตามศัตรู 3 ตัว (สูงสุด 1 ลูกต่อคน) โดยจะโจมตีเป้าหมายที่อยู่ใกล้เขาที่สุด จรวดแต่ละลูกสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger ยิง Micro-Rocket ที่จะติดตามศัตรู @MaxTargets@ ตัว (สูงสุด 1 ลูกต่อคน) โดยจะโจมตีเป้าหมายที่อยู่ใกล้เขาที่สุด จรวดแต่ละลูกสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Heimerdinger โยนลูกระเบิดไปยังพื้นที่เป้าหมาย สร้างความเสียหายให้กับศัตรูทุกตัวที่อยู่ในรัศมี พร้อมทั้งสตันศัตรูที่อยู่กลางวง และทำให้ศัตรูรอบข้างตาบอด",
-            "dynamicDescription": "Heimerdinger โยนระเบิด สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับยูนิตศัตรู และทำให้พวกเขา<status>ตาบอด</status>เป็นเวลา @BlindDuration@ วินาที  ศัตรูที่โดนโจมตีโดยตรงจะถูก<status>สตัน</status>เป็นเวลา 1.5 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger โยนระเบิด สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับยูนิตศัตรู และทำให้พวกเขา<status>ตาบอด</status>เป็นเวลา @BlindDuration@ วินาที  ศัตรูที่โดนระเบิดโดยตรงจะถูก<status>สตัน</status>เป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ติดตัว / กดใช้: เพิ่มการลดคูลดาวน์แบบติดตัว  หากกดใช้จะฮีล Evolution Turret ที่ทำงานอยู่ทั้งหมด และทำให้พวกมันยิงกระสุนน้ำแข็งซึ่งจะลดความเร็วเคลื่อนที่เป็นเวลาสั้น ๆ",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>ลดคูลดาวน์ @CooldownBonus*-100@%<br><br><spellActive>กดใช้: </spellActive>เสริมพลังให้กับสกิลและป้อมปืนทั้งหมดในช่วงเวลาหนึ่ง<br><br><spellName>Evolution Turrets:</spellName> <healing>ฮีล</healing>ป้อมปืนทั้งหมด 100% ของพลังชีวิตสูงสุด และการโจมตีแต่ละครั้งจะ<status>สโลว์ @MovementSpeedMod*-100@%</status><br><spellName>Hextech Micro-Rockets:</spellName> ยิงจรวด 5 ลูกแทนที่จะเป็น 3 ลูก<br><spellName>CH-1 Concussion Grenade:</spellName> ระเบิดเดินทางเร็วขึ้น 33%@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>ลดคูลดาวน์ @CooldownBonus*-100@%<br><br><spellActive>กดใช้: </spellActive>เสริมพลังให้กับสกิลและป้อมปืนทั้งหมดในช่วงเวลาหนึ่ง<br><br><spellName>Evolution Turrets:</spellName> ป้อมปืนทั้งหมดจะ<healing>ฟื้นฟูพลังชีวิต</healing>จนเต็ม การโจมตีแต่ละครั้งจะ<status>สโลว์ @MovementSpeedMod*-100@%</status><br><spellName>Hextech Micro-Rockets:</spellName> ยิงจรวด @WMaxMissiles@ ลูก<br><spellName>CH-1 Concussion Grenade:</spellName> ระเบิดเดินทางเร็วขึ้น 33%@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

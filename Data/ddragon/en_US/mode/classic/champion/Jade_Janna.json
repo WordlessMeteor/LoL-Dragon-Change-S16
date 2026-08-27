@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Janna": {
             "id": "Jade_Janna",
@@ -250,7 +250,7 @@
                     "id": "Jade_JannaHowlingGale",
                     "name": "Howling Gale",
                     "description": "By creating a localized change in pressure and temperature, Janna is able to create a small storm that grows in size with time. She can active the spell again to release the storm. On release this storm will fly towards the direction it was cast in, dealing damage and knocking away any enemies in its path.",
-                    "tooltip": "Summons a whirlwind, which deals <magicDamage>{{ minimumdamage }} magic damage</magicDamage> to all enemies in its path and <status>Knocks</status> them into the air. The whirlwind travels further, deals <magicDamage>{{ chargedamage }} bonus damage</magicDamage>, and <status>Knocks</status> enemies higher, for each second it charges (up to a maximum of 3 seconds).<br /><br /><recast>Recast</recast> to release the whirlwind early.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Summons a whirlwind, which deals <magicDamage>{{ minimumdamage }} magic damage</magicDamage> to all enemies in its path and <status>Knocks</status> them into the air. The whirlwind travels further, deals <magicDamage>{{ chargedamage }} bonus damage</magicDamage>, and <status>Knocks</status> enemies higher, for each second it charges (up to a maximum of {{ maxduration }} seconds).<br /><br /><recast>Recast</recast> to release the whirlwind early.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -685,7 +685,7 @@
                     "id": "Jade_JannaReapTheWhirlwind",
                     "name": "Monsoon",
                     "description": "Janna surrounds herself in a magical storm, throwing enemies back. After the storm has settled, soothing winds heal nearby allies while the ability is active.",
-                    "tooltip": "Summons forth the might of the wind to <recast>Knockback</recast> surrounding enemies and restores <healing>{{ totalheal }} Health</healing> to nearby allies over 4 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Summons forth the might of the wind to <recast>Knockback</recast> surrounding enemies and restores <healing>{{ totalheal }} Health</healing> to nearby allies over {{ maxchannelduration }} seconds. (Maximum heal: <healing>{{ totalheal }}</healing>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Heal Per Second",
@@ -801,7 +801,7 @@
             ],
             "passive": {
                 "name": "Tailwind",
-                "description": "Janna and her allied champions gain 3% increased Movement Speed.",
+                "description": "Janna and her allied champions gain increased Movement Speed.",
                 "image": {
                     "full": "Jade_JannaP.png",
                     "sprite": "passive0.png",

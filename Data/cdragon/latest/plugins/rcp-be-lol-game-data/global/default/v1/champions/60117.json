@@ -1105,7 +1105,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy.",
-            "dynamicDescription": "<mainText>On Ally Cast: Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for 6 seconds. Upon arrival, Pix <shield>shields for @TotalShield@ damage</shield> for 6 seconds.<br><br>On Enemy Cast: Pix deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to target enemy unit. Pix then follows and grants vision of them for 6 seconds.",
+            "dynamicDescription": "On Ally Cast: Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for @AllyFollowDuration@ seconds. Upon arrival, Pix <shield>shields for @TotalShield@ damage</shield> for @ShieldDuration@ seconds.<br><br>On Enemy Cast: Pix deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to target enemy unit. Pix then follows and grants vision of them for @EnemyFollowDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1136,13 +1136,13 @@
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1154,13 +1154,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1172,31 +1172,31 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1255,7 +1255,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies.",
-            "dynamicDescription": "<mainText>Lulu enlarges her ally, <status>Knocking Up</status> nearby enemies into the air. For @BuffDuration@ seconds, her ally gains <scaleHealth>@TotalBonusHealth@ bonus health</scaleHealth> and nearby enemies are <status>Slowed</status> by @SlowPercent@% for 1 second.",
+            "dynamicDescription": "Lulu enlarges her ally, <status>Knocking Up</status> nearby enemies into the air. For @BuffDuration@ seconds, her ally gains <scaleHealth>@TotalBonusHealth@ bonus health</scaleHealth> and nearby enemies are <status>Slowed</status> by @SlowPercent@%.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

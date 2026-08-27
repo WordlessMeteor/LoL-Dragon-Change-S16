@@ -63,6 +63,46 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "防弹武僧 李青",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": [
+                {
+                    "name": "Killer",
+                    "emblemPath": {
+                        "large": "/lol-game-data/assets/v1/emblem-images/39.png",
+                        "small": "/lol-game-data/assets/v1/emblem-images/39.png"
+                    },
+                    "positions": {}
+                }
+            ],
+            "regionRarityId": 4,
+            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/4_large.png",
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "朔极弟子的传统服装从来就不适合充满雄心的年轻李青，他所拥有的原生潜力是任何其他弟子都无法想象的。然而，他成长了：既有了装束，又拥有了龙的力量。"
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -498,7 +538,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "李青使用一次技能后，他接下来的两次普通攻击会获得40%攻击速度，且每次攻击回复15能量。"
+        "description": "在李青使用一次技能后，他的下几次攻击会获得攻速加成，且回复能量。"
     },
     "spells": [
         {
@@ -509,8 +549,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "天音波：李青发出刺耳的声波定位敌人，对命中的首个敌人造成物理伤害。如果天音波击中敌人，则李青在接下来3秒可施放回音击。<br>回音击：李青冲向被天音波击中的敌人，造成物理伤害外加目标8%已损失生命值的伤害。",
-            "dynamicDescription": "<spellName>天音波：</spellName>李青发出刺耳的声波定位敌人，对命中的首个敌人造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。如果<spellName>天音波</spellName>击中敌人，则李青在接下来3秒可施放<spellName>回音击</spellName>。<br><br><spellName>回音击：</spellName>李青冲刺向被天音波击中的敌人，造成<physicalDamage>@RecastDamage@物理伤害</physicalDamage>外加目标8%已损失生命值的伤害。@SpellModifierDescriptionAppend@",
+            "description": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成物理伤害。如果天音波击中敌人，李青可施放回音击。<br><br>回音击：李青冲向被天音波击中的敌人，造成基于该目标已损失生命值的额外伤害。",
+            "dynamicDescription": "<spellName>天音波：</spellName>李青发出刺耳的声波定位敌人，对首个敌人造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。如果天音波击中敌人，李青在接下来3秒可施放<spellName>回音击</spellName>。<br><br><spellName>回音击：</spellName>李青冲向被天音波击中的敌人，造成<physicalDamage>@RecastDamage@物理伤害</physicalDamage>外加其@MissingHealthDamage*100@%已损失生命值的额外伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -533,11 +573,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -659,8 +699,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "金钟罩：李青冲向目标友军，为目标和自身提供护盾。在使用金钟罩后，李青可以在接下来的3秒内施放铁布衫。<br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能。4秒内，李青获得生命偷取、法术吸血和护甲。",
-            "dynamicDescription": "<spellName>金钟罩：</spellName>李青冲向目标友军，为目标和自身提供<shield>护盾</shield>，可在接下来5秒内吸收@ShieldAmount@伤害。使用<spellName>金钟罩</spellName>后，李青可以在接下来的3秒内施放<spellName>铁布衫</spellName>。<br><br><spellName>铁布衫：</spellName>李青艰苦卓绝的训练让他能在战斗中激发潜能。5秒内，李青获得@LifestealAndSpellVamp@%生命偷取、法术吸血和<scaleArmor>@ArmorBonus@护甲</scaleArmor>。@SpellModifierDescriptionAppend@",
+            "description": "金钟罩：李青冲向一个目标友军，为二者提供护盾值。在使用金钟罩后，李青可以施放铁布衫。<br><br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能，从而获得生命偷取、技能吸血和护甲。",
+            "dynamicDescription": "<spellName>金钟罩：</spellName>李青冲向一个目标友军，为二者提供@ShieldAmount@<shield>护盾值</shield>，持续@ShieldDuration@秒。在使用<spellName>金钟罩</spellName>后，李青可以在接下来的@W1ReactivateTime@秒内施放<spellName>铁布衫</spellName>。<br><br><spellName>铁布衫：</spellName>李青艰苦卓绝的训练让他能在战斗中激发潜能。在@LifestealAndSpellVampTime@秒期间，李青获得@LifestealAndSpellVamp@%生命偷取、法术吸血和<scaleArmor>@ArmorBonus@护甲</scaleArmor>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -686,7 +726,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -836,7 +876,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

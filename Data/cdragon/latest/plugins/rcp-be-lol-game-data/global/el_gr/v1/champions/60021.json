@@ -401,7 +401,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.png",
         "abilityVideoPath": "champion-abilities/60021/ability_60021_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60021/ability_60021_P1.jpg",
-        "description": "Αν περάσουν 5 δευτερόλεπτα χωρίς να δεχτεί επίθεση, η <speed>Ταχύτητα Κίνησης</speed> της Μις Φόρτσουν αυξάνεται κατά 25. Αυτό το μπόνους αυξάνεται κατά 9 κάθε δευτερόλεπτο με μέγιστο όριο το 70."
+        "description": "Η Μις Φόρτσουν έχει αυξημένη Ταχύτητα Κίνησης μέχρι να δεχτεί χτύπημα στη μάχη."
     },
     "spells": [
         {
@@ -428,7 +428,7 @@
                 80.0,
                 85.0,
                 90.0,
-                40.0
+                95.0
             ],
             "cooldownCoefficients": [
                 9.0,
@@ -563,7 +563,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν αυξάνει παθητικά τη ζημιά που προκαλεί σε ένα στόχο με κάθε χτύπημα.  Αυτή η ικανότητα μπορεί να ενεργοποιηθεί για να αυξήσει την Ταχύτητα Επίθεσης της Μις Φόρτσουν και να μειώσει μέσω των επιθέσεών της, τη Θεραπεία που λαμβάνει ο στόχος.",
-            "dynamicDescription": "<font color='#FF9900'>Παθητική:</font> Η Μις Φόρτσουν προκαλεί <magicDamage>@TotalDamageOnHIt@ Μαγική Ζημιά</magicDamage> στον στόχο της με κάθε επίθεση, η οποία συσσωρεύεται αθροιστικά έως και @MaxStacks@ φορές στον ίδιο στόχο.<br><magicDamage>Μέγιστη μπόνους ζημιά: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Ενεργή:</font> Η <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> της Μις Φόρτσουν αυξάνεται κατά <attackSpeed>@ASMod@%</attackSpeed> για 6 δευτ. και οι επιθέσεις της εφαρμόζουν <keyword>Βαριά Τραύματα κατά 50%</keyword> για 3 δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>Παθητική:</font> Η Μις Φόρτσουν προκαλεί <magicDamage>@TotalDamageOnHIt@ Μαγική Ζημιά</magicDamage> στον στόχο της με κάθε επίθεση, η οποία συσσωρεύεται αθροιστικά έως και @MaxStacks@ φορές στον ίδιο στόχο.<br><magicDamage>Μέγιστη μπόνους ζημιά: @MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>Ενεργή:</font> Η <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> της Μις Φόρτσουν αυξάνεται κατά <attackSpeed>@ASMod@%</attackSpeed> για @ActiveDuration@ δευτ. και οι επιθέσεις της εφαρμόζουν <keyword>Βαριά Τραύματα 50%</keyword> για 3 δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -713,7 +713,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν εξαπολύει σφαίρες σε μια θέση και προκαλεί κύματα ζημιάς στους αντιπάλους της, ενώ παράλληλα τους επιβραδύνει.",
-            "dynamicDescription": "Η Μις Φόρτσουν εξαπολύει εκατοντάδες σφαίρες στον αέρα οι οποίες πέφτουν σε μια τοποθεσία μετά από 0,5 δευτερόλεπτο και προκαλούν <magicDamage>@TotalDamagePerSecond@ Μαγική Ζημιά</magicDamage> σε 2 δευτερόλεπτα, ενώ <status>Επιβραδύνουν</status> τους εχθρούς που χτυπούν κατά @TotalSlowAmount@ για 1 δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Μις Φόρτσουν εκτοξεύει εκατοντάδες σφαίρες στον αέρα που πέφτουν σαν βροχή, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε διάστημα @Duration@ δευτερολέπτων και <status>Επιβραδύνουν</status> τους εχθρούς κατά @MoveSpeedMod*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -723,12 +723,12 @@
                 800.0
             ],
             "costCoefficients": [
+                70.0,
+                75.0,
                 80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                85.0,
+                90.0,
+                95.0
             ],
             "cooldownCoefficients": [
                 15.0,
@@ -863,7 +863,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μις Φόρτσουν εξαπολύει σφαίρες σε έναν κώνο μπροστά της και προκαλεί τεράστια ζημιά στους εχθρούς.",
-            "dynamicDescription": "Η Μις Φόρτσουν εξαπολύει έναν καταιγισμό από σφαίρες σε έναν κώνο μπροστά της για 2 δευτερόλεπτα και προκαλεί <physicalDamage>@PhysicalDamagePerWave@ Σωματική Ζημιά</physicalDamage> ανά σφαίρα (<physicalDamage>Συνολική ζημιά: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Μις Φόρτσουν εξαπολύει έναν καταιγισμό από σφαίρες σε έναν κώνο μπροστά της για @ChannelDuration@ δευτερόλεπτα και προκαλεί <physicalDamage>@PhysicalDamagePerWave@ Σωματική Ζημιά</physicalDamage> ανά σφαίρα (<physicalDamage>Συνολική ζημιά: @TotalDamage@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

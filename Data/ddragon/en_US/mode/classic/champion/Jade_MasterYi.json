@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_MasterYi": {
             "id": "Jade_MasterYi",
@@ -22,6 +22,12 @@
                     "id": "60011000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60011001",
+                    "num": 1,
+                    "name": "Assassin Master Yi",
                     "chromas": false
                 },
                 {
@@ -87,13 +93,13 @@
                     "id": "60011052",
                     "num": 52,
                     "name": "Spirit Blossom Master Yi",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60011053",
                     "num": 53,
                     "name": "Prestige Spirit Blossom Master Yi",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60011080",
@@ -359,7 +365,7 @@
                     "id": "Jade_MasterYiMeditate",
                     "name": "Meditate",
                     "description": "Master Yi rejuvenates his body by focus of mind, restoring Health and taking reduced damage for a short time.",
-                    "tooltip": "Master Yi channels, restoring <healing>{{ totalheal }} Health</healing> over 5 seconds. While channeling, Master Yi gains <scaleArmor>{{ defensestat }} Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Master Yi channels, restoring <healing>{{ totalheal }} Health</healing> over {{ duration }} seconds. While channeling, Master Yi gains <scaleArmor>{{ defensestat }} Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Health Restored",

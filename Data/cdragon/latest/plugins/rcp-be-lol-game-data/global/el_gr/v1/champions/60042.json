@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Κόρκι εκτοξεύει μια βόμβα λάμψης σε μια τοποθεσία-στόχο. Αυτή η επίθεση αποκαλύπτει τις μονάδες που δεν είναι σε απόκρυψη γύρω από την έκρηξη και τους Ήρωες για 6 δευτερόλεπτα.",
-            "dynamicDescription": "<mainText>Προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους εχθρούς στην περιοχή-στόχο. Επιπλέον, η έκρηξη <status>Αποκαλύπτει</status> την περιοχή και τους Ήρωες που βρίσκονται σε αυτήν για 6 δευτ. (δεν αποκαλύπτει μονάδες σε απόκρυψη).",
+            "description": "Ο Κόρκι εκτοξεύει μια βόμβα, προκαλώντας ζημιά και αποκαλύπτοντας τους εχθρούς γύρω από την έκρηξη.",
+            "dynamicDescription": "Ο Κόρκι εκτοξεύει μια βόμβα, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>. Η περιοχή και οι Ήρωες που πετυχαίνει αποκαλύπτονται για @RevealDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Το μυδραλιοβόλο του Κόρκι ρίχνει με μεγάλη ταχύτητα σε έναν κώνο μπροστά του, προκαλώντας ζημιά και μειώνοντας την Θωράκιση του εχθρού.",
-            "dynamicDescription": "<mainText>Το μυδραλιοβόλο του Κόρκι ρίχνει σε μια κωνική περιοχή μπροστά του για 4 δευτερόλεπτα, προκαλώντας <physicalDamage>@TotalDamageTooltipOnly@ Σωματική Ζημιά</physicalDamage> και <status>μειώνοντας τη @ArmorMod*-1@ Θωράκιση</status> ανά δευτερόλεπτο. Η μείωση θωράκισης συσσωρεύεται και διαρκεί 2 δευτερόλεπτα.",
+            "dynamicDescription": "Το μυδραλιοβόλο του Κόρκι ρίχνει σε μια κωνική περιοχή μπροστά του για @ActiveDuration@ δευτ., προκαλώντας <physicalDamage>@DamagePerSecondCalc@ Σωματική Ζημιά</physicalDamage> και <status>μειώνοντας τη @ArmorMod*-1@ Θωράκιση</status> ανά δευτ. Η Μείωση Θωράκισης συσσωρεύεται και διαρκεί @ShredDuration@ δευτ. (Μέγιστη ζημιά: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Κόρκι εξαπολύει ένα βλήμα προς τη θέση του στόχου, το οποίο ανατινάζεται κατά την πρόσκρουση και προκαλεί ζημιά στους εχθρούς που βρίσκονται στην περιοχή. Ο Κόρκι αποθηκεύει έναν πύραυλο κάθε 12 δευτερόλεπτα, μέχρι 7 πυραύλους συνολικά. Κάθε 3ος πύραυλος γίνεται Τεράστιος και προκαλεί επιπλέον ζημιά.",
-            "dynamicDescription": "<mainText>Ο Κόρκι εκτοξεύει έναν πύραυλο προς την τοποθεσία-στόχο, ο οποίος συγκρούεται με τον πρώτο εχθρό που θα βρει στην πορεία του. Κάθε βλήμα προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε μια περιοχή.<br><br>Αυτή η ικανότητα έχει 7 φορτίσεις (ανανέωση κάθε @AmmoRechargeTime@ δευτ.).<br><br>Κάθε 3ος πύραυλος θα είναι Τεράστιος και θα προκαλεί <magicDamage>@TotalDamageBig@ Μαγική Ζημιά</magicDamage>.",
+            "description": "Ο Κόρκι εξαπολύει έναν πύραυλο προς τη θέση του στόχου, ο οποίος ανατινάζεται κατά την πρόσκρουση και προκαλεί ζημιά στους εχθρούς που βρίσκονται στην περιοχή. Περιστασιακά, οι πύραυλοι γίνονται Τεράστιοι και προκαλούν επιπλέον ζημιά.",
+            "dynamicDescription": "Ο Κόρκι εκτοξεύει έναν πύραυλο προς την στοχευμένη τοποθεσία, ο οποίος συγκρούεται με τον πρώτο εχθρό που θα βρει στην πορεία του. Κάθε πύραυλος προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε μια περιοχή.<br><br>Αυτή η ικανότητα έχει @MaxAmmoTooltip@ φορτίσεις (ανανέωση κάθε@AmmoRechargeTime@ δευτ.)<br><br>Κάθε 3ος πύραυλος θα είναι Τεράστιος και θα προκαλεί <magicDamage>@TotalDamageBig@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

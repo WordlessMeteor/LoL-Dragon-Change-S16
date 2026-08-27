@@ -131,6 +131,37 @@
             "description": null
         },
         {
+            "id": 60086002,
+            "contentId": "4f1dab6d-ed8c-4918-a119-439293756327",
+            "relatedPrimeContentId": "1fe63e8e-1dc9-43fb-8f69-e9aa5a7eef95",
+            "relatedPrimeItemId": 86002,
+            "isBase": false,
+            "name": "砂漠の兵士ガレン",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Jade_GarenLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 167
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60086005,
             "contentId": "087c644d-dc63-4089-b87b-8d61c01d9fca",
             "relatedPrimeContentId": "093bfaff-5446-46de-97f6-de4eec36e682",
@@ -675,7 +706,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "剣を振って死の舞を披露し、効果時間中は周囲にダメージを与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>の値が追加で20%増加する。<br><br><spellActive>発動効果: </spellActive>@BuffDuration@秒間、防御シールドを獲得し、受けるダメージを@DamageReduction*100@%軽減して、30%の行動妨害耐性を得る。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>の値が追加で@ResistanceScaling*100@%増加する。<br><br><spellActive>発動効果: </spellActive>@BuffDuration@秒間、防御シールドを獲得し、受けるダメージを@DamageReduction*100@%軽減して、@TenacityBonus*100@%の行動妨害耐性を得る。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -825,7 +856,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "高速で回転しながら剣を振り回し、周囲の敵に物理ダメージを与える。",
-            "dynamicDescription": "@Duration@秒間、高速で回転しながら剣を振り回し、周囲の敵に毎秒<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。回転中はユニットをすり抜けて移動できるが、ユニットに重なって通り抜ける際は移動速度が20%低下する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、高速で回転しながら剣を振り回し、周囲の敵に毎秒<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える(最大ダメージ: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Heimerdinger em Manutenção",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Um cientista pouco ortodoxo que vive na Nova República de Bandópolis, Heimerdinger ainda não disse a ninguém que ele talvez tenha desenvolvido “uma ou duas grandes bombas pré-guerra” para “um ou mais governos vilões por aí”... Ele ainda prefere trabalhar em uma cidade que não está tentando matá-lo toda hora."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger posiciona uma torre metralhadora. As torres recebem habilidades conforme esta habilidade é aprimorada. (As torres do Heimerdinger causam metade do dano a torres do mapa.)",
-            "dynamicDescription": "Heimerdinger constrói uma Torre Metralhadora que causa <magicDamage>@BonusDamage@ de Dano Mágico</magicDamage> por ataque. A habilidade tem @MaxAmmo@ cargas (recarrega a cada @AmmoRechargeTime@s).<br><br>Cada ranque desta habilidade concede uma melhoria adicional:<br><attention>Ranque 2:</attention> os ataques da torre reduzem a Armadura e a Resistência Mágica do alvo em 1 (até 50).<br><attention>Ranque 3:</attention> o máximo de torres aumenta para 2.<br><attention>Ranque 4:</attention> as torres recebem mais <scaleHealth>125 de Vida</scaleHealth>.<br><attention>Ranque 5:</attention> os ataques da torre causam dano em área.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger constrói uma Torre Metralhadora que causa <magicDamage>@BonusDamage@ de Dano Mágico</magicDamage> por ataque. As torres recebem <attackSpeed>@TurretBonusAttackSpeed*100@% de Velocidade de Ataque</attackSpeed> nos primeiros @AttackSpeedDuration@s após serem posicionadas. A Habilidade tem @MaxAmmo@ cargas (recarrega a cada @AmmoRechargeTime@s).<br><br>Cada ranque desta Habilidade concede uma melhoria adicional:<br><attention>Ranque 2:</attention> os ataques das torres reduzem a Armadura e a Resistência Mágica do alvo em @Level2ResistShred@ (até @MaxShredCapTooltip@).<br><attention>Ranque 3:</attention> o máximo de torres aumenta para 2.<br><attention>Ranque 4:</attention> as torres recebem mais <scaleHealth>@Level4HPTooltip@ de Vida</scaleHealth>.<br><attention>Ranque 5:</attention> os ataques das torres causam @AoEDamageMod*100@% de dano de dispersão.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger dispara mísseis de longo alcance que atingem os inimigos mais próximos a ele.",
-            "dynamicDescription": "Heimerdinger dispara 3 Micro-Mísseis teleguiados (máximo de 1 por pessoa), atingindo os alvos mais próximos a ele. Cada míssil causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger dispara @MaxTargets@ Micro-Mísseis teleguiados (máximo de 1 por pessoa), atingindo os alvos mais próximos a ele. Cada míssil causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heimerdinger lança uma granada em um local, causando dano a unidades inimigas, Atordoando todas as unidades diretamente atingidas e cegando as unidades próximas.",
-            "dynamicDescription": "Heimerdinger arremessa uma granada, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a unidades inimigas e aplicando <status>Cegueira</status> a elas por @BlindDuration@s.  Inimigos atingidos diretamente sofrem <status>Atordoamento</status> por 1,5s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger arremessa uma granada, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a unidades inimigas e aplicando <status>Cegueira</status> a elas por @BlindDuration@s.  Inimigos atingidos diretamente sofrem <status>Atordoamento</status> por @StunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passivo/Ativo: aumenta passivamente a Redução do Tempo de Recarga.  Ative para curar todas as Torres Evolutivas ativas e fazer com que elas disparem projéteis de gelo, que reduzem a Velocidade de Movimento, por um curto período.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>@CooldownBonus*-100@% de Redução do Tempo de Recarga.<br><br><spellActive>Ativo: </spellActive>energiza todas as habilidades e torres durante o efeito.<br><br><spellName>Torres Evolutivas:</spellName> todas as torres recebem <healing>cura</healing> equivalente a 100% da Vida máxima delas e cada ataque aplica <status>@MovementSpeedMod*-100@% de Lentidão</status>.<br><spellName>Micro-Mísseis Hextec:</spellName> dispara 5 mísseis em vez de 3.<br><spellName>Granada de Concussão CH-1:</spellName> percorre o trajeto 33% mais rápido.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>@CooldownBonus*-100@% de Redução do Tempo de Recarga.<br><br><spellActive>Ativo: </spellActive>fortalece todas as Habilidades e torres durante o efeito.<br><br><spellName>Torres Evolutivas:</spellName> Todas as torres são totalmente <healing>curadas</healing>. Cada Ataque aplica <status>@MovementSpeedMod*-100@% de Lentidão</status>.<br><spellName>Micro-Mísseis Hextec:</spellName> dispara @WMaxMissiles@ mísseis.<br><spellName>Granada de Concussão CH-1:</spellName> percorre o trajeto 33% mais rápido.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

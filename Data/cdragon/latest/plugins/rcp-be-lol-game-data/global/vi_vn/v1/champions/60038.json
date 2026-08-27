@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin giảm 15% <magicDamage>sát thương phép</magicDamage> nhận vào và chuyển hóa lượng sát thương này thành <attackSpeed>Tốc Độ Đánh</attackSpeed> cộng thêm."
+        "description": "Kassadin nhận <magicDamage>sát thương phép</magicDamage> giảm đi và chuyển hóa sát thương phép nhận vào thành <attackSpeed>Tốc Độ Đánh</attackSpeed> cộng thêm."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Nội tại: Đòn đánh thường của Kassadin hồi lại Năng Lượng. Lượng Năng Lượng hồi lại sẽ được tăng gấp ba khi đối đầu với tướng địch. Kích hoạt: Đòn đánh thường của Kassadin gây thêm sát thương phép.",
-            "dynamicDescription": "<spellPassive>Nội tại: </spellPassive>Đòn đánh thường của Kassadin hấp thụ năng lượng từ hư không, hồi lại <scaleMana>@ManaGainAmount@ Năng Lượng</scaleMana> mỗi đòn đánh. Nếu mục tiêu là tướng địch, <scaleMana>Năng Lượng</scaleMana> hồi phục sẽ được tăng gấp ba lần lên @ManaGainAmount*3@.<br><br><spellActive>Kích hoạt: </spellActive>Kassadin vận sức cho lưỡi kiếm âm ti trong 5 giây, khiến các đòn đánh thường của hắn gây thêm <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Nội Tại: Đòn đánh thường của Kassadin hồi lại Năng Lượng. Kích Hoạt: Đòn đánh thường của Kassadin gây thêm sát thương phép.",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Đòn đánh thường của Kassadin hấp thụ năng lượng từ hư không, hồi lại <scaleMana>@ManaGainAmount@ Năng Lượng</scaleMana> mỗi đòn đánh, tăng thành <scaleMana>@ChampionManaRestore@ Năng Lượng</scaleMana> lên Tướng.<br><br><spellActive>Kích Hoạt: </spellActive>Kassadin vận sức cho lưỡi kiếm âm ti trong @BuffDuration@ giây, khiến các đòn đánh thường của hắn gây thêm <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Kassadin hút năng lượng từ những phép tung ra từ xung quanh. Khi tích tụ xong, Kassadin có thể sử dụng Áp Suất Hư Không để gây sát thương và làm chậm kẻ địch theo hình nón trước mặt hắn.",
-            "dynamicDescription": "Kassadin hút năng lượng từ những phép tung ra xung quanh hắn (trong phạm vi 1.800), nhận 1 điểm cộng dồn mỗi khi có kỹ năng được thi triển ở gần hắn. Khi đạt đủ 6 cộng dồn, Kassadin có thể sử dụng <spellName>Áp Suất Hư Không</spellName> để gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch đi @MoveSpeedMod*-100@% trong 3 giây theo hình nón phía trước.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin hút năng lượng từ những phép tung ra xung quanh hắn, nhận 1 điểm cộng dồn mỗi khi có kỹ năng được thi triển ở gần hắn.<br><br>Khi đạt đủ @RequiredChargesTooltip@ cộng dồn, Kassadin có thể sử dụng <spellName>Áp Suất Hư Không</spellName> để gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch đi @MoveSpeedMod*-100@% trong @SlowDuration@ giây theo hình nón phía trước.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Kassadin dịch chuyển đến vị trí gần bên gây sát thương lên các kẻ địch xung quanh. Ngoài ra, sử dụng Hư Vô Bộ Pháp nhiều lần trong thời gian ngắn sẽ làm hao tổn thêm năng lượng, nhưng bù lại gây thêm sát thương.",
-            "dynamicDescription": "Kassadin bay đến một vị trí cạnh bên và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những đơn vị xung quanh. Ngoài ra, mỗi lần <spellName>Hư Vô Bộ Pháp</spellName> tiếp theo trong 8 giây kế tiếp sẽ tiêu tốn thêm <scaleMana>100 Năng Lượng</scaleMana> và gây thêm <magicDamage>@Damage@ sát thương</magicDamage>, cộng dồn tối đa 10 lần.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin bay đến một vị trí cạnh bên và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những đơn vị xung quanh. Ngoài ra, mỗi lần dùng <spellName>Hư Vô Bộ Pháp</spellName> sau đó trong @BuffDuration@ giây kế tiếp sẽ tiêu tốn thêm <scaleMana>@AdditionalManaPerCast@ Năng Lượng</scaleMana> và gây thêm <magicDamage>@Damage@ sát thương</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

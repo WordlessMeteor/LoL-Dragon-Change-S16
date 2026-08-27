@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Akali": {
             "id": "Jade_Akali",
@@ -22,6 +22,12 @@
                     "id": "60084000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60084001",
+                    "num": 1,
+                    "name": "Stinger Akali",
                     "chromas": false
                 },
                 {
@@ -220,8 +226,8 @@
                 {
                     "id": "Jade_AkaliQ",
                     "name": "Mark of the Assassin",
-                    "description": "Akali spins her kama at a target enemy to deal magic damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy.",
-                    "tooltip": "Akali throws her kama at a target enemy to deal <magicDamage>{{ initialdamage }} magic damage</magicDamage> and mark the target for 6 seconds.<br /><br />Akali's melee attacks against a marked target will consume the mark to cause <magicDamage>{{ procdamage }} magic damage</magicDamage> and restore <keywordMajor>{{ energyreturn }} Energy</keywordMajor>.{{ spellmodifierdescriptionappend }}",
+                    "description": "Akali spins her kama at a target enemy to deal magic damage and mark the target. Akali's next melee attack against a marked target will consume the mark to cause additional damage and restore Energy.",
+                    "tooltip": "Akali throws her kama at a target enemy to deal <magicDamage>{{ initialdamage }} magic damage</magicDamage> and mark the target for {{ markduration }} seconds.<br /><br />Akali's melee attacks against a marked target will consume the mark to cause <magicDamage>{{ procdamage }} magic damage</magicDamage> and restore <keywordMajor>{{ energyreturn }} Energy</keywordMajor>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Initial Damage",
@@ -366,12 +372,12 @@
                     "id": "Jade_AkaliW",
                     "name": "Twilight Shroud",
                     "description": "Akali throws down a cover of smoke. While inside the area, Akali gains Armor and Magic Resist and becomes invisible. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced.",
-                    "tooltip": "Akali throws down a cover of smoke that lasts for 8 seconds. While inside the area, Akali gains <scaleArmor>{{ totalresists }} Armor</scaleArmor> and <scaleMR>{{ totalresists }} Magic Resist</scaleMR> and becomes <keywordStealth>Invisible</keywordStealth>. Attacking or using abilities will briefly reveal her.<br /><br />Enemies inside the smoke are <status>Slowed</status> by {{ slowamount }}%.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Akali throws down a cover of smoke that lasts for {{ cloudduration }} seconds. While inside the area, Akali gains <scaleArmor>{{ totalresists }} Armor</scaleArmor> and <scaleMR>{{ totalresists }} Magic Resist</scaleMR> and becomes <keywordStealth>Invisible</keywordStealth>. Attacking or using abilities will briefly reveal her.<br /><br />Enemies inside the smoke are <status>Slowed</status> by {{ slowamount }}%.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Armor Bonus",
                             "Magic Resist Bonus",
-                            "Slow Amount",
+                            "Slow",
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
@@ -402,18 +408,11 @@
                     "effect": [
                         null,
                         [
-                            140,
-                            140,
-                            140,
-                            140,
-                            140
-                        ],
-                        [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -423,32 +422,11 @@
                             0
                         ],
                         [
-                            250,
-                            250,
-                            250,
-                            250,
-                            250
-                        ],
-                        [
-                            60,
-                            65,
-                            70,
-                            75,
-                            80
-                        ],
-                        [
-                            0.3,
-                            0.35,
-                            0.4,
-                            0.45,
-                            0.5
-                        ],
-                        [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -458,11 +436,39 @@
                             0
                         ],
                         [
-                            5,
-                            5.5,
-                            6,
-                            6.5,
-                            7
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -474,15 +480,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "140",
-                        "4",
                         "0",
-                        "250",
-                        "60/65/70/75/80",
-                        "0.3/0.35/0.4/0.45/0.5",
-                        "1",
                         "0",
-                        "5/5.5/6/6.5/7",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],

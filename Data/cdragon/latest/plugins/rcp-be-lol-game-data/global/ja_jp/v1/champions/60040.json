@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "ジャンナと味方チャンピオンの移動速度が3%増加する。"
+        "description": "ジャンナと味方チャンピオンの移動速度が増加する。"
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "大気を操り、小さな竜巻を生み出す。竜巻は時間とともに成長し、このスキルを再発動することで解き放たれて指定方向へ直進し、進路上の敵ユニットにダメージを与えてノックアップさせる。",
-            "dynamicDescription": "竜巻を召喚する。竜巻は通り道にいる敵ユニットに<magicDamage>@MinimumDamage@の魔法ダメージ</magicDamage>を与え、<status>ノックアップ</status>させる。竜巻はチャージ時間1秒ごとに(最大3秒まで)飛距離が伸び、<magicDamage>@ChargeDamage@の追加ダメージ</magicDamage>を与え、敵をより高く<status>ノックアップ</status>させる。<br><br><recast>再発動</recast>すると、すぐに竜巻を放つ。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "竜巻を召喚する。竜巻は通り道にいる敵ユニットに<magicDamage>@MinimumDamage@の魔法ダメージ</magicDamage>を与え、<status>ノックアップ</status>させる。竜巻はチャージ時間1秒ごとに(最大@MaxDuration@秒まで)飛距離が伸び、<magicDamage>@ChargeDamage@の追加ダメージ</magicDamage>を与え、敵をより高く<status>ノックアップ</status>させる。<br><br><recast>再発動</recast>すると、すぐに竜巻を放つ。@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "魔法の嵐に包まれ、敵を吹き飛ばす。その後ジャンナは詠唱を続け、癒しの風によって範囲内の味方の体力を回復する。",
-            "dynamicDescription": "魔法の嵐に包まれ、周囲の敵を<recast>ノックバック</recast>させる。さらに4秒かけて周囲の味方の<healing>体力を@TotalHeal@</healing>回復させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "魔法の嵐に包まれ、周囲の敵を<recast>ノックバック</recast>させる。さらに@MaxChannelDuration@秒かけて周囲の味方の<healing>@TotalHeal@体力を</healing>回復させる。(最大体力回復量: <healing>@TotalHeal@</healing>)@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

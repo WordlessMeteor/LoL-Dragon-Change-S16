@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Útočná kouzla umístí na nepřátele na dobu 3,5 sek. efekt Sluneční světlo. Když jim pak spojenečtí šampioni způsobí poškození, Sluneční světlo se spotřebuje a způsobí dodatečné magické poškození."
+        "description": "Útočná kouzla umístí na nepřátele efekt Sluneční světlo. Když jim pak spojenečtí šampioni způsobí poškození, Sluneční světlo se spotřebuje a způsobí dodatečné poškození."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leona provede svůj příští základní útok štítem, čímž cíli způsobí bonusové magické poškození a také ho omráčí.",
-            "dynamicDescription": "Příští základní útok způsobí dodatečných <magicDamage>@TotalDamageTooltip@ bodů magického poškození</magicDamage> a <status>omráčí</status> nepřítele na 1,25 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Příští základní útok způsobí dodatečných <magicDamage>@TotalDamageTooltip@ bodů magického poškození</magicDamage> a na @StunDuration@ sek. nepřítele <status>omráčí</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leona pozvedne svůj štít, čímž získá bonus k brnění a odolnosti vůči magii.  Když účinek poprvé vyprchá a v blízkosti Leony jsou nepřátelé, způsobí jim magické poškození a trvání účinku této schopnosti se prodlouží.",
-            "dynamicDescription": "Na 3 sek. získá @BonusARMR@ k hodnotám <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR>. Nepřátelé v okolí utrpí po vypršení účinku <magicDamage>@TotalDamageTooltip@ bodů magického poškození</magicDamage> a bonus k hodnotě <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR> Leoně zůstane ještě 3 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona na @BuffDuration@ sek. získá <scaleArmor>@BonusARMR@ k brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR>. Nepřátelé v okolí utrpí po vypršení účinku <magicDamage>@TotalDamageTooltip@ bodů magického poškození</magicDamage> a Leoně zůstane bonus k <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR> ještě @BuffDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

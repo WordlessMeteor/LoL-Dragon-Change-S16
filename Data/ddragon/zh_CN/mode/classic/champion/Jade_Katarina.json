@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Katarina": {
             "id": "Jade_Katarina",
@@ -222,7 +222,7 @@
                     "id": "Jade_KatarinaQ",
                     "name": "弹射之刃",
                     "description": "卡特琳娜投掷一把匕首，在敌人之间弹跳，造成魔法伤害。",
-                    "tooltip": "投掷一把匕首，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。匕首会弹跳至{{ maxbounces }}个相距最近的敌人，每次弹跳造成的伤害降低10%。<br /><br />被命中的敌人还会被标记{{ markduration }}秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>{{ totaldamagemark }}</magicDamage>额外魔法伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "投掷一把匕首，造成<magicDamage>{{ totaldamage }}</magicDamage>魔法伤害。匕首会弹跳至{{ maxbounces }}个相距最近的敌人，每次弹跳造成的伤害降低{{ damagefalloff*100 }}%。<br /><br />被命中的敌人还会被标记{{ markduration }}秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>{{ totaldamagemark }}</magicDamage>额外魔法伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -277,11 +277,11 @@
                             0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -331,7 +331,7 @@
                         "0",
                         "0",
                         "0",
-                        "2",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -646,8 +646,8 @@
                 {
                     "id": "Jade_KatarinaR",
                     "name": "死亡莲华",
-                    "description": "卡特琳娜化身刀刃风暴，以无可匹敌的速度向附近至多三名英雄投掷匕首。",
-                    "tooltip": "化身刀刃风暴，向相距最近的3名敌方英雄投掷匕首，在2.5秒内持续造成共<magicDamage>{{ damagecalctooltiponly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "卡特琳娜化身为一道剑刃飓风，以无与伦比的速度对周围敌方英雄们投掷匕首，从而造成巨量魔法伤害并施加重伤效果。",
+                    "tooltip": "化身刀刃风暴，向相距最近的{{ maxtargets }}名敌方英雄投掷匕首，在{{ channelduration }}秒内持续造成共<magicDamage>{{ damagecalctooltiponly }}魔法伤害</magicDamage>。被击中的敌人们会受到持续{{ grievouswoundsduration }}秒的{{ grievouswoundsamount*100 }}%<status>重伤</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -761,7 +761,7 @@
             ],
             "passive": {
                 "name": "贪婪",
-                "description": "击杀英雄或参与助攻可使她的技能冷却时间减少15秒。",
+                "description": "参与击杀英雄和助攻可缩短卡特琳娜的技能冷却时间。",
                 "image": {
                     "full": "Jade_Katarina_Passive.png",
                     "sprite": "passive0.png",

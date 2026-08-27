@@ -647,7 +647,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Anivia_Rebirth.project_jade.png",
         "abilityVideoPath": "champion-abilities/60034/ability_60034_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60034/ability_60034_P1.jpg",
-        "description": "Upon dying, Anivia will revert into an egg. If the egg can survive for six seconds, she is gloriously reborn."
+        "description": "Upon dying, Anivia will revert into an egg. If the egg can survive, she is gloriously reborn."
     },
     "spells": [
         {
@@ -659,7 +659,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area.",
-            "dynamicDescription": "A massive chunk of ice flies toward target location, dealing <magicDamage>@TotalPassthroughDamage@ magic damage</magicDamage> and chilling targets, <status>Slowing</status> their Movement Speed by 20%. <br><br>At the end of its range or if Anivia <recast>recasts</recast> the spell, the missile detonates, doing <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage> in a small area and <status>Stunning</status> units for @StunDuration@ second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "A massive chunk of ice flies toward target location, dealing <magicDamage>@TotalPassthroughDamage@ magic damage</magicDamage> and chilling targets, <status>Slowing</status> their Movement Speed by @MovementSpeedMod*-100@% for @SlowDuration@ seconds.<br><br>At the end of its range or if Anivia <recast>recasts</recast> the spell, the missile detonates, doing <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage> in a small area and <status>Stunning</status> units for @StunDuration@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,

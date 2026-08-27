@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Buccaneer Tristana",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "มือปืนมาแล้ว! Tristana กระโดดลงสู่ท้องทะเล ล่องเรือไปกับการผจญภัยครั้งใหม่ที่เกินขอบเขตของเมือง Bandle หมวกที่ยืม (ปล้น) มาจากโจรสลัดที่เธอยิงใส่ และที่ปิดตานั้นมีไว้เป็นของปลอม แต่ทัศนคติที่ไม่มีผู้ต้องขังและปืนใหญ่ที่ไว้ใจได้ของเธอจมเรือมาแล้วมากกว่ากัปตันในเมือง Bilgewater อีก"
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Tristana ยิงปืนของเธออย่างรวดเร็ว เพิ่มความเร็วโจมตีเป็นเวลาสั้น ๆ",
-            "dynamicDescription": "<mainText>เพิ่ม<attackSpeed>ความเร็วโจมตีของ Tristana @AttackSpeedMod*100@%</attackSpeed> เป็นเวลา 7 วินาที",
+            "dynamicDescription": "ได้รับ<attackSpeed>ความเร็วโจมตี @AttackSpeedMod*100@%</attackSpeed> เป็นเวลา @BuffDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Tristana ยิงลงพื้นเพื่อส่งตัวเองไปยังตำแหน่งเป้าหมาย แล้วสร้างความเสียหายแก่ศัตรูที่อยู่รอบ ๆ จุดที่ลงพื้น พร้อมกับสโลว์ศัตรูเป็นเวลา 3 วินาที",
-            "dynamicDescription": "<mainText>Tristana ยิงลงพื้นเพื่อส่งตัวเองไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @LandingDamage@ หน่วย</magicDamage> และ<status>สโลว์</status> 60% เป็นเวลา 2.5 วินาทีเมื่อเธอลงถึงพื้น<br>เมื่อสังหารแชมเปี้ยนหรือช่วยเหลือได้ คูลดาวน์จะรีเฟรช",
+            "description": "Tristana ยิงลงพื้นเพื่อส่งตัวเองไปยังตำแหน่งเป้าหมาย สร้างความเสียหายและสโลว์ศัตรูในจุดที่เธอลงพื้น",
+            "dynamicDescription": "Tristana ยิงลงพื้นเพื่อส่งตัวเองไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @LandingDamage@ หน่วย</magicDamage> และ<status>สโลว์</status> @Slow@% เป็นเวลา @SlowDuration@ วินาทีเมื่อเธอลงถึงพื้น รีเฟรชคูลดาวน์ Rocket Jump เมื่อสังหารแชมเปี้ยนหรือช่วยเหลือได้@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "เมื่อ Tristana สังหารยูนิตได้ ลูกกระสุนปืนใหญ่ของเธอจะระเบิดออกเป็นสะเก็ด สร้างความเสียหายแก่ศัตรูโดยรอบ  สามารถกดใช้เพื่อสร้างความเสียหายแก่เป้าหมายอย่างต่อเนื่อง และลดการฟื้นฟูที่ได้รับ",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Tristana จะทำให้ศัตรูระเบิดเมื่อถูกสังหาร สร้าง<magicDamage>ความเสียหายเวท @PassiveDamage@ หน่วย</magicDamage>แก่ศัตรูใกล้เคียง<br><br><spellActive>กดใช้: </spellActive>ทำให้ศัตรูเป้าหมายอ่อนแอ ติดสถานะ <keyword>Grievous Wounds 50%</keyword> และสร้าง<magicDamage>ความเสียหายเวท @ActiveDamageTTOnly@ หน่วย</magicDamage>ในช่วงเวลา 5 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Tristana จะทำให้ศัตรูระเบิดเมื่อถูกสังหาร สร้าง<magicDamage>ความเสียหายเวท @PassiveDamage@ หน่วย</magicDamage>แก่ศัตรูใกล้เคียง<br><br><spellActive>กดใช้: </spellActive>ทำให้ศัตรูเป้าหมายอ่อนแอ ติดสถานะ <keyword>Grievous Wounds 50%</keyword> และสร้าง<magicDamage>ความเสียหายเวท @ActiveDamageTTOnly@ หน่วย</magicDamage>ในช่วงเวลา @GrievousDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

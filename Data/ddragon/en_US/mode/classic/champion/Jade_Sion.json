@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Sion": {
             "id": "Jade_Sion",
@@ -22,6 +22,12 @@
                     "id": "60014000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60014001",
+                    "num": 1,
+                    "name": "Hextech Sion",
                     "chromas": false
                 },
                 {
@@ -47,14 +53,14 @@
                     "id": "60014007",
                     "num": 7,
                     "name": "Mecha Zero Sion (Pearl)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 5
                 },
                 {
                     "id": "60014008",
                     "num": 8,
                     "name": "Mecha Zero Sion (Sapphire)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -164,14 +170,14 @@
                     "id": "60014032",
                     "num": 32,
                     "name": "High Noon Sion (Citrine)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 30
                 },
                 {
                     "id": "60014033",
                     "num": 33,
                     "name": "High Noon Sion (Emerald)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 30
                 },
                 {
@@ -220,13 +226,13 @@
                     "id": "60014301",
                     "num": 301,
                     "name": "Classic Sion",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60014302",
                     "num": 302,
                     "name": "Classic Sion (Hextech)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 301
                 }
             ],
@@ -272,7 +278,7 @@
                     "id": "Jade_SionQ",
                     "name": "Cryptic Gaze",
                     "description": "Sion's stare terrifies a single enemy, dealing damage and stunning them.",
-                    "tooltip": "Blasts a single enemy, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Stunning</status> for 1.5 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Sion blasts a single enemy, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Stunning</status> for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -332,11 +338,11 @@
                             0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -346,32 +352,32 @@
                             0
                         ],
                         [
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            60,
-                            60,
-                            60,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            150,
-                            150,
-                            150,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -380,12 +386,12 @@
                         "0",
                         "0",
                         "0",
-                        "2.5",
                         "0",
-                        "7.5",
-                        "60",
-                        "150",
-                        "-0.8"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -412,8 +418,8 @@
                 {
                     "id": "Jade_SionW",
                     "name": "Death's Caress",
-                    "description": "Sion surrounds himself with a damage-absorbing shield.  If the shield is not destroyed in 10 seconds then it will explode, dealing damage to surrounding enemies. Cast again after 4 seconds to manually detonate.",
-                    "tooltip": "Sion surrounds himself with a shield which absorbs <shield>{{ totalshield }} damage</shield>. If the shield is not destroyed in 10 seconds, it will explode, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemies.<br /><br /><recast>Recast</recast> after 4 seconds to manually detonate.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "Sion surrounds himself with a damage-absorbing shield.  If the shield is not destroyed it will explode, damaging surrounding enemies. Sion can reactivate the ability to detonate the shield early.",
+                    "tooltip": "Sion surrounds himself with a shield which absorbs <shield>{{ totalshield }} damage</shield>. If the shield is not destroyed in {{ shieldduration }} seconds, it will explode, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemies.<br /><br /><recast>Recast</recast> after {{ recastdelay }} seconds to manually detonate.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -445,67 +451,67 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            75,
-                            90,
-                            105,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            65,
-                            90,
-                            115,
-                            140
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            10,
-                            12,
-                            14,
-                            16
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            14,
-                            14,
-                            14,
-                            14,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -517,15 +523,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/75/90/105/120",
-                        "40/65/90/115/140",
-                        "8/10/12/14/16",
-                        "14",
-                        "4",
-                        "15",
-                        "3",
-                        "15",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -697,7 +703,7 @@
                     "id": "Jade_SionR",
                     "name": "Cannibalism",
                     "description": "Sion consumes some of his enemies' life force on each attack, leeching health to himself and nearby allies. The smell of flesh also renews Sion's fervor, increasing his Attack Speed.",
-                    "tooltip": "Grants Sion <lifeSteal>{{ lifestealpercent*100 }}% Lifesteal</lifeSteal> and <attackSpeed>{{ attackspeedmod*100 }}% Attack Speed</attackSpeed> for 20 seconds. Additionally, Sion's basic attacks <healing>heal</healing> surrounding allies for {{ healpercent*100 }}% of the damage dealt.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Sion gains <lifeSteal>{{ lifestealpercent*100 }}% Lifesteal</lifeSteal> and <attackSpeed>{{ attackspeedmod*100 }}% Attack Speed</attackSpeed> for {{ buffduration }} seconds. Additionally, Sion's basic attacks <healing>heal</healing> surrounding allies for {{ healpercent*100 }}% of the damage dealt.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Ally Heal",
@@ -811,7 +817,7 @@
             ],
             "passive": {
                 "name": "Feel No Pain",
-                "description": "Sion has a 40% chance to ignore up to 30/40/50 damage each time he is attacked.",
+                "description": "Sion has a chance to ignore some damage each time he is attacked.",
                 "image": {
                     "full": "Jade_Sion_Passive1.png",
                     "sprite": "passive1.png",

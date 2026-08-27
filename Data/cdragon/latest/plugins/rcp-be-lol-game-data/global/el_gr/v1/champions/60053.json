@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "Όταν η Ζωή του Μπλίτζκρανκ πέσει κάτω από το 20%, ενεργοποιείται το Πλέγμα Μάνα. Αυτή η επίδραση δημιουργεί μια Ασπίδα Μάνα με αντοχή ίση με το 50% του Μάνα του, για 10 δευτερόλεπτα. Το Πλέγμα Μάνα μπορεί να ενεργοποιηθεί μόνο μία φορά κάθε 90 δευτερόλεπτα."
+        "description": "Όταν δέχεται ζημιά ενώ έχει λίγη Ζωή, ο Μπλίτζκρανκ αποκτά πρώτα μια Ασπίδα ίση με ένα ποσοστό του τρέχοντος Μάνα του. Αυτή η επίδραση έχει Χρόνο Επαναφόρτισης."
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "Ο Μπλίτζκρανκ εξαπολύει το δεξί του χέρι για να αρπάξει έναν αντίπαλο που βρίσκεται στη διαδρομή του, κίνηση που προκαλεί ζημιά και μεταφέρει τον αντίπαλο κοντά στον Μπλίτζκρανκ.",
             "dynamicDescription": "Ο Μπλίτζκρανκ ρίχνει το δεξί του χέρι, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>, <status>Ακινητοποιεί</status> τον στόχο και τον <status>Τραβά</status> προς το μέρος του.@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Μπλίτζκρανκ φορτίζει τη γροθιά του για να προκαλέσει στην επόμενη επίθεσή του διπλή ζημιά και να εκτοξεύσει τον στόχο του στον αέρα.",
-            "dynamicDescription": "Ο Μπλίτζκρανκ φορτίζει τη γροθιά του, ώστε η επόμενη επίθεσή του να προκαλέσει <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και ο στόχος του να <status>Εκτοξευτεί στον αέρα</status> για @CCDuration@ δευτερόλεπτο.@SpellModifierDescriptionAppend@",
+            "description": "Ο Μπλίτζκρανκ φορτίζει τη γροθιά του για να προκαλέσει μπόνους ζημιά με την επόμενη επίθεσή του και να εκτοξεύσει τον στόχο του στον αέρα.",
+            "dynamicDescription": "Ο Μπλίτζκρανκ φορτίζει τη γροθιά του. Η επόμενη επίθεσή του προκαλεί <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και <status>Εκτοξεύει στον Αέρα</status> τον στόχο του.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Καλεί παθητικά κεραυνούς που προκαλούν ζημιά σε έναν κοντινό εχθρό. Επιπλέον, ο Μπλίτζκρανκ μπορεί να ενεργοποιήσει αυτή την ικανότητα για να προκαλέσει ζημιά στους κοντινούς εχθρούς και να τους αναγκάσει να σιγήσουν για 0,5 δευτ., αλλά αυτή η ενέργεια αφαιρεί τον παθητικό κεραυνό έως ότου γίνει διαθέσιμο ξανά το Στατικό πεδίο.",
-            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Κεραυνοί εκτοξεύονται από τον Μπλίτζκρανκ και χτυπούν τυχαία έναν κοντινό εχθρό, προκαλώντας <magicDamage>@PassiveDamage@ Μαγική Ζημιά</magicDamage> κάθε 2,5 δευτερόλεπτα.<br><br><spellActive>Ενεργή: </spellActive>Προκαλεί <magicDamage>@ActiveDamage@ Μαγική Ζημιά</magicDamage> και αναγκάζει τις εχθρικές μονάδες στη γύρω περιοχή να <status>σιγήσουν</status> για 0,5 δευτερόλεπτα.@SpellModifierDescriptionAppend@",
+            "description": "Καλεί παθητικά κεραυνούς που προκαλούν ζημιά σε έναν κοντινό εχθρό. Επιπλέον, ο Μπλίτζκρανκ μπορεί να ενεργοποιήσει αυτή την ικανότητα για να προκαλέσει ζημιά στους κοντινούς εχθρούς και να τους αναγκάσει να σιγήσουν για σύντομο χρονικό διάστημα.",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Κεραυνοί εκτοξεύονται από τον Μπλίτζκρανκ και χτυπούν τυχαία έναν κοντινό εχθρό, προκαλώντας <magicDamage>@PassiveDamage@ Μαγική Ζημιά</magicDamage> κάθε @PassiveHitRate@ δευτερόλεπτα.<br><br><spellActive>Ενεργή: </spellActive>Προκαλεί <magicDamage>@ActiveDamage@ Μαγική Ζημιά</magicDamage> και αναγκάζει τις εχθρικές μονάδες στη γύρω περιοχή να <status>σιγήσουν</status> για @SilenceDuration@ δευτερόλεπτα. Η παθητική απενεργοποιείται όσο το Στατικό Πεδίο έχει Χρόνο Επαναφόρτισης.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

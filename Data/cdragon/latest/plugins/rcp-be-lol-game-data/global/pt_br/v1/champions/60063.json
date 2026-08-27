@@ -621,7 +621,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/BrandBlaze.project_jade.png",
         "abilityVideoPath": "champion-abilities/60063/ability_60063_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60063/ability_60063_P1.jpg",
-        "description": "As Habilidades de Brand deixam os alvos incandescentes e causam Dano Mágico igual a 8% da Vida máxima deles ao longo de 4s."
+        "description": "As Habilidades de Brand deixam os alvos incandescentes e causam Dano Mágico equivalente a uma parte da Vida máxima deles."
     },
     "spells": [
         {
@@ -633,7 +633,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Brand lança uma bola de fogo que causa Dano Mágico. Se o alvo estiver incandescente, Cauterizar o atordoará.",
-            "dynamicDescription": "<mainText>Brand lança uma bola de fogo que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.<br><br><spellPassive>Labareda:</spellPassive> se o alvo está <keywordMajor>incandescente</keywordMajor>, <spellName>Cauterizar</spellName> o <status>Atordoa</status> por 2s.",
+            "dynamicDescription": "Brand lança uma bola de fogo que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.<br><br><spellPassive>Labareda:</spellPassive> se o alvo está <keywordMajor>incandescente</keywordMajor>, <spellName>Cauterizar</spellName> o <status>Atordoa</status> por @StunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -659,18 +659,18 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.65,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    70.0,
-                    70.0,
-                    100.0,
-                    130.0,
-                    160.0,
-                    190.0,
-                    190.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,

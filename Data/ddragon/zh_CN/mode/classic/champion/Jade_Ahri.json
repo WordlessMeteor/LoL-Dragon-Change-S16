@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ahri": {
             "id": "Jade_Ahri",
@@ -235,8 +235,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 摄魂夺魄(被动)可在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置",
-            "blurb": "- 摄魂夺魄(被动)可在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置",
+            "lore": " - 摄魂夺魄(被动)会在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置<br>- 魅惑妖术(E)会提升阿狸对目标的伤害",
+            "blurb": " - 摄魂夺魄(被动)会在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置<br>- 魅惑妖术(E)会提升阿狸对目标的伤害",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -251,7 +251,7 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 460,
+                "hp": 440,
                 "hpperlevel": 80,
                 "mp": 280,
                 "mpperlevel": 50,
@@ -261,8 +261,8 @@
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
-                "hpregen": 6.1,
-                "hpregenperlevel": 0.6,
+                "hpregen": 4.5,
+                "hpregenperlevel": 0.45,
                 "mpregen": 6.85,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
@@ -702,7 +702,7 @@
                     "id": "Jade_AhriR",
                     "name": "灵魄突袭",
                     "description": "阿狸向前猛冲，并放出元气弹，对周围的3个敌人（英雄优先）造成伤害。灵魄突袭在进入冷却以前最多可被施放三次。",
-                    "tooltip": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹。这些元气弹每枚造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<spellName>灵魄突袭</spellName>在10秒内可<recast>再次施放</recast>至多2次。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹。这些元气弹每枚造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<spellName>灵魄突袭</spellName>在{{ recastduration }}秒内可<recast>再次施放</recast>至多2次。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -715,11 +715,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        110,
-                        95,
+                        120,
+                        100,
                         80
                     ],
-                    "cooldownBurn": "110/95/80",
+                    "cooldownBurn": "120/100/80",
                     "cost": [
                         100,
                         100,

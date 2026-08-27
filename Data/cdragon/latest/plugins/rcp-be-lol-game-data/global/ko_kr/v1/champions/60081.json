@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "노팅엄 이즈리얼",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "외딴 숲속 왕국의 모험을 좋아하는 엘프, 이즈리얼은 자신을 자로 라이트페더라는 이름의 ''멋쟁이 떠돌이 기사''라고 칭합니다. 아주 극소수만이 그가 기사 작위를 받았다는 사실을 믿지만, 그들 덕분에 그가 저지른 끔찍한 사고들이 묻히곤 합니다."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "이즈리얼이 스킬을 적중시킬 때마다 공격 속도를 얻습니다. (최대 5회 중첩)"
+        "description": "이즈리얼이 스킬을 맞힐 때마다 증가하는 공격 속도를 얻습니다."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "이즈리얼이 에너지로 이루어진 화살을 발사합니다. 적 유닛에게 명중하면 모든 스킬의 재사용 대기시간이 약간 감소합니다.",
             "dynamicDescription": "이즈리얼이 에너지 화살을 발사해 <physicalDamage>@Damage@의 물리 피해</physicalDamage>를 입힙니다. (적중 시 효과 적용) <br><br><spellName>신비한 화살</spellName> 적중 시 이즈리얼의 스킬 재사용 대기시간이 1초 감소합니다.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "이즈리얼이 넘실대는 에너지 파동을 발사합니다. 파동에 맞은 적 챔피언은 마법 피해를 받고 공격 속도가 감소하며, 아군 챔피언은 체력을 회복하고 공격 속도를 얻습니다.",
-            "dynamicDescription": "이즈리얼이 에너지 파동을 발사해, 경로상의 모든 적 챔피언에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입히고 5초 동안 <attackSpeed>공격 속도</attackSpeed>를 @AttackSpeed@% 감소시킵니다.<br><br>파동에 맞은 아군 챔피언은 <healing>@TotalHeal@의 체력</healing>을 회복하고 5초 동안 @AttackSpeed@%의 <attackSpeed>공격 속도</attackSpeed>를 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "이즈리얼이 에너지 파동을 발사해, 경로상의 모든 적 챔피언에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입히고 @Duration@초 동안 <attackSpeed>공격 속도</attackSpeed>를 @AttackSpeed@% 감소시킵니다.<br><br>파동에 맞은 아군 챔피언은 <healing>@TotalHeal@의 체력</healing>을 회복하고 @Duration@초 동안 @AttackSpeed@%의 <attackSpeed>공격 속도</attackSpeed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "이즈리얼이 1초 동안 정신을 집중한 뒤, 강력한 에너지 투사체를 발사해 경로상의 유닛에게 막대한 피해를 입힙니다. (유닛 하나를 맞힐 때마다 피해량 10% 감소)",
-            "dynamicDescription": "이즈리얼이 1초 동안 정신을 집중한 뒤 투사체를 발사해 경로상의 유닛에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입힙니다. 유닛 하나를 맞힐 때마다 피해량이 @DamageReductionPerHit*100@%씩 감소합니다. (최소 @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "이즈리얼이 강력한 에너지 투사체를 발사해 경로상의 모든 유닛에게 막대한 피해를 입힙니다.",
+            "dynamicDescription": "이즈리얼이 에너지 투사체를 발사해 경로상의 모든 유닛에게 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입힙니다. 단, 유닛 하나를 맞힐 때마다 피해량이 @DamageReductionPerHit*100@%씩 감소합니다. (최소 @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

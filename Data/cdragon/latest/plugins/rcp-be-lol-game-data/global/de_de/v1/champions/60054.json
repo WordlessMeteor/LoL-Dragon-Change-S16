@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "Malphite wird von einer Felsenschicht geschützt, die Schaden in Höhe von bis zu 10 % seines maximalen Lebens absorbiert. Wenn Malphite 10 Sekunden lang nicht getroffen wurde, wird dieser Effekt wiederaufgeladen."
+        "description": "Malphite wird von einer Felsenschicht geschützt, die Schaden absorbiert. Wenn Malphite eine Zeit lang nicht getroffen wurde, wird dieser Effekt wiederaufgeladen."
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Malphite sendet mit Hilfe seiner ureigenen Elementarmagie eine Erdscholle durch den Boden unter seinem Gegner, die beim Auftreffen Schaden verursacht und raubt dem Ziel 4 Sekunden lang Lauftempo.",
+            "description": "Malphite sendet mit Hilfe seiner ureigenen Elementarmagie eine Erdscholle durch den Boden unter seinem Gegner, die beim Auftreffen Schaden verursacht und dem Ziel Lauftempo raubt.",
             "dynamicDescription": "Verursacht <magicDamage>@QDamageCalc@ magischen Schaden</magicDamage> und raubt dem Ziel @SlowDuration@ Sekunden lang <speed>@SpeedSteal@ % Lauftempo</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -630,36 +630,36 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    70.0,
-                    120.0,
-                    170.0,
-                    220.0,
-                    270.0,
-                    320.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -754,7 +754,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Malphite beginnt mit solch enormer Kraft zuzuschlagen, dass er an allen Einheiten vor sich Schaden verursacht. Wenn er „Brutale Schläge“ aktiviert, werden seine Rüstung und sein Angriffsschaden für kurze Zeit stark erhöht.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Malphites normale Angriffe treffen Einheiten in der Nähe seines Ziels und verursachen @Jade_MalphiteObduracyPercentDamage*100@ % seines <physicalDamage>Angriffsschadens</physicalDamage>.<br><br><spellActive>Aktiv: </spellActive>Malphites <scaleArmor>Rüstung</scaleArmor> und sein <physicalDamage>Angriffsschaden</physicalDamage> werden 6 Sekunden lang um @ArmorBonus*100@ % erhöht.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Malphites normale Angriffe treffen Einheiten in der Nähe seines Ziels und verursachen @Jade_MalphiteObduracyPercentDamage*100@ % seines <physicalDamage>Angriffsschadens</physicalDamage>.<br><br><spellActive>Aktiv: </spellActive>Malphites <scaleArmor>Rüstung</scaleArmor> und sein <physicalDamage>Angriffsschaden</physicalDamage> werden @BuffDuration@ Sekunden lang um @ArmorBonus*100@ % erhöht.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

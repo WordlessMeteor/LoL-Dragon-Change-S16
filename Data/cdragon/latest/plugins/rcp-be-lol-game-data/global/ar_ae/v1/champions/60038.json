@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "يتلقى كاسادين <magicDamage>ضرر سحرٍ</magicDamage> مقلصًا بنسبة 15% ويحول هذا الضرر إلى <attackSpeed>سرعة هجوم</attackSpeed> إضافية."
+        "description": "يتلقى كاسادين <magicDamage>ضرر سحرٍ</magicDamage> مقلصًا ويحول ضرر السحر المتلقى إلى <attackSpeed>سرعة هجوم</attackSpeed> إضافية."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تأثير كامن: تستعيد هجمات كاسادين الأساسية المانا. تتضاعف المانا المستعادة ثلاث مرات ضد الأبطال المعادين. تأثير نشط: تلحق هجمات كاسادين الأساسية ضرر سحر إضافيًا.",
-            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>تسحب هجمات كاسادين الأساسية الطاقة من الفويد، فتستعيد <scaleMana>@ManaGainAmount@ مانا</scaleMana> كل إصابة. إذا كان الهدف بطلًا معاديًا، تتضاعف <scaleMana>المانا</scaleMana> المستعادة ثلاث مرات لتبلغ @ManaGainAmount*3@.<br><br><spellActive>تأثير نشط: </spellActive>يشحن كاسادين نصل العالم السفلي لمدة 5 ثوانٍ، مما يجعل هجماته الأساسية تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إضافي.@SpellModifierDescriptionAppend@",
+            "description": "تأثير كامن: تستعيد هجمات كاسادين الأساسية المانا. تأثير نشط: تلحق هجمات كاسادين الأساسية ضرر سحر إضافيًا.",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>تسحب هجمات كاسادين الأساسية الطاقة من الفويد، فتستعيد <scaleMana>@ManaGainAmount@ مانا</scaleMana> كل إصابة، وتزداد إلى <scaleMana>@ChampionManaRestore@ مانا</scaleMana> ضد الأبطال.<br><br><spellActive>تأثير نشط: </spellActive>يشحن كاسادين نصل العالم السفلي لمدة @BuffDuration@ث، مما يجعل هجماته الأساسية تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يسحب كاسادين الطاقة من التعويذات الملقاة بجواره. لدى اكتمال الشحن، يستطيع كاسادين استعمال نبضة القوة لإلحاق الضرر بالأعداء وإبطائهم في مخروط أمامه.",
-            "dynamicDescription": "يسحب كاسادين الطاقة من التعويذات الملقاة بجواره (ضمن نطاق 1800 وحدة)، فيكسب شحنةً كلما تم إلقاء تعويذةٍ قربه. عند بلوغ 6 شحنات، يستطيع كاسادين استخدام <spellName>نبضة القوة</spellName> لإلحاق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء، وكذلك <status>إبطائهم</status> بنسبة @MoveSpeedMod*-100@% لمدة 3 ثوانٍ في مخروط أمامه.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يسحب كاسادين الطاقة من التعويذات الملقاة بجواره فيكسب شحنةً كلما تم إلقاء تعويذةٍ قربه.<br><br>عند بلوغ @RequiredChargesTooltip@ من الشحنات، يستطيع كاسادين استخدام <spellName>نبضة القوة</spellName> لإلحاق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء، وكذلك <status>إبطائهم</status> بنسبة @MoveSpeedMod*-100@% لمدة @SlowDuration@ث في مخروط أمامه.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينفذ كاسادين الانتقال السريع إلى موقع في الجوار، فيلحق الضرر بوحدات العدو المجاورة. إضافةً إلى ذلك، تؤدي إلقاءات جولة الريفت المتعددة خلال فترة قصيرة إلى زيادة تكلفة المانا وإلحاق ضررٍ إضافي.",
-            "dynamicDescription": "ينفذ كاسادين الانتقال السريع إلى موقع في الجوار، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بوحدات العدو المحيطة. بالإضافة إلى ذلك، فإن كل إلقاء تالٍ لقدرة <spellName>جولة الريفت</spellName> خلال الثواني الثماني التالية يكلف <scaleMana>100 مانا إضافية</scaleMana> ويلحق <magicDamage>@Damage@ ضرر إضافي</magicDamage>، ويتكدس ذلك حتى 10 مرات.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينفذ كاسادين الانتقال السريع إلى موقع في الجوار، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بوحدات العدو المحيطة. بالإضافة إلى ذلك، فإن كل إلقاء تالٍ لقدرة <spellName>جولة الريفت</spellName> خلال الـ @BuffDuration@ث التالية يكلف <scaleMana>@AdditionalManaPerCast@ مانا إضافية</scaleMana> ويلحق <magicDamage>@Damage@ ضرر إضافي</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

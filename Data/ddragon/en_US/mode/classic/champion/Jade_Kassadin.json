@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Kassadin": {
             "id": "Jade_Kassadin",
@@ -308,16 +308,16 @@
                 {
                     "id": "Jade_KassadinW",
                     "name": "Nether Blade",
-                    "description": "Passive: Kassadin's basic attacks restore Mana. The Mana restored is tripled against enemy champions. Active: Kassadin's basic attacks deal additional magic damage.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Kassadin's basic attacks draw energy from the void, restoring <scaleMana>{{ managainamount }} Mana</scaleMana> each hit. If the target is an enemy champion, the <scaleMana>Mana</scaleMana> restored is tripled to {{ managainamount*3 }}.<br /><br /><spellActive>Active: </spellActive>Kassadin charges his nether blade for 5 seconds causing his basic attacks to deal an additional <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "description": "Passive: Kassadin's basic attacks restore Mana. Active: Kassadin's basic attacks deal additional magic damage.",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Kassadin's basic attacks draw energy from the void, restoring <scaleMana>{{ managainamount }} Mana</scaleMana> each hit, increased to <scaleMana>{{ championmanarestore }} Mana</scaleMana> against Champions.<br /><br /><spellActive>Active: </spellActive>Kassadin charges his nether blade for {{ buffduration }} seconds causing his basic attacks to deal an additional <magicDamage>{{ totaldamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Base Damage",
-                            "Base Mana Restore"
+                            "Base Mana Restore",
+                            "Base Damage"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ managainamount }} -> {{ managainamountNL }}"
+                            "{{ managainamount }} -> {{ managainamountNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -341,32 +341,32 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            4.5,
-                            5,
-                            5.5,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            75,
-                            100,
-                            125,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            22.5,
-                            25,
-                            27.5,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -413,10 +413,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/4.5/5/5.5/6",
-                        "20",
-                        "50/75/100/125/150",
-                        "20/22.5/25/27.5/30",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -450,7 +450,7 @@
                     "id": "Jade_KassadinE",
                     "name": "Force Pulse",
                     "description": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him.",
-                    "tooltip": "Kassadin draws energy from spells cast in his vicinity (1800 range), gaining a charge whenever a spell is cast near him. Upon reaching 6 charges, Kassadin can use <spellName>Force Pulse</spellName> to deal <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slow</status> enemies by {{ movespeedmod*-100 }}% for 3 seconds in a cone in front of him.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Kassadin draws energy from spells cast in his vicinity, gaining a charge whenever a spell is cast near him.<br /><br />Upon reaching {{ requiredchargestooltip }} charges, Kassadin can use <spellName>Force Pulse</spellName> to deal <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slow</status> enemies by {{ movespeedmod*-100 }}% for {{ slowduration }} seconds in a cone in front of him.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -489,18 +489,18 @@
                             0
                         ],
                         [
-                            50,
-                            60,
-                            70,
-                            80,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -555,8 +555,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50/60/70/80/90",
-                        "1",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -591,7 +591,7 @@
                     "id": "Jade_KassadinR",
                     "name": "Riftwalk",
                     "description": "Kassadin teleports to a nearby location dealing damage to nearby enemy units. Additionally, multiple Riftwalks in a short period of time cause them to cost additional Mana and deal additional damage.",
-                    "tooltip": "Kassadin teleports to a nearby location dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemy units. Additionally, each subsequent <spellName>Riftwalk</spellName> within the next 8 seconds costs <scaleMana>100 additional Mana</scaleMana> and deals <magicDamage>{{ damage }} additional damage</magicDamage>, stacks up to 10 times.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Kassadin teleports to a nearby location dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemy units. Additionally, each subsequent <spellName>Riftwalk</spellName> within the next {{ buffduration }} seconds costs <scaleMana>{{ additionalmanapercast }} additional Mana</scaleMana> and deals <magicDamage>{{ damage }} additional damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -705,7 +705,7 @@
             ],
             "passive": {
                 "name": "Void Stone",
-                "description": "Kassadin takes 15% reduced <magicDamage>magic damage</magicDamage> and transforms this damage into bonus <attackSpeed>Attack Speed</attackSpeed>.",
+                "description": "Kassadin takes reduced <magicDamage>magic damage</magicDamage> and transforms incoming magic damage into bonus <attackSpeed>Attack Speed</attackSpeed>.",
                 "image": {
                     "full": "Jade_Kassadin_Passive.png",
                     "sprite": "passive0.png",

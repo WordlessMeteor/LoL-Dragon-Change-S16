@@ -620,7 +620,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "击杀英雄或参与助攻可使她的技能冷却时间减少15秒。"
+        "description": "参与击杀英雄和助攻可缩短卡特琳娜的技能冷却时间。"
     },
     "spells": [
         {
@@ -632,7 +632,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "卡特琳娜投掷一把匕首，在敌人之间弹跳，造成魔法伤害。",
-            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。匕首会弹跳至@MaxBounces@个相距最近的敌人，每次弹跳造成的伤害降低10%。<br><br>被命中的敌人还会被标记@MarkDuration@秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>@TotalDamageMark@</magicDamage>额外魔法伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法伤害。匕首会弹跳至@MaxBounces@个相距最近的敌人，每次弹跳造成的伤害降低@DamageFalloff*100@%。<br><br>被命中的敌人还会被标记@MarkDuration@秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>@TotalDamageMark@</magicDamage>额外魔法伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -690,13 +690,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1081,8 +1081,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "卡特琳娜化身刀刃风暴，以无可匹敌的速度向附近至多三名英雄投掷匕首。",
-            "dynamicDescription": "化身刀刃风暴，向相距最近的3名敌方英雄投掷匕首，在2.5秒内持续造成共<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "卡特琳娜化身为一道剑刃飓风，以无与伦比的速度对周围敌方英雄们投掷匕首，从而造成巨量魔法伤害并施加重伤效果。",
+            "dynamicDescription": "化身刀刃风暴，向相距最近的@MaxTargets@名敌方英雄投掷匕首，在@ChannelDuration@秒内持续造成共<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。被击中的敌人们会受到持续@GrievousWoundsDuration@秒的@GrievousWoundsAmount*100@%<status>重伤</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

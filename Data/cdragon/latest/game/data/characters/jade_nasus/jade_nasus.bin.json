@@ -94,7 +94,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -442,9 +442,9 @@
         "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
         "mChildSpells": [
             "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
-            "{d1c0cb81}",
-            "{a884c2d6}",
-            "{6201ac59}"
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack"
         ],
         "mName": "Jade_NasusQAbility",
         "__type": "AbilityObject"
@@ -480,16 +480,16 @@
         "__type": "SpellObject"
     },
     "{7f98aae4}": {
-        "mRootSpell": "{be31b2f7}",
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mChildSpells": [
-            "{be31b2f7}"
+            "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive"
         ],
         "mName": "Jade_NasusPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{5cf1a812}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_Nasus_Susan0175_Egg": {
         "ObjectName": "Jade_Nasus_Susan0175_Egg",
-        "objectPath": "{5cf1a812}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_Nasus_Susan0175_Egg",
         "mScriptName": "Jade_Nasus_Susan0175_Egg",
         "mSpell": {
             "mImgIconName": [
@@ -511,9 +511,9 @@
         },
         "__type": "SpellObject"
     },
-    "{be31b2f7}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive": {
         "ObjectName": "Jade_NasusPassive",
-        "objectPath": "{be31b2f7}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mScriptName": "Jade_NasusPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -587,9 +587,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6201ac59}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack": {
         "ObjectName": "Jade_NasusSiphoningStrikeAttack",
-        "objectPath": "{6201ac59}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack",
         "mScriptName": "Jade_NasusSiphoningStrikeAttack",
         "mSpell": {
             "flags": 4,
@@ -688,7 +688,7 @@
                 "13": "Play_sfx_Nasus_NasusQAttack_OnHit"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{d1c0cb81}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
                 "mTargeterDefinitions": [
                     {
                         "__type": "TargeterDefinitionRange"
@@ -1044,9 +1044,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a884c2d6}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks": {
         "ObjectName": "Jade_NasusQStacks",
-        "objectPath": "{a884c2d6}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQStacks",
         "mScriptName": "Jade_NasusQStacks",
         "mSpell": {
             "mImgIconName": [
@@ -1061,9 +1061,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d1c0cb81}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike": {
         "ObjectName": "Jade_NasusSiphoningStrike",
-        "objectPath": "{d1c0cb81}",
+        "objectPath": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrike",
         "mScriptName": "Jade_NasusSiphoningStrike",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -1305,19 +1305,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "InitialResistGain",
-                    "values": [
-                        25.0,
-                        40.0,
-                        55.0,
-                        70.0,
-                        85.0,
-                        100.0,
-                        115.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxDamageCap",
                     "values": [
                         240.0,
@@ -1344,32 +1331,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "QCDR",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SizeIncreasePercent",
-                    "values": [
-                        0.25,
-                        0.30000001192092896,
-                        0.3499999940395355,
-                        0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.550000011920929
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BaseAoERadius",
                     "values": [
                         376.0,
@@ -1392,6 +1353,19 @@
                         400.0,
                         400.0,
                         400.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageToAD",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1547,19 +1521,6 @@
                         "mFormulaParts": [
                             {
                                 "mDataValue": "BonusHealth",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 524288,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "InitialResistGain",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -1790,7 +1751,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2495,7 +2456,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{6201ac59}",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusSiphoningStrikeAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2522,7 +2483,7 @@
         "passiveName": "game_character_passiveName_Jade_Nasus",
         "passiveLuaName": "Jade_NasusPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Nasus",
-        "passive1IconName": "ASSETS/Characters/Jade_Nasus/HUD/Icons2D/Jade_Nasus_Passive.dds",
+        "passive1IconName": "assets/characters/jade_nasus/hud/icons2d/jade_nasus_passive.dds",
         "name": "game_character_displayname_Jade_Nasus",
         "weaponMaterials": [
             "Jade_NasusBasicAttack"
@@ -2667,10 +2628,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{be31b2f7}",
+        "mCharacterPassiveSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{be31b2f7}",
+                "mParentPassiveBuff": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
                 "__type": "CharacterPassiveData"
             },
             {

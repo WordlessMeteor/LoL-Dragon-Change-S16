@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Champion kills or assists reduce Katarina's cooldowns by 15 seconds."
+        "description": "Champion takedowns reduce Katarina's cooldowns."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina throws a dagger that bounces from enemy to enemy, dealing magic damage.",
-            "dynamicDescription": "Throws a dagger dealing <magicDamage>@TotalDamage@</magicDamage> magic damage. The dagger bounces to the @MaxBounces@ closest enemies dealing 10% less damage with each bounce.<br><br>Enemies hit are marked for @MarkDuration@ seconds. Katarina's basic attacks or spells will consume the mark dealing <magicDamage>@TotalDamageMark@</magicDamage> additional magic damage.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Throws a dagger dealing <magicDamage>@TotalDamage@</magicDamage> magic damage. The dagger bounces to the @MaxBounces@ closest enemies dealing @DamageFalloff*100@% less damage with each bounce.<br><br>Enemies hit are marked for @MarkDuration@ seconds. Katarina's basic attacks or spells will consume the mark dealing <magicDamage>@TotalDamageMark@</magicDamage> additional magic damage.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at up to three nearby Champions.",
-            "dynamicDescription": "Becomes a flurry of blades, throwing daggers at the closest 3 enemy Champions dealing <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> over 2.5 seconds.@SpellModifierDescriptionAppend@",
+            "description": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at nearby enemy Champions, dealing significant damage and applying Wounds.",
+            "dynamicDescription": "Becomes a flurry of blades, throwing daggers at the closest @MaxTargets@ enemy Champions dealing <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> over @ChannelDuration@ seconds. Enemies struck are <status>Wounded</status> by @GrievousWoundsAmount*100@% for @GrievousWoundsDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "Lisica o Dziewięciu Ogonach",
-    "shortBio": "— Kradzież Esencji (B) jest kumulowana przy zadawaniu obrażeń wrogom<br>— Widmowa Szarża (R) się nie resetuje",
+    "shortBio": "— Kradzież Esencji (B) jest kumulowana przy zadawaniu obrażeń wrogom<br>— Widmowa Szarża (R) się nie resetuje<br>— Urok (E) zwiększa obrażenia Ahri przeciwko jej celowi",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri doskakuje do przodu i wystrzeliwuje pociski esencji, zadając obrażenia 3 pobliskim wrogom (priorytetowo traktując bohaterów). Widmowej Szarży można użyć do trzech razy, zanim zacznie się odnawiać.",
-            "dynamicDescription": "Ahri zwinnie doskakuje, wystrzeliwując 3 pociski esencji w stronę pobliskich wrogów (priorytetowo traktując bohaterów). Każdy pocisk zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. <spellName>Widmowej Szarży</spellName> można <recast>użyć ponownie</recast> jeszcze 2 razy w ciągu 10 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri zwinnie doskakuje, wystrzeliwując 3 pociski esencji w stronę pobliskich wrogów (priorytetowo traktując bohaterów). Każdy pocisk zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. <spellName>Widmowej Szarży</spellName> można <recast>użyć ponownie</recast> jeszcze 2 razy w ciągu @RecastDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

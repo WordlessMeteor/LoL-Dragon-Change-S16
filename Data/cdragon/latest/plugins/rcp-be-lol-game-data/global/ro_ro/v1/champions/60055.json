@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "După uciderea unui campion sau participarea la uciderea sa, timpul de reactivare pentru Katarina este redus cu 15 secunde."
+        "description": "Doborârile de campioni reduc timpii de reactivare ai Katarinei."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Katarina aruncă un pumnal care sare de la un inamic la altul, provocând daune magice.",
-            "dynamicDescription": "Aruncă un pumnal care provoacă <magicDamage>@TotalDamage@</magicDamage> daune magice. Pumnalul ricoșează către cei mai apropiați @MaxBounces@ inamici, provocând cu 10% mai puține daune la fiecare ricoșeu.<br><br>Inamicii atinși sunt însemnați timp de @MarkDuration@ secunde. Atacurile de bază sau vrăjile Katarinei vor consuma însemnul, provocând <magicDamage>@TotalDamageMark@</magicDamage> daune magice suplimentare.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Aruncă un pumnal care provoacă <magicDamage>@TotalDamage@</magicDamage> daune magice. Pumnalul ricoșează către cei mai apropiați @MaxBounces@ inamici, provocând cu @DamageFalloff*100@% mai puține daune la fiecare ricoșeu.<br><br>Inamicii atinși sunt însemnați timp de @MarkDuration@ secunde. Atacurile de bază sau vrăjile Katarinei vor consuma însemnul, provocând <magicDamage>@TotalDamageMark@</magicDamage> daune magice suplimentare.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Katarina intră într-o stare de concentrare extremă, aruncând cu o viteză nemaiîntâlnită pumnale spre maxim trei campioni din apropiere.",
-            "dynamicDescription": "Devine un vârtej de tăișuri, aruncând cu pumnale spre cei mai apropiați 3 campioni inamici și provocând <magicDamage>@DamageCalcTooltipOnly@ daune magice</magicDamage> de-a lungul a 2,5 secunde.@SpellModifierDescriptionAppend@",
+            "description": "Katarina intră într-o stare de concentrare extremă, aruncând cu o viteză nemaiîntâlnită pumnale spre campionii inamici din apropiere, provocându-le daune semnificative și aplicând ''Răni''.",
+            "dynamicDescription": "Devine un vârtej de tăișuri, aruncând cu pumnale spre cei mai apropiați @MaxTargets@ campioni inamici și provocând <magicDamage>@DamageCalcTooltipOnly@ daune magice</magicDamage> de-a lungul a @ChannelDuration@ secunde. Inamicii loviți sunt <status>''Răniți''</status> cu @GrievousWoundsAmount*100@% timp de @GrievousWoundsDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

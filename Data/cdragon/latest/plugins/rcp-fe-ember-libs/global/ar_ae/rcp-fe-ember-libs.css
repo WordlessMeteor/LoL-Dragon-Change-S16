@@ -1791,6 +1791,16 @@
     width: 115px
 }
 
+.loadouts-modal-v2 .header .tft-compensation-badge-wrapper {
+    margin: auto 7px auto auto
+}
+
+.loadouts-modal-v2 .header .tft-compensation-badge {
+    cursor: pointer;
+    height: 28px;
+    width: 28px
+}
+
 .loadouts-modal-v2 .loadouts-modal-content {
     display: flex;
     flex-direction: row;
@@ -2173,13 +2183,32 @@
     }
 }
 
-.loadouts-modal-active-item lol-parties-cosmetics-panel .hide-unowned-checkbox-container {
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles .hide-unowned-checkbox-container {
     display: flex;
     padding-left: 20px
 }
 
-.loadouts-modal-active-item lol-parties-cosmetics-panel .hide-unowned-checkbox-container .hide_unowned_checkbox_label {
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles .hide-unowned-checkbox-container .hide_unowned_checkbox_label {
     height: 17px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles .hide-disabled-checkbox-container {
+    display: flex;
+    padding-left: 20px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles .hide-disabled-checkbox-container .hide_disabled_checkbox_label {
+    height: 17px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetics-selection-toggles .hide-disabled-checkbox-container .hide_disabled_checkbox_img {
+    width: 15%
 }
 
 .loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic {
@@ -2343,9 +2372,14 @@
     margin-left: 15px
 }
 
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .disabled-cosmetic-icon,
 .loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .wip-cosmetic-icon {
     height: 32px;
     width: 32px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-disabled {
+    margin-left: 15px
 }
 
 .loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper {

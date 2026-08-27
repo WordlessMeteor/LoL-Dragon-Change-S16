@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Heimerdinger": {
             "id": "Jade_Heimerdinger",
@@ -22,6 +22,12 @@
                     "id": "60074000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60074002",
+                    "num": 2,
+                    "name": "拆弹专家 黑默丁格",
                     "chromas": false
                 },
                 {
@@ -115,14 +121,14 @@
                     "id": "60074026",
                     "num": 26,
                     "name": "冷若冰霜小深蓝 黑默丁格",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 24
                 },
                 {
                     "id": "60074027",
                     "num": 27,
                     "name": "浪漫浪漫小淡紫 黑默丁格",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 24
                 },
                 {
@@ -216,7 +222,7 @@
                     "id": "Jade_HeimerdingerQ",
                     "name": "H-28G进化炮台",
                     "description": "黑默丁格部署一座机枪炮台。随着该技能等级提升，炮台会获得新的能力。（炮台对防御塔仅造成一半伤害。）",
-                    "tooltip": "黑默丁格建造一座机枪炮台，每次攻击造成<magicDamage>{{ bonusdamage }}魔法伤害</magicDamage> 。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒刷新时间)。<br /><br />该技能每提升一级，炮台都会获得额外强化：<br /><attention>2级：</attention>炮台攻击会使目标的护甲和魔法抗性减少1(最多降低50)<br /><attention>3级：</attention>炮台数量上限提升至2<br /><attention>4级：</attention>炮台额外获得<scaleHealth>125生命值</scaleHealth><br /><attention>5级：</attention>炮台攻击会造成范围伤害{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格建造一座机枪炮台，它的每次攻击造成<magicDamage>{{ bonusdamage }}魔法伤害</magicDamage>。炮台在被放置后的最初{{ attackspeedduration }}秒获得<attackSpeed>{{ turretbonusattackspeed*100 }}%攻击速度</attackSpeed>。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒充能时间)。<br /><br />该技能等级每提升一级，就会获得进一步强化：<br /><attention>2级：</attention>炮台攻击会使目标的护甲和魔法抗性降低{{ level2resistshred }}（最多降低{{ maxshredcaptooltip }}）<br /><attention>3级：</attention>炮台数量上限提升至2个<br /><attention>4级：</attention>炮台额外获得<scaleHealth>{{ level4hptooltip }}生命值</scaleHealth><br /><attention>5级：</attention>炮台攻击会造成{{ aoedamagemod*100 }}%溅射伤害{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -357,7 +363,7 @@
                     "id": "Jade_HeimerdingerW",
                     "name": "海克斯科技微型导弹",
                     "description": "黑默丁格发射数枚长程导弹，瞄准离黑默丁格最近的敌人。",
-                    "tooltip": "黑默丁格发射3枚追踪敌人的微型火箭(每人最多命中1枚)，优先攻击离他最近的目标。每枚火箭造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格发射{{ maxtargets }}枚追踪敌人的微型火箭(每人最多命中1枚)，优先攻击离他最近的目标。每枚火箭造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -476,13 +482,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1100,
-                        1100,
-                        1100,
-                        1100,
-                        1100
+                        950,
+                        950,
+                        950,
+                        950,
+                        950
                     ],
-                    "rangeBurn": "1100",
+                    "rangeBurn": "950",
                     "image": {
                         "full": "Jade_HeimerdingerW.png",
                         "sprite": "spell2.png",
@@ -498,7 +504,7 @@
                     "id": "Jade_HeimerdingerE",
                     "name": "CH-1震荡手雷",
                     "description": "黑默丁格朝一个位置掷出一颗手雷，对敌方单位造成伤害，并对直接命中的敌人造成晕眩效果，对附近单位造成致盲。",
-                    "tooltip": "黑默丁格投掷一枚手雷，对敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ blindduration }}秒<status>致盲</status>。对直接命中的敌人造成1.5秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格投掷一枚手雷，对敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ blindduration }}秒<status>致盲</status>。对直接命中的敌人造成{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -643,7 +649,7 @@
                     "id": "Jade_HeimerdingerR",
                     "name": "升级！！！",
                     "description": "被动/主动：被动提升冷却缩减。激活后为所有已激活的进化炮台回复生命值，并让它们在短时间内发射能降低目标移动速度的冰霜射击。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>{{ cooldownbonus*-100 }}%冷却缩减。<br /><br /><spellActive>主动：</spellActive>在持续时间内强化所有技能和炮台。<br /><br /><spellName>进化炮台：</spellName>所有炮台<healing>回复</healing>100%最大生命值，每次攻击施加<status>{{ movementspeedmod*-100 }}%减速</status>。<br /><spellName>海克斯科技微型导弹：</spellName>发射的导弹数量从3枚提升至5枚。<br /><spellName>CH-1震荡手雷：</spellName>飞行速度提升33%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>{{ cooldownbonus*-100 }}%冷却缩减。<br /><br /><spellActive>主动：</spellActive>在持续时间内强化所有技能和炮台。<br /><br /><spellName>进化炮台：</spellName>所有炮台<healing>回复</healing>100%最大生命值。每次攻击施加<status>{{ movementspeedmod*-100 }}%减速</status>。<br /><spellName>海克斯科技微型导弹：</spellName>发射{{ wmaxmissiles }}枚火箭。<br /><spellName>CH-1震荡手雷：</spellName>飞行速度提升33%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -673,68 +679,68 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            140,
-                            180
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            80,
-                            80
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.12,
-                            0.12,
-                            0.12
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            500,
-                            690,
-                            865
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.45,
-                            0.45,
-                            0.45
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            100,
-                            120
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            135,
-                            180,
-                            225
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            28,
-                            39,
-                            49
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "100/140/180",
-                        "80",
-                        "1.5",
-                        "0.12",
-                        "500/690/865",
-                        "0.45",
-                        "80/100/120",
-                        "135/180/225",
-                        "28/39/49",
-                        "150/250/350"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

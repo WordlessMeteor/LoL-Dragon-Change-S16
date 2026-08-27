@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Η Αναπλήρωση Μάνα του Βέιγκαρ αυξάνεται κατά 1% για κάθε 1% του Μάνα που του λείπει."
+        "description": "Η Αναπλήρωση Μάνα του Βέιγκαρ αυξάνεται ανάλογα με το Μάνα που του λείπει."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Βέιγκαρ καλεί μια μεγάλη μάζα σκοτεινής ύλης, η οποία πέφτει από τον ουρανό στη θέση του στόχου και προκαλεί Μαγική Ζημιά κατά την πρόσκρουση.",
-            "dynamicDescription": "<mainText>Μετά από 1,2 δευτ. πέφτει από τον ουρανό σκοτεινή ύλη στην τοποθεσία του στόχου, η οποία προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>.",
+            "dynamicDescription": "Μετά από @ImpactDelay@ δευτ., πέφτει από τον ουρανό σκοτεινή ύλη στην στοχευμένη τοποθεσία, η οποία προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Βέιγκαρ διαστρεβλώνει το χώρο γύρω από τη θέση του στόχου για 3 δευτ. και ακινητοποιεί τους εχθρούς που περνούν μέσα από την περίμετρο για ένα σύντομο χρονικό διάστημα.",
-            "dynamicDescription": "<mainText>Ο Βέιγκαρ διαστρεβλώνει τον χώρο γύρω από τη θέση του στόχου για 3 δευτ. και <status>Ακινητοποιεί</status> τους εχθρούς που περνούν μέσα από την περίμετρο για @StunDuration@ δευτ.",
+            "dynamicDescription": "Ο Βέιγκαρ διαστρεβλώνει τον χώρο γύρω από τη θέση του στόχου για @CageDuration@ δευτ. και <status>Ακινητοποιεί</status> τους εχθρούς που περνούν μέσα από την περίμετρο για @StunDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Χτυπά τον στοχευμένο αντίπαλο Ήρωα και προκαλεί μεγάλη βασική ποσότητα Μαγικής Ζημιάς συν 80% της Ισχύος Ικανότητας του στόχου του.",
-            "dynamicDescription": "<mainText>Χτυπά έναν εχθρικό Ήρωα και προκαλεί <magicDamage>Μαγική Ζημιά ίση με @MinDamage@ συν το 80% της Ισχύος Ικανότητας του στόχου</magicDamage>.",
+            "dynamicDescription": "Ο Βέιγκαρ χτυπά έναν αντίπαλο Ήρωα, προκαλώντας <magicDamage>Μαγική Ζημιά ίση με @MinDamage@ συν @EnemyAPRatio*100@% της Ισχύος Ικανότητας του στόχου</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

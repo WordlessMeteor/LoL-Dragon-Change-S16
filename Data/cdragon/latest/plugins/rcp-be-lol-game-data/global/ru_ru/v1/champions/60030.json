@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "После смерти Картус приобретает форму духа, которая позволяет ему продолжать использовать заклинания."
+        "description": "После смерти Картус обретает форму духа, ненадолго позволяющую ему продолжать применять умения."
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Картус вызывает отложенный взрыв в указанной точке, нанося урон врагам поблизости.",
-            "dynamicDescription": "Вызывает взрыв, происходящий через 0.5 сек. и наносящий <magicDamage>@QDamage@ ед. маг. урона</magicDamage> всем врагам вокруг. Урон удвоен, если задета всего одна цель.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Вызывает отложенный взрыв, наносящий <magicDamage>@QDamage@ ед. маг. урона</magicDamage> всем врагам рядом с точкой. Урон удвоен, если задета всего 1 цель.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Картус готовит умение в течение 3 сек., после чего наносит урон всем вражеским чемпионам.",
-            "dynamicDescription": "Картус готовит умение в течение 3 сек., после чего наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем вражеским чемпионам.@SpellModifierDescriptionAppend@",
+            "description": "Картус готовит умение, после чего наносит урон всем вражеским чемпионам.",
+            "dynamicDescription": "Картус готовит умение в течение @ChannelDuration@ сек., после чего наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем вражеским чемпионам.@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

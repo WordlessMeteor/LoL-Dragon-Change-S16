@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "Hasar veren yetenekler, rakiplere 3,5 saniyeliğine Güneş Işığı uygular. Takım arkadaşları bu hedeflere hasar verdiğinde Günışığı'nı tüketerek fazladan büyü hasarı verir."
+        "description": "Hasar veren yetenekler rakiplere Güneş Işığı etkisi uygular. Takım arkadaşları bu hedeflere hasar verdiğinde Güneş Işığı'nı tüketerek fazladan hasar verir."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Leona bir sonraki normal saldırısında kalkanını kullanarak ilave büyü hasarı verir ve hedefi sersemletir.",
-            "dynamicDescription": "Bir sonraki normal saldırısı ilave <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> verir ve 1,25 saniyeliğine <status>sersemletir</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Bir sonraki normal saldırısı ilave <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> verir ve @StunDuration@ saniyeliğine <status>sersemletir</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Leona kalkanını kaldırarak zırh ve büyü direnci kazanır.  Yeteneğin süresi ilk kez sona erdiğinde yakınında rakip varsa Leona onlara büyü hasarı verir ve etkinin süresini uzatır.",
-            "dynamicDescription": "3 saniyeliğine @BonusARMR@ İlave <scaleArmor>Zırh</scaleArmor> ve <scaleMR>Büyü Direnci</scaleMR> kazanır. Etki sona erdiğinde yakında olup isabet alan rakipler <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> alır ve Leona 3 saniye daha <scaleArmor>zırh</scaleArmor> ve <scaleMR>büyü direnci</scaleMR> ilavelerini korur.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@BuffDuration@ saniyeliğine <scaleArmor>@BonusARMR@ Zırh</scaleArmor> ve <scaleMR>Büyü Direnci</scaleMR> kazanır. Etki sona erdiğinde yakında olup isabet alan rakipler <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> alır ve Leona @BuffDuration@ saniye daha <scaleArmor>zırh</scaleArmor> ve <scaleMR>büyü direnci</scaleMR> ilavelerini korur.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

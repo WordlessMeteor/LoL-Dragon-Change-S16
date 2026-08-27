@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Explodierter Heimerdinger",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Der exzentrische Wissenschaftler Heimerdinger, der in der neuen Republik Bandle lebt, hat noch niemandem erzählt, dass er vielleicht „die eine oder andere Vorkriegsbombe“ für „die eine oder andere skrupellose Regierung“ entwickelt hat. Er bastelt und schraubt nämlich lieber in einer Stadt, die ihn nicht nach dem Leben trachtet."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger platziert einen Geschützturm mit einem Maschinengewehr. Geschütztürme erhalten Fähigkeiten, wenn diese Fähigkeit verbessert wird. (Geschütztürme verursachen an Türmen nur halben Schaden).",
-            "dynamicDescription": "Heimerdinger konstruiert einen Geschützturm mit einem Maschinengewehr, der pro Angriff <magicDamage>@BonusDamage@ magischen Schaden</magicDamage> verursacht. Diese Fähigkeit hat @MaxAmmo@ Aufladungen (@AmmoRechargeTime@ Sekunden Aufladungszeit).<br><br>Jede Stufe dieser Fähigkeit gewährt eine weitere Verbesserung:<br><attention>Stufe 2:</attention> Angriffe von Geschütztürmen verringern die Rüstung und Magieresistenz des Ziels um 1 (maximal 50)<br><attention>Stufe 3:</attention> Die maximale Anzahl an Geschütztürmen wird auf 2 erhöht<br><attention>Stufe 4:</attention> Geschütztürme erhalten zusätzlich <scaleHealth>125 Leben</scaleHealth>.<br><attention>Stufe 5:</attention> Angriffe von Geschütztürmen verursachen Flächenschaden@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger konstruiert einen Geschützturm mit einem Maschinengewehr, der pro Angriff <magicDamage>@BonusDamage@ magischen Schaden</magicDamage> verursacht. Geschütztürme erhalten in den ersten @AttackSpeedDuration@ Sekunden nach dem Platzieren <attackSpeed>@TurretBonusAttackSpeed*100@ % Angriffstempo</attackSpeed>. Diese Fähigkeit hat @MaxAmmo@ Aufladungen (@AmmoRechargeTime@ Sekunden Aufladungszeit).<br><br>Jede Stufe dieser Fähigkeit gewährt eine weitere Verbesserung:<br><attention>Stufe 2:</attention> Angriffe von Geschütztürmen verringern die Rüstung und Magieresistenz des Ziels um @Level2ResistShred@ (maximal @MaxShredCapTooltip@)<br><attention>Stufe 3:</attention> Die maximale Anzahl an Geschütztürmen wird auf 2 erhöht<br><attention>Stufe 4:</attention> Geschütztürme erhalten zusätzlich <scaleHealth>@Level4HPTooltip@ Leben</scaleHealth><br><attention>Stufe 5:</attention> Angriffe von Geschütztürmen verursachen @AoEDamageMod*100@ % Flächenschaden.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger feuert Raketen mit hoher Reichweite ab, die jene Gegner treffen, die Heimerdinger am nächsten sind.",
-            "dynamicDescription": "Heimerdinger feuert 3 zielsuchende Mikro-Raketen auf Gegner ab (maximal 1 pro Ziel), die Ziele treffen, die ihm am nächsten sind. Jede Rakete verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger feuert @MaxTargets@ zielsuchende Mikro-Raketen auf Gegner ab (maximal 1 pro Ziel), die Ziele treffen, die ihm am nächsten sind. Jede Rakete verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Heimerdinger wirft eine Granate an einen Zielort, mit der er Schaden an gegnerischen Einheiten verursacht und alle direkt getroffenen Einheiten betäubt. Außerdem werden Einheiten in der Nähe geblendet.",
-            "dynamicDescription": "Heimerdinger wirft eine Granate, die gegnerischen Einheiten <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und sie @BlindDuration@ Sekunden lang <status>blendet</status>.  Gegner, die direkt getroffen werden, werden 1,5 Sekunden lang <status>betäubt</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger wirft eine Granate, die gegnerischen Einheiten <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und sie @BlindDuration@ Sekunden lang <status>blendet</status>.  Gegner, die direkt getroffen werden, werden @StunDuration@ Sekunden lang <status>betäubt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Passiv / Aktiv: Erhöht passiv die Abklingzeitverringerung.  Aktiviere die Fähigkeit, um alle aktiven Evolutions-Geschütztürme zu heilen und sie für kurze Zeit Frostschüsse abfeuern zu lassen, die das Lauftempo verringern.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>@CooldownBonus*-100@ % Abklingzeitverringerung.<br><br><spellActive>Aktiv: </spellActive>Verstärkt für die Wirkdauer alle Fähigkeiten und Geschütztürme.<br><br><spellName>Evolutions-Geschütztürme:</spellName> Alle Geschütztürme werden um 100 % ihres maximalen Lebens <healing>geheilt</healing> und jeder Angriff <status>verlangsamt um @MovementSpeedMod*-100@ %</status>.<br><spellName>Hextech-Mikroraketen:</spellName> Feuert 5 statt 3 Raketen ab.<br><spellName>Schockgranate CH-1:</spellName> Fliegt um 33 % schneller.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>@CooldownBonus*-100@ % Abklingzeitverringerung.<br><br><spellActive>Aktiv: </spellActive>Verstärkt für die Wirkdauer alle Fähigkeiten und Geschütztürme.<br><br><spellName>Evolutions-Geschütztürme:</spellName> Alle Türme werden vollständig <healing>geheilt</healing>. Jeder Angriff <status>verlangsamt um @MovementSpeedMod*-100@%</status>.<br><spellName>Hextech-Mikroraketen:</spellName> Feuert @WMaxMissiles@ Raketen ab.<br><spellName>Schockgranate CH-1:</spellName> Fliegt um 33 % schneller.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

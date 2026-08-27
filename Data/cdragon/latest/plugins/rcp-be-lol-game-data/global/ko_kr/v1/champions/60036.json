@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "독극물 문도 박사",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "문도, 독 없다. 문도한테는 건강한 감정 해소 방법 있다. 아, 보라색 액체? 그것도 아무 문제 없을 거다."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "문도 박사는 매초 최대 체력의 0.3%가 회복됩니다."
+        "description": "문도 박사는 매초 최대 체력의 일부분을 회복합니다."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>체력 @HealthCost@</font>",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "문도 박사가 식칼을 던져 적의 최대 체력에 비례한 피해를 입힙니다.",
-            "dynamicDescription": "<mainText>문도 박사가 식칼을 던져 대상 현재 체력의 @DamageMod*100@%(최소 @MinDamage@)만큼 <magicDamage>마법 피해</magicDamage>를 입히고 2초 동안 적의 속도를 40% <status>늦춥니다</status>.<br><br>식칼이 대상에게 적중하면 소모한 체력의 절반을 회복합니다.",
+            "dynamicDescription": "문도 박사가 식칼을 던져, 대상 현재 체력의 @DamageMod*100@%에 해당하는 <magicDamage>마법 피해</magicDamage>(최소 @MinDamage@)를 입히고 @SlowDuration@초 동안 @MoveMod*-100@% <status>둔화</status>시킵니다.<br><br>식칼을 대상에게 맞히면 <healing>@HealthReturn@의 체력</healing>을 돌려받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>체력 @HealthCost@</font>",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "피학증 사용 시 5초 동안 문도 박사의 공격력이 일정량 증가합니다. 또한 문도 박사가 잃은 체력 퍼센트당 추가 공격력을 얻습니다.",
-            "dynamicDescription": "문도 박사가 5초 동안 <physicalDamage>@BaseIncrease@의 공격력</physicalDamage>을 얻습니다. 문도 박사가 잃은 체력 퍼센트당 <physicalDamage>+@DamageMod@의 공격력</physicalDamage>을 추가로 얻습니다.@SpellModifierDescriptionAppend@",
+            "description": "문도 박사가 몇 초 동안 잃은 체력에 비례하는 공격력을 얻습니다.",
+            "dynamicDescription": "문도 박사가 @Duration@초 동안 <physicalDamage>@BaseIncrease@의 공격력</physicalDamage>을 얻습니다. 잃은 체력 1%당 <physicalDamage>@DamageMod@의 공격력</physicalDamage>을 추가로 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>현재 체력의 @HealthCost@%</font>",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "문도 박사가 체력의 일부를 희생하여 이동 속도를 높이고 체력 재생력을 크게 높입니다.",
-            "dynamicDescription": "<mainText>문도 박사가 12초 동안 <healing>@MaximumHealthRegen@의 체력</healing>을 회복합니다. 또한 <speed>이동 속도가 @SpeedMod*100@%</speed> 증가합니다.",
+            "dynamicDescription": "문도 박사가 @Duration@초에 걸쳐 <healing>@MaximumHealthRegen@의 체력</healing>을 회복하고 <speed>@SpeedMod*100@%의 이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "召喚學徒 李星",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "年輕氣盛的李星永遠穿不慣「精進」侍僧的傳統服飾，身懷雄心壯志的他身上擁有的潛力是其他侍僧遠遠比不上的。不過他還是慢慢成長：配得上僧袍，以及神龍之力。"
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "李星使用技能後，下2次普攻提升40%攻速並各回復15能量。"
+        "description": "李星使用技能後，下一次普攻將獲得額外攻速並回復能量。"
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "虎嘯龍吟：李星發出紊亂音波尋找敵軍，對首位碰到音波的敵軍造成物理傷害。若「虎嘯龍吟」命中敵軍，李星可在3秒內施放「震驚百里」。<br>震驚百里：李星衝向遭「虎嘯龍吟」命中的敵軍，造成物理傷害加上目標已損失生命8%的傷害。",
-            "dynamicDescription": "<spellName>虎嘯龍吟：</spellName>李星發出紊亂音波尋找敵軍，對首位碰到音波的敵軍造成<physicalDamage>@InitialDamage@物理傷害</physicalDamage>。若<spellName>虎嘯龍吟</spellName>命中目標，李星可在3秒內施放<spellName>震驚百里</spellName>。<br><br><spellName>震驚百里：</spellName>李星衝向遭「虎嘯龍吟」命中的敵軍，造成<physicalDamage>@RecastDamage@物理傷害</physicalDamage>加上目標已損失生命8%的傷害。@SpellModifierDescriptionAppend@",
+            "description": "虎嘯龍吟：李星發出紊亂音波尋找敵軍，對首位碰到音波的敵軍造成傷害。若虎嘯龍吟命中目標，李星可施放震驚百里。<br><br>震驚百里：李星衝向遭「虎嘯龍吟」命中的敵軍，造成更多物理傷害加上目標已損失生命一部分的傷害。",
+            "dynamicDescription": "<spellName>虎嘯龍吟：</spellName>李星發出紊亂音波尋找敵軍，對首位碰到音波的敵軍造成<physicalDamage>@InitialDamage@物理傷害</physicalDamage>。若<spellName>虎嘯龍吟</spellName>命中目標，李星可在3秒內施放<spellName>震驚百里</spellName>。<br><br><spellName>震驚百里：</spellName>李星衝向遭「虎嘯龍吟」命中的敵軍，造成<physicalDamage>@RecastDamage@物理傷害</physicalDamage>加上目標已損失生命@MissingHealthDamage*100@%的傷害。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "鐵璧金身：李星衝向目標友軍，賦予自身和目標護盾以抵擋傷害。李星使用「鐵璧金身」後，可在3秒內使出「易筋洗髓」。<br>易筋洗髓：李星接受過嚴格的肉體訓練，使他越戰越猛。李星獲得普攻吸血、技能吸血並增加物防，持續4秒。",
-            "dynamicDescription": "<spellName>鐵璧金身：</spellName>李星衝向目標友軍，賦予自身和目標<shield>護盾</shield>，在5秒內吸收@ShieldAmount@傷害。使用<spellName>鐵璧金身</spellName>後，李星可在3秒內使出<spellName>易筋洗髓</spellName>。<br><br><spellName>易筋洗髓：</spellName>李星接受過嚴格的肉體訓練，使他越戰越猛。李星獲得@LifestealAndSpellVamp@%普攻吸血及技能吸血，並增加<scaleArmor>@ArmorBonus@物防</scaleArmor>，持續5秒。@SpellModifierDescriptionAppend@",
+            "description": "鐵璧金身：李星衝向目標友軍，賦予自身和目標護盾以抵擋傷害。使用「鐵璧金身」後，李星可以接著使出「易筋洗髓」。<br><br>易筋洗髓：李星接受過嚴格的肉體訓練，獲得普攻吸血、技能吸血與物防。",
+            "dynamicDescription": "<spellName>鐵璧金身：</spellName>李星衝向目標友軍，賦予自身和目標<shield>護盾</shield>，在@ShieldDuration@秒內吸收@ShieldAmount@傷害。發動<spellName>鐵璧金身</spellName>後，李星可以在接下來@W1ReactivateTime@秒內施展<spellName>易筋洗髓</spellName>。<br><br><spellName>易筋洗髓：</spellName>李星接受過嚴格的肉體訓練，使他越戰越猛。李星獲得@LifestealAndSpellVamp@%普攻吸血及技能吸血，並增加<scaleArmor>@ArmorBonus@物防</scaleArmor>，持續@LifestealAndSpellVampTime@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

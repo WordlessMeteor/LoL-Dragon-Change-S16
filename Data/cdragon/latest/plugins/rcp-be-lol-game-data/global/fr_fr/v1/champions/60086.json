@@ -131,6 +131,37 @@
             "description": null
         },
         {
+            "id": 60086002,
+            "contentId": "4f1dab6d-ed8c-4918-a119-439293756327",
+            "relatedPrimeContentId": "1fe63e8e-1dc9-43fb-8f69-e9aa5a7eef95",
+            "relatedPrimeItemId": 86002,
+            "isBase": false,
+            "name": "Garen soldat du désert",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Jade_GarenLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 167
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60086005,
             "contentId": "087c644d-dc63-4089-b87b-8d61c01d9fca",
             "relatedPrimeContentId": "093bfaff-5446-46de-97f6-de4eec36e682",
@@ -675,7 +706,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Garen effectue une danse mortelle avec son épée, infligeant des dégâts autour de lui pendant toute la durée.",
-            "dynamicDescription": "<spellPassive>Passif :</spellPassive> Garen bénéficie de 20% d'<scaleArmor>armure</scaleArmor> et de <scaleMR>résistance magique</scaleMR> bonus.<br><br><spellActive>Actif : </spellActive>Garen bénéficie d'un bouclier pendant @BuffDuration@ sec, réduisant les dégâts subis de @DamageReduction*100@% et octroyant 30% de réduction des contrôles de foule.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif :</spellPassive> Garen bénéficie de @ResistanceScaling*100@% d'<scaleArmor>armure</scaleArmor> et de <scaleMR>résistance magique</scaleMR> bonus.<br><br><spellActive>Actif : </spellActive>Garen bénéficie d'un bouclier pendant @BuffDuration@ sec, réduisant les dégâts subis de @DamageReduction*100@% et octroyant @TenacityBonus*100@% de réduction des contrôles de foule.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -825,7 +856,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Garen donne des coups d'épée tourbillonnants, infligeant des dégâts physiques aux ennemis proches.",
-            "dynamicDescription": "Garen donne des coups d'épée tourbillonnants pendant @Duration@ sec, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> chaque seconde aux ennemis proches. Garen peut traverser les unités en tournoyant, mais se déplace 20% plus lentement lorsqu'il passe directement à travers des unités.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Garen donne des coups d'épée tourbillonnants pendant @Duration@ sec, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> chaque seconde aux ennemis proches. (Dégâts max : <physicalDamage>@MaximumDamageTooltip@</physicalDamage>.)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

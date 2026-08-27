@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "Janna and her allied champions gain 3% increased Movement Speed."
+        "description": "Janna and her allied champions gain increased Movement Speed."
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "By creating a localized change in pressure and temperature, Janna is able to create a small storm that grows in size with time. She can active the spell again to release the storm. On release this storm will fly towards the direction it was cast in, dealing damage and knocking away any enemies in its path.",
-            "dynamicDescription": "Summons a whirlwind, which deals <magicDamage>@MinimumDamage@ magic damage</magicDamage> to all enemies in its path and <status>Knocks</status> them into the air. The whirlwind travels further, deals <magicDamage>@ChargeDamage@ bonus damage</magicDamage>, and <status>Knocks</status> enemies higher, for each second it charges (up to a maximum of 3 seconds).<br><br><recast>Recast</recast> to release the whirlwind early.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Summons a whirlwind, which deals <magicDamage>@MinimumDamage@ magic damage</magicDamage> to all enemies in its path and <status>Knocks</status> them into the air. The whirlwind travels further, deals <magicDamage>@ChargeDamage@ bonus damage</magicDamage>, and <status>Knocks</status> enemies higher, for each second it charges (up to a maximum of @MaxDuration@ seconds).<br><br><recast>Recast</recast> to release the whirlwind early.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Janna surrounds herself in a magical storm, throwing enemies back. After the storm has settled, soothing winds heal nearby allies while the ability is active.",
-            "dynamicDescription": "Summons forth the might of the wind to <recast>Knockback</recast> surrounding enemies and restores <healing>@TotalHeal@ Health</healing> to nearby allies over 4 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Summons forth the might of the wind to <recast>Knockback</recast> surrounding enemies and restores <healing>@TotalHeal@ Health</healing> to nearby allies over @MaxChannelDuration@ seconds. (Maximum heal: <healing>@TotalHeal@</healing>)@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

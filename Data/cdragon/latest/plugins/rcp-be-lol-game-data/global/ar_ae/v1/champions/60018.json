@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "تريستانا القرصانة",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "احذروا أيها المدفعيون! إن تريستانا قد دخلت أعالي البحار، حيث تبحر بحثًا عن مغامرات جديدة تتجاوز حدود باندل. وقد استعارت (سرقت) القبعة من قرصان قامت بتفجيره، أما رقعة العين فهي لمجرد الاستعراض. لكن موقفها الذي لا يعرف الاستسلام ومدفعها الموثوق به قد أغرقا سفنًا أكثر من معظم القباطنة في بيلجواتر."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق تريستانا سلاحها بسرعة، مما يزيد من سرعة هجومها لفترة قصيرة.",
-            "dynamicDescription": "<mainText>تزداد <attackSpeed>سرعة هجوم تريستانا بنسبة @AttackSpeedMod*100@%</attackSpeed> لمدة 7ث.",
+            "dynamicDescription": "- تكسب تريستانا <attackSpeed>@AttackSpeedMod*100@% سرعة هجوم</attackSpeed> لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها إلى موقع بعيد، مما يلحق الضرر بالوحدات المحيطة ويبطئُها لمدة 3ث في مكان هبوطها.",
-            "dynamicDescription": "<mainText>تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها إلى الموقع المستهدف، فتلحق <magicDamage>@LandingDamage@ ضرر سحر</magicDamage> و<status>تبطئ</status> بنسبة 60% لمدة 2.5ث عند هبوطها.<br>عند قتل بطل أو المساعدة في قتله، يتم تجديد فترة التبريد.",
+            "description": "تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها نحو موقع بعيد، فتلحق الضرر بالأعداء وتبطئهم في مكان هبوطها.",
+            "dynamicDescription": "تطلق تريستانا سلاحها باتجاه الأرض لتطير بنفسها إلى الموقع المستهدف، فتلحق <magicDamage>@LandingDamage@ ضرر سحر</magicDamage> و<status>تبطئ</status> بنسبة @Slow@% لمدة @SlowDuration@ث عند هبوطها. عند قتل بطل أو المساعدة في قتله، تتم إعادة ضبط فترة تبريد القفزة الصاروخية.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "عندما تقتل تريستانا إحدى الوحدات، تنفجر قذائف مدفعها إلى شظايا، فتلحق الضرر بالأعداء المحيطين.  يمكن تفعيلها لإلحاق ضرر بالوحدة المستهدفة بمرور الوقت وتقليص العلاج الذي تتلقاه.",
-            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>ينفجر الأعداء عند قتلهم بفعل هجمات تريستانا الأساسية، مما يلحق <magicDamage>@PassiveDamage@ ضرر سحر</magicDamage> بالأعداء المجاورين.<br><br><spellActive>تأثير نشط: </spellActive>تمزّق العدو المستهدف، وتطبق عليه <keyword>الجراح الخطيرة بنسبة 50%</keyword> وتلحق به <magicDamage>@ActiveDamageTTOnly@ ضرر سحر</magicDamage> على مدار 5ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>ينفجر الأعداء عند قتلهم بفعل هجمات تريستانا الأساسية، مما يلحق <magicDamage>@PassiveDamage@ ضرر سحر</magicDamage> بالأعداء المجاورين.<br><br><spellActive>تأثير نشط: </spellActive>تمزّق العدو المستهدف، وتطبق عليه <keyword>الجراح الخطيرة بنسبة 50%</keyword> وتلحق به <magicDamage>@ActiveDamageTTOnly@ ضرر سحر</magicDamage> على مدار @GrievousDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

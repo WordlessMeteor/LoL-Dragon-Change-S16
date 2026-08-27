@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_JarvanIV": {
             "id": "Jade_JarvanIV",
@@ -216,7 +216,7 @@
                     "id": "Jade_JarvanIVDragonStrike",
                     "name": "巨龙撞击",
                     "description": "嘉文四世的长矛穿透敌人，对它途经的所有敌人造成物理伤害和护甲击碎效果。此外，该技能还会将嘉文四世引向德邦军旗，并击飞他途经的所有敌人。",
-                    "tooltip": "用嘉文四世的长矛穿透敌人，对命中的所有敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续3秒的{{ armorshredpercent }}%护甲击碎效果。<br /><br />如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>他途经的所有敌人。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "将嘉文四世的长矛延伸出去，对命中的所有敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续{{ armorshredduration }}秒的{{ armorshredpercent }}%护甲削减。<br /><br />如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>沿途的所有敌人。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -361,7 +361,7 @@
                     "id": "Jade_JarvanIVGoldenAegis",
                     "name": "黄金圣盾",
                     "description": "嘉文四世召唤古德玛西亚列王保护自己，提供护盾吸收伤害并减速附近敌人。",
-                    "tooltip": "临时获得一个持续5秒的<shield>护盾</shield>，可吸收最多{{ shieldamount }}伤害（附近每有一名敌方英雄，额外吸收{{ shieldbonus }}伤害），并对周围敌人造成持续2秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "提供一个可吸收至多{{ shieldamount }}(+{{ shieldbonus }}x周围敌方英雄数)伤害的<shield>护盾</shield>，持续{{ shieldduration }}秒，并对周围的敌人们造成持续{{ slowduration }}秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -653,7 +653,7 @@
                     "id": "Jade_JarvanIVCataclysm",
                     "name": "天崩地裂",
                     "description": "嘉文四世勇猛地跃向目标敌方英雄，对其造成物理伤害，并在敌人周围形成环形障碍，持续数秒。",
-                    "tooltip": "勇猛地跃向目标敌方英雄，造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，并在目标周围形成环形障碍，持续3.5秒。<br /><br /><recast>再次施放</recast>即可使障碍倒塌。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "勇猛地跃向目标敌方英雄，对目标及附近的敌人造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，并在目标周围形成持续{{ wallduration }}秒的环形障碍。<br /><br /><recast>再次施放</recast>将使该障碍倒塌。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",

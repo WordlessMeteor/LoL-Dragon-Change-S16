@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "إزريال نوتينغهام",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "كجني مغامر من ممالك الغابة النائية، يحب إزريال تقديم نفسه \"كفارس مارق وسيم\" يدعى جارو لايتفيذر. قلة هم من يصدقون مزاعمه عن الفروسية، ولكنهم يوفرون مصدر إلهاء كافٍ فيما بين مغامراته الفاشلة إلى حد كارثي."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "يكسب إزريال سرعة هجوم متزايدة في كل مرة تصيب إحدى تعويذاته هدفها بنجاح، تتكدس حتى 5 مرات."
+        "description": "يكسب إزريال سرعة هجوم متزايدة في كل مرة تصيب إحدى تعويذاته هدفها بنجاح."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "يطلق إزريال صاعقة طاقة تلحق الضرر وتقلص كل فترات تبريده بشكل طفيف إذا أصابت وحدة معادية.",
             "dynamicDescription": "يطلق إزريال صاعقة طاقة تلحق <physicalDamage>@Damage@ ضرر مادي</physicalDamage> (تطبق تأثيرات الإصابة). <br><br>تتقلص كل فترات تبريد إزريال بمقدار 1ث إذا أصابت <spellName>الرمية الغامضة</spellName> هدفًا.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق إزريال موجة متقلبة من الطاقة، فتخفض سرعة الهجوم وتلحق ضرر سحر بأبطال العدو، وتزيد سرعة هجوم الأبطال الحلفاء وتعالجهم.",
-            "dynamicDescription": "يطلق إزريال موجة من الطاقة تلحق <magicDamage>@Damage@ ضرر سحر</magicDamage> وتخفض <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة @AttackSpeed@% لمدة 5ث. <br><br>يستعيد الأبطال الحلفاء الذين تصيبهم الموجة <healing>@TotalHeal@ صحة</healing> وتزداد <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة @AttackSpeed@% لمدة 5ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق إزريال موجة من الطاقة تلحق الضرر بجميع الأبطال الذين تمر عبرهم بقيمة <magicDamage>@Damage@ ضرر سحر</magicDamage> وتخفض <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة @AttackSpeed@% لمدة @Duration@ث. <br><br>يستعيد الأبطال الحلفاء الذين تصيبهم الموجة <healing>@TotalHeal@ صحة</healing> وتزداد <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة @AttackSpeed@% لمدة @Duration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يتحضر إزريال لمدة 1ث ليطلق وابلًا قويًا من قذائف الطاقة التي تلحق ضررًا هائلًا بكل وحدة تمر عبرها (تلحق ضررًا أقل بنسبة 10% مقابل كل وحدة تمر عبرها).",
-            "dynamicDescription": "يتحضر إزريال لمدة 1ث ليطلق وابلًا من القذائف ملحقًا <magicDamage>@Damage@ ضرر سحر</magicDamage> بكل وحدة يمر عبرها. إلا أنه يلحق ضررًا أقل بنسبة @DamageReductionPerHit*100@% مقابل كل وحدة يصيبها (بحد أدنى @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "يطلق إزريال وابلًا قويًا من قذائف الطاقة، تلحق ضررًا هائلًا بكل وحدة تمر عبرها.",
+            "dynamicDescription": "يطلق إزريال وابلًا من قذائف الطاقة، فيلحق <magicDamage>@Damage@ ضرر سحر</magicDamage> بكل وحدة يمر عبرها. إلا أنه يلحق ضررًا أقل بنسبة @DamageReductionPerHit*100@% مقابل كل وحدة يصيبها (بحد أدنى @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

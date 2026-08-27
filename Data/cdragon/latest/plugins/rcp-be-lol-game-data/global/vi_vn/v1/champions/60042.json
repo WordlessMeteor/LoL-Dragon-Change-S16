@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Corki bắn một quả bom sáng vào vị trí chỉ định. Đòn tấn công này sẽ phát hiện các đơn vị không tàng hình xung quanh vụ nổ và tướng trong 6 giây.",
-            "dynamicDescription": "<mainText>Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch trong một khu vực chỉ định. Ngoài ra, vụ nổ còn <status>Soi Sáng</status> khu vực cũng như những tướng trúng phải vụ nổ trong 6 giây (không phát hiện tàng hình).",
+            "description": "Corki bắn ra một quả bom, gây sát thương và làm lộ diện kẻ địch xung quanh vụ nổ.",
+            "dynamicDescription": "Corki bắn ra một quả bom, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Khu vực và tướng trúng chiêu sẽ bị lộ diện trong @RevealDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Súng Máy của Corki bắn liên tục theo hình nón phía trước hắn, gây sát thương và giảm giáp của kẻ địch.",
-            "dynamicDescription": "<mainText>Súng Máy của Corki bắn theo hình nón phía trước hắn trong 4 giây, gây <physicalDamage>@TotalDamageTooltipOnly@ sát thương vật lý</physicalDamage> và <status>giảm @ArmorMod*-1@ giáp</status> mỗi giây. Hiệu ứng giảm giáp có thể cộng dồn và kéo dài trong 2 giây.",
+            "dynamicDescription": "Súng Máy của Corki bắn theo hình nón phía trước hắn trong @ActiveDuration@ giây, gây <physicalDamage>@DamagePerSecondCalc@ sát thương vật lý</physicalDamage> và <status>giảm @ArmorMod*-1@ giáp</status> mỗi giây. Hiệu ứng giảm giáp có thể cộng dồn và kéo dài trong @ShredDuration@ giây. (Sát thương tối đa: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Corki bắn một quả hỏa tiễn vào vị trí mục tiêu, sẽ nổ tung sau khi va chạm, gây sát thương lên những kẻ địch trong vùng ảnh hưởng. Corki tích trữ một hỏa tiễn mỗi 12 giây, lên đến tổng cộng 7 quả. Mỗi quả thứ 3 sẽ là Hỏa Tiễn Cực Đại, gây thêm sát thương.",
-            "dynamicDescription": "<mainText>Corki bắn 1 quả tên lửa vào vị trí mục tiêu, sẽ nổ tung sau khi va chạm vào mục tiêu đầu tiên trúng đòn. Mỗi tên lửa gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong 1 khu vực.<br><br>Kỹ Năng này tích trữ 7 quả tên lửa (@AmmoRechargeTime@ giây sạc lại).<br><br>Mỗi quả tên lửa thứ 3 sẽ là Hỏa Tiễn Cực Đại, gây <magicDamage>@TotalDamageBig@ sát thương phép</magicDamage>.",
+            "description": "Corki bắn một quả hỏa tiễn vào vị trí mục tiêu, sẽ nổ tung sau khi va chạm, gây sát thương lên những kẻ địch trong vùng ảnh hưởng. Mỗi một vài quả sẽ là Hỏa Tiễn Cực Đại, gây thêm sát thương.",
+            "dynamicDescription": "Corki bắn 1 quả tên lửa vào vị trí mục tiêu, sẽ nổ tung sau khi va chạm vào mục tiêu đầu tiên trúng đòn. Mỗi tên lửa gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong một khu vực.<br><br>Kỹ Năng này có @MaxAmmoTooltip@ tích trữ (@AmmoRechargeTime@ giây sạc lại).<br><br>Mỗi quả tên lửa thứ 3 sẽ là Hỏa Tiễn Cực Đại, gây <magicDamage>@TotalDamageBig@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

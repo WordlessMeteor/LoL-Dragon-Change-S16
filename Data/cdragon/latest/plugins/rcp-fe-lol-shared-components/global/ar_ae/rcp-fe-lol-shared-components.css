@@ -3980,6 +3980,11 @@ div.player-name-input__split-inputs-wrapper {
     background: rgba(30, 40, 45, .5)
 }
 
+.shared-reset-timer-component .reset-timer.hide-background {
+    background: transparent;
+    padding: 0
+}
+
 .shared-reset-timer-component:lang(ar-ae) .reset-timer:before {
     margin: 2px -2px 2px 8px
 }
@@ -4419,6 +4424,118 @@ div.player-name-input__split-inputs-wrapper {
 
 .shared-quest-form-content .quest-form-tier .quest-form-tier-name {
     padding-right: 10px
+}
+
+.tft-compensation-tooltip {
+    box-sizing: border-box;
+    min-height: 180px;
+    width: 360px
+}
+
+.tft-compensation-tooltip__title {
+    color: #f0e6d2;
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin: 0;
+    text-align: left
+}
+
+.tft-compensation-tooltip__divider {
+    border: 0;
+    border-top: 1px solid hsla(40, 50%, 88%, .2);
+    margin: 14px 0 16px
+}
+
+.tft-compensation-tooltip__body {
+    box-sizing: border-box;
+    color: hsla(40, 50%, 88%, .65);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 22px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-align: left;
+    white-space: normal
+}
+
+.tft-compensation-tooltip__body:last-child {
+    margin-bottom: 0
+}
+
+.tft-compensation-tooltip__reward-counts {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr;
+    margin-top: 6px
+}
+
+.tft-compensation-tooltip__available-cosmetics-title {
+    color: #f0e6d2;
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    text-align: left
+}
+
+.tft-compensation-tooltip__reward-count {
+    align-items: center;
+    color: #f0e6d2;
+    display: flex;
+    font-family: Spiegel, sans-serif;
+    font-size: 16px;
+    text-align: left
+}
+
+.tft-compensation-tooltip__reward-count strong {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: auto
+}
+
+.tft-compensation-tooltip__reward-label {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.tft-compensation-tooltip__prestige-icon,
+.tft-compensation-tooltip__rarity-icon {
+    display: block;
+    flex: 0 0 20px;
+    height: 20px !important;
+    max-height: 20px !important;
+    max-width: 20px !important;
+    min-height: 20px !important;
+    min-width: 20px !important;
+    object-fit: contain;
+    width: 20px !important
+}
+
+.tft-compensation-tooltip__asterisk {
+    color: hsla(40, 50%, 88%, .65);
+    font-family: Spiegel, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 18px 0 14px;
+    text-align: left
+}
+
+.tft-compensation-tooltip__more-details {
+    color: #60ecff;
+    cursor: pointer;
+    font-family: Spiegel, sans-serif;
+    font-size: 16px;
+    text-decoration: none
+}
+
+.tft-compensation-tooltip__more-details:hover {
+    text-decoration: underline
 }
 
 .verbal-abuse-remedy-component .verbal-abuse-remedy-header-container .verbal-abuse-remedy-header-text,

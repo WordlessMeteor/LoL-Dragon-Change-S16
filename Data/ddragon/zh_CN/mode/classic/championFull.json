@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Ahri": {
             "id": "Jade_Ahri",
@@ -235,8 +235,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 摄魂夺魄(被动)可在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置",
-            "blurb": "- 摄魂夺魄(被动)可在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置",
+            "lore": " - 摄魂夺魄(被动)会在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置<br>- 魅惑妖术(E)会提升阿狸对目标的伤害",
+            "blurb": " - 摄魂夺魄(被动)会在对敌人造成伤害时叠加层数<br>- 灵魄突袭(R)不会重置<br>- 魅惑妖术(E)会提升阿狸对目标的伤害",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -251,7 +251,7 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 460,
+                "hp": 440,
                 "hpperlevel": 80,
                 "mp": 280,
                 "mpperlevel": 50,
@@ -261,8 +261,8 @@
                 "spellblock": 30,
                 "spellblockperlevel": 0,
                 "attackrange": 550,
-                "hpregen": 6.1,
-                "hpregenperlevel": 0.6,
+                "hpregen": 4.5,
+                "hpregenperlevel": 0.45,
                 "mpregen": 6.85,
                 "mpregenperlevel": 0.6,
                 "crit": 0,
@@ -702,7 +702,7 @@
                     "id": "Jade_AhriR",
                     "name": "灵魄突袭",
                     "description": "阿狸向前猛冲，并放出元气弹，对周围的3个敌人（英雄优先）造成伤害。灵魄突袭在进入冷却以前最多可被施放三次。",
-                    "tooltip": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹。这些元气弹每枚造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<spellName>灵魄突袭</spellName>在10秒内可<recast>再次施放</recast>至多2次。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹。这些元气弹每枚造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<spellName>灵魄突袭</spellName>在{{ recastduration }}秒内可<recast>再次施放</recast>至多2次。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -715,11 +715,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        110,
-                        95,
+                        120,
+                        100,
                         80
                     ],
-                    "cooldownBurn": "110/95/80",
+                    "cooldownBurn": "120/100/80",
                     "cost": [
                         100,
                         100,
@@ -848,6 +848,12 @@
                     "id": "60084000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60084001",
+                    "num": 1,
+                    "name": "蜂刺 阿卡丽",
                     "chromas": false
                 },
                 {
@@ -1046,8 +1052,8 @@
                 {
                     "id": "Jade_AkaliQ",
                     "name": "奥义！绯叶",
-                    "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个持续6秒的绯叶印。阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
-                    "tooltip": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>，并在目标身上施加一个持续6秒的绯叶印。<br /><br />阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>{{ procdamage }}魔法伤害</magicDamage>并回复<keywordMajor>{{ energyreturn }}能量</keywordMajor>。{{ spellmodifierdescriptionappend }}",
+                    "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个绯叶印。阿卡丽对被标记单位的下一个近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
+                    "tooltip": "阿卡丽向目标投掷她的忍镰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>，并在目标身上施加一个持续{{ markduration }}秒的绯叶印。<br /><br />阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成<magicDamage>{{ procdamage }}魔法伤害</magicDamage>并回复<keywordMajor>{{ energyreturn }}能量</keywordMajor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "初始伤害",
@@ -1192,12 +1198,12 @@
                     "id": "Jade_AkaliW",
                     "name": "我流奥义！霞阵",
                     "description": "阿卡丽扔下一枚烟幕弹。当处于这个区域内时，阿卡丽获得护甲和魔法抗性并进入隐形状态。攻击或使用技能会短暂地使她显形。烟幕弹之中的敌人们会被降低移动速度。",
-                    "tooltip": "阿卡丽扔下一枚持续8秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>{{ totalresists }}护甲</scaleArmor>和<scaleMR>{{ totalresists }}魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br /><br />烟幕弹之中的敌人们会被<status>减速</status>{{ slowamount }}%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿卡丽扔下一枚持续{{ cloudduration }}秒的烟幕弹。当处于这个区域内时，阿卡丽获得<scaleArmor>{{ totalresists }}护甲</scaleArmor>和<scaleMR>{{ totalresists }}魔法抗性</scaleMR>并进入<keywordStealth>隐形</keywordStealth>状态。攻击或使用技能会短暂地使她显形。<br /><br />烟幕弹之中的敌人们会被<status>减速</status>{{ slowamount }}%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护甲加成",
                             "魔法抗性加成",
-                            "减速幅度",
+                            "减速",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
@@ -1228,18 +1234,11 @@
                     "effect": [
                         null,
                         [
-                            140,
-                            140,
-                            140,
-                            140,
-                            140
-                        ],
-                        [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -1249,32 +1248,11 @@
                             0
                         ],
                         [
-                            250,
-                            250,
-                            250,
-                            250,
-                            250
-                        ],
-                        [
-                            60,
-                            65,
-                            70,
-                            75,
-                            80
-                        ],
-                        [
-                            0.3,
-                            0.35,
-                            0.4,
-                            0.45,
-                            0.5
-                        ],
-                        [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -1284,11 +1262,39 @@
                             0
                         ],
                         [
-                            5,
-                            5.5,
-                            6,
-                            6.5,
-                            7
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -1300,15 +1306,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "140",
-                        "4",
                         "0",
-                        "250",
-                        "60/65/70/75/80",
-                        "0.3/0.35/0.4/0.45/0.5",
-                        "1",
                         "0",
-                        "5/5.5/6/6.5/7",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -1635,6 +1641,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60012002",
+                    "num": 2,
+                    "name": "金牛座 阿利斯塔",
+                    "chromas": false
+                },
+                {
                     "id": "60012008",
                     "num": 8,
                     "name": "黑暗骑士 阿利斯塔",
@@ -1685,14 +1697,14 @@
                     "id": "60012016",
                     "num": 16,
                     "name": "哞利斯塔 酸奶",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 10
                 },
                 {
                     "id": "60012017",
                     "num": 17,
                     "name": "哞利斯塔 花生牛奶",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -1766,14 +1778,14 @@
                     "id": "60012041",
                     "num": 41,
                     "name": "永恒之森 阿利斯塔 焰枫",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 40
                 },
                 {
                     "id": "60012042",
                     "num": 42,
                     "name": "永恒之森 阿利斯塔 辉瓣",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 40
                 },
                 {
@@ -3247,7 +3259,7 @@
             ],
             "passive": {
                 "name": "诅咒之触",
-                "description": "阿木木的攻击会削弱目标的魔法抗性，持续3秒。",
+                "description": "阿木木的普通攻击会减少目标的魔法抗性。",
                 "image": {
                     "full": "Jade_Amumu_Passive.png",
                     "sprite": "passive0.png",
@@ -3473,7 +3485,7 @@
                     "id": "Jade_AniviaFlashFrost",
                     "name": "寒冰闪耀",
                     "description": "艾尼维亚挥动翅膀聚集空气，制造一枚冰晶向目标区域施放，冰冻并伤害路径上的所有敌人。当冰晶爆裂时，它会晕眩并伤害一定范围内的所有敌人。",
-                    "tooltip": "一大块寒冰飞向目标位置，造成<magicDamage>{{ totalpassthroughdamage }}魔法伤害</magicDamage>并施加冰冻效果，<status>减缓</status>其20%移动速度。<br /><br />到达最大距离后，或当艾尼维亚<recast>再次施放</recast>该技能时，冰块会爆炸，对小范围内的敌人造成<magicDamage>{{ totalexplosiondamage }}魔法伤害</magicDamage>和{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "一枚巨大的冰块飞向目标区域，造成<magicDamage>{{ totalpassthroughdamage }}魔法伤害</magicDamage>并对目标施加冰冷效果，从而使其受到持续{{ slowduration }}秒的{{ movementspeedmod*-100 }}%移动速度<status>减速</status>。<br /><br />在飞到范围的终点时，或艾尼维亚<recast>再次施放</recast>此技能时，冰块会爆炸，对小范围内的敌人造成<magicDamage>{{ totalexplosiondamage }}魔法伤害</magicDamage>和{{ stunduration }}秒的<status>晕眩</status>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -4012,7 +4024,7 @@
             ],
             "passive": {
                 "name": "寒霜涅槃",
-                "description": "在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋在6秒内没有被击破的话，艾尼维亚就会闪亮重生。",
+                "description": "在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋没有被击破，艾尼维亚就会闪亮重生。",
                 "image": {
                     "full": "Jade_Anivia_P.png",
                     "sprite": "passive0.png",
@@ -4050,6 +4062,12 @@
                     "id": "60001001",
                     "num": 1,
                     "name": "哥特萝莉 安妮",
+                    "chromas": false
+                },
+                {
+                    "id": "60001004",
+                    "num": 4,
+                    "name": "舞会公主 安妮",
                     "chromas": false
                 },
                 {
@@ -4763,7 +4781,7 @@
             ],
             "passive": {
                 "name": "嗜火",
-                "description": "在施放4个技能后，安妮的下一次伤害类技能会对目标造成持续1.75秒的晕眩效果。　",
+                "description": "安妮的伤害类技能会不时地晕眩她的目标。",
                 "image": {
                     "full": "Jade_Annie_Passive.png",
                     "sprite": "passive0.png",
@@ -4972,7 +4990,7 @@
                             "减速"
                         ],
                         "effect": [
-                            "{{ slowpercent*-100.000000 }} -> {{ slowpercentnl*-100.000000 }}"
+                            "{{ slowpercent*-100.000000 }}% -> {{ slowpercentnl*-100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -5017,46 +5035,46 @@
                             6
                         ],
                         [
-                            20,
-                            30,
-                            40,
-                            50,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.22,
-                            0.235,
-                            0.25,
-                            0.265,
-                            0.28
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.1,
-                            1.175,
-                            1.25,
-                            1.325,
-                            1.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -5071,12 +5089,12 @@
                         "4",
                         "4",
                         "6",
-                        "20/30/40/50/60",
-                        "0.22/0.235/0.25/0.265/0.28",
-                        "1.1/1.175/1.25/1.325/1.4",
-                        "1",
-                        "1",
-                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -5224,13 +5242,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1200,
-                        1200,
-                        1200,
-                        1200,
-                        1200
+                        1250,
+                        1250,
+                        1250,
+                        1250,
+                        1250
                     ],
-                    "rangeBurn": "1200",
+                    "rangeBurn": "1250",
                     "image": {
                         "full": "Jade_AsheVolley.png",
                         "sprite": "spell1.png",
@@ -5246,15 +5264,15 @@
                     "id": "Jade_AsheSpiritOfTheHawk",
                     "name": "鹰击长空",
                     "description": "艾希每次击杀单位都会获得额外金币。艾希可以激活技能，派遣她的猎鹰之灵去执行侦查任务。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>艾希每次击杀敌人都会额外获得<gold>{{ additionalgold }}金币</gold>。<br /><br /><spellActive>主动：</spellActive>艾希派出一只猎鹰，为指定区域提供5秒视野。它还会在飞行时显形途经的区域。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>艾希在每次击杀一个敌人时获得<gold>{{ additionalgold }}额外金币</gold>。<br /><br /><spellActive>主动：</spellActive>艾希派出一只鹰，以在一个区域提供{{ revealduration }}秒视野。它还会在飞行时显形附近的区域。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "距离",
-                            "额外金币"
+                            "额外金币",
+                            "距离"
                         ],
                         "effect": [
-                            "{{ castrange }} -> {{ castrangeNL }}",
-                            "{{ additionalgold }} -> {{ additionalgoldNL }}"
+                            "{{ additionalgold }} -> {{ additionalgoldNL }}",
+                            "{{ castrange }} -> {{ castrangeNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -5278,32 +5296,32 @@
                     "effect": [
                         null,
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            90,
-                            130,
-                            170,
-                            210
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25000,
-                            25000,
-                            25000,
-                            25000,
-                            25000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -5350,10 +5368,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "3",
-                        "50/90/130/170/210",
-                        "25000",
-                        "5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -5387,7 +5405,7 @@
                     "id": "Jade_AsheEnchantedCrystalArrow",
                     "name": "魔法水晶箭",
                     "description": "艾希射出一支沿直线飞行的魔法水晶箭。如果水晶箭命中了一名敌方英雄，则对该英雄造成伤害和晕眩效果，晕眩时长取决于水晶箭的飞行距离，最多持续3.5秒。此外，附近的敌方单位会受到伤害并减速。",
-                    "tooltip": "艾希射出沿直线飞行的魔法水晶箭，<status>晕眩</status>命中的敌方英雄并造成<magicDamage>{{ rmaindamage }}魔法伤害</magicDamage>。<status>晕眩</status>时长随飞行距离提升，最多{{ maxstunduration }}秒。附近敌人被<status>减速</status>50%，持续3秒，并受到<magicDamage>{{ rmaindamagesplashtooltip }}伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "艾希射出魔法水晶箭，<status>晕眩</status>命中的第一个敌方英雄，并造成<magicDamage>{{ rmaindamage }}魔法伤害</magicDamage>。<status>晕眩</status>时长取决于飞行距离，至多{{ maxstunduration }}秒。还会对目标周围的敌人们造成持续{{ slowduration }}秒的{{ movementspeedmod*-100 }}%<status>减速</status>和<magicDamage>{{ raoedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -5766,13 +5784,13 @@
                     ],
                     "cooldownBurn": "22/21/20/19/18",
                     "cost": [
-                        120,
-                        120,
-                        120,
-                        120,
-                        120
+                        140,
+                        140,
+                        140,
+                        140,
+                        140
                     ],
-                    "costBurn": "120",
+                    "costBurn": "140",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -5864,13 +5882,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1079,
-                        1079,
-                        1079,
-                        1079,
-                        1079
+                        1025,
+                        1025,
+                        1025,
+                        1025,
+                        1025
                     ],
-                    "rangeBurn": "1079",
+                    "rangeBurn": "1025",
                     "image": {
                         "full": "Jade_BlitzcrankRocketGrab.png",
                         "sprite": "spell1.png",
@@ -6026,8 +6044,8 @@
                 {
                     "id": "Jade_BlitzcrankPowerFist",
                     "name": "能量铁拳",
-                    "description": "布里茨为机械手臂充能，下次攻击造成双倍伤害并击飞目标。",
-                    "tooltip": "布里茨为机械手臂充能，使下次攻击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并将目标<status>击飞</status>{{ ccduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "description": "布里茨为它的机械手臂充能，以使它的下次攻击造成额外伤害并击飞目标。",
+                    "tooltip": "布里茨为它的机械手臂充能，以使它的下次攻击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并<status>击飞</status>目标。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间"
@@ -6165,8 +6183,8 @@
                 {
                     "id": "Jade_BlitzcrankStaticField",
                     "name": "静电力场",
-                    "description": "被动生成电弧，对附近的一名敌人造成伤害。此外，主动施放时对周围的敌人造成伤害和0.5秒沉默，但在施放后会暂时禁用被动电弧效果，直到技能冷却完毕。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>布里茨周身生成电弧，每2.5秒对附近一名随机敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>对周围敌方单位造成<magicDamage>{{ activedamage }}魔法伤害</magicDamage>和0.5秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
+                    "description": "被动地引发闪电弹来伤害一个附近的敌人。此外，布里茨可以主动激活这个技能来对附近的敌人造成伤害和短暂的沉默效果。",
+                    "tooltip": "<spellPassive>被动效果：</spellPassive>布里茨每{{ passivehitrate }}秒会释放一道电弧，对附近的随机一个单位造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动效果：</spellActive>对周围的敌方单位们造成<magicDamage>{{ activedamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。该被动效果会在【静电力场】尚未冷却完毕时失效。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "电弧伤害",
@@ -6179,11 +6197,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        30,
-                        30,
-                        30
+                        40,
+                        40,
+                        40
                     ],
-                    "cooldownBurn": "30",
+                    "cooldownBurn": "40",
                     "cost": [
                         150,
                         150,
@@ -6280,7 +6298,7 @@
             ],
             "passive": {
                 "name": "法力屏障",
-                "description": "布里茨的生命值降到20%以下时，法力屏障就会激活，生成一道相当于其50%法力值的护盾，持续10秒。法力屏障每90秒内只能触发一次。",
+                "description": "在低生命值状态受到伤害时，布里茨会先获得护盾，数额相当于它的一部分当前法力值。这个效果有一段冷却时间。",
                 "image": {
                     "full": "Jade_Blitzcrank_ManaBarrier.png",
                     "sprite": "passive0.png",
@@ -6520,7 +6538,7 @@
                     "id": "Jade_BrandQ",
                     "name": "火焰烙印",
                     "description": "布兰德向前方放出一团可造成魔法伤害的火球。如果目标带有烈焰焚身效果，则火焰烙印将使目标晕眩。",
-                    "tooltip": "布兰德向前方放出一团可造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>的火球。<br /><br /><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，则<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>2秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布兰德向前方放出一团可造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>的火球。<br /><br /><spellPassive>炽热之焰：</spellPassive>如果目标带有<keywordMajor>烈焰焚身</keywordMajor>效果，那么<spellName>火焰烙印</spellName>将使目标<status>晕眩</status>{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -6552,11 +6570,11 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            100,
-                            130,
-                            160,
-                            190
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -6624,7 +6642,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/100/130/160/190",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -7059,7 +7077,7 @@
             ],
             "passive": {
                 "name": "炽热之焰",
-                "description": "布兰德的技能会对目标施加烈焰焚身效果，在4秒内持续造成共8%目标最大生命值的魔法伤害。",
+                "description": "布兰德的技能会对他的目标施加【烈焰焚身】效果，造成目标一部分最大生命值的魔法伤害。",
                 "image": {
                     "full": "Jade_BrandP.png",
                     "sprite": "passive0.png",
@@ -8086,8 +8104,8 @@
                 {
                     "id": "Jade_CorkiQ",
                     "name": "磷光炸弹",
-                    "description": "库奇向目标区域发射一枚闪光弹。这次攻击会显形爆炸周围非潜行状态的单位和英雄，持续6秒。",
-                    "tooltip": "对目标区域内的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。此外，爆炸会<status>显形</status>该区域和被爆炸命中的英雄，持续6秒（不会使已潜行的单位显形）。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "库奇发射一颗炸弹，从而伤害并显形爆裂点周围的敌人们。",
+                    "tooltip": "库奇发射一颗炸弹，从而造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。该区域及命中的敌方英雄会被显形{{ revealduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -8369,7 +8387,7 @@
                     "id": "Jade_CorkiE",
                     "name": "格林机枪",
                     "description": "库奇使用格林机枪扫射他面前锥形范围内的敌人，造成伤害并削减敌人护甲。",
-                    "tooltip": "库奇使用格林机枪扫射他面前锥形范围内的敌人，持续4秒，造成<physicalDamage>{{ totaldamagetooltiponly }}物理伤害</physicalDamage>，并每秒<status>削减{{ armormod*-1 }}护甲</status>。护甲削减效果可叠加，持续2秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "库奇使用格林机枪扫射他面前锥形范围内的敌人{{ activeduration }}秒，每秒造成<physicalDamage>{{ damagepersecondcalc }}物理伤害</physicalDamage>并<status>削减敌人{{ armormod*-1 }}护甲</status>。该护甲削减效果可以叠层并且持续{{ shredduration }}秒。(最大伤害：<physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -8377,7 +8395,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ tooltipdamage }} -> {{ tooltipdamageNL }}",
+                            "{{ basedps }} -> {{ basedpsNL }}",
                             "{{ armormod*-1.000000 }} -> {{ armormodnl*-1.000000 }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -8511,8 +8529,8 @@
                 {
                     "id": "Jade_CorkiR",
                     "name": "火箭轰击",
-                    "description": "库奇朝着他的目标位置发射一枚导弹。导弹会在命中第一个敌人后爆炸，并对目标周围单位造成伤害。库奇每12秒就会挂载一枚导弹，最多挂载7枚。每发射3枚导弹后，下一次就会发射超级导弹，造成额外伤害。",
-                    "tooltip": "库奇向目标地点发射一枚导弹。导弹会在命中第一个敌人后爆炸。每枚导弹会在一片区域内造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能有7层充能（{{ ammorechargetime }}秒充能时间）。<br /><br />每发射2枚导弹后，下一次就会发射超级导弹，造成<magicDamage>{{ totaldamagebig }}魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "库奇朝着他的目标地点发射一枚导弹。导弹会在命中第一个敌人后爆炸，并对目标周围单位造成伤害。有些导弹将是超级导弹，可造成额外伤害。",
+                    "tooltip": "库奇朝着他的目标地点发射一枚导弹，该导弹会在命中第一个敌人后爆炸。每枚导弹在一个区域内造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能拥有{{ maxammotooltip }}层充能({{ ammorechargetime }}秒充能时间)。<br /><br />每第3枚导弹将是超级导弹，转而造成<magicDamage>{{ totaldamagebig }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -8661,6 +8679,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60036001",
+                    "num": 1,
+                    "name": "战栗之毒 蒙多",
+                    "chromas": false
+                },
+                {
                     "id": "60036002",
                     "num": 2,
                     "name": "健美教练 蒙多",
@@ -8670,13 +8694,13 @@
                     "id": "60036003",
                     "num": 3,
                     "name": "律政大亨 蒙多",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60036008",
                     "num": 8,
                     "name": "泳池派对 蒙多",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60036016",
@@ -8805,8 +8829,8 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 522,
-                "hpperlevel": 89,
+                "hp": 560,
+                "hpperlevel": 90,
                 "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 345,
@@ -8824,24 +8848,26 @@
                 "attackdamage": 59.23,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.8,
-                "attackspeed": 0.625
+                "attackspeed": 0.658
             },
             "spells": [
                 {
                     "id": "Jade_DrMundoQ",
                     "name": "病毒屠刀",
                     "description": "蒙多医生掷出他的屠刀，对目标造成基于其最大生命值的伤害。",
-                    "tooltip": "蒙多医生掷出他的屠刀，造成相当于目标{{ damagemod*100 }}%当前生命值的<magicDamage>魔法伤害</magicDamage>（最低造成{{ mindamage }}伤害），以及持续2秒的40%<status>减速</status>。<br /><br />如果屠刀命中目标，则会返还一半生命消耗。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蒙多医生挥出他的屠刀，造成目标{{ damagemod*100 }}%当前生命值的<magicDamage>魔法伤害</magicDamage>(不会小于{{ mindamage }})和持续{{ slowduration }}秒的{{ movemod*-100 }}%<status>减速</status>效果。<br /><br />如果屠刀命中了一个目标，就会返还<healing>{{ healthreturn }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",
                             "伤害百分比",
-                            "生命值消耗"
+                            "生命值消耗",
+                            "最大伤害"
                         ],
                         "effect": [
                             "{{ mindamage }} -> {{ mindamageNL }}",
                             "{{ damagemod*100.000000 }}% -> {{ damagemodnl*100.000000 }}%",
-                            "{{ healthcost }} -> {{ healthcostNL }}"
+                            "{{ healthcost }} -> {{ healthcostNL }}",
+                            "{{ maxdamage }} -> {{ maxdamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -9116,8 +9142,8 @@
                 {
                     "id": "Jade_DrMundoE",
                     "name": "潜能激发",
-                    "description": "潜能激发会在5秒内提升蒙多医生的攻击力。此外，蒙多医生每损失一定百分比的生命值，还会获得额外攻击力。",
-                    "tooltip": "蒙多医生获得<physicalDamage>{{ baseincrease }}攻击力</physicalDamage>，持续5秒。祖安蒙多医生每损失一定百分比的生命值，还会额外获得<physicalDamage>+{{ damagemod }}攻击力</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "蒙多医生获得持续若干秒的攻击力，数额基于他的已损失生命值。",
+                    "tooltip": "蒙多医生获得持续{{ duration }}秒的<physicalDamage>{{ baseincrease }}攻击力</physicalDamage>。蒙多医生每损失1%生命值，就会获得额外的<physicalDamage>+{{ damagemod }}攻击力</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外攻击力",
@@ -9260,7 +9286,7 @@
                     "id": "Jade_DrMundoR",
                     "name": "背水一战",
                     "description": "蒙多医生消耗部分生命值来提升移动速度，并巨幅提升生命回复速度。",
-                    "tooltip": "蒙多医生在12秒内持续回复共<healing>{{ maximumhealthregen }}生命值</healing>。此外，他还会获得<speed>{{ speedmod*100 }}%移动速度</speed>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蒙多医生在{{ duration }}秒里持续回复共<healing>{{ maximumhealthregen }}生命值</healing>和<speed>{{ speedmod*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "治疗术",
@@ -9374,7 +9400,7 @@
             ],
             "passive": {
                 "name": "肾上腺激素",
-                "description": "蒙多医生每秒回复0.3%的最大生命值。",
+                "description": "蒙多医生每秒回复一部分最大生命值。",
                 "image": {
                     "full": "Jade_DrMundo_P.png",
                     "sprite": "passive0.png",
@@ -9406,6 +9432,12 @@
                     "id": "60028000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60028001",
+                    "num": 1,
+                    "name": "黑暗女王 伊芙琳",
                     "chromas": false
                 },
                 {
@@ -9559,7 +9591,7 @@
                     "id": "60028302",
                     "num": 302,
                     "name": "经典 伊芙琳 黑暗女王",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 301
                 }
             ],
@@ -9644,81 +9676,81 @@
                             0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            60,
-                            60,
-                            60,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            25,
-                            35,
-                            45,
-                            55
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.25,
-                            -0.25,
-                            -0.25,
-                            -0.25,
-                            -0.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
                         "0",
-                        "30",
-                        "60",
-                        "15/25/35/45/55",
-                        "25/30/35/40/45",
-                        "6",
-                        "30",
-                        "50",
-                        "4",
-                        "-0.25"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -9759,110 +9791,110 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        15,
-                        15,
-                        15,
-                        15,
-                        15
+                        20,
+                        20,
+                        20,
+                        20,
+                        20
                     ],
-                    "cooldownBurn": "15",
+                    "cooldownBurn": "20",
                     "cost": [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
+                        40,
+                        40,
+                        40,
+                        40,
+                        40
                     ],
-                    "costBurn": "0",
+                    "costBurn": "40",
                     "datavalues": {},
                     "effect": [
                         null,
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.25,
-                            1.5,
-                            1.75,
-                            2,
-                            2.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.45,
-                            -0.45,
-                            -0.45,
-                            -0.45,
-                            -0.45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            14,
-                            13,
-                            12,
-                            11
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            250,
-                            300,
-                            350,
-                            400,
-                            450
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.35,
-                            0.375,
-                            0.4,
-                            0.425,
-                            0.45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "2",
-                        "1.25/1.5/1.75/2/2.25",
-                        "-0.45",
-                        "15/14/13/12/11",
-                        "5",
-                        "1.5",
-                        "250/300/350/400/450",
-                        "0.75",
-                        "0.35/0.375/0.4/0.425/0.45",
-                        "4"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
-                    "costType": "无消耗",
+                    "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
                         0,
@@ -9881,7 +9913,7 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "无消耗"
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
                 },
                 {
                     "id": "Jade_EvelynnE",
@@ -10030,7 +10062,7 @@
                     "id": "Jade_EvelynnR",
                     "name": "痛苦之拥",
                     "description": "伊芙琳从地下召唤尖刺，对区域内的敌人造成伤害并施加减速效果。随后，她会根据命中的敌方英雄数量获得护盾。",
-                    "tooltip": "伊芙琳刺穿目标区域内的所有敌人，造成相当于当前生命值<magicDamage>{{ totaldamage }}%的魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slow*100 }}%<status>减速</status>。<br /><br />伊芙琳汲取敌人的痛苦，每命中一名敌方英雄，都会获得一个<shield>{{ shieldamount }}生命值护盾</shield>，最多持续6秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "伊芙琳刺穿目标区域内的所有敌人，造成相当于当前生命值<magicDamage>{{ totaldamage }}%的魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slow*100 }}%<status>减速</status>。<br /><br />伊芙琳汲取敌人的痛苦，每命中一名敌方英雄，都会获得一个<shield>{{ shieldamount }}生命值护盾</shield>，最多持续{{ shieldduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "当前生命值百分比",
@@ -10062,49 +10094,49 @@
                     "effect": [
                         null,
                         [
-                            125,
-                            250,
-                            375
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.4,
-                            1.4,
-                            1.4
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            225,
-                            300
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            4,
-                            3
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.3,
-                            0.3,
-                            0.3
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            700,
-                            700,
-                            700
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            45,
-                            60
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -10114,15 +10146,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "125/250/375",
-                        "1.4",
-                        "2.5",
-                        "150/225/300",
-                        "3",
-                        "5/4/3",
-                        "0.3",
-                        "700",
-                        "30/45/60",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -10183,6 +10215,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60081001",
+                    "num": 1,
+                    "name": "冒险精神 伊泽瑞尔",
+                    "chromas": false
+                },
+                {
                     "id": "60081003",
                     "num": 3,
                     "name": "冰川勇者 伊泽瑞尔",
@@ -10192,13 +10230,13 @@
                     "id": "60081005",
                     "num": 5,
                     "name": "未来战士 伊泽瑞尔",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60081043",
                     "num": 43,
                     "name": "心之钢 伊泽瑞尔",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60081044",
@@ -10536,13 +10574,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1150,
-                        1150,
-                        1150,
-                        1150,
-                        1150
+                        1050,
+                        1050,
+                        1050,
+                        1050,
+                        1050
                     ],
-                    "rangeBurn": "1150",
+                    "rangeBurn": "1050",
                     "image": {
                         "full": "Jade_EzrealQ.png",
                         "sprite": "spell1.png",
@@ -10558,7 +10596,7 @@
                     "id": "Jade_EzrealW",
                     "name": "精华跃动",
                     "description": "伊泽瑞尔发射一道起伏的能量波，降低途经敌方英雄的攻击速度并对其造成魔法伤害，同时为途经友方英雄回复生命值并提升其攻击速度。",
-                    "tooltip": "伊泽瑞尔发射一道能量波，对途经的所有敌方英雄造成<magicDamage>{{ damage }}魔法伤害</magicDamage>和持续5秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>削减。<br /><br />音波在命中友军时会为其回复<healing>{{ totalheal }}生命值</healing>和持续5秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>提升。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "伊泽瑞尔发射一道能量波，对它途经的所有敌方英雄造成<magicDamage>{{ damage }}魔法伤害</magicDamage>和持续{{ duration }}秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>削减。<br /><br />被命中的友方英雄会回复<healing>{{ totalheal }}生命值</healing>并获得持续{{ duration }}秒的{{ attackspeed }}%<attackSpeed>攻击速度</attackSpeed>提升。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -10841,8 +10879,8 @@
                 {
                     "id": "Jade_EzrealR",
                     "name": "精准弹幕",
-                    "description": "伊泽瑞尔引导1秒，发射一个强力的能量弹幕，弹幕将对它途经的每一个敌人造成魔法伤害。（每穿过一个单位，弹幕造成的伤害就会降低10%）。",
-                    "tooltip": "伊泽瑞尔引导1秒，发射一串弹幕，弹幕将对它途经的每一个单位造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。但每命中一个单位，弹幕造成的伤害就会降低{{ damagereductionperhit*100 }}%（最低{{ minimumdamagepercent*100 }}%）{{ spellmodifierdescriptionappend }}",
+                    "description": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成高额伤害。",
+                    "tooltip": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。不过，每穿过一个单位，它造成的伤害就会降低{{ damagereductionperhit*100 }}%(最小值为{{ minimumdamagepercent*100 }}%){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -10954,7 +10992,7 @@
             ],
             "passive": {
                 "name": "咒能高涨",
-                "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度（最多可叠加5次）。",
+                "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度。",
                 "image": {
                     "full": "Jade_Ezreal_RisingSpellForce.png",
                     "sprite": "passive0.png",
@@ -10989,6 +11027,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60009001",
+                    "num": 1,
+                    "name": "幽魂 费德提克",
+                    "chromas": false
+                },
+                {
                     "id": "60009003",
                     "num": 3,
                     "name": "荒野幽灵 费德提克",
@@ -10998,13 +11042,13 @@
                     "id": "60009006",
                     "num": 6,
                     "name": "惊悚派对 费德提克",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60009016",
                     "num": 16,
                     "name": "惊悚派对 费德提克 吓吓红",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 6
                 },
                 {
@@ -11018,14 +11062,14 @@
                     "id": "60009018",
                     "num": 18,
                     "name": "惊悚派对 费德提克 怕怕蓝",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 6
                 },
                 {
                     "id": "60009019",
                     "num": 19,
                     "name": "荒野幽灵 费德提克 贝列之锐",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 3
                 },
                 {
@@ -11163,14 +11207,14 @@
                     "id": "60009048",
                     "num": 48,
                     "name": "绝命花妖 费德提克 冷艳绽放",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 46
                 },
                 {
                     "id": "60009049",
                     "num": 49,
                     "name": "绝命花妖 费德提克 葱茏绽放",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 46
                 },
                 {
@@ -11552,7 +11596,7 @@
                     "id": "Jade_FiddlesticksE",
                     "name": "黑暗之风",
                     "description": "一阵黑暗之风袭向目标敌人，并在附近敌人之间弹射，对命中的敌人造成伤害并施加沉默效果。",
-                    "tooltip": "一阵黑暗之风袭向目标敌人，并在附近敌人之间最多弹射5次。每次命中都会造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "一阵黑暗之风袭向目标敌人，并在附近敌人之间最多弹射{{ maxbouncestooltip }}次。每次打击都会造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ silenceduration }}秒<status>沉默</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -11852,6 +11896,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60041002",
+                    "num": 2,
+                    "name": "老兵 普朗克",
+                    "chromas": false
+                },
+                {
                     "id": "60041005",
                     "num": 5,
                     "name": "特种部队 普朗克",
@@ -11887,14 +11937,14 @@
                     "id": "60041011",
                     "num": 11,
                     "name": "恐惧新星 普朗克“贪婪黑洞号”船长",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 8
                 },
                 {
                     "id": "60041012",
                     "num": 12,
                     "name": "恐惧新星 普朗克“皇家私掠号”船长",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 8
                 },
                 {
@@ -11928,14 +11978,14 @@
                     "id": "60041017",
                     "num": 17,
                     "name": "泳池派对 普朗克 菠萝毁灭者",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 14
                 },
                 {
                     "id": "60041018",
                     "num": 18,
                     "name": "泳池派对 普朗克 海滩主宰者",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 14
                 },
                 {
@@ -12298,7 +12348,7 @@
                     "id": "Jade_GangplankE",
                     "name": "鼓舞士气",
                     "description": "普朗克朝空中鸣枪，为附近友方英雄提升攻击力和移动速度。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>普朗克获得<physicalDamage>{{ passivead }}攻击力</physicalDamage>和<speed>{{ passivems*100 }}%移动速度</speed>。<br /><br /><spellActive>主动：</spellActive>普朗克朝空中鸣枪，暂时失去被动加成，但获得持续{{ duration }}秒的<physicalDamage>{{ activead }}攻击力</physicalDamage>和<speed>{{ activems*100 }}%移动速度</speed>。附近友方英雄获得持续{{ duration }}秒的(一半该加成)<physicalDamage>{{ allyactivead }}攻击力</physicalDamage>和<speed>{{ allyactivems*100 }}%移动速度</speed>，。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>普朗克获得<physicalDamage>{{ passivead }}攻击力</physicalDamage>和<speed>{{ passivems*100 }}%移动速度</speed>。<br /><br /><spellActive>主动：</spellActive>普朗克朝空中鸣枪，暂时失去被动加成，但获得持续{{ duration }}秒的<physicalDamage>{{ activead }}攻击力</physicalDamage>和<speed>{{ activems*100 }}%移动速度</speed>。附近友方英雄获得持续{{ duration }}秒的(一半该加成)<physicalDamage>{{ allyactivead }}攻击力</physicalDamage>和<speed>{{ allyactivems*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "主动攻击力",
@@ -12444,7 +12494,7 @@
                 {
                     "id": "Jade_GangplankR",
                     "name": "加农炮幕",
-                    "description": "普朗克命令战舰对目标区域进行持续7秒的炮击，对敌人造成减速，并在区域内随机位置造成伤害。",
+                    "description": "普朗克命令战舰对地图上的任意区域进行炮击，从而对敌人们造成减速和持续伤害。",
                     "tooltip": "命令普朗克的战舰对目标区域进行持续{{ duration }}秒的炮击，期间使区域内的敌人<status>减速</status>{{ slow*100 }}%。炮弹不断落入该区域，每发炮弹造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -12493,9 +12543,9 @@
                             0
                         ],
                         [
-                            1.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -12503,24 +12553,24 @@
                             0
                         ],
                         [
-                            300,
-                            300,
-                            300
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            75,
-                            75,
-                            75
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -12529,12 +12579,12 @@
                         "0",
                         "0",
                         "0",
-                        "1.5/0.5/0.5",
                         "0",
-                        "300",
-                        "75",
-                        "1",
-                        "40"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -12592,6 +12642,12 @@
                     "num": 0,
                     "name": "default",
                     "chromas": true
+                },
+                {
+                    "id": "60086002",
+                    "num": 2,
+                    "name": "黄金骑士 盖伦",
+                    "chromas": false
                 },
                 {
                     "id": "60086005",
@@ -12678,14 +12734,14 @@
                     "id": "60086021",
                     "num": 21,
                     "name": "德玛西亚警官 盖伦 五彩斑斓黑",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 14
                 },
                 {
                     "id": "60086022",
                     "num": 22,
                     "name": "机神玄武 盖伦",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60086023",
@@ -12735,7 +12791,7 @@
                 "mpperlevel": 0,
                 "movespeed": 345,
                 "armor": 25.7,
-                "armorperlevel": 2.7,
+                "armorperlevel": 3,
                 "spellblock": 31.25,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
@@ -12745,7 +12801,7 @@
                 "mpregenperlevel": 0,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 55.5,
+                "attackdamage": 60,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.9,
                 "attackspeed": 0.625
@@ -12898,7 +12954,7 @@
                     "id": "Jade_GarenW",
                     "name": "勇气",
                     "description": "盖伦用他的大剑表演死亡之舞，在持续期间内对周围的敌方单位造成伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>盖伦从额外<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>中获得的收益提高20%。<br /><br /><spellActive>主动：</spellActive>盖伦获得一个持续{{ buffduration }}秒的防御护盾，使受到的伤害降低{{ damagereduction*100 }}%，并获得30%控制减免效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>盖伦从额外<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>中获得的收益提高{{ resistancescaling*100 }}%。<br /><br /><spellActive>主动：</spellActive>盖伦获得一个持续{{ buffduration }}秒的防御护盾，使受到的伤害降低{{ damagereduction*100 }}%，并获得{{ tenacitybonus*100 }}%控制减免效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "持续时间",
@@ -13039,7 +13095,7 @@
                     "id": "Jade_GarenE",
                     "name": "审判",
                     "description": "盖伦快速地旋转身体挥舞大剑，并对邻近敌人造成物理伤害。",
-                    "tooltip": "盖伦快速地旋转身体挥舞大剑，持续{{ duration }}秒，每秒对邻近敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。盖伦在旋转时可以穿过单位，但直接穿过单位会使移动速度降低20%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "盖伦快速地旋转身体挥舞大剑{{ duration }}秒，并且每秒对附近敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。(最大伤害：<physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每秒基础伤害",
@@ -13478,13 +13534,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        12.5,
                         11.5,
                         10.5,
                         9.5,
-                        8.5,
-                        7.5
+                        8.5
                     ],
-                    "cooldownBurn": "11.5/10.5/9.5/8.5/7.5",
+                    "cooldownBurn": "12.5/11.5/10.5/9.5/8.5",
                     "cost": [
                         80,
                         90,
@@ -13621,13 +13677,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        25,
-                        25,
-                        25,
-                        25,
-                        25
+                        30,
+                        30,
+                        30,
+                        30,
+                        30
                     ],
-                    "cooldownBurn": "25",
+                    "cooldownBurn": "30",
                     "cost": [
                         0,
                         0,
@@ -13905,11 +13961,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        100,
-                        90,
-                        80
+                        130,
+                        115,
+                        100
                     ],
-                    "cooldownBurn": "100/90/80",
+                    "cooldownBurn": "130/115/100",
                     "cost": [
                         100,
                         125,
@@ -14041,6 +14097,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60074002",
+                    "num": 2,
+                    "name": "拆弹专家 黑默丁格",
+                    "chromas": false
+                },
+                {
                     "id": "60074005",
                     "num": 5,
                     "name": "生化博士 黑默丁格",
@@ -14131,14 +14193,14 @@
                     "id": "60074026",
                     "num": 26,
                     "name": "冷若冰霜小深蓝 黑默丁格",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 24
                 },
                 {
                     "id": "60074027",
                     "num": 27,
                     "name": "浪漫浪漫小淡紫 黑默丁格",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 24
                 },
                 {
@@ -14232,7 +14294,7 @@
                     "id": "Jade_HeimerdingerQ",
                     "name": "H-28G进化炮台",
                     "description": "黑默丁格部署一座机枪炮台。随着该技能等级提升，炮台会获得新的能力。（炮台对防御塔仅造成一半伤害。）",
-                    "tooltip": "黑默丁格建造一座机枪炮台，每次攻击造成<magicDamage>{{ bonusdamage }}魔法伤害</magicDamage> 。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒刷新时间)。<br /><br />该技能每提升一级，炮台都会获得额外强化：<br /><attention>2级：</attention>炮台攻击会使目标的护甲和魔法抗性减少1(最多降低50)<br /><attention>3级：</attention>炮台数量上限提升至2<br /><attention>4级：</attention>炮台额外获得<scaleHealth>125生命值</scaleHealth><br /><attention>5级：</attention>炮台攻击会造成范围伤害{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格建造一座机枪炮台，它的每次攻击造成<magicDamage>{{ bonusdamage }}魔法伤害</magicDamage>。炮台在被放置后的最初{{ attackspeedduration }}秒获得<attackSpeed>{{ turretbonusattackspeed*100 }}%攻击速度</attackSpeed>。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒充能时间)。<br /><br />该技能等级每提升一级，就会获得进一步强化：<br /><attention>2级：</attention>炮台攻击会使目标的护甲和魔法抗性降低{{ level2resistshred }}（最多降低{{ maxshredcaptooltip }}）<br /><attention>3级：</attention>炮台数量上限提升至2个<br /><attention>4级：</attention>炮台额外获得<scaleHealth>{{ level4hptooltip }}生命值</scaleHealth><br /><attention>5级：</attention>炮台攻击会造成{{ aoedamagemod*100 }}%溅射伤害{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -14373,7 +14435,7 @@
                     "id": "Jade_HeimerdingerW",
                     "name": "海克斯科技微型导弹",
                     "description": "黑默丁格发射数枚长程导弹，瞄准离黑默丁格最近的敌人。",
-                    "tooltip": "黑默丁格发射3枚追踪敌人的微型火箭(每人最多命中1枚)，优先攻击离他最近的目标。每枚火箭造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格发射{{ maxtargets }}枚追踪敌人的微型火箭(每人最多命中1枚)，优先攻击离他最近的目标。每枚火箭造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -14492,13 +14554,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1100,
-                        1100,
-                        1100,
-                        1100,
-                        1100
+                        950,
+                        950,
+                        950,
+                        950,
+                        950
                     ],
-                    "rangeBurn": "1100",
+                    "rangeBurn": "950",
                     "image": {
                         "full": "Jade_HeimerdingerW.png",
                         "sprite": "spell2.png",
@@ -14514,7 +14576,7 @@
                     "id": "Jade_HeimerdingerE",
                     "name": "CH-1震荡手雷",
                     "description": "黑默丁格朝一个位置掷出一颗手雷，对敌方单位造成伤害，并对直接命中的敌人造成晕眩效果，对附近单位造成致盲。",
-                    "tooltip": "黑默丁格投掷一枚手雷，对敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ blindduration }}秒<status>致盲</status>。对直接命中的敌人造成1.5秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "黑默丁格投掷一枚手雷，对敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ blindduration }}秒<status>致盲</status>。对直接命中的敌人造成{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -14659,7 +14721,7 @@
                     "id": "Jade_HeimerdingerR",
                     "name": "升级！！！",
                     "description": "被动/主动：被动提升冷却缩减。激活后为所有已激活的进化炮台回复生命值，并让它们在短时间内发射能降低目标移动速度的冰霜射击。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>{{ cooldownbonus*-100 }}%冷却缩减。<br /><br /><spellActive>主动：</spellActive>在持续时间内强化所有技能和炮台。<br /><br /><spellName>进化炮台：</spellName>所有炮台<healing>回复</healing>100%最大生命值，每次攻击施加<status>{{ movementspeedmod*-100 }}%减速</status>。<br /><spellName>海克斯科技微型导弹：</spellName>发射的导弹数量从3枚提升至5枚。<br /><spellName>CH-1震荡手雷：</spellName>飞行速度提升33%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>{{ cooldownbonus*-100 }}%冷却缩减。<br /><br /><spellActive>主动：</spellActive>在持续时间内强化所有技能和炮台。<br /><br /><spellName>进化炮台：</spellName>所有炮台<healing>回复</healing>100%最大生命值。每次攻击施加<status>{{ movementspeedmod*-100 }}%减速</status>。<br /><spellName>海克斯科技微型导弹：</spellName>发射{{ wmaxmissiles }}枚火箭。<br /><spellName>CH-1震荡手雷：</spellName>飞行速度提升33%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -14689,68 +14751,68 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            140,
-                            180
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            80,
-                            80
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.12,
-                            0.12,
-                            0.12
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            500,
-                            690,
-                            865
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.45,
-                            0.45,
-                            0.45
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            100,
-                            120
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            135,
-                            180,
-                            225
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            28,
-                            39,
-                            49
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "100/140/180",
-                        "80",
-                        "1.5",
-                        "0.12",
-                        "500/690/865",
-                        "0.45",
-                        "80/100/120",
-                        "135/180/225",
-                        "28/39/49",
-                        "150/250/350"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -15035,7 +15097,7 @@
                     "id": "Jade_JannaHowlingGale",
                     "name": "飓风呼啸",
                     "description": "迦娜改变气压和温度，在目标区域召唤小型风暴，对沿途的所有单位造成伤害和击飞效果。召唤风暴时，迦娜可以再次使用此技能来立刻施放风暴，造成的伤害取决于蓄力时间的长短。",
-                    "tooltip": "召唤一道旋风，对沿途的所有敌人造成<magicDamage>{{ minimumdamage }}魔法伤害</magicDamage>和<status>击飞</status>。旋风的充能时间每延长一秒（最多3秒），飞行距离就会变远，造成<magicDamage>{{ chargedamage }}额外伤害</magicDamage>，并将敌人<status>击飞</status>得更高。<br /><br /><recast>再次施放</recast>可提前释放旋风。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "召唤一道旋风，对沿途的所有敌人造成<magicDamage>{{ minimumdamage }}魔法伤害</magicDamage>和<status>击飞</status>。旋风的充能时间每延长一秒（最多{{ maxduration }}秒），飞行距离就会变远，造成<magicDamage>{{ chargedamage }}额外伤害</magicDamage>，并将敌人<status>击飞</status>得更高。<br /><br /><recast>再次施放</recast>可提前释放旋风。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -15470,7 +15532,7 @@
                     "id": "Jade_JannaReapTheWhirlwind",
                     "name": "复苏季风",
                     "description": "迦娜召唤魔法风暴围绕自己，将敌人击退。唤出风暴后会刮起治愈之风，在持续时间内为附近的友军回复生命值。",
-                    "tooltip": "迦娜召唤风之力，将附近的敌人<recast>击退</recast>，并在4秒内为周围的友军回复<healing>{{ totalheal }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "迦娜召唤风之力，将周围的敌人<recast>击退</recast>，并且每秒为周围的友军回复<healing>{{ totalheal }}生命值</healing>，持续{{ maxchannelduration }}秒。(最大治疗量：<healing>{{ totalheal }}</healing>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每秒治疗",
@@ -15586,7 +15648,7 @@
             ],
             "passive": {
                 "name": "顺风而行",
-                "description": "迦娜和友方英雄的移动速度提升3%。",
+                "description": "迦娜和她的友方英雄获得移动速度提升。",
                 "image": {
                     "full": "Jade_JannaP.png",
                     "sprite": "passive0.png",
@@ -15812,7 +15874,7 @@
                     "id": "Jade_JarvanIVDragonStrike",
                     "name": "巨龙撞击",
                     "description": "嘉文四世的长矛穿透敌人，对它途经的所有敌人造成物理伤害和护甲击碎效果。此外，该技能还会将嘉文四世引向德邦军旗，并击飞他途经的所有敌人。",
-                    "tooltip": "用嘉文四世的长矛穿透敌人，对命中的所有敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续3秒的{{ armorshredpercent }}%护甲击碎效果。<br /><br />如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>他途经的所有敌人。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "将嘉文四世的长矛延伸出去，对命中的所有敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续{{ armorshredduration }}秒的{{ armorshredpercent }}%护甲削减。<br /><br />如果该技能指向<spellName>德邦军旗</spellName>，则嘉文四世会被引向军旗，并<status>击飞</status>沿途的所有敌人。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -15957,7 +16019,7 @@
                     "id": "Jade_JarvanIVGoldenAegis",
                     "name": "黄金圣盾",
                     "description": "嘉文四世召唤古德玛西亚列王保护自己，提供护盾吸收伤害并减速附近敌人。",
-                    "tooltip": "临时获得一个持续5秒的<shield>护盾</shield>，可吸收最多{{ shieldamount }}伤害（附近每有一名敌方英雄，额外吸收{{ shieldbonus }}伤害），并对周围敌人造成持续2秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "提供一个可吸收至多{{ shieldamount }}(+{{ shieldbonus }}x周围敌方英雄数)伤害的<shield>护盾</shield>，持续{{ shieldduration }}秒，并对周围的敌人们造成持续{{ slowduration }}秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -16249,7 +16311,7 @@
                     "id": "Jade_JarvanIVCataclysm",
                     "name": "天崩地裂",
                     "description": "嘉文四世勇猛地跃向目标敌方英雄，对其造成物理伤害，并在敌人周围形成环形障碍，持续数秒。",
-                    "tooltip": "勇猛地跃向目标敌方英雄，造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，并在目标周围形成环形障碍，持续3.5秒。<br /><br /><recast>再次施放</recast>即可使障碍倒塌。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "勇猛地跃向目标敌方英雄，对目标及附近的敌人造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，并在目标周围形成持续{{ wallduration }}秒的环形障碍。<br /><br /><recast>再次施放</recast>将使该障碍倒塌。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -16497,8 +16559,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 宗师之威(R)每次攻击都会提供可叠加攻击速度<br>- 武器专精(被动)根据战力提升生命值",
-            "blurb": "- 宗师之威(R)每次攻击都会提供可叠加攻击速度<br>- 武器专精(被动)根据战力提升生命值",
+            "lore": "- 无情连打(R)每次打击提供可叠加的攻击速度<br>- 武器专精(被动)提供基于强度的生命值",
+            "blurb": "- 无情连打(R)每次打击提供可叠加的攻击速度<br>- 武器专精(被动)提供基于强度的生命值",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -16538,7 +16600,7 @@
                     "id": "Jade_JaxQ",
                     "name": "跳斩",
                     "description": "贾克斯跃起猛击。",
-                    "tooltip": "贾克斯跳向目标单位，如果目标是敌人则对其造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "贾克斯跳向目标单位，如果目标是敌人则造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -16961,7 +17023,7 @@
                 },
                 {
                     "id": "Jade_JaxR",
-                    "name": "宗师之威",
+                    "name": "无情连打",
                     "description": "贾克斯每次攻击时获得攻击速度。每第三次连续攻击造成额外伤害。",
                     "tooltip": "<spellPassive>被动</spellPassive>：贾克斯每次攻击都会获得<attackSpeed>{{ attackspeedperstack*100 }}%攻击速度</attackSpeed>，最多叠加{{ maxstacks }}层。每第三次连续攻击额外造成<magicDamage>{{ onhitdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
@@ -17335,7 +17397,7 @@
                     "id": "Jade_KarthusLayWaste",
                     "name": "荒芜",
                     "description": "卡尔萨斯在目标区域释放一次有延迟的爆炸魔法，对区域内的所有敌人造成伤害。",
-                    "tooltip": "制造一次延迟爆炸魔法，0.5秒后对附近的每个敌人造成<magicDamage>{{ qdamage }}魔法伤害</magicDamage>，如果只命中一个敌人，则造成双倍伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "制造一次有延迟的爆裂，对附近的每个敌人造成<magicDamage>{{ qdamage }}魔法伤害</magicDamage>，如果范围内只有1个敌人，那么此技能会造成双倍伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -17367,11 +17429,11 @@
                     "effect": [
                         null,
                         [
-                            45,
-                            65,
-                            85,
-                            105,
-                            125
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -17439,7 +17501,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "45/65/85/105/125",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -17759,8 +17821,8 @@
                 {
                     "id": "Jade_KarthusFallenOne",
                     "name": "挽歌",
-                    "description": "在引导3秒后，卡尔萨斯就会对所有敌方英雄造成伤害。",
-                    "tooltip": "在引导3秒后，卡尔萨斯就会对所有敌方英雄造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "在引导之后，卡尔萨斯就会对所有敌方英雄造成伤害。",
+                    "tooltip": "在引导{{ channelduration }}秒后，卡尔萨斯就会对所有敌方英雄造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -17876,7 +17938,7 @@
             ],
             "passive": {
                 "name": "死亡契约",
-                "description": "在死亡时，卡尔萨斯会化为一个灵体，能够继续施放技能。",
+                "description": "在死亡时，卡尔萨斯会化为一个灵体，能够在死亡状态下继续施放技能，持续一小段时间。",
                 "image": {
                     "full": "Jade_Karthus_Passive.png",
                     "sprite": "passive0.png",
@@ -18194,16 +18256,16 @@
                 {
                     "id": "Jade_KassadinW",
                     "name": "虚空之刃",
-                    "description": "被动：卡萨丁的普通攻击回复法力值。攻击敌方英雄时，法力值回复量提升至三倍。主动：卡萨丁的普通攻击造成额外魔法伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁的普通攻击从虚空中汲取能量，每次命中都会回复<scaleMana>{{ managainamount }}法力值</scaleMana>。如果目标是敌方英雄，则<scaleMana>法力值</scaleMana>回复量会提升至三倍，达到{{ managainamount*3 }}。<br /><br /><spellActive>主动：</spellActive>卡萨丁为他的虚空之刃充能，使他的普通攻击额外造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，持续5秒。{{ spellmodifierdescriptionappend }}",
+                    "description": "被动：卡萨丁的普攻回复法力值。主动：卡萨丁的普攻造成额外魔法伤害。",
+                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁的普通攻击从虚空中吸取法力，从而每次命中都会回复<scaleMana>{{ managainamount }}法力值</scaleMana>，对抗英雄时提升至<scaleMana>{{ championmanarestore }}法力值</scaleMana>。<br /><br /><spellActive>主动：</spellActive>卡萨丁给他的虚空之刃充能{{ buffduration }}秒，使他的下次普通攻击造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "基础伤害",
-                            "基础法力回复"
+                            "基础法力回复",
+                            "基础伤害"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ managainamount }} -> {{ managainamountNL }}"
+                            "{{ managainamount }} -> {{ managainamountNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -18227,32 +18289,32 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            4.5,
-                            5,
-                            5.5,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            75,
-                            100,
-                            125,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            22.5,
-                            25,
-                            27.5,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -18299,10 +18361,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/4.5/5/5.5/6",
-                        "20",
-                        "50/75/100/125/150",
-                        "20/22.5/25/27.5/30",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -18336,7 +18398,7 @@
                     "id": "Jade_KassadinE",
                     "name": "能量脉冲",
                     "description": "附近有单位施放法术技能时，卡萨丁将吸收能量。当充能完毕后，吸收的能量可转化为脉冲，对面前锥形区域内敌人造成伤害并减速。",
-                    "tooltip": "卡萨丁会从临近(1800码内)的每次施法中吸收能量，附近每有一次技能施放，就会获得一层效果。当效果到达6层后，卡萨丁就可以使用<spellName>能量脉冲</spellName>，来对前方锥形范围内的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>以及持续3秒的{{ movespeedmod*-100 }}%<status>减速</status>效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡萨丁会从临近的每次施法中吸收能量，附近每有一次技能施放，就会获得一层效果。<br /><br />当效果到达{{ requiredchargestooltip }}层后，卡萨丁就可以使用<spellName>能量脉冲</spellName>，来对前方锥形范围内的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>以及持续{{ slowduration }}秒的{{ movespeedmod*-100 }}%<status>减速</status>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -18375,18 +18437,18 @@
                             0
                         ],
                         [
-                            50,
-                            60,
-                            70,
-                            80,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -18441,8 +18503,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50/60/70/80/90",
-                        "1",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -18477,7 +18539,7 @@
                     "id": "Jade_KassadinR",
                     "name": "虚空行走",
                     "description": "卡萨丁传送到附近区域，对区域内的敌方单位造成魔法伤害。此外，在一段时间内连续施放虚空行走技能会消耗更多的法力值，并造成额外伤害。",
-                    "tooltip": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。此外，在接下来8秒内每次施放<spellName>虚空行走</spellName>会额外消耗<scaleMana>100法力值</scaleMana>，并造成<magicDamage>{{ damage }}额外伤害</magicDamage>，最多叠加10层。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。此外，接下来{{ buffduration }}秒内的每次后续<spellName>虚空行走</spellName>消耗<scaleMana>{{ additionalmanapercast }}额外法力值</scaleMana>并造成<magicDamage>{{ damage }}额外伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -18591,7 +18653,7 @@
             ],
             "passive": {
                 "name": "虚空之石",
-                "description": "卡萨丁受到的<magicDamage>魔法伤害</magicDamage>减少15%，并将该伤害转化为额外<attackSpeed>攻击速度</attackSpeed>。",
+                "description": "卡萨丁所受的<magicDamage>魔法伤害</magicDamage>减少，并将即将到来的魔法伤害转化为额外<attackSpeed>攻击速度</attackSpeed>。",
                 "image": {
                     "full": "Jade_Kassadin_Passive.png",
                     "sprite": "passive0.png",
@@ -18823,7 +18885,7 @@
                     "id": "Jade_KatarinaQ",
                     "name": "弹射之刃",
                     "description": "卡特琳娜投掷一把匕首，在敌人之间弹跳，造成魔法伤害。",
-                    "tooltip": "投掷一把匕首，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。匕首会弹跳至{{ maxbounces }}个相距最近的敌人，每次弹跳造成的伤害降低10%。<br /><br />被命中的敌人还会被标记{{ markduration }}秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>{{ totaldamagemark }}</magicDamage>额外魔法伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "投掷一把匕首，造成<magicDamage>{{ totaldamage }}</magicDamage>魔法伤害。匕首会弹跳至{{ maxbounces }}个相距最近的敌人，每次弹跳造成的伤害降低{{ damagefalloff*100 }}%。<br /><br />被命中的敌人还会被标记{{ markduration }}秒。卡特琳娜的攻击或技能将消耗该标记以造成<magicDamage>{{ totaldamagemark }}</magicDamage>额外魔法伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -18878,11 +18940,11 @@
                             0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -18932,7 +18994,7 @@
                         "0",
                         "0",
                         "0",
-                        "2",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -19247,8 +19309,8 @@
                 {
                     "id": "Jade_KatarinaR",
                     "name": "死亡莲华",
-                    "description": "卡特琳娜化身刀刃风暴，以无可匹敌的速度向附近至多三名英雄投掷匕首。",
-                    "tooltip": "化身刀刃风暴，向相距最近的3名敌方英雄投掷匕首，在2.5秒内持续造成共<magicDamage>{{ damagecalctooltiponly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "卡特琳娜化身为一道剑刃飓风，以无与伦比的速度对周围敌方英雄们投掷匕首，从而造成巨量魔法伤害并施加重伤效果。",
+                    "tooltip": "化身刀刃风暴，向相距最近的{{ maxtargets }}名敌方英雄投掷匕首，在{{ channelduration }}秒内持续造成共<magicDamage>{{ damagecalctooltiponly }}魔法伤害</magicDamage>。被击中的敌人们会受到持续{{ grievouswoundsduration }}秒的{{ grievouswoundsamount*100 }}%<status>重伤</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -19362,7 +19424,7 @@
             ],
             "passive": {
                 "name": "贪婪",
-                "description": "击杀英雄或参与助攻可使她的技能冷却时间减少15秒。",
+                "description": "参与击杀英雄和助攻可缩短卡特琳娜的技能冷却时间。",
                 "image": {
                     "full": "Jade_Katarina_Passive.png",
                     "sprite": "passive0.png",
@@ -19936,13 +19998,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        22,
-                        21,
                         20,
                         19,
-                        18
+                        18,
+                        17,
+                        16
                     ],
-                    "cooldownBurn": "22/21/20/19/18",
+                    "cooldownBurn": "20/19/18/17/16",
                     "cost": [
                         65,
                         65,
@@ -20233,56 +20295,56 @@
                 {
                     "id": "60085009",
                     "num": 9,
-                    "name": "医学博士 凯南众志成城",
+                    "name": "医学博士 凯南 众志成城",
                     "chromas": true,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085010",
                     "num": 10,
-                    "name": "医学博士 凯南初心不改",
+                    "name": "医学博士 凯南 初心不改",
                     "chromas": false,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085011",
                     "num": 11,
-                    "name": "医学博士 凯南以身作则",
+                    "name": "医学博士 凯南 以身作则",
                     "chromas": false,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085012",
                     "num": 12,
-                    "name": "医学博士 凯南赤子之心",
+                    "name": "医学博士 凯南 赤子之心",
                     "chromas": false,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085013",
                     "num": 13,
-                    "name": "医学博士 凯南坚韧团结",
+                    "name": "医学博士 凯南 坚韧团结",
                     "chromas": true,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085014",
                     "num": 14,
-                    "name": "医学博士 凯南自强不息",
+                    "name": "医学博士 凯南 自强不息",
                     "chromas": false,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085015",
                     "num": 15,
-                    "name": "医学博士 凯南全力以赴",
+                    "name": "医学博士 凯南 全力以赴",
                     "chromas": false,
                     "parentSkin": 4
                 },
                 {
                     "id": "60085016",
                     "num": 16,
-                    "name": "医学博士 凯南万众一心",
+                    "name": "医学博士 凯南 万众一心",
                     "chromas": false,
                     "parentSkin": 4
                 },
@@ -20609,25 +20671,25 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            95,
-                            120,
-                            145,
-                            170
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.7,
-                            0.7,
-                            0.7,
-                            0.7,
-                            0.7
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -20681,9 +20743,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/95/120/145/170",
-                        "25",
-                        "0.7",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -21314,7 +21376,7 @@
                 {
                     "id": "Jade_KogMawQ",
                     "name": "腐蚀唾液",
-                    "description": "被动：克格莫的攻击速度提升。<br><br>主动：克格莫发射一团腐蚀性物质，对目标造成魔法伤害，并腐蚀目标的护甲和魔法抗性，持续4秒。",
+                    "description": "克格莫发射一团腐蚀性物质，对目标造成魔法伤害，并腐蚀目标的护甲和魔法抗性。",
                     "tooltip": "<spellPassive>被动：</spellPassive>克格莫获得<attackSpeed>{{ passiveattackspeed*100 }}%攻击速度</attackSpeed>。<br /><br /><spellActive>主动：</spellActive>克格莫吐出一团腐蚀性飞弹，对命中的第一个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，以及持续{{ debuffduration }}秒的<scaleArmor>{{ armorshred }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>击碎。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -21349,32 +21411,32 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            110,
-                            160,
-                            210,
-                            260
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            15,
-                            20,
-                            25,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            10,
-                            15,
-                            20,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -21421,10 +21483,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/110/160/210/260",
-                        "10/15/20/25/30",
-                        "5/10/15/20/25",
-                        "4",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -21858,7 +21920,7 @@
             ],
             "passive": {
                 "name": "来自艾卡西亚的惊喜",
-                "description": "阵亡后，克格莫的身体将启动连锁反应，并于4秒之后爆炸，对周围的敌人们造成魔法伤害。",
+                "description": "在死亡后，克格莫的身体将启动一种连锁反应，并于若干秒之后爆炸，从而对周围的敌人造成伤害。",
                 "image": {
                     "full": "Jade_KogMaw_IcathianSurprise.png",
                     "sprite": "passive0.png",
@@ -21893,6 +21955,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60064002",
+                    "num": 2,
+                    "name": "防弹武僧 李青",
+                    "chromas": false
+                },
+                {
                     "id": "60064004",
                     "num": 4,
                     "name": "至高之拳 李青",
@@ -21908,13 +21976,13 @@
                     "id": "60064027",
                     "num": 27,
                     "name": "黑夜使者 李青",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60064028",
                     "num": 28,
                     "name": "至臻 黑夜使者 李青",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60064039",
@@ -22039,17 +22107,15 @@
                 {
                     "id": "Jade_LeeSinQOne",
                     "name": "天音波/回音击",
-                    "description": "天音波：李青发出刺耳的声波定位敌人，对命中的首个敌人造成物理伤害。如果天音波击中敌人，则李青在接下来3秒可施放回音击。<br>回音击：李青冲向被天音波击中的敌人，造成物理伤害外加目标8%已损失生命值的伤害。",
-                    "tooltip": "<spellName>天音波：</spellName>李青发出刺耳的声波定位敌人，对命中的首个敌人造成<physicalDamage>{{ initialdamage }}物理伤害</physicalDamage>。如果<spellName>天音波</spellName>击中敌人，则李青在接下来3秒可施放<spellName>回音击</spellName>。<br /><br /><spellName>回音击：</spellName>李青冲刺向被天音波击中的敌人，造成<physicalDamage>{{ recastdamage }}物理伤害</physicalDamage>外加目标8%已损失生命值的伤害。{{ spellmodifierdescriptionappend }}",
+                    "description": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成物理伤害。如果天音波击中敌人，李青可施放回音击。<br><br>回音击：李青冲向被天音波击中的敌人，造成基于该目标已损失生命值的额外伤害。",
+                    "tooltip": "<spellName>天音波：</spellName>李青发出刺耳的声波定位敌人，对首个敌人造成<physicalDamage>{{ initialdamage }}物理伤害</physicalDamage>。如果天音波击中敌人，李青在接下来3秒可施放<spellName>回音击</spellName>。<br /><br /><spellName>回音击：</spellName>李青冲向被天音波击中的敌人，造成<physicalDamage>{{ recastdamage }}物理伤害</physicalDamage>外加其{{ missinghealthdamage*100 }}%已损失生命值的额外伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "天音波伤害",
-                            "回音击 最小伤害",
+                            "伤害",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ q1basedamage }} -> {{ q1basedamageNL }}",
-                            "{{ q2basedamage }} -> {{ q2basedamageNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -22182,8 +22248,8 @@
                 {
                     "id": "Jade_LeeSinWOne",
                     "name": "金钟罩/铁布衫",
-                    "description": "金钟罩：李青冲向目标友军，为目标和自身提供护盾。在使用金钟罩后，李青可以在接下来的3秒内施放铁布衫。<br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能。4秒内，李青获得生命偷取、法术吸血和护甲。",
-                    "tooltip": "<spellName>金钟罩：</spellName>李青冲向目标友军，为目标和自身提供<shield>护盾</shield>，可在接下来5秒内吸收{{ shieldamount }}伤害。使用<spellName>金钟罩</spellName>后，李青可以在接下来的3秒内施放<spellName>铁布衫</spellName>。<br /><br /><spellName>铁布衫：</spellName>李青艰苦卓绝的训练让他能在战斗中激发潜能。5秒内，李青获得{{ lifestealandspellvamp }}%生命偷取、法术吸血和<scaleArmor>{{ armorbonus }}护甲</scaleArmor>。{{ spellmodifierdescriptionappend }}",
+                    "description": "金钟罩：李青冲向一个目标友军，为二者提供护盾值。在使用金钟罩后，李青可以施放铁布衫。<br><br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能，从而获得生命偷取、技能吸血和护甲。",
+                    "tooltip": "<spellName>金钟罩：</spellName>李青冲向一个目标友军，为二者提供{{ shieldamount }}<shield>护盾值</shield>，持续{{ shieldduration }}秒。在使用<spellName>金钟罩</spellName>后，李青可以在接下来的{{ w1reactivatetime }}秒内施放<spellName>铁布衫</spellName>。<br /><br /><spellName>铁布衫：</spellName>李青艰苦卓绝的训练让他能在战斗中激发潜能。在{{ lifestealandspellvamptime }}秒期间，李青获得{{ lifestealandspellvamp }}%生命偷取、法术吸血和<scaleArmor>{{ armorbonus }}护甲</scaleArmor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "金钟罩伤害吸收",
@@ -22581,7 +22647,7 @@
             ],
             "passive": {
                 "name": "疾风骤雨",
-                "description": "李青使用一次技能后，他接下来的两次普通攻击会获得40%攻击速度，且每次攻击回复15能量。",
+                "description": "在李青使用一次技能后，他的下几次攻击会获得攻速加成，且回复能量。",
                 "image": {
                     "full": "Jade_LeeSinPassive.png",
                     "sprite": "passive0.png",
@@ -22814,17 +22880,17 @@
                     "id": "Jade_LeonaShieldOfDaybreak",
                     "name": "破晓之盾",
                     "description": "蕾欧娜用盾进行下次普通攻击，造成额外魔法伤害并晕眩目标。",
-                    "tooltip": "下一次普通攻击会额外造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>，并使敌人<status>晕眩</status>1.25秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "下一次普攻对一个敌人造成额外的<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>和{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "@AbilityResourceName@消耗",
-                            "冷却时间"
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ damage }} -> {{ damageNL }}",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -22848,11 +22914,11 @@
                     "effect": [
                         null,
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             10,
@@ -22920,7 +22986,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "1",
+                        "0",
                         "10/35/60/85/110",
                         "0",
                         "0",
@@ -22957,7 +23023,7 @@
                     "id": "Jade_LeonaSolarBarrier",
                     "name": "日蚀",
                     "description": "蕾欧娜举起盾牌，获得护甲和魔法抗性。第一段持续时间结束时，如果附近有敌人，则蕾欧娜对其造成魔法伤害，并延长此效果的持续时间。",
-                    "tooltip": "获得{{ bonusarmr }}额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>，持续3秒。此效果结束时，周围被击中的敌人会受到<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>，并且蕾欧娜会使自己的额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>延长3秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蕾欧娜获得<scaleArmor>{{ bonusarmr }}护甲</scaleArmor>与<scaleMR>魔抗</scaleMR>，持续{{ buffduration }}秒。当此效果结束时，周围被击中的敌人会受到<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>，并且蕾欧娜会使她的额外<scaleArmor>护甲</scaleArmor>与<scaleMR>魔法抗性</scaleMR>延长{{ buffduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -23003,11 +23069,11 @@
                             70
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -23063,7 +23129,7 @@
                         null,
                         "60/110/160/210/260",
                         "30/40/50/60/70",
-                        "3",
+                        "0",
                         "30/40/50/60/70",
                         "0",
                         "0",
@@ -23355,7 +23421,7 @@
             ],
             "passive": {
                 "name": "日光",
-                "description": "伤害类技能会在敌人身上施加持续3.5秒的日光效果。在此期间，当友方英雄对被标记的敌人造成伤害时，会消耗日光减益来使目标受到额外的魔法伤害。",
+                "description": "伤害类技能将对敌人施加日光效果。当友方英雄对这些目标造成伤害时，会消耗该日光减益以造成额外的伤害。",
                 "image": {
                     "full": "Jade_LeonaSunlight.png",
                     "sprite": "passive0.png",
@@ -23959,7 +24025,7 @@
                     "id": "Jade_LuluE",
                     "name": "帮忙，皮克斯！",
                     "description": "如果对友军施放，会命令皮克斯跳到一名友军身上进行保护，之后会跟随并协助目标（而不是璐璐）进行攻击。如果对敌人施放，皮克斯会跳到敌人身上造成伤害，之后会跟随并提供目标的视野。",
-                    "tooltip": "对友军施放：命令皮克斯跳到一名友军身上，之后会跟随并协助目标（而不是璐璐）进行攻击，持续6秒。皮克斯<shield>会为目标提供一道抵挡{{ totalshield }}伤害的护盾</shield>，持续6秒。<br /><br />对敌人施放：皮克斯对目标敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。之后会跟随并提供目标的视野，持续6秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "对友军施放：命令皮克斯跳到一名友军身上，之后会跟随并协助目标进行攻击，持续{{ allyfollowduration }}秒。在抵达时，皮克斯会为目标提供持续{{ shieldduration }}秒的<shield>{{ totalshield }}护盾值</shield>。<br /><br />对敌人施放：皮克斯对目标敌方单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。皮克斯随后会跟随并提供目标的真实视野，持续{{ enemyfollowduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -23995,11 +24061,11 @@
                     "effect": [
                         null,
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -24009,11 +24075,11 @@
                             0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -24023,25 +24089,25 @@
                             0
                         ],
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -24067,13 +24133,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "6",
                         "0",
-                        "50",
                         "0",
-                        "25",
-                        "4",
-                        "2.5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -24104,7 +24170,7 @@
                     "id": "Jade_LuluR",
                     "name": "狂野生长",
                     "description": "璐璐让她的友军变大，击飞目标附近的敌人，同时为目标友军提供大量生命值加成。接下来的几秒内，该友军会获得一个光环，减速附近的敌人。",
-                    "tooltip": "璐璐让她的友军变大，并<status>击飞</status>目标附近的敌人。在{{ buffduration }}秒的持续时间里，她的友军会获得<scaleHealth>{{ totalbonushealth }}额外生命值</scaleHealth>，并使附近的敌军<status>减速</status>{{ slowpercent }}%，持续1秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "璐璐让她的友军变大，并<status>击飞</status>目标附近的敌人。在{{ buffduration }}秒的持续时间里，她的友军会获得<scaleHealth>{{ totalbonushealth }}额外生命值</scaleHealth>，并使附近的敌军<status>减速</status>{{ slowpercent }}%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外生命值",
@@ -24431,7 +24497,7 @@
                 "critperlevel": 0,
                 "attackdamage": 53.3,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 1.36,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.625
             },
             "spells": [
@@ -24473,25 +24539,25 @@
                     "effect": [
                         null,
                         [
-                            80,
-                            120,
-                            160,
-                            200,
-                            240
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -24545,9 +24611,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "80/120/160/200/240",
-                        "50",
-                        "2",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -24723,7 +24789,7 @@
                     "id": "Jade_LuxLightStrikeKugel",
                     "name": "透光奇点",
                     "description": "向指定区域释放一道不规则的扭曲之光，减速附近的敌人。拉克丝可随后将其引爆，对范围内敌人造成伤害。",
-                    "tooltip": "创造一片区域，使敌人们减速<status></status>{{ slowpercent }}%。5秒后区域引爆，造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。<br /><br /><recast>再次施放</recast>可提前引爆。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "拉克丝创造一个光明地带，显形该区域并使区域中的敌人<status>减速</status>{{ slowpercent }}%。在{{ slowzoneduration }}秒后，它会爆炸，从而造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br /><recast>再次施放</recast>可提前引爆。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -24757,32 +24823,32 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            105,
-                            150,
-                            215,
-                            265
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            310,
-                            310,
-                            310,
-                            310,
-                            310
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -24829,10 +24895,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "60/105/150/215/265",
-                        "5",
-                        "310",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -24980,7 +25046,7 @@
             ],
             "passive": {
                 "name": "光芒四射",
-                "description": "拉克丝的伤害类技能会将能量注入敌人，持续6秒。拉克丝的下一次攻击将会点燃这股能量，对目标造成额外魔法伤害（基于拉克丝的等级）。",
+                "description": "拉克丝的伤害类技能会将能量注入敌人的体内。拉克丝的下一次攻击将会点燃这股能量，以对目标造成额外魔法伤害。",
                 "image": {
                     "full": "Jade_LuxIlluminatingFraulein.png",
                     "sprite": "passive1.png",
@@ -25211,7 +25277,7 @@
                 {
                     "id": "Jade_MalphiteSeismicShard",
                     "name": "地震碎片",
-                    "description": "墨菲特使用原初元素魔法，发出一块大地碎片穿过敌人处的地面，在碰撞时造成伤害并且偷取移动速度4秒。",
+                    "description": "墨菲特使用原初元素魔法，将一块大地碎片从地下射向目标，命中时造成伤害并且偷取目标的移动速度。",
                     "tooltip": "墨菲特将一块岩石碎片从地下射向目标，造成<magicDamage>{{ qdamagecalc }}魔法伤害</magicDamage>，并偷取目标<speed>{{ speedsteal }}%移动速度</speed>，持续{{ slowduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -25245,25 +25311,25 @@
                     "effect": [
                         null,
                         [
-                            70,
-                            120,
-                            170,
-                            220,
-                            270
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            25,
-                            30,
-                            35,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -25317,9 +25383,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "70/120/170/220/270",
-                        "20/25/30/35/40",
-                        "3",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -25354,7 +25420,7 @@
                     "id": "Jade_MalphiteObduracy",
                     "name": "野蛮打击",
                     "description": "墨菲特开始以巨大力量进行挥击，攻击对前方的所有敌人造成伤害。激活【野蛮打击】会使墨菲特的护甲和攻击力会在短时间内大幅提升。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>墨菲特的普通攻击会对目标附近敌人造成相当于自身{{ jade_malphiteobduracypercentdamage*100 }}%<physicalDamage>攻击力</physicalDamage>的伤害。<br /><br /><spellActive>主动：</spellActive>墨菲特的<scaleArmor>护甲</scaleArmor>和<physicalDamage>攻击力</physicalDamage>提升{{ armorbonus*100 }}%，持续6秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>墨菲特的普通攻击会对目标附近敌人造成相当于自身{{ jade_malphiteobduracypercentdamage*100 }}%<physicalDamage>攻击力</physicalDamage>的伤害。<br /><br /><spellActive>主动：</spellActive>墨菲特的<scaleArmor>护甲</scaleArmor>和<physicalDamage>攻击力</physicalDamage>提升{{ armorbonus*100 }}%，持续{{ buffduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "@AbilityResourceName@消耗",
@@ -25756,7 +25822,7 @@
             ],
             "passive": {
                 "name": "花岗岩护盾",
-                "description": "墨菲特被岩石护盾保护，最多吸收10%最大生命值的伤害。若10秒内未受到攻击，这个护盾将重置。",
+                "description": "墨菲特被一层可吸收伤害的岩石护盾保护。若墨菲特近期未受到攻击，这个效果将重置。",
                 "image": {
                     "full": "Jade_Malphite_GraniteShield.png",
                     "sprite": "passive1.png",
@@ -26501,6 +26567,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60011001",
+                    "num": 1,
+                    "name": "暗影 易",
+                    "chromas": false
+                },
+                {
                     "id": "60011004",
                     "num": 4,
                     "name": "侍魂 易",
@@ -26563,13 +26635,13 @@
                     "id": "60011052",
                     "num": 52,
                     "name": "灵魂莲华 易",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60011053",
                     "num": 53,
                     "name": "至臻 灵魂莲华 易",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60011080",
@@ -26835,7 +26907,7 @@
                     "id": "Jade_MasterYiMeditate",
                     "name": "冥想",
                     "description": "易集中念力、活化身体，短时间内回复生命值并减少所受的伤害。",
-                    "tooltip": "易开始引导，5秒内持续回复共<healing>{{ totalheal }}生命值</healing> 。引导期间，易获得<scaleArmor>{{ defensestat }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "易开始引导，{{ duration }}秒内持续回复共<healing>{{ totalheal }}生命值</healing>。引导期间，易获得<scaleArmor>{{ defensestat }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "生命值已回复",
@@ -27373,7 +27445,7 @@
                 "hpperlevel": 85,
                 "mp": 250,
                 "mpperlevel": 38,
-                "movespeed": 325,
+                "movespeed": 335,
                 "armor": 22,
                 "armorperlevel": 3,
                 "spellblock": 30,
@@ -27538,7 +27610,7 @@
                     "id": "Jade_MissFortuneViciousStrikes",
                     "name": "黑枪射击",
                     "description": "厄运小姐攻击同一目标时，每次命中造成的伤害会被动提升。该技能可激活，提升厄运小姐的攻击速度，并使她的攻击降低目标受到的治疗效果。",
-                    "tooltip": "<span class=\"colorFF9900\">被动：</span>厄运小姐每次攻击会对她的目标造成<magicDamage>{{ totaldamageonhit }}魔法伤害</magicDamage>，对同一目标至多叠加{{ maxstacks }}层。<br /><magicDamage>最大额外伤害：{{ maximumtotaldamageonhit }}</magicDamage><br /><br /><span class=\"colorFF9900\">主动：</span>厄运小姐的<attackSpeed>攻击速度</attackSpeed>提升<attackSpeed>{{ asmod }}%</attackSpeed>，持续6秒，并使她的攻击施加持续3秒的<keyword>50%重伤</keyword>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<span class=\"colorFF9900\">被动：</span>厄运小姐每次攻击会对她的目标造成<magicDamage>{{ totaldamageonhit }}魔法伤害</magicDamage>，对同一目标至多叠加{{ maxstacks }}层。<br /><magicDamage>最大额外伤害：{{ maximumtotaldamageonhit }}</magicDamage><br /><br /><span class=\"colorFF9900\">主动：</span>厄运小姐的<attackSpeed>攻击速度</attackSpeed>提升<attackSpeed>{{ asmod }}%</attackSpeed>，持续{{ activeduration }}秒，并使她的攻击施加持续3秒的<keyword>50%重伤</keyword>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每层伤害",
@@ -27681,15 +27753,17 @@
                     "id": "Jade_MissFortuneScattershot",
                     "name": "枪林弹雨",
                     "description": "厄运小姐向目标区域释放一阵弹雨，对敌人造成数波伤害并减缓其移动速度。",
-                    "tooltip": "厄运小姐向空中发射数百枚子弹，在0.5秒后在指定区域倾泻而下，在2秒内造成<magicDamage>{{ totaldamagepersecond }}魔法伤害</magicDamage>，并对击中的敌人造成持续1秒的{{ totalslowamount }}<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐发射数百颗子弹到空中然后如雨般落下，从而在{{ duration }}秒里持续造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ movespeedmod*-100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每秒伤害",
-                            "减速"
+                            "减速",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ basedamagepersecond }} -> {{ basedamagepersecondNL }}",
-                            "{{ baseslowamount*100.000000 }}% -> {{ baseslowamountnl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ movespeedmod*-100.000000 }}% -> {{ movespeedmodnl*-100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -27702,13 +27776,13 @@
                     ],
                     "cooldownBurn": "15",
                     "cost": [
+                        70,
+                        75,
                         80,
-                        80,
-                        80,
-                        80,
-                        80
+                        85,
+                        90
                     ],
-                    "costBurn": "80",
+                    "costBurn": "70/75/80/85/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -27822,7 +27896,7 @@
                     "id": "Jade_MissFortuneBulletTime",
                     "name": "弹幕时间",
                     "description": "厄运小姐向面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。",
-                    "tooltip": "厄运小姐向面前的锥形范围内引导一阵持续2秒的子弹风暴，每颗子弹造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(<physicalDamage>总伤害：{{ totaldamage }}</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐向面前的锥形范围内引导一阵子弹风暴，持续{{ channelduration }}秒，每颗子弹造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(<physicalDamage>总伤害：{{ totaldamage }}</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -27936,7 +28010,7 @@
             ],
             "passive": {
                 "name": "大步流星",
-                "description": "未受到攻击5秒后，厄运小姐额外获得<speed>25移动速度</speed>。该加成每秒提升9，最高可达70。",
+                "description": "厄运小姐的移动速度得到提升，此效果一直持续到她在战斗中被击中。",
                 "image": {
                     "full": "Jade_MissFortune_W.png",
                     "sprite": "passive1.png",
@@ -27969,6 +28043,12 @@
                     "num": 0,
                     "name": "default",
                     "chromas": true
+                },
+                {
+                    "id": "60025001",
+                    "num": 1,
+                    "name": "杀戮天使昔拉 莫甘娜",
+                    "chromas": false
                 },
                 {
                     "id": "60025005",
@@ -28034,14 +28114,14 @@
                     "id": "60025021",
                     "num": 21,
                     "name": "玉剑传说 苍鸾 青竹",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 17
                 },
                 {
                     "id": "60025022",
                     "num": 22,
                     "name": "玉剑传说 苍鸾 紫檀",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 17
                 },
                 {
@@ -28075,14 +28155,14 @@
                     "id": "60025027",
                     "num": 27,
                     "name": "至尊魔女 莫甘娜 愤怒",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 26
                 },
                 {
                     "id": "60025028",
                     "num": 28,
                     "name": "至尊魔女 莫甘娜 饕餮",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 26
                 },
                 {
@@ -28138,14 +28218,14 @@
                     "id": "60025036",
                     "num": 36,
                     "name": "魅惑女巫 莫甘娜 浪漫化身",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60025037",
                     "num": 37,
                     "name": "魅惑女巫 莫甘娜 纯真化身",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -28720,7 +28800,7 @@
                     "id": "Jade_MorganaR",
                     "name": "灵魂镣铐",
                     "description": "用能量拴住附近的敌方英雄，对其造成初始伤害和减速效果；一段时间后，仍然留在莫甘娜身边的敌人会再次受到伤害和晕眩。",
-                    "tooltip": "将自己与附近的敌方英雄用黑暗锁链拴在一起，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和持续3秒的20%<status>减速</status>效果。{{ chainduration }}秒后，对锁链缠住的敌人造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒晕眩。<br /><br />敌方英雄可以通过远离莫甘娜来挣脱锁链。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "将黑暗锁链拷在附近的敌方英雄们身上，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ slowpercent*-100 }}%<status>减速</status>效果。{{ chainduration }}秒后，对锁链缠住的敌人造成额外的<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒晕眩。<br /><br />敌方英雄可以通过远离莫甘娜来挣脱锁链。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -28869,6 +28949,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60075001",
+                    "num": 1,
+                    "name": "星空之门 内瑟斯",
+                    "chromas": false
+                },
+                {
                     "id": "60075002",
                     "num": 2,
                     "name": "法老王朝 内瑟斯",
@@ -28930,14 +29016,14 @@
                     "id": "60075026",
                     "num": 26,
                     "name": "“狗头” 内瑟斯 内有恶犬“橘宝”号",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 25
                 },
                 {
                     "id": "60075027",
                     "num": 27,
                     "name": "“狗头” 内瑟斯 内有恶犬“大黄”号",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 25
                 },
                 {
@@ -29472,7 +29558,7 @@
                     "id": "Jade_NasusR",
                     "name": "死神降临",
                     "description": "内瑟斯释放出强力的沙尘暴，席卷附近的敌人。风暴肆虐时，他会获得更高的生命值、攻击距离、施法距离，并汲取附近敌人的最大生命值，转化为持续时间内的额外伤害。",
-                    "tooltip": "沙漠风暴赐予内瑟斯力量，使他在15秒的持续时间内提升<scaleHealth>{{ bonushealth }}最大生命值</scaleHealth>、{{ attackrangeincrease }}攻击距离、以及100施法距离。<br /><br />在风暴肆虐时，他每秒对周围目标造成目标<magicDamage>{{ damagecalc }}最大生命值的魔法伤害</magicDamage>(每秒的伤害上限为{{ maxdamagecap }})，并将5%该伤害转化为<physicalDamage>攻击力</physicalDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "沙漠风暴赐予内瑟斯力量，使他在{{ duration }}秒的持续时间内提升<scaleHealth>{{ bonushealth }}最大生命值</scaleHealth>，{{ attackrangeincrease }}攻击距离、以及100施法距离。<br /><br />在风暴肆虐时，他每秒对周围目标造成目标<magicDamage>{{ damagecalc }}最大生命值的魔法伤害</magicDamage>(每秒的伤害上限为{{ maxdamagecap }})，并将{{ damagetoad*100 }}%该伤害转化为<physicalDamage>攻击力</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外生命值",
@@ -29621,6 +29707,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60076003",
+                    "num": 3,
+                    "name": "法国女仆 奈德丽",
+                    "chromas": false
+                },
+                {
                     "id": "60076004",
                     "num": 4,
                     "name": "艳后 奈德丽",
@@ -29662,14 +29754,14 @@
                     "id": "60076013",
                     "num": 13,
                     "name": "黎明使者 奈德丽 祥辉",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076014",
                     "num": 14,
                     "name": "黎明使者 奈德丽 灵辉",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -29683,14 +29775,14 @@
                     "id": "60076016",
                     "num": 16,
                     "name": "黎明使者 奈德丽 霞辉",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60076017",
                     "num": 17,
                     "name": "黎明使者 奈德丽 雪辉",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -29952,7 +30044,7 @@
                     "id": "Jade_NidaleeBushwhack",
                     "name": "丛林伏击/猛扑",
                     "description": "人类形态下，奈德丽为粗心大意的对手布置一个伤害陷阱，敌人触发后会被其显形，并在12秒内降低护甲和魔法抗性。美洲狮形态下，奈德丽向前跃击，在落地时造成少量伤害。",
-                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽布置一个陷阱，它可在2秒内持续造成<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，并且，使目标显形并<status>削减</status>其{{ resistdecreases*100 }}%的<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>，持续12秒。<br /><br /><keywordMajor>美洲狮形态：</keywordMajor>奈德丽向前跃击，对周围敌人们造成<magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽布置一个陷阱，它可在2秒内持续造成<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，并且，使目标显形并<status>削减</status>其{{ resistdecreases*100 }}%的<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>，持续12秒。陷阱可持续4分钟。<br /><br /><keywordMajor>美洲狮形态：</keywordMajor>奈德丽向前跃击，对周围敌人们造成<magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "陷阱伤害",
@@ -30384,6 +30476,12 @@
                     "id": "60020000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60020001",
+                    "num": 1,
+                    "name": "荒野巨兽 努努和威朗普",
                     "chromas": false
                 },
                 {
@@ -33523,6 +33621,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60013002",
+                    "num": 2,
+                    "name": "部落精神 瑞兹",
+                    "chromas": false
+                },
+                {
                     "id": "60013004",
                     "num": 4,
                     "name": "守护者雕像 瑞兹",
@@ -33639,14 +33743,14 @@
                     "id": "60013034",
                     "num": 34,
                     "name": "腥红之月 瑞兹 琉璃",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 29
                 },
                 {
                     "id": "60013035",
                     "num": 35,
                     "name": "腥红之月 瑞兹 落樱",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 29
                 },
                 {
@@ -35059,6 +35163,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60098002",
+                    "num": 2,
+                    "name": "炎爆 慎",
+                    "chromas": false
+                },
+                {
                     "id": "60098003",
                     "num": 3,
                     "name": "主治医师 慎",
@@ -35068,27 +35178,27 @@
                     "id": "60098005",
                     "num": 5,
                     "name": "战国大名 慎",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60098007",
                     "num": 7,
                     "name": "战国大名 慎 仁",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
                     "id": "60098008",
                     "num": 8,
                     "name": "战国大名 慎 礼",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 5
                 },
                 {
                     "id": "60098009",
                     "num": 9,
                     "name": "战国大名 慎 义",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -35150,14 +35260,14 @@
                     "id": "60098025",
                     "num": 25,
                     "name": "主治医师 慎 自强不息",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 3
                 },
                 {
                     "id": "60098026",
                     "num": 26,
                     "name": "主治医师 慎 众志成城",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 3
                 },
                 {
@@ -36594,6 +36704,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60014001",
+                    "num": 1,
+                    "name": "钢铁终结者 赛恩",
+                    "chromas": false
+                },
+                {
                     "id": "60014003",
                     "num": 3,
                     "name": "原野伐木工 赛恩",
@@ -36616,14 +36732,14 @@
                     "id": "60014007",
                     "num": 7,
                     "name": "霸天零式 赛恩 终极雪崩",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 5
                 },
                 {
                     "id": "60014008",
                     "num": 8,
                     "name": "霸天零式 赛恩 湮灭狂潮",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -36733,14 +36849,14 @@
                     "id": "60014032",
                     "num": 32,
                     "name": "西部魔影 合成天使 赛恩 豪爽",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 30
                 },
                 {
                     "id": "60014033",
                     "num": 33,
                     "name": "西部魔影 合成天使 赛恩 善良",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 30
                 },
                 {
@@ -36789,13 +36905,13 @@
                     "id": "60014301",
                     "num": 301,
                     "name": "经典 赛恩",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60014302",
                     "num": 302,
                     "name": "经典 赛恩 钢铁终结者",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 301
                 }
             ],
@@ -36841,7 +36957,7 @@
                     "id": "Jade_SionQ",
                     "name": "秘密凝视",
                     "description": "赛恩以恐怖目光震慑一名敌人，对其造成伤害和晕眩。",
-                    "tooltip": "轰击一名敌人，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和1.5秒<status>晕眩</status> 。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赛恩爆裂单个敌人，从而造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -36901,11 +37017,11 @@
                             0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -36915,32 +37031,32 @@
                             0
                         ],
                         [
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            60,
-                            60,
-                            60,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            150,
-                            150,
-                            150,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -36949,12 +37065,12 @@
                         "0",
                         "0",
                         "0",
-                        "2.5",
                         "0",
-                        "7.5",
-                        "60",
-                        "150",
-                        "-0.8"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -36981,8 +37097,8 @@
                 {
                     "id": "Jade_SionW",
                     "name": "死亡拥抱",
-                    "description": "赛恩生成一道可吸收伤害的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成伤害。4秒后再次施放可手动引爆护盾。",
-                    "tooltip": "赛恩生成一道可吸收<shield>{{ totalshield }}伤害</shield>的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />4秒后<recast>再次施放</recast>可手动引爆护盾。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "赛恩生成一道可吸收伤害的护盾环绕自身。如果该护盾未被摧毁，则触发爆炸，对身边的敌人造成伤害。赛恩可以再次施放以提前引爆护盾。",
+                    "tooltip": "赛恩生成一道可吸收<shield>{{ totalshield }}伤害</shield>的护盾环绕自身。如果该护盾在{{ shieldduration }}秒内未被摧毁，则触发爆炸，对身边的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />在{{ recastdelay }}秒后<recast>再次施放</recast>即可手动引爆。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -37014,67 +37130,67 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            75,
-                            90,
-                            105,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            65,
-                            90,
-                            115,
-                            140
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            10,
-                            12,
-                            14,
-                            16
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            14,
-                            14,
-                            14,
-                            14,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -37086,15 +37202,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/75/90/105/120",
-                        "40/65/90/115/140",
-                        "8/10/12/14/16",
-                        "14",
-                        "4",
-                        "15",
-                        "3",
-                        "15",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -37266,7 +37382,7 @@
                     "id": "Jade_SionR",
                     "name": "死灵狂暴",
                     "description": "赛恩每次攻击都会吸取敌人的部分生命力，为自己和附近友军回复生命值。鲜肉的气息也会激发赛恩的狂热，提升他的攻击速度。",
-                    "tooltip": "赛恩获得<lifeSteal>{{ lifestealpercent*100 }}%生命偷取</lifeSteal>和<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>，持续20秒。此外，赛恩的普通攻击会为附近友军<healing>回复</healing>相当于{{ healpercent*100 }}%造成伤害的生命值。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赛恩获得持续{{ buffduration }}秒的<lifeSteal>{{ lifestealpercent*100 }}%生命偷取</lifeSteal>和<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>。此外，赛恩的普攻会<healing>治疗</healing>身边的友军们，数额相当于{{ healpercent*100 }}%造成伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "友方治疗",
@@ -37380,7 +37496,7 @@
             ],
             "passive": {
                 "name": "硬化皮肤",
-                "description": "赛恩每次受到攻击时，有40%几率无视最多30/40/50伤害。",
+                "description": "赛恩在每次被攻击时，有一定几率无视一些伤害。",
                 "image": {
                     "full": "Jade_Sion_Passive1.png",
                     "sprite": "passive1.png",
@@ -38193,6 +38309,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60072001",
+                    "num": 1,
+                    "name": "沙暴巨蝎 斯卡纳",
+                    "chromas": false
+                },
+                {
                     "id": "60072002",
                     "num": 2,
                     "name": "远土之灵 斯卡纳",
@@ -38214,13 +38336,13 @@
                     "id": "60072005",
                     "num": 5,
                     "name": "天蝎星神 斯卡纳",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60072006",
                     "num": 6,
                     "name": "天蝎星神 斯卡纳 战神星魂",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -39735,6 +39857,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60016001",
+                    "num": 1,
+                    "name": "森林女神 索拉卡",
+                    "chromas": false
+                },
+                {
                     "id": "60016005",
                     "num": 5,
                     "name": "蕉泥座人 索拉卡",
@@ -39861,6 +39989,68 @@
                     "name": "花仙子 索拉卡 翠蓝",
                     "chromas": false,
                     "parentSkin": 44
+                },
+                {
+                    "id": "60016063",
+                    "num": 63,
+                    "name": "海之歌 索拉卡",
+                    "chromas": false
+                },
+                {
+                    "id": "60016064",
+                    "num": 64,
+                    "name": "海之歌 索拉卡 迷人晚霞",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016065",
+                    "num": 65,
+                    "name": "海之歌 索拉卡 逐浪流沙",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016066",
+                    "num": 66,
+                    "name": "海之歌 索拉卡 葱郁椰林",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016067",
+                    "num": 67,
+                    "name": "海之歌 索拉卡 随波海草",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016068",
+                    "num": 68,
+                    "name": "海之歌 索拉卡 清凉海风",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016069",
+                    "num": 69,
+                    "name": "海之歌 索拉卡 浪漫氛围",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016070",
+                    "num": 70,
+                    "name": "海之歌 索拉卡 月夜潮汐",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "60016071",
+                    "num": 71,
+                    "name": "海之歌 索拉卡 拾音",
+                    "chromas": false,
+                    "parentSkin": 63
                 },
                 {
                     "id": "60016301",
@@ -40059,9 +40249,9 @@
                 },
                 {
                     "id": "Jade_SorakaW",
-                    "name": "星界恩典",
+                    "name": "星之祝福",
                     "description": "索拉卡为一名友方单位赐福，为其回复生命值并暂时提升护甲。",
-                    "tooltip": "为一名友军回复<healing>{{ totalheal }}生命值</healing>，并在3秒内临时为其提升<scaleArmor>{{ armour }}护甲</scaleArmor>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "索拉卡为一名友军回复<healing>{{ totalheal }}生命值</healing>并为其提供持续{{ buffduration }}秒的<scaleArmor>{{ armour }}护甲</scaleArmor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "治疗效果",
@@ -40463,7 +40653,7 @@
             ],
             "passive": {
                 "name": "奉献",
-                "description": "使周围友军提高16魔法抗性。",
+                "description": "提升身边友军们的魔法抗性。",
                 "image": {
                     "full": "Jade_Soraka_Passive.png",
                     "sprite": "passive1.png",
@@ -41303,6 +41493,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60017002",
+                    "num": 2,
+                    "name": "军情五处 提莫",
+                    "chromas": false
+                },
+                {
                     "id": "60017004",
                     "num": 4,
                     "name": "提莫:'约德尔人的一大步'",
@@ -41318,7 +41514,7 @@
                     "id": "60017008",
                     "num": 8,
                     "name": "欧米伽小队 幽灵特工",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60017009",
@@ -41331,7 +41527,7 @@
                     "id": "60017010",
                     "num": 10,
                     "name": "草莓味糖果 兔宝宝 提莫",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -41345,14 +41541,14 @@
                     "id": "60017012",
                     "num": 12,
                     "name": "抹茶味糖果 兔宝宝 提莫",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 5
                 },
                 {
                     "id": "60017013",
                     "num": 13,
                     "name": "葡萄味糖果 兔宝宝 提莫",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -41386,13 +41582,13 @@
                     "id": "60017018",
                     "num": 18,
                     "name": "小蜜蜂 提莫",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60017019",
                     "num": 19,
                     "name": "元气满满七星瓢 提莫",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 18
                 },
                 {
@@ -41413,14 +41609,14 @@
                     "id": "60017022",
                     "num": 22,
                     "name": "笑意盈盈紫蜂皇 提莫",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 18
                 },
                 {
                     "id": "60017023",
                     "num": 23,
                     "name": "可爱可爱粉红红 提莫",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 18
                 },
                 {
@@ -42146,6 +42342,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60018005",
+                    "num": 5,
+                    "name": "约德尔海贼团 崔丝塔娜",
+                    "chromas": false
+                },
+                {
                     "id": "60018006",
                     "num": 6,
                     "name": "火箭达人 崔丝塔娜",
@@ -42176,13 +42378,13 @@
                     "id": "60018010",
                     "num": 10,
                     "name": "驯龙炮手 崔丝塔娜",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60018018",
                     "num": 18,
                     "name": "驯龙炮手 崔丝塔娜 狂傲红龙",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -42203,14 +42405,14 @@
                     "id": "60018021",
                     "num": 21,
                     "name": "驯龙炮手 崔丝塔娜 庄严银龙",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 10
                 },
                 {
                     "id": "60018022",
                     "num": 22,
                     "name": "驯龙炮手 崔丝塔娜 狡黠黑龙",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 10
                 },
                 {
@@ -42298,14 +42500,14 @@
                     "id": "60018052",
                     "num": 52,
                     "name": "灵魂莲华 崔丝塔娜 流火",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 51
                 },
                 {
                     "id": "60018053",
                     "num": 53,
                     "name": "灵魂莲华 崔丝塔娜 鸣蜩",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 51
                 },
                 {
@@ -42397,7 +42599,7 @@
                 "hp": 497,
                 "hpperlevel": 82,
                 "mp": 225,
-                "mpperlevel": 32,
+                "mpperlevel": 40,
                 "movespeed": 325,
                 "armor": 22,
                 "armorperlevel": 3,
@@ -42412,7 +42614,7 @@
                 "critperlevel": 0,
                 "attackdamage": 49.5,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 4,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.656
             },
             "spells": [
@@ -42420,13 +42622,15 @@
                     "id": "Jade_TristanaQ",
                     "name": "急速射击",
                     "description": "崔丝塔娜迅速开火，短时间内提升攻击速度。",
-                    "tooltip": "崔丝塔娜<attackSpeed>攻击速度提升{{ attackspeedmod*100 }}%</attackSpeed>，持续7秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "崔丝塔娜获得持续{{ buffduration }}秒的<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "攻击速度"
+                            "攻击速度",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -42440,12 +42644,12 @@
                     "cooldownBurn": "20",
                     "cost": [
                         50,
-                        50,
-                        50,
-                        50,
-                        50
+                        60,
+                        70,
+                        80,
+                        90
                     ],
-                    "costBurn": "50",
+                    "costBurn": "50/60/70/80/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -42558,8 +42762,8 @@
                 {
                     "id": "Jade_TristanaW",
                     "name": "火箭跳跃",
-                    "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人，持续3秒。",
-                    "tooltip": "崔丝塔娜朝地面开火，将自己弹射至目标位置，落地时造成<magicDamage>{{ landingdamage }}魔法伤害</magicDamage>和持续2.5秒的60%<status>减速</status>。<br />参与击杀英雄时，这个冷却时间会被重置。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人。",
+                    "tooltip": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成<magicDamage>{{ landingdamage }}魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slow }}%<status>减速</status>效果。击杀或协助击杀一个英雄时，火箭跳跃的冷却时间会得到刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -42700,7 +42904,7 @@
                     "id": "Jade_TristanaE",
                     "name": "爆炸射击",
                     "description": "崔丝塔娜击杀一个单位时，她的炮弹会爆炸成弹片，对周围敌人造成伤害。可主动施放，对目标单位造成持续伤害，并减少其受到的治疗效果。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在5秒内持续造成<magicDamage>{{ activedamagettonly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的普通攻击击杀敌人时，会让目标爆炸，对附近敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>撕裂目标敌人，施加<keyword>50%重伤</keyword>，并在{{ grievousduration }}秒内持续造成<magicDamage>{{ activedamagettonly }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动爆炸伤害",
@@ -42709,7 +42913,7 @@
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
-                            "{{ activedottotal }} -> {{ activedottotalNL }}",
+                            "{{ activedot }} -> {{ activedotNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -43223,8 +43427,8 @@
                 "spellblock": 31.25,
                 "spellblockperlevel": 1.25,
                 "attackrange": 125,
-                "hpregen": 10,
-                "hpregenperlevel": 0.9,
+                "hpregen": 7.5,
+                "hpregenperlevel": 0.75,
                 "mpregen": 0,
                 "mpregenperlevel": 0,
                 "crit": 0,
@@ -43521,7 +43725,7 @@
                     "id": "Jade_TryndamereE",
                     "name": "旋风斩",
                     "description": "泰达米尔挥舞大剑冲向目标，对冲锋路线上所有敌人造成伤害。",
-                    "tooltip": "泰达米尔挥舞大剑冲向目标，对他途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />泰达米尔每次造成暴击时，<spellName>旋风斩</spellName>的冷却时间缩短2秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泰达米尔挥舞大剑冲向目标，对他途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />泰达米尔每次造成暴击时，<spellName>旋风斩</spellName>的冷却时间缩短{{ cooldownrefund }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -43675,11 +43879,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        110,
-                        100,
-                        90
+                        130,
+                        115,
+                        100
                     ],
-                    "cooldownBurn": "110/100/90",
+                    "cooldownBurn": "130/115/100",
                     "cost": [
                         0,
                         0,
@@ -43817,6 +44021,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60004002",
+                    "num": 2,
+                    "name": "红桃杰克 崔斯特",
+                    "chromas": false
+                },
+                {
                     "id": "60004004",
                     "num": 4,
                     "name": "探戈灵魂 崔斯特",
@@ -43873,14 +44083,14 @@
                     "id": "60004030",
                     "num": 30,
                     "name": "地下都市 梦魇 崔斯特 琥珀",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 25
                 },
                 {
                     "id": "60004031",
                     "num": 31,
                     "name": "地下都市 梦魇 崔斯特 黛夜",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 25
                 },
                 {
@@ -43970,14 +44180,14 @@
                     "id": "60004044",
                     "num": 44,
                     "name": "“万能舞王” 崔斯特 传送拆水晶",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 36
                 },
                 {
                     "id": "60004301",
                     "num": 301,
                     "name": "经典 崔斯特",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60004302",
@@ -44611,6 +44821,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60029001",
+                    "num": 1,
+                    "name": "首领 图奇",
+                    "chromas": false
+                },
+                {
                     "id": "60029003",
                     "num": 3,
                     "name": "都铎王朝 图奇",
@@ -44620,13 +44836,13 @@
                     "id": "60029004",
                     "num": 4,
                     "name": "黑金诱惑 图奇",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60029021",
                     "num": 21,
                     "name": "都铎王朝 图奇 上善若水",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 3
                 },
                 {
@@ -44784,14 +45000,14 @@
                     "id": "60029047",
                     "num": 47,
                     "name": "西部魔影 送葬人 图奇 豪爽",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 45
                 },
                 {
                     "id": "60029048",
                     "num": 48,
                     "name": "西部魔影 送葬人 图奇 恭敬",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 45
                 },
                 {
@@ -44846,7 +45062,7 @@
                     "id": "60029302",
                     "num": 302,
                     "name": "经典 图奇 横行霸道",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 301
                 }
             ],
@@ -44866,7 +45082,7 @@
                 "difficulty": 6
             },
             "stats": {
-                "hp": 470,
+                "hp": 455,
                 "hpperlevel": 81,
                 "mp": 260,
                 "mpperlevel": 40,
@@ -44885,7 +45101,7 @@
                 "attackdamage": 50,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 3.38,
-                "attackspeed": 0.679
+                "attackspeed": 0.658
             },
             "spells": [
                 {
@@ -46515,7 +46731,7 @@
                     "id": "Jade_VeigarDarkMatter",
                     "name": "黑暗物质",
                     "description": "维迦召唤一大团黑暗物质轰击目标区域，落地造成魔法伤害。",
-                    "tooltip": "1.2秒后，黑暗物质从天而降，对目标区域的单位造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "{{ impactdelay }}秒后，黑暗物质将从天而降，对目标区域的单位造成 <magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -46554,18 +46770,18 @@
                             0
                         ],
                         [
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2,
-                            1.2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            8,
-                            8,
-                            8,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -46620,8 +46836,8 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "1.2",
-                        "8",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -46656,7 +46872,7 @@
                     "id": "Jade_VeigarEventHorizon",
                     "name": "扭曲空间",
                     "description": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会被短暂晕眩。",
-                    "tooltip": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会受到{{ stunduration }}秒的<status>晕眩</status>效果。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "维迦在目标区域创造一个能够维持{{ cageduration }}秒的扭曲空间，穿过此区域边界的敌人将会受到持续{{ stunduration }}秒的<status>晕眩</status>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "晕眩时长：",
@@ -46664,7 +46880,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -46690,18 +46906,18 @@
                     "effect": [
                         null,
                         [
-                            1.5,
-                            1.75,
-                            2,
-                            2.25,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -46762,8 +46978,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "1.5/1.75/2/2.25/2.5",
-                        "0.5",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -46799,7 +47015,7 @@
                     "id": "Jade_VeigarR",
                     "name": "能量爆裂",
                     "description": "引爆目标敌方英雄，造成大量基础魔法伤害，并额外造成目标80%法术强度的伤害。",
-                    "tooltip": "引爆目标敌方英雄，造成<magicDamage>{{ mindamage }}伤害，并额外造成目标80%法术强度的魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "维迦引爆目标一名敌方英雄，造成<magicDamage>{{ mindamage }}外加目标{{ enemyapratio*100 }}%法术强度的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -46915,7 +47131,7 @@
             ],
             "passive": {
                 "name": "均衡",
-                "description": "维迦每损失1%法力值，法力回复便提升1%。",
+                "description": "维迦的法力回复会基于他的已损失法力值得到提升。",
                 "image": {
                     "full": "Jade_VeigarEntropy.png",
                     "sprite": "passive1.png",
@@ -46953,6 +47169,12 @@
                     "id": "60019002",
                     "num": 2,
                     "name": "披着海牛的狼 沃里克",
+                    "chromas": false
+                },
+                {
+                    "id": "60019004",
+                    "num": 4,
+                    "name": "冻原猎手 沃里克",
                     "chromas": false
                 },
                 {
@@ -47005,14 +47227,14 @@
                     "id": "60019015",
                     "num": 15,
                     "name": "南天之怒 沃里克 炫金天神",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 10
                 },
                 {
                     "id": "60019016",
                     "num": 16,
                     "name": "源计划：末日 沃里克",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60019026",
@@ -47046,14 +47268,14 @@
                     "id": "60019030",
                     "num": 30,
                     "name": "源计划：末日 沃里克 裂变",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 16
                 },
                 {
                     "id": "60019031",
                     "num": 31,
                     "name": "源计划：末日 沃里克 震击",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 16
                 },
                 {
@@ -48105,7 +48327,7 @@
                 {
                     "id": "Jade_WukongW",
                     "name": "真假猴王",
-                    "description": "孙悟空进入1.5秒的隐身状态。留下一具无法控制的分身，1.5秒后对其附近的敌人造成魔法伤害。",
+                    "description": "孙悟空进入隐形状态并留下一具无法控制的分身，该分身会在一段较短延迟后对附近的敌人造成伤害。",
                     "tooltip": "孙悟空进入{{ stealthduration }}秒的<keywordStealth>隐身</keywordStealth>状态。留下一具无法控制的分身，{{ cloneduration }}秒后对其附近的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_MissFortune": {
             "id": "Jade_MissFortune",
@@ -130,7 +130,7 @@
                 "hpperlevel": 85,
                 "mp": 250,
                 "mpperlevel": 38,
-                "movespeed": 325,
+                "movespeed": 335,
                 "armor": 22,
                 "armorperlevel": 3,
                 "spellblock": 30,
@@ -295,7 +295,7 @@
                     "id": "Jade_MissFortuneViciousStrikes",
                     "name": "Impure Shots",
                     "description": "Miss Fortune passively increases damage dealt to a target with each strike.  This ability can be activated to increase Miss Fortune's Attack Speed and cause her attacks to lower healing received by the target.",
-                    "tooltip": "<span class=\"colorFF9900\">Passive:</span> Miss Fortune deals <magicDamage>{{ totaldamageonhit }} magic damage</magicDamage> to her target with each attack, cumulatively stacking up to {{ maxstacks }} times on the same target.<br /><magicDamage>Maximum bonus damage: {{ maximumtotaldamageonhit }}</magicDamage><br /><br /><span class=\"colorFF9900\">Active:</span> Miss Fortune's <attackSpeed>Attack Speed</attackSpeed> is increased by <attackSpeed>{{ asmod }}%</attackSpeed> for 6 seconds and causes her attacks to apply <keyword>50% Grievous Wounds</keyword> for 3 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<span class=\"colorFF9900\">Passive:</span> Miss Fortune deals <magicDamage>{{ totaldamageonhit }} magic damage</magicDamage> to her target with each attack, cumulatively stacking up to {{ maxstacks }} times on the same target.<br /><magicDamage>Maximum bonus damage: {{ maximumtotaldamageonhit }}</magicDamage><br /><br /><span class=\"colorFF9900\">Active:</span> Miss Fortune's <attackSpeed>Attack Speed</attackSpeed> is increased by <attackSpeed>{{ asmod }}%</attackSpeed> for {{ activeduration }} seconds and causes her attacks to apply <keyword>50% Grievous Wounds</keyword> for 3 seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage per Stack",
@@ -438,15 +438,17 @@
                     "id": "Jade_MissFortuneScattershot",
                     "name": "Make It Rain",
                     "description": "Miss Fortune unleashes a flurry of bullets at a location, dealing waves of damage to opponents and slowing them.",
-                    "tooltip": "Miss Fortune fires hundreds of bullets into the air that rain down at a location after 0.5 seconds, dealing <magicDamage>{{ totaldamagepersecond }} magic damage</magicDamage> over 2 seconds and <status>Slowing</status> enemies hit by {{ totalslowamount }} for 1 second.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Miss Fortune fires hundreds of bullets into the air that rain down, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> over {{ duration }} seconds and <status>Slowing</status> enemies by {{ movespeedmod*-100 }}%.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage Per Second",
-                            "Slow"
+                            "Slow",
+                            "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ basedamagepersecond }} -> {{ basedamagepersecondNL }}",
-                            "{{ baseslowamount*100.000000 }}% -> {{ baseslowamountnl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ movespeedmod*-100.000000 }}% -> {{ movespeedmodnl*-100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -459,13 +461,13 @@
                     ],
                     "cooldownBurn": "15",
                     "cost": [
+                        70,
+                        75,
                         80,
-                        80,
-                        80,
-                        80,
-                        80
+                        85,
+                        90
                     ],
-                    "costBurn": "80",
+                    "costBurn": "70/75/80/85/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -579,7 +581,7 @@
                     "id": "Jade_MissFortuneBulletTime",
                     "name": "Bullet Time",
                     "description": "Miss Fortune channels a flurry of bullets into a cone in front of her, dealing large amounts of damage to enemies.",
-                    "tooltip": "Miss Fortune channels a barrage of bullets into a cone in front of her for 2 seconds, dealing <physicalDamage>{{ physicaldamageperwave }} physical damage</physicalDamage> per bullet (<physicalDamage>Total Damage: {{ totaldamage }}</physicalDamage>).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Miss Fortune channels a barrage of bullets into a cone in front of her for {{ channelduration }} seconds, dealing <physicalDamage>{{ physicaldamageperwave }} physical damage</physicalDamage> per bullet (<physicalDamage>Total Damage: {{ totaldamage }}</physicalDamage>).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -693,7 +695,7 @@
             ],
             "passive": {
                 "name": "Strut",
-                "description": "After 5 seconds of not being attacked, Miss Fortune gains an additional <speed>25 Movement Speed</speed>. This bonus increases by 9 each second up to a maximum bonus of 70.",
+                "description": "Miss Fortune has increased Movement Speed until she is hit in combat.",
                 "image": {
                     "full": "Jade_MissFortune_W.png",
                     "sprite": "passive1.png",

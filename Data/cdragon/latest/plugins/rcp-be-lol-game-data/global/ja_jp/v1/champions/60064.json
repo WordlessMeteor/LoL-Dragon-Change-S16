@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "従者リー・シン",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "ショウジンの従者が纏う伝統的な衣服は、野心ばかりが旺盛な若きリー・シンの肩には決して上手く収まることはなかったが、彼は他の従者が夢でしか語らないような、純粋な可能性にあふれていた。いつの日か彼は成長し、その衣服にも龍の力にも見合った傑物となるだろう。"
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "スキル使用後、次の通常攻撃2回の攻撃速度が40%増加し、それぞれ気を15回復する。"
+        "description": "スキル使用後、続く通常攻撃の攻撃速度が増加し、気を回復する。"
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "響掌: 敵の位置を探るひずんだ音波を発射して、最初に当たった敵に物理ダメージを与える。また、命中してから3秒間は「共鳴撃」を発動できる。<br>共鳴撃: 「響掌」が命中した敵に素早く接近し、物理ダメージに加えて対象の減少体力の8%にあたるダメージを与える。",
-            "dynamicDescription": "<spellName>響掌: </spellName>敵の位置を探るひずんだ音波を発射して、最初に当たった敵に<physicalDamage>@InitialDamage@の物理ダメージ</physicalDamage>を与える。また、<spellName>響掌</spellName>が命中してから3秒間は<spellName>共鳴撃</spellName>を発動できる。<br><br><spellName>共鳴撃: </spellName>「響掌」が命中した敵に素早く接近し、<physicalDamage>@RecastDamage@の物理ダメージ</physicalDamage>に加えて対象の減少体力の8%にあたるダメージを与える。@SpellModifierDescriptionAppend@",
+            "description": "響掌: 敵の位置を探るひずんだ音波を発射して、最初に当たった敵にダメージを与える。また、「響掌」が命中した場合、「共鳴撃」を発動できる。<br><br>共鳴撃: 「響掌」が命中した敵に素早く接近し、追加ダメージに加えて対象の減少体力の一定割合にあたるダメージを与える。",
+            "dynamicDescription": "<spellName>響掌: </spellName>敵の位置を探るひずんだ音波を発射して、最初に当たった敵に<physicalDamage>@InitialDamage@の物理ダメージ</physicalDamage>を与える。また、<spellName>響掌</spellName>が命中してから3秒間は<spellName>共鳴撃</spellName>を発動できる。<br><br><spellName>共鳴撃: </spellName>「響掌」が命中した敵に素早く接近し、<physicalDamage>@RecastDamage@の物理ダメージ</physicalDamage>に加えて対象の減少体力の@MissingHealthDamage*100@%にあたるダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "守りの型: 指定した味方に素早く接近し、自身と対象の両方にシールドを付与する。また、使用後3秒間は「鉄の意志」を発動できる。<br>鉄の意志: 厳しい修行の成果により、4秒間にわたってライフスティール、スペルヴァンプ、物理防御を増加させる。",
-            "dynamicDescription": "<spellName>守りの型: </spellName>指定した味方に素早く接近し、5秒間、自身と対象の両方に耐久値@ShieldAmount@の<shield>シールド</shield>を付与する。<spellName>守りの型</spellName>を使用してから3秒間は、<spellName>鉄の意志</spellName>を発動できる。<br><br><spellName>鉄の意志: </spellName>厳しい修行の成果により、5秒間にわたってライフスティールを@LifestealAndSpellVamp@%、スペルヴァンプ、<scaleArmor>物理防御を@ArmorBonus@</scaleArmor>増加させる。@SpellModifierDescriptionAppend@",
+            "description": "守りの型: 指定した味方に素早く接近し、自身と対象の両方にシールドを付与する。「守りの型」の使用後、「鉄の意志」を発動できる。<br><br>鉄の意志: 厳しい修行の成果により、ライフスティール、スペルヴァンプ、物理防御を獲得する。",
+            "dynamicDescription": "<spellName>守りの型: </spellName>指定した味方に素早く接近し、@ShieldDuration@秒間、自身と対象の両方に耐久値@ShieldAmount@の<shield>シールド</shield>を付与する。<spellName>守りの型</spellName>を使用してから@W1ReactivateTime@秒間は、<spellName>鉄の意志</spellName>を発動できる。<br><br><spellName>鉄の意志: </spellName>厳しい修行の成果により、@LifestealAndSpellVampTime@秒間にわたってライフスティールを@LifestealAndSpellVamp@%、スペルヴァンプ、<scaleArmor>物理防御を@ArmorBonus@</scaleArmor>増加させる。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

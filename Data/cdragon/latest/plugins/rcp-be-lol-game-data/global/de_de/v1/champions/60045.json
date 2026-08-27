@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Veigars Manaregeneration erhöht sich pro 1 % fehlendem Mana um 1 %."
+        "description": "Veigars Manaregeneration erhöht sich abhängig von seinem fehlenden Mana."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Veigar ruft eine große dunkle Materie herbei, die vom Himmel auf den Zielort trifft und magischen Schaden verursacht.",
-            "dynamicDescription": "<mainText>Nach 1,2 Sekunden fällt am Zielort dunkle Materie vom Himmel, die <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht.",
+            "dynamicDescription": "Nach @ImpactDelay@ Sekunden fällt am Zielort dunkle Materie vom Himmel, die <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Veigar verbiegt 3 Sekunden lang die Grenzen des Raums um den Zielort und betäubt so kurzzeitig Gegner, die durch dieses Gebiet laufen.",
-            "dynamicDescription": "<mainText>Veigar verbiegt die Grenzen der Zeit um den Zielort 3 Sekunden lang und <status>betäubt</status> dadurch Gegner für @StunDuration@ Sekunden, die durch dieses Gebiet laufen.",
+            "dynamicDescription": "Veigar verbiegt die Grenzen der Zeit um den Zielort @CageDuration@ Sekunden lang und <status>betäubt</status> dadurch Gegner für @StunDuration@ Sekunden, die durch dieses Gebiet laufen.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Trifft einen gegnerischen Champion und verursacht einen hohen Basiswert sowie 80 % der Fähigkeitsstärke seines Zieles als magischen Schaden.",
-            "dynamicDescription": "<mainText>Trifft einen gegnerischen Champion und verursacht <magicDamage>@MinDamage@ sowie 80 % der Fähigkeitsstärke seines Zieles als magischen Schaden</magicDamage>.",
+            "dynamicDescription": "Veigar trifft einen gegnerischen Champion und verursacht <magicDamage>@MinDamage@ sowie @EnemyAPRatio*100@ % der Fähigkeitsstärke seines Zieles als magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

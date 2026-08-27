@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Blitzcrank": {
             "id": "Jade_Blitzcrank",
@@ -255,13 +255,13 @@
                     ],
                     "cooldownBurn": "22/21/20/19/18",
                     "cost": [
-                        120,
-                        120,
-                        120,
-                        120,
-                        120
+                        140,
+                        140,
+                        140,
+                        140,
+                        140
                     ],
-                    "costBurn": "120",
+                    "costBurn": "140",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -353,13 +353,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1079,
-                        1079,
-                        1079,
-                        1079,
-                        1079
+                        1025,
+                        1025,
+                        1025,
+                        1025,
+                        1025
                     ],
-                    "rangeBurn": "1079",
+                    "rangeBurn": "1025",
                     "image": {
                         "full": "Jade_BlitzcrankRocketGrab.png",
                         "sprite": "spell1.png",
@@ -515,8 +515,8 @@
                 {
                     "id": "Jade_BlitzcrankPowerFist",
                     "name": "Power Fist",
-                    "description": "Blitzcrank charges up their fist to make their next attack deal double damage and pop their target up in the air.",
-                    "tooltip": "Blitzcrank charges up their fist to make their next attack deal <physicalDamage>{{ totaldamage }} Physical Damage</physicalDamage> and their target is <status>Knocked Up</status> for {{ ccduration }} second.{{ spellmodifierdescriptionappend }}",
+                    "description": "Blitzcrank charges up their fist to make their next attack deal bonus damage and pop their target up in the air.",
+                    "tooltip": "Blitzcrank charges up their fist to make their next attack deal <physicalDamage>{{ totaldamage }} Physical Damage</physicalDamage> and <status>Knock Up</status> their target.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown"
@@ -654,8 +654,8 @@
                 {
                     "id": "Jade_BlitzcrankStaticField",
                     "name": "Static Field",
-                    "description": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Lightning arcs off of Blitzcrank to hit a random nearby enemy for <magicDamage>{{ passivedamage }} magic damage</magicDamage> every 2.5 seconds.<br /><br /><spellActive>Active: </spellActive>Deals <magicDamage>{{ activedamage }} magic damage</magicDamage> and <status>Silences</status> surrounding enemy units for 0.5 seconds.{{ spellmodifierdescriptionappend }}",
+                    "description": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and briefly silence them.",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Lightning arcs off of Blitzcrank to hit a random nearby enemy for <magicDamage>{{ passivedamage }} magic damage</magicDamage> every {{ passivehitrate }} seconds.<br /><br /><spellActive>Active: </spellActive>Deals <magicDamage>{{ activedamage }} magic damage</magicDamage> and <status>Silences</status> surrounding enemy units for {{ silenceduration }} seconds. The passive is disabled while Static Field is on cooldown.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Lightning Damage",
@@ -668,11 +668,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        30,
-                        30,
-                        30
+                        40,
+                        40,
+                        40
                     ],
-                    "cooldownBurn": "30",
+                    "cooldownBurn": "40",
                     "cost": [
                         150,
                         150,
@@ -769,7 +769,7 @@
             ],
             "passive": {
                 "name": "Mana Barrier",
-                "description": "When Blitzcrank life is brought below 20% health they activate Mana Barrier. This creates a mana shield equal to 50% of their mana for 10 seconds. Mana Barrier can only occur once every 90 seconds.",
+                "description": "When taking damage at low Health, Blitzcrank is first Shielded for a percent of their current Mana. This effect has a cooldown.",
                 "image": {
                     "full": "Jade_Blitzcrank_ManaBarrier.png",
                     "sprite": "passive0.png",

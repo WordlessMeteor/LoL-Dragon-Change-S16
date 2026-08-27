@@ -672,7 +672,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.png",
         "abilityVideoPath": "champion-abilities/60030/ability_60030_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60030/ability_60030_P1.jpg",
-        "description": "เมื่อ Karthus ถูกสังหาร เขาจะกลายเป็นร่างวิญญาณ ซึ่งเขาจะยังสามารถใช้สกิลเพื่อโจมตีต่อไปได้"
+        "description": "เมื่อ Karthus ถูกสังหาร เขาจะกลายเป็นร่างวิญญาณและใช้สกิลต่อไปได้เป็นเวลาสั้น ๆ"
     },
     "spells": [
         {
@@ -684,7 +684,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Karthus ปล่อยระเบิดดีเลย์ในพื้นที่เป้าหมาย สร้างความเสียหายเวทให้กับศัตรูใกล้เคียง",
-            "dynamicDescription": "สร้างระเบิดดีเลย์ โดยเมื่อผ่านไป 0.5 วินาที จะสร้าง<magicDamage>ความเสียหายเวท @QDamage@ หน่วย</magicDamage> ให้กับศัตรูใกล้เคียง สร้างความเสียหายเป็นสองเท่าหากเป็นยูนิตเป้าหมายเดี่ยว@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ปล่อยระเบิดดีเลย์ที่จะสร้าง<magicDamage>ความเสียหายเวท @QDamage@ หน่วย</magicDamage>ให้กับศัตรูใกล้เคียง สร้างความเสียหายเป็นสองเท่าหากเป็นยูนิตเป้าหมายเดี่ยว@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -710,18 +710,18 @@
                 1.0
             ],
             "coefficients": {
-                "coefficient1": 0.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    45.0,
-                    45.0,
-                    65.0,
-                    85.0,
-                    105.0,
-                    125.0,
-                    145.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -1133,8 +1133,8 @@
             "abilityVideoImagePath": "champion-abilities/60030/ability_60030_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Karthus จะทำการร่ายสกิลเป็นเวลา 3 วินาที หลังจากนั้นเขาจะสร้างความเสียหายให้กับแชมเปี้ยนศัตรูทุกตัว",
-            "dynamicDescription": "หลังจากร่ายสกิลเป็นเวลา 3 วินาที Karthus จะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ให้กับแชมเปี้ยนศัตรูทุกตัว@SpellModifierDescriptionAppend@",
+            "description": "หลังจากร่ายสกิลเสร็จ Karthus จะสร้างความเสียหายแก่แชมเปี้ยนศัตรูทั้งหมด",
+            "dynamicDescription": "หลังจากร่ายสกิลเป็นเวลา @ChannelDuration@ วินาที Karthus จะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับแชมเปี้ยนศัตรูทุกตัว@SpellModifierDescriptionAppend@",
             "range": [
                 10000.0,
                 10000.0,
@@ -1160,7 +1160,7 @@
                 200.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

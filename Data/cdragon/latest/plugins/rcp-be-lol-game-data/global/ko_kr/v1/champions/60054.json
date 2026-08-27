@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Malphite_GraniteShield.project_jade.png",
         "abilityVideoPath": "champion-abilities/60054/ability_60054_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60054/ability_60054_P1.jpg",
-        "description": "말파이트는 여러 겹의 바위로 감싸여 있어, 자기 최대 체력의 10%에 해당하는 피해를 흡수할 수 있습니다. 이 효과는 말파이트가 10초 동안 공격받지 않으면 다시 충전됩니다."
+        "description": "말파이트는 피해를 흡수하는 여러 겹의 바위로 감싸여 있습니다. 이 효과는 말파이트가 최근에 공격받지 않았다면 다시 충전됩니다."
     },
     "spells": [
         {
@@ -603,7 +603,7 @@
             "abilityVideoImagePath": "champion-abilities/60054/ability_60054_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "말파이트가 태초의 원소 마법으로 지면을 통해 대지의 조각을 날려, 적중한 적에게 피해를 입히고 4초 동안 이동 속도를 훔칩니다.",
+            "description": "말파이트가 태초의 원소 마법으로 지면을 통해 대지의 조각을 날려, 적중한 적에게 피해를 입히고 이동 속도를 훔칩니다.",
             "dynamicDescription": "대상에게 <magicDamage>@QDamageCalc@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 <speed>@SpeedSteal@%의 이동 속도</speed>를 훔칩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
@@ -630,36 +630,36 @@
                 8.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    70.0,
-                    120.0,
-                    170.0,
-                    220.0,
-                    270.0,
-                    320.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -754,7 +754,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "말파이트가 막강한 힘으로 타격하기 시작해 기본 공격 시 전방의 모든 유닛에게 피해를 입힙니다. 사용 시 방어력과 공격력이 잠시 대폭 증가합니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>말파이트가 기본 공격 시 대상 근처의 유닛에게 <physicalDamage>공격력</physicalDamage>의 @Jade_MalphiteObduracyPercentDamage*100@%에 해당하는 피해를 입힙니다.<br><br><spellActive>사용 시: </spellActive>말파이트의 <scaleArmor>방어력</scaleArmor>과 <physicalDamage>공격력</physicalDamage>이 6초 동안 @ArmorBonus*100@% 증가합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>말파이트가 기본 공격 시 대상 근처의 유닛에게 <physicalDamage>공격력</physicalDamage>의 @Jade_MalphiteObduracyPercentDamage*100@%에 해당하는 피해를 입힙니다.<br><br><spellActive>사용 시: </spellActive>말파이트의 <scaleArmor>방어력</scaleArmor>과 <physicalDamage>공격력</physicalDamage>이 @BuffDuration@초 동안 @ArmorBonus*100@% 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

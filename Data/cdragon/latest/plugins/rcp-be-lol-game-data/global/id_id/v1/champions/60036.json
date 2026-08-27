@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60036001,
+            "contentId": "fe2157e2-d089-467e-b7ff-287c7c46043d",
+            "relatedPrimeContentId": "3dd5adf7-f507-451b-85ee-9c5e88b3bb6a",
+            "relatedPrimeItemId": 36001,
+            "isBase": false,
+            "name": "Toxic Dr. Mundo",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Images/Jade_DrMundo_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_DrMundo/Skins/Skin01/Jade_DrMundoLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 111
+                }
+            ],
+            "description": "Mundo bukan pengganggu, Mundo punya mekanisme olah emosional yang baik. Oh, maksudmu goo ungu? Mundo juga yakin, hal itu tak jadi masalah."
+        },
+        {
             "id": 60036002,
             "contentId": "13b4262d-5b39-4bca-a4e6-cfa1388c5416",
             "relatedPrimeContentId": "9c1b5b53-d5e0-4ab8-bc23-47ef4faae5f7",
@@ -493,7 +524,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.png",
         "abilityVideoPath": "champion-abilities/60036/ability_60036_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60036/ability_60036_P1.jpg",
-        "description": "Dr. Mundo memulihkan 0,3% Health maksimum miliknya setiap detik."
+        "description": "Setiap detik, Dr. Mundo memulihkan sebagian dari Health maksimumnya."
     },
     "spells": [
         {
@@ -505,7 +536,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@ Health</font>",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Dr. Mundo melemparkan goloknya, menghasilkan damage berdasarkan health maksimum korbannya.",
-            "dynamicDescription": "<mainText>Dr. Mundo melemparkan goloknya, menghasilkan <magicDamage>magic damage</magicDamage> sebesar @DamageMod*100@% dari health target saat ini (@MinDamage@ damage minimum) dan menerapkan <status>Slow</status> pada mereka sebesar 40% selama 2 detik.<br><br>Setengah dari biaya health akan dikembalikan jika goloknya mengenai target.",
+            "dynamicDescription": "Dr. Mundo melemparkan cleaver-nya, menghasilkan <magicDamage>magic damage</magicDamage> sebesar @DamageMod*100@% dari health target saat ini (@MinDamage@ damage minimum) dan menerapkan <status>Slow</status> pada mereka sebesar @MoveMod*-100@% selama @SlowDuration@ detik.<br><br><healing>@HealthReturn@ Health</healing> akan dikembalikan jika cleaver mengenai target.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -804,8 +835,8 @@
             "abilityVideoImagePath": "champion-abilities/60036/ability_60036_E1.jpg",
             "cost": "<font color='#CC3300'>@HealthCost@ Health</font>",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Masochism meningkatkan Attack Damage Dr. Mundo dalam jumlah tetap selama 5 detik. Selain itu, Dr. Mundo juga mendapatkan tambahan Attack Damage untuk setiap persen Health yang hilang.",
-            "dynamicDescription": "Dr. Mundo mendapatkan <physicalDamage>@BaseIncrease@ Attack Damage</physicalDamage> selama 5 detik. Dr. Mundo mendapatkan tambahan <physicalDamage>+@DamageMod@ Attack Damage</physicalDamage> untuk setiap persen Health yang hilang.@SpellModifierDescriptionAppend@",
+            "description": "Dr. Mundo mendapatkan Attack Damage selama beberapa detik berdasarkan health-nya yang hilang.",
+            "dynamicDescription": "Dr. Mundo mendapatkan <physicalDamage>@BaseIncrease@ Attack Damage</physicalDamage> selama @Duration@ detik. Dr. Mundo mendapatkan tambahan <physicalDamage>+@DamageMod@ Attack Damage</physicalDamage> untuk setiap persen Health yang hilang.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -955,7 +986,7 @@
             "cost": "<font color='#CC3300'>@HealthCost@% dari Health Saat Ini</font>",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Dr. Mundo mengorbankan sebagian Health miliknya untuk meningkatkan Movement Speed dan menambah Regenerasi Health secara drastis.",
-            "dynamicDescription": "<mainText>Dr. Mundo memulihkan <healing>@MaximumHealthRegen@ Health</healing> selama 12 detik. Selain itu, dia mendapatkan <speed>@SpeedMod*100@% Movement Speed</speed>.",
+            "dynamicDescription": "Dr. Mundo memulihkan <healing>@MaximumHealthRegen@ Health</healing> dan mendapatkan <speed>@SpeedMod*100@% Movement Speed</speed> selama @Duration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,

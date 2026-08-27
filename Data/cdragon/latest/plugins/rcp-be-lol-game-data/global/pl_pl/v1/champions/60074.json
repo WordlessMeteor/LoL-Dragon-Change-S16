@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60074002,
+            "contentId": "28b7c772-5e24-4937-98f7-9231736b3de1",
+            "relatedPrimeContentId": "4ba59b85-dddf-4d62-a292-61570956f559",
+            "relatedPrimeItemId": 74002,
+            "isBase": false,
+            "name": "Heimerdinger po Wybuchu",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Images/Jade_Heimerdinger_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Heimerdinger/Skins/Skin02/Jade_HeimerdingerLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 70
+                }
+            ],
+            "description": "Heimerdinger, ekscentryczny naukowiec mieszkający w Nowej Republice Bandle, nie powiedział jeszcze nikomu, że wynalazł „ze dwie duże bomby” przeznaczone dla „jednego albo paru zbuntowanych rządów”. Wolałby majsterkować w mieście, w którym nikt nie chce go zabić."
+        },
+        {
             "id": 60074005,
             "contentId": "b1601725-8093-4c4e-b637-a88f3a1a6020",
             "relatedPrimeContentId": "6d32da9f-9a62-438b-afc4-874f4bab2aa8",
@@ -566,7 +597,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger rozstawia działko strażnicze. Działka zyskują umiejętności w miarę rozwijania tej umiejętności. (Działka zadają wieżom połowę obrażeń).",
-            "dynamicDescription": "Heimerdinger konstruuje działko strażnicze, które zadaje <magicDamage>@BonusDamage@ pkt. obrażeń magicznych</magicDamage> przy każdym ataku. Ta umiejętność ma następującą liczbę ładunków: @MaxAmmo@ (@AmmoRechargeTime@ sek. odnowienia).<br><br>Każda ranga tej umiejętności zapewnia dodatkowe ulepszenie:<br><attention>Ranga 2:</attention> Ataki działka zmniejszają pancerz i odporność na magię celu o 1 (maks. 50).<br><attention>Ranga 3:</attention> Maksymalna liczba działek zwiększona do 2.<br><attention>Ranga 4:</attention> Działka zyskują dodatkowe <scaleHealth>125 pkt. zdrowia</scaleHealth>.<br><attention>Ranga 5:</attention> Ataki działek zadają obrażenia obszarowe.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger konstruuje działko strażnicze, które zadaje <magicDamage>@BonusDamage@ pkt. obrażeń magicznych</magicDamage> przy każdym ataku. Wieżyczki zyskują <attackSpeed>@TurretBonusAttackSpeed*100@% prędkości ataku</attackSpeed> przez pierwsze @AttackSpeedDuration@ sek. po ich umieszczeniu. Ta umiejętność ma następującą liczbę ładunków: @MaxAmmo@ (@AmmoRechargeTime@ sek. odnowienia).<br><br>Każdy poziom tej umiejętności zapewnia dodatkowe wzmocnienie:<br><attention>Poziom 2:</attention> Ataki działka zmniejszają pancerz i odporność na magię celu o @Level2ResistShred@ pkt. (maks. @MaxShredCapTooltip@)<br><attention>Poziom 3:</attention> Maksymalna liczba działek zostaje zwiększona do 2.<br><attention>Poziom 4:</attention> Działka zyskują dodatkowe <scaleHealth>@Level4HPTooltip@ pkt. zdrowia</scaleHealth><br><attention>Poziom 5:</attention> Ataki działek zadają @AoEDamageMod*100@% obrażeń rozpryskowych.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -716,14 +747,14 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger wystrzeliwuje rakiety dalekiego zasięgu, które trafiają najbliższych wrogów.",
-            "dynamicDescription": "Heimerdinger wystrzeliwuje 3 samonaprowadzane Mikrorakiety (maks. 1 na osobę), które trafiają najbliższe cele. Każda rakieta zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger wystrzeliwuje samonaprowadzane Mikrorakiety w liczbie: @MaxTargets@ (maks. 1 na osobę), które trafiają najbliższe cele. Każda rakieta zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
                 65.0,
@@ -731,7 +762,7 @@
                 105.0,
                 125.0,
                 145.0,
-                90.0
+                165.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -742,8 +773,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
-                "coefficient2": 0.12
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -866,7 +897,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Heimerdinger rzuca granatem we wskazane miejsce, zadając obrażenia, ogłuszając bezpośrednio trafionych wrogów i oślepiając pobliskie jednostki.",
-            "dynamicDescription": "Heimerdinger rzuca granatem, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogim jednostkom i <status>oślepiając</status> je na @BlindDuration@ sek.  Wrogowie trafieni bezpośrednio zostają <status>ogłuszeni</status> na 1,5 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Heimerdinger rzuca granatem, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogim jednostkom i <status>oślepiając</status> je na @BlindDuration@ sek.  Wrogowie trafieni bezpośrednio zostają <status>ogłuszeni</status> na @StunDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 920.0,
                 920.0,
@@ -1016,7 +1047,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Biernie/użycie: Biernie zwiększa skrócenie czasu odnowienia.  Użyj, aby uzdrowić wszystkie Działka Rozwojowe i sprawić, że przez krótki czas będą strzelać Lodowymi Strzałami, które zmniejszają prędkość ruchu.",
-            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>@CooldownBonus*-100@% skrócenia czasu odnowienia.<br><br><spellActive>Użycie: </spellActive>Wzmocnienie wszystkich umiejętności i działek na czas działania.<br><br><spellName>Działka Rozwojowe:</spellName> Wszystkie działka zostają <healing>uleczone</healing> o 100% swojego maksymalnego zdrowia. Każdy atak działek nakłada <status>@MovementSpeedMod*-100@% spowolnienia</status>.<br><spellName>Minirakiety Hextech:</spellName> Wystrzelonych zostaje 5 rakiet zamiast 3.<br><spellName>Granat Ogłuszający CH-1:</spellName> Porusza się o 33% szybciej.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>@CooldownBonus*-100@% skrócenia czasu odnowienia.<br><br><spellActive>Użycie: </spellActive>Wzmocnienie wszystkich umiejętności i działek na czas działania.<br><br><spellName>Działka Rozwojowe:</spellName> Wszystkie działka zostają w pełni <healing>uleczone</healing>. Każdy atak nakłada <status>@MovementSpeedMod*-100@% spowolnienia</status>.<br><spellName>Minirakiety Hextech:</spellName> Wystrzeliwuje rakiety w liczbie: @WMaxMissiles@.<br><spellName>Granat Ogłuszający CH-1:</spellName> Porusza się o 33% szybciej.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1042,96 +1073,96 @@
                 45.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
-                "coefficient2": 0.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    100.0,
-                    140.0,
-                    180.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect2Amount": [
                     0.0,
-                    80.0,
-                    80.0,
-                    80.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect3Amount": [
                     0.0,
-                    1.5,
-                    1.5,
-                    1.5,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect4Amount": [
                     0.0,
-                    0.12,
-                    0.12,
-                    0.12,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    500.0,
-                    690.0,
-                    865.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect6Amount": [
                     0.0,
-                    0.45,
-                    0.45,
-                    0.45,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    80.0,
-                    100.0,
-                    120.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect8Amount": [
                     0.0,
-                    135.0,
-                    180.0,
-                    225.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect9Amount": [
                     0.0,
-                    28.0,
-                    39.0,
-                    49.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "Effect10Amount": [
                     0.0,
-                    150.0,
-                    250.0,
-                    350.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Corki": {
             "id": "Jade_Corki",
@@ -277,8 +277,8 @@
                 {
                     "id": "Jade_CorkiQ",
                     "name": "Phosphorus Bomb",
-                    "description": "Corki fires a flash bomb at a target location. This attack reveals non-stealthed units around the blast and champions for 6 seconds.",
-                    "tooltip": "Deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>  to enemies in a target area. In addition, the blast <status>Reveals</status> the area and champions hit by the blast for 6 seconds (does not reveal stealth).</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "Corki fires a bomb, damaging and revealing enemies around the blast.",
+                    "tooltip": "Corki fires a bomb, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>. The area and champions hit are revealed for {{ revealduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -560,7 +560,7 @@
                     "id": "Jade_CorkiE",
                     "name": "Gatling Gun",
                     "description": "Corki's gatling gun rapidly fires in a cone in front of him, dealing damage and reducing enemy armor.",
-                    "tooltip": "Corki's gatling gun fires in a cone in front of him for 4 seconds, dealing <physicalDamage>{{ totaldamagetooltiponly }} physical damage</physicalDamage> and <status>reducing {{ armormod*-1 }} armor</status> per second. The armor reduction stacks and lasts 2 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Corki's gatling gun fires in a cone in front of him for {{ activeduration }} seconds, dealing <physicalDamage>{{ damagepersecondcalc }} physical damage</physicalDamage> and <status>reducing {{ armormod*-1 }} armor</status> per second. The armor reduction stacks and lasts {{ shredduration }} seconds. (Maximum damage: <physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -568,7 +568,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ tooltipdamage }} -> {{ tooltipdamageNL }}",
+                            "{{ basedps }} -> {{ basedpsNL }}",
                             "{{ armormod*-1.000000 }} -> {{ armormodnl*-1.000000 }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -702,8 +702,8 @@
                 {
                     "id": "Jade_CorkiR",
                     "name": "Missile Barrage",
-                    "description": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Corki stores one missile every 12 seconds up to 7 missiles total. Every 3rd missile will be a Big One, dealing extra damage.",
-                    "tooltip": "Corki fires a missile toward his targeted location that will collide with the first enemy it hits. Each missile deals <magicDamage>{{ totaldamage }}  magic damage</magicDamage> in an area.<br /><br />This Ability has 7 charges ({{ ammorechargetime }} second refresh).<br /><br />Every 3rd missile will be a Big One, dealing <magicDamage>{{ totaldamagebig }} magic damage</magicDamage>  instead.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Some missiles will be a Big One, dealing extra damage.",
+                    "tooltip": "Corki fires a missile toward his targeted location that will collide with the first enemy it hits. Each missile deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> in an area.<br /><br />This Ability has {{ maxammotooltip }} charges ({{ ammorechargetime }} second refresh).<br /><br />Every 3rd missile will be a Big One, dealing <magicDamage>{{ totaldamagebig }} magic damage</magicDamage> instead.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "獨眼海盜 崔絲塔娜",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "海賊槍手們注意！崔絲塔娜躍然海上，為了嶄新冒險而駛出了班德爾的邊界。她的帽子是從一位被她炸爆的海盜那裡借（偷）來的，而眼罩單純是為了好看。她趕盡殺絕的態度和可靠的加農炮擊沉的艦船數量，可遠比比爾吉沃特的絕大多數船長還來得多。"
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -779,7 +810,7 @@
                 },
                 {
                     "id": 60018303,
-                    "name": "經典 粉色蘿莉 崔絲塔娜",
+                    "name": "經典 崔絲塔娜(粉色蘿莉)",
                     "contentId": "3c128324-2917-479c-b5e0-9b55c6673be2",
                     "relatedPrimeContentId": "8ffed7f5-dfac-4cb8-b659-ea4bae857cb2",
                     "relatedPrimeItemId": 18001,
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "崔絲塔娜急速射擊，短時間內增加攻速。",
-            "dynamicDescription": "<mainText>崔絲塔娜的<attackSpeed>攻速增加@AttackSpeedMod*100@%</attackSpeed>，持續7秒。",
+            "dynamicDescription": "崔絲塔娜增加<attackSpeed>@AttackSpeedMod*100@%攻速</attackSpeed>，持續@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "崔絲塔娜朝地面開火，靠反作用力跳躍至目標地點，落地時造成傷害並緩速鄰近敵軍3秒。",
-            "dynamicDescription": "<mainText>崔絲塔娜朝地面開火，靠反作用力跳躍至目標地點，落地時造成<magicDamage>@LandingDamage@</magicDamage>魔法傷害，並<status>緩速</status>60%，持續2.5秒。<br>取得英雄擊殺或助攻時，冷卻時間會重置。",
+            "description": "崔絲塔娜朝地面開火，將自己彈射到遠處，並在落地時對敵軍造成傷害與緩速。",
+            "dynamicDescription": "崔絲塔娜朝地面開火，靠反作用力跳躍至目標地點，落地時造成<magicDamage>@LandingDamage@魔法傷害</magicDamage>，並<status>緩速@Slow@%</status>，持續@SlowDuration@秒。如參與擊殺英雄，火箭跳躍的冷卻時間會重置。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "當崔絲塔娜殺死一個單位，加農炮彈會炸裂傷害周圍的敵軍。可以主動施放，對目標單位造成持續傷害，並降低受治療量。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>敵軍被崔絲塔娜的普攻擊殺時將產生爆炸，對鄰近敵軍造成<magicDamage>@PassiveDamage@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>撕裂目標敵軍，造成<keyword>50%重創</keyword>效果，並在5秒內造成<magicDamage>@ActiveDamageTTOnly@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>敵軍被崔絲塔娜的普攻擊殺時將產生爆炸，對鄰近敵軍造成<magicDamage>@PassiveDamage@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>撕裂目標敵軍，造成<keyword>50%重創</keyword>效果，並在@GrievousDuration@秒內造成<magicDamage>@ActiveDamageTTOnly@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

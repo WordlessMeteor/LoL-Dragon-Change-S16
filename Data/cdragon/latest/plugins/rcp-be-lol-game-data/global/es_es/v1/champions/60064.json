@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Lee Sin acólito",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "Los ropajes tradicionales de los acólitos de Shojin nunca le sentaron bien al joven y ambicioso Lee Sin, que tenía muchísimo más potencial de lo que los demás acólitos podrían llegar a soñar. Y, aun así, consiguió adaptarse, tanto a los ropajes como al poder del dragón."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Después de que Lee Sin use una habilidad, sus siguientes 2 ataques básicos obtienen un 40% de velocidad de ataque y restauran 15 de energía cada uno."
+        "description": "Después de que Lee Sin use una habilidad, sus siguientes ataques básicos obtienen velocidad de ataque y restauran energía."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Onda sónica: Lee Sin emite una onda sonora discordante para localizar a sus enemigos e inflige daño físico al que detecta primero. Si Onda sónica acierta, Lee Sin dispone de 3 s para lanzar Golpe resonante.<br>Golpe resonante: Lee Sin se abalanza sobre el enemigo golpeado por Onda sónica y le inflige daño físico + 8% de la vida que le falte.",
-            "dynamicDescription": "<spellName>Onda sónica:</spellName> Lee Sin emite una onda sonora discordante para localizar a sus enemigos e inflige <physicalDamage>@InitialDamage@ de daño físico</physicalDamage> al que detecta primero. Si <spellName>Onda sónica</spellName> acierta, Lee Sin dispone de 3 s para lanzar <spellName>Golpe resonante</spellName>.<br><br><spellName>Golpe resonante:</spellName> Lee Sin se desliza hacia el enemigo impactado por Onda sónica y le inflige <physicalDamage>@RecastDamage@ de daño físico</physicalDamage> + 8% de la vida que le falte.@SpellModifierDescriptionAppend@",
+            "description": "Onda sónica: Lee Sin emite una onda sonora discordante para localizar a sus enemigos e inflige daño al primer enemigo golpeado. Si Onda sónica acierta, Lee Sin puede lanzar Golpe resonante.<br><br>Golpe resonante: Lee Sin se abalanza sobre el enemigo golpeado por Onda sónica y le inflige más daño, además de una parte de la vida que le falte.",
+            "dynamicDescription": "<spellName>Onda sónica:</spellName> Lee Sin emite una onda sonora discordante para localizar a sus enemigos e inflige <physicalDamage>@InitialDamage@ de daño físico</physicalDamage> al que detecta primero. Si <spellName>Onda sónica</spellName> acierta, Lee Sin dispone de 3 s para lanzar <spellName>Golpe resonante</spellName>.<br><br><spellName>Golpe resonante:</spellName> Lee Sin se abalanza sobre el enemigo golpeado por Onda sónica y le inflige <physicalDamage>@RecastDamage@ de daño físico</physicalDamage> + @MissingHealthDamage*100@% de la vida que le falte.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Salvaguarda: Lee Sin salta sobre un aliado objetivo y genera un escudo que protege a ambos del daño. Tras utilizar Salvaguarda, Lee Sin dispone de 3 s para lanzar Voluntad de hierro.<br>Voluntad de hierro: El intenso entrenamiento de Lee Sin le permite crecerse en la batalla. Lee Sin obtiene robo de vida, succión de hechizo y armadura durante 4 s.",
-            "dynamicDescription": "<spellName>Salvaguarda:</spellName> Lee Sin salta sobre un aliado objetivo y genera un <shield>escudo</shield> que protege a ambos de @ShieldAmount@ de daño durante 5 s. Tras utilizar <spellName>Salvaguarda</spellName>, Lee Sin dispone de 3 s para lanzar <spellName>Voluntad de hierro</spellName>.<br><br><spellName>Voluntad de hierro:</spellName> El intenso entrenamiento de Lee Sin le permite crecerse en la batalla. Lee Sin obtiene un @LifestealAndSpellVamp@% robo de vida y succión de hechizo y <scaleArmor>@ArmorBonus@ de armadura</scaleArmor> durante 5 s.@SpellModifierDescriptionAppend@",
+            "description": "Salvaguarda: Lee Sin salta sobre un aliado objetivo y genera un escudo que protege a ambos del daño. Tras utilizar Salvaguarda, Lee Sin puede lanzar Voluntad de hierro.<br><br>Voluntad de hierro: El intenso entrenamiento de Lee Sin le permite crecerse en la batalla, lo que le otorga robo de vida, succión de hechizo y armadura.",
+            "dynamicDescription": "<spellName>Salvaguarda:</spellName> Lee Sin salta sobre un aliado objetivo y genera un <shield>escudo</shield> que protege a ambos de @ShieldAmount@ de daño durante @ShieldDuration@ s. Tras utilizar <spellName>Salvaguarda</spellName>, Lee Sin dispone de @W1ReactivateTime@ s para lanzar <spellName>Voluntad de hierro</spellName>.<br><br><spellName>Voluntad de hierro:</spellName> El intenso entrenamiento de Lee Sin le permite crecerse en la batalla. Lee Sin obtiene un @LifestealAndSpellVamp@% de robo de vida y succión de hechizo y <scaleArmor>@ArmorBonus@ de armadura</scaleArmor> durante @LifestealAndSpellVampTime@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

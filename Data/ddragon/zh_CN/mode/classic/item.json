@@ -1,6 +1,6 @@
 {
     "type": "item",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "basic": {
         "name": "",
         "rune": {
@@ -1832,7 +1832,8 @@
                 "773131",
                 "773085",
                 "773091",
-                "773109"
+                "773109",
+                "773154"
             ],
             "image": {
                 "full": "771043.png",
@@ -1948,8 +1949,7 @@
                 "773074",
                 "773072",
                 "773050",
-                "773144",
-                "773154"
+                "773144"
             ],
             "image": {
                 "full": "771053.png",
@@ -4458,7 +4458,7 @@
         },
         "773084": {
             "name": "激发之匣",
-            "description": "<mainText><stats><attention>430</attention>生命值<br><attention>450</attention>法力</stats><br><br><jadeUnique>活力激发</jadeUnique>：每当你施放技能时，在2秒内为附近生命值最低的友方英雄持续回复<healing>50生命值</healing>和<scaleMana>20法力值</scaleMana>。<keywordMajor>活力激发</keywordMajor>有3秒的冷却时间。</mainText>",
+            "description": "<mainText><stats><attention>500</attention>生命值<br><attention>450</attention>法力<br><attention>10%</attention>冷却缩减</stats><br><br><jadeUnique>活力激发</jadeUnique>：每当你施放技能时，在2秒内为附近生命值最低的友方英雄持续回复<healing>60生命值</healing>和<scaleMana>25法力值</scaleMana>。<keywordMajor>活力激发</keywordMajor>有3秒的冷却时间。</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -4475,10 +4475,10 @@
                 "h": 48
             },
             "gold": {
-                "base": 750,
+                "base": 350,
                 "purchasable": true,
-                "total": 2650,
-                "sell": 1855
+                "total": 2250,
+                "sell": 1575
             },
             "tags": [
                 "Health",
@@ -4490,7 +4490,7 @@
             },
             "stats": {
                 "FlatMPPoolMod": 450,
-                "FlatHPPoolMod": 430
+                "FlatHPPoolMod": 500
             },
             "depth": 3
         },
@@ -6196,12 +6196,12 @@
         },
         "773154": {
             "name": "瑞格之灯",
-            "description": "<mainText><stats><attention>25</attention>攻击力<br><attention>25</attention>护甲<br><attention>15%</attention>生命偷取</stats><br><br><jadeUnique>被动：</jadeUnique>普通攻击有25%几率在命中时对小兵和野怪造成<magicDamage>500额外魔法伤害</magicDamage>。<br><br><jadeLimit>击杀大型野怪或参与击杀英雄总计达到30次时转变为<attention>烈焰之炬</attention>。</jadeLimit><jadeUnique>主动</jadeUnique>180秒<br>放置一个隐形侦查守卫显示周围区域，持续180秒。</mainText>",
+            "description": "<mainText><stats><attention>30%</attention>攻击速度<br><attention>25</attention>护甲<br><attention>15%</attention>生命偷取</stats><br><br><jadeUnique>被动：</jadeUnique>普通攻击有25%几率在命中时对小兵和野怪造成<magicDamage>500额外魔法伤害</magicDamage>。<br><br><jadeLimit>击杀大型野怪或参与击杀英雄总计达到30次时转变为<attention>烈焰之炬</attention>。</jadeLimit><jadeUnique>主动</jadeUnique>180秒<br>放置一个隐形侦查守卫显示周围区域，持续180秒。</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
                 "773106",
-                "771053"
+                "771043"
             ],
             "image": {
                 "full": "773154.png",
@@ -6213,7 +6213,7 @@
                 "h": 48
             },
             "gold": {
-                "base": 500,
+                "base": 400,
                 "purchasable": true,
                 "total": 2000,
                 "sell": 1400
@@ -6232,7 +6232,7 @@
             },
             "stats": {
                 "FlatArmorMod": 25,
-                "FlatPhysicalDamageMod": 25,
+                "PercentAttackSpeedMod": 0.3,
                 "PercentLifeStealMod": 0.15
             },
             "depth": 3
@@ -6386,7 +6386,7 @@
         },
         "773160": {
             "name": "烈焰之炬",
-            "description": "<mainText><stats><attention>25</attention>攻击力<br><attention>25</attention>护甲<br><attention>15%</attention>生命偷取</stats><br><br><jadeUnique>野性标记：</jadeUnique>每参与击杀一名英雄后或击杀一只大型野怪时，获得一层野性。普通攻击命中时会造成<magicDamage>25(+1x野性层数)额外魔法伤害</magicDamage>。小兵和野怪有25%几率受到额外的425伤害。<jadeUnique>主动</jadeUnique>180秒<br>放置一个隐形侦查守卫显示周围区域，持续180秒。</mainText>",
+            "description": "<mainText><stats><attention>30%</attention>攻击速度<br><attention>25</attention>护甲<br><attention>15%</attention>生命偷取</stats><br><br><jadeUnique>野性标记：</jadeUnique>每参与击杀一名英雄后或击杀一只大型野怪时，获得一层野性。普通攻击命中时会造成<magicDamage>25(+1x野性层数)额外魔法伤害</magicDamage>。小兵和野怪有25%几率受到额外的425伤害。<jadeUnique>主动</jadeUnique>180秒<br>放置一个隐形侦查守卫显示周围区域，持续180秒。</mainText>",
             "colloq": "",
             "plaintext": "",
             "specialRecipe": 773154,
@@ -6418,7 +6418,7 @@
             },
             "stats": {
                 "FlatArmorMod": 25,
-                "FlatPhysicalDamageMod": 25,
+                "PercentAttackSpeedMod": 0.3,
                 "PercentLifeStealMod": 0.15
             }
         },
@@ -7080,7 +7080,7 @@
         },
         {
             "id": "CleaveItems",
-            "MaxGroupOwnable": "-1"
+            "MaxGroupOwnable": "1"
         },
         {
             "id": "Consumable",
@@ -7227,6 +7227,10 @@
             "MaxGroupOwnable": "1"
         },
         {
+            "id": "Kiwi_UltraHydra_Components",
+            "MaxGroupOwnable": "3"
+        },
+        {
             "id": "LastWhisper",
             "MaxGroupOwnable": "1"
         },
@@ -7237,10 +7241,6 @@
         {
             "id": "LegendaryAnvilGroup",
             "MaxGroupOwnable": "-1"
-        },
-        {
-            "id": "LegendaryClearingItems",
-            "MaxGroupOwnable": "1"
         },
         {
             "id": "LifelineItems",

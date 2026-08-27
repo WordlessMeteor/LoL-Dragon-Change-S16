@@ -6,7 +6,7 @@
     "name": "아리",
     "alias": "Jade_Ahri",
     "title": "구미호",
-    "shortBio": "- 적에게 피해를 입히면 정기 흡수(P) 중첩이 쌓입니다.<br>- 혼령 질주(R)의 재사용 대기시간이 초기화되지 않습니다.",
+    "shortBio": "- 적에게 피해를 입히면 정기 흡수 (P) 중첩이 쌓입니다.<br>- 혼령 질주(R)가 초기화되지 않습니다.<br>- 매혹(E)은 대상이 아리로부터 받는 피해를 증가시킵니다.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -1302,7 +1302,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아리가 전방으로 돌진하며 혼령의 정기를 발사해, 근처에 있는 적 최대 3명(챔피언 우선)에게 피해를 입힙니다. 혼령 질주는 재사용 대기에 돌입하기 전까지 최대 3회 사용할 수 있습니다.",
-            "dynamicDescription": "아리가 민첩하게 질주하며 근처에 있는 적에게 혼령의 정기 3개를 발사합니다. (챔피언 우선) 정기는 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. <spellName>혼령 질주</spellName>는 10초 내로 최대 2회 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "아리가 민첩하게 질주하며 근처에 있는 적에게 혼령의 정기 3개를 발사합니다. (챔피언 우선) 정기는 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. <spellName>혼령 질주</spellName>는 @RecastDuration@초 내로 최대 2회 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1320,12 +1320,12 @@
                 100.0
             ],
             "cooldownCoefficients": [
-                110.0,
-                95.0,
+                120.0,
+                100.0,
                 80.0,
-                65.0,
-                50.0,
-                35.0
+                60.0,
+                40.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

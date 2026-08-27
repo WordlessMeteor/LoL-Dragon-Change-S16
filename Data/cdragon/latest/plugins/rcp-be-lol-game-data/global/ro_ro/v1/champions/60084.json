@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Akali crepusculară",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "Ordinul Marii Viespi urmează un regim de formare tradițional foarte brutal, care îi învață pe studenți să înțepe cu ferocitatea și persistența unei viespi. Akali este cel mai mare campion al său și intenționează să perfecționeze tehnica până ajunge pe cele mai înalte culmi."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Akali își aruncă secera kama către un inamic țintă pentru a provoca daune magice și a însemna ținta timp de 6 secunde. Atacurile melee ale lui Akali împotriva unei ținte însemnate vor declanșa și vor consuma însemnul pentru a provoca daune suplimentare și a-i reface energia.",
-            "dynamicDescription": "Akali își aruncă secera kama către un inamic țintă pentru a provoca <magicDamage>@InitialDamage@ daune magice</magicDamage> și a însemna ținta timp de 6 secunde.<br><br>Atacurile melee ale lui Akali împotriva unei ținte însemnate vor consuma însemnul pentru a provoca <magicDamage>@ProcDamage@ daune magice</magicDamage> și a-i reface <keywordMajor>@EnergyReturn@ energie</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Akali își aruncă secera kama către un inamic țintă pentru a provoca daune magice și a însemna ținta. Următorul atac melee ale lui Akali împotriva unei ținte însemnate va consuma însemnul pentru a provoca daune suplimentare și a-i reface energia.",
+            "dynamicDescription": "Akali își aruncă secera kama către un inamic țintă pentru a provoca <magicDamage>@InitialDamage@ daune magice</magicDamage> și a însemna ținta timp de @MarkDuration@ secunde.<br><br>Atacurile melee ale lui Akali împotriva unei ținte însemnate vor consuma însemnul pentru a provoca <magicDamage>@ProcDamage@ daune magice</magicDamage> și a-i reface <keywordMajor>@EnergyReturn@ energie</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Akali se învăluie într-o mantie de fum. Cât timp este în zonă, Akali primește armură și rezistență la magie și devine invizibilă. Dacă atacă sau își folosește abilitățile, redevine vizibilă pentru scurt timp. Inamicii din interiorul mantiei au viteza de mișcare redusă.",
-            "dynamicDescription": "Akali se învăluie într-o mantie de fum care durează 8 secunde. Cât timp este în zonă, Akali primește <scaleArmor>@TotalResists@ armură</scaleArmor> și <scaleMR>@TotalResists@ rezistență la magie</scaleMR> și devine <keywordStealth>invizibilă</keywordStealth>. Dacă atacă sau își folosește abilitățile, redevine vizibilă pentru scurt timp.<br><br>Inamicii din fum sunt <status>încetiniți</status> cu @SlowAmount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Akali se învăluie într-o mantie de fum care durează @CloudDuration@ secunde. Cât timp este în zonă, Akali primește <scaleArmor>@TotalResists@ armură</scaleArmor> și <scaleMR>@TotalResists@ rezistență la magie</scaleMR> și devine <keywordStealth>invizibilă</keywordStealth>. Dacă atacă sau își folosește abilitățile, redevine vizibilă pentru scurt timp.<br><br>Inamicii din fum sunt <status>încetiniți</status> cu @SlowAmount@%.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

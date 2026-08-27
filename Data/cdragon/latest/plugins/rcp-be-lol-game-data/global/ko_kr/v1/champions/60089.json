@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "공격 스킬에 맞은 적에게 3.5초 동안 햇빛을 적용합니다. 아군 챔피언이 대상에게 피해를 입히면 햇빛을 소모해 추가 마법 피해를 입힙니다."
+        "description": "공격 스킬에 맞은 적에게 햇빛을 적용합니다. 아군 챔피언이 대상에게 피해를 입히면 햇빛을 소모해 추가 피해를 입힙니다."
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "레오나가 다음 기본 공격 시 방패를 사용하여 대상에게 추가 마법 피해를 입히고 기절시킵니다.",
-            "dynamicDescription": "다음 기본 공격 시 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 추가로 입히고 적을 1.25초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "다음 기본 공격 시 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 추가로 입히고 적을 @StunDuration@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "레오나가 방패를 들어 방어력과 마법 저항력을 얻습니다.  지속시간이 종료될 때 근처에 적이 있으면 마법 피해를 입히고, 추가 능력치가 더 오랫동안 지속됩니다.",
-            "dynamicDescription": "3초 동안 @BonusARMR@의 추가 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 얻습니다. 지속시간이 종료될 때 근처의 적에게 폭발을 맞히면 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입히고, 추가 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>이 3초간 추가로 지속됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "레오나가 @BuffDuration@초 동안 <scaleArmor>@BonusARMR@의 방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 얻습니다. 지속시간이 종료될 때 근처의 적에게 폭발을 맞히면 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입히고, 추가 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>의 @BuffDuration@초간 추가로 지속됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

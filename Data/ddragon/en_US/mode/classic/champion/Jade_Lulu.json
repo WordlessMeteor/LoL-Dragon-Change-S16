@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Lulu": {
             "id": "Jade_Lulu",
@@ -594,7 +594,7 @@
                     "id": "Jade_LuluE",
                     "name": "Help, Pix!",
                     "description": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy.",
-                    "tooltip": "On Ally Cast: Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for 6 seconds. Upon arrival, Pix <shield>shields for {{ totalshield }} damage</shield> for 6 seconds.<br /><br />On Enemy Cast: Pix deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to target enemy unit. Pix then follows and grants vision of them for 6 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "On Ally Cast: Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for {{ allyfollowduration }} seconds. Upon arrival, Pix <shield>shields for {{ totalshield }} damage</shield> for {{ shieldduration }} seconds.<br /><br />On Enemy Cast: Pix deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to target enemy unit. Pix then follows and grants vision of them for {{ enemyfollowduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -630,11 +630,11 @@
                     "effect": [
                         null,
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -644,11 +644,11 @@
                             0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -658,25 +658,25 @@
                             0
                         ],
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -702,13 +702,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "6",
                         "0",
-                        "50",
                         "0",
-                        "25",
-                        "4",
-                        "2.5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -739,7 +739,7 @@
                     "id": "Jade_LuluR",
                     "name": "Wild Growth",
                     "description": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies.",
-                    "tooltip": "Lulu enlarges her ally, <status>Knocking Up</status> nearby enemies into the air. For {{ buffduration }} seconds, her ally gains <scaleHealth>{{ totalbonushealth }} bonus health</scaleHealth> and nearby enemies are <status>Slowed</status> by {{ slowpercent }}% for 1 second.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lulu enlarges her ally, <status>Knocking Up</status> nearby enemies into the air. For {{ buffduration }} seconds, her ally gains <scaleHealth>{{ totalbonushealth }} bonus health</scaleHealth> and nearby enemies are <status>Slowed</status> by {{ slowpercent }}%.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Health",

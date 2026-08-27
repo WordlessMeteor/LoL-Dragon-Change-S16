@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Έζρεαλ του Νότινγκχαμ",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Ένα ξωτικό που λατρεύει την περιπέτεια από τα βασίλεια των μακρινών δασών, ο Έζρεαλ πολλές φορές υποδύεται τον ρόλο ενός «γοητευτικού τυχοδιώκτη-σταυροφόρου», ονόματι Τζάρο Λάιτφεδερ. Ελάχιστοι πιστεύουν τις ιστορίες για την ευγενή καταγωγή του, αλλά είναι ένας διασκεδαστικός τρόπος για να περνάει η ώρα μέχρι την επόμενη περιπέτειά του."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ο Έζρεαλ αποκτά αυξανόμενη Ταχύτητα Επίθεσης κάθε φορά που μια ικανότητά του πετυχαίνει τον στόχο της, η οποία συσσωρεύεται έως 5 φορές."
+        "description": "Ο Έζρεαλ αποκτά αυξανόμενη Ταχύτητα Επίθεσης κάθε φορά που μια ικανότητά του πετυχαίνει τον στόχο της."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ο Έζρεαλ εξαπολύει μια βολή ενέργειας, η οποία μειώνει ελαφρώς όλους τους Χρόνους Επαναφόρτισής του, αν χτυπήσει μια εχθρική μονάδα.",
             "dynamicDescription": "Ο Έζρεαλ εξαπολύει μια σφαίρα ενέργειας που προκαλεί <physicalDamage>@Damage@ Σωματική Ζημιά</physicalDamage> (εφαρμόζει επιδράσεις κατά το χτύπημα). <br><br>Αν η <spellName>Μυστικιστική Βολή</spellName> χτυπήσει κάποιο στόχο, οι Χρόνοι Επαναφόρτισης του Έζρεαλ μειώνονται κατά 1 δευτ.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Έζρεαλ εξαπολύει ένα απρόβλεπτο κύμα ενέργειας, μειώνοντας την Ταχύτητα Επίθεσης των αντίπαλων Ηρώων και προκαλώντας τους Μαγική Ζημιά, ενώ παράλληλα θεραπεύει και αυξάνει την Ταχύτητα Επίθεσης των σύμμαχων Ηρώων.",
-            "dynamicDescription": "Ο Έζρεαλ εξαπολύει ένα κύμα ενέργειας που χτυπά όλους τους αντίπαλους Ήρωες που διαπερνά, προκαλώντας <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage> και μειώνοντας την <attackSpeed>Ταχύτητα Επίθεσής</attackSpeed> τους κατά @AttackSpeed@% για 5 δευτερόλεπτα. <br><br>Οι σύμμαχοι Ήρωες που αγγίζει το κύμα αναπληρώνουν <healing>@TotalHeal@ Ζωή</healing>, ενώ η <attackSpeed>Ταχύτητα Επίθεσής</attackSpeed> τους αυξάνεται κατά @AttackSpeed@% για 5 δευτερόλεπτα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Έζρεαλ εξαπολύει ένα κύμα ενέργειας που χτυπά όλους τους αντίπαλους Ήρωες που διαπερνά, προκαλώντας <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage> και μειώνοντας την <attackSpeed>Ταχύτητα Επίθεσής</attackSpeed> τους κατά @AttackSpeed@% για @Duration@ δευτ. <br><br>Οι σύμμαχοι Ήρωες που αγγίζει το κύμα αναπληρώνουν <healing>@TotalHeal@ Ζωή</healing>, ενώ η <attackSpeed>Ταχύτητα Επίθεσής</attackSpeed> τους αυξάνεται κατά @AttackSpeed@% για @Duration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Έζρεαλ προετοιμάζεται για 1 δευτ. για να εξαπολύσει μια ισχυρή ομοβροντία ενεργειακών βολών που προκαλεί τεράστια ζημιά σε κάθε μονάδα που διαπερνά (προκαλεί 10% λιγότερη ζημιά σε κάθε μονάδα που διαπερνά).",
-            "dynamicDescription": "Ο Έζρεαλ προετοιμάζεται για 1 δευτ. για να εξαπολύσει μια ομοβροντία βολών που προκαλεί <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage> σε κάθε μονάδα που διαπερνά. Ωστόσο, προκαλεί @DamageReductionPerHit*100@% λιγότερη ζημιά για κάθε μονάδα που χτυπά (το λιγότερο @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ο Έζρεαλ εξαπολύει έναν καταιγισμό από ισχυρά βλήματα ενέργειας που προκαλούν τεράστια ζημιά σε κάθε μονάδα που διαπερνούν.",
+            "dynamicDescription": "Ο Έζρεαλ εξαπολύει έναν καταιγισμό βλημάτων που προκαλεί <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage> σε κάθε μονάδα που διαπερνά. Ωστόσο, προκαλεί @DamageReductionPerHit*100@% λιγότερη ζημιά για κάθε μονάδα που χτυπά (το λιγότερο @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

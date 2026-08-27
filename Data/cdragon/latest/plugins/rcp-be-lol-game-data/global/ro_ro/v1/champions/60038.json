@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadin primește cu 15% mai puține <magicDamage>daune magice</magicDamage> și transformă aceste daune în <attackSpeed>viteză de atac</attackSpeed> bonus."
+        "description": "Kassadin suferă <magicDamage>daune magice</magicDamage> reduse și transformă daunele magice primite în <attackSpeed>viteză de atac</attackSpeed> bonus."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Pasivă: atacurile de bază ale lui Kassadin îi refac mană. Mana refăcută este triplată împotriva campionilor inamici. Activă: atacurile de bază ale lui Kassadin provoacă daune magice suplimentare.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>atacurile de bază ale lui Kassadin extrag energie din Vid, refăcând <scaleMana>@ManaGainAmount@ mană</scaleMana> la fiecare lovitură. Dacă ținta este un campion inamic, <scaleMana>mana</scaleMana> refăcută este triplată la @ManaGainAmount*3@.<br><br><spellActive>Activă: </spellActive>Kassadin își încarcă spada infernului timp de 5 secunde, iar atacurile sale de bază vor provoca <magicDamage>@TotalDamage@ daune magice</magicDamage> suplimentare.@SpellModifierDescriptionAppend@",
+            "description": "Pasivă: atacurile de bază ale lui Kassadin îi refac mană. Activă: atacurile de bază ale lui Kassadin provoacă daune magice suplimentare.",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>atacurile de bază ale lui Kassadin extrag energie din Vid, refăcând <scaleMana>@ManaGainAmount@ mană</scaleMana> la fiecare lovitură, valoare ce crește la <scaleMana>@ChampionManaRestore@ mană</scaleMana> împotriva campionilor.<br><br><spellActive>Activă: </spellActive>Kassadin își încarcă spada infernului timp de @BuffDuration@ secunde, iar atacurile sale de bază vor provoca <magicDamage>@TotalDamage@ daune magice</magicDamage> suplimentare.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Kassadin se hrănește cu energie din vrăjile folosite în apropierea lui. După încărcare, Kassadin poate folosi ''Impulsul de forță'' pentru a provoca daune și a încetini inamicii dintr-o zonă în formă de con din fața lui.",
-            "dynamicDescription": "Kassadin se hrănește cu energie din vrăjile folosite în apropierea lui (pe o rază de 1800), primind un cumul de fiecare dată când o vrajă este folosită lângă el. Când ajunge la 6 cumuluri, Kassadin poate folosi <spellName>''Impulsul de forță''</spellName> pentru a provoca <magicDamage>@TotalDamage@ daune magice</magicDamage> și pentru a <status>încetini</status> inamicii cu @MoveSpeedMod*-100@% timp de 3 secunde într-o zonă în formă de con din fața lui.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin se hrănește cu energie din vrăjile folosite în apropierea lui, primind un cumul de fiecare dată când o vrajă este folosită lângă el.<br><br>Când ajunge la @RequiredChargesTooltip@ cumuluri, Kassadin poate folosi <spellName>''Impulsul de forță''</spellName> pentru a provoca <magicDamage>@TotalDamage@ daune magice</magicDamage> și pentru a <status>încetini</status> inamicii cu @MoveSpeedMod*-100@% timp de @SlowDuration@ secunde într-o zonă în formă de con din fața lui.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Kassadin se teleportează într-o locație apropiată, provocând daune unităților inamice din zonă. Dacă folosește ''Pașii riftului'' de mai multe ori într-un interval scurt, costul de mană al fiecărui proiectil crește și provoacă daune suplimentare.",
-            "dynamicDescription": "Kassadin se teleportează într-o locație apropiată, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> unităților inamice din jur. În plus, fiecare folosire a <spellName>''Pașilor riftului''</spellName> în următoarele 8 secunde costă cu <scaleMana>100 mană suplimentară</scaleMana> și provoacă <magicDamage>@Damage@ daune suplimentare</magicDamage>, cumulându-se de până la 10 ori.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin se teleportează într-o locație apropiată, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> unităților inamice din jur. În plus, fiecare folosire a <spellName>''Pașilor riftului''</spellName> în următoarele @BuffDuration@ secunde costă <scaleMana>@AdditionalManaPerCast@ mană suplimentară</scaleMana> și provoacă <magicDamage>@Damage@ daune suplimentare</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

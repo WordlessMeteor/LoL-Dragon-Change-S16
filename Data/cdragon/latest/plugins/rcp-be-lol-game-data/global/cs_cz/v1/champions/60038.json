@@ -431,7 +431,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.png",
         "abilityVideoPath": "champion-abilities/60038/ability_60038_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60038/ability_60038_P1.jpg",
-        "description": "Kassadinovi je způsobováno o 15 % nižší <magicDamage>magické poškození</magicDamage> a toto poškození si převádí na bonusovou <attackSpeed>rychlost útoků</attackSpeed>."
+        "description": "Kassadinovi je způsobováno snížené <magicDamage>magické poškození</magicDamage> a utrpěné magické poškození si převádí na bonusovou <attackSpeed>rychlost útoků</attackSpeed>."
     },
     "spells": [
         {
@@ -592,8 +592,8 @@
             "abilityVideoImagePath": "champion-abilities/60038/ability_60038_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pasivní efekt: Kassadinovy základní útoky obnovují manu. Při použití proti nepřátelským šampionům je množství obnovené many trojnásobné. Aktivace: Kassadinovy základní útoky způsobují dodatečné magické poškození.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Kassadinovy základní útoky čerpají energii z Prázdnoty a při každém zásahu mu obnoví <scaleMana>@ManaGainAmount@ many</scaleMana>. Je-li cílem nepřátelský šampion, množství obnovené <scaleMana>many</scaleMana> se ztrojnásobí na @ManaGainAmount*3@.<br><br><spellActive>Aktivace: </spellActive>Kassadin si na 5 sek. nabije své Podlé ostří, jeho základní útoky tak budou způsobovat dodatečných <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Pasivní efekt: Kassadinovy základní útoky obnovují manu. Aktivace: Kassadinovy základní útoky způsobují dodatečné magické poškození.",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Kassadinovy základní útoky čerpají energii z Prázdnoty a při každém zásahu mu obnoví <scaleMana>@ManaGainAmount@ many</scaleMana>, při použití proti šampionům se tato hodnota zvyšuje na <scaleMana>@ChampionManaRestore@ many</scaleMana>.<br><br><spellActive>Aktivace: </spellActive>Kassadin si na @BuffDuration@ sek. nabije své Podlé ostří, jeho základní útoky tak budou způsobovat dodatečných <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -619,45 +619,45 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    4.0,
-                    4.5,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
-                    175.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    20.0,
-                    20.0,
-                    22.5,
-                    25.0,
-                    27.5,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -743,7 +743,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kassadin čerpá energii z kouzel seslaných v jeho blízkosti. Po plném nabití může Kassadin Silovým impulzem poškodit a zpomalit nepřátele v kuželové výseči před sebou.",
-            "dynamicDescription": "Kassadin čerpá energii z kouzel seslaných v jeho blízkosti (okruh 1800 jednotek), a kdykoliv je v jeho okolí sesláno nějaké kouzlo, získá jedno nabití. Po nasbírání 6 nabití může Kassadin seslat <spellName>Silový impulz</spellName>, kterým nepřátelům v kuželové výseči před sebou způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na 3 sek. je <status>zpomalí</status> o @MoveSpeedMod*-100@ %.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin čerpá energii z kouzel seslaných v jeho blízkosti, a kdykoliv je v jeho okolí sesláno nějaké kouzlo, získá jedno nabití.<br><br>Po nasbírání @RequiredChargesTooltip@ nabití může Kassadin seslat <spellName>Silový impulz</spellName>, kterým nepřátelům v kuželové výseči před sebou způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@ sek. je <status>zpomalí</status> o @MoveSpeedMod*-100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -783,22 +783,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    40.0,
-                    50.0,
-                    60.0,
-                    70.0,
-                    80.0,
-                    90.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -893,7 +893,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kassadin se teleportuje na nedalekou pozici a způsobí poškození okolním nepřátelům. V případě seslání většího počtu Temných skoků během krátké doby se zvýší množství many, jež je pro aktivaci této schopnosti zapotřebí, zároveň však narůstá i způsobované poškození.",
-            "dynamicDescription": "Kassadin se teleportuje na nedalekou pozici a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> okolním nepřátelům. Každý další <spellName>Temný skok</spellName> seslaný během následujících 8 sekund navíc stojí o <scaleMana>100 many</scaleMana> víc a způsobí <magicDamage>@Damage@ bodů dodatečného poškození</magicDamage>, tento efekt se může nasčítat až 10x.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kassadin se teleportuje na nedalekou pozici a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> okolním nepřátelům. Každý další <spellName>Temný skok</spellName> seslaný během následujících @BuffDuration@ sek. stojí o <scaleMana>@AdditionalManaPerCast@ many</scaleMana> víc a způsobí <magicDamage>@Damage@ bodů dodatečného poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

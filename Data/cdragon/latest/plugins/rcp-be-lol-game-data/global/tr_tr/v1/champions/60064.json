@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60064002,
+            "contentId": "f442f995-da70-4919-b1a9-c30ba0538afa",
+            "relatedPrimeContentId": "f9654d96-327a-47fe-850e-375431bc498f",
+            "relatedPrimeItemId": 64002,
+            "isBase": false,
+            "name": "Tapınak Fedaisi Lee Sin",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Images/Jade_LeeSin_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_LeeSin/Skins/Skin02/Jade_LeeSinLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 180
+                }
+            ],
+            "description": "Diğer takipçilerin ancak rüyalarını süsleyecek bir potansiyele sahip olan genç Lee Sin'in hırslı omuzlarına Shojin'in takipçilerinin geleneksel kıyafetleri bir türlü oturmuyordu. Fakat gel zaman git zaman artık hem kıyafet hem de ejderhanın gücü üstüne tam oturmaya başladı."
+        },
+        {
             "id": 60064004,
             "contentId": "17887c02-94bf-4c84-ac55-b1235102d1cb",
             "relatedPrimeContentId": "456f3a57-192f-4b3e-931b-2787736e7887",
@@ -453,7 +484,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.png",
         "abilityVideoPath": "champion-abilities/60064/ability_60064_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60064/ability_60064_P1.jpg",
-        "description": "Lee Sin'in bir yetenek kullandıktan sonraki 2 normal saldırısı %40 Saldırı Hızı kazandırır ve 15 Enerji iade eder."
+        "description": "Lee Sin'in bir yetenek kullandıktan sonraki normal saldırıları, saldırı hızı kazandırır ve enerji iade eder."
     },
     "spells": [
         {
@@ -464,8 +495,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Ses Dalgası: Lee Sin isabet alan ilk rakibe fiziksel hasar veren ve rakiplerinin yerini tespit eden düzensiz bir ses dalgası gönderir. Ses Dalgası bir rakibe isabet ederse Lee Sin sonraki 3 saniye boyunca Titreşim Darbesi'ni kullanabilir.<br>Titreşim Darbesi: Lee Sin, Ses Dalgası'nın isabet ettiği rakibin üstüne atılıp fiziksel hasar artı rakibin eksik canının %8'ine eşdeğer miktarda hasar verir.",
-            "dynamicDescription": "<spellName>Ses Dalgası:</spellName> Lee Sin isabet alan ilk rakibe <physicalDamage>@InitialDamage@ Fiziksel Hasar</physicalDamage> veren ve rakiplerinin yerini tespit eden düzensiz bir ses dalgası gönderir. <spellName>Ses Dalgası</spellName> isabet ederse Lee Sin sonraki 3 saniye boyunca <spellName>Titreşim Darbesi</spellName>'ni kullanabilir.<br><br><spellName>Titreşim Darbesi:</spellName> Lee Sin, Ses Dalgası'nın isabet ettiği rakibin üstüne atılarak <physicalDamage>@RecastDamage@ Fiziksel Hasar</physicalDamage> artı rakibin eksik canının %8'ine eşdeğer miktarda hasar verir.@SpellModifierDescriptionAppend@",
+            "description": "Ses Dalgası: Lee Sin isabet alan ilk rakibe hasar veren ve rakiplerinin yerini tespit eden düzensiz bir ses dalgası gönderir. Ses Dalgası isabet ederse Lee Sin, Titreşim Darbesi'ni kullanabilir.<br><br>Titreşim Darbesi: Lee Sin, Ses Dalgası'nın isabet ettiği rakibin üstüne atılarak daha fazla hasar artı rakibin eksik canının belli bir kısmına eşdeğer miktarda hasar verir.",
+            "dynamicDescription": "<spellName>Ses Dalgası:</spellName> Lee Sin isabet alan ilk rakibe <physicalDamage>@InitialDamage@ Fiziksel Hasar</physicalDamage> veren ve rakiplerinin yerini tespit eden düzensiz bir ses dalgası gönderir. <spellName>Ses Dalgası</spellName> isabet ederse Lee Sin sonraki 3 saniye boyunca <spellName>Titreşim Darbesi</spellName>'ni kullanabilir.<br><br><spellName>Titreşim Darbesi: </spellName>Lee Sin, Ses Dalgası'nın isabet ettiği rakibin üstüne atılarak <physicalDamage>@RecastDamage@ Fiziksel Hasar</physicalDamage> artı rakibin eksik can miktarının %@MissingHealthDamage*100@ kadarına eşdeğer hasar verir.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -488,11 +519,11 @@
                 9.0,
                 8.0,
                 7.0,
-                7.0
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
-                "coefficient2": 2.0
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -614,8 +645,8 @@
             "abilityVideoImagePath": "champion-abilities/60064/ability_60064_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Koruma Güdüsü: Lee Sin hedef takım arkadaşına atılarak kendine ve ona kalkan sağlar. Lee Sin Koruma Güdüsü'nü kullandıktan sonraki 3 saniye boyunca Demir İrade yeteneğini kullanabilir.<br>Demir İrade: Lee Sin'in yoğun eğitimi savaşta avantaj sağlar. Lee Sin 4 saniyeliğine can çalma, can emme ve zırh kazanır.",
-            "dynamicDescription": "<spellName>Koruma Güdüsü:</spellName> Lee Sin hedef takım arkadaşına atılarak kendine ve ona 5 saniyeliğine @ShieldAmount@ Hasar soğuran bir <shield>kalkan</shield> sağlar. Lee Sin, <spellName>Koruma Güdüsü</spellName>'nü kullandıktan sonraki 3 saniye boyunca <spellName>Demir İrade</spellName>'yi kullanabilir.<br><br><spellName>Demir İrade:</spellName> Lee Sin'in yoğun eğitimi savaşma kabiliyetini arttırır. Lee Sin 5 saniyeliğine %@LifestealAndSpellVamp@ Can Çalma, Can Emme ve <scaleArmor>@ArmorBonus@ Zırh</scaleArmor> kazanır.@SpellModifierDescriptionAppend@",
+            "description": "Koruma Güdüsü: Lee Sin hedef takım arkadaşına atılarak kendine ve ona kalkan sağlar. Lee Sin, Koruma Güdüsü'nü kullandıktan sonra Demir İrade'yi kullanabilir.<br><br>Demir İrade: Lee Sin'in yoğun eğitimi savaşma kabiliyetini arttırarak can çalma, can emme ve zırh kazanmasını sağlar.",
+            "dynamicDescription": "<spellName>Koruma Güdüsü:</spellName> Lee Sin hedef takım arkadaşına atılarak kendine ve ona @ShieldDuration@ saniyeliğine @ShieldAmount@ Hasar soğuran bir <shield>kalkan</shield> sağlar. Lee Sin, <spellName>Koruma Güdüsü</spellName>'nü kullandıktan sonraki @W1ReactivateTime@ saniye içinde <spellName>Demir İrade</spellName>'yi kullanabilir.<br><br><spellName>Demir İrade:</spellName> Lee Sin'in yoğun eğitimi savaşma kabiliyetini arttırır. Lee Sin @LifestealAndSpellVampTime@ saniyeliğine %@LifestealAndSpellVamp@ Can Çalma, Can Emme ve <scaleArmor>@ArmorBonus@ Zırh</scaleArmor> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -641,7 +672,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -791,7 +822,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

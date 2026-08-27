@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Sion": {
             "id": "Jade_Sion",
@@ -22,6 +22,12 @@
                     "id": "60014000",
                     "num": 0,
                     "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60014001",
+                    "num": 1,
+                    "name": "钢铁终结者 赛恩",
                     "chromas": false
                 },
                 {
@@ -47,14 +53,14 @@
                     "id": "60014007",
                     "num": 7,
                     "name": "霸天零式 赛恩 终极雪崩",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 5
                 },
                 {
                     "id": "60014008",
                     "num": 8,
                     "name": "霸天零式 赛恩 湮灭狂潮",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 5
                 },
                 {
@@ -164,14 +170,14 @@
                     "id": "60014032",
                     "num": 32,
                     "name": "西部魔影 合成天使 赛恩 豪爽",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 30
                 },
                 {
                     "id": "60014033",
                     "num": 33,
                     "name": "西部魔影 合成天使 赛恩 善良",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 30
                 },
                 {
@@ -220,13 +226,13 @@
                     "id": "60014301",
                     "num": 301,
                     "name": "经典 赛恩",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60014302",
                     "num": 302,
                     "name": "经典 赛恩 钢铁终结者",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 301
                 }
             ],
@@ -272,7 +278,7 @@
                     "id": "Jade_SionQ",
                     "name": "秘密凝视",
                     "description": "赛恩以恐怖目光震慑一名敌人，对其造成伤害和晕眩。",
-                    "tooltip": "轰击一名敌人，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和1.5秒<status>晕眩</status> 。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赛恩爆裂单个敌人，从而造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -332,11 +338,11 @@
                             0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -346,32 +352,32 @@
                             0
                         ],
                         [
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5,
-                            7.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            60,
-                            60,
-                            60,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            150,
-                            150,
-                            150,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8,
-                            -0.8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
@@ -380,12 +386,12 @@
                         "0",
                         "0",
                         "0",
-                        "2.5",
                         "0",
-                        "7.5",
-                        "60",
-                        "150",
-                        "-0.8"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -412,8 +418,8 @@
                 {
                     "id": "Jade_SionW",
                     "name": "死亡拥抱",
-                    "description": "赛恩生成一道可吸收伤害的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成伤害。4秒后再次施放可手动引爆护盾。",
-                    "tooltip": "赛恩生成一道可吸收<shield>{{ totalshield }}伤害</shield>的护盾，保护自己。如果护盾在10秒内未被摧毁，则触发爆炸，对附近的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />4秒后<recast>再次施放</recast>可手动引爆护盾。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "赛恩生成一道可吸收伤害的护盾环绕自身。如果该护盾未被摧毁，则触发爆炸，对身边的敌人造成伤害。赛恩可以再次施放以提前引爆护盾。",
+                    "tooltip": "赛恩生成一道可吸收<shield>{{ totalshield }}伤害</shield>的护盾环绕自身。如果该护盾在{{ shieldduration }}秒内未被摧毁，则触发爆炸，对身边的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />在{{ recastdelay }}秒后<recast>再次施放</recast>即可手动引爆。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -445,67 +451,67 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            75,
-                            90,
-                            105,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            65,
-                            90,
-                            115,
-                            140
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            10,
-                            12,
-                            14,
-                            16
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            14,
-                            14,
-                            14,
-                            14,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -517,15 +523,15 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/75/90/105/120",
-                        "40/65/90/115/140",
-                        "8/10/12/14/16",
-                        "14",
-                        "4",
-                        "15",
-                        "3",
-                        "15",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -697,7 +703,7 @@
                     "id": "Jade_SionR",
                     "name": "死灵狂暴",
                     "description": "赛恩每次攻击都会吸取敌人的部分生命力，为自己和附近友军回复生命值。鲜肉的气息也会激发赛恩的狂热，提升他的攻击速度。",
-                    "tooltip": "赛恩获得<lifeSteal>{{ lifestealpercent*100 }}%生命偷取</lifeSteal>和<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>，持续20秒。此外，赛恩的普通攻击会为附近友军<healing>回复</healing>相当于{{ healpercent*100 }}%造成伤害的生命值。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赛恩获得持续{{ buffduration }}秒的<lifeSteal>{{ lifestealpercent*100 }}%生命偷取</lifeSteal>和<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>。此外，赛恩的普攻会<healing>治疗</healing>身边的友军们，数额相当于{{ healpercent*100 }}%造成伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "友方治疗",
@@ -811,7 +817,7 @@
             ],
             "passive": {
                 "name": "硬化皮肤",
-                "description": "赛恩每次受到攻击时，有40%几率无视最多30/40/50伤害。",
+                "description": "赛恩在每次被攻击时，有一定几率无视一些伤害。",
                 "image": {
                     "full": "Jade_Sion_Passive1.png",
                     "sprite": "passive1.png",

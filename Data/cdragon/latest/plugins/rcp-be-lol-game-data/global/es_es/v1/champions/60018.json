@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Tristana bucanera",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "¡Atención, artilleros! Tristana se hace a la mar y navega hacia nuevas aventuras más allá de las fronteras de Bandle. El sombrero es prestado (robado) de un pirata al que encañonó, y el parche es solo para fardar. Pero con su política de no tomar prisioneros y su cañón de confianza, ha hundido más barcos que la mayoría de capitanes de Aguas Estancadas."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Tristana incrementa su velocidad de ataque durante un breve tiempo.",
-            "dynamicDescription": "<mainText>Aumenta la <attackSpeed>velocidad de ataque de Tristana un @AttackSpeedMod*100@%</attackSpeed> durante 7 s.",
+            "dynamicDescription": "Tristana obtiene un <attackSpeed>@AttackSpeedMod*100@% de velocidad de ataque</attackSpeed> durante @BuffDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Tristana dispara al suelo para propulsarse hasta un punto lejano, lo que inflige daño y ralentiza durante 3 s a las unidades circundantes al aterrizar.",
-            "dynamicDescription": "<mainText>Tristana dispara al suelo para propulsarse hasta un lugar objetivo, lo que inflige al aterrizar <magicDamage>@LandingDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> un 60% durante 2,5 s.<br>Si mata o ayuda a matar a un enemigo, el enfriamiento se restablece.",
+            "description": "Tristana dispara al suelo para propulsarse a una ubicación lejana, lo que inflige daño y ralentiza a los enemigos donde aterrice.",
+            "dynamicDescription": "Tristana dispara al suelo para propulsarse hasta un lugar objetivo, lo que inflige <magicDamage>@LandingDamage@ de daño mágico</magicDamage> al aterrizar y <status>ralentiza</status> un @Slow@% durante @SlowDuration@ s. Al conseguir un asesinato o una asistencia, el enfriamiento de Salto misil se reinicia.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Cuando Tristana mata a una unidad, sus proyectiles estallan como metralla e infligen daño a los enemigos circundantes.  Se puede activar para infligir daño a lo largo del tiempo al objetivo y reducir la curación que reciba.",
-            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los enemigos explotan cuando Tristana los asesina con sus ataques básicos. La explosión inflige <magicDamage>@PassiveDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br><spellActive>Activa:</spellActive> Desgarra a un enemigo, lo que le aplica un <keyword>50% de heridas graves</keyword> y le inflige <magicDamage>@ActiveDamageTTOnly@ de daño mágico</magicDamage> a lo largo de 5 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los enemigos explotan cuando Tristana los asesina con sus ataques básicos. La explosión inflige <magicDamage>@PassiveDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br><spellActive>Activa:</spellActive> Desgarra a un enemigo, lo que le aplica un <keyword>50% de heridas graves</keyword> y le inflige <magicDamage>@ActiveDamageTTOnly@ de daño mágico</magicDamage> a lo largo de @GrievousDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

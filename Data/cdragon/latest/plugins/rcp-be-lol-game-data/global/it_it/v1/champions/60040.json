@@ -685,7 +685,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.project_jade.png",
         "abilityVideoPath": "champion-abilities/60040/ability_60040_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60040/ability_60040_P1.jpg",
-        "description": "Janna e i campioni alleati ottengono il 3% di velocità di movimento aggiuntiva."
+        "description": "Janna e i campioni alleati ottengono velocità di movimento aggiuntiva."
     },
     "spells": [
         {
@@ -697,7 +697,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Creando un cambiamento nella pressione e nella temperatura, Janna è in grado di creare un piccolo tornado che cresce col tempo. Può attivare di nuovo l'abilità per rilasciare il tornado. Al rilascio, il tornado vola verso la direzione in cui è stato lanciato, infliggendo danni e lanciando in aria i nemici sulla sua traiettoria.",
-            "dynamicDescription": "Evoca un turbine che infligge <magicDamage>@MinimumDamage@ danni magici</magicDamage> a tutti i nemici sul suo percorso e li <status>lancia</status> in aria. Il turbine viaggia più lontano, infligge <magicDamage>@ChargeDamage@ danni bonus</magicDamage> e <status>lancia</status> i nemici più in alto per ogni secondo di carica (fino a un massimo di 3 secondi).<br><br><recast>Rilancia</recast> per liberare il turbine in anticipo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Evoca un turbine che infligge <magicDamage>@MinimumDamage@ danni magici</magicDamage> a tutti i nemici sul suo percorso e li <status>lancia</status> in aria. Il turbine viaggia più lontano, infligge <magicDamage>@ChargeDamage@ danni bonus</magicDamage> e <status>lancia</status> i nemici più in alto per ogni secondo di carica (fino a un massimo di @MaxDuration@ secondi).<br><br><recast>Rilancia</recast> per liberare il turbine in anticipo.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Janna si circonda di una tempesta magica che respinge i nemici. Dopo che la tempesta si è calmata, un vento rassicurante cura gli alleati nelle vicinanze finché l'abilità è attiva.",
-            "dynamicDescription": "Evoca la forza del vento per <recast>respingere</recast> i nemici nelle vicinanze e ripristinare <healing>@TotalHeal@ salute</healing> agli alleati vicini nell'arco di 4 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Evoca la forza del vento per <recast>respingere</recast> i nemici nelle vicinanze e ripristinare <healing>@TotalHeal@ salute</healing> agli alleati vicini nell'arco di @MaxChannelDuration@ secondi. (Guarigione massima: <healing>@TotalHeal@</healing>)@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,

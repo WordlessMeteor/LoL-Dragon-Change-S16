@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Veigar mana-regenerálódása a hiányzó manájának minden 1%-a után 1%-kal nő."
+        "description": "Veigar mana-regenerálódása a hiányzó manájával arányosan növekszik."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Veigar rengeteg sötét anyagot idéz meg, amely az égből a célhelyre zuhan, és landoláskor varázssebzést okoz.",
-            "dynamicDescription": "<mainText>1,2 másodperc elteltével sötét anyag zúdul az égből a célterületre, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.",
+            "dynamicDescription": "@ImpactDelay@ másodperc elteltével sötét anyag zúdul az égből a célterületre, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Veigar 3 másodpercre meghajlítja a teret a kijelölt terület körül, a határon átlépő egységeket pedig rövid időre elkábítja.",
-            "dynamicDescription": "<mainText>Veigar 3 másodpercre meghajlítja a teret a kijelölt terület körül, a határon átlépő egységeket pedig @StunDuration@ másodpercre <status>elkábítja</status>.",
+            "dynamicDescription": "Veigar @CageDuration@ másodpercre meghajlítja a teret a kijelölt terület körül, a határon átlépő egységeket pedig @StunDuration@ másodpercre <status>elkábítja</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Felrobbantja a célba vett ellenséges hőst, ezzel nagymértékű alap varázssebzést, illetve a célpont varázserejének 80%-át kitevő sebzést okoz.",
-            "dynamicDescription": "<mainText>Csapást mér egy ellenséges hősre, és <magicDamage>@MinDamage@ + a célpont varázserejének 80%-ával megegyező varázssebzést</magicDamage> okoz neki.",
+            "dynamicDescription": "Veigar csapást mér egy ellenséges hősre, és <magicDamage>@MinDamage@ + a célpont varázserejének @EnemyAPRatio*100@%-ával megegyező varázssebzést</magicDamage> okoz neki.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

@@ -670,7 +670,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_ManaBarrier.project_jade.png",
         "abilityVideoPath": "champion-abilities/60053/ability_60053_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60053/ability_60053_P1.jpg",
-        "description": "体力が20%未満になると、「マナバリア」が発動する。これにより、マナの50%に相当するシールドを10秒間獲得する。「マナバリア」のクールダウンは90秒。"
+        "description": "体力が低下した状態でダメージを受けると、現在のマナの割合に応じた耐久値のシールドを獲得する。この効果にはクールダウンがある。"
     },
     "spells": [
         {
@@ -684,20 +684,20 @@
             "description": "指定方向に右手を発射する。最初に触れた敵ユニットを掴んでダメージを与え、自身のそばに引き寄せる。",
             "dynamicDescription": "右手を発射して<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、対象を<status>スタン</status>させて自身の位置まで<status>引き寄せる</status>。@SpellModifierDescriptionAppend@",
             "range": [
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0,
-                1079.0
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0,
+                1025.0
             ],
             "costCoefficients": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0,
+                140.0
             ],
             "cooldownCoefficients": [
                 22.0,
@@ -981,8 +981,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "拳にエネルギーを充填して次の通常攻撃のダメージを2倍にし、対象をノックアップする。",
-            "dynamicDescription": "拳にエネルギーを充填して、次の通常攻撃で<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、対象を@CCDuration@秒間<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
+            "description": "拳にエネルギーを充填して次の通常攻撃が追加ダメージを与え、対象をノックアップする。",
+            "dynamicDescription": "拳にエネルギーを充填して、次の通常攻撃で<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、対象を<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1005,7 +1005,7 @@
                 7.0,
                 6.0,
                 5.0,
-                5.0
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,
@@ -1131,8 +1131,8 @@
             "abilityVideoImagePath": "champion-abilities/60053/ability_60053_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "自動効果で電撃を放ち、周囲の敵1体にダメージを与える。また、発動すると周囲に電撃を放出し、範囲内の敵ユニットにダメージと0.5秒のサイレンス効果を与える。クールダウン中は自動効果が発生しなくなる。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>2.5秒ごとに体から電撃を放ち、周囲にいる敵にランダムで<magicDamage>@PassiveDamage@の魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果: </spellActive>周囲の敵ユニットに<magicDamage>@ActiveDamage@の魔法ダメージ</magicDamage>を与え、0.5秒間<status>サイレンス効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "description": "自動効果で電撃を放ち、周囲の敵1体にダメージを与える。また、スキルを発動すると周囲に電撃を放ち、範囲内の敵ユニットにダメージと一時的なサイレンス効果を与える。",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>@PassiveHitRate@秒ごとに体から電撃を放ち、周囲にいる敵にランダムで<magicDamage>@PassiveDamage@の魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果: </spellActive>周囲の敵ユニットに<magicDamage>@ActiveDamage@の魔法ダメージ</magicDamage>を与え@SilenceDuration@秒間<status>サイレンス効果</status>を付与する。「イナズマフィールド」のクールダウン中、この自動効果は無効になる。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1150,12 +1150,12 @@
                 150.0
             ],
             "cooldownCoefficients": [
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0,
-                30.0
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60081001,
+            "contentId": "d91b8ce0-5ab9-48bc-ac90-a6ccd773992e",
+            "relatedPrimeContentId": "e5aece36-d877-4a11-8afd-055389a4ae28",
+            "relatedPrimeItemId": 81001,
+            "isBase": false,
+            "name": "Nottinghami Ezreal",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Images/Jade_Ezreal_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Ezreal/Skins/Skin01/Jade_EzrealLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 97
+                }
+            ],
+            "description": "Ezreal egy távoli erdei birodalomból származó kalandozó elf, aki előszeretettel nevezi magát „Pehelytoll Jarrónak, a jóképű tolvaj-paplovagnak.” A többség joggal kételkedik abban, hogy valódi lovag lenne, de legalább ez is elvonja a figyelmüket sokszor katasztrofális kimenetelű ballépéseiről."
+        },
+        {
             "id": 60081003,
             "contentId": "ead523b8-3df9-4d7a-8a5f-fad2bbd415ce",
             "relatedPrimeContentId": "4d4fe602-f609-42bf-b88c-ff491b7d29bd",
@@ -783,7 +814,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.png",
         "abilityVideoPath": "champion-abilities/60081/ability_60081_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60081/ability_60081_P1.jpg",
-        "description": "Ha Ezreal betalál egy varázslatával, a támadási sebessége megnő (a hatás legfeljebb 5 alkalommal halmozódhat)."
+        "description": "Ha Ezreal eltalál egy célpontot egy varázslatával, a támadási sebessége megnő."
     },
     "spells": [
         {
@@ -797,12 +828,12 @@
             "description": "Ezreal egy sebzést okozó energialövedéket lő ki, amely találat esetén kis mértékben csökkenti az összes töltési idejét.",
             "dynamicDescription": "Ezreal egy energialövedéket lő ki, amely <physicalDamage>@Damage@ fizikai sebzést</physicalDamage> okoz (és alkalmazza a találati hatásokat). <br><br>Ezreal minden töltési ideje 1 másodperccel csökken, ha a <spellName>Misztikus lövés</spellName> eltalálja a célpontot.<br>@SpellModifierDescriptionAppend@",
             "range": [
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0,
-                1150.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 30.0,
@@ -945,7 +976,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ezreal egy energiahullámot lő ki, amely csökkenti az eltalált ellenséges hősök támadási sebességét, és varázssebzést okoz nekik, valamint gyógyítja az eltalált szövetséges hősöket, és növeli a támadási sebességüket.",
-            "dynamicDescription": "Ezreal egy energiahullámot lő ki, amely az útjába kerülő összes ellenséges hőst megsebzi, és <magicDamage>@Damage@ varázssebzést</magicDamage> okoz nekik, valamint 5 másodpercre @AttackSpeed@%-kal csökkenti a <br>támadási sebességüket<attackSpeed>. </attackSpeed><br>A hullám által eltalált szövetséges hősök visszatöltenek <healing>@TotalHeal@ életerőt</healing>, és a <attackSpeed>támadási sebességük</attackSpeed> 5 másodpercre @AttackSpeed@%-kal megnő.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ezreal egy energiahullámot lő ki, amely az útjába kerülő összes ellenséges hőst megsebzi, és <magicDamage>@Damage@ varázssebzést</magicDamage> okoz nekik, valamint @Duration@ másodpercre @AttackSpeed@%-kal csökkenti a <attackSpeed>támadási sebességüket</attackSpeed>. <br><br>A hullám által eltalált szövetséges hősök visszatöltenek <healing>@TotalHeal@ életerőt</healing>, és a <attackSpeed>támadási sebességük</attackSpeed> @Duration@ másodpercre @AttackSpeed@%-kal megnő.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,
@@ -1244,8 +1275,8 @@
             "abilityVideoImagePath": "champion-abilities/60081/ability_60081_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Ezreal 1 másodperces felkészülés után erős energialövedékeket lő ki, amelyek komoly sebzést okoznak az összes útjukba kerülő egységnek (a sebzés minden újabb eltalált ellenség után 10%-kal csökken).",
-            "dynamicDescription": "Ezreal 1 másodperces felkészülés után erős energialövedékeket lő ki, amelyek <magicDamage>@Damage@ varázssebzést</magicDamage> okoznak az útjukba kerülő összes egységnek. A képesség azonban minden eltalált egység után @DamageReductionPerHit*100@%-kal kevesebb sebzést okoz (a minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
+            "description": "Ezreal erős energialövedékeket lő ki, amelyek komoly sebzést okoznak az összes útjukba kerülő egységnek.",
+            "dynamicDescription": "Ezreal erős energialövedékeket lő ki, amelyek <magicDamage>@Damage@ varázssebzést</magicDamage> okoznak az útjukba kerülő összes egységnek. A képesség azonban minden eltalált egység után @DamageReductionPerHit*100@%-kal kevesebb sebzést okoz (a minimum @MinimumDamagePercent*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

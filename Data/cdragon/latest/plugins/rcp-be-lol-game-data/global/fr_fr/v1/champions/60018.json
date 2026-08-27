@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Tristana pirate",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Ohé, les gargoussiers ! Tristana appareille pour la haute mer et fait voile au-delà des frontières de Bandle vers de nouvelles aventures. Elle a emprunté (volé) son chapeau à un pirate qu'elle a explosé. Le bandeau, c'est pour l'épate. En tout cas, son agressivité et son canon lui ont permis de couler plus de navires que la plupart des capitaines de Bilgewater."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tristana tire rapidement avec son arme, augmentant sa vitesse d'attaque pendant un court instant.",
-            "dynamicDescription": "<mainText>Augmente la <attackSpeed>vitesse d'attaque de Tristana de @AttackSpeedMod*100@%</attackSpeed> pendant 7 sec.",
+            "dynamicDescription": "Tristana gagne <attackSpeed>@AttackSpeedMod*100@% de vitesse d'attaque</attackSpeed> pendant @BuffDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Tristana pointe son arme vers le sol et tire pour se propulser jusqu'à une destination éloignée, infligeant des dégâts aux unités proches et les ralentissant pendant 3 sec à l'atterrissage.",
-            "dynamicDescription": "<mainText>Tristana pointe son arme vers le sol et tire pour se propulser jusqu'à l'emplacement ciblé, infligeant <magicDamage>@LandingDamage@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> les ennemis de 60% pendant 2.5 sec à l'atterrissage.<br>Le délai de récupération de la compétence est annulé en cas d'élimination de champion ou d'assistance.",
+            "description": "Tristana tire sur le sol pour se propulser vers un endroit éloigné, infligeant des dégâts et ralentissant les ennemis à l'endroit où elle atterrit.",
+            "dynamicDescription": "Tristana pointe son arme vers le sol et tire pour se propulser jusqu'à l'emplacement ciblé, infligeant <magicDamage>@LandingDamage@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> les ennemis de @Slow@% pendant @SlowDuration@ sec à l'atterrissage. Lors d'une élimination ou d'une assistance contre un champion, le délai de récupération de Saut roquette est réinitialisé.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lorsque Tristana élimine une unité, ses projectiles explosent et infligent des dégâts aux ennemis proches.  Peut être activé pour placer sur une cible ennemie pour lui infliger des dégâts sur la durée et réduire les soins qu'elle reçoit.",
-            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les ennemis explosent lorsqu'ils sont éliminés par les attaques de base de Tristana, infligeant <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches.<br><br><spellActive>Actif : </spellActive>blesse la cible ennemie, lui appliquant <keyword>50% d'Hémorragie</keyword> et lui infligeant <magicDamage>@ActiveDamageTTOnly@ pts de dégâts magiques</magicDamage> en 5 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les ennemis explosent lorsqu'ils sont éliminés par les attaques de base de Tristana, infligeant <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches.<br><br><spellActive>Actif : </spellActive>blesse la cible ennemie, lui appliquant <keyword>50% d'Hémorragie</keyword> et lui infligeant <magicDamage>@ActiveDamageTTOnly@ pts de dégâts magiques</magicDamage> en @GrievousDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

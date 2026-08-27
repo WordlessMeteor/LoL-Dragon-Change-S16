@@ -62,6 +62,33 @@
             "description": null
         },
         {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Akali Ong Bắp Cày",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "Hội Ong Vĩ Đại có một chế độ huấn luyện tàn khốc và khắc nghiệt, dạy học viên chích dữ dội và không ngừng như ong vò vẽ. Akali là nhà vô địch vĩ đại nhất của họ, và cô có ý định đưa nghệ thuật này lên tầm cao mới."
+        },
+        {
             "id": 60084002,
             "contentId": "3fcc4d62-9786-41ee-811f-1e75f0a56d07",
             "relatedPrimeContentId": "a34d8b8a-1afe-4875-be19-2e55c61aaff0",
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Akali xoay liềm về phía kẻ địch chỉ định, gây sát thương phép và đánh dấu mục tiêu trong 6 giây. Các đòn đánh cận chiến của Akali lên mục tiêu bị đánh dấu sẽ kích hoạt và tiêu hao dấu ấn để gây thêm sát thương và hồi lại Nội Năng.",
-            "dynamicDescription": "Akali ném lưỡi liềm vào một kẻ địch chỉ định, gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage> và đánh dấu mục tiêu trong 6 giây.<br><br>Các đòn đánh cận chiến của Akali lên mục tiêu bị đánh dấu sẽ tiêu hao dấu ấn để gây <magicDamage>@ProcDamage@ sát thương phép</magicDamage> và hồi lại <keywordMajor>@EnergyReturn@ Nội Năng</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Akali xoay liềm về phía kẻ địch chỉ định, gây sát thương phép và đánh dấu mục tiêu. Đòn đánh cận chiến tiếp theo của Akali lên mục tiêu bị đánh dấu sẽ tiêu hao dấu ấn để gây thêm sát thương và hồi lại Nội Năng.",
+            "dynamicDescription": "Akali ném lưỡi liềm vào một kẻ địch chỉ định, gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage> và đánh dấu mục tiêu trong @MarkDuration@ giây.<br><br>Các đòn đánh cận chiến của Akali lên mục tiêu bị đánh dấu sẽ tiêu hao dấu ấn để gây <magicDamage>@ProcDamage@ sát thương phép</magicDamage> và hồi lại <keywordMajor>@EnergyReturn@ Nội Năng</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Akali tung ra một màn khói che phủ. Khi ở trong khói, Akali nhận thêm Giáp và Kháng Phép, đồng thời trở nên vô hình. Tấn công hoặc sử dụng kỹ năng sẽ tạm thời làm cô lộ diện. Kẻ địch ở trong khói sẽ bị giảm Tốc Độ Di Chuyển.",
-            "dynamicDescription": "Akali tung ra một màn khói che phủ kéo dài trong 8 giây. Khi ở trong khói, Akali nhận thêm <scaleArmor>@TotalResists@ Giáp</scaleArmor> và <scaleMR>@TotalResists@ Kháng Phép</scaleMR>, đồng thời trở nên <keywordStealth>Vô Hình</keywordStealth>. Tấn công hoặc sử dụng kỹ năng sẽ tạm thời làm cô lộ diện.<br><br>Kẻ địch ở trong khói sẽ bị <status>Làm Chậm</status> @SlowAmount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Akali tung ra một màn khói che phủ kéo dài trong @CloudDuration@ giây. Khi ở trong khói, Akali nhận thêm <scaleArmor>@TotalResists@ Giáp</scaleArmor> và <scaleMR>@TotalResists@ Kháng Phép</scaleMR>, đồng thời trở nên <keywordStealth>Vô Hình</keywordStealth>. Tấn công hoặc sử dụng kỹ năng sẽ tạm thời làm cô lộ diện.<br><br>Kẻ địch ở trong khói sẽ bị <status>Làm Chậm</status> @SlowAmount@%.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

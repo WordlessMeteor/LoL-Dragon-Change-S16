@@ -4,7 +4,7 @@
         "championSkinName": "LordMordekaiser",
         "metaDataTags": "gender:male,faction:noxus,skinline:legacy",
         "loadscreen": {
-            "image": "ASSETS/Characters/Mordekaiser/Skins/Skin04/MordekaiserLoadscreen_4.tex",
+            "image": "assets/characters/mordekaiser/skins/skin04/mordekaiserloadscreen_4.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -180,7 +180,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Mordekaiser_Skin04.skl",
             "simpleSkin": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Mordekaiser_Skin04.skn",
-            "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Mordekaiser_Skin04_TX_CM.tex",
+            "texture": "assets/characters/mordekaiser/skins/skin04/mordekaiser_skin04_tx_cm.tex",
             "selfIllumination": 1.0,
             "overrideBoundingBox": [
                 195.0,
@@ -196,22 +196,22 @@
             "initialSubmeshToHide": "Guitar Crown Poro_ShadowIsles_Mat",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Mordekaiser_Skin04_Mace_TX_CM.tex",
+                    "texture": "assets/characters/mordekaiser/skins/skin04/mordekaiser_skin04_mace_tx_cm.tex",
                     "submesh": "Mace",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Mordekaiser/Skins/Base/Mordekaiser_Base_Guitar_TX_CM.tex",
+                    "texture": "assets/characters/mordekaiser/skins/base/mordekaiser_base_guitar_tx_cm.tex",
                     "submesh": "Guitar",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Mordekaisker_Skin04_Crown_TX_CM.tex",
+                    "texture": "assets/characters/mordekaiser/skins/skin04/mordekaisker_skin04_crown_tx_cm.tex",
                     "submesh": "Crown",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Mordekaiser/Skins/Base/Poro_ShadowIsles_TX_CM.tex",
+                    "texture": "assets/characters/mordekaiser/skins/base/poro_shadowisles_tx_cm.tex",
                     "submesh": "Poro_ShadowIsles_Mat",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -261,9 +261,9 @@
             }
         ],
         "mContextualActionData": "Characters/Mordekaiser/CAC/Mordekaiser_Base",
-        "iconCircle": "ASSETS/Characters/Mordekaiser/HUD/Mordekaiser_Circle_0.tex",
-        "iconSquare": "ASSETS/Characters/Mordekaiser/HUD/Mordekaiser_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Mordekaiser/HUD/Mordekaiser_Circle_4.tex",
+        "iconCircle": "assets/characters/mordekaiser/hud/mordekaiser_circle_0.tex",
+        "iconSquare": "assets/characters/mordekaiser/hud/mordekaiser_square.tex",
+        "iconAvatar": "assets/characters/mordekaiser/hud/mordekaiser_circle_4.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -19110,7 +19110,7 @@
                     {
                         "priority": 1,
                         "overrideBlendMode": 2,
-                        "baseTexture": "ASSETS/Characters/Mordekaiser/Skins/Skin04/Particles/Yuumi_Skin04_W_empty32.tex",
+                        "baseTexture": "assets/characters/mordekaiser/skins/skin04/particles/yuumi_skin04_w_empty32.tex",
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
                 ],
@@ -36475,7 +36475,7 @@
                 "texture": "ASSETS/Characters/Illaoi/Skins/Base/Particles/Illaoi_Base_E_SpiritMat.tex",
                 "materialOverrideDefinitions": [
                     {
-                        "baseTexture": "ASSETS/Characters/Illaoi/Skins/Base/Particles/Illaoi_Base_E_SpiritMat.tex",
+                        "baseTexture": "assets/characters/illaoi/skins/base/particles/illaoi_base_e_spiritmat.tex",
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
                 ],
@@ -87651,6 +87651,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 306,
+                "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "softParticleParams": {
                     "deltaIn": 120.0,
@@ -89214,10 +89215,6 @@
                 },
                 "pass": 413,
                 "alphaRef": 0,
-                "softParticleParams": {
-                    "deltaIn": 120.0,
-                    "__type": "VfxSoftParticleDefinitionData"
-                },
                 "alphaErosionDefinition": {
                     "erosionMapName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/common_trans-vladnbladeback.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
@@ -89359,10 +89356,6 @@
                 },
                 "pass": 414,
                 "alphaRef": 0,
-                "softParticleParams": {
-                    "deltaIn": 120.0,
-                    "__type": "VfxSoftParticleDefinitionData"
-                },
                 "alphaErosionDefinition": {
                     "erosionMapName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/common_trans-vladnbladeback.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
@@ -90481,185 +90474,6 @@
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
-                "emitterName": "outerSpiral_TE5",
-                "disabled": true,
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -30.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Pit_Souls.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.6000000238418579
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.01792294718325138,
-                            0.9536013603210449,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6000000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6000000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 308,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "stencilMode": 2,
-                "StencilReferenceId": "{7b2a0c50}",
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Malestrom.tex",
-                "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_colorGrad_16.tex",
-                    "paletteCount": 16,
-                    "__type": "VfxPaletteDefinitionData"
-                },
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        -0.05000000074505806,
-                        -0.05000000074505806
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "texDiv": [
-                    2.0,
-                    1.0
-                ],
-                "uvScale": {
-                    "constantValue": [
-                        4.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Malestrom.tex",
-                    "uvScaleMult": {
-                        "constantValue": [
-                            2.0,
-                            2.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "ParticleIntegratedUvScrollMult": {
-                        "constantValue": [
-                            0.02500000037252903,
-                            0.02500000037252903
-                        ],
-                        "dynamics": {
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                [
-                                    0.02500000037252903,
-                                    0.02500000037252903
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector2fVariableData"
-                        },
-                        "__type": "IntegratedValueVector2"
-                    },
-                    "birthUVOffsetMult": {
-                        "constantValue": [
-                            2.0,
-                            1.0
-                        ],
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -1.0,
-                                        1.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                },
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -1.0,
-                                        1.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                [
-                                    2.0,
-                                    1.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector2fVariableData"
-                        },
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
                 "emitterName": "outerSpiral_TE6",
                 "SpawnShape": {
                     "emitOffset": [
@@ -90965,7 +90779,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/velvet_Nrm_pyke.tex",
+                "texturePath": "assets/shared/materials/velvet_nrm_pyke.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -91137,7 +90951,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/velvet_Nrm_pyke.tex",
+                "texturePath": "assets/shared/materials/velvet_nrm_pyke.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -91407,9 +91221,9 @@
         "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin4_Skins_Skin42_Skins_Skin43_Skins_Skin5.bin",
         "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5.bin",
-        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin4_Skins_Skin5.bin",
         "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4.bin",
-        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin4_Skins_Skin5.bin",
-        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin3_Skins_Skin4.bin"
+        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin4_Skins_Skin5.bin",
+        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin3_Skins_Skin4.bin",
+        "DATA/Characters/Mordekaiser/Mordekaiser_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin4_Skins_Skin5.bin"
     ]
 }

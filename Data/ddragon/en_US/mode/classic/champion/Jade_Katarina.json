@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Katarina": {
             "id": "Jade_Katarina",
@@ -222,7 +222,7 @@
                     "id": "Jade_KatarinaQ",
                     "name": "Bouncing Blade",
                     "description": "Katarina throws a dagger that bounces from enemy to enemy, dealing magic damage.",
-                    "tooltip": "Throws a dagger dealing <magicDamage>{{ totaldamage }}</magicDamage> magic damage. The dagger bounces to the {{ maxbounces }} closest enemies dealing 10% less damage with each bounce.<br /><br />Enemies hit are marked for {{ markduration }} seconds. Katarina's basic attacks or spells will consume the mark dealing <magicDamage>{{ totaldamagemark }}</magicDamage> additional magic damage.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Throws a dagger dealing <magicDamage>{{ totaldamage }}</magicDamage> magic damage. The dagger bounces to the {{ maxbounces }} closest enemies dealing {{ damagefalloff*100 }}% less damage with each bounce.<br /><br />Enemies hit are marked for {{ markduration }} seconds. Katarina's basic attacks or spells will consume the mark dealing <magicDamage>{{ totaldamagemark }}</magicDamage> additional magic damage.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -277,11 +277,11 @@
                             0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -331,7 +331,7 @@
                         "0",
                         "0",
                         "0",
-                        "2",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -646,8 +646,8 @@
                 {
                     "id": "Jade_KatarinaR",
                     "name": "Death Lotus",
-                    "description": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at up to three nearby Champions.",
-                    "tooltip": "Becomes a flurry of blades, throwing daggers at the closest 3 enemy Champions dealing <magicDamage>{{ damagecalctooltiponly }} magic damage</magicDamage> over 2.5 seconds.{{ spellmodifierdescriptionappend }}",
+                    "description": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at nearby enemy Champions, dealing significant damage and applying Wounds.",
+                    "tooltip": "Becomes a flurry of blades, throwing daggers at the closest {{ maxtargets }} enemy Champions dealing <magicDamage>{{ damagecalctooltiponly }} magic damage</magicDamage> over {{ channelduration }} seconds. Enemies struck are <status>Wounded</status> by {{ grievouswoundsamount*100 }}% for {{ grievouswoundsduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -761,7 +761,7 @@
             ],
             "passive": {
                 "name": "Voracity",
-                "description": "Champion kills or assists reduce Katarina's cooldowns by 15 seconds.",
+                "description": "Champion takedowns reduce Katarina's cooldowns.",
                 "image": {
                     "full": "Jade_Katarina_Passive.png",
                     "sprite": "passive0.png",

@@ -805,8 +805,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Corki tire une bombe éclairante à l'endroit visé. Cette compétence révèle les unités non camouflées autour de l'explosion ainsi que les champions pendant 6 sec.",
-            "dynamicDescription": "<mainText>Inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis dans la zone ciblée. De plus, l'explosion <status>révèle</status> la zone et les champions touchés pendant 6 sec (ne révèle pas les unités furtives).",
+            "description": "Corki tire une bombe, blessant et révélant les ennemis autour de l'explosion.",
+            "dynamicDescription": "Corki tire une bombe, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. La zone et les champions touchés sont révélés pendant @RevealDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "La mitrailleuse de Corki tire rapidement en cône devant lui, infligeant des dégâts et réduisant l'armure de l'ennemi.",
-            "dynamicDescription": "<mainText>La mitrailleuse de Corki tire en cône devant lui pendant 4 sec, infligeant <physicalDamage>@TotalDamageTooltipOnly@ pts de dégâts physiques</physicalDamage> et <status>réduisant l'armure de @ArmorMod*-1@</status> par seconde. La réduction d'armure se cumule et dure 2 sec.",
+            "dynamicDescription": "La mitrailleuse de Corki tire en cône devant lui pendant @ActiveDuration@ sec, infligeant <physicalDamage>@DamagePerSecondCalc@ pts de dégâts physiques</physicalDamage> et <status>réduisant l'armure de @ArmorMod*-1@</status> par seconde. La réduction d'armure se cumule et dure @ShredDuration@ sec. (Dégâts max : <physicalDamage>@MaximumDamageTooltip@</physicalDamage>.)@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1255,8 +1255,8 @@
             "abilityVideoImagePath": "champion-abilities/60042/ability_60042_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Corki tire un projectile dans une direction. Il explose à l'impact et inflige des dégâts aux ennemis dans la zone. Corki stocke un missile toutes les 12 sec, jusqu'à un maximum de 7 missiles. Un projectile sur 3 est une grosse Bertha qui inflige plus de dégâts.",
-            "dynamicDescription": "<mainText>Corki tire un missile vers l'emplacement ciblé qui explose sur le premier ennemi touché. Chaque missile inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> dans une zone.<br><br>Cette compétence a 7 charges (@AmmoRechargeTime@ sec de rechargement).<br><br>Un projectile sur 3 est une grosse Bertha qui inflige <magicDamage>@TotalDamageBig@ pts de dégâts magiques</magicDamage> à la place.",
+            "description": "Corki tire un projectile dans une direction. Il explose à l'impact et inflige des dégâts aux ennemis dans la zone. Certains projectiles seront une grosse Bertha qui inflige plus de dégâts.",
+            "dynamicDescription": "Corki tire un missile vers l'emplacement ciblé qui explose sur le premier ennemi touché. Chaque missile inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> dans une zone.<br><br>Cette compétence a @MaxAmmoTooltip@ charges (@AmmoRechargeTime@ sec de rechargement).<br><br>Un projectile sur 3 est une Grosse Bertha qui inflige <magicDamage>@TotalDamageBig@ pts de dégâts magiques</magicDamage> à la place.@SpellModifierDescriptionAppend@",
             "range": [
                 1225.0,
                 1225.0,

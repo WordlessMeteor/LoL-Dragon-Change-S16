@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_LeeSin": {
             "id": "Jade_LeeSin",
@@ -25,6 +25,12 @@
                     "chromas": false
                 },
                 {
+                    "id": "60064002",
+                    "num": 2,
+                    "name": "Acolyte Lee Sin",
+                    "chromas": false
+                },
+                {
                     "id": "60064004",
                     "num": 4,
                     "name": "Muay Thai Lee Sin",
@@ -40,13 +46,13 @@
                     "id": "60064027",
                     "num": 27,
                     "name": "Nightbringer Lee Sin",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "60064028",
                     "num": 28,
                     "name": "Prestige Nightbringer Lee Sin",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "60064039",
@@ -171,17 +177,15 @@
                 {
                     "id": "Jade_LeeSinQOne",
                     "name": "Sonic Wave / Resonating Strike",
-                    "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.<br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing health.",
-                    "tooltip": "<spellName>Sonic Wave: </spellName>Lee Sin projects a discordant wave of sound to locate his enemies, dealing <physicalDamage>{{ initialdamage }} physical damage</physicalDamage> to the first enemy it encounters. If <spellName>Sonic Wave</spellName> hits, Lee Sin can cast <spellName>Resonating Strike</spellName> for the next 3 seconds.<br /><br /><spellName>Resonating Strike: </spellName>Lee Sin dashes to the enemy hit by Sonic Wave, dealing <physicalDamage>{{ recastdamage }} physical damage</physicalDamage> plus 8% of their missing Health.{{ spellmodifierdescriptionappend }}",
+                    "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, damaging the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike.<br><br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing more damage plus a portion of their missing health.",
+                    "tooltip": "<spellName>Sonic Wave: </spellName>Lee Sin projects a discordant wave of sound to locate his enemies, dealing <physicalDamage>{{ initialdamage }} physical damage</physicalDamage> to the first enemy it encounters. If <spellName>Sonic Wave</spellName> hits, Lee Sin can cast <spellName>Resonating Strike</spellName> for the next 3 seconds.<br /><br /><spellName>Resonating Strike: </spellName>Lee Sin dashes to the enemy hit by Sonic Wave, dealing <physicalDamage>{{ recastdamage }} physical damage</physicalDamage> plus {{ missinghealthdamage*100 }}% of their missing Health.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Sonic Wave Damage",
-                            "Resonating Strike Minimum Base Damage",
+                            "Damage",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ q1basedamage }} -> {{ q1basedamageNL }}",
-                            "{{ q2basedamage }} -> {{ q2basedamageNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -314,8 +318,8 @@
                 {
                     "id": "Jade_LeeSinWOne",
                     "name": "Safeguard / Iron Will",
-                    "description": "Safeguard: Lee Sin rushes towards a target ally, shielding them both from damage. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.<br>Iron Will: Lee Sin's intense training allows him to thrive in battle. For 4 seconds, Lee Sin gains Life Steal, Spell Vamp, and Armor.",
-                    "tooltip": "<spellName>Safeguard: </spellName>Lee Sin rushes towards a target ally, <shield>shielding</shield> them both for {{ shieldamount }} damage over the next 5 seconds. After using <spellName>Safeguard</spellName>, Lee Sin can cast <spellName>Iron Will</spellName> for the next 3 seconds.<br /><br /><spellName>Iron Will: </spellName>Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains {{ lifestealandspellvamp }}% Life Steal, Spell Vamp, and <scaleArmor>{{ armorbonus }} Armor</scaleArmor>.{{ spellmodifierdescriptionappend }}",
+                    "description": "Safeguard: Lee Sin rushes towards a target ally, shielding them both from damage. After using Safeguard, Lee Sin can cast Iron Will.<br><br>Iron Will: Lee Sin's intense training allows him to thrive in battle, gaining Life Steal, Spell Vamp, and Armor.",
+                    "tooltip": "<spellName>Safeguard: </spellName>Lee Sin rushes towards a target ally, <shield>shielding</shield> them both for {{ shieldamount }} damage over the next {{ shieldduration }} seconds. After using <spellName>Safeguard</spellName>, Lee Sin can cast <spellName>Iron Will</spellName> for the next {{ w1reactivatetime }} seconds.<br /><br /><spellName>Iron Will: </spellName>Lee Sin's intense training allows him to thrive in battle. For {{ lifestealandspellvamptime }} seconds, Lee Sin gains {{ lifestealandspellvamp }}% Life Steal, Spell Vamp, and <scaleArmor>{{ armorbonus }} Armor</scaleArmor>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Safeguard Shield Absorption",
@@ -713,7 +717,7 @@
             ],
             "passive": {
                 "name": "Flurry",
-                "description": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 15 Energy each.",
+                "description": "After Lee Sin uses an ability, his next basic attacks gain Attack Speed and return Energy.",
                 "image": {
                     "full": "Jade_LeeSinPassive.png",
                     "sprite": "passive0.png",

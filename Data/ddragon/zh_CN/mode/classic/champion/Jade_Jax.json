@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Jax": {
             "id": "Jade_Jax",
@@ -122,8 +122,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 宗师之威(R)每次攻击都会提供可叠加攻击速度<br>- 武器专精(被动)根据战力提升生命值",
-            "blurb": "- 宗师之威(R)每次攻击都会提供可叠加攻击速度<br>- 武器专精(被动)根据战力提升生命值",
+            "lore": "- 无情连打(R)每次打击提供可叠加的攻击速度<br>- 武器专精(被动)提供基于强度的生命值",
+            "blurb": "- 无情连打(R)每次打击提供可叠加的攻击速度<br>- 武器专精(被动)提供基于强度的生命值",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -163,7 +163,7 @@
                     "id": "Jade_JaxQ",
                     "name": "跳斩",
                     "description": "贾克斯跃起猛击。",
-                    "tooltip": "贾克斯跳向目标单位，如果目标是敌人则对其造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "贾克斯跳向目标单位，如果目标是敌人则造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -586,7 +586,7 @@
                 },
                 {
                     "id": "Jade_JaxR",
-                    "name": "宗师之威",
+                    "name": "无情连打",
                     "description": "贾克斯每次攻击时获得攻击速度。每第三次连续攻击造成额外伤害。",
                     "tooltip": "<spellPassive>被动</spellPassive>：贾克斯每次攻击都会获得<attackSpeed>{{ attackspeedperstack*100 }}%攻击速度</attackSpeed>，最多叠加{{ maxstacks }}层。每第三次连续攻击额外造成<magicDamage>{{ onhitdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {

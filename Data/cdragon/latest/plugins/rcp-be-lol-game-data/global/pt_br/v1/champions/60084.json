@@ -6,7 +6,7 @@
     "name": "Akali",
     "alias": "Jade_Akali",
     "title": "O Punho das Sombras",
-    "shortBio": "– A Passiva da Akali concede atributos adicionais com base no Dano de Ataque e Poder de Habilidade adicionais.\\n– O Q da Akali é uma Habilidade guiada.\\n– O E da Akali causa dano em área de ação ao redor dela.\\n– O R da Akali é um avanço guiado.",
+    "shortBio": "– A Passiva da Akali concede atributos adicionais com base no Dano de Ataque e Poder de Habilidade adicionais.<br>\\n– O Q da Akali é uma Habilidade guiada.<br>\\n– O E da Akali causa dano em área de ação ao redor dela.<br>\\n– O R da Akali é um avanço guiado.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 7,
@@ -60,6 +60,33 @@
             "rarityGemPath": null,
             "skinLines": null,
             "description": null
+        },
+        {
+            "id": 60084001,
+            "contentId": "c9406735-859d-4ada-b38f-6ce3b517b085",
+            "relatedPrimeContentId": "328fc0ae-9f6d-44c8-972d-833a061bb74a",
+            "relatedPrimeItemId": 84001,
+            "isBase": false,
+            "name": "Akali Sinistra",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_centered_1.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_uncentered_1.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Images/Jade_Akali_splash_tile_1.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Akali/Skins/Skin01/Jade_AkaliLoadscreen_1.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": "A Ordem da Grande Vespa-Pardal segue um regime de treinamento brutal e consagrado pelo tempo, ensinando seus alunos a arder com a ferocidade incessante de uma vespa. Akali é sua maior campeã e pretende levar essa arte a alturas ainda maiores."
         },
         {
             "id": 60084002,
@@ -617,8 +644,8 @@
             "abilityVideoImagePath": "champion-abilities/60084/ability_60084_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Akali arremessa a kama contra um alvo inimigo, causando Dano Mágico a ele e marcando-o por 6s. Os Ataques corpo a corpo de Akali contra um alvo marcado acionam e consomem a marca, causando dano adicional e restaurando energia.",
-            "dynamicDescription": "Akali arremessa a kama contra um alvo inimigo, causando <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage> a ele e marcando-o por 6s.<br><br>Os Ataques corpo a corpo de Akali contra um alvo marcado consomem a marca, causando <magicDamage>@ProcDamage@ de Dano Mágico</magicDamage> e restaurando <keywordMajor>@EnergyReturn@ de energia</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Akali arremessa a kama contra um alvo inimigo, causando Dano Mágico a ele e marcando-o. O próximo ataque corpo a corpo de Akali contra um alvo marcado consumirá a marca, causando dano adicional e restaurando Energia.",
+            "dynamicDescription": "Akali arremessa a kama contra um alvo inimigo, causando <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage> a ele e marcando-o por @MarkDuration@s.<br><br>Os Ataques corpo a corpo de Akali contra um alvo marcado consomem a marca, causando <magicDamage>@ProcDamage@ de Dano Mágico</magicDamage> e restaurando <keywordMajor>@EnergyReturn@ de energia</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -644,8 +671,8 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -768,7 +795,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Akali espalha uma nuvem de fumaça. Enquanto está dentro da fumaça, Akali recebe Armadura, Resistência Mágica e invisibilidade. Atacar ou usar Habilidades faz com que ela seja revelada por um breve período. Inimigos dentro da fumaça sofrem Lentidão.",
-            "dynamicDescription": "Akali espalha uma nuvem de fumaça que dura 8s. Enquanto está dentro da fumaça, Akali recebe <scaleArmor>@TotalResists@ de Armadura</scaleArmor>, <scaleMR>@TotalResists@ de Resistência Mágica</scaleMR> e <keywordStealth>invisibilidade</keywordStealth>. Atacar ou usar Habilidades faz com que ela seja revelada por um breve período.<br><br>Inimigos dentro da fumaça sofrem @SlowAmount@% de <status>Lentidão</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Akali espalha uma nuvem de fumaça que dura @CloudDuration@s. Enquanto está dentro da fumaça, Akali recebe <scaleArmor>@TotalResists@ de Armadura</scaleArmor>, <scaleMR>@TotalResists@ de Resistência Mágica</scaleMR> e <keywordStealth>invisibilidade</keywordStealth>. Atacar ou usar Habilidades faz com que ela seja revelada por um breve período.<br><br>Inimigos dentro da fumaça sofrem @SlowAmount@% de <status>Lentidão</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -794,27 +821,27 @@
                 20.0
             ],
             "coefficients": {
-                "coefficient1": 1.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -826,40 +853,40 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    60.0,
-                    60.0,
-                    65.0,
-                    70.0,
-                    75.0,
-                    80.0,
-                    80.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.2,
-                    0.3,
-                    0.35,
-                    0.4,
-                    0.45,
-                    0.5,
-                    0.45
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -871,13 +898,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    5.0,
-                    5.0,
-                    5.5,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,

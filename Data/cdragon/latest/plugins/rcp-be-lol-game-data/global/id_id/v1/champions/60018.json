@@ -63,6 +63,37 @@
             "description": null
         },
         {
+            "id": 60018005,
+            "contentId": "678e78f5-5d0f-4653-af70-3c75c9571b23",
+            "relatedPrimeContentId": "d1933af4-defd-4bef-ad77-40fdd2235de4",
+            "relatedPrimeItemId": 18005,
+            "isBase": false,
+            "name": "Buccaneer Tristana",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_centered_5.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_uncentered_5.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Images/Jade_Tristana_splash_tile_5.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Tristana/Skins/Skin05/Jade_TristanaLoadScreen_5.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 49
+                }
+            ],
+            "description": "Gunners ahoy! Tristana melompat ke laut lepas, berlayar menuju petualangan baru di luar perbatasan Bandle. Topi itu dipinjam (dicuri) dari seorang bajak laut yang dia ledakkan, dan penutup matanya hanya untuk gaya. Namun, sikapnya yang tanpa ampun dan meriam andalannya telah menenggelamkan lebih banyak kapal daripada kebanyakan kapten di Bilgewater."
+        },
+        {
             "id": 60018006,
             "contentId": "68d160e8-ca5f-4de3-8da6-3f032ed59de0",
             "relatedPrimeContentId": "350f061a-0e74-4043-8694-f7aa43750239",
@@ -819,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Tristana melepaskan tembakan beruntun dari senjatanya, meningkatkan Attack Speed-nya beberapa saat.",
-            "dynamicDescription": "<mainText>Meningkatkan <attackSpeed>Attack Speed Tristana sebesar @AttackSpeedMod*100@%</attackSpeed> selama 7 detik.",
+            "dynamicDescription": "Tristana mendapatkan <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> selama @BuffDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -830,11 +861,11 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 20.0,
@@ -968,8 +999,8 @@
             "abilityVideoImagePath": "champion-abilities/60018/ability_60018_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Tristana menembak ke tanah untuk melontarkan dirinya ke lokasi yang jauh, menghasilkan damage dan slow ke unit di sekeliling tempat dia mendarat selama 3 detik.",
-            "dynamicDescription": "<mainText>Tristana menembak ke tanah untuk melontarkan diri ke lokasi target, menghasilkan <magicDamage>@LandingDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar 60% selama 2,5 detik saat mendarat.<br>Saat melakukan kill champion atau assist, Cooldown akan direset.",
+            "description": "Tristana menembakkan senjatanya ke tanah untuk melontarkan dirinya ke lokasi yang jauh, menghasilkan damage dan menerapkan slow kepada musuh di tempat ia mendarat.",
+            "dynamicDescription": "Tristana menembak ke tanah untuk melontarkan diri ke lokasi target, menghasilkan <magicDamage>@LandingDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar @Slow@% selama @SlowDuration@ detik saat mendarat. Kill atau assist terhadap champion akan mereset cooldown Rocket Jump.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1119,7 +1150,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Saat Tristana membunuh satu unit, bola meriamnya meledak menjadi serpihan, menghasilkan damage ke musuh di sekeliling.  Ini bisa diaktifkan untuk menghasilkan damage berkelanjutan pada unit target, dan mengurangi heal yang diterima.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Musuh meledak saat terbunuh oleh basic attack Tristana, menghasilkan <magicDamage>@PassiveDamage@ magic damage</magicDamage> pada musuh di sekitar.<br><br><spellActive>Aktif: </spellActive>Mencabik musuh target, menerapkan <keyword>50% Grievous Wounds</keyword> dan menghasilkan <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> selama 5 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Musuh meledak saat terbunuh oleh basic attack Tristana, menghasilkan <magicDamage>@PassiveDamage@ magic damage</magicDamage> pada musuh di sekitar.<br><br><spellActive>Aktif: </spellActive>Mencabik musuh target, menerapkan <keyword>50% Grievous Wounds</keyword> dan menghasilkan <magicDamage>@ActiveDamageTTOnly@ magic damage</magicDamage> selama @GrievousDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

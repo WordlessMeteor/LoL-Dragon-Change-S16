@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Le uccisioni o gli assist contro i campioni riducono i tempi di ricarica di Katarina di 15 secondi."
+        "description": "Le eliminazioni dei campioni riducono i tempi di ricarica di Katarina."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Katarina lancia un pugnale che rimbalza da un nemico all'altro, infliggendo danni magici.",
-            "dynamicDescription": "Lancia un pugnale che infligge <magicDamage>@TotalDamage@</magicDamage> danni magici. Il pugnale rimbalza sui @MaxBounces@ nemici più vicini, infliggendo il 10% di danni in meno a ogni rimbalzo.<br><br>I nemici colpiti vengono marchiati per @MarkDuration@ secondo/i. Gli attacchi base o le abilità di Katarina consumano il marchio, infliggendo <magicDamage>@TotalDamageMark@</magicDamage> danni magici aggiuntivi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lancia un pugnale che infligge <magicDamage>@TotalDamage@</magicDamage> danni magici. Il pugnale rimbalza sui @MaxBounces@ nemici più vicini, infliggendo un @DamageFalloff*100@% di danni in meno a ogni rimbalzo.<br><br>I nemici colpiti vengono marchiati per @MarkDuration@ secondo/i. Gli attacchi base o le abilità di Katarina consumano il marchio, infliggendo <magicDamage>@TotalDamageMark@</magicDamage> danni magici aggiuntivi.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Katarina diventa un turbinio di lame, lanciando pugnali a velocità senza pari verso un massimo di tre campioni nelle vicinanze.",
-            "dynamicDescription": "Diventa un turbinio di lame, lanciando pugnali contro i 3 campioni nemici più vicini e infliggendo <magicDamage>@DamageCalcTooltipOnly@ danni magici</magicDamage> nell'arco di 2,5 secondi.@SpellModifierDescriptionAppend@",
+            "description": "Katarina diventa una turbinio di lame, lanciando pugnali a una velocità senza pari contro i campioni nemici vicini, infliggendo ingenti danni e applicando Ferite.",
+            "dynamicDescription": "Diventa un turbinio di lame, lanciando pugnali contro i @MaxTargets@ campioni nemici più vicini e infliggendo <magicDamage>@DamageCalcTooltipOnly@ danni magici</magicDamage> nell'arco di @ChannelDuration@ secondo/i. I nemici colpiti vengono <status>feriti</status> di un @GrievousWoundsAmount*100@% per @GrievousWoundsDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

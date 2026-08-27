@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.16.1",
+    "version": "16.17.1",
     "data": {
         "Jade_Morgana": {
             "id": "Jade_Morgana",
@@ -23,6 +23,12 @@
                     "num": 0,
                     "name": "default",
                     "chromas": true
+                },
+                {
+                    "id": "60025001",
+                    "num": 1,
+                    "name": "Exiled Morgana",
+                    "chromas": false
                 },
                 {
                     "id": "60025005",
@@ -88,14 +94,14 @@
                     "id": "60025021",
                     "num": 21,
                     "name": "Majestic Empress Morgana (Turquoise)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 17
                 },
                 {
                     "id": "60025022",
                     "num": 22,
                     "name": "Majestic Empress Morgana (Tanzanite)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 17
                 },
                 {
@@ -129,14 +135,14 @@
                     "id": "60025027",
                     "num": 27,
                     "name": "Coven Morgana (Ruby)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 26
                 },
                 {
                     "id": "60025028",
                     "num": 28,
                     "name": "Coven Morgana (Pearl)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 26
                 },
                 {
@@ -192,14 +198,14 @@
                     "id": "60025036",
                     "num": 36,
                     "name": "Bewitching Morgana (Rose Quartz)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 11
                 },
                 {
                     "id": "60025037",
                     "num": 37,
                     "name": "Bewitching Morgana (Pearl)",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 11
                 },
                 {
@@ -774,7 +780,7 @@
                     "id": "Jade_MorganaR",
                     "name": "Soul Shackles",
                     "description": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana.",
-                    "tooltip": "Dark chains latch onto nearby enemy Champions dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> them by 20% for 3 seconds. After {{ chainduration }} seconds, they are dealt an additional  <magicDamage>{{ totaldamage }} magic damage</magicDamage> and are stunned for {{ stunduration }} seconds.<br /><br />Enemy Champions can break the chains by moving away from Morgana.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Dark chains latch onto nearby enemy Champions dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> them by {{ slowpercent*-100 }}%. After {{ chainduration }} seconds, they are dealt an additional  <magicDamage>{{ totaldamage }} magic damage</magicDamage> and are stunned for {{ stunduration }} seconds.<br /><br />Enemy Champions can break the chains by moving away from Morgana.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",

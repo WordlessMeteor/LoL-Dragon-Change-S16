@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Şampiyon katletmek veya asistler Katarina'nın bekleme sürelerini 15 saniye azaltır."
+        "description": "Şampiyon alt etmek Katarina'nın bekleme sürelerini azaltır."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Katarina rakipten rakibe sekerek büyü hasarı veren bir bıçak fırlatır.",
-            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage> Büyü Hasarı veren bir bıçak fırlatır. Bıçak en yakındaki @MaxBounces@ rakibe daha seker ve her sekmede %10 daha az hasar verir.<br><br>İsabet alan rakipler @MarkDuration@ saniyeliğine işaretlenir. Katarina'nın normal saldırıları veya yetenekleri işareti tüketerek fazladan <magicDamage>@TotalDamageMark@</magicDamage> Büyü Hasarı verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage> Büyü Hasarı veren bir bıçak fırlatır. Bıçak en yakındaki @MaxBounces@ rakibe daha seker ve her sekmede %@DamageFalloff*100@ daha az hasar verir.<br><br>İsabet alan rakipler @MarkDuration@ saniyeliğine işaretlenir. Katarina'nın normal saldırıları veya yetenekleri işareti tüketerek fazladan <magicDamage>@TotalDamageMark@</magicDamage> Büyü Hasarı verir.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Katarina yakındaki en fazla üç şampiyona benzersiz bir hızla bıçak fırlatır.",
-            "dynamicDescription": "En yakındaki 3 rakip şampiyona benzersiz bir hızla bıçak fırlatarak 2,5 saniye içinde <magicDamage>@DamageCalcTooltipOnly@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "description": "Katarina yakınındaki rakip şampiyonlara benzersiz bir hızla bıçak fırlatarak yüksek miktarda hasar verir ve onları yaralar.",
+            "dynamicDescription": "En yakındaki @MaxTargets@ rakip şampiyona benzersiz bir hızla bıçak fırlatarak @ChannelDuration@ saniye içinde <magicDamage>@DamageCalcTooltipOnly@ Büyü Hasarı</magicDamage> verir. İsabet alan rakipler @GrievousWoundsDuration@ saniyeliğine %@GrievousWoundsAmount*100@ <status>yaralanır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

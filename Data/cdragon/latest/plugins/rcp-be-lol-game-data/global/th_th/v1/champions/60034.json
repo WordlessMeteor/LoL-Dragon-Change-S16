@@ -647,7 +647,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Anivia_Rebirth.project_jade.png",
         "abilityVideoPath": "champion-abilities/60034/ability_60034_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60034/ability_60034_P1.jpg",
-        "description": "Anivia จะกลับกลายเป็นไข่เมื่อเธอตาย ถ้าเธออยู่รอดครบ 6 วินาที เธอจะกลับมาเกิดใหม่อีกครั้ง"
+        "description": "Anivia จะกลับกลายเป็นไข่เมื่อเธอตาย หากเธอรอดในร่างไข่ เธอจะกลับมาเกิดใหม่อีกครั้ง"
     },
     "spells": [
         {
@@ -659,7 +659,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Anivia กระพือปีกและเสกลูกแก้วน้ำแข็งลอยไปยังศัตรู พร้อมทั้งแช่แข็งและสร้างความเสียหายให้กับศัตรูที่อยู่ในเส้นทาง เมื่อลูกแก้วระเบิด จะสร้างความเสียหายปานกลางในรัศมี และสตันทุกคนที่อยู่ในพื้นที่",
-            "dynamicDescription": "เสกก้อนน้ำแข็งมหึมาให้ลอยไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @TotalPassthroughDamage@ หน่วย</magicDamage> และแช่แข็งเป้าหมาย <status>สโลว์</status>ความเร็วเคลื่อนที่ของพวกเขา 20% <br><br>เมื่อสุดระยะหรือเมื่อ Anivia <recast>กดใช้ซ้ำ</recast> ลูกแก้วจะระเบิดออก สร้าง<magicDamage>ความเสียหายเวท @TotalExplosionDamage@ หน่วย</magicDamage>ในพื้นที่ใกล้เคียง และ<status>สตัน</status>ยูนิตเป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "เสกก้อนน้ำแข็งมหึมาให้ลอยไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @TotalPassthroughDamage@ หน่วย</magicDamage> และแช่แข็งเป้าหมาย <status>สโลว์</status>ความเร็วเคลื่อนที่ของพวกเขา @MovementSpeedMod*-100@% เป็นเวลา @SlowDuration@ วินาที<br><br>เมื่อสุดระยะหรือเมื่อ Anivia <recast>กดใช้ซ้ำ</recast> ก้อนน้ำแข็งจะระเบิดออก สร้าง<magicDamage>ความเสียหายเวท @TotalExplosionDamage@ หน่วย</magicDamage>ในพื้นที่ใกล้เคียง และ<status>สตัน</status>ยูนิตเป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,

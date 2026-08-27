@@ -131,6 +131,37 @@
             "description": null
         },
         {
+            "id": 60086002,
+            "contentId": "4f1dab6d-ed8c-4918-a119-439293756327",
+            "relatedPrimeContentId": "1fe63e8e-1dc9-43fb-8f69-e9aa5a7eef95",
+            "relatedPrimeItemId": 86002,
+            "isBase": false,
+            "name": "Wüstentruppen-Garen",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_centered_2.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_uncentered_2.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Images/Jade_Garen_splash_tile_2.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Garen/Skins/Skin02/Jade_GarenLoadScreen_2.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": true,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": [
+                {
+                    "id": 167
+                }
+            ],
+            "description": null
+        },
+        {
             "id": 60086005,
             "contentId": "087c644d-dc63-4089-b87b-8d61c01d9fca",
             "relatedPrimeContentId": "093bfaff-5446-46de-97f6-de4eec36e682",
@@ -675,7 +706,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Garen führt mit seinem Schwert einen Tanz des Todes aus, wodurch er während der Wirkdauer an allen umstehenden Gegnern Schaden verursacht.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Garen erhält 20 % zusätzlichen Wert aus zusätzlicher <scaleArmor>Rüstung</scaleArmor> und <scaleMR>Magieresistenz</scaleMR>.<br><br><spellActive>Aktiv: </spellActive>Garen erhält die nächsten @BuffDuration@ Sekunden lang einen defensiven Schild, der erlittenen Schaden um @DamageReduction*100@ % verringert und Massenkontrolle um 30 % reduziert.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Garen erhält @ResistanceScaling*100@ % zusätzlichen Wert aus zusätzlicher <scaleArmor>Rüstung</scaleArmor> und <scaleMR>Magieresistenz</scaleMR>.<br><br><spellActive>Aktiv: </spellActive>Garen erhält die nächsten @BuffDuration@ Sekunden lang einen defensiven Schild, der erlittenen Schaden um @DamageReduction*100@ % verringert und Massenkontrolle um @TenacityBonus*100@ % reduziert.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -825,7 +856,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Garen lässt sein Schwert schnell um seinen Körper herumwirbeln und fügt nahen Gegnern normalen Schaden zu.",
-            "dynamicDescription": "Garen lässt sein Schwert @Duration@ Sekunden lang schnell um seinen Körper herumwirbeln und fügt nahen Gegnern jede Sekunde <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zu. Garen kann sich durch Einheiten bewegen, während er sich dreht, ist aber 20 % langsamer, wenn er sie direkt durchdringt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Garen lässt sein Schwert @Duration@ Sekunden lang schnell um seinen Körper herumwirbeln und fügt nahen Gegnern jede Sekunde <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zu. (Maximaler Schaden: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,

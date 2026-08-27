@@ -1080,16 +1080,16 @@
         "__type": "SpellObject"
     },
     "{244d7ae4}": {
-        "mRootSpell": "{086d6fa9}",
+        "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive",
         "mChildSpells": [
-            "{086d6fa9}"
+            "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive"
         ],
         "mName": "Jade_ShacoPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{086d6fa9}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive": {
         "ObjectName": "Jade_ShacoPassive",
-        "objectPath": "{086d6fa9}",
+        "objectPath": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive",
         "mScriptName": "Jade_ShacoPassive",
         "mSpell": {
             "DataValues": [
@@ -1419,9 +1419,9 @@
         },
         "__type": "SpellObject"
     },
-    "{45e1f108}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoFromBehind": {
         "ObjectName": "Jade_ShacoFromBehind",
-        "objectPath": "{45e1f108}",
+        "objectPath": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoFromBehind",
         "mScriptName": "Jade_ShacoFromBehind",
         "mSpell": {
             "mImgIconName": [
@@ -2059,7 +2059,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2101,32 +2101,6 @@
                         170.0,
                         210.0,
                         250.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ExecuteDamagePercent",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ExecuteHealthThreshold",
-                    "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2228,14 +2202,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "TotalExecuteDamage": {
-                    "mMultiplier": {
-                        "mDataValue": "ExecuteDamagePercent",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TotalDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -3258,7 +3224,7 @@
         "passiveLuaName": "Jade_ShacoPassive_Jade",
         "passiveToolTip": "",
         "passiveSpell": "Jade_ShacoPassive_Jade",
-        "passive1IconName": "ASSETS/Characters/Jade_Shaco/HUD/Icons2D/Jester_CarefulStrikes.dds",
+        "passive1IconName": "assets/characters/jade_shaco/hud/icons2d/jester_carefulstrikes.dds",
         "name": "game_character_displayname_Jade_Shaco",
         "weaponMaterials": [
             "JesterBasicAttack"
@@ -3359,10 +3325,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Domination",
-        "mCharacterPassiveSpell": "{086d6fa9}",
+        "mCharacterPassiveSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{086d6fa9}",
+                "mParentPassiveBuff": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive",
                 "__type": "CharacterPassiveData"
             }
         ],

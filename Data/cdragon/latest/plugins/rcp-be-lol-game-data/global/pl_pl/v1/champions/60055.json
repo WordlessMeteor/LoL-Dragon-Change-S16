@@ -593,7 +593,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "champion-abilities/60055/ability_60055_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60055/ability_60055_P1.jpg",
-        "description": "Zabójstwa i asysty bohatera skracają czas odnowienia umiejętności Katariny o 15 sekund."
+        "description": "Udziały w zabójstwach bohaterów skracają czasy odnowienia Katariny."
     },
     "spells": [
         {
@@ -605,7 +605,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina rzuca sztyletem, który odbija się od kilku wrogów, zadając im obrażenia magiczne.",
-            "dynamicDescription": "Rzuca sztyletem, zadając <magicDamage>@TotalDamage@</magicDamage> pkt. obrażeń magicznych. Sztylet odbija się od @MaxBounces@ najbliższych wrogów, zadając o 10% mniej obrażeń z każdym odbiciem.<br><br>Trafieni wrogowie zostają oznaczeni na @MarkDuration@ sek. Podstawowe ataki lub zaklęcia Katariny zużywają znak, zadając <magicDamage>@TotalDamageMark@</magicDamage> dodatkowych pkt. obrażeń magicznych.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rzuca sztyletem, zadając <magicDamage>@TotalDamage@</magicDamage> pkt. obrażeń magicznych. Sztylet odbija się od @MaxBounces@ najbliższych wrogów, zadając o @DamageFalloff*100@% mniej obrażeń z każdym odbiciem.<br><br>Trafieni wrogowie zostają oznaczeni na @MarkDuration@ sek. Podstawowe ataki lub zaklęcia Katariny zużywają znak, zadając <magicDamage>@TotalDamageMark@</magicDamage> pkt. dodatkowych obrażeń magicznych.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -663,13 +663,13 @@
                     0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1054,8 +1054,8 @@
             "abilityVideoImagePath": "champion-abilities/60055/ability_60055_R1.jpg",
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Katarina wyrzuca sztylety z zawrotną prędkością, raniąc do trzech bohaterów znajdujących się w pobliżu.",
-            "dynamicDescription": "Tworzy grad ataków, rzucając sztyletami w 3 najbliższych wrogich bohaterów i zadając im <magicDamage>@DamageCalcTooltipOnly@ pkt. obrażeń magicznych</magicDamage> w ciągu 2,5 sekund.@SpellModifierDescriptionAppend@",
+            "description": "Katarina wyrzuca sztylety z zawrotną prędkością w maksymalnie trzech wrogich bohaterów znajdujących się w pobliżu. Zadaje wysokie obrażenia i nakłada Rany.",
+            "dynamicDescription": "Tworzy grad ataków, rzucając sztyletami w najbliższych @MaxTargets@ wrogich bohaterów i zadając im <magicDamage>@DamageCalcTooltipOnly@ pkt. obrażeń magicznych</magicDamage> w ciągu @ChannelDuration@ sek. Na trafionych wrogów zostaje nałożone @GrievousWoundsAmount*100@% <status>zranienia</status> na @GrievousWoundsDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

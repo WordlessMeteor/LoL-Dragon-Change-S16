@@ -1105,7 +1105,7 @@
             "cost": "<font color='#FF3300'>@BaseHealthCost@의 체력</font> 소모",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트린다미어가 대상을 향해 이동하며 검을 휘둘러 경로상의 적에게 피해를 입힙니다.",
-            "dynamicDescription": "트린다미어가 회전하며 적을 베어넘겨, 경로상의 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>트린다미어가 치명타를 발동할 때마다 <spellName>회전 베기</spellName>의 재사용 대기시간이 2초씩 감소합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "트린다미어가 회전하며 적을 베어넘겨, 경로상의 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>트린다미어가 치명타를 발동할 때마다 <spellName>회전 베기</spellName>의 재사용 대기시간이 @CooldownRefund@초씩 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1273,12 +1273,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                110.0,
+                130.0,
+                115.0,
                 100.0,
-                90.0,
-                80.0,
+                85.0,
                 70.0,
-                60.0
+                55.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

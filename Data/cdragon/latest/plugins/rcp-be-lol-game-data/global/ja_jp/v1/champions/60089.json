@@ -610,7 +610,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/LeonaSunlight.project_jade.png",
         "abilityVideoPath": "champion-abilities/60089/ability_60089_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60089/ability_60089_P1.jpg",
-        "description": "攻撃スキルが命中した敵に3.5秒間「サンライト」を付与する。この状態の対象に味方チャンピオンがダメージを与えると「サンライト」のデバフを消費して追加魔法ダメージを与える。"
+        "description": "攻撃スキルが命中した敵に「サンライト」を付与する。この状態の対象に味方チャンピオンがダメージを与えると「サンライト」のデバフを消費して追加ダメージを与える。"
     },
     "spells": [
         {
@@ -622,7 +622,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次の通常攻撃時に盾を使って攻撃し、追加魔法ダメージを与えて対象にスタン効果を付与する。",
-            "dynamicDescription": "次の通常攻撃が敵に追加で<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、1.25秒間、<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "次の通常攻撃が敵に追加で<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、@StunDuration@秒間、<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -648,21 +648,21 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    10.0,
+                    0.0,
                     10.0,
                     35.0,
                     60.0,
@@ -772,7 +772,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身の体を盾で保護し、物理防御と魔法防御を増加させる。最初の効果時間終了時に近くに敵がいる場合、その全員に魔法ダメージを与え、さらにシールドの効果時間が延長される。",
-            "dynamicDescription": "3秒間、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>が@BonusARMR@増加する。効果時間終了時、近くに敵がいる場合はその全員に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、増加した<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を3秒間維持する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@BuffDuration@秒間、<scaleArmor>物理防御</scaleArmor>と、<scaleMR>魔法防御</scaleMR>が@BonusARMR@増加する。効果時間終了時、近くに敵がいる場合はその全員に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、増加した<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>をさらに@BuffDuration@秒間維持する。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -798,12 +798,12 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    60.0,
+                    0.0,
                     60.0,
                     110.0,
                     160.0,
@@ -812,7 +812,7 @@
                     260.0
                 ],
                 "Effect2Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,
@@ -821,16 +821,16 @@
                     70.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    30.0,
+                    0.0,
                     30.0,
                     40.0,
                     50.0,

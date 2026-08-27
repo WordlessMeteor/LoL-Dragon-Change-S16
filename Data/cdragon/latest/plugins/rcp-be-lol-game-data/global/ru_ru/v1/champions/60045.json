@@ -519,7 +519,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.png",
         "abilityVideoPath": "champion-abilities/60045/ability_60045_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60045/ability_60045_P1.jpg",
-        "description": "Периодическое восстановление маны Вейгара растет на 1% за каждый недостающий 1% маны."
+        "description": "Восст. маны Вейгара растет в зависимости от его недост. маны."
     },
     "spells": [
         {
@@ -681,7 +681,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Вейгар вызывает падение с неба сгустка темной материи, нанося магический урон всем врагам в зоне поражения.",
-            "dynamicDescription": "<mainText>Вейгар призывает темную материю. Через 1.2 сек. она обрушивается с неба в выбранную точку, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам вокруг.",
+            "dynamicDescription": "Вейгар призывает темную материю. Через @ImpactDelay@ сек. она обрушивается с неба в выбранную точку, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам вокруг.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -721,22 +721,22 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2,
-                    1.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -831,7 +831,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Вейгар искривляет пространство в выбранной области на 3 секунды, из-за чего враги, пересекающие ее границу, будут оглушены в течение короткого времени.",
-            "dynamicDescription": "<mainText>Вейгар искривляет пространство в выбранной области на 3 сек., из-за чего враги, пересекающие ее границу, <status>оглушаются</status> на @StunDuration@ сек.",
+            "dynamicDescription": "Вейгар искривляет пространство в выбранной области на @CageDuration@ сек., из-за чего враги, пересекающие ее границу, <status>оглушаются</status> на @StunDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -857,27 +857,27 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -981,7 +981,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Вейгар поражает вражеского чемпиона, нанося большое количество магического урона, дополнительно увеличенное на 80% от силы умений жертвы.",
-            "dynamicDescription": "<mainText>Вейгар поражает вражеского чемпиона, нанося ему маг. урон в размере <magicDamage>@MinDamage@ плюс 80% от силы умений цели</magicDamage>.",
+            "dynamicDescription": "Вейгар подрывает вражеского чемпиона, нанося ему <magicDamage>маг. урон: @MinDamage@ ед. плюс @EnemyAPRatio*100@% от силы умений цели</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

@@ -87,7 +87,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -101,8 +101,8 @@
         "mRootSpell": "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR",
         "mChildSpells": [
             "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR",
-            "{987768b2}",
-            "{392847cf}"
+            "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Boom",
+            "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Debuff"
         ],
         "mName": "Jade_GragasRAbility",
         "__type": "AbilityObject"
@@ -167,14 +167,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    145.0,
+                    130.0,
+                    115.0,
                     100.0,
-                    100.0,
-                    90.0,
-                    80.0,
+                    85.0,
                     70.0,
-                    70.0,
-                    70.0
+                    55.0
                 ],
+                "{0a3e0478}": 145.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -240,10 +241,11 @@
                     100.0,
                     125.0,
                     150.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    175.0,
+                    200.0,
+                    225.0
                 ],
+                "{0a3e0478}": 100.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 2,
@@ -297,7 +299,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -361,9 +363,9 @@
         },
         "__type": "SpellObject"
     },
-    "{392847cf}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Debuff": {
         "ObjectName": "Jade_GragasR_Debuff",
-        "objectPath": "{392847cf}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Debuff",
         "mScriptName": "Jade_GragasR_Debuff",
         "mSpell": {
             "flags": 4194308,
@@ -562,9 +564,9 @@
         },
         "__type": "SpellObject"
     },
-    "{987768b2}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Boom": {
         "ObjectName": "Jade_GragasR_Boom",
-        "objectPath": "{987768b2}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Boom",
         "mScriptName": "Jade_GragasR_Boom",
         "mSpell": {
             "flags": 4194308,
@@ -702,17 +704,17 @@
         "__type": "SpellObject"
     },
     "{b5067e82}": {
-        "mRootSpell": "{46bce518}",
+        "mRootSpell": "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive",
         "mChildSpells": [
-            "{46bce518}",
-            "{2f9db95b}"
+            "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive",
+            "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive_Heal"
         ],
         "mName": "Jade_GragasPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{2f9db95b}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive_Heal": {
         "ObjectName": "Jade_GragasPassive_Heal",
-        "objectPath": "{2f9db95b}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive_Heal",
         "mScriptName": "Jade_GragasPassive_Heal",
         "mSpell": {
             "DataValues": [
@@ -869,25 +871,12 @@
         },
         "__type": "SpellObject"
     },
-    "{46bce518}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive": {
         "ObjectName": "Jade_GragasPassive",
-        "objectPath": "{46bce518}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive",
         "mScriptName": "Jade_GragasPassive",
         "mSpell": {
             "DataValues": [
-                {
-                    "name": "ArenaCooldownMod",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "HealRatio",
                     "values": [
@@ -898,6 +887,19 @@
                         0.019999999552965164,
                         0.019999999552965164,
                         0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -913,31 +915,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "HealCooldown": {
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 12.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 11,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 16,
-                                    "mAdditionalBonusAtThisLevel": -2.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                "{f5ba9851}": {
+                    "mMultiplier": {
+                        "mNumber": 0.25,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "HealAmount",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -954,15 +938,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
-                "{0a3e0478}": 12.0,
+                "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
             "castRange": [
@@ -1012,7 +996,7 @@
         "mRootSpell": "Characters/Jade_Gragas/Spells/Jade_GragasWAbility/Jade_GragasW",
         "mChildSpells": [
             "Characters/Jade_Gragas/Spells/Jade_GragasWAbility/Jade_GragasW",
-            "{605f0c9f}"
+            "Characters/Jade_Gragas/Spells/Jade_GragasWAbility/Jade_GragasW_Self"
         ],
         "mName": "Jade_GragasWAbility",
         "__type": "AbilityObject"
@@ -1122,15 +1106,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0
                 ],
-                "{0a3e0478}": 25.0,
+                "{0a3e0478}": 30.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1251,9 +1235,9 @@
         },
         "__type": "SpellObject"
     },
-    "{605f0c9f}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasWAbility/Jade_GragasW_Self": {
         "ObjectName": "Jade_GragasW_Self",
-        "objectPath": "{605f0c9f}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasWAbility/Jade_GragasW_Self",
         "mScriptName": "Jade_GragasW_Self",
         "mSpell": {
             "flags": 32,
@@ -1470,7 +1454,7 @@
         "mRootSpell": "Characters/Jade_Gragas/Spells/Jade_GragasEAbility/Jade_GragasE",
         "mChildSpells": [
             "Characters/Jade_Gragas/Spells/Jade_GragasEAbility/Jade_GragasE",
-            "{36930a89}"
+            "Characters/Jade_Gragas/Spells/Jade_GragasEAbility/Jade_GragasE_TargetSlow"
         ],
         "mName": "Jade_GragasEAbility",
         "__type": "AbilityObject"
@@ -1847,9 +1831,9 @@
         },
         "__type": "SpellObject"
     },
-    "{36930a89}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasEAbility/Jade_GragasE_TargetSlow": {
         "ObjectName": "Jade_GragasE_TargetSlow",
-        "objectPath": "{36930a89}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasEAbility/Jade_GragasE_TargetSlow",
         "mScriptName": "Jade_GragasE_TargetSlow",
         "mSpell": {
             "flags": 4,
@@ -2303,7 +2287,7 @@
                             "basePosition": 3,
                             "__type": "DrawablePositionLocator"
                         },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
                         "__type": "TargeterDefinitionAoe"
                     }
                 ],
@@ -2317,15 +2301,15 @@
         "mRootSpell": "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ",
         "mChildSpells": [
             "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ",
-            "{50e52061}",
-            "{92366c1f}"
+            "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Toggle",
+            "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Missile"
         ],
         "mName": "Jade_GragasQAbility",
         "__type": "AbilityObject"
     },
-    "{50e52061}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Toggle": {
         "ObjectName": "Jade_GragasQ_Toggle",
-        "objectPath": "{50e52061}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Toggle",
         "mScriptName": "Jade_GragasQ_Toggle",
         "mSpell": {
             "flags": 4,
@@ -2510,13 +2494,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        35.0,
-                        85.0,
-                        135.0,
-                        185.0,
-                        235.0,
-                        285.0,
-                        335.0
+                        25.0,
+                        75.0,
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0,
+                        325.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2580,15 +2564,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    13.5,
                     12.5,
                     11.5,
                     10.5,
                     9.5,
                     8.5,
-                    7.5,
-                    6.5
+                    7.5
                 ],
-                "{0a3e0478}": 12.5,
+                "{0a3e0478}": 13.5,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2760,9 +2744,9 @@
         },
         "__type": "SpellObject"
     },
-    "{92366c1f}": {
+    "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Missile": {
         "ObjectName": "Jade_GragasQ_Missile",
-        "objectPath": "{92366c1f}",
+        "objectPath": "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Missile",
         "mScriptName": "Jade_GragasQ_Missile",
         "mSpell": {
             "flags": 4194308,
@@ -3617,9 +3601,9 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{92366c1f}",
-            "{987768b2}",
-            "{50e52061}",
+            "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Missile",
+            "Characters/Jade_Gragas/Spells/Jade_GragasRAbility/Jade_GragasR_Boom",
+            "Characters/Jade_Gragas/Spells/Jade_GragasQAbility/Jade_GragasQ_Toggle",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3645,7 +3629,7 @@
         "passiveName": "game_character_passiveName_Jade_Gragas",
         "passiveLuaName": "Jade_GragasPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Gragas",
-        "passive1IconName": "ASSETS/Characters/Jade_Gragas/HUD/Icons2D/Jade_GragasPassiveHeal.dds",
+        "passive1IconName": "assets/characters/jade_gragas/hud/icons2d/jade_gragaspassiveheal.dds",
         "name": "game_character_displayname_Jade_Gragas",
         "weaponMaterials": [
             "Jade_GragasBasicAttack"
@@ -3775,7 +3759,7 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{46bce518}",
+        "mCharacterPassiveSpell": "Characters/Jade_Gragas/Spells/Jade_GragasPassiveAbility/Jade_GragasPassive",
         "{c5c48b41}": 1,
         "Script": "{94dc7d33}",
         "__type": "CharacterRecord"
