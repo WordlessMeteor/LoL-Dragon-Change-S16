@@ -1272,9 +1272,9 @@
                 },
                 joinOwnershipData(e, t) {
                     e.forEach(((e, n) => {
-                        if (e.questSkinInfo && this.addChildSkinOwnershipData(e.questSkinInfo.tiers, t), !t.has(n)) return;
+                        if (e.questSkinInfo && this.addChildSkinOwnershipData(e.questSkinInfo.tiers, t), this.addChildSkinOwnershipData(e.chromas, t), !t.has(n)) return;
                         const s = t.get(n);
-                        e.ownership.rental.purchaseDate = this.get("tra.moment")(s.purchaseDate).valueOf(), e.ownership.owned = "OWNED" === s.ownershipType, e.isVintage = s.payload && s.payload.isVintage, this.addChildSkinOwnershipData(e.chromas, t)
+                        e.ownership.rental.purchaseDate = this.get("tra.moment")(s.purchaseDate).valueOf(), e.ownership.owned = "OWNED" === s.ownershipType, e.isVintage = s.payload && s.payload.isVintage
                     }))
                 },
                 addChildSkinOwnershipData(e, t) {
@@ -1284,7 +1284,7 @@
                                 owned: !1
                             }, !t.has(e.id)) return;
                         const n = t.get(e.id);
-                        e.ownership.rental.purchaseDate = this.get("tra.moment")(n.purchaseDate).valueOf(), e.ownership.owned = "OWNED" === n.ownershipType
+                        e.ownership.rental.purchaseDate = this.get("tra.moment")(n.purchaseDate).valueOf(), e.ownership.owned = n.owned
                     }))
                 },
                 getSortableMasteries(e, t) {

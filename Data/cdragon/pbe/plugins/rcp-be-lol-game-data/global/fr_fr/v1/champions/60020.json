@@ -619,7 +619,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Nunu peut lancer gratuitement une compétence toutes les 5 attaques."
+        "description": "Spell_NunuPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -631,7 +631,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nunu ordonne à Willump d'avaler le sbire ou le monstre visé, lui infligeant de lourds dégâts pour récupérer des PV.",
-            "dynamicDescription": "<mainText>Nunu ordonne à Willump d'avaler le sbire ou le monstre visé, lui infligeant <trueDamage>@BaseDamage@ pts de dégâts bruts</trueDamage>. Nunu <healing>récupère</healing> @TotalHealing@ PV.<br><br>Nunu obtient des bonus pendant @ConsumeDuration@ sec en fonction de la cible qu'il a avalée.<br><br><attention>Loups</attention> ou <attention>reptiles : </attention>vos attaques et compétences infligent des <magicDamage>dégâts magiques équivalents à 1% de vos PV max</magicDamage>.<br><attention>Golems :</attention> votre taille et vos <scaleHealth>PV max</scaleHealth> augmentent de 10%.<br><attention>Loups ou spectres :</attention> éliminer une unité confère <speed>15% de vitesse de déplacement</speed> pendant 3 sec.",
+            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 125.0,
                 125.0,
@@ -781,7 +781,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Augmente la pression sanguine d'une unité alliée et de Nunu, ce qui accroît temporairement leur vitesse d'attaque et de déplacement.",
-            "dynamicDescription": "<mainText>Le sang de Nunu et de l'allié visé se met à bouillir dans leurs veines, augmentant leur <speed>vitesse de déplacement de @MoveSpeed*100@%</speed> et leur <attackSpeed>vitesse d'attaque de @AttackSpeed*100@%</attackSpeed> pendant 12 sec. Nunu peut se cibler lui-même.",
+            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -931,7 +931,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nunu lance un éclair de glace sur une unité ennemie, lui infligeant des dégâts et réduisant temporairement sa vitesse de déplacement et d'attaque.",
-            "dynamicDescription": "<mainText>Nunu lance un éclair de glace sur une unité ennemie, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> sa vitesse de déplacement de @SlowAmount*-100@% et sa vitesse d'attaque de 25% pendant 3 sec.",
+            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1081,7 +1081,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nunu absorbe la chaleur autour de lui, ralentissant les ennemis proches. À la fin de l'effet, il inflige de lourds dégâts aux ennemis dans la zone d'effet.",
-            "dynamicDescription": "<mainText>Nunu absorbe la chaleur autour de lui, canalisant pendant jusqu'à 3 sec. Les ennemis dans la zone sont <status>ralentis</status> de 50% et leur <attackSpeed>vitesse d'attaque</attackSpeed> est réduite de 25%.<br><br>Les ennemis qui se trouvent dans la zone d'effet quand la canalisation prend fin subissent jusqu'à <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>, en fonction de la durée de la canalisation.",
+            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

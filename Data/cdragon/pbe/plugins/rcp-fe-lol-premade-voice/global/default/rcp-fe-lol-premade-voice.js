@@ -432,7 +432,7 @@
                         body: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_body"
                     }
                 };
-            class L extends r.default {
+            class z extends r.default {
                 templateMarkup() {
                     return n(41)
                 }
@@ -1056,9 +1056,9 @@
                     n && (t ? n.classList.add("disabled") : n.classList.remove("disabled"))
                 }
             }
-            L.tagName = "lol-parties-comm-panel";
-            var z = L;
-            t.default = z
+            z.tagName = "lol-parties-comm-panel";
+            var L = z;
+            t.default = L
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1674,8 +1674,8 @@
                 V = n(76),
                 N = n(77),
                 j = n(78),
-                L = n(79),
-                z = n(80),
+                z = n(79),
+                L = n(80),
                 R = n(81),
                 U = n(82),
                 H = n(83),
@@ -1713,8 +1713,8 @@
                 ye = a(V),
                 xe = a(N),
                 Ee = a(j),
-                Ce = a(L),
-                ke = a(z),
+                Ce = a(z),
+                ke = a(L),
                 Be = a(R),
                 we = a(U),
                 $e = a(H);
@@ -1981,7 +1981,7 @@
                     }, this._initDataBinding()
                 }
                 connectedCallback() {
-                    super.connectedCallback(), this._handleVoiceDisabled(), this.attachListener("click", this._listeners.showPanel, this._elements.voiceButton), this.attachListener("willHide", this._listeners.willHide), this._assignFlyout(), this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), document.addEventListener("keydown", this._listeners.keyDown), document.addEventListener("keyup", this._listeners.keyUp)
+                    super.connectedCallback(), this._handleVoiceDisabled(), this.attachListener("click", this._listeners.showPanel, this._elements.voiceButton), this.attachListener("willHide", this._listeners.willHide), this._voicePanelElement && this._voicePanelElement.addEventListener("minimizeVoicePanel", this._listeners.minimizePanel), this._assignFlyout(), this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), document.addEventListener("keydown", this._listeners.keyDown), document.addEventListener("keyup", this._listeners.keyUp)
                 }
                 disconnectedCallback() {
                     super.disconnectedCallback(), this._voiceDisabled && this._parentNode && this._parentNode.style && (this._parentNode.style.display = "inherit"), this.detachListener("click", this._listeners.showPanel, this._elements.voiceButton), this.detachListener("willHide", this._listeners.willHide), document.removeEventListener("keydown", this._listeners.keyDown), document.removeEventListener("keyup", this._listeners.keyUp), this._voicePanelElement && this._voicePanelElement.removeEventListener("minimizeVoicePanel", this._listeners.minimizePanel), this._removeFirstExperienceContextualNotification()

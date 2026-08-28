@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Çalılarda ilerlemek Nidalee'nin hareket hızını 2 saniyeliğine %15 arttırır."
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Nidalee insan suretindeyken mesafe kat ettikçe hasarı artan ve büyü hasarı veren bir mızrak fırlatır.  Puma suretindeyken bir sonraki saldırısı hedefini ölümcül şekilde yaralar ve hedefin canı ne kadar azsa o kadar fazla hasar verir.",
-            "dynamicDescription": "<keywordMajor>İnsan:</keywordMajor> Nidalee mızrağını fırlatarak isabet halinde Nidalee'nin hedefe olan uzaklığına bağlı olarak <magicDamage>@StartingDamage@</magicDamage> ila <magicDamage>@MaxDamage@ Büyü Hasarı</magicDamage> verir.<br><br><keywordMajor>Puma:</keywordMajor> Nidalee'nin bir sonraki saldırısı <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ Fiziksel Hasar</physicalDamage> verir ve bu hasar yaralı hedeflere karşı artar (en fazla %300 Toplam Hasar).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "İnsan suretindeyken Nidalee bir kapan kurar. Gafil avlanıp kapana takılan hedefler hasar alır, açığa çıkar ve zırh ile büyü dirençleri 12 saniyeliğine azalır. Puma halindeyken ileri atlar ve yere indiğinde az miktarda hasar verir.",
-            "dynamicDescription": "<keywordMajor>İnsan:</keywordMajor> Nidalee 2 saniye boyunca <magicDamage>@DamagePerSecond@ Büyü Hasarı</magicDamage> veren, hedefi açığa çıkaran ve 12 saniyeliğine hedefin <scaleArmor>zırh</scaleArmor> ile <scaleMR>büyü direncini</scaleMR> %@ResistDecreases*100@ <status>eksilten</status> bir kapan kurar. Kapanlar 4 dakika boyunca varlığını korur. <br><br><keywordMajor>Puma:</keywordMajor> Nidalee ileri atılarak etrafındaki rakiplere <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "İnsan suretindeyken Nidalee pumanın ruhunu çağırarak takım arkadaşlarını iyileştirir ve onlara kısa süreliğine saldırı hızı kazandırır.  Puma suretindeyken önündeki rakiplere hızla pençe atar.",
-            "dynamicDescription": "<keywordMajor>İnsan:</keywordMajor> Nidalee bir takım arkadaşını <healing>@TotalHealing@</healing> Can iyileştirir ve ona 7 saniyeliğine <attackSpeed>%@BonusAS*100@ Saldırı Hızı</attackSpeed> kazandırır.<br><br><keywordMajor>Puma:</keywordMajor> Nidalee, önündeki rakiplere pençe atarak <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Nidalee pumaya dönüşerek yeni yetenekler ve hareket hızı kazanır.",
-            "dynamicDescription": "<keywordMajor>İnsan:</keywordMajor> Nidalee vahşi bir pumaya dönüşerek <speed>20 Hareket Hızı</speed> kazanır ve temel yetenekleri <spellName>Yere Ser</spellName>, <spellName>Atıl</spellName> ve <spellName>Pençele</spellName> olarak değişir.<br><br><keywordMajor>Puma:</keywordMajor> Nidalee tekrar insan suretine bürünür.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

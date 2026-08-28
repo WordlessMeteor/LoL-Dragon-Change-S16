@@ -300,7 +300,7 @@
         "mRootSpell": "Characters/Sivir/Spells/SivirQAbility/SivirQ",
         "mChildSpells": [
             "Characters/Sivir/Spells/SivirQAbility/SivirQ",
-            "{35ad7475}",
+            "Characters/Sivir/Spells/SivirQAbility/SivirQMissile",
             "Characters/Sivir/Spells/SivirQMissileReturn",
             "Characters/Sivir/Spells/SivirQMissileReturnDead"
         ],
@@ -800,9 +800,9 @@
         },
         "__type": "SpellObject"
     },
-    "{35ad7475}": {
+    "Characters/Sivir/Spells/SivirQAbility/SivirQMissile": {
         "ObjectName": "SivirQMissile",
-        "objectPath": "{35ad7475}",
+        "objectPath": "Characters/Sivir/Spells/SivirQAbility/SivirQMissile",
         "mScriptName": "SivirQMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1326,9 +1326,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8f485316}": {
+    "Characters/Sivir/Spells/SivirRAbility/SivirRASBuff": {
         "ObjectName": "SivirRASBuff",
-        "objectPath": "{8f485316}",
+        "objectPath": "Characters/Sivir/Spells/SivirRAbility/SivirRASBuff",
         "mScriptName": "SivirRASBuff",
         "mBuff": {
             "mTooltipData": {
@@ -2284,9 +2284,9 @@
         "mScriptName": "SivirRunCycleManager",
         "__type": "SpellObject"
     },
-    "{9c834a86}": {
+    "Characters/Sivir/Spells/SivirEAbility/SpellShieldSpellImmunity": {
         "ObjectName": "SpellShieldSpellImmunity",
-        "objectPath": "{9c834a86}",
+        "objectPath": "Characters/Sivir/Spells/SivirEAbility/SpellShieldSpellImmunity",
         "mScriptName": "SpellShieldSpellImmunity",
         "__type": "SpellObject"
     },
@@ -3125,7 +3125,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -3165,7 +3165,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -3191,7 +3191,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -3231,7 +3231,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             375,
             975,
@@ -3260,7 +3260,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             80,
             200,
@@ -3288,7 +3288,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             15,
             40,
@@ -3330,7 +3330,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             10,
             25,
@@ -3358,7 +3358,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             20,
             45,
@@ -3386,7 +3386,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             45,
             125,
@@ -3892,7 +3892,7 @@
                         "mRuleName": "General",
                         "mConditions": [
                             {
-                                "__type": "{d55b5c23}"
+                                "__type": "ContextualConditionDamageResultType"
                             }
                         ],
                         "mAudioAction": {
@@ -3951,7 +3951,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3980,7 +3980,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4004,7 +4004,7 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4120,8 +4120,8 @@
                         "mRuleName": "General",
                         "mConditions": [
                             {
-                                "{262bfa2e}": 2,
-                                "__type": "{061b427f}"
+                                "PrevGearId": 2,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 30.0,
@@ -4143,9 +4143,9 @@
                         "mRuleName": "New Gear",
                         "mConditions": [
                             {
-                                "{aa8fd0c5}": true,
-                                "{262bfa2e}": 2,
-                                "__type": "{061b427f}"
+                                "CheckNewGearId": true,
+                                "PrevGearId": 2,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 30.0,
@@ -4167,8 +4167,8 @@
                         "mRuleName": "Previous Gear",
                         "mConditions": [
                             {
-                                "{dba9e788}": true,
-                                "__type": "{061b427f}"
+                                "CheckPrevGearId": true,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 30.0,
@@ -4626,7 +4626,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{35ad7475}",
+                                "mSpell": "Characters/Sivir/Spells/SivirQAbility/SivirQMissile",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4860,7 +4860,7 @@
                         "mConditions": [
                             {
                                 "{93f0c42c}": "TauntEndedNearby",
-                                "__type": "{4ab36eb5}"
+                                "__type": "ContextualConditionEndedVoCacSituation"
                             }
                         ],
                         "mAudioAction": {
@@ -4880,7 +4880,7 @@
                         "mConditions": [
                             {
                                 "{93f0c42c}": "JokeEndedNearby",
-                                "__type": "{4ab36eb5}"
+                                "__type": "ContextualConditionEndedVoCacSituation"
                             },
                             {
                                 "mRuleCooldown": 30.0,
@@ -5612,7 +5612,7 @@
                         "mConditions": [
                             {
                                 "{b3ec72b9}": 12,
-                                "__type": "{0dc0a353}"
+                                "__type": "ContextualConditionAbilityResourceType"
                             }
                         ],
                         "mAudioAction": {
@@ -5649,6 +5649,33 @@
         },
         "mObjectPath": "Characters/Sivir/CAC/CAC_Template",
         "__type": "ContextualActionData"
+    },
+    "{7ae72b07}": {
+        "__type": "{6c87d653}"
+    },
+    "{7fe9717d}": {
+        "__type": "{6c87d653}"
+    },
+    "{7ff87c07}": {
+        "__type": "{6c87d653}"
+    },
+    "{80a8ef54}": {
+        "__type": "{6c87d653}"
+    },
+    "{e7ee9263}": {
+        "__type": "{6c87d653}"
+    },
+    "{edee9bd5}": {
+        "__type": "{6c87d653}"
+    },
+    "{eef0dbff}": {
+        "__type": "{6c87d653}"
+    },
+    "{f1f31f4f}": {
+        "__type": "{6c87d653}"
+    },
+    "{f8f568eb}": {
+        "__type": "{6c87d653}"
     },
     "Characters/Sivir/CharacterRecords/Root": {
         "mCharacterName": "Sivir",
@@ -5792,7 +5819,7 @@
         ],
         "extraSpellsList": [
             "Characters/Sivir/Spells/SivirWAttack",
-            "{35ad7475}",
+            "Characters/Sivir/Spells/SivirQAbility/SivirQMissile",
             "Characters/Sivir/Spells/SivirWAttackBounce",
             "Characters/Sivir/Spells/SivirQMissileReturn",
             "Characters/Sivir/Spells/SivirQMissileReturnDead",

@@ -619,7 +619,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "يستطيع نونو إلقاء تعويذة مجانًا بعد تنفيذ 5 هجمات."
+        "description": "Spell_NunuPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -631,7 +631,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يأمر نونو وحش ثلجه بعضّ تابع أو وحش مستهدف، فيلحق به ضررًا هائلًا ويعالج نفسه.",
-            "dynamicDescription": "<mainText>يأمر نونو وحش ثلجه بعضّ تابع أو وحش، فيلحق <trueDamage>@BaseDamage@ ضرر حقيقي</trueDamage> بالهدف كما <healing>يعالج</healing> نفسه بمقدار @TotalHealing@.<br><br>يكسب نونو مكافآت إضافية لمدة @ConsumeDuration@ث حسب الهدف الذي قام بالتهامه.<br><br><attention>الذئاب</attention> أو <attention>الزواحف: </attention>تلحق هجماتك وتعويذاتك ضررًا إضافيًا يعادل <magicDamage>1% من صحتك القصوى على شكل ضرر سحر</magicDamage>.<br><attention>الغولم:</attention> زيادة بنسبة 10% في الحجم و<scaleHealth>الصحة القصوى</scaleHealth>.<br><attention>الأشباح:</attention> يمنحك قتل وحدة <speed>15% سرعة حركة</speed> لمدة 3ث.",
+            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 125.0,
                 125.0,
@@ -781,7 +781,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينشّط نونو نفسه ووحدة حليفة عبر تسخين دمهما، مما يزيد سرعة الحركة وسرعة الهجوم لديهما.",
-            "dynamicDescription": "<mainText>ترتفع حرارة دماء نونو وحليف مستهدف، مما يزيد <speed>سرعة الحركة بنسبة @MoveSpeed*100@%</speed> و<attackSpeed>سرعة الهجوم بنسبة @AttackSpeed*100@%</attackSpeed> لمدة 12ث. من الممكن أن يستهدف نونو نفسه.",
+            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -931,7 +931,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق نونو كرة من الجليد على وحدة معادية، فتلحق الضرر وتبطئ سرعة الحركة وسرعة الهجوم لديها مؤقتًا.",
-            "dynamicDescription": "<mainText>يطلق نونو كرة من الجليد على وحدة معادية، فيلحق بها <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>يبطئ</status> سرعة الحركة لديها بنسبة @SlowAmount*-100@% وسرعة الهجوم بنسبة 25% لمدة 3ث.",
+            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1081,7 +1081,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يبدأ نونو باستنزاف حرارة المنطقة، فيبطئ جميع الأعداء في الجوار. وعند انتهاء التعويذة، يلحق ضررًا هائلًا بجميع الأعداء العالقين داخل المنطقة.",
-            "dynamicDescription": "<mainText>يستنزف نونو حرارة المنطقة، فيقوم بتحضير القدرة لمدة تصل إلى 3ث، حيث يتم <status>إبطاء</status> الأعداء داخل المنطقة بنسبة 50% وتتقلص <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة 25%.<br><br>يتلقى الأعداء العالقون داخل المنطقة عند انتهاء التحضير ما يصل إلى <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>، حسب مدة تحضير التعويذة.",
+            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

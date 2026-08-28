@@ -3,10 +3,10 @@
         "mRootSpell": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQ",
         "mChildSpells": [
             "Characters/Velkoz/Spells/VelkozQAbility/VelkozQ",
-            "{6938e80b}",
-            "{8113db71}",
-            "{1cd9df10}",
-            "{8738eb36}"
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissile",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissileSplit",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSlow",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSplitActivate"
         ],
         "mName": "VelkozQAbility",
         "AbilityTraits": 256,
@@ -389,9 +389,9 @@
         },
         "__type": "SpellObject"
     },
-    "{1cd9df10}": {
+    "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSlow": {
         "ObjectName": "VelkozQSlow",
-        "objectPath": "{1cd9df10}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSlow",
         "mScriptName": "VelkozQSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VelkozQSlow",
@@ -399,9 +399,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6938e80b}": {
+    "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissile": {
         "ObjectName": "VelkozQMissile",
-        "objectPath": "{6938e80b}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissile",
         "mScriptName": "VelkozQMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -518,9 +518,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8113db71}": {
+    "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissileSplit": {
         "ObjectName": "VelkozQMissileSplit",
-        "objectPath": "{8113db71}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissileSplit",
         "mScriptName": "VelkozQMissileSplit",
         "mSpell": {
             "flags": 4,
@@ -688,9 +688,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8738eb36}": {
+    "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSplitActivate": {
         "ObjectName": "VelkozQSplitActivate",
-        "objectPath": "{8738eb36}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSplitActivate",
         "mScriptName": "VelkozQSplitActivate",
         "mSpell": {
             "flags": 4,
@@ -797,16 +797,16 @@
         "mRootSpell": "Characters/Velkoz/Spells/VelkozEAbility/VelkozE",
         "mChildSpells": [
             "Characters/Velkoz/Spells/VelkozEAbility/VelkozE",
-            "{89e98e63}",
-            "{13787781}"
+            "Characters/Velkoz/Spells/VelkozEAbility/VelkozEMissile",
+            "Characters/Velkoz/Spells/VelkozEAbility/VelkozEStun"
         ],
         "mName": "VelkozEAbility",
         "AbilityTraits": 2048,
         "__type": "AbilityObject"
     },
-    "{13787781}": {
+    "Characters/Velkoz/Spells/VelkozEAbility/VelkozEStun": {
         "ObjectName": "VelkozEStun",
-        "objectPath": "{13787781}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozEAbility/VelkozEStun",
         "mScriptName": "VelkozEStun",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VelkozEStun",
@@ -814,9 +814,9 @@
         },
         "__type": "SpellObject"
     },
-    "{89e98e63}": {
+    "Characters/Velkoz/Spells/VelkozEAbility/VelkozEMissile": {
         "ObjectName": "VelkozEMissile",
-        "objectPath": "{89e98e63}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozEAbility/VelkozEMissile",
         "mScriptName": "VelkozEMissile",
         "mSpell": {
             "mAffectsTypeFlags": 1028,
@@ -1377,14 +1377,14 @@
         "mRootSpell": "Characters/Velkoz/Spells/VelkozWAbility/VelkozW",
         "mChildSpells": [
             "Characters/Velkoz/Spells/VelkozWAbility/VelkozW",
-            "{3fbc316b}"
+            "Characters/Velkoz/Spells/VelkozWAbility/VelkozWMissile"
         ],
         "mName": "VelkozWAbility",
         "__type": "AbilityObject"
     },
-    "{3fbc316b}": {
+    "Characters/Velkoz/Spells/VelkozWAbility/VelkozWMissile": {
         "ObjectName": "VelkozWMissile",
-        "objectPath": "{3fbc316b}",
+        "objectPath": "Characters/Velkoz/Spells/VelkozWAbility/VelkozWMissile",
         "mScriptName": "VelkozWMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2628,7 +2628,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             20,
             50,
@@ -2656,7 +2656,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             9000,
             23000,
@@ -2684,7 +2684,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             25,
             60,
@@ -2786,7 +2786,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -2826,7 +2826,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -2852,7 +2852,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -2878,7 +2878,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             25,
             65,
@@ -2907,7 +2907,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             2,
             4,
@@ -2935,7 +2935,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             50,
             125,
@@ -2963,7 +2963,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             5,
             10,
@@ -3422,12 +3422,12 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{6938e80b}",
-            "{3fbc316b}",
-            "{89e98e63}",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissile",
+            "Characters/Velkoz/Spells/VelkozWAbility/VelkozWMissile",
+            "Characters/Velkoz/Spells/VelkozEAbility/VelkozEMissile",
             "Characters/Velkoz/Spells/VelkozResearchProc",
-            "{8738eb36}",
-            "{8113db71}",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQSplitActivate",
+            "Characters/Velkoz/Spells/VelkozQAbility/VelkozQMissileSplit",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3509,6 +3509,18 @@
         ],
         "{c5c48b41}": 1,
         "__type": "CharacterRecord"
+    },
+    "{6ea883ac}": {
+        "__type": "{6c87d653}"
+    },
+    "{96d16136}": {
+        "__type": "{6c87d653}"
+    },
+    "{f6a10aff}": {
+        "__type": "{6c87d653}"
+    },
+    "{fda11604}": {
+        "__type": "{6c87d653}"
     },
     "Characters/Velkoz/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"

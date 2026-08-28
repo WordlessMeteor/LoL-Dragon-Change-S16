@@ -65,7 +65,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -91,7 +91,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -162,7 +162,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -188,7 +188,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             6,
             15,
@@ -216,7 +216,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             6500,
             1600,
@@ -244,7 +244,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             10,
             25,
@@ -272,7 +272,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             11000,
             29000,
@@ -300,7 +300,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             20,
             45,
@@ -328,7 +328,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{47089000}",
+        "category": "Loadouts/StatStones/Categories/Support_Unique",
         "Milestones": [
             5500,
             14000,
@@ -342,21 +342,30 @@
         "stoneName": "MilioEBlocks",
         "__type": "StatStoneData"
     },
+    "{18547449}": {
+        "__type": "{6c87d653}"
+    },
+    "{2381cc02}": {
+        "__type": "{6c87d653}"
+    },
+    "{b151938d}": {
+        "__type": "{6c87d653}"
+    },
     "Characters/Milio/Spells/MilioQAbility": {
         "mRootSpell": "Characters/Milio/Spells/MilioQAbility/MilioQ",
         "mChildSpells": [
             "Characters/Milio/Spells/MilioQAbility/MilioQ",
-            "{71323211}",
-            "{2e13e11f}",
-            "{19391cd9}"
+            "Characters/Milio/Spells/MilioQAbility/MilioQHit",
+            "Characters/Milio/Spells/MilioQAbility/MilioQHitMinion",
+            "Characters/Milio/Spells/MilioQAbility/MilioQSlow"
         ],
         "mName": "MilioQAbility",
         "AbilityTraits": 2304,
         "__type": "AbilityObject"
     },
-    "{19391cd9}": {
+    "Characters/Milio/Spells/MilioQAbility/MilioQSlow": {
         "ObjectName": "MilioQSlow",
-        "objectPath": "{19391cd9}",
+        "objectPath": "Characters/Milio/Spells/MilioQAbility/MilioQSlow",
         "mScriptName": "MilioQSlow",
         "mSpell": {
             "mImgIconName": [
@@ -370,9 +379,9 @@
         },
         "__type": "SpellObject"
     },
-    "{2e13e11f}": {
+    "Characters/Milio/Spells/MilioQAbility/MilioQHitMinion": {
         "ObjectName": "MilioQHitMinion",
-        "objectPath": "{2e13e11f}",
+        "objectPath": "Characters/Milio/Spells/MilioQAbility/MilioQHitMinion",
         "mScriptName": "MilioQHitMinion",
         "mSpell": {
             "mImgIconName": [
@@ -471,9 +480,9 @@
         },
         "__type": "SpellObject"
     },
-    "{71323211}": {
+    "Characters/Milio/Spells/MilioQAbility/MilioQHit": {
         "ObjectName": "MilioQHit",
-        "objectPath": "{71323211}",
+        "objectPath": "Characters/Milio/Spells/MilioQAbility/MilioQHit",
         "mScriptName": "MilioQHit",
         "mSpell": {
             "mImgIconName": [
@@ -1220,17 +1229,17 @@
         "__type": "AbilityObject"
     },
     "Characters/Milio/Spells/MilioPassiveAbility": {
-        "mRootSpell": "{3e27cfac}",
+        "mRootSpell": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
         "mChildSpells": [
-            "{3e27cfac}"
+            "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive"
         ],
         "mName": "MilioPassiveAbility",
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{3e27cfac}": {
+    "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive": {
         "ObjectName": "MilioPassive",
-        "objectPath": "{3e27cfac}",
+        "objectPath": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
         "mScriptName": "MilioPassive",
         "mSpell": {
             "mSpellTags": [
@@ -1466,9 +1475,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e86d160c}": {
+    "Characters/Milio/Spells/MilioPassiveAbility/MilioPBurn": {
         "ObjectName": "MilioPBurn",
-        "objectPath": "{e86d160c}",
+        "objectPath": "Characters/Milio/Spells/MilioPassiveAbility/MilioPBurn",
         "mScriptName": "MilioPBurn",
         "mSpell": {
             "mImgIconName": [
@@ -1482,9 +1491,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f08b37b8}": {
+    "Characters/Milio/Spells/MilioPassiveAbility/MilioPBuff": {
         "ObjectName": "MilioPBuff",
-        "objectPath": "{f08b37b8}",
+        "objectPath": "Characters/Milio/Spells/MilioPassiveAbility/MilioPBuff",
         "mScriptName": "MilioPBuff",
         "mSpell": {
             "mImgIconName": [
@@ -3288,10 +3297,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{3e27cfac}",
+        "mCharacterPassiveSpell": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{3e27cfac}",
+                "mParentPassiveBuff": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -3550,10 +3559,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{3e27cfac}",
+        "mCharacterPassiveSpell": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{3e27cfac}",
+                "mParentPassiveBuff": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -3812,10 +3821,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{3e27cfac}",
+        "mCharacterPassiveSpell": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{3e27cfac}",
+                "mParentPassiveBuff": "Characters/Milio/Spells/MilioPassiveAbility/MilioPassive",
                 "__type": "CharacterPassiveData"
             }
         ],

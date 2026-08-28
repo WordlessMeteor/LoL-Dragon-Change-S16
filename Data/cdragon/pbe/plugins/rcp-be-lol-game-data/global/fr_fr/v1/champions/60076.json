@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Lorsqu'elle se déplace dans les hautes herbes, Nidalee gagne 15% de vitesse de déplacement pendant 2 sec."
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "En forme humaine, Nidalee lance un javelot sur sa cible. Ce javelot inflige de plus en plus de dégâts selon la distance parcourue.  Sous la forme d'un couguar, sa prochaine attaque tente de mortellement blesser sa cible, et plus celle-ci a déjà perdu de PV, plus les dégâts sont importants.",
-            "dynamicDescription": "<keywordMajor>Forme humaine :</keywordMajor> Nidalee lance son javelot, infligeant entre <magicDamage>@StartingDamage@</magicDamage> et <magicDamage>@MaxDamage@ pts de dégâts magiques</magicDamage> à l'impact en fonction de la distance qui sépare Nidalee de la cible. <br><br><keywordMajor>Couguar :</keywordMajor> la prochaine attaque de Nidalee inflige <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ pts de dégâts physiques</physicalDamage>, et ces dégâts sont augmentés contre les cibles blessées (jusqu'à 300% de dégâts totaux).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Dans sa forme humaine, Nidalee pose un piège infligeant des dégâts aux adversaires imprudents qui, une fois déclenché, révèle la cible et réduit son armure et sa résistance magique pendant 12 sec. Sous la forme d'un couguar, elle bondit en avant et inflige une petite quantité de dégâts à l'atterrissage.",
-            "dynamicDescription": "<keywordMajor>Forme humaine : </keywordMajor>Nidalee pose un piège qui inflige <magicDamage>@DamagePerSecond@ pts de dégâts magiques</magicDamage> en 2 sec, révèle la cible et <status>réduit</status> son <scaleArmor>armure</scaleArmor> et sa <scaleMR>résistance magique</scaleMR> de @ResistDecreases*100@% pendant 12 sec. Les pièges durent 4 minutes.<br><br><keywordMajor>Couguar : </keywordMajor>Nidalee bondit en avant, infligeant <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ pts de dégâts magiques</magicDamage> aux ennemis à proximité.@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Dans sa forme humaine, Nidalee canalise l'esprit du couguar pour soigner ses alliés et leur conférer temporairement un bonus en vitesse d'attaque.  Sous la forme d'un couguar, elle donne un coup de griffes aux ennemis devant elle.",
-            "dynamicDescription": "<keywordMajor>Forme humaine : </keywordMajor>Nidalee rend <healing>@TotalHealing@ PV</healing> à un champion allié et lui octroie<attackSpeed>@BonusAS*100@% de vitesse d'attaque</attackSpeed> pendant 7 sec.<br><br><keywordMajor>Couguar : </keywordMajor>Nidalee griffe les ennemis devant elle, infligeant <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ pts de dégâts magiques</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nidalee prend la forme d'un couguar, ce qui lui confère de nouvelles compétences et une augmentation de sa vitesse de déplacement.",
-            "dynamicDescription": "<keywordMajor>Forme humaine : </keywordMajor>Nidalee se transforme en un féroce couguar, gagnant <speed>20 vitesse de déplacement</speed>, et ses compétences de base deviennent <spellName>Mise à terre</spellName>, <spellName>Bond</spellName> et <spellName>Taillade</spellName>.<br><br><keywordMajor>Forme couguar : </keywordMajor>Nidalee reprend sa forme humaine.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

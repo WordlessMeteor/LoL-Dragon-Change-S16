@@ -619,7 +619,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "通常攻撃を5回行うと、スキルをコスト無しで発動できる。"
+        "description": "Spell_NunuPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -631,7 +631,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "イエティに指示して、対象のミニオンかモンスターに噛みつかせ、大ダメージを与えて自身の体力を回復する。",
-            "dynamicDescription": "<mainText>イエティに指示して、ミニオンかモンスターに噛みつかせ、<trueDamage>@BaseDamage@の確定ダメージ</trueDamage>を与えて、自身は体力を@TotalHealing@<healing>回復</healing>する。<br><br>さらに@ConsumeDuration@秒間、丸かじりした対象に応じた恩恵を獲得する。<br><br><attention>狼</attention>または<attention>トカゲ: </attention>通常攻撃とスキルが追加で<magicDamage>自身の最大体力の1%にあたる魔法ダメージ</magicDamage>を与える。<br><attention>ゴーレム:</attention> サイズと<scaleHealth>最大体力</scaleHealth>が10%増加する。<br><attention>レイス:</attention> ユニットを倒すと3秒間、<speed>移動速度が15%</speed>増加する。",
+            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 125.0,
                 125.0,
@@ -781,7 +781,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身と味方1体に活力を与え、移動速度と攻撃速度を増加させる。",
-            "dynamicDescription": "<mainText>自身と味方1体の血を沸き立たせ、12秒間<speed>移動速度を@MoveSpeed*100@%</speed>、<attackSpeed>攻撃速度を@AttackSpeed*100@%</attackSpeed>増加させる。自身を対象に指定することもできる。",
+            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -931,7 +931,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵ユニットに向けて氷の玉を投げつけてダメージを与え、少しの間、移動速度と攻撃速度を低下させる。",
-            "dynamicDescription": "<mainText>敵ユニットに氷の玉を投げつけ、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、3秒間、対象の移動速度を@SlowAmount*-100@%、攻撃速度を25%<status>低下</status>させる。",
+            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1081,7 +1081,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "周囲の熱を吸収し、周囲のすべての敵にスロウ効果を与える。スキル終了時、範囲内のすべての敵に大ダメージを与える。",
-            "dynamicDescription": "<mainText>最大3秒間詠唱して周囲の熱を吸収し、範囲内の敵に50%の<status>スロウ効果</status>を付与して、対象の<attackSpeed>攻撃速度</attackSpeed>を25%低下させる。<br><br>詠唱終了時に範囲内にいた敵に、詠唱時間に応じて最大<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。",
+            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

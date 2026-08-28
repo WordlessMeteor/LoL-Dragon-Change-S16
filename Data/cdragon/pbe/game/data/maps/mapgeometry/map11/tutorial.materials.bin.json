@@ -222149,67 +222149,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_h_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT",
         "type": 0,
@@ -226693,47 +226632,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlane_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
         "type": 0,
@@ -228223,6 +228121,47 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_a2_ordertop_a.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlanecaps_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -303087,7 +303026,37 @@
             "{8bfba8d4}": null,
             "{e00e67de}": null,
             "{567e1d79}": null,
-            "{ed41a404}": null
+            "{ed41a404}": null,
+            "{355dbc2d}": {
+                "transform": [
+                    [
+                        0.8755214810371399,
+                        0.0,
+                        0.24909645318984985,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.9102675318717957,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.24909645318984985,
+                        0.0,
+                        0.8755214810371399,
+                        0.0
+                    ],
+                    [
+                        2034.254638671875,
+                        39.61114501953125,
+                        14314.2626953125,
+                        1.0
+                    ]
+                ],
+                "name": "{9529afba}",
+                "__type": "{fa42cdaf}"
+            }
         },
         "__type": "MapPlaceableContainer"
     },

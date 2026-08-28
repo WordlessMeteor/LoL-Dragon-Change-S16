@@ -111,12 +111,12 @@
                 P = i.UIKit.getModalManager();
             e.exports = class {
                 constructor() {
-                    this._currentParty = null, this._currentPlayer = null, this._selected = null, this._application = null, this._lastGameflowPhase = null, this._factoryRegistered = !1, this._restoreNavigationState = null, this._applicationRegisteredPromise = null, this._partyCreatedCallback = null, this._partyDestroyedCallback = null, this._npeQueue = null, this._summonerLevel = null, this._coopAiRoutingExperimentEnabled = null, this._maxLevelForExperiments = null, this._npeModeSelected = null, this._lobbiesObserver = !1, this._gameflowObserver = !1, this._queues = m.default, this._platformConfigSingleton = p.default, this._showingState = r.default.create();
+                    this._currentParty = null, this._currentPlayer = null, this._selected = null, this._application = null, this._lastGameflowPhase = null, this._factoryRegistered = !1, this._restoreNavigationState = null, this._applicationRegisteredPromise = null, this._partyCreatedCallback = null, this._partyDestroyedCallback = null, this._phantomLobbyRecoveryEnabled = !1, this._npeQueue = null, this._summonerLevel = null, this._coopAiRoutingExperimentEnabled = null, this._maxLevelForExperiments = null, this._npeModeSelected = null, this._lobbiesObserver = !1, this._gameflowObserver = !1, this._queues = m.default, this._platformConfigSingleton = p.default, this._showingState = r.default.create();
                     const e = i.Viewport.getApiKey("rcp-fe-lol-parties - bump/release parties");
                     f.default.set("viewportApiKey", e), this._screenRoot = i.Viewport.main().getScreenRoot(e, "rcp-fe-lol-parties"), this._connectViewportIsShowing(), this._connectToPatcher(), this._requirements = {
                         login: !1,
                         summoner: !1
-                    }, this._binding = i.dataBinding.bindTo((0, i.getProvider)().getSocket()), this._binding.addObserver(k, this, this._updateSummoner), this._binding.observe("/lol-npe-rewards/v1/get_poro_experiments", this, this._handleExperimentUpdated), this._binding.observe("/lol-settings/v2/account/LCUPreferences/lol-npe-first-touch", this, this._handleNpeFirstTouchUpdated), this._readyCheckNotifications = new _.default, this._suppressNavigateHomeOnce = !1
+                    }, this._binding = i.dataBinding.bindTo((0, i.getProvider)().getSocket()), this._binding.addObserver(k, this, this._updateSummoner), this._binding.observe("/lol-client-config/v3/client-config/lol.client_settings.lobby.phantom_lobby_recovery_enabled", this, this._handlePhantomLobbyRecoveryConfig), this._binding.observe("/lol-npe-rewards/v1/get_poro_experiments", this, this._handleExperimentUpdated), this._binding.observe("/lol-settings/v2/account/LCUPreferences/lol-npe-first-touch", this, this._handleNpeFirstTouchUpdated), this._readyCheckNotifications = new _.default, this._suppressNavigateHomeOnce = !1
                 }
                 show() {
                     return new Promise(((e, t) => {
@@ -246,7 +246,9 @@
                     return new Promise(((e, t) => {
                         this._currentPlayer ? this._currentParty ? (this._partyDestroyedCallback = () => {
                             e()
-                        }, this._lobbiesObserver.leaveLobby().catch((e => {
+                        }, this._lobbiesObserver.leaveLobby(this._phantomLobbyRecoveryEnabled).then((t => {
+                            t && (this._partyDestroyedCallback = null, e())
+                        })).catch((e => {
                             this._partyDestroyedCallback = null, t(e)
                         }))) : t(new Error("NOT_IN_LOBBY")) : t("NOT_SIGNED_IN")
                     }))
@@ -270,6 +272,9 @@
                     })), this._screenRoot.on("hide", (() => {
                         this._restoreNavigationState = null, i.logger.trace("UNLOCKING PLAY BUTTON"), i.Navigation.setIsShowingLobby(!1)
                     }))
+                }
+                _handlePhantomLobbyRecoveryConfig(e) {
+                    this._phantomLobbyRecoveryEnabled = Boolean(e)
                 }
                 _updateSummoner(e) {
                     if (!e) return;
@@ -605,8 +610,11 @@
                         queueId: e
                     })
                 }
-                leaveLobby() {
-                    return this._lobbyBinding.delete("v2/lobby")
+                leaveLobby(e = !1) {
+                    return this._lobbyBinding.delete("v2/lobby").then((() => !1)).catch((t => {
+                        if (!e || "LOBBY_NOT_FOUND" !== t?.data?.errorCode) throw t;
+                        return i.logger.error("FAILED TO LEAVE LOBBY, FOUNDATION HAS NO LOBBY BUT UI STILL HAS ONE, CLEARING UI"), this._lobbyData && this._deletedLobby(), !0
+                    }))
                 }
                 _observeLobbies() {
                     this._lobbyBinding.observe("v2/lobby", (e => {
@@ -8187,6 +8195,9 @@
                 region: null,
                 isFavoritesToggled: !1,
                 hasSeenWIPCosmeticTooltipInLobby: !1,
+                hasDismissedUnavailableCosmeticTooltipInSession: !1,
+                _unavailableCosmeticTooltipQueueId: null,
+                _shouldReshowUnavailableTooltipAfterQueue6110: !1,
                 disabledContentIdsByQueueData: null,
                 disabledContentIds: [],
                 init() {
@@ -8340,6 +8351,9 @@
                         },
                         schemaVersion: 1
                     })
+                },
+                updateUnavailableCosmeticTooltipQueue(e, t) {
+                    null != e && (e !== this._unavailableCosmeticTooltipQueueId && (this._shouldReshowUnavailableTooltipAfterQueue6110 = 6110 === this._unavailableCosmeticTooltipQueueId && 6110 !== e, this._unavailableCosmeticTooltipQueueId = e), this._shouldReshowUnavailableTooltipAfterQueue6110 && t && (this.set("hasDismissedUnavailableCosmeticTooltipInSession", !1), this._shouldReshowUnavailableTooltipAfterQueue6110 = !1))
                 },
                 _updateDisabledContentIdsByQueue() {
                     const e = this.get("lobbyState.selected.queueId");
@@ -21047,11 +21061,16 @@
                                 wip: i(n, "WIP Cosmetic")
                             }, this._WIPCosmeticTooltip ? this._updateWIPCosmeticTooltip() : this._showWIPCosmeticTooltip(!0)
                         }
-                    }, window.addEventListener(l, this._showWIPCosmeticTooltipHandler), this._maybeShowWIPCosmeticTooltip()
+                    }, window.addEventListener(l, this._showWIPCosmeticTooltipHandler), this._updateUnavailableCosmeticTooltipQueue(), this._maybeShowWIPCosmeticTooltip()
                 },
-                _onEquippedCosmeticsChanged: i.Ember.observer("tftCosmeticsService.equippedCompanion", "tftCosmeticsService.equippedMapSkin", "tftCosmeticsService.equippedDamageSkin", "tftCosmeticsService.equippedZoomSkin", "tftCosmeticsService.resetCompanion", "tftCosmeticsService.resetMapSkin", "tftCosmeticsService.resetDamageSkin", "tftCosmeticsService.resetZoomSkin", "tftCosmeticsService.disabledContentIds", "lobbyState.showingState.isShowingParty", "lobbyState.selected.queueId", "lobbiesService.isTFT", (function() {
-                    this._maybeShowWIPCosmeticTooltip()
+                _onEquippedCosmeticsChanged: i.Ember.observer("tftCosmeticsService.equippedCompanion", "tftCosmeticsService.equippedMapSkin", "tftCosmeticsService.equippedDamageSkin", "tftCosmeticsService.equippedZoomSkin", "tftCosmeticsService.resetCompanion", "tftCosmeticsService.resetMapSkin", "tftCosmeticsService.resetDamageSkin", "tftCosmeticsService.resetZoomSkin", "tftCosmeticsService.disabledContentIds", "lobbyState.showingState.isShowingParty", "lobbyState.selected.queueId", "lobbiesService.inLobby", "lobbiesService.isTFT", (function() {
+                    this._updateUnavailableCosmeticTooltipQueue(), this._maybeShowWIPCosmeticTooltip()
                 })),
+                _updateUnavailableCosmeticTooltipQueue: function() {
+                    const e = this.get("tftCosmeticsService"),
+                        t = (e.get("unavailableResetItems") || []).length > 0;
+                    e.updateUnavailableCosmeticTooltipQueue(this.get("lobbyState.selected.queueId"), t)
+                },
                 _maybeShowWIPCosmeticTooltip: function() {
                     const e = this._shouldShowWIPCosmeticTooltip();
                     this._WIPCosmeticTooltip ? e ? this._updateWIPCosmeticTooltip() : this._removeWIPCosmeticTooltip() : e && this._showWIPCosmeticTooltip()
@@ -21099,10 +21118,11 @@
                         o = this.get("tftCosmeticsService.equippedZoomSkin"),
                         s = this.get("lobbyState.selected.queueId"),
                         a = this.get("lobbyState.showingState.isShowingParty"),
-                        r = this.get("lobbiesService.isTFT"),
-                        l = this._getUnavailableItems().length > 0,
-                        c = !this.get("tftCosmeticsService.hasSeenWIPCosmeticTooltipInLobby") && this._getWIPItems().length > 0;
-                    return e && r && a && 6110 !== s && t && n && i && o && (l || c)
+                        r = this.get("lobbiesService.inLobby"),
+                        l = this.get("lobbiesService.isTFT"),
+                        c = !this.get("tftCosmeticsService.hasDismissedUnavailableCosmeticTooltipInSession") && this._getUnavailableItems().length > 0,
+                        m = !this.get("tftCosmeticsService.hasSeenWIPCosmeticTooltipInLobby") && this._getWIPItems().length > 0;
+                    return e && l && a && r && 6110 !== s && t && n && i && o && (c || m)
                 },
                 _buildTooltipSection: function(e, t, n) {
                     const i = window.document,
@@ -21122,7 +21142,7 @@
                     const t = window.document;
                     for (; e.firstChild;) e.removeChild(e.firstChild);
                     const n = this._getUnavailableItems();
-                    n.length > 0 && e.appendChild(this._buildTooltipSection("unavailable", this.get("tra.tft_unavailable_cosmetic_tooltip_lobby_title"), this._formatItemNameList(n, "tft_unavailable_cosmetic_list")));
+                    n.length > 0 && (e.appendChild(this._buildTooltipSection("unavailable", this.get("tra.tft_unavailable_cosmetic_tooltip_lobby_title"), this._formatItemNameList(n, "tft_unavailable_cosmetic_list"))), e.setAttribute("data-included-unavailable-section", "true"));
                     const i = this._getWIPItems();
                     (Boolean(this._devWIPCosmeticTooltipItems) || !this.get("tftCosmeticsService.hasSeenWIPCosmeticTooltipInLobby")) && i.length > 0 && (e.appendChild(this._buildTooltipSection("wip", this.get("tra.tft_wip_cosmetic_tooltip_lobby_title"), this._formatItemNameList(i, "tft_wip_cosmetic_list"))), e.setAttribute("data-included-wip-section", "true"));
                     const o = this.get("tra.tft_wip_cosmetic_tooltip_lobby_support_url"),
@@ -21145,22 +21165,22 @@
                             target: {
                                 domNode: this.element,
                                 anchor: {
-                                    x: "center",
-                                    y: "bottom"
+                                    x: "right",
+                                    y: "center"
                                 }
                             },
-                            orientation: "bottom",
+                            orientation: "right",
                             anchor: {
-                                x: "center",
-                                y: "top"
+                                x: "left",
+                                y: "center"
                             },
                             offset: {
-                                x: 0,
-                                y: o
+                                x: o,
+                                y: 0
                             },
                             dismissable: !0
                         }), this._WIPCosmeticTooltip.onRemove.then((() => {
-                            if (this._WIPCosmeticTooltip = null, this._WIPCosmeticTooltipContent = null, this._devWIPCosmeticTooltipItems = null, !e && n.hasAttribute("data-included-wip-section")) {
+                            if (this._WIPCosmeticTooltip = null, this._WIPCosmeticTooltipContent = null, this._devWIPCosmeticTooltipItems = null, !e && (n.hasAttribute("data-included-unavailable-section") && this.set("tftCosmeticsService.hasDismissedUnavailableCosmeticTooltipInSession", !0), n.hasAttribute("data-included-wip-section"))) {
                                 this.set("tftCosmeticsService.hasSeenWIPCosmeticTooltipInLobby", !0);
                                 this.get("tftCosmeticsService").saveHasSeenWIPCosmeticTooltipInLobby()
                             }

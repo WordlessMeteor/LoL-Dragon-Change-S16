@@ -265,6 +265,32 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/KSante/Skins/Skin14/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "Spell": "Characters/KSante/Spells/KSanteRAbility/KsanteRTransform",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "C_Buffbone_Glb_Chest_Loc",
+                        "effectKey": "KSante_R_Buf_Body",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "L_Blade_1",
+                        "effectKey": "KSante_R_Buf_L_Weapon",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "R_Blade_1",
+                        "effectKey": "KSante_R_Buf_R_Weapon",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "objectPath": "Characters/KSante/Skins/Skin14",
         "__type": "SkinCharacterDataProperties"
     },

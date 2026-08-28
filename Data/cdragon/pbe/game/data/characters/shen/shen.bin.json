@@ -13,20 +13,20 @@
         "mRootSpell": "Characters/Shen/Spells/ShenQAbility/ShenQ",
         "mChildSpells": [
             "Characters/Shen/Spells/ShenQAbility/ShenQ",
-            "{5bcf3302}",
-            "{33e7ee4f}",
-            "{b779fb32}",
-            "{f7d0d6b3}",
-            "{9ad2e70c}",
-            "{4de662af}",
-            "{0bc25ec5}"
+            "Characters/Shen/Spells/ShenQAbility/ShenQMissile",
+            "Characters/Shen/Spells/ShenQAbility/ShenQSlow",
+            "Characters/Shen/Spells/ShenQAbility/ShenQAttack",
+            "Characters/Shen/Spells/ShenQAbility/ShenQBuff",
+            "Characters/Shen/Spells/ShenQAbility/ShenQBuffStrong",
+            "Characters/Shen/Spells/ShenQAbility/ShenQBuffWeak",
+            "Characters/Shen/Spells/ShenQAbility/ShenQTransmitter"
         ],
         "mName": "ShenQAbility",
         "__type": "AbilityObject"
     },
-    "{0bc25ec5}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQTransmitter": {
         "ObjectName": "ShenQTransmitter",
-        "objectPath": "{0bc25ec5}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQTransmitter",
         "mScriptName": "ShenQTransmitter",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShenQTransmitter",
@@ -34,9 +34,9 @@
         },
         "__type": "SpellObject"
     },
-    "{33e7ee4f}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQSlow": {
         "ObjectName": "ShenQSlow",
-        "objectPath": "{33e7ee4f}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQSlow",
         "mScriptName": "ShenQSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShenQSlow",
@@ -44,9 +44,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4de662af}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQBuffWeak": {
         "ObjectName": "ShenQBuffWeak",
-        "objectPath": "{4de662af}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQBuffWeak",
         "mScriptName": "ShenQBuffWeak",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShenQBuffWeak",
@@ -54,9 +54,9 @@
         },
         "__type": "SpellObject"
     },
-    "{5bcf3302}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQMissile": {
         "ObjectName": "ShenQMissile",
-        "objectPath": "{5bcf3302}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQMissile",
         "mScriptName": "ShenQMissile",
         "mSpell": {
             "flags": 4,
@@ -150,9 +150,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9ad2e70c}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQBuffStrong": {
         "ObjectName": "ShenQBuffStrong",
-        "objectPath": "{9ad2e70c}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQBuffStrong",
         "mScriptName": "ShenQBuffStrong",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShenQBuffStrong",
@@ -160,9 +160,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b779fb32}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQAttack": {
         "ObjectName": "ShenQAttack",
-        "objectPath": "{b779fb32}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQAttack",
         "mScriptName": "ShenQAttack",
         "mSpell": {
             "mAnimationName": "Spell1_AttackBackup",
@@ -196,9 +196,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f7d0d6b3}": {
+    "Characters/Shen/Spells/ShenQAbility/ShenQBuff": {
         "ObjectName": "ShenQBuff",
-        "objectPath": "{f7d0d6b3}",
+        "objectPath": "Characters/Shen/Spells/ShenQAbility/ShenQBuff",
         "mScriptName": "ShenQBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShenQBuff",
@@ -2493,7 +2493,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             4500,
             11000,
@@ -2521,7 +2521,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             8000,
             21000,
@@ -2549,7 +2549,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             10000,
             25000,
@@ -2591,7 +2591,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             5,
             10,
@@ -2619,7 +2619,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{2eeaa87d}",
+        "category": "Loadouts/StatStones/Categories/CC_Unique",
         "Milestones": [
             85,
             225,
@@ -2648,7 +2648,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{0899c06d}",
+        "category": "Loadouts/StatStones/Categories/Defense_Unique",
         "Milestones": [
             45,
             125,
@@ -2690,7 +2690,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -2730,7 +2730,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -2801,7 +2801,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -2812,6 +2812,30 @@
         ],
         "stoneName": "ShenEpicMonstersKilled",
         "__type": "StatStoneData"
+    },
+    "{1ea1fc48}": {
+        "__type": "{6c87d653}"
+    },
+    "{24a205ba}": {
+        "__type": "{6c87d653}"
+    },
+    "{260a2373}": {
+        "__type": "{6c87d653}"
+    },
+    "{270a2506}": {
+        "__type": "{6c87d653}"
+    },
+    "{ae02aac6}": {
+        "__type": "{6c87d653}"
+    },
+    "{b5007734}": {
+        "__type": "{6c87d653}"
+    },
+    "{b702b8f1}": {
+        "__type": "{6c87d653}"
+    },
+    "{bd11cced}": {
+        "__type": "{6c87d653}"
     },
     "{2e8bdb27}": {
         "__type": "ChampionRuneRecommendationsContext"
@@ -2878,6 +2902,23 @@
     },
     "{f23d73f9}": {
         "RecSpellRankUpInfos": [
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
             {
                 "MapId": 11,
                 "Position": "Top",

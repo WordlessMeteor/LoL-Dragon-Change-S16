@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "การเคลื่อนที่ผ่านพุ่มไม้จะเพิ่มความเร็วเคลื่อนที่ของ Nidalee 15% เป็นเวลา 2 วินาที"
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ในร่างมนุษย์ Nidalee ขว้างหอกใส่เป้าหมาย สร้างความเสียหายตามระยะทาง  ในร่างเสือภูเขา การโจมตีปกติครั้งต่อไปจะโจมตีสร้างบาดแผลฉกรรจ์แก่ศัตรู สร้างความเสียหายตามพลังชีวิตที่หายไปของศัตรู",
-            "dynamicDescription": "<keywordMajor>ร่างมนุษย์:</keywordMajor> Nidalee ขว้างหอก สร้าง<magicDamage>ความเสียหายเวทระหว่าง @StartingDamage@ หน่วย</magicDamage> ถึง <magicDamage>@MaxDamage@ หน่วย</magicDamage>เมื่อโดนเป้าหมาย โดยความรุนแรงจะขึ้นอยู่กับระยะห่างระหว่าง Nidalee และเป้าหมาย<br><br><keywordMajor>ร่างเสือภูเขา: </keywordMajor>การโจมตีครั้งถัดไปของ Nidalee สร้าง<physicalDamage>ความเสียหายกายภาพ @spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ หน่วย</physicalDamage> โดยความเสียหายจะเพิ่มขึ้นเมื่อโจมตีเป้าหมายที่บาดเจ็บ (ความเสียหายทั้งหมดเป็นได้สูงสุด 300%)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ในร่างมนุษย์ Nidalee วางกับดักสร้างความเสียหายให้กับศัตรูที่ไม่ระวังตัว ซึ่งเมื่อทำงานจะเปิดเผยเป้าหมายและลดเกราะกับความต้านทานเวทของพวกเขาเป็นเวลา 12 วินาที ในร่างเสือภูเขา เธอจะกระโจนไปข้างหน้า สร้างความเสียหายเล็กน้อยเมื่อเธอลงถึงพื้น",
-            "dynamicDescription": "<keywordMajor>ร่างมนุษย์: </keywordMajor>Nidalee วางกับดักที่จะสร้าง<magicDamage>ความเสียหายเวท @DamagePerSecond@ หน่วย</magicDamage>เป็นเวลา 2 วินาที เปิดเผยเป้าหมาย พร้อมทั้ง<status>ลด</status><scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>ของพวกเขาลง @ResistDecreases*100@% เป็นเวลา 12 วินาที กับดักจะคงอยู่ได้นานสุด 4 นาที<br><br><keywordMajor>ร่างเสือภูเขา: </keywordMajor>Nidalee พุ่งไปข้างหน้า สร้าง<magicDamage>ความเสียหายเวท @spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ หน่วย</magicDamage>แก่ศัตรูโดยรอบ@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ในร่างมนุษย์ Nidalee ใช้จิตวิญญาณแห่งเสือฮีลเพื่อนร่วมทีม และช่วยเพิ่มความเร็วโจมตีครู่หนึ่ง  ในร่างเสือภูเขา เธอจะข่วนศัตรูด้านหน้าอย่างรวดเร็ว",
-            "dynamicDescription": "<keywordMajor>ร่างมนุษย์: </keywordMajor>Nidalee ฮีลแชมเปี้ยนร่วมทีม <healing>@TotalHealing@</healing> หน่วย และมอบ<attackSpeed>ความเร็วโจมตี @BonusAS*100@%</attackSpeed> เป็นเวลา 7 วินาที<br><br><keywordMajor>ร่างเสือภูเขา: </keywordMajor>Nidalee ข่วนศัตรูด้านหน้า สร้าง<magicDamage>ความเสียหายเวท @spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nidalee เปลี่ยนร่างเป็นเสือภูเขา ได้รับสกิลชุดใหม่และมีความเร็วเคลื่อนที่เพิ่มขึ้น",
-            "dynamicDescription": "<keywordMajor>ร่างมนุษย์: </keywordMajor>Nidalee แปลงร่างเป็นเสือภูเขาดุร้าย ได้รับ<speed>ความเร็วเคลื่อนที่ 20 หน่วย</speed> และสกิลพื้นฐานของเธอจะเปลี่ยนเป็น <spellName>Takedown</spellName>, <spellName>Pounce</spellName> และ <spellName>Swipe</spellName><br><br><keywordMajor>ร่างเสือภูเขา: </keywordMajor>Nidalee แปลงร่างกลับสู่ร่างมนุษย์@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

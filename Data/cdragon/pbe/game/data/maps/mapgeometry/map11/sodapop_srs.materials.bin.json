@@ -227634,46 +227634,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_D1_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_D1_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_d1_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_ShrineKit_A_MAT": {
         "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_ShrineKit_A_MAT",
         "type": 0,
@@ -227718,67 +227678,6 @@
                         "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest_DoubleSided",
                         "blendEnable": true,
                         "cullEnable": false,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Base_B_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Base_B_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_chaos_base_b_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
@@ -228018,168 +227917,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Base_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Base_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_chaos_base_a_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_A4_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_A4_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_a4_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Order_Base_B_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Order_Base_B_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_order_base_b_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_WeaponRackKit_B_MAT": {
         "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_WeaponRackKit_B_MAT",
         "type": 0,
@@ -228314,140 +228051,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_B4_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_B4_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_b4_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Spawn_C_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Spawn_C_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_chaos_spawn_c_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.8999999761581421,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest_DoubleSided",
-                        "blendEnable": true,
-                        "cullEnable": false,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_A5_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_A5_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_a5_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_PropKit_A_MAT": {
         "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_PropKit_A_MAT",
         "type": 0,
@@ -228455,91 +228058,6 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_propkit_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_E1_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_E1_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_e1_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_D2_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_D2_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_d2_chaosbase_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -228754,46 +228272,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_E2_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_E2_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_e2_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Prop_Cart_A_MAT": {
         "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Prop_Cart_A_MAT",
         "type": 0,
@@ -228880,152 +228358,6 @@
                         "cullEnable": false,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Spawn_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Chaos_Spawn_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_chaos_spawn_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Order_Base_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Order_Base_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_order_base_a_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_B5_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_Ground_B5_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/sodapop/textures/sodapop_ground_b5_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -231108,6 +230440,67 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_spawn_b_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT",
         "type": 0,
@@ -231329,67 +230722,6 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_topriver_a_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_h_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -235351,6 +234683,67 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Order_Mid_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Mid_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/order_mid_a_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Earth_Order_Dragon_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Earth_Order_Dragon_A_MAT",
         "type": 0,
@@ -235866,13 +235259,13 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT",
+    "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
         "type": 0,
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlane_a.tex",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/order_base_a_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -235887,18 +235280,38 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
             "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
         },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -235907,13 +235320,13 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
+    "Maps/KitPieces/SRS/Base/Materials/Default/Order_Spawn_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Spawn_A_MAT",
         "type": 0,
         "samplerValues": [
             {
                 "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/order_base_a_1bitalpha.tex",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/order_spawn_a_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -236740,6 +236153,67 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_D_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_D_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_spawn_d_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_D4_DragonPit_Fire_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_D4_DragonPit_Fire_A_MAT",
         "type": 0,
@@ -237274,6 +236748,47 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_a2_ordertop_a.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlanecaps_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -242100,6 +241615,67 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Top_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Top_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_top_a_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_BotRiver_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_BotRiver_A_MAT",
         "type": 0,
@@ -242921,6 +242497,67 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_d_1bitalpha.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1",
+            "PREMULTIPLIED_ALPHA": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/Order_Bot_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Bot_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/order_bot_a_1bitalpha.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -273605,7 +273242,37 @@
             "{8bfba8d4}": null,
             "{e00e67de}": null,
             "{567e1d79}": null,
-            "{ed41a404}": null
+            "{ed41a404}": null,
+            "{355dbc2d}": {
+                "transform": [
+                    [
+                        0.8755214810371399,
+                        0.0,
+                        0.24909645318984985,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.9102675318717957,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.24909645318984985,
+                        0.0,
+                        0.8755214810371399,
+                        0.0
+                    ],
+                    [
+                        2034.254638671875,
+                        39.61114501953125,
+                        14314.2626953125,
+                        1.0
+                    ]
+                ],
+                "name": "{9529afba}",
+                "__type": "{fa42cdaf}"
+            }
         },
         "__type": "MapPlaceableContainer"
     },
@@ -273631,8 +273298,11 @@
             "{d4386834}": null,
             "{e337ce53}": null,
             "{7c005243}": null,
+            "{bf94bdb5}": null,
             "{ad7bccd9}": null,
+            "{c7955e56}": null,
             "{7c03ca30}": null,
+            "{0371b443}": null,
             "{22575efa}": null,
             "{8400d2f5}": null,
             "{d8c7ec74}": null,
@@ -273641,6 +273311,7 @@
             "{dc7019e2}": null,
             "{8487c17a}": null,
             "{b44650a4}": null,
+            "{212544dd}": null,
             "{60a494b4}": null,
             "{42081aaf}": null,
             "{f63a0650}": null,
@@ -273651,11 +273322,13 @@
             "{83ea468c}": null,
             "{63b5f2c1}": null,
             "{2e95de35}": null,
+            "{2f7f3a26}": null,
             "{872dfede}": null,
             "{c3e587d4}": null,
             "{5bfc5ac0}": null,
             "{2ede06e1}": null,
             "{e1ed5f2e}": null,
+            "{807945ec}": null,
             "{fc059ab4}": null,
             "{ccf34d67}": null,
             "{d937ce99}": null,
@@ -273697,6 +273370,39 @@
             "{0739773b}": null,
             "{0df6c2c4}": null,
             "{fb9fff27}": null,
+            "{223ba4ba}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        7431.9404296875,
+                        111.0997543334961,
+                        7393.24609375,
+                        1.0
+                    ]
+                ],
+                "name": "CubemapProbe1",
+                "mVisibilityFlags": 1,
+                "CubemapProbePath": "ASSETS/Maps/CubeMaps/Maps/MapGeometry/Map11/Base_SRX/b2ebdf57-0589-4b33-a3ba-0acba7004df3_cubemap.dds",
+                "CubemapProbeScale": 3.462409019470215,
+                "__type": "MapCubemapProbe"
+            },
             "{c9fe1b77}": null,
             "{e0bf5a83}": null,
             "{7031bc24}": null,
@@ -318795,7 +318501,37 @@
             "{8bfba8d4}": null,
             "{e00e67de}": null,
             "{567e1d79}": null,
-            "{ed41a404}": null
+            "{ed41a404}": null,
+            "{355dbc2d}": {
+                "transform": [
+                    [
+                        0.8755214810371399,
+                        0.0,
+                        0.24909645318984985,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.9102675318717957,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.24909645318984985,
+                        0.0,
+                        0.8755214810371399,
+                        0.0
+                    ],
+                    [
+                        2034.254638671875,
+                        39.61114501953125,
+                        14314.2626953125,
+                        1.0
+                    ]
+                ],
+                "name": "{9529afba}",
+                "__type": "{fa42cdaf}"
+            }
         },
         "__type": "MapPlaceableContainer"
     },

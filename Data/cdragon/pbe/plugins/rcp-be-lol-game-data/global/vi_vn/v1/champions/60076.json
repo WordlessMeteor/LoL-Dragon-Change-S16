@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Di chuyển qua bụi cỏ giúp Nidalee tăng 15% Tốc Độ Di Chuyển trong 2 giây."
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ở dạng người, Nidalee phóng ra một cây lao gai tới mục tiêu của cô và gây thêm sát thương theo khoảng cách phóng lao.  Ở dạng báo, đòn đánh tiếp theo sẽ làm trọng thương mục tiêu, gây sát thương càng cao khi kẻ địch còn càng ít máu.",
-            "dynamicDescription": "<keywordMajor>Dạng Người:</keywordMajor> Nidalee phóng lao, gây <magicDamage>@StartingDamage@</magicDamage> - <magicDamage>@MaxDamage@ sát thương phép</magicDamage> khi trúng đích, dựa trên khoảng cách giữa Nidalee và mục tiêu. <br><br><keywordMajor>Dạng Báo:</keywordMajor> Đòn đánh tiếp theo của Nidalee gây <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ sát thương vật lý</physicalDamage>, và sát thương được tăng lên đối với mục tiêu bị thương (tối đa 300% tổng sát thương).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Ở dạng người, Nidalee đặt một cái bẫy, gây sát thương lên những kẻ địch mất cảnh giác. Khi kích hoạt, bẫy sẽ làm lộ diện mục tiêu và giảm Giáp & Kháng Phép của kẻ đó trong 12 giây. Ở dạng báo, cô lao tới phía trước, gây một lượng sát thương nhỏ khi tiếp đất.",
-            "dynamicDescription": "<keywordMajor>Dạng Người: </keywordMajor>Nidalee đặt một cái bẫy, gây <magicDamage>@DamagePerSecond@ sát thương phép</magicDamage> trong vòng 2 giây, làm lộ diện mục tiêu và <status>làm giảm</status> <scaleArmor>Giáp</scaleArmor> & <scaleMR>Kháng Phép</scaleMR> của chúng đi @ResistDecreases*100@% trong 12 giây. Bẫy tồn tại trong 4 phút. <br><br><keywordMajor>Dạng Báo: </keywordMajor>Nidalee lao về phía trước, gây <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ sát thương phép</magicDamage> lên kẻ địch xung quanh.@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Trong dạng người, Nidalee triệu tập tinh linh của loài báo để hồi máu cho đồng đội và giúp tăng Tốc Độ Đánh trong thời gian ngắn.  Trong lốt báo, cô cào và gây sát thương lên kẻ địch phía trước mình.",
-            "dynamicDescription": "<keywordMajor>Dạng Người: </keywordMajor>Nidalee hồi <healing>@TotalHealing@</healing> máu cho một tướng đồng minh và tăng cho họ <attackSpeed>@BonusAS*100@% Tốc Độ Đánh</attackSpeed> trong 7 giây.<br><br><keywordMajor>Dạng Báo: </keywordMajor>Nidalee cào những kẻ địch ở phía trước, gây <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nidalee hóa báo, nhận dàn kỹ năng mới và tăng Tốc Độ Di Chuyển.",
-            "dynamicDescription": "<keywordMajor>Dạng Người: </keywordMajor>Nidalee hóa thành một con báo dữ tợn, nhận được <speed>20 Tốc Độ Di Chuyển</speed>, và các kỹ năng cơ bản của cô trở thành <spellName>Cắn Xé</spellName>, <spellName>Vồ</spellName>, và <spellName>Vả</spellName>.<br><br><keywordMajor>Dạng Báo: </keywordMajor>Nidalee biến trở lại dạng người.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

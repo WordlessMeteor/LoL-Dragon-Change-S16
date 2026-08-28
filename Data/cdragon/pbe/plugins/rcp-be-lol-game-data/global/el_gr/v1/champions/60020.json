@@ -619,7 +619,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Ο Νούνου μπορεί να χρησιμοποιήσει μία ικανότητα χωρίς κόστος, μετά από 5 επιθέσεις."
+        "description": "Spell_NunuPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -631,7 +631,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Νούνου διατάζει το Γέτι να δαγκώσει έναν υπηρέτη ή ένα τέρας, προκαλώντας του μεγάλη ζημιά και θεραπεύοντας τον ίδιο.",
-            "dynamicDescription": "<mainText>Δίνει εντολή στο Γέτι να δαγκώσει έναν υπηρέτη ή ένα τέρας, προκαλώντας <trueDamage>@BaseDamage@ Πραγματική Ζημιά</trueDamage> στον στόχο και <healing>Θεραπεύοντας</healing> τον εαυτό του για @TotalHealing@.<br><br>Ο Νούνου αποκτά μπόνους για @ConsumeDuration@ δευτ. ανάλογα με τον στόχο που κατανάλωσε.<br><br><attention>Λύκοι</attention> ή <attention>Ερπετά: </attention>Οι επιθέσεις και οι ικανότητές σας προκαλούν επιπλέον <magicDamage>Μαγική Ζημιά ίση με το 1% της μέγιστης Ζωής σας</magicDamage>.<br><attention>Γκόλεμ:</attention> 10% αυξημένο Μέγεθος και <scaleHealth>Μέγιστη Ζωή</scaleHealth>.<br><attention>Πνεύματα:</attention> Όταν σκοτώνετε μια μονάδα, αποκτάτε <speed>15% Ταχύτητα Κίνησης</speed> για 3 δευτερόλεπτα.",
+            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 125.0,
                 125.0,
@@ -781,7 +781,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Νούνου αναζωογονεί τον εαυτό του και μια συμμαχική μονάδα θερμαίνοντας το αίμα τους, κάτι που αυξάνει την Ταχύτητα Κίνησης και επίθεσης.",
-            "dynamicDescription": "<mainText>Η θερμοκρασία αίματος του Νούνου και ενός συμμάχου αυξάνεται, με αποτέλεσμα να αυξηθεί η <speed>Ταχύτητα Κίνησης κατά @MoveSpeed*100@%</speed> και η <attackSpeed>Ταχύτητα Επίθεσής τους κατά @AttackSpeed*100@%</attackSpeed> για 12 δευτερόλεπτα. Ο Νούνου μπορεί να στοχεύσει τον εαυτό του.",
+            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -931,7 +931,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Νούνου εκτοξεύει μια μπάλα πάγου σε μια εχθρική μονάδα, προκαλώντας της ζημιά, ενώ παράλληλα Επιβραδύνει προσωρινά την Ταχύτητα Κίνησης και Επίθεσής της.",
-            "dynamicDescription": "<mainText>Ο Νούνου εκτοξεύει μια μπάλα πάγου σε μια εχθρική μονάδα, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>, ενώ παράλληλα <status>Επιβραδύνει</status> την Ταχύτητα Κίνησης κατά @SlowAmount*-100@% και την Ταχύτητα Επίθεσής της κατά 25% για 3 δευτερόλεπτα.",
+            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1081,7 +1081,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Νούνου αρχίζει να απορροφά τη θερμότητα της περιοχής, Επιβραδύνοντας τους κοντινούς εχθρούς. Μόλις λήξει η ικανότητα, προκαλεί τεράστια ζημιά σε όλους τους εχθρούς που βρίσκονται στην περιοχή.",
-            "dynamicDescription": "<mainText>Ο Νούνου απορροφά τη θερμότητα από την περιοχή, διοχετεύοντας ενέργεια για έως και 3 δευτερόλεπτα. Οι εχθροί εντός της ζώνης <status>Επιβραδύνονται</status> κατά 50% και η <attackSpeed>Ταχύτητα Επίθεσής</attackSpeed> τους μειώνεται κατά 25%.<br><br>Οι εχθροί που βρίσκονται στην περιοχή όταν ολοκληρωθεί η διοχέτευση δέχονται έως και <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>, ανάλογα με τον χρόνο που διοχετεύτηκε η ικανότητα.",
+            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

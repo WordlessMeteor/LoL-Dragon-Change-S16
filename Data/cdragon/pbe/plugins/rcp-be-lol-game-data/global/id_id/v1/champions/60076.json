@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Bergerak melewati semak meningkatkan Movement Speed Nidalee sebesar 15% selama 2 detik."
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Dalam human form, Nidalee melemparkan lembing berduri ke target yang menghasilkan peningkatan damage saat melesat.  Dalam cougar form, serangan berikutnya berpeluang melukai target secara fatal, menghasilkan damage yang lebih besar jika Health mereka rendah.",
-            "dynamicDescription": "<keywordMajor>Human:</keywordMajor> Nidalee melempar tombaknya, menghasilkan antara <magicDamage>@StartingDamage@</magicDamage> hingga <magicDamage>@MaxDamage@ magic damage</magicDamage> saat mengenai target, tergantung seberapa jauh jarak Nidalee dari target. <br><br><keywordMajor>Cougar:</keywordMajor> Serangan Nidalee berikutnya menghasilkan <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ physical damage</physicalDamage>, dan damage-nya meningkat terhadap target yang terluka (hingga 300% total damage).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Dalam human form, Nidalee memasang jebakan yang menghasilkan damage untuk menjerat lawan yang lengah. Saat terpicu, jebakan akan mengungkap target dan mengurangi Armor serta Magic Resist mereka selama 12 detik. Dalam cougar form, dia menerkam ke depan dan menghasilkan sedikit damage saat mendarat.",
-            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee memasang jebakan yang menghasilkan <magicDamage>@DamagePerSecond@ magic damage</magicDamage> selama 2 detik, mengungkap target, dan <status>shred</status> <scaleArmor>Armor</scaleArmor> serta <scaleMR>Magic Resist</scaleMR> target sebesar @ResistDecreases*100@% selama 12 detik. Jebakan bertahan selama 4 menit. <br><br><keywordMajor>Cougar: </keywordMajor>Nidalee menerjang ke depan, menghasilkan <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ magic damage</magicDamage> ke musuh di sekitar.@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Dalam wujud manusia, Nidalee channeling spirit cougar untuk memberikan heal dan attack speed ke sekutu untuk sesaat.  Dalam wujud cougar, dia mencakar musuh di depannya dengan cepat.",
-            "dynamicDescription": "<keywordMajor>Manusia: </keywordMajor>Nidalee memulihkan champion sekutu sebesar <healing>@TotalHealing@</healing> dan memberikan <attackSpeed>@BonusAS*100@% Attack Speed</attackSpeed> selama 7 detik.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee mencakar musuh di depannya, menghasilkan <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nidalee berubah menjadi seekor cougar, mendapatkan ability baru dan peningkatan Movement Speed.",
-            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee berubah menjadi cougar buas, mendapatkan <speed>20 Movement Speed</speed>, dan basic ability miliknya berubah menjadi <spellName>Takedown</spellName>, <spellName>Pounce</spellName>, dan <spellName>Swipe</spellName>.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee berubah kembali ke human form.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

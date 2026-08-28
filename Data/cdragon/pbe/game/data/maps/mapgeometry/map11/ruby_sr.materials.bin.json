@@ -82195,67 +82195,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_h_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT",
         "type": 0,
@@ -83965,47 +83904,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlane_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
         "type": 0,
@@ -84502,6 +84400,47 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_a2_ordertop_a.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlanecaps_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -133612,7 +133551,37 @@
             "{8bfba8d4}": null,
             "{e00e67de}": null,
             "{567e1d79}": null,
-            "{ed41a404}": null
+            "{ed41a404}": null,
+            "{355dbc2d}": {
+                "transform": [
+                    [
+                        0.8755214810371399,
+                        0.0,
+                        0.24909645318984985,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.9102675318717957,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.24909645318984985,
+                        0.0,
+                        0.8755214810371399,
+                        0.0
+                    ],
+                    [
+                        2034.254638671875,
+                        39.61114501953125,
+                        14314.2626953125,
+                        1.0
+                    ]
+                ],
+                "name": "{9529afba}",
+                "__type": "{fa42cdaf}"
+            }
         },
         "__type": "MapPlaceableContainer"
     },
@@ -142040,10 +142009,110 @@
         },
         "__type": "MapPlaceableContainer"
     },
+    "{0c210e40}": {
+        "PathHash": "{0c210e40}",
+        "Parents": [
+            "{48106271}"
+        ],
+        "ParentMode": 3,
+        "__type": "ChildMapVisibilityController"
+    },
+    "{2b8dbdee}": {
+        "PathHash": "{2b8dbdee}",
+        "name": "{625c62d8}",
+        "DefaultVisible": false,
+        "{27639032}": 32,
+        "__type": "{c406a533}"
+    },
+    "{3c5b24f7}": {
+        "PathHash": "{3c5b24f7}",
+        "name": "{5cba1be9}",
+        "DefaultVisible": false,
+        "{27639032}": 8,
+        "__type": "{c406a533}"
+    },
+    "{48106271}": {
+        "PathHash": "{48106271}",
+        "name": "{dba9fcb3}",
+        "DefaultVisible": false,
+        "{27639032}": 4,
+        "__type": "{c406a533}"
+    },
+    "{4f0b2a3e}": {
+        "PathHash": "{4f0b2a3e}",
+        "name": "{699b9ac4}",
+        "DefaultVisible": false,
+        "{27639032}": 16,
+        "__type": "{c406a533}"
+    },
+    "{5e652742}": {
+        "PathHash": "{5e652742}",
+        "Parents": [
+            "{8e6a128e}",
+            "{4f0b2a3e}",
+            "{48106271}",
+            "{d1a17399}",
+            "{2b8dbdee}",
+            "{3c5b24f7}"
+        ],
+        "ParentMode": 3,
+        "__type": "ChildMapVisibilityController"
+    },
+    "{6f187e01}": {
+        "PathHash": "{6f187e01}",
+        "Parents": [
+            "{8e6a128e}",
+            "{48106271}",
+            "{d1a17399}",
+            "{2b8dbdee}"
+        ],
+        "ParentMode": 3,
+        "__type": "ChildMapVisibilityController"
+    },
+    "{76c50391}": {
+        "PathHash": "{76c50391}",
+        "MutatorName": "SR_Hall_Of_Legends",
+        "__type": "MutatorMapVisibilityController"
+    },
+    "{8e6a128e}": {
+        "PathHash": "{8e6a128e}",
+        "name": "{5086eb70}",
+        "DefaultVisible": false,
+        "{27639032}": 64,
+        "__type": "{c406a533}"
+    },
+    "{d1a17399}": {
+        "PathHash": "{d1a17399}",
+        "name": "{2936ed63}",
+        "DefaultVisible": false,
+        "{27639032}": 2,
+        "__type": "{c406a533}"
+    },
     "{11a9b55d}": {
         "PathHash": "{11a9b55d}",
         "MutatorName": "MapObjectESportSponsorBanners",
         "__type": "MutatorMapVisibilityController"
+    },
+    "{1b3399aa}": {
+        "PathHash": "{1b3399aa}",
+        "name": "{d1751a06}",
+        "DefaultVisible": false,
+        "{8bff8cdf}": 4,
+        "__type": "{ec733fe2}"
+    },
+    "{f4968631}": {
+        "PathHash": "{f4968631}",
+        "name": "{6204d1e5}",
+        "{8bff8cdf}": 1,
+        "__type": "{ec733fe2}"
+    },
+    "{21d36b37}": {
+        "PathHash": "{21d36b37}",
+        "Parents": [
+            "{1b3399aa}"
+        ],
+        "ParentMode": 3,
+        "__type": "ChildMapVisibilityController"
     },
     "{43a50be2}": {
         "PathHash": "{43a50be2}",
@@ -142069,21 +142138,10 @@
         "DefaultVisible": false,
         "__type": "{e07edfa4}"
     },
-    "{76c50391}": {
-        "PathHash": "{76c50391}",
-        "MutatorName": "SR_Hall_Of_Legends",
-        "__type": "MutatorMapVisibilityController"
-    },
     "{8f1ab207}": {
         "PathHash": "{8f1ab207}",
         "MutatorName": "MSITrophy",
         "__type": "MutatorMapVisibilityController"
-    },
-    "{f4968631}": {
-        "PathHash": "{f4968631}",
-        "name": "{6204d1e5}",
-        "{8bff8cdf}": 1,
-        "__type": "{ec733fe2}"
     },
     "Maps/MapGeometry/Map11/Ruby_SR": {
         "mapPath": "Maps/MapGeometry/Map11/Ruby_SR",

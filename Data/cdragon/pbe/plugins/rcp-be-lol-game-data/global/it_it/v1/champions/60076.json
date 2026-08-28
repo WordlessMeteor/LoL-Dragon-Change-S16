@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Muoversi tra i cespugli aumenta la velocità di movimento di Nidalee del 15% per 2 secondi."
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Nella sua forma umana, Nidalee lancia un giavellotto contro il suo bersaglio. I danni del giavellotto aumentano mentre è in volo.  In forma di puma, il suo prossimo attacco cercherà di ferire fatalmente infliggendo danni in misura inversamente proporzionale alla salute del bersaglio.",
-            "dynamicDescription": "<keywordMajor>Forma umana:</keywordMajor> Nidalee lancia il suo giavellotto, infliggendo tra <magicDamage>@StartingDamage@</magicDamage> e <magicDamage>@MaxDamage@ danni magici</magicDamage> all'impatto in base alla distanza tra Nidalee e il bersaglio. <br><br><keywordMajor>Puma:</keywordMajor> il prossimo attacco di Nidalee infligge <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ danni fisici</physicalDamage> e i danni aumentano contro i bersagli feriti (fino al 300% dei danni totali).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "In forma umana, Nidalee piazza una trappola dannosa per gli avversari distratti che, una volta attivata, rivela il bersaglio e ne riduce l'armatura e la resistenza magica per 12 secondi. In forma di puma, balza in avanti, infliggendo una piccola quantità di danni all'atterraggio.",
-            "dynamicDescription": "<keywordMajor>Forma umana: </keywordMajor>Nidalee piazza una trappola che infligge <magicDamage>@DamagePerSecond@ danni magici</magicDamage> nell'arco di 2 secondi, rivela il bersaglio e ne <status>riduce</status> <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> di un @ResistDecreases*100@% per 12 secondi. Le trappole durano 4 minuti. <br><br><keywordMajor>Forma puma: </keywordMajor>Nidalee balza in avanti, infliggendo <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ danni magici</magicDamage> ai nemici circostanti.@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Nella sua forma umana, Nidalee richiama lo spirito del puma per guarire i suoi alleati e infonderli di velocità d'attacco per un breve periodo.  Come puma, si scaglia con i suoi artigli verso i nemici davanti a lei.",
-            "dynamicDescription": "<keywordMajor>Forma umana: </keywordMajor>Nidalee cura un campione alleato di <healing>@TotalHealing@</healing> e gli fornisce <attackSpeed>@BonusAS*100@% velocità d'attacco</attackSpeed> per 7 secondi.<br><br><keywordMajor>Forma puma: </keywordMajor>Nidalee squarcia i nemici davanti a sé, infliggendo <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Nidalee si trasforma in un puma, ottenendo nuove abilità e velocità di movimento aumentata.",
-            "dynamicDescription": "<keywordMajor>Forma umana: </keywordMajor>Nidalee si trasforma in una feroce puma, ottenendo <speed>20 velocità di movimento</speed>, e le sue abilità di base diventano <spellName>Colpo fatale</spellName>, <spellName>Balzo</spellName> e <spellName>Artiglio</spellName>.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee torna alla forma umana.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

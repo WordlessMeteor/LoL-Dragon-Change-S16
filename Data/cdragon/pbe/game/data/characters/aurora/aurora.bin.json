@@ -27,7 +27,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             30000,
             70000,
@@ -55,7 +55,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             20,
             50,
@@ -83,7 +83,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{024e22b2}",
+        "category": "Loadouts/StatStones/Categories/Style_Unique",
         "Milestones": [
             2000,
             5000,
@@ -139,7 +139,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             60,
             150,
@@ -167,7 +167,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{06fc9407}",
+        "category": "Loadouts/StatStones/Categories/Offense_Unique",
         "Milestones": [
             50,
             125,
@@ -195,7 +195,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{1dab670a}",
+        "category": "Loadouts/StatStones/Categories/Goal_Unique",
         "Milestones": [
             2,
             4,
@@ -223,7 +223,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             5,
             15,
@@ -294,7 +294,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{6ce57a50}",
+        "category": "Loadouts/StatStones/Categories/Goal_Common",
         "Milestones": [
             3,
             10,
@@ -334,7 +334,7 @@
                 "__type": "StatStoneEventToTrack"
             }
         ],
-        "category": "{5c6e96a2}",
+        "category": "Loadouts/StatStones/Categories/Support_Common",
         "Milestones": [
             25,
             65,
@@ -638,24 +638,24 @@
         "mRootSpell": "Characters/Aurora/Spells/AuroraQAbility/AuroraQ",
         "mChildSpells": [
             "Characters/Aurora/Spells/AuroraQAbility/AuroraQ",
-            "{55293a74}",
-            "{fe565ec8}"
+            "Characters/Aurora/Spells/AuroraQAbility/AuroraQRecast",
+            "Characters/Aurora/Spells/AuroraQAbility/AuroraQReturnMissile"
         ],
         "mName": "AuroraQAbility",
         "AbilityTraits": 256,
         "__type": "AbilityObject"
     },
     "{450988f8}": {
-        "mRootSpell": "{55fe4142}",
+        "mRootSpell": "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive",
         "mChildSpells": [
-            "{55fe4142}"
+            "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive"
         ],
         "mName": "AuroraPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{2cce65a3}": {
+    "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPNumSpiritsTracker": {
         "ObjectName": "AuroraPNumSpiritsTracker",
-        "objectPath": "{2cce65a3}",
+        "objectPath": "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPNumSpiritsTracker",
         "mScriptName": "AuroraPNumSpiritsTracker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -665,9 +665,9 @@
         },
         "__type": "SpellObject"
     },
-    "{55fe4142}": {
+    "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive": {
         "ObjectName": "AuroraPassive",
-        "objectPath": "{55fe4142}",
+        "objectPath": "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive",
         "mScriptName": "AuroraPassive",
         "mSpell": {
             "DataValues": [
@@ -933,8 +933,8 @@
         "mRootSpell": "Characters/Aurora/Spells/AuroraRAbility/AuroraR",
         "mChildSpells": [
             "Characters/Aurora/Spells/AuroraRAbility/AuroraR",
-            "{36b6a65c}",
-            "{f84a9cce}"
+            "Characters/Aurora/Spells/AuroraRAbility/AuroraRMissile",
+            "Characters/Aurora/Spells/AuroraRAbility/AuroraRRecast"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "AuroraRAbility",
@@ -942,9 +942,9 @@
         "AbilityTraits": 4098,
         "__type": "AbilityObject"
     },
-    "{36b6a65c}": {
+    "Characters/Aurora/Spells/AuroraRAbility/AuroraRMissile": {
         "ObjectName": "AuroraRMissile",
-        "objectPath": "{36b6a65c}",
+        "objectPath": "Characters/Aurora/Spells/AuroraRAbility/AuroraRMissile",
         "mScriptName": "AuroraRMissile",
         "mSpell": {
             "flags": 4,
@@ -1490,9 +1490,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f84a9cce}": {
+    "Characters/Aurora/Spells/AuroraRAbility/AuroraRRecast": {
         "ObjectName": "AuroraRRecast",
-        "objectPath": "{f84a9cce}",
+        "objectPath": "Characters/Aurora/Spells/AuroraRAbility/AuroraRRecast",
         "mScriptName": "AuroraRRecast",
         "mSpell": {
             "flags": 4,
@@ -1621,9 +1621,9 @@
         },
         "__type": "SpellObject"
     },
-    "{55293a74}": {
+    "Characters/Aurora/Spells/AuroraQAbility/AuroraQRecast": {
         "ObjectName": "AuroraQRecast",
-        "objectPath": "{55293a74}",
+        "objectPath": "Characters/Aurora/Spells/AuroraQAbility/AuroraQRecast",
         "mScriptName": "AuroraQRecast",
         "mSpell": {
             "flags": 4,
@@ -2170,9 +2170,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fe565ec8}": {
+    "Characters/Aurora/Spells/AuroraQAbility/AuroraQReturnMissile": {
         "ObjectName": "AuroraQReturnMissile",
-        "objectPath": "{fe565ec8}",
+        "objectPath": "Characters/Aurora/Spells/AuroraQAbility/AuroraQReturnMissile",
         "mScriptName": "AuroraQReturnMissile",
         "mSpell": {
             "mAffectsTypeFlags": 14346,
@@ -2526,9 +2526,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8ea20d6a}": {
+    "Characters/Aurora/Spells/AuroraWAbility/AuroraWMS": {
         "ObjectName": "AuroraWMS",
-        "objectPath": "{8ea20d6a}",
+        "objectPath": "Characters/Aurora/Spells/AuroraWAbility/AuroraWMS",
         "mScriptName": "AuroraWMS",
         "mSpell": {
             "mImgIconName": [
@@ -3374,6 +3374,15 @@
     "{8c66ea93}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
+    "{445d3493}": {
+        "__type": "{6c87d653}"
+    },
+    "{9ef9e130}": {
+        "__type": "{6c87d653}"
+    },
+    "{d564d49b}": {
+        "__type": "{6c87d653}"
+    },
     "Characters/Aurora/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
@@ -3659,10 +3668,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{55fe4142}",
+        "mCharacterPassiveSpell": "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{55fe4142}",
+                "mParentPassiveBuff": "Characters/Aurora/Spells/AuroraPassiveAbility/AuroraPassive",
                 "__type": "CharacterPassiveData"
             }
         ],

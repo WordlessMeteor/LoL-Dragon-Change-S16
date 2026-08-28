@@ -210,8 +210,7 @@
                         "keyName": "Spell_NidaleeCougarW_Jade_Name",
                         "keySummary": "Spell_NidaleeCougarW_Jade_Summary",
                         "keyTooltip": "Spell_NidaleeCougarW_Jade_Tooltip",
-                        "keyCost": "Spell_Cost_NoCost",
-                        "keyTooltipExtended": "Spell_NidaleeCougarW_Jade_ExtTooltip"
+                        "keyCost": "Spell_Cost_NoCost"
                     },
                     "__type": "TooltipInstanceSpell"
                 },
@@ -279,56 +278,6 @@
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        80.0,
-                        80.0,
-                        140.0,
-                        200.0,
-                        260.0,
-                        260.0,
-                        260.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "mCoefficient": 0.5,
             "mCoefficient2": 0.44999998807907104,
             "mAnimationName": "Spell3",
@@ -386,7 +335,7 @@
                 "__type": "{0a0eddc9}"
             },
             "castConeAngle": 90.0,
-            "castConeDistance": 310.0,
+            "castConeDistance": 350.0,
             "castFrame": 22.0,
             "missileSpeed": 0.0,
             "mFloatVarsDecimals": [
@@ -477,88 +426,7 @@
             "mSpellTags": [
                 "Trait_Trap"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        14.0,
-                        13.0,
-                        12.0,
-                        11.0,
-                        10.0,
-                        9.0,
-                        9.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        50.0,
-                        100.0,
-                        150.0,
-                        200.0,
-                        250.0,
-                        300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        40.0,
-                        80.0,
-                        120.0,
-                        160.0,
-                        200.0,
-                        240.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
-                {
-                    "name": "ModesBonusMaxTraps",
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "DamagePerSecondData",
                     "values": [
@@ -597,40 +465,35 @@
                         4.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShredDuration",
+                    "values": [
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "MaxTraps": {
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 4.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": 2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 11,
-                                    "mAdditionalBonusAtThisLevel": 2.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 16,
-                                    "mAdditionalBonusAtThisLevel": 2.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        },
-                        {
-                            "mDataValue": "ModesBonusMaxTraps",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
                 "DamagePerSecond": {
                     "mFormulaParts": [
                         {
@@ -653,8 +516,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.05000000074505806,
-            "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_Bushwhack.dds"
@@ -800,8 +661,7 @@
                     "mLocKeys": {
                         "keyName": "Spell_NidaleeW_Jade_Name",
                         "keySummary": "Spell_NidaleeW_Jade_Summary",
-                        "keyTooltip": "Spell_NidaleeW_Jade_Tooltip",
-                        "keyTooltipExtended": "Spell_NidaleeW_Jade_ExtTooltip"
+                        "keyTooltip": "Spell_NidaleeW_Jade_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -902,32 +762,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MaxHealMult",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxHealThreshold",
-                    "values": [
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BonusAS",
                     "values": [
                         0.10000000149011612,
@@ -967,23 +801,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "MaxHealing": {
-                    "mMultiplier": {
-                        "mSubparts": [
-                            {
-                                "mNumber": 1.0,
-                                "__type": "NumberCalculationPart"
-                            },
-                            {
-                                "mDataValue": "MaxHealMult",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "SumOfSubPartsCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TotalHealing",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1005,17 +822,26 @@
             ],
             "castRangeValues": {
                 "values": [
-                    900.0,
-                    900.0,
-                    900.0,
-                    900.0,
-                    900.0,
-                    900.0,
-                    900.0
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
                 ],
-                "{0a3e0478}": 900.0,
+                "{0a3e0478}": 600.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
+            ],
             "castRadius": [
                 350.0,
                 350.0,
@@ -1273,6 +1099,34 @@
         "objectPath": "{5e5ecf6f}",
         "mScriptName": "Jade_NidaleeProwl",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "BrushMoveSpeed",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.dds"
             ],
@@ -1388,116 +1242,6 @@
             },
             "mSpellTags": [
                 "Trait_AttackReset"
-            ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        30.0,
-                        55.0,
-                        80.0,
-                        80.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        10.0,
-                        10.0,
-                        67.5,
-                        137.5,
-                        220.0,
-                        220.0,
-                        220.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
-                        1.75,
-                        1.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "DataValues": [
-                {
-                    "name": "TotalADRatio",
-                    "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
-                    ],
-                    "__type": "SpellDataValue"
-                }
             ],
             "mCoefficient": 0.75,
             "mCoefficient2": 0.4000000059604645,
@@ -1654,6 +1398,19 @@
                         0.6499999761581421
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamageMultiplier",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1672,8 +1429,8 @@
                 },
                 "MaxDamage": {
                     "mMultiplier": {
-                        "mNumber": 2.5,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "{ca99b64b}",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "{d2b61fd4}",
                     "__type": "GameCalculationModified"
@@ -1914,61 +1671,7 @@
                 "Trait_Transformation",
                 "Trait_Ultimate"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
-                {
-                    "name": "PassivePercentMS",
-                    "values": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "TakedownBaseDamage",
                     "values": [
@@ -1992,32 +1695,6 @@
                         1.0,
                         1.0,
                         1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TakedownDamageAmp",
-                    "values": [
-                        0.75,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PounceCooldown",
-                    "values": [
-                        3.5,
-                        3.0,
-                        2.5,
-                        2.0,
-                        1.5,
-                        1.5,
-                        1.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2085,6 +1762,32 @@
                         0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CougarMoveSpeed",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TakedownMaxDamageMultiplier",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2127,6 +1830,14 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{ee8e64b1}": {
+                    "mMultiplier": {
+                        "mDataValue": "{580c8342}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalTakedownDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mCoefficient": 0.75,
@@ -3833,6 +3544,7 @@
         "sequences": {
             "{6a7835b9}": {
                 "blocks": [
+                    null,
                     {
                         "{d851ffa3}": "dfae34fd-7e7a-4afd-a55a-c21855c10cbc",
                         "Src": {

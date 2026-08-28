@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "穿越草丛时，奈德丽的移动速度提升15%，持续2秒。"
+        "description": "Spell_NidaleePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "人类形态：奈德丽朝目标投掷一支带刺标枪，标枪飞行距离越远，造成的伤害越高。美洲狮形态：她的下一次普攻会对目标造成致命伤害，目标生命越低，造成的伤害越高。",
-            "dynamicDescription": "<keywordMajor>人类形态：</keywordMajor>奈德丽投掷一支标枪，命中时会造成<magicDamage>@StartingDamage@</magicDamage>至<magicDamage>@MaxDamage@魔法伤害</magicDamage>（基于奈德丽与目标的距离）。<br><br><keywordMajor>美洲狮形态：</keywordMajor>奈德丽的下一次普攻会造成<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@物理伤害</physicalDamage>，对受伤目标会造成更多伤害（最高为300%总伤害）。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "人类形态：奈德丽为粗心大意的对手布置一个伤害性陷阱，触发后会使目标现形，并在12秒内降低其物理防御和魔法防御。美洲狮形态：她会向前扑击，落地时造成少量伤害。",
-            "dynamicDescription": "<keywordMajor>人类形态：</keywordMajor>奈德丽布置一个陷阱，在2秒内造成<magicDamage>@DamagePerSecond@魔法伤害</magicDamage>，使目标现形，并在12秒内<status>削减</status>其@ResistDecreases*100@%<scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>。陷阱持续4分钟。<br><br><keywordMajor>美洲狮形态：</keywordMajor>奈德丽向前扑击，对周围敌人造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "Spell_NidaleeW_Jade_Summary",
+            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "人类形态：奈德丽引导美洲狮之灵，为友军提供治疗并使其攻击速度短暂提升。美洲狮形态：她会迅速朝前方的敌人进行爪击。",
-            "dynamicDescription": "<keywordMajor>人类形态：</keywordMajor>奈德丽为一名友方英雄提供<healing>@TotalHealing@</healing>生命值的治疗，并使其获得<attackSpeed>@BonusAS*100@%攻击速度</attackSpeed>，持续7秒。<br><br><keywordMajor>美洲狮形态：</keywordMajor>奈德丽朝前方的敌人进行爪击，造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "奈德丽变身为美洲狮，获得新的技能并提升移动速度。",
-            "dynamicDescription": "<keywordMajor>人类形态：</keywordMajor>奈德丽变身为美洲狮，获得<speed>20移动速度</speed>，她的基础技能变为<spellName>击倒</spellName>、<spellName>猛扑</spellName>和<spellName>挥击</spellName>。<br><br><keywordMajor>美洲狮形态：</keywordMajor>奈德丽变回人类形态。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
