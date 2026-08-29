@@ -1,536 +1,536 @@
 {
     "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame": {
         "PathHashToSelf": "clientstates/gameplay/ux/lol/jade/jadeplayerframe",
-        "BaseLoadable": "{5a1043e9}",
-        "RootScene": "{d96b8f46}",
-        "CenterTooltipRegion": "{8049ad5b}",
+        "BaseLoadable": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase",
+        "RootScene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root",
+        "CenterTooltipRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/CenterTooltip",
         "{1c05ee9d}": [
             {
-                "StatPageViewController": "{2b5f0328}",
-                "Button": "{775f6a79}",
+                "StatPageViewController": "ClientStates/Gameplay/UX/LoL/Jade/PlayerStats_Jade",
+                "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/Stats_Button",
                 "__type": "{c3f95838}"
             }
         ],
         "PortraitUiData": {
-            "Icon": "{fb86dcbb}",
-            "LevelText": "{28fd13e2}",
-            "RespawnTimer": "{092d6fe1}",
-            "VoiceChatHalo": "{9c577bf6}",
-            "TooltipRegion": "{f29c29b7}",
+            "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerIcon_Base",
+            "LevelText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerLevel",
+            "RespawnTimer": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerRespawnTimer",
+            "VoiceChatHalo": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerVoiceChatHalo",
+            "TooltipRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerTooltip",
             "__type": "PlayerPortraitUiData"
         },
         "ResourceBars": {
             "HealthMeter": {
-                "Meter": "{58a21d21}",
-                "ValueText": "{25a89ca6}",
-                "FadeBar": "{9dd4fee7}",
+                "Meter": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter",
+                "ValueText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_ValueText",
+                "FadeBar": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_BarFade",
                 "__type": "HealthMeter"
             },
             "HealthAnimatedMeterSkin": {
                 "BarElements": [
-                    "{d922b4f8}"
+                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_AnimationHealth"
                 ],
                 "TipElements": [
-                    "{a4587f05}"
+                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_AnimationHealthTip"
                 ],
                 "{b5df893e}": [
-                    "{392f6e19}"
+                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_AnimationHealthEmpty"
                 ],
                 "__type": "UiElementMeterSkin"
             },
-            "HealthRegenText": "{35f9236e}",
-            "HealthHitRegion": "{a2639796}",
+            "HealthRegenText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_RegenText",
+            "HealthHitRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerHPMeter/PlayerHP_Backdrop",
             "ParMeterData": {
                 "AbilityResourceBars": {
-                    "Meter": "{e1bbc520}",
+                    "Meter": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter",
                     "MeterSkins": {
                         "DefaultMeterSkin": {
                             "BarElements": [
-                                "{7f03889e}"
+                                "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_DefaultBar"
                             ],
                             "TipElements": [
-                                "{e2a0927f}"
+                                "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_DefaultBarTip"
                             ],
                             "__type": "UiElementMeterSkin"
                         },
                         "AdditionalMeterSkins": {
                             "Mana": {
                                 "BarElements": [
-                                    "{2ac1a22d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_StaticMana"
                                 ],
                                 "TipElements": [
-                                    "{7f6e3163}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_StaticManaBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{432268e6}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_StaticManaEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{9d9b31e7}": {
                                 "BarElements": [
-                                    "{cd50ae05}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_AnimationMana"
                                 ],
                                 "TipElements": [
-                                    "{0f41d16b}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_AnimationManaBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{0a72842e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPar_AnimationManaEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "Energy": {
                                 "BarElements": [
-                                    "{dcd04440}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticEnergy"
                                 ],
                                 "TipElements": [
-                                    "{781647da}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticEnergyBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{f4de9771}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticEnergyEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{b76d7f2c}": {
                                 "BarElements": [
-                                    "{77f84740}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationEnergy"
                                 ],
                                 "TipElements": [
-                                    "{fbe632da}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationEnergyBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{322de071}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationEnergyEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{4948cbcb}": {
                                 "BarElements": [
-                                    "{1bed956a}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBattlefury"
                                 ],
                                 "TipElements": [
-                                    "{33ea4f14}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBattlefuryBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{f472755f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBattlefuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{76817df6}": {
                                 "BarElements": [
-                                    "{c652c86a}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationBattleFury"
                                 ],
                                 "TipElements": [
-                                    "{838dea14}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationBattlefuryBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{15ad4e5f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationBattlefuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{12650733}": {
                                 "BarElements": [
-                                    "{d3a0a0ce}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellLow"
                                 ],
                                 "TipElements": [
-                                    "{bb544940}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellLowBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ef117863}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellLowEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{73d99e4e}": {
                                 "BarElements": [
-                                    "{7ff4a61a}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowBloodwell"
                                 ],
                                 "TipElements": [
-                                    "{353753a4}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowBloodwellBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ab0bd8cf}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowBloodwellEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{38496ea5}": {
                                 "BarElements": [
-                                    "{a117212e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellActive"
                                 ],
                                 "TipElements": [
-                                    "{4dff4ba0}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellActiveBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{7bbbd543}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticBloodwellActiveEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{3d72b59c}": {
                                 "BarElements": [
-                                    "{d74a57fa}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveBloodwell"
                                 ],
                                 "TipElements": [
-                                    "{6d90b784}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveBloodwellBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{dff9ef2f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveBloodwellEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{6a487efc}": {
                                 "BarElements": [
-                                    "{145474f5}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryActive"
                                 ],
                                 "TipElements": [
-                                    "{82310efb}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryActiveBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{7cff8e18}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{2a1e7c1d}": {
                                 "BarElements": [
-                                    "{0bb2cd1d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveDragonfury"
                                 ],
                                 "TipElements": [
-                                    "{9d818773}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveDragonfuryBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{9e3a6718}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationDragonfuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{d6a704be}": {
                                 "BarElements": [
-                                    "{7ee2dadb}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryLow"
                                 ],
                                 "TipElements": [
-                                    "{7b9d8941}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryLowBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{7cff8e18}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticDragonfuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{f65a2ae3}": {
                                 "BarElements": [
-                                    "{00a056bd}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowDragonfury"
                                 ],
                                 "TipElements": [
-                                    "{cbcb7c13}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowDragonfuryBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{9e3a6718}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationDragonfuryEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{b7239382}": {
                                 "BarElements": [
-                                    "{73b12e1f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityActive"
                                 ],
                                 "TipElements": [
-                                    "{ab0176ed}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityActiveBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ec7a0b9e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{d58d0a8f}": {
                                 "BarElements": [
-                                    "{2dde5cf5}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationFerocity"
                                 ],
                                 "TipElements": [
-                                    "{6c0b8cbd}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveFerocityBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{6cc8fc9e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationFerocityEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{beeed654}": {
                                 "BarElements": [
-                                    "{f1a9dfb1}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityLow"
                                 ],
                                 "TipElements": [
-                                    "{52a9b6ff}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityLowBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ec7a0b9e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticFerocityEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{8ba1b345}": {
                                 "BarElements": [
-                                    "{d090056f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowFerocity"
                                 ],
                                 "TipElements": [
-                                    "{a922685d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowFerocityBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{6cc8fc9e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationFerocityEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{82a703be}": {
                                 "BarElements": [
-                                    "{167524cb}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatCool"
                                 ],
                                 "TipElements": [
-                                    "{32d98a51}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatCoolBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ad5f5d23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{c0fb09e3}": {
                                 "BarElements": [
-                                    "{d14c5fcb}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatCool"
                                 ],
                                 "TipElements": [
-                                    "{2f1eed51}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatCoolBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ce313e23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{a5df7af5}": {
                                 "BarElements": [
-                                    "{9c00fbc2}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatWarning"
                                 ],
                                 "TipElements": [
-                                    "{150ba8dc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatWarningBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ad5f5d23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{d5eaba8c}": {
                                 "BarElements": [
-                                    "{d95044c2}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatWarning"
                                 ],
                                 "TipElements": [
-                                    "{7398a9dc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatWarningBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ce313e23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{28a283ef}": {
                                 "BarElements": [
-                                    "{d327cdd6}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatOverheat"
                                 ],
                                 "TipElements": [
-                                    "{d41d5518}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatOverheatBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ad5f5d23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{dab702d2}": {
                                 "BarElements": [
-                                    "{56f7b8d6}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatOverheat"
                                 ],
                                 "TipElements": [
-                                    "{ac15e818}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatOverheatBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{ce313e23}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationHeatEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{1c7ba538}": {
                                 "BarElements": [
-                                    "{1026f941}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageLow"
                                 ],
                                 "TipElements": [
-                                    "{c8cf1daf}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageLowBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{1375042a}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageLowEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{eaa470d1}": {
                                 "BarElements": [
-                                    "{e58cd967}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowRage"
                                 ],
                                 "TipElements": [
-                                    "{886295c5}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowRageBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{34758174}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationLowRageEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{843939de}": {
                                 "BarElements": [
-                                    "{793970ef}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageActive"
                                 ],
                                 "TipElements": [
-                                    "{de2477dd}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageActiveBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{49afff0c}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticRageActiveEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{a6af5803}": {
                                 "BarElements": [
-                                    "{131e06c7}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveRage"
                                 ],
                                 "TipElements": [
-                                    "{96abcc25}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveRageBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{4fbaed54}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveRageEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "Shield": {
                                 "BarElements": [
-                                    "{8cb5e56d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticShield"
                                 ],
                                 "TipElements": [
-                                    "{fa83d8a3}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticShieldBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{b4aa1a26}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticShieldEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{dc320db9}": {
                                 "BarElements": [
-                                    "{27dde86d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationShield"
                                 ],
                                 "TipElements": [
-                                    "{7e53c3a3}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationShieldBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{f1f96326}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationShieldEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{507271d1}": {
                                 "BarElements": [
-                                    "{1cd8c2d8}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumCalm"
                                 ],
                                 "TipElements": [
-                                    "{f74c62c2}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumCalmBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{df8939a3}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticCalmTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{85a766d0}": {
                                 "BarElements": [
-                                    "{e145da0e}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationCalmTantrum"
                                 ],
                                 "TipElements": [
-                                    "{e3e8d380}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationCalmTantrumBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{2f2cd4a3}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationCalmTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{4ef5ca2e}": {
                                 "BarElements": [
-                                    "{26f65d9d}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumWarning"
                                 ],
                                 "TipElements": [
-                                    "{4d2493f3}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumWarningBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{49ad45ac}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWarningTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{15e6bc33}": {
                                 "BarElements": [
-                                    "{b7cd5a0f}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWarningTantrum"
                                 ],
                                 "TipElements": [
-                                    "{f8d799fd}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWarningTantrumBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{45fcaeac}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWarningTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{82eaef6e}": {
                                 "BarElements": [
-                                    "{4a336635}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumActive"
                                 ],
                                 "TipElements": [
-                                    "{d062b03b}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticTantrumActiveBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{99bf2132}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticActiveTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{3b346273}": {
                                 "BarElements": [
-                                    "{7f066379}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveTantrum"
                                 ],
                                 "TipElements": [
-                                    "{e5c7ef77}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveTantrumBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{71b7b432}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationActiveTantrumEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "Wind": {
                                 "BarElements": [
-                                    "{461b3fa2}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWind"
                                 ],
                                 "TipElements": [
-                                    "{01e141bc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWindBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{522218c7}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWindEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{8067a27a}": {
                                 "BarElements": [
-                                    "{f324caa2}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWind"
                                 ],
                                 "TipElements": [
-                                    "{ac4674bc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWindBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{72f3f9c7}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWindEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{1902a1a2}": {
                                 "BarElements": [
-                                    "{218c791a}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWindShieldFull"
                                 ],
                                 "TipElements": [
-                                    "{01e141bc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWindBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{522218c7}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_StaticWindEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             },
                             "{8152c3af}": {
                                 "BarElements": [
-                                    "{604a719b}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWindFull"
                                 ],
                                 "TipElements": [
-                                    "{ac4674bc}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWindBarTip"
                                 ],
                                 "{b5df893e}": [
-                                    "{72f3f9c7}"
+                                    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeterSkins/PlayerPar_AnimationWindEmpty"
                                 ],
                                 "__type": "UiElementMeterSkin"
                             }
@@ -541,181 +541,181 @@
                 },
                 "UseAnimatedSkins": true,
                 "{484b8029}": "{20426d6f}",
-                "Backdrop": "{810fe44e}",
-                "ValueText": "{c1852c4e}",
+                "Backdrop": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_Backdrop",
+                "ValueText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_ValueText",
                 "__type": "AbilityResourceBarData"
             },
-            "ParRegenText": "{4a321eb6}",
-            "ParHitRegion": "{810fe44e}",
-            "SarText": "{79d40dcf}",
-            "ExperienceBar": "{0050a596}",
-            "ExperienceHitRegion": "{2ca4080e}",
+            "ParRegenText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_RegenText",
+            "ParHitRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerPARMeter/PlayerPar_Backdrop",
+            "SarText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerResourceBars/PlayerSAR_ValueText",
+            "ExperienceBar": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerExp_BarTexture_Old",
+            "ExperienceHitRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/PlayerExp_Backdrop",
             "__type": "HudPlayerResourceBars"
         },
-        "StatusMessage": "{f1ca8da1}",
-        "SpellCastMessage": "{dc20dc10}",
+        "StatusMessage": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/StatusMessageToolTip",
+        "SpellCastMessage": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/Player_Frame/SpellToolTip",
         "AbilitiesUiData": {
             "ChampionSpells": [
                 {
-                    "ContentElement": "{e563d900}",
-                    "MouseoverRegion": "{c6c8fee9}",
-                    "BorderEnabled": "{f3ed0df5}",
-                    "BorderDisabled": "{f3a35240}",
-                    "OverlayDisabled": "{fc37d65a}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{9b7a2a51}",
-                        "RadialEffect": "{d3a81117}",
-                        "CooldownCompleteEffect": "{0bf8b6b7}",
-                        "CooldownJumpEffect": "{a99aa65a}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{8f008d11}",
-                    "OverlayOom": "{193949b6}",
-                    "AmmoText": "{7d974fae}",
-                    "AmmoFx": "{b6a4b0e0}",
-                    "Hotkey": "{23c17f0a}",
-                    "ToggleFx": "{4ab17c72}",
-                    "Cost": "{b0ace535}",
-                    "CostBg": "{2de2ead6}",
-                    "ResetFlashFxAttention": "{d9e4f2d5}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CostBg",
+                    "ResetFlashFxAttention": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_ResetAttentionFX",
                     "CooldownGem": {
-                        "AllyGem": "{1acca258}",
-                        "GemBackground": "{01c5dec3}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{9a77e6ef}",
-                            "CooldownCompleteEffect": "{a39a866f}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{090a49e9}",
-                        "TimerBorderFx": "{fa0137f0}",
-                        "TimerBarBg": "{192044b9}",
-                        "TimerBarFill": "{15775d37}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Ability0_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
                 },
                 {
-                    "ContentElement": "{f71b83a6}",
-                    "MouseoverRegion": "{6b933397}",
-                    "BorderEnabled": "{3d0fdf67}",
-                    "BorderDisabled": "{d76757e6}",
-                    "OverlayDisabled": "{3c437730}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{6aac068f}",
-                        "RadialEffect": "{47abb9c9}",
-                        "CooldownCompleteEffect": "{15af4ac5}",
-                        "CooldownJumpEffect": "{39cf9618}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{006afa5f}",
-                    "OverlayOom": "{baa78884}",
-                    "AmmoText": "{825e92a0}",
-                    "AmmoFx": "{2c48b4fe}",
-                    "Hotkey": "{2fbfe798}",
-                    "ToggleFx": "{401e1620}",
-                    "Cost": "{f0acf597}",
-                    "CostBg": "{8711cad8}",
-                    "ResetFlashFxAttention": "{0a8a500b}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CostBg",
+                    "ResetFlashFxAttention": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_ResetAttentionFX",
                     "CooldownGem": {
-                        "AllyGem": "{0f055cbe}",
-                        "GemBackground": "{6af9f075}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{8d3d5c21}",
-                            "CooldownCompleteEffect": "{489599dd}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{05cc77d7}",
-                        "TimerBorderFx": "{12c1fef2}",
-                        "TimerBarBg": "{78ec42a7}",
-                        "TimerBarFill": "{2221b7fd}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Ability1_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
                 },
                 {
-                    "ContentElement": "{3f80f214}",
-                    "MouseoverRegion": "{114f3aed}",
-                    "BorderEnabled": "{6141b7a9}",
-                    "BorderDisabled": "{e51b6074}",
-                    "OverlayDisabled": "{305b4dee}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{13e2e1bd}",
-                        "RadialEffect": "{8566f43b}",
-                        "CooldownCompleteEffect": "{18e35993}",
-                        "CooldownJumpEffect": "{fd11322e}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{1cb8746d}",
-                    "OverlayOom": "{7ef0f21a}",
-                    "AmmoText": "{4494921a}",
-                    "AmmoFx": "{93b752a4}",
-                    "Hotkey": "{ad336df6}",
-                    "ToggleFx": "{13a98f9e}",
-                    "Cost": "{13310309}",
-                    "CostBg": "{c890d5a2}",
-                    "ResetFlashFxAttention": "{d43bdcc1}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CostBg",
+                    "ResetFlashFxAttention": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_ResetAttentionFX",
                     "CooldownGem": {
-                        "AllyGem": "{e6881f34}",
-                        "GemBackground": "{8b926057}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{62bd7b5b}",
-                            "CooldownCompleteEffect": "{92c2e733}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{95b26eb5}",
-                        "TimerBorderFx": "{8ebcf10c}",
-                        "TimerBarBg": "{f3deb875}",
-                        "TimerBarFill": "{57d523bb}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Ability2_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
                 },
                 {
-                    "ContentElement": "{ec17388e}",
-                    "MouseoverRegion": "{deec8c5f}",
-                    "BorderEnabled": "{9f2ee53f}",
-                    "BorderDisabled": "{7ed4ec8e}",
-                    "OverlayDisabled": "{71be5848}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{4540e227}",
-                        "RadialEffect": "{95f187b1}",
-                        "CooldownCompleteEffect": "{8bd263cd}",
-                        "CooldownJumpEffect": "{869c0690}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{d6d2f3c7}",
-                    "OverlayOom": "{83388cdc}",
-                    "AmmoText": "{56f36b58}",
-                    "AmmoFx": "{fd6ef9c6}",
-                    "Hotkey": "{9c1120e0}",
-                    "ToggleFx": "{9c53df18}",
-                    "Cost": "{17f4ef2f}",
-                    "CostBg": "{f31afff0}",
-                    "ResetFlashFxAttention": "{8a70ea63}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CostBg",
+                    "ResetFlashFxAttention": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_ResetAttentionFX",
                     "CooldownGem": {
-                        "AllyGem": "{7e723d96}",
-                        "GemBackground": "{a2bcd40d}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{566bc879}",
-                            "CooldownCompleteEffect": "{a480ef15}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{8c152bcf}",
-                        "TimerBorderFx": "{890a99ba}",
-                        "TimerBarBg": "{3ac16c8f}",
-                        "TimerBarFill": "{90660155}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Ability3_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
@@ -724,82 +724,82 @@
             "SpellRankPips": {
                 "RankPips": [
                     {
-                        "PipTargetRect": "{ca3974fe}",
+                        "PipTargetRect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_PipRect",
                         "EmptyPips": [
-                            "{f5c94713}",
-                            "{f4c94580}",
-                            "{f7c94a39}",
-                            "{f6c948a6}",
-                            "{f9c94d5f}",
-                            "{f8c94bcc}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_EmptyPip5"
                         ],
                         "FullPips": [
-                            "{26372b01}",
-                            "{2537296e}",
-                            "{243727db}",
-                            "{23372648}",
-                            "{2a37314d}",
-                            "{29372fba}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability0/Pips/Ability0_FullPip5"
                         ],
                         "__type": "SpellPipsUiData"
                     },
                     {
-                        "PipTargetRect": "{60b570a2}",
+                        "PipTargetRect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_PipRect",
                         "EmptyPips": [
-                            "{e149887f}",
-                            "{e04986ec}",
-                            "{e3498ba5}",
-                            "{e2498a12}",
-                            "{dd498233}",
-                            "{dc4980a0}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_EmptyPip5"
                         ],
                         "FullPips": [
-                            "{d42ca5cd}",
-                            "{d32ca43a}",
-                            "{d22ca2a7}",
-                            "{d12ca114}",
-                            "{d02c9f81}",
-                            "{cf2c9dee}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability1/Pips/Ability1_FullPip5"
                         ],
                         "__type": "SpellPipsUiData"
                     },
                     {
-                        "PipTargetRect": "{6c339762}",
+                        "PipTargetRect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_PipRect",
                         "EmptyPips": [
-                            "{2cc9bfbf}",
-                            "{2bc9be2c}",
-                            "{2ec9c2e5}",
-                            "{2dc9c152}",
-                            "{28c9b973}",
-                            "{27c9b7e0}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_EmptyPip5"
                         ],
                         "FullPips": [
-                            "{3a048f0d}",
-                            "{39048d7a}",
-                            "{38048be7}",
-                            "{37048a54}",
-                            "{360488c1}",
-                            "{3504872e}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability2/Pips/Ability2_FullPip5"
                         ],
                         "__type": "SpellPipsUiData"
                     },
                     {
-                        "PipTargetRect": "{74bb6aee}",
+                        "PipTargetRect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_PipRect",
                         "EmptyPips": [
-                            "{c2289283}",
-                            "{c12890f0}",
-                            "{c42895a9}",
-                            "{c3289416}",
-                            "{c62898cf}",
-                            "{c528973c}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_EmptyPip5"
                         ],
                         "FullPips": [
-                            "{e6f9aad1}",
-                            "{e5f9a93e}",
-                            "{e4f9a7ab}",
-                            "{e3f9a618}",
-                            "{eaf9b11d}",
-                            "{e9f9af8a}"
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip0",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip1",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip2",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip3",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip4",
+                            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Ability3/Pips/Ability3_FullPip5"
                         ],
                         "__type": "SpellPipsUiData"
                     }
@@ -808,104 +808,104 @@
             },
             "SummonerSpells": [
                 {
-                    "ContentElement": "{8d725d5e}",
-                    "MouseoverRegion": "{822c4e0f}",
-                    "BorderEnabled": "{cb05920f}",
-                    "BorderDisabled": "{84b7103e}",
-                    "OverlayDisabled": "{d15832b8}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{d75b27d7}",
-                        "RadialEffect": "{92aff9c1}",
-                        "CooldownCompleteEffect": "{ab7f3dfd}",
-                        "CooldownJumpEffect": "{39a1e940}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{50e85777}",
-                    "OverlayOom": "{fd4f838c}",
-                    "AmmoText": "{fa4eba28}",
-                    "AmmoFx": "{1faf7036}",
-                    "Hotkey": "{3c4a45f0}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_HotKey",
                     "CooldownGem": {
-                        "AllyGem": "{2e8f19e6}",
-                        "GemBackground": "{9cccd8dd}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{4ae1c409}",
-                            "CooldownCompleteEffect": "{13aa8405}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{9b34051f}",
-                        "TimerBorderFx": "{b829a56a}",
-                        "TimerBarBg": "{964fbd7f}",
-                        "TimerBarFill": "{496d3b45}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner0/Summoner0_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
                 },
                 {
-                    "ContentElement": "{24a7ac5e}",
-                    "MouseoverRegion": "{3d064b0f}",
-                    "BorderEnabled": "{dd27a70f}",
-                    "BorderDisabled": "{5cb3ad3e}",
-                    "OverlayDisabled": "{d40359b8}",
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_OverlayUnavailable",
                     "CooldownUiData": {
-                        "CooldownText": "{0c8b56d7}",
-                        "RadialEffect": "{b7d940c1}",
-                        "CooldownCompleteEffect": "{5027b2fd}",
-                        "CooldownJumpEffect": "{de4a5e40}",
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_GlintFX",
                         "__type": "CooldownEffectUiData"
                     },
-                    "OverlayCced": "{f590cc77}",
-                    "OverlayOom": "{a1f7f88c}",
-                    "AmmoText": "{b749f928}",
-                    "AmmoFx": "{dcc24736}",
-                    "Hotkey": "{f95d1cf0}",
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_HotKey",
                     "CooldownGem": {
-                        "AllyGem": "{ae89dee6}",
-                        "GemBackground": "{9395d7dd}",
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_CooldownGemAvailable",
                         "CooldownEffects": {
-                            "RadialEffect": "{c94b3109}",
-                            "CooldownCompleteEffect": "{1655ab05}",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_CooldownGemSheenFX",
                             "__type": "CooldownEffectUiData"
                         },
                         "__type": "CooldownGemUiData"
                     },
                     "BuffTimer": {
-                        "TimerBorderBg": "{199d721f}",
-                        "TimerBorderFx": "{3693126a}",
-                        "TimerBarBg": "{6e4c5a7f}",
-                        "TimerBarFill": "{7cdba045}",
+                        "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_TimerBorderCooldownBG",
+                        "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_TimerBorderCooldownFX",
+                        "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_TimerBar_Backdrop",
+                        "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Summoner1/Summoner1_TimerBar_BarTexture",
                         "__type": "SpellSlotBuffTimerData"
                     },
                     "__type": "SpellSlotDetailedUiDefinition"
                 }
             ],
             "Passive": {
-                "ContentElement": "{c16a7732}",
-                "MouseoverRegion": "{9c161733}",
-                "BorderEnabled": "{0c0f4593}",
-                "BorderDisabled": "{07ca0fe2}",
-                "OverlayDisabled": "{2c2c68bc}",
+                "ContentElement": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_",
+                "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_Mouseover",
+                "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_BorderAvailable",
+                "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_BorderUnavailable",
+                "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_OverlayUnavailable",
                 "CooldownUiData": {
-                    "CooldownText": "{b88576f3}",
-                    "RadialEffect": "{bc6b48d5}",
-                    "CooldownCompleteEffect": "{2a104299}",
-                    "CooldownJumpEffect": "{b27c5054}",
+                    "CooldownText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_Cooldown",
+                    "RadialEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_CooldownFX",
+                    "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_SheenFX",
+                    "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_GlintFX",
                     "__type": "CooldownEffectUiData"
                 },
-                "OverlayCced": "{38832783}",
-                "OverlayOom": "{dabdfce0}",
-                "AmmoText": "{e7db27d4}",
-                "AmmoFx": "{5d3241ca}",
-                "ToggleFx": "{32ed67b4}",
-                "ResetFlashFxAttention": "{0c6f5b4f}",
+                "OverlayCced": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_IconLoc",
+                "OverlayOom": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_IconOom",
+                "AmmoText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_Ammo",
+                "AmmoFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_AmmoFX",
+                "ToggleFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_ToggleFX",
+                "ResetFlashFxAttention": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_ResetAttentionFX",
                 "BuffTimer": {
-                    "TimerBorderBg": "{b16d7f5b}",
-                    "TimerBorderFx": "{9677e236}",
-                    "TimerBarBg": "{e2de7eeb}",
-                    "TimerBarFill": "{a27f2bf9}",
+                    "TimerBorderBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_TimerBorderCooldownBG",
+                    "TimerBorderFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_TimerBorderCooldownFX",
+                    "TimerBarBg": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_TimerBar_Backdrop",
+                    "TimerBarFill": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerSpells/Passive/Passive_TimerBar_BarTexture",
                     "__type": "SpellSlotBuffTimerData"
                 },
                 "__type": "SpellSlotDetailedUiDefinition"
@@ -914,17 +914,17 @@
             "__type": "AbilitiesUiData"
         },
         "SummonerSpellSpecialist": {
-            "Scene": "{4a6451ff}",
+            "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
             "ToggleButtons": [
-                "{c908cddb}",
-                "{c808cc48}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0",
+                "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1"
             ],
             "SelectorMenu": {
-                "Scene": "{2c2fb78b}",
-                "Layout": "{f29fd0d0}",
+                "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistSelector",
+                "Layout": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistSelector/SummonerSpecialist_Layout",
                 "SelectorButtonTemplate": {
-                    "Button": "{3d79a301}",
-                    "SpellIcon": "{026cde9c}",
+                    "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistSelector/SummonerSpecialistSpell",
+                    "SpellIcon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistSelector/SummonerSpecialistSpell/Spell_Icon",
                     "__type": "UiPerkSummonerSpecialistSelectorButtonData"
                 },
                 "__type": "UIPerkSummonerSpecialistSelector"
@@ -932,70 +932,70 @@
             "__type": "UiPerkSummonerSpecialistToggles"
         },
         "LevelUpDisplay": {
-            "title": "{ad9efeec}",
-            "ButtonsScene": "{26f83bbe}",
-            "FxInScene": "{b3d6214f}",
+            "title": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/LevelUp_Text",
+            "ButtonsScene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp",
+            "FxInScene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn",
             "spells": [
                 {
-                    "AbilityFxIn": "{1c3027ff}",
-                    "ButtonFxIn": "{48627bfd}",
-                    "ButtonPostFxIn": "{e7cddeb9}",
-                    "ButtonFxOutSelected": "{daf0be44}",
-                    "ButtonFxOutUnselected": "{38c859b1}",
-                    "ButtonIdleGlowFx": "{b5518092}",
-                    "ButtonIdleSheenFx": "{3eeab5bc}",
-                    "SkillUpButton": "{97cbe8b7}",
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp0_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp0_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp0_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp0_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp0_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp0_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp0_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/LevelUp0_Button",
                     "Evolution": {
-                        "Icon": "{e481c848}",
-                        "Button": "{193cadbb}",
+                        "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve0_Image",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve0_Button",
                         "__type": "SpellEvolutionUiData"
                     },
                     "__type": "SpellLevelUpUiData"
                 },
                 {
-                    "AbilityFxIn": "{aa9109b4}",
-                    "ButtonFxIn": "{ad57fe48}",
-                    "ButtonPostFxIn": "{b7ca1aee}",
-                    "ButtonFxOutSelected": "{980955db}",
-                    "ButtonFxOutUnselected": "{bd22d41e}",
-                    "ButtonIdleGlowFx": "{82d35f17}",
-                    "ButtonIdleSheenFx": "{ac1fc8b7}",
-                    "SkillUpButton": "{fcebe13e}",
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp1_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp1_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp1_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp1_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp1_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp1_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp1_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/LevelUp1_Button",
                     "Evolution": {
-                        "Icon": "{dfd1a79f}",
-                        "Button": "{3a3e44d2}",
+                        "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve1_Image",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve1_Button",
                         "__type": "SpellEvolutionUiData"
                     },
                     "__type": "SpellLevelUpUiData"
                 },
                 {
-                    "AbilityFxIn": "{577a93d5}",
-                    "ButtonFxIn": "{0e2d5737}",
-                    "ButtonPostFxIn": "{908ac1d3}",
-                    "ButtonFxOutSelected": "{1f839d72}",
-                    "ButtonFxOutUnselected": "{f69a4f33}",
-                    "ButtonIdleGlowFx": "{956a6984}",
-                    "ButtonIdleSheenFx": "{586cbb7e}",
-                    "SkillUpButton": "{4758c46d}",
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp2_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp2_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp2_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp2_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp2_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp2_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp2_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/LevelUp2_Button",
                     "Evolution": {
-                        "Icon": "{8aaa7b7a}",
-                        "Button": "{c53adcf1}",
+                        "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve2_Image",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve2_Button",
                         "__type": "SpellEvolutionUiData"
                     },
                     "__type": "SpellLevelUpUiData"
                 },
                 {
-                    "AbilityFxIn": "{253654d2}",
-                    "ButtonFxIn": "{ab7a7632}",
-                    "ButtonPostFxIn": "{f55dd8d0}",
-                    "ButtonFxOutSelected": "{06c37341}",
-                    "ButtonFxOutUnselected": "{0314d7e8}",
-                    "ButtonIdleGlowFx": "{7715f5c1}",
-                    "ButtonIdleSheenFx": "{36cbb0d1}",
-                    "SkillUpButton": "{99c66ae4}",
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp3_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp3_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxIn/LevelUp3_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp3_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp3_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp3_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut/LevelUp3_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/LevelUp3_Button",
                     "Evolution": {
-                        "Icon": "{9634fb19}",
-                        "Button": "{5d7eed78}",
+                        "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve3_Image",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/LevelUp/Evolve3_Button",
                         "__type": "SpellEvolutionUiData"
                     },
                     "__type": "SpellLevelUpUiData"
@@ -1003,77 +1003,77 @@
             ],
             "__type": "UiLevelUp"
         },
-        "PlayerBuffsScene": "{4ee1b9f4}",
+        "PlayerBuffsScene": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs",
         "PositiveBuffs": {
             "BuffDisplayTemplate": {
-                "Group": "{4e57137b}",
-                "Icon": "{0e1b5c11}",
-                "HitRegion": "{d384411d}",
-                "IconBorderPositive": "{fcb79085}",
-                "IconBorderNegative": "{b3c69511}",
-                "StacksText": "{8deaa6e1}",
-                "CooldownFx": "{88b0e2e7}",
+                "Group": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate",
+                "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffIcon",
+                "HitRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffHitRegion",
+                "IconBorderPositive": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffBorderPositive",
+                "IconBorderNegative": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffBorderNegative",
+                "StacksText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffStacks",
+                "CooldownFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffCooldownFX",
                 "__type": "BuffDisplayData"
             },
-            "Layout": "{e095209c}",
+            "Layout": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerPositiveBuffLayout",
             "MaxBuffDisplayCount": 12,
             "__type": "BuffDisplayList"
         },
         "NegativeBuffs": {
             "BuffDisplayTemplate": {
-                "Group": "{4e57137b}",
-                "Icon": "{0e1b5c11}",
-                "HitRegion": "{d384411d}",
-                "IconBorderPositive": "{fcb79085}",
-                "IconBorderNegative": "{b3c69511}",
-                "StacksText": "{8deaa6e1}",
-                "CooldownFx": "{88b0e2e7}",
+                "Group": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate",
+                "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffIcon",
+                "HitRegion": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffHitRegion",
+                "IconBorderPositive": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffBorderPositive",
+                "IconBorderNegative": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffBorderNegative",
+                "StacksText": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffStacks",
+                "CooldownFx": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerBuffTemplate/PlayerBuffCooldownFX",
                 "__type": "BuffDisplayData"
             },
-            "Layout": "{1b896850}",
+            "Layout": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/PlayerBuffs/PlayerNegativeBuffLayout",
             "MaxBuffDisplayCount": 10,
             "__type": "BuffDisplayList"
         },
         "DrawAreaList": {
             "DrawRegions": [
-                "{f9d69924}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/HUDRegion"
             ],
             "__type": "DrawAreaList"
         },
         "LevelUpLinks": [
-            "{f8772c72}",
-            "{f9772e05}",
-            "{f677294c}",
-            "{f7772adf}"
+            "ClientStates/Gameplay/UX/LoL/Jade/Highlighter_Jade/UIBase/HighlightFX/HighlightLevelUp0",
+            "ClientStates/Gameplay/UX/LoL/Jade/Highlighter_Jade/UIBase/HighlightFX/HighlightLevelUp1",
+            "ClientStates/Gameplay/UX/LoL/Jade/Highlighter_Jade/UIBase/HighlightFX/HighlightLevelUp2",
+            "ClientStates/Gameplay/UX/LoL/Jade/Highlighter_Jade/UIBase/HighlightFX/HighlightLevelUp3"
         ],
         "HudCenterFrameGlowData": {
-            "Icon": "{0c74da47}",
+            "Icon": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/HUDCenterFrameGlow",
             "{cdeba821}": 0.25,
             "EaseType": 8,
             "__type": "HudCenterFrameGlowData"
         },
         "{5e1b3750}": {
-            "{21cd04bc}": "{197ba633}",
-            "{6ccd8190}": "{08ec165c}",
-            "{315e42a9}": "{8a4326c5}",
-            "{bd8d1755}": "{eb825467}",
-            "{f15f6627}": "{1704d379}",
-            "{7cbd1c44}": "{43318486}",
-            "{fc3539b0}": "{fe159224}",
-            "{a392f0ff}": "{9c6f10f1}",
+            "{21cd04bc}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystaLeftIIntro",
+            "{6ccd8190}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalLeftLoop",
+            "{315e42a9}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalLeftOutro",
+            "{bd8d1755}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalRightIntro",
+            "{f15f6627}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalRightLoop",
+            "{7cbd1c44}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalRightOutro",
+            "{fc3539b0}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalLeftStatic",
+            "{a392f0ff}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/CrystalRightStatic",
             "{e209baa0}": 0.7300000190734863,
             "__type": "{5e1b3750}"
         },
-        "{db2e37dc}": "{16dd26cd}",
+        "{db2e37dc}": "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase/Player_Frame_Root/OffsetForExtraInventoryRegion",
         "FlippedMinimapOverride": "{f60c469b}",
         "__type": "PlayerFrameViewController"
     },
-    "{5a1043e9}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame/UIBase": {
         "FilepathHash": "clientstates/gameplay/ux/lol/jade/jadeplayerframe/uibase",
         "__type": "UiPropertyLoadable"
     },
     "{f60c469b}": {
-        "FilepathHash": "{7b2ef75738d3da7d}",
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/jadeplayerframe/uiflippedminimap",
         "OverrideSrcFolder": "clientstates/gameplay/ux/lol/jade/jadeplayerframe/uibase",
         "__type": "UiPropertyOverrideLoadable"
     },

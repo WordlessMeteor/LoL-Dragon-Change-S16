@@ -27609,6 +27609,7 @@
                 },
                 setCouldShowModalPreference(e) {
                     this.db.patch("/lol-settings/v2/account/LCUPreferences/lol-navigation", {
+                        schemaVersion: 1,
                         data: {
                             couldShowRemedyVerbalAbuseModal: e
                         }

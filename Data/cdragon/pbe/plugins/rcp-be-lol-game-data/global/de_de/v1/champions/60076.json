@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Spell_NidaleePassive_Jade_Summary"
+        "description": "Wenn sich Nidalee durch hohes Gras bewegt, erhöht sich ihr Lauftempo 2 Sekunden lang um 15 %."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "In menschlicher Form wirft Nidalee einen mit Stacheln besetzten Speer auf ihr Ziel, der umso mehr Schaden verursacht, je länger er fliegt.  In ihrer felinen Gestalt versucht sie mit ihrem nächsten Angriff, das Ziel tödlich zu verwunden, wobei sie umso mehr Schaden verursacht, je weniger Leben das Ziel noch hat.",
-            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Mensch:</keywordMajor> Nidalee wirft ihren Speer, der beim Aufprall zwischen <magicDamage>@StartingDamage@</magicDamage> und <magicDamage>@MaxDamage@ magischen Schaden</magicDamage> verursacht, abhängig von der Entfernung zwischen Nidalee und dem Ziel. <br><br><keywordMajor>Feline Gestalt:</keywordMajor> Nidalees nächster Angriff verursacht <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ normalen Schaden</physicalDamage>, der gegen verwundete Ziele erhöht ist (bis zu 300 % Gesamtschaden).@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_NidaleeW_Jade_Summary",
-            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "In menschlicher Form legt Nidalee eine Falle für unachtsame Gegner. Wenn sie ausgelöst wird, deckt sie das Ziel auf und verringert 12 Sekunden lang dessen Rüstung und Magieresistenz. In feliner Gestalt springt sie nach vorn und fügt Gegnern bei der Landung geringen Schaden zu.",
+            "dynamicDescription": "<keywordMajor>Mensch: </keywordMajor>Nidalee legt eine Falle, die über 2 Sekunden <magicDamage>@DamagePerSecond@ magischen Schaden</magicDamage> verursacht, das Ziel aufdeckt und seine <scaleArmor>Rüstung</scaleArmor> sowie <scaleMR>Magieresistenz</scaleMR> 12 Sekunden lang um @ResistDecreases*100@ % <status>verringert</status>. Fallen bleiben 4 Minuten lang bestehen. <br><br><keywordMajor>Feline Gestalt: </keywordMajor>Nidalee springt nach vorn und fügt Gegnern in der Nähe <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.0,
-                "coefficient2": 0.0
+                "coefficient1": 0.05,
+                "coefficient2": 0.2
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
                 ],
                 "Effect4Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    9.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    50.0,
+                    100.0,
+                    150.0,
+                    200.0,
+                    250.0,
+                    300.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    40.0,
+                    80.0,
+                    120.0,
+                    160.0,
+                    200.0,
+                    240.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Als Mensch ruft Nidalee den Geist des Pumas an, um ihre Verbündeten zu heilen und ihr Angriffstempo eine kurze Zeit lang zu erhöhen.  In ihrer felinen Gestalt schlägt sie schnell mit ihren Klauen nach Gegnern vor ihr.",
-            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Mensch: </keywordMajor>Nidalee heilt einen verbündeten Champion um <healing>@TotalHealing@</healing> und gewährt ihm 7 Sekunden lang <attackSpeed>@BonusAS*100@ % Angriffstempo</attackSpeed>.<br><br><keywordMajor>Feline Gestalt: </keywordMajor>Nidalee attackiert Gegner vor sich und fügt ihnen <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nidalee nimmt eine feline Gestalt an, wodurch sie neue Fähigkeiten und erhöhtes Lauftempo erhält.",
-            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Mensch: </keywordMajor>Nidalee verwandelt sich in eine wilde feline Gestalt, wodurch sie <speed>20 Lauftempo</speed> erhält und ihre Grundfähigkeiten zu <spellName>Anfallen</spellName>, <spellName>Sprung</spellName> und <spellName>Schlag</spellName> werden.<br><br><keywordMajor>Feline Gestalt: </keywordMajor>Nidalee verwandelt sich zurück in ihre menschliche Form.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
                 ],
                 "Effect7Amount": [
                     0.0,

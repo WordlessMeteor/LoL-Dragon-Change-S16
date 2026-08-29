@@ -588,23 +588,6 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
-                },
-                {
-                    "id": 60020303,
-                    "name": "نونو وويلامب كلاسيك (الدمية المرقعة)",
-                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
-                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
-                    "relatedPrimeItemId": 20003,
-                    "skinClassification": "kRecolor",
-                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "colors": [
-                        "#2756CE",
-                        "#2756CE"
-                    ],
-                    "descriptions": [],
-                    "description": "",
-                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -616,22 +599,22 @@
     ],
     "passive": {
         "name": "صاحب الرؤية",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Spell_NunuPassive_Jade_Summary"
+        "description": "يستطيع نونو إلقاء تعويذة مجانًا بعد تنفيذ 5 هجمات."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "الالتهام",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يأمر نونو وحش ثلجه بعضّ تابع أو وحش مستهدف، فيلحق به ضررًا هائلًا ويعالج نفسه.",
-            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>يأمر نونو وحش ثلجه بعضّ تابع أو وحش، فيلحق <trueDamage>@BaseDamage@ ضرر حقيقي</trueDamage> بالهدف كما <healing>يعالج</healing> نفسه بمقدار @TotalHealing@.<br><br>يكسب نونو مكافآت إضافية لمدة @ConsumeDuration@ث حسب الهدف الذي قام بالتهامه.<br><br><attention>الذئاب</attention> أو <attention>الزواحف: </attention>تلحق هجماتك وتعويذاتك ضررًا إضافيًا يعادل <magicDamage>1% من صحتك القصوى على شكل ضرر سحر</magicDamage>.<br><attention>الغولم:</attention> زيادة بنسبة 10% في الحجم و<scaleHealth>الصحة القصوى</scaleHealth>.<br><attention>الأشباح:</attention> يمنحك قتل وحدة <speed>15% سرعة حركة</speed> لمدة 3ث.",
             "range": [
                 125.0,
                 125.0,
@@ -775,13 +758,13 @@
         {
             "spellKey": "w",
             "name": "غليان الدم",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينشّط نونو نفسه ووحدة حليفة عبر تسخين دمهما، مما يزيد سرعة الحركة وسرعة الهجوم لديهما.",
-            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>ترتفع حرارة دماء نونو وحليف مستهدف، مما يزيد <speed>سرعة الحركة بنسبة @MoveSpeed*100@%</speed> و<attackSpeed>سرعة الهجوم بنسبة @AttackSpeed*100@%</attackSpeed> لمدة 12ث. من الممكن أن يستهدف نونو نفسه.",
             "range": [
                 700.0,
                 700.0,
@@ -925,13 +908,13 @@
         {
             "spellKey": "e",
             "name": "الانفجار الجليدي",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق نونو كرة من الجليد على وحدة معادية، فتلحق الضرر وتبطئ سرعة الحركة وسرعة الهجوم لديها مؤقتًا.",
-            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>يطلق نونو كرة من الجليد على وحدة معادية، فيلحق بها <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>يبطئ</status> سرعة الحركة لديها بنسبة @SlowAmount*-100@% وسرعة الهجوم بنسبة 25% لمدة 3ث.",
             "range": [
                 550.0,
                 550.0,
@@ -1075,13 +1058,13 @@
         {
             "spellKey": "r",
             "name": "الصفر المطلق",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يبدأ نونو باستنزاف حرارة المنطقة، فيبطئ جميع الأعداء في الجوار. وعند انتهاء التعويذة، يلحق ضررًا هائلًا بجميع الأعداء العالقين داخل المنطقة.",
-            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>يستنزف نونو حرارة المنطقة، فيقوم بتحضير القدرة لمدة تصل إلى 3ث، حيث يتم <status>إبطاء</status> الأعداء داخل المنطقة بنسبة 50% وتتقلص <attackSpeed>سرعة الهجوم</attackSpeed> لديهم بنسبة 25%.<br><br>يتلقى الأعداء العالقون داخل المنطقة عند انتهاء التحضير ما يصل إلى <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>، حسب مدة تحضير التعويذة.",
             "range": [
                 650.0,
                 650.0,

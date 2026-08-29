@@ -98,15 +98,15 @@
         "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR",
         "mChildSpells": [
             "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR",
-            "{1809327f}",
-            "{9438137e}"
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRPassiveAttack",
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRAS"
         ],
         "mName": "Jade_JaxRAbility",
         "__type": "AbilityObject"
     },
-    "{1809327f}": {
+    "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRPassiveAttack": {
         "ObjectName": "Jade_JaxRPassiveAttack",
-        "objectPath": "{1809327f}",
+        "objectPath": "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRPassiveAttack",
         "mScriptName": "Jade_JaxRPassiveAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7423,
@@ -408,9 +408,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9438137e}": {
+    "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRAS": {
         "ObjectName": "Jade_JaxRAS",
-        "objectPath": "{9438137e}",
+        "objectPath": "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRAS",
         "mScriptName": "Jade_JaxRAS",
         "mSpell": {
             "DataValues": [
@@ -964,14 +964,14 @@
         "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW",
         "mChildSpells": [
             "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW",
-            "{92738cf0}"
+            "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxWAttack"
         ],
         "mName": "Jade_JaxWAbility",
         "__type": "AbilityObject"
     },
-    "{92738cf0}": {
+    "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxWAttack": {
         "ObjectName": "Jade_JaxWAttack",
-        "objectPath": "{92738cf0}",
+        "objectPath": "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxWAttack",
         "mScriptName": "Jade_JaxWAttack",
         "mSpell": {
             "mAffectsTypeFlags": 23210,
@@ -1447,9 +1447,9 @@
         "__type": "SpellObject"
     },
     "{9f06c3b4}": {
-        "mRootSpell": "{f8c0b6bc}",
+        "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive",
         "mChildSpells": [
-            "{f8c0b6bc}"
+            "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive"
         ],
         "mName": "Jade_JaxPassiveAbility",
         "__type": "AbilityObject"
@@ -2006,9 +2006,9 @@
         "mScriptName": "Jade_JaxAttackSequencer",
         "__type": "SpellObject"
     },
-    "{f8c0b6bc}": {
+    "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive": {
         "ObjectName": "Jade_JaxPassive",
-        "objectPath": "{f8c0b6bc}",
+        "objectPath": "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive",
         "mScriptName": "Jade_JaxPassive",
         "mSpell": {
             "DataValues": [
@@ -2810,8 +2810,8 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{1809327f}",
-            "{92738cf0}",
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRPassiveAttack",
+            "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxWAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2953,12 +2953,12 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mCharacterPassiveSpell": "{f8c0b6bc}",
+        "mCharacterPassiveSpell": "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{f8c0b6bc}",
+                "mParentPassiveBuff": "Characters/Jade_Jax/Spells/Jade_JaxPassiveAbility/Jade_JaxPassive",
                 "mComponentBuffs": [
-                    "{9438137e}"
+                    "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxRAS"
                 ],
                 "__type": "CharacterPassiveData"
             },

@@ -298,8 +298,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "XzzIXyn4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-title"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-label"],["flush-element"],["append",["unknown",["tra","flyout_title_label"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-close"],["modifier",["action"],[["get",[null]],"closeFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-control-panel"],["flush-element"],["text","\\n  "],["append",["helper",["control-panel"],null,[["groupingSortingState","setNameFilter","setGroupingAndSorting"],[["get",["groupingSortingState"]],["helper",["action"],[["get",[null]],"setNameFilter"],null],["helper",["action"],[["get",[null]],"setGroupingAndSorting"],null]]]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-grid"],["flush-element"],["text","\\n  "],["append",["helper",["skins-grid"],null,[["selectedSkinId","selectedAugments","filteredSkins","onSkinSelected"],[["get",["model","selectedSkinId"]],["get",["model","selectedAugments"]],["get",["skinsStore","filteredSkins"]],["helper",["action"],[["get",[null]],"updateSelectedSkinId"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "WJhIiZjR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-title"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-label"],["flush-element"],["append",["unknown",["tra","flyout_title_label"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-close"],["modifier",["action"],[["get",[null]],"closeFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-control-panel"],["flush-element"],["text","\\n  "],["append",["helper",["control-panel"],null,[["groupingSortingState","setNameFilter","setGroupingAndSorting"],[["get",["groupingSortingState"]],["helper",["action"],[["get",[null]],"setNameFilter"],null],["helper",["action"],[["get",[null]],"setGroupingAndSorting"],null]]]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-grid"],["flush-element"],["text","\\n  "],["append",["helper",["skins-grid"],null,[["selectedSkinId","selectedAugments","filteredSkins","onSkinSelected"],[["get",["model","selectedSkinId"]],["get",["model","selectedAugments"]],["get",["skinsStore","filteredSkins"]],["helper",["action"],[["get",[null]],"updateSelectedSkinId"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1204,8 +1204,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "oaoEzmH8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","control-panel-text-filter"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","maxlength","class","value","placeholder"],["search","50","control-panel-search-text",["get",["nameFilter"]],["get",["tra","control_panel_search_placeholder"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-grouping-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableGroups"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-sort-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableSorts"]]],[["key"],["name"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["sort","selected"]],null],["dynamic-attr","value",["unknown",["sort","name"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setSortOrder",["get",["sort"]]],null],null],["flush-element"],["append",["unknown",["sort","label"]],false],["close-element"],["text","\\n"]],"locals":["sort"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setGroupingKey",["get",["group","groupKey"]]],null],null],["dynamic-attr","selected",["unknown",["group","isSelected"]],null],["flush-element"],["append",["unknown",["group","name"]],false],["close-element"],["text","\\n"]],"locals":["group"]}],"hasPartials":false}',
+                id: "xa37gSbn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","control-panel-text-filter"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","maxlength","class","value","placeholder"],["search","50","control-panel-search-text",["get",["nameFilter"]],["get",["tra","control_panel_search_placeholder"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-grouping-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableGroups"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-sort-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableSorts"]]],[["key"],["name"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["sort","selected"]],null],["dynamic-attr","value",["unknown",["sort","name"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setSortOrder",["get",["sort"]]],null],null],["flush-element"],["append",["unknown",["sort","label"]],false],["close-element"],["text","\\n"]],"locals":["sort"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setGroupingKey",["get",["group","groupKey"]]],null],null],["dynamic-attr","selected",["unknown",["group","isSelected"]],null],["flush-element"],["append",["unknown",["group","name"]],false],["close-element"],["text","\\n"]],"locals":["group"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1241,7 +1241,7 @@
                 },
                 computed: N
             } = i.Ember, h = "lol-collectibles-libs-virtual-list";
-            var T = d.extend({
+            var R = d.extend({
                 classNames: ["skins-grid-component"],
                 layout: n(30),
                 style: n(31),
@@ -1332,7 +1332,7 @@
                     }
                 }
             });
-            t.default = T
+            t.default = R
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1912,8 +1912,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "tTqD4qiZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","skins-grid-content"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "bEczTOhV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","skins-grid-content"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1970,9 +1970,9 @@
                     isArray: I,
                     get: N,
                     set: h,
-                    run: T
+                    run: R
                 } = i.Ember;
-            var R = S.extend(s.default, {
+            var T = S.extend(s.default, {
                 isLoading: !0,
                 groupingSortingState: l.default.create(),
                 allStoreSkins: null,
@@ -2195,7 +2195,7 @@
                     h(this, "champions", e)
                 }
             });
-            t.default = R
+            t.default = T
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

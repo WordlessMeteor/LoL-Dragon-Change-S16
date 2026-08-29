@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Spell_NidaleePassive_Jade_Summary"
+        "description": "Перемещаясь в кустах, Нидали получает 15% скорости передвижения на 2 сек."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "В человеческой форме Нидали бросает в указанном направлении копье. Его урон зависит от дистанции. В форме пумы Нидали старается добить цель, усиливая свою следующую автоатаку. Следующий удар нанесет тем больше урона, чем меньше у цели здоровья.",
-            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Человеческая форма:</keywordMajor> Нидали бросает копье, нанося <magicDamage>@StartingDamage@</magicDamage>–<magicDamage>@MaxDamage@ ед. маг. урона</magicDamage> при попадании, в зависимости от дистанции от Нидали до цели.<br><br><keywordMajor>Форма пумы:</keywordMajor> следующая автоатака Нидали наносит <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ ед. физ. урона</physicalDamage>. Цели с неполным здоровьем получают больше урона (до 300%).@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_NidaleeW_Jade_Summary",
-            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "В человеческой форме Нидали ставит ловушку, раскрывающую пораженного врага и снижающую его броню и сопр. магии на 12 сек. В форме пумы Нидали прыгает вперед, нанося небольшой урон по области в точке приземления.",
+            "dynamicDescription": "<keywordMajor>Человеческая форма:</keywordMajor> Нидали ставит ловушку, наносящую <magicDamage>@DamagePerSecond@ ед. маг. урона</magicDamage> в течение 2 сек., раскрывающую цель и <status>снижающую</status> <scaleArmor>броню</scaleArmor> и <scaleMR>сопр. магии</scaleMR> цели на @ResistDecreases*100@% на 12 сек. Ловушка действует 4 мин.<br><br><keywordMajor>Форма пумы:</keywordMajor> Нидали прыгает вперед, нанося <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ ед. маг. урона</magicDamage> врагам поблизости.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.0,
-                "coefficient2": 0.0
+                "coefficient1": 0.05,
+                "coefficient2": 0.2
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
                 ],
                 "Effect4Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    9.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    50.0,
+                    100.0,
+                    150.0,
+                    200.0,
+                    250.0,
+                    300.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    40.0,
+                    80.0,
+                    120.0,
+                    160.0,
+                    200.0,
+                    240.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "В человеческой форме Нидали призывает дух пумы, леча союзников и давая им скорость атаки. В форме пумы Нидали быстро бьет когтями врагов перед собой.",
-            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Человеческая форма:</keywordMajor> Нидали восстанавливает союзному чемпиону <healing>@TotalHealing@</healing> здоровья и дает ему <attackSpeed>@BonusAS*100@% скорости атаки</attackSpeed> на 7 сек.<br><br><keywordMajor>Форма пумы:</keywordMajor> Нидали бьет когтями врагов перед собой, нанося <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нидали принимает форму пумы, получая новые умения и скорость передвижения.",
-            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Человеческая форма:</keywordMajor> Нидали принимает форму дикой пумы, получая <speed>20 скорости передвижения</speed>. Ее баз. умениями становятся <spellName>Добивание</spellName>, <spellName>Прыжок</spellName> и <spellName>Размах</spellName>.<br><br><keywordMajor>Форма пумы:</keywordMajor> Нидали вновь становится человеком.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
                 ],
                 "Effect7Amount": [
                     0.0,

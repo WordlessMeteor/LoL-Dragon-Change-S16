@@ -588,23 +588,6 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
-                },
-                {
-                    "id": 60020303,
-                    "name": "클래식 누누와 윌럼프 (폭신폭신)",
-                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
-                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
-                    "relatedPrimeItemId": 20003,
-                    "skinClassification": "kRecolor",
-                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "colors": [
-                        "#2756CE",
-                        "#2756CE"
-                    ],
-                    "descriptions": [],
-                    "description": "",
-                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -616,22 +599,22 @@
     ],
     "passive": {
         "name": "선지자",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Spell_NunuPassive_Jade_Summary"
+        "description": "누누는 기본 공격을 5회 가하면 다음 스킬을 소모값 없이 사용할 수 있습니다."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "잡아먹기",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "누누가 지정한 미니언 또는 몬스터를 물어뜯도록 설인에게 명령을 내려, 큰 피해를 입히고 자신의 체력을 회복합니다.",
-            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>미니언 또는 몬스터를 물어뜯도록 설인에게 명령을 내려, 대상에게 <trueDamage>@BaseDamage@의 고정 피해</trueDamage>를 입히고 자신의 체력을 @TotalHealing@만큼 <healing>회복</healing>합니다.<br><br>누누는 잡아먹은 대상의 종류에 따라 @ConsumeDuration@초 동안 추가 효과를 얻습니다.<br><br><attention>늑대</attention> 또는 <attention>파충류: </attention>기본 공격과 스킬이 <magicDamage>내 최대 체력의 1%에 해당하는 마법 피해</magicDamage>를 추가로 입힙니다.<br><attention>골렘:</attention> 크기와 <scaleHealth>최대 체력</scaleHealth>이 10% 증가합니다.<br><attention>망령:</attention> 유닛을 처치하면 3초간 <speed>15%의 이동 속도</speed>를 얻습니다.",
             "range": [
                 125.0,
                 125.0,
@@ -775,13 +758,13 @@
         {
             "spellKey": "w",
             "name": "끓어오르는 피",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "누누가 자신과 대상 아군 유닛의 피를 끓어오르게 하여 공격 속도와 이동 속도를 증가시킵니다.",
-            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>누누 자신과 대상 아군의 피가 끓어올라, 12초 동안 <speed>이동 속도가 @MoveSpeed*100@%</speed>, <attackSpeed>공격 속도가 @AttackSpeed*100@%</attackSpeed> 증가합니다. 누누는 자신을 대상으로 지정할 수 있습니다.",
             "range": [
                 700.0,
                 700.0,
@@ -925,13 +908,13 @@
         {
             "spellKey": "e",
             "name": "얼음 덩어리",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "누누가 적 유닛에게 얼음 덩어리를 던져 피해를 입히고, 이동 속도와 공격 속도를 잠시 감소시킵니다.",
-            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>누누가 적 유닛에게 얼음 덩어리를 던져 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고, 3초 동안 이동 속도를 @SlowAmount*-100@% <status>둔화</status>시키며, 공격 속도를 25% 감소시킵니다.",
             "range": [
                 550.0,
                 550.0,
@@ -1075,13 +1058,13 @@
         {
             "spellKey": "r",
             "name": "절대 영도",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "누누가 범위 내의 열기를 빨아들이며 주변 적을 둔화시킵니다. 스킬이 종료될 때 해당 지역에 있는 모든 적에게 막대한 피해를 입힙니다.",
-            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>누누가 최대 3초간 정신을 집중하며 범위 내의 열기를 빨아들입니다. 주변의 적은 50% <status>둔화</status>되고 <attackSpeed>공격 속도</attackSpeed>가 25% 감소합니다.<br><br>정신 집중이 끝나면 근처에 있던 적은 정신 집중 시간에 따라 최대 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 받습니다.",
             "range": [
                 650.0,
                 650.0,

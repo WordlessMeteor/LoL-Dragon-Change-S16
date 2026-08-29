@@ -588,23 +588,6 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
-                },
-                {
-                    "id": 60020303,
-                    "name": "Nunu & Willump Cổ Điển (Mẫu Giáo)",
-                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
-                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
-                    "relatedPrimeItemId": 20003,
-                    "skinClassification": "kRecolor",
-                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "colors": [
-                        "#2756CE",
-                        "#2756CE"
-                    ],
-                    "descriptions": [],
-                    "description": "",
-                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -616,22 +599,22 @@
     ],
     "passive": {
         "name": "Nhìn Xa Trông Rộng",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Spell_NunuPassive_Jade_Summary"
+        "description": "Nunu có thể tung kỹ năng miễn phí sau 5 đòn đánh."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Nuốt Chửng",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nunu ra lệnh cho người tuyết cắn vào lính hoặc quái vật mục tiêu, gây sát thương lớn lên mục tiêu đó và hồi máu cho bản thân.",
-            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Ra lệnh cho người tuyết cắn vào lính hoặc quái, gây <trueDamage>@BaseDamage@ sát thương chuẩn</trueDamage> lên mục tiêu và <healing>hồi lại</healing> @TotalHealing@ Máu cho bản thân.<br><br>Nunu nhận thêm hiệu ứng trong @ConsumeDuration@ giây dựa trên thứ mà cậu cắn.<br><br><attention>Sói</attention> hoặc <attention>Bò Sát: </attention>Đòn đánh và kỹ năng gây thêm <magicDamage>sát thương phép bằng 1% máu tối đa của bạn</magicDamage>.<br><attention>Người Đá:</attention> Tăng 10% Kích Thước và <scaleHealth>Máu Tối Đa</scaleHealth>.<br><attention>Bóng Ma:</attention> Tiêu diệt một đơn vị sẽ cho <speed>15% Tốc Độ Di Chuyển</speed> trong 3 giây.",
             "range": [
                 125.0,
                 125.0,
@@ -775,13 +758,13 @@
         {
             "spellKey": "w",
             "name": "Sôi Máu",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nunu tiếp thêm sinh lực cho bản thân và một đơn vị đồng minh bằng cách làm nóng máu của họ để tăng Tốc Độ Di Chuyển và Tốc Độ Đánh.",
-            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Làm nóng máu của Nunu và một đồng minh mục tiêu, tăng <speed>Tốc Độ Di Chuyển thêm @MoveSpeed*100@%</speed> và <attackSpeed>Tốc Độ Đánh thêm @AttackSpeed*100@%</attackSpeed> trong 12 giây. Nunu có thể chỉ định chính bản thân.",
             "range": [
                 700.0,
                 700.0,
@@ -925,13 +908,13 @@
         {
             "spellKey": "e",
             "name": "Cầu Tuyết",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nunu ném băng cầu vào một đơn vị địch, gây sát thương và làm chậm Tốc Độ Di Chuyển cùng Tốc Độ Đánh của chúng trong thời gian ngắn.",
-            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Nunu ném bóng băng vào một đơn vị địch, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> Tốc Độ Di Chuyển của chúng đi @SlowAmount*-100@% và Tốc Độ Đánh đi 25% trong 3 giây.",
             "range": [
                 550.0,
                 550.0,
@@ -1075,13 +1058,13 @@
         {
             "spellKey": "r",
             "name": "Tuyệt Đỉnh Băng Giá",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nunu gồng người và bắt đầu hút cạn nhiệt độ xung quanh, làm chậm tất cả kẻ địch ở gần. Khi kỹ năng kết thúc, cậu gây lượng sát thương khổng lồ lên tất cả kẻ địch trong khu vực ảnh hưởng.",
-            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Nunu hút cạn nhiệt lượng xung quanh, vận sức lên đến 3 giây, kẻ địch trong khu vực bị <status>Làm Chậm</status> 50% và giảm 25% <attackSpeed>Tốc Độ Đánh</attackSpeed>.<br><br>Kẻ địch vẫn còn trong khu vực khi vận sức kết thúc nhận tối đa <magicDamage>@TotalDamage@ sát thương phép</magicDamage>, tùy theo thời gian vận sức.",
             "range": [
                 650.0,
                 650.0,

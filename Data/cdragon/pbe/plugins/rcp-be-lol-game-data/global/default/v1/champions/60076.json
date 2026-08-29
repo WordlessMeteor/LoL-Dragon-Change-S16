@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Moving through brush increases Nidalee's Movement Speed."
+        "description": "Moving through brush increases Nidalee's Movement Speed by 15% for 2 seconds."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "In human form, Nidalee throws a spiked javelin at her target that gains damage as it flies.  As a cougar, her next attack will attempt to fatally wound her target, dealing more damage the less life they have.",
-            "dynamicDescription": "<keywordMajor>Human:</keywordMajor> Nidalee tosses her javelin, dealing between <magicDamage>@StartingDamage@</magicDamage> and <magicDamage>@MaxDamage@ magic damage</magicDamage> on impact based on how far Nidalee is away from the target. <br><br><keywordMajor>Cougar:</keywordMajor> Nidalee's next attack deals between <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage> and <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@ physical damage</physicalDamage> based on the target's missing Health.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Human:</keywordMajor> Nidalee tosses her javelin, dealing between <magicDamage>@StartingDamage@</magicDamage> and <magicDamage>@MaxDamage@ magic damage</magicDamage> on impact based on how far Nidalee is away from the target. <br><br><keywordMajor>Cougar:</keywordMajor> Nidalee's next attack deals <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ physical damage</physicalDamage>, and the damage is increased against wounded targets (up to 300% total damage).@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, damages, reveals, reduces the target's Armor and Magic Resist. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
-            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>@DamagePerSecond@ magic damage</magicDamage> over @DamageDuration@ seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by @ResistDecreases*100@% for @ShredDuration@ seconds. Traps last for @TrapDurationMins@ minutes. <br><br><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ magic damage</magicDamage> to surrounding enemies.@SpellModifierDescriptionAppend@",
+            "description": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, reveals the target and reduces their Armor and Magic Resist for 12 seconds. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
+            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>@DamagePerSecond@ magic damage</magicDamage> over 2 seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by @ResistDecreases*100@% for 12 seconds. Traps last for 4 minutes. <br><br><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ magic damage</magicDamage> to surrounding enemies.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.0,
-                "coefficient2": 0.0
+                "coefficient1": 0.05,
+                "coefficient2": 0.2
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
                 ],
                 "Effect4Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    9.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    50.0,
+                    100.0,
+                    150.0,
+                    200.0,
+                    250.0,
+                    300.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    40.0,
+                    80.0,
+                    120.0,
+                    160.0,
+                    200.0,
+                    240.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "In human form, Nidalee channels the spirit of the cougar to heal her allies and imbue them with attack speed for a short duration.  As a cougar, she rapidly claws enemies in front of her.",
-            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee heals an allied champion for <healing>@TotalHealing@</healing> and grants them <attackSpeed>@BonusAS*100@% Attack Speed</attackSpeed> for @ASDuration@ seconds.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee claws at enemies in front of her, dealing <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee heals an allied champion for <healing>@TotalHealing@</healing> and grants them <attackSpeed>@BonusAS*100@% Attack Speed</attackSpeed> for 7 seconds.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee claws at enemies in front of her, dealing <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nidalee transforms into a cougar, gaining new abilities and increased Movement Speed.",
-            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee transforms into a vicious cougar, gaining <speed>@CougarMoveSpeed@ Movement Speed</speed>, and her basic abilities become <spellName>Takedown</spellName>, <spellName>Pounce</spellName>, and <spellName>Swipe</spellName>.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee transforms back into human form.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Human: </keywordMajor>Nidalee transforms into a vicious cougar, gaining <speed>20 Movement Speed</speed>, and her basic abilities become <spellName>Takedown</spellName>, <spellName>Pounce</spellName>, and <spellName>Swipe</spellName>.<br><br><keywordMajor>Cougar: </keywordMajor>Nidalee transforms back into human form.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
                 ],
                 "Effect7Amount": [
                     0.0,

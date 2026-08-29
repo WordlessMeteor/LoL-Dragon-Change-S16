@@ -318,14 +318,14 @@
         "mRootSpell": "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealW",
         "mChildSpells": [
             "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealW",
-            "{0ce59470}"
+            "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealWDebuff"
         ],
         "mName": "Jade_EzrealWAbility",
         "__type": "AbilityObject"
     },
-    "{0ce59470}": {
+    "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealWDebuff": {
         "ObjectName": "Jade_EzrealWDebuff",
-        "objectPath": "{0ce59470}",
+        "objectPath": "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealWDebuff",
         "mScriptName": "Jade_EzrealWDebuff",
         "mSpell": {
             "mImgIconName": [
@@ -347,9 +347,9 @@
         },
         "__type": "SpellObject"
     },
-    "{2f0a858e}": {
+    "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealWInternalHitMarker": {
         "ObjectName": "Jade_EzrealWInternalHitMarker",
-        "objectPath": "{2f0a858e}",
+        "objectPath": "Characters/Jade_Ezreal/Spells/Jade_EzrealWAbility/Jade_EzrealWInternalHitMarker",
         "mScriptName": "Jade_EzrealWInternalHitMarker",
         "__type": "SpellObject"
     },
@@ -1552,7 +1552,7 @@
         "mRootSpell": "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealE",
         "mChildSpells": [
             "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealE",
-            "{b6f5d442}"
+            "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealEMissile"
         ],
         "mName": "Jade_EzrealEAbility",
         "__type": "AbilityObject"
@@ -1937,9 +1937,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b6f5d442}": {
+    "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealEMissile": {
         "ObjectName": "Jade_EzrealEMissile",
-        "objectPath": "{b6f5d442}",
+        "objectPath": "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealEMissile",
         "mScriptName": "Jade_EzrealEMissile",
         "mSpell": {
             "flags": 4,
@@ -2132,17 +2132,17 @@
         "__type": "SpellObject"
     },
     "{b1146b56}": {
-        "mRootSpell": "{bede967e}",
+        "mRootSpell": "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive",
         "mChildSpells": [
-            "{bede967e}",
-            "{d085d927}"
+            "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive",
+            "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassiveStacks"
         ],
         "mName": "Jade_EzrealPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{bede967e}": {
+    "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive": {
         "ObjectName": "Jade_EzrealPassive",
-        "objectPath": "{bede967e}",
+        "objectPath": "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive",
         "mScriptName": "Jade_EzrealPassive",
         "mSpell": {
             "DataValues": [
@@ -2233,9 +2233,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d085d927}": {
+    "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassiveStacks": {
         "ObjectName": "Jade_EzrealPassiveStacks",
-        "objectPath": "{d085d927}",
+        "objectPath": "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassiveStacks",
         "mScriptName": "Jade_EzrealPassiveStacks",
         "mSpell": {
             "mImgIconName": [
@@ -2380,7 +2380,7 @@
             "Characters/Jade_Ezreal/Spells/Jade_EzrealRAbility/Jade_EzrealR"
         ],
         "extraSpellsList": [
-            "{b6f5d442}",
+            "Characters/Jade_Ezreal/Spells/Jade_EzrealEAbility/Jade_EzrealEMissile",
             "{00000000}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2475,12 +2475,12 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{bede967e}",
+        "mCharacterPassiveSpell": "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{bede967e}",
+                "mParentPassiveBuff": "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassive",
                 "mComponentBuffs": [
-                    "{d085d927}"
+                    "Characters/Jade_Ezreal/Spells/Jade_EzrealPassiveAbility/Jade_EzrealPassiveStacks"
                 ],
                 "__type": "CharacterPassiveData"
             },
@@ -3511,7 +3511,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3546,7 +3546,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3581,7 +3581,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3616,7 +3616,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3645,7 +3645,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3802,7 +3802,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3837,7 +3837,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3872,7 +3872,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3907,7 +3907,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3942,7 +3942,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -3977,7 +3977,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -4006,7 +4006,7 @@
                                         "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"

@@ -588,23 +588,6 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
-                },
-                {
-                    "id": 60020303,
-                    "name": "Классические Нуну и Виллумп – ''Гранжевые''",
-                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
-                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
-                    "relatedPrimeItemId": 20003,
-                    "skinClassification": "kRecolor",
-                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "colors": [
-                        "#2756CE",
-                        "#2756CE"
-                    ],
-                    "descriptions": [],
-                    "description": "",
-                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -616,22 +599,22 @@
     ],
     "passive": {
         "name": "Визионер",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Spell_NunuPassive_Jade_Summary"
+        "description": "После каждых 5 автоатак Нуну может применить умение, не тратя ману."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Поглощение",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "По приказу Нуну йети пытается съесть вражеского миньона или монстра, нанося ему большой урон и восстанавливая себе здоровье.",
-            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Приказывает йети укусить миньона или монстра, нанеся цели <trueDamage>@BaseDamage@ ед. чист. урона</trueDamage> и <healing>восстановив</healing> себе @TotalHealing@ здоровья.<br><br>Нуну в течение @ConsumeDuration@ сек. получает бонусы, зависящие от того, что он поглотил.<br><br><attention>Волки</attention> или <attention>рептилии:</attention> ваши атаки и умения дополнительно наносят <magicDamage>маг. урон в размере 1% от макс. здоровья</magicDamage>.<br><attention>Големы:</attention> размер и <scaleHealth>макс. здоровье</scaleHealth> выше на 10%.<br><attention>Призраки:</attention> при убийстве бойца вы получаете <speed>15% скорости передвижения</speed> на 3 сек.",
             "range": [
                 125.0,
                 125.0,
@@ -775,13 +758,13 @@
         {
             "spellKey": "w",
             "name": "Вскипание крови",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Разогревая кровь, Нуну усиливает себя и союзника, повышая скорость передвижения и скорость атаки.",
-            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Разогревает кровь Нуну и выбранного союзника, повышая <speed>скорость передвижения на @MoveSpeed*100@%</speed> и <attackSpeed>скорость атаки на @AttackSpeed*100@%</attackSpeed> на 12 сек. Нуну может выбрать целью себя.",
             "range": [
                 700.0,
                 700.0,
@@ -925,13 +908,13 @@
         {
             "spellKey": "e",
             "name": "Ледяной взрыв",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нуну бросает осколок льда в выбранного врага, нанося ему урон и временно снижая его скорость передвижения и скорость атаки.",
-            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Нуну бросает осколок льда в выбранного врага, нанося ему <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>снижая</status> его скорость передвижения на @SlowAmount*-100@% и скорость атаки на 25% на 3 сек.",
             "range": [
                 550.0,
                 550.0,
@@ -1075,13 +1058,13 @@
         {
             "spellKey": "r",
             "name": "Абсолютный ноль",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нуну вытягивает из области тепло, замедляя всех врагов поблизости. По окончании действия умения он наносит огромный урон всем врагам в зоне поражения.",
-            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Нуну до 3 сек. вытягивает тепло из области вокруг себя, <status>замедляя</status> врагов в ней на 50% и снижая их <attackSpeed>скорость атаки</attackSpeed> на 25%.<br><br>Враги в области поражения на момент окончания действия умения получают до <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> (зависит от времени подготовки умения).",
             "range": [
                 650.0,
                 650.0,

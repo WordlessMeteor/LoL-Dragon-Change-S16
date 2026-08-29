@@ -588,23 +588,6 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
-                },
-                {
-                    "id": 60020303,
-                    "name": "Klasszikus Nunu és Willump (Kukaszörny)",
-                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
-                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
-                    "relatedPrimeItemId": 20003,
-                    "skinClassification": "kRecolor",
-                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
-                    "colors": [
-                        "#2756CE",
-                        "#2756CE"
-                    ],
-                    "descriptions": [],
-                    "description": "",
-                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -616,22 +599,22 @@
     ],
     "passive": {
         "name": "Látnok",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Spell_NunuPassive_Jade_Summary"
+        "description": "5 támadást követően Nunu ingyen vetheti be az egyik képességét."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Felfalás",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Nunu megparancsolja a jetinek, hogy harapjon ki egy darabot a célba vett minionból vagy szörnyből, amivel komoly sérüléseket okoz az ellenfélnek, és gyógyítja saját magát.",
-            "dynamicDescription": "Spell_NunuQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Megparancsolja a jetinek, hogy harapjon ki egy darabot egy minionból vagy szörnyből, amivel <trueDamage>@BaseDamage@ tényleges sebzést</trueDamage> okoz a célpontnak, és @TotalHealing@ életerővel <healing>gyógyítja</healing> saját magát.<br><br>Nunu @ConsumeDuration@ másodpercre különböző bónuszokat kap, a felfalt lény típusától függően.<br><br><attention>Farkasok</attention> vagy <attention>hüllők: </attention>a támadásaid és a varázslataid a <magicDamage>maximális életerőd 1%-ának megfelelő további sebzést okoznak varázssebzésként</magicDamage>.<br><attention>Gólemek:</attention> 10%-kal nagyobb méret és <scaleHealth>maximális életerő</scaleHealth>.<br><attention>Lidércek:</attention> az egységek megölése 3 másodpercre <speed>15%-kal növeli a mozgási sebességet</speed>.",
             "range": [
                 125.0,
                 125.0,
@@ -775,13 +758,13 @@
         {
             "spellKey": "w",
             "name": "Vérforralás",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Nunu megerősíti magát és egyik szövetségesét azzal, hogy felmelegíti mindkettejük vérét, amitől megnő a mozgási és a támadási sebességük.",
-            "dynamicDescription": "Spell_NunuW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Nunu és a kijelölt szövetséges testhőmérséklete emelkedik, így 12 másodpercre a <speed>mozgási sebességük @MoveSpeed*100@%-kal</speed>, a <attackSpeed>támadási sebességük pedig @AttackSpeed*100@%-kal</attackSpeed> nő. Nunu saját magát is megcélozhatja.",
             "range": [
                 700.0,
                 700.0,
@@ -925,13 +908,13 @@
         {
             "spellKey": "e",
             "name": "Hógolyó",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Nunu egy jéggömböt lő ki az ellenséges egységre, amivel sebzést okoz neki, és ideiglenesen csökkenti a mozgási és támadási sebességét.",
-            "dynamicDescription": "Spell_NunuE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Nunu egy jéggömböt lő ki az ellenséges egységre, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, valamint 3 másodperc erejéig a mozgási sebességét @SlowAmount*-100@%-kal, a támadási sebességét pedig 25%-kal <status>csökkenti</status>.",
             "range": [
                 550.0,
                 550.0,
@@ -1075,13 +1058,13 @@
         {
             "spellKey": "r",
             "name": "Abszolút nulla fok",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Nunu elkezdi kiszívni a hőt az adott területről, és ezzel lelassítja a közelben tartózkodó ellenfeleket. Amikor véget ér a varázslat, hatalmas sebzést okoz a hatóterületen ragadt ellenséges egységeknek.",
-            "dynamicDescription": "Spell_NunuR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText>Nunu legfeljebb 3 másodpercnyi varázslással elszívja a hőt a területről. A területen belüli ellenfelek <status>mozgási sebessége</status> 50%-kal, a <attackSpeed>támadási sebességük</attackSpeed> pedig 25%-kal csökken.<br><br>Amint a varázslás véget ér, a területen tartózkodó ellenfelek legfeljebb <magicDamage>@TotalDamage@ varázssebzést</magicDamage> szenvednek el, amelynek pontos mértéke a varázslás időtartamától függ.",
             "range": [
                 650.0,
                 650.0,

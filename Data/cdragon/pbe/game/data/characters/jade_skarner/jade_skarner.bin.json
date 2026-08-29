@@ -55,7 +55,7 @@
         "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
         "mChildSpells": [
             "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
-            "{d70dbefc}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE_Missile"
         ],
         "mName": "Jade_SkarnerEAbility",
         "AbilityTraits": 2560,
@@ -94,6 +94,45 @@
                         75.0,
                         90.0,
                         105.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MarkDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SubsequentHealMultiplier",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumHealingMultiplier",
+                    "values": [
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -245,9 +284,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d70dbefc}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE_Missile": {
         "ObjectName": "Jade_SkarnerE_Missile",
-        "objectPath": "{d70dbefc}",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE_Missile",
         "mScriptName": "Jade_SkarnerE_Missile",
         "mSpell": {
             "flags": 4,
@@ -360,9 +399,9 @@
         "__type": "SpellObject"
     },
     "{2959969c}": {
-        "mRootSpell": "{f52b58c3}",
+        "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive",
         "mChildSpells": [
-            "{f52b58c3}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive"
         ],
         "mName": "Jade_SkarnerPassiveAbility",
         "mType": 3,
@@ -423,6 +462,32 @@
                         -0.4000000059604645,
                         -0.44999998807907104,
                         -0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CrystalEnergyDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -619,9 +684,9 @@
         },
         "__type": "SpellObject"
     },
-    "{56b7f331}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ_Slow": {
         "ObjectName": "Jade_SkarnerQ_Slow",
-        "objectPath": "{56b7f331}",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ_Slow",
         "mScriptName": "Jade_SkarnerQ_Slow",
         "mSpell": {
             "flags": 4,
@@ -733,9 +798,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b7fdaf7b}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ_Energy1": {
         "ObjectName": "Jade_SkarnerQ_Energy1",
-        "objectPath": "{b7fdaf7b}",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ_Energy1",
         "mScriptName": "Jade_SkarnerQ_Energy1",
         "mSpell": {
             "flags": 4,
@@ -894,9 +959,9 @@
         "mScriptName": "Jade_SkarnerAttackSequencer",
         "__type": "SpellObject"
     },
-    "{94db3ef7}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR_Buff": {
         "ObjectName": "Jade_SkarnerR_Buff",
-        "objectPath": "{94db3ef7}",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR_Buff",
         "mScriptName": "Jade_SkarnerR_Buff",
         "mSpell": {
             "mAffectsTypeFlags": 2,
@@ -1085,6 +1150,19 @@
                         250.0,
                         300.0,
                         350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SuppressionDuration",
+                    "values": [
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1335,6 +1413,19 @@
                         0.550000011920929
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1544,11 +1635,39 @@
         },
         "__type": "SpellObject"
     },
-    "{f52b58c3}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive": {
         "ObjectName": "Jade_SkarnerPassive",
-        "objectPath": "{f52b58c3}",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive",
         "mScriptName": "Jade_SkarnerPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "CooldownReduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChampionCooldownReduction",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.dds"
             ],
@@ -2250,18 +2369,7 @@
                                                 "Condition": null,
                                                 "Sequence": {
                                                     "blocks": [
-                                                        {
-                                                            "{d851ffa3}": "17bf524b-c906-48d2-a7b6-58b01a9c514c",
-                                                            "Src": {
-                                                                "value": 1,
-                                                                "__type": "IntGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "CDR",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        }
+                                                        null
                                                     ],
                                                     "__type": "ScriptSequence"
                                                 },
@@ -2271,18 +2379,7 @@
                                                 "{d851ffa3}": "9c193f8e-2113-4905-9c5a-126b15b1e11a",
                                                 "Sequence": {
                                                     "blocks": [
-                                                        {
-                                                            "{d851ffa3}": "6d2e7031-582f-4d08-89fa-46721f6088c6",
-                                                            "Src": {
-                                                                "value": 0.5,
-                                                                "__type": "FloatGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "CDR",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        }
+                                                        null
                                                     ],
                                                     "__type": "ScriptSequence"
                                                 },
@@ -2576,7 +2673,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{d70dbefc}",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE_Missile",
             "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2696,7 +2793,7 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{f52b58c3}",
+        "mCharacterPassiveSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive",
         "mCharacterPassiveBuffs": [
             {
                 "mParentPassiveBuff": "Characters/Jade_Skarner/Spells/Jade_SkarnerAttackSequencer",

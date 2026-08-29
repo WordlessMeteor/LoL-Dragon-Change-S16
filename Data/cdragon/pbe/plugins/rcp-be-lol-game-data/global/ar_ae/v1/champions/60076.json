@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Spell_NidaleePassive_Jade_Summary"
+        "description": "يزيد التحرك عبر الأعشاب سرعة حركة نيدالي بنسبة 15% لمدة ثانيتين."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "حين تكون نيدالي في هيئتها البشرية، ترمي رمحًا مطوقًا بالمسامير على هدفها يكسب ضررًا أثناء تحليقه.  أما في هيئة أسد الجبل، تحاول استخدام هجومها التالي لإلحاق جرح قاتل بهدفها، فتلحق المزيد من الضرر به كلما انخفضت صحته.",
-            "dynamicDescription": "Spell_NidaleeQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>الهيئة البشرية:</keywordMajor> ترمي نيدالي رمحها، فتلحق ما بين <magicDamage>@StartingDamage@</magicDamage> و <magicDamage>@MaxDamage@ ضرر سحر</magicDamage> عند الإصابة بناءً على المسافة التي تفصل نيدالي عن الهدف. <br><br><keywordMajor>أسد الجبال: </keywordMajor> يلحق هجوم نيدالي التالي <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ ضرر مادي</physicalDamage>، ويزداد الضرر ضد الأهداف المصابة بالجروح (بنسبة أقصاها 300% من إجمالي الضرر).@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_NidaleeW_Jade_Summary",
-            "dynamicDescription": "Spell_NidaleeW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "في الهيئة البشرية، تنصب نيدالي فخًا يلحق الضرر بالخصوم الغافلين، وعند تفعيله، يكشف عن الهدف ويقلص الدروع ومقاومة السحر لديه لمدة 12ث. في هيئة أسد الجبال، تنقضّ إلى الأمام، فتلحق مقدارًا بسيطًا من الضرر عند وصولها.",
+            "dynamicDescription": "<keywordMajor>الهيئة البشرية: </keywordMajor>تنصب نيدالي فخًا يلحق <magicDamage>@DamagePerSecond@ ضرر سحر</magicDamage> على مدار ثانيتين، ويكشف الهدف، كما <status>يفتت</status> <scaleArmor>الدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> لديه بنسبة @ResistDecreases*100@% لمدة 12ث. تدوم الفخاخ لمدة 4 دقائق. <br><br><keywordMajor>أسد الجبال: </keywordMajor>تندفع نيدالي إلى الأمام، فتلحق <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ ضرر سحر</magicDamage> بالأعداء المحيطين.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.0,
-                "coefficient2": 0.0
+                "coefficient1": 0.05,
+                "coefficient2": 0.2
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
                 ],
                 "Effect4Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    9.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    50.0,
+                    100.0,
+                    150.0,
+                    200.0,
+                    250.0,
+                    300.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    40.0,
+                    80.0,
+                    120.0,
+                    160.0,
+                    200.0,
+                    240.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "في هيئتها البشرية، توجه نيدالي روح أسد الجبال لعلاج حلفائها وحقنهم بسرعة الهجوم لفترة قصيرة.  في هيئة أسد الجبال، تلحق الضرر بالأعداء أمامها بسرعة.",
-            "dynamicDescription": "Spell_NidaleeE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>الهيئة البشرية: </keywordMajor>تعالج نيدالي بطلًا حليفًا بمقدار <healing>@TotalHealing@</healing> وتمنحه <attackSpeed>@BonusAS*100@% سرعة هجوم</attackSpeed> لمدة 7ث.<br><br><keywordMajor>أسد الجبال: </keywordMajor>تنقضّ نيدالي بمخالبها على الأعداء أمامها، فتلحق بهم <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ ضرر سحر.</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0,
-                575.0
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تتحول نيدالي إلى هيئة أسد الجبل، فتكسب قدرات جديدة وسرعة حركة إضافية.",
-            "dynamicDescription": "Spell_NidaleeR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>الهيئة البشرية: </keywordMajor>تتحول نيدالي إلى أسد جبل شرس، فتكسب <speed>20 سرعة حركة</speed>، وتتحول قدراتها الأساسية إلى <spellName>الإطاحة</spellName> و<spellName>الانقضاض</spellName> و<spellName>انقضاض المخالب</spellName>.<br><br><keywordMajor>هيئة أسد الجبل: </keywordMajor>تعود نيدالي إلى هيئتها البشرية.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
                 ],
                 "Effect7Amount": [
                     0.0,

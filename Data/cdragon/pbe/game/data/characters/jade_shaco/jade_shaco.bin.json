@@ -156,83 +156,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        20.0,
-                        35.0,
-                        50.0,
-                        65.0,
-                        80.0,
-                        95.0,
-                        110.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        100.0,
-                        200.0,
-                        300.0,
-                        400.0,
-                        500.0,
-                        600.0,
-                        700.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.25,
-                        0.5,
-                        0.75,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "FearDuration",
@@ -341,8 +264,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.20000000298023224,
-            "mCoefficient2": 0.10000000149011612,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Shaco_DeathWard.dds"
@@ -729,19 +650,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "BaseDamage",
-                    "values": [
-                        15.0,
-                        25.0,
-                        35.0,
-                        45.0,
-                        55.0,
-                        65.0,
-                        75.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "StealthDuration",
                     "values": [
                         3.5,
@@ -764,58 +672,6 @@
                         6.0,
                         6.0,
                         6.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CDRefund",
-                    "values": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ExtraAATime",
-                    "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PseudoCastTime",
-                    "values": [
-                        0.125,
-                        0.125,
-                        0.125,
-                        0.125,
-                        0.125,
-                        0.125,
-                        0.125
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BonusADRatio",
-                    "values": [
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -847,21 +703,6 @@
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "BonusADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
                 "{80835cbf}": {
                     "tooltipOnly": true,
                     "mFormulaParts": [
@@ -881,20 +722,6 @@
                         }
                     ],
                     "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
-                },
-                "TotalDamageTooltip": {
-                    "mMultiplier": {
-                        "mSpellCalculationKey": "{80835cbf}",
-                        "__type": "{f3cbe7b2}"
-                    },
-                    "mFormulaParts": [
-                        {
-                            "mStat": 2,
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
                     "__type": "GameCalculation"
                 }
             },
@@ -1094,106 +921,15 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "PerUnitCD",
+                    "name": "BonusDamagePercent",
                     "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MonsterCritMod",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "APRatio",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CloneMult",
-                    "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ShivSlowAmount",
-                    "values": [
-                        -0.4000000059604645,
-                        -0.4000000059604645,
-                        -0.4000000059604645,
-                        -0.4000000059604645,
-                        -0.4000000059604645,
-                        -0.4000000059604645,
-                        -0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ShredDuration",
-                    "values": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ShivExecuteDamagePercent",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AttackBonusADRatio",
-                    "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1252,85 +988,6 @@
                         }
                     ],
                     "__type": "SpellDataValueVector"
-                }
-            },
-            "mSpellCalculations": {
-                "MonsterDamageTooltip": {
-                    "mFormulaParts": [
-                        {
-                            "mStat": 2,
-                            "mSubpart": {
-                                "mSubparts": [
-                                    {
-                                        "mDataValue": "MonsterCritMod",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    {
-                                        "mStat": 9,
-                                        "mStatFormula": 2,
-                                        "mCoefficient": 1.0,
-                                        "__type": "StatByCoefficientCalculationPart"
-                                    }
-                                ],
-                                "__type": "SumOfSubPartsCalculationPart"
-                            },
-                            "__type": "StatBySubPartCalculationPart"
-                        },
-                        {
-                            "mDataValue": "APRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "BasicAttackDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mStartValue": 20.0,
-                            "mEndValue": 35.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "AttackBonusADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ShivDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mStartValue": 15.0,
-                            "mEndValue": 50.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.10000000149011612,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{3445d362}": {
-                    "mFormulaParts": [
-                        {
-                            "mStat": 9,
-                            "mStatFormula": 1,
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ShivDamageExecute": {
-                    "mMultiplier": {
-                        "mDataValue": "ShivExecuteDamagePercent",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "ShivDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -1539,47 +1196,6 @@
                 "Trait_ImmobilizingCCSpell",
                 "Trait_Pet"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "TeleportRange",
@@ -1591,32 +1207,6 @@
                         150.0,
                         150.0,
                         150.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "STBaseDamage",
-                    "values": [
-                        0.0,
-                        25.0,
-                        50.0,
-                        75.0,
-                        100.0,
-                        125.0,
-                        150.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AoEBaseDamage",
-                    "values": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1647,19 +1237,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BoxFearDuration",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "ExplosionBaseDamage",
                     "values": [
                         150.0,
@@ -1682,19 +1259,6 @@
                         18.0,
                         18.0,
                         18.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Jade_ShacoDamageTakenTooltip",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1724,6 +1288,21 @@
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
+                    "__type": "GameCalculation"
+                },
+                "{76c2c8d6}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{280af5cc}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mNumber": -1.0,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 }
             },

@@ -8,7 +8,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -20,7 +20,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{1209114a94e93c06}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/attack1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -31,7 +31,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 10.0,
-                        "mEffectKey": "{718bc5b9}",
+                        "mEffectKey": "Jade_Fiora_BA2",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -44,7 +44,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{590a1a4d2272cd6a}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/attack2.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -53,7 +53,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{04df23ec13d5c094}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/channel.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -62,7 +62,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{c1aa7f9e88a3b233}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/channel_windup.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -70,7 +70,7 @@
             "Crit": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{01a719585b3a2a00}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/crit.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -83,10 +83,16 @@
                         "mJointNameToOverride": "weapon",
                         "mJointNameToSnapTo": "Snap_Weapon2World",
                         "__type": "JointSnapEventData"
+                    },
+                    "Audio_Death": {
+                        "mStartFrame": 5.0,
+                        "mSoundName": "Play_sfx_Fiora_Death3D_cast",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{c93b73669237eca5}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/death.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -94,7 +100,7 @@
             "Laugh": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{a9db8a03effcf2df}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/laugh.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -103,7 +109,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.03333333879709244,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{e7738348aa884df5}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/run.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -111,7 +117,7 @@
             "Spell1": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{ca953f9d69c4dcdd}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/spell1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -122,7 +128,7 @@
                     "Taunt": {
                         "mName": "Taunt",
                         "mStartFrame": 69.0,
-                        "mEffectKey": "{cd453638}",
+                        "mEffectKey": "Jade_Fiora_Taunt",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -131,10 +137,15 @@
                         ],
                         "mIsLoop": false,
                         "__type": "ParticleEventData"
+                    },
+                    "Audio_Taunt": {
+                        "mSoundName": "Play_sfx_Fiora_Taunt3D_buffactivate",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{5597a02eab261611}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/taunt.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -142,8 +153,15 @@
             "Dance": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Audio_Dance": {
+                        "mStartFrame": 11.0,
+                        "mSoundName": "Play_sfx_Fiora_Dance3D_buffactivate",
+                        "__type": "SoundEventData"
+                    }
+                },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{132c8dcd9dd2eddf}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/dance.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -154,7 +172,7 @@
                     "Joke": {
                         "mName": "Joke",
                         "mStartFrame": 106.0,
-                        "mEffectKey": "{13e5fd13}",
+                        "mEffectKey": "Jade_Fiora_Joke",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_CSTM_WEAPON_CENTER",
@@ -163,10 +181,15 @@
                         ],
                         "mIsLoop": false,
                         "__type": "ParticleEventData"
+                    },
+                    "Audio_Joke": {
+                        "mSoundName": "Play_sfx_Fiora_Joke3D_buffactivate",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{fc06aa4fc269d5e9}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/joke.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -175,7 +198,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.03030303120613098,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{e7738348aa884df5}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/run.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -183,7 +206,7 @@
             "{ec499dc6}": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{a9db8a03effcf2df}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/laugh.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -194,7 +217,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -207,7 +230,7 @@
                 },
                 "mTickDuration": 0.05000000074505806,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{700c265f859e6ff3}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/spell4a.anm",
                     "__type": "AnimationResourceData"
                 },
                 "startFrame": 2.0,
@@ -220,7 +243,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -245,7 +268,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -270,7 +293,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -283,7 +306,7 @@
                 },
                 "mTickDuration": 0.05000000074505806,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{700c265f859e6ff3}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/spell4a.anm",
                     "__type": "AnimationResourceData"
                 },
                 "startFrame": 2.0,
@@ -296,7 +319,7 @@
                     "WeaponTrail": {
                         "mName": "WeaponTrail",
                         "mStartFrame": 11.0,
-                        "mEffectKey": "{a9e1db31}",
+                        "mEffectKey": "Jade_Fiora_BA",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -318,7 +341,7 @@
             "Spell4_In": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{31f9efc56ec50c31}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/spell4_in.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -326,7 +349,7 @@
             "Idle1": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{54d1283af2c90147}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/idle1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -334,7 +357,7 @@
             "Idle2": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{9daa788d9224da80}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/idle2.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -342,7 +365,7 @@
             "Idle3": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{73e02113d3eb4f1a}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/idle3.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -350,7 +373,7 @@
             "Idle4": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "{390407d70ae9b420}",
+                    "mAnimationFilePath": "assets/characters/jade_fiora/skins/skin301/animations/idle4.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"

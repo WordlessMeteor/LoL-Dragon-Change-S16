@@ -4,7 +4,7 @@
     },
     "Characters/TFTEventER_Dragon/Spells/TFTEventER_DragonBasicAttack": {
         "ObjectName": "TFTEventER_DragonBasicAttack",
-        "objectPath": "{7a51e8d9}",
+        "objectPath": "Characters/TFTEventER_Dragon/Spells/TFTEventER_DragonBasicAttack",
         "mScriptName": "TFTEventER_DragonBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -18,7 +18,7 @@
                 2000.0,
                 2000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2000.0,
                     2000.0,
@@ -59,7 +59,7 @@
             "mMissileEffectKey": "TFTEventER_GlobalFireball_BA",
             "mHitEffectOrientType": 2,
             "mResourceResolvers": [
-                "{233b8258}"
+                "Maps/Shipping/Map22/Sets/TFTSetEventER/Resources"
             ],
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -77,16 +77,16 @@
         },
         "__type": "SpellObject"
     },
-    "{970da4d5}": {
+    "Characters/TFTEventER_Dragon/Spells/TFTEventER_DragonSpell": {
         "ObjectName": "TFTEventER_DragonSpell",
-        "objectPath": "{970da4d5}",
+        "objectPath": "Characters/TFTEventER_Dragon/Spells/TFTEventER_DragonSpell",
         "mScriptName": "TFTEventER_DragonSpell",
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 13327,
             "mAnimationName": "",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -120,7 +120,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -231,7 +231,7 @@
         "expGivenOnDeath": 0.0,
         "goldGivenOnDeath": 0.0,
         "spells": [
-            "{970da4d5}",
+            "Characters/TFTEventER_Dragon/Spells/TFTEventER_DragonSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -243,7 +243,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mShopData": "{0e613255}",
+        "mShopData": "Maps/Shipping/Map22/Sets/TFTSetEventER/Shop/TFTEventER_Dragon",
         "__type": "TFTCharacterRecord"
     },
     "__linked": []

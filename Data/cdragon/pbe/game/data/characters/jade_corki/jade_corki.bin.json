@@ -114,10 +114,10 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
-            "{111cf174}",
-            "{f48f518f}",
-            "{b3a1b264}",
-            "{1d8bbd62}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2"
         ],
         "mName": "Jade_CorkiRAbility",
         "__type": "AbilityObject"
@@ -126,15 +126,15 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
-            "{64e9dcb0}",
-            "{0f4b80df}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray"
         ],
         "mName": "Jade_CorkiEAbility",
         "__type": "AbilityObject"
     },
-    "{0f4b80df}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray": {
         "ObjectName": "Jade_CorkiE_Spray",
-        "objectPath": "{0f4b80df}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray",
         "mScriptName": "Jade_CorkiE_Spray",
         "mSpell": {
             "flags": 4,
@@ -273,9 +273,9 @@
         },
         "__type": "SpellObject"
     },
-    "{64e9dcb0}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff": {
         "ObjectName": "Jade_CorkiE_Debuff",
-        "objectPath": "{64e9dcb0}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Debuff",
         "mScriptName": "Jade_CorkiE_Debuff",
         "mSpell": {
             "mImgIconName": [
@@ -373,7 +373,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{cceb7917}",
+                            "mDataValue": "ADperSecond",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -381,7 +381,7 @@
                 },
                 "{442d07f7}": {
                     "mMultiplier": {
-                        "mDataValue": "{25fd816b}",
+                        "mDataValue": "ActiveDuration",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "{5f73bdfe}",
@@ -611,9 +611,9 @@
         },
         "__type": "SpellObject"
     },
-    "{111cf174}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check": {
         "ObjectName": "Jade_CorkiR_Check",
-        "objectPath": "{111cf174}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Check",
         "mScriptName": "Jade_CorkiR_Check",
         "mSpell": {
             "mImgIconName": [
@@ -627,9 +627,9 @@
         },
         "__type": "SpellObject"
     },
-    "{1d8bbd62}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2": {
         "ObjectName": "Jade_CorkiR_Missile2",
-        "objectPath": "{1d8bbd62}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2",
         "mScriptName": "Jade_CorkiR_Missile2",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1139,9 +1139,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b3a1b264}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile": {
         "ObjectName": "Jade_CorkiR_Missile",
-        "objectPath": "{b3a1b264}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
         "mScriptName": "Jade_CorkiR_Missile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1347,9 +1347,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f48f518f}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC": {
         "ObjectName": "Jade_CorkiR_NC",
-        "objectPath": "{f48f518f}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_NC",
         "mScriptName": "Jade_CorkiR_NC",
         "mSpell": {
             "mImgIconName": [
@@ -1367,7 +1367,7 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
-            "{bb1744cd}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound"
         ],
         "mName": "Jade_CorkiWAbility",
         "__type": "AbilityObject"
@@ -1686,9 +1686,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bb1744cd}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound": {
         "ObjectName": "Jade_CorkiW_Sound",
-        "objectPath": "{bb1744cd}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW_Sound",
         "mScriptName": "Jade_CorkiW_Sound",
         "mSpell": {
             "mImgIconName": [
@@ -1817,9 +1817,9 @@
         "__type": "SpellObject"
     },
     "{40c3de80}": {
-        "mRootSpell": "{ede48645}",
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "mChildSpells": [
-            "{ede48645}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive"
         ],
         "mName": "Jade_CorkiPassiveAbility",
         "__type": "AbilityObject"
@@ -1838,14 +1838,14 @@
         "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
         "mChildSpells": [
             "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
-            "{57214631}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind"
         ],
         "mName": "Jade_CorkiQAbility",
         "__type": "AbilityObject"
     },
-    "{57214631}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind": {
         "ObjectName": "Jade_CorkiQ_Blind",
-        "objectPath": "{57214631}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ_Blind",
         "mScriptName": "Jade_CorkiQ_Blind",
         "mSpell": {
             "mImgIconName": [
@@ -2210,9 +2210,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ede48645}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive": {
         "ObjectName": "Jade_CorkiPassive",
-        "objectPath": "{ede48645}",
+        "objectPath": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "mScriptName": "Jade_CorkiPassive",
         "mSpell": {
             "DataValues": [
@@ -3225,9 +3225,9 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{0f4b80df}",
-            "{b3a1b264}",
-            "{1d8bbd62}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE_Spray",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR_Missile2",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3368,7 +3368,7 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{ede48645}",
+        "mCharacterPassiveSpell": "Characters/Jade_Corki/Spells/Jade_CorkiPassiveAbility/Jade_CorkiPassive",
         "{c5c48b41}": 1,
         "Script": "{2c54c4b7}",
         "__type": "CharacterRecord"

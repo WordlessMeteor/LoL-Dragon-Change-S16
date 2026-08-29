@@ -21153,18 +21153,18 @@
                             target: {
                                 domNode: this.element,
                                 anchor: {
-                                    x: "center",
-                                    y: "bottom"
+                                    x: "right",
+                                    y: "center"
                                 }
                             },
-                            orientation: "bottom",
+                            orientation: "right",
                             anchor: {
-                                x: "center",
-                                y: "top"
+                                x: "left",
+                                y: "center"
                             },
                             offset: {
-                                x: 0,
-                                y: s
+                                x: s,
+                                y: 0
                             },
                             dismissable: !0
                         }), this._WIPCosmeticTooltip.onRemove.then((() => {

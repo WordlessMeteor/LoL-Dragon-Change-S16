@@ -327582,7 +327582,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327612,7 +327612,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327641,7 +327641,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327671,7 +327671,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327701,7 +327701,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327731,7 +327731,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327761,7 +327761,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327791,7 +327791,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327821,7 +327821,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327851,7 +327851,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327887,7 +327887,7 @@
                                         "__type": "ContextualConditionCharacterSkinID"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327912,7 +327912,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327942,7 +327942,7 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -327965,7 +327965,7 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "__type": "{b6da23cb}"
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -328244,7 +328244,7 @@
                         "mConditions": [
                             {
                                 "{93f0c42c}": "TauntEndedNearby",
-                                "__type": "{4ab36eb5}"
+                                "__type": "ContextualConditionEndedVoCacSituation"
                             }
                         ],
                         "mAudioAction": {
@@ -328263,7 +328263,7 @@
                         "mConditions": [
                             {
                                 "{93f0c42c}": "JokeEndedNearby",
-                                "__type": "{4ab36eb5}"
+                                "__type": "ContextualConditionEndedVoCacSituation"
                             }
                         ],
                         "mAudioAction": {
@@ -328429,9 +328429,9 @@
                         "mRuleName": "Gear0",
                         "mConditions": [
                             {
-                                "{aa8fd0c5}": true,
-                                "{262bfa2e}": 2,
-                                "__type": "{061b427f}"
+                                "CheckNewGearId": true,
+                                "PrevGearId": 2,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 60.0,
@@ -328454,9 +328454,9 @@
                         "mRuleName": "Gear1",
                         "mConditions": [
                             {
-                                "{aa8fd0c5}": true,
-                                "{20941997}": 1,
-                                "__type": "{061b427f}"
+                                "CheckNewGearId": true,
+                                "NewGearId": 1,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 60.0,
@@ -328479,10 +328479,10 @@
                         "mRuleName": "Gear2",
                         "mConditions": [
                             {
-                                "{aa8fd0c5}": true,
-                                "{20941997}": 2,
-                                "{262bfa2e}": 1,
-                                "__type": "{061b427f}"
+                                "CheckNewGearId": true,
+                                "NewGearId": 2,
+                                "PrevGearId": 1,
+                                "__type": "ContextualConditionGearIdEquip"
                             },
                             {
                                 "mRuleCooldown": 60.0,
