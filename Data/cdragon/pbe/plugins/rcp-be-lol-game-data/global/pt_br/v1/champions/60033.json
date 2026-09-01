@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Casco Espetado",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus recebe dano adicional ao fortalecer sua carapaça, convertendo 25% de sua Armadura em Dano de Ataque."
+        "description": "Rammus recebe dano adicional ao fortalecer sua carapaça, convertendo uma parte de sua Armadura em Dano de Ataque."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Bola do Poder",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus acelera enquanto rola em direção a inimigos, causando dano e Lentidão aos alvos atingidos pelo impacto.",
-            "dynamicDescription": "Rammus acelera em forma de bola por 7s em direção aos inimigos, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos do impacto e @SlowPercent*-100@% de <status>Lentidão</status> por 3s.<br><br><recast>Reconjure</recast> para remover este efeito.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus acelera em forma de bola por @Duration@s em direção aos inimigos, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e @SlowPercent*-100@% de <status>Lentidão</status> a inimigos próximos ao impacto por @SlowDuration@s.<br><br><recast>Reconjure</recast> para remover este efeito.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Bola Curva Defensiva",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus assume uma posição defensiva, aumentando bastante sua Armadura e Resistência Mágica enquanto reflete dano aos inimigos que o atacam.",
-            "dynamicDescription": "Rammus entra em forma defensiva por 6s, aumentando sua <scaleArmor>Armadura</scaleArmor> e <scaleMR>Resistência Mágica</scaleMR> em @Armour@ e refletindo <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a quem o ataca.<br><br><recast>Reconjure</recast> para remover este efeito.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus entra em uma forma defensiva por @Duration@s, aumentando sua <scaleArmor>Armadura</scaleArmor> e <scaleMR>Resistência Mágica</scaleMR> em @Armour@ e refletindo <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a quem o ataca.<br><br><recast>Reconjure</recast> para remover este efeito.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Provocação Perfurante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Tremores",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus cria ondas de destruição que pulsam pelo chão, causando dano a unidades e estruturas próximas a ele.",
-            "dynamicDescription": "Rammus cria ondas de destruição que pulsam pelo chão, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a cada segundo a unidades e estruturas próximas por 8s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus cria ondas de destruição que pulsam pelo chão, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a cada segundo a unidades e estruturas próximas por @Duration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

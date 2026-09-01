@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Álcázás",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Ha Teemo rövid ideig nem mozdul és nem cselekszik, akkor korlátlan ideig lopakodhat. A lopakodásból kilépve Teemo elnyeri a Meglepetés erejét, amely néhány másodpercre megnöveli a támadási sebességét."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Vakító lövés",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Gyors futás",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Teemo nekiiramodik, és passzívan növeli a mozgási sebességét, amíg el nem találja egy ellenséges hős vagy torony.  Teemo sprintelhet is, ilyenkor egy rövid ideig a mozgási sebesség tovább nő, és a hatás találat esetén sem szakad meg.",
-            "dynamicDescription": "<mainText><spellPassive>Passzív: </spellPassive>Teemo <speed>mozgási sebessége</speed> @PassiveMoveSpeedBonus*100@%-kal nő, ha az elmúlt 5 másodpercben nem szenvedett sebzést ellenséges hőstől vagy toronytól.<br><br><spellActive>Aktív: </spellActive>Teemo sprintel, amivel 3 másodpercig <speed>@ActiveMoveSpeedBonus*100@% mozgási sebességre</speed> tesz szert. Ez a bónusz találat esetén sem veszik el.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Méreglövedék",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Teemo minden támadása mérgezi a célpontot, és a becsapódáskor, illetve a következő 4 másodperc minden másodpercében sebzést okoz.",
-            "dynamicDescription": "<mainText>Teemo alaptámadásai megmérgezik a célpontot, és a becsapódáskor <magicDamage>@ImpactCalculatedDamage@ varázssebzést</magicDamage>, illetve 4 másodpercen keresztül másodpercenként további <magicDamage>@TickCalculatedDamage@ varázssebzést</magicDamage> okoznak.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Veszedelmes csapda",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Teemo a táskájában tárolt gombák egyikének felhasználásával elhelyez egy robbanást produkáló, mérges csapdát.  Ha egy ellenfél rálép a csapdára, az egy mérgező felhőt bocsát ki, amely lassítja és folyamatosan sebzi az ellenséget.",
-            "dynamicDescription": "Az eltárolt gombák egyikének felhasználásával elhelyez egy csapdát, amely felrobban, amikor egy ellenfél rálép, és mérget szór a közeli ellenfelekre, @SlowAmount@%-kal <status>lelassítva</status> őket, és 4 másodperc alatt <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozva.<br><br>A képességnek 3 töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo elhelyez egy gombacsapdát, amely felrobban, ha rálépnek. A csapdák @DebuffDuration@ másodperc alatt @SlowAmount@%-os <status>lassítást</status> és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. Az ellenfelek erre az időtartamra láthatóvá is válnak.<br><br>A csapdák @MushroomDuration@ percig maradnak meg, és láthatatlanok. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

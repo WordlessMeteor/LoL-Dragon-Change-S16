@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "Nunu e Willump Clássicos (Bicho-Papão)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "Visionário",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "A cada 5 ataques, Nunu pode conjurar uma habilidade sem custo."
+        "description": "Após vários ataques, Nunu pode conjurar uma Habilidade sem custo."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Consumir",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu comanda o yeti para que ele morda a tropa ou monstro alvo, causando dano elevado e se curando.",
-            "dynamicDescription": "<mainText>Ordena que o yeti morda uma tropa ou monstro, causando <trueDamage>@BaseDamage@ de Dano Verdadeiro</trueDamage> ao alvo e <healing>curando-se</healing> em @TotalHealing@.<br><br>Nunu recebe efeitos por @ConsumeDuration@s com base no que consumiu.<br><br><attention>Lobos</attention> ou <attention>Répteis: </attention>seus Ataques e Habilidades causam mais <magicDamage>Dano Mágico equivalente a 1% da sua Vida máxima</magicDamage>.<br><attention>Golens:</attention> 10% de aumento de Tamanho e <scaleHealth>Vida Máxima</scaleHealth>.<br><attention>Espectros:</attention> abater uma unidade concede <speed>15% de Velocidade de Movimento</speed> por 3s.",
+            "dynamicDescription": "<mainText>Ordena que o yeti morda uma tropa ou monstro, causando <trueDamage>@BaseDamage@ de Dano Verdadeiro</trueDamage> ao alvo e <healing>curando-se</healing> em @TotalHealing@.<br><br>Nunu recebe um bônus por @ConsumeDuration@s com base no que consumiu.<br><br><attention>Lobos</attention> ou <attention>Répteis: </attention>seus Ataques e Habilidades causam <magicDamage>@ReptileDamage@ de Dano Mágico</magicDamage> adicional.<br><attention>Golens:</attention> @GolemSizeBonus*100@% de aumento de Tamanho e <scaleHealth>@GolemHealthBonus*100@% de Vida</scaleHealth> máxima.<br><attention>Espectros:</attention> abater uma unidade concede <speed>@WraithMoveSpeed*100@% de Velocidade de Movimento</speed> por @WraithMoveSpeedDuration@s.",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "Ferver o Sangue",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu revigora a si mesmo e a uma unidade aliada esquentando seu sangue, aumentando sua Velocidade de Ataque e de Movimento.",
-            "dynamicDescription": "<mainText>O sangue de Nunu e de um aliado alvo ferve, aumentando a <speed>Velocidade de Movimento em @MoveSpeed*100@%</speed> e a <attackSpeed>Velocidade de Ataque em @AttackSpeed*100@%</attackSpeed> por 12s. Nunu pode usar a habilidade em si mesmo.",
+            "dynamicDescription": "<mainText>O sangue de Nunu e de um aliado alvo ferve, aumentando a <speed>Velocidade de Movimento em @MoveSpeed*100@%</speed> e a <attackSpeed>Velocidade de Ataque em @AttackSpeed*100@%</attackSpeed> por @BuffDuration@s. Nunu pode usar a Habilidade em si mesmo.",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "Explosão de Gelo",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu lança uma bola de gelo na unidade inimiga, causando dano e reduzindo temporariamente a Velocidade de Movimento e de Ataque dela.",
-            "dynamicDescription": "<mainText>Nunu lança uma bola de gelo em uma unidade inimiga, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>reduzindo</status> a Velocidade de Movimento dela em @SlowAmount*-100@% e a Velocidade de Ataque em 25% por 3s.",
+            "dynamicDescription": "<mainText>Nunu lança uma bola de gelo contra uma unidade inimiga, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e @SlowAmount*-100@% de <status>Lentidão</status>, além de reduzir a Velocidade de Ataque dela em @AttackSpeedMod*-100@% por @SlowDuration@s.",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "Zero Absoluto",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu começa a drenar o calor da área, causando Lentidão a todos os inimigos próximos. Ao fim da habilidade, ele causa dano elevado a todos os inimigos pegos na área.",
-            "dynamicDescription": "<mainText>Nunu começa a drenar o calor da área, canalizando por até 3s. Inimigos na área têm a Velocidade de Movimento <status>reduzida</status> em 50% e a <attackSpeed>Velocidade de Ataque</attackSpeed> reduzida em 25%.<br><br>Inimigos pegos na área quando a canalização termina sofrem até <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>, dependendo do tempo de canalização da habilidade.",
+            "dynamicDescription": "<mainText>Nunu começa a drenar o calor da área enquanto inimigos na zona sofrem @MovementSpeedMod*-100@% de <status>Lentidão</status> e têm a <attackSpeed>Velocidade de Ataque</attackSpeed> reduzida em @AttackSpeedMod*-100@%.<br><br>Inimigos pegos na área quando a canalização termina sofrem até <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>, dependendo do tempo de canalização da Habilidade.",
             "range": [
                 650.0,
                 650.0,

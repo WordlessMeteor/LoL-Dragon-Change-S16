@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Armazón de pinchos",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus obtiene daño de ataque adicional y refuerza su armazón, convirtiendo un 25% de su armadura en daño de ataque."
+        "description": "Rammus obtiene daño de ataque adicional y refuerza su armazón, lo que convierte parte de su armadura en daño de ataque."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Bola de poder",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Rammus se hace una bola y se lanza a gran velocidad contra sus enemigos, lo que inflige daño y ralentiza a los objetivos contra los que choca.",
-            "dynamicDescription": "Rammus se hace una bola y se lanza hacia los enemigos durante 7 s, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos al impactar y los <status>ralentiza</status> un @SlowPercent*-100@% durante 3 s.<br><br><recast>Al reactivarla</recast>, se elimina el efecto.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus se hace una bola y se lanza hacia los enemigos durante @Duration@ s, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos al impactar y los <status>ralentiza</status> un @SlowPercent*-100@% durante @SlowDuration@ s.<br><br><recast>Al reactivarla</recast>, se elimina el efecto.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Posición defensiva",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Rammus adopta una posición defensiva, lo que aumenta en gran medida su armadura y su resistencia mágica. Además, devuelve daño de los ataques.",
-            "dynamicDescription": "Rammus adopta una posición defensiva durante 6 s, lo que aumenta su <scaleArmor>armadura</scaleArmor> y su <scaleMR>resistencia mágica</scaleMR> en @Armour@. Además, devuelve <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los atacantes.<br><br><recast>Al reactivarla</recast>, se elimina el efecto.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus adopta una posición defensiva durante @Duration@ s, lo que aumenta su <scaleArmor>armadura</scaleArmor> y su <scaleMR>resistencia mágica</scaleMR> en @Armour@. Además, devuelve <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los atacantes.<br><br><recast>Al reactivarla</recast>, se elimina el efecto.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Provocación penetrante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Seísmos",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Rammus crea destructivas ondas sísmicas que infligen daño a las unidades y estructuras cercanas.",
-            "dynamicDescription": "Rammus provoca seísmos que infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage> por segundo a las unidades y estructuras cercanas durante 8 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus provoca seísmos que infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage> por segundo a las unidades y estructuras cercanas durante @Duration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

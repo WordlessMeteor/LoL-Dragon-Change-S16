@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "การโจมตีปกติจะลดคูลดาวน์สกิลทั้งหมดลง 0.5 วินาที เพิ่มขึ้นเป็นสองเท่าเมื่อโจมตีแชมเปี้ยน"
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Skarner ฟาดกรงเล็บ สร้างความเสียหายกายภาพแก่ศัตรูใกล้เคียงทั้งหมด และหากใช้โดนศัตรูจะเป็นการเร่งพลังงานคริสตัลในตัวเขาช่วงเวลาหนึ่ง  หากเขาใช้ Crystal Slash ขณะที่มีพลังงานคริสตัลอยู่ในร่างกาย เขาจะสร้างโบนัสความเสียหายและสโลว์ศัตรูทั้งหมดเมื่อโจมตีโดน",
-            "dynamicDescription": "Skarner สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalBaseDamage@ หน่วย</physicalDamage>แก่ศัตรูใกล้เคียงทั้งหมด และชาร์จ<keywordMajor>พลังงานคริสตัล</keywordMajor>เป็นเวลา 5 วินาทีหากโจมตีโดนยูนิต<br><br>ขณะที่ Skarner มีพลังงานคริสตัล <spellName>Crystal Slash</spellName> และการโจมตีปกติของเขาจะสร้าง<magicDamage>โบนัสความเสียหายเวท @TotalProcDamage@ หน่วย</magicDamage>และ<status>สโลว์</status> @SlowPercent*-100@% เป็นเวลา 2 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Skarner ได้รับโล่ป้องกัน โดยขณะโล่ป้องกันยังอยู่ เขาจะได้รับความเร็วเคลื่อนที่และความเร็วโจมตีเพิ่มเติม",
-            "dynamicDescription": "Skarner ได้รับ<shield>โล่ป้องกัน</shield> @BlockDamage@ หน่วยเป็นเวลา 6 วินาที โดยขณะโล่ป้องกันยังอยู่ Skarner จะได้รับ<attackSpeed>ความเร็วโจมตี @ASBonus*100@%</attackSpeed>และ<speed>ความเร็วเคลื่อนที่ @MSBonus*100@%</speed>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Skarner ปล่อยพลังงานคริสตัล สร้างความเสียหายแก่ศัตรูที่โดนและทิ้งเครื่องหมายไว้ การโจมตีศัตรูจะใช้งานเครื่องหมายเพื่อฮีล Skarner และการสังหารเป้าหมายโดยทันทีก็จะเปิดใช้งานการฮีลด้วยเช่นกัน",
-            "dynamicDescription": "Skarner สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูเป็นเส้นตรงและทำเครื่องหมายใส่พวกเขาเป็นเวลา 6 วินาที<br><br>การโจมตีศัตรูจะใช้งานเครื่องหมายเพื่อ<healing>ฮีล</healing> Skarner @TotalHealing@ หน่วย และการสังหารเป้าหมายโดยทันทีก็จะเปิดใช้งานการฮีลด้วยเช่นกัน (การใช้งานแต่ละครั้งจะฮีลได้น้อยลง 50%)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Skarner ยับยั้งแชมเปี้ยนศัตรูและสร้างความเสียหายเวท  ในช่วงเวลานี้ Skarner สามารถเคลื่อนไหวได้อย่างอิสระและลากเหยื่อที่ไร้ทางสู้ตามไปกับเขาด้วย  เมื่อเอฟเฟกต์นี้สิ้นสุด เป้าหมายของ Skarner จะได้รับความเสียหายเพิ่มเติม",
-            "dynamicDescription": "Skarner <status>ยับยั้ง</status>แชมเปี้ยนศัตรูเป็นเวลา 1.75 วินาที และสร้าง<magicDamage>ความเสียหายเวท @TotaDamage@ หน่วย</magicDamage> Skarner สามารถเคลื่อนไหวได้อย่างอิสระในช่วงเวลานี้ และลากเหยื่อที่ไร้ทางสู้ตามไปกับเขาด้วย เมื่อเอฟเฟกต์นี้สิ้นสุด เป้าหมายของ Skarner จะได้รับ<magicDamage>ความเสียหายเวทเพิ่มเติม @TotaDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

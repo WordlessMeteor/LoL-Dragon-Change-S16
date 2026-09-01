@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Das Auge des Zwielichts",
-    "shortBio": "– „Ki-Schlag“ (Passiv) und „Vorpalklinge“ (Q) sind unterschiedliche Fähigkeiten<br>– „Ki-Barriere“ (W) gewährt für kurze Zeit einen Schild<br>– „Schattensturz“ (E) trifft nur Champions",
+    "shortBio": "– „Ki-Schlag“ (Passiv) und „Vorpalklinge“ (Q) sind unterschiedliche Fähigkeiten.<br>– „Finte“ (W) gewährt für kurze Zeit einen Schild.<br>– „Schattensturz“ (E) trifft nur Champions.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Alle 9 Sekunden verursacht Shens nächster Angriff zusätzlichen Schaden. Immer wenn Shen angreift, verringert sich eine laufende Abklingzeit von „Ki-Schlag“."
+        "description": "Shens nächster Angriff verursacht regelmäßig zusätzlichen Schaden. Immer wenn Shen einen Vasallen, ein Monster oder einen Champion angreift, verringert sich die Abklingzeit von Ki-Schlag."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Shen schützt sich selbst und absorbiert einige Sekunden lang eingehenden Schaden.",
-            "dynamicDescription": "Shen gewährt sich selbst @ShieldDuration@ Sekunden lang <shield>@TotalShieldAmount@ Schild</shield>. Solange diese Fähigkeit aktiv ist, verringern seine Angriffe die Abklingzeit von <keywordMajor>Ki-Schlag</keywordMajor> um 1 zusätzliche Sekunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen gewährt sich selbst @ShieldDuration@ Sekunden lang einen <shield>Schild</shield> in Höhe von @TotalShieldAmount@. Solange diese Fähigkeit aktiv ist, verringern seine Angriffe die Abklingzeit von <keywordMajor>Ki-Schlag</keywordMajor> zusätzlich um @PassiveCooldownReduction@ Sekunde.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

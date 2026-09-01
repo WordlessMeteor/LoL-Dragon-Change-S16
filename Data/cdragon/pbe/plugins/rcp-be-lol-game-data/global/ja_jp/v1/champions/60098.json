@@ -6,7 +6,7 @@
     "name": "シェン",
     "alias": "Jade_Shen",
     "title": "黄昏の瞳",
-    "shortBio": "- 「気功斬(P)」と「吸命刀(Q)」は別のスキル<br>- 「内気功(W)」は短時間シールドを付与する<br>- 「殺気駆け(E)」はチャンピオンにしか命中しない",
+    "shortBio": "- 「気功斬(P)」と「吸命刀(Q)」は別のスキル<br>- 「護身術(W)」は短時間シールドを付与する<br>- 「殺気駆け(E)」はチャンピオンにしか命中しない",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "9秒ごとに、次の通常攻撃が追加ダメージを与える。通常攻撃を行うたびに、「気功斬」のクールダウンが短縮される。"
+        "description": "定期的に次の通常攻撃が追加ダメージを与える。ミニオン、モンスター、チャンピオンに通常攻撃を行うたびに、「気功斬」のクールダウンが短縮される。"
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "数秒間、受けるダメージを吸収するシールドを獲得する。",
-            "dynamicDescription": "@ShieldDuration@秒間、<shield>耐久値@TotalShieldAmount@のシールド</shield>を獲得する。このスキルが有効な間は、通常攻撃で<keywordMajor>気功斬</keywordMajor>のクールダウンが1秒短縮される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ShieldDuration@秒間、<shield>耐久値@TotalShieldAmount@のシールド</shield>を獲得する。このスキルが有効な間は、通常攻撃で<keywordMajor>気功斬</keywordMajor>のクールダウンが@PassiveCooldownReduction@秒短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

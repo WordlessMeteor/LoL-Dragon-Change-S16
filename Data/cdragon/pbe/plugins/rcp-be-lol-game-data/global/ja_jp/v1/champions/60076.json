@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "茂みの中を移動すると、移動速度が2秒間、15%増加する。"
+        "description": "茂みの中を移動すると、移動速度が増加する。"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヒト形態: 対象に向かって槍を投げる。ダメージ量は槍の飛距離に比例して大きくなる。<br><br>クーガー形態: 次の通常攻撃時に大量の追加ダメージを与える。ダメージ量は対象の失った体力に比例して増える。",
-            "dynamicDescription": "<keywordMajor>ヒト形態:</keywordMajor> 槍を投げ、対象との距離に応じて<magicDamage>@StartingDamage@</magicDamage> - <magicDamage>@MaxDamage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>クーガー形態: </keywordMajor> 次の通常攻撃が<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@の物理ダメージ</physicalDamage>を与え、体力が低下した対象にはダメージが増加する(最大で合計ダメージの300%)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ヒト形態:</keywordMajor> 槍を投げ、対象との距離に応じて<magicDamage>@StartingDamage@</magicDamage> - <magicDamage>@MaxDamage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>クーガー形態: </keywordMajor>次の通常攻撃が、対象の減少体力に応じて<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage> - <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@の物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "ヒト形態: 不用意な敵を捕らえる罠を設置する。罠は発動すると12秒間、対象を可視化し、物理防御と魔法防御を低下させる。<br><br>クーガー形態: 前方に飛びかかり、着地時に少量のダメージを与える。",
-            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>罠を設置する。罠は発動すると2秒かけて<magicDamage>@DamagePerSecond@の魔法ダメージ</magicDamage>を与え、12秒間、対象を可視化し、<status>細断</status>を付与して、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ResistDecreases*100@%低下させる。罠は4分間持続する。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にダッシュし、周囲の敵に<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "description": "ヒト形態: 不用意な敵を捕らえる罠を設置する。罠は発動するとダメージを与え、対象を可視化して物理防御と魔法防御を低下させる。クーガー形態: 前方に飛びかかり、着地時に少量のダメージを与える。",
+            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>罠を設置する。罠は発動すると@DamageDuration@秒かけて<magicDamage>@DamagePerSecond@の魔法ダメージ</magicDamage>を与え@ShredDuration@秒間、対象を可視化し、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ResistDecreases*100@%<status>低下</status>させる。罠は@TrapDurationMins@分間持続する。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にダッシュし、周囲の敵に<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヒト形態: クーガーの精霊を呼び出し、味方の体力を回復して短時間攻撃速度を増加させる。クーガー形態: 前方にいる複数の敵を素早くかぎ爪で攻撃する。",
-            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>味方チャンピオン1体の体力を<healing>@TotalHealing@</healing>回復させ、7秒間<attackSpeed>攻撃速度を@BonusAS*100@%</attackSpeed>増加させる。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にいる複数の敵をかぎ爪で攻撃し、<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>味方チャンピオン1体の体力を<healing>@TotalHealing@</healing>回復させ@ASDuration@秒間<attackSpeed>@BonusAS*100@攻撃速度を%</attackSpeed>増加させる。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にいる複数の敵をかぎ爪で攻撃し、<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "クーガーに変身し、特別なスキルを獲得して、移動速度が増加する。",
-            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>獰猛なクーガーに変身し、<speed>移動速度が20</speed>増加して、通常スキルが<spellName>テイクダウン</spellName>、<spellName>ジャンプ</spellName>、 <spellName>クロウ</spellName>に変化する。<br><br><keywordMajor>クーガー形態: </keywordMajor>人間の姿に戻る。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>獰猛なクーガーに変身し、<speed>移動速度が@CougarMoveSpeed@</speed>増加して、通常スキルが<spellName>テイクダウン</spellName>、<spellName>ジャンプ</spellName>、 <spellName>クロウ</spellName>に変化する。<br><br><keywordMajor>クーガー形態: </keywordMajor>人間の姿に戻る。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "หลังจากโจมตีหรือใช้สกิลครบ 4 ครั้ง Pantheon จะได้รับการคุ้มครองจากการถูกโจมตีครั้งต่อไป"
+        "description": "Pantheon ปัดป้องการโจมตีครั้งถัดไปหลังจากโจมตีหรือใช้สกิลครบทุก @AttacksRequired@ ครั้ง"
     },
     "spells": [
         {
@@ -956,8 +956,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Pantheon กระโจนเข้าใส่ศัตรูและฟาดศัตรูด้วยโล่ของเขา ทำให้ศัตรูติดสตัน  หลังจากโจมตีเสร็จสิ้น Pantheon จะเตรียมพร้อมเพื่อป้องกันการโจมตีครั้งถัดไป",
-            "dynamicDescription": "Pantheon กระโจนเข้าใส่เป้าหมายศัตรูและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> พร้อมกับ<status>สตัน</status>เป็นเวลา @StunDuration@ วินาที Pantheon จะรีเฟรช <spellName>Aegis Protection</spellName> ของเขาทันทีด้วย@SpellModifierDescriptionAppend@",
+            "description": "Pantheon กระโดดเข้าใส่ศัตรูและฟาดพวกเขาด้วยโล่ ทำให้ศัตรูติดสตัน โดยหลังจากจู่โจมเสร็จสิ้น Pantheon จะเตรียมพร้อมเพื่อป้องกันการโจมตีครั้งถัดไป",
+            "dynamicDescription": "Pantheon กระโดดเข้าใส่เป้าหมายศัตรู สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สตัน</status>พวกเขาเป็นเวลา @StunDuration@ วินาที อีกทั้งรีเฟรชสกิล <spellName>Aegis Protection</spellName> ในทันที@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Pantheon ตั้งสมาธิแล้วแทงรัว 3 ครั้งใส่พื้นที่ตรงหน้าเขาอย่างรวดเร็ว สร้างความเสียหายให้กับแชมเปี้ยนสองเท่า Pantheon รับรู้ถึงจุดตายของศัตรูได้ดีขึ้น ทำให้เขาโจมตีคริติคอลใส่ศัตรูที่มีพลังชีวิตต่ำกว่า 15% ได้เสมอ",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName> และการโจมตีปกติของ Pantheon จะได้รับโอกาสติดคริติคอล 100% เมื่อโจมตีเป้าหมายที่มีพลังชีวิตต่ำกว่า @PassiveCritThreshold*100@%<br><br><spellActive>กดใช้:</spellActive> Pantheon ตั้งสมาธิและโจมตีด้านหน้า @NumberOfStrikes@ ครั้งอย่างรวดเร็ว สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>ต่อครั้ง (ทั้งหมด <physicalDamage>@MaximumDamageTooltip@</physicalDamage> หน่วย)@SpellModifierDescriptionAppend@",
+            "description": "Pantheon ตั้งสมาธิและแทงรัวด้านหน้าอย่างรวดเร็ว สร้างความเสียหายเพิ่มขึ้นแก่แชมเปี้ยน อีกทั้ง Pantheon รับรู้ถึงจุดตายของศัตรูได้ดีขึ้น ทำให้สามารถโจมตีคริติคอลใส่ศัตรูที่บาดเจ็บหนัก",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> สกิล <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName> และการโจมตีปกติของ Pantheon จะติดคริติคอลเมื่อโจมตีเป้าหมายที่พลังชีวิตต่ำกว่า @PassiveCritThreshold*100@%<br><br><spellActive>กดใช้:</spellActive> Pantheon ตั้งสมาธิและจู่โจม @NumberOfStrikes@ ครั้งด้านหน้าอย่างรวดเร็ว สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>ต่อการโจมตี (ทั้งหมด <physicalDamage>@MaximumDamageTooltip@</physicalDamage> หน่วย)@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1256,8 +1256,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Pantheon รวบรวมพลังแล้วกระโดดขึ้นบนอากาศไปหาเป้าหมาย แล้วลงมาจู่โจมศัตรูในพื้นที่ ศัตรูที่อยู่ใกล้กับจุดปะทะนั้นจะได้รับความเสียหายมากขึ้น",
-            "dynamicDescription": "Pantheon รวบรวมพละกำลังแล้วกระโดดขึ้นไปบนอากาศ ก่อนจะพุ่งลงมายังพื้นที่เป้าหมายในอีกไม่กี่วินาทีต่อมา สร้าง<magicDamage>ความเสียหายเวทสูงสุด @MaxDamage@ หน่วย</magicDamage>แก่ศัตรูที่อยู่ตรงกลาง (ลดลงเหลือ<magicDamage>ความเสียหายเวท @MinDamage@ หน่วย</magicDamage>ที่ขอบ) และ<status>สโลว์</status>พวกเขา @SlowAmount*100@% เป็นเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "description": "Pantheon รวบรวมพลังแล้วกระโดดขึ้นบนอากาศไปหาเป้าหมาย จู่โจมศัตรูทั้งหมดในระยะ ศัตรูที่อยู่ใกล้กับจุดปะทะจะได้รับความเสียหายมากขึ้น",
+            "dynamicDescription": "Pantheon รวบรวมพละกำลังแล้วกระโดดขึ้นไปบนอากาศ ก่อนพุ่งลงมายังพื้นที่เป้าหมายในอีกไม่กี่วินาทีต่อมา สร้าง<magicDamage>ความเสียหายเวทสูงสุด @MaxDamage@ หน่วย</magicDamage>แก่ศัตรูที่อยู่ตรงกลาง (ลดลงเหลือ <magicDamage>@MinDamage@ หน่วย</magicDamage>สำหรับส่วนขอบ) และ<status>สโลว์</status>พวกเขา @SlowAmount*100@% เป็นเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

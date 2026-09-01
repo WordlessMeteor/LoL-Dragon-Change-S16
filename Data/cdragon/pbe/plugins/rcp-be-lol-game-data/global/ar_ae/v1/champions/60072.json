@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "تقلص الهجمات الأساسية فترة تبريد جميع القدرات بمقدار 0.5ث. يتضاعف التأثير عند مهاجمة الأبطال."
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يضرب سكارنر بمخالبه، فيلحق الضرر المادي بكل الأعداء في الجوار، ويشحن نفسه بطاقة الكريستال لبضعة ثوان إذا أصاب وحدة.  إذا ألقى الضربة الكريستالية مجددًا أثناء تعزيزه بطاقة الكريستال، يلحق ضرر سحر إضافيًا ويبطئ جميع الأهداف المصابة.",
-            "dynamicDescription": "يلحق سكارنر <physicalDamage>@TotalBaseDamage@ ضرر مادي</physicalDamage> بجميع الأعداء في الجوار ويشحن نفسه <keywordMajor>بطاقة الكريستال</keywordMajor> لمدة 5ث إذا أصاب وحدة.<br><br>أثناء شحن سكارنر، تلحق <spellName>الضربة الكريستالية</spellName> <magicDamage>@TotalProcDamage@ ضرر سحر إضافي</magicDamage> كما <status>تبطئ</status> الأعداء بنسبة @SlowPercent*-100@% لمدة 2ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يكسب سكارنر درعًا، وطيلة فترة بقاء الدرع تزداد سرعة حركته وسرعة هجومه.",
-            "dynamicDescription": "يحصل سكارنر على <shield>درع</shield> يمتص @BlockDamage@ ضرر لمدة 6ث. طيلة فترة بقاء الدرع، يكسب سكارنر <attackSpeed>@ASBonus*100@% سرعة هجوم</attackSpeed> و <speed>@MSBonus*100@% سرعة حركة</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يستدعي سكارنر دفقة من الطاقة الكريستالية، فتلحق الضرر بالأعداء الذين تضربهم وتقوم بوسمهم. يؤدي ضرب الأعداء إلى استهلاك الوسم لعلاج سكارنر. كما يؤدي قتل الأهداف مباشرةً إلى تفعيل العلاج أيضًا.",
-            "dynamicDescription": "يلحق سكارنر <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء في خط مستقيم ويقوم بوسمهم لمدة 6ث.<br><br>يؤدي ضرب الأعداء إلى استهلاك الوسم <healing>لعلاج</healing> سكارنر بمقدار @TotalHealing@. كما يؤدي قتل الأهداف مباشرةً إلى تفعيل العلاج أيضًا. (يعالج كل تفعيل بنسبة أقل بمقدار 50%.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يقمع سكارنر بطلًا معديًا ويلحق به ضرر سحر.  خلال هذه الفترة، يستطيع سكارنر التحرك بحرية وسحب ضحيته العاجزة في الأرجاء معه.  عند انتهاء التأثير، يتلقى هدف سكارنر ضررًا إضافيًا.",
-            "dynamicDescription": "<status>يقمع</status> سكارنر بطلًا معاديًا لمدة 1.75ث ويلحق <magicDamage>@TotaDamage@ ضرر سحر</magicDamage> به. يستطيع سكارنر التحرك بحرية خلال هذه المدة، ويسحب ضحيته العاجزة في الأرجاء معه. عند انتهاء التأثير، يتلقى هدف سكارنر <magicDamage>@TotaDamage@ ضرر سحر</magicDamage> إضافي.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

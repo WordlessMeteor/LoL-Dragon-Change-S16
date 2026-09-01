@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "After every 4 attacks or spell casts, Pantheon gains protection from the next attack."
+        "description": "After every @AttacksRequired@ attacks or spell casts, Pantheon gains protection from the next attack."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them.  After finishing the attack, Pantheon readies himself to block the next attack.",
+            "description": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them. After finishing the attack, Pantheon readies himself to block the next attack.",
             "dynamicDescription": "Pantheon leaps at the target enemy and deals <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Stuns</status> them for @StunDuration@ second(s). Pantheon also instantly refreshes his <spellName>Aegis Protection</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Pantheon focuses and unleashes 3 swift strikes to the area in front of him, dealing double damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to always crit enemies below 15% health.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, and Pantheon's basic attacks gain 100% critical strike chance against targets below @PassiveCritThreshold*100@% health.<br><br><spellActive>Active:</spellActive> Pantheon channels and deals @NumberOfStrikes@ swift strikes in front of him for <physicalDamage>@TotalDamage@ physical damage</physicalDamage> per strike (total <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon focuses and unleashes swift strikes to the area in front of him, dealing increased damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to critically strike against wounded enemies.",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, and Pantheon's basic attacks critically strike against targets below @PassiveCritThreshold*100@% health.<br><br><spellActive>Active:</spellActive> Pantheon channels and deals @NumberOfStrikes@ swift strikes to the area in front of him for <physicalDamage>@TotalDamage@ physical damage</physicalDamage> per strike (total <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

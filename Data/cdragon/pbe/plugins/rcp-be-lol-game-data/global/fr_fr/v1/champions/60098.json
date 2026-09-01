@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Œil du crépuscule",
-    "shortBio": "- Frappe de Ki (passif) et Lame vorpale (A) sont des compétences différentes<br>- Barrière de ki (Z) octroie un bouclier pendant une courte durée<br>- Rush des ombres (E) ne touche que les champions",
+    "shortBio": "- Frappe de Ki (passif) et Lame vorpale (A) sont des compétences différentes<br>- Feinte (Z) octroie un bouclier pendant une courte durée<br>- Rush des ombres (E) ne touche que les champions",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Toutes les 9 sec, la prochaine attaque de Shen inflige des dégâts bonus. Chaque fois que Shen attaque, la récupération de Frappe de ki est réduite."
+        "description": "Périodiquement, la prochaine attaque de Shen inflige des dégâts bonus. Chaque fois que Shen attaque un sbire, un monstre ou un champion, le délai de récupération de Frappe de ki est réduit."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shen se protège, absorbant des dégâts pendant quelques secondes.",
-            "dynamicDescription": "Shen s'octroie à lui-même un <shield>bouclier de @TotalShieldAmount@ PV</shield> pendant @ShieldDuration@ sec. Tant que cette compétence est maintenue, ses attaques réduisent le délai de récupération de <keywordMajor>Frappe de Ki</keywordMajor> d'une seconde supplémentaire.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen s'octroie un <shield>bouclier de @TotalShieldAmount@ PV</shield> pendant @ShieldDuration@ sec. Tant que ce bouclier est actif, ses attaques réduisent le délai de récupération de <keywordMajor>Frappe de Ki</keywordMajor> de @PassiveCooldownReduction@ sec bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

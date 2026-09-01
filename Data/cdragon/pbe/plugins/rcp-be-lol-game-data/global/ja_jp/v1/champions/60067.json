@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "ヴェインは悪事を働く者を容赦なく狩る。敵チャンピオンに向かって移動する時、移動速度が30増加する。"
+        "description": "Spell_VaynePassive_Jade_Summary"
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>固有スキル</spellPassive>",
             "cooldown": "",
-            "description": "邪悪な存在が嫌う銀の矢を、クロスボウにつがえる。同じ対象に通常攻撃またはスキルを3回連続で命中させると、対象の最大体力に比例する追加確定ダメージが発生する(モンスターへのダメージは200が上限)。",
-            "dynamicDescription": "同じ敵に通常攻撃またはスキルを3回連続して行うごとに、追加で@BaseDamage@(+敵の最大体力の@MaxHealthRatio*100@%)の<trueDamage>確定ダメージ</trueDamage>を与える(モンスターへのダメージは200が上限)。@SpellModifierDescriptionAppend@",
+            "description": "Spell_VayneW_Jade_Summary",
+            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "背中に担いだ特大クロスボウを構え、指定対象に巨大な矢を撃ち込む。矢を受けたユニットをノックバックしてダメージを与える。ノックバックにより対象が地形に衝突した場合は、対象に追加ダメージを与えてスタンさせる。",
-            "dynamicDescription": "矢を撃ち込み、敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えてノックバックする。地形に衝突した敵には<physicalDamage>@TotalDamagewithSpell@の追加物理ダメージ</physicalDamage>を与え、1.5秒間<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "敵を殲滅すべく特大クロスボウを構え、攻撃力が増加する。また効果時間中は「タンブル」発動時にインビジブル状態になり、「ナイトハンター」の増加移動速度も3倍になる。",
-            "dynamicDescription": "@Duration@秒間、追加で<physicalDamage>攻撃力が@ADMod@</physicalDamage>増加する。発動中は、「タンブル」で1秒間<keywordStealth>インビジブル</keywordStealth>状態になり、<spellName>ナイトハンター</spellName>による増加<speed>移動速度</speed>が90に増加する。@SpellModifierDescriptionAppend@",
+            "description": "Spell_VayneR_Jade_Summary",
+            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

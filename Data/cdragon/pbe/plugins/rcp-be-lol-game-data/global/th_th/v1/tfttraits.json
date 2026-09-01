@@ -5962,7 +5962,7 @@
         "trait_id": "TFT15_General",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_13_Conqueror.png",
-        "tooltip_text": "Janna มอบมนต์เสริมพลังแบบสุ่มให้กับคุณในทุก ๆ รอบ ซึ่งสามารถใช้เพื่อปรับเปลี่ยนรูปแบบการต่อสู้ของพันธมิตร โดยมนต์เสริมพลังจะอยู่แค่หนึ่งรอบ และหายไปตอนจบรอบหากไม่ได้ใช้งาน",
+        "tooltip_text": "Janna มอบมนตร์เสริมพลังแบบสุ่มให้กับคุณในทุก ๆ รอบ ซึ่งสามารถใช้เพื่อปรับเปลี่ยนรูปแบบการต่อสู้ของพันธมิตร โดยมนตร์เสริมพลังจะอยู่แค่หนึ่งรอบ และหายไปตอนจบรอบหากไม่ได้ใช้งาน",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -18089,7 +18089,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "GoldPerCharmPurchased",
@@ -18105,7 +18105,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.45
+                        "value": 0.5
                     }
                 ],
                 "min_units": 9,
@@ -18441,7 +18441,7 @@
         "trait_id": "DA_18_Executioner",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Executioner.TFT_Set18.png",
-        "tooltip_text": "<row>(@MinUnits@) Executioner ได้รับสถานะ<TFTKeyword>แม่นยำ</TFTKeyword> มีโอกาสคริติคอล @CritChance*100@%</row><br><row>(@MinUnits@) อีกทั้งทำให้ศัตรูเลือดไหล และสร้างความเสียหายจริงเพิ่มเติม @BonusBleedPercent*100@% ในช่วงเวลา @BleedDuration@ วินาที</row><br><row>(@MinUnits@) ความเสียหายเลือดไหลเพิ่มขึ้นเป็น @BonusBleedPercent*100@%</row>",
+        "tooltip_text": "<row>(@MinUnits@) Executioner ได้รับสถานะ<TFTKeyword>แม่นยำ</TFTKeyword>และโอ⁠กาสค⁠ริ⁠ติ⁠คอล @CritChance*100@%</row><br><row>(@MinUnits@) อีกทั้งทำให้ศัตรูเลือดไหล และสร้างความเสียหายจริงเพิ่มเติม @BonusBleedPercent*100@% ในช่วงเวลา @BleedDuration@ วินาที</row><br><row>(@MinUnits@) ความเสียหายเลือดไหลเพิ่มขึ้นเป็น @BonusBleedPercent*100@%</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -18510,7 +18510,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 2.0
+                        "value": 2.5
                     }
                 ],
                 "min_units": 2,
@@ -18649,7 +18649,7 @@
                 "constants": [
                     {
                         "name": "Duration",
-                        "value": 4.0
+                        "value": 3.0
                     }
                 ]
             }
@@ -18687,7 +18687,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "LuckySlotCount",
@@ -18703,7 +18703,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 3.0
+                        "value": 3.5
                     },
                     {
                         "name": "LuckySlotCount",
@@ -19147,7 +19147,7 @@
                     },
                     {
                         "name": "Threshold2TrueDamageConversion",
-                        "value": 0.5
+                        "value": 0.4
                     },
                     {
                         "name": "Threshold3StarUpPeriod",
@@ -19296,10 +19296,14 @@
         "trait_id": "DA_18_Summoner",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
-        "tooltip_text": "Summoner เสริมพลังยูนิตซัมมอนในรูปแบบที่แตกต่างกัน<br><br>Yorick: พลังชีวิต +@HealthMult*100@%<br>Azir: ความเสียหาย +@DamageMult*100@%<br>Mama Beak: ความเสียหาย +@DamageMult*100@%<br>Zyra: ต้นไม้โจมตีเพิ่ม +@NumExtraAttacks@ ครั้ง<br><row>(@MinUnits@) เสริมพลังยูนิตซัมมอน</row><br><row>(@MinUnits@) เพิ่มเอฟเฟกต์แต่ละอย่างขึ้น 50%</row>",
+        "tooltip_text": "Summoner เสริมพลังยูนิตซัมมอนในรูปแบบที่แตกต่างกัน<br><br>Yorick: พลังชีวิต +@HealthMult*100@%<br>Azir: ความเสียหาย +@AzirDamageMult*100@%<br>Mama Beak: ความเสียหาย +@DamageMult*100@%<br>Zyra: ต้นไม้โจมตีเพิ่ม +@NumExtraAttacks@ ครั้ง<br><row>(@MinUnits@) เสริมพลังยูนิตซัมมอน</row><br><row>(@MinUnits@) เพิ่มเอฟเฟกต์แต่ละอย่างขึ้น 50%</row>",
         "innate_trait_sets": [
             {
                 "constants": [
+                    {
+                        "name": "AzirDamageMult",
+                        "value": 0.2
+                    },
                     {
                         "name": "DamageMult",
                         "value": 0.45
@@ -19336,7 +19340,7 @@
         "trait_id": "DA_18_Vanguard",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
-        "tooltip_text": "เมื่อเริ่มการต่อสู้และเมื่อ<colorHealth>พลังชีวิต</colorHealth>เหลือน้อยกว่า @HealthThreshold*100@% Vanguard จะได้รับโล่ป้องกันจากพลังชีวิตสูงสุดเป็นเวลา @ShieldDuration@ วินาที<br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด และได้รับความทนทาน @DurabilityIncrease*100@% ขณะมีโล่ป้องกัน</row>",
+        "tooltip_text": "เมื่อเริ่มการต่อสู้และเมื่อพลังชีวิตเหลือน้อยกว่า @HealthThreshold*100@% Vanguard จะได้รับโล่ป้องกันจากพลังชีวิตสูงสุดเป็นเวลา @ShieldDuration@ วินาที<br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด และได้รับความทนทาน @DurabilityIncrease*100@% ขณะมีโล่ป้องกัน</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19368,7 +19372,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.32
+                        "value": 0.3
                     }
                 ],
                 "min_units": 4,
@@ -19384,7 +19388,7 @@
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.42
+                        "value": 0.4
                     }
                 ],
                 "min_units": 6,
@@ -19548,7 +19552,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.3
+                        "value": 0.33
                     },
                     {
                         "name": "TeamDurability",
@@ -19564,7 +19568,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "TeamDurability",

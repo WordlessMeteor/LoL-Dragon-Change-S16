@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Spiked Shell",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus gains additional damage as his shell becomes reinforced, converting 25% of his armor into Attack Damage."
+        "description": "Rammus gains additional damage as his shell becomes reinforced, converting a portion of his Armor into Attack Damage."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Powerball",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus accelerates in a ball towards his enemies, dealing damage and slowing targets affected by the impact.",
-            "dynamicDescription": "Rammus accelerates in a ball over 7 seconds towards his enemies, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies on impact and <status>Slowing</status> them by @SlowPercent*-100@% for 3 seconds.<br><br><recast>Recast</recast> to remove this effect.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus accelerates in a ball over @Duration@s towards his enemies, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies on impact and <status>Slowing</status> them by @SlowPercent*-100@% for @SlowDuration@s.<br><br><recast>Recast</recast> to remove this effect.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Defensive Ball Curl",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus goes into a defensive formation, vastly increasing his armor and magic resistance, while returning damage to attacks.",
-            "dynamicDescription": "Rammus goes into a defensive formation for 6 seconds, increasing his <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by @Armour@ and returning <magicDamage>@TotalDamage@ magic damage</magicDamage> to attackers.<br><br><recast>Recast</recast> to remove this effect.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus goes into a defensive formation for @Duration@s, increasing his <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by @Armour@ and returning <magicDamage>@TotalDamage@ magic damage</magicDamage> to attackers.<br><br><recast>Recast</recast> to remove this effect.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Puncturing Taunt",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Tremors",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Rammus creates waves of destruction pulsing through the ground, causing damage to units and structures near him.",
-            "dynamicDescription": "Rammus creates tremors beneath him, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> every second to nearby units and structures for 8 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus creates tremors beneath him, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> every second to nearby units and structures for @Duration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

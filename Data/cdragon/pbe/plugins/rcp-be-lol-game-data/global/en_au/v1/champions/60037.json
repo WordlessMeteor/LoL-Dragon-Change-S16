@@ -719,13 +719,13 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "champion-abilities/60037/ability_60037_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60037/ability_60037_P1.jpg",
-        "description": "After casting 3 spells, Sona's next attack deals bonus magic damage and causes her target to deal reduced damage for a few seconds."
+        "description": "Every few spells, Sona's next attack deals bonus magic damage and causes her target to deal reduced damage for a few seconds."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Hymn of Valor",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60037/ability_60037_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60037/ability_60037_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1025,7 +1025,7 @@
         {
             "spellKey": "e",
             "name": "Song of Celerity",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60037/ability_60037_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60037/ability_60037_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1181,7 +1181,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sona plays her ultimate chord, forcing enemy champions to dance and dealing magic damage to them.",
-            "dynamicDescription": "Strikes an irresistible chord dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and forcing enemy Champions to <status>dance</status> for 1.5 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Strikes an irresistible chord dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and forcing enemy Champions to <status>dance</status> for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,

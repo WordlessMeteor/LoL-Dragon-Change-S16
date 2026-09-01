@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Camouflage",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Wenn Teemo stillsteht und für eine kurze Zeit nichts tut, wird er unbegrenzt unsichtbar. Nach Ende der Unsichtbarkeit hat Teemo das Überraschungsmoment auf seiner Seite, wodurch sein Angriffstempo für ein paar Sekunden lang erhöht ist."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Blendpfeil",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Schnelle Bewegung",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Teemo saust umher und erhöht passiv sein Lauftempo, bis er von einem gegnerischen Champion oder Turm getroffen wird.  Teemo kann zudem sprinten und so sein Lauftempo erhöhen, ohne dass dieser Effekt durch Angriffe aufgehoben wird.",
-            "dynamicDescription": "<mainText><spellPassive>Passiv: </spellPassive>Teemos <speed>Lauftempo</speed> wird um @PassiveMoveSpeedBonus*100@ % erhöht, solange er nicht in den letzten 5 Sekunden von einem gegnerischen Champion oder Turm getroffen wurde.<br><br><spellActive>Aktiv: </spellActive>Teemo sprintet und erhält 3 Sekunden lang <speed>@ActiveMoveSpeedBonus*100@ % Lauftempo</speed>. Dieser Bonus geht nicht verloren, wenn er getroffen wird.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Giftschuss",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Teemo vergiftet mit seinen Angriffen das Ziel und verursacht bei Treffern sowie 4 Sekunden lang jede Sekunde Schaden.",
-            "dynamicDescription": "<mainText>Teemos normale Angriffe vergiften sein Ziel. Dabei verursacht er zu Beginn <magicDamage>@ImpactCalculatedDamage@ magischen Schaden</magicDamage> und 4 Sekunden lang jede Sekunde <magicDamage>@TickCalculatedDamage@ magischen Schaden</magicDamage>.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Giftfalle",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Teemo fertigt aus einem der Pilze in seinem Rucksack eine explosive, giftige Falle und platziert sie.  Wenn ein Gegner in die Falle tappt, wird eine Giftwolke freigesetzt, die Gegner verlangsamt und ihnen Schaden über Zeit zufügt.",
-            "dynamicDescription": "Benutzt einen gesammelten Pilz, um eine Falle auszuwerfen, die explodiert, wenn ein Gegner auf sie tritt. Dabei werden auch nahe Gegner vergiftet. Sie werden um <status>@SlowAmount@ % verlangsamt</status> und erleiden 4 Sekunden lang <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>.<br><br>Diese Fähigkeit hat 3 Aufladungen (@AmmoRechargeTime@ Sekunden Aufladungszeit).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo platziert eine Pilzfalle, die explodiert, wenn ein Gegner auf sie tritt. Die Fallen <status>verlangsamen</status> um @SlowAmount@ % und verursachen <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> über @DebuffDuration@ Sekunden. Gegner werden für dieselbe Dauer aufgedeckt.<br><br>Die Fallen bleiben @MushroomDuration@ Minuten lang bestehen und sind getarnt. Diese Fähigkeit hat @MaxAmmo@ Aufladungen (@AmmoRechargeTime@ Sekunden Aufladungszeit).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ καλεί την ενέργεια της γης για να θεραπεύσει έναν σύμμαχο και τον εαυτό του. Αυτή η θεραπεία είναι πιο αποτελεσματική όταν ο Τάρικ θεραπεύει μόνο τον εαυτό του. Επιπλέον, οι βασικές επιθέσεις του Τάρικ μειώνουν τον Χρόνο Επαναφόρτισης του Εμποτισμού.",
-            "dynamicDescription": "<mainText>Ο Τάρικ καλεί την ενέργεια της γης, αναπληρώνοντας <healing>@HealAmount@ Ζωή</healing> σε έναν σύμμαχο και στον εαυτό του. Αν στοχεύσει τον εαυτό του, η Θεραπεία αυξάνεται κατά 40%, αποκαθιστώντας <healing>@HealAmountSelfTT@ Ζωή</healing>.<br><br>Οι βασικές επιθέσεις του Τάρικ μειώνουν τον Χρόνο Επαναφόρτισης του <spellName>Εμποτισμού</spellName> κατά 1 δευτερόλεπτο (3 δευτερόλεπτα αν επιτίθεται σε αντίπαλο Ήρωα).",
+            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -682,63 +682,63 @@
                 15.0
             ],
             "coefficients": {
-                "coefficient1": 0.15,
-                "coefficient2": 0.75
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.3,
-                    0.45,
-                    0.6,
-                    0.75,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.75,
-                    0.75,
-                    1.5,
-                    2.25,
-                    3.0,
-                    3.75,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    125.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    2.0,
-                    3.0,
-                    4.0,
-                    5.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ προστατεύεται από μια άκαμπτη αύρα που αυξάνει τη Θωράκισή του και τη Θωράκιση των κοντινών συμμάχων Ηρώων. Μπορεί να επιλέξει να θρυμματίσει τους μαγεμένους βράχους που βρίσκονται γύρω του για να προκαλέσει ζημιά και να μειώσει την Θωράκιση των γύρω εχθρών. Αυτή η ενέργεια κοστίζει λίγη Θωράκιση για σύντομο χρονικό διάστημα.",
-            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Οι πολύτιμοι λίθοι του Τάρικ αυξάνουν τη <scaleArmor>Θωράκισή του κατά @ArmorBonus@</scaleArmor>. Επιπλέον, οι κοντινοί σύμμαχοι Ήρωες αποκτούν <scaleArmor>@BonustoAllies@ Θωράκιση</scaleArmor> (@ArmorBonusCoefficient*100@% της Θωράκισης του Τάρικ).<br><br><spellActive>Ενεργή: </spellActive>Ο Τάρικ θρυμματίζει την πανοπλία του, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς και μειώνοντας τη <scaleArmor>Θωράκισή τους κατά @ArmorShred*-1@</scaleArmor> για 4 δευτερόλεπτα. Ο Τάρικ χάνει <scaleArmor>@ArmorBonus@ Θωράκιση</scaleArmor> μέχρι να επαναφορτιστεί το <spellName>Θρυμμάτισμα</spellName>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -832,8 +832,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -846,40 +846,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    7.0,
-                    8.0,
-                    9.0,
-                    10.0,
-                    11.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ εκπέμπει μια μπάλα πρισματικού φωτός από την ασπίδα με τα πετράδια, Ακινητοποιώντας το στόχο του και προκαλώντας του ζημιά ανάλογα με το πόσο κοντά βρίσκεται.",
-            "dynamicDescription": "<mainText>Ο Τάρικ εκτοξεύει μια πρισματική σφαίρα σε έναν εχθρικό στόχο, προκαλώντας από <magicDamage>@TotalDamage@</magicDamage> έως <magicDamage>@TotalMaxDamageTT@ Μαγική Ζημιά</magicDamage> και <status>Ακινητοποιώντας</status> τον για @MinStunLength@ έως @MaxStunLength@ δευτερόλεπτα. Η ζημιά της Εκθάμβωσης αυξάνεται όσο πιο κοντά είναι ο Τάρικ στον στόχο και η διάρκεια της Ακινητοποίησης αυξάνεται όσο πιο μακριά είναι από τον στόχο.",
+            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -979,39 +979,39 @@
                 12.0,
                 11.0,
                 10.0,
-                10.0
+                9.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0,
-                    290.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ χτυπά το σφυρί του στο έδαφος και προκαλεί ζημιά στους κοντινούς εχθρούς. Για λίγη ώρα μετά, τα πετράδια του Τάρικ εκπέμπουν ενέργεια και ενδυναμώνουν τον ίδιο και τους συμμάχους του, προσφέροντας επιπλέον Ζημιά Επίθεσης και Ισχύ Ικανότητας.",
-            "dynamicDescription": "<mainText>Ο Τάρικ χτυπά το σφυρί του στο έδαφος και προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς.<br><br>Για τα επόμενα 10 δευτ. τα πετράδια του Τάρικ εκπέμπουν ενέργεια και του δίνουν <physicalDamage>@DamageIncrease@ Ζημιά Επίθεσης</physicalDamage> και <magicDamage>Ισχύ Ικανότητας</magicDamage>. Οι κοντινοί σύμμαχοί του αποκτούν <physicalDamage>@AllyBonus@ Ζημιά Επίθεσης</physicalDamage> και <magicDamage>Ισχύ Ικανότητας</magicDamage>.",
+            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1132,8 +1132,8 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

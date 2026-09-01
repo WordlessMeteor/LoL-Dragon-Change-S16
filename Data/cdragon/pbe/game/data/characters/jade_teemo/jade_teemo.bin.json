@@ -338,7 +338,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bdbce814}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility": {
         "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
         "mChildSpells": [
             "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
@@ -379,14 +379,27 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedBonus",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "BonusAttackSpeed": {
                     "mFormulaParts": [
                         {
-                            "mNumber": 0.4000000059604645,
-                            "__type": "NumberCalculationPart"
+                            "mDataValue": "AttackSpeedBonus",
+                            "__type": "NamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -1289,22 +1302,6 @@
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "TickCalculatedDamage",
                     "__type": "GameCalculationModified"
-                },
-                "{8b70cfd6}": {
-                    "mMultiplier": {
-                        "mDataValue": "monstermod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "ImpactCalculatedDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "{938cba49}": {
-                    "mMultiplier": {
-                        "mDataValue": "monstermod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TickCalculatedDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "{fe87f21e}": [
@@ -1635,19 +1632,6 @@
                         2.25,
                         2.5,
                         2.75
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MissChance",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -5619,7 +5603,7 @@
             "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility",
             "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility",
             "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility",
-            "{bdbce814}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Teemo",
         "passiveLuaName": "Jade_TeemoPassive_Jade",

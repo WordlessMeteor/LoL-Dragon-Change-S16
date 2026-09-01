@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "9초마다 쉔의 다음 기본 공격이 추가 피해를 입힙니다. 쉔이 기본 공격을 가할 때마다 기의 일격 재사용 대기시간이 감소합니다."
+        "description": "쉔의 기본 공격이 주기적으로 추가 피해를 입힙니다. 쉔이 미니언, 몬스터, 챔피언에게 기본 공격을 가할 때마다 기의 일격 재사용 대기시간이 감소합니다."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쉔이 자신에게 보호막을 부여해, 몇 초 동안 받는 피해를 흡수합니다.",
-            "dynamicDescription": "쉔이 @ShieldDuration@초 동안 자신에게 <shield>@TotalShieldAmount@의 보호막</shield>을 부여합니다. 이 보호막이 지속되는 동안 기본 공격을 가하면 <keywordMajor>기의 일격</keywordMajor> 재사용 대기시간이 1초 추가로 감소합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "쉔이 @ShieldDuration@초 동안 자신에게 <shield>@TotalShieldAmount@의 보호막</shield>을 부여합니다. 이 보호막이 지속되는 동안 기본 공격을 가하면 <keywordMajor>기의 일격</keywordMajor> 재사용 대기시간이 @PassiveCooldownReduction@초 추가로 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Tras 4 ataques o habilidades usadas, Pantheon obtiene protección frente al siguiente ataque."
+        "description": "Tras @AttacksRequired@ ataques o habilidades usadas, Pantheon obtiene protección frente al siguiente ataque."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pantheon salta hacia un enemigo, lo golpea con su escudo y lo aturde.  Tras finalizar el ataque, se prepara para bloquear el siguiente ataque.",
+            "description": "Pantheon salta hacia un enemigo, lo golpea con su escudo y lo aturde. Tras finalizar el ataque, se prepara para bloquear el siguiente ataque.",
             "dynamicDescription": "Pantheon salta hacia un enemigo objetivo, le inflige <magicDamage>@TotalDamage@ daño mágico</magicDamage> y lo <status>aturde</status> durante @StunDuration@ s. Además, Pantheon reinicia <spellName>Escudo de protección</spellName> al instante.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pantheon se concentra y lanza 3 golpes rápidos al área que tiene delante, lo que inflige el doble de daño a campeones. También se vuelve más consciente de los puntos vitales de su enemigo, lo que le permite asestarle impactos críticos cuando tiene menos del 15% de vida.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> <spellName>Tiro de lanza</spellName>, <spellName>Golpe buscacorazones</spellName> y los ataques básicos de Pantheon obtienen un 100% de probabilidad de impacto crítico contra los objetivos con menos de un @PassiveCritThreshold*100@% de vida.<br><br><spellActive>Activa:</spellActive> Pantheon canaliza y asesta @NumberOfStrikes@ estocadas rápidas frente a él, que infligen <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> por estocada (total: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon se concentra y lanza varios golpes rápidos al área que tiene delante, lo que aumenta el daño a campeones. Pantheon también se vuelve más consciente de los puntos vitales de su enemigo, lo que le permite asestarles impactos críticos a los enemigos heridos.",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> <spellName>Tiro de lanza</spellName>, <spellName>Golpe buscacorazones</spellName> y los ataques básicos de Pantheon asestan impactos críticos a los objetivos con menos de un @PassiveCritThreshold*100@% de vida.<br><br><spellActive>Activa:</spellActive> Pantheon canaliza y asesta @NumberOfStrikes@ estocadas rápidas en la zona frente a él, que infligen <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> por estocada (total: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

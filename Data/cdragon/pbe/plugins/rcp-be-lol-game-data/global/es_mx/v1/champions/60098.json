@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "El Ojo del Crepúsculo",
-    "shortBio": "- Golpe de Ki (Pasiva) y Espada Vorpalina (Q) son habilidades diferentes<br>- Barrera de Ki (W) otorga un escudo por un breve periodo<br>- Ataque de Sombra (E) solo impacta a campeones",
+    "shortBio": "- Golpe de Ki (Pasiva) y Espada Vorpalina (Q) son diferentes<br>- Finta (W) otorga un escudo por un breve periodo<br>- Ataque de Sombra (E) solo impacta a campeones",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Cada 9 seg, el siguiente ataque de Shen inflige daño adicional. Cada vez que Shen ataca, el enfriamiento de Golpe de Ki se reduce."
+        "description": "Cada cierto tiempo, el siguiente ataque de Shen inflige daño adicional. Cada vez que Shen ataca a un súbdito, monstruo o campeón, el enfriamiento de Golpe de Ki se reduce."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Shen se protege con un escudo que absorbe el daño recibido durante unos seg.",
-            "dynamicDescription": "Shen se otorga <shield>@TotalShieldAmount@ de escudo</shield> a sí mismo durante @ShieldDuration@ seg. Mientras esta habilidad esté activa, sus ataques reducen 1 seg el enfriamiento de <keywordMajor>Golpe de Ki</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen se otorga <shield>@TotalShieldAmount@ de escudo</shield> a sí mismo durante @ShieldDuration@ seg. Mientras esta habilidad esté activa, sus ataques reducen en @PassiveCooldownReduction@ seg el enfriamiento de <keywordMajor>Golpe de Ki</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

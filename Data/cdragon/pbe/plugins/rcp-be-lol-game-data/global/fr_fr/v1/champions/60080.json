@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Après avoir lancé 4 attaques ou compétences, Pantheon est protégé contre l'attaque suivante."
+        "description": "Après avoir lancé @AttacksRequired@ attaques ou compétences, Pantheon est protégé contre l'attaque suivante."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Pantheon saute sur un ennemi et le frappe avec son bouclier, ce qui l'étourdit.  Pantheon se prépare ensuite à bloquer l'attaque suivante.",
+            "description": "Pantheon saute sur un ennemi et le frappe avec son bouclier, ce qui l'étourdit. Pantheon se prépare ensuite à bloquer l'attaque suivante.",
             "dynamicDescription": "Pantheon saute sur l'ennemi ciblé, lui inflige <magicDamage>@TotalDamage@ pts dégâts magiques</magicDamage> et l'<status>étourdit</status> pendant @StunDuration@ sec. Pantheon réinitialise également instantanément <spellName>Protection de l'égide</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Pantheon se concentre et frappe 3 fois la zone devant lui, infligeant deux fois plus de dégâts aux champions. Pantheon devient également conscient des points faibles de l'ennemi, ce qui lui permet de toujours infliger des coups critiques aux ennemis qui ont moins de 15% de leurs PV.",
-            "dynamicDescription": "<spellPassive>Passif :</spellPassive> <spellName>Vélite</spellName>, <spellName>Crève-cœur</spellName> et les attaques de base de Pantheon et Vélite gagnent 100% de chances de critique contre les cibles ayant moins de @PassiveCritThreshold*100@% de leurs PV.<br><br><spellActive>Actif :</spellActive> Pantheon se concentre et inflige @NumberOfStrikes@ coups rapides devant lui, soit <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> par coup. (Total : <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon se concentre et frappe rapidement la zone devant lui, infligeant des dégâts accrus aux champions. Pantheon devient également plus conscient des points vitaux de son ennemi, ce qui lui permet d'infliger un coup critique aux ennemis blessés.",
+            "dynamicDescription": "<spellPassive>Passif :</spellPassive> <spellName>Vélite</spellName>, <spellName>Crève-cœur</spellName> et les attaques de base de Pantheon infligent des coups critiques contre les cibles ayant moins de @PassiveCritThreshold*100@% de leurs PV.<br><br><spellActive>Actif :</spellActive> Pantheon se concentre et inflige @NumberOfStrikes@ coups rapides dans la zone devant lui, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> par coup. (Total : <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

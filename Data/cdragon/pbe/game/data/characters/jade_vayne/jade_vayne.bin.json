@@ -43,6 +43,19 @@
                         220.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1103,6 +1116,32 @@
                         18.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InvisibilityDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UltimateMovementSpeed",
+                    "values": [
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mAnimationName": "Spell4",
@@ -1206,7 +1245,7 @@
                         "keyName": "Spell_VayneR_Jade_Name",
                         "keySummary": "Spell_VayneR_Jade_Summary",
                         "keyTooltip": "Spell_VayneR_Jade_Tooltip",
-                        "keyTooltipExtended": "Spell_VayneR_Jade_ExtTooltip"
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_VayneR_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -1605,7 +1644,7 @@
         "mScriptName": "Jade_VayneProjectMask",
         "__type": "SpellObject"
     },
-    "{7016b268}": {
+    "Characters/Jade_Vayne/Spells/Jade_VaynePassiveAbility": {
         "mRootSpell": "Characters/Jade_Vayne/Spells/Jade_VaynePassiveAbility/Jade_VaynePassive",
         "mChildSpells": [
             "Characters/Jade_Vayne/Spells/Jade_VaynePassiveAbility/Jade_VaynePassive"
@@ -3661,7 +3700,7 @@
         "mAbilities": [
             "Characters/Jade_Vayne/Spells/Jade_VayneEAbility",
             "Characters/Jade_Vayne/Spells/Jade_VayneRAbility",
-            "{7016b268}",
+            "Characters/Jade_Vayne/Spells/Jade_VaynePassiveAbility",
             "Characters/Jade_Vayne/Spells/Jade_VayneWAbility",
             "Characters/Jade_Vayne/Spells/Jade_VayneQAbility"
         ],
@@ -6922,8 +6961,11 @@
                                 {
                                     "{d851ffa3}": "a71498cd-9685-4157-96f5-5bb3a1fdf6df",
                                     "Src": {
-                                        "value": 30,
-                                        "__type": "IntGet"
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "{83eff39f}",
+                                        "__type": "ScriptTableGet"
                                     },
                                     "Dest": {
                                         "Table": {
@@ -6940,8 +6982,14 @@
                                     "Sequence": {
                                         "blocks": [
                                             {
-                                                "{d851ffa3}": "6982bd42-e89e-4fc4-a4e2-f8ecaefe7e35",
-                                                "Formula": "90",
+                                                "{d851ffa3}": "d22de360-c85b-4780-9043-a15628a89edb",
+                                                "Src": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "{d34aac42}",
+                                                    "__type": "ScriptTableGet"
+                                                },
                                                 "Dest": {
                                                     "Table": {
                                                         "__type": "InstanceVars"
@@ -6949,7 +6997,7 @@
                                                     "Var": "SpeedBoost",
                                                     "__type": "ScriptTableSet"
                                                 },
-                                                "__type": "{15ebaa9c}"
+                                                "__type": "SetVarInTableBlock"
                                             },
                                             {
                                                 "{d851ffa3}": "ccd67b40-01d3-446e-a47b-bd6b9375441c",
@@ -7044,7 +7092,9 @@
                             "__type": "ScriptTableSet"
                         },
                         "__type": "SetVarInTableBlock"
-                    }
+                    },
+                    null,
+                    null
                 ],
                 "__type": "RootScriptSequence"
             },

@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Stachelpanzer",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus verursacht zusätzlichen Schaden, da seine Haut verstärkt wird. 25 % seiner Rüstung werden in Angriffsschaden umgewandelt."
+        "description": "Rammus verursacht zusätzlichen Schaden, da seine Haut verstärkt wird. Ein Teil seiner Rüstung wird in Angriffsschaden umgewandelt."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Dornenwalze",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Rammus rollt als dornige Kugel auf seine Gegner zu und wird immer schneller. Dabei verursacht er Schaden und verlangsamt die Ziele, die vom Aufprall betroffen sind.",
-            "dynamicDescription": "Rammus rollt 7 Sekunden lang als Kugel auf seine Gegner zu, fügt nahen Gegnern beim Aufprall <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und <status>verlangsamt</status> sie 3 Sekunden lang um @SlowPercent*-100@ %.<br><br><recast>Reaktivieren</recast>, um diesen Effekt zu entfernen.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus rollt @Duration@ Sek. lang als Kugel auf seine Gegner zu, fügt nahen Gegnern beim Aufprall <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und <status>verlangsamt</status> sie @SlowDuration@ Sek. lang um @SlowPercent*-100@ %.<br><br><recast>Reaktivierung</recast> entfernt diesen Effekt.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Eingerollte Abwehrhaltung",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Rammus nimmt eine Abwehrhaltung ein, in der seine Rüstung und seine Magieresistenz deutlich ansteigen, während Schaden an Angreifer reflektiert wird.",
-            "dynamicDescription": "Rammus nimmt 6 Sekunden lang eine Abwehrhaltung ein, wodurch seine <scaleArmor>Rüstung</scaleArmor> und <scaleMR>Magieresistenz</scaleMR> um @Armour@ erhöht werden und er Angreifern <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt.<br><br><recast>Reaktivieren</recast>, um diesen Effekt zu entfernen.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus nimmt @Duration@ Sek. lang eine Abwehrhaltung ein, wodurch seine <scaleArmor>Rüstung</scaleArmor> und <scaleMR>Magieresistenz</scaleMR> um @Armour@ erhöht werden und er Angreifern <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt.<br><br><recast>Reaktivierung</recast> entfernt diesen Effekt.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Durchdringender Spott",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Beben",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Rammus erzeugt Zerstörungswellen, die durch den Boden pulsieren und Einheiten sowie Gebäuden in seiner Nähe Schaden zufügen.",
-            "dynamicDescription": "Rammus lässt die Erde beben und fügt dabei 8 Sekunden lang Einheiten und Gebäuden in seiner Nähe <magicDamage>@TotalDamage@  magischen Schaden</magicDamage> pro Sekunde zu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus lässt die Erde beben und fügt dabei @Duration@ Sek. lang Einheiten und Gebäuden in seiner Nähe <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> pro Sekunde zu.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

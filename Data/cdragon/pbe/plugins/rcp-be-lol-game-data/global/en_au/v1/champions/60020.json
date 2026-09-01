@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "Classic Nunu & Willump (Grungy)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "Visionary",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Nunu can cast a spell for free after 5 attacks."
+        "description": "Nunu can cast a spell for free after several attacks."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Consume",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu commands the yeti to take a bite out of a target minion or monster, dealing heavy damage to it and healing himself.",
-            "dynamicDescription": "<mainText>Commands the yeti to bite out of a minion or monster, dealing <trueDamage>@BaseDamage@ true damage</trueDamage> to the target and <healing>healing</healing> himself for @TotalHealing@.<br><br>Nunu gains bonuses for @ConsumeDuration@ seconds based on what he consumed.<br><br><attention>Wolves</attention> or <attention>Reptiles: </attention>Your attacks and spells deal an additional <magicDamage>1% of your maximum health as magic damage</magicDamage>.<br><attention>Golems:</attention> 10% increased Size and <scaleHealth>Maximum Health</scaleHealth>.<br><attention>Wraiths:</attention> Killing a unit grants <speed>15% Movement Speed</speed> for 3 seconds.",
+            "dynamicDescription": "<mainText>Commands the yeti to bite out of a minion or monster, dealing <trueDamage>@BaseDamage@ true damage</trueDamage> to the target and <healing>healing</healing> himself for @TotalHealing@.<br><br>Nunu gains bonuses for @ConsumeDuration@ seconds based on what he consumed.<br><br><attention>Wolves</attention> or <attention>Reptiles: </attention>Your attacks and spells deal an additional <magicDamage>@ReptileDamage@ magic damage</magicDamage>.<br><attention>Golems:</attention> @GolemSizeBonus*100@% increased Size and <scaleHealth>@GolemHealthBonus*100@% Maximum Health</scaleHealth>.<br><attention>Wraiths:</attention> Killing a unit grants <speed>@WraithMoveSpeed*100@% Movement Speed</speed> for @WraithMoveSpeedDuration@ seconds.",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "Blood Boil",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu invigorates himself and an allied unit by heating their blood, increasing their Movement and Attack Speeds.",
-            "dynamicDescription": "<mainText>The heat of Nunu and a target ally's blood rises, increasing <speed>Movement Speed by @MoveSpeed*100@%</speed> and <attackSpeed>Attack Speed by @AttackSpeed*100@%</attackSpeed> for 12 seconds. Nunu may target themself.",
+            "dynamicDescription": "<mainText>The heat of Nunu and a target ally's blood rises, increasing <speed>Movement Speed by @MoveSpeed*100@%</speed> and <attackSpeed>Attack Speed by @AttackSpeed*100@%</attackSpeed> for @BuffDuration@ seconds. Nunu may target themself.",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "Ice Blast",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu launches a ball of ice at an enemy unit, dealing damage and temporarily slowing their Movement and Attack Speeds.",
-            "dynamicDescription": "<mainText>Nunu launches a ball of ice at an enemy unit, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> their Movement Speed by @SlowAmount*-100@% and Attack Speed by 25% for 3 seconds.",
+            "dynamicDescription": "<mainText>Nunu launches a ball of ice at an enemy unit, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> their Movement Speed by @SlowAmount*-100@% and Attack Speed by @AttackSpeedMod*-100@% for @SlowDuration@ seconds.",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "Absolute Zero",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nunu begins to sap the area of heat, slowing all nearby enemies. When the spell ends, he deals massive damage to all enemies caught in the area.",
-            "dynamicDescription": "<mainText>Nunu saps the area of heat, channeling up to 3 seconds, enemies within the zone are <status>Slowed</status> by 50% and their <attackSpeed>Attack Speed</attackSpeed> reduced by 25%.<br><br>Enemies caught in the area when the channel ends receive up to <magicDamage>@TotalDamage@ magic damage</magicDamage>, depending on how long the spell was channeled.",
+            "dynamicDescription": "<mainText>Nunu saps the area of heat, channeling while enemies within the zone are <status>Slowed</status> by @MovementSpeedMod*-100@% and their <attackSpeed>Attack Speed</attackSpeed> is reduced by @AttackSpeedMod*-100@%.<br><br>Enemies caught in the area when the channel ends receive up to <magicDamage>@TotalDamage@ magic damage</magicDamage>, depending on how long the spell was channeled.",
             "range": [
                 650.0,
                 650.0,

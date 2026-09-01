@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Kamuflaj",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Teemo olduğu yerde durur ve kısa bir süre hiçbir şey yapmazsa belirsiz bir süreliğine görünmez hale gelir. Teemo görünmezlikten çıktıktan sonra Şaşırtmaca Avantajı kazanır ve saldırı hızını birkaç saniyeliğine arttırır."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Kör Eden Dart",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Seri Adım",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Teemo koşuşturmaya başlar ve bir rakip şampiyon ya da kulenin saldırısına uğrayana kadar hareket hızı pasif olarak artar.  Teemo, depar atarak kısa süreliğine darbe alsa bile kaybetmeyeceği bir ilave hareket hızı artışı elde edebilir.",
-            "dynamicDescription": "<mainText><spellPassive>Pasif:</spellPassive> Teemo son 5 saniye içinde bir rakip şampiyon ya da kuleden hasar almadıysa <speed>hareket hızı</speed> %@PassiveMoveSpeedBonus*100@ artar.<br><br><spellActive>Aktif:</spellActive> Teemo depar atarak 3 saniyeliğine <speed>%@ActiveMoveSpeedBonus*100@ Hareket Hızı</speed> kazanır. Bu ilave, hasar aldığında kaybolmaz.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Zehirli Atış",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Teemo'nun her saldırısı, hedefi zehirleyerek isabet anında ve sonraki 4 saniye boyunca hasar verir.",
-            "dynamicDescription": "<mainText>Teemo'nun normal saldırıları hedefi zehirleyerek isabet anında <magicDamage>@ImpactCalculatedDamage@ Büyü Hasarı</magicDamage> ve takip eden 4 saniye boyunca saniye başına <magicDamage>@TickCalculatedDamage@ Büyü Hasarı</magicDamage> verir.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Tehlikeli Tuzak",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Teemo, çantasında sakladığı mantarlardan birini kullanarak patlayıcı bir tuzak kurar.  Bir rakip tuzağa basarsa rakipleri yavaşlatan ve onların zamanla hasar almasına neden olan bir zehir bulutu yayılır.",
-            "dynamicDescription": "Saklanan mantarları kullanarak kurulan tuzak, bir rakip üstüne bastığında patlar. Mantar, 4 saniye boyunca yakındaki rakipleri %@SlowAmount@ <status>yavaşlatan</status> ve <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren bir zehir yayar.<br><br>Bu yetenek 3 yüke sahiptir (@AmmoRechargeTime@ saniye yenilenme süresi).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo üstüne basıldığında patlayan bir mantar tuzağı yerleştirir. Tuzaklar rakipleri @DebuffDuration@ saniye boyunca %@SlowAmount@ <status>yavaşlatır</status> ve onlara <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Rakipler aynı süre boyunca açığa çıkar.<br><br>Tuzaklar @MushroomDuration@ dakika boyunca varlığını korur ve gizlenir. Bu yetenek @MaxAmmo@ yüke sahiptir (@AmmoRechargeTime@ saniye yenilenme süresi).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

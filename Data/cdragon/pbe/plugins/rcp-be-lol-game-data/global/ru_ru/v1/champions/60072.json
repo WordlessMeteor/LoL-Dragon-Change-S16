@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Автоатаки снижают перезарядку всех умений на 0.5 сек. Удвоенный эффект при атаке чемпионов."
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скарнер делает взмах клешнями, при попадании нанося всем врагам поблизости физ. урон и на несколько секунд заряжаясь Энергией кристаллов. Когда Скарнер заряжен, повторное применение Кристаллического удара наносит всем целям доп. маг. урон и замедляет их.",
-            "dynamicDescription": "Скарнер наносит <physicalDamage>@TotalBaseDamage@ ед. физ. урона</physicalDamage> всем врагам поблизости и заряжается <keywordMajor>Энергией кристаллов</keywordMajor> на 5 сек.<br><br>Когда Скарнер заряжен, <spellName>Кристаллический удар</spellName> дополнительно наносит <magicDamage>@TotalProcDamage@ ед. маг. урона</magicDamage> и <status>замедляет</status> цели на @SlowPercent*-100@% на 2 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скарнер получает щит. Пока тот действует, он получает скорость атаки и скорость передвижения.",
-            "dynamicDescription": "Скарнер получает <shield>щит</shield> прочностью @BlockDamage@ на 6 сек. Пока тот действует, Скарнер получает <attackSpeed>@ASBonus*100@% скорости атаки</attackSpeed> и <speed>@MSBonus*100@% скорости передвижения</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скарнер посылает заряд кристаллической энергии, наносящий урон всем врагам на пути и помечающий их. При нанесении урона цели метка снимется и восстановит здоровье Скарнера. Убив врага этим умением, он сразу восстановит здоровье.",
-            "dynamicDescription": "Скарнер наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам на линии и помечает их на 6 сек.<br><br>При нанесении урона цели метка снимется и <healing>восстановит</healing> Скарнеру @TotalHealing@ здоровья. Убийство целей также восстанавливает здоровье (при каждой активации восстанавливает на 50% меньше).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скарнер подавляет вражеского чемпиона и наносит ему маг. урон. Пока эффект действует, Скарнер может свободно передвигаться и тащить цель за собой. Когда действие умения заканчивается, цель получает доп. урон.",
-            "dynamicDescription": "Скарнер <status>подавляет</status> вражеского чемпиона на 1.75 сек. и наносит ему <magicDamage>@TotaDamage@ ед. маг. урона</magicDamage>. Пока эффект действует, Скарнер может свободно передвигаться и тащить цель за собой. По окончании действия умения цель дополнительно получает <magicDamage>@TotaDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

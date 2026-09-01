@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Mimesi",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Se Teemo sta fermo e non agisce per un breve periodo di tempo, diventa invisibile. Dopo che è tornato visibile, Teemo ottiene Elemento di sorpresa, aumentando la velocità d'attacco per alcuni secondi."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Dardo accecante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Rapidità",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Teemo va in giro per il campo di battaglia, e aumenta passivamente la sua velocità di movimento finché non è colpito da un campione nemico o una torre.  Teemo può scattare per guadagnare un bonus alla velocità di movimento per un breve periodo di tempo, che non viene annullato dal fatto di essere colpito.",
-            "dynamicDescription": "<mainText><spellPassive>Passiva: </spellPassive>la <speed>velocità di movimento</speed> di Teemo è aumentata di un @PassiveMoveSpeedBonus*100@% a meno che non abbia subito danni da un campione o una torre nemica negli ultimi 5 secondi.<br><br><spellActive>Attiva: </spellActive>Teemo scatta, ottenendo <speed>@ActiveMoveSpeedBonus*100@% velocità di movimento</speed> per 3 secondi. Il bonus non viene perduto quando si viene colpiti.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Colpo tossico",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Ognuno degli attacchi di Teemo avvelena il bersaglio, infliggendo danni all'impatto e poi a ogni secondo, per 4 secondi.",
-            "dynamicDescription": "<mainText>Gli attacchi base di Teemo avvelenano il bersaglio, infliggendo <magicDamage>@ImpactCalculatedDamage@ danni magici</magicDamage> all'impatto e <magicDamage>@TickCalculatedDamage@ danni magici</magicDamage> al secondo per 4 secondi.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Trappola tossica",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Teemo piazza una trappola esplosiva e velenosa, usando uno dei funghi che ha raccolto.  Se un nemico attiva la trappola si sprigiona una nube velenosa, che rallenta i nemici e li danneggia nel tempo.",
-            "dynamicDescription": "Usa un fungo per piazzare una trappola che, se attivata da un nemico, esplode diffondendo tra tutti i nemici vicini un veleno che <status>rallenta</status> di un @SlowAmount@% e infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> nell'arco di 4 secondi.<br><br>Questa abilità ha 3 cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo piazza una trappola di funghi che esplode quando viene calpestata. Le trappole <status>rallentano</status> di un @SlowAmount@% e infliggono <magicDamage>@TotalDamage@ danni magici</magicDamage> nell'arco di @DebuffDuration@ secondi. I nemici vengono rivelati per la stessa durata.<br><br>Le trappole durano @MushroomDuration@ minuti e sono invisibili. Questa abilità ha @MaxAmmo@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

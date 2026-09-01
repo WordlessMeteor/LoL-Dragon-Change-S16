@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Minden 4. támadás vagy képességhasználat után Pantheon védelmet kap a következő támadással szemben."
+        "description": "Minden @AttacksRequired@. támadás vagy képességhasználat után Pantheon védelmet kap a következő támadással szemben."
     },
     "spells": [
         {
@@ -806,7 +806,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Pantheon egy ellenfél felé hajítja a dárdáját, és sebzést okoz neki.",
+            "description": "Pantheon dárdáját egy ellenfélre hajítja, és sebzést okoz neki.",
             "dynamicDescription": "Pantheon egy ellenfél felé hajítja a dárdáját, és <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz neki. @SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -956,8 +956,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Pantheon ráugrik egy ellenfelére, a pajzsával ütést mér rá, és elkábítja.  A támadás befejeztével Pantheon felkészül a következő támadás hárítására.",
-            "dynamicDescription": "Pantheon a célba vett ellenfélre veti magát, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz neki, és @StunDuration@ másodpercre <status>elkábítja</status>. Pantheon <spellName>Az égisz védelme</spellName> képessége is azonnal frissül.@SpellModifierDescriptionAppend@",
+            "description": "Pantheon ráugrik egy ellenfelére, a pajzsával ütést mér rá, és elkábítja. A támadás befejeztével Pantheon felkészül a következő támadás hárítására.",
+            "dynamicDescription": "Pantheon a célba vett ellenfélre veti magát, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz neki, és @StunDuration@ másodpercre <status>elkábítja</status>. Pantheon <spellName>az Égisz védelme</spellName> képessége is azonnal frissül.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Pantheon összpontosít, majd 3 gyors csapást mér az előtte lévő területre, dupla sebzést okozva a hősöknek. Pantheon ezenkívül még inkább tisztában lesz ellenfele gyenge pontjaival, így mindig kritikus csapást mérhet a 15%-nál kevesebb életerővel rendelkező célpontokra.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> a <spellName>Dárdahajítás</spellName>, a <spellName>Villámszúrások</spellName> és Pantheon alaptámadásai 100% kritikus csapási esélyt kapnak @PassiveCritThreshold*100@% életerő alatti célpontok ellen.<br><br><spellActive>Aktív:</spellActive> Pantheon összpontosít, és @NumberOfStrikes@ gyors csapást mér maga elé, amelyek egyenként <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoznak (összesen <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon összpontosít, majd gyors csapásokat mér az előtte lévő területre, megnövelt sebzést okozva a hősöknek. Pantheon ezenkívül még inkább tisztában lesz ellenfele gyenge pontjaival, így kritikus csapást mérhet a Seb hatás alatt álló célpontokra.",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> a <spellName>Dárdahajítás</spellName>, a <spellName>Villámszúrások</spellName> és Pantheon alaptámadásai kritikus csapást mérnek, ha a célpont életereje @PassiveCritThreshold*100@% alatt van.<br><br><spellActive>Aktív:</spellActive> Pantheon összpontosít, és @NumberOfStrikes@ gyors csapást mér az előtte lévő területre, amelyek egyenként <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoznak (összesen: <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1257,7 +1257,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Pantheon összeszedi magát, majd egy célterület felé a levegőbe ugrik, ahová becsapódva minden ott lévő ellenséges egységet megsebez. A becsapódási ponthoz közelebb lévő ellenfelek több sebzést szenvednek el.",
-            "dynamicDescription": "Pantheon erejét összegyűjtve a magasba szökken, majd néhány másodperc elteltével a célterületre zuhan. Legfeljebb <magicDamage>@MaxDamage@ varázssebzést</magicDamage> okoz a közepén tartózkodó egységeknek (a széleken ez <magicDamage>@MinDamage@ varázssebzésre</magicDamage> csökken), és @SlowDuration@ másodpercre @SlowAmount*100@%-kal <status>lassítja</status> őket.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Pantheon az erejét összegyűjtve a magasba szökken, majd néhány másodperc elteltével a célterületre zuhan. Legfeljebb <magicDamage>@MaxDamage@ varázssebzést</magicDamage> okoz a közepén tartózkodó egységeknek (a széleken ez <magicDamage>@MinDamage@ varázssebzésre</magicDamage> csökken), és @SlowDuration@ másodpercre @SlowAmount*100@%-kal <status>lassítja</status> őket.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

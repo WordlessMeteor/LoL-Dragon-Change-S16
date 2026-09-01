@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "L'occhio del crepuscolo",
-    "shortBio": "- Colpo del Ki (passiva) e Lama Vorpal (Q) sono abilità diverse<br>- Barriera di Ki (W) conferisce uno scudo per un breve periodo<br>- Impeto dell'ombra (E) colpisce solo i campioni",
+    "shortBio": "- Colpo del Ki (passiva) e Lama Vorpal (Q) sono abilità diverse<br>- Finta (W) conferisce uno scudo per un breve periodo<br>- Impeto dell'ombra (E) colpisce solo i campioni",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Ogni 9 secondi, il prossimo attacco di Shen infligge danni bonus. Ogni volta che Shen attacca, il tempo di ricarica di Colpo del Ki diminuisce."
+        "description": "Periodicamente, l'attacco successivo di Shen infligge danni bonus. Ogni volta che Shen attacca un minion, un mostro o un campione, il tempo di ricarica di Colpo del Ki si riduce."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Shen si protegge con uno scudo, assorbendo i danni subiti per qualche secondo.",
-            "dynamicDescription": "Shen si conferisce un <shield>@TotalShieldAmount@ scudo</shield> per @ShieldDuration@ secondo/i. Finché questa abilità è attiva, i suoi attacchi riducono il tempo di ricarica di <keywordMajor>Colpo del Ki</keywordMajor> di 1 secondo aggiuntivo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen si conferisce <shield>@TotalShieldAmount@ di scudo</shield> per @ShieldDuration@ secondo/i. Finché questa abilità è attiva, i suoi attacchi riducono il tempo di ricarica di <keywordMajor>Colpo del Ki</keywordMajor> di @PassiveCooldownReduction@ secondo/i in più.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

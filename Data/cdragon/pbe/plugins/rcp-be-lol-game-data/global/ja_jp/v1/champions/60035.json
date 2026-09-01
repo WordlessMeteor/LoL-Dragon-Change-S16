@@ -522,22 +522,22 @@
     ],
     "passive": {
         "name": "バックスタブ",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_CarefulStrikes.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_CarefulStrikes.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60035/ability_60035_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60035/ability_60035_P1.jpg",
-        "description": "背後から敵ユニットを攻撃すると、20%の追加ダメージを与える。"
+        "description": "背後から攻撃すると、通常攻撃とスキルが追加ダメージを与える。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "幻惑",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_ManiacalCloak2.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_ManiacalCloak2.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "インビジブル状態になり、指定地点に瞬間移動する。次の通常攻撃は必ずクリティカルになる。",
-            "dynamicDescription": "近くの地点にテレポートして、3.5秒間<keywordStealth>インビジブル</keywordStealth>状態になる。<br><br>@EnhancedAttackDuration@秒以内に行う次の通常攻撃がクリティカルになり、@ModifiedQCritDamageTooltip@ダメージを与える。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "近くの地点にテレポートして@StealthDuration@秒間<keywordStealth>インビジブル</keywordStealth>状態になる。<br><br>@EnhancedAttackDuration@秒以内に行う次の通常攻撃がクリティカルになり、@ModifiedQCritDamageTooltip@のダメージを与える。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -681,7 +681,7 @@
         {
             "spellKey": "w",
             "name": "びっくり箱",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_DeathWard.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_DeathWard.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
@@ -713,54 +713,54 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    35.0,
-                    50.0,
-                    65.0,
-                    80.0,
-                    95.0,
-                    110.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    100.0,
-                    200.0,
-                    300.0,
-                    400.0,
-                    500.0,
-                    600.0,
-                    700.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.25,
-                    0.5,
-                    0.75,
-                    1.0,
-                    1.25,
-                    1.5,
-                    1.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -831,7 +831,7 @@
         {
             "spellKey": "e",
             "name": "ポイズンダガー",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_IncrediblyPrecise.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_IncrediblyPrecise.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
@@ -981,13 +981,13 @@
         {
             "spellKey": "r",
             "name": "ハルシネイト",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_HallucinogenBomb.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_HallucinogenBomb.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "分身が生成され周囲の敵を攻撃する。分身は倒されると爆発して、周囲の敵にダメージを与える。",
-            "dynamicDescription": "少しの間、姿を消してから、最大@CloneLifetime@秒間持続する分身とともに出現する。分身はシャコの攻撃力の@CloneAADamagePercent*100@%にあたるダメージを与え、受けるダメージは@Jade_ShacoDamageTakenTooltip*100@%増加する。<br><br>分身は倒されると爆発して、周囲の敵に<magicDamage>@ExplosionTotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "少しの間、姿を消してから、最大@CloneLifetime@秒間持続する分身とともに出現する。分身はシャコの攻撃力の@CloneAADamagePercent*100@%にあたるダメージを与え、受けるダメージは@CloneBonusDamageTakenTooltip@増加する。<br><br>分身は倒されると爆発して、周囲の敵に<magicDamage>@ExplosionTotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 200.0,
                 200.0,
@@ -1054,13 +1054,13 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,

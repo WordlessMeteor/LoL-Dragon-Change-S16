@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Poruszanie się w zaroślach zwiększa prędkość ruchu Nidalee o 15% na 2 sekundy."
+        "description": "Poruszanie się w zaroślach zwiększa prędkość ruchu Nidalee."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "W ludzkiej formie Nidalee ciska w cel kolczastym oszczepem, który zyskuje obrażenia podczas lotu.  Jako puma jej następny atak będzie próbą śmiertelnego zranienia celu i zada tym więcej obrażeń, im mniej zdrowia ma cel.",
-            "dynamicDescription": "<keywordMajor>Człowiek:</keywordMajor> Nidalee ciska swoim oszczepem, zadając <magicDamage>@StartingDamage@</magicDamage>-<magicDamage>@MaxDamage@ pkt. obrażeń magicznych</magicDamage> przy trafieniu, zależnie od odległości Nidalee od celu.<br><br><keywordMajor>Puma: </keywordMajor> Następny atak Nidalee zada <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ pkt. obrażeń fizycznych</physicalDamage>, a obrażenia te są zwiększone przeciwko zranionym celom (do 300% całkowitych obrażeń).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Człowiek:</keywordMajor> Nidalee ciska swoim oszczepem, zadając <magicDamage>@StartingDamage@</magicDamage>-<magicDamage>@MaxDamage@ pkt. obrażeń magicznych</magicDamage> przy trafieniu, zależnie od odległości Nidalee od celu.<br><br><keywordMajor>Puma:</keywordMajor> Kolejny atak Nidalee zadaje od <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage> pkt. do <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@ pkt. obrażeń fizycznych</physicalDamage> w zależności od brakującego zdrowia celu.@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "W ludzkiej postaci Nidalee zastawia na nieostrożnych wrogów zadającą obrażenia pułapkę, która po uruchomieniu ujawnia cel oraz zmniejsza jego pancerz i odporność na magię na 12 sek. Jako puma skacze do przodu, zadając niewielkie obrażenia przy lądowaniu.",
-            "dynamicDescription": "<keywordMajor>Człowiek: </keywordMajor>Nidalee zastawia pułapkę, która zadaje <magicDamage>@DamagePerSecond@ pkt. obrażeń magicznych</magicDamage> w ciągu 2 sek., ujawnia cel i <status>osłabia</status> <scaleArmor>pancerz</scaleArmor> oraz <scaleMR>odporność na magię</scaleMR> o @ResistDecreases*100@% na 12 sek. Pułapki utrzymują się przez 4 minuty. <br><br><keywordMajor>Puma:</keywordMajor> Nidalee rzuca się naprzód, zadając <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ pkt. obrażeń magicznych</magicDamage> wrogom dookoła.@SpellModifierDescriptionAppend@",
+            "description": "W ludzkiej postaci Nidalee zastawia na nieostrożnych wrogów zadającą obrażenia pułapkę, która po uruchomieniu ujawnia cel, zadaje mu obrażenia, a także zmniejsza jego pancerz i odporność na magię. Jako puma skacze do przodu, zadając niewielkie obrażenia przy lądowaniu.",
+            "dynamicDescription": "<keywordMajor>Człowiek: </keywordMajor>Nidalee zastawia pułapkę, która zadaje <magicDamage>@DamagePerSecond@ pkt. obrażeń magicznych</magicDamage> w ciągu @DamageDuration@ sek., ujawnia cel i <status>osłabia</status> <scaleArmor>pancerz</scaleArmor> oraz <scaleMR>odporność na magię</scaleMR> o @ResistDecreases*100@% na @ShredDuration@ sek. Pułapki utrzymują się przez @TrapDurationMins@ min.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee rzuca się naprzód, zadając <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ pkt. obrażeń magicznych</magicDamage> otaczającym wrogom.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nidalee w ludzkiej postaci wykorzystuję drzemiącego w niej ducha pumy, by uzdrowić sojuszników i na pewien czas zwiększyć ich prędkość ataku.  Jako puma szybko tnie wrogów przed sobą.",
-            "dynamicDescription": "<keywordMajor>Człowiek: </keywordMajor>Nidalee leczy sojuszniczego bohatera, przywracając mu <healing>@TotalHealing@</healing> pkt. zdrowia, i zapewnia mu <attackSpeed>@BonusAS*100@% prędkości ataku</attackSpeed> na 7 sek.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee rzuca się z pazurami na wrogów stojących przed nią, zadając <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Człowiek: </keywordMajor>Nidalee leczy sojuszniczego bohatera, przywracając mu <healing>@TotalHealing@</healing> pkt. zdrowia, i zapewnia mu <attackSpeed>@BonusAS*100@% prędkości ataku</attackSpeed> na @ASDuration@ sek.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee rzuca się z pazurami na wrogów stojących przed nią, zadając <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nidalee zmienia się w pumę, zyskuje nowe umiejętności i zwiększoną prędkość ruchu.",
-            "dynamicDescription": "<keywordMajor>Człowiek:</keywordMajor> Nidalee zmienia się w dziką pumę, zyskując <speed>20 jedn. prędkości ruchu</speed>. Jej podstawowe umiejętności zmieniają się na <spellName>Dobijanie</spellName>, <spellName>Sus</spellName> i <spellName>Zamach</spellName>.<br><br><keywordMajor>Puma:</keywordMajor> Nidalee powraca do ludzkiej postaci.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Człowiek:</keywordMajor> Nidalee zmienia się w dziką pumę, zyskując <speed>@CougarMoveSpeed@ jedn. prędkości ruchu</speed>. Jej podstawowe umiejętności zmieniają się na <spellName>Dobijanie</spellName>, <spellName>Sus</spellName> i <spellName>Zamach</spellName>.<br><br><keywordMajor>Puma:</keywordMajor> Nidalee powraca do ludzkiej postaci.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

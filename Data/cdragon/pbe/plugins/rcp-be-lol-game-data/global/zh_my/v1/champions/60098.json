@@ -6,7 +6,7 @@
     "name": "慎",
     "alias": "Jade_Shen",
     "title": "暮光之眼",
-    "shortBio": "- 气合斩（被动）和灵刃（Q）是两种不同的技能<br>- 气合盾（W）会提供一个持续较短时间的护盾<br>- 影袭（E）只能命中英雄",
+    "shortBio": "- 气合斩（被动）和灵刃（Q）是两种不同的技能<br>- 佯攻（W）会提供一个持续较短时间的护盾<br>- 影袭（E）只能命中英雄",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "每过9秒，慎的下一次普攻会造成额外伤害。慎每次攻击都会缩短“气合斩”的冷却时间。"
+        "description": "每隔一段时间，慎的下一次普攻会造成额外伤害。每当慎攻击士兵、野怪或英雄时，就会缩短“气合斩”的冷却时间。"
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "慎为自己提供护盾，在数秒内吸收伤害。",
-            "dynamicDescription": "慎为自己提供<shield>@TotalShieldAmount@护盾</shield>，持续@ShieldDuration@秒。在护盾存在期间，他的普攻会使<keywordMajor>气合斩</keywordMajor>的冷却时间额外缩短1秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "慎为自己提供<shield>@TotalShieldAmount@护盾</shield>，持续@ShieldDuration@秒。在护盾存在期间，他的普攻会使<keywordMajor>气合斩</keywordMajor>的冷却时间额外缩短@PassiveCooldownReduction@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

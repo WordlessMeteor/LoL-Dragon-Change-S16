@@ -658,16 +658,16 @@
     ],
     "passive": {
         "name": "사기 주사위",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_SealFate.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_SealFate.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60004/ability_60004_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60004/ability_60004_P1.jpg",
-        "description": "트위스티드 페이트와 아군이 적을 처치할 때마다 2골드를 추가로 얻습니다."
+        "description": "트위스티드 페이트와 아군이 적을 처치할 때마다 골드를 추가로 얻습니다."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "와일드 카드",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_PowerCard.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_PowerCard.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
@@ -817,13 +817,13 @@
         {
             "spellKey": "w",
             "name": "카드 뽑기",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_FatesGambit.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_FatesGambit.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트위스티드 페이터가 덱에서 마법 카드를 선택한 뒤, 다음 기본 공격 시 사용하여 추가 효과를 부여합니다.",
-            "dynamicDescription": "트위스티드 페이트가 덱을 섞기 시작합니다. <recast>재사용</recast>하면 세 카드 중 하나를 선택해 다음 기본 공격을 강화합니다.<br><br><font color='#0000FF'>푸른색 카드</font>는 <magicDamage>@BlueDamage@의 마법 피해</magicDamage>를 입히고 <scaleMana>@ManaRestore@의 마나</scaleMana>를 회복시킵니다.<br><br><font color='#FF0000'>붉은색 카드</font>는 대상 주변의 유닛에게 <magicDamage>@RedDamage@의 마법 피해</magicDamage>를 입히고 2.5초 동안 @Slow@% <status>둔화</status>시킵니다.<br><br><font color='#FFD700'>황금색 카드</font>는 <magicDamage>@GoldDamage@의 마법 피해</magicDamage>를 입히고 @Stun@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "트위스티드 페이트가 덱을 섞기 시작합니다. <recast>재사용</recast>하면 세 카드 중 하나를 선택해 다음 기본 공격을 강화합니다.<br><br><font color='#0000FF'>푸른색 카드</font>는 <magicDamage>@BlueDamage@의 마법 피해</magicDamage>를 입히고 <scaleMana>@ManaRestore@의 마나</scaleMana>를 회복시킵니다.<br><br><font color='#FF0000'>붉은색 카드</font>는 대상 주변의 유닛에게 <magicDamage>@RedDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @Slow@% <status>둔화</status>시킵니다.<br><br><font color='#FFD700'>황금색 카드</font>는 <magicDamage>@GoldDamage@의 마법 피해</magicDamage>를 입히고 @Stun@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 200.0,
                 200.0,
@@ -849,63 +849,63 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    40.0,
-                    60.0,
-                    80.0,
-                    100.0,
-                    120.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.75,
-                    1.0,
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    90.0,
-                    105.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    7.5,
-                    15.0,
-                    22.5,
-                    30.0,
-                    37.5,
-                    45.0,
-                    52.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    70.0,
-                    70.0,
-                    90.0,
-                    110.0,
-                    130.0,
-                    150.0,
-                    165.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -967,7 +967,7 @@
         {
             "spellKey": "e",
             "name": "관문",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_Premonition.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_Premonition.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
@@ -999,42 +999,42 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    6.0,
-                    8.0,
-                    10.0,
-                    50.0,
-                    40.0,
-                    42.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    150.0,
-                    130.0,
-                    110.0,
-                    90.0,
-                    45.0,
-                    30.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
                     0.0,
                     0.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    5500.0,
-                    5500.0,
-                    5500.0,
-                    5500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
@@ -1149,15 +1149,15 @@
                 90.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    6.0,
-                    8.0,
-                    10.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
@@ -1182,9 +1182,9 @@
                 ],
                 "Effect4Amount": [
                     0.0,
-                    5500.0,
-                    5500.0,
-                    5500.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

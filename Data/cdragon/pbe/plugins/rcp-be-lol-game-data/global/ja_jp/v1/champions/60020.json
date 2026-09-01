@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "クラシック ヌヌ＆ウィルンプ (暴食)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "ビジョナリー",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "通常攻撃を5回行うと、スキルをコスト無しで発動できる。"
+        "description": "通常攻撃を数回行うと、スキルをコスト無しで発動できる。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "丸かじり",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "イエティに指示して、対象のミニオンかモンスターに噛みつかせ、大ダメージを与えて自身の体力を回復する。",
-            "dynamicDescription": "<mainText>イエティに指示して、ミニオンかモンスターに噛みつかせ、<trueDamage>@BaseDamage@の確定ダメージ</trueDamage>を与えて、自身は体力を@TotalHealing@<healing>回復</healing>する。<br><br>さらに@ConsumeDuration@秒間、丸かじりした対象に応じた恩恵を獲得する。<br><br><attention>狼</attention>または<attention>トカゲ: </attention>通常攻撃とスキルが追加で<magicDamage>自身の最大体力の1%にあたる魔法ダメージ</magicDamage>を与える。<br><attention>ゴーレム:</attention> サイズと<scaleHealth>最大体力</scaleHealth>が10%増加する。<br><attention>レイス:</attention> ユニットを倒すと3秒間、<speed>移動速度が15%</speed>増加する。",
+            "dynamicDescription": "<mainText>イエティに指示して、ミニオンかモンスターに噛みつかせ、<trueDamage>@BaseDamage@の確定ダメージ</trueDamage>を与えて、自身は体力を@TotalHealing@<healing>回復</healing>する。<br><br>さらに@ConsumeDuration@秒間、丸かじりした対象に応じた恩恵を獲得する。<br><br><attention>狼</attention>または<attention>トカゲ: </attention>通常攻撃とスキルが追加で<magicDamage>@ReptileDamage@の魔法ダメージ</magicDamage>を与える。<br><attention>ゴーレム:</attention> サイズが@GolemSizeBonus*100@%、<scaleHealth>最大体力が@GolemHealthBonus*100@%</scaleHealth>増加する。<br><attention>レイス:</attention> ユニットを倒すと@WraithMoveSpeedDuration@秒間、<speed>移動速度が@WraithMoveSpeed*100@%</speed>増加する。",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "熱血",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身と味方1体に活力を与え、移動速度と攻撃速度を増加させる。",
-            "dynamicDescription": "<mainText>自身と味方1体の血を沸き立たせ、12秒間<speed>移動速度を@MoveSpeed*100@%</speed>、<attackSpeed>攻撃速度を@AttackSpeed*100@%</attackSpeed>増加させる。自身を対象に指定することもできる。",
+            "dynamicDescription": "<mainText>自身と味方1体の血を沸き立たせ@BuffDuration@秒間<speed>移動速度を@MoveSpeed*100@%</speed>、<attackSpeed>攻撃速度を@AttackSpeed*100@%</attackSpeed>増加させる。自身を対象に指定することもできる。",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "氷弾",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵ユニットに向けて氷の玉を投げつけてダメージを与え、少しの間、移動速度と攻撃速度を低下させる。",
-            "dynamicDescription": "<mainText>敵ユニットに氷の玉を投げつけ、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、3秒間、対象の移動速度を@SlowAmount*-100@%、攻撃速度を25%<status>低下</status>させる。",
+            "dynamicDescription": "<mainText>敵ユニットに氷の玉を投げつけ、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間、対象の移動速度を@SlowAmount*-100@%、攻撃速度を@AttackSpeedMod*-100@%<status>低下</status>させる。",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "アブソリュート・ゼロ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "周囲の熱を吸収し、周囲のすべての敵にスロウ効果を与える。スキル終了時、範囲内のすべての敵に大ダメージを与える。",
-            "dynamicDescription": "<mainText>最大3秒間詠唱して周囲の熱を吸収し、範囲内の敵に50%の<status>スロウ効果</status>を付与して、対象の<attackSpeed>攻撃速度</attackSpeed>を25%低下させる。<br><br>詠唱終了時に範囲内にいた敵に、詠唱時間に応じて最大<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。",
+            "dynamicDescription": "<mainText>周囲の熱を吸収し、範囲内の敵に@MovementSpeedMod*-100@%の<status>スロウ効果</status>を付与して、対象の<attackSpeed>攻撃速度</attackSpeed>を@AttackSpeedMod*-100@%低下させる。<br><br>詠唱終了時に範囲内にいた敵に、詠唱時間に応じて最大<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。",
             "range": [
                 650.0,
                 650.0,

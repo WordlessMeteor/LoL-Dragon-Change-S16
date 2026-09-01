@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Spiked Shell",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus สร้างความเสียหายเพิ่มเติมตามเกราะที่แข็งแกร่งขึ้นของเขา โดยเปลี่ยน 25% ของเกราะเป็นพลังโจมตี"
+        "description": "Rammus สร้างความเสียหายเพิ่มเติมตามเกราะหนามที่แข็งแกร่งยิ่งขึ้น แปลงส่วนหนึ่งของค่าเกราะให้กลายเป็นพลังโจมตี"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Powerball",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Rammus กลิ้งเป็นลูกบอลเพื่อเร่งความเร็วเข้าหาศัตรู โดยจะสร้างความเสียหายและสโลว์ศัตรูที่ถูกชน",
-            "dynamicDescription": "Rammus กลิ้งเป็นลูกบอลเพื่อเร่งความเร็วเข้าหาศัตรูเป็นเวลา 7 วินาที สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูที่อยู่ใกล้เคียงเมื่อปะทะ และ<status>สโลว์</status>พวกเขา @SlowPercent*-100@% เป็นเวลา 3 วินาที<br><br>สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อลบเอฟเฟกต์นี้@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus กลิ้งตัวเป็นลูกบอลเร่งความเร็วเข้าหาศัตรูเป็นเวลา @Duration@ วินาที สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูใกล้เคียงเมื่อชนเข้ากับเป้าหมาย และ<status>สโลว์</status>พวกเขา @SlowPercent*-100@% เป็นเวลา @SlowDuration@ วินาที<br><br>สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อยกเลิกเอฟเฟกต์นี้@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Defensive Ball Curl",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Rammus เข้าสู่ท่าตั้งรับ เพิ่มเกราะและต้านทานเวทเป็นจำนวนมาก และสะท้อนความเสียหายกลับไปยังศัตรูที่โจมตีเขา",
-            "dynamicDescription": "Rammus เข้าสู่ท่าตั้งรับเป็นเวลา 6 วินาที เพิ่ม<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR> @Armour@ หน่วย และสะท้อน<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>กลับไปยังผู้โจมตี<br><br>สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อลบเอฟเฟกต์นี้@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus เข้าสู่ท่วงท่าป้องกันเป็นเวลา @Duration@ วินาที เพิ่ม<scaleArmor>เกราะ</scaleArmor>กับ<scaleMR>ต้านทานเวท</scaleMR> @Armour@ หน่วย และสะท้อน<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>กลับไปยังผู้โจมตี<br><br>สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อยกเลิกเอฟเฟกต์นี้@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Puncturing Taunt",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Tremors",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Rammus สร้างคลื่นสะเทือนไปทั่วพื้นดิน สร้างความเสียหายให้กับยูนิตและสิ่งปลูกสร้างใกล้เคียง",
-            "dynamicDescription": "Rammus สร้างคลื่นสะเทือนใต้ตัวเขา สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ทุกวินาที ให้กับยูนิตและสิ่งปลูกสร้างใกล้เคียงเป็นเวลา 8 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus สร้างคลื่นสั่นสะเทือนขึ้นมาใต้ตัว สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ต่อวินาทีแก่ยูนิตและสิ่งปลูกสร้างใกล้เคียงเป็นเวลา @Duration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

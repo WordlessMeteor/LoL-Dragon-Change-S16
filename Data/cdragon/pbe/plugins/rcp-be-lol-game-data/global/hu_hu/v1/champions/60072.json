@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Az alaptámadások 0,5 másodperccel csökkentik az összes képesség töltési idejét. Hősök támadásakor a hatás megduplázódik."
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Skarner előrecsap a karmaival, és ezzel fizikai sebzést okoz minden közeli ellenfélnek, valamint több másodpercre Kristályenergiával tölti fel magát, ha eltalál egy egységet.  Ha a Kristályenergiával eltelve süti el újra a Kristálytámadást, akkor bónusz varázssebzést okoz, és lelassítja az eltalált célpontokat.",
-            "dynamicDescription": "Skarner <physicalDamage>@TotalBaseDamage@ fizikai sebzést</physicalDamage> okoz a közelben lévő összes ellenfélnek, és ha eltalál egy egységet, 5 másodpercre feltöltődik <keywordMajor>Kristályenergiával</keywordMajor>.<br><br>Amíg Skarner fel van töltődve, a <spellName>Kristálytámadás</spellName> <magicDamage>@TotalProcDamage@ bónusz varázssebzést</magicDamage> okoz, és 2 másodpercre @SlowPercent*-100@%-kal <status>lassítja</status> a célpontot.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Skarner egy pajzsot kap, valamint megnő a mozgási és támadási sebessége, amíg az kitart.",
-            "dynamicDescription": "Skarnert @BlockDamage@ sebzést elnyelő <shield>pajzs</shield> védi 6 másodpercig. Amíg a pajzs kitart, Skarner <attackSpeed>@ASBonus*100@% támadási sebességre</attackSpeed> és <speed>@MSBonus*100@% mozgási sebességre</speed> tesz szert.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Skarner megidéz egy kristályenergia-csapást, amely sebzést okoz az eltalált ellenfeleknek, és megjelöli őket. Az ellenfelek eltalálása felemészti a jelet, ami gyógyítja Skarnert. A célpontok azonnali megölése szintén aktiválja a gyógyítást.",
-            "dynamicDescription": "Skarner <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz minden ellenfélnek egy vonal mentén, és 6 másodpercre megjelöli őket.<br><br>Az ellenfelek eltalálása felemészti a jelet, ami @TotalHealing@ életerővel <healing>gyógyítja</healing> Skarnert. A célpontok azonnali megölése szintén aktiválja a gyógyítást. (Minden aktiválás 50%-kal kevesebbet gyógyít.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Skarner az ellenséges hősbe mélyeszti a fullánkját, és varázssebzést okoz neki.  Ez idő alatt Skarner szabadon mozoghat, és maga után vonszolja tehetetlen áldozatát.  Amikor a hatás véget ér, Skarner célpontja további sebzést szenved el.",
-            "dynamicDescription": "Skarner 1,75 másodpercre <status>elnyom</status> egy ellenséges hőst, és <magicDamage>@TotaDamage@ varázssebzést</magicDamage> okoz neki. Ez idő alatt Skarner szabadon mozoghat, és maga után vonszolja tehetetlen áldozatát. Amikor a hatás véget ér, Skarner célpontja további <magicDamage>@TotaDamage@ varázssebzést</magicDamage> szenved el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

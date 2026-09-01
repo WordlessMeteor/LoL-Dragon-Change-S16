@@ -18089,7 +18089,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "GoldPerCharmPurchased",
@@ -18105,7 +18105,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.45
+                        "value": 0.5
                     }
                 ],
                 "min_units": 9,
@@ -18510,7 +18510,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 2.0
+                        "value": 2.5
                     }
                 ],
                 "min_units": 2,
@@ -18649,7 +18649,7 @@
                 "constants": [
                     {
                         "name": "Duration",
-                        "value": 4.0
+                        "value": 3.0
                     }
                 ]
             }
@@ -18687,7 +18687,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "LuckySlotCount",
@@ -18703,7 +18703,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 3.0
+                        "value": 3.5
                     },
                     {
                         "name": "LuckySlotCount",
@@ -19147,7 +19147,7 @@
                     },
                     {
                         "name": "Threshold2TrueDamageConversion",
-                        "value": 0.5
+                        "value": 0.4
                     },
                     {
                         "name": "Threshold3StarUpPeriod",
@@ -19296,10 +19296,14 @@
         "trait_id": "DA_18_Summoner",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
-        "tooltip_text": "Tướng Triệu Hồi cường hóa các đơn vị triệu hồi của mình theo nhiều cách khác nhau.<br><br>Yorick: +@HealthMult*100@% Máu<br>Azir: +@DamageMult*100@% Sát Thương<br>Chim Mẹ: +@DamageMult*100@% Sát Thương<br>Zyra: +@NumExtraAttacks@ Đòn Đánh Từ Cây<br><row>(@MinUnits@) Cường Hóa Đơn Vị Triệu Hồi</row><br><row>(@MinUnits@) Tăng mỗi hiệu ứng thêm 50%</row>",
+        "tooltip_text": "Tướng Triệu Hồi cường hóa các đơn vị triệu hồi của mình theo nhiều cách khác nhau.<br><br>Yorick: +@HealthMult*100@% Máu<br>Azir: +@AzirDamageMult*100@% Sát Thương<br>Chim Mẹ: +@DamageMult*100@% Sát Thương<br>Zyra: +@NumExtraAttacks@ Đòn Đánh Từ Cây<br><row>(@MinUnits@) Cường Hóa Đơn Vị Triệu Hồi</row><br><row>(@MinUnits@) Tăng mỗi hiệu ứng thêm 50%</row>",
         "innate_trait_sets": [
             {
                 "constants": [
+                    {
+                        "name": "AzirDamageMult",
+                        "value": 0.2
+                    },
                     {
                         "name": "DamageMult",
                         "value": 0.45
@@ -19336,7 +19340,7 @@
         "trait_id": "DA_18_Vanguard",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
-        "tooltip_text": "Khi Bắt đầu giao tranh và khi xuống dưới @HealthThreshold*100@% <colorHealth>Máu</colorHealth>, tướng Tiên Phong nhận Lá Chắn theo Máu tối đa trong @ShieldDuration@ giây.<br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa</row><br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa</row><br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa. Tăng @DurabilityIncrease*100@% Chống Chịu khi có Lá Chắn.</row>",
+        "tooltip_text": "Khi Bắt Đầu Giao Rranh và khi xuống dưới @HealthThreshold*100@% Máu, tướng Tiên Phong nhận Lá Chắn theo Máu tối đa trong @ShieldDuration@ giây.<br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa</row><br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa</row><br><row>(@MinUnits@) @MaxHealthShield*100@% Máu tối đa. Tăng @DurabilityIncrease*100@% Chống Chịu khi có Lá Chắn.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19368,7 +19372,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.32
+                        "value": 0.3
                     }
                 ],
                 "min_units": 4,
@@ -19384,7 +19388,7 @@
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.42
+                        "value": 0.4
                     }
                 ],
                 "min_units": 6,
@@ -19548,7 +19552,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.3
+                        "value": 0.33
                     },
                     {
                         "name": "TeamDurability",
@@ -19564,7 +19568,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "TeamDurability",

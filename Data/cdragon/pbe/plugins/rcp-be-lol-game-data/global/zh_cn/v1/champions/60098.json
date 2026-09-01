@@ -6,7 +6,7 @@
     "name": "暮光之眼",
     "alias": "Jade_Shen",
     "title": "慎",
-    "shortBio": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅会命中英雄",
+    "shortBio": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅命中英雄",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -821,7 +821,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "每9秒，慎的下一次攻击会造成额外伤害。慎的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。"
+        "description": "每过一段时间，慎的下一次攻击会造成额外伤害。慎对小兵、野怪或英雄的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。"
     },
     "spells": [
         {
@@ -983,7 +983,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "慎为自己提供护盾，从而吸收即将到来的伤害，持续若干秒。",
-            "dynamicDescription": "慎为自己提供持续@ShieldDuration@秒的<shield>@TotalShieldAmount@护盾值</shield>。当这个技能持续时，他的攻击会使<keywordMajor>忍法！诛邪斩</keywordMajor>的冷却时间缩短额外的1秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "慎为自己提供持续@ShieldDuration@秒的<shield>@TotalShieldAmount@护盾值</shield>。当这个技能持续时，他的攻击会使<keywordMajor>忍法！诛邪斩</keywordMajor>的冷却时间缩短额外的@PassiveCooldownReduction@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1309,7 +1309,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

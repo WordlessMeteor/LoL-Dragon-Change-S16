@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "После каждой 4-й автоатаки или применения умения Пантеон получает защиту от следующей автоатаки."
+        "description": "После каждой @AttacksRequired@-й автоатаки или применения умения Пантеон получает защиту от следующей автоатаки."
     },
     "spells": [
         {
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Пантеон чувствует слабые места противника и наносит крит. урон врагам со здоровьем ниже 15%. При активации умения Пантеон концентрируется и проводит 3 серии быстрых ударов копьем перед собой, нанося урон всем врагам.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <spellName>Бросок копья</spellName>, <spellName>Достать до сердца</spellName> и автоатаки Пантеона имеют 100% шанс крит. урона целям со здоровьем ниже @PassiveCritThreshold*100@%.<br><br><spellActive>Активно:</spellActive> Пантеон готовится, проводя @NumberOfStrikes@ серии быстрых ударов копьем перед собой. Каждая наносит <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> (всего <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Пантеон чувствует слабые места противника и наносит крит. урон врагам с низким здоровьем. При активации умения Пантеон концентрируется и проводит несколько серий быстрых ударов копьем перед собой, нанося больше урона чемпионам.",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <spellName>Бросок копья</spellName>, <spellName>Достать до сердца</spellName> и автоатаки Пантеона наносят крит. урон целям со здоровьем ниже @PassiveCritThreshold*100@%.<br><br><spellActive>Активно:</spellActive> Пантеон готовится, проводя серии быстрых ударов копьем (@NumberOfStrikes@) в области перед собой. Каждая наносит <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> (всего <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

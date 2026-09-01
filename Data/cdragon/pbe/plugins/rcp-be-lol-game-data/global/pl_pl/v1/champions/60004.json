@@ -658,16 +658,16 @@
     ],
     "passive": {
         "name": "Sprzyjające Szczęście",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_SealFate.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_SealFate.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60004/ability_60004_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60004/ability_60004_P1.jpg",
-        "description": "Twisted Fate i jego sojusznicy otrzymują dodatkowe 2 szt. złota za każde zabójstwo."
+        "description": "Spell_TwistedFatePassive_Jade_Summary"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Jokery",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_PowerCard.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_PowerCard.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
@@ -817,13 +817,13 @@
         {
             "spellKey": "w",
             "name": "Wybierz Kartę",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_FatesGambit.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_FatesGambit.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Twisted Fate wybiera magiczną kartę z talii i używa jej do następnego ataku. Karta ma dodatkowe efekty.",
-            "dynamicDescription": "Twisted Fate zaczyna tasować swoją talię, co pozwala mu <recast>użyć umiejętności ponownie</recast>, by wybrać jedną z trzech kart i wzmocnić następny atak.<br><br><font color='#0000FF'>Niebieska Karta</font> zadaje <magicDamage>@BlueDamage@ pkt. obrażeń magicznych</magicDamage> i przywraca <scaleMana>@ManaRestore@ pkt. many</scaleMana>.<br><br><font color='#FF0000'>Czerwona Karta</font> zadaje <magicDamage>@RedDamage@ pkt. obrażeń magicznych</magicDamage> jednostkom wokół celu i <status>spowalnia</status> je o @Slow@% na 2,5 sek.<br><br><font color='#FFD700'>Złota Karta</font> zadaje <magicDamage>@GoldDamage@ pkt. obrażeń magicznych</magicDamage> i <status>ogłusza</status> na @Stun@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TwistedFateW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 200.0,
                 200.0,
@@ -849,63 +849,63 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    40.0,
-                    60.0,
-                    80.0,
-                    100.0,
-                    120.0,
-                    140.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.75,
-                    1.0,
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    90.0,
-                    105.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    7.5,
-                    15.0,
-                    22.5,
-                    30.0,
-                    37.5,
-                    45.0,
-                    52.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    70.0,
-                    70.0,
-                    90.0,
-                    110.0,
-                    130.0,
-                    150.0,
-                    165.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -967,7 +967,7 @@
         {
             "spellKey": "e",
             "name": "Brama",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_Premonition.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/TwistedFate_Premonition.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60004/ability_60004_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60004/ability_60004_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
@@ -999,42 +999,42 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    4.0,
-                    6.0,
-                    8.0,
-                    10.0,
-                    50.0,
-                    40.0,
-                    42.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    150.0,
-                    130.0,
-                    110.0,
-                    90.0,
-                    45.0,
-                    30.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    75.0,
-                    100.0,
-                    125.0,
-                    150.0,
                     0.0,
                     0.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    5500.0,
-                    5500.0,
-                    5500.0,
-                    5500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
@@ -1149,15 +1149,15 @@
                 90.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    6.0,
-                    8.0,
-                    10.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0
@@ -1182,9 +1182,9 @@
                 ],
                 "Effect4Amount": [
                     0.0,
-                    5500.0,
-                    5500.0,
-                    5500.0,
+                    0.0,
+                    0.0,
+                    0.0,
                     0.0,
                     0.0,
                     0.0

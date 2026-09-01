@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Camouflage",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "If Teemo stands still and takes no actions for a short duration, he becomes Invisible indefinitely. After leaving Invisibility, Teemo gains the Element of Surprise, increasing his Attack Speed for a few seconds."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Blinding Dart",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Move Quick",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Teemo scampers around, passively increasing his movement speed until he is struck by an enemy champion or turret.  Teemo can sprint to gain bonus movement speed that isn't stopped by being struck for a short time.",
-            "dynamicDescription": "<mainText><spellPassive>Passive: </spellPassive>Teemo's <speed>Movement Speed</speed> is increased by @PassiveMoveSpeedBonus*100@% unless he has been damaged by an enemy champion or turret in the last 5 seconds.<br><br><spellActive>Active: </spellActive>Teemo sprints, gaining <speed>@ActiveMoveSpeedBonus*100@% Movement Speed</speed> for 3 seconds. This bonus is not lost when struck.",
+            "dynamicDescription": "<mainText><spellPassive>Passive: </spellPassive>Teemo's <speed>Movement Speed</speed> is increased by @PassiveMoveSpeedBonus*100@% unless he has been damaged by an enemy champion or turret in the last @PassiveCooldownOnDamageTaken@ seconds.<br><br><spellActive>Active: </spellActive>Teemo sprints, gaining <speed>@ActiveMoveSpeedBonus*100@% Movement Speed</speed> for @ActiveMoveSpeedBuffDuration@ seconds. This bonus is not lost when struck.",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Toxic Shot",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for 4 seconds.",
-            "dynamicDescription": "<mainText>Teemo's basic attacks poison their target, dealing <magicDamage>@ImpactCalculatedDamage@ magic damage</magicDamage> upon impact and <magicDamage>@TickCalculatedDamage@ magic damage</magicDamage> each second for 4 seconds.",
+            "description": "Each of Teemo's attacks poisons the target, dealing damage on impact and over time.",
+            "dynamicDescription": "Teemo's basic attacks poison their target, dealing <magicDamage>@ImpactCalculatedDamage@ magic damage</magicDamage> upon impact and <magicDamage>@TickCalculatedDamage@ magic damage</magicDamage> each second for @PoisonDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Noxious Trap",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Teemo places an explosive poisonous trap using one of the mushrooms stored in his pack.  If an enemy steps on the trap it will release a poisonous cloud, slowing enemies and damaging them over time.",
-            "dynamicDescription": "Uses a stored mushroom to place a trap that detonates if an enemy steps on it, spreading poison to nearby enemies that <status>Slows</status> by @SlowAmount@%  and deals <magicDamage>@TotalDamage@ magic damage</magicDamage> over 4 seconds.<br><br>This Ability has 3 charges (@AmmoRechargeTime@ second refresh).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo plants a mushroom trap that detonates when stepped on. The traps <status>Slow</status> by @SlowAmount@% and deal <magicDamage>@TotalDamage@ magic damage</magicDamage> over @DebuffDuration@ seconds. Enemies are revealed for the same duration.<br><br>Traps last @MushroomDuration@ minutes and are stealthed. This Ability has @MaxAmmo@ charges (@AmmoRechargeTime@ second refresh).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

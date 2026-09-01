@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "Classic Nunu & Willump (Grungy)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "Visionary",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Nunu bisa menggunakan spell tanpa mana setelah 5 serangan."
+        "description": "Nunu bisa cast spell tanpa mana setelah beberapa serangan."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Consume",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nunu memerintahkan yeti untuk menggigit minion atau monster target, menghasilkan damage besar dan memulihkan Health dirinya sendiri.",
-            "dynamicDescription": "<mainText>Memerintahkan yeti untuk menggigit minion atau monster, menghasilkan <trueDamage>@BaseDamage@ true damage</trueDamage> ke target dan memberikan <healing>heal</healing> ke dirinya sendiri sebesar @TotalHealing@.<br><br>Nunu mendapatkan bonus selama @ConsumeDuration@ detik berdasarkan unit yang dia konsumsi.<br><br><attention>Wolf</attention> atau <attention>Reptile: </attention>Serangan dan spell milikmu menghasilkan tambahan <magicDamage>1% dari health maksimum sebagai magic damage</magicDamage>.<br><attention>Golem:</attention> Ukuran dan <scaleHealth>Health Maksimum</scaleHealth> meningkat 10%.<br><attention>Wraith:</attention> Kill unit akan memberimu <speed>15% Movement Speed</speed> selama 3 detik.",
+            "dynamicDescription": "<mainText>Memerintahkan yeti untuk menggigit minion atau monster, menghasilkan <trueDamage>@BaseDamage@ true damage</trueDamage> ke target dan memberikan <healing>heal</healing> ke dirinya sendiri sebesar @TotalHealing@.<br><br>Nunu mendapatkan bonus selama @ConsumeDuration@ detik berdasarkan unit yang dia konsumsi.<br><br><attention>Serigala</attention> atau <attention>Reptil: </attention>Serangan dan spell kamu menghasilkan tambahan <magicDamage>@ReptileDamage@ magic damage</magicDamage>.<br><attention>Golem:</attention> @GolemSizeBonus*100@% ukuran bertambah dan <scaleHealth>@GolemHealthBonus*100@% Health maksimum</scaleHealth>.<br><attention>Wraith:</attention> Mengeliminasi unit memberikan <speed>@WraithMoveSpeed*100@% Movement Speed</speed> selama @WraithMoveSpeedDuration@ detik.",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "Blood Boil",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nunu menyemangati dirinya dan satu unit sekutu dengan memanaskan darah mereka, meningkatkan Movement dan Attack Speed mereka.",
-            "dynamicDescription": "<mainText>Panas darah Nunu dan satu sekutu meningkat, memberikan <speed>Movement Speed sebesar @MoveSpeed*100@%</speed> dan <attackSpeed>Attack Speed sebesar @AttackSpeed*100@%</attackSpeed> selama 12 detik. Nunu bisa menarget dirinya sendiri.",
+            "dynamicDescription": "<mainText>Darah Nunu dan rekan setim yang menjadi target memanas, meningkatkan <speed>Movement Speed sebesar @MoveSpeed*100@%</speed> dan <attackSpeed>Attack Speed sebesar @AttackSpeed*100@%</attackSpeed> selama @BuffDuration@ detik. Nunu bisa menarget dirinya sendiri.",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "Ice Blast",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nunu melempar bola es ke unit musuh, menghasilkan damage, dan memperlambat Movement serta Attack Speed-nya untuk sesaat.",
-            "dynamicDescription": "<mainText>Nunu melemparkan bola es ke unit musuh, memberikan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan efek <status>Slow</status> terhadap Movement Speed sebesar @SlowAmount*-100@% dan Attack Speed sebesar 25% selama 3 detik.",
+            "dynamicDescription": "<mainText>Nunu melemparkan bola es ke unit musuh, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan efek <status>Slow</status> terhadap Movement Speed sebesar @SlowAmount*-100@% dan Attack Speed sebesar @AttackSpeedMod*-100@% selama @SlowDuration@ detik.",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "Absolute Zero",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nunu mulai menyerap panas di area, menerapkan slow ke semua musuh di sekitar. Saat spell berakhir, dia menghasilkan damage masif ke semua musuh yang terjebak di area tersebut.",
-            "dynamicDescription": "<mainText>Nunu menyerap panas di area tersebut, melakukan channeling hingga 3 detik, musuh di dalam zona akan terkena <status>Slow</status> sebesar 50% dan <attackSpeed>Attack Speed</attackSpeed> mereka berkurang 25%.<br><br>Musuh yang terkena di area saat channel berakhir akan menerima hingga <magicDamage>@TotalDamage@ magic damage</magicDamage>, sesuai durasi channeling spell tersebut.",
+            "dynamicDescription": "<mainText>Nunu menyerap panas di area tersebut, melakukan channeling sementara musuh di dalam zona itu akan terkena <status>Slow</status> sebesar @MovementSpeedMod*-100@% dan <attackSpeed>Attack Speed</attackSpeed> mereka berkurang @AttackSpeedMod*-100@%.<br><br>Musuh yang terkena di area saat channeling berakhir akan menerima hingga <magicDamage>@TotalDamage@ magic damage</magicDamage>, sesuai durasi channeling spell tersebut.",
             "range": [
                 650.0,
                 650.0,

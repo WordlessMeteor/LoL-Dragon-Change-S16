@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "Όταν κινείται μέσα στη βλάστηση, η Ταχύτητα Κίνησης της Νίνταλι αυξάνεται κατά 15% για 2 δευτερόλεπτα."
+        "description": "Όταν κινείται στη βλάστηση, η Ταχύτητα Κίνησης της Νίνταλι αυξάνεται."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Στην ανθρώπινη μορφή της, η Νίνταλι πετάει ένα μυτερό ακόντιο στον στόχο της, το οποίο προκαλεί περισσότερη ζημιά ανάλογα με την απόσταση που διανύει.  Ως κούγκαρ, η επόμενη επίθεσή της θα προσπαθήσει να πληγώσει θανάσιμα τον στόχο της, προκαλώντας ζημιά που αυξάνεται όσο μειώνεται η Ζωή του.",
-            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή:</keywordMajor> Η Νίνταλι πετάει το ακόντιό της, προκαλώντας από <magicDamage>@StartingDamage@</magicDamage> έως <magicDamage>@MaxDamage@ Μαγική Ζημιά</magicDamage> κατά την πρόσκρουση, ανάλογα με την απόσταση της Νίνταλι από τον στόχο. <br><br><keywordMajor>Κούγκαρ: </keywordMajor> Η επόμενη επίθεση της Νίνταλι προκαλεί <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ Σωματική Ζημιά</physicalDamage> και η ζημιά αυξάνεται ενάντια σε τραυματισμένους στόχους (έως 300% συνολική ζημιά).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή:</keywordMajor> Η Νίνταλι πετάει το ακόντιό της, προκαλώντας από <magicDamage>@StartingDamage@</magicDamage> έως <magicDamage>@MaxDamage@ Μαγική Ζημιά</magicDamage> κατά την πρόσκρουση, ανάλογα με την απόσταση της Νίνταλι από τον στόχο. <br><br><keywordMajor>Κούγκαρ: </keywordMajor> Η επόμενη επίθεση της Νίνταλι προκαλεί από <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage> έως <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@ Σωματική Ζημιά</physicalDamage>, ανάλογα με τη Ζωή που λείπει από τον στόχο.@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Στην ανθρώπινη μορφή της, η Νίνταλι στήνει μια παγίδα που προκαλεί ζημιά σε ανυποψίαστους αντιπάλους. Όταν ενεργοποιείται, αποκαλύπτει τον στόχο και μειώνει τη Θωράκιση και την Αντίσταση Μαγείας του για 12 δευτ. Όταν έχει τη μορφή του κούγκαρ, ορμάει μπροστά και προκαλεί μικρή ποσότητα ζημιάς όταν προσγειώνεται.",
-            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι στήνει μια παγίδα που προκαλεί <magicDamage>@DamagePerSecond@ Μαγική Ζημιά</magicDamage> σε διάστημα 2 δευτ., αποκαλύπτει τον στόχο και <status>μειώνει</status> τη <scaleArmor>Θωράκιση</scaleArmor> και την <scaleMR>Αντίσταση Μαγείας</scaleMR> του κατά @ResistDecreases*100@% για 12 δευτ. Οι παγίδες διαρκούν για 4 λεπτά. <br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι ορμάει μπροστά, προκαλώντας <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ Μαγική Ζημιά</magicDamage> στους εχθρούς που βρίσκονται γύρω της.@SpellModifierDescriptionAppend@",
+            "description": "Στην ανθρώπινη μορφή της, η Νίνταλι στήνει μια παγίδα που προκαλεί ζημιά σε ανυποψίαστους αντιπάλους. Όταν ενεργοποιείται προκαλεί ζημιά, αποκαλύπτει τον στόχο και μειώνει τη Θωράκιση και την Αντίσταση Μαγείας. Όταν έχει τη μορφή του κούγκαρ, ορμάει μπροστά και προκαλεί μικρή ποσότητα ζημιάς όταν προσγειώνεται.",
+            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι στήνει μια παγίδα που προκαλεί <magicDamage>@DamagePerSecond@ Μαγική Ζημιά</magicDamage> σε διάστημα @DamageDuration@ δευτ., αποκαλύπτει τον στόχο και <status>μειώνει</status> τη <scaleArmor>Θωράκιση</scaleArmor> και την <scaleMR>Αντίσταση Μαγείας</scaleMR> του κατά @ResistDecreases*100@% για @ShredDuration@ δευτ. Οι Παγίδες διαρκούν για @TrapDurationMins@ λεπτά. <br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι ορμάει μπροστά, προκαλώντας <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ Μαγική Ζημιά</magicDamage> στους εχθρούς που βρίσκονται γύρω της.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Στην ανθρώπινη μορφή της, η Νίνταλι διοχετεύει το πνεύμα του κούγκαρ για να θεραπεύσει τους συμμάχους της και να αυξήσει την Ταχύτητα Επίθεσής τους για μικρό χρονικό διάστημα.  Ως κούγκαρ, νυχιάζει με αστραπιαία ταχύτητα τους εχθρούς που βρίσκονται μπροστά της.",
-            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι θεραπεύει έναν σύμμαχο Ήρωα για <healing>@TotalHealing@</healing> και του δίνει <attackSpeed>@BonusAS*100@% Ταχύτητα Επίθεσης</attackSpeed> για 7 δευτερόλεπτα.<br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι χτυπάει με τα νύχια της τους εχθρούς που βρίσκονται μπροστά της, προκαλώντας <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι θεραπεύει έναν σύμμαχο Ήρωα για <healing>@TotalHealing@</healing> και του δίνει <attackSpeed>@BonusAS*100@% Ταχύτητα Επίθεσης</attackSpeed> για @ASDuration@ δευτ.<br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι χτυπάει με τα νύχια της τους εχθρούς που βρίσκονται μπροστά της, προκαλώντας <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Νίνταλι μεταμορφώνεται σε κούγκαρ και αποκτά νέες ικανότητες και αυξημένη Ταχύτητα Κίνησης.",
-            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι μεταμορφώνεται σε ένα άγριο κούγκαρ, αποκτώντας <speed>20 Ταχύτητα Κίνησης</speed> και οι βασικές της ικανότητες μετατρέπονται σε <spellName>Εξόντωση</spellName>, <spellName>Άρπαγμα</spellName> και <spellName>Νύχιασμα</spellName>.<br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι επιστρέφει στην ανθρώπινη μορφή της.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ανθρώπινη Μορφή: </keywordMajor>Η Νίνταλι μεταμορφώνεται σε ένα άγριο κούγκαρ, αποκτώντας <speed>@CougarMoveSpeed@ Ταχύτητα Κίνησης</speed> και οι βασικές της ικανότητες μετατρέπονται σε <spellName>Εξόντωση</spellName>, <spellName>Άρπαγμα</spellName> και <spellName>Νύχιασμα</spellName>.<br><br><keywordMajor>Κούγκαρ: </keywordMajor>Η Νίνταλι επιστρέφει στην ανθρώπινη μορφή της.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

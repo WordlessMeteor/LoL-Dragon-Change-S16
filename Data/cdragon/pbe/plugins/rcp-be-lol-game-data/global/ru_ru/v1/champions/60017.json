@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Маскировка",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Если Тимо некоторое время неподвижен и не предпринимает никаких действий, он становится невидимым. После выхода из невидимости скорость атаки Тимо увеличена на несколько секунд благодаря Фактору внезапности."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Слепящий дротик",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Быстрый бег",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скорость передвижения Тимо пассивно увеличена, пока его не поразит вражеский чемпион или башня. Тимо может рвануть вперед, при этом он получает дополнительную скорость передвижения и не замедляется при получении урона.",
-            "dynamicDescription": "<mainText><spellPassive>Пассивно:</spellPassive> <speed>скорость передвижения</speed> Тимо растет на @PassiveMoveSpeedBonus*100@%, если он не получал урон от вражеского чемпиона или башни за последние 5 сек.<br><br><spellActive>Активно:</spellActive> Тимо разгоняется, получая <speed>@ActiveMoveSpeedBonus*100@% скорости передвижения</speed> на 3 сек. Полученный урон не влияет на активный эффект.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Отравленный выстрел",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Автоатаки Тимо отравляют цель, нанося урон сразу и затем доп. урон раз в секунду в течение 4 сек.",
-            "dynamicDescription": "<mainText>Автоатаки Тимо отравляют цель, нанося <magicDamage>@ImpactCalculatedDamage@ ед. маг. урона</magicDamage> при попадании и еще <magicDamage>@TickCalculatedDamage@ маг. урона</magicDamage> раз в секунду в течение 4 сек.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Ядовитая ловушка",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тимо устанавливает взрывающуюся отравляющую ловушку, используя один из хранящихся в его рюкзаке грибов. Если противник заденет ее, ловушка выпустит ядовитое облако, замедляющее врагов и наносящее им урон с течением времени.",
-            "dynamicDescription": "Использует один из грибов в рюкзаке. Если враг задевает ловушку, та взрывается, выпуская ядовитое облако, <status>замедляющее</status> окружающих врагов на @SlowAmount@% и наносящее <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за 4 сек.<br><br>У этого умения 3 зар. (перезарядка – @AmmoRechargeTime@ сек.).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Тимо ставит ловушку в виде гриба, взрывающуюся при контакте с врагом. Ловушки <status>замедляют</status> на @SlowAmount@% и наносят <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @DebuffDuration@ сек. Пораженные враги раскрываются на то же время.<br><br>Ловушки существуют @MushroomDuration@ мин. и невидимы. Макс. @MaxAmmo@ зарядов (новый заряд раз в @AmmoRechargeTime@ сек.).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

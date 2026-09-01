@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Шипастый панцирь",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Раммус наносит дополнительный урон благодаря своему укрепленному панцирю, преобразуя 25% брони в силу атаки."
+        "description": "Раммус наносит дополнительный урон благодаря своему укрепленному панцирю, преобразуя долю брони в силу атаки."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Катящийся шар",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Раммус сворачивается в клубок и катится на врагов, нанося урон и замедляя всех врагов вокруг при столкновении.",
-            "dynamicDescription": "Раммус сворачивается в клубок и, постоянно ускоряясь, катится на противников в течение 7 сек., при столкновении нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам поблизости, <status>замедляя</status> их на @SlowPercent*-100@% на 3 сек.<br><br><recast>Повторное применение</recast> прерывает эффект.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Раммус сворачивается в клубок и, постоянно ускоряясь, катится на противников в течение @Duration@ сек., при столкновении нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам поблизости, <status>замедляя</status> их на @SlowPercent*-100@% на @SlowDuration@ сек.<br><br><recast>Повторное применение</recast> прерывает эффект.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Защитная поза",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Раммус встает в защитную стойку, значительно повышая свою броню и сопр. магии и возвращая нанесенный ему урон атакующим.",
-            "dynamicDescription": "Раммус встает в защитную стойку на 6 сек., получая @Armour@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR> и возвращая <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> атакующим.<br><br><recast>Повторное применение</recast> отменяет эффект.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Раммус встает в защитную стойку на @Duration@ сек., получая @Armour@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR> и возвращая <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> атакующим.<br><br><recast>Повторное применение</recast> отменяет эффект.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Колкость",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Дрожь земли",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Раммус сотрясает землю вокруг себя, нанося урон вражеским бойцам и строениям.",
-            "dynamicDescription": "Раммус сотрясает землю вокруг себя, раз в секунду нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам и строениям поблизости в течение 8 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Раммус сотрясает землю вокруг себя, раз в секунду нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам и строениям поблизости в течение @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -656,7 +656,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "大地のエネルギーを呼び覚まし、自身と味方1体の体力を回復する。自身のみを対象とした場合は回復量が増加する。さらに、通常攻撃で「インビュー」のクールダウンが短縮される。",
-            "dynamicDescription": "<mainText>大地のエネルギーを呼び覚まし、自身と味方1体の<healing>体力を@HealAmount@</healing>回復する。自身を対象にした場合、回復効果が40%増加して、<healing>体力を@HealAmountSelfTT@</healing>回復する。<br><br>通常攻撃で<spellName>インビュー</spellName>のクールダウンが1秒短縮される(敵チャンピオンを攻撃した場合は3秒)。",
+            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -682,63 +682,63 @@
                 15.0
             ],
             "coefficients": {
-                "coefficient1": 0.15,
-                "coefficient2": 0.75
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.3,
-                    0.45,
-                    0.6,
-                    0.75,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.75,
-                    0.75,
-                    1.5,
-                    2.25,
-                    3.0,
-                    3.75,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    125.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    2.0,
-                    3.0,
-                    4.0,
-                    5.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "硬化のオーラに守られ、自身と周囲の味方チャンピオンの物理防御を増加させる。物理防御の一部を消費して自身を包む魔法の岩を砕き、周囲の敵にダメージを与えることもできる。これを行った場合、少しの間、対象の物理防御を低下させられる。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>タリックの宝石が<scaleArmor>物理防御を@ArmorBonus@</scaleArmor>増加させる。さらに、周囲の味方チャンピオンは<scaleArmor>物理防御が@BonustoAllies@</scaleArmor>(タリックの物理防御の@ArmorBonusCoefficient*100@%)増加する。<br><br><spellActive>発動効果: </spellActive>自身の鎧を砕き、周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、4秒間、対象の<scaleArmor>物理防御を@ArmorShred*-1@</scaleArmor>低下させる。<spellName>ジェムクラッシュ</spellName>のクールダウン中は、<scaleArmor>物理防御を@ArmorBonus@</scaleArmor>失う。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -832,8 +832,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -846,40 +846,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    7.0,
-                    8.0,
-                    9.0,
-                    10.0,
-                    11.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "宝石をちりばめた盾から眩いプリズムの光の玉を放ち、対象をスタンさせてダメージを与える。ダメージ量は対象との距離が近いほど増加する。",
-            "dynamicDescription": "<mainText>対象の敵に向かってプリズムの玉を放ち、<magicDamage>@TotalDamage@</magicDamage> - <magicDamage>@TotalMaxDamageTT@の魔法ダメージ</magicDamage>を与え、@MinStunLength@ - @MaxStunLength@秒間<status>スタン</status>させる。「ダズル」のダメージはタリックが対象に近いほど増加し、スタン効果時間は対象から遠いほど長くなる。",
+            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -979,39 +979,39 @@
                 12.0,
                 11.0,
                 10.0,
-                10.0
+                9.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0,
-                    290.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ハンマーを地面に叩きつけ、周囲の敵にダメージを与える。その後一定時間、宝石がエネルギーを放出し、自身と味方の攻撃力と魔力を強化する。",
-            "dynamicDescription": "<mainText>ハンマーを地面に叩きつけ、周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>次の10秒間タリックの宝石がエネルギーを放出し、<physicalDamage>攻撃力が@DamageIncrease@</physicalDamage>増加し、<magicDamage>魔力</magicDamage>が増加する。周囲の味方は<physicalDamage>攻撃力が@AllyBonus@</physicalDamage>増加し、<magicDamage>魔力</magicDamage>が増加する。",
+            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1132,8 +1132,8 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

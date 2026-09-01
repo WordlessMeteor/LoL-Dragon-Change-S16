@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "O Olho do Crepúsculo",
-    "shortBio": "– Golpe de Ki (Passiva) e Lâmina Vorpal (Q) são Habilidades diferentes.<br>– Barreira de Ki (W) concede um Escudo por um curto período.<br>– Corrida das Sombras (E) só atinge Campeões.",
+    "shortBio": "– Golpe de Ki (Passiva) e Lâmina Vorpal (Q) são Habilidades diferentes.<br>– Fingir (W) concede Escudo por um curto período.<br>– Corrida das Sombras (E) só atinge Campeões.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "A cada 9s, o próximo Ataque de Shen causa dano adicional. Cada vez que Shen ataca, o Tempo de Recarga do Golpe de Ki é reduzido."
+        "description": "Periodicamente, o próximo ataque de Shen causará dano adicional. Cada vez que Shen ataca uma tropa, monstro ou um Campeão, o Tempo de Recarga de Golpe de Ki diminui."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shen se protege com um Escudo que absorve dano por alguns segundos.",
-            "dynamicDescription": "Shen concede a si mesmo <shield>@TotalShieldAmount@ de Escudo</shield> por @ShieldDuration@s. Enquanto esta Habilidade está ativa, os Ataques dele reduzem o Tempo de Recarga do <keywordMajor>Golpe de Ki</keywordMajor> em mais 1s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen concede a si mesmo <shield>@TotalShieldAmount@ de Escudo</shield> por @ShieldDuration@s. Enquanto esta Habilidade está ativa, os Ataques dele reduzem o Tempo de Recarga de <keywordMajor>Golpe de Ki</keywordMajor> em mais @PassiveCooldownReduction@s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

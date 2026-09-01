@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Μετά από κάθε 4 επιθέσεις ή ικανότητες, ο Πάνθεον αποκτά προστασία από την επόμενη επίθεση."
+        "description": "Μετά από κάθε @AttacksRequired@ επιθέσεις ή ικανότητες, ο Πάνθεον αποκτά προστασία από την επόμενη επίθεση."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Πάνθεον υψώνεται στον αέρα και πέφτει επάνω σε έναν εχθρό, τον χτυπά με την ασπίδα του και τον Ακινητοποιεί.  Μετά το τέλος της επίθεσης, ο Πάνθεον προετοιμάζεται για να μπλοκάρει την επόμενη επίθεση.",
+            "description": "Ο Πάνθεον υψώνεται στον αέρα και πέφτει επάνω σε έναν εχθρό, τον χτυπά με την ασπίδα του και τον Ακινητοποιεί. Μετά το τέλος της επίθεσης, ο Πάνθεον προετοιμάζεται για να μπλοκάρει την επόμενη επίθεση.",
             "dynamicDescription": "Ο Πάνθεον υψώνεται στον αέρα και πέφτει στον στοχευμένο εχθρό, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> και <status>Ακινητοποιώντας</status> τον για @StunDuration@ δευτ. Επιπλέον, ο Πάνθεον ανανεώνει αμέσως την <spellName>Προστασία Αιγίδας</spellName> του.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Πάνθεον εστιάζει και εξαπολύει 3 γρήγορα χτυπήματα στην περιοχή μπροστά του, προκαλώντας διπλή ζημιά στους Ήρωες. Ο Πάνθεον αποκτά επίσης μεγαλύτερη επίγνωση των ζωτικών σημείων του εχθρού και αυτό του επιτρέπει να πετυχαίνει πάντοτε Καίρια Χτυπήματα σε εχθρούς που έχουν Ζωή κάτω από 15%.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η <spellName>Ρίψη Δόρατος</spellName>, το <spellName>Χτύπημα στην Καρδιά</spellName> και οι βασικές επιθέσεις του Πάνθεον αποκτούν 100% Πιθανότητα Καίριου Χτυπήματος ενάντια σε στόχους με Ζωή κάτω από @PassiveCritThreshold*100@%.<br><br><spellActive>Ενεργή:</spellActive> Ο Πάνθεον διοχετεύει και εξαπολύει @NumberOfStrikes@ ταχύτατα χτυπήματα μπροστά του, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> ανά χτύπημα (συνολικά <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Ο Πάνθεον εστιάζει και εξαπολύει γρήγορα χτυπήματα στην περιοχή μπροστά του, προκαλώντας αυξημένη ζημιά στους Ήρωες. Ο Πάνθεον αποκτά επίσης μεγαλύτερη επίγνωση των ζωτικών σημείων του εχθρού του, κάτι που του επιτρέπει να καταφέρνει Καίρια Χτυπήματα σε τραυματισμένους εχθρούς.",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η <spellName>Ρίψη Δόρατος</spellName>, το <spellName>Χτύπημα στην Καρδιά</spellName> και οι βασικές επιθέσεις του Πάνθεον προκαλούν Καίριο Χτύπημα ενάντια σε στόχους με Ζωή κάτω από @PassiveCritThreshold*100@%.<br><br><spellActive>Ενεργή:</spellActive> Ο Πάνθεον διοχετεύει και εξαπολύει @NumberOfStrikes@ ταχύτατα χτυπήματα στην περιοχή μπροστά του, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> ανά χτύπημα (συνολικά <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1257,7 +1257,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Πάνθεον συγκεντρώνεται και, στη συνέχεια, πηδά στον αέρα και προσγειώνεται σε έναν στόχο, χτυπώντας όλες τις εχθρικές μονάδες στην περιοχή. Οι εχθροί που βρίσκονται πιο κοντά στο σημείο της πρόσκρουσης δέχονται περισσότερη ζημιά.",
-            "dynamicDescription": "Ο Πάνθεον μαζεύει τη δύναμή του, πηδά ψηλά στον αέρα και, λίγα δευτερόλεπτα αργότερα, πέφτει με δύναμη στη στοχευμένη περιοχή. Προκαλεί έως και <magicDamage>@MaxDamage@ Μαγική Ζημιά</magicDamage> στις μονάδες που βρίσκονται στο κέντρο (έως και <magicDamage>@MinDamage@ Μαγική Ζημιά</magicDamage> στην άκρη) και τις <status>Επιβραδύνει</status> κατά @SlowAmount*100@% για @SlowDuration@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Πάνθεον μαζεύει τη δύναμή του, πηδά ψηλά στον αέρα και, λίγα δευτ. αργότερα, πέφτει με δύναμη στη στοχευμένη περιοχή. Προκαλεί έως και <magicDamage>@MaxDamage@ Μαγική Ζημιά</magicDamage> στις μονάδες που βρίσκονται στο κέντρο (έως και <magicDamage>@MinDamage@ Μαγική Ζημιά</magicDamage> στην άκρη) και τις <status>Επιβραδύνει</status> κατά @SlowAmount*100@% για @SlowDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Normale Angriffe verringern die Abklingzeiten aller Fähigkeiten um 0,5 Sekunden. Doppelter Effekt bei Angriffen auf Champions."
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Skarner schlägt mit seinen Scheren um sich und verursacht normalen Schaden an allen nahen Gegnern. Zudem lädt er sich mehrere Sekunden lang mit Kristallenergie auf, falls er eine Einheit trifft.  Reaktiviert er währenddessen „Kristallschnitt“, verursacht er zusätzlichen magischen Schaden und verlangsamt alle getroffenen Ziele.",
-            "dynamicDescription": "Skarner verursacht <physicalDamage>@TotalBaseDamage@ normalen Schaden</physicalDamage> an allen nahen Gegnern. Zudem lädt er sich 5 Sekunden lang mit <keywordMajor>Kristallenergie</keywordMajor> auf, falls er eine Einheit trifft.<br><br>Solange Skarner aufgeladen ist, verursacht <spellName>Kristallschnitt</spellName> <magicDamage>@TotalProcDamage@ zusätzlichen magischen Schaden</magicDamage> und <status>verlangsamt</status> 2 Sekunden lang um @SlowPercent*-100@ %.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Skarner erhält einen Schild, und während dieser aktiv ist, sind sein Lauf- und Angriffstempo erhöht.",
-            "dynamicDescription": "Skarner wird 6 Sekunden lang von einem <shield>Schild</shield> geschützt, der @BlockDamage@ Schaden absorbiert. Während der Schild besteht, erhält Skarner <attackSpeed>@ASBonus*100@ % Angriffstempo</attackSpeed> und <speed>@MSBonus*100@ % Lauftempo</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Skarner beschwört einen Stoß Kristallenergie, der getroffenen Gegnern Schaden zufügt und sie markiert. Wenn du so einen Gegner triffst, wird die Marke verbraucht, um Skarner zu heilen. Das Töten von Zielen aktiviert die Heilung ebenfalls.",
-            "dynamicDescription": "Skarner fügt Gegnern in einer Linie <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und markiert sie 6 Sekunden lang.<br><br>Wenn du so einen Gegner triffst, wird die Marke verbraucht, um Skarner um @TotalHealing@ zu <healing>heilen</healing>. Das Töten von Zielen aktiviert die Heilung ebenfalls. (Jede Aktivierung heilt 50 % weniger.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Skarner unterdrückt einen gegnerischen Champion und fügt ihm magischen Schaden zu.  Während dieser Zeit kann sich Skarner frei bewegen und sein hilfloses Opfer mit sich zerren.  Wenn der Effekt endet, erleidet Skarners Ziel zusätzlichen Schaden.",
-            "dynamicDescription": "Skarner <status>unterdrückt</status> einen gegnerischen Champion 1,75 Sekunden lang und fügt ihm <magicDamage>@TotaDamage@ magischen Schaden</magicDamage> zu. Währenddessen kann sich Skarner frei bewegen und sein hilfloses Opfer mit sich zerren. Wenn der Effekt endet, erleidet Skarners Ziel zusätzlich <magicDamage>@TotaDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Carapace cloutée",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus inflige plus de dégâts quand il renforce sa carapace, convertissant 25% de son armure en dégâts d'attaque."
+        "description": "Rammus inflige des dégâts supplémentaires quand il renforce sa carapace, convertissant une portion de son armure en dégâts d'attaque."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Démolisseur",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Rammus fonce comme une balle vers les ennemis, infligeant des dégâts et ralentissant les cibles touchées.",
-            "dynamicDescription": "Rammus fonce comme une balle vers les ennemis pendant 7 sec, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches à l'impact, les <status>ralentissant</status> de @SlowPercent*-100@% pendant 3 sec.<br><br><recast>Relancer</recast> la compétence met fin à l'effet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus fonce comme une balle vers les ennemis pendant @Duration@ sec, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches à l'impact, les <status>ralentissant</status> de @SlowPercent*-100@% pendant @SlowDuration@ sec.<br><br><recast>Relancer</recast> la compétence met fin à l'effet.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Boule défensive",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Rammus adopte une posture défensive, augmentant grandement son armure et sa résistance magique et renvoyant les dégâts qu'il subit.",
-            "dynamicDescription": "Rammus prend une posture défensive pendant 6 sec. Son <scaleArmor>armure</scaleArmor> et sa <scaleMR>résistance magique</scaleMR> sont augmentées de @Armour@ et il renvoie <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis qui l'attaquent.<br><br><recast>Relancer</recast> la compétence met fin à l'effet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus prend une posture défensive pendant @Duration@ sec. Son <scaleArmor>armure</scaleArmor> et sa <scaleMR>résistance magique</scaleMR> sont augmentées de @Armour@ et il renvoie <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis qui l'attaquent.<br><br><recast>Relancer</recast> la compétence met fin à l'effet.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Provocation blessante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Secousses",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Rammus fait trembler le sol, infligeant des dégâts aux unités et bâtiments proches.",
-            "dynamicDescription": "Rammus provoque des secousses, infligeant <magicDamage>@TotalDamage@ pts dégâts magiques</magicDamage> par seconde aux unités et bâtiments proches pendant 8 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus provoque des secousses, infligeant <magicDamage>@TotalDamage@ pts dégâts magiques</magicDamage> par seconde aux unités et bâtiments proches pendant @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

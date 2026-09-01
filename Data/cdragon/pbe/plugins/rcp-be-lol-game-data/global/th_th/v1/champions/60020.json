@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "Classic Nunu & Willump (Grungy)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "Visionary",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Nunu สามารถร่ายสกิลได้ฟรีหลังจากโจมตีครบ 5 ครั้ง"
+        "description": "Nunu ร่ายสกิลได้ฟรีหลังจากโจมตีครบจำนวนที่กำหนด"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Consume",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nunu สั่งให้เยติกัดมินเนี่ยนหรือมอนสเตอร์เพื่อสร้างความเสียหายอย่างรุนแรงและฟื้นฟูพลังชีวิตให้ตัวเอง",
-            "dynamicDescription": "<mainText>สั่งให้เยติกัดมินเนี่ยนหรือมอนสเตอร์ สร้าง<trueDamage>ความเสียหายจริง @BaseDamage@ หน่วย</trueDamage>ให้กับเป้าหมาย และ<healing>ฮีล</healing>พลังชีวิตตัวเอง @TotalHealing@ หน่วย<br><br>Nunu จะได้รับโบนัสเป็นเวลา @ConsumeDuration@ วินาที โดยขึ้นอยู่กับสิ่งที่เขากินเข้าไป<br><br><attention>Wolves</attention> หรือ <attention>Reptiles: </attention>การโจมตีและสกิลของคุณจะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติมเท่ากับ 1% ของพลังชีวิตสูงสุด</magicDamage><br><attention>Golems:</attention> ขนาดตัวและ<scaleHealth>พลังชีวิตสูงสุด</scaleHealth>เพิ่มขึ้น 10%<br><attention>Wraiths:</attention> การสังหารยูนิตจะมอบ<speed>ความเร็วเคลื่อนที่ 15%</speed> เป็นเวลา 3 วินาที",
+            "dynamicDescription": "<mainText>สั่งให้เยติกัดมินเนี่ยนหรือมอนสเตอร์ สร้าง<trueDamage>ความเสียหายจริง @BaseDamage@ หน่วย</trueDamage>แก่เป้าหมาย และ<healing>ฮีล</healing>พลังชีวิตตัวเอง @TotalHealing@ หน่วย<br><br>Nunu ได้รับโบนัสเป็นเวลา @ConsumeDuration@ วินาที ขึ้นอยู่กับสิ่งที่เขากินเข้าไป<br><br><attention>Wolves</attention> หรือ <attention>Reptiles: </attention>การโจมตีและสกิลสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @ReptileDamage@ หน่วย</magicDamage><br><attention>Golems:</attention> ขนาดตัวเพิ่มขึ้น @GolemSizeBonus*100@% และได้รับ<scaleHealth>พลังชีวิตสูงสุด @GolemHealthBonus*100@%</scaleHealth><br><attention>Wraiths:</attention> ได้รับ<speed>ความเร็วเคลื่อนที่ @WraithMoveSpeed*100@%</speed>เป็นเวลา @WraithMoveSpeedDuration@ วินาทีเมื่อสังหารยูนิต",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "Blood Boil",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nunu ทำให้เลือดในกายของตัวเองและเพื่อนร่วมทีมเดือดพล่าน เพิ่มความเร็วเคลื่อนที่และความเร็วโจมตีให้กับพวกเขา",
-            "dynamicDescription": "<mainText>ความร้อนทำให้เลือดของ Nunu และเป้าหมายเพื่อนร่วมทีมเดือดพล่าน เพิ่ม<speed>ความเร็วเคลื่อนที่ @MoveSpeed*100@%</speed> และ <attackSpeed>ความเร็วโจมตี @AttackSpeed*100@%</attackSpeed> เป็นเวลา 12 วินาที Nunu สามารถเลือกเป้าหมายเป็นตัวเองได้",
+            "dynamicDescription": "<mainText>Nunu ทำให้เลือดของตัวเองและเป้าหมายเพื่อนร่วมทีมเดือดพล่าน เพิ่ม<speed>ความเร็วเคลื่อนที่ @MoveSpeed*100@%</speed> และ<attackSpeed>ความเร็วโจมตี @AttackSpeed*100@%</attackSpeed> เป็นเวลา @BuffDuration@ วินาที Nunu สามารถเลือกเป้าหมายเป็นตัวเองได้",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "Ice Blast",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nunu ปล่อยบอลน้ำแข็งใส่ศัตรู สร้างความเสียหายพร้อมทั้งลดความเร็วเคลื่อนที่และความเร็วโจมตีของเป้าหมายชั่วครู่",
-            "dynamicDescription": "<mainText>Nunu ปล่อยบอลน้ำแข็งใส่ศัตรู สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> พร้อมทั้ง<status>สโลว์</status>ความเร็วเคลื่อนที่ @SlowAmount*-100@% และความเร็วโจมตี 25% เป็นเวลา 3 วินาที",
+            "dynamicDescription": "<mainText>Nunu ปล่อยบอลน้ำแข็งใส่ศัตรู สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> พร้อมทั้ง<status>สโลว์</status>ความเร็วเคลื่อนที่ @SlowAmount*-100@% และความเร็วโจมตี @AttackSpeedMod*-100@% เป็นเวลา @SlowDuration@ วินาที",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "Absolute Zero",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nunu ดูดความร้อนออกจากพื้นที่โดยรอบเพื่อสโลว์ศัตรูใกล้เคียงทั้งหมด เมื่อสกิลสิ้นสุดลง เขาจะสร้างความเสียหายมหาศาลให้กับศัตรูทั้งหมดที่อยู่ในพื้นที่",
-            "dynamicDescription": "<mainText>Nunu ดูดความร้อนออกจากพื้นที่โดยรอบ ร่ายได้สูงสุด 3 วินาที โดยศัตรูที่อยู่ในพื้นที่ดังกล่าวจะถูก<status>สโลว์</status> 50% และลด<attackSpeed>ความเร็วโจมตี</attackSpeed> 25%<br><br>เมื่อสิ้นสุดการร่ายสกิล ศัตรูที่อยู่ในพื้นที่จะได้รับ<magicDamage>ความเสียหายเวทสูงสุด @TotalDamage@ หน่วย</magicDamage> ขึ้นอยู่กับระยะเวลาที่ร่ายสกิล",
+            "dynamicDescription": "<mainText>Nunu ดูดความร้อนออกจากพื้นที่โดยรอบ โดยขณะร่ายสกิลศัตรูในระยะจะถูก<status>สโลว์</status> @MovementSpeedMod*-100@% และลด<attackSpeed>ความเร็วโจมตี</attackSpeed> @AttackSpeedMod*-100@%<br><br>จากนั้นเมื่อร่ายเสร็จสิ้น ศัตรูในระยะจะได้รับ<magicDamage>ความเสียหายเวทสูงสุด @TotalDamage@ หน่วย</magicDamage> ขึ้นอยู่กับระยะเวลาที่ร่ายสกิล",
             "range": [
                 650.0,
                 650.0,

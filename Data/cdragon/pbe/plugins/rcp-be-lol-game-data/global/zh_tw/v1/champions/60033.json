@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "錐刺甲殼",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "拉姆斯的外殼強化後獲得額外傷害，將25%的物防轉化為物攻。"
+        "description": "拉姆斯的外殼強化後獲得額外傷害，將一定比例的物防轉化為物攻。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "動力衝刺",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "拉姆斯縮成球狀衝擊敵軍，造成傷害並使受到衝擊的目標緩速。",
-            "dynamicDescription": "拉姆斯在7秒內縮成球狀衝擊敵軍，撞擊時對鄰近敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並使其<status>緩速</status>@SlowPercent*-100@%，持續3秒。<br><br><recast>重施技能</recast>來移除此效果。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "拉姆斯在@Duration@秒內縮成球狀衝擊敵軍，撞擊時對鄰近敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並使其<status>緩速</status>@SlowPercent*-100@%，持續@SlowDuration@秒。<br><br><recast>重施技能</recast>來移除此效果。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "尖刺防禦",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "拉姆斯進入防禦狀態，大幅提升物防及魔防，並同時反彈傷害。",
-            "dynamicDescription": "拉姆斯進入6秒的防禦狀態，他的<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>增加@Armour@，並對普攻他的人反彈<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br><recast>重施技能</recast>來移除此效果。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "拉姆斯進入@Duration@秒的防禦狀態，他的<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>增加@Armour@，並對普攻他的人反彈<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br><recast>重施技能</recast>來移除此效果。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "穿刺嘲諷",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "地動山搖",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "拉姆斯施放震盪波，對鄰近單位與防禦塔造成傷害。",
-            "dynamicDescription": "拉姆斯在腳下製造地震，每秒對鄰近的單位和建築物造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，持續8秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "拉姆斯在腳下製造地震，每秒對鄰近的單位和建築物造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，持續@Duration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

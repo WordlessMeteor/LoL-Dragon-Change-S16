@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Az alkony szeme",
-    "shortBio": "– A Ki támadás (passzív) és a Gyógyító tőr (Q) különböző képességek<br>– A Ki-pajzs (W) rövid időre pajzsot ad<br>- Az Árnyékugrás (E) csak hősöket talál el",
+    "shortBio": "– A Ki támadás (passzív) és a Gyógyító tőr (Q) megváltoztak<br>– A Védelem (W) rövid időre pajzsot ad<br>– Az Árnyékugrás (E) csak hősöket talál el",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "9 másodpercenként Shen következő támadása bónusz sebzést okoz. Shen minden támadásakor csökken a Ki támadás töltési ideje."
+        "description": "Bizonyos időközönként Shen következő támadása bónusz sebzést okoz. Minden alkalommal, amikor Shen megtámad egy miniont, egy szörnyet vagy egy hőst, a Ki támadás töltési ideje csökken."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Shen védelmezi magát, így pár másodpercig kivédi a beérkező sebzéseket.",
-            "dynamicDescription": "Shen <shield>@TotalShieldAmount@ pajzsot</shield> biztosít magának @ShieldDuration@ másodpercre. Amíg ez a képesség aktív, a támadásai további 1 másodperccel csökkentik a <keywordMajor>Ki támadás</keywordMajor> töltési idejét.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen @ShieldDuration@ másodpercre <shield>@TotalShieldAmount@ pajzsot</shield> biztosít magának. Amíg ez a képesség aktív, a támadásai további @PassiveCooldownReduction@ másodperccel csökkentik a <keywordMajor>Ki támadás</keywordMajor> töltési idejét.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

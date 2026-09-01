@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "นัยน์ตาแห่งสนธยา",
-    "shortBio": "- Ki Strike (ติดตัว) และ Vorpal Blade (Q) เป็นสกิลที่แตกต่างกัน<br>- Ki Barrier (W) จะมอบโล่ป้องกันเป็นระยะเวลาสั้น ๆ<br>- Shadow Dash (E) จะโจมตีโดนแชมเปี้ยนเท่านั้น",
+    "shortBio": "- Ki Strike (ติดตัว) และ Vorpal Blade (Q) เป็นสกิลที่แตกต่างไป<br>- Feint (W) มอบโล่ป้องกันเป็นระยะเวลาสั้น ๆ<br>- Shadow Dash (E) ใช้ได้กับแชมเปี้ยนเท่านั้น",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "การโจมตีครั้งถัดไปของ Shen ในทุก ๆ 9 วินาทีจะสร้างโบนัสความ‍เสีย‍หาย โดยทุก ๆ ครั้งที่ Shen โจมตี คูลดาวน์ของ Ki Strike จะลดลง"
+        "description": "การโจมตีครั้งถัดไปของ Shen สร้างโบนัสความเสียหายเป็นระยะ ๆ และคูลดาวน์ของ Ki Strike ลดลงทุก ๆ ครั้งที่ Shen โจมตีมินเนี่ยน มอนสเตอร์ หรือแชมเปี้ยน"
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Shen มอบโล่ป้องกันแก่ตัวเอง ดูดซับความเสียหายที่ได้รับเป็นเวลาสั้น ๆ",
-            "dynamicDescription": "Shen มอบ<shield>โล่ป้องกัน @TotalShieldAmount@ หน่วย</shield>แก่ตัวเองเป็นเวลา @ShieldDuration@ วินาที ขณะที่สกิลนี้ทำงาน การโจมตีของเขาจะลดคูลดาวน์ของ <keywordMajor>Ki Strike</keywordMajor> เพิ่มอีก 1 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen มอบ<shield>โล่ป้องกัน @TotalShieldAmount@ หน่วย</shield>แก่ตัวเองเป็นเวลา @ShieldDuration@ วินาที โดยขณะที่สกิลนี้ทำงาน การโจมตีของเขาจะลดคูลดาวน์ <keywordMajor>Ki Strike</keywordMajor> เพิ่มอีก @PassiveCooldownReduction@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Ojo del Crepúsculo",
-    "shortBio": "- Golpe ki (pasiva) y Hoja del crepúsculo (Q) son habilidades diferentes.<br>- Barrera ki (W) otorga un escudo durante un breve periodo de tiempo.<br>- Movimiento de sombra (E) solo golpea a campeones.",
+    "shortBio": "- Golpe de ki (pasiva) y Hoja del crepúsculo (Q) son habilidades diferentes.<br>- Maniobra engañosa (W) otorga un escudo durante un breve periodo de tiempo.<br>- Movimiento de sombra (E) solo golpea a campeones.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Cada 9 s, el siguiente ataque de Shen inflige daño adicional. Cada vez que Shen ataca, se reduce el enfriamiento de Golpe ki."
+        "description": "De forma periódica, el siguiente ataque de Shen inflige daño adicional. Cada vez que Shen ataca a un súbdito o a un campeón, reduce el enfriamiento de Golpe ki."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Shen se escuda a sí mismo y absorbe el daño recibido durante unos segundos.",
-            "dynamicDescription": "Shen obtiene <shield>@TotalShieldAmount@ de escudo</shield> durante @ShieldDuration@ s. Mientras esta habilidad está activa, sus ataques reducen el enfriamiento de <keywordMajor>Golpe ki</keywordMajor> en 1 s más.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen obtiene <shield>@TotalShieldAmount@ de escudo</shield> durante @ShieldDuration@ s. Mientras esta habilidad está activa, sus ataques reducen el enfriamiento de <keywordMajor>Golpe ki</keywordMajor> en @PassiveCooldownReduction@ s más.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

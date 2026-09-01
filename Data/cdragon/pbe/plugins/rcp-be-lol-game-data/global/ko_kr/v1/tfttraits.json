@@ -18089,7 +18089,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "GoldPerCharmPurchased",
@@ -18105,7 +18105,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.45
+                        "value": 0.5
                     }
                 ],
                 "min_units": 9,
@@ -18510,7 +18510,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 2.0
+                        "value": 2.5
                     }
                 ],
                 "min_units": 2,
@@ -18649,7 +18649,7 @@
                 "constants": [
                     {
                         "name": "Duration",
-                        "value": 4.0
+                        "value": 3.0
                     }
                 ]
             }
@@ -18687,7 +18687,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "LuckySlotCount",
@@ -18703,7 +18703,7 @@
                 "constants": [
                     {
                         "name": "HPBurnPerSecond",
-                        "value": 3.0
+                        "value": 3.5
                     },
                     {
                         "name": "LuckySlotCount",
@@ -19147,7 +19147,7 @@
                     },
                     {
                         "name": "Threshold2TrueDamageConversion",
-                        "value": 0.5
+                        "value": 0.4
                     },
                     {
                         "name": "Threshold3StarUpPeriod",
@@ -19296,10 +19296,14 @@
         "trait_id": "DA_18_Summoner",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
-        "tooltip_text": "소환사는 각기 다른 방식으로 소환수를 강화합니다.<br><br>요릭: 체력 +@HealthMult*100@%<br>아지르: 피해량 +@DamageMult*100@%<br>어미 부리: 피해량 +@DamageMult*100@%<br>자이라: 식물 공격 횟수 +@NumExtraAttacks@<br><row>(@MinUnits@) 소환수 강화</row><br><row>(@MinUnits@) 각 효과 50% 증가</row>",
+        "tooltip_text": "소환사는 각기 다른 방식으로 소환수를 강화합니다.<br><br>요릭: 체력 +@HealthMult*100@%<br>아지르: 피해량 +@AzirDamageMult*100@%<br>어미 부리: 피해량 +@DamageMult*100@%<br>자이라: 식물 공격 횟수 +@NumExtraAttacks@<br><row>(@MinUnits@) 소환수 강화</row><br><row>(@MinUnits@) 각 효과 50% 강화</row>",
         "innate_trait_sets": [
             {
                 "constants": [
+                    {
+                        "name": "AzirDamageMult",
+                        "value": 0.2
+                    },
                     {
                         "name": "DamageMult",
                         "value": 0.45
@@ -19336,7 +19340,7 @@
         "trait_id": "DA_18_Vanguard",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
-        "tooltip_text": "전투 시작 시 및 <colorHealth>체력</colorHealth>이 @HealthThreshold*100@% 아래로 떨어지면 선봉대가 @ShieldDuration@초 동안 최대 체력 비례 보호막을 얻습니다.<br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%</row><br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%</row><br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%, 보호막이 씌워진 동안 내구력 @DurabilityIncrease*100@% 획득</row>",
+        "tooltip_text": "전투 시작 시 및 체력이 @HealthThreshold*100@% 아래로 떨어지면 선봉대가 @ShieldDuration@초 동안 최대 체력 비례 보호막을 얻습니다.<br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%</row><br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%</row><br><row>(@MinUnits@) 최대 체력의 @MaxHealthShield*100@%, 보호막이 씌워진 동안 내구력 @DurabilityIncrease*100@% 획득</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19368,7 +19372,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.32
+                        "value": 0.3
                     }
                 ],
                 "min_units": 4,
@@ -19384,7 +19388,7 @@
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.42
+                        "value": 0.4
                     }
                 ],
                 "min_units": 6,
@@ -19548,7 +19552,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.3
+                        "value": 0.33
                     },
                     {
                         "name": "TeamDurability",
@@ -19564,7 +19568,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "TeamDurability",

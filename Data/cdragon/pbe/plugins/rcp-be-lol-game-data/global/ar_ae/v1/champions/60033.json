@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "القوقعة الشائكة",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "يكسب راموس ضررًا إضافيًا مع تعزيز قوقعته، فيحول 25% من الدروع لديه إلى ضرر هجوم."
+        "description": "يكسب راموس ضررًا إضافيًا مع تدعيم قوقعته، فيحول جزءًا من دروعه إلى ضرر هجوم."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "كرة القوة",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينطلق راموس بسرعة كبيرة في هيئة كرة باتجاه أعدائه، فيلحق الضرر بالأهداف المتأثرة بالارتطام ويبطئها.",
-            "dynamicDescription": "ينطلق راموس بسرعة كبيرة في هيئة كرة باتجاه أعدائه لمدة 7ث، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار عند الإصابة، كما <status>يبطئهم</status> بنسبة @SlowPercent*-100@% لمدة 3ث.<br><br><recast>أعد الإلقاء</recast> لإزالة هذا التأثير.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينطلق راموس بسرعة كبيرة في هيئة كرة باتجاه أعدائه لمدة @Duration@ث، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار عند الإصابة، كما <status>يبطئهم</status> بنسبة @SlowPercent*-100@% لمدة @SlowDuration@ث.<br><br><recast>أعد الإلقاء</recast> لإزالة هذا التأثير.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "دحرجة الكرة الدفاعية",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يدخل راموس في تشكيل دفاعي، مما يزيد من قوة الدروع ومقاومة السحر لديه بشكل كبير ويرد الضرر إلى المهاجمين.",
-            "dynamicDescription": "يدخل راموس في تشكيل دفاعي لمدة 6ث، مما يزيد <scaleArmor>الدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> لديه بمقدار @Armour@ ويرد <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إلى المهاجمين.<br><br><recast>أعد الإلقاء</recast> لإزالة هذا التأثير.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يدخل راموس في تشكيل دفاعي لمدة @Duration@ث، مما يزيد <scaleArmor>الدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> لديه بمقدار @Armour@ ويرد <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إلى المهاجمين.<br><br><recast>أعد الإلقاء</recast> لإزالة هذا التأثير.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "الاستفزاز النافذ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "الهزات",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق راموس موجات من الدمار تنبض عبر الأرض، فتلحق الضرر بالوحدات والمباني القريبة منه.",
-            "dynamicDescription": "يطلق راموس هزات تحته، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كل ثانية بالوحدات والمباني القريبة لمدة 8ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق راموس هزات تحته، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كل ثانية بالوحدات والمباني القريبة لمدة @Duration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

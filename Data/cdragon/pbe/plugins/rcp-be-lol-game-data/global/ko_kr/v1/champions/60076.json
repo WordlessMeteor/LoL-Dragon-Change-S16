@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "수풀을 통과해 이동하면 니달리의 이동 속도가 2초간 15% 증가합니다."
+        "description": "수풀을 통과해 이동하면 니달리의 이동 속도가 증가합니다."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "인간 형태일 때는 니달리가 대상에게 가시 달린 창을 던집니다. 창은 날아간 거리에 비례해 피해량이 증가합니다.  쿠거 형태일 때는 다음 기본 공격 시 대상에게 치명적인 일격을 가해, 대상의 체력이 낮을수록 더 큰 피해를 입힙니다.",
-            "dynamicDescription": "<keywordMajor>인간 형태:</keywordMajor> 니달리가 창을 던져, 대상과의 거리에 따라 <magicDamage>@StartingDamage@</magicDamage>~<magicDamage>@MaxDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 다음 기본 공격 시 <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@의 물리 피해</physicalDamage>를 입힙니다. 부상당한 대상에게는 입히는 피해가 증가합니다. (최대 300%의 피해)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>인간 형태:</keywordMajor> 니달리가 창을 던져, 대상과의 거리에 따라 <magicDamage>@StartingDamage@</magicDamage>~<magicDamage>@MaxDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><keywordMajor>쿠거 형태:</keywordMajor> 니달리의 다음 기본 공격이 대상의 잃은 체력에 비례해 <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage>~<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@의 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "인간 형태일 때는 니달리가 방심한 적을 노려 피해를 입히는 덫을 설치합니다. 덫은 발동 시 대상의 위치를 드러내고 12초 동안 방어력과 마법 저항력을 감소시킵니다. 쿠거 형태일 때는 전방을 급습하여, 착지할 때 소량의 피해를 입힙니다.",
-            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 덫을 설치합니다. 덫은 대상에게 2초에 걸쳐 <magicDamage>@DamagePerSecond@의 마법 피해</magicDamage>를 입히고, 위치를 드러내며, 12초 동안 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 @ResistDecreases*100@% <status>감소</status>시킵니다. 덫은 4분간 유지됩니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 전방으로 도약해, 주변 적에게 <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "description": "인간 형태일 때는 니달리가 방심한 적을 노려 피해를 입히는 덫을 설치합니다. 덫은 발동 시 대상에게 피해를 입히고, 위치를 드러내며, 방어력 및 마법 저항력을 감소시킵니다. 쿠거 형태일 때는 전방을 급습하여, 착지할 때 소량의 피해를 입힙니다.",
+            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 덫을 설치합니다. 덫은 대상에게 @DamageDuration@초에 걸쳐 <magicDamage>@DamagePerSecond@의 마법 피해</magicDamage>를 입히고, 위치를 드러내며, @ShredDuration@초 동안 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 @ResistDecreases*100@% <status>감소</status>시킵니다. 덫은 @TrapDurationMins@분간 유지됩니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 전방으로 도약해, 주변 적에게 <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "인간 형태일 때는 니달리가 쿠거의 영혼을 끌어내어, 아군의 체력을 회복시키고 잠시 공격 속도를 부여합니다.  쿠거 형태일 때는 전방의 적을 발톱으로 빠르게 공격합니다.",
-            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 아군 챔피언의 체력을 <healing>@TotalHealing@</healing>만큼 회복시키고 7초 동안 <attackSpeed>@BonusAS*100@%의 공격 속도</attackSpeed>를 부여합니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 전방의 적을 발톱으로 공격해 <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 아군 챔피언의 체력을 <healing>@TotalHealing@</healing>만큼 회복시키고, @ASDuration@초 동안 <attackSpeed>@BonusAS*100@%의 공격 속도</attackSpeed>를 부여합니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 전방의 적을 발톱으로 공격해 <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "니달리가 쿠거로 변신하여 새로운 스킬을 사용할 수 있게 되고 이동 속도가 증가합니다.",
-            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 사나운 쿠거로 변신해, <speed>20의 이동 속도</speed>를 얻고 기본 스킬이 <spellName>숨통 끊기</spellName>, <spellName>급습</spellName>, <spellName>할퀴기</spellName>로 바뀝니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 인간 형태로 돌아옵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>인간 형태: </keywordMajor>니달리가 사나운 쿠거로 변신해, <speed>@CougarMoveSpeed@의 이동 속도</speed>를 얻고 기본 스킬이 <spellName>숨통 끊기</spellName>, <spellName>급습</spellName>, <spellName>할퀴기</spellName>로 바뀝니다.<br><br><keywordMajor>쿠거 형태: </keywordMajor>니달리가 인간 형태로 돌아옵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

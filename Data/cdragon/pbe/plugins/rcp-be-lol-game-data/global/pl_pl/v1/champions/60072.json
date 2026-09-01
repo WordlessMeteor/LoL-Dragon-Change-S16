@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Ataki podstawowe skracają czas odnowienia wszystkich umiejętności o 0,5 sek. Atakowanie bohaterów podwaja ten efekt."
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner atakuje szczypcami, zadając obrażenia fizyczne wszystkim pobliskim wrogom i na kilka sekund wzmacniając się Kryształową Energią, jeśli trafi jednostkę.  Jeśli ponownie użyje Kryształowego Cięcia, będąc pod wpływem Kryształowej Energii, zada dodatkowe obrażenia magiczne i spowolni wszystkie trafione cele.",
-            "dynamicDescription": "Skarner zadaje <physicalDamage>@TotalBaseDamage@ pkt. obrażeń fizycznych</physicalDamage> wszystkim pobliskim wrogom i na 5 sek. wzmacnia się <keywordMajor>Kryształową Energią</keywordMajor>, jeśli trafi jednostkę.<br><br>Gdy Skarner jest naładowany, <spellName>Kryształowe Cięcie</spellName> zadaje <magicDamage>@TotalProcDamage@ pkt. dodatkowych obrażeń magicznych</magicDamage> i <status>spowalnia</status> o @SlowPercent*-100@% na 2 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarnera otacza tarcza. Póki istnieje, zwiększa się jego prędkość ruchu i prędkość ataku.",
-            "dynamicDescription": "Skarner zostaje <shield>osłonięty tarczą</shield>, która pochłania @BlockDamage@ pkt. obrażeń przez 6 sek. Póki jest aktywna, Skarner zyskuje <attackSpeed>@ASBonus*100@% prędkości ataku</attackSpeed> i <speed>@MSBonus*100@% prędkość ruchu</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner wywołuje wybuch krystalicznej energii, który zadaje obrażenia trafionym wrogom i oznacza ich. Trafienie wrogów zużyje oznaczenie i uleczy Skarnera. Zabicie celu również aktywuje efekt leczenia.",
-            "dynamicDescription": "Skarner zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom w linii i oznacza ich na 6 sek.<br><br>Trafienie wrogów zużyje oznaczenie i <healing>uleczy</healing> Skarnera o @TotalHealing@ pkt. zdrowia. Zabicie celu również aktywuje efekt leczenia. (Każda aktywacja leczy o 50% mniej).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner przygważdża bohatera i zadaje mu obrażenia magiczne.  W tym czasie Skarner może się przemieszczać, ciągnąc za sobą bezbronną ofiarę.  Kiedy efekt się skończy, ofiara otrzyma dodatkowe obrażenia.",
-            "dynamicDescription": "Skarner <status>przygwożdża</status> wrogiego bohatera na 1,75 sek. i zadaje mu <magicDamage>@TotaDamage@ pkt. obrażeń magicznych</magicDamage>. W tym czasie Skarner może się przemieszczać, ciągnąc za sobą bezbronną ofiarę. Gdy efekt się zakończy, ofiara otrzyma dodatkowo <magicDamage>@TotaDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

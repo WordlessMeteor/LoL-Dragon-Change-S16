@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Caparazón de Púas",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus inflige más daño conforme su caparazón se fortalece y convierte un 25% de su Armadura en daño de ataque."
+        "description": "Rammus inflige más daño conforme su caparazón se fortalece y convierte una parte de su armadura en daño de ataque."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Bola Rodante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Rammus se convierte en una bola y acelera en dirección a los enemigos. Al impactar a un objetivo, le inflige daño y lo ralentiza.",
-            "dynamicDescription": "Rammus se convierte en una bola y acelera en dirección a los enemigos a lo largo de 7 seg. Al impactar a un objetivo, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos y los <status>ralentiza</status> un @SlowPercent*-100@% durante 3 seg.<br><br>Si <recast>vuelves a lanzar</recast> la habilidad, el efecto se termina antes de tiempo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus se convierte en una bola y acelera en dirección a los enemigos a lo largo de @Duration@ seg. Al impactar a un objetivo, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos y los <status>ralentiza</status> un @SlowPercent*-100@% durante @SlowDuration@ seg.<br><br>Si <recast>vuelves a lanzar</recast> la habilidad, el efecto se termina antes de tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Posición Defensiva",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Rammus adopta una postura defensiva, lo que le otorga mucha armadura y resistencia mágica adicionales y le permite devolver parte del daño recibido.",
-            "dynamicDescription": "Rammus adopta una postura defensiva durante 6 seg, lo que aumenta su <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> en @Armour@ y refleja <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a quienes lo ataquen.<br><br>Si <recast>vuelves a lanzar</recast> la habilidad, el efecto se termina antes de tiempo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus adopta una postura defensiva durante @Duration@ seg, lo que aumenta su <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> en @Armour@ y refleja <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a quienes lo ataquen.<br><br>Si <recast>vuelves a lanzar</recast> la habilidad, el efecto se termina antes de tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Provocación Punzante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Temblores",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Rammus crea ondas expansivas de destrucción que se propagan por el suelo e infligen daño tanto a las unidades como a las estructuras cercanas.",
-            "dynamicDescription": "Rammus hace temblar el suelo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> por seg tanto a las unidades como a las estructuras cercanas durante 8 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus hace temblar el suelo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> por seg tanto a las unidades como a las estructuras cercanas durante @Duration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

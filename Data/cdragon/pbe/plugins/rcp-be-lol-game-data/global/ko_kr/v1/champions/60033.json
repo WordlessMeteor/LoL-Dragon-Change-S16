@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "가시박힌 껍질",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "람머스가 껍질이 튼튼해짐에 따라 추가 피해를 얻어, 방어력의 25%를 공격력으로 전환합니다."
+        "description": "람머스가 껍질이 튼튼해짐에 따라 추가 피해를 얻어, 방어력의 일부를 공격력으로 전환합니다."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "대회전",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "람머스가 공 모양으로 몸을 만 후 적에게 돌진해 충돌 시 주변 적에게 피해를 입히고 둔화시킵니다.",
-            "dynamicDescription": "람머스가 공 모양으로 몸을 만 후 7초에 걸쳐 가속하며 적에게 돌진합니다. 충돌 시 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 3초간 @SlowPercent*-100@% <status>둔화</status>시킵니다.<br><br><recast>재사용</recast> 시 효과가 사라집니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "람머스가 공 모양으로 몸을 만 후, @Duration@초에 걸쳐 가속하며 적에게 돌진합니다. 충돌 시 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowPercent*-100@% <status>둔화</status>시킵니다.<br><br><recast>재사용</recast> 시 효과가 종료됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "몸 말아 웅크리기",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "람머스가 방어 자세로 들어가 방어력 및 마법 저항력이 대폭 증가하고, 기본 공격으로 받는 피해를 반사합니다.",
-            "dynamicDescription": "람머스가 6초 동안 방어 자세로 들어가 자신의 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 @Armour@만큼 증가시키고, 자신에게 기본 공격을 가하는 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br><recast>재사용</recast> 시 효과가 사라집니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "람머스가 @Duration@초 동안 방어 자세에 들어가 자신의 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 @Armour@만큼 증가시키고, 기본 공격을 가하는 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 돌려줍니다.<br><br><recast>재사용</recast> 시 효과가 종료됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "따끔한 도발",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "지진",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "람머스가 무서운 지진을 일으켜 근처의 유닛과 구조물에 피해를 입힙니다.",
-            "dynamicDescription": "람머스가 지진을 일으켜 8초 동안 근처의 유닛과 구조물에 매초 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "람머스가 지진을 일으켜, @Duration@초 동안 근처의 유닛과 구조물에 매초 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

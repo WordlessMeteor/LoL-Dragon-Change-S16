@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "판테온은 기본 공격이나 스킬을 4회 사용할 때마다 다음에 받는 공격을 방어합니다."
+        "description": "판테온은 기본 공격이나 스킬을 @AttacksRequired@회 사용할 때마다 다음에 받는 공격을 방어합니다."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "판테온이 적을 향해 도약한 뒤 방패로 가격하여 기절시킵니다.  공격을 마치면 판테온이 다음 기본 공격을 방어할 태세를 갖춥니다.",
+            "description": "판테온이 적을 향해 도약한 뒤 방패로 가격하여 기절시킵니다. 공격을 마치면 판테온이 다음 기본 공격을 방어할 태세를 갖춥니다.",
             "dynamicDescription": "판테온이 지정한 적에게 도약한 뒤 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @StunDuration@초 동안 <status>기절</status>시킵니다. 또한 판테온이 즉시 <spellName>방패 방어술</spellName> 효과를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "판테온이 정신을 집중하여 전방에 빠르게 3회의 공격을 가합니다. 챔피언에게는 두 배의 피해를 입힙니다. 또한 적의 약점을 더욱 정확히 파악하여, 체력이 15% 미만인 적에게 항상 치명타를 발동합니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> <spellName>투창</spellName>, <spellName>심장추적자</spellName>, 기본 공격이 체력이 @PassiveCritThreshold*100@% 미만인 대상을 상대로 치명타를 100% 발동합니다.<br><br><spellActive>사용 시:</spellActive> 판테온이 정신을 집중하여, 전방에 빠르게 @NumberOfStrikes@회의 공격을 가해 각각 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다. (총 <physicalDamage>@MaximumDamageTooltip@</physicalDamage>의 피해)@SpellModifierDescriptionAppend@",
+            "description": "판테온이 정신을 집중하며 전방에 빠르게 공격을 가합니다. 챔피언에게는 증가한 피해를 입힙니다. 또한 적의 약점을 더욱 정확히 파악하여, 부상당한 적에게 항상 치명타를 발동합니다.",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> <spellName>투창</spellName>, <spellName>심장추적자</spellName>, 기본 공격이 체력이 @PassiveCritThreshold*100@% 아래인 대상을 상대로 항상 치명타를 발동합니다.<br><br><spellActive>사용 시:</spellActive> 판테온이 정신을 집중하며 전방에 빠르게 @NumberOfStrikes@회의 공격을 가해, 각각 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다. (총 <physicalDamage>@MaximumDamageTooltip@</physicalDamage>의 피해)@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1256,7 +1256,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "판테온이 태세를 갖춘 뒤, 공중으로 도약했다가 목표 지점을 덮쳐 범위 내의 모든 적에게 피해를 입힙니다. 착지 지점에 가까울수록 더 큰 피해를 받습니다.",
+            "description": "판테온이 태세를 갖춘 뒤, 공중으로 도약했다가 목표 지점을 덮쳐 범위 내의 모든 적 유닛에게 피해를 입힙니다. 착지 지점에 가까울수록 더 큰 피해를 받습니다.",
             "dynamicDescription": "판테온이 힘을 모은 뒤, 공중으로 도약했다가 몇 초 뒤 목표 지점을 덮칩니다. 범위 중앙에 가까운 유닛은 최대 <magicDamage>@MaxDamage@의 마법 피해</magicDamage>를, 가장자리의 유닛은 최소 <magicDamage>@MinDamage@의 마법 피해</magicDamage>를 받고 @SlowDuration@초 동안 @SlowAmount*100@% <status>둔화</status>됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,

@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Spiked Shell",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus mendapatkan tambahan damage saat cangkangnya diperkuat, mengubah 25% armor-nya menjadi Attack Damage."
+        "description": "Rammus mendapatkan tambahan damage saat cangkangnya diperkuat, mengubah sebagian Armor menjadi Attack Damage."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Powerball",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Rammus berakselerasi dalam bentuk bola ke arah musuh, menghasilkan damage dan slow ke target yang ditabrak.",
-            "dynamicDescription": "Rammus berakselerasi dalam bentuk bola selama 7 detik ke arah musuh, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitar yang tertabrak dan menyebabkan <status>Slow</status> kepadanya sebesar @SlowPercent*-100@% selama 3 detik.<br><br><recast>Recast</recast> untuk menghilangkan efek ini.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus melesat cepat dalam bentuk bola selama @Duration@ dtk ke arah musuh, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitar yang tertabrak dan menyebabkan <status>Slow</status> kepadanya sebesar @SlowPercent*-100@% selama @SlowDuration@ dtk.<br><br><recast>Recast</recast> untuk menghilangkan efek ini.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Defensive Ball Curl",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Rammus beralih ke formasi bertahan, meningkatkan armor dan magic resistance-nya secara drastis serta mengembalikan damage serangan.",
-            "dynamicDescription": "Rammus beralih ke formasi bertahan selama 6 detik, meningkatkan <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> sebesar @Armour@ dan mengembalikan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke penyerang.<br><br><recast>Recast</recast> untuk menghilangkan efek ini.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus beralih ke formasi bertahan selama @Duration@ detik, meningkatkan <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> sebesar @Armour@ dan mengembalikan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke penyerang.<br><br><recast>Recast</recast> untuk menghilangkan efek ini.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Puncturing Taunt",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Tremors",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Rammus menciptakan gelombang kehancuran yang berdenyut di tanah, menghasilkan damage ke unit dan bangunan di sekitarnya.",
-            "dynamicDescription": "Rammus menggetarkan tanah yang diinjaknya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> setiap detik ke unit dan bangunan di sekitar selama 8 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus menggetarkan tanah yang diinjaknya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> setiap detik ke unit dan bangunan di sekitar selama @Duration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

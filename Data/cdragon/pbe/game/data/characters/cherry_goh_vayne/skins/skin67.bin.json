@@ -5342,6 +5342,11 @@
         "name": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Materials/DemonHand01",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/cherry_goh_vayne/skins/skin67/cherry_goh_vayne_skin67_demon_hand01_tx_cm.tex",
                 "addressU": 2,
@@ -5461,7 +5466,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -6212,6 +6217,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_TWO_ADDITIVE_MASK",
                 "on": false,
@@ -9600,6 +9610,11 @@
         "name": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Materials/R_Hand",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/cherry_goh_vayne/skins/skin67/cherry_goh_vayne_skin67_r_hand_tx_cm.tex",
                 "addressU": 2,
@@ -9717,7 +9732,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -10468,6 +10483,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_TWO_ADDITIVE_MASK",
                 "on": false,

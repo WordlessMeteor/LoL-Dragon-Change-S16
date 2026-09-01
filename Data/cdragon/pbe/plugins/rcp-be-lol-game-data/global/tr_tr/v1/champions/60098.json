@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Alacakaranlığın Gözü",
-    "shortBio": "- Ki Saldırısı (Pasif) ve Ölümcül Kılıç (Q) farklı yetenekler.<br>- Ki Kalkanı (W) kısa süreliğine bir kalkan sağlar.<br>- Gölge Fırlayışı (E) sadece şampiyonlara isabet eder.",
+    "shortBio": "- Ki Saldırısı (Pasif) ve Ölümcül Kılıç (Q) farklı yetenekler.<br>- Gözdağı (W) kısa süreliğine bir kalkan sağlar.<br>- Gölge Fırlayışı (E) sadece şampiyonlara isabet eder.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Her 9 saniyede bir Shen'in bir sonraki saldırısı ilave hasar verir. Shen her saldırdığında Ki Saldırısı'nın bekleme süresi azalır."
+        "description": "Zaman zaman Shaco'nun bir sonraki saldırısı ilave hasar verir. Shen bir minyona, canavara veya şampiyona her saldırdığında Ki Saldırısı'nın bekleme süresi azalır."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Shen birkaç saniyeliğine kendine gelen hasarı soğuran bir kalkan sağlar.",
-            "dynamicDescription": "Shen @ShieldDuration@ saniyeliğine kendine <shield>@TotalShieldAmount@ Kalkan</shield> sağlar. Saldırıları bu yetenek etkinken <keywordMajor>Ki Saldırısı</keywordMajor>'nın bekleme süresini fazladan 1 saniye azaltır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen @ShieldDuration@ saniyeliğine kendine <shield>@TotalShieldAmount@ Kalkan</shield> sağlar. Saldırıları bu yetenek etkinken <keywordMajor>Ki Saldırısı</keywordMajor>'nın bekleme süresini fazladan @PassiveCooldownReduction@ saniye azaltır.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Eye of Twilight",
-    "shortBio": "- Ki Strike (Pasif) dan Vorpal Blade (Q) adalah ability yang berbeda<br>- Ki Barirer (W) memberikan shield selama beberapa saat<br>- Shadow Dash (E) hanya mengenai champion",
+    "shortBio": "- Ki Strike (Pasif) dan Vorpal Blade (Q) adalah ability yang berbeda<br>- Feint (W) memberikan shield selama beberapa saat<br>- Shadow Dash (E) hanya mengenai champion",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Tiap 9 detik, serangan Shen berikutnya memberikan damage bonus. Setiap kali Shen menyerang, cooldown Ki Strike berkurang."
+        "description": "Secara berkala, serangan Shen berikutnya menghasilkan damage bonus. Tiap kali Shen menyerang minion, monster, atau champion, cooldown Ki Strike berkurang."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Shen melindungi dirinya sendiri dengan Shield yang menyerap damage yang masuk selama beberapa detik.",
-            "dynamicDescription": "Shen memberikan <shield>@TotalShieldAmount@ Shield</shield> kepada dirinya sendiri selama @ShieldDuration@ detik. Selama Ability ini aktif, serangan Shen mengurangi cooldown <keywordMajor>Ki Strike</keywordMajor> sebesar 1 detik tambahan.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen memberikan <shield>@TotalShieldAmount@ Shield</shield> kepada dirinya sendiri selama @ShieldDuration@ detik. Selama Ability ini aktif, serangannya mengurangi cooldown <keywordMajor>Ki Strike</keywordMajor> sebanyak @PassiveCooldownReduction@ detik tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

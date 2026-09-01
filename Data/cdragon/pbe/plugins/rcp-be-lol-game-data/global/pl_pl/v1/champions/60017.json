@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "Kamuflaż",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "Pozostając przez jakiś czas w bezruchu i nie wykonując żadnych akcji, Teemo na czas nieokreślony staje się niewidzialny. Po utracie niewidzialności Teemo zyskuje Element Zaskoczenia, zwiększając swoją prędkość ataku na kilka sekund."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "Oślepiająca Strzałka",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "Szybkie Ruchy",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Teemo truchta, biernie zwiększając prędkość ruchu do momentu zostania trafionym przez wrogiego bohatera bądź wieżę.  Teemo może szybko biec, dzięki czemu na chwilę zyskuje dodatkową prędkość ruchu, która nie jest redukowana przez trafienie.",
-            "dynamicDescription": "<mainText><spellPassive>Biernie:</spellPassive> <speed>Prędkość ruchu</speed> Teemo zostaje zwiększona o @PassiveMoveSpeedBonus*100@%, chyba że w przeciągu 5 sek. został trafiony przez wrogiego bohatera bądź wieżę.<br><br><spellActive>Użycie: </spellActive>Teemo zyskuje <speed>@ActiveMoveSpeedBonus*100@% prędkości ruchu</speed> na 3 sek. Premia aktywna nie jest tracona w przypadku trafienia.",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "Toksyczne Strzałki",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Każdy atak Teemo zatruwa cel, zadając obrażenia przy uderzeniu, a potem co sekundę przez 4 sek.",
-            "dynamicDescription": "<mainText>Ataki podstawowe Teemo zatruwają cel, zadając <magicDamage>@ImpactCalculatedDamage@ pkt. obrażeń magicznych</magicDamage> przy trafieniu oraz <magicDamage>@TickCalculatedDamage@ pkt. obrażeń magicznych</magicDamage> co sekundę przez 4 sek.",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "Trująca Pułapka",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Teemo rzuca trującą pułapką wybuchową w postaci jednego z grzybów, które trzyma w plecaku.  Po uruchomieniu pułapka wypuści obłok trucizny, spowalniając wrogów i zadając obrażenia w czasie.",
-            "dynamicDescription": "Rzuca przechowywanym grzybem, aby umieścić pułapkę, która wybuchnie, jeśli wróg na nią nadepnie. Wybuch zatruwa okolicznych wrogów, <status>spowalniając</status> ich o @SlowAmount@% oraz zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w przeciągu 4 sek.<br><br>Ta umiejętność ma 3 ładunki (@AmmoRechargeTime@ sek. odnowienia).<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teemo kładzie grzybową pułapkę, która wybucha, gdy ktoś na nią nadepnie. Pułapki <status>spowalniają</status> o @SlowAmount@% i zadają <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DebuffDuration@ sek. Wrogowie zostają ujawnieni na tyle samo czasu.<br><br>Pułapki utrzymują się przez @MushroomDuration@ min i są ukryte. Ta umiejętność ma następującą liczbę ładunków: @MaxAmmo@ (@AmmoRechargeTime@ sek. odnowienia).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

@@ -302,7 +302,7 @@
                 },
                 {
                     "id": 60076015,
-                    "name": "黎明使者 奈德麗 飾框頭像",
+                    "name": "黎明使者 奈德麗(完美楷模)",
                     "contentId": "ccdaea4d-0727-40a2-b267-2fd80f972c67",
                     "relatedPrimeContentId": "2e0ad7bd-6efb-4cd0-88f8-7abbb80f1f88",
                     "relatedPrimeItemId": 76015,
@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "奈德麗穿越草叢時跑速提升15%，持續2秒。"
+        "description": "奈德麗穿越草叢時，跑速會增加。"
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "人類形態：奈德麗向目標投擲帶刺標槍，飛行距離越遠，傷害越高。美洲獅形態：她下一次普攻會試圖對目標造成致命傷害，目標的生命越低，傷害越高。",
-            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗投擲標槍，命中時根據奈德麗與目標的距離，造成<magicDamage>@StartingDamage@</magicDamage>至<magicDamage>@MaxDamage@魔法傷害</magicDamage>。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗下一次普攻造成<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@物理傷害</physicalDamage>，對受傷目標造成更高傷害(最高可達300%總傷害)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗投擲標槍，命中時根據奈德麗與目標的距離，造成<magicDamage>@StartingDamage@</magicDamage>至<magicDamage>@MaxDamage@魔法傷害</magicDamage>。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗的下一次普攻根據目標已損失的生命造成<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage>至<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@物理傷害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "奈德麗為人類形態時會設下陷阱，對粗心大意的敵軍造成傷害。陷阱觸發時，會揭露目標位置，並削弱其雙防，持續12秒。處於美洲獅形態時，她會向前撲擊，落地時造成少量傷害。",
-            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗設置陷阱，在2秒內造成<magicDamage>@DamagePerSecond@魔法傷害</magicDamage>，並揭露目標視野，<status>削弱</status>其<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>@ResistDecreases*100@%，持續12秒。陷阱持續4分鐘。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗向前撲擊，對周遭敵軍造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "奈德麗為人類形態時會設下陷阱，對粗心大意的敵軍造成傷害。陷阱觸發時，會造成傷害和揭露目標位置，並削弱其雙防。處於美洲獅形態時，她會向前撲擊，落地時造成少量傷害。",
+            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗設置陷阱，在@DamageDuration@秒內造成<magicDamage>@DamagePerSecond@魔法傷害</magicDamage>，並揭露目標視野，<status>削弱</status>其<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>@ResistDecreases*100@%，持續@ShredDuration@秒。陷阱持續@TrapDurationMins@分鐘。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗向前撲擊，對周遭敵軍造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "人類形態：奈德麗引導美洲獅的靈魂治療友軍，並短暫提升其攻速。美洲獅形態：她迅速揮爪攻擊前方敵軍。",
-            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗為友方英雄回復<healing>@TotalHealing@</healing>生命，並賦予他們<attackSpeed>@BonusAS*100@%攻速</attackSpeed>，持續7秒。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗揮爪攻擊前方敵軍，造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗為友方英雄回復<healing>@TotalHealing@</healing>生命，並賦予他們<attackSpeed>@BonusAS*100@%攻速</attackSpeed>，持續@ASDuration@秒。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗揮爪攻擊前方敵軍，造成<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "奈德麗變身為兇猛的美洲獅，變更為新的技能組且跑速提升。",
-            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗變身為兇猛的美洲獅，獲得<speed>20跑速</speed>，她的基礎技能會變為<spellName>擊倒</spellName>、<spellName>飛撲</spellName>和<spellName>揮擊</spellName>。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗變回人類型態。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>人類形態：</keywordMajor>奈德麗變身為兇猛的美洲獅，獲得<speed>@CougarMoveSpeed@跑速</speed>，她的基礎技能會變為<spellName>擊倒</spellName>、<spellName>飛撲</spellName>和<spellName>揮擊</spellName>。<br><br><keywordMajor>美洲獅形態：</keywordMajor>奈德麗變回人類型態。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

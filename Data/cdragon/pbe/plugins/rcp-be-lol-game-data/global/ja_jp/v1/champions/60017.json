@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "カモフラージュ",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "短時間行動せずにいると無限にインビジブル状態になる。インビジブル状態が解除されると「奇襲モード」になり、攻撃速度が数秒間増加する。"
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "目つぶしダーツ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "駆け足！",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ちょこまかと動き回り、移動速度が増加する。敵チャンピオンまたはタワーから攻撃を受けると効果が消滅する。スプリントすると移動速度がさらに増加し、短時間の間は攻撃を受けても効果が持続する。",
-            "dynamicDescription": "<mainText><spellPassive>自動効果: </spellPassive>敵チャンピオンまたはタワーからの攻撃を5秒間受けないでいると、<speed>移動速度</speed>が@PassiveMoveSpeedBonus*100@%増加する。<br><br><spellActive>発動効果: </spellActive>3秒間全力疾走し、<speed>移動速度が@ActiveMoveSpeedBonus*100@%</speed>増加する。この増加移動速度は、攻撃を受けても消滅しない。",
+            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "毒たっぷり吹き矢",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "通常攻撃のたびに、対象を毒状態にする。攻撃を受けた対象は命中時にダメージを受け、さらにその後4秒にわたって毎秒ダメージを受ける。",
-            "dynamicDescription": "<mainText>通常攻撃が対象を毒状態にして、命中時<magicDamage>@ImpactCalculatedDamage@の魔法ダメージ</magicDamage>を与え、4秒間、毎秒<magicDamage>@TickCalculatedDamage@の魔法ダメージ</magicDamage>を与える。",
+            "description": "Spell_TeemoE_Jade_Summary",
+            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "毒キノコ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "バックパックに収納した「毒キノコ」を1つ取り出し、破裂性の毒トラップを仕掛ける。敵がトラップを踏むと毒の胞子が放出され、近くにいる敵ユニットをスロウ状態にし、継続ダメージを与える。",
-            "dynamicDescription": "蓄えていたキノコを1つ取り出し、トラップを仕掛ける。敵がトラップを踏むと毒の胞子が放出され、範囲内の敵ユニットに@SlowAmount@%の<status>スロウ効果</status>を付与し、4秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>このスキルは3回までチャージできる(@AmmoRechargeTime@秒でリチャージ)。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "キノコのトラップを設置する。トラップは踏まれると爆発して、@SlowAmount@%の<status>スロウ効果</status>を与え、@DebuffDuration@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。その間、敵は可視化される。<br><br>トラップはステルス状態になり、@MushroomDuration@分間持続する。このスキルは@MaxAmmo@個までチャージ可能(@AmmoRechargeTime@秒でリチャージ)。@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

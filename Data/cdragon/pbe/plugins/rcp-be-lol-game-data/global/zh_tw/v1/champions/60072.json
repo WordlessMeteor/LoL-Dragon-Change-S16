@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "普攻會使所有技能的冷卻時間縮短0.5秒。普攻英雄時效果加倍。"
+        "description": "Spell_SkarnerPassive_Jade_Summary"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史加納揮舞爪子，對鄰近敵軍造成物理傷害，如擊中目標則能夠以水晶能量替自己充能。在水晶能量強化期間再次施放水晶斬擊，則會對所有命中目標造成額外魔法傷害並施加緩速。",
-            "dynamicDescription": "史加納對所有鄰近敵軍造成<physicalDamage>@TotalBaseDamage@物理傷害</physicalDamage>，若擊中目標，會為自己充能<keywordMajor>水晶能量</keywordMajor>，持續5秒。<br><br>史加納處於充能狀態時，<spellName>水晶斬擊</spellName>造成<magicDamage>@TotalProcDamage@額外魔法傷害</magicDamage>，且<status>緩速</status>@SlowPercent*-100@%，持續2秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史加納獲得護盾，護盾存在期間，他的跑速和攻速都會提升。",
-            "dynamicDescription": "史加納獲得<shield>護盾</shield>，可吸收@BlockDamage@傷害，持續6秒。護盾存在期間，史加納增加<attackSpeed>@ASBonus*100@%攻速</attackSpeed>和<speed>@MSBonus*100@%跑速</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史加納召喚一道水晶能量衝擊，對命中的敵軍造成傷害並標記他們。普攻敵軍會消耗印記，治療史加納。直接擊殺目標同樣會觸發治療效果。",
-            "dynamicDescription": "史加納對一條直線上的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並標記他們6秒。<br><br>普攻敵軍會消耗標記，<healing>治療</healing>史加納@TotalHealing@。直接擊殺目標同樣會觸發治療效果(每次啟動的治療效果降低50%)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史加納壓制敵方英雄，並造成魔法傷害。在此期間，他可以自由移動並將受壓制的敵人四處拖行。效果結束時，史加納的目標會受到額外傷害。",
-            "dynamicDescription": "史加納<status>壓制</status>一名敵方英雄1.75秒，並造成<magicDamage>@TotaDamage@魔法傷害</magicDamage>。在此期間，他可以自由移動並將受壓制的敵軍四處拖行。效果結束時，史加納的目標會額外受到<magicDamage>@TotaDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

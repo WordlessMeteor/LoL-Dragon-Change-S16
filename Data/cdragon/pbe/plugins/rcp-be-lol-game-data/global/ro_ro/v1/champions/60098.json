@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Ochiul crepusculului",
-    "shortBio": "- ''Lovitura Ki'' (pasivă) și ''Tăișul vorpal'' (Q) sunt abilități diferite<br>- ''Bariera Ki'' (W) oferă un scut pentru o perioadă scurtă<br>- ''Năluca'' (E) lovește doar campionii",
+    "shortBio": "- ''Lovitura Ki'' (pasivă) și ''Tăișul vorpal'' (Q) sunt abilități diferite<br>- ''Fentă'' (W) oferă un scut pentru o perioadă scurtă<br>- ''Năluca'' (E) lovește doar campionii",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "La fiecare 9 secunde, următorul atac al lui Shen provoacă daune bonus. De fiecare dată când Shen atacă, timpul de reactivare al ''Loviturii Ki'' se reduce."
+        "description": "Periodic, următorul atac al lui Shen provoacă daune bonus. De fiecare dată când Shen atacă un minion, un monstru sau un campion, timpul de reactivare al ''Loviturii Ki'' se reduce."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Shen se apără, absorbind daunele suferite timp de câteva secunde.",
-            "dynamicDescription": "Shen se protejează cu un <shield>scut de @TotalShieldAmount@</shield> timp de @ShieldDuration@ secunde. Cât timp această abilitate este activă, atacurile lui reduc timpul de reactivare al <keywordMajor>''Loviturii Ki''</keywordMajor> cu încă 1 secundă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen se protejează cu un <shield>scut de @TotalShieldAmount@</shield> timp de @ShieldDuration@ secunde. Cât timp această abilitate este activă, atacurile lui reduc timpul de reactivare al <keywordMajor>''Loviturii Ki''</keywordMajor> cu încă @PassiveCooldownReduction@ secundă.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Após cada 4 Ataques ou conjurações de Habilidade, Pantheon fica protegido contra o próximo Ataque sofrido."
+        "description": "Após cada @AttacksRequired@ Ataques ou conjurações de Habilidade, Pantheon fica protegido contra o próximo Ataque sofrido."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Pantheon salta na direção de um inimigo e o golpeia com seu escudo, Atordoando-o.  Depois de terminar, Pantheon se prepara para bloquear o próximo Ataque.",
+            "description": "Pantheon salta na direção de um inimigo e o golpeia com seu escudo, Atordoando-o. Depois de terminar, Pantheon se prepara para bloquear o próximo Ataque.",
             "dynamicDescription": "Pantheon salta em direção a um inimigo-alvo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>Atordoando-o</status> por @StunDuration@s. Pantheon também renova sua <spellName>Proteção de Égide</spellName> instantaneamente.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Pantheon se concentra e desfere 3 golpes rápidos na área à frente, causando o dobro de dano a Campeões. Pantheon também fica mais ciente dos pontos vitais dos inimigos, o que permite que ele sempre cause Acertos Críticos em inimigos com menos de 15% de Vida.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> <spellName>Atirar Lança</spellName>, <spellName>Ataque Busca-Coração</spellName> e os Ataques básicos de Pantheon recebem 100% de chance de Acerto Crítico contra alvos com menos de @PassiveCritThreshold*100@% de Vida.<br><br><spellActive>Ativo:</spellActive> Pantheon canaliza e desfere @NumberOfStrikes@ golpes rápidos à frente, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> por golpe (total de <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon se concentra e desfere golpes rápidos na área à frente, causando dano aumentado a Campeões. Ele também fica mais ciente dos pontos vitais dos inimigos, o que lhe permite causar Acertos Críticos contra alvos feridos.",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> <spellName>Atirar Lança</spellName>, <spellName>Ataque Busca-Coração</spellName> e os Ataques básicos de Pantheon causam Acerto Crítico contra alvos com menos de @PassiveCritThreshold*100@% de Vida.<br><br><spellActive>Ativo:</spellActive> Pantheon canaliza e desfere @NumberOfStrikes@ golpes rápidos na área à frente, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> por golpe (total de <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
