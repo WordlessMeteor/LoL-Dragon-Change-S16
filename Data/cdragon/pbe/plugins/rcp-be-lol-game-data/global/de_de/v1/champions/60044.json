@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Taric erzeugt irdene Energie und heilt damit sich selbst und einen Verbündeten. Die Heilung ist stärker, wenn Taric nur sich selbst heilt. Tarics normale Angriffe verringern außerdem die Abklingzeit von „Verzaubern“.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric erzeugt irdene Energie und heilt damit sich selbst und einen Verbündeten um <healing>@HealAmount@ Leben</healing>. Wenn er sich selbst als Ziel wählt, wird die Heilung erhöht und stellt <healing>@HealAmountSelf@ Leben</healing> wieder her.<br><br>Tarics normale Angriffe verringern die Abklingzeit von <spellName>Verzaubern</spellName> um @BasicAttackCooldownReduction@ Sekunde (@ChampionBasicAttackCooldownReduction@ Sekunden bei Angriffen gegen gegnerische Champions).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Eine steinharte Aura erhöht die Rüstung von Taric und verbündeten Champions in der Nähe. Taric kann auf Kosten von etwas Rüstung die ihn umgebenden verzauberten Steine explodieren lassen, um nahen Gegnern Schaden zuzufügen und ihre Rüstung für kurze Zeit zu verringern.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Tarics Edelsteine erhöhen seine <scaleArmor>Rüstung um @ArmorBonus@</scaleArmor>. Verbündete Champions in der Nähe erhalten zusätzlich <scaleArmor>@BonustoAllies@ Rüstung</scaleArmor> (@ArmorBonusCoefficient*100@ % von Tarics Rüstung).<br><br><spellActive>Aktiv: </spellActive>Taric zerschmettert seine Rüstung, fügt Gegnern in der Nähe <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und verringert @ArmorShredDuration@ Sekunden lang ihre <scaleArmor>Rüstung um @ArmorShred*-1@</scaleArmor>. Taric verliert <scaleArmor>@ArmorBonus@ Rüstung</scaleArmor>, solange <spellName>Aufteilen</spellName> abklingt.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Taric sendet eine gleißende Kugel aus Licht in allen Spektralfarben von seinem Edelsteinschild aus, die seine Gegner betäubt und abhängig von deren Distanz Schaden an ihnen verursacht.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric schießt eine prismatische Kugel auf ein gegnerisches Ziel, die <magicDamage>@TotalDamage@</magicDamage> bis <magicDamage>@TotalMaxDamageTT@ magischen Schaden</magicDamage> verursacht und das Ziel @MinStunLength@ bis @MaxStunLength@ Sekunden lang <status>betäubt</status>.<br><br>Der Schaden von „Blenden“ erhöht sich, je näher Taric am Ziel ist, und die Dauer der Betäubung erhöht sich, je weiter er vom Ziel entfernt ist.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Taric rammt seinen Hammer in den Boden und verursacht Schaden an Gegnern in der Nähe. Danach strahlen Tarics Edelsteine Energie aus, die Taric und seinen Verbündeten zusätzlichen Angriffsschaden und Fähigkeitsstärke gewähren.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric rammt seinen Hammer in den Boden und verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> an nahen Gegnern.<br><br>Für die nächsten @RadianceDuration@ Sekunden strahlen Tarics Edelsteine Energie aus und gewähren ihm <physicalDamage>@DamageIncrease@ Angriffsschaden</physicalDamage> und <magicDamage>Fähigkeitsstärke</magicDamage>. Verbündete in seiner Nähe erhalten <physicalDamage>@AllyBonus@ Angriffsschaden</physicalDamage> und <magicDamage>Fähigkeitsstärke</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

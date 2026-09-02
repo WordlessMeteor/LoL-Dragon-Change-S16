@@ -87,14 +87,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    33.0,
+                    30.0,
+                    27.0,
                     24.0,
-                    24.0,
-                    22.0,
-                    20.0,
+                    21.0,
                     18.0,
-                    16.0,
-                    16.0
+                    15.0
                 ],
+                "{0a3e0478}": 33.0,
                 "__type": "{0a0eddc9}"
             },
             "mAmmoRechargeTime": [
@@ -721,7 +722,7 @@
         "mName": "Jade_WarwickQAbility",
         "__type": "AbilityObject"
     },
-    "{cc13f764}": {
+    "Characters/Jade_Warwick/Spells/Jade_WarwickPassiveAbility": {
         "mRootSpell": "Characters/Jade_Warwick/Spells/Jade_WarwickPassiveAbility/Jade_WarwickPassive",
         "mChildSpells": [
             "Characters/Jade_Warwick/Spells/Jade_WarwickPassiveAbility/Jade_WarwickPassive",
@@ -776,12 +777,19 @@
             ],
             "mSpellCalculations": {
                 "OnHitDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
+                    "{72c5c2a8}": 1,
                     "mFormulaParts": [
                         {
-                            "mStartValue": 3.0,
-                            "mEndValue": 16.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "mLevel1Value": 3.0,
+                            "mInitialBonusPerLevel": 0.5,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 10,
+                                    "mBonusPerLevelAtAndAfter": 1.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1249,13 +1257,13 @@
                 {
                     "name": "RBaseDamage",
                     "values": [
-                        165.0,
-                        250.0,
-                        335.0,
+                        60.0,
+                        180.0,
+                        300.0,
                         420.0,
-                        505.0,
-                        590.0,
-                        675.0
+                        540.0,
+                        660.0,
+                        780.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1372,6 +1380,15 @@
                 "{0a3e0478}": 650.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
             "castRadius": [
                 675.0,
                 675.0,
@@ -3834,11 +3851,11 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.6439999938011169,
+            "baseValue": 0.625,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
-            "baseValue": 0.6439999938011169,
+            "baseValue": 0.625,
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
@@ -3966,7 +3983,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{cc13f764}",
+            "Characters/Jade_Warwick/Spells/Jade_WarwickPassiveAbility",
             "Characters/Jade_Warwick/Spells/Jade_WarwickQAbility",
             "Characters/Jade_Warwick/Spells/Jade_WarwickWAbility",
             "Characters/Jade_Warwick/Spells/Jade_WarwickEAbility",

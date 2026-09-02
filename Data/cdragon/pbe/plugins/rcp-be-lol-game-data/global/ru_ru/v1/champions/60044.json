@@ -656,7 +656,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик призывает силу земли, леча себя и союзника. Одного себя он лечит сильнее. Автоатаки Тарика сокращают перезарядку Насыщения.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Тарик призывает силу земли, восстанавливая <healing>@HealAmount@ здоровья</healing> себе и союзнику. Леча лишь себя, он восстанавливает <healing>@HealAmountSelf@ здоровья</healing>.<br><br>Автоатаки Тарика сокращают перезарядку <spellName>Насыщения</spellName> на @BasicAttackCooldownReduction@ сек. (@ChampionBasicAttackCooldownReduction@ сек. при атаке враж. чемпиона).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик защищен аурой, дающей броню ему и союзным чемпионам поблизости. Он может разбить окружающие его зачарованные камни, нанося урон врагам вокруг и снижая их броню на некоторое время, ненадолго теряя бонус к броне.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> самоцветы Тарика дают ему <scaleArmor>@ArmorBonus@</scaleArmor> брони, а союзным чемпионам рядом – <scaleArmor>@BonustoAllies@ брони</scaleArmor> (@ArmorBonusCoefficient*100@% от брони Тарика).<br><br><spellActive>Активно:</spellActive> Тарик разбивает свою броню, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам поблизости и ослабляя их <scaleArmor>броню на @ArmorShred*-1@</scaleArmor> на @ArmorShredDuration@ сек. Тарик теряет <scaleArmor>@ArmorBonus@ брони</scaleArmor>, пока <spellName>Разбивание</spellName> перезаряжается.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик испускает сияющий шар света из своего щита, оглушая врага и нанося ему урон (чем ближе враг, тем больше урон).",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tарик выпускает во врага шар света, наносящий <magicDamage>@TotalDamage@</magicDamage>–<magicDamage>@TotalMaxDamageTT@ ед. маг. урона</magicDamage> и <status>оглушающий</status> цель на @MinStunLength@–@MaxStunLength@ сек.<br><br>Чем ближе Тарик к цели, тем выше урон и тем меньше срок оглушения.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик бьет молотом по земле, нанося урон врагам вокруг. Некоторое время после удара самоцветы Тарика излучают энергию, увеличивая силу атаки и силу умений Тарика и окружающих его союзников.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Тарик бьет молотом по земле, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> ближайшим врагам.<br><br>После этого в течение @RadianceDuration@ сек. самоцветы Тарика излучают энергию, давая ему <physicalDamage>@DamageIncrease@ силы атаки</physicalDamage> и <magicDamage>силы умений</magicDamage>. Окружающие его союзники получают <physicalDamage>@AllyBonus@ силы атаки</physicalDamage> и <magicDamage>силы умений</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

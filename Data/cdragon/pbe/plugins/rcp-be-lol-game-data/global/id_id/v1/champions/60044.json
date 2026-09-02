@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taric memanggil energi bumi untuk heal satu sekutu dan dirinya sendiri. Heal ini lebih kuat saat Taric hanya heal dirinya sendiri. Selain itu, basic attack Taric mengurangi cooldown Imbue.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric memanggil energi bumi, memulihkan <healing>@HealAmount@ Health</healing> untuk sekutu dan dirinya sendiri. Jika dia menarget dirinya sendiri, heal meningkat dan memulihkan <healing>@HealAmountSelf@ Health</healing>.<br><br>Basic attack Taric mengurangi cooldown <spellName>Imbue</spellName> sebanyak @BasicAttackCooldownReduction@ detik (@ChampionBasicAttackCooldownReduction@ detik jika menyerang champion musuh).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taric dilindungi oleh aura yang mengeras, meningkatkan Armor dirinya dan champion sekutu di sekitar. Dia bisa memilih untuk memecahkan batu-batu magis di sekelilingnya untuk menghasilkan damage dan mengurangi Armor musuh di sekitar dengan mengorbankan sebagian Armor-nya sendiri selama beberapa saat.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Batu permata Taric meningkatkan <scaleArmor>Armornya sebanyak @ArmorBonus@</scaleArmor>. Selain itu, champion sekutu di sekitar mendapatkan <scaleArmor>@BonustoAllies@ Armor</scaleArmor> (@ArmorBonusCoefficient*100@% dari Armor Taric).<br><br><spellActive>Aktif: </spellActive>Taric menghancurkan armornya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitar dan mengurangi <scaleArmor>Armor mereka sebesar @ArmorShred*-1@</scaleArmor> selama @ArmorShredDuration@ detik. Taric kehilangan <scaleArmor>@ArmorBonus@ Armor</scaleArmor> saat <spellName>Shatter</spellName> sedang cooldown.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taric memancarkan bola cahaya prismatik cemerlang dari shield berhias permatanya, membuat targetnya terkena stun dan memberikan damage berdasarkan seberapa dekat Taric dengan mereka.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric menembakkan bola prismatik ke musuh yang ditarget, menghasilkan <magicDamage>@TotalDamage@</magicDamage> hingga <magicDamage>@TotalMaxDamageTT@ magic damage</magicDamage> dan menerapkan <status>Stun</status> selama @MinStunLength@ hingga @MaxStunLength@ detik.<br><br>Damage Dazzle meningkat seiring makin dekat Taric ke target, dan durasi stun bertambah lama seiring makin jauh dari target.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taric menghantamkan palunya ke tanah untuk menghasilkan damage pada musuh di sekitar. Untuk beberapa saat setelahnya, permata Taric memancarkan energi yang memperkuat Taric dan sekutunya dengan bonus Attack Damage dan Ability Power",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric menghantamkan palu ke tanah, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada musuh di sekitar.<br><br>Selama @RadianceDuration@ detik berikutnya, permata Taric memancarkan energi, memberinya <physicalDamage>@DamageIncrease@ Attack Damage</physicalDamage> dan <magicDamage>Ability Power</magicDamage>. Sekutu di sekitar mendapatkan <physicalDamage>@AllyBonus@ Attack Damage</physicalDamage> dan <magicDamage>Ability Power</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

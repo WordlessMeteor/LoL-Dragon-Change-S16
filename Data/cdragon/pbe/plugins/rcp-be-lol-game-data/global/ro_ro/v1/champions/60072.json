@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "Atacurile de bază reduc timpii de reactivare ai tuturor abilităților. Acest efect este mai puternic împotriva campionilor."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Skarner se repede cu ghearele asupra inamicilor din apropiere, provocându-le tuturor daune fizice și încărcându-se cu ''Energie cristalină'' pentru câteva secunde dacă lovește o unitate.  Dacă folosește din nou ''Lovitura de cristal'' cât timp este alimentat de ''Energia cristalină'', provoacă daune magice bonus și încetinește toate țintele lovite.",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner le provoacă <physicalDamage>@TotalBaseDamage@ daune fizice</physicalDamage> tuturor inamicilor din apropiere și se încarcă cu <keywordMajor>''Energie cristalină''</keywordMajor> timp de @CrystalEnergyDuration@ secunde dacă lovește o unitate.<br><br>Cât timp este încărcat, <spellName>''Lovitura de cristal''</spellName> a lui Skarner provoacă <magicDamage>@TotalProcDamage@ daune magice bonus</magicDamage> și <status>încetinesc</status> țintele cu @SlowPercent*-100@% timp de @SlowDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Skarner primește un scut, iar viteza lui de mișcare și viteza lui de atac cresc cât timp scutul rezistă.",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner este <shield>protejat de un scut</shield> care absoarbe @BlockDamage@ daune și rezistă timp de @ShieldDuration@ secunde. Cât timp scutul este activ, Skarner primește <attackSpeed>@ASBonus*100@% viteză de atac</attackSpeed> și <speed>@MSBonus*100@% viteză de mișcare</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Skarner invocă o explozie de energie cristalină care provoacă daune inamicilor loviți și îi însemnează. Când lovește inamicii, Skarner consumă însemnul și se vindecă. Și uciderea țintelor va activa vindecarea.",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor aflați în linie și îi însemnează timp de @MarkDuration@ secunde.<br><br>Lovirea inamicilor va consuma însemnul, <healing>vindecându-l</healing> pe Skarner în valoare de @TotalHealing@. Și uciderea țintelor va activa vindecarea. (Fiecare activare vindecă cu @SubsequentHealMultiplier*100@% mai puțin.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Skarner suprimă un campion inamic și îi provoacă daune magice.  În acest timp, Skarner se poate mișca liber, târându-și victima neajutorată după el.  La finalul efectului, ținta lui Skarner va suferi daune suplimentare.",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner <status>suprimă</status> un campion inamic timp de @SuppressionDuration@ secunde și îi provoacă <magicDamage>@TotaDamage@ daune magice</magicDamage>. Între timp, Skarner se poate mișca liber și își târăște victima neajutorată după el. Când efectul se încheie, ținta lui Skarner va suferi încă <magicDamage>@TotaDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

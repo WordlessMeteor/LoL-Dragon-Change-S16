@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Taric triệu hồi năng lượng đất để hồi máu cho một đồng minh và bản thân. Lượng hồi máu này mạnh hơn khi Taric chỉ hồi máu cho bản thân. Ngoài ra, các đòn đánh thường của Taric giảm hồi chiêu của Khích Lệ.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric triệu hồi năng lượng đất để hồi lại <healing>@HealAmount@ máu</healing> cho một đồng minh và bản thân. Nếu anh ấy tự chọn bản thân, hồi máu tăng thêm, hồi lại <healing>@HealAmountSelf@ máu</healing>.<br><br>Các đòn đánh thường của Taric giảm hồi chiêu của <spellName>Khích Lệ</spellName> đi @BasicAttackCooldownReduction@ giây (@ChampionBasicAttackCooldownReduction@ giây nếu tấn công tướng địch).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Taric được bảo vệ bởi một hào quang cứng cáp, tăng Giáp cho bản thân và các tướng đồng minh lân cận. Anh ta có thể phá vỡ những tảng đá ma thuật xung quanh mình để gây sát thương và giảm Giáp của kẻ địch gần đó, đổi lại sẽ mất một phần Giáp của bản thân trong thời gian ngắn.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Đá quý của Taric tăng <scaleArmor>Giáp của anh ấy thêm @ArmorBonus@</scaleArmor>. Ngoài ra, các tướng đồng minh gần đó nhận được <scaleArmor>@BonustoAllies@ Giáp</scaleArmor> (@ArmorBonusCoefficient*100@% Giáp của Taric).<br><br><spellActive>Kích Hoạt: </spellActive>Taric phá vỡ giáp của mình, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch xung quanh và giảm <scaleArmor>Giáp của chúng đi @ArmorShred*-1@</scaleArmor> trong @ArmorShredDuration@ giây. Taric mất <scaleArmor>@ArmorBonus@ Giáp</scaleArmor> khi <spellName>Tan Vỡ</spellName> đang hồi chiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Taric phóng ra một quả cầu ánh sáng lăng kính rực rỡ từ chiếc khiên nạm ngọc của mình, làm choáng mục tiêu và gây sát thương dựa trên khoảng cách giữa hắn với mục tiêu.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric phóng ra một quả cầu lăng kính vào kẻ địch chỉ định, gây <magicDamage>@TotalDamage@</magicDamage> - <magicDamage>@TotalMaxDamageTT@ sát thương phép</magicDamage> và <status>Làm Choáng</status> trong @MinStunLength@ - @MaxStunLength@ giây.<br><br>Sát thương của Chói Lóa càng tăng khi Taric ở càng gần mục tiêu, và thời gian làm choáng càng tăng khi Taric ở càng xa mục tiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Taric nện búa xuống đất, gây sát thương lên kẻ địch xung quanh. Trong một khoảng thời gian sau đó, những viên ngọc của Taric tỏa ra năng lượng, cường hóa Taric và đồng minh giúp tăng Sức Mạnh Công Kích và Sức Mạnh Phép Thuật.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric nện búa xuống đất, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch xung quanh.<br><br>Trong @RadianceDuration@ giây tiếp theo, những viên ngọc của Taric tỏa ra năng lượng, ban cho anh <physicalDamage>@DamageIncrease@ Sức Mạnh Công Kích</physicalDamage> và <magicDamage>Sức Mạnh Phép Thuật</magicDamage>. Các đồng minh ở gần nhận <physicalDamage>@AllyBonus@ Sức Mạnh Công Kích</physicalDamage> và <magicDamage>Sức Mạnh Phép Thuật</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

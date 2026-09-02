@@ -656,7 +656,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric vyvolá energii země, díky které vyléčí sebe i jednoho spojence. Léčivý účinek je silnější, když Taric léčí jen sebe. Taricovy základní útoky navíc zkracují přebíjecí dobu schopnosti Vetknout.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric vyvolá energii země, díky které vyléčí sobě a jednomu spojenci <healing>@HealAmount@ zdraví</healing>. Pokud zaměří sebe, účinnost léčení se zvýší, takže si obnoví <healing>@HealAmountSelf@ zdraví</healing>.<br><br>Taricovy základní útoky zkracují přebíjecí dobu schopnosti <spellName>Vetknout</spellName> o @BasicAttackCooldownReduction@ sek. (útoky proti nepřátelským šampionům ji zkracují o @ChampionBasicAttackCooldownReduction@ sek.).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Tarica chrání zpevňující aura, která jemu i okolním spojeneckým šampionům zvyšuje hodnotu brnění. Pokud chce, může očarovanou krustu kolem sebe roztříštit. Za cenu krátkodobého snížení vlastní hodnoty brnění tak způsobí poškození okolním nepřátelům a připraví je o část brnění.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Taricovy drahokamy zvyšují jeho hodnotu <scaleArmor>brnění o @ArmorBonus@</scaleArmor>. Okolní spojenečtí šampioni navíc získají <scaleArmor>@BonustoAllies@ brnění</scaleArmor> (@ArmorBonusCoefficient*100@ % Taricova brnění).<br><br><spellActive>Aktivace: </spellActive>Taric roztříští svou zbroj a způsobí tak <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> všem okolním nepřátelům. Současně jim na @ArmorShredDuration@ sek. sníží hodnotu <scaleArmor>brnění o @ArmorShred*-1@</scaleArmor>. Když schopnosti <spellName>Roztříštit</spellName> běží přebíjecí doba, sníží se Taricovi hodnota <scaleArmor>brnění o @ArmorBonus@</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric ze svého drahokamového štítu vyšle kouli zářivého světla, která jeho cíl omráčí a uštědří mu poškození odvíjející se od uražené vzdálenosti.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric vystřelí na zvoleného protivníka duhovou sféru, která jej na @MinStunLength@–@MaxStunLength@ sek. <status>omráčí</status> a způsobí mu <magicDamage>@TotalDamage@</magicDamage>–<magicDamage>@TotalMaxDamageTT@ bodů magického poškození</magicDamage>.<br><br>Cílům, které se nacházejí blíže k němu, způsobí Taric vyšší poškození, vzdálenější cíle pro změnu omráčí na delší dobu.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric udeří svým kladivem do země a způsobí poškození okolním nepřátelům. Po určitou dobu pak Taricovy krystaly vyzařují energii, která jemu i jeho spojencům poskytne bonus k útočnému poškození a síle schopností.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric udeří svým kladivem do země a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> okolním nepřátelům.<br><br>Následujících @RadianceDuration@ sek. vyzařují Taricovy drahokamy energii, která mu poskytuje <physicalDamage>@DamageIncrease@ k útočnému poškození</physicalDamage> a <magicDamage>síle schopností</magicDamage>. Jeho okolní spojenci získají <physicalDamage>@AllyBonus@ k útočnému poškození</physicalDamage> a <magicDamage>síle schopností</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

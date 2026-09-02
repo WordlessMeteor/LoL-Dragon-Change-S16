@@ -656,7 +656,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric capta energia da terra para curar a si e um aliado. A cura é mais potente quando Taric cura apenas a si. Além disso, os Ataques básicos de Taric reduzem o Tempo de Recarga de Imbuir.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric capta energia da terra para curar <healing>@HealAmount@ da própria Vida</healing> e da de um aliado. Se o alvo for o próprio Taric, a cura aumenta e recupera <healing>@HealAmountSelf@ de Vida</healing>.<br><br>Os Ataques básicos de Taric reduzem o Tempo de Recarga de <spellName>Imbuir</spellName> em @BasicAttackCooldownReduction@s (@ChampionBasicAttackCooldownReduction@s ao atacar um Campeão inimigo).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric é protegido por uma aura de resistência que aumenta a Armadura dele e a de Campeões aliados próximos. Ele pode estilhaçar as pedras enfeitiçadas ao redor de si, sacrificando um pouco da própria Armadura para causar dano e reduzir a Armadura de inimigos próximos por um breve período.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>as gemas de Taric aumentam a <scaleArmor>Armadura dele em @ArmorBonus@</scaleArmor>. Campeões aliados próximos também recebem <scaleArmor>@BonustoAllies@ de Armadura</scaleArmor> (@ArmorBonusCoefficient*100@% da Armadura de Taric).<br><br><spellActive>Ativo: </spellActive>Taric estilhaça a própria Armadura, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos e reduzindo a <scaleArmor>Armadura deles em @ArmorShred*-1@</scaleArmor> por @ArmorShredDuration@s. Enquanto <spellName>Estilhaçar</spellName> está em Tempo de Recarga, Taric perde <scaleArmor>@ArmorBonus@ de Armadura</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric faz seu escudo cravejado de gemas emitir um orbe de luz prismática que atordoa o alvo e causa dano com base na distância entre eles.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric dispara um orbe prismático contra um inimigo-alvo, causando <magicDamage>@TotalDamage@</magicDamage> - <magicDamage>@TotalMaxDamageTT@ de Dano Mágico</magicDamage> e <status>Atordoando-o</status> por @MinStunLength@ - @MaxStunLength@s.<br><br>O dano de Deslumbrar aumenta quanto mais perto Taric está do alvo, e a duração do Atordoamento aumenta quanto mais longe ele está do alvo.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric bate o martelo no chão para causar dano a inimigos próximos. Por um período, as gemas de Taric irradiam energia, concedendo Dano de Ataque e Poder de Habilidade adicionais a ele e aos aliados.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric bate o martelo no chão, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos.<br><br>Pelos próximos @RadianceDuration@s, as gemas de Taric irradiam energia, concedendo a ele <physicalDamage>@DamageIncrease@ de Dano de Ataque</physicalDamage> e <magicDamage>Poder de Habilidade</magicDamage>. Os aliados próximos recebem <physicalDamage>@AllyBonus@ de Dano de Ataque</physicalDamage> e <magicDamage>Poder de Habilidade</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

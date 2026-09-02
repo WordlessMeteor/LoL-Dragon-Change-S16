@@ -479,7 +479,7 @@
         "mScriptName": "Jade_NasusSiblingRivalryReady",
         "__type": "SpellObject"
     },
-    "{7f98aae4}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility": {
         "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mChildSpells": [
             "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive"
@@ -820,6 +820,39 @@
                             "mStat": 9,
                             "mCoefficient": 1.0,
                             "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{d7740e71}": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mDataValue": "BonusDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    {
+                                        "mStat": 2,
+                                        "mCoefficient": 1.0,
+                                        "__type": "StatByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mBuffName": "{5665a78c}",
+                            "mIconKey": "%i:JadeNasusStackIcon%",
+                            "mCoefficient": 1.0,
+                            "__type": "BuffCounterByCoefficientCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2475,7 +2508,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Nasus/Spells/Jade_NasusEAbility",
-            "{7f98aae4}",
+            "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusQAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusRAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusWAbility"

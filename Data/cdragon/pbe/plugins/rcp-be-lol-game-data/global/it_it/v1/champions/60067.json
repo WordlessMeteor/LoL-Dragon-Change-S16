@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne dà la caccia ai malfattori in modo implacabile. Ottiene velocità di movimento bonus quando si muove verso i campioni nemici vicini."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Passiva</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne usa per le punte dei suoi dardi un raro metallo, tossico per tutte le creature malvagie.  Il terzo attacco o abilità consecutivi contro lo stesso bersaglio infliggono una percentuale della salute massima del bersaglio come danni puri bonus.",
+            "dynamicDescription": "Ogni terzo attacco o abilità consecutivi contro un nemico infliggono un ulteriore @BaseDamage@ più @MaxHealthRatio*100@% della salute massima del bersaglio in <trueDamage>danni puri</trueDamage> (Massimo @MonsterDamageCap@ danni contro i mostri)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Vayne estrae la sua balestra pesante dalla schiena e spara un grosso dardo al suo bersaglio, infliggendo danni e respingendolo.  Se collide contro un muro, il suo avversario rimane impalato, subisce danni bonus ed è stordito.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spara un dardo che infligge <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e respinge il nemico. I nemici che collidono contro un muro subiscono <physicalDamage>@TotalDamagewithSpell@ danni fisici aggiuntivi</physicalDamage> e sono <status>storditi</status> per @StunDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Preparandosi per un confronto epico, Vayne ottiene attacco fisico aumentato, Invisibilità durante Capriola e una velocità di movimento bonus molto maggiore da Cacciatrice notturna.",
+            "dynamicDescription": "Preparandosi per un confronto epico, Vayne ottiene <physicalDamage>@ADMod@ attacco fisico bonus</physicalDamage> per @Duration@ secondo/i. Quando attiva, Capriola conferisce <keywordStealth>Invisibilità</keywordStealth> per @InvisibilityDuration@ secondo/i e il bonus di <spellName>Cacciatrice notturna</spellName> alla <speed>velocità di movimento</speed> aumenta a @UltimateMovementSpeed@.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

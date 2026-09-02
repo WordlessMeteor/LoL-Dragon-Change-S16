@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "Normal saldırılar tüm yeteneklerin bekleme sürelerini azaltır. Bu etki şampiyonlara karşı daha güçlüdür."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Skarner kıskaçlarını açar ve yakınındaki bütün rakiplere fiziksel hasar verir. Herhangi bir birim isabet alırsa Skarner birkaç saniyeliğine Kristal Enerji ile yüklenir.  Kristal Enerji yüklüyken Kristal Kıskaç'ı tekrar kullanırsa ilave büyü hasarı verir ve isabet alan hedefleri yavaşlatır.",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner yakınındaki tüm rakiplere <physicalDamage>@TotalBaseDamage@ Fiziksel Hasar</physicalDamage> verir. Bir birim bu yetenekten isabet alırsa Skarner @CrystalEnergyDuration@ saniyeliğine <keywordMajor>Kristal Enerji</keywordMajor> ile yüklenir.<br><br>Skarner, Kristal Enerji yüklüyken <spellName>Kristal Kıskaç</spellName> <magicDamage>@TotalProcDamage@ İlave Büyü Hasarı</magicDamage> verir ve @SlowDuration@ saniyeliğine %@SlowPercent*-100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Skarner bir kalkan kazanır ve kalkan etkin olduğu sürece hareket hızı ile saldırı hızı artar.",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner @ShieldDuration@ saniyeliğine @BlockDamage@ Hasar engelleyen bir <shield>kalkan</shield> kazanır. Kalkan etkinken Skarner <attackSpeed>%@ASBonus*100@ Saldırı Hızı</attackSpeed> ve <speed>%@MSBonus*100@ Hareket Hızı</speed> elde eder.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Skarner, isabet ettiği rakiplere hasar veren ve onları işaretleyen bir kristal patlaması oluşturur. Rakiplere saldırmak işareti tüketerek Skarner'ın canını yeniler. Hedefleri doğrudan katletmek de iyileştirmeyi tetikler.",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner bir hat üstündeki rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onları @MarkDuration@ saniye işaretler.<br><br>Rakiplere saldırmak işareti tüketerek Skarner'ı @TotalHealing@ Can <healing>iyileştirir</healing>. Hedefleri doğrudan katletmek de iyileştirmeyi tetikler. (Her tetikleme %@SubsequentHealMultiplier*100@ daha az can yeniler.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Skarner bir rakip şampiyonu sindirir ve ona büyü hasarı verir.  Bu esnada Skarner serbestçe hareket edip çaresiz kurbanını peşinden sürükleyebilir.  Etki sona erdiğinde Skarner'ın hedefi fazladan hasar alır.",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner bir rakip şampiyonu @SuppressionDuration@ saniyeliğine <status>sindirir</status> ve ona <magicDamage>@TotaDamage@ Büyü Hasarı</magicDamage> verir. Bu esnada Skarner serbestçe hareket edip çaresiz kurbanını peşinden sürükleyebilir. Etki sona erdiğinde Skarner'ın hedefi fazladan <magicDamage>@TotaDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

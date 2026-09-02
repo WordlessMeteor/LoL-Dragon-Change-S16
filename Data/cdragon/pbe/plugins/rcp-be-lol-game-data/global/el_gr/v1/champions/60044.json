@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ καλεί την ενέργεια της γης για να θεραπεύσει έναν σύμμαχο και τον εαυτό του. Αυτή η θεραπεία είναι πιο αποτελεσματική όταν ο Τάρικ θεραπεύει μόνο τον εαυτό του. Επιπλέον, οι βασικές επιθέσεις του Τάρικ μειώνουν τον Χρόνο Επαναφόρτισης του Εμποτισμού.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Τάρικ καλεί την ενέργεια της γης, αναπληρώνοντας <healing>@HealAmount@ Ζωή</healing> σε έναν σύμμαχο και στον εαυτό του. Αν στοχεύσει τον εαυτό του, η Θεραπεία αυξάνεται, αποκαθιστώντας <healing>@HealAmountSelf@ Ζωή</healing>.<br><br>Οι βασικές επιθέσεις του Τάρικ μειώνουν τον Χρόνο Επαναφόρτισης του <spellName>Εμποτισμού</spellName> κατά @BasicAttackCooldownReduction@ δευτ. (@ChampionBasicAttackCooldownReduction@ δευτ. αν επιτίθεται σε αντίπαλο Ήρωα).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ προστατεύεται από μια άκαμπτη αύρα που αυξάνει τη Θωράκισή του και τη Θωράκιση των κοντινών συμμάχων Ηρώων. Μπορεί να επιλέξει να θρυμματίσει τους μαγεμένους βράχους που βρίσκονται γύρω του για να προκαλέσει ζημιά και να μειώσει την Θωράκιση των γύρω εχθρών. Αυτή η ενέργεια κοστίζει λίγη Θωράκιση για σύντομο χρονικό διάστημα.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Τα πετράδια του Τάρικ αυξάνουν τη <scaleArmor>Θωράκισή του κατά @ArmorBonus@</scaleArmor>. Επιπλέον, οι κοντινοί σύμμαχοι Ήρωες αποκτούν <scaleArmor>@BonustoAllies@ Θωράκιση</scaleArmor> (@ArmorBonusCoefficient*100@% της Θωράκισης του Τάρικ).<br><br><spellActive>Ενεργή: </spellActive>Ο Τάρικ θρυμματίζει την πανοπλία του, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς και μειώνοντας τη <scaleArmor>Θωράκισή τους κατά @ArmorShred*-1@</scaleArmor> για @ArmorShredDuration@ δευτ. Ο Τάρικ χάνει <scaleArmor>@ArmorBonus@ Θωράκιση</scaleArmor> μέχρι να επαναφορτιστεί το <spellName>Θρυμμάτισμα</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ εκπέμπει μια μπάλα πρισματικού φωτός από την ασπίδα με τα πετράδια, Ακινητοποιώντας το στόχο του και προκαλώντας του ζημιά ανάλογα με το πόσο κοντά βρίσκεται.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Τάρικ εκτοξεύει μια πρισματική σφαίρα σε έναν εχθρικό στόχο, προκαλώντας από <magicDamage>@TotalDamage@</magicDamage> έως <magicDamage>@TotalMaxDamageTT@ Μαγική Ζημιά</magicDamage> και <status>Ακινητοποιώντας</status> τον για @MinStunLength@ έως @MaxStunLength@ δευτ.<br><br>Η ζημιά της Εκθάμβωσης αυξάνεται όσο πιο κοντά είναι ο Τάρικ στον στόχο και η διάρκεια της Ακινητοποίησης αυξάνεται όσο πιο μακριά είναι από τον στόχο.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τάρικ χτυπά το σφυρί του στο έδαφος και προκαλεί ζημιά στους κοντινούς εχθρούς. Για λίγη ώρα μετά, τα πετράδια του Τάρικ εκπέμπουν ενέργεια και ενδυναμώνουν τον ίδιο και τους συμμάχους του, προσφέροντας επιπλέον Ζημιά Επίθεσης και Ισχύ Ικανότητας.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Τάρικ χτυπά το σφυρί του στο έδαφος και προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς.<br><br>Για τα επόμενα @RadianceDuration@ δευτ. τα πετράδια του Τάρικ εκπέμπουν ενέργεια και του δίνουν <physicalDamage>@DamageIncrease@ Ζημιά Επίθεσης</physicalDamage> και <magicDamage>Ισχύ Ικανότητας</magicDamage>. Οι κοντινοί σύμμαχοί του αποκτούν <physicalDamage>@AllyBonus@ Ζημιά Επίθεσης</physicalDamage> και <magicDamage>Ισχύ Ικανότητας</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

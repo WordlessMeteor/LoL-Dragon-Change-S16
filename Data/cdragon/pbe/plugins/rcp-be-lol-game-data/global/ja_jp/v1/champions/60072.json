@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "通常攻撃時、すべてのスキルのクールダウンが短縮される。この効果はチャンピオンに対してはより強力になる。"
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "爪を振り、周囲の敵すべてに物理ダメージを与える。攻撃が命中した場合は数秒間、「クリスタルエナジー」をチャージする。「クリスタルエナジー」で強化中に「クリスタルスラッシュ」を再び発動すると追加魔法ダメージを与え、命中したすべての対象にスロウ効果を付与する。",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "周囲の敵すべてに<physicalDamage>@TotalBaseDamage@の物理ダメージ</physicalDamage>を与え、攻撃が命中した場合は@CrystalEnergyDuration@秒間、<keywordMajor>クリスタルエナジー</keywordMajor>をチャージする。<br><br>チャージ中は、<spellName>クリスタルスラッシュ</spellName>が<magicDamage>@TotalProcDamage@の追加魔法ダメージ</magicDamage>を与え、対象に@SlowDuration@秒間、@SlowPercent*-100@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "シールドを獲得し、シールド展開中は移動速度と攻撃速度が両方ともに増加する。",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ShieldDuration@秒間、耐久値@BlockDamage@の<shield>シールド</shield>を獲得する。このシールドが持続している間は、<attackSpeed>攻撃速度が@ASBonus*100@%</attackSpeed>、<speed>移動速度が@MSBonus*100@%</speed>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "貫通する水晶エネルギーの砲弾を発射し、当たった敵ユニットにダメージを与えてマークする。敵を攻撃するとマークを消費して、自身の体力が回復する。対象を直ちにキルした場合も、この回復効果が発動する。",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "直線上にいる敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え@MarkDuration@秒間マークする。<br><br>敵を攻撃するとマークを消費して、自身の体力が@TotalHealing@<healing>回復</healing>する。対象を直ちにキルした場合も、この体力回復効果が発動する(発動ごとに回復量が@SubsequentHealMultiplier*100@%ずつ減少する)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵チャンピオンにサプレッション効果を与えて、魔法ダメージを与える。この効果時間中は、無力化した敵を自由に引きずり回すことができる。効果が終了すると、対象に追加ダメージを与える。",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵チャンピオンに@SuppressionDuration@秒間<status>サプレッション効果</status>を与えて、<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。この効果時間中は、無力化した敵を自由に引きずり回すことができる。効果が終了すると、対象に追加で<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

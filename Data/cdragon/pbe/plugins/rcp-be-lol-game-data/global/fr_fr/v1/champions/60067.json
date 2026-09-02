@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne traque sans relâche les êtres malfaisants. Sa vitesse de déplacement augmente quand elle se déplace vers des champions ennemis proches."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Compétence passive</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne trempe ses carreaux dans de l'argent, un métal nocif pour les êtres maléfiques.  La troisième attaque ou compétence consécutive contre une même cible inflige un pourcentage des PV max de la cible sous forme de dégâts bruts bonus.",
+            "dynamicDescription": "Toutes les 3 attaques ou compétences consécutives contre un ennemi, Vayne inflige @BaseDamage@ + @MaxHealthRatio*100@% des PV max de l'ennemi en <trueDamage>dégâts bruts</trueDamage> bonus. (Dégâts max contre les monstres : @MonsterDamageCap@.)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Vayne prend l'arbalète qu'elle porte sur le dos et tire un carreau gigantesque sur sa cible, lui infligeant des dégâts et la projetant en arrière.  Si la cible percute le terrain, elle est empalée, ce qui lui inflige des dégâts bonus et l'étourdit.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vayne tire un carreau qui inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et repousse l'ennemi. Les ennemis qui touchent un élément de terrain subissent <physicalDamage>@TotalDamagewithSpell@ pts de dégâts physiques</physicalDamage> bonus et sont <status>étourdis</status> pendant @StunDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne se prépare à un combat épique. Ses dégâts d'attaque augmentent, elle devient invisible pendant Roulade et le bonus de vitesse de déplacement de Chasseresse nocturne est grandement augmenté.",
+            "dynamicDescription": "Se préparant pour un combat épique, Vayne gagne <physicalDamage>@ADMod@ dégâts d'attaque bonus</physicalDamage> pendant @Duration@ sec. Quand la compétence est active, Roulade rend Vayne <keywordStealth>invisible</keywordStealth> pendant @InvisibilityDuration@ sec et le bonus de <spellName>Chasseresse nocturne</spellName> de <speed>vitesse de déplacement</speed> est augmenté à @UltimateMovementSpeed@.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

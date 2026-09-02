@@ -1046,7 +1046,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ちょこまかと動き回り、移動速度が増加する。敵チャンピオンまたはタワーから攻撃を受けると効果が消滅する。スプリントすると移動速度がさらに増加し、短時間の間は攻撃を受けても効果が持続する。",
-            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText><spellPassive>自動効果: </spellPassive>敵チャンピオンまたはタワーからの攻撃を@PassiveCooldownOnDamageTaken@秒間受けないでいると、<speed>移動速度</speed>が@PassiveMoveSpeedBonus*100@%増加する。<br><br><spellActive>発動効果: </spellActive>@ActiveMoveSpeedBuffDuration@秒間全力疾走し、<speed>移動速度が@ActiveMoveSpeedBonus*100@%</speed>増加する。この増加移動速度は、攻撃を受けても消滅しない。",
             "range": [
                 0.0,
                 0.0,
@@ -1195,8 +1195,8 @@
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "Spell_TeemoE_Jade_Summary",
-            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "通常攻撃のたびに、対象を毒状態にする。攻撃を受けた対象は命中時にダメージを受け、さらにその後継続ダメージを受ける。",
+            "dynamicDescription": "通常攻撃が対象を毒状態にして、命中時<magicDamage>@ImpactCalculatedDamage@の追加魔法ダメージ</magicDamage>を与え@PoisonDuration@秒間、毎秒<magicDamage>@TickCalculatedDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,

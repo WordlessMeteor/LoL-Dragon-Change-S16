@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taric จะเรียกพลังงานแห่งปฐพีเพื่อฮีลเพื่อนร่วมทีมและตัวเขาเอง การฮีลนี้จะทรงพลังยิ่งขึ้นเมื่อ Taric ฮีลตัวเองเท่านั้น นอกจากนี้ การโจมตีปกติของ Taric จะลดคูลดาวน์ของ Imbue",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric เรียกพลังแห่งปฐพี ฟื้นฟู<healing>พลังชีวิต @HealAmount@ หน่วย</healing>แก่เพื่อนร่วมทีมและตัวเขาเอง หากเขาเลือกเป้าหมายเป็นตัวเอง เอฟเฟกต์ฮีลจะเพิ่มขึ้น ฟื้นฟู<healing>พลังชีวิต @HealAmountSelf@ หน่วย</healing><br><br>การโจมตีปกติของ Taric จะลดคูลดาวน์ของ <spellName>Imbue</spellName> ลง @BasicAttackCooldownReduction@ วินาที (@ChampionBasicAttackCooldownReduction@ วินาทีหากโจมตีแชมเปี้ยนศัตรู)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taric ได้รับการปกป้องจากออร่าเสริมความแข็งแกร่ง เพิ่มเกราะให้กับตัวเขาและแชมเปี้ยนร่วมทีมใกล้เคียง โดยเขาเลือกที่จะทำให้หินเสริมพลังที่อยู่รอบตัวแตกกระจายได้ เพื่อสร้างความเสียหายและลดเกราะของศัตรูใกล้เคียง โดยแลกกับเกราะของตัวเองเป็นเวลาสั้น ๆ",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>อัญมณีของ Taric เพิ่ม<scaleArmor>เกราะ @ArmorBonus@ หน่วย</scaleArmor>ให้กับตัวเขา อีกทั้งมอบ<scaleArmor>เกราะ @BonustoAllies@ หน่วย</scaleArmor>ให้กับแชมเปี้ยนร่วมทีมใกล้เคียงด้วย (@ArmorBonusCoefficient*100@% จากเกราะของ Taric)<br><br><spellActive>กดใช้: </spellActive>Taric สลายเกราะของเขา สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูใกล้เคียง และลด<scaleArmor>เกราะศัตรู @ArmorShred*-1@ หน่วย</scaleArmor>เป็นเวลา @ArmorShredDuration@ วินาที Taric จะสูญเสีย<scaleArmor>เกราะ @ArmorBonus@ หน่วย</scaleArmor>ขณะที่ <spellName>Shatter</spellName> ติดคูลดาวน์@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taric ปล่อยลูกบอลแสงปริซึมออกจากโล่อัญมณีของเขา ทำให้เป้าหมายสตันและสร้างความเสียหายโดยขึ้นอยู่กับว่าเขาอยู่ใกล้เป้าหมายแค่ไหน",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric ปล่อยปริซึมทรงกลมใส่เป้าหมายศัตรู สร้าง<magicDamage>ความเสียหายเวทระหว่าง @TotalDamage@ </magicDamage>ถึง <magicDamage>@TotalMaxDamageTT@ หน่วย</magicDamage> และ<status>สตัน</status>พวกเขาระหว่าง @MinStunLength@ ถึง @MaxStunLength@ วินาที<br><br>ความเสียหายของ Dazzle เพิ่มขึ้นหาก Taric อยู่ใกล้กับเป้าหมาย แต่ระยะเวลาสตันเพิ่มขึ้นหาก Taric อยู่ไกลจากเป้าหมาย@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taric ทุบค้อนใส่พื้น สร้างความเสียหายแก่ศัตรูใกล้เคียง จากนั้นอัญมณีของ Taric จะแผ่กระจายพลังงานเสริมพลัง มอบโบนัสพลังโจมตีและพลังเวทให้กับตัวเขาและเพื่อนร่วมทีมในช่วงระยะเวลาหนึ่ง",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric ทุบค้อนใส่พื้น สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูใกล้เคียง<br><br>จากนั้นในช่วง @RadianceDuration@ วินาทีถัดไป อัญมณีของ Taric จะปลดปล่อยพลังงาน มอบ<physicalDamage>พลังโจมตี</physicalDamage>และ<magicDamage>พลังเวท</magicDamage> @DamageIncrease@ หน่วยให้กับตัวเขา ขณะที่เพื่อนร่วมทีมใกล้เคียงได้รับ<physicalDamage>พลังโจมตี</physicalDamage>และ<magicDamage>พลังเวท</magicDamage> @AllyBonus@ หน่วย@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

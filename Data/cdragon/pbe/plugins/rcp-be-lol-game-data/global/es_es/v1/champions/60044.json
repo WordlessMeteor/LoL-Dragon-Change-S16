@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taric invoca energía terrenal para curarse a sí mismo y a un aliado. Esta curación es más potente cuando Taric se cura solo a sí mismo. Además, los ataques básicos de Taric reducen el enfriamiento de Imbuir.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric invoca energía terrenal para curarse <healing>@HealAmount@ de vida</healing> a sí mismo y a un aliado. Si se elige a sí mismo como objetivo, la curación aumenta y restaura <healing>@HealAmountSelf@ de vida</healing>.<br><br>Los ataques básicos de Taric reducen el enfriamiento de <spellName>Imbuir</spellName> en @BasicAttackCooldownReduction@ s (@ChampionBasicAttackCooldownReduction@ s si ataca a un campeón enemigo).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taric queda protegido por un aura endurecida que aumenta su armadura y la de los campeones aliados cercanos. Puede optar por quebrar las rocas encantadas que lo rodean para infligir daño y reducir durante un breve periodo de tiempo la armadura de los enemigos cercanos, a cambio de parte de la suya.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Las gemas de Taric aumentan en <scaleArmor>@ArmorBonus@ su armadura</scaleArmor>. Además, los campeones aliados cercanos obtienen <scaleArmor>@BonustoAllies@ de armadura</scaleArmor> (@ArmorBonusCoefficient*100@% de la armadura de Taric).<br><br><spellActive>Activa:</spellActive> Taric hace añicos su armadura, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos y reduce en <scaleArmor>@ArmorShred*-1@</scaleArmor> su armadura durante @ArmorShredDuration@ s. Taric pierde <scaleArmor>@ArmorBonus@ de armadura</scaleArmor> mientras <spellName>Fragmentación</spellName> está en enfriamiento.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taric emite una esfera brillante de luz prismática desde su escudo tachonado, lo que aturde e inflige daño a sus enemigos según lo cerca que esté de ellos.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric lanza una esfera prismática a un enemigo objetivo, lo que inflige entre <magicDamage>@TotalDamage@</magicDamage> y <magicDamage>@TotalMaxDamageTT@ de daño mágico</magicDamage> y lo <status>aturde</status> entre @MinStunLength@ y @MaxStunLength@ s.<br><br>El daño de Desorientación aumenta cuanto más cerca esté Taric del objetivo, y la duración del aturdimiento aumenta cuanto más lejos esté del objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taric golpea el suelo con su martillo para infligir daño a los enemigos cercanos. Tras hacerlo, y durante un tiempo, las gemas de Taric irradian una energía que potencia a Taric y a sus aliados con daño de ataque y poder de habilidad adicionales.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric golpea el suelo con su martillo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos.<br><br>Durante los próximos @RadianceDuration@ s, las gemas de Taric irradian energía, lo que le otorga <physicalDamage>@DamageIncrease@ de daño de ataque</physicalDamage> y de <magicDamage>poder de habilidad</magicDamage>. Los aliados cercanos obtienen <physicalDamage>@AllyBonus@ de daño de ataque</physicalDamage> y de <magicDamage>poder de habilidad</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

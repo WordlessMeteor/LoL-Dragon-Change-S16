@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "Ataques básicos reduzem o Tempo de Recarga de todas as Habilidades básicas. Este efeito é mais forte contra Campeões."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner ataca com suas garras, causando Dano Físico a todos os inimigos próximos e se carregando com Energia do Cristal por vários segundos caso uma unidade seja atingida.  Se ele lançar Corte de Cristal novamente enquanto estiver fortalecido pela Energia do Cristal, causará Dano Mágico adicional e Lentidão a todos os alvos atingidos.",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner causa <physicalDamage>@TotalBaseDamage@ de Dano Físico</physicalDamage> a todos os inimigos próximos e se energiza com <keywordMajor>Energia do Cristal</keywordMajor> por @CrystalEnergyDuration@s quando uma unidade é atingida.<br><br>Enquanto Skarner está energizado, <spellName>Corte de Cristal</spellName> causa <magicDamage>@TotalProcDamage@ de Dano Mágico adicional</magicDamage> e @SlowPercent*-100@% de <status>Lentidão</status> por @SlowDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner recebe Escudo que aumenta tanto a Velocidade de Movimento quanto a de Ataque enquanto está ativo.",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner ganha um <shield>Escudo</shield> que suporta até @BlockDamage@ de dano por @ShieldDuration@s. Enquanto o Escudo está ativo, Skarner recebe <attackSpeed>@ASBonus*100@% de Velocidade de Ataque</attackSpeed> e <speed>@MSBonus*100@% de Velocidade de Movimento</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner invoca uma explosão de energia cristalina que causa dano aos inimigos atingidos e os marca. Atingir inimigos irá consumir a marca para curar Skarner. Abater alvos também ativará a cura.",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos em linha reta e os marca por @MarkDuration@s.<br><br>Atingir inimigos consumirá a marca para <healing>curar</healing> Skarner em @TotalHealing@. Abater alvos também ativará a cura. (Cada ativação cura @SubsequentHealMultiplier*100@% a menos.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner suprime um Campeão inimigo e causa Dano Mágico a ele.  Durante a supressão, Skarner se move livremente e arrasta as vítimas indefesas com ele.  Quando o efeito acaba, o alvo sofre dano adicional.",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner <status>Suprime</status> um Campeão inimigo por @SuppressionDuration@s e causa <magicDamage>@TotaDamage@ de Dano Mágico</magicDamage>. Durante a Supressão, Skarner se move livremente e arrasta a vítima indefesa com ele. Quando o efeito acaba, o alvo sofre mais <magicDamage>@TotaDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne memburu para pelaku kejahatan tanpa ampun. Dia mendapatkan bonus Movement Speed saat bergerak ke arah champion musuh di sekitar."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Pasif</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne melapisi bolt dengan logam langka yang beracun bagi makhluk jahat.  Setiap serangan atau ability ketiga ke target yang sama akan menghasilkan true damage bonus sebesar persentase tertentu dari Health maksimum target.",
+            "dynamicDescription": "Setiap serangan atau ability beruntun ketiga terhadap musuh akan menghasilkan tambahan @BaseDamage@ plus @MaxHealthRatio*100@% <trueDamage>true damage</trueDamage> dari Health maksimum musuh. (Maksimum: @MonsterDamageCap@ damage melawan Monster)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Vayne menarik crossbow besar dari punggungnya, lalu menembakkan bolt besar ke arah target, menghasilkan damage dan knock back target.  Jika menghantam medan, target akan terkena impale, menghasilkan damage bonus dan menerapkan stun pada mereka.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Menembakkan bolt yang menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan knock back musuh. Musuh yang menghantam medan akan menerima <physicalDamage>@TotalDamagewithSpell@ physical damage tambahan</physicalDamage> dan terkena <status>Stun</status> selama @StunDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Mempersiapkan diri untuk konfrontasi hebat, Vayne mendapatkan peningkatan Attack Damage, invisibility selama Tumble, dan lebih banyak Movement Speed bonus dari Night Hunter.",
+            "dynamicDescription": "Mempersiapkan diri untuk konfrontasi hebat, Vayne mendapatkan <physicalDamage>@ADMod@ Bonus Attack Damage</physicalDamage> selama @Duration@ detik. Saat aktif, Tumble memberikan <keywordStealth>Invisibility</keywordStealth> selama @InvisibilityDuration@ detik, dan <speed>Movement Speed</speed> bonus dari <spellName>Night Hunter</spellName> meningkat jadi @UltimateMovementSpeed@.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

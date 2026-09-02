@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克召喚大地能量，治療友軍和自身。塔里克僅治療自身時，效果更強大。此外，塔里克的普攻會縮短「神聖洗禮」的冷卻時間。",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克召喚大地能量，為友軍和自身回復<healing>@HealAmount@生命</healing>。若僅對自身施放，治療效果提升，回復<healing>@HealAmountSelf@生命</healing>。<br><br>塔里克的普攻會使<spellName>神聖洗禮</spellName>的冷卻時間縮短@BasicAttackCooldownReduction@秒(若普攻敵方英雄則縮短@ChampionBasicAttackCooldownReduction@秒)。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克受到強化靈氣的守護，提升自己與鄰近友方英雄的物防。他可以擊碎周遭的附魔岩石，對鄰近敵軍造成傷害並降低其物防，但自己會暫時失去部分物防。",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>塔里克的寶石會使其<scaleArmor>物防加@ArmorBonus@</scaleArmor>。此外，鄰近友方英雄會獲得<scaleArmor>@BonustoAllies@物防</scaleArmor>(相當於塔里克物防的@ArmorBonusCoefficient*100@%)。<br><br><spellActive>主動：</spellActive>塔里克粉碎自己的盔甲，對鄰近敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並使其<scaleArmor>物防減@ArmorShred*-1@</scaleArmor>，持續@ArmorShredDuration@秒。<spellName>碎裂</spellName>進入冷卻時，塔里克失去<scaleArmor>@ArmorBonus@物防</scaleArmor>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克從鑲有寶石的護盾釋放出一顆璀璨的稜彩光球，暈眩目標並根據他與目標的距離造成相應傷害。",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克向目標敵軍發射一個稜彩球體，造成<magicDamage>@TotalDamage@</magicDamage>至<magicDamage>@TotalMaxDamageTT@魔法傷害</magicDamage>，並<status>暈眩</status>對方@MinStunLength@到@MaxStunLength@秒。<br><br>塔里克離目標越近，「失能眩光」造成的傷害越高；離目標越遠，暈眩時間越長。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克將錘子猛力砸向地面，對鄰近敵軍造成傷害。接下來一段時間內，塔里克的寶石會釋放能量，賦予自身和友軍額外物攻和魔攻。",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克將錘子猛力砸向地面，對鄰近敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>接下來@RadianceDuration@秒內，塔里克的寶石會釋放能量，賦予他<physicalDamage>@DamageIncrease@物攻</physicalDamage>和<magicDamage>魔攻</magicDamage>。鄰近友軍會增加<physicalDamage>@AllyBonus@物攻</physicalDamage>與<magicDamage>魔攻</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

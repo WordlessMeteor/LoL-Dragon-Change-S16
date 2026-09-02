@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne îi vânează fără milă pe răufăcători. Când se îndreaptă către un campion inamic, primește viteză de mișcare bonus."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Pasivă</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vârfurile săgeților lui Vayne sunt forjate dintr-un metal rar, toxic pentru toate creaturile malefice.  La fiecare trei atacuri sau abilități consecutive împotriva aceleiași ținte, aceasta suferă daune reale în valoare de un procent din viața sa maximă.",
+            "dynamicDescription": "După fiecare trei atacuri sau abilități consecutive împotriva unui inamic, provoacă <trueDamage>daune reale</trueDamage> în valoare de @BaseDamage@ plus @MaxHealthRatio*100@% din viața maximă a inamicului. (Maximum: @MonsterDamageCap@ daune împotriva monștrilor)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Vayne trage o săgeată uriașă spre țintă, provocându-i daune țintei și proiectând-o în spate.  Dacă ținta lovită intră în coliziune cu terenul, suferă daune bonus și e amețită.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Trage un proiectil care provoacă <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și aruncă inamicul în spate. Inamicii care intră în coliziune cu terenul suferă <physicalDamage>@TotalDamagewithSpell@ daune fizice suplimentare</physicalDamage> și sunt <status>amețiți</status> timp de @StunDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne se pregătește pentru o luptă extraordinară. Are daune din atac mai mari, e invizibilă în timpul ''Tumbelor'', iar bonusul de viteză de mișcare primit din ''Vânătorul nocturn'' crește semnificativ.",
+            "dynamicDescription": "Pregătindu-se pentru o confruntare epică, Vayne primește <physicalDamage>@ADMod@ daune bonus din atac</physicalDamage> timp de @Duration@ secunde. Cât timp abilitatea este activă, ''Tumba'' oferă <keywordStealth>invizibilitate</keywordStealth> timp de @InvisibilityDuration@ secunde, iar bonusul de <speed>viteză de mișcare</speed> al <spellName>''Vânătorului nopții''</spellName> crește la @UltimateMovementSpeed@.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

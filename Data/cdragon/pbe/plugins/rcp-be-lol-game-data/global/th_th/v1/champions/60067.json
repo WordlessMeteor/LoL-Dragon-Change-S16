@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne ไล่ล่าผู้กระทำผิดอย่างไร้ปรานี ได้รับโบนัสความเร็วเคลื่อนที่ขณะเคลื่อนที่เข้าหาแชมเปี้ยนศัตรูใกล้เคียง"
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>ติดตัว</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne ชุบลูกศรด้วยโลหะหายาก ซึ่งมีพิษร้ายแรงต่อสิ่งชั่วร้าย  ทำให้การโจมตีหรือใช้สกิล 3 ครั้งติดต่อกันใส่เป้าหมายตัวเดิม สร้างโบนัสความเสียหายจริงจากเปอร์เซ็นต์พลังชีวิตสูงสุดของเป้าหมาย",
+            "dynamicDescription": "การโจมตีหรือใช้สกิล 3 ครั้งติดต่อกันใส่ศัตรูตัวเดิม จะสร้าง<trueDamage>ความเสียหายจริง</trueDamage>เพิ่มเติม @BaseDamage@ หน่วย บวกด้วย @MaxHealthRatio*100@% จากพลังชีวิตสูงสุดของศัตรู (สูงสุด: @MonsterDamageCap@ หน่วยแก่มอนสเตอร์)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Vayne ชักหน้าไม้ขนาดใหญ่ด้านหลังออกมา แล้วยิงลูกศรยักษ์ใส่เป้าหมาย สร้างความเสียหายและกระแทกศัตรูไปด้านหลัง  หากพวกเขาชนเข้ากับกำแพง ศัตรูจะถูกเสียบทะลุ ได้รับโบนัสความเสียหายและติดสตัน",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ยิงลูกศรออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>และกระแทกเป้าหมายไปด้านหลัง หากศัตรูชนเข้ากับกำแพง พวกเขาจะได้รับ<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamagewithSpell@ หน่วย</physicalDamage>และถูก<status>สตัน</status>เป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne เตรียมพร้อมเผชิญหน้าครั้งใหญ่ ได้รับพลังโจมตีเพิ่มเติม สามารถหายตัวขณะใช้สกิล Tumble และเพิ่มโบนัสความเร็วเคลื่อนที่จาก Night Hunter แบบมหาศาล",
+            "dynamicDescription": "Vayne เตรียมพร้อมเผชิญหน้าครั้งใหญ่ ได้รับ<physicalDamage>โบนัสพลังโจมตี @ADMod@ หน่วย</physicalDamage>เป็นเวลา @Duration@ วินาที โดยขณะเปิดใช้งาน สกิล Tumble จะมอบสถานะ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @InvisibilityDuration@ วินาที และโบนัส<speed>ความเร็วเคลื่อนที่</speed>จาก <spellName>Night Hunter</spellName> เพิ่มขึ้นเป็น @UltimateMovementSpeed@ หน่วย@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

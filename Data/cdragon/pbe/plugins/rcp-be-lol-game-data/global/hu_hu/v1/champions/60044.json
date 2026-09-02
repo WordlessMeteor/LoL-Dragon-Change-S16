@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Taric a föld energiájának megidézésével gyógyítja saját magát és egy szövetségesét. A gyógyítás erősebb, ha Taric csak saját magát gyógyítja. Ezenkívül Taric alaptámadásai csökkentik a Feltöltés töltési idejét.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric a föld energiájának megidézésével <healing>@HealAmount@ életerővel</healing> gyógyítja saját magát és egy szövetségesét. Ha saját magát célozza, a gyógyítás erősebb, és <healing>@HealAmountSelf@ életerőt</healing> tölt vissza.<br><br>Taric alaptámadásai @BasicAttackCooldownReduction@ másodperccel csökkentik a <spellName>Feltöltés</spellName> töltési idejét (@ChampionBasicAttackCooldownReduction@ másodperccel, ha egy ellenséges hőst támad).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Taricot egy megerősített aura védi, amely a sajátja mellett a közeli szövetséges hősök páncélját is megnöveli. Dönthet úgy, hogy szétzúzza az őt körülvevő bűvös sziklákat, így rövid ideig tartó páncélveszteség árán sebzést okozhat a közelben tartózkodó ellenfeleknek, és csökkentheti a páncéljukat.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>Taric drágakövei <scaleArmor>@ArmorBonus@ ponttal növelik a páncélját</scaleArmor>. Emellett a közeli szövetséges hősök <scaleArmor>@BonustoAllies@ páncélt</scaleArmor> kapnak (Taric páncéljának @ArmorBonusCoefficient*100@%-át).<br><br><spellActive>Aktív: </spellActive>Taric szétzúzza a páncélját, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek, és @ArmorShredDuration@ másodpercre <scaleArmor>@ArmorShred*-1@</scaleArmor> ponttal csökkenti a páncéljukat. Taric elveszít <scaleArmor>@ArmorBonus@ pontnyi páncélt</scaleArmor>, amíg a <spellName>Kristálypajzs</spellName> töltődik.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Taric vakító, prizmás fénygömböt idéz meg ékköves pajzsából, amivel elkábítja az ellenfelét, és a kettejük közti távolságtól függő mértékben meg is sebzi a célpontját.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric egy prizmás gömböt lő ki egy célba vett ellenfélre, amely <magicDamage>@TotalDamage@</magicDamage> és <magicDamage>@TotalMaxDamageTT@ közötti varázssebzést</magicDamage> okoz, és @MinStunLength@–@MaxStunLength@ másodpercre <status>elkábítja</status> a célpontot.<br><br>A Káprázat sebzése annál nagyobb, minél közelebb van Taric a célponthoz, a kábítás időtartama pedig annál hosszabb, minél távolabb van tőle.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Taric a földbe csapja a kalapácsát, hogy sebzést okozzon a közeli ellenfeleknek. Ezután egy ideig Taric drágakövei energiát sugároznak, ami bónusz sebzést és varázserőt adó energiával tölti fel Taricot és a szövetségeseit.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric a földbe csapja a kalapácsát, hogy <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozzon a közeli ellenfeleknek.<br><br>A következő @RadianceDuration@ másodpercben Taric drágakövei energiát sugároznak, ami <physicalDamage>@DamageIncrease@ sebzést</physicalDamage> és <magicDamage>varázserőt</magicDamage> ad neki. A közeli szövetségesei <physicalDamage>@AllyBonus@ sebzést</physicalDamage> és <magicDamage>varázserőt</magicDamage> kapnak.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

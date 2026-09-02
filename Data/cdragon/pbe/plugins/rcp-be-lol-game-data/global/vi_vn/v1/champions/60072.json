@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "Đòn đánh thường giảm thời gian hồi chiêu tất cả kỹ năng. Hiệu ứng này mạnh hơn khi tấn công tướng."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Skarner gây sát thương vật lý lên tất cả kẻ địch xung quanh, và kích phát Năng Lượng Tinh Thể trong vài giây nếu có đơn vị trúng chiêu.  Nếu sử dụng Nhát Chém Tinh Thể lần nữa khi đang được cường hóa bởi Năng Lượng Tinh Thể, hắn sẽ gây thêm sát thương phép và làm chậm tất cả các mục tiêu trúng đòn.",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner gây <physicalDamage>@TotalBaseDamage@ sát thương vật lý</physicalDamage> lên tất cả kẻ địch xung quanh và tự tích tụ <keywordMajor>Năng Lượng Tinh Thể</keywordMajor> trong @CrystalEnergyDuration@ giây nếu có đơn vị trúng chiêu.<br><br>Khi Skarner tích đủ năng lượng, <spellName>Nhát Chém Tinh Thể</spellName> gây <magicDamage>@TotalProcDamage@ sát thương phép cộng thêm</magicDamage> và <status>Làm Chậm</status> đi @SlowPercent*-100@% trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Skarner nhận được một lá chắn, và khi lá chắn còn tồn tại, cả tốc độ di chuyển và tốc độ đánh của hắn đều được tăng lên.",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner có <shield>lá chắn</shield> chặn @BlockDamage@ sát thương trong @ShieldDuration@ giây. Trong khi lá chắn còn tồn tại, Skarner được tăng <attackSpeed>@ASBonus*100@% Tốc Độ Đánh</attackSpeed> và <speed>@MSBonus*100@% Tốc Độ Di Chuyển</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Skarner tạo ra một vụ nổ năng lượng tinh thể gây sát thương lên những kẻ địch trúng phải và đánh dấu chúng. Tấn công kẻ địch sẽ tiêu hao dấu ấn để hồi máu cho Skarner. Hạ gục mục tiêu cũng sẽ kích hoạt hồi máu.",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch theo đường thẳng và đánh dấu chúng trong @MarkDuration@ giây.<br><br>Tấn công kẻ địch sẽ tiêu hao dấu ấn để <healing>hồi</healing> cho Skarner @TotalHealing@ Máu. Hạ gục mục tiêu cũng sẽ kích hoạt hồi máu. (Mỗi lần kích hoạt, lượng hồi máu sẽ giảm @SubsequentHealMultiplier*100@%.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Skarner áp chế một tướng địch và gây sát thương phép lên kẻ đó.  Trong thời gian đó, Skarner có thể di chuyển tự do và sẽ kéo nạn nhân bất lực theo hắn.  Khi hiệu ứng kết thúc, mục tiêu của Skarner sẽ chịu thêm sát thương.",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner <status>Áp Chế</status> một tướng địch trong @SuppressionDuration@ giây và gây <magicDamage>@TotaDamage@ sát thương phép</magicDamage>. Skarner có thể di chuyển tự do trong thời gian đó và sẽ kéo nạn nhân bất lực theo hắn. Khi hiệu ứng kết thúc, mục tiêu của Skarner sẽ chịu thêm <magicDamage>@TotaDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

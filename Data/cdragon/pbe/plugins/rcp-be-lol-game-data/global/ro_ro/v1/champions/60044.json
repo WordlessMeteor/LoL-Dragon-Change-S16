@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Taric mobilizează energia telurică pentru a se vindeca pe sine și pe un aliat. Vindecarea este mai puternică dacă Taric se vindecă doar pe sine. În plus, atacurile de bază ale lui Taric reduc timpul de reactivare al ''Însuflețirii''.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric mobilizează energia telurică, refăcând <healing>@HealAmount@ viață</healing> pentru el și un aliat. Dacă se țintește pe sine, vindecarea crește, refăcându-și <healing>@HealAmountSelf@ viață</healing>.<br><br>Atacurile de bază ale lui Taric reduc timpul de reactivare al <spellName>''Însuflețirii''</spellName> cu @BasicAttackCooldownReduction@ secundă (@ChampionBasicAttackCooldownReduction@ secunde pentru atacurile împotriva unui campion inamic).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Taric e protejat de o aură fortifiantă, care mărește armura lui și a campionilor aliați din apropiere. Poate opta să sfărâme pietrele vrăjite din jurul lui, pentru a provoca daune și a reduce armura inamicilor din apropiere, afectându-i armura pe o scurtă perioadă.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>nestematele lui Taric îi cresc <scaleArmor>armura cu @ArmorBonus@</scaleArmor>. În plus, campionii aliați din apropiere primesc <scaleArmor>@BonustoAllies@ armură</scaleArmor> (@ArmorBonusCoefficient*100@% din armura lui Taric).<br><br><spellActive>Activă: </spellActive>Taric își sfărâmă armura, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere și reducându-le <scaleArmor>armura cu @ArmorShred*-1@</scaleArmor> timp de @ArmorShredDuration@ secunde. Taric pierde <scaleArmor>@ArmorBonus@ armură</scaleArmor> cât timp <spellName>''Sparge-n țăndări''</spellName> este în perioada de reactivare.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Taric emite o sferă strălucitoare de lumină polarizată din scutul său cu nestemate, amețindu-și ținta și provocându-i daune, cu atât mai mari cu cât ținta e mai aproape de el.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric lansează o sferă prismatică spre un inamic-țintă, provocându-i între <magicDamage>@TotalDamage@</magicDamage> și <magicDamage>@TotalMaxDamageTT@ daune magice</magicDamage> și <status>amețindu-l</status> timp de între @MinStunLength@ și @MaxStunLength@ secunde.<br><br>Daunele ''Fascinației orbitoare'' cresc cu cât Taric este mai aproape de țintă, iar durata amețirii crește cu cât este mai departe de țintă.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Taric izbește cu ciocanul în pământ, provocând daune inamicilor din apropiere. Pentru o perioadă de timp după aceea, nestematele lui Taric radiază energie, fortificându-i pe Taric și pe aliații lui cu bonusuri de daune din atac și de putere a abilităților.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric izbește cu ciocanul în pământ, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere.<br><br>În următoarele @RadianceDuration@ secunde, nestematele lui Taric radiază energie, oferindu-i <physicalDamage>@DamageIncrease@ daune din atac</physicalDamage> și <magicDamage>puterea abilităților</magicDamage>. Aliații săi din apropiere primesc <physicalDamage>@AllyBonus@ daune din atac</physicalDamage> și <magicDamage>puterea abilităților</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

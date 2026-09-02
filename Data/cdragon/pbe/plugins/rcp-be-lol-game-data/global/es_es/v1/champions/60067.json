@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne caza implacablemente a los malhechores. Obtiene velocidad de movimiento adicional cuando avanza hacia un campeón enemigo cercano."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Pasiva</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne impregna sus proyectiles de un metal especial, tóxico para los seres maléficos.  El tercer ataque o habilidad consecutivos contra un mismo objetivo inflige un porcentaje de la vida máxima del objetivo como daño verdadero adicional.",
+            "dynamicDescription": "Cada tercer ataque o habilidad consecutiva contra un enemigo inflige @BaseDamage@ + @MaxHealthRatio*100@% de la vida máxima del enemigo como <trueDamage>daño verdadero</trueDamage> adicional (máximo: @MonsterDamageCap@ de daño contra monstruos).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Vayne saca una pesada ballesta y dispara un enorme proyectil contra su objetivo, lo que le inflige daño y lo empuja.  Si este impacta contra un obstáculo del terreno, queda empalado, aturdido y recibe daño adicional.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dispara un proyectil que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y empuja al enemigo. Los enemigos que chocan contra un obstáculo del terreno reciben <physicalDamage>@TotalDamagewithSpell@ de daño físico adicional</physicalDamage> y quedan <status>aturdidos</status> durante @StunDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Al prepararse para una confrontación épica, Vayne obtiene daño de ataque adicional, invisibilidad durante Pirueta y aumenta considerablemente la bonificación a la velocidad de movimiento de Cazadora noctívaga.",
+            "dynamicDescription": "Vayne se prepara para una confrontación épica y obtiene <physicalDamage>@ADMod@ de daño de ataque adicional</physicalDamage> durante @Duration@ s. Mientras está activa, Pirueta otorga <keywordStealth>invisibilidad</keywordStealth> durante @InvisibilityDuration@ s y la <speed>velocidad de movimiento</speed> adicional de <spellName>Cazadora noctívaga</spellName> aumenta a @UltimateMovementSpeed@.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

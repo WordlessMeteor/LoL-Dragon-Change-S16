@@ -774,7 +774,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヒト形態: 不用意な敵を捕らえる罠を設置する。罠は発動するとダメージを与え、対象を可視化して物理防御と魔法防御を低下させる。クーガー形態: 前方に飛びかかり、着地時に少量のダメージを与える。",
-            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>罠を設置する。罠は発動すると@DamageDuration@秒かけて<magicDamage>@DamagePerSecond@の魔法ダメージ</magicDamage>を与え@ShredDuration@秒間、対象を可視化し、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ResistDecreases*100@%<status>低下</status>させる。罠は@TrapDurationMins@分間持続する。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にダッシュし、周囲の敵に<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>罠を設置する。罠は発動すると@DamageDuration@秒かけて<magicDamage>@DamagePerSecond@の魔法ダメージ</magicDamage>を与え@ShredDuration@秒間、対象を可視化し、<status>細断</status>を付与して、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ResistDecreases*100@%低下させる。罠は@TrapDurationMins@分間持続する。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にダッシュし、周囲の敵に<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヒト形態: クーガーの精霊を呼び出し、味方の体力を回復して短時間攻撃速度を増加させる。クーガー形態: 前方にいる複数の敵を素早くかぎ爪で攻撃する。",
-            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>味方チャンピオン1体の体力を<healing>@TotalHealing@</healing>回復させ@ASDuration@秒間<attackSpeed>@BonusAS*100@攻撃速度を%</attackSpeed>増加させる。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にいる複数の敵をかぎ爪で攻撃し、<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ヒト形態: </keywordMajor>味方チャンピオン1体の体力を<healing>@TotalHealing@</healing>回復させ、@ASDuration@秒間<attackSpeed>攻撃速度を@BonusAS*100@%</attackSpeed>増加させる。<br><br><keywordMajor>クーガー形態: </keywordMajor>前方にいる複数の敵をかぎ爪で攻撃し、<magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 575.0,
                 575.0,

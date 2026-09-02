@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne bezwzględnie poluje na złoczyńców. Kiedy porusza się w kierunku wrogich bohaterów zyskuje dodatkową prędkość ruchu."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Biernie</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne stosuje bełty zakończone metalem szlachetnym, który jest toksyczny dla złych istot.  Trzeci z rzędu atak lub umiejętność przeciw temu samemu celowi zadaje mu dodatkowe obrażenia nieuchronne równe pewnemu procentowi jego maksymalnego zdrowia.",
+            "dynamicDescription": "Każdy co trzeci atak lub użycie umiejętności z rzędu przeciwko temu samemu wrogowi zadaje mu dodatkowo <trueDamage>obrażenia nieuchronne</trueDamage> równe @BaseDamage@ pkt. plus @MaxHealthRatio*100@% jego maks. zdrowia. (Maks.: @MonsterDamageCap@ pkt. obrażeń przeciwko potworom)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Vayne zdejmuje z pleców ciężką kuszę i wystrzeliwuje w cel ogromny bełt, zadając obrażenia, które odrzucają go do tyłu.  Jeśli wróg trafi w teren, zostanie na niego nabity, co zada mu dodatkowe obrażenia i ogłuszy go.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Wystrzeliwuje pocisk, który zadaje <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> i odrzuca wroga. Wrogowie, którzy zderzą się z terenem, otrzymują <physicalDamage>@TotalDamagewithSpell@ pkt. dodatkowych obrażeń fizycznych</physicalDamage> i zostają <status>ogłuszeni</status> na @StunDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Przygotowując się do wiekopomnego starcia, Vayne otrzymuje premię do obrażeń od ataku, staje się niewidzialna podczas Akrobacji i zyskuje znacznie większą premię do prędkości ruchu od Nocnej Łowczyni.",
+            "dynamicDescription": "Przygotowując się do wiekopomnego starcia, Vayne zyskuje <physicalDamage>@ADMod@ pkt. dodatkowych obrażeń od ataku</physicalDamage> na @Duration@ sek. Podczas działania Akrobacja zapewnia <keywordStealth>niewidzialność</keywordStealth> na @InvisibilityDuration@ sek., a dodatkowa <speed>prędkość ruchu</speed> <spellName>Nocnej Łowczyni</spellName> zostaje zwiększona do @UltimateMovementSpeed@ jedn.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

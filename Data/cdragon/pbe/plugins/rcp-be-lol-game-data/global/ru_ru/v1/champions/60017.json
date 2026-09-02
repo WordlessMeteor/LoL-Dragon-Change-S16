@@ -1046,7 +1046,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скорость передвижения Тимо пассивно увеличена, пока его не поразит вражеский чемпион или башня. Тимо может рвануть вперед, при этом он получает дополнительную скорость передвижения и не замедляется при получении урона.",
-            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText><spellPassive>Пассивно:</spellPassive> <speed>скорость передвижения</speed> Тимо растет на @PassiveMoveSpeedBonus*100@%, если он не получал урона от враж. чемпиона или башни за последние @PassiveCooldownOnDamageTaken@ сек.<br><br><spellActive>Активно:</spellActive> Тимо разгоняется, получая <speed>@ActiveMoveSpeedBonus*100@% скорости передвижения</speed> на @ActiveMoveSpeedBuffDuration@ сек. Полученный урон не влияет на акт. эффект.",
             "range": [
                 0.0,
                 0.0,
@@ -1195,8 +1195,8 @@
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_TeemoE_Jade_Summary",
-            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Автоатаки Тимо отравляют цель, нанося урон при попадании и период. урон.",
+            "dynamicDescription": "Автоатаки Тимо отравляют цель, нанося <magicDamage>@ImpactCalculatedDamage@ ед. маг. урона</magicDamage> при попадании и еще <magicDamage>@TickCalculatedDamage@ ед. маг. урона</magicDamage> раз в секунду в течение @PoisonDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1346,7 +1346,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тимо устанавливает взрывающуюся отравляющую ловушку, используя один из хранящихся в его рюкзаке грибов. Если противник заденет ее, ловушка выпустит ядовитое облако, замедляющее врагов и наносящее им урон с течением времени.",
-            "dynamicDescription": "Тимо ставит ловушку в виде гриба, взрывающуюся при контакте с врагом. Ловушки <status>замедляют</status> на @SlowAmount@% и наносят <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @DebuffDuration@ сек. Пораженные враги раскрываются на то же время.<br><br>Ловушки существуют @MushroomDuration@ мин. и невидимы. Макс. @MaxAmmo@ зарядов (новый заряд раз в @AmmoRechargeTime@ сек.).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Тимо ставит ловушку в виде гриба, взрывающуюся при контакте с врагом. Ловушки <status>замедляют</status> на @SlowAmount@% и наносят <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @DebuffDuration@ сек. Пораженные враги раскрываются на то же время.<br><br>Ловушки существуют @MushroomDuration@ мин. и невидимы. Максимум зарядов – @MaxAmmo@ (новый заряд раз в @AmmoRechargeTime@ сек.).@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

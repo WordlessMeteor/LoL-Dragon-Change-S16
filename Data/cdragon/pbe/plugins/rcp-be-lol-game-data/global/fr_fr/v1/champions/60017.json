@@ -1046,7 +1046,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "La vitesse de déplacement de Teemo est passivement augmentée jusqu'à ce qu'il soit frappé par un champion ennemi ou une tourelle ennemie.  Teemo peut sprinter pour gagner un bonus temporaire en vitesse de déplacement qui n'est pas annulé s'il est touché.",
-            "dynamicDescription": "Spell_TeemoW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<mainText><spellPassive>Passif : </spellPassive>la <speed>vitesse de déplacement</speed> de Teemo est augmentée de @PassiveMoveSpeedBonus*100@%, sauf s'il a été blessé par un champion ennemi ou une tourelle ennemie il y a moins de @PassiveCooldownOnDamageTaken@ sec.<br><br><spellActive>Actif : </spellActive>Teemo sprinte et gagne <speed>@ActiveMoveSpeedBonus*100@% de vitesse de déplacement</speed> pendant @ActiveMoveSpeedBuffDuration@ sec. Les dégâts ne dissipent pas ce bonus.",
             "range": [
                 0.0,
                 0.0,
@@ -1195,8 +1195,8 @@
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_TeemoE_Jade_Summary",
-            "dynamicDescription": "Spell_TeemoE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Toutes les attaques de Teemo empoisonnent la cible, infligeant des dégâts à l'impact et sur la durée.",
+            "dynamicDescription": "Les attaques de base de Teemo empoisonnent ses cibles, infligeant <magicDamage>@ImpactCalculatedDamage@ pts de dégâts magiques</magicDamage> à l'impact, puis <magicDamage>@TickCalculatedDamage@ pts de dégâts magiques</magicDamage> chaque seconde pendant @PoisonDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,

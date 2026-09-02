@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "Spell_VaynePassive_Jade_Summary"
+        "description": "Vayne jagt unbarmherzig Übeltäter. Sie erhält zusätzliches Lauftempo, wenn sie sich auf gegnerische Champions in der Nähe zubewegt."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>Passiv</spellPassive>",
             "cooldown": "",
-            "description": "Spell_VayneW_Jade_Summary",
-            "dynamicDescription": "Spell_VayneW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne versieht ihre Bolzen mit Spitzen aus seltenem Metall, die das Böse vergiften.  Der dritte Angriff in Folge, ob normaler Angriff oder Fähigkeit, auf dasselbe Ziel verursacht einen prozentualen Teil des maximalen Lebens des Ziels als absoluten Schaden.",
+            "dynamicDescription": "Jeder dritte Angriff bzw. Fähigkeit in Folge gegen denselben Gegner verursacht zusätzlich @BaseDamage@ plus @MaxHealthRatio*100@ % des maximalen Lebens des Gegners als <trueDamage>absoluten Schaden</trueDamage>. (Max. Schaden gegen Monster: @MonsterDamageCap@)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Vayne zieht ihre schwere Armbrust von ihrem Rücken und feuert einen riesigen Bolzen auf ihr Ziel, der Schaden verursacht und es zurückstößt.  Kollidiert es mit der Umgebung, wird es gepfählt, erleidet zusätzlichen Schaden und wird betäubt.",
-            "dynamicDescription": "Spell_VayneE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Feuert einen Bolzen ab, der <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> verursacht und den Gegner zurückstößt. Gegner, die mit Terrain kollidieren, erleiden <physicalDamage>@TotalDamagewithSpell@ zusätzlichen normalen Schaden</physicalDamage> und werden @StunDuration@ Sekunden lang <status>betäubt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_VayneR_Jade_Summary",
-            "dynamicDescription": "Spell_VayneR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Vayne bereitet sich auf eine epische Konfrontation vor. Sie erhält zusätzlichen Angriffsschaden, Unsichtbarkeit während „Hechtrolle“ und stark erhöhtes zusätzliches Lauftempo von „Jägerin der Nacht“.",
+            "dynamicDescription": "Vayne bereitet sich auf eine epische Konfrontation vor und erhält @Duration@ Sekunden lang <physicalDamage>@ADMod@ zusätzlichen Angriffsschaden</physicalDamage>. Während der Aktivierung gewährt „Hechtrolle“ @InvisibilityDuration@ Sekunden lang <keywordStealth>Unsichtbarkeit</keywordStealth> und das zusätzliche <speed>Lauftempo</speed> von <spellName>Jägerin der Nacht</spellName> wird auf @UltimateMovementSpeed@ erhöht.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

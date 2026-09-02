@@ -656,7 +656,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric wyzwala energię ziemi, lecząc siebie i cel. To uleczenie jest skuteczniejsze, gdy Taric leczy tylko siebie. Dodatkowo ataki podstawowe Tarica skracają czas odnowienia Przepełnienia.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric wyzwala energię ziemi, przywracając <healing>@HealAmount@ pkt. zdrowia</healing> sobie i sojusznikowi. Jeśli Taric obierze za cel samego siebie, leczenie wzrasta, co znaczy, że przywróci sobie <healing>@HealAmountSelf@ pkt. zdrowia</healing>.<br><br>Ataki podstawowe Tarica skracają czas odnowienia <spellName>Przepełnienia</spellName> o @BasicAttackCooldownReduction@ sek. (@ChampionBasicAttackCooldownReduction@ sek., jeśli celem jest wrogi bohater).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Tarica chroni utwardzająca aura, która wzmacnia pancerz u niego i u pobliskich sojuszniczych bohaterów. Taric może rozsadzić otaczające go magiczne kamienie, aby zadać obrażenia pobliskim wrogom i osłabić ich pancerz. Powoduje to jednak osłabienie na pewien czas pancerza samego Tarica.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive>Klejnoty Tarica zwiększają jego <scaleArmor>pancerz o @ArmorBonus@ pkt.</scaleArmor>. Dodatkowo pobliscy sojuszniczy bohaterowie zyskują <scaleArmor>@BonustoAllies@ pkt. pancerza</scaleArmor> (@ArmorBonusCoefficient*100@% pancerza Tarica).<br><br><spellActive>Użycie: </spellActive>Taric roztrzaskuje swój pancerz, zadając pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i zmniejszając ich <scaleArmor>pancerz o @ArmorShred*-1@</scaleArmor> pkt. na @ArmorShredDuration@ sek. Gdy <spellName>Roztrzaskanie</spellName> się odnawia, Taric ma o <scaleArmor>@ArmorBonus@ pkt. pancerza mniej</scaleArmor>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric wypuszcza lśniącą kulę światła ze swojej tarczy, co ogłusza cel i zadaje mu obrażenia zależne od odległości, jaka ich dzieli.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric wystrzeliwuje w wybranego wroga pryzmatyczną kulę, która zadaje od <magicDamage>@TotalDamage@</magicDamage> do <magicDamage>@TotalMaxDamageTT@ pkt. obrażeń magicznych</magicDamage> i <status>ogłusza</status> go na @MinStunLength@-@MaxStunLength@ sek.<br><br>Obrażenia Rozbłysku rosną, gdy cel znajduje się bliżej, podczas gdy czas ogłuszenia jest większy, gdy cel znajduje się dalej.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric uderza młotem w ziemię i zadaje obrażenia pobliskim wrogom. Przez jakiś czas klejnoty Tarica emanują mocą, wzmacniając Tarica i jego sojuszników dodatkowymi obrażeniami od ataku i mocą umiejętności.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric uderza młotem w ziemię, zadając pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Przez następne @RadianceDuration@ sek. klejnoty Tarica emanują energią, zapewniając mu <physicalDamage>@DamageIncrease@ pkt. obrażeń od ataku</physicalDamage> i <magicDamage>mocy umiejętności</magicDamage>. Jego pobliscy sojusznicy zyskują <physicalDamage>@AllyBonus@ pkt. obrażeń od ataku</physicalDamage> i <magicDamage>mocy umiejętności</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

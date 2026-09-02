@@ -4,28 +4,28 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function() {
-                Object.keys(n).forEach((e => {
-                    Object.keys(n[e]).forEach((t => {
-                        const O = n[e][t],
+                Object.keys(T).forEach((e => {
+                    Object.keys(T[e]).forEach((t => {
+                        const O = T[e][t],
                             P = {
                                 pos: e,
                                 rate: O
                             };
-                        r[t] ? r[t].push(P) : r[t] = [P]
+                        n[t] ? n[t].push(P) : n[t] = [P]
                     }))
-                })), Object.keys(r).forEach((e => {
-                    r[e].sort(((e, t) => e - t))
+                })), Object.keys(n).forEach((e => {
+                    n[e].sort(((e, t) => e - t))
                 }));
                 const e = {
                         getPlayRates: function() {
-                            return n
+                            return T
                         },
                         getPreferredPosition: function(e) {
-                            const t = r[e] || [];
+                            const t = n[e] || [];
                             return t.length > 0 ? t[0].pos : "NONE"
                         },
                         getPositions: function(e) {
-                            return r[e] || []
+                            return n[e] || []
                         }
                     },
                     t = {},
@@ -47,8 +47,8 @@
                 }, e
             };
             var P = O(2);
-            const n = O(3),
-                r = {}
+            const T = O(3),
+                n = {}
         }, (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
@@ -56,7 +56,9 @@
             t.JADE_POSITIONS_BY_CHAMP_ID = {
                 60001: ["MIDDLE"],
                 60002: ["TOP", "JUNGLE"],
+                60003: ["TOP"],
                 60004: ["MIDDLE"],
+                60005: ["JUNGLE", "TOP"],
                 60009: ["JUNGLE", "SUPPORT"],
                 60010: ["TOP", "SUPPORT"],
                 60011: ["JUNGLE", "TOP"],
@@ -104,6 +106,7 @@
                 60074: ["MIDDLE", "TOP"],
                 60075: ["TOP"],
                 60076: ["MIDDLE"],
+                60078: ["TOP"],
                 60079: ["MIDDLE"],
                 60080: ["TOP"],
                 60081: ["BOTTOM"],
@@ -115,7 +118,9 @@
                 60096: ["BOTTOM"],
                 60098: ["TOP", "SUPPORT"],
                 60099: ["MIDDLE", "SUPPORT"],
+                60102: ["JUNGLE", "TOP"],
                 60103: ["MIDDLE"],
+                60114: ["TOP"],
                 60117: ["SUPPORT"]
             }
         }, e => {
@@ -126,12 +131,12 @@
         t = {};
 
     function O(P) {
-        var n = t[P];
-        if (void 0 !== n) return n.exports;
-        var r = t[P] = {
+        var T = t[P];
+        if (void 0 !== T) return T.exports;
+        var n = t[P] = {
             exports: {}
         };
-        return e[P](r, r.exports, O), r.exports
+        return e[P](n, n.exports, O), n.exports
     }
     O.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
@@ -145,8 +150,8 @@
         };
         O(4);
         const P = document.currentScript.ownerDocument;
-        const n = window.getPluginAnnounceEventName("rcp-fe-lol-champion-statistics");
-        P.addEventListener(n, (function(e) {
+        const T = window.getPluginAnnounceEventName("rcp-fe-lol-champion-statistics");
+        P.addEventListener(T, (function(e) {
             (0, e.registrationHandler)((function() {
                 return (0, t.default)()
             }))

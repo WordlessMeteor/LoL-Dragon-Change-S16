@@ -16647,8 +16647,9 @@
                             n = e.catalogItem && null != e.catalogItem.itemId ? String(e.catalogItem.itemId).toLowerCase() : "";
                         return t.includes(s) || n.includes(s)
                     })));
-                    const o = !(!this.get("_deepLinkItemIds") || !this.get("_deepLinkItemIds").size);
-                    if (this.get("showOwned") || o || (e = e.filter((e => !e.isOwned))), v.forEach((({
+                    const o = !(!this.get("_deepLinkItemIds") || !this.get("_deepLinkItemIds").size),
+                        l = i === p.CATEGORY_ID.FEATURED;
+                    if (this.get("showOwned") || o || l || (e = e.filter((e => !e.isOwned))), v.forEach((({
                             flag: t,
                             predicate: n
                         }) => {
@@ -16657,13 +16658,13 @@
                         const t = Date.now();
                         e = e.filter((e => !!e.inactiveDate && new Date(e.inactiveDate).getTime() - t < m.MS_PER_YEAR))
                     }
-                    const l = this.get("toolbarConfig");
-                    if ("filter" === l.dropdown && l.dropdownFilterField) {
+                    const r = this.get("toolbarConfig");
+                    if ("filter" === r.dropdown && r.dropdownFilterField) {
                         const t = this.get("activeDropdownFilter");
-                        t && t !== p.DROPDOWN_FILTER_ALL && (e = e.filter((e => e[l.dropdownFilterField] === t)))
+                        t && t !== p.DROPDOWN_FILTER_ALL && (e = e.filter((e => e[r.dropdownFilterField] === t)))
                     }
-                    const r = this.get("_deepLinkItemIds");
-                    return r && r.size && (e = e.filter((e => e.catalogItem && r.has(String(e.catalogItem.itemId))))), e = (0, c.sortStoreItems)(e, a), e
+                    const d = this.get("_deepLinkItemIds");
+                    return d && d.size && (e = e.filter((e => e.catalogItem && d.has(String(e.catalogItem.itemId))))), e = (0, c.sortStoreItems)(e, a), e
                 })),
                 classicExclusiveFlagNode: a.Ember.computed("showClassicExclusiveFlagInModal", (function() {
                     if (this.get("showClassicExclusiveFlagInModal")) {

@@ -2744,24 +2744,37 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
-            var l = n(1),
-                a = l.Ember.Controller.extend({
-                    inputSettings: l.Ember.computed.alias("model.accountInputSettings.data"),
-                    inputSettingsSchema: l.Ember.computed.alias("model.inputSettingsSchema"),
-                    gameSettingsSchema: l.Ember.computed.alias("model.gameSettingsSchema"),
-                    gameSettingsRemote: l.Ember.computed.alias("model.gameSettingsRemote"),
-                    contentComponent: null,
-                    resetToDefault: function() {
-                        this.get("contentComponent") && this.get("contentComponent").resetToDefault()
-                    },
-                    actions: {
-                        handleComponentInitialized: function(e) {
-                            this.set("contentComponent", e)
-                        }
+            }), t.inputSettingsBinding = t.default = t.ACCOUNT_INPUT_SETTINGS_PATH = void 0;
+            var l = n(1);
+            const a = "/lol-settings/v2/account/GamePreferences/input-settings";
+            t.ACCOUNT_INPUT_SETTINGS_PATH = a;
+            const s = l.dataBinding.bindTo(l.socket);
+            t.inputSettingsBinding = s;
+            var o = l.Ember.Controller.extend({
+                inputSettings: l.Ember.computed.alias("model.accountInputSettings.data"),
+                inputSettingsSchema: l.Ember.computed.alias("model.inputSettingsSchema"),
+                gameSettingsSchema: l.Ember.computed.alias("model.gameSettingsSchema"),
+                gameSettingsRemote: l.Ember.computed.alias("model.gameSettingsRemote"),
+                contentComponent: null,
+                init() {
+                    this._super(...arguments), s.observe(a, this, (e => {
+                        const t = this.get("model.accountInputSettings");
+                        e && e.data && t && !l.lodash.isEqual(t.data, e.data) && this.set("model.accountInputSettings", e)
+                    }))
+                },
+                willDestroy() {
+                    this._super(...arguments), s.unobserve(a, this)
+                },
+                resetToDefault: function() {
+                    this.get("contentComponent") && this.get("contentComponent").resetToDefault()
+                },
+                actions: {
+                    handleComponentInitialized: function(e) {
+                        this.set("contentComponent", e)
                     }
-                });
-            t.default = a
+                }
+            });
+            t.default = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

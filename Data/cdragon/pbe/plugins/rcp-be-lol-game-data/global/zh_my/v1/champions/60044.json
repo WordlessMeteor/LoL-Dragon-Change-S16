@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克召唤大地能量，为一名友军和自己提供治疗。当塔里克只为自己治疗时，此治疗效果会更强。此外，塔里克的普攻会缩短“灌注”的冷却时间。",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克召唤大地能量，为一名友军和自己回复<healing>@HealAmount@生命值</healing>。如果目标是自己，治疗效果提升，回复<healing>@HealAmountSelf@生命值</healing>。<br><br>塔里克的普攻可使<spellName>灌注</spellName>的冷却时间缩短@BasicAttackCooldownReduction@秒（攻击敌方英雄时缩短@ChampionBasicAttackCooldownReduction@秒）。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克受到坚韧光环的保护，提升自己和附近友方英雄的物理防御。他可以选择粉碎环绕自身的魔法岩石，造成伤害并降低附近敌人的物理防御，但会在短时间内牺牲自身部分物理防御。",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>塔里克的宝石会使他的<scaleArmor>物理防御提升@ArmorBonus@</scaleArmor>。此外，附近友方英雄会获得<scaleArmor>@BonustoAllies@物理防御</scaleArmor>（相当于塔里克物理防御的@ArmorBonusCoefficient*100@%）。<br><br><spellActive>主动：</spellActive>塔里克粉碎自身装甲，对附近敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并使其<scaleArmor>物理防御降低@ArmorShred*-1@</scaleArmor>，持续@ArmorShredDuration@秒。当<spellName>破碎</spellName>处于冷却期间，塔里克的<scaleArmor>物理防御降低@ArmorBonus@</scaleArmor>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克从宝石盾牌中释放一颗璀璨的棱光球，晕眩目标，并根据他与目标的距离造成伤害。",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克朝目标敌人发射一颗棱光球，造成<magicDamage>@TotalDamage@</magicDamage>至<magicDamage>@TotalMaxDamageTT@魔法伤害</magicDamage>和@MinStunLength@至@MaxStunLength@秒的<status>晕眩</status>效果。<br><br>塔里克离目标越近，“失能眩光”的伤害越高；塔里克离目标越远，晕眩时间越长。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克挥锤猛击地面，对附近敌人造成伤害。在接下来的一段时间内，塔里克的宝石会释放能量，为塔里克及其友军提供额外的物理攻击和魔法攻击。",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克挥锤猛击地面，对附近敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>在接下来的@RadianceDuration@秒内，塔里克的宝石会释放能量，为他提供<physicalDamage>@DamageIncrease@物理攻击</physicalDamage>和<magicDamage>魔法攻击</magicDamage>。他的附近友军会获得<physicalDamage>@AllyBonus@物理攻击</physicalDamage>和<magicDamage>魔法攻击</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

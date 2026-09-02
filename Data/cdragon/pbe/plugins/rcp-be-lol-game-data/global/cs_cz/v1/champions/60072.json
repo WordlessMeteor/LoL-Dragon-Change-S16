@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Spell_SkarnerPassive_Jade_Summary"
+        "description": "Základní útoky zkracují přebíjecí doby všech schopností. Při útocích proti šampionům je tento efekt silnější."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner máchne svými pařáty a všem okolním nepřátelům způsobí fyzické poškození. Pokud někoho zasáhne, nabije se na několik sekund křišťálovou energií.  Jestliže sešle Křišťálové seknutí znovu po nabití křišťálovou energií, způsobí bonusové magické poškození a zpomalí všechny zasažené cíle.",
-            "dynamicDescription": "Spell_SkarnerQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner způsobí všem okolním nepřátelům <physicalDamage>@TotalBaseDamage@ bodů fyzického poškození</physicalDamage>, a pokud někoho zasáhne, nabije se na @CrystalEnergyDuration@ sek. <keywordMajor>křišťálovou energií</keywordMajor>.<br><br>Dokud je Skarner nabitý, <spellName>Křišťálové seknutí</spellName> způsobuje <magicDamage>@TotalProcDamage@ bodů bonusového magického poškození</magicDamage> a na @SlowDuration@ sek. <status>zpomaluje</status> zasažené jednotky o @SlowPercent*-100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner získá štít, který mu během svého působení zvyšuje hodnoty rychlosti pohybu a útoků.",
-            "dynamicDescription": "Spell_SkarnerW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner získá na @ShieldDuration@ sek. <shield>štít</shield> o síle @BlockDamage@ bodů. Ten mu během svého působení přidává <attackSpeed>@ASBonus*100@ % k rychlosti útoků</attackSpeed> a <speed>@MSBonus*100@ % k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner vyvolá výboj křišťálové energie, který zasaženým protivníkům způsobí poškození a označí je. Zásah nepřátel tuto značku spotřebuje a Skarner se vyléčí. Léčení se aktivuje také okamžitě zabitím cíle.",
-            "dynamicDescription": "Spell_SkarnerE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner způsobí nepřátelům v řadě <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @MarkDuration@ sek. je označí.<br><br>Zásah nepřátel tuto značku spotřebuje a <healing>vyléčí</healing> Skarnerovi @TotalHealing@ zdraví. Léčení se aktivuje také okamžitě zabitím cíle. (S každou aktivací se účinnost léčení snižuje o @SubsequentHealMultiplier*100@ %.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Skarner potlačí nepřátelského šampiona a způsobí mu magické poškození.  Skarner se může po tuto dobu volně pohybovat a táhne bezmocnou oběť za sebou.  Jakmile efekt skončí, Skarnerovu cíli je způsobeno dodatečné poškození.",
-            "dynamicDescription": "Spell_SkarnerR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner na @SuppressionDuration@ sek. <status>potlačí</status> nepřátelského šampiona a způsobí mu <magicDamage>@TotaDamage@ bodů magického poškození</magicDamage>. Skarner se může po tuto dobu volně pohybovat a táhne bezmocnou oběť za sebou. Jakmile tento efekt skončí, utrpí Skarnerův cíl dalších <magicDamage>@TotaDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taric utilise l'énergie de la terre pour soigner une cible et se soigner lui-même. Les soins sont plus importants si Taric ne soigne que lui. De plus, les attaques de base de Taric réduisent le délai de récupération d'Imprégnation.",
-            "dynamicDescription": "game_spell_tooltip_Imbue_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric utilise l'énergie de la terre pour soigner un allié et se soigner lui-même de <healing>@HealAmount@ PV</healing>. S'il se soigne lui-même, les soins augmentent, et il récupère alors <healing>@HealAmountSelf@ PV</healing>.<br><br>Les attaques de base de Taric réduisent le délai de récupération d'<spellName>Imprégnation</spellName> de @BasicAttackCooldownReduction@ sec (@ChampionBasicAttackCooldownReduction@ sec en attaquant un champion ennemi).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taric est protégé par un halo qui augmente son armure ainsi que celle des champions alliés proches. Il peut choisir de briser les pierres qui l'entourent pour infliger des dégâts et réduire l'armure des ennemis proches au prix d'une brève réduction de son armure.",
-            "dynamicDescription": "game_spell_tooltip_Shatter_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les gemmes de Taric augmentent son <scaleArmor>armure de @ArmorBonus@</scaleArmor>. De plus, les champions alliés à proximité gagnent <scaleArmor>@BonustoAllies@ armure</scaleArmor> (@ArmorBonusCoefficient*100@% de l'armure de Taric).<br><br><spellActive>Actif : </spellActive>Taric brise son armure, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches et réduisant leur <scaleArmor>armure de @ArmorShred*-1@</scaleArmor> pendant @ArmorShredDuration@ sec. Taric perd <scaleArmor>@ArmorBonus@ armure</scaleArmor> tant que <spellName>Dislocation</spellName> est en récupération.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taric émet une brillante lumière prismatique avec son bouclier incrusté de gemmes, étourdissant sa cible et la blessant en fonction de la distance qui les sépare.",
-            "dynamicDescription": "game_spell_tooltip_Dazzle_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric lance une sphère prismatique sur un ennemi ciblé, infligeant entre <magicDamage>@TotalDamage@</magicDamage> et <magicDamage>@TotalMaxDamageTT@ pts de dégâts magiques</magicDamage> et <status>étourdissant</status> entre @MinStunLength@ et @MaxStunLength@ sec.<br><br>Plus Taric est proche de la cible, plus les dégâts d'Éblouissement augmentent. Plus il est éloigné de la cible, plus la durée de l'étourdissement augmente.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taric donne un coup de marteau sur le sol, infligeant des dégâts aux ennemis proches. Les gemmes de Taric émettent ensuite temporairement de l'énergie qui augmente les dégâts d'attaque et la puissance de Taric et ses alliés.",
-            "dynamicDescription": "game_spell_tooltip_TaricHammerSmash_Jade@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric donne un coup de marteau sur le sol, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches.<br><br>Pendant les @RadianceDuration@ prochaines secondes, les gemmes de Taric rayonnent d'énergie, lui conférant <physicalDamage>@DamageIncrease@ dégâts d'attaque</physicalDamage> et <magicDamage>puissance</magicDamage>. Ses alliés proches gagnent <physicalDamage>@AllyBonus@ dégâts d'attaque</physicalDamage> et <magicDamage>puissance</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
