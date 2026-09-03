@@ -953,7 +953,7 @@
         },
         "__type": "SpellObject"
     },
-    "{7d0c74fc}": {
+    "Characters/Jade_Kayle/Spells/Jade_KaylePassiveAbility": {
         "mRootSpell": "Characters/Jade_Kayle/Spells/Jade_KaylePassiveAbility/Jade_KaylePassive",
         "mChildSpells": [
             "Characters/Jade_Kayle/Spells/Jade_KaylePassiveAbility/Jade_KaylePassive"
@@ -967,45 +967,6 @@
         "mScriptName": "Jade_KaylePassive",
         "mSpell": {
             "DataValues": [
-                {
-                    "name": "Shred",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Duration",
-                    "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Stacks",
-                    "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "ADfromAP",
                     "values": [
@@ -1031,8 +992,33 @@
                         0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LevelOneAP",
+                    "values": [
+                        16.889999389648438,
+                        16.889999389648438,
+                        16.889999389648438,
+                        16.889999389648438,
+                        16.889999389648438,
+                        16.889999389648438,
+                        16.889999389648438
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "mSpellCalculations": {
+                "{2c5d3763}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 16.889999389648438,
+                            "mInitialBonusPerLevel": 0.8999999761581421,
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Kayle_EyeforanEye.dds"
             ],
@@ -2462,7 +2448,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Kayle/Spells/Jade_KayleEAbility",
-            "{7d0c74fc}",
+            "Characters/Jade_Kayle/Spells/Jade_KaylePassiveAbility",
             "Characters/Jade_Kayle/Spells/Jade_KayleQAbility",
             "Characters/Jade_Kayle/Spells/Jade_KayleRAbility",
             "Characters/Jade_Kayle/Spells/Jade_KayleWAbility"
@@ -2549,21 +2535,6 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mPerkReplacements": {
-            "mReplacements": [
-                {
-                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
-                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
-                    "__type": "PerkReplacement"
-                },
-                {
-                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
-                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
-                    "__type": "PerkReplacement"
-                }
-            ],
-            "__type": "PerkReplacementList"
-        },
         "mCharacterPassiveSpell": "Characters/Jade_Kayle/Spells/Jade_KaylePassiveAbility/Jade_KaylePassive",
         "mCharacterPassiveBuffs": [
             {
@@ -2573,17 +2544,6 @@
         ],
         "{c5c48b41}": 1,
         "Script": "{6671a95f}",
-        "{6854087e}": [
-            {
-                "{e4f7105d}": "Maps/Shipping/Map11/Modes/SWIFTPLAY",
-                "{cf19cb5d}": {
-                    "damagePerLevel": -0.5,
-                    "attackSpeedPerLevel": -0.5,
-                    "__type": "{770f7888}"
-                },
-                "__type": "{47f13ab0}"
-            }
-        ],
         "__type": "CharacterRecord"
     },
     "__linked": []

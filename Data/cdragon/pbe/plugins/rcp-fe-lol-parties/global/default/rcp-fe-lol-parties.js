@@ -967,15 +967,15 @@
                             gameSelectModeGroup: m,
                             assetMutator: d,
                             queues: []
-                        }), t[l][m].queues.push(a);
-                        const h = i.queueAvailability === o.QUEUE_AVAILABILITY.enabled;
-                        p && h && (r || m !== o.MODE_GROUP_NAMES.AlternativeLeagueModes || (r = !0), n[l] = n[l] ? n[l] : {}, n[l][m] || (n[l][m] = {
+                        }), t[l][m].queues.push(a), p && (r || m !== o.MODE_GROUP_NAMES.AlternativeLeagueModes || (r = !0), n[l] = n[l] ? n[l] : {}, n[l][m] || (n[l][m] = {
                             mapId: c,
                             gameMode: u,
                             gameSelectModeGroup: m,
                             assetMutator: d,
                             queues: []
-                        }), n[l][m].queues.push(a), s.push(a)), i.available = h, e[a] = i
+                        }), n[l][m].queues.push(a), s.push(a));
+                        const h = i.queueAvailability === o.QUEUE_AVAILABILITY.enabled;
+                        i.available = h, e[a] = i
                     })), this.get("disabledRgmButtonEnabled") && !r && n[o.CATEGORY_NAMES.PVP] && (n[o.CATEGORY_NAMES.PVP][o.MODE_GROUP_NAMES.AlternativeLeagueModes] = o.DISABLED_RGM_GAME_TYPE), this.set("queuesById", e), this.set("queuesByCategory", t), this.set("availableQueues", n), this.set("availableQueueIds", i.Ember.A(s))
                 })),
                 getPickTypeForQueue: function(e) {
@@ -12622,7 +12622,10 @@
                     if (!e || !e.eligible) {
                         const t = this.get("eligibilityService");
                         return t.generateDisabledReasonForParty(e).then((n => {
-                            this.set("isDisabled", t.isSummonerRestricted(e, this.get("summonerId"))), this.set("disabledReasons", i.Ember.A(n))
+                            const o = (e.restrictions || []).find((e => "QueueDisabled" === e.restrictionCode)),
+                                s = t.isSummonerRestricted(e, this.get("summonerId")),
+                                a = o || s;
+                            this.set("isDisabled", a), this.set("disabledReasons", i.Ember.A(n))
                         }))
                     }
                     return this.set("isDisabled", !1), Promise.resolve()

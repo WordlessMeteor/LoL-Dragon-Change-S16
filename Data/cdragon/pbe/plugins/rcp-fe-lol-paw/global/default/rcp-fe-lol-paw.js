@@ -742,22 +742,23 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = E(n(31)),
+                s = T(n(31)),
                 l = n(32),
                 o = n(33),
-                i = E(n(35)),
-                c = E(n(38)),
-                r = E(n(41)),
-                p = E(n(44)),
-                m = E(n(47)),
-                u = E(n(50)),
-                d = E(n(53)),
-                h = E(n(56)),
-                g = E(n(59)),
-                _ = E(n(62)),
-                f = E(n(65));
+                i = T(n(35)),
+                c = T(n(38)),
+                r = T(n(40)),
+                p = T(n(43)),
+                m = T(n(46)),
+                u = T(n(49)),
+                d = T(n(52)),
+                h = T(n(55)),
+                g = T(n(58)),
+                _ = T(n(61)),
+                f = T(n(64)),
+                E = T(n(67));
 
-            function E(e) {
+            function T(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -852,50 +853,50 @@
                         name: "rcp-fe-lol-paw",
                         tra: e,
                         ComponentFactory: a.componentFactory,
-                        PawRootComponent: n(66),
-                        TopBannerComponent: n(72),
-                        RelatedItemsOverlayComponent: n(75),
-                        ItemDetailsComponent: n(78),
-                        PurchaseOptionsComponent: n(81),
-                        PurchaseWarningsComponent: n(84),
-                        ItemSplashComponent: n(87),
-                        OverlayImageComponent: n(90),
-                        ContentDescriptionComponent: n(93),
-                        DependencyDetailsComponent: n(96),
-                        PriceDetailsComponent: n(99),
-                        PriceButtonComponent: n(102),
-                        DisclaimerCheckboxComponent: n(105),
-                        ItemUnlockedComponent: n(108),
-                        CelebrationVideoComponent: n(111),
-                        PreviewVideoToggleComponent: n(113),
-                        BadgeOverlayComponent: n(116),
+                        PawRootComponent: n(68),
+                        TopBannerComponent: n(73),
+                        RelatedItemsOverlayComponent: n(76),
+                        ItemDetailsComponent: n(79),
+                        PurchaseOptionsComponent: n(82),
+                        PurchaseWarningsComponent: n(85),
+                        ItemSplashComponent: n(88),
+                        OverlayImageComponent: n(91),
+                        ContentDescriptionComponent: n(94),
+                        DependencyDetailsComponent: n(97),
+                        PriceDetailsComponent: n(100),
+                        PriceButtonComponent: n(103),
+                        DisclaimerCheckboxComponent: n(106),
+                        ItemUnlockedComponent: n(109),
+                        CelebrationVideoComponent: n(112),
+                        PreviewVideoToggleComponent: n(114),
+                        BadgeOverlayComponent: n(117),
                         DigitalGoodsDisclaimerComponent: a.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
-                        PawChoiceComponent: n(119),
-                        ItemChoiceComponent: n(122),
-                        ItemChoiceDetailsComponent: n(127),
-                        ItemChoiceDetailFullComponent: n(130),
-                        BundleRootComponent: n(133),
-                        BundleTitleComponent: n(136),
-                        BundleDescriptionComponent: n(139),
-                        BundleItemsComponent: n(142),
-                        BundlePriceComponent: n(145),
-                        BundlePurchaseComponent: n(148),
-                        BundleUpsellComponent: n(151),
-                        ChromaBundleDetailsComponent: n(154),
-                        ChromaBundleOverlayImageComponent: n(156),
-                        ChromaButtonComponent: n(159),
-                        ChromaBundleContentItemsComponent: n(162),
-                        PurchaseWidgetService: n(163),
+                        PawChoiceComponent: n(120),
+                        ItemChoiceComponent: n(123),
+                        ItemChoiceDetailsComponent: n(128),
+                        ItemChoiceDetailFullComponent: n(131),
+                        BundleRootComponent: n(134),
+                        BundleTitleComponent: n(137),
+                        BundleDescriptionComponent: n(140),
+                        BundleItemsComponent: n(143),
+                        BundlePriceComponent: n(146),
+                        BundlePurchaseComponent: n(149),
+                        BundleUpsellComponent: n(152),
+                        ChromaBundleDetailsComponent: n(155),
+                        ChromaBundleOverlayImageComponent: n(157),
+                        ChromaButtonComponent: n(160),
+                        ChromaBundleContentItemsComponent: n(163),
+                        PurchaseWidgetService: c.default,
                         PawTemplateService: i.default,
-                        PawTemplateLargeTwoColumnLandscapeTemplateComponent: c.default,
-                        PawTemplateImageCarouselComponent: r.default,
-                        PawTemplateMediaComponent: p.default,
-                        PawTemplatePurchaseComponent: m.default,
-                        PawTemplateScrollListComponent: u.default,
-                        PawTemplateTextComponent: d.default,
-                        PawTemplateTitleSubtitleComponent: h.default,
-                        PawTemplateVerticalListComponent: g.default,
-                        PawTemplateWindowComponent: _.default
+                        PawTemplateLargeTwoColumnLandscapeTemplateComponent: r.default,
+                        PawTemplateImageCarouselComponent: p.default,
+                        PawTemplateMediaComponent: m.default,
+                        PawTemplatePurchaseComponent: u.default,
+                        PawTemplateScrollListComponent: d.default,
+                        PawTemplateTextComponent: h.default,
+                        PawTemplateTitleSubtitleComponent: g.default,
+                        PawTemplateVerticalListComponent: _.default,
+                        PawTemplateWindowComponent: f.default
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "PAWRPTopUpModalComponent",
                         tra: e,
@@ -934,7 +935,7 @@
                 getBaseSkinLineData(e) {
                     return new Promise(((t, n) => {
                         this.bindings.paw.get(o.BASE_SKIN_LINE_DATA_URL + "/" + e).then((a => {
-                            a ? t((0, f.default)(a, this.tra)) : n(`offer id ${e} not found`)
+                            a ? t((0, E.default)(a, this.tra)) : n(`offer id ${e} not found`)
                         })).catch((e => {
                             n(e)
                         }))
@@ -1306,6 +1307,171 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            var a, s = n(1),
+                l = (a = n(39)) && a.__esModule ? a : {
+                    default: a
+                },
+                o = n(33),
+                i = n(32);
+            const c = (0, s.emberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
+                logPrefix: "service:purchasewidget",
+                boundProperties: {
+                    orderNotifications: "/lol-purchase-widget/v1/order-notifications",
+                    summoner: "/lol-summoner/v1/current-summoner"
+                }
+            });
+            var r = s.Ember.Service.extend(c, {
+                init() {
+                    this._super(...arguments), this._dataBinding = (0, s.dataBinding)("lol-purchase-widget"), s.db.get("/lol-game-data/assets/v1/lolcurrency.json").then((e => {
+                        this.set("gameDataCurrencies", e)
+                    })), s.db.get("/lol-game-data-inventory/v1/items/itemIds/inventoryTypes/CHAMPION_SKIN").then((e => {
+                        this.set("skins", e)
+                    })), s.db.get("/lol-client-config/v3/client-config/lol.client_settings.missingVO").then((e => {
+                        this.set("missingVOConfig", e)
+                    })), s.db.get("/riotclient/region-locale").then((e => {
+                        this.set("currentLocale", e?.locale)
+                    }))
+                },
+                getMissingVOData(e = []) {
+                    const t = this.get("missingVOConfig"),
+                        n = this.get("currentLocale");
+                    if (!Array.isArray(t) || !n) return null;
+                    const a = t.filter((e => e.locale === n));
+                    if (0 === a.length) return null;
+                    for (const t of a) {
+                        const n = t.items || [];
+                        if (e.some((e => !(!e || void 0 === e.itemId || null === e.itemId) && n.some((t => Number(t.itemId) === Number(e.itemId) && t.inventoryType === e.inventoryType))))) return {
+                            disclaimerText: t.disclaimerText,
+                            checkboxText: t.checkboxText
+                        }
+                    }
+                    return null
+                },
+                getItem(e, t) {
+                    const n = `/v1/purchasable-item?inventoryType=${t}&itemId=${e}`;
+                    return this._dataBinding.get(n, {
+                        skipCache: !0
+                    }).then(this._mapValidationErrors)
+                },
+                getItems(e, t) {
+                    const n = `/v1/purchasable-items/${t}`;
+                    return this._dataBinding.post(n, e).then(this._mapValidationErrors)
+                },
+                getRelatedItems(e, t) {
+                    const n = `v1/items/${e}/related-bundles?inventoryType=${t}`;
+                    return this._dataBinding.get(n)
+                },
+                _mapValidationErrors(e) {
+                    const t = Object.assign({}, e);
+                    if (t.validationErrors) {
+                        const e = t.validationErrors.map((function(e) {
+                            return l.default.fromErrorKey(e.id)
+                        }));
+                        t.validationErrors = e
+                    }
+                    return t
+                },
+                _getTimeoutPromise: e => new Promise((function(t, n) {
+                    setTimeout((function() {
+                        n(new Error(`Request has not return after ${e}ms`))
+                    }), e)
+                })),
+                purchaseItem(e, t, n) {
+                    const a = [];
+                    return e.priceDetails.forEach((e => {
+                        a.push({
+                            itemKey: e.itemKey,
+                            purchaseCurrencyInfo: {
+                                currencyType: e.price.currencyType,
+                                price: e.price.price,
+                                purchasable: !0
+                            },
+                            source: t,
+                            featuredSection: n,
+                            quantity: 1
+                        })
+                    })), s.Telemetry.sendCustomData(i.TELEMETRY_EVENT_NAME, {
+                        id: i.TELEMETRY_EVENT_ID.START_PURCHASE,
+                        purchaseDataItems: JSON.stringify(a)
+                    }), Promise.race([this._getTimeoutPromise(o.MAX_WAITING_TIME_IN_MS), this._dataBinding.post("/v2/purchaseItems", {
+                        items: a
+                    })])
+                }
+            });
+            t.default = r
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            class n {
+                constructor(e) {
+                    this.id = e, this.messageKey = this._buildMessageKey(e)
+                }
+                _buildMessageKey(e) {
+                    return `cat_paw_error_${e.replace(/\./g,"_")}`
+                }
+            }
+            const a = {
+                    ALREADY_OWNED: "validation.item.owned",
+                    BASE_SKIN_NOT_OWNED: "validation.item.base.skin.not.owned",
+                    MALFORMED: "validation.item.malformed",
+                    MISSING_REQUEST_FIELDS: "validation.request.missing.fields",
+                    NO_PRICE: "validation.item.no.price",
+                    NOT_ENOUGH_CURRENCY: "validation.item.not.enough.currency",
+                    NOT_VALID: "validation.not.valid",
+                    OVER_LIMIT: "validation.item.over.limit",
+                    PARENT_NOT_OWNED: "validation.item.parent.not.owned",
+                    UNKNOWN_ITEM: "validation.item.nonexistant",
+                    UNPURCHASABLE_ITEM: "validation.item.not.active",
+                    PAW_ITEM_PURCHASE_DISABLED: "validation.item.paw.purchase.disabled",
+                    CONNECTION_TIME_OUT: "validation.connection.failed"
+                },
+                s = {
+                    ALREADY_OWNED: new n("validation.item.owned"),
+                    GENERIC_ERROR: new n("validation.generic"),
+                    NOT_ENOUGH_CURRENCY: new n("validation.item.not.enough.currency"),
+                    NOT_VALID: new n("validation.not.valid"),
+                    UNSUPPORTED_INVENTORY_TYPE: new n("validation.not.valid"),
+                    UNKNOWN_ITEM: new n("validation.item.nonexistant"),
+                    UNPURCHASABLE_ITEM: new n("validation.item.not.active"),
+                    BASE_SKIN_NOT_OWNED: new n("validation.item.base.skin.not.owned"),
+                    PARENT_NOT_OWNED: new n("validation.item.parent.not.owned"),
+                    PAW_ITEM_PURCHASE_DISABLED: new n("validation.item.purchase.disabled"),
+                    CONNECTION_TIME_OUT: new n("validation.generic")
+                },
+                l = new Map([
+                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
+                    [a.BASE_SKIN_NOT_OWNED, s.BASE_SKIN_NOT_OWNED],
+                    [a.PARENT_NOT_OWNED, s.PARENT_NOT_OWNED],
+                    [a.UNKNOWN_ITEM, s.UNKNOWN_ITEM],
+                    [a.UNPURCHASABLE_ITEM, s.UNPURCHASABLE_ITEM],
+                    [a.NOT_ENOUGH_CURRENCY, s.NOT_ENOUGH_CURRENCY],
+                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
+                    [a.MALFORMED, s.NOT_VALID],
+                    [a.NO_PRICE, s.NOT_VALID],
+                    [a.OVER_LIMIT, s.NOT_VALID],
+                    [a.MISSING_REQUEST_FIELDS, s.NOT_VALID],
+                    [a.NOT_VALID, s.NOT_VALID],
+                    [a.PAW_ITEM_PURCHASE_DISABLED, s.PAW_ITEM_PURCHASE_DISABLED],
+                    [a.CONNECTION_TIME_OUT, s.CONNECTION_TIME_OUT]
+                ]);
+            var o = {
+                Errors: s,
+                fromErrorKey: function(e) {
+                    let t = s.GENERIC_ERROR;
+                    return l.has(e) && (t = l.get(e)), t
+                },
+                ValidationErrorKeys: a
+            };
+            t.default = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             var a = n(1),
                 s = n(3);
             const {
@@ -1313,8 +1479,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-large-two-column-landscape-template"],
-                layout: n(39),
-                style: n(40),
+                layout: n(41),
+                style: n(42),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 componentData0: l.readOnly("pawTemplateService.pawTemplateDataCache.template.components.0"),
                 componentData1: l.readOnly("pawTemplateService.pawTemplateDataCache.template.components.1"),
@@ -1372,8 +1538,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-image-carousel"],
-                layout: n(42),
-                style: n(43),
+                layout: n(44),
+                style: n(45),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 selectedDisplayIndex: 0,
                 scrollPosition: 0,
@@ -1452,8 +1618,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-media"],
-                layout: n(45),
-                style: n(46),
+                layout: n(47),
+                style: n(48),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 captionTitle: l("componentData.caption.localizedTitle", "componentData.sourceConnectionData", (function() {
                     return this.get("componentData.sourceConnectionData.associatedText") || this.get("componentData.caption.localizedTitle")
@@ -1497,8 +1663,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-purchase"],
-                layout: n(48),
-                style: n(49),
+                layout: n(50),
+                style: n(51),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 validateError: l("pawTemplateService.offerValidationProgress.errorKey", (function() {
                     const e = this.get("pawTemplateService.offerValidationProgress.errorKey");
@@ -1570,8 +1736,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-scroll-list"],
-                layout: n(51),
-                style: n(52),
+                layout: n(53),
+                style: n(54),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 scrollListSections: l("componentData.sections", (function() {
                     const e = [];
@@ -1628,8 +1794,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-text"],
-                layout: n(54),
-                style: n(55),
+                layout: n(56),
+                style: n(57),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 text: s.readOnly("componentData.localizedText")
             });
@@ -1655,8 +1821,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-title-subtitle"],
-                layout: n(57),
-                style: n(58),
+                layout: n(59),
+                style: n(60),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 title: s.readOnly("componentData.localizedTitle"),
                 subtitle: s.readOnly("componentData.localizedSubtitle")
@@ -1683,8 +1849,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-vertical-list"],
-                layout: n(60),
-                style: n(61),
+                layout: n(62),
+                style: n(63),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 items: s("componentData.items.[]", (function() {
                     const e = [];
@@ -1722,8 +1888,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-window"],
-                layout: n(63),
-                style: n(64),
+                layout: n(65),
+                style: n(66),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 isLargeTwoColumnLandscapeTemplate: l("pawTemplateService.pawTemplateDataCache.template.templateType", (function() {
                     return this.get("pawTemplateService.pawTemplateDataCache.template.templateType") === s.PAW.TEMPLATE_TYPES.LARGE_TWO_COLUMN_LANDSCAPE
@@ -1877,10 +2043,10 @@
                 s = n(3),
                 l = m(n(37)),
                 o = m(n(34)),
-                i = m(n(67)),
+                i = m(n(39)),
                 c = n(32),
                 r = n(33),
-                p = n(68);
+                p = n(69);
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -1892,8 +2058,8 @@
                 computed: d
             } = a.Ember, h = "/lol-client-config/v3/client-config/", g = h + "lol.experiments", _ = a.dataBinding.bindTo(a.socket), f = [i.default.Errors.NOT_ENOUGH_CURRENCY], E = [i.default.Errors.NOT_ENOUGH_CURRENCY, i.default.Errors.PARENT_NOT_OWNED], T = [s.PAW.INVENTORY_TYPES.CHAMPION_SKIN, s.PAW.INVENTORY_TYPES.BUNDLES], w = ["HEXTECH_BUNDLE", "MEGA_BUNDLE", "RECOLOR"], y = u.extend(l.default, {
                 isLoadingCatalogItemInfo: !0,
-                layout: n(70),
-                style: n(71),
+                layout: n(71),
+                style: n(72),
                 inventoryType: null,
                 itemId: null,
                 items: null,
@@ -2400,72 +2566,6 @@
                 }
             });
             e.exports = y
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            class n {
-                constructor(e) {
-                    this.id = e, this.messageKey = this._buildMessageKey(e)
-                }
-                _buildMessageKey(e) {
-                    return `cat_paw_error_${e.replace(/\./g,"_")}`
-                }
-            }
-            const a = {
-                    ALREADY_OWNED: "validation.item.owned",
-                    BASE_SKIN_NOT_OWNED: "validation.item.base.skin.not.owned",
-                    MALFORMED: "validation.item.malformed",
-                    MISSING_REQUEST_FIELDS: "validation.request.missing.fields",
-                    NO_PRICE: "validation.item.no.price",
-                    NOT_ENOUGH_CURRENCY: "validation.item.not.enough.currency",
-                    NOT_VALID: "validation.not.valid",
-                    OVER_LIMIT: "validation.item.over.limit",
-                    PARENT_NOT_OWNED: "validation.item.parent.not.owned",
-                    UNKNOWN_ITEM: "validation.item.nonexistant",
-                    UNPURCHASABLE_ITEM: "validation.item.not.active",
-                    PAW_ITEM_PURCHASE_DISABLED: "validation.item.paw.purchase.disabled",
-                    CONNECTION_TIME_OUT: "validation.connection.failed"
-                },
-                s = {
-                    ALREADY_OWNED: new n("validation.item.owned"),
-                    GENERIC_ERROR: new n("validation.generic"),
-                    NOT_ENOUGH_CURRENCY: new n("validation.item.not.enough.currency"),
-                    NOT_VALID: new n("validation.not.valid"),
-                    UNSUPPORTED_INVENTORY_TYPE: new n("validation.not.valid"),
-                    UNKNOWN_ITEM: new n("validation.item.nonexistant"),
-                    UNPURCHASABLE_ITEM: new n("validation.item.not.active"),
-                    BASE_SKIN_NOT_OWNED: new n("validation.item.base.skin.not.owned"),
-                    PARENT_NOT_OWNED: new n("validation.item.parent.not.owned"),
-                    PAW_ITEM_PURCHASE_DISABLED: new n("validation.item.purchase.disabled"),
-                    CONNECTION_TIME_OUT: new n("validation.generic")
-                },
-                l = new Map([
-                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
-                    [a.BASE_SKIN_NOT_OWNED, s.BASE_SKIN_NOT_OWNED],
-                    [a.PARENT_NOT_OWNED, s.PARENT_NOT_OWNED],
-                    [a.UNKNOWN_ITEM, s.UNKNOWN_ITEM],
-                    [a.UNPURCHASABLE_ITEM, s.UNPURCHASABLE_ITEM],
-                    [a.NOT_ENOUGH_CURRENCY, s.NOT_ENOUGH_CURRENCY],
-                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
-                    [a.MALFORMED, s.NOT_VALID],
-                    [a.NO_PRICE, s.NOT_VALID],
-                    [a.OVER_LIMIT, s.NOT_VALID],
-                    [a.MISSING_REQUEST_FIELDS, s.NOT_VALID],
-                    [a.NOT_VALID, s.NOT_VALID],
-                    [a.PAW_ITEM_PURCHASE_DISABLED, s.PAW_ITEM_PURCHASE_DISABLED],
-                    [a.CONNECTION_TIME_OUT, s.CONNECTION_TIME_OUT]
-                ]);
-            var o = {
-                Errors: s,
-                fromErrorKey: function(e) {
-                    let t = s.GENERIC_ERROR;
-                    return l.has(e) && (t = l.get(e)), t
-                },
-                ValidationErrorKeys: a
-            };
-            t.default = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2645,7 +2745,7 @@
                     default: a
                 },
                 i = n(33),
-                c = n(69);
+                c = n(70);
             const {
                 CHAMPION_SKIN: r
             } = s.PAW.INVENTORY_TYPES;
@@ -2715,14 +2815,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-top-banner", "fade-in"],
-                layout: n(73),
-                style: n(74),
+                layout: n(74),
+                style: n(75),
                 saleValue: o("sale.discount", (function() {
                     return Math.round(this.get("sale.discount"))
                 })),
@@ -2750,13 +2850,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
-                layout: n(76),
-                style: n(77),
+                layout: n(77),
+                style: n(78),
                 purchaseWidgetService: a.Ember.inject.service("purchaseWidget"),
                 currencyIconPaths: o("items.@each.currencyType", "purchaseWidgetService.gameDataCurrencies", (function() {
                     const e = this.get("items") || [],
@@ -2821,8 +2921,8 @@
                 computed: c
             } = s.Ember, r = "1, 10, 19", p = "/lol-client-config/v3/client-config/lol.experiments", m = "/lol-settings/v2/local/lol-user-experience", u = s.dataBinding.bindTo(s.socket), d = i.extend({
                 classNames: ["paw-content-details"],
-                layout: n(79),
-                style: n(80),
+                layout: n(80),
+                style: n(81),
                 itemPurchaseOption: c.readOnly("catalogItemPurchaseOption.item"),
                 pawSplashImage: c.readOnly("catalogItemPurchaseOption.pawSplashImage"),
                 init() {
@@ -2891,15 +2991,30 @@
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-purchase-options"],
+                purchaseWidgetService: a.Ember.inject.service("purchaseWidget"),
                 purchaseDisclaimerChecked: !1,
-                layout: n(82),
-                style: n(83),
-                purchaseEnabled: o("alwaysShowPurchaseDisclaimer", "purchaseDisclaimerChecked", (function() {
-                    return !this.get("alwaysShowPurchaseDisclaimer") || this.get("purchaseDisclaimerChecked")
+                missingVOChecked: !1,
+                layout: n(83),
+                style: n(84),
+                missingVOData: o("itemPurchaseOption.itemId", "itemPurchaseOption.inventoryType", "purchaseWidgetService.missingVOConfig", "purchaseWidgetService.currentLocale", (function() {
+                    const e = this.get("purchaseWidgetService"),
+                        t = this.get("itemPurchaseOption");
+                    return e && t && t.itemId ? e.getMissingVOData([{
+                        itemId: t.itemId,
+                        inventoryType: t.inventoryType
+                    }]) : null
+                })),
+                purchaseEnabled: o("alwaysShowPurchaseDisclaimer", "purchaseDisclaimerChecked", "missingVOData", "missingVOChecked", (function() {
+                    const e = !this.get("alwaysShowPurchaseDisclaimer") || this.get("purchaseDisclaimerChecked"),
+                        t = !this.get("missingVOData") || this.get("missingVOChecked");
+                    return e && t
                 })),
                 actions: {
                     toggleDisclaimerValue(e) {
                         this.set("purchaseDisclaimerChecked", e)
+                    },
+                    toggleMissingVOCheckbox(e) {
+                        this.set("missingVOChecked", e.target.checked)
                     },
                     closeModal() {
                         this.element.dispatchEvent(new Event(s.PAW_MODAL_CLOSE_EVENT_NAME, {
@@ -2915,8 +3030,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "2n+gsgcQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,6,5]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["disclaimer-checkbox"],null,[["toggleDisclaimerValue"],["toggleDisclaimerValue"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,0],["text","  "],["append",["helper",["price-details"],null,[["purchaseOptions","itemPurchaseOption","wallet","purchaseEnabled","purchase","padding"],[["get",["purchaseOptions"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseEnabled"]],"purchase",["get",["padding"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-purchase-options-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["dynamic-attr","class",["concat",[["unknown",["errorMessageClass"]]]]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-purchase-options-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,2,1]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "2mr9bVnc",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,8,7]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","missingVOCheckbox"],["static-attr","class","paw-purchase-disclaimer"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","missingVOCheckbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleMissingVOCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","missingVOCheckbox"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["missingVOData","checkboxText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["disclaimer-checkbox"],null,[["toggleDisclaimerValue"],["toggleDisclaimerValue"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings missing-vo-disclaimer"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["unknown",["missingVOData","disclaimerText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"],["block",["if"],[["get",["missingVOData"]]],null,2],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,1],["block",["if"],[["get",["missingVOData"]]],null,0],["text","  "],["append",["helper",["price-details"],null,[["purchaseOptions","itemPurchaseOption","wallet","purchaseEnabled","purchase","padding"],[["get",["purchaseOptions"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseEnabled"]],"purchase",["get",["padding"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-purchase-options-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["dynamic-attr","class",["concat",[["unknown",["errorMessageClass"]]]]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-purchase-options-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,6,5]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2930,8 +3045,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-warnings-wrapper"],
-                layout: n(85),
-                style: n(86),
+                layout: n(86),
+                style: n(87),
                 warnings: l("itemPurchaseOption", (function() {
                     const e = this.get("itemPurchaseOption.tags") || [],
                         t = this.get("tra");
@@ -2965,8 +3080,8 @@
                 computed: l
             } = a.Ember, o = "/lol-client-config/v3/client-config/lol.client_settings.paw.embeddedVideoSettings", i = a.dataBinding.bindTo(a.socket), c = s.extend({
                 classNames: ["paw-item-splash"],
-                layout: n(88),
-                style: n(89),
+                layout: n(89),
+                style: n(90),
                 init() {
                     this._super(...arguments), this.initDataBindings()
                 },
@@ -3037,8 +3152,8 @@
             } = s.Ember, r = i.extend({
                 classNames: ["paw-overlay-image-content"],
                 classNameBindings: ["inventoryTypeSpecialStyle"],
-                layout: n(91),
-                style: n(92),
+                layout: n(92),
+                style: n(93),
                 overlayImagePath: c("itemPurchaseOption.assets.iconPath", "itemPurchaseOption.inventoryType", "itemPurchaseOption.imagePath", "awInfo", (function() {
                     if ("BOOST" === this.get("itemPurchaseOption.inventoryType")) {
                         if (this.get("awInfo.isAw")) return "/fe/lol-static-assets/images/aram-wardrobe/celebration-icon.png";
@@ -3083,7 +3198,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(94),
+                s = n(95),
                 l = n(33);
             const {
                 Component: o,
@@ -3095,7 +3210,7 @@
             }
             const r = o.extend({
                 classNames: ["paw-content-description"],
-                layout: n(95),
+                layout: n(96),
                 awInfo: {
                     isExtension: !1
                 },
@@ -3191,8 +3306,8 @@
                 computed: l
             } = a.Ember, o = a.Ember.A, i = s.extend({
                 classNames: ["paw-dependency-details"],
-                layout: n(97),
-                style: n(98),
+                layout: n(98),
+                style: n(99),
                 shouldShowContentBlock: l("dependencies", (function() {
                     return (this.get("dependencies") || []).findIndex((e => !e.owned)) > -1
                 })),
@@ -3228,8 +3343,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-price-details"],
-                layout: n(100),
-                style: n(101),
+                layout: n(101),
+                style: n(102),
                 showBoostRefundDisclaimer: l.equal("itemPurchaseOption.inventoryType", "BOOST"),
                 paddingWithDefault: a.Ember.computed("padding", (function() {
                     return this.get("padding") || "medium"
@@ -3260,8 +3375,8 @@
             } = a.Ember, o = "/lol-client-config/v3/client-config/", i = o + "lol.client_settings.paw.enableRPTopUp", c = a.dataBinding.bindTo((0, a.getProvider)().getSocket()), r = s.extend({
                 classNames: ["paw-price-button", "fade-in"],
                 classNameBindings: ["hasSplashImage:paw-price-button--has-splash-image"],
-                layout: n(103),
-                style: n(104),
+                layout: n(104),
+                style: n(105),
                 init() {
                     this._super(...arguments), this.initDataBindings()
                 },
@@ -3417,8 +3532,8 @@
                 computed: s,
                 Component: l
             } = a.Ember, o = l.extend({
-                layout: n(106),
-                style: n(107),
+                layout: n(107),
+                style: n(108),
                 tokenizedConfirmationText: s("tra.cat_paw_purchase_disclaimer", (function() {
                     const e = this.get("tra.cat_paw_purchase_disclaimer");
                     return /(.*){{confirmationLink}}(.*)/.exec(e)
@@ -3466,7 +3581,7 @@
             "use strict";
             var a = n(1),
                 s = n(33),
-                l = n(94);
+                l = n(95);
             const {
                 Component: o,
                 computed: i
@@ -3477,8 +3592,8 @@
             }
             const p = o.extend({
                 classNames: ["paw-item-unlocked", "fade-in"],
-                layout: n(109),
-                style: n(110),
+                layout: n(110),
+                style: n(111),
                 init() {
                     this._super(...arguments), c.get("/riotclient/region-locale").then((e => {
                         this.set("region", e?.region)
@@ -3546,7 +3661,7 @@
                 type: "intro",
                 src: "/fe/lol-paw/videos/UnlockCeremony.webm",
                 bundleUpsell: !1,
-                style: n(112),
+                style: n(113),
                 didInsertElement() {
                     this.element.play()
                 }
@@ -3563,8 +3678,8 @@
                 Component: l
             } = a.Ember, o = l.extend({
                 classNames: ["paw-preview-video-toggle"],
-                layout: n(114),
-                style: n(115),
+                layout: n(115),
+                style: n(116),
                 isVideoMode: !1,
                 videoStartTime: null,
                 willDestroy() {
@@ -3615,13 +3730,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
-                layout: n(117),
-                style: n(118),
+                layout: n(118),
+                style: n(119),
                 decoratorBadge: o("item.data.item", (function() {
                     const e = this.get("item");
                     if (!e?.data?.item) return null;
@@ -3649,8 +3764,8 @@
             const {
                 Component: o
             } = s.Ember, i = o.extend(l.default, {
-                layout: n(120),
-                style: n(121),
+                layout: n(121),
+                style: n(122),
                 choices: null,
                 wallet: null,
                 purchaseOptions: null,
@@ -3697,17 +3812,17 @@
             "use strict";
             var a, s = n(1),
                 l = n(32),
-                o = (a = n(123)) && a.__esModule ? a : {
+                o = (a = n(124)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(124);
+                i = n(125);
             const {
                 Component: c,
                 computed: r
             } = s.Ember, p = "linear-gradient(to top, black 0px, rgba(0,0,0, 0.8) 310px, transparent 80%)", m = c.extend({
                 classNames: ["paw-content-choice"],
-                layout: n(125),
-                style: n(126),
+                layout: n(126),
+                style: n(127),
                 purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
                 title: null,
                 subTitle: null,
@@ -3828,14 +3943,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(124);
+                s = n(125);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-content-choice-details"],
-                layout: n(128),
-                style: n(129),
+                layout: n(129),
+                style: n(130),
                 item: null,
                 contents: null,
                 backgroundImage: null,
@@ -3977,8 +4092,8 @@
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-content-choice-detail"],
-                layout: n(131),
-                style: n(132),
+                layout: n(132),
+                style: n(133),
                 title: null,
                 subTitle: null,
                 description: null,
@@ -4008,14 +4123,14 @@
                     default: a
                 },
                 i = n(33),
-                c = n(68);
+                c = n(69);
             const {
                 Component: r,
                 computed: p
             } = s.Ember, m = r.extend({
                 classNames: ["paw-bundle-root-component"],
-                layout: n(134),
-                style: n(135),
+                layout: n(135),
+                style: n(136),
                 hasDiscount: p("catalogItemPurchaseOption.sale.discount", (function() {
                     return this.get("catalogItemPurchaseOption.sale.discount") > 0
                 })),
@@ -4106,8 +4221,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-bundle-title-component"],
-                layout: n(137),
-                style: n(138)
+                layout: n(138),
+                style: n(139)
             });
             e.exports = o
         }, (e, t, n) => {
@@ -4128,8 +4243,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-bundle-description-component"],
-                layout: n(140),
-                style: n(141),
+                layout: n(141),
+                style: n(142),
                 isOverflowing: !1,
                 seeMoreIsExpanded: !1,
                 didInsertElement() {
@@ -4167,9 +4282,9 @@
                 Component: s
             } = a.Ember, l = s.extend({
                 classNames: ["paw-bundle-item-component"],
-                layout: n(143),
+                layout: n(144),
                 lootTableItemName: null,
-                style: n(144),
+                style: n(145),
                 actions: {
                     closeLootTableModal() {
                         this.set("lootTableItemName", null)
@@ -4193,7 +4308,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
@@ -4208,8 +4323,8 @@
                 },
                 classNames: ["paw-bundle-price-component"],
                 discountDisabledIds: null,
-                layout: n(146),
-                style: n(147),
+                layout: n(147),
+                style: n(148),
                 bundleCurrency: o.readOnly("catalogItemPurchaseOption.purchaseOptions.0.priceDetails.0.price.currencyType"),
                 currencyIconPath: o("bundleCurrency", (function() {
                     const e = "/lol-game-data/assets/ASSETS/Currencies/images";
@@ -4265,7 +4380,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                l = (a = n(67)) && a.__esModule ? a : {
+                l = (a = n(39)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -4273,9 +4388,26 @@
                 computed: i
             } = s.Ember, c = o.extend({
                 classNames: ["paw-bundle-purchase-component"],
-                layout: n(149),
-                style: n(150),
+                purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
+                layout: n(150),
+                style: n(151),
                 disclaimersAccepted: !1,
+                missingVOChecked: !1,
+                missingVOData: i("catalogItemPurchaseOption.item.itemId", "catalogItemPurchaseOption.item.inventoryType", "catalogItemPurchaseOption.bundledItems.[]", "purchaseWidgetService.missingVOConfig", "purchaseWidgetService.currentLocale", (function() {
+                    const e = this.get("purchaseWidgetService"),
+                        t = this.get("catalogItemPurchaseOption");
+                    if (!e || !t) return null;
+                    const n = this.get("catalogItemPurchaseOption.item") || {},
+                        a = this.get("catalogItemPurchaseOption.bundledItems") || [],
+                        s = [{
+                            itemId: n.itemId,
+                            inventoryType: n.inventoryType
+                        }, ...a.filter((e => !!e)).map((e => ({
+                            itemId: e.itemId || e.item?.itemId,
+                            inventoryType: e.inventoryType || e.item?.inventoryType
+                        })))];
+                    return e.getMissingVOData(s)
+                })),
                 didInsertElement: function() {
                     window.splash = this
                 },
@@ -4290,10 +4422,20 @@
                     const e = this.get("validationErrors");
                     if (e) return !!e.find((e => e.id === l.default.ValidationErrorKeys.PARENT_NOT_OWNED))
                 })),
-                purchaseEnabled: !1,
+                showStandardDisclaimer: i("displayBundleNonRefundableDisclaimer", "alwaysShowPurchaseDisclaimer", (function() {
+                    return this.get("displayBundleNonRefundableDisclaimer") || this.get("alwaysShowPurchaseDisclaimer")
+                })),
+                purchaseEnabled: i("disclaimersAccepted", "missingVOData", "missingVOChecked", "alwaysShowPurchaseDisclaimer", "displayBundleNonRefundableDisclaimer", (function() {
+                    const e = !(this.get("alwaysShowPurchaseDisclaimer") || this.get("displayBundleNonRefundableDisclaimer")) || this.get("disclaimersAccepted"),
+                        t = !this.get("missingVOData") || this.get("missingVOChecked");
+                    return e && t
+                })),
                 actions: {
                     toggleTosCheck(e) {
-                        this.set("purchaseEnabled", e.target.checked)
+                        this.set("disclaimersAccepted", e.target.checked)
+                    },
+                    toggleMissingVOCheckbox(e) {
+                        this.set("missingVOChecked", e.target.checked)
                     },
                     purchase: function(e) {
                         this.sendAction("purchase", e)
@@ -4304,8 +4446,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Ne8zc5H+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,10,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","item"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","        "],["append",["unknown",["termsOfServiceDisclaimer"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","cat_paw_bundled_disclaimer_bundle_non_refundable"]],false],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","paw-bundle-purchase-disclaimers"],["flush-element"],["text","\\n  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["catalogItemPurchaseOption","item"]]]]],false],["text","\\n"],["text","  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleNonRefundableDisclaimer"]]],null,2],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-bundle-digital-goods-disclaimer"]]],false],["text","\\n"],["close-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-purchase-buttons-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["catalogItemPurchaseOption","purchaseOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-generic-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase"],["flush-element"],["text","\\n    "],["append",["helper",["price-details"],null,[["purchaseOptions","wallet","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","purchaseOptions"]],["get",["wallet"]],false,"purchase"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseRestricted"]]],null,6,5]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption","catalogItemPurchaseOption","item"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "EoLDjK4E",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,13,12]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","item"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","missingVOCheckbox"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","missingVOCheckbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleMissingVOCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","missingVOCheckbox"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n        "],["append",["unknown",["missingVOData","checkboxText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["termsOfServiceDisclaimer"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","cat_paw_bundled_disclaimer_bundle_non_refundable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleNonRefundableDisclaimer"]]],null,3],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings missing-vo-disclaimer"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["unknown",["missingVOData","disclaimerText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","paw-bundle-purchase-disclaimers"],["flush-element"],["text","\\n  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["catalogItemPurchaseOption","item"]]]]],false],["text","\\n"],["block",["if"],[["get",["missingVOData"]]],null,5],["block",["if"],[["get",["showStandardDisclaimer"]]],null,4],["block",["if"],[["get",["missingVOData"]]],null,1],["text","  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-bundle-digital-goods-disclaimer"]]],false],["text","\\n"],["close-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-purchase-buttons-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["catalogItemPurchaseOption","purchaseOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-generic-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,7,6]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase"],["flush-element"],["text","\\n    "],["append",["helper",["price-details"],null,[["purchaseOptions","wallet","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","purchaseOptions"]],["get",["wallet"]],false,"purchase"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseRestricted"]]],null,9,8]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,11,10]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption","catalogItemPurchaseOption","item"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4320,7 +4462,7 @@
                 },
                 i = n(32),
                 c = n(33),
-                r = n(68);
+                r = n(69);
             const {
                 Component: p,
                 computed: m
@@ -4328,8 +4470,8 @@
                 CHAMPION_SKIN: u
             } = l.PAW.INVENTORY_TYPES, d = 1, h = 2, g = 3, _ = 4, f = p.extend({
                 classNames: ["paw-bundle-upsell-component"],
-                layout: n(152),
-                style: n(153),
+                layout: n(153),
+                style: n(154),
                 purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
                 selectedBundle: null,
                 selectedBundlePurchaseOption: null,
@@ -4566,7 +4708,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                l = (a = n(78)) && a.__esModule ? a : {
+                l = (a = n(79)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(3);
@@ -4574,7 +4716,7 @@
                 computed: i
             } = s.Ember, c = l.default.extend({
                 showOverlayImage: !0,
-                layout: n(155),
+                layout: n(156),
                 champion: i("bundledItems", (function() {
                     const e = this.get("bundledItems");
                     return e ? e.find((e => e.inventoryType === o.PAW.INVENTORY_TYPES.CHAMPION)) : null
@@ -4599,7 +4741,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = i(n(90)),
+                s = i(n(91)),
                 l = n(3),
                 o = i(n(34));
 
@@ -4613,8 +4755,8 @@
             } = a.Ember, r = s.default.extend({
                 classNames: ["paw-overlay-image-content", "paw-chroma-bundle-overlay-image-content"],
                 showChromaIcon: !0,
-                layout: n(157),
-                style: n(158),
+                layout: n(158),
+                style: n(159),
                 overlayImagePath: c.readOnly("showingChroma.assets.iconPath"),
                 skin: c("bundledItems", (function() {
                     return this.get("bundledItems") ? this.get("bundledItems").find((e => e.inventoryType === l.PAW.INVENTORY_TYPES.CHAMPION_SKIN && !e.subInventoryType)) : null
@@ -4656,8 +4798,8 @@
             } = a.Ember, o = s.extend({
                 classNames: ["paw-chroma-button"],
                 classNameBindings: ["active"],
-                layout: n(160),
-                style: n(161),
+                layout: n(161),
+                style: n(162),
                 active: l("showingChroma", "chroma", (function() {
                     return this.get("showingChroma") === this.get("chroma")
                 })),
@@ -4683,7 +4825,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = i(n(96)),
+                s = i(n(97)),
                 l = n(3),
                 o = i(n(34));
 
@@ -4727,83 +4869,6 @@
                 }
             });
             e.exports = p
-        }, (e, t, n) => {
-            "use strict";
-            var a, s = n(1),
-                l = (a = n(67)) && a.__esModule ? a : {
-                    default: a
-                },
-                o = n(33),
-                i = n(32);
-            const c = (0, s.emberDataBinding)({
-                    Ember: s.Ember,
-                    websocket: (0, s.getProvider)().getSocket(),
-                    logPrefix: "service:purchasewidget",
-                    boundProperties: {
-                        orderNotifications: "/lol-purchase-widget/v1/order-notifications",
-                        summoner: "/lol-summoner/v1/current-summoner"
-                    }
-                }),
-                r = s.Ember.Service.extend(c, {
-                    init() {
-                        this._super(...arguments), this._dataBinding = (0, s.dataBinding)("lol-purchase-widget"), s.db.get("/lol-game-data/assets/v1/lolcurrency.json").then((e => {
-                            this.set("gameDataCurrencies", e)
-                        })), s.db.get("/lol-game-data-inventory/v1/items/itemIds/inventoryTypes/CHAMPION_SKIN").then((e => {
-                            this.set("skins", e)
-                        }))
-                    },
-                    getItem(e, t) {
-                        const n = `/v1/purchasable-item?inventoryType=${t}&itemId=${e}`;
-                        return this._dataBinding.get(n, {
-                            skipCache: !0
-                        }).then(this._mapValidationErrors)
-                    },
-                    getItems(e, t) {
-                        const n = `/v1/purchasable-items/${t}`;
-                        return this._dataBinding.post(n, e).then(this._mapValidationErrors)
-                    },
-                    getRelatedItems(e, t) {
-                        const n = `v1/items/${e}/related-bundles?inventoryType=${t}`;
-                        return this._dataBinding.get(n)
-                    },
-                    _mapValidationErrors(e) {
-                        const t = Object.assign({}, e);
-                        if (t.validationErrors) {
-                            const e = t.validationErrors.map((function(e) {
-                                return l.default.fromErrorKey(e.id)
-                            }));
-                            t.validationErrors = e
-                        }
-                        return t
-                    },
-                    _getTimeoutPromise: e => new Promise((function(t, n) {
-                        setTimeout((function() {
-                            n(new Error(`Request has not return after ${e}ms`))
-                        }), e)
-                    })),
-                    purchaseItem(e, t, n) {
-                        const a = [];
-                        return e.priceDetails.forEach((e => {
-                            a.push({
-                                itemKey: e.itemKey,
-                                purchaseCurrencyInfo: {
-                                    currencyType: e.price.currencyType,
-                                    price: e.price.price,
-                                    purchasable: !0
-                                },
-                                source: t,
-                                featuredSection: n,
-                                quantity: 1
-                            })
-                        })), s.Telemetry.sendCustomData(i.TELEMETRY_EVENT_NAME, {
-                            id: i.TELEMETRY_EVENT_ID.START_PURCHASE,
-                            purchaseDataItems: JSON.stringify(a)
-                        }), Promise.race([this._getTimeoutPromise(o.MAX_WAITING_TIME_IN_MS), this._dataBinding.post("/v2/purchaseItems", {
-                            items: a
-                        })])
-                    }
-                });
-            e.exports = r
         }, (e, t, n) => {
             "use strict";
             var a = n(1);

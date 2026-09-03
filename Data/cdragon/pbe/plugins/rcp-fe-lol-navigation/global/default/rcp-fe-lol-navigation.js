@@ -25680,6 +25680,10 @@
                     locKey: "loyalty_navbar_badge_XP_boost",
                     rewardValueKey: "xpBoost"
                 },
+                loyaltyMayhemBPAugmentsCount: {
+                    locKey: "loyalty_navbar_badge_unlocked_mayhem_bp_augments_numerous",
+                    rewardValueKey: "mayhemBPAugments"
+                },
                 loyaltyTFTMapSkinCount: {
                     locKey: "loyalty_navbar_badge_unlocked_mapskins_numerous",
                     rewardValueKey: "mapSkins"
@@ -25715,6 +25719,12 @@
                 icon: "/fe/lol-static-assets/images/xpBoost_rewards.svg",
                 game: "lol",
                 type: "percentage"
+            }, {
+                locKey: "rewards_program_loyalty_mayhem_bp_augments",
+                rewardKey: "loyaltyMayhemBPAugmentsCount",
+                icon: "/fe/lol-static-assets/images/loyaltyMayhemBPAugmentsCount_rewards.svg",
+                game: "lol",
+                type: "number"
             }, {
                 locKey: "rewards_program_champions",
                 rewardKey: "classicFreeRewardedChampionsCount",

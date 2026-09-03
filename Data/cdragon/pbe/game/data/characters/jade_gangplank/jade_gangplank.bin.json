@@ -746,7 +746,7 @@
         },
         "__type": "SpellObject"
     },
-    "{69ee55f0}": {
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankPassiveAbility": {
         "mRootSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankPassiveAbility/Jade_GangplankPassive",
         "mChildSpells": [
             "Characters/Jade_Gangplank/Spells/Jade_GangplankPassiveAbility/Jade_GangplankPassive",
@@ -1057,26 +1057,26 @@
                 {
                     "name": "ActiveAD",
                     "values": [
-                        5.0,
-                        12.0,
-                        19.0,
-                        26.0,
-                        33.0,
-                        40.0,
-                        47.0
+                        6.0,
+                        14.0,
+                        22.0,
+                        30.0,
+                        38.0,
+                        46.0,
+                        54.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "ActiveMS",
                     "values": [
-                        0.05000000074505806,
-                        0.07999999821186066,
-                        0.10999999940395355,
+                        0.05999999865889549,
+                        0.10000000149011612,
                         0.14000000059604645,
-                        0.17000000178813934,
-                        0.20000000298023224,
-                        0.23000000417232513
+                        0.18000000715255737,
+                        0.2199999988079071,
+                        0.25999999046325684,
+                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1094,32 +1094,61 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AllyActiveAD",
+                    "name": "AllyShareRatio",
                     "values": [
-                        2.5,
-                        6.0,
-                        9.5,
-                        13.0,
-                        16.5,
-                        20.0,
-                        23.5
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "AllyActiveMS",
                     "values": [
-                        0.02500000037252903,
-                        0.03999999910593033,
-                        0.054999999701976776,
+                        0.029999999329447746,
+                        0.05000000074505806,
                         0.07000000029802322,
-                        0.08500000089406967,
-                        0.10000000149011612,
-                        0.11500000208616257
+                        0.09000000357627869,
+                        0.10999999940395355,
+                        0.12999999523162842,
+                        0.15000000596046448
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
+            "mSpellCalculations": {
+                "{2afc05a4}": {
+                    "mMultiplier": {
+                        "mDataValue": "{96692a65}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{e6e6e0ea}",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{a2a00bc1}": {
+                    "mMultiplier": {
+                        "mDataValue": "{96692a65}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ActiveMS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell3_Jade",
             "mImgIconName": [
@@ -1244,6 +1273,18 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
+                                    "type": "PassiveAD",
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveAD_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassiveMS",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveMS_Name",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "ActiveAD",
                                     "typeIndex": 3,
                                     "nameOverride": "Spell_GangplankE_Jade_LevelUpActiveAD_Name",
@@ -1254,18 +1295,6 @@
                                     "typeIndex": 1,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_GangplankE_Jade_LevelUpActiveMS_Name",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "PassiveAD",
-                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveAD_Name",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "PassiveMS",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveMS_Name",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1499,32 +1528,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "CherryRatio",
-                    "values": [
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322,
-                        0.07000000029802322
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "GameModeInteger",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "SpellDamage",
                     "values": [
                         -5.0,
@@ -1553,37 +1556,17 @@
                 {
                     "name": "GoldGain",
                     "values": [
-                        3.0,
+                        2.0,
                         4.0,
-                        5.0,
                         6.0,
-                        7.0,
                         8.0,
-                        9.0
+                        10.0,
+                        12.0,
+                        14.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "GameModeInteger",
-                            "values": [
-                                2.0,
-                                2.0,
-                                2.0,
-                                2.0,
-                                2.0,
-                                2.0,
-                                2.0
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "ShotDamage": {
                     "mFormulaParts": [
@@ -1943,7 +1926,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility",
-            "{69ee55f0}",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankPassiveAbility",
             "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility",
             "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility",
             "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility"

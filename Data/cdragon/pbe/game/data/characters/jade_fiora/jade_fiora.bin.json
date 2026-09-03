@@ -231,18 +231,18 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "MSBonus",
-                                    "typeIndex": 6,
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_MovementSpeed",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "ASBonus",
                                     "typeIndex": 4,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MSBonus",
+                                    "typeIndex": 6,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -541,7 +541,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.15000000596046448,
+                            "mCoefficient": 1.149999976158142,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -647,13 +647,13 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "Damage",
                                     "typeIndex": 2,
                                     "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1631,6 +1631,11 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
+                                    "type": "BonusAD",
+                                    "nameOverride": "ListType_Spell_FioraW_Jade_Tooltip",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
@@ -1638,11 +1643,6 @@
                                 },
                                 {
                                     "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BonusAD",
-                                    "nameOverride": "ListType_Spell_FioraW_Jade_Tooltip",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

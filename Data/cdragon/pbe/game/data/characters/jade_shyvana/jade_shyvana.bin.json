@@ -913,6 +913,7 @@
             },
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
             "mTurnSpeedScalar": 2.0,
             "mUpdateRotationWhenCasting": true,
             "castRange": [
@@ -966,6 +967,7 @@
             "mCastType": 1,
             "missileSpeed": 1700.0,
             "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{24374ce7}",
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -1241,6 +1243,7 @@
             ],
             "mSpellCalculations": {
                 "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1258,13 +1261,9 @@
                         "mDataValue": "SeasonOneDamagePercent",
                         "__type": "NamedDataValueCalculationPart"
                     },
-                    "mFormulaParts": [
-                        {
-                            "mSpellCalculationKey": "Damage",
-                            "__type": "{f3cbe7b2}"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mExpandedTooltipCalculationDisplay": 7,
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1560,19 +1559,15 @@
             ],
             "mSpellCalculations": {
                 "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mSubparts": [
-                                {
-                                    "mDataValue": "BaseDamage",
-                                    "__type": "NamedDataValueCalculationPart"
-                                },
-                                {
-                                    "mDataValue": "DamageAPRatio",
-                                    "__type": "StatByNamedDataValueCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1582,13 +1577,9 @@
                         "mDataValue": "SeasonOneDamagePercent",
                         "__type": "NamedDataValueCalculationPart"
                     },
-                    "mFormulaParts": [
-                        {
-                            "mSpellCalculationKey": "Damage",
-                            "__type": "{f3cbe7b2}"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mExpandedTooltipCalculationDisplay": 7,
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1824,43 +1815,28 @@
             ],
             "mSpellCalculations": {
                 "Damage": {
-                    "{72c5c2a8}": 1,
+                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mSubparts": [
-                                {
-                                    "mDataValue": "BaseDamage",
-                                    "__type": "NamedDataValueCalculationPart"
-                                },
-                                {
-                                    "mDataValue": "DamageAPRatio",
-                                    "__type": "StatByNamedDataValueCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
                 "BonusDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "SeasonOneDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 7,
                     "{72c5c2a8}": 1,
-                    "mFormulaParts": [
-                        {
-                            "mSubparts": [
-                                {
-                                    "SourceObject": "{c613c718}",
-                                    "{3de6ce2d}": "Damage",
-                                    "__type": "{ba007871}"
-                                },
-                                {
-                                    "mDataValue": "SeasonOneDamagePercent",
-                                    "__type": "NamedDataValueCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1896,6 +1872,7 @@
             "mCantCancelWhileWindingUp": true,
             "castRangeUseBoundingBoxes": true,
             "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
             "mTurnSpeedScalar": 2.0,
             "mIgnoreRangeCheck": true,
             "mUpdateRotationWhenCasting": true,
@@ -1951,6 +1928,7 @@
             "mCastType": 1,
             "missileSpeed": 1700.0,
             "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{24374ce7}",
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -3654,7 +3632,350 @@
             }
         ],
         "{c5c48b41}": 1,
+        "Script": "{b780973f}",
         "__type": "CharacterRecord"
+    },
+    "{b780973f}": {
+        "ScriptName": "charscriptJade_Shyvana",
+        "path": "{b780973f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "e1083396-f3bd-420a-b563-b3182199292e",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "EndTransformOnArrival",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "c55df1bf-ca1f-49e1-9450-79cee6e97bb7",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "5dd0a816-e894-4fed-91bb-a12a7efb6d41",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "Slot_AA",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{78e4e28e}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{368259a8}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "a212031c-147c-4477-87e4-94a8e5c26d52",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "AddStack",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "27392e8a-c319-4086-9a49-ff548f2e357c",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToAdd",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "b796f040-3807-4e14-9392-2aaefdd03c0a",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "AddStackx10",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "831c6094-46bc-4237-83fe-f224f1015b3e",
+                                    "Src": {
+                                        "value": 10,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToAdd",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "1fd2164a-38d0-44a9-b768-dbb887b00a68",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveStack",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "8151c55b-1a4f-4474-b523-2aae7da90565",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToRemove",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "8eabbae2-9a84-4e33-8054-6259217beb73",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveStackx10",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "1fd9cdfa-d4d7-4c56-9da2-41e768e0f7c9",
+                                    "Src": {
+                                        "value": 10,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToRemove",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "5ddf5222-0267-4b0f-b35c-6d82c6edb91c",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveAllStacks",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "459ac14a-de7d-41f1-bcb1-510b5c012ac1",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "EndTransform",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "99dd0976-13cd-452d-9822-9efc11cad497",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "EndTransformOnArrival",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "cefae7fb-7b5a-4264-b950-15df363f26cb",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Table": {
+                                                "__type": "CharacterVars"
+                                            },
+                                            "Var": "{e6c74da0}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "BoolGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "26bec52b-2b10-42bf-ba09-83ed037325f6",
+                                                "Src": {
+                                                    "value": true,
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "EndTransformOnArrival",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "719d2a59-e340-4e91-afe2-7711c67bdfd1",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "03c1f4e8-8f87-4ceb-8818-2819ba351eb1",
+                                                "Src": {
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "EndTransformOnArrival",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "6ded88f0-304a-4892-83c5-ad18de97b4ca",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "Characters/Jade_Shyvana/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"

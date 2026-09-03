@@ -729,7 +729,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "貫通する水晶エネルギーの砲弾を発射し、当たった敵ユニットにダメージを与えてマークする。敵を攻撃するとマークを消費して、自身の体力が回復する。対象を直ちにキルした場合も、この回復効果が発動する。",
-            "dynamicDescription": "直線上にいる敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え@MarkDuration@秒間マークする。<br><br>敵を攻撃するとマークを消費して、自身の体力が@TotalHealing@<healing>回復</healing>する。対象を直ちにキルした場合も、この体力回復効果が発動する(発動ごとに回復量が@SubsequentHealMultiplier*100@%ずつ減少する)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "直線上にいる敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え@MarkDuration@秒間マークする。<br><br>敵を攻撃するとマークを消費して、自身の体力が@TotalHealing@<healing>回復</healing>する。対象を直ちにキルした場合も、この体力回復効果が発動する(発動ごとに回復量が@SubsequentHealMultiplier*100@%ずつ減少する)。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵チャンピオンにサプレッション効果を与えて、魔法ダメージを与える。この効果時間中は、無力化した敵を自由に引きずり回すことができる。効果が終了すると、対象に追加ダメージを与える。",
-            "dynamicDescription": "敵チャンピオンに@SuppressionDuration@秒間<status>サプレッション効果</status>を与えて、<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。この効果時間中は、無力化した敵を自由に引きずり回すことができる。効果が終了すると、対象に追加で<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵チャンピオンに@SuppressionDuration@秒間<status>サプレッション効果</status>を与えて、<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。この効果時間中は自由に移動することができ、無力化した敵を引きずり回す。効果が終了すると、対象に追加で<magicDamage>@TotaDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
