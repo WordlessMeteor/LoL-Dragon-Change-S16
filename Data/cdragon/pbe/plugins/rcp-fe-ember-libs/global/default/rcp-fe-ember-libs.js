@@ -2082,7 +2082,7 @@
                         })), e("ember-glimmer/dom", ["exports", "glimmer-runtime", "glimmer-node"], (function(t, e, n) {
                             "use strict";
                             t.DOMChanges = e.DOMChanges, t.DOMTreeConstruction = e.DOMTreeConstruction, t.NodeDOMTreeConstruction = n.NodeDOMTreeConstruction
-                        })), e("ember-glimmer/environment", ["exports", "ember-utils", "ember-metal", "ember-views", "glimmer-runtime", "ember-glimmer/syntax/curly-component", "ember-glimmer/syntax", "ember-glimmer/syntax/dynamic-component", "ember-glimmer/utils/iterable", "ember-glimmer/utils/references", "ember-glimmer/utils/debug-stack", "ember-glimmer/helpers/if-unless", "ember-glimmer/utils/bindings", "ember-glimmer/helpers/action", "ember-glimmer/helpers/component", "ember-glimmer/helpers/concat", "ember-glimmer/helpers/debugger", "ember-glimmer/helpers/get", "ember-glimmer/helpers/hash", "ember-glimmer/helpers/loc", "ember-glimmer/helpers/log", "ember-glimmer/helpers/mut", "ember-glimmer/helpers/readonly", "ember-glimmer/helpers/unbound", "ember-glimmer/helpers/-class", "ember-glimmer/helpers/-input-type", "ember-glimmer/helpers/query-param", "ember-glimmer/helpers/each-in", "ember-glimmer/helpers/-normalize-class", "ember-glimmer/helpers/-html-safe", "ember-glimmer/protocol-for-url", "container", "ember-glimmer/modifiers/action"], (function(t, e, n, r, i, o, s, a, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, P, R, N, I) {
+                        })), e("ember-glimmer/environment", ["exports", "ember-utils", "ember-metal", "ember-views", "glimmer-runtime", "ember-glimmer/syntax/curly-component", "ember-glimmer/syntax", "ember-glimmer/syntax/dynamic-component", "ember-glimmer/utils/iterable", "ember-glimmer/utils/references", "ember-glimmer/utils/debug-stack", "ember-glimmer/helpers/if-unless", "ember-glimmer/utils/bindings", "ember-glimmer/helpers/action", "ember-glimmer/helpers/component", "ember-glimmer/helpers/concat", "ember-glimmer/helpers/debugger", "ember-glimmer/helpers/get", "ember-glimmer/helpers/hash", "ember-glimmer/helpers/loc", "ember-glimmer/helpers/log", "ember-glimmer/helpers/mut", "ember-glimmer/helpers/readonly", "ember-glimmer/helpers/unbound", "ember-glimmer/helpers/-class", "ember-glimmer/helpers/-input-type", "ember-glimmer/helpers/query-param", "ember-glimmer/helpers/each-in", "ember-glimmer/helpers/-normalize-class", "ember-glimmer/helpers/-html-safe", "ember-glimmer/protocol-for-url", "container", "ember-glimmer/modifiers/action"], (function(t, e, n, r, i, o, s, a, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, R, P, N, I) {
                             "use strict";
                             var M = {
                                     textarea: "-text-area"
@@ -2091,7 +2091,7 @@
                                     function h(s) {
                                         var a = this,
                                             l = s[e.OWNER];
-                                        t.apply(this, arguments), this.owner = l, this.isInteractive = l.lookup("-environment:main").isInteractive, this.destroyedComponents = [], R.default(this), this._definitionCache = new n.Cache(2e3, (function(t) {
+                                        t.apply(this, arguments), this.owner = l, this.isInteractive = l.lookup("-environment:main").isInteractive, this.destroyedComponents = [], P.default(this), this._definitionCache = new n.Cache(2e3, (function(t) {
                                             var e = t.name,
                                                 n = t.source,
                                                 i = t.owner,
@@ -2148,7 +2148,7 @@
                                             "-each-in": k.default,
                                             "-input-type": C.default,
                                             "-normalize-class": O.default,
-                                            "-html-safe": P.default,
+                                            "-html-safe": R.default,
                                             "-get-dynamic-var": i.getDynamicVar
                                         }
                                     }
@@ -4821,9 +4821,9 @@
                                 for (2 === arguments.length && Array.isArray(arguments[1]) && (i = 0, r = arguments[1]); i < r.length; i++) n[r[i]] = e.get(t, r[i]);
                                 return n
                             }
-                        })), e("ember-metal/index", ["exports", "require", "ember-metal/core", "ember-metal/computed", "ember-metal/alias", "ember-metal/merge", "ember-metal/debug", "ember-metal/instrumentation", "ember-metal/testing", "ember-metal/error_handler", "ember-metal/meta", "ember-metal/error", "ember-metal/cache", "ember-metal/features", "ember-metal/property_get", "ember-metal/property_set", "ember-metal/weak_map", "ember-metal/events", "ember-metal/is_none", "ember-metal/is_empty", "ember-metal/is_blank", "ember-metal/is_present", "ember-metal/run_loop", "ember-metal/observer_set", "ember-metal/property_events", "ember-metal/properties", "ember-metal/watch_key", "ember-metal/chains", "ember-metal/watch_path", "ember-metal/watching", "ember-metal/libraries", "ember-metal/map", "ember-metal/get_properties", "ember-metal/set_properties", "ember-metal/expand_properties", "ember-metal/observer", "ember-metal/mixin", "ember-metal/binding", "ember-metal/path_cache", "ember-metal/injected_property", "ember-metal/tags", "ember-metal/replace", "ember-metal/transaction", "ember-metal/is_proxy", "ember-metal/descriptor"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, P, R, N, I, M, L, D, B, F, U, j, V, q, z, Y) {
+                        })), e("ember-metal/index", ["exports", "require", "ember-metal/core", "ember-metal/computed", "ember-metal/alias", "ember-metal/merge", "ember-metal/debug", "ember-metal/instrumentation", "ember-metal/testing", "ember-metal/error_handler", "ember-metal/meta", "ember-metal/error", "ember-metal/cache", "ember-metal/features", "ember-metal/property_get", "ember-metal/property_set", "ember-metal/weak_map", "ember-metal/events", "ember-metal/is_none", "ember-metal/is_empty", "ember-metal/is_blank", "ember-metal/is_present", "ember-metal/run_loop", "ember-metal/observer_set", "ember-metal/property_events", "ember-metal/properties", "ember-metal/watch_key", "ember-metal/chains", "ember-metal/watch_path", "ember-metal/watching", "ember-metal/libraries", "ember-metal/map", "ember-metal/get_properties", "ember-metal/set_properties", "ember-metal/expand_properties", "ember-metal/observer", "ember-metal/mixin", "ember-metal/binding", "ember-metal/path_cache", "ember-metal/injected_property", "ember-metal/tags", "ember-metal/replace", "ember-metal/transaction", "ember-metal/is_proxy", "ember-metal/descriptor"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, R, P, N, I, M, L, D, B, F, U, j, V, q, z, Y) {
                             "use strict";
-                            t.default = n.default, t.computed = r.default, t.cacheFor = r.cacheFor, t.ComputedProperty = r.ComputedProperty, t.alias = i.default, t.merge = o.default, t.assert = s.assert, t.info = s.info, t.warn = s.warn, t.debug = s.debug, t.deprecate = s.deprecate, t.deprecateFunc = s.deprecateFunc, t.runInDebug = s.runInDebug, t.setDebugFunction = s.setDebugFunction, t.getDebugFunction = s.getDebugFunction, t.debugSeal = s.debugSeal, t.debugFreeze = s.debugFreeze, t.instrument = a.instrument, t.flaggedInstrument = a.flaggedInstrument, t._instrumentStart = a._instrumentStart, t.instrumentationReset = a.reset, t.instrumentationSubscribe = a.subscribe, t.instrumentationUnsubscribe = a.unsubscribe, t.isTesting = l.isTesting, t.setTesting = l.setTesting, t.getOnerror = u.getOnerror, t.setOnerror = u.setOnerror, t.dispatchError = u.dispatchError, t.setDispatchOverride = u.setDispatchOverride, t.META_DESC = c.META_DESC, t.meta = c.meta, t.peekMeta = c.peekMeta, t.Error = h.default, t.Cache = p.default, t.isFeatureEnabled = d.default, t.FEATURES = d.FEATURES, t.DEFAULT_FEATURES = d.DEFAULT_FEATURES, t._getPath = f._getPath, t.get = f.get, t.getWithDefault = f.getWithDefault, t.set = m.set, t.trySet = m.trySet, t.WeakMap = g.default, t.accumulateListeners = v.accumulateListeners, t.addListener = v.addListener, t.hasListeners = v.hasListeners, t.listenersFor = v.listenersFor, t.on = v.on, t.removeListener = v.removeListener, t.sendEvent = v.sendEvent, t.suspendListener = v.suspendListener, t.suspendListeners = v.suspendListeners, t.watchedEvents = v.watchedEvents, t.isNone = y.default, t.isEmpty = b.default, t.isBlank = _.default, t.isPresent = w.default, t.run = x.default, t.ObserverSet = E.default, t.beginPropertyChanges = S.beginPropertyChanges, t.changeProperties = S.changeProperties, t.endPropertyChanges = S.endPropertyChanges, t.overrideChains = S.overrideChains, t.propertyDidChange = S.propertyDidChange, t.propertyWillChange = S.propertyWillChange, t.PROPERTY_DID_CHANGE = S.PROPERTY_DID_CHANGE, t.defineProperty = T.defineProperty, t.Descriptor = T.Descriptor, t.watchKey = C.watchKey, t.unwatchKey = C.unwatchKey, t.ChainNode = A.ChainNode, t.finishChains = A.finishChains, t.removeChainWatcher = A.removeChainWatcher, t.watchPath = k.watchPath, t.unwatchPath = k.unwatchPath, t.destroy = O.destroy, t.isWatching = O.isWatching, t.unwatch = O.unwatch, t.watch = O.watch, t.watcherCount = O.watcherCount, t.libraries = P.default, t.Map = R.Map, t.MapWithDefault = R.MapWithDefault, t.OrderedSet = R.OrderedSet, t.getProperties = N.default, t.setProperties = I.default, t.expandProperties = M.default, t._suspendObserver = L._suspendObserver, t._suspendObservers = L._suspendObservers, t.addObserver = L.addObserver, t.observersFor = L.observersFor, t.removeObserver = L.removeObserver, t._addBeforeObserver = L._addBeforeObserver, t._removeBeforeObserver = L._removeBeforeObserver, t.Mixin = D.Mixin, t.aliasMethod = D.aliasMethod, t._immediateObserver = D._immediateObserver, t._beforeObserver = D._beforeObserver, t.mixin = D.mixin, t.observer = D.observer, t.required = D.required, t.REQUIRED = D.REQUIRED, t.hasUnprocessedMixins = D.hasUnprocessedMixins, t.clearUnprocessedMixins = D.clearUnprocessedMixins, t.detectBinding = D.detectBinding, t.Binding = B.Binding, t.bind = B.bind, t.isGlobalPath = F.isGlobalPath, t.InjectedProperty = U.default, t.setHasViews = j.setHasViews, t.tagForProperty = j.tagForProperty, t.tagFor = j.tagFor, t.markObjectAsDirty = j.markObjectAsDirty, t.replace = V.default, t.runInTransaction = q.default, t.didRender = q.didRender, t.assertNotRendered = q.assertNotRendered, t.isProxy = z.isProxy, t.descriptor = Y.default, e.has("ember-debug") && e.default("ember-debug")
+                            t.default = n.default, t.computed = r.default, t.cacheFor = r.cacheFor, t.ComputedProperty = r.ComputedProperty, t.alias = i.default, t.merge = o.default, t.assert = s.assert, t.info = s.info, t.warn = s.warn, t.debug = s.debug, t.deprecate = s.deprecate, t.deprecateFunc = s.deprecateFunc, t.runInDebug = s.runInDebug, t.setDebugFunction = s.setDebugFunction, t.getDebugFunction = s.getDebugFunction, t.debugSeal = s.debugSeal, t.debugFreeze = s.debugFreeze, t.instrument = a.instrument, t.flaggedInstrument = a.flaggedInstrument, t._instrumentStart = a._instrumentStart, t.instrumentationReset = a.reset, t.instrumentationSubscribe = a.subscribe, t.instrumentationUnsubscribe = a.unsubscribe, t.isTesting = l.isTesting, t.setTesting = l.setTesting, t.getOnerror = u.getOnerror, t.setOnerror = u.setOnerror, t.dispatchError = u.dispatchError, t.setDispatchOverride = u.setDispatchOverride, t.META_DESC = c.META_DESC, t.meta = c.meta, t.peekMeta = c.peekMeta, t.Error = h.default, t.Cache = p.default, t.isFeatureEnabled = d.default, t.FEATURES = d.FEATURES, t.DEFAULT_FEATURES = d.DEFAULT_FEATURES, t._getPath = f._getPath, t.get = f.get, t.getWithDefault = f.getWithDefault, t.set = m.set, t.trySet = m.trySet, t.WeakMap = g.default, t.accumulateListeners = v.accumulateListeners, t.addListener = v.addListener, t.hasListeners = v.hasListeners, t.listenersFor = v.listenersFor, t.on = v.on, t.removeListener = v.removeListener, t.sendEvent = v.sendEvent, t.suspendListener = v.suspendListener, t.suspendListeners = v.suspendListeners, t.watchedEvents = v.watchedEvents, t.isNone = y.default, t.isEmpty = b.default, t.isBlank = _.default, t.isPresent = w.default, t.run = x.default, t.ObserverSet = E.default, t.beginPropertyChanges = S.beginPropertyChanges, t.changeProperties = S.changeProperties, t.endPropertyChanges = S.endPropertyChanges, t.overrideChains = S.overrideChains, t.propertyDidChange = S.propertyDidChange, t.propertyWillChange = S.propertyWillChange, t.PROPERTY_DID_CHANGE = S.PROPERTY_DID_CHANGE, t.defineProperty = T.defineProperty, t.Descriptor = T.Descriptor, t.watchKey = C.watchKey, t.unwatchKey = C.unwatchKey, t.ChainNode = A.ChainNode, t.finishChains = A.finishChains, t.removeChainWatcher = A.removeChainWatcher, t.watchPath = k.watchPath, t.unwatchPath = k.unwatchPath, t.destroy = O.destroy, t.isWatching = O.isWatching, t.unwatch = O.unwatch, t.watch = O.watch, t.watcherCount = O.watcherCount, t.libraries = R.default, t.Map = P.Map, t.MapWithDefault = P.MapWithDefault, t.OrderedSet = P.OrderedSet, t.getProperties = N.default, t.setProperties = I.default, t.expandProperties = M.default, t._suspendObserver = L._suspendObserver, t._suspendObservers = L._suspendObservers, t.addObserver = L.addObserver, t.observersFor = L.observersFor, t.removeObserver = L.removeObserver, t._addBeforeObserver = L._addBeforeObserver, t._removeBeforeObserver = L._removeBeforeObserver, t.Mixin = D.Mixin, t.aliasMethod = D.aliasMethod, t._immediateObserver = D._immediateObserver, t._beforeObserver = D._beforeObserver, t.mixin = D.mixin, t.observer = D.observer, t.required = D.required, t.REQUIRED = D.REQUIRED, t.hasUnprocessedMixins = D.hasUnprocessedMixins, t.clearUnprocessedMixins = D.clearUnprocessedMixins, t.detectBinding = D.detectBinding, t.Binding = B.Binding, t.bind = B.bind, t.isGlobalPath = F.isGlobalPath, t.InjectedProperty = U.default, t.setHasViews = j.setHasViews, t.tagForProperty = j.tagForProperty, t.tagFor = j.tagFor, t.markObjectAsDirty = j.markObjectAsDirty, t.replace = V.default, t.runInTransaction = q.default, t.didRender = q.didRender, t.assertNotRendered = q.assertNotRendered, t.isProxy = z.isProxy, t.descriptor = Y.default, e.has("ember-debug") && e.default("ember-debug")
                         })), e("ember-metal/injected_property", ["exports", "ember-utils", "ember-metal/debug", "ember-metal/computed", "ember-metal/alias", "ember-metal/properties"], (function(t, e, n, r, i, o) {
                             "use strict";
 
@@ -5633,14 +5633,14 @@
                             }();
                             t.default = k, k._apply = A, k.finishPartial = E;
                             var O = !1,
-                                P = k.prototype;
+                                R = k.prototype;
 
-                            function R(t, n, r) {
+                            function P(t, n, r) {
                                 var i = e.guidFor(t);
                                 if (r[i]) return !1;
                                 if (r[i] = !0, t === n) return !0;
                                 for (var o = t.mixins, s = o ? o.length : 0; --s >= 0;)
-                                    if (R(o[s], n, r)) return !0;
+                                    if (P(o[s], n, r)) return !0;
                                 return !1
                             }
 
@@ -5654,26 +5654,26 @@
                                             return N(t, e, r)
                                         }))
                             }
-                            P.reopen = function() {
+                            R.reopen = function() {
                                 var t = void 0;
                                 this.properties ? (t = new k(void 0, this.properties), this.properties = void 0, this.mixins = [t]) : this.mixins || (this.mixins = []);
                                 var e = this.mixins,
                                     n = void 0;
                                 for (n = 0; n < arguments.length; n++)(t = arguments[n]) instanceof k ? e.push(t) : e.push(new k(void 0, t));
                                 return this
-                            }, P.apply = function(t) {
+                            }, R.apply = function(t) {
                                 return A(t, [this], !1)
-                            }, P.applyPartial = function(t) {
+                            }, R.applyPartial = function(t) {
                                 return A(t, [this], !0)
-                            }, P.toString = Object.toString, P.detect = function(t) {
+                            }, R.toString = Object.toString, R.detect = function(t) {
                                 if ("object" != typeof t || null === t) return !1;
-                                if (t instanceof k) return R(t, this, {});
+                                if (t instanceof k) return P(t, this, {});
                                 var n = i.peekMeta(t);
                                 return !!n && !!n.peekMixins(e.guidFor(this))
-                            }, P.without = function() {
+                            }, R.without = function() {
                                 for (var t = new k([this]), e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
                                 return t._without = n, t
-                            }, P.keys = function() {
+                            }, R.keys = function() {
                                 var t = {};
                                 return N(t, this, {}), Object.keys(t)
                             };
@@ -8231,9 +8231,9 @@
                             }, r.capitalize = function() {
                                 return n.capitalize(this)
                             })
-                        })), e("ember-runtime/index", ["exports", "ember-runtime/ext/string", "ember-runtime/ext/function", "ember-runtime/system/object", "ember-runtime/system/string", "ember-runtime/mixins/registry_proxy", "ember-runtime/mixins/container_proxy", "ember-runtime/copy", "ember-runtime/inject", "ember-runtime/compare", "ember-runtime/is-equal", "ember-runtime/mixins/array", "ember-runtime/mixins/comparable", "ember-runtime/system/namespace", "ember-runtime/system/array_proxy", "ember-runtime/system/object_proxy", "ember-runtime/system/core_object", "ember-runtime/system/native_array", "ember-runtime/mixins/action_handler", "ember-runtime/mixins/copyable", "ember-runtime/mixins/enumerable", "ember-runtime/mixins/freezable", "ember-runtime/mixins/-proxy", "ember-runtime/system/lazy_load", "ember-runtime/mixins/observable", "ember-runtime/mixins/mutable_enumerable", "ember-runtime/mixins/mutable_array", "ember-runtime/mixins/target_action_support", "ember-runtime/mixins/evented", "ember-runtime/mixins/promise_proxy", "ember-runtime/computed/computed_macros", "ember-runtime/computed/reduce_computed_macros", "ember-runtime/controllers/controller", "ember-runtime/mixins/controller", "ember-runtime/system/service", "ember-runtime/ext/rsvp", "ember-runtime/utils", "ember-runtime/string_registry"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, P, R, N, I, M, L, D, B) {
+                        })), e("ember-runtime/index", ["exports", "ember-runtime/ext/string", "ember-runtime/ext/function", "ember-runtime/system/object", "ember-runtime/system/string", "ember-runtime/mixins/registry_proxy", "ember-runtime/mixins/container_proxy", "ember-runtime/copy", "ember-runtime/inject", "ember-runtime/compare", "ember-runtime/is-equal", "ember-runtime/mixins/array", "ember-runtime/mixins/comparable", "ember-runtime/system/namespace", "ember-runtime/system/array_proxy", "ember-runtime/system/object_proxy", "ember-runtime/system/core_object", "ember-runtime/system/native_array", "ember-runtime/mixins/action_handler", "ember-runtime/mixins/copyable", "ember-runtime/mixins/enumerable", "ember-runtime/mixins/freezable", "ember-runtime/mixins/-proxy", "ember-runtime/system/lazy_load", "ember-runtime/mixins/observable", "ember-runtime/mixins/mutable_enumerable", "ember-runtime/mixins/mutable_array", "ember-runtime/mixins/target_action_support", "ember-runtime/mixins/evented", "ember-runtime/mixins/promise_proxy", "ember-runtime/computed/computed_macros", "ember-runtime/computed/reduce_computed_macros", "ember-runtime/controllers/controller", "ember-runtime/mixins/controller", "ember-runtime/system/service", "ember-runtime/ext/rsvp", "ember-runtime/utils", "ember-runtime/string_registry"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, R, P, N, I, M, L, D, B) {
                             "use strict";
-                            t.Object = r.default, t.FrameworkObject = r.FrameworkObject, t.String = i.default, t.RegistryProxyMixin = o.default, t.buildFakeRegistryWithDeprecations = o.buildFakeRegistryWithDeprecations, t.ContainerProxyMixin = s.default, t.copy = a.default, t.inject = l.default, t.compare = u.default, t.isEqual = c.default, t.Array = h.default, t.objectAt = h.objectAt, t.isEmberArray = h.isEmberArray, t.addArrayObserver = h.addArrayObserver, t.removeArrayObserver = h.removeArrayObserver, t.Comparable = p.default, t.Namespace = d.default, t.isNamespaceSearchDisabled = d.isSearchDisabled, t.setNamespaceSearchDisabled = d.setSearchDisabled, t.ArrayProxy = f.default, t.ObjectProxy = m.default, t.CoreObject = g.default, t.NativeArray = v.default, t.A = v.A, t.ActionHandler = y.default, t.deprecateUnderscoreActions = y.deprecateUnderscoreActions, t.Copyable = b.default, t.Enumerable = _.default, t.Freezable = w.Freezable, t.FROZEN_ERROR = w.FROZEN_ERROR, t._ProxyMixin = x.default, t.onLoad = E.onLoad, t.runLoadHooks = E.runLoadHooks, t._loaded = E._loaded, t.Observable = S.default, t.MutableEnumerable = T.default, t.MutableArray = C.default, t.removeAt = C.removeAt, t.TargetActionSupport = A.default, t.Evented = k.default, t.PromiseProxyMixin = O.default, t.empty = P.empty, t.notEmpty = P.notEmpty, t.none = P.none, t.not = P.not, t.bool = P.bool, t.match = P.match, t.equal = P.equal, t.gt = P.gt, t.gte = P.gte, t.lt = P.lt, t.lte = P.lte, t.oneWay = P.oneWay, t.readOnly = P.readOnly, t.deprecatingAlias = P.deprecatingAlias, t.and = P.and, t.or = P.or, t.sum = R.sum, t.min = R.min, t.max = R.max, t.map = R.map, t.sort = R.sort, t.setDiff = R.setDiff, t.mapBy = R.mapBy, t.filter = R.filter, t.filterBy = R.filterBy, t.uniq = R.uniq, t.uniqBy = R.uniqBy, t.union = R.union, t.intersect = R.intersect, t.collect = R.collect, t.Controller = N.default, t.ControllerMixin = I.default, t.Service = M.default, t.RSVP = L.default, t.onerrorDefault = L.onerrorDefault, t.isArray = D.isArray, t.typeOf = D.typeOf, t.getStrings = B.getStrings, t.setStrings = B.setStrings
+                            t.Object = r.default, t.FrameworkObject = r.FrameworkObject, t.String = i.default, t.RegistryProxyMixin = o.default, t.buildFakeRegistryWithDeprecations = o.buildFakeRegistryWithDeprecations, t.ContainerProxyMixin = s.default, t.copy = a.default, t.inject = l.default, t.compare = u.default, t.isEqual = c.default, t.Array = h.default, t.objectAt = h.objectAt, t.isEmberArray = h.isEmberArray, t.addArrayObserver = h.addArrayObserver, t.removeArrayObserver = h.removeArrayObserver, t.Comparable = p.default, t.Namespace = d.default, t.isNamespaceSearchDisabled = d.isSearchDisabled, t.setNamespaceSearchDisabled = d.setSearchDisabled, t.ArrayProxy = f.default, t.ObjectProxy = m.default, t.CoreObject = g.default, t.NativeArray = v.default, t.A = v.A, t.ActionHandler = y.default, t.deprecateUnderscoreActions = y.deprecateUnderscoreActions, t.Copyable = b.default, t.Enumerable = _.default, t.Freezable = w.Freezable, t.FROZEN_ERROR = w.FROZEN_ERROR, t._ProxyMixin = x.default, t.onLoad = E.onLoad, t.runLoadHooks = E.runLoadHooks, t._loaded = E._loaded, t.Observable = S.default, t.MutableEnumerable = T.default, t.MutableArray = C.default, t.removeAt = C.removeAt, t.TargetActionSupport = A.default, t.Evented = k.default, t.PromiseProxyMixin = O.default, t.empty = R.empty, t.notEmpty = R.notEmpty, t.none = R.none, t.not = R.not, t.bool = R.bool, t.match = R.match, t.equal = R.equal, t.gt = R.gt, t.gte = R.gte, t.lt = R.lt, t.lte = R.lte, t.oneWay = R.oneWay, t.readOnly = R.readOnly, t.deprecatingAlias = R.deprecatingAlias, t.and = R.and, t.or = R.or, t.sum = P.sum, t.min = P.min, t.max = P.max, t.map = P.map, t.sort = P.sort, t.setDiff = P.setDiff, t.mapBy = P.mapBy, t.filter = P.filter, t.filterBy = P.filterBy, t.uniq = P.uniq, t.uniqBy = P.uniqBy, t.union = P.union, t.intersect = P.intersect, t.collect = P.collect, t.Controller = N.default, t.ControllerMixin = I.default, t.Service = M.default, t.RSVP = L.default, t.onerrorDefault = L.onerrorDefault, t.isArray = D.isArray, t.typeOf = D.typeOf, t.getStrings = B.getStrings, t.setStrings = B.setStrings
                         })), e("ember-runtime/inject", ["exports", "ember-metal"], (function(t, e) {
                             "use strict";
 
@@ -9685,7 +9685,7 @@
                                 return g.get(t)
                             }
 
-                            function P(t) {
+                            function R(t) {
                                 return y.get(t)
                             }
                             t.default = {
@@ -9697,8 +9697,8 @@
                                 camelize: A,
                                 classify: k,
                                 underscore: O,
-                                capitalize: P
-                            }, t.fmt = x, t.loc = E, t.w = S, t.decamelize = T, t.dasherize = C, t.camelize = A, t.classify = k, t.underscore = O, t.capitalize = P
+                                capitalize: R
+                            }, t.fmt = x, t.loc = E, t.w = S, t.decamelize = T, t.dasherize = C, t.camelize = A, t.classify = k, t.underscore = O, t.capitalize = R
                         })), e("ember-runtime/utils", ["exports", "ember-runtime/mixins/array", "ember-runtime/system/object"], (function(t, e, n) {
                             "use strict";
                             t.isArray = function(t) {
@@ -15232,7 +15232,7 @@
                                 }, e
                             }(e.Statement);
                             t.Text = O;
-                            var P = function(t) {
+                            var R = function(t) {
                                 function e(e) {
                                     t.call(this), this.comment = e, this.type = "comment"
                                 }
@@ -15244,8 +15244,8 @@
                                     t.comment(this.comment)
                                 }, e
                             }(e.Statement);
-                            t.Comment = P;
-                            var R = function(t) {
+                            t.Comment = R;
+                            var P = function(t) {
                                 function n(e, n, r) {
                                     t.call(this), this.tag = e, this.blockParams = n, this.symbolTable = r, this.type = "open-element"
                                 }
@@ -15292,7 +15292,7 @@
                                     }
                                 }, n
                             }(e.Statement);
-                            t.OpenElement = R;
+                            t.OpenElement = P;
                             var N = function(t) {
                                 function e(e, n, r) {
                                     t.call(this), this.tag = e, this.attrs = n, this.args = r, this.type = "component"
@@ -17358,16 +17358,16 @@
                                     }
                                 });
 
-                            function P(t, e) {
-                                var n = new(0, P.klasses[t])(e || {});
-                                return n.factory = P, n
+                            function R(t, e) {
+                                var n = new(0, R.klasses[t])(e || {});
+                                return n.factory = R, n
                             }
-                            P.klasses = {
+                            R.klasses = {
                                 resolved: A,
                                 param: O,
                                 object: k
                             };
-                            var R = v(S, {
+                            var P = v(S, {
                                 name: null,
                                 pivotHandler: null,
                                 contexts: null,
@@ -17430,7 +17430,7 @@
                                         var u = this.preTransitionState.handlerInfos[s];
                                         l = u && u.context
                                     }
-                                    return P("object", {
+                                    return R("object", {
                                         name: t,
                                         getHandler: e,
                                         serializer: a,
@@ -17449,7 +17449,7 @@
                                             o[u] = a[u]
                                         }
                                     }
-                                    return P("param", {
+                                    return R("param", {
                                         name: t,
                                         getHandler: e,
                                         params: o
@@ -17481,7 +17481,7 @@
                                         }
                                         for (r = 0, i = a.length; r < i; ++r) {
                                             var h = a[r],
-                                                p = P("param", {
+                                                p = R("param", {
                                                     name: h.handler,
                                                     getHandler: n,
                                                     params: h.params
@@ -17610,14 +17610,14 @@
                                 if (s && s.hasOwnProperty("queryParams") && (a = M.call(e).queryParams), 0 === e.length) {
                                     c(t, "Updating query params");
                                     var l = t.state.handlerInfos;
-                                    i = new R({
+                                    i = new P({
                                         name: l[l.length - 1].name,
                                         contexts: [],
                                         queryParams: a
                                     })
                                 } else "/" === o.charAt(0) ? (c(t, "Attempting URL transition to " + o), i = new I({
                                     url: o
-                                })) : (c(t, "Attempting transition to " + o), i = new R({
+                                })) : (c(t, "Attempting transition to " + o), i = new P({
                                     name: e[0],
                                     contexts: r.call(e, 1),
                                     queryParams: a
@@ -17701,7 +17701,7 @@
                                         r[s.name] = s.params || {}
                                     }
                                     c(this, "Starting a refresh transition");
-                                    var a = new R({
+                                    var a = new P({
                                         name: n[n.length - 1].name,
                                         pivotHandler: t || n[0].handler,
                                         contexts: [],
@@ -17713,14 +17713,14 @@
                                     return V(this, arguments).method("replace")
                                 },
                                 generate: function(t) {
-                                    for (var e = l(r.call(arguments, 1)), n = e[0], i = e[1], o = new R({
+                                    for (var e = l(r.call(arguments, 1)), n = e[0], i = e[1], o = new P({
                                             name: t,
                                             contexts: n
                                         }).applyToState(this.state, this.recognizer, this.getHandler, null, this.getSerializer), a = {}, u = 0, c = o.handlerInfos.length; u < c; ++u) s(a, o.handlerInfos[u].serialize());
                                     return a.queryParams = i, this.recognizer.generate(t, a)
                                 },
                                 applyIntent: function(t, e) {
-                                    var n = new R({
+                                    var n = new P({
                                             name: t,
                                             contexts: e
                                         }),
@@ -17738,7 +17738,7 @@
                                     if (c === u.length) return !1;
                                     var h = new _;
                                     h.handlerInfos = a.slice(0, c + 1), u = u.slice(0, c + 1);
-                                    var p = q(new R({
+                                    var p = q(new P({
                                         name: l,
                                         contexts: e
                                     }).applyToHandlers(h, u, this.getHandler, l, !0, !0, this.getSerializer).handlerInfos, h.handlerInfos);
@@ -17857,7 +17857,7 @@
                             var y = void 0,
                                 b = 1,
                                 _ = 2,
-                                w = new P;
+                                w = new R;
 
                             function x(t) {
                                 try {
@@ -17925,10 +17925,10 @@
                                 }
                             }
 
-                            function P() {
+                            function R() {
                                 this.error = null
                             }
-                            var R = new P;
+                            var P = new R;
 
                             function N(t, e, n, r) {
                                 var i = u(n),
@@ -17941,9 +17941,9 @@
                                             try {
                                                 return t(e)
                                             } catch (t) {
-                                                return R.error = t, R
+                                                return P.error = t, P
                                             }
-                                        }(n, r), o === R ? (l = !0, s = o.error, o.error = null) : a = !0, e === o) return void A(e, new TypeError("A promises callback cannot return that same promise."))
+                                        }(n, r), o === P ? (l = !0, s = o.error, o.error = null) : a = !0, e === o) return void A(e, new TypeError("A promises callback cannot return that same promise."))
                                 } else o = r, a = !0;
                                 e._state !== y || (i && a ? S(e, o) : l ? A(e, s) : t === b ? C(e, o) : t === _ && A(e, o))
                             }
@@ -18311,7 +18311,7 @@
                                 var kt = window.__PROMISE_INSTRUMENTATION__;
                                 for (var Ot in a("instrument", !0), kt) kt.hasOwnProperty(Ot) && Ct(Ot, kt[Ot])
                             }
-                            var Pt = ((e = {
+                            var Rt = ((e = {
                                 cast: St,
                                 Promise: F,
                                 EventTarget: o,
@@ -18330,7 +18330,7 @@
                                 reject: it,
                                 map: nt
                             }).async = Tt, e.filter = st, e);
-                            t.cast = St, t.Promise = F, t.EventTarget = o, t.all = G, t.allSettled = X, t.race = K, t.hash = $, t.hashSettled = Z, t.rethrow = tt, t.defer = et, t.denodeify = Y, t.configure = a, t.on = Ct, t.off = At, t.resolve = rt, t.reject = it, t.map = nt, t.async = Tt, t.filter = st, t.default = Pt
+                            t.cast = St, t.Promise = F, t.EventTarget = o, t.all = G, t.allSettled = X, t.race = K, t.hash = $, t.hashSettled = Z, t.rethrow = tt, t.defer = et, t.denodeify = Y, t.configure = a, t.on = Ct, t.off = At, t.resolve = rt, t.reject = it, t.map = nt, t.async = Tt, t.filter = st, t.default = Rt
                         })), r("ember")
                     }(),
                     function() {
@@ -19670,9 +19670,9 @@
                                 for (2 === arguments.length && Array.isArray(arguments[1]) && (i = 0, r = arguments[1]); i < r.length; i++) n[r[i]] = e.get(t, r[i]);
                                 return n
                             }
-                        })), e("ember-metal/index", ["exports", "require", "ember-metal/core", "ember-metal/computed", "ember-metal/alias", "ember-metal/merge", "ember-metal/debug", "ember-metal/instrumentation", "ember-metal/testing", "ember-metal/error_handler", "ember-metal/meta", "ember-metal/error", "ember-metal/cache", "ember-metal/features", "ember-metal/property_get", "ember-metal/property_set", "ember-metal/weak_map", "ember-metal/events", "ember-metal/is_none", "ember-metal/is_empty", "ember-metal/is_blank", "ember-metal/is_present", "ember-metal/run_loop", "ember-metal/observer_set", "ember-metal/property_events", "ember-metal/properties", "ember-metal/watch_key", "ember-metal/chains", "ember-metal/watch_path", "ember-metal/watching", "ember-metal/libraries", "ember-metal/map", "ember-metal/get_properties", "ember-metal/set_properties", "ember-metal/expand_properties", "ember-metal/observer", "ember-metal/mixin", "ember-metal/binding", "ember-metal/path_cache", "ember-metal/injected_property", "ember-metal/tags", "ember-metal/replace", "ember-metal/transaction", "ember-metal/is_proxy", "ember-metal/descriptor"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, P, R, N, I, M, L, D, B, F, U, j, V, q, z, Y) {
+                        })), e("ember-metal/index", ["exports", "require", "ember-metal/core", "ember-metal/computed", "ember-metal/alias", "ember-metal/merge", "ember-metal/debug", "ember-metal/instrumentation", "ember-metal/testing", "ember-metal/error_handler", "ember-metal/meta", "ember-metal/error", "ember-metal/cache", "ember-metal/features", "ember-metal/property_get", "ember-metal/property_set", "ember-metal/weak_map", "ember-metal/events", "ember-metal/is_none", "ember-metal/is_empty", "ember-metal/is_blank", "ember-metal/is_present", "ember-metal/run_loop", "ember-metal/observer_set", "ember-metal/property_events", "ember-metal/properties", "ember-metal/watch_key", "ember-metal/chains", "ember-metal/watch_path", "ember-metal/watching", "ember-metal/libraries", "ember-metal/map", "ember-metal/get_properties", "ember-metal/set_properties", "ember-metal/expand_properties", "ember-metal/observer", "ember-metal/mixin", "ember-metal/binding", "ember-metal/path_cache", "ember-metal/injected_property", "ember-metal/tags", "ember-metal/replace", "ember-metal/transaction", "ember-metal/is_proxy", "ember-metal/descriptor"], (function(t, e, n, r, i, o, s, a, l, u, c, h, p, d, f, m, g, v, y, b, _, w, x, E, S, T, C, A, k, O, R, P, N, I, M, L, D, B, F, U, j, V, q, z, Y) {
                             "use strict";
-                            t.default = n.default, t.computed = r.default, t.cacheFor = r.cacheFor, t.ComputedProperty = r.ComputedProperty, t.alias = i.default, t.merge = o.default, t.assert = s.assert, t.info = s.info, t.warn = s.warn, t.debug = s.debug, t.deprecate = s.deprecate, t.deprecateFunc = s.deprecateFunc, t.runInDebug = s.runInDebug, t.setDebugFunction = s.setDebugFunction, t.getDebugFunction = s.getDebugFunction, t.debugSeal = s.debugSeal, t.debugFreeze = s.debugFreeze, t.instrument = a.instrument, t.flaggedInstrument = a.flaggedInstrument, t._instrumentStart = a._instrumentStart, t.instrumentationReset = a.reset, t.instrumentationSubscribe = a.subscribe, t.instrumentationUnsubscribe = a.unsubscribe, t.isTesting = l.isTesting, t.setTesting = l.setTesting, t.getOnerror = u.getOnerror, t.setOnerror = u.setOnerror, t.dispatchError = u.dispatchError, t.setDispatchOverride = u.setDispatchOverride, t.META_DESC = c.META_DESC, t.meta = c.meta, t.peekMeta = c.peekMeta, t.Error = h.default, t.Cache = p.default, t.isFeatureEnabled = d.default, t.FEATURES = d.FEATURES, t.DEFAULT_FEATURES = d.DEFAULT_FEATURES, t._getPath = f._getPath, t.get = f.get, t.getWithDefault = f.getWithDefault, t.set = m.set, t.trySet = m.trySet, t.WeakMap = g.default, t.accumulateListeners = v.accumulateListeners, t.addListener = v.addListener, t.hasListeners = v.hasListeners, t.listenersFor = v.listenersFor, t.on = v.on, t.removeListener = v.removeListener, t.sendEvent = v.sendEvent, t.suspendListener = v.suspendListener, t.suspendListeners = v.suspendListeners, t.watchedEvents = v.watchedEvents, t.isNone = y.default, t.isEmpty = b.default, t.isBlank = _.default, t.isPresent = w.default, t.run = x.default, t.ObserverSet = E.default, t.beginPropertyChanges = S.beginPropertyChanges, t.changeProperties = S.changeProperties, t.endPropertyChanges = S.endPropertyChanges, t.overrideChains = S.overrideChains, t.propertyDidChange = S.propertyDidChange, t.propertyWillChange = S.propertyWillChange, t.PROPERTY_DID_CHANGE = S.PROPERTY_DID_CHANGE, t.defineProperty = T.defineProperty, t.Descriptor = T.Descriptor, t.watchKey = C.watchKey, t.unwatchKey = C.unwatchKey, t.ChainNode = A.ChainNode, t.finishChains = A.finishChains, t.removeChainWatcher = A.removeChainWatcher, t.watchPath = k.watchPath, t.unwatchPath = k.unwatchPath, t.destroy = O.destroy, t.isWatching = O.isWatching, t.unwatch = O.unwatch, t.watch = O.watch, t.watcherCount = O.watcherCount, t.libraries = P.default, t.Map = R.Map, t.MapWithDefault = R.MapWithDefault, t.OrderedSet = R.OrderedSet, t.getProperties = N.default, t.setProperties = I.default, t.expandProperties = M.default, t._suspendObserver = L._suspendObserver, t._suspendObservers = L._suspendObservers, t.addObserver = L.addObserver, t.observersFor = L.observersFor, t.removeObserver = L.removeObserver, t._addBeforeObserver = L._addBeforeObserver, t._removeBeforeObserver = L._removeBeforeObserver, t.Mixin = D.Mixin, t.aliasMethod = D.aliasMethod, t._immediateObserver = D._immediateObserver, t._beforeObserver = D._beforeObserver, t.mixin = D.mixin, t.observer = D.observer, t.required = D.required, t.REQUIRED = D.REQUIRED, t.hasUnprocessedMixins = D.hasUnprocessedMixins, t.clearUnprocessedMixins = D.clearUnprocessedMixins, t.detectBinding = D.detectBinding, t.Binding = B.Binding, t.bind = B.bind, t.isGlobalPath = F.isGlobalPath, t.InjectedProperty = U.default, t.setHasViews = j.setHasViews, t.tagForProperty = j.tagForProperty, t.tagFor = j.tagFor, t.markObjectAsDirty = j.markObjectAsDirty, t.replace = V.default, t.runInTransaction = q.default, t.didRender = q.didRender, t.assertNotRendered = q.assertNotRendered, t.isProxy = z.isProxy, t.descriptor = Y.default, e.has("ember-debug") && e.default("ember-debug")
+                            t.default = n.default, t.computed = r.default, t.cacheFor = r.cacheFor, t.ComputedProperty = r.ComputedProperty, t.alias = i.default, t.merge = o.default, t.assert = s.assert, t.info = s.info, t.warn = s.warn, t.debug = s.debug, t.deprecate = s.deprecate, t.deprecateFunc = s.deprecateFunc, t.runInDebug = s.runInDebug, t.setDebugFunction = s.setDebugFunction, t.getDebugFunction = s.getDebugFunction, t.debugSeal = s.debugSeal, t.debugFreeze = s.debugFreeze, t.instrument = a.instrument, t.flaggedInstrument = a.flaggedInstrument, t._instrumentStart = a._instrumentStart, t.instrumentationReset = a.reset, t.instrumentationSubscribe = a.subscribe, t.instrumentationUnsubscribe = a.unsubscribe, t.isTesting = l.isTesting, t.setTesting = l.setTesting, t.getOnerror = u.getOnerror, t.setOnerror = u.setOnerror, t.dispatchError = u.dispatchError, t.setDispatchOverride = u.setDispatchOverride, t.META_DESC = c.META_DESC, t.meta = c.meta, t.peekMeta = c.peekMeta, t.Error = h.default, t.Cache = p.default, t.isFeatureEnabled = d.default, t.FEATURES = d.FEATURES, t.DEFAULT_FEATURES = d.DEFAULT_FEATURES, t._getPath = f._getPath, t.get = f.get, t.getWithDefault = f.getWithDefault, t.set = m.set, t.trySet = m.trySet, t.WeakMap = g.default, t.accumulateListeners = v.accumulateListeners, t.addListener = v.addListener, t.hasListeners = v.hasListeners, t.listenersFor = v.listenersFor, t.on = v.on, t.removeListener = v.removeListener, t.sendEvent = v.sendEvent, t.suspendListener = v.suspendListener, t.suspendListeners = v.suspendListeners, t.watchedEvents = v.watchedEvents, t.isNone = y.default, t.isEmpty = b.default, t.isBlank = _.default, t.isPresent = w.default, t.run = x.default, t.ObserverSet = E.default, t.beginPropertyChanges = S.beginPropertyChanges, t.changeProperties = S.changeProperties, t.endPropertyChanges = S.endPropertyChanges, t.overrideChains = S.overrideChains, t.propertyDidChange = S.propertyDidChange, t.propertyWillChange = S.propertyWillChange, t.PROPERTY_DID_CHANGE = S.PROPERTY_DID_CHANGE, t.defineProperty = T.defineProperty, t.Descriptor = T.Descriptor, t.watchKey = C.watchKey, t.unwatchKey = C.unwatchKey, t.ChainNode = A.ChainNode, t.finishChains = A.finishChains, t.removeChainWatcher = A.removeChainWatcher, t.watchPath = k.watchPath, t.unwatchPath = k.unwatchPath, t.destroy = O.destroy, t.isWatching = O.isWatching, t.unwatch = O.unwatch, t.watch = O.watch, t.watcherCount = O.watcherCount, t.libraries = R.default, t.Map = P.Map, t.MapWithDefault = P.MapWithDefault, t.OrderedSet = P.OrderedSet, t.getProperties = N.default, t.setProperties = I.default, t.expandProperties = M.default, t._suspendObserver = L._suspendObserver, t._suspendObservers = L._suspendObservers, t.addObserver = L.addObserver, t.observersFor = L.observersFor, t.removeObserver = L.removeObserver, t._addBeforeObserver = L._addBeforeObserver, t._removeBeforeObserver = L._removeBeforeObserver, t.Mixin = D.Mixin, t.aliasMethod = D.aliasMethod, t._immediateObserver = D._immediateObserver, t._beforeObserver = D._beforeObserver, t.mixin = D.mixin, t.observer = D.observer, t.required = D.required, t.REQUIRED = D.REQUIRED, t.hasUnprocessedMixins = D.hasUnprocessedMixins, t.clearUnprocessedMixins = D.clearUnprocessedMixins, t.detectBinding = D.detectBinding, t.Binding = B.Binding, t.bind = B.bind, t.isGlobalPath = F.isGlobalPath, t.InjectedProperty = U.default, t.setHasViews = j.setHasViews, t.tagForProperty = j.tagForProperty, t.tagFor = j.tagFor, t.markObjectAsDirty = j.markObjectAsDirty, t.replace = V.default, t.runInTransaction = q.default, t.didRender = q.didRender, t.assertNotRendered = q.assertNotRendered, t.isProxy = z.isProxy, t.descriptor = Y.default, e.has("ember-debug") && e.default("ember-debug")
                         })), e("ember-metal/injected_property", ["exports", "ember-utils", "ember-metal/debug", "ember-metal/computed", "ember-metal/alias", "ember-metal/properties"], (function(t, e, n, r, i, o) {
                             "use strict";
 
@@ -20346,9 +20346,9 @@
                                 for (var e = arguments.length, n = Array(e > 1 ? e - 1 : 0), r = 1; r < e; r++) n[r - 1] = arguments[r];
                                 return k(t, n, !1), t
                             }, t.hasUnprocessedMixins = function() {
-                                return P
+                                return R
                             }, t.clearUnprocessedMixins = function() {
-                                P = !1
+                                R = !1
                             }, t.required = function() {
                                 return r.deprecate("Ember.required is deprecated as its behavior is inconsistent and unreliable.", !1, {
                                     id: "ember-metal.required",
@@ -20525,7 +20525,7 @@
                                 return t.applyPartial = function(t) {
                                     return k(t, d.call(arguments, 1), !0)
                                 }, t.create = function() {
-                                    P = !0;
+                                    R = !0;
                                     for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
                                     return new this(e, void 0)
                                 }, t.mixins = function(t) {
@@ -20537,8 +20537,8 @@
                                 }, t
                             }();
                             t.default = O, O._apply = k, O.finishPartial = S;
-                            var P = !1,
-                                R = O.prototype;
+                            var R = !1,
+                                P = O.prototype;
 
                             function N(t, n, r) {
                                 var i = e.guidFor(t);
@@ -20559,29 +20559,29 @@
                                             return I(t, e, r)
                                         }))
                             }
-                            R.reopen = function() {
+                            P.reopen = function() {
                                 var t = void 0;
                                 this.properties ? (t = new O(void 0, this.properties), this.properties = void 0, this.mixins = [t]) : this.mixins || (this.mixins = []);
                                 var e = this.mixins,
                                     n = void 0;
                                 for (n = 0; n < arguments.length; n++) t = arguments[n], r.assert("Expected hash or Mixin instance, got " + Object.prototype.toString.call(t), "object" == typeof t && null !== t && "[object Array]" !== Object.prototype.toString.call(t)), t instanceof O ? e.push(t) : e.push(new O(void 0, t));
                                 return this
-                            }, R.apply = function(t) {
+                            }, P.apply = function(t) {
                                 return k(t, [this], !1)
-                            }, R.applyPartial = function(t) {
+                            }, P.applyPartial = function(t) {
                                 return k(t, [this], !0)
-                            }, R.toString = Object.toString, R.detect = function(t) {
+                            }, P.toString = Object.toString, P.detect = function(t) {
                                 if ("object" != typeof t || null === t) return !1;
                                 if (t instanceof O) return N(t, this, {});
                                 var n = i.peekMeta(t);
                                 return !!n && !!n.peekMixins(e.guidFor(this))
-                            }, R.without = function() {
+                            }, P.without = function() {
                                 for (var t = new O([this]), e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
                                 return t._without = n, t
-                            }, R.keys = function() {
+                            }, P.keys = function() {
                                 var t = {};
                                 return I(t, this, {}), Object.keys(t)
-                            }, r.debugSeal(R);
+                            }, r.debugSeal(P);
                             var M = new s.Descriptor;
 
                             function L(t) {
@@ -26516,7 +26516,7 @@
                                 }, e
                             }(e.Statement);
                             t.Text = O;
-                            var P = function(t) {
+                            var R = function(t) {
                                 function e(e) {
                                     t.call(this), this.comment = e, this.type = "comment"
                                 }
@@ -26528,8 +26528,8 @@
                                     t.comment(this.comment)
                                 }, e
                             }(e.Statement);
-                            t.Comment = P;
-                            var R = function(t) {
+                            t.Comment = R;
+                            var P = function(t) {
                                 function n(e, n, r) {
                                     t.call(this), this.tag = e, this.blockParams = n, this.symbolTable = r, this.type = "open-element"
                                 }
@@ -26576,7 +26576,7 @@
                                     }
                                 }, n
                             }(e.Statement);
-                            t.OpenElement = R;
+                            t.OpenElement = P;
                             var N = function(t) {
                                 function e(e, n, r) {
                                     t.call(this), this.tag = e, this.attrs = n, this.args = r, this.type = "component"
@@ -33346,14 +33346,14 @@
                     } - 1 === T && (T = y.length), this.host = y.slice(0, T), y = y.slice(T), this.parseHost(), this.hostname = this.hostname || "";
                     var k = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
                     if (!k)
-                        for (var O = this.hostname.split(/\./), P = (C = 0, O.length); C < P; C++) {
-                            var R = O[C];
-                            if (R && !R.match(p)) {
-                                for (var N = "", I = 0, M = R.length; I < M; I++) R.charCodeAt(I) > 127 ? N += "x" : N += R[I];
+                        for (var O = this.hostname.split(/\./), R = (C = 0, O.length); C < R; C++) {
+                            var P = O[C];
+                            if (P && !P.match(p)) {
+                                for (var N = "", I = 0, M = P.length; I < M; I++) P.charCodeAt(I) > 127 ? N += "x" : N += P[I];
                                 if (!N.match(p)) {
                                     var L = O.slice(0, C),
                                         D = O.slice(C + 1),
-                                        B = R.match(d);
+                                        B = P.match(d);
                                     B && (L.push(B[1]), D.unshift(B[2])), D.length && (y = "/" + D.join(".") + y), this.hostname = L.join(".");
                                     break
                                 }
@@ -33365,7 +33365,7 @@
                     this.host = U + F, this.href += this.host, k && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== y[0] && (y = "/" + y))
                 }
                 if (!f[w])
-                    for (C = 0, P = u.length; C < P; C++) {
+                    for (C = 0, R = u.length; C < R; C++) {
                         var j = u[C];
                         if (-1 !== y.indexOf(j)) {
                             var V = encodeURIComponent(j);
@@ -33528,7 +33528,7 @@
                         return w(r + (_ + 1) * t / (t + h))
                     }
 
-                    function P(t) {
+                    function R(t) {
                         var e, n, r, i, o, s, h, p, g, v, y, b = [],
                             _ = t.length,
                             x = 0,
@@ -33542,7 +33542,7 @@
                         return A(b)
                     }
 
-                    function R(t) {
+                    function P(t) {
                         var e, n, r, i, o, s, h, p, g, v, y, b, _, S, T, A = [];
                         for (b = (t = C(t)).length, e = f, n = 0, o = d, s = 0; s < b; ++s)(y = t[s]) < 128 && A.push(x(y));
                         for (r = i = A.length, i && A.push(m); r < b;) {
@@ -33561,16 +33561,16 @@
                             decode: C,
                             encode: A
                         },
-                        decode: P,
-                        encode: R,
+                        decode: R,
+                        encode: P,
                         toASCII: function(t) {
                             return T(t, (function(t) {
-                                return v.test(t) ? "xn--" + R(t) : t
+                                return v.test(t) ? "xn--" + P(t) : t
                             }))
                         },
                         toUnicode: function(t) {
                             return T(t, (function(t) {
-                                return g.test(t) ? P(t.slice(4).toLowerCase()) : t
+                                return g.test(t) ? R(t.slice(4).toLowerCase()) : t
                             }))
                         }
                     }, void 0 === (r = function() {
@@ -34285,8 +34285,8 @@
                         A = "[object Object]",
                         k = "[object Promise]",
                         O = "[object RegExp]",
-                        P = "[object Set]",
-                        R = "[object String]",
+                        R = "[object Set]",
+                        P = "[object String]",
                         N = "[object Symbol]",
                         I = "[object WeakMap]",
                         M = "[object ArrayBuffer]",
@@ -34339,15 +34339,15 @@
                         At = "a-z\\xdf-\\xf6\\xf8-\\xff",
                         kt = "A-Z\\xc0-\\xd6\\xd8-\\xde",
                         Ot = "\\ufe0e\\ufe0f",
-                        Pt = "\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",
-                        Rt = "['’]",
+                        Rt = "\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",
+                        Pt = "['’]",
                         Nt = "[" + St + "]",
-                        It = "[" + Pt + "]",
+                        It = "[" + Rt + "]",
                         Mt = "[" + Tt + "]",
                         Lt = "\\d+",
                         Dt = "[" + Ct + "]",
                         Bt = "[" + At + "]",
-                        Ft = "[^" + St + Pt + Lt + Ct + At + kt + "]",
+                        Ft = "[^" + St + Rt + Lt + Ct + At + kt + "]",
                         Ut = "\\ud83c[\\udffb-\\udfff]",
                         jt = "[^" + St + "]",
                         Vt = "(?:\\ud83c[\\udde6-\\uddff]){2}",
@@ -34363,7 +34363,7 @@
                         $t = Jt + Kt + ("(?:" + Yt + "(?:" + [jt, Vt, qt].join("|") + ")" + Jt + Kt + ")*"),
                         Qt = "(?:" + [Dt, Vt, qt].join("|") + ")" + $t,
                         Zt = "(?:" + [jt + Mt + "?", Mt, Vt, qt, Nt].join("|") + ")",
-                        te = RegExp(Rt, "g"),
+                        te = RegExp(Pt, "g"),
                         ee = RegExp(Mt, "g"),
                         ne = RegExp(Ut + "(?=" + Ut + ")|" + Zt + $t, "g"),
                         re = RegExp([zt + "?" + Bt + "+" + Wt + "(?=" + [It, zt, "$"].join("|") + ")", Gt + "+" + Xt + "(?=" + [It, zt + Ht, "$"].join("|") + ")", zt + "?" + Ht + "+" + Wt, zt + "+" + Xt, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", Lt, Qt].join("|"), "g"),
@@ -34372,9 +34372,9 @@
                         se = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         ae = -1,
                         le = {};
-                    le[D] = le[B] = le[F] = le[U] = le[j] = le[V] = le[q] = le[z] = le[Y] = !0, le[y] = le[b] = le[M] = le[_] = le[L] = le[w] = le[x] = le[E] = le[T] = le[C] = le[A] = le[O] = le[P] = le[R] = le[I] = !1;
+                    le[D] = le[B] = le[F] = le[U] = le[j] = le[V] = le[q] = le[z] = le[Y] = !0, le[y] = le[b] = le[M] = le[_] = le[L] = le[w] = le[x] = le[E] = le[T] = le[C] = le[A] = le[O] = le[R] = le[P] = le[I] = !1;
                     var ue = {};
-                    ue[y] = ue[b] = ue[M] = ue[L] = ue[_] = ue[w] = ue[D] = ue[B] = ue[F] = ue[U] = ue[j] = ue[T] = ue[C] = ue[A] = ue[O] = ue[P] = ue[R] = ue[N] = ue[V] = ue[q] = ue[z] = ue[Y] = !0, ue[x] = ue[E] = ue[I] = !1;
+                    ue[y] = ue[b] = ue[M] = ue[L] = ue[_] = ue[w] = ue[D] = ue[B] = ue[F] = ue[U] = ue[j] = ue[T] = ue[C] = ue[A] = ue[O] = ue[R] = ue[P] = ue[N] = ue[V] = ue[q] = ue[z] = ue[Y] = !0, ue[x] = ue[E] = ue[I] = !1;
                     var ce = {
                             "\\": "\\",
                             "'": "'",
@@ -34432,12 +34432,12 @@
                         return t
                     }
 
-                    function Pe(t, e) {
+                    function Re(t, e) {
                         for (var n = null == t ? 0 : t.length; n-- && !1 !== e(t[n], n, t););
                         return t
                     }
 
-                    function Re(t, e) {
+                    function Pe(t, e) {
                         for (var n = -1, r = null == t ? 0 : t.length; ++n < r;)
                             if (!e(t[n], n, t)) return !1;
                         return !0
@@ -34865,8 +34865,8 @@
                             At = e.Math,
                             kt = e.Object,
                             Ot = e.RegExp,
-                            Pt = e.String,
-                            Rt = e.TypeError,
+                            Rt = e.String,
+                            Pt = e.TypeError,
                             Nt = r.prototype,
                             It = Ct.prototype,
                             Mt = kt.prototype,
@@ -34917,8 +34917,8 @@
                             An = po(e, "Promise"),
                             kn = po(e, "Set"),
                             On = po(e, "WeakMap"),
-                            Pn = po(kt, "create"),
-                            Rn = On && new On,
+                            Rn = po(kt, "create"),
+                            Pn = On && new On,
                             Nn = {},
                             In = Fo(Tn),
                             Mn = Fo(Cn),
@@ -35001,7 +35001,7 @@
                                 i = !n && !r && Xs(t),
                                 o = !n && !r && !i && ua(t),
                                 s = n || r || i || o,
-                                a = s ? $e(t.length, Pt) : [],
+                                a = s ? $e(t.length, Rt) : [],
                                 l = a.length;
                             for (var u in t) !e && !Bt.call(t, u) || s && ("length" == u || i && ("offset" == u || "parent" == u) || o && ("buffer" == u || "byteLength" == u || "byteOffset" == u) || _o(u, l)) || a.push(u);
                             return a
@@ -35013,11 +35013,11 @@
                         }
 
                         function Zn(t, e) {
-                            return Lo(Pi(t), lr(e, 0, t.length))
+                            return Lo(Ri(t), lr(e, 0, t.length))
                         }
 
                         function tr(t) {
-                            return Lo(Pi(t))
+                            return Lo(Ri(t))
                         }
 
                         function er(t, e, n) {
@@ -35042,7 +35042,7 @@
                         }
 
                         function or(t, e) {
-                            return t && Ri(e, Ra(e), t)
+                            return t && Pi(e, Pa(e), t)
                         }
 
                         function sr(t, e, n) {
@@ -35076,18 +35076,18 @@
                                             n = new t.constructor(e);
                                         e && "string" == typeof t[0] && Bt.call(t, "index") && (n.index = t.index, n.input = t.input);
                                         return n
-                                    }(t), !l) return Pi(t, a)
+                                    }(t), !l) return Ri(t, a)
                             } else {
                                 var p = go(t),
                                     d = p == E || p == S;
                                 if (Xs(t)) return Si(t, l);
                                 if (p == A || p == y || d && !o) {
                                     if (a = u || d ? {} : yo(t), !l) return u ? function(t, e) {
-                                        return Ri(t, mo(t), e)
+                                        return Pi(t, mo(t), e)
                                     }(t, function(t, e) {
-                                        return t && Ri(e, Na(e), t)
+                                        return t && Pi(e, Na(e), t)
                                     }(a, t)) : function(t, e) {
-                                        return Ri(t, fo(t), e)
+                                        return Pi(t, fo(t), e)
                                     }(t, or(a, t))
                                 } else {
                                     if (!ue[p]) return o ? t : {};
@@ -35117,14 +35117,14 @@
                                             case T:
                                                 return new r;
                                             case C:
-                                            case R:
+                                            case P:
                                                 return new r(t);
                                             case O:
                                                 return function(t) {
                                                     var e = new t.constructor(t.source, mt.exec(t));
                                                     return e.lastIndex = t.lastIndex, e
                                                 }(t);
-                                            case P:
+                                            case R:
                                                 return new r;
                                             case N:
                                                 return i = t, Un ? kt(Un.call(i)) : {}
@@ -35142,7 +35142,7 @@
                             if (na(t)) return t.forEach((function(r, i) {
                                 a.set(i, ur(r, e, n, i, t, s))
                             })), a;
-                            var m = h ? i : (c ? u ? oo : io : u ? Na : Ra)(t);
+                            var m = h ? i : (c ? u ? oo : io : u ? Na : Pa)(t);
                             return Oe(m || t, (function(r, i) {
                                 m && (r = t[i = r]), nr(a, i, ur(r, e, n, i, t, s))
                             })), a
@@ -35161,8 +35161,8 @@
                         }
 
                         function hr(t, e, n) {
-                            if ("function" != typeof t) throw new Rt(o);
-                            return Ro((function() {
+                            if ("function" != typeof t) throw new Pt(o);
+                            return Po((function() {
                                 t.apply(i, n)
                             }), e)
                         }
@@ -35196,23 +35196,23 @@
                                 _: Vn
                             }
                         }, Vn.prototype = zn.prototype, Vn.prototype.constructor = Vn, Yn.prototype = qn(zn.prototype), Yn.prototype.constructor = Yn, Hn.prototype = qn(zn.prototype), Hn.prototype.constructor = Hn, Gn.prototype.clear = function() {
-                            this.__data__ = Pn ? Pn(null) : {}, this.size = 0
+                            this.__data__ = Rn ? Rn(null) : {}, this.size = 0
                         }, Gn.prototype.delete = function(t) {
                             var e = this.has(t) && delete this.__data__[t];
                             return this.size -= e ? 1 : 0, e
                         }, Gn.prototype.get = function(t) {
                             var e = this.__data__;
-                            if (Pn) {
+                            if (Rn) {
                                 var n = e[t];
                                 return n === s ? i : n
                             }
                             return Bt.call(e, t) ? e[t] : i
                         }, Gn.prototype.has = function(t) {
                             var e = this.__data__;
-                            return Pn ? e[t] !== i : Bt.call(e, t)
+                            return Rn ? e[t] !== i : Bt.call(e, t)
                         }, Gn.prototype.set = function(t, e) {
                             var n = this.__data__;
-                            return this.size += this.has(t) ? 0 : 1, n[t] = Pn && e === i ? s : e, this
+                            return this.size += this.has(t) ? 0 : 1, n[t] = Rn && e === i ? s : e, this
                         }, Wn.prototype.clear = function() {
                             this.__data__ = [], this.size = 0
                         }, Wn.prototype.delete = function(t) {
@@ -35309,11 +35309,11 @@
                             _r = Li(!0);
 
                         function wr(t, e) {
-                            return t && br(t, e, Ra)
+                            return t && br(t, e, Pa)
                         }
 
                         function xr(t, e) {
-                            return t && _r(t, e, Ra)
+                            return t && _r(t, e, Pa)
                         }
 
                         function Er(t, e) {
@@ -35360,7 +35360,7 @@
                             return null != t && e in kt(t)
                         }
 
-                        function Pr(t, e, n) {
+                        function Rr(t, e, n) {
                             for (var o = n ? Me : Ie, s = t[0].length, a = t.length, l = a, u = r(a), c = 1 / 0, h = []; l--;) {
                                 var p = t[l];
                                 l && e && (p = Le(p, Qe(e))), c = _n(p.length, c), u[l] = !n && (e || s >= 120 && p.length >= 120) ? new Kn(l && p) : i
@@ -35382,7 +35382,7 @@
                             return h
                         }
 
-                        function Rr(t, e, n) {
+                        function Pr(t, e, n) {
                             var r = null == (t = Oo(t, e = _i(e, t))) ? t : t[Bo(Jo(e))];
                             return null == r ? i : Ae(r, t, n)
                         }
@@ -35418,11 +35418,11 @@
                                         case x:
                                             return t.name == e.name && t.message == e.message;
                                         case O:
-                                        case R:
+                                        case P:
                                             return t == e + "";
                                         case T:
                                             var a = ln;
-                                        case P:
+                                        case R:
                                             var l = 1 & r;
                                             if (a || (a = pn), t.size != e.size && !l) return !1;
                                             var u = s.get(t);
@@ -35576,7 +35576,7 @@
                                             var d = Ys(u),
                                                 f = !d && Xs(u),
                                                 m = !d && !f && ua(u);
-                                            h = u, d || f || m ? Ys(l) ? h = l : Ws(l) ? h = Pi(l) : f ? (p = !1, h = Si(u, !0)) : m ? (p = !1, h = Ci(u, !0)) : h = [] : ia(u) || zs(u) ? (h = l, zs(l) ? h = va(l) : (!ta(l) || r && $s(l)) && (h = yo(u))) : p = !1
+                                            h = u, d || f || m ? Ys(l) ? h = l : Ws(l) ? h = Ri(l) : f ? (p = !1, h = Si(u, !0)) : m ? (p = !1, h = Ci(u, !0)) : h = [] : ia(u) || zs(u) ? (h = l, zs(l) ? h = va(l) : (!ta(l) || r && $s(l)) && (h = yo(u))) : p = !1
                                         }
                                         p && (a.set(u, h), o(h, u, r, s, a), a.delete(u));
                                         er(t, n, h)
@@ -35640,7 +35640,7 @@
                                 o = -1,
                                 s = e.length,
                                 a = t;
-                            for (t === e && (e = Pi(e)), n && (a = Le(t, Qe(n))); ++o < s;)
+                            for (t === e && (e = Ri(e)), n && (a = Le(t, Qe(n))); ++o < s;)
                                 for (var l = 0, u = e[o], c = n ? n(u) : u;
                                     (l = i(a, c, l, r)) > -1;) a !== t && $t.call(a, l, 1), $t.call(t, l, 1);
                             return t
@@ -35696,8 +35696,8 @@
                             }
                             return t
                         }
-                        var ei = Rn ? function(t, e) {
-                                return Rn.set(t, e), t
+                        var ei = Pn ? function(t, e) {
+                                return Pn.set(t, e), t
                             } : rl,
                             ni = ie ? function(t, e) {
                                 return ie(t, "toString", {
@@ -35911,14 +35911,14 @@
                             return p
                         }
 
-                        function Pi(t, e) {
+                        function Ri(t, e) {
                             var n = -1,
                                 i = t.length;
                             for (e || (e = r(i)); ++n < i;) e[n] = t[n];
                             return e
                         }
 
-                        function Ri(t, e, n, r) {
+                        function Pi(t, e, n, r) {
                             var o = !n;
                             n || (n = {});
                             for (var s = -1, a = e.length; ++s < a;) {
@@ -36018,7 +36018,7 @@
                                 var o = kt(e);
                                 if (!Gs(e)) {
                                     var s = uo(n, 3);
-                                    e = Ra(e), n = function(t) {
+                                    e = Pa(e), n = function(t) {
                                         return s(o[t], t, o)
                                     }
                                 }
@@ -36034,7 +36034,7 @@
                                     s = Yn.prototype.thru;
                                 for (t && e.reverse(); r--;) {
                                     var a = e[r];
-                                    if ("function" != typeof a) throw new Rt(o);
+                                    if ("function" != typeof a) throw new Pt(o);
                                     if (s && !l && "wrapper" == ao(a)) var l = new Yn([], !0)
                                 }
                                 for (r = l ? r : n; ++r < n;) {
@@ -36075,7 +36075,7 @@
                                 return b = _.length, u ? _ = function(t, e) {
                                     var n = t.length,
                                         r = _n(e.length, n),
-                                        o = Pi(t);
+                                        o = Ri(t);
                                     for (; r--;) {
                                         var s = e[r];
                                         t[r] = _o(s, n) ? o[s] : i
@@ -36146,7 +36146,7 @@
                             e |= d ? u : c, 4 & (e &= ~(d ? c : u)) || (e &= -4);
                             var f = [t, e, o, d ? s : i, d ? a : i, d ? i : s, d ? i : a, l, h, p],
                                 m = n.apply(i, f);
-                            return Eo(t) && Po(m, f), m.placeholder = r, Io(m, t, e)
+                            return Eo(t) && Ro(m, f), m.placeholder = r, Io(m, t, e)
                         }
 
                         function Ki(t) {
@@ -36166,7 +36166,7 @@
                         function $i(t) {
                             return function(e) {
                                 var n = go(e);
-                                return n == T ? ln(e) : n == P ? dn(e) : function(t, e) {
+                                return n == T ? ln(e) : n == R ? dn(e) : function(t, e) {
                                     return Le(e, (function(e) {
                                         return [e, t[e]]
                                     }))
@@ -36176,7 +36176,7 @@
 
                         function Qi(t, e, n, s, d, f, m, g) {
                             var v = 2 & e;
-                            if (!v && "function" != typeof t) throw new Rt(o);
+                            if (!v && "function" != typeof t) throw new Pt(o);
                             var y = s ? s.length : 0;
                             if (y || (e &= -97, s = d = i), m = m === i ? m : bn(fa(m), 0), g = g === i ? g : fa(g), y -= d ? d.length : 0, e & c) {
                                 var b = s,
@@ -36225,7 +36225,7 @@
                                     return (this && this !== me && this instanceof e ? i : t).apply(r ? n : this, arguments)
                                 }
                             }(t, e, n);
-                            return Io((w ? ei : Po)(E, x), t, e)
+                            return Io((w ? ei : Ro)(E, x), t, e)
                         }
 
                         function Zi(t, e, n, r) {
@@ -36279,14 +36279,14 @@
                         }
 
                         function io(t) {
-                            return Tr(t, Ra, fo)
+                            return Tr(t, Pa, fo)
                         }
 
                         function oo(t) {
                             return Tr(t, Na, mo)
                         }
-                        var so = Rn ? function(t) {
-                            return Rn.get(t)
+                        var so = Pn ? function(t) {
+                            return Pn.get(t)
                         } : ll;
 
                         function ao(t) {
@@ -36313,7 +36313,7 @@
                         }
 
                         function ho(t) {
-                            for (var e = Ra(t), n = e.length; n--;) {
+                            for (var e = Pa(t), n = e.length; n--;) {
                                 var r = e[n],
                                     i = t[r];
                                 e[n] = [r, i, Co(i)]
@@ -36379,7 +36379,7 @@
                             if (t === n) return !0;
                             var r = so(n);
                             return !!r && t === r[0]
-                        }(Tn && go(new Tn(new ArrayBuffer(1))) != L || Cn && go(new Cn) != T || An && go(An.resolve()) != k || kn && go(new kn) != P || On && go(new On) != I) && (go = function(t) {
+                        }(Tn && go(new Tn(new ArrayBuffer(1))) != L || Cn && go(new Cn) != T || An && go(An.resolve()) != k || kn && go(new kn) != R || On && go(new On) != I) && (go = function(t) {
                             var e = Cr(t),
                                 n = e == A ? t.constructor : i,
                                 r = n ? Fo(n) : "";
@@ -36391,7 +36391,7 @@
                                 case Ln:
                                     return k;
                                 case Dn:
-                                    return P;
+                                    return R;
                                 case Bn:
                                     return I
                             }
@@ -36427,8 +36427,8 @@
                         function Oo(t, e) {
                             return e.length < 2 ? t : Sr(t, ii(e, 0, -1))
                         }
-                        var Po = Mo(ei),
-                            Ro = fe || function(t, e) {
+                        var Ro = Mo(ei),
+                            Po = fe || function(t, e) {
                                 return me.setTimeout(t, e)
                             },
                             No = Mo(ni);
@@ -36509,7 +36509,7 @@
                         function Uo(t) {
                             if (t instanceof Hn) return t.clone();
                             var e = new Yn(t.__wrapped__, t.__chain__);
-                            return e.__actions__ = Pi(t.__actions__), e.__index__ = t.__index__, e.__values__ = t.__values__, e
+                            return e.__actions__ = Ri(t.__actions__), e.__index__ = t.__index__, e.__values__ = t.__values__, e
                         }
                         var jo = $r((function(t, e) {
                                 return Ws(t) ? pr(t, yr(e, 1, Ws, !0)) : []
@@ -36546,17 +36546,17 @@
                         }
                         var Wo = $r((function(t) {
                                 var e = Le(t, yi);
-                                return e.length && e[0] === t[0] ? Pr(e) : []
+                                return e.length && e[0] === t[0] ? Rr(e) : []
                             })),
                             Xo = $r((function(t) {
                                 var e = Jo(t),
                                     n = Le(t, yi);
-                                return e === Jo(n) ? e = i : n.pop(), n.length && n[0] === t[0] ? Pr(n, uo(e, 2)) : []
+                                return e === Jo(n) ? e = i : n.pop(), n.length && n[0] === t[0] ? Rr(n, uo(e, 2)) : []
                             })),
                             Ko = $r((function(t) {
                                 var e = Jo(t),
                                     n = Le(t, yi);
-                                return (e = "function" == typeof e ? e : i) && n.pop(), n.length && n[0] === t[0] ? Pr(n, i, e) : []
+                                return (e = "function" == typeof e ? e : i) && n.pop(), n.length && n[0] === t[0] ? Rr(n, i, e) : []
                             }));
 
                         function Jo(t) {
@@ -36663,7 +36663,7 @@
                         }
 
                         function bs(t, e) {
-                            return (Ys(t) ? Pe : fr)(t, uo(e, 3))
+                            return (Ys(t) ? Re : fr)(t, uo(e, 3))
                         }
                         var _s = Ni((function(t, e, n) {
                             Bt.call(t, n) ? t[n].push(e) : sr(t, n, [e])
@@ -36673,7 +36673,7 @@
                                     o = "function" == typeof e,
                                     s = Gs(t) ? r(t.length) : [];
                                 return dr(t, (function(t) {
-                                    s[++i] = o ? Ae(e, t, n) : Rr(t, e, n)
+                                    s[++i] = o ? Ae(e, t, n) : Pr(t, e, n)
                                 })), s
                             })),
                             xs = Ni((function(t, e, n) {
@@ -36706,7 +36706,7 @@
 
                         function ks(t, e) {
                             var n;
-                            if ("function" != typeof e) throw new Rt(o);
+                            if ("function" != typeof e) throw new Pt(o);
                             return t = fa(t),
                                 function() {
                                     return --t > 0 && (n = e.apply(this, arguments)), t <= 1 && (e = i), n
@@ -36720,21 +36720,21 @@
                                 }
                                 return Qi(t, r, e, n, i)
                             })),
-                            Ps = $r((function(t, e, n) {
+                            Rs = $r((function(t, e, n) {
                                 var r = 3;
                                 if (n.length) {
-                                    var i = cn(n, lo(Ps));
+                                    var i = cn(n, lo(Rs));
                                     r |= u
                                 }
                                 return Qi(e, r, t, n, i)
                             }));
 
-                        function Rs(t, e, n) {
+                        function Ps(t, e, n) {
                             var r, s, a, l, u, c, h = 0,
                                 p = !1,
                                 d = !1,
                                 f = !0;
-                            if ("function" != typeof t) throw new Rt(o);
+                            if ("function" != typeof t) throw new Pt(o);
 
                             function m(e) {
                                 var n = r,
@@ -36750,7 +36750,7 @@
                             function v() {
                                 var t = Cs();
                                 if (g(t)) return y(t);
-                                u = Ro(v, function(t) {
+                                u = Po(v, function(t) {
                                     var n = e - (t - c);
                                     return d ? _n(n, a - (t - h)) : n
                                 }(t))
@@ -36765,11 +36765,11 @@
                                     n = g(t);
                                 if (r = arguments, s = this, c = t, n) {
                                     if (u === i) return function(t) {
-                                        return h = t, u = Ro(v, e), p ? m(t) : l
+                                        return h = t, u = Po(v, e), p ? m(t) : l
                                     }(c);
-                                    if (d) return u = Ro(v, e), m(c)
+                                    if (d) return u = Po(v, e), m(c)
                                 }
-                                return u === i && (u = Ro(v, e)), l
+                                return u === i && (u = Po(v, e)), l
                             }
                             return e = ga(e) || 0, ta(n) && (p = !!n.leading, a = (d = "maxWait" in n) ? bn(ga(n.maxWait) || 0, e) : a, f = "trailing" in n ? !!n.trailing : f), b.cancel = function() {
                                 u !== i && Ei(u), h = 0, r = c = s = u = i
@@ -36785,7 +36785,7 @@
                             }));
 
                         function Ms(t, e) {
-                            if ("function" != typeof t || null != e && "function" != typeof e) throw new Rt(o);
+                            if ("function" != typeof t || null != e && "function" != typeof e) throw new Pt(o);
                             var n = function() {
                                 var r = arguments,
                                     i = e ? e.apply(this, r) : r[0],
@@ -36798,7 +36798,7 @@
                         }
 
                         function Ls(t) {
-                            if ("function" != typeof t) throw new Rt(o);
+                            if ("function" != typeof t) throw new Pt(o);
                             return function() {
                                 var e = arguments;
                                 switch (e.length) {
@@ -36910,11 +36910,11 @@
                             return ea(t) && Cr(t) == O
                         };
                         var sa = Te ? Qe(Te) : function(t) {
-                            return ea(t) && go(t) == P
+                            return ea(t) && go(t) == R
                         };
 
                         function aa(t) {
-                            return "string" == typeof t || !Ys(t) && ea(t) && Cr(t) == R
+                            return "string" == typeof t || !Ys(t) && ea(t) && Cr(t) == P
                         }
 
                         function la(t) {
@@ -36930,13 +36930,13 @@
 
                         function pa(t) {
                             if (!t) return [];
-                            if (Gs(t)) return aa(t) ? mn(t) : Pi(t);
+                            if (Gs(t)) return aa(t) ? mn(t) : Ri(t);
                             if (Zt && t[Zt]) return function(t) {
                                 for (var e, n = []; !(e = t.next()).done;) n.push(e.value);
                                 return n
                             }(t[Zt]());
                             var e = go(t);
-                            return (e == T ? ln : e == P ? pn : ja)(t)
+                            return (e == T ? ln : e == R ? pn : ja)(t)
                         }
 
                         function da(t) {
@@ -36967,25 +36967,25 @@
                         }
 
                         function va(t) {
-                            return Ri(t, Na(t))
+                            return Pi(t, Na(t))
                         }
 
                         function ya(t) {
                             return null == t ? "" : ci(t)
                         }
                         var ba = Ii((function(t, e) {
-                                if (To(e) || Gs(e)) Ri(e, Ra(e), t);
+                                if (To(e) || Gs(e)) Pi(e, Pa(e), t);
                                 else
                                     for (var n in e) Bt.call(e, n) && nr(t, n, e[n])
                             })),
                             _a = Ii((function(t, e) {
-                                Ri(e, Na(e), t)
+                                Pi(e, Na(e), t)
                             })),
                             wa = Ii((function(t, e, n, r) {
-                                Ri(e, Na(e), t, r)
+                                Pi(e, Na(e), t, r)
                             })),
                             xa = Ii((function(t, e, n, r) {
-                                Ri(e, Ra(e), t, r)
+                                Pi(e, Pa(e), t, r)
                             })),
                             Ea = ro(ar);
                         var Sa = $r((function(t, e) {
@@ -37019,9 +37019,9 @@
                             Oa = qi((function(t, e, n) {
                                 null != e && "function" != typeof e.toString && (e = jt.call(e)), Bt.call(t, e) ? t[e].push(n) : t[e] = [n]
                             }), uo),
-                            Pa = $r(Rr);
+                            Ra = $r(Pr);
 
-                        function Ra(t) {
+                        function Pa(t) {
                             return Gs(t) ? $n(t) : Br(t)
                         }
 
@@ -37040,7 +37040,7 @@
                                 var r = !1;
                                 e = Le(e, (function(e) {
                                     return e = _i(e, t), r || (r = e.length > 1), e
-                                })), Ri(t, oo(t), n), r && (n = ur(n, 7, eo));
+                                })), Pi(t, oo(t), n), r && (n = ur(n, 7, eo));
                                 for (var i = e.length; i--;) pi(n, e[i]);
                                 return n
                             }));
@@ -37061,11 +37061,11 @@
                                 return e(t, n[0])
                             }))
                         }
-                        var Fa = $i(Ra),
+                        var Fa = $i(Pa),
                             Ua = $i(Na);
 
                         function ja(t) {
-                            return null == t ? [] : Ze(t, Ra(t))
+                            return null == t ? [] : Ze(t, Pa(t))
                         }
                         var Va = Bi((function(t, e, n) {
                             return e = e.toLowerCase(), t + (n ? qa(e) : e)
@@ -37135,19 +37135,19 @@
                         }
                         var ol = $r((function(t, e) {
                                 return function(n) {
-                                    return Rr(n, t, e)
+                                    return Pr(n, t, e)
                                 }
                             })),
                             sl = $r((function(t, e) {
                                 return function(n) {
-                                    return Rr(t, n, e)
+                                    return Pr(t, n, e)
                                 }
                             }));
 
                         function al(t, e, n) {
-                            var r = Ra(e),
+                            var r = Pa(e),
                                 i = Er(e, r);
-                            null != n || ta(e) && (i.length || !r.length) || (n = e, e = t, t = this, i = Er(e, Ra(e)));
+                            null != n || ta(e) && (i.length || !r.length) || (n = e, e = t, t = this, i = Er(e, Pa(e)));
                             var o = !(ta(n) && "chain" in n && !n.chain),
                                 s = $s(t);
                             return Oe(i, (function(n) {
@@ -37156,7 +37156,7 @@
                                     var e = this.__chain__;
                                     if (o || e) {
                                         var n = t(this.__wrapped__);
-                                        return (n.__actions__ = Pi(this.__actions__)).push({
+                                        return (n.__actions__ = Ri(this.__actions__)).push({
                                             func: r,
                                             args: arguments,
                                             thisArg: t
@@ -37169,7 +37169,7 @@
 
                         function ll() {}
                         var ul = Yi(Le),
-                            cl = Yi(Re),
+                            cl = Yi(Pe),
                             hl = Yi(Ue);
 
                         function pl(t) {
@@ -37205,12 +37205,12 @@
                                 return t - e
                             }), 0);
                         return Vn.after = function(t, e) {
-                            if ("function" != typeof e) throw new Rt(o);
+                            if ("function" != typeof e) throw new Pt(o);
                             return t = fa(t),
                                 function() {
                                     if (--t < 1) return e.apply(this, arguments)
                                 }
-                        }, Vn.ary = As, Vn.assign = ba, Vn.assignIn = _a, Vn.assignInWith = wa, Vn.assignWith = xa, Vn.at = Ea, Vn.before = ks, Vn.bind = Os, Vn.bindAll = Za, Vn.bindKey = Ps, Vn.castArray = function() {
+                        }, Vn.ary = As, Vn.assign = ba, Vn.assignIn = _a, Vn.assignInWith = wa, Vn.assignWith = xa, Vn.at = Ea, Vn.before = ks, Vn.bind = Os, Vn.bindAll = Za, Vn.bindKey = Rs, Vn.castArray = function() {
                             if (!arguments.length) return [];
                             var t = arguments[0];
                             return Ys(t) ? t : [t]
@@ -37230,12 +37230,12 @@
                             var t = arguments.length;
                             if (!t) return [];
                             for (var e = r(t - 1), n = arguments[0], i = t; i--;) e[i - 1] = arguments[i];
-                            return De(Ys(n) ? Pi(n) : [n], yr(e, 1))
+                            return De(Ys(n) ? Ri(n) : [n], yr(e, 1))
                         }, Vn.cond = function(t) {
                             var e = null == t ? 0 : t.length,
                                 n = uo();
                             return t = e ? Le(t, (function(t) {
-                                if ("function" != typeof t[1]) throw new Rt(o);
+                                if ("function" != typeof t[1]) throw new Pt(o);
                                 return [n(t[0]), t[1]]
                             })) : [], $r((function(n) {
                                 for (var r = -1; ++r < e;) {
@@ -37245,7 +37245,7 @@
                             }))
                         }, Vn.conforms = function(t) {
                             return function(t) {
-                                var e = Ra(t);
+                                var e = Pa(t);
                                 return function(n) {
                                     return cr(n, t, e)
                                 }
@@ -37259,7 +37259,7 @@
                         }, Vn.curryRight = function t(e, n, r) {
                             var o = Qi(e, l, i, i, i, i, i, n = r ? i : n);
                             return o.placeholder = t.placeholder, o
-                        }, Vn.debounce = Rs, Vn.defaults = Sa, Vn.defaultsDeep = Ta, Vn.defer = Ns, Vn.delay = Is, Vn.difference = jo, Vn.differenceBy = Vo, Vn.differenceWith = qo, Vn.drop = function(t, e, n) {
+                        }, Vn.debounce = Ps, Vn.defaults = Sa, Vn.defaultsDeep = Ta, Vn.defer = Ns, Vn.delay = Is, Vn.difference = jo, Vn.differenceBy = Vo, Vn.differenceWith = qo, Vn.drop = function(t, e, n) {
                             var r = null == t ? 0 : t.length;
                             return r ? ii(t, (e = n || e === i ? 1 : fa(e)) < 0 ? 0 : e, r) : []
                         }, Vn.dropRight = function(t, e, n) {
@@ -37297,12 +37297,12 @@
                             }
                             return r
                         }, Vn.functions = function(t) {
-                            return null == t ? [] : Er(t, Ra(t))
+                            return null == t ? [] : Er(t, Pa(t))
                         }, Vn.functionsIn = function(t) {
                             return null == t ? [] : Er(t, Na(t))
                         }, Vn.groupBy = _s, Vn.initial = function(t) {
                             return (null == t ? 0 : t.length) ? ii(t, 0, -1) : []
-                        }, Vn.intersection = Wo, Vn.intersectionBy = Xo, Vn.intersectionWith = Ko, Vn.invert = ka, Vn.invertBy = Oa, Vn.invokeMap = ws, Vn.iteratee = il, Vn.keyBy = xs, Vn.keys = Ra, Vn.keysIn = Na, Vn.map = Es, Vn.mapKeys = function(t, e) {
+                        }, Vn.intersection = Wo, Vn.intersectionBy = Xo, Vn.intersectionWith = Ko, Vn.invert = ka, Vn.invertBy = Oa, Vn.invokeMap = ws, Vn.iteratee = il, Vn.keyBy = xs, Vn.keys = Pa, Vn.keysIn = Na, Vn.map = Es, Vn.mapKeys = function(t, e) {
                             var n = {};
                             return e = uo(e, 3), wr(t, (function(t, r, i) {
                                 sr(n, e(t, r, i), t)
@@ -37348,7 +37348,7 @@
                             }
                             return Xr(t, i), n
                         }, Vn.rest = function(t, e) {
-                            if ("function" != typeof t) throw new Rt(o);
+                            if ("function" != typeof t) throw new Pt(o);
                             return $r(t, e = e === i ? e : fa(e))
                         }, Vn.reverse = ts, Vn.sampleSize = function(t, e, n) {
                             return e = (n ? wo(t, e, n) : e === i) ? 1 : fa(e), (Ys(t) ? Zn : Zr)(t, e)
@@ -37368,7 +37368,7 @@
                         }, Vn.split = function(t, e, n) {
                             return n && "number" != typeof n && wo(t, e, n) && (e = n = i), (n = n === i ? g : n >>> 0) ? (t = ya(t)) && ("string" == typeof e || null != e && !oa(e)) && !(e = ci(e)) && an(t) ? xi(mn(t), 0, n) : t.split(e, n) : []
                         }, Vn.spread = function(t, e) {
-                            if ("function" != typeof t) throw new Rt(o);
+                            if ("function" != typeof t) throw new Pt(o);
                             return e = null == e ? 0 : bn(fa(e), 0), $r((function(n) {
                                 var r = n[e],
                                     i = xi(n, 0, e);
@@ -37391,14 +37391,14 @@
                         }, Vn.throttle = function(t, e, n) {
                             var r = !0,
                                 i = !0;
-                            if ("function" != typeof t) throw new Rt(o);
-                            return ta(n) && (r = "leading" in n ? !!n.leading : r, i = "trailing" in n ? !!n.trailing : i), Rs(t, e, {
+                            if ("function" != typeof t) throw new Pt(o);
+                            return ta(n) && (r = "leading" in n ? !!n.leading : r, i = "trailing" in n ? !!n.trailing : i), Ps(t, e, {
                                 leading: r,
                                 maxWait: e,
                                 trailing: i
                             })
                         }, Vn.thru = ds, Vn.toArray = pa, Vn.toPairs = Fa, Vn.toPairsIn = Ua, Vn.toPath = function(t) {
-                            return Ys(t) ? Le(t, Bo) : la(t) ? [t] : Pi(Do(ya(t)))
+                            return Ys(t) ? Le(t, Bo) : la(t) ? [t] : Ri(Do(ya(t)))
                         }, Vn.toPlainObject = va, Vn.transform = function(t, e, n) {
                             var r = Ys(t),
                                 i = r || Xs(t) || ua(t);
@@ -37442,7 +37442,7 @@
                         }, Vn.cloneWith = function(t, e) {
                             return ur(t, 4, e = "function" == typeof e ? e : i)
                         }, Vn.conformsTo = function(t, e) {
-                            return null == e || cr(t, e, Ra(e))
+                            return null == e || cr(t, e, Pa(e))
                         }, Vn.deburr = za, Vn.defaultTo = function(t, e) {
                             return null == t || t != t ? e : t
                         }, Vn.divide = bl, Vn.endsWith = function(t, e, n) {
@@ -37455,7 +37455,7 @@
                         }, Vn.escapeRegExp = function(t) {
                             return (t = ya(t)) && ot.test(t) ? t.replace(it, "\\$&") : t
                         }, Vn.every = function(t, e, n) {
-                            var r = Ys(t) ? Re : mr;
+                            var r = Ys(t) ? Pe : mr;
                             return n && wo(t, e, n) && (e = i), r(t, uo(e, 3))
                         }, Vn.find = gs, Vn.findIndex = zo, Vn.findKey = function(t, e) {
                             return Ve(t, uo(e, 3), wr)
@@ -37485,7 +37485,7 @@
                                 function(t, e, n) {
                                     return t >= _n(e, n) && t < bn(e, n)
                                 }(t = ga(t), e, n)
-                        }, Vn.invoke = Pa, Vn.isArguments = zs, Vn.isArray = Ys, Vn.isArrayBuffer = Hs, Vn.isArrayLike = Gs, Vn.isArrayLikeObject = Ws, Vn.isBoolean = function(t) {
+                        }, Vn.invoke = Ra, Vn.isArguments = zs, Vn.isArray = Ys, Vn.isArrayBuffer = Hs, Vn.isArrayLike = Gs, Vn.isArrayLikeObject = Ws, Vn.isBoolean = function(t) {
                             return !0 === t || !1 === t || ea(t) && Cr(t) == _
                         }, Vn.isBuffer = Xs, Vn.isDate = Ks, Vn.isElement = function(t) {
                             return ea(t) && 1 === t.nodeType && !ia(t)
@@ -37493,7 +37493,7 @@
                             if (null == t) return !0;
                             if (Gs(t) && (Ys(t) || "string" == typeof t || "function" == typeof t.splice || Xs(t) || ua(t) || zs(t))) return !t.length;
                             var e = go(t);
-                            if (e == T || e == P) return !t.size;
+                            if (e == T || e == R) return !t.size;
                             if (To(t)) return !Br(t).length;
                             for (var n in t)
                                 if (Bt.call(t, n)) return !1;
@@ -37613,7 +37613,7 @@
                             if (null == t) return 0;
                             if (Gs(t)) return aa(t) ? fn(t) : t.length;
                             var e = go(t);
-                            return e == T || e == P ? t.size : Br(t).length
+                            return e == T || e == R ? t.size : Br(t).length
                         }, Vn.snakeCase = Wa, Vn.some = function(t, e, n) {
                             var r = Ys(t) ? Ue : oi;
                             return n && wo(t, e, n) && (e = i), r(t, uo(e, 3))
@@ -37648,7 +37648,7 @@
                             var r = Vn.templateSettings;
                             n && wo(t, e, n) && (e = i), t = ya(t), e = wa({}, e, r, Zi);
                             var o, s, a = wa({}, e.imports, r.imports, Zi),
-                                l = Ra(a),
+                                l = Pa(a),
                                 u = Ze(a, l),
                                 c = 0,
                                 h = e.interpolate || xt,
@@ -37772,7 +37772,7 @@
                             return this.reverse().find(t)
                         }, Hn.prototype.invokeMap = $r((function(t, e) {
                             return "function" == typeof t ? new Hn(this) : this.map((function(n) {
-                                return Rr(n, t, e)
+                                return Pr(n, t, e)
                             }))
                         })), Hn.prototype.reject = function(t) {
                             return this.filter(Ls(uo(t)))
@@ -37843,7 +37843,7 @@
                             func: i
                         }], Hn.prototype.clone = function() {
                             var t = new Hn(this.__wrapped__);
-                            return t.__actions__ = Pi(this.__actions__), t.__dir__ = this.__dir__, t.__filtered__ = this.__filtered__, t.__iteratees__ = Pi(this.__iteratees__), t.__takeCount__ = this.__takeCount__, t.__views__ = Pi(this.__views__), t
+                            return t.__actions__ = Ri(this.__actions__), t.__dir__ = this.__dir__, t.__filtered__ = this.__filtered__, t.__iteratees__ = Ri(this.__iteratees__), t.__takeCount__ = this.__takeCount__, t.__views__ = Ri(this.__views__), t
                         }, Hn.prototype.reverse = function() {
                             if (this.__filtered__) {
                                 var t = new Hn(this);
@@ -39031,18 +39031,18 @@
                 var A = 0,
                     k = [],
                     O = {},
-                    P = {},
-                    R = !1,
+                    R = {},
+                    P = !1,
                     N = 0,
                     I = new r.Parser({
                         onopentag: function(t, n) {
-                            if (R) N++;
+                            if (P) N++;
                             else {
                                 var r = new _(t, n);
                                 k.push(r);
                                 var i, o = !1,
                                     l = !!r.text;
-                                f(C, t) && (i = C[t](t, n), r.attribs = n = i.attribs, void 0 !== i.text && (r.innerText = i.text), t !== i.tagName && (r.name = t = i.tagName, P[A] = i.tagName)), T && (i = T(t, n), r.attribs = n = i.attribs, t !== i.tagName && (r.name = t = i.tagName, P[A] = i.tagName)), e.allowedTags && -1 === e.allowedTags.indexOf(t) && (o = !0, -1 !== E.indexOf(t) && (R = !0, N = 1), O[A] = !0), A++, o || (b += "<" + t, (!w || f(w, t) || w["*"]) && d(n, (function(n, i) {
+                                f(C, t) && (i = C[t](t, n), r.attribs = n = i.attribs, void 0 !== i.text && (r.innerText = i.text), t !== i.tagName && (r.name = t = i.tagName, R[A] = i.tagName)), T && (i = T(t, n), r.attribs = n = i.attribs, t !== i.tagName && (r.name = t = i.tagName, R[A] = i.tagName)), e.allowedTags && -1 === e.allowedTags.indexOf(t) && (o = !0, -1 !== E.indexOf(t) && (P = !0, N = 1), O[A] = !0), A++, o || (b += "<" + t, (!w || f(w, t) || w["*"]) && d(n, (function(n, i) {
                                     if (g.test(i)) {
                                         var o, l = !1;
                                         if (!w || f(w, t) && -1 !== w[t].indexOf(i) || w["*"] && -1 !== w["*"].indexOf(i) || f(x, t) && x[t].test(i) || x["*"] && x["*"].test(i)) l = !0;
@@ -39059,19 +39059,19 @@
                                                         if (!0 === C.multiple) {
                                                             var k = n.split(" "),
                                                                 O = !0,
-                                                                P = !1,
-                                                                R = void 0;
+                                                                R = !1,
+                                                                P = void 0;
                                                             try {
                                                                 for (var N, I = k[Symbol.iterator](); !(O = (N = I.next()).done); O = !0) {
                                                                     var D = N.value; - 1 !== C.values.indexOf(D) && ("" === A ? A = D : A += " " + D)
                                                                 }
                                                             } catch (t) {
-                                                                P = !0, R = t
+                                                                R = !0, P = t
                                                             } finally {
                                                                 try {
                                                                     !O && I.return && I.return()
                                                                 } finally {
-                                                                    if (P) throw R
+                                                                    if (R) throw P
                                                                 }
                                                             }
                                                         } else C.values.indexOf(n) >= 0 && (A = n);
@@ -39152,7 +39152,7 @@
                             }
                         },
                         ontext: function(t) {
-                            if (!R) {
+                            if (!P) {
                                 var n, r = k[k.length - 1];
                                 if (r && (n = r.tag, t = void 0 !== r.innerText ? r.innerText : t), "script" === n || "style" === n) b += t;
                                 else {
@@ -39163,14 +39163,14 @@
                             }
                         },
                         onclosetag: function(t) {
-                            if (R) {
+                            if (P) {
                                 if (--N) return;
-                                R = !1
+                                P = !1
                             }
                             var n = k.pop();
                             if (n) {
-                                if (R = !1, A--, O[A]) return delete O[A], void n.updateParentNodeText();
-                                P[A] && (t = P[A], delete P[A]), e.exclusiveFilter && e.exclusiveFilter(n) ? b = b.substr(0, n.tagPosition) : (n.updateParentNodeText(), -1 === e.selfClosing.indexOf(t) && (b += "</" + t + ">"))
+                                if (P = !1, A--, O[A]) return delete O[A], void n.updateParentNodeText();
+                                R[A] && (t = R[A], delete R[A]), e.exclusiveFilter && e.exclusiveFilter(n) ? b = b.substr(0, n.tagPosition) : (n.updateParentNodeText(), -1 === e.selfClosing.indexOf(t) && (b += "</" + t + ">"))
                             }
                         }
                     }, e.parser);
@@ -39484,8 +39484,8 @@
                 A = a++,
                 k = a++,
                 O = a++,
-                P = a++,
                 R = a++,
+                P = a++,
                 N = a++,
                 I = a++,
                 M = a++,
@@ -39587,7 +39587,7 @@
                 this._state = "-" === t ? k : C
             }, gt.prototype._stateAfterComment2 = function(t) {
                 ">" === t ? (this._cbs.oncomment(this._buffer.substring(this._sectionStart, this._index - 2)), this._state = l, this._sectionStart = this._index + 1) : "-" !== t && (this._state = C)
-            }, gt.prototype._stateBeforeCdata1 = ft("C", P, E), gt.prototype._stateBeforeCdata2 = ft("D", R, E), gt.prototype._stateBeforeCdata3 = ft("A", N, E), gt.prototype._stateBeforeCdata4 = ft("T", I, E), gt.prototype._stateBeforeCdata5 = ft("A", M, E), gt.prototype._stateBeforeCdata6 = function(t) {
+            }, gt.prototype._stateBeforeCdata1 = ft("C", R, E), gt.prototype._stateBeforeCdata2 = ft("D", P, E), gt.prototype._stateBeforeCdata3 = ft("A", N, E), gt.prototype._stateBeforeCdata4 = ft("T", I, E), gt.prototype._stateBeforeCdata5 = ft("A", M, E), gt.prototype._stateBeforeCdata6 = function(t) {
                 "[" === t ? (this._state = L, this._sectionStart = this._index + 1) : (this._state = E, this._index--)
             }, gt.prototype._stateInCdata = function(t) {
                 "]" === t && (this._state = D)
@@ -39642,7 +39642,7 @@
             }, gt.prototype._parse = function() {
                 for (; this._index < this._buffer.length && this._running;) {
                     var t = this._buffer.charAt(this._index);
-                    this._state === l ? this._stateText(t) : this._state === u ? this._stateBeforeTagName(t) : this._state === c ? this._stateInTagName(t) : this._state === p ? this._stateBeforeCloseingTagName(t) : this._state === d ? this._stateInCloseingTagName(t) : this._state === f ? this._stateAfterCloseingTagName(t) : this._state === h ? this._stateInSelfClosingTag(t) : this._state === m ? this._stateBeforeAttributeName(t) : this._state === g ? this._stateInAttributeName(t) : this._state === v ? this._stateAfterAttributeName(t) : this._state === y ? this._stateBeforeAttributeValue(t) : this._state === b ? this._stateInAttributeValueDoubleQuotes(t) : this._state === _ ? this._stateInAttributeValueSingleQuotes(t) : this._state === w ? this._stateInAttributeValueNoQuotes(t) : this._state === x ? this._stateBeforeDeclaration(t) : this._state === E ? this._stateInDeclaration(t) : this._state === S ? this._stateInProcessingInstruction(t) : this._state === T ? this._stateBeforeComment(t) : this._state === C ? this._stateInComment(t) : this._state === A ? this._stateAfterComment1(t) : this._state === k ? this._stateAfterComment2(t) : this._state === O ? this._stateBeforeCdata1(t) : this._state === P ? this._stateBeforeCdata2(t) : this._state === R ? this._stateBeforeCdata3(t) : this._state === N ? this._stateBeforeCdata4(t) : this._state === I ? this._stateBeforeCdata5(t) : this._state === M ? this._stateBeforeCdata6(t) : this._state === L ? this._stateInCdata(t) : this._state === D ? this._stateAfterCdata1(t) : this._state === B ? this._stateAfterCdata2(t) : this._state === F ? this._stateBeforeSpecial(t) : this._state === U ? this._stateBeforeSpecialEnd(t) : this._state === j ? this._stateBeforeScript1(t) : this._state === V ? this._stateBeforeScript2(t) : this._state === q ? this._stateBeforeScript3(t) : this._state === z ? this._stateBeforeScript4(t) : this._state === Y ? this._stateBeforeScript5(t) : this._state === H ? this._stateAfterScript1(t) : this._state === G ? this._stateAfterScript2(t) : this._state === W ? this._stateAfterScript3(t) : this._state === X ? this._stateAfterScript4(t) : this._state === K ? this._stateAfterScript5(t) : this._state === J ? this._stateBeforeStyle1(t) : this._state === $ ? this._stateBeforeStyle2(t) : this._state === Q ? this._stateBeforeStyle3(t) : this._state === Z ? this._stateBeforeStyle4(t) : this._state === tt ? this._stateAfterStyle1(t) : this._state === et ? this._stateAfterStyle2(t) : this._state === nt ? this._stateAfterStyle3(t) : this._state === rt ? this._stateAfterStyle4(t) : this._state === it ? this._stateBeforeEntity(t) : this._state === ot ? this._stateBeforeNumericEntity(t) : this._state === st ? this._stateInNamedEntity(t) : this._state === at ? this._stateInNumericEntity(t) : this._state === lt ? this._stateInHexEntity(t) : this._cbs.onerror(Error("unknown _state"), this._state), this._index++
+                    this._state === l ? this._stateText(t) : this._state === u ? this._stateBeforeTagName(t) : this._state === c ? this._stateInTagName(t) : this._state === p ? this._stateBeforeCloseingTagName(t) : this._state === d ? this._stateInCloseingTagName(t) : this._state === f ? this._stateAfterCloseingTagName(t) : this._state === h ? this._stateInSelfClosingTag(t) : this._state === m ? this._stateBeforeAttributeName(t) : this._state === g ? this._stateInAttributeName(t) : this._state === v ? this._stateAfterAttributeName(t) : this._state === y ? this._stateBeforeAttributeValue(t) : this._state === b ? this._stateInAttributeValueDoubleQuotes(t) : this._state === _ ? this._stateInAttributeValueSingleQuotes(t) : this._state === w ? this._stateInAttributeValueNoQuotes(t) : this._state === x ? this._stateBeforeDeclaration(t) : this._state === E ? this._stateInDeclaration(t) : this._state === S ? this._stateInProcessingInstruction(t) : this._state === T ? this._stateBeforeComment(t) : this._state === C ? this._stateInComment(t) : this._state === A ? this._stateAfterComment1(t) : this._state === k ? this._stateAfterComment2(t) : this._state === O ? this._stateBeforeCdata1(t) : this._state === R ? this._stateBeforeCdata2(t) : this._state === P ? this._stateBeforeCdata3(t) : this._state === N ? this._stateBeforeCdata4(t) : this._state === I ? this._stateBeforeCdata5(t) : this._state === M ? this._stateBeforeCdata6(t) : this._state === L ? this._stateInCdata(t) : this._state === D ? this._stateAfterCdata1(t) : this._state === B ? this._stateAfterCdata2(t) : this._state === F ? this._stateBeforeSpecial(t) : this._state === U ? this._stateBeforeSpecialEnd(t) : this._state === j ? this._stateBeforeScript1(t) : this._state === V ? this._stateBeforeScript2(t) : this._state === q ? this._stateBeforeScript3(t) : this._state === z ? this._stateBeforeScript4(t) : this._state === Y ? this._stateBeforeScript5(t) : this._state === H ? this._stateAfterScript1(t) : this._state === G ? this._stateAfterScript2(t) : this._state === W ? this._stateAfterScript3(t) : this._state === X ? this._stateAfterScript4(t) : this._state === K ? this._stateAfterScript5(t) : this._state === J ? this._stateBeforeStyle1(t) : this._state === $ ? this._stateBeforeStyle2(t) : this._state === Q ? this._stateBeforeStyle3(t) : this._state === Z ? this._stateBeforeStyle4(t) : this._state === tt ? this._stateAfterStyle1(t) : this._state === et ? this._stateAfterStyle2(t) : this._state === nt ? this._stateAfterStyle3(t) : this._state === rt ? this._stateAfterStyle4(t) : this._state === it ? this._stateBeforeEntity(t) : this._state === ot ? this._stateBeforeNumericEntity(t) : this._state === st ? this._stateInNamedEntity(t) : this._state === at ? this._stateInNumericEntity(t) : this._state === lt ? this._stateInHexEntity(t) : this._cbs.onerror(Error("unknown _state"), this._state), this._index++
                 }
                 this._cleanup()
             }, gt.prototype.pause = function() {
@@ -40795,8 +40795,8 @@
                 A = "[object Uint8ClampedArray]",
                 k = "[object Uint16Array]",
                 O = "[object Uint32Array]",
-                P = /\w*$/,
-                R = /^\[object .+?Constructor\]$/,
+                R = /\w*$/,
+                P = /^\[object .+?Constructor\]$/,
                 N = /^(?:0|[1-9]\d*)$/,
                 I = {};
             I[o] = I["[object Array]"] = I[b] = I[_] = I[s] = I[a] = I[w] = I[x] = I[E] = I[S] = I[T] = I[c] = I[h] = I[p] = I[f] = I[m] = I[g] = I[v] = I[C] = I[A] = I[k] = I[O] = !0, I["[object Error]"] = I[l] = I[y] = !1;
@@ -40915,7 +40915,7 @@
                 this.__data__ = new At(t)
             }
 
-            function Pt(t, e) {
+            function Rt(t, e) {
                 var n = Ht(t) || function(t) {
                         return function(t) {
                             return function(t) {
@@ -40932,7 +40932,7 @@
                 return n
             }
 
-            function Rt(t, e, n) {
+            function Pt(t, e, n) {
                 var r = t[e];
                 tt.call(t, e) && Yt(r, n) && (void 0 !== n || e in t) || (t[e] = n)
             }
@@ -40944,12 +40944,12 @@
             }
 
             function It(t, e, n, r, i, d, y) {
-                var R;
-                if (r && (R = d ? r(t, i, d, y) : r(t)), void 0 !== R) return R;
+                var P;
+                if (r && (P = d ? r(t, i, d, y) : r(t)), void 0 !== P) return P;
                 if (!Kt(t)) return t;
                 var N = Ht(t);
                 if (N) {
-                    if (R = function(t) {
+                    if (P = function(t) {
                             var e = t.length,
                                 n = t.constructor(e);
                             e && "string" == typeof t[0] && tt.call(t, "index") && (n.index = t.index, n.input = t.input);
@@ -40960,7 +40960,7 @@
                         e || (e = Array(r));
                         for (; ++n < r;) e[n] = t[n];
                         return e
-                    }(t, R)
+                    }(t, P)
                 } else {
                     var M = jt(t),
                         L = M == l || M == u;
@@ -40971,17 +40971,17 @@
                     }(t, e);
                     if (M == p || M == o || L && !d) {
                         if (z(t)) return d ? t : {};
-                        if (R = function(t) {
+                        if (P = function(t) {
                                 return "function" != typeof t.constructor || qt(t) ? {} : (e = st(t), Kt(e) ? at(e) : {});
                                 var e
                             }(L ? {} : t), !e) return function(t, e) {
                             return Dt(t, Ut(t), e)
                         }(t, function(t, e) {
                             return t && Dt(e, Jt(e), t)
-                        }(R, t))
+                        }(P, t))
                     } else {
                         if (!I[M]) return d ? t : {};
-                        R = function(t, e, n, r) {
+                        P = function(t, e, n, r) {
                             var i = t.constructor;
                             switch (e) {
                                 case b:
@@ -41017,7 +41017,7 @@
                                     return new i(t);
                                 case f:
                                     return function(t) {
-                                        var e = new t.constructor(t.source, P.exec(t));
+                                        var e = new t.constructor(t.source, R.exec(t));
                                         return e.lastIndex = t.lastIndex, e
                                     }(t);
                                 case m:
@@ -41035,7 +41035,7 @@
                 y || (y = new Ot);
                 var D = y.get(t);
                 if (D) return D;
-                if (y.set(t, R), !N) var B = n ? function(t) {
+                if (y.set(t, P), !N) var B = n ? function(t) {
                     return function(t, e, n) {
                         var r = e(t);
                         return Ht(t) ? r : function(t, e) {
@@ -41047,12 +41047,12 @@
                 return function(t, e) {
                     for (var n = -1, r = t ? t.length : 0; ++n < r && !1 !== e(t[n], n, t););
                 }(B || t, (function(i, o) {
-                    B && (i = t[o = i]), Rt(R, o, It(i, e, n, r, o, t, y))
-                })), R
+                    B && (i = t[o = i]), Pt(P, o, It(i, e, n, r, o, t, y))
+                })), P
             }
 
             function Mt(t) {
-                return !(!Kt(t) || (e = t, Q && Q in e)) && (Xt(t) || z(t) ? nt : R).test(zt(t));
+                return !(!Kt(t) || (e = t, Q && Q in e)) && (Xt(t) || z(t) ? nt : P).test(zt(t));
                 var e
             }
 
@@ -41066,7 +41066,7 @@
                 for (var i = -1, o = e.length; ++i < o;) {
                     var s = e[i],
                         a = r ? r(n[s], t[s], s, n, t) : void 0;
-                    Rt(n, s, void 0 === a ? t[s] : a)
+                    Pt(n, s, void 0 === a ? t[s] : a)
                 }
                 return n
             }
@@ -41215,7 +41215,7 @@
             }
 
             function Jt(t) {
-                return Gt(t) ? Pt(t) : function(t) {
+                return Gt(t) ? Rt(t) : function(t) {
                     if (!qt(t)) return pt(t);
                     var e = [];
                     for (var n in Object(t)) tt.call(t, n) && "constructor" != n && e.push(n);
@@ -41259,13 +41259,13 @@
                 return "__proto__" == e ? void 0 : t[e]
             }
             var C, A, k, O = Array.prototype,
-                P = Function.prototype,
-                R = Object.prototype,
+                R = Function.prototype,
+                P = Object.prototype,
                 N = y["__core-js_shared__"],
-                I = P.toString,
-                M = R.hasOwnProperty,
+                I = R.toString,
+                M = P.hasOwnProperty,
                 L = (C = /[^.]+$/.exec(N && N.keys && N.keys.IE_PROTO || "")) ? "Symbol(src)_1." + C : "",
-                D = R.toString,
+                D = P.toString,
                 B = I.call(Object),
                 F = RegExp("^" + I.call(M).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                 U = w ? y.Buffer : void 0,
@@ -41276,7 +41276,7 @@
                     return A(k(t))
                 }),
                 Y = Object.create,
-                H = R.propertyIsEnumerable,
+                H = P.propertyIsEnumerable,
                 G = O.splice,
                 W = j ? j.toStringTag : void 0,
                 X = function() {
@@ -41293,7 +41293,7 @@
                 tt = function() {
                     function t() {}
                     return function(e) {
-                        if (!Rt(e)) return {};
+                        if (!Pt(e)) return {};
                         if (Y) return Y(e);
                         t.prototype = e;
                         var n = new t;
@@ -41470,7 +41470,7 @@
             }
 
             function ft(t) {
-                return !(!Rt(t) || function(t) {
+                return !(!Pt(t) || function(t) {
                     return !!L && L in t
                 }(t)) && (Ot(t) ? F : d).test(function(t) {
                     if (null != t) {
@@ -41486,7 +41486,7 @@
             }
 
             function mt(t) {
-                if (!Rt(t)) return function(t) {
+                if (!Pt(t)) return function(t) {
                     var e = [];
                     if (null != t)
                         for (var n in Object(t)) e.push(n);
@@ -41500,7 +41500,7 @@
 
             function gt(t, e, n, r, i) {
                 t !== e && ht(e, (function(o, s) {
-                    if (Rt(o)) i || (i = new it),
+                    if (Pt(o)) i || (i = new it),
                         function(t, e, n, r, i, o, s) {
                             var a = T(t, n),
                                 l = T(e, n),
@@ -41542,7 +41542,7 @@
                                         }
                                         return n
                                     }(t, Mt(t))
-                                }(a) : (!Rt(a) || r && Ot(a)) && (h = function(t) {
+                                }(a) : (!Pt(a) || r && Ot(a)) && (h = function(t) {
                                     return "function" != typeof t.constructor || xt(t) ? {} : tt(z(t))
                                 }(l))) : p = !1
                             }
@@ -41613,7 +41613,7 @@
 
             function xt(t) {
                 var e = t && t.constructor;
-                return t === ("function" == typeof e && e.prototype || R)
+                return t === ("function" == typeof e && e.prototype || P)
             }
             var Et = function(t) {
                 var e = 0,
@@ -41639,23 +41639,23 @@
                 Ct = Array.isArray;
 
             function At(t) {
-                return null != t && Pt(t.length) && !Ot(t)
+                return null != t && Rt(t.length) && !Ot(t)
             }
             var kt = K || function() {
                 return !1
             };
 
             function Ot(t) {
-                if (!Rt(t)) return !1;
+                if (!Pt(t)) return !1;
                 var e = pt(t);
                 return e == a || e == l || e == s || e == h
             }
 
-            function Pt(t) {
+            function Rt(t) {
                 return "number" == typeof t && t > -1 && t % 1 == 0 && t <= i
             }
 
-            function Rt(t) {
+            function Pt(t) {
                 var e = typeof t;
                 return null != t && ("object" == e || "function" == e)
             }
@@ -41668,7 +41668,7 @@
                     return t(e)
                 }
             }(S) : function(t) {
-                return Nt(t) && Pt(t.length) && !!m[pt(t)]
+                return Nt(t) && Rt(t.length) && !!m[pt(t)]
             };
 
             function Mt(t) {
@@ -41682,7 +41682,7 @@
                     i = r > 1 ? e[r - 1] : void 0,
                     o = r > 2 ? e[2] : void 0;
                 for (i = Lt.length > 3 && "function" == typeof i ? (r--, i) : void 0, o && function(t, e, n) {
-                        if (!Rt(n)) return !1;
+                        if (!Pt(n)) return !1;
                         var r = typeof e;
                         return !!("number" == r ? At(n) && wt(e, n.length) : "string" == r && e in n) && St(n[e], t)
                     }(e[0], e[1], o) && (i = r < 3 ? void 0 : i, r = 1), t = Object(t); ++n < r;) {
@@ -43738,7 +43738,7 @@
             "use strict";
             e.__esModule = !0, e.default = function(t, e) {
                 void 0 === e && (e = {});
-                var T, C, A, k, O, P, R, N, I, M, L, D, B, F, U = t.css.valueOf(),
+                var T, C, A, k, O, R, P, N, I, M, L, D, B, F, U = t.css.valueOf(),
                     j = e.ignoreErrors,
                     V = U.length,
                     q = -1,
@@ -43794,7 +43794,7 @@
                                             for (L = C; U.charCodeAt(L - 1) === i;) L -= 1, M = !M
                                         } while (M);
                                         F = ["brackets", U.slice(Y, C + 1), z, Y - q, z, C - q], Y = C
-                                    } else C = U.indexOf(")", Y + 1), P = U.slice(Y, C + 1), -1 === C || E.test(P) ? F = ["(", "(", z, Y - q] : (F = ["brackets", P, z, Y - q, z, C - q], Y = C);
+                                    } else C = U.indexOf(")", Y + 1), R = U.slice(Y, C + 1), -1 === C || E.test(R) ? F = ["(", "(", z, Y - q] : (F = ["brackets", R, z, Y - q, z, C - q], Y = C);
                                     break;
                                 case n:
                                 case r:
@@ -43809,21 +43809,21 @@
                                         }
                                         for (L = C; U.charCodeAt(L - 1) === i;) L -= 1, M = !M
                                     } while (M);
-                                    P = U.slice(Y, C + 1), k = P.split("\n"), (O = k.length - 1) > 0 ? (N = z + O, I = C - k[O].length) : (N = z, I = q), F = ["string", U.slice(Y, C + 1), z, Y - q, N, C - I], q = I, z = N, Y = C;
+                                    R = U.slice(Y, C + 1), k = R.split("\n"), (O = k.length - 1) > 0 ? (N = z + O, I = C - k[O].length) : (N = z, I = q), F = ["string", U.slice(Y, C + 1), z, Y - q, N, C - I], q = I, z = N, Y = C;
                                     break;
                                 case _:
                                     w.lastIndex = Y + 1, w.test(U), C = 0 === w.lastIndex ? U.length - 1 : w.lastIndex - 2, F = ["at-word", U.slice(Y, C + 1), z, Y - q, z, C - q], Y = C;
                                     break;
                                 case i:
-                                    for (C = Y, R = !0; U.charCodeAt(C + 1) === i;) C += 1, R = !R;
-                                    if (T = U.charCodeAt(C + 1), R && T !== o && T !== a && T !== s && T !== u && T !== c && T !== l && (C += 1, S.test(U.charAt(C)))) {
+                                    for (C = Y, P = !0; U.charCodeAt(C + 1) === i;) C += 1, P = !P;
+                                    if (T = U.charCodeAt(C + 1), P && T !== o && T !== a && T !== s && T !== u && T !== c && T !== l && (C += 1, S.test(U.charAt(C)))) {
                                         for (; S.test(U.charAt(C + 1));) C += 1;
                                         U.charCodeAt(C + 1) === a && (C += 1)
                                     }
                                     F = ["word", U.slice(Y, C + 1), z, Y - q, z, C - q], Y = C;
                                     break;
                                 default:
-                                    T === o && U.charCodeAt(Y + 1) === y ? (0 === (C = U.indexOf("*/", Y + 2) + 1) && (j || e ? C = U.length : W("comment")), P = U.slice(Y, C + 1), k = P.split("\n"), (O = k.length - 1) > 0 ? (N = z + O, I = C - k[O].length) : (N = z, I = q), F = ["comment", P, z, Y - q, N, C - I], q = I, z = N, Y = C) : (x.lastIndex = Y + 1, x.test(U), C = 0 === x.lastIndex ? U.length - 1 : x.lastIndex - 2, F = ["word", U.slice(Y, C + 1), z, Y - q, z, C - q], H.push(F), Y = C)
+                                    T === o && U.charCodeAt(Y + 1) === y ? (0 === (C = U.indexOf("*/", Y + 2) + 1) && (j || e ? C = U.length : W("comment")), R = U.slice(Y, C + 1), k = R.split("\n"), (O = k.length - 1) > 0 ? (N = z + O, I = C - k[O].length) : (N = z, I = q), F = ["comment", R, z, Y - q, N, C - I], q = I, z = N, Y = C) : (x.lastIndex = Y + 1, x.test(U), C = 0 === x.lastIndex ? U.length - 1 : x.lastIndex - 2, F = ["word", U.slice(Y, C + 1), z, Y - q, z, C - q], H.push(F), Y = C)
                             }
                             return Y++, F
                         }
@@ -45251,64 +45251,64 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "4JXl0zYS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-spinner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-spinner.js\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","class",["concat",["lol-uikit-spinner-image ",["unknown",["defaultSize"]]," ",["unknown",["class"]]]]],["dynamic-attr","src",["unknown",["s"]],null],["dynamic-attr","width",["unknown",["w"]],null],["dynamic-attr","height",["unknown",["h"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "NfyFTO0R",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-spinner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-spinner.js\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","class",["concat",["lol-uikit-spinner-image ",["unknown",["defaultSize"]]," ",["unknown",["class"]]]]],["dynamic-attr","src",["unknown",["s"]],null],["dynamic-attr","width",["unknown",["w"]],null],["dynamic-attr","height",["unknown",["h"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "YMfyHrtx",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["renderContent"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["yield","default"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "pemZkq7v",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["renderContent"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["yield","default"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "unb70AM2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-modal.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isFullPage"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["yield","default"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","uikit-modal__full-page"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "4sVnIpEk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-modal.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isFullPage"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["yield","default"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","uikit-modal__full-page"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "m/gi11ZU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-framed-icon.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-framed-icon.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["outer-mask ",["unknown",["interactiveStyle"]]," ",["unknown",["zoomStyle"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["frame-color ",["unknown",["cursorStyle"]]]]],["dynamic-attr","style",["unknown",["frameDynamicStyle"]],null],["flush-element"],["text","\\n    "],["yield","default"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["inner-mask ",["unknown",["innerShadowStyle"]]]]],["dynamic-attr","style",["unknown",["innerMaskDynamicStyle"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "IEmyQs3d",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-framed-icon.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-framed-icon.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["outer-mask ",["unknown",["interactiveStyle"]]," ",["unknown",["zoomStyle"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["frame-color ",["unknown",["cursorStyle"]]]]],["dynamic-attr","style",["unknown",["frameDynamicStyle"]],null],["flush-element"],["text","\\n    "],["yield","default"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["inner-mask ",["unknown",["innerShadowStyle"]]]]],["dynamic-attr","style",["unknown",["innerMaskDynamicStyle"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "3XqecXZP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-background-switcher.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-background-switcher.js\\" "],["text","\\n"],["block",["if"],[["get",["src"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["get",["overlay"]],null],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-overlay ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]},{"statements":[["block",["each"],[["get",["overlays"]]],null,0]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["src"]],null],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-image ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","video",[]],["dynamic-attr","src",["unknown",["src"]],null],["static-attr","preload","auto"],["static-attr","loop","true"],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-video ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isVideoSrc"]]],null,3,2],["block",["if"],[["get",["overlays"]]],null,1]],"locals":[]}],"hasPartials":false}',
+                id: "3ahv0Gwq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-background-switcher.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-background-switcher.js\\" "],["text","\\n"],["block",["if"],[["get",["src"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["get",["overlay"]],null],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-overlay ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]},{"statements":[["block",["each"],[["get",["overlays"]]],null,0]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["src"]],null],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-image ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","video",[]],["dynamic-attr","src",["unknown",["src"]],null],["static-attr","preload","auto"],["static-attr","loop","true"],["dynamic-attr","class",["concat",["lol-uikit-background-switcher-video ",["unknown",["newSrcCssClassNames"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isVideoSrc"]]],null,3,2],["block",["if"],[["get",["overlays"]]],null,1]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "zz/ef1b8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-error-page.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-error-page.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","uikit-error-page__group"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","uikit-error-page__wrench"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","p",[]],["static-attr","class","uikit-error-page__content"],["flush-element"],["text","\\n    "],["append",["unknown",["renderedContent"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","uikit-error-page__button-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRetrying"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","uikit-error-page__button"],["modifier",["action"],[["get",[null]],"buttonCallback"]],["flush-element"],["text","\\n        "],["append",["unknown",["renderedButtonText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","uikit-error-page__retry-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "uNZxHzq6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-error-page.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-error-page.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","uikit-error-page__group"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","uikit-error-page__wrench"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","p",[]],["static-attr","class","uikit-error-page__content"],["flush-element"],["text","\\n    "],["append",["unknown",["renderedContent"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","uikit-error-page__button-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRetrying"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","uikit-error-page__button"],["modifier",["action"],[["get",[null]],"buttonCallback"]],["flush-element"],["text","\\n        "],["append",["unknown",["renderedButtonText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","uikit-error-page__retry-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "QZiypNkG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-lottie.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-lottie.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lottie-render-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["lottieErrorMessage"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["lottieErrorMessage"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "pJ1iyWCs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-lottie.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-lottie.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lottie-render-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["lottieErrorMessage"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["lottieErrorMessage"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "3BeW1XT4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-vignette.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-vignette.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header bar"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","interior-content"],["flush-element"],["text","\\n    "],["yield","default",[["helper",["hash"],null,[["header"],["blank-template"]]]]],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","border-bar"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","main-content"],["flush-element"],["text","\\n  "],["yield","default",[["helper",["hash"],null,[["content"],["blank-template"]]]]],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","border-bar"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","footer bar"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","interior-content"],["flush-element"],["text","\\n    "],["yield","default",[["helper",["hash"],null,[["footer"],["blank-template"]]]]],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "hRQPcCud",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\uikit-vignette.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\components\\\\uikit-vignette.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header bar"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","interior-content"],["flush-element"],["text","\\n    "],["yield","default",[["helper",["hash"],null,[["header"],["blank-template"]]]]],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","border-bar"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","main-content"],["flush-element"],["text","\\n  "],["yield","default",[["helper",["hash"],null,[["content"],["blank-template"]]]]],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","border-bar"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","footer bar"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","interior-content"],["flush-element"],["text","\\n    "],["yield","default",[["helper",["hash"],null,[["footer"],["blank-template"]]]]],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "Ze+Nay1p",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\blank-template.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "SwsepOHB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\ember-uikit\\\\addon\\\\templates\\\\components\\\\blank-template.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
@@ -45653,22 +45653,22 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "FWw/wbE7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-root.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-root.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","loot-table-window"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,7,1],["close-element"],["text","\\n\\n"],["block",["uikit-modal"],null,[["type","displayModal","okText","dismissible","show"],["DialogAlert",["get",["showLoadError"]],["get",["tra","loot_odds_error_fail_to_load_dismiss_modal"]],true,true]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-small"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["flush-element"],["append",["unknown",["tra","loot_odds_error_fail_to_load_title"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","loot_odds_error_fail_to_load_description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","classname","loot-table-loading"],["flush-element"],["append",["helper",["uikit-spinner"],null,[["class","width","height"],["loading-spinner","50px","50px"]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loot-table-no-results"],["flush-element"],["append",["unknown",["tra","loot_odds_no_results"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["chanceList"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["list-subtitle ",["helper",["unless"],[["get",["guaranteedItem","isVisible"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["guaranteedItem","subHeader"]],false],["close-element"],["text","\\n              "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["guaranteedItem","children"]]]]],false],["text","\\n"]],"locals":["guaranteedItem"]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","style","padding:18px"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__content"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__title-container"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-variable-odds-tooltip__badge-icon loot-table-variable-odds-tooltip__badge-icon--tooltip\\n                          ",["unknown",["disclaimer","iconCssClass"]]]]],["flush-element"],["close-element"],["text","\\n                      "],["open-element","h3",[]],["static-attr","class","loot-table-variable-odds-tooltip__title"],["flush-element"],["append",["unknown",["disclaimer","title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","loot-table-variable-odds-tooltip__disclaimer"],["flush-element"],["text","\\n                      "],["append",["helper",["sanitize"],[["get",["disclaimer","description"]]],null],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__toggle-button"],["flush-element"],["text","\\n                "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-variable-odds-tooltip__badge-icon ",["unknown",["disclaimer","iconCssClass"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["disclaimer","badgeTitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],5],["text","            "],["close-element"],["text","\\n"]],"locals":["disclaimer"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-table-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","loot-table-header-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-header"],["flush-element"],["text","\\n          "],["append",["unknown",["lootItemName"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds"],["flush-element"],["text","\\n"],["block",["each"],[["get",["disclaimers"]]],null,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-header-subtext"],["flush-element"],["append",["unknown",["disclaimerSubtitle"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","loot-table-search"],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","class","loot-table-search-input"],["static-attr","type","search"],["dynamic-attr","value",["unknown",["searchTerm"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onSearchInput"],null],null],["dynamic-attr","placeholder",["unknown",["tra","loot_odds_filter_searchbox_placeholder_text"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","loot-table-scrollable-wrapper"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","loot-table-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["list-title ",["helper",["unless"],[["get",["hasVisibleGuaranteedList"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n            "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_guaranteed_title"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["each"],[["get",["guaranteedList"]]],null,4],["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["chanceListVisible"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","list-title"],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_chance_title"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","list-subtitle"],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_chance_subtitle"]],false],["close-element"],["text","\\n              "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["chanceList"]]],null,3],["block",["if"],[["get",["noResults"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "vepkQtvJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-root.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-root.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","loot-table-window"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,7,1],["close-element"],["text","\\n\\n"],["block",["uikit-modal"],null,[["type","displayModal","okText","dismissible","show"],["DialogAlert",["get",["showLoadError"]],["get",["tra","loot_odds_error_fail_to_load_dismiss_modal"]],true,true]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-small"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["flush-element"],["append",["unknown",["tra","loot_odds_error_fail_to_load_title"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","loot_odds_error_fail_to_load_description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","classname","loot-table-loading"],["flush-element"],["append",["helper",["uikit-spinner"],null,[["class","width","height"],["loading-spinner","50px","50px"]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loot-table-no-results"],["flush-element"],["append",["unknown",["tra","loot_odds_no_results"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["chanceList"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["list-subtitle ",["helper",["unless"],[["get",["guaranteedItem","isVisible"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["guaranteedItem","subHeader"]],false],["close-element"],["text","\\n              "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["guaranteedItem","children"]]]]],false],["text","\\n"]],"locals":["guaranteedItem"]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","style","padding:18px"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__content"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__title-container"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-variable-odds-tooltip__badge-icon loot-table-variable-odds-tooltip__badge-icon--tooltip\\n                          ",["unknown",["disclaimer","iconCssClass"]]]]],["flush-element"],["close-element"],["text","\\n                      "],["open-element","h3",[]],["static-attr","class","loot-table-variable-odds-tooltip__title"],["flush-element"],["append",["unknown",["disclaimer","title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","loot-table-variable-odds-tooltip__disclaimer"],["flush-element"],["text","\\n                      "],["append",["helper",["sanitize"],[["get",["disclaimer","description"]]],null],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds-tooltip__toggle-button"],["flush-element"],["text","\\n                "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-variable-odds-tooltip__badge-icon ",["unknown",["disclaimer","iconCssClass"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["disclaimer","badgeTitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],5],["text","            "],["close-element"],["text","\\n"]],"locals":["disclaimer"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-table-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","loot-table-header-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-header"],["flush-element"],["text","\\n          "],["append",["unknown",["lootItemName"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-variable-odds"],["flush-element"],["text","\\n"],["block",["each"],[["get",["disclaimers"]]],null,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loot-table-header-subtext"],["flush-element"],["append",["unknown",["disclaimerSubtitle"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","loot-table-search"],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","class","loot-table-search-input"],["static-attr","type","search"],["dynamic-attr","value",["unknown",["searchTerm"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onSearchInput"],null],null],["dynamic-attr","placeholder",["unknown",["tra","loot_odds_filter_searchbox_placeholder_text"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","loot-table-scrollable-wrapper"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","loot-table-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["list-title ",["helper",["unless"],[["get",["hasVisibleGuaranteedList"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n            "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_guaranteed_title"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["each"],[["get",["guaranteedList"]]],null,4],["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["chanceListVisible"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","list-title"],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_chance_title"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","list-subtitle"],["flush-element"],["text","\\n              "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","loot_odds_droprates_modal_chance_subtitle"]],false],["close-element"],["text","\\n              "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["chanceList"]]],null,3],["block",["if"],[["get",["noResults"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "BqAUzLjr",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-list.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-list.js\\" "],["text","\\n"],["block",["each"],[["get",["sortedItemList"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["loot-table-item"],null,[["item"],[["get",["item"]]]]],false],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
+                id: "pTGp+qeh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-list.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-list.js\\" "],["text","\\n"],["block",["each"],[["get",["sortedItemList"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["loot-table-item"],null,[["item"],[["get",["item"]]]]],false],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "B//bUCKn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-item.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","loot-list-item"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-list-item-details"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"collapseNode"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","loot-list-item-background-holder"],["flush-element"],["open-element","div",[]],["static-attr","class","loot-list-item-row-background"],["flush-element"],["close-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isCollapsable"]]],null,7,6],["text","    "],["open-element","div",[]],["static-attr","class","loot-odd-name"],["flush-element"],["append",["unknown",["displayLabel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","loot-table-drop-rate"],["flush-element"],["append",["unknown",["percentage"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasQueryEvaluation"]]],null,5],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasChildren"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","loot-table-query-child-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","loot-table-bullet-point"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["flush-element"],["append",["unknown",["queryItem","localizedName"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["queryItem"]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-query-children ",["helper",["if"],[["get",["item","isCollapsed"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["queryEvaluatedItemsToShow"]]],null,0],["text","    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showEvaluationItems"]]],null,1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-child-list ",["helper",["if"],[["get",["item","isCollapsed"]],"filtered-hidden"],null]]]],["flush-element"],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["item","children"]]]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["childQueryDisplayText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-query-wrapper"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["item","isLoadingQueryEvaluation"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-bullet-point"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-chevron-wrapper"],["flush-element"],["text","\\n        "],["open-element","svg",[]],["static-attr","class","loot-table-chevron"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n          "],["open-element","path",[]],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M13.3 10L12.3 9L12 8.7L8.3 5L7 6.4L10.6 10L7 13.7L8.3 15L13.3 10Z"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "aeS+rCLw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\templates\\\\components\\\\loot-table-item.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loot-table\\\\addon\\\\components\\\\loot-table-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","loot-list-item"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-list-item-details"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"collapseNode"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","loot-list-item-background-holder"],["flush-element"],["open-element","div",[]],["static-attr","class","loot-list-item-row-background"],["flush-element"],["close-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isCollapsable"]]],null,7,6],["text","    "],["open-element","div",[]],["static-attr","class","loot-odd-name"],["flush-element"],["append",["unknown",["displayLabel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","loot-table-drop-rate"],["flush-element"],["append",["unknown",["percentage"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasQueryEvaluation"]]],null,5],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasChildren"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","loot-table-query-child-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","loot-table-bullet-point"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["flush-element"],["append",["unknown",["queryItem","localizedName"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["queryItem"]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-query-children ",["helper",["if"],[["get",["item","isCollapsed"]],"filtered-hidden"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["queryEvaluatedItemsToShow"]]],null,0],["text","    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["showEvaluationItems"]]],null,1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-table-child-list ",["helper",["if"],[["get",["item","isCollapsed"]],"filtered-hidden"],null]]]],["flush-element"],["append",["helper",["loot-table-list"],null,[["itemList"],[["get",["item","children"]]]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["childQueryDisplayText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-query-wrapper"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["item","isLoadingQueryEvaluation"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-bullet-point"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","loot-table-chevron-wrapper"],["flush-element"],["text","\\n        "],["open-element","svg",[]],["static-attr","class","loot-table-chevron"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n          "],["open-element","path",[]],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M13.3 10L12.3 9L12 8.7L8.3 5L7 6.4L10.6 10L7 13.7L8.3 15L13.3 10Z"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
@@ -46310,15 +46310,15 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "UG2I7Oq6",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\templates\\\\components\\\\loadouts-modal-v2.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\components\\\\loadouts-modal-v2.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["text","\\n\\n"],["block",["unless"],[["get",["isARAM"]]],null,6],["text","\\n  "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n    "],["append",["unknown",["title"]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTFTCompensationBadge"]]],null,5],["text","\\n  "],["append",["helper",["tft-star-shards"],null,[["playBalanceUpdate"],[["get",["playStarShardsBalanceUpdate"]]]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","loadouts-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isARAM"]]],null,3],["text","\\n  "],["comment"," This should have the content of the active selection"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loadouts-modal-active-item"],["dynamic-attr","class",["unknown",["selectedTypeId"]],null],["flush-element"],["text","\\n    "],["open-element","lol-parties-cosmetics-panel",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","cosmetic-selection-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","cosmetic-selection-options-container"],["flush-element"],["text","\\n\\n          "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","search-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","cosmetic_search_bar"],["static-attr","type","search"],["static-attr","name","search"],["static-attr","maxlength","24"],["dynamic-attr","placeholder",["unknown",["tra","tft_cosmetics_search_placeholder"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","cosmetic-sorting-dropdown hidden"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","custom-dropdown-option-content"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","ui-dropdown-option-only"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","dropdown-icon"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","cosmetics-dropdown-spinner-default-order hidden"],["static-attr","src","/fe/lol-static-assets/images/spinner.png"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","custom-dropdown-option-content"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","ui-dropdown-option-only"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","dropdown-icon"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","cosmetics-dropdown-spinner-last-acquired hidden"],["static-attr","src","/fe/lol-static-assets/images/spinner.png"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","cosmetics-selection-toggles"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","hide-unowned-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","hide_unowned_checkbox"],["static-attr","type","checkbox"],["static-attr","slot","input"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleOwnedCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","id","hide_unowned_checkbox_label"],["static-attr","for","hide_unowned_checkbox"],["static-attr","slot","label"],["flush-element"],["text","\\n              "],["append",["helper",["tra"],["parties_cosmetics_show_unowned"],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","hide-disabled-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","hide_disabled_checkbox"],["static-attr","type","checkbox"],["static-attr","slot","input"],["static-attr","checked",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleDisabledCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","id","hide_disabled_checkbox_label"],["static-attr","for","hide_disabled_checkbox"],["static-attr","slot","label"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","hide_disabled_checkbox_img"],["static-attr","src","/fe/lol-parties/WrenchFist_Disabled.png"],["flush-element"],["close-element"],["text","\\n              "],["append",["unknown",["tra","tft_loadouts_cosmetics_show_unavailable_label"]],false],["text","\\n              "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","hide-disabled-info-icon"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type","restrictArea"],["bottom","system","whole-window"]],1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","cosmetic-option-scroller"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-scroller-item cosmetic-option-item-list cosmetic-option-favorites-list"],["flush-element"],["text"," "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-scroller-item cosmetic-option-item-list cosmetic-option-group-list"],["flush-element"],["text","\\n            "],["comment"," Renderer layout example\\n            <div class=\\"cosmetic-option-group\\">\\n              <div class=\\"cosmetic-option-group-header\\">\\n                <div class=\\"cosmetic-option-group-title\\"></div>\\n                <div class=\\"cosmetic-option-group-info\\"></div>\\n              </div>\\n              <div class=\\"cosmetic-option-list\\">\\n                <div class=\\"cosmetic-option\\"></div>\\n              </div>\\n            </div>\\n            "],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","selected-cosmetic"],["flush-element"],["text","\\n        "],["open-element","slot",[]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","selected-cosmetic-header-group"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","selected-cosmetic-header-group-2"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-rarity"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-gem"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","cosmetic-group-favorite-button hidden"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-title"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-wrapper"],["flush-element"],["text","\\n            "],["comment"," moon"],["text","\\n            "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-container hidden norender"],["static-attr","data-type","moon"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-moon intended"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade moon"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-moon"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["comment"," star "],["text","\\n            "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-container hidden norender"],["static-attr","data-type","star"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-1 hidden unowned"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-2 hidden unowned"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"calcRemainingStarShards"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-3 hidden unowned"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"calcRemainingStarShards"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","star-shards-label-wrapper"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","star-shards-label"],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","star-shards-amount"],["flush-element"],["text","\\n              "],["append",["unknown",["remainingStarShards"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-wip-wrapper"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","cosmetic-group-action-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"actionButtonClick"],null],null],["static-attr","disabled",""],["flush-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-wip hidden"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","wip-cosmetic-icon"],["static-attr","src","/fe/lol-parties/cosmetic-wip-badge.png"],["flush-element"],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],0],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-disabled hidden"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openFlyout"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","disabled-cosmetic-icon"],["static-attr","src","/fe/lol-parties/cosmetic-disabled-badge.png"],["flush-element"],["close-element"],["text","\\n              "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeFlyout"],null],null],["static-attr","direction","top"],["static-attr","offsetx","-2.2"],["static-attr","offsety","-6"],["flush-element"],["text","\\n                "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","game-mode-blocked-tooltip"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["flyoutTooltipText"]]],null],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","tft_wip_cosmetic_tooltip"]],false],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","cosmetics_unavailable_tooltip"],["flush-element"],["append",["unknown",["tra","tft_cosmetics_show_unavailable_tooltip"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_augment_pillars"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_augment_pillars"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","tft_zoom_skins_label"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","tabbed"],["static-attr","direction","down"],["dynamic-attr","selectedindex",["unknown",["selectedLoadoutTypeIndex"]],null],["static-attr","class","loadouts-selectable-items"],["flush-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","companions"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","companions"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_companions_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_map_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_map_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_map_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_damage_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_damage_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_damage_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_zoom_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_zoom_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_zoom_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isAugmentPillarEnabled"]]],null,2],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["tft-compensation-tooltip"],null,[["onDismiss"],[["helper",["action"],[["get",[null]],"dismissTFTCompensationTooltip"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","tft-compensation-badge-wrapper"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleTFTCompensationTooltip"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["type","tooltipPosition","show"],["persistent","bottom",["get",["showTFTCompensationTooltip"]]]],4],["text","      "],["open-element","img",[]],["static-attr","class","tft-compensation-badge"],["static-attr","src","/fe/lol-parties/Compensation.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"backButtonClick"],null],null],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","src","/fe/lol-parties/button-icon-back.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "cvxFJJwy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\templates\\\\components\\\\loadouts-modal-v2.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\components\\\\loadouts-modal-v2.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["text","\\n\\n"],["block",["unless"],[["get",["isARAM"]]],null,6],["text","\\n  "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n    "],["append",["unknown",["title"]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showTFTCompensationBadge"]]],null,5],["text","\\n  "],["append",["helper",["tft-star-shards"],null,[["playBalanceUpdate"],[["get",["playStarShardsBalanceUpdate"]]]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","loadouts-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isARAM"]]],null,3],["text","\\n  "],["comment"," This should have the content of the active selection"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loadouts-modal-active-item"],["dynamic-attr","class",["unknown",["selectedTypeId"]],null],["flush-element"],["text","\\n    "],["open-element","lol-parties-cosmetics-panel",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","cosmetic-selection-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","cosmetic-selection-options-container"],["flush-element"],["text","\\n\\n          "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","search-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","cosmetic_search_bar"],["static-attr","type","search"],["static-attr","name","search"],["static-attr","maxlength","24"],["dynamic-attr","placeholder",["unknown",["tra","tft_cosmetics_search_placeholder"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","cosmetic-sorting-dropdown hidden"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","custom-dropdown-option-content"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","ui-dropdown-option-only"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","dropdown-icon"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","cosmetics-dropdown-spinner-default-order hidden"],["static-attr","src","/fe/lol-static-assets/images/spinner.png"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","custom-dropdown-option-content"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","ui-dropdown-option-only"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","dropdown-icon"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","cosmetics-dropdown-spinner-last-acquired hidden"],["static-attr","src","/fe/lol-static-assets/images/spinner.png"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","cosmetics-selection-toggles"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","hide-unowned-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","hide_unowned_checkbox"],["static-attr","type","checkbox"],["static-attr","slot","input"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleOwnedCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","id","hide_unowned_checkbox_label"],["static-attr","for","hide_unowned_checkbox"],["static-attr","slot","label"],["flush-element"],["text","\\n              "],["append",["helper",["tra"],["parties_cosmetics_show_unowned"],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","hide-disabled-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","id","hide_disabled_checkbox"],["static-attr","type","checkbox"],["static-attr","slot","input"],["static-attr","checked",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleDisabledCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","id","hide_disabled_checkbox_label"],["static-attr","for","hide_disabled_checkbox"],["static-attr","slot","label"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","hide_disabled_checkbox_img"],["static-attr","src","/fe/lol-parties/WrenchFist_Disabled.png"],["flush-element"],["close-element"],["text","\\n              "],["append",["unknown",["tra","tft_loadouts_cosmetics_show_unavailable_label"]],false],["text","\\n              "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","hide-disabled-info-icon"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type","restrictArea"],["bottom","system","whole-window"]],1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","cosmetic-option-scroller"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-scroller-item cosmetic-option-item-list cosmetic-option-favorites-list"],["flush-element"],["text"," "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-scroller-item cosmetic-option-item-list cosmetic-option-group-list"],["flush-element"],["text","\\n            "],["comment"," Renderer layout example\\n            <div class=\\"cosmetic-option-group\\">\\n              <div class=\\"cosmetic-option-group-header\\">\\n                <div class=\\"cosmetic-option-group-title\\"></div>\\n                <div class=\\"cosmetic-option-group-info\\"></div>\\n              </div>\\n              <div class=\\"cosmetic-option-list\\">\\n                <div class=\\"cosmetic-option\\"></div>\\n              </div>\\n            </div>\\n            "],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","selected-cosmetic"],["flush-element"],["text","\\n        "],["open-element","slot",[]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","selected-cosmetic-header-group"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","selected-cosmetic-header-group-2"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-rarity"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-gem"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","cosmetic-group-favorite-button hidden"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-title"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-wrapper"],["flush-element"],["text","\\n            "],["comment"," moon"],["text","\\n            "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-container hidden norender"],["static-attr","data-type","moon"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-moon intended"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade moon"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-moon"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["comment"," star "],["text","\\n            "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-container hidden norender"],["static-attr","data-type","star"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-1 hidden unowned"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-2 hidden unowned"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"calcRemainingStarShards"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade-bounding-container cosmetic-upgrade-3 hidden unowned"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"calcRemainingStarShards"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","cosmetic-upgrade"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","cosmetics-modal-star"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","star-shards-label-wrapper"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","star-shards-label"],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","star-shards-amount"],["flush-element"],["text","\\n              "],["append",["unknown",["remainingStarShards"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","selected-cosmetic-wip-wrapper"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","cosmetic-group-action-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"actionButtonClick"],null],null],["static-attr","disabled",""],["flush-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-wip hidden"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","wip-cosmetic-icon"],["static-attr","src","/fe/lol-parties/cosmetic-wip-badge.png"],["flush-element"],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],0],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","selected-cosmetic-disabled hidden"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openFlyout"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","disabled-cosmetic-icon"],["static-attr","src","/fe/lol-parties/cosmetic-disabled-badge.png"],["flush-element"],["close-element"],["text","\\n              "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeFlyout"],null],null],["static-attr","direction","top"],["static-attr","offsetx","-2.2"],["static-attr","offsety","-6"],["flush-element"],["text","\\n                "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","game-mode-blocked-tooltip"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["flyoutTooltipText"]]],null],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","tft_wip_cosmetic_tooltip"]],false],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","cosmetics_unavailable_tooltip"],["flush-element"],["append",["unknown",["tra","tft_cosmetics_show_unavailable_tooltip"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_augment_pillars"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_augment_pillars"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","tft_zoom_skins_label"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","tabbed"],["static-attr","direction","down"],["dynamic-attr","selectedindex",["unknown",["selectedLoadoutTypeIndex"]],null],["static-attr","class","loadouts-selectable-items"],["flush-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","companions"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","companions"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_companions_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_map_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_map_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_map_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_damage_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_damage_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_damage_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","id","tft_zoom_skins"],["static-attr","class","loadouts-modal-navigation-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"tabClicked","tft_zoom_skins"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","loadouts-modal-navigation-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","tft_zoom_skins_label"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isAugmentPillarEnabled"]]],null,2],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["tft-compensation-tooltip"],null,[["onDismiss"],[["helper",["action"],[["get",[null]],"dismissTFTCompensationTooltip"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","tft-compensation-badge-wrapper"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleTFTCompensationTooltip"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["type","tooltipPosition","show"],["persistent","bottom",["get",["showTFTCompensationTooltip"]]]],4],["text","      "],["open-element","img",[]],["static-attr","class","tft-compensation-badge"],["static-attr","src","/fe/lol-parties/Compensation.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"backButtonClick"],null],null],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","src","/fe/lol-parties/button-icon-back.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "6C2KA4Q2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\templates\\\\components\\\\tft-star-shards.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\components\\\\tft-star-shards.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","currency-ss"],["flush-element"],["text","\\n  "],["append",["unknown",["starShardsAmount"]],false],["text","\\n\\n"],["text","  "],["open-element","video",[]],["static-attr","class","currency-upgrade-video"],["static-attr","preload","auto"],["static-attr","src",""],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "m3ORCQrp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\templates\\\\components\\\\tft-star-shards.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\loadouts-modal\\\\addon\\\\components\\\\tft-star-shards.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","currency-ss"],["flush-element"],["text","\\n  "],["append",["unknown",["starShardsAmount"]],false],["text","\\n\\n"],["text","  "],["open-element","video",[]],["static-attr","class","currency-upgrade-video"],["static-attr","preload","auto"],["static-attr","src",""],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
@@ -46373,8 +46373,8 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "w2eIcSdV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\svg-loader\\\\addon\\\\templates\\\\svg-loader.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\svg-loader\\\\addon\\\\styles\\\\svg-loader.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["guideMode"]]],null,2,1]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["svg-loader ",["helper",["if"],[["get",["shouldFadeOutSvg"]],"fade-out"],null]]]],["dynamic-attr","style",["unknown",["loaderStyles"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["content ",["helper",["unless"],[["get",["showContent"]],"display-none"],null]]]],["flush-element"],["text","\\n    "],["yield","default"],["text","\\n  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["showContent"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["svg-loader ",["helper",["if"],[["get",["guideMode"]],"guide-mode"],null]]]],["dynamic-attr","style",["unknown",["loaderStyles"]],null],["flush-element"],["close-element"],["text","\\n  "],["yield","default"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "wDrmIzHa",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\svg-loader\\\\addon\\\\templates\\\\svg-loader.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\svg-loader\\\\addon\\\\styles\\\\svg-loader.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["guideMode"]]],null,2,1]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["svg-loader ",["helper",["if"],[["get",["shouldFadeOutSvg"]],"fade-out"],null]]]],["dynamic-attr","style",["unknown",["loaderStyles"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["content ",["helper",["unless"],[["get",["showContent"]],"display-none"],null]]]],["flush-element"],["text","\\n    "],["yield","default"],["text","\\n  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["showContent"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["svg-loader ",["helper",["if"],[["get",["guideMode"]],"guide-mode"],null]]]],["dynamic-attr","style",["unknown",["loaderStyles"]],null],["flush-element"],["close-element"],["text","\\n  "],["yield","default"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
@@ -46466,15 +46466,15 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "UhE3krih",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\templates\\\\components\\\\icon-rarity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\components\\\\icon-rarity.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","icon-rarity__tooltip-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["tooltipOn"]]],null,1],["text","  "],["open-element","img",[]],["static-attr","class","icon-rarity__image"],["dynamic-attr","src",["unknown",["rarityData","gemIcon"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","icon-rarity__tooltip-content"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["rarityData","tooltipTraKey"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["collections-tooltip"],null,null,0]],"locals":[]}],"hasPartials":false}',
+                id: "pLcJs/5m",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\templates\\\\components\\\\icon-rarity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\components\\\\icon-rarity.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","icon-rarity__tooltip-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["tooltipOn"]]],null,1],["text","  "],["open-element","img",[]],["static-attr","class","icon-rarity__image"],["dynamic-attr","src",["unknown",["rarityData","gemIcon"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","icon-rarity__tooltip-content"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["rarityData","tooltipTraKey"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["collections-tooltip"],null,null,0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "AUtzVI4h",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\templates\\\\components\\\\collections-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\components\\\\collections-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "v/+hzKqT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\templates\\\\components\\\\collections-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\icon-rarity\\\\addon\\\\components\\\\collections-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
@@ -47339,12 +47339,12 @@
                 BoundingBoxAttachment: () => I.BoundingBoxAttachment,
                 CURRENT: () => i.CURRENT,
                 ClippingAttachment: () => M.ClippingAttachment,
-                Color: () => R.Color,
+                Color: () => P.Color,
                 ConstraintData: () => u.ConstraintData,
                 CurveTimeline: () => r.CurveTimeline,
                 CurveTimeline1: () => r.CurveTimeline1,
                 CurveTimeline2: () => r.CurveTimeline2,
-                DebugUtils: () => R.DebugUtils,
+                DebugUtils: () => P.DebugUtils,
                 DeformTimeline: () => r.DeformTimeline,
                 Downloader: () => c.Downloader,
                 DrawOrderTimeline: () => r.DrawOrderTimeline,
@@ -47363,9 +47363,9 @@
                 IkConstraintTimeline: () => r.IkConstraintTimeline,
                 Inherit: () => l.Inherit,
                 InheritTimeline: () => r.InheritTimeline,
-                IntSet: () => R.IntSet,
-                Interpolation: () => R.Interpolation,
-                MathUtils: () => R.MathUtils,
+                IntSet: () => P.IntSet,
+                Interpolation: () => P.Interpolation,
+                MathUtils: () => P.MathUtils,
                 MeshAttachment: () => L.MeshAttachment,
                 MixBlend: () => r.MixBlend,
                 MixDirection: () => r.MixDirection,
@@ -47386,10 +47386,10 @@
                 PhysicsConstraintTimeline: () => r.PhysicsConstraintTimeline,
                 PhysicsConstraintWindTimeline: () => r.PhysicsConstraintWindTimeline,
                 PointAttachment: () => B.PointAttachment,
-                Pool: () => R.Pool,
+                Pool: () => P.Pool,
                 PositionMode: () => g.PositionMode,
-                Pow: () => R.Pow,
-                PowOut: () => R.PowOut,
+                Pow: () => P.Pow,
+                PowOut: () => P.PowOut,
                 RGB2Timeline: () => r.RGB2Timeline,
                 RGBA2Timeline: () => r.RGBA2Timeline,
                 RGBATimeline: () => r.RGBATimeline,
@@ -47417,7 +47417,7 @@
                 Slot: () => S.Slot,
                 SlotData: () => T.SlotData,
                 SpacingMode: () => g.SpacingMode,
-                StringSet: () => R.StringSet,
+                StringSet: () => P.StringSet,
                 Texture: () => C.Texture,
                 TextureAtlas: () => A.TextureAtlas,
                 TextureAtlasPage: () => A.TextureAtlasPage,
@@ -47425,7 +47425,7 @@
                 TextureFilter: () => C.TextureFilter,
                 TextureRegion: () => C.TextureRegion,
                 TextureWrap: () => C.TextureWrap,
-                TimeKeeper: () => R.TimeKeeper,
+                TimeKeeper: () => P.TimeKeeper,
                 Timeline: () => r.Timeline,
                 TrackEntry: () => i.TrackEntry,
                 TransformConstraint: () => k.TransformConstraint,
@@ -47434,11 +47434,11 @@
                 TranslateTimeline: () => r.TranslateTimeline,
                 TranslateXTimeline: () => r.TranslateXTimeline,
                 TranslateYTimeline: () => r.TranslateYTimeline,
-                Triangulator: () => P.Triangulator,
-                Utils: () => R.Utils,
-                Vector2: () => R.Vector2,
+                Triangulator: () => R.Triangulator,
+                Utils: () => P.Utils,
+                Vector2: () => P.Vector2,
                 VertexAttachment: () => N.VertexAttachment,
-                WindowedMean: () => R.WindowedMean
+                WindowedMean: () => P.WindowedMean
             });
             var r = n(180),
                 i = n(184),
@@ -47467,8 +47467,8 @@
                 A = n(190),
                 k = n(208),
                 O = n(214),
-                P = n(217),
-                R = (n(219), n(182)),
+                R = n(217),
+                P = (n(219), n(182)),
                 N = (n(220), n(181)),
                 I = (n(221), n(187)),
                 M = n(188),
@@ -47481,11 +47481,11 @@
             n.r(e), n.d(e, {
                 AlphaTimeline: () => A,
                 Animation: () => l,
-                AttachmentTimeline: () => P,
+                AttachmentTimeline: () => R,
                 CurveTimeline: () => h,
                 CurveTimeline1: () => p,
                 CurveTimeline2: () => d,
-                DeformTimeline: () => R,
+                DeformTimeline: () => P,
                 DrawOrderTimeline: () => I,
                 EventTimeline: () => N,
                 IkConstraintTimeline: () => M,
@@ -48277,7 +48277,7 @@
                     }
                 }
             }
-            class P extends c {
+            class R extends c {
                 slotIndex = 0;
                 attachmentNames;
                 constructor(t, e) {
@@ -48297,7 +48297,7 @@
                     e.setAttachment(n ? t.getAttachment(this.slotIndex, n) : null)
                 }
             }
-            class R extends h {
+            class P extends h {
                 slotIndex = 0;
                 attachment;
                 vertices;
@@ -51071,21 +51071,21 @@
                         k = t.d,
                         O = Math.abs(d - f) <= 1e-4;
                     !O || a ? (x = 0, E = T * w + t.worldX, S = A * w + t.worldY) : (x = e.ay, E = T * w + C * x + t.worldX, S = A * w + k * x + t.worldY);
-                    let P = t.parent;
-                    if (!P) throw new Error("IK parent must itself have a parent.");
-                    T = P.a, C = P.b, A = P.c, k = P.d;
-                    let R = T * k - C * A,
-                        N = E - P.worldX,
-                        I = S - P.worldY;
-                    R = Math.abs(R) <= 1e-4 ? 0 : 1 / R;
-                    let M, L, D = (N * k - I * C) * R - h,
-                        B = (I * T - N * A) * R - p,
+                    let R = t.parent;
+                    if (!R) throw new Error("IK parent must itself have a parent.");
+                    T = R.a, C = R.b, A = R.c, k = R.d;
+                    let P = T * k - C * A,
+                        N = E - R.worldX,
+                        I = S - R.worldY;
+                    P = Math.abs(P) <= 1e-4 ? 0 : 1 / P;
+                    let M, L, D = (N * k - I * C) * P - h,
+                        B = (I * T - N * A) * P - p,
                         F = Math.sqrt(D * D + B * B),
                         U = e.data.length * v;
                     if (F < 1e-4) return this.apply1(t, n, o, !1, a, !1, c), void e.updateWorldTransformWith(w, x, 0, e.ascaleX, e.ascaleY, e.ashearX, e.ashearY);
-                    N = n - P.worldX, I = o - P.worldY;
-                    let j = (N * k - I * C) * R - h,
-                        V = (I * T - N * A) * R - p,
+                    N = n - R.worldX, I = o - R.worldY;
+                    let j = (N * k - I * C) * P - h,
+                        V = (I * T - N * A) * P - p,
                         q = j * j + V * V;
                     if (0 != u) {
                         u *= d * (v + 1) * .5;
@@ -51381,11 +51381,11 @@
                         A = 0,
                         k = 0,
                         O = 0,
-                        P = 0,
                         R = 0,
+                        P = 0,
                         N = 0,
                         I = 0;
-                    for (let t = 0, e = 2; t < d; t++, e += 6) _ = c[e], w = c[e + 1], x = c[e + 2], E = c[e + 3], S = c[e + 4], T = c[e + 5], C = .1875 * (y - 2 * _ + x), A = .1875 * (b - 2 * w + E), k = .09375 * (3 * (_ - x) - y + S), O = .09375 * (3 * (w - E) - b + T), P = 2 * C + k, R = 2 * A + O, N = .75 * (_ - y) + C + .16666667 * k, I = .75 * (w - b) + A + .16666667 * O, v += Math.sqrt(N * N + I * I), N += P, I += R, P += k, R += O, v += Math.sqrt(N * N + I * I), N += P, I += R, v += Math.sqrt(N * N + I * I), N += P + k, I += R + O, v += Math.sqrt(N * N + I * I), g[t] = v, y = S, b = T;
+                    for (let t = 0, e = 2; t < d; t++, e += 6) _ = c[e], w = c[e + 1], x = c[e + 2], E = c[e + 3], S = c[e + 4], T = c[e + 5], C = .1875 * (y - 2 * _ + x), A = .1875 * (b - 2 * w + E), k = .09375 * (3 * (_ - x) - y + S), O = .09375 * (3 * (w - E) - b + T), R = 2 * C + k, P = 2 * A + O, N = .75 * (_ - y) + C + .16666667 * k, I = .75 * (w - b) + A + .16666667 * O, v += Math.sqrt(N * N + I * I), N += R, I += P, R += k, P += O, v += Math.sqrt(N * N + I * I), N += R, I += P, v += Math.sqrt(N * N + I * I), N += R + k, I += P + O, v += Math.sqrt(N * N + I * I), g[t] = v, y = S, b = T;
                     switch (this.data.positionMode == i.PositionMode.Percent && (a *= v), this.data.spacingMode) {
                         case i.SpacingMode.Percent:
                             m = v;
@@ -51427,8 +51427,8 @@
                         if (i != f) {
                             f = i;
                             let t = 6 * i;
-                            for (y = c[t], b = c[t + 1], _ = c[t + 2], w = c[t + 3], x = c[t + 4], E = c[t + 5], S = c[t + 6], T = c[t + 7], C = .03 * (y - 2 * _ + x), A = .03 * (b - 2 * w + E), k = .006 * (3 * (_ - x) - y + S), O = .006 * (3 * (w - E) - b + T), P = 2 * C + k, R = 2 * A + O, N = .3 * (_ - y) + C + .16666667 * k, I = .3 * (w - b) + A + .16666667 * O, L = Math.sqrt(N * N + I * I), M[0] = L, t = 1; t < 8; t++) N += P, I += R, P += k, R += O, L += Math.sqrt(N * N + I * I), M[t] = L;
-                            N += P, I += R, L += Math.sqrt(N * N + I * I), M[8] = L, N += P + k, I += R + O, L += Math.sqrt(N * N + I * I), M[9] = L, o = 0
+                            for (y = c[t], b = c[t + 1], _ = c[t + 2], w = c[t + 3], x = c[t + 4], E = c[t + 5], S = c[t + 6], T = c[t + 7], C = .03 * (y - 2 * _ + x), A = .03 * (b - 2 * w + E), k = .006 * (3 * (_ - x) - y + S), O = .006 * (3 * (w - E) - b + T), R = 2 * C + k, P = 2 * A + O, N = .3 * (_ - y) + C + .16666667 * k, I = .3 * (w - b) + A + .16666667 * O, L = Math.sqrt(N * N + I * I), M[0] = L, t = 1; t < 8; t++) N += R, I += P, R += k, P += O, L += Math.sqrt(N * N + I * I), M[t] = L;
+                            N += R, I += P, L += Math.sqrt(N * N + I * I), M[8] = L, N += R + k, I += P + O, L += Math.sqrt(N * N + I * I), M[9] = L, o = 0
                         }
                         for (s *= L;; o++) {
                             let t = M[o];
@@ -52778,10 +52778,10 @@
                                 case O:
                                     r.push(w(t, new i.ScaleXTimeline(o, a, e), 1));
                                     break;
-                                case P:
+                                case R:
                                     r.push(w(t, new i.ScaleYTimeline(o, a, e), 1));
                                     break;
-                                case R:
+                                case P:
                                     r.push(x(t, new i.ShearTimeline(o, a, e), 1));
                                     break;
                                 case N:
@@ -53147,8 +53147,8 @@
                 A = 3,
                 k = 4,
                 O = 5,
-                P = 6,
-                R = 7,
+                R = 6,
+                P = 7,
                 N = 8,
                 I = 9,
                 M = 10,
@@ -53780,22 +53780,22 @@
                                     m = 1 / (n * h + r * (v - T)),
                                     k = t >> 1,
                                     O = this.clipOutput,
-                                    P = i.Utils.setArraySize(u, e + k * d);
+                                    R = i.Utils.setArraySize(u, e + k * d);
                                 for (let i = 0; i < t; i += 2, e += d) {
                                     let t = O[i],
                                         l = O[i + 1];
-                                    P[e] = t, P[e + 1] = l, P[e + 2] = o.r, P[e + 3] = o.g, P[e + 4] = o.b, P[e + 5] = o.a;
+                                    R[e] = t, R[e + 1] = l, R[e + 2] = o.r, R[e + 3] = o.g, R[e + 4] = o.b, R[e + 5] = o.a;
                                     let u = t - S,
                                         c = l - T,
                                         d = (n * u + r * c) * m,
                                         f = (p * u + h * c) * m,
                                         g = 1 - d - f;
-                                    P[e + 6] = y * d + x * f + C * g, P[e + 7] = b * d + E * f + A * g, a && (P[e + 8] = s.r, P[e + 9] = s.g, P[e + 10] = s.b, P[e + 11] = s.a)
+                                    R[e + 6] = y * d + x * f + C * g, R[e + 7] = b * d + E * f + A * g, a && (R[e + 8] = s.r, R[e + 9] = s.g, R[e + 10] = s.b, R[e + 11] = s.a)
                                 }
                                 e = c.length;
-                                let R = i.Utils.setArraySize(c, e + 3 * (k - 2));
+                                let P = i.Utils.setArraySize(c, e + 3 * (k - 2));
                                 k--;
-                                for (let t = 1; t < k; t++, e += 3) R[e] = f, R[e + 1] = f + t, R[e + 2] = f + t + 1;
+                                for (let t = 1; t < k; t++, e += 3) P[e] = f, P[e + 1] = f + t, P[e + 2] = f + t + 1;
                                 f += k + 1
                             }
                         }
@@ -55581,19 +55581,19 @@
                         A = 0,
                         k = 0,
                         O = 0,
-                        P = 0,
                         R = 0,
+                        P = 0,
                         N = 0,
                         I = 0,
                         M = 0;
                     if (0 != l) {
                         let t = r.MathUtils.cosDeg(l),
                             e = r.MathUtils.sinDeg(l);
-                        A = t * b - e * _, k = e * b + t * _, I = t * w - e * x, M = e * w + t * x, R = t * E - e * S, N = e * E + t * S, O = R + (A - I), P = N + (k - M)
-                    } else A = b, k = _, I = w, M = x, R = E, N = S, O = T, P = C;
-                    A += c, k += f, O += c, P += f, R += c, N += f, I += c, M += f;
+                        A = t * b - e * _, k = e * b + t * _, I = t * w - e * x, M = e * w + t * x, P = t * E - e * S, N = e * E + t * S, O = P + (A - I), R = N + (k - M)
+                    } else A = b, k = _, I = w, M = x, P = E, N = S, O = T, R = C;
+                    A += c, k += f, O += c, R += f, P += c, N += f, I += c, M += f;
                     var L = 0;
-                    h[L++] = A, h[L++] = k, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 0, h[L++] = 1, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = O, h[L++] = P, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 1, h[L++] = 1, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = R, h[L++] = N, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 1, h[L++] = 0, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = I, h[L++] = M, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 0, h[L++] = 0, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L] = 0), this.batcher.draw(t, h, p)
+                    h[L++] = A, h[L++] = k, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 0, h[L++] = 1, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = O, h[L++] = R, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 1, h[L++] = 1, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = P, h[L++] = N, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 1, h[L++] = 0, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L++] = 0), h[L++] = I, h[L++] = M, h[L++] = u.r, h[L++] = u.g, h[L++] = u.b, h[L++] = u.a, h[L++] = 0, h[L++] = 0, this.twoColorTint && (h[L++] = 0, h[L++] = 0, h[L++] = 0, h[L] = 0), this.batcher.draw(t, h, p)
                 }
                 drawRegion(t, e, n, r, i, o) {
                     this.enableRenderer(this.batcher), o || (o = d);
@@ -59054,71 +59054,71 @@
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "L1oKpSDI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-and-play-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-and-play-button.js\\" "],["text","\\n"],["append",["unknown",["patcher-play-button"]],false],["text","\\n"],["append",["unknown",["patching-progress-bar"]],false],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","patcher-tooltip-holder"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isProgressTooltipAttached"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["patcher-progress-tooltip"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "a90Ziv1Z",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-and-play-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-and-play-button.js\\" "],["text","\\n"],["append",["unknown",["patcher-play-button"]],false],["text","\\n"],["append",["unknown",["patching-progress-bar"]],false],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","patcher-tooltip-holder"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isProgressTooltipAttached"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["patcher-progress-tooltip"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "f5QWyjZn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-bar.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "VQiADwR9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-bar.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "YodM2hhn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-video-state.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-video-state.js\\" "],["text","\\n"],["block",["if"],[["get",["isIntro"]]],null,2],["block",["if"],[["get",["isLoop"]]],null,1],["block",["if"],[["get",["playOutro"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["outro",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcOutro"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["loop",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcLoop"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["static-attr","loop","true"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["intro",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcIntro"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Iq2phBpA",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-video-state.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-video-state.js\\" "],["text","\\n"],["block",["if"],[["get",["isIntro"]]],null,2],["block",["if"],[["get",["isLoop"]]],null,1],["block",["if"],[["get",["playOutro"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["outro",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcOutro"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["loop",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcLoop"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["static-attr","loop","true"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","video",[]],["dynamic-attr","class",["concat",["intro",["helper",["if"],[["get",["isHanging"]]," hanging"],null]]]],["dynamic-attr","src",["unknown",["srcIntro"]],null],["static-attr","autoplay","true"],["static-attr","preload","auto"],["dynamic-attr","width",["unknown",["srcWidth"]],null],["dynamic-attr","height",["unknown",["srcHeight"]],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "EWdbjBRA",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-progress-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-progress-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["static-attr","id","patcher-progress-tooltip"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["flush-element"],["append",["unknown",["primaryWorkDisplayText"]],false],["text"," | "],["append",["unknown",["productName"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDownloading"]]],null,7,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["primaryWorkDisplayDetailText"]],false],["close-element"],["open-element","div",[]],["flush-element"],["append",["unknown",["eta"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["progress"]],false],["close-element"],["open-element","div",[]],["static-attr","class","filename"],["flush-element"],["append",["unknown",["lastFileProcessed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRepairing"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["filesScanned"]],false],["close-element"],["open-element","div",[]],["static-attr","class","filename"],["flush-element"],["append",["unknown",["lastFileProcessed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isScanningFiles"]]],null,3,2]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["flush-element"],["append",["unknown",["tra","patcher_hanging_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["flush-element"],["append",["unknown",["eta"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["progress"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHanging"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
+                id: "LKO/KIp2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-progress-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-progress-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["static-attr","id","patcher-progress-tooltip"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["flush-element"],["append",["unknown",["primaryWorkDisplayText"]],false],["text"," | "],["append",["unknown",["productName"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDownloading"]]],null,7,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["primaryWorkDisplayDetailText"]],false],["close-element"],["open-element","div",[]],["flush-element"],["append",["unknown",["eta"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["progress"]],false],["close-element"],["open-element","div",[]],["static-attr","class","filename"],["flush-element"],["append",["unknown",["lastFileProcessed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRepairing"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["filesScanned"]],false],["close-element"],["open-element","div",[]],["static-attr","class","filename"],["flush-element"],["append",["unknown",["lastFileProcessed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isScanningFiles"]]],null,3,2]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["flush-element"],["append",["unknown",["tra","patcher_hanging_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["flush-element"],["append",["unknown",["eta"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["append",["unknown",["progress"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHanging"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "snV1DrYs",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-basic-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-basic-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","play-button-frame"],["dynamic-attr","data-is-logged-in",["unknown",["playButton","isLoggedIn"]],null],["dynamic-attr","data-is-not-patching",["unknown",["playButton","isNotPatching"]],null],["dynamic-attr","data-patcher-state",["unknown",["patcher","patcherState"]],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["showTooltip"]]],null,1],["text","\\n"],["open-element","div",[]],["static-attr","class","play-button-container"],["dynamic-attr","style",["helper",["sanitize"],[["get",["buttonContainerStyle"]]],null],null],["flush-element"],["text","\\n\\n  "],["append",["helper",["league-client-logo"],null,[["videoSource"],[["get",["videoSource"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","play-button-content"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","play-button-text"],["flush-element"],["text","\\n      "],["append",["unknown",["buttonText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["text","\\n        "],["append",["unknown",["tooltipMessage"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0]],"locals":[]}],"hasPartials":false}',
+                id: "Fyh12tEe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-basic-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-basic-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","play-button-frame"],["dynamic-attr","data-is-logged-in",["unknown",["playButton","isLoggedIn"]],null],["dynamic-attr","data-is-not-patching",["unknown",["playButton","isNotPatching"]],null],["dynamic-attr","data-patcher-state",["unknown",["patcher","patcherState"]],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["showTooltip"]]],null,1],["text","\\n"],["open-element","div",[]],["static-attr","class","play-button-container"],["dynamic-attr","style",["helper",["sanitize"],[["get",["buttonContainerStyle"]]],null],null],["flush-element"],["text","\\n\\n  "],["append",["helper",["league-client-logo"],null,[["videoSource"],[["get",["videoSource"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","play-button-content"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","play-button-text"],["flush-element"],["text","\\n      "],["append",["unknown",["buttonText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["text","\\n        "],["append",["unknown",["tooltipMessage"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "x6zpeE5A",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-play-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-play-button.js\\" "],["text","\\n"],["append",["helper",["patcher-basic-button"],null,[["isHidden","buttonText","buttonState","imageSource","soundSource","videoSource","isLobby","play","tooltipMessage","showTooltip"],[["get",["isHidden"]],["get",["buttonText"]],["get",["buttonState"]],["get",["imageSource"]],["get",["soundSource"]],["get",["videoSource"]],["get",["isLobbyBtn"]],"play",["get",["tooltipMessage"]],["get",["showTooltip"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "+mywVOMN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patcher-play-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patcher-play-button.js\\" "],["text","\\n"],["append",["helper",["patcher-basic-button"],null,[["isHidden","buttonText","buttonState","imageSource","soundSource","videoSource","isLobby","play","tooltipMessage","showTooltip"],[["get",["isHidden"]],["get",["buttonText"]],["get",["buttonState"]],["get",["imageSource"]],["get",["soundSource"]],["get",["videoSource"]],["get",["isLobbyBtn"]],"play",["get",["tooltipMessage"]],["get",["showTooltip"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "V+zlTA/Z",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\game-patcher-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\game-patcher-bar.js\\" "],["text","\\n"],["open-element","video",[]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","type","video/webm"],["flush-element"],["text","\\n  "],["open-element","source",[]],["static-attr","src","/fe/lol-static-assets/videos/league-logo-loop-idle.webm"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "GryRpQL0",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\game-patcher-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\game-patcher-bar.js\\" "],["text","\\n"],["open-element","video",[]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","type","video/webm"],["flush-element"],["text","\\n  "],["open-element","source",[]],["static-attr","src","/fe/lol-static-assets/videos/league-logo-loop-idle.webm"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "C9cn9KNi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\league-client-logo.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\league-client-logo.js\\" "],["text","\\n"],["open-element","lol-uikit-video-state-machine",[]],["flush-element"],["text","\\n  "],["comment"," BUTTON BACKGROUND VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","play-button-video"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","patcher-intro"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","class","large-video"],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","patcherIntro"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","enabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","enabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","class","large-video"],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","disabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["static-attr","wait-for-end",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","releaseIntro"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","hoverIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-out"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","hoverOutro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["comment"," BUTTON MAGIC VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","play-button-hover-magic"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["static-attr","wait-for-end",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","magicRelease"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","hoverIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","patcher-intro"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-out"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["comment"," LOGO VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","league-logo"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["static-attr","no-preserve-state",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","refresh"],["static-attr","no-preserve-state",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","league-logo"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoMagicIntro"]],null],["static-attr","fade-out","400"],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "oyUfq+gq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\league-client-logo.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\league-client-logo.js\\" "],["text","\\n"],["open-element","lol-uikit-video-state-machine",[]],["flush-element"],["text","\\n  "],["comment"," BUTTON BACKGROUND VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","play-button-video"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","patcher-intro"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","class","large-video"],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","patcherIntro"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","enabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","enabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","class","large-video"],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","disabledIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["static-attr","wait-for-end",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","releaseIntro"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","hoverIntro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-out"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","hoverOutro"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["comment"," BUTTON MAGIC VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","play-button-hover-magic"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["static-attr","wait-for-end",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","outro"],["dynamic-attr","src",["unknown",["videoSource","magicRelease"]],null],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","hoverIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","patcher-intro"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-out"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["comment"," LOGO VIDEO "],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","league-logo"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","default"],["static-attr","no-preserve-state",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","refresh"],["static-attr","no-preserve-state",""],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoIdle"]],null],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-video-group",[]],["static-attr","class","league-logo"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","release"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-video",[]],["static-attr","type","intro"],["dynamic-attr","src",["unknown",["videoSource","leagueLogoMagicIntro"]],null],["static-attr","fade-out","400"],["static-attr","preload",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","enabled"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","hover-in"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-video-state",[]],["static-attr","state","disabled"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "Mi+XDgXG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\progress-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\progress-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","progress-bar-container"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["global-mask ",["helper",["if"],[["get",["endPointMask"]],"active"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","progress-bar-mask"],["dynamic-attr","style",["helper",["sanitize"],[["get",["progressBarStyle"]]],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","video-wrapper"],["flush-element"],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcLoop"],["main",["get",["srcMainLoop"]]]]],false],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcLoop"],["border",["get",["srcBorderLoop"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","endpoint-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","video-wrapper"],["flush-element"],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro","srcLoop","action"],["endpoint",["get",["srcTipIntro"]],["get",["srcTipLoop"]],"endpointState"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["yield","default"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "TIvbztlx",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\progress-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\progress-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","progress-bar-container"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["global-mask ",["helper",["if"],[["get",["endPointMask"]],"active"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","progress-bar-mask"],["dynamic-attr","style",["helper",["sanitize"],[["get",["progressBarStyle"]]],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","video-wrapper"],["flush-element"],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcLoop"],["main",["get",["srcMainLoop"]]]]],false],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcLoop"],["border",["get",["srcBorderLoop"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","endpoint-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","video-wrapper"],["flush-element"],["text","\\n        "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro","srcLoop","action"],["endpoint",["get",["srcTipIntro"]],["get",["srcTipLoop"]],"endpointState"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["yield","default"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
             const r = n(1).Ember;
             t.exports = r.HTMLBars.template({
-                id: "YPgmoPCQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patching-progress-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patching-progress-bar.js\\" "],["text","\\n"],["comment"," need currentPatchPercentComplete in the template to ensure it fires updates "],["text","\\n"],["open-element","div",[]],["dynamic-attr","data-video-state",["unknown",["videoState"]],null],["dynamic-attr","data-current-progress",["unknown",["patcher","currentPatchPercentComplete"]],null],["dynamic-attr","class",["concat",["animated-progress-bar main ",["unknown",["patchingStatus"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","patcher-bar-proxy"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLongPatcherBar"]]],null,6,5],["text","\\n"],["block",["if"],[["get",["isPatching"]]],null,4],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","id","lol-patcher-client-patch-modal-holder"],["static-attr","class","lol-patcher-modal-holder"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","lol-patcher-client-patch-modal-body"],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text"," "],["append",["unknown",["clientPatchMessageText"]],false],["text"," "],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","timer"],["flush-element"],["append",["unknown",["clientPatchModalTimerText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","progress-percent-text"],["flush-element"],["append",["unknown",["patcher","formattedPercent"]],false],["open-element","span",[]],["static-attr","class","phase"],["flush-element"],["append",["unknown",["phase"]],false],["close-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","progress-percent-text"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","long_patcher_bar_text"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["patcher","formattedPercent"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLongPatcherBar"]]],null,1,0]],"locals":[]},{"statements":[["text","\\n"],["block",["progress-bar"],null,[["progressPercent","srcMainLoop","srcBorderLoop","srcTipIntro","srcTipLoop"],[["get",["patcher","currentPatchPercentComplete"]],["get",["progressBarAssets","progressBarMainLoop"]],["get",["progressBarAssets","progressBarBorder"]],["get",["progressBarAssets","progressBarTipIntro"]],["get",["progressBarAssets","progressBarTipLoop"]]]],2],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressing"]]],null,3],["text","\\n    "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro","srcLoop","srcWidth","srcHeight"],["logo",["get",["leagueLogoIntro"]],["get",["leagueLogoLoop"]],"64","54"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro"],["frame",["get",["progressBarAssets","patcherFrameIntro"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","frame"],["dynamic-attr","src",["unknown",["progressBarAssets","patcherFrame"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "yfX7MkSJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\templates\\\\components\\\\patching-progress-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_18\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-ember-libs\\\\src\\\\lib\\\\patcher-and-play-button\\\\addon\\\\components\\\\patching-progress-bar.js\\" "],["text","\\n"],["comment"," need currentPatchPercentComplete in the template to ensure it fires updates "],["text","\\n"],["open-element","div",[]],["dynamic-attr","data-video-state",["unknown",["videoState"]],null],["dynamic-attr","data-current-progress",["unknown",["patcher","currentPatchPercentComplete"]],null],["dynamic-attr","class",["concat",["animated-progress-bar main ",["unknown",["patchingStatus"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","patcher-bar-proxy"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLongPatcherBar"]]],null,6,5],["text","\\n"],["block",["if"],[["get",["isPatching"]]],null,4],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","id","lol-patcher-client-patch-modal-holder"],["static-attr","class","lol-patcher-modal-holder"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","lol-patcher-client-patch-modal-body"],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text"," "],["append",["unknown",["clientPatchMessageText"]],false],["text"," "],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","timer"],["flush-element"],["append",["unknown",["clientPatchModalTimerText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","progress-percent-text"],["flush-element"],["append",["unknown",["patcher","formattedPercent"]],false],["open-element","span",[]],["static-attr","class","phase"],["flush-element"],["append",["unknown",["phase"]],false],["close-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","progress-percent-text"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","long_patcher_bar_text"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["patcher","formattedPercent"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLongPatcherBar"]]],null,1,0]],"locals":[]},{"statements":[["text","\\n"],["block",["progress-bar"],null,[["progressPercent","srcMainLoop","srcBorderLoop","srcTipIntro","srcTipLoop"],[["get",["patcher","currentPatchPercentComplete"]],["get",["progressBarAssets","progressBarMainLoop"]],["get",["progressBarAssets","progressBarBorder"]],["get",["progressBarAssets","progressBarTipIntro"]],["get",["progressBarAssets","progressBarTipLoop"]]]],2],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressing"]]],null,3],["text","\\n    "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro","srcLoop","srcWidth","srcHeight"],["logo",["get",["leagueLogoIntro"]],["get",["leagueLogoLoop"]],"64","54"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["patcher-video-state"],null,[["class","srcIntro"],["frame",["get",["progressBarAssets","patcherFrameIntro"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","frame"],["dynamic-attr","src",["unknown",["progressBarAssets","patcherFrame"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (t, e, n) => {
