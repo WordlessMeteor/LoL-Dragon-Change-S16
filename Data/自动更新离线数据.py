@@ -12,25 +12,31 @@ os.makedirs("Data/Update Logs", exist_ok = True)
 currentTime: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
 log: IO[Any] = open(f"Data/Update Logs/{currentTime}.log", "w", encoding = "utf-8")
 
+def getISOTime(timestamp: float) -> str:
+    dt: datetime.datetime = datetime.datetime.fromtimestamp(timestamp, tz = datetime.timezone.utc)
+    return dt.isoformat(timespec = "milliseconds").replace("+00:00", "Z")
+
 def logInput(prompt: str = "", log: _io.TextIOWrapper = log, write_time: bool = True) -> str:
     s: str = input(prompt)
     if isinstance(log, _io.TextIOWrapper):
         if write_time:
-            currentTime = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-            log.write("[%s]%s\n" %(currentTime, prompt + s))
+            currentTime_millisecond: str = getISOTime(time.time())
+            log.write("[%s]%s\n" %(currentTime_millisecond, prompt + s))
         else:
             log.write(prompt + s + "\n")
     return s
 
 def logPrint(s: object = "", log: _io.TextIOWrapper = log, end: str = "\n", print_time: bool = False, write_time: bool = True) -> None:
-    currentTime: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    currentTime: float = time.time()
+    currentTime_second: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime(currentTime))
+    currentTime_millisecond: str = getISOTime(currentTime)
     if print_time:
-        print("[%s]%s" %(currentTime, s), end = end, flush = end == "\r")
+        print("[%s]%s" %(currentTime_second, s), end = end, flush = end == "\r")
     else:
         print(s, end = end, flush = end == "\r")
     if isinstance(log, _io.TextIOWrapper):
         if write_time:
-            log.write("[%s]%s%s" %(currentTime, str(s), "\n" if end == "\r" else end))
+            log.write("[%s]%s%s" %(currentTime_millisecond, str(s), "\n" if end == "\r" else end))
         else:
             log.write("%s%s" %(str(s), "\n" if end == "\r" else end))
 
