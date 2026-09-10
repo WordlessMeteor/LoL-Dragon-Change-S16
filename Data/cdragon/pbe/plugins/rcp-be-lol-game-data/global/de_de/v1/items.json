@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "Mondstaub-Zauberklinge",
+        "description": "<mainText><stats><attention> 50</attention>&nbsp;Fähigkeitsstärke<br><attention> 50</attention>&nbsp;Rüstung<br><attention> 50</attention>&nbsp;Magieresistenz</stats><br><br><jadeUnique>Zähigkeit:</jadeUnique> Die Dauer von <status>Betäubung, Verlangsamung, Spott, Furcht, Verstummung, Blendung</status> und <status>bewegungsunfähig</status> machenden Effekten ist um <attention>35 %</attention> verringert.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "Mantel und Dolch",
+        "description": "<mainText><stats><attention> 20&nbsp;%</attention> Angriffstempo<br><attention> 20&nbsp;%</attention> Chance auf kritische Treffer</stats><br><br><jadeUnique>Zähigkeit:</jadeUnique> Die Dauer von <status>Betäubung, Verlangsamung, Spott, Furcht, Verstummung, Blendung</status> und <status>bewegungsunfähig</status> machenden Effekten ist um <attention>35 %</attention> verringert.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "Morellonomikon",
         "description": "<mainText><stats><attention> 75</attention>&nbsp;Fähigkeitsstärke<br><attention> 12</attention> Manaregeneration alle 5 Sek.<br><attention> 20 %</attention> Abklingzeitverringerung</stats><br><br><jadeUnique>Morellos Hass:</jadeUnique> Wenn du gegnerischen Champions mit weniger als <scaleHealth>40 % Leben</scaleHealth> magischen Schaden zufügst, belegst du sie 4 Sekunden lang mit <status>Klaffende Wunden</status>.<br><br><jadeRules>(<status>Klaffende Wunden</status> verringern eingehende Heil- und Regenerationseffekte um 50 %.)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "Zz'Rot-Portal",
-        "description": "<mainText><stats><attention> 50</attention>&nbsp;Rüstung<br><attention> 50</attention>&nbsp;Magieresistenz<br><attention> 5</attention> Lebensregeneration alle 5 Sek.</stats><br><br><jadeUnique>Zielläufer:</jadeUnique> Gewährt <speed>+30 % zusätzliches Lauftempo</speed>, das sich über 2 Sekunden aufbaut, wenn du dich in der Nähe von Türmen oder Leerenportalen befindest. <jadeUnique>Aktiv</jadeUnique>  150 Sek.<br>Erschafft am Zielort für 150 Sekunden ein Portal (kann nicht in der Nähe von Türmen platziert werden). Alle 4 Sekunden lässt das Portal eine instabile <keywordMajor>Leerenbrut</keywordMajor> erscheinen, die sich die nächste Lane entlangbewegt. <br><br>Nach 4 Sekunden fällt das Leben einer <keywordMajor>Leerenbrut</keywordMajor> rasch auf 0 ab. Die vierte <keywordMajor>Leerenbrut</keywordMajor> und jede weitere <keywordMajor>Leerenbrut</keywordMajor> verursacht zusätzlichen Schaden in Höhe von 50 % deiner Resistenzen.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention>&nbsp;Rüstung<br><attention> 50</attention>&nbsp;Magieresistenz<br><attention> 5</attention> Lebensregeneration alle 5 Sek.</stats><br><br><jadeUnique>Zielläufer:</jadeUnique> Wenn du dich in der Nähe von Türmen oder <keywordMajor>Leerenportalen</keywordMajor> befindest, erhältst du bis zu <speed>30 % Lauftempo</speed>, das sich über 2 Sekunden aufbaut. <jadeUnique>Aktiv</jadeUnique>  150 Sek.<br>Erschafft 150 Sekunden lang ein <keywordMajor>Leerenportal</keywordMajor> am Zielort. Alle 4 Sekunden lässt das Portal eine instabile <keywordMajor>Leerenbrut</keywordMajor> erscheinen, die sich die nächste Lane entlangbewegt.</mainText>",
         "active": true,
         "inStore": true,
         "from": [

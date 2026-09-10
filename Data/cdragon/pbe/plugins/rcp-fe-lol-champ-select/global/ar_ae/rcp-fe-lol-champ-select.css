@@ -20308,7 +20308,8 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     width: 300px
 }
 
-.jade-store-filter-label {
+.jade-store-filter-label,
+.jade-store-item-tooltip {
     font-family: var(--font-frizquadrata)
 }
 
@@ -20321,11 +20322,22 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 .jade-store-filter-label:lang(vi-VN),
 .jade-store-filter-label:lang(zh-cn),
 .jade-store-filter-label:lang(zh-my),
-.jade-store-filter-label:lang(zh-tw) {
+.jade-store-filter-label:lang(zh-tw),
+.jade-store-item-tooltip:lang(el-gr),
+.jade-store-item-tooltip:lang(ko-kr),
+.jade-store-item-tooltip:lang(ro-ro),
+.jade-store-item-tooltip:lang(ru-ru),
+.jade-store-item-tooltip:lang(th-th),
+.jade-store-item-tooltip:lang(tr-tr),
+.jade-store-item-tooltip:lang(vi-VN),
+.jade-store-item-tooltip:lang(zh-cn),
+.jade-store-item-tooltip:lang(zh-my),
+.jade-store-item-tooltip:lang(zh-tw) {
     font-family: var(--font-display)
 }
 
-.jade-store-filter-label:lang(ja-jp) {
+.jade-store-filter-label:lang(ja-jp),
+.jade-store-item-tooltip:lang(ja-jp) {
     font-family: "Noto Serif Jp Title"
 }
 
@@ -20496,6 +20508,14 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     padding: 4px 8px
 }
 
+.jade-store-filters--radio-group {
+    gap: 8px
+}
+
+.jade-store-filters--radio-group .jade-store-filter-label {
+    font-size: 14px
+}
+
 .jade-store-filter-option {
     align-items: center;
     cursor: pointer;
@@ -20551,6 +20571,7 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 }
 
 .jade-store-checkbox {
+    border-radius: 1px;
     box-sizing: border-box;
     display: grid;
     flex-shrink: 0;
@@ -20561,17 +20582,22 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 
 .jade-store-checkbox:before {
     background: #d9d9d9;
+    border-radius: 1px;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .5);
     content: "";
     grid-area: 1/1
 }
 
 .jade-store-checkbox-on:after {
-    background: linear-gradient(0deg, #0c3360 37.5%, #2c66aa);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.867 8.017'%3E%3Cpath d='M3.8 8.017 0 4.217l.95-.95 2.85 2.85L9.917 0l.95.95z'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
     content: "";
     grid-area: 1/1;
-    height: 8px;
+    height: 8.02px;
     place-self: center;
-    width: 8px
+    width: 10.87px
 }
 
 .jade-store-sort-wrapper {
@@ -20778,8 +20804,15 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     background: rgba(120, 90, 40, .7)
 }
 
+.jade-store-grid--cols-4 {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.jade-store-grid--cols-5 {
+    grid-template-columns: repeat(5, 1fr)
+}
+
 .jade-store-grid--wide {
-    grid-template-columns: repeat(5, 1fr);
     padding-left: 4px;
     width: 984px
 }
@@ -20915,6 +20948,39 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 
 .jade-store-item-clickable {
     cursor: pointer
+}
+
+.jade-store-item__new-pip {
+    background: #fabe0a;
+    border-radius: 50%;
+    height: 10px;
+    inset-inline-end: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    width: 10px
+}
+
+.jade-store-item__new-pip:after,
+.jade-store-item__new-pip:before {
+    background: #fabe0a;
+    border-radius: 50%;
+    content: "";
+    inset: 0;
+    mix-blend-mode: screen;
+    position: absolute
+}
+
+.jade-store-item__new-pip:before {
+    filter: blur(2px)
+}
+
+.jade-store-item__new-pip:after {
+    filter: blur(8px)
+}
+
+.jade-store-item:not(.jade-store-item--new) .jade-store-item__new-pip {
+    display: none
 }
 
 .jade-store-item:hover .jade-store-item-hover-border {
@@ -21089,20 +21155,20 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 }
 
 .jade-store-item-name {
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.jade-store-item-description,
-.jade-store-item-name {
     color: #fff;
     font-family: $store-font-heading;
     font-size: 12px;
     font-weight: 400;
-    text-align: center
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis
 }
 
-.jade-store-item-description {
+.jade-store-item--rune .jade-store-item-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
     word-break: break-word
 }
 
@@ -21191,6 +21257,69 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 
 .jade-store-grid--empty {
     overflow: hidden
+}
+
+.jade-store-item-tooltip {
+    background: #0b1015;
+    border: 1px solid #d09a00;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: normal;
+    padding: 16px;
+    pointer-events: none;
+    position: fixed;
+    width: 352px;
+    word-break: break-word
+}
+
+.jade-store-item-tooltip__name {
+    color: #f0f0f0;
+    font-size: 14px
+}
+
+.jade-store-item-tooltip__description {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 8px
+}
+
+.jade-store-item-tooltip__caret {
+    height: 0;
+    position: absolute;
+    top: 100%;
+    width: 0
+}
+
+.jade-store-item-tooltip__caret:after,
+.jade-store-item-tooltip__caret:before {
+    border: 8px solid transparent;
+    border-top-color: #d09a00;
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%)
+}
+
+.jade-store-item-tooltip__caret:after {
+    border-top-color: #0b1015;
+    border-width: 7px
+}
+
+.jade-store-item-tooltip--below .jade-store-item-tooltip__caret {
+    bottom: 100%;
+    top: auto
+}
+
+.jade-store-item-tooltip--below .jade-store-item-tooltip__caret:after,
+.jade-store-item-tooltip--below .jade-store-item-tooltip__caret:before {
+    border-bottom-color: #d09a00;
+    border-top-color: transparent;
+    bottom: 0;
+    top: auto
+}
+
+.jade-store-item-tooltip--below .jade-store-item-tooltip__caret:after {
+    border-bottom-color: #0b1015
 }
 
 .jade-store-no-results {
@@ -23309,10 +23438,6 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     font-family: "Noto Serif Jp Title"
 }
 
-.rune-plate-component {
-    overflow: hidden
-}
-
 .rune-plate-component .rune-plate {
     align-items: center;
     background: url(/fe/lol-champ-select/runesBackground.png) no-repeat;
@@ -23412,6 +23537,22 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     height: 100%;
     object-fit: contain;
     position: absolute;
+    width: 100%
+}
+
+.rune-plate-component .rune-slot .rune-slot__effect {
+    display: block;
+    height: 128px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 128px
+}
+
+.rune-plate-component .rune-slot .rune-slot__effect video {
+    height: 100%;
     width: 100%
 }
 
@@ -23589,11 +23730,6 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     display: none
 }
 
-.rune-plate-component .rune-slot.black.filled .empty-slot,
-.rune-plate-component .rune-slot.black.filled .rune-slot__image {
-    filter: drop-shadow(0 0 8px #c084fc)
-}
-
 .rune-plate-component .rune-slot.black .custom-rune-tooltip {
     bottom: auto;
     left: -10%;
@@ -23754,26 +23890,6 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 .rune-plate-component .slot-30 {
     left: 388px;
     top: 154px
-}
-
-.rune-plate-component .rune-slot.filled.glow-offense .empty-slot,
-.rune-plate-component .rune-slot.filled.glow-offense .rune-slot__image {
-    filter: drop-shadow(0 0 8px #f00)
-}
-
-.rune-plate-component .rune-slot.filled.glow-defense .empty-slot,
-.rune-plate-component .rune-slot.filled.glow-defense .rune-slot__image {
-    filter: drop-shadow(0 0 8px #ffd700)
-}
-
-.rune-plate-component .rune-slot.filled.glow-magical .empty-slot,
-.rune-plate-component .rune-slot.filled.glow-magical .rune-slot__image {
-    filter: drop-shadow(0 0 8px #6496ff)
-}
-
-.rune-plate-component .rune-slot.filled.glow-utility .empty-slot,
-.rune-plate-component .rune-slot.filled.glow-utility .rune-slot__image {
-    filter: drop-shadow(0 0 8px #c084fc)
 }
 
 @-moz-keyframes fadeInRune {
@@ -31998,7 +32114,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-power-value,
 .voting-system-question-title,
 .voting-system-result-heading,
-.voting-system-time-tooltip-title {
+.voting-system-time-tooltip-title,
+.voting-system__power-tooltip-list {
     font-family: var(--font-frizquadrata)
 }
 
@@ -32101,7 +32218,17 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-time-tooltip-title:lang(vi-VN),
 .voting-system-time-tooltip-title:lang(zh-cn),
 .voting-system-time-tooltip-title:lang(zh-my),
-.voting-system-time-tooltip-title:lang(zh-tw) {
+.voting-system-time-tooltip-title:lang(zh-tw),
+.voting-system__power-tooltip-list:lang(el-gr),
+.voting-system__power-tooltip-list:lang(ko-kr),
+.voting-system__power-tooltip-list:lang(ro-ro),
+.voting-system__power-tooltip-list:lang(ru-ru),
+.voting-system__power-tooltip-list:lang(th-th),
+.voting-system__power-tooltip-list:lang(tr-tr),
+.voting-system__power-tooltip-list:lang(vi-VN),
+.voting-system__power-tooltip-list:lang(zh-cn),
+.voting-system__power-tooltip-list:lang(zh-my),
+.voting-system__power-tooltip-list:lang(zh-tw) {
     font-family: var(--font-display)
 }
 
@@ -32114,7 +32241,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .voting-system-power-value:lang(ja-jp),
 .voting-system-question-title:lang(ja-jp),
 .voting-system-result-heading:lang(ja-jp),
-.voting-system-time-tooltip-title:lang(ja-jp) {
+.voting-system-time-tooltip-title:lang(ja-jp),
+.voting-system__power-tooltip-list:lang(ja-jp) {
     font-family: "Noto Serif Jp Title"
 }
 
@@ -32705,7 +32833,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-option--disabled:hover .voting-system-option-frame-main {
-    border-color: #a27a2f
+    border-color: #183859
 }
 
 .voting-system-option--disabled:hover .voting-system-option-image:after {
@@ -32750,7 +32878,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-option-frame-main {
-    border: 2px solid #a27a2f;
+    border: 2px solid #183859;
     bottom: 1px;
     left: 1px;
     position: absolute;
@@ -32786,20 +32914,22 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .voting-system-power-block {
+    flex-direction: column;
+    flex-shrink: 0
+}
+
+.voting-system-power-block,
+.voting-system-power-row,
+.voting-system__power-content {
     align-items: center;
     display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
     gap: 4px
 }
 
 .voting-system-power-row {
-    align-items: center;
     background: #000;
     border: 1px solid #383838;
     border-radius: 100px;
-    display: flex;
-    gap: 4px;
     padding: 4px 12px;
     white-space: nowrap
 }
@@ -32810,6 +32940,80 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     font-size: 18px;
     font-weight: 400;
     line-height: normal
+}
+
+.voting-system__power-info {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.voting-system__power-info-icon {
+    display: block;
+    height: 20px;
+    width: 20px
+}
+
+lol-uikit-content-block.voting-system__power-tooltip[type=tooltip-system] {
+    box-sizing: border-box;
+    padding: 16px;
+    position: relative;
+    text-align: start;
+    white-space: normal;
+    width: 352px
+}
+
+lol-uikit-content-block.voting-system__power-tooltip[type=tooltip-system]:before {
+    background-image: url(/fe/lol-jade/images/jade-uikit/voting-system-tooltip-caret.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 14px 364px;
+    content: "";
+    height: 26px;
+    left: -14px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px
+}
+
+lol-uikit-content-block.voting-system__power-tooltip[type=tooltip-system]:after {
+    background: #0b1015;
+    content: "";
+    height: 26px;
+    left: -1px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px
+}
+
+.voting-system__power-tooltip-list {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    list-style: disc;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding-inline-start: 21px;
+    text-align: start;
+    white-space: normal
+}
+
+lol-uikit-tooltip[add-part-selector=voting-system__power-tooltip]::part(lol-uikit-tooltip) {
+    background: #0b1015;
+    border: 1px solid #d09a00;
+    border-image: none;
+    box-shadow: none;
+    margin: 0
+}
+
+lol-uikit-tooltip[add-part-selector=voting-system__power-tooltip]::part(lol-uikit-tooltip-caret) {
+    display: none
 }
 
 .voting-system-time-row {
@@ -32940,9 +33144,17 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     text-align: end
 }
 
+.voting-system-result-name--winner {
+    color: #d09a00
+}
+
 .voting-system-result-bar {
     background: #d9d9d9;
     height: 8px
+}
+
+.voting-system-result-bar--winner {
+    background: #d09a00
 }
 
 .voting-system-result-pct {

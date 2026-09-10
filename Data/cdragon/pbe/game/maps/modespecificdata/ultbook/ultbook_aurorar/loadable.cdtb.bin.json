@@ -21662,7 +21662,9 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "Base",
-                            "LowerBody"
+                            "Legs",
+                            "Hat",
+                            "weapon"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -21751,8 +21753,6 @@
                     -1.0
                 ],
                 "miscRenderFlags": 1,
-                "stencilMode": 1,
-                "stencilRef": 2,
                 "particleIsLocalOrientation": 1,
                 "scale0": {
                     "dynamics": {
@@ -21835,7 +21835,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 1.5,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -21844,14 +21844,17 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "Base"
+                            "Base",
+                            "Hat",
+                            "Legs",
+                            "weapon"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
                     },
-                    "UseAvatarSpecificSubmeshMask": true,
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
+                "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
                         0.0,
@@ -21907,8 +21910,6 @@
                     -1.0,
                     -3.0
                 ],
-                "stencilMode": 1,
-                "stencilRef": 2,
                 "scale0": {
                     "dynamics": {
                         "times": [
@@ -22235,7 +22236,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "BODY"
+                            "Base"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -22335,8 +22336,6 @@
                     1.0,
                     80.0
                 ],
-                "stencilMode": 1,
-                "stencilRef": 2,
                 "particleIsLocalOrientation": 1,
                 "hasPostRotateOrientation": 1,
                 "isRotationEnabled": 1,

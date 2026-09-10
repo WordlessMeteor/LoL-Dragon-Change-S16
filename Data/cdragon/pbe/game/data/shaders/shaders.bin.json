@@ -17642,6 +17642,164 @@
     "Shaders/UI/UI_Masked": {
         "parameters": [
             {
+                "name": "Refraction_Texture_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Texture_Rotation_Center",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Rotation_Center",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Texture_Rotation_Angle",
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Rotation_Angle",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Texture_Wipe",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Wipe",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Texture_Panner",
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Panner",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Texture_Use_Panning",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Texture_Use_Panning",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Intensity",
+                "data": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Chromatic_Aberration_R_Intensity",
+                "data": [
+                    1.0199999809265137,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Chromatic_Aberration_R_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Chromatic_Aberration_G_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Chromatic_Aberration_G_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Chromatic_Aberration_B_Intensity",
+                "data": [
+                    0.9800000190734863,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Chromatic_Aberration_B_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "UV_Rotation_Center",
                 "data": [
                     0.5,
@@ -17858,6 +18016,10 @@
         ],
         "staticSwitches": [
             {
+                "name": "ENABLE_REFRACTION",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "ENABLE_FADE",
                 "__type": "ShaderStaticSwitch"
             },
@@ -17867,6 +18029,11 @@
             }
         ],
         "textures": [
+            {
+                "name": "Refraction_Texture",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhaird.tex",
+                "__type": "ShaderTexture"
+            },
             {
                 "name": "MaskTexture",
                 "defaultTexturePath": "assets/shared/materials/base_caustic_noise.tex",
@@ -83991,6 +84158,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "VertexDeform_Speed",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeform_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "data": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeform_Tilling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeformIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Anim_Scale_Intensity",
                 "data": [
                     2.0,
@@ -84246,6 +84464,68 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "TailDistortIntensity",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TailDistortIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "logicalParameters": [
+                    {
+                        "name": "PatternTexOffset_B",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "PatternTexTile_B",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "PatternTexScrollSpeed_B",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Alpha_Control",
                 "logicalParameters": [
                     {
@@ -84365,7 +84645,15 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "VERTEX_DEFORM_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "FLOWDIRECTIONSWITCH",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MASK_VERSION_TWO",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -84384,6 +84672,16 @@
         ],
         "textures": [
             {
+                "name": "Mask",
+                "defaultTexturePath": "assets/shared/materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VertexDeformTexture",
+                "defaultTexturePath": "assets/shared/materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
                 "name": "FlowMap",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
@@ -84394,8 +84692,8 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Mask",
-                "defaultTexturePath": "assets/shared/materials/black.tex",
+                "name": "PatternTexture",
+                "defaultTexturePath": "assets/shared/materials/bc_testtexture.tex",
                 "__type": "ShaderTexture"
             },
             {
@@ -93827,6 +94125,91 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "VoidTendrilNormalIntensity",
+                "data": [
+                    0.3499999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilNormalIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VoidTendrilSoftness",
+                "data": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilSoftness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamTiling",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamTiling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamPanner",
+                "data": [
+                    0.0,
+                    0.004999999888241291,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamPanner",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamRippleDistortionTiling",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamRippleDistortionTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Refraction_Distortion_Strength",
                 "logicalParameters": [
                     {
@@ -94003,7 +94386,7 @@
             {
                 "name": "WaterShallowContrast",
                 "data": [
-                    0.20000000298023224,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -94046,6 +94429,23 @@
                     {
                         "name": "ShallowWaterTint",
                         "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterTransparencyShallow",
+                "data": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterTransparencyShallow",
+                        "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -94114,57 +94514,6 @@
                     {
                         "name": "ShoreFoamRippleDistortionMinMax",
                         "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamTiling",
-                "data": [
-                    0.5,
-                    0.5,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamTiling",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamPanner",
-                "data": [
-                    0.0,
-                    0.004999999888241291,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamPanner",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamRippleDistortionTiling",
-                "data": [
-                    0.5,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamRippleDistortionTiling",
-                        "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -94267,16 +94616,16 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "VoidTendrilNormalIntensity",
+                "name": "SpecBase",
                 "data": [
-                    0.3499999940395355,
+                    1.0,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "logicalParameters": [
                     {
-                        "name": "VoidTendrilNormalIntensity",
+                        "name": "SpecBase",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -94284,16 +94633,50 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "VoidTendrilSoftness",
+                "name": "SpecThreshold",
                 "data": [
-                    0.15000000596046448,
+                    0.9990000128746033,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "logicalParameters": [
                     {
-                        "name": "VoidTendrilSoftness",
+                        "name": "SpecThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecEdgeSize",
+                "data": [
+                    0.003000000026077032,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecEdgeSize",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecIntensity",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecIntensity",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -94511,10 +94894,6 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
-                "name": "SAND_DISTURBANCE",
-                "__type": "ShaderStaticSwitch"
-            },
-            {
                 "name": "USE_VOID_PREVIEW_IN_MM",
                 "{066e669c}": true,
                 "__type": "ShaderStaticSwitch"
@@ -94522,6 +94901,12 @@
             {
                 "name": "USE_VOID",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_SHORE_SDF_FOR_SHALLOWS",
+                "onByDefault": true,
+                "{066e669c}": true,
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -94541,30 +94926,6 @@
             {
                 "name": "BAKED_NORMAL_TEXTURE",
                 "defaultTexturePath": "assets/shared/materials/cobble_moss_nm.tex",
-                "samplerName": "EnvironmentClamp",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "BAKED_DIFFUSE_TEXTURE",
-                "defaultTexturePath": "assets/shared/materials/cobble_moss_albedo.tex",
-                "samplerName": "EnvironmentClamp",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "FoamSparkleNoise",
-                "defaultTexturePath": "assets/shared/materials/foam_sparkle_noise_m.tex",
-                "samplerName": "EnvironmentWrap",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "ShoreTexturePacked",
-                "defaultTexturePath": "assets/maps/particles/map14/waterripple/waterripplepacked.tex",
-                "samplerName": "EnvironmentWrap",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "BAKED_RMA_TEXTURE",
-                "defaultTexturePath": "assets/shared/materials/cobble_moss_rma.tex",
                 "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             },
@@ -94591,6 +94952,30 @@
                 "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ac_nm.tex",
                 "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "FoamSparkleNoise",
+                "defaultTexturePath": "assets/shared/materials/foam_sparkle_noise_m.tex",
+                "samplerName": "EnvironmentWrap",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ShoreTexturePacked",
+                "defaultTexturePath": "assets/maps/particles/map14/waterripple/waterripplepacked.tex",
+                "samplerName": "EnvironmentWrap",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BAKED_DIFFUSE_TEXTURE",
+                "defaultTexturePath": "assets/shared/materials/cobble_moss_albedo.tex",
+                "samplerName": "EnvironmentClamp",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BAKED_RMA_TEXTURE",
+                "defaultTexturePath": "assets/shared/materials/cobble_moss_rma.tex",
+                "samplerName": "EnvironmentClamp",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
@@ -94598,6 +94983,7 @@
             "FEATURE_BLOOM": "1",
             "FEATURE_NAVMESH_MASK": "1",
             "FEATURE_SCREENSPACE_UV": "1",
+            "FEATURE_STYLIZED_SPECULAR": "1",
             "FEATURE_TANGENT": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"

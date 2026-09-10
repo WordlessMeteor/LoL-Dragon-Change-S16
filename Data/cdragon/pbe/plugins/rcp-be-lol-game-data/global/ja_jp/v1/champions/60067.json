@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "ヴェインは悪事を働く者を容赦なく狩る。敵チャンピオンに向かって移動する時、移動速度が増加する。"
+        "description": "悪事を働く者を容赦なく狩る。敵チャンピオンに向かって移動する時、移動速度が増加する。"
     },
     "spells": [
         {
@@ -620,7 +620,7 @@
             "cost": "<spellPassive>固有スキル</spellPassive>",
             "cooldown": "",
             "description": "邪悪な存在が嫌う銀の矢を、クロスボウにつがえる。同じ対象に通常攻撃またはスキルを3回連続で命中させると、対象の最大体力に比例する追加確定ダメージが発生する。",
-            "dynamicDescription": "同じ敵に通常攻撃またはスキルを3回連続して行うごとに、追加で@BaseDamage@に敵の最大体力の@MaxHealthRatio*100@%を加えた値の<trueDamage>確定ダメージ</trueDamage>を与える。(モンスターに与えるダメージは最大@MonsterDamageCap@)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "同じ敵に通常攻撃またはスキルを3回連続して行うごとに、追加で@BaseDamage@(+敵の最大体力の@MaxHealthRatio*100@%)の<trueDamage>確定ダメージ</trueDamage>を与える(モンスターに与えるダメージは最大@MonsterDamageCap@)。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "背中に担いだ特大クロスボウを構え、指定対象に巨大な矢を撃ち込む。矢を受けたユニットをノックバックしてダメージを与える。ノックバックにより対象が地形に衝突した場合は、対象に追加ダメージを与えてスタンさせる。",
-            "dynamicDescription": "矢を撃ち込み、敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えてノックバックする。地形に衝突した敵には<physicalDamage>@TotalDamagewithSpell@の追加物理ダメージ</physicalDamage>を与え@StunDuration@秒間<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "矢を撃ち込み、敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えてノックバックする。地形に衝突した敵には<physicalDamage>@TotalDamagewithSpell@の追加物理ダメージ</physicalDamage>を与え、@StunDuration@秒間<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

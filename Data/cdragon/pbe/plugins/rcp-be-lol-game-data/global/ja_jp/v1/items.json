@@ -5486,7 +5486,7 @@
     {
         "id": 3109,
         "name": "騎士の誓い",
-        "description": "<mainText><stats>体力<attention> 200</attention><br>物理防御 <attention> 40</attention><br>スキルヘイスト<attention> 10</attention><br>基本体力自動回復<attention> 100%</attention></stats><br><br><passive>犠牲</passive><br>味方の<attention>同志</attention>が近くにいる間は、その味方が受けるダメージの14%を代わりに受け、また<attention>同志</attention>がチャンピオンに与えたダメージの<healing>12%にあたる体力を回復</healing>する。 <active>誓約</active>  (0秒)<br>味方を<attention>同志</attention>に指定する。</mainText>",
+        "description": "<mainText><stats>体力<attention> 200</attention><br>物理防御 <attention> 40</attention><br>スキルヘイスト<attention> 10</attention><br>基本体力自動回復<attention> 100%</attention></stats><br><br><passive>犠牲</passive><br>味方の<attention>同志</attention>が近くにいる間は、その味方が受けるダメージの14%を代わりに受け、また<attention>同志</attention>がチャンピオンに与えたダメージの<healing>12%にあたる体力</healing>を回復する。 <active>誓約</active>  (0秒)<br>味方を<attention>同志</attention>に指定する。</mainText>",
         "active": true,
         "inStore": true,
         "from": [
@@ -16678,7 +16678,7 @@
     {
         "id": 323109,
         "name": "騎士の誓い",
-        "description": "<mainText><stats>体力<attention> 300</attention><br>物理防御 <attention> 50</attention><br>スキルヘイスト<attention> 10</attention><br>基本体力自動回復<attention> 150%</attention></stats><br><br><passive>犠牲</passive><br>味方の<attention>同志</attention>が近くにいる間は、その味方が受けるダメージの14%を代わりに受け、また<attention>同志</attention>がチャンピオンに与えたダメージの<healing>12%にあたる体力を回復</healing>する。 <active>誓約</active>  (0秒)<br>味方を<attention>同志</attention>に指定する。</mainText>",
+        "description": "<mainText><stats>体力<attention> 300</attention><br>物理防御 <attention> 50</attention><br>スキルヘイスト<attention> 10</attention><br>基本体力自動回復<attention> 150%</attention></stats><br><br><passive>犠牲</passive><br>味方の<attention>同志</attention>が近くにいる間は、その味方が受けるダメージの14%を代わりに受け、また<attention>同志</attention>がチャンピオンに与えたダメージの<healing>12%にあたる体力</healing>を回復する。 <active>誓約</active>  (0秒)<br>味方を<attention>同志</attention>に指定する。</mainText>",
         "active": true,
         "inStore": true,
         "from": [
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "ムーンフレア スペルブレード",
+        "description": "<mainText><stats>魔力<attention> 50</attention><br>物理防御 <attention> 50</attention><br>魔法防御<attention> 50</attention></stats><br><br><jadeUnique>行動妨害耐性:</jadeUnique><status> スタン、スロウ、タウント、フィアー、サイレンス、ブラインド、</status><status>スネア</status>の効果時間を<attention>35%</attention>短縮する。</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "クローク アンド ダガー",
+        "description": "<mainText><stats>攻撃速度<attention> 20%</attention><br>クリティカル率<attention> 20%</attention></stats><br><br><jadeUnique>行動妨害耐性:</jadeUnique><status> スタン、スロウ、タウント、フィアー、サイレンス、ブラインド、</status><status>スネア</status>の効果時間を<attention>35%</attention>短縮する。</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "モレロノミコン",
         "description": "<mainText><stats>魔力<attention> 75</attention><br><attention>マナ自動回復(5秒毎) +12</attention><br><attention>クールダウン短縮 20%</attention></stats><br><br><jadeUnique>モレロの憎悪:</jadeUnique> <scaleHealth>体力が40%</scaleHealth>未満の敵チャンピオンに魔法ダメージを与えると、4秒間、対象に<status>重傷</status>を付与する。<br><br><jadeRules>(<status>重傷</status>は受ける体力回復および自動回復の効果を50%減少させる。)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "ジ＝ロット ポータル",
-        "description": "<mainText><stats>物理防御 <attention> 50</attention><br>魔法防御<attention> 50</attention><br><attention>体力自動回復(5秒毎) +5</attention></stats><br><br><jadeUnique>ポイントランナー:</jadeUnique> タワーまたはヴォイドゲートの近くにいると、2秒かけて<speed>増加移動速度が+30%</speed>まで増加する。 <jadeUnique>発動効果</jadeUnique>  150秒<br>指定した地点に150秒間持続するゲートを出現させる(タワーの近くには設置不可)。4秒ごとに、ゲートから不安定な<keywordMajor>ヴォイドスポーン</keywordMajor>が1体出現し、最も近くのレーンを進んでいく。 <br><br>4秒後、<keywordMajor>ヴォイドスポーン</keywordMajor>の体力は急速に減少して、0になる。4体目以降の<keywordMajor>ヴォイドスポーン</keywordMajor>は、自身の防御力の50%にあたる追加ダメージを与える。</mainText>",
+        "description": "<mainText><stats>物理防御 <attention> 50</attention><br>魔法防御<attention> 50</attention><br><attention>体力自動回復(5秒毎) +5</attention></stats><br><br><jadeUnique>ポイントランナー:</jadeUnique> タワーまたは<keywordMajor>ヴォイドゲート</keywordMajor>の近くにいると、2秒かけて最大で<speed>移動速度が30%</speed>まで増加する。 <jadeUnique>発動効果</jadeUnique>  150秒<br>指定した地点に150秒間持続する<keywordMajor>ヴォイドゲート</keywordMajor>を1つ発生させる。4秒ごとに、ゲートから不安定な<keywordMajor>ヴォイドスポーン</keywordMajor>が1体出現し、最も近くのレーンを進んでいく。</mainText>",
         "active": true,
         "inStore": true,
         "from": [

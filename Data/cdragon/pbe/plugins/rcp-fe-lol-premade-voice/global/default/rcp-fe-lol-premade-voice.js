@@ -38,7 +38,7 @@
                         Settings: e => e.get("rcp-fe-lol-settings")
                     }), await i.default.tra.ready();
                     n(14)();
-                    return new(n(127))
+                    return new(n(131))
                 }))
             }), {
                 once: !0
@@ -314,13 +314,13 @@
         }, (e, t, n) => {
             "use strict";
             var r = h(n(15)),
-                i = h(n(85)),
-                a = h(n(101)),
-                o = h(n(110)),
-                l = h(n(115)),
-                s = h(n(118)),
-                c = h(n(121)),
-                p = h(n(124)),
+                i = h(n(87)),
+                a = h(n(105)),
+                o = h(n(114)),
+                l = h(n(119)),
+                s = h(n(122)),
+                c = h(n(125)),
+                p = h(n(128)),
                 d = n(1);
 
             function h(e) {
@@ -340,52 +340,54 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = S(n(16)),
+            var r = P(n(16)),
                 i = n(1),
-                a = w(n(17)),
-                o = w(n(18)),
-                l = w(n(19)),
-                s = w(n(20)),
-                c = w(n(21)),
-                p = w(n(22)),
-                d = w(n(23)),
-                h = w(n(25)),
-                m = w(n(26)),
-                u = w(n(27)),
-                g = w(n(29)),
-                A = w(n(30)),
-                _ = w(n(31)),
-                v = w(n(32)),
-                b = w(n(33)),
-                y = w(n(34)),
-                f = w(n(35)),
-                E = n(36),
-                x = n(37),
-                C = S(n(38)),
+                a = S(n(17)),
+                o = S(n(18)),
+                l = S(n(19)),
+                s = S(n(20)),
+                c = S(n(21)),
+                p = S(n(22)),
+                d = S(n(23)),
+                h = S(n(24)),
+                m = S(n(25)),
+                u = S(n(27)),
+                g = S(n(28)),
+                A = S(n(29)),
+                _ = S(n(31)),
+                v = S(n(32)),
+                b = S(n(33)),
+                y = S(n(34)),
+                f = S(n(35)),
+                E = S(n(36)),
+                x = S(n(37)),
+                C = n(38),
                 k = n(39),
-                B = w(n(40));
+                B = P(n(40)),
+                w = n(41),
+                $ = S(n(42));
 
-            function w(e) {
+            function S(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function $(e) {
+            function T(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return ($ = function(e) {
+                return (T = function(e) {
                     return e ? n : t
                 })(e)
             }
 
-            function S(e, t) {
+            function P(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
                 };
-                var n = $(t);
+                var n = T(t);
                 if (n && n.has(e)) return n.get(e);
                 var r = {},
                     i = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -395,54 +397,54 @@
                         o && (o.get || o.set) ? Object.defineProperty(r, a, o) : r[a] = e[a]
                     } return r.default = e, n && n.set(e, r), r
             }
-            const T = "chatParticipantsKey",
-                P = "HONOR_LEVEL_TOO_LOW",
-                O = "PLUGIN_DISABLED",
-                D = "QUEUE_NOT_ENABLED",
-                I = "NOT_IN_ACTIVE_GAME_PHASE",
-                V = "VOICE_COMPLIANCE_AGREEMENT_NOT_ACCEPTED",
-                M = "parties_comm_panel_team_voice_status_unavailable",
-                N = {
-                    [O]: "parties_comm_panel_team_voice_status_disabled",
-                    [D]: M,
-                    [I]: M,
-                    [P]: "parties_comm_panel_team_voice_status_restricted",
+            const O = "chatParticipantsKey",
+                D = "HONOR_LEVEL_TOO_LOW",
+                I = "PLUGIN_DISABLED",
+                V = "QUEUE_NOT_ENABLED",
+                M = "NOT_IN_ACTIVE_GAME_PHASE",
+                N = "VOICE_COMPLIANCE_AGREEMENT_NOT_ACCEPTED",
+                z = "parties_comm_panel_team_voice_status_unavailable",
+                j = {
+                    [I]: "parties_comm_panel_team_voice_status_disabled",
+                    [V]: z,
+                    [M]: z,
+                    [D]: "parties_comm_panel_team_voice_status_restricted",
                     PARENTAL_CONTROLS_RESTRICTED: "parties_comm_panel_team_voice_status_restricted",
-                    [V]: "parties_comm_panel_team_voice_status_accept_agreement"
+                    [N]: "parties_comm_panel_team_voice_status_accept_agreement"
                 },
-                z = {
-                    [P]: {
+                L = {
+                    [D]: {
                         title: "parties_comm_panel_team_voice_restricted_title",
                         body: "parties_comm_panel_team_voice_restricted_body"
                     },
-                    [O]: {
+                    [I]: {
                         title: "parties_comm_panel_team_voice_plugin_disabled_title",
                         body: "parties_comm_panel_team_voice_plugin_disabled_body"
                     },
-                    [D]: {
+                    [V]: {
                         title: "parties_comm_panel_team_voice_queue_not_enabled_title",
                         body: "parties_comm_panel_team_voice_queue_not_enabled_body"
                     },
-                    [I]: {
+                    [M]: {
                         title: "parties_comm_panel_team_voice_not_in_active_game_phase_title",
                         body: "parties_comm_panel_team_voice_not_in_active_game_phase_body"
                     },
-                    [V]: {
+                    [N]: {
                         title: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_title",
                         body: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_body"
                     }
                 };
-            class j extends r.default {
+            class R extends r.default {
                 templateMarkup() {
-                    return n(41)
+                    return n(43)
                 }
                 stylesheetMarkup() {
-                    return n(42)
+                    return n(44)
                 }
                 constructor() {
-                    super(), this._participants = [], this._participantMap = new Map, this._teamParticipants = [], this._teamParticipantMap = new Map, this._partyMemberPuuids = new Set, this._multiUserChatId = null, this._gameflowPhase = "", this._isGameClientRunning = !1, this._lastVolumeUpdate = 0, this._lockOutMemberJoinSound = !1, this._isDraggingMicSlider = !1, this._clashRoster = null, this._headerType = k.HEADER_LOBBY, this._connectionState = E.VOICE_DISCONNECTED_STATE, this._teamConnectionState = E.VOICE_DISCONNECTED_STATE, this._updatingTeamToggle = !1, this._teamVoicePluginEnabled = !1, this._teamVoiceAvailability = !1, this._teamVoiceAvailabilityReason = null, this._teamVoiceRestricted = !1, this._teamVoiceConnectionFailed = !1, this._isVoiceChatRestricted = !1, this._puuidsToNameOverrides = {};
+                    super(), this._participants = [], this._participantMap = new Map, this._teamParticipants = [], this._teamParticipantMap = new Map, this._partyMemberPuuids = new Set, this._multiUserChatId = null, this._gameflowPhase = "", this._isGameClientRunning = !1, this._lastVolumeUpdate = 0, this._lockOutMemberJoinSound = !1, this._isDraggingMicSlider = !1, this._clashRoster = null, this._headerType = w.HEADER_LOBBY, this._connectionState = C.VOICE_DISCONNECTED_STATE, this._teamConnectionState = C.VOICE_DISCONNECTED_STATE, this._updatingTeamToggle = !1, this._teamVoicePluginEnabled = !1, this._teamVoiceAvailability = !1, this._teamVoiceAvailabilityReason = null, this._teamVoiceRestricted = !1, this._teamVoiceConnectionFailed = !1, this._isVoiceChatRestricted = !1, this._puuidsToNameOverrides = {};
                     const e = i.Audio.getChannel(r.SOUND_CHANNEL);
-                    this._muteSound = e.createSound(a.default), this._unmuteSound = e.createSound(o.default), this._closeSound = e.createSound(l.default), this._volumeScrollSound = e.createSound(s.default), this._volumeBarClickSound = e.createSound(c.default), this._volumeScrollReleaseSound = e.createSound(p.default), this._selectors = {
+                    this._muteSound = e.createSound(a.default), this._unmuteSound = e.createSound(o.default), this._channelToggleOnSound = e.createSound(l.default), this._channelToggleOffSound = e.createSound(s.default), this._closeSound = e.createSound(c.default), this._volumeScrollSound = e.createSound(p.default), this._volumeBarClickSound = e.createSound(d.default), this._volumeScrollReleaseSound = e.createSound(h.default), this._selectors = {
                         voicePanel: ".lol-premade-voice-panel",
                         currentPlayerChatIcon: ".lol-premade-voice-panel-cp-chat-icon",
                         headerText: ".lol-premade-voice-panel-header-text",
@@ -511,7 +513,7 @@
                     super.connectedCallback(), this._attachSliderTooltipDelegate(), this._refreshConnectionState(), this._applyConnectionStateText(), this._teamVoicePluginEnabled && (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._updatePartyToggleState(), this._refreshTeamConnectionState(), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._updateTeamToggleState(), this._updateTeamUnavailableStatus()), this._updateConnectionBarVisibility(), this._setupHeader(), this.addInnerHtml(i.tra.get("parties_comm_panel_party_header"), this._selectors.partyHeaderText), this.addInnerHtml(i.tra.get("parties_comm_panel_team_header"), this._selectors.teamHeaderText), this._updateInGameSessionMessage(), this._updatePanelDisplayState(), this.attachListener("change", this._listeners.micLevelSlideChange, this._selectors.currentPlayerVolume), this.attachListener("slideEnd", this._listeners.micLevelSlideEnd, this._selectors.currentPlayerVolume), this.attachListener("slideStart", this._listeners.micLevelSlideStart, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.micLevelClick, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.mute, this._selectors.currentPlayerMic), this.attachListener("click", this._listeners.connectionToggleClick, this._selectors.connectionToggle), this.attachListener("click", this._listeners.connectionBarClick, this._selectors.connectionBar), this.attachListener("click", this._listeners.partyToggleClick, this._selectors.partyToggle), this.attachListener("click", this._listeners.teamToggleClick, this._selectors.teamToggle), this._currentPlayerPuuid && this._updateCurrentPlayerName(), this.attachListener("click", this._listeners.settingsClicked, this._selectors.settingsButton), this.attachListener("click", this._listeners.minimizeClicked, this._selectors.minimizeButton), this._attachInGameSessionListeners(), this.addEventListener("willShowVoicePanel", this._listeners.willShow), this.addEventListener("willHideVoicePanel", this._listeners.willHide), this.addEventListener("voiceButtonEnabled", this._listeners.voiceButtonEnabled), this.addEventListener("keybind-set-click", this._listeners.settingsClicked)
                 }
                 _setupHeader() {
-                    this.hide(this._selectors.headerClash), this.hide(this._selectors.headerDefault), this._headerType === k.HEADER_CLASH && this._clashRoster ? (this.addImg(this._clashRoster.logoUrl, this._selectors.headerClashLogo), this.addInnerHtml(this._clashRoster.shortName, this._selectors.headerClashShortName), this.addInnerHtml(this._clashRoster.name, this._selectors.headerClashName), this.show(this._selectors.headerClash)) : (this.addInnerHtml(i.tra.get("parties_comm_panel_header_text_party_only"), this._selectors.headerText), this.show(this._selectors.headerDefault))
+                    this.hide(this._selectors.headerClash), this.hide(this._selectors.headerDefault), this._headerType === w.HEADER_CLASH && this._clashRoster ? (this.addImg(this._clashRoster.logoUrl, this._selectors.headerClashLogo), this.addInnerHtml(this._clashRoster.shortName, this._selectors.headerClashShortName), this.addInnerHtml(this._clashRoster.name, this._selectors.headerClashName), this.show(this._selectors.headerClash)) : (this.addInnerHtml(i.tra.get("parties_comm_panel_header_text_party_only"), this._selectors.headerText), this.show(this._selectors.headerDefault))
                 }
                 disconnectedCallback() {
                     super.disconnectedCallback(), this.detachListener("slideEnd", this._listeners.micLevelSlideEnd, this._selectors.currentPlayerVolume), this.detachListener("click", this._listeners.micLevelClick, this._selectors.currentPlayerVolume), this.detachListener("click", this._listeners.mute, this._selectors.currentPlayerMic), this.detachListener("click", this._listeners.connectionToggleClick, this._selectors.connectionToggle), this.detachListener("click", this._listeners.connectionBarClick, this._selectors.connectionBar), this.detachListener("click", this._listeners.settingsClicked, this._selectors.settingsButton), this.detachListener("click", this._listeners.minimizeClicked, this._selectors.minimizeButton), this._detachInGameSessionListeners(), this.detachListener("willShowVoicePanel", this._listeners.willShow), this.detachListener("willHideVoicePanel", this._listeners.willHide), this.removeEventListener("keybind-set-click", this._listeners.settingsClicked)
@@ -529,7 +531,7 @@
                 }
                 _handleDisconnectedState(e) {
                     const t = this.shadowRoot.querySelector(this._selectors.currentPlayerVolume);
-                    e ? (this._updateConnectionState(E.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), t && t.setAttribute("disabled", ""), this.addClass("disabled", this._selectors.currentPlayerContent)) : (t && t.removeAttribute("disabled"), this.removeClass("disabled", this._selectors.currentPlayerContent)), this._updateCurrentPlayerMuteButton()
+                    e ? (this._updateConnectionState(C.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), t && t.setAttribute("disabled", ""), this.addClass("disabled", this._selectors.currentPlayerContent)) : (t && t.removeAttribute("disabled"), this.removeClass("disabled", this._selectors.currentPlayerContent)), this._updateCurrentPlayerMuteButton()
                 }
                 _showPanelMessage(e) {
                     this.addInnerHtml(e, this._selectors.availabilityMessage), this.removeClass("hide", this._selectors.availability), this.addClass("hide", this._selectors.participants)
@@ -576,7 +578,7 @@
                 _refreshConnectionState() {
                     const e = this._participants.length > 0,
                         t = this._connectionState;
-                    e ? this._updateConnectionState(E.VOICE_CONNECTED_STATE) : this._connectionState !== E.VOICE_CONNECTING_STATE && this._updateConnectionState(E.VOICE_DISCONNECTED_STATE), t !== this._connectionState && (this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()), this._checkAvailabilityMessaging()
+                    e ? this._updateConnectionState(C.VOICE_CONNECTED_STATE) : this._connectionState !== C.VOICE_CONNECTING_STATE && this._updateConnectionState(C.VOICE_DISCONNECTED_STATE), t !== this._connectionState && (this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()), this._checkAvailabilityMessaging()
                 }
                 settingsUpdated(e) {
                     this._settings = e, this._updateCurrentParticipant(), this._updateKeyBindIndicators(), this._updateVoiceSkinIndicator()
@@ -594,7 +596,7 @@
                     if (!this._settings) return;
                     const e = this.shadowRoot.querySelector(this._selectors.partyPttIndicator);
                     if (e) {
-                        const t = this._settings.inputMode === C.INPUT_MODE_PUSH_TO_TALK,
+                        const t = this._settings.inputMode === B.INPUT_MODE_PUSH_TO_TALK,
                             n = this._settings.pttKey,
                             r = !n || "[<Unbound>]" === n,
                             a = r ? "" : n.split("],[")[0].replace(/^\[|\]$/g, "");
@@ -610,17 +612,17 @@
                 }
                 lobbyUpdated(e) {
                     const t = e || {};
-                    t.multiUserChatId && t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = k.HEADER_LOBBY), this._multiUserChatId = t.multiUserChatId;
+                    t.multiUserChatId && t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = w.HEADER_LOBBY), this._multiUserChatId = t.multiUserChatId;
                     const n = t && t.members || [];
                     this._partyMemberPuuids = new Set(n.map((e => e.puuid)).filter(Boolean)), this._updateTeamParticipants()
                 }
                 clashRostersUpdated(e) {
-                    const t = (e || []).find((e => e.tournamentState !== x.CLASH_ROSTER_STATE.IDLE));
-                    t && t.multiUserChatId && (t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = k.HEADER_CLASH, this._clashRoster = t), this._multiUserChatId = t.multiUserChatId)
+                    const t = (e || []).find((e => e.tournamentState !== k.CLASH_ROSTER_STATE.IDLE));
+                    t && t.multiUserChatId && (t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = w.HEADER_CLASH, this._clashRoster = t), this._multiUserChatId = t.multiUserChatId)
                 }
                 postgameStatsUpdated(e) {
                     if (e && e.multiUserChatId) {
-                        const t = v.default.parseChatId(e.multiUserChatId);
+                        const t = y.default.parseChatId(e.multiUserChatId);
                         t !== this._multiUserChatId && this._conversations && this._chatParticipantsObserver(t), this._multiUserChatId = t
                     }
                 }
@@ -649,9 +651,9 @@
                     this._conversations = e, this._chatParticipantsObserver(this._multiUserChatId)
                 }
                 _chatParticipantsObserver(e) {
-                    if (b.default.removeObservers(T), this._conversations && e) {
+                    if (f.default.removeObservers(O), this._conversations && e) {
                         const t = this._conversations.find((t => t.id.indexOf(e) > -1));
-                        t && (b.default.createObserver(T, `/v1/conversations/${encodeURIComponent(t.id)}/participants`), b.default.observe(T, this.chatParticipantsUpdated.bind(this)))
+                        t && (f.default.createObserver(O, `/v1/conversations/${encodeURIComponent(t.id)}/participants`), f.default.observe(O, this.chatParticipantsUpdated.bind(this)))
                     }
                 }
                 _chatParticipant(e) {
@@ -674,10 +676,10 @@
                     this._teamVoicePluginEnabled ? (this.removeClass("hide", this._selectors.sectionDivider), this.removeClass("hide", this._selectors.teamHeader)) : (this.addClass("hide", this._selectors.sectionDivider), this.addClass("hide", this._selectors.teamHeader), this.addClass("hide", this._selectors.teamPartyRow)), this._updateTeamPartyIndicator(), this._updateTeamUnavailableStatus()
                 }
                 _updateTeamUnavailableStatus() {
-                    this._teamVoicePluginEnabled && (this._setTeamVoiceStatusText(this._getTeamVoiceStatusLabelKey()), this._teamVoiceRestricted ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._setTeamToggleMuteRestricted(!0), this._attachTeamToggleRestrictionTooltip(P)) : this._teamVoiceAvailability || this._teamConnectionState === E.VOICE_CONNECTED_STATE || this._teamVoiceAvailabilityReason === V ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), z[this._teamVoiceAvailabilityReason] ? this._attachTeamToggleRestrictionTooltip(this._teamVoiceAvailabilityReason) : this._removeTeamToggleRestrictionTooltip()))
+                    this._teamVoicePluginEnabled && (this._setTeamVoiceStatusText(this._getTeamVoiceStatusLabelKey()), this._teamVoiceRestricted ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._setTeamToggleMuteRestricted(!0), this._attachTeamToggleRestrictionTooltip(D)) : this._teamVoiceAvailability || this._teamConnectionState === C.VOICE_CONNECTED_STATE || this._teamVoiceAvailabilityReason === N ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), L[this._teamVoiceAvailabilityReason] ? this._attachTeamToggleRestrictionTooltip(this._teamVoiceAvailabilityReason) : this._removeTeamToggleRestrictionTooltip()))
                 }
                 _getTeamVoiceStatusLabelKey() {
-                    return this._teamConnectionState === E.VOICE_CONNECTED_STATE ? this._teamVoiceRestricted ? N[P] : null : this._teamVoiceAvailabilityReason === V ? N[V] : this._teamVoiceAvailability ? this._teamVoiceConnectionFailed ? "parties_comm_panel_team_voice_status_try_again" : null : N[this._teamVoiceAvailabilityReason] || M
+                    return this._teamConnectionState === C.VOICE_CONNECTED_STATE ? this._teamVoiceRestricted ? j[D] : null : this._teamVoiceAvailabilityReason === N ? j[N] : this._teamVoiceAvailability ? this._teamVoiceConnectionFailed ? "parties_comm_panel_team_voice_status_try_again" : null : j[this._teamVoiceAvailabilityReason] || z
                 }
                 _setTeamVoiceStatusText(e) {
                     const t = this.shadowRoot.querySelector(this._selectors.teamUnavailable);
@@ -695,16 +697,16 @@
                 }
                 _updateTeamToggleState() {
                     if (this._teamVoiceRestricted) return void this._setTeamToggleMuteRestricted(!0);
-                    if (this._setTeamToggleMuteRestricted(!1), this._teamVoiceAvailabilityReason === P) return void this._setTeamToggleRestricted(!0);
+                    if (this._setTeamToggleMuteRestricted(!1), this._teamVoiceAvailabilityReason === D) return void this._setTeamToggleRestricted(!0);
                     this._setTeamToggleRestricted(!1);
-                    const e = this._teamConnectionState === E.VOICE_CONNECTED_STATE,
-                        t = this._teamConnectionState === E.VOICE_CONNECTING_STATE,
-                        n = this._teamVoiceAvailabilityReason === V,
+                    const e = this._teamConnectionState === C.VOICE_CONNECTED_STATE,
+                        t = this._teamConnectionState === C.VOICE_CONNECTING_STATE,
+                        n = this._teamVoiceAvailabilityReason === N,
                         r = !e && !n && (t || !this._teamVoiceAvailability);
                     this._setToggleDisabled(this._selectors.teamToggle, r)
                 }
                 _refreshTeamConnectionState() {
-                    this._teamParticipants && this._teamParticipants.length > 0 ? this._updateTeamConnectionState(E.VOICE_CONNECTED_STATE) : this._updateTeamConnectionState(E.VOICE_DISCONNECTED_STATE)
+                    this._teamParticipants && this._teamParticipants.length > 0 ? this._updateTeamConnectionState(C.VOICE_CONNECTED_STATE) : this._updateTeamConnectionState(C.VOICE_DISCONNECTED_STATE)
                 }
                 _isVoiceEligible() {
                     return 0 !== this._participants.length
@@ -716,16 +718,16 @@
                     this._connectionButtonLocked = !1
                 }
                 _connectionClick() {
-                    return this._lockConnectionButton(), this._connectionState === E.VOICE_DISCONNECTED_STATE && this._isVoiceEligible() ? (this._updateConnectionState(E.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then((() => {
+                    return this._lockConnectionButton(), this._connectionState === C.VOICE_DISCONNECTED_STATE && this._isVoiceEligible() ? (this._updateConnectionState(C.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, m.default.connect().then((() => {
                         this._joinVoiceSessionSuccess(), this._unlockConnectionButton()
                     })).catch((e => {
                         this._joinVoiceSessionFailed(e), this._unlockConnectionButton()
-                    }))) : this._connectionState === E.VOICE_CONNECTED_STATE ? d.default.disconnect().then((() => {
+                    }))) : this._connectionState === C.VOICE_CONNECTED_STATE ? m.default.disconnect().then((() => {
                         this._leaveVoiceSessionSuccess(), this._unlockConnectionButton()
                     })) : (this._unlockConnectionButton(), Promise.resolve())
                 }
                 _connectionMouseEnter() {
-                    if (this._connectionState === E.VOICE_DISCONNECTED_STATE && this._isVoiceEligible()) {
+                    if (this._connectionState === C.VOICE_DISCONNECTED_STATE && this._isVoiceEligible()) {
                         const e = i.tra.get("parties_comm_panel_connect_text");
                         this.addInnerHtml(e, this._selectors.connectionState)
                     }
@@ -737,59 +739,59 @@
                     }
                 }
                 _connectionBarClick() {
-                    if (!this._teamVoicePluginEnabled) return this._connectionState === E.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(E.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    if (!this._teamVoicePluginEnabled) return this._connectionState === C.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(C.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, m.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === E.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === C.VOICE_CONNECTED_STATE ? m.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _connectionToggleClick() {
-                    return this._connectionState === E.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(E.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    return this._connectionState === C.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(C.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, m.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === E.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === C.VOICE_CONNECTED_STATE ? m.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _partyToggleClick() {
                     if (!this._teamVoicePluginEnabled) return;
                     const e = this.shadowRoot.querySelector(this._selectors.partyToggle);
-                    return e && e.classList.contains("restricted") ? void 0 : this._connectionState === E.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(E.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    return e && e.classList.contains("restricted") ? void 0 : this._connectionState === C.VOICE_DISCONNECTED_STATE ? (this._channelToggleOnSound.play(), this._updateConnectionState(C.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, m.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === E.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === C.VOICE_CONNECTED_STATE ? (this._channelToggleOffSound.play(), m.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this))) : void 0
                 }
                 _teamToggleClick() {
                     if (!this._teamVoicePluginEnabled || this._updatingTeamToggle) return;
-                    if (this._teamVoiceAvailabilityReason === V) return void m.default.showAgreementModal();
+                    if (this._teamVoiceAvailabilityReason === N) return void g.default.showAgreementModal();
                     const e = this.shadowRoot.querySelector(this._selectors.teamToggle);
                     if (e && e.classList.contains("restricted")) return;
-                    return e && e.classList.contains("mute-restricted") && this._teamConnectionState !== E.VOICE_CONNECTED_STATE ? void 0 : this._teamConnectionState === E.VOICE_DISCONNECTED_STATE ? (this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(E.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, h.default.connect().then(this._joinTeamVoiceSessionSuccess.bind(this)).catch((e => {
+                    return e && e.classList.contains("mute-restricted") && this._teamConnectionState !== C.VOICE_CONNECTED_STATE ? void 0 : this._teamConnectionState === C.VOICE_DISCONNECTED_STATE ? (this._channelToggleOnSound.play(), this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(C.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, u.default.connect().then(this._joinTeamVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinTeamVoiceSessionFailed(e)
-                    }))) : this._teamConnectionState === E.VOICE_CONNECTED_STATE ? h.default.disconnect().then(this._leaveTeamVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._teamConnectionState === C.VOICE_CONNECTED_STATE ? (this._channelToggleOffSound.play(), u.default.disconnect().then(this._leaveTeamVoiceSessionSuccess.bind(this))) : void 0
                 }
                 _leaveVoiceSessionSuccess() {
-                    this._updateConnectionState(E.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
+                    this._updateConnectionState(C.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
                 }
                 _joinVoiceSessionSuccess() {
-                    this._updateConnectionState(E.VOICE_CONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._updateConnectionState(C.VOICE_CONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
-                    }), 500), d.default.participants().then(this.participantsDataListener)
+                    }), 500), m.default.participants().then(this.participantsDataListener)
                 }
                 _joinVoiceSessionFailed(e) {
                     if (e && e.data) {
                         this._lockOutMemberJoinSound = !1;
                         const t = e.data.message;
-                        i.logger.warning(`Failed to join voice channel: ${t}`), this._updateConnectionState(E.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
+                        i.logger.warning(`Failed to join voice channel: ${t}`), this._updateConnectionState(C.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
                     }
                 }
                 _leaveTeamVoiceSessionSuccess() {
-                    this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(E.VOICE_DISCONNECTED_STATE)
+                    this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(C.VOICE_DISCONNECTED_STATE)
                 }
                 _joinTeamVoiceSessionSuccess() {
-                    this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(E.VOICE_CONNECTED_STATE), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._teamVoiceConnectionFailed = !1, this._updateTeamConnectionState(C.VOICE_CONNECTED_STATE), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
-                    }), 500), h.default.session().then(this.teamVoiceSessionListener)
+                    }), 500), u.default.session().then(this.teamVoiceSessionListener)
                 }
                 _joinTeamVoiceSessionFailed(e) {
                     if (e && e.data) {
                         this._lockOutMemberJoinSound = !1;
                         const t = e.data.message;
-                        i.logger.warning(`Failed to join team voice channel: ${t}`), this._teamVoiceConnectionFailed = !0, this._updateTeamConnectionState(E.VOICE_DISCONNECTED_STATE)
+                        i.logger.warning(`Failed to join team voice channel: ${t}`), this._teamVoiceConnectionFailed = !0, this._updateTeamConnectionState(C.VOICE_DISCONNECTED_STATE)
                     }
                 }
                 _removeOldParticipants() {
@@ -923,11 +925,11 @@
                         if (e - this._lastVolumeUpdate < 250) return;
                         this._lastVolumeUpdate = e
                     }
-                    d.default.changeMicLevelSelf(e.value)
+                    m.default.changeMicLevelSelf(e.value)
                 }
                 _updateCurrentPlayerMuteButton() {
                     if (!this._availability || !this._settings) return;
-                    const e = !this._teamVoicePluginEnabled && this._settings.inputMode === C.INPUT_MODE_PUSH_TO_TALK;
+                    const e = !this._teamVoicePluginEnabled && this._settings.inputMode === B.INPUT_MODE_PUSH_TO_TALK;
                     this._availability.showDisconnectedState || e ? (this.addClass("disabled", this._selectors.currentPlayerMic), this.removeClass("muted", this._selectors.currentPlayerMic)) : (this.removeClass("disabled", this._selectors.currentPlayerMic), this._settings && this._settings.localMicMuted ? this.addClass("muted", this._selectors.currentPlayerMic) : this.removeClass("muted", this._selectors.currentPlayerMic)), this._attachMuteSelfTooltip()
                 }
                 _createParticipantElement(e) {
@@ -937,7 +939,7 @@
                     return t.updateChatParticipant(n), e.puuid && this._puuidsToNameOverrides[e.puuid] && t.setNameOverride(this._puuidsToNameOverrides[e.puuid]), t
                 }
                 _initDataBinding() {
-                    this.lobbyDataListener = this.lobbyUpdated.bind(this), _.default.observe("lobby", this.lobbyDataListener), _.default.lobby().then(this.lobbyDataListener), this.clashChatListener = this.clashRostersUpdated.bind(this), y.default.observe("rosters", this.clashChatListener), y.default.clashRosters().then(this.clashChatListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), g.default.observe("session", this.gameflowSessionListener), g.default.session().then(this.gameflowSessionListener), this.postgameStatsListener = this.postgameStatsUpdated.bind(this), v.default.observe("stats", this.postgameStatsListener), v.default.stats().then(this.postgameStatsListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), d.default.observe("availability", this.availabilityDataListener), d.default.availability().then(this.availabilityDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), d.default.observe("participants", this.participantsDataListener), d.default.participants().then(this.participantsDataListener), this.partyVoiceSessionListener = this.partyVoiceSessionUpdated.bind(this), d.default.observe("session", this.partyVoiceSessionListener), d.default.session().then(this.partyVoiceSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), d.default.observe("settings", this.settingsDataListener), d.default.settings().then(this.settingsDataListener), this.sessionDataListener = this.sessionUpdated.bind(this), A.default.observe("session", this.sessionDataListener), A.default.session().then(this.sessionDataListener), this.currentPlayerChatInfoListener = this.currentPlayerChatInfoUpdated.bind(this), b.default.observe("me", this.currentPlayerChatInfoListener), b.default.me().then(this.currentPlayerChatInfoListener), this.conversationsListener = this.conversationsUpdated.bind(this), b.default.observe("conversations", this.conversationsListener), b.default.conversations().then(this.conversationsListener), this.teamVoicePluginEnabledListener = this.teamVoicePluginEnabledUpdate.bind(this), u.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), u.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), h.default.observe("availability", this.teamVoiceAvailabilityListener), h.default.availability().then(this.teamVoiceAvailabilityListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), h.default.observe("session", this.teamVoiceSessionListener), h.default.session().then(this.teamVoiceSessionListener), this.voiceFontsListener = this.voiceFontsUpdated.bind(this), h.default.observe("voiceFonts", this.voiceFontsListener), h.default.voiceFonts().then(this.voiceFontsListener), this.parentalControlsStatusListener = this.parentalControlsStatusUpdated.bind(this), f.default.observe("status", this.parentalControlsStatusListener), f.default.status().then(this.parentalControlsStatusListener)
+                    this.lobbyDataListener = this.lobbyUpdated.bind(this), b.default.observe("lobby", this.lobbyDataListener), b.default.lobby().then(this.lobbyDataListener), this.clashChatListener = this.clashRostersUpdated.bind(this), E.default.observe("rosters", this.clashChatListener), E.default.clashRosters().then(this.clashChatListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), _.default.observe("session", this.gameflowSessionListener), _.default.session().then(this.gameflowSessionListener), this.postgameStatsListener = this.postgameStatsUpdated.bind(this), y.default.observe("stats", this.postgameStatsListener), y.default.stats().then(this.postgameStatsListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), m.default.observe("availability", this.availabilityDataListener), m.default.availability().then(this.availabilityDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), m.default.observe("participants", this.participantsDataListener), m.default.participants().then(this.participantsDataListener), this.partyVoiceSessionListener = this.partyVoiceSessionUpdated.bind(this), m.default.observe("session", this.partyVoiceSessionListener), m.default.session().then(this.partyVoiceSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), m.default.observe("settings", this.settingsDataListener), m.default.settings().then(this.settingsDataListener), this.sessionDataListener = this.sessionUpdated.bind(this), v.default.observe("session", this.sessionDataListener), v.default.session().then(this.sessionDataListener), this.currentPlayerChatInfoListener = this.currentPlayerChatInfoUpdated.bind(this), f.default.observe("me", this.currentPlayerChatInfoListener), f.default.me().then(this.currentPlayerChatInfoListener), this.conversationsListener = this.conversationsUpdated.bind(this), f.default.observe("conversations", this.conversationsListener), f.default.conversations().then(this.conversationsListener), this.teamVoicePluginEnabledListener = this.teamVoicePluginEnabledUpdate.bind(this), A.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), A.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), u.default.observe("availability", this.teamVoiceAvailabilityListener), u.default.availability().then(this.teamVoiceAvailabilityListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), u.default.observe("session", this.teamVoiceSessionListener), u.default.session().then(this.teamVoiceSessionListener), this.voiceFontsListener = this.voiceFontsUpdated.bind(this), u.default.observe("voiceFonts", this.voiceFontsListener), u.default.voiceFonts().then(this.voiceFontsListener), this.parentalControlsStatusListener = this.parentalControlsStatusUpdated.bind(this), x.default.observe("status", this.parentalControlsStatusListener), x.default.status().then(this.parentalControlsStatusListener)
                 }
                 parentalControlsStatusUpdated(e) {
                     this._isVoiceChatRestricted = e && e.enabled && e.isVoiceChatRestricted, this._updateParentalControlsRestriction()
@@ -976,12 +978,12 @@
                     i.ModalManager.add(n)
                 }
                 _toggleMute() {
-                    this._settings && (this._teamVoicePluginEnabled || this._settings.inputMode !== C.INPUT_MODE_PUSH_TO_TALK) && d.default.checkMicrophonePermissions().then((e => {
-                        e ? (this._teamVoicePluginEnabled && (this._settings.localMicMuted ? this._unmuteSound.play() : this._muteSound.play()), d.default.muteSelf(!this._settings.localMicMuted)) : this._showMicrophonePermissionsModal()
+                    this._settings && (this._teamVoicePluginEnabled || this._settings.inputMode !== B.INPUT_MODE_PUSH_TO_TALK) && m.default.checkMicrophonePermissions().then((e => {
+                        e ? (this._teamVoicePluginEnabled && (this._settings.localMicMuted ? this._unmuteSound.play() : this._muteSound.play()), m.default.muteSelf(!this._settings.localMicMuted)) : this._showMicrophonePermissionsModal()
                     }))
                 }
                 _settingsClicked() {
-                    this._isGameClientRunning || (this._playSound("/fe/lol-navigation/sfx-soc-ui-click-generic.ogg"), (0, C.default)())
+                    this._isGameClientRunning || (this._playSound("/fe/lol-navigation/sfx-soc-ui-click-generic.ogg"), (0, B.default)())
                 }
                 _setVoiceHaloPuuid(e) {
                     const t = e || "",
@@ -992,12 +994,12 @@
                     if (!this._settings || !this._settings.inputMode) return;
                     const e = this.shadowRoot.querySelector(this._selectors.currentPlayerMic);
                     let t;
-                    t = this._teamVoicePluginEnabled || this._settings.inputMode !== C.INPUT_MODE_PUSH_TO_TALK ? this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self") : i.tra.get("parties_comm_panel_tooltip_mute_disabled"), B.default.attachSmallTooltip(e, t)
+                    t = this._teamVoicePluginEnabled || this._settings.inputMode !== B.INPUT_MODE_PUSH_TO_TALK ? this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self") : i.tra.get("parties_comm_panel_tooltip_mute_disabled"), $.default.attachSmallTooltip(e, t)
                 }
                 _attachSettingsTooltip() {
                     const e = this.shadowRoot.querySelector(this._selectors.settingsButton);
                     let t;
-                    t = this._isGameClientRunning ? i.tra.get("parties_comm_panel_tooltip_settings_disabled") : i.tra.get("parties_comm_panel_tooltip_settings"), B.default.attachSmallTooltip(e, t)
+                    t = this._isGameClientRunning ? i.tra.get("parties_comm_panel_tooltip_settings_disabled") : i.tra.get("parties_comm_panel_tooltip_settings"), $.default.attachSmallTooltip(e, t)
                 }
                 _minimizeClicked() {
                     this.dispatchEvent(new Event("minimizeVoicePanel"))
@@ -1042,7 +1044,7 @@
                 }
                 _updateToggleState(e, t) {
                     const n = this.shadowRoot.querySelector(e);
-                    n && (n.classList.remove(E.VOICE_CONNECTED_STATE, E.VOICE_DISCONNECTED_STATE, E.VOICE_CONNECTING_STATE, "disabled", "restricted", "disabled-disconnected"), n.classList.add(t))
+                    n && (n.classList.remove(C.VOICE_CONNECTED_STATE, C.VOICE_DISCONNECTED_STATE, C.VOICE_CONNECTING_STATE, "disabled", "restricted", "disabled-disconnected"), n.classList.add(t))
                 }
                 _setTeamToggleRestricted(e) {
                     this._setToggleRestricted(this._selectors.teamToggle, e)
@@ -1053,14 +1055,14 @@
                 }
                 _setToggleRestricted(e, t) {
                     const n = this.shadowRoot.querySelector(e);
-                    n && (t ? (n.classList.remove(E.VOICE_CONNECTED_STATE, E.VOICE_DISCONNECTED_STATE, E.VOICE_CONNECTING_STATE, "disabled"), n.classList.add("restricted")) : n.classList.remove("restricted"))
+                    n && (t ? (n.classList.remove(C.VOICE_CONNECTED_STATE, C.VOICE_DISCONNECTED_STATE, C.VOICE_CONNECTING_STATE, "disabled"), n.classList.add("restricted")) : n.classList.remove("restricted"))
                 }
                 _updatePartyToggleState() {
                     if (!this._teamVoicePluginEnabled) return;
-                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === E.VOICE_CONNECTED_STATE ? (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._removeToggleTooltip(this._selectors.partyToggle)) : (this._setToggleRestricted(this._selectors.partyToggle, !0), this._attachToggleTooltip(this._selectors.partyToggle, i.tra.get("parties_comm_panel_party_voice_no_party_title"), i.tra.get("parties_comm_panel_party_voice_no_party_body")))
+                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === C.VOICE_CONNECTED_STATE ? (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._removeToggleTooltip(this._selectors.partyToggle)) : (this._setToggleRestricted(this._selectors.partyToggle, !0), this._attachToggleTooltip(this._selectors.partyToggle, i.tra.get("parties_comm_panel_party_voice_no_party_title"), i.tra.get("parties_comm_panel_party_voice_no_party_body")))
                 }
                 _attachTeamToggleRestrictionTooltip(e) {
-                    const t = z[e] || z[P];
+                    const t = L[e] || L[D];
                     this._attachToggleTooltip(this._selectors.teamToggle, i.tra.get(t.title), i.tra.get(t.body))
                 }
                 _removeTeamToggleRestrictionTooltip() {
@@ -1093,9 +1095,9 @@
                     n && (t ? n.classList.add("disabled") : n.classList.remove("disabled"))
                 }
             }
-            j.tagName = "lol-parties-comm-panel";
-            var L = j;
-            t.default = L
+            R.tagName = "lol-parties-comm-panel";
+            var U = R;
+            t.default = U
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1156,6 +1158,12 @@
             e.exports = n.p + "sfx-vc-unmute-button-click.ogg"
         }, (e, t, n) => {
             "use strict";
+            e.exports = n.p + "sfx-vc-channel-toggle-on-click.ogg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "sfx-vc-channel-toggle-off-click.ogg"
+        }, (e, t, n) => {
+            "use strict";
             e.exports = n.p + "sfx-soc-ui-chatwindow-close.ogg"
         }, (e, t, n) => {
             "use strict";
@@ -1171,7 +1179,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1296,7 +1304,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1333,8 +1341,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                i = o(n(27)),
-                a = o(n(28));
+                i = o(n(29)),
+                a = o(n(30));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -1389,7 +1397,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1407,7 +1415,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             const a = "/v2/account/LCUPreferences/lol-navigation",
@@ -1451,7 +1459,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1469,7 +1477,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1487,7 +1495,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1505,7 +1513,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1526,7 +1534,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1547,7 +1555,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1565,7 +1573,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, i = (r = n(24)) && r.__esModule ? r : {
+            var r, i = (r = n(26)) && r.__esModule ? r : {
                 default: r
             };
             class a extends i.default {
@@ -1681,48 +1689,48 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-panel">\r\n    <div class="lol-premade-voice-panel-wrapper">\r\n      <div class="lol-premade-voice-panel-header">\r\n        <div class="lol-premade-voice-panel-header-default">\r\n          <div class="lol-premade-voice-panel-header-text"></div>\r\n          <div class="lol-premade-voice-panel-connection-status"></div>\r\n          <div class="voice-toggle lol-premade-voice-panel-connection-toggle disconnected">\r\n            <div class="voice-toggle-icon"></div>\r\n            <div class="voice-toggle-thumb"></div>\r\n          </div>\r\n          <div class="lol-premade-voice-panel-minimize-button"></div>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-header-clash">\r\n          <img class="lol-premade-voice-panel-header-clash-logo" />\r\n          <div class="lol-premade-voice-panel-header-clash-title">\r\n            <div class="lol-premade-voice-panel-header-clash-shortName"></div>\r\n            <div class="lol-premade-voice-panel-header-clash-name"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <lol-uikit-scrollable class="lol-premade-voice-panel-participants lol-premade-voice-panel-content">\r\n        <div class="lol-premade-voice-panel-party-header">\r\n          <div class="lol-premade-voice-panel-party-header-text"></div>\r\n          <lol-parties-key-bind-indicator class="lol-premade-voice-panel-party-ptt-indicator"></lol-parties-key-bind-indicator>\r\n          <div class="voice-toggle lol-premade-voice-panel-party-toggle disconnected">\r\n            <div class="voice-toggle-icon"></div>\r\n            <div class="voice-toggle-thumb"></div>\r\n          </div>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-section-divider hide"></div>\r\n        <div class="lol-premade-voice-panel-team-header hide">\r\n          <div class="lol-premade-voice-panel-team-header-text"></div>\r\n          <lol-parties-key-bind-indicator class="lol-premade-voice-panel-team-ptt-indicator"></lol-parties-key-bind-indicator>\r\n          <div class="lol-premade-voice-panel-team-unavailable hide"></div>\r\n          <div class="voice-toggle lol-premade-voice-panel-team-toggle disconnected">\r\n            <div class="voice-toggle-icon"></div>\r\n            <div class="voice-toggle-thumb"></div>\r\n          </div>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-team-party-row hide">\r\n          <div class="lol-premade-voice-panel-team-party-indicator">\r\n            <div class="lol-premade-voice-panel-team-party-indicator-icon"></div>\r\n            <div class="lol-premade-voice-panel-team-party-indicator-count">0</div>\r\n          </div>\r\n          <div class="lol-premade-voice-panel-team-party-names"></div>\r\n        </div>\r\n      </lol-uikit-scrollable>\r\n      <div class="lol-premade-voice-panel-availability lol-premade-voice-panel-content hide">\r\n        <div class="lol-premade-voice-panel-poro"></div>\r\n        <div class="lol-premade-voice-panel-message"></div>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-connection-bar">\r\n        <div class="lol-premade-voice-panel-connection-state"></div>\r\n        <div class="lol-premade-voice-panel-connection-icon"></div>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-current-player">\r\n        <div class="lol-premade-voice-panel-player-highlight"></div>\r\n        <div class="voice-panel-avatar-wrapper">\r\n          <lol-parties-comm-halo class="voice-panel-current-player-halo" size="small">\r\n            <lol-social-avatar-icon\r\n                    class="lol-premade-voice-panel-cp-chat-icon"\r\n                    icon-id=""\r\n                    availability=""\r\n                    show-availability="true"\r\n            >\r\n            </lol-social-avatar-icon>\r\n          </lol-parties-comm-halo>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-current-player-content">\r\n          <div class="lol-premade-voice-panel-current-player-row">\r\n            <div class="lol-premade-voice-panel-current-player-name">\r\n              <lol-uikit-player-name format="tooltip" puuid="" />\r\n            </div>\r\n            <div class="lol-premade-voice-panel-current-player-voice-skin hide"></div>\r\n          </div>\r\n          <lol-uikit-slider\r\n                  for="currentPlayerVolume"\r\n                  percentage\r\n                  value="0"\r\n                  class="lol-premade-voice-panel-current-player-volume"\r\n                  clickset="true"\r\n                  trackTooltipPosition="true"\r\n          >\r\n          </lol-uikit-slider>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-current-player-buttons">\r\n          <div class="lol-premade-voice-panel-current-player-mic"></div>\r\n          <div class="lol-premade-voice-panel-current-player-deafen"></div>\r\n          <div class="lol-premade-voice-panel-current-player-divider"></div>\r\n          <div class="lol-premade-voice-panel-current-player-settings"></div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-in-game-session hide">\r\n      <div class="lol-premade-voice-panel-in-game-minimize-button"></div>\r\n      <div class="lol-premade-voice-panel-in-game-content">\r\n        <div class="lol-premade-voice-panel-in-game-poro"></div>\r\n        <div class="lol-premade-voice-panel-in-game-message"></div>\r\n      </div>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-restricted lol-premade-voice-panel-content hide">\r\n      <div class="lol-premade-voice-panel-restricted-poro"></div>\r\n      <div class="lol-premade-voice-panel-restricted-message"></div>\r\n    </div>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44),
-                a = n(45),
-                o = n(46),
-                l = n(47),
-                s = n(48),
-                c = n(49),
-                p = n(50),
-                d = n(51),
-                h = n(52),
-                m = n(53),
-                u = n(54),
-                g = n(55),
-                A = n(56),
-                _ = n(57),
-                v = n(58),
-                b = n(59),
-                y = n(60),
-                f = n(61),
-                E = n(62),
-                x = n(63),
-                C = n(64),
-                k = n(65),
-                B = n(66),
-                w = n(67),
-                $ = n(68),
-                S = n(69),
-                T = n(70),
-                P = n(71),
-                O = n(72),
-                D = n(73),
-                I = n(74),
-                V = n(75),
-                M = n(76),
-                N = n(77),
-                z = n(78),
-                j = n(79),
-                L = n(80),
-                R = n(81),
-                U = n(82),
-                F = n(83),
-                H = n(84),
+            var r = n(45),
+                i = n(46),
+                a = n(47),
+                o = n(48),
+                l = n(49),
+                s = n(50),
+                c = n(51),
+                p = n(52),
+                d = n(53),
+                h = n(54),
+                m = n(55),
+                u = n(56),
+                g = n(57),
+                A = n(58),
+                _ = n(59),
+                v = n(60),
+                b = n(61),
+                y = n(62),
+                f = n(63),
+                E = n(64),
+                x = n(65),
+                C = n(66),
+                k = n(67),
+                B = n(68),
+                w = n(69),
+                $ = n(70),
+                S = n(71),
+                T = n(72),
+                P = n(73),
+                O = n(74),
+                D = n(75),
+                I = n(76),
+                V = n(77),
+                M = n(78),
+                N = n(79),
+                z = n(80),
+                j = n(81),
+                L = n(82),
+                R = n(83),
+                U = n(84),
+                F = n(85),
+                H = n(86),
                 Y = i(r),
                 G = a(o),
                 q = a(l),
@@ -1938,49 +1946,51 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = B(n(1)),
-                i = B(n(16)),
-                a = C(n(86)),
-                o = C(n(87)),
-                l = C(n(88)),
-                s = C(n(89)),
-                c = C(n(90)),
-                p = C(n(91)),
-                d = C(n(92)),
-                h = C(n(93)),
-                m = C(n(94)),
-                u = C(n(95)),
-                g = C(n(23)),
-                A = C(n(25)),
-                _ = C(n(27)),
-                v = C(n(29)),
-                b = C(n(31)),
-                y = C(n(96)),
-                f = n(97),
-                E = n(98),
-                x = n(36);
+            var r = $(n(1)),
+                i = $(n(16)),
+                a = B(n(88)),
+                o = B(n(89)),
+                l = B(n(90)),
+                s = B(n(91)),
+                c = B(n(92)),
+                p = B(n(93)),
+                d = B(n(94)),
+                h = B(n(95)),
+                m = B(n(96)),
+                u = B(n(97)),
+                g = B(n(98)),
+                A = B(n(99)),
+                _ = B(n(25)),
+                v = B(n(27)),
+                b = B(n(29)),
+                y = B(n(31)),
+                f = B(n(33)),
+                E = B(n(100)),
+                x = n(101),
+                C = n(102),
+                k = n(38);
 
-            function C(e) {
+            function B(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function k(e) {
+            function w(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (k = function(e) {
+                return (w = function(e) {
                     return e ? n : t
                 })(e)
             }
 
-            function B(e, t) {
+            function $(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
                 };
-                var n = k(t);
+                var n = w(t);
                 if (n && n.has(e)) return n.get(e);
                 var r = {},
                     i = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -1990,30 +2000,31 @@
                         o && (o.get || o.set) ? Object.defineProperty(r, a, o) : r[a] = e[a]
                     } return r.default = e, n && n.set(e, r), r
             }
-            const w = {
-                party_ptt: {
-                    attribute: "party-ptt",
-                    label: "parties_comm_panel_team_voice_eat_hotkey_party_ptt"
-                },
-                team_ptt: {
-                    attribute: "team-ptt",
-                    label: "parties_comm_panel_team_voice_eat_hotkey_team_ptt"
-                },
-                character_menu: {
-                    attribute: "character-menu",
-                    label: "parties_comm_panel_team_voice_eat_hotkey_character_menu"
-                },
-                role_quest: {
-                    attribute: "role-quest",
-                    label: "parties_comm_panel_team_voice_eat_hotkey_role_quest"
-                }
-            };
-            class $ extends i.default {
+            const S = e => e.composedPath().some((e => e instanceof HTMLElement && (e.matches("input, textarea") || e.isContentEditable))),
+                T = {
+                    party_ptt: {
+                        attribute: "party-ptt",
+                        label: "parties_comm_panel_team_voice_eat_hotkey_party_ptt"
+                    },
+                    team_ptt: {
+                        attribute: "team-ptt",
+                        label: "parties_comm_panel_team_voice_eat_hotkey_team_ptt"
+                    },
+                    character_menu: {
+                        attribute: "character-menu",
+                        label: "parties_comm_panel_team_voice_eat_hotkey_character_menu"
+                    },
+                    role_quest: {
+                        attribute: "role-quest",
+                        label: "parties_comm_panel_team_voice_eat_hotkey_role_quest"
+                    }
+                };
+            class P extends i.default {
                 templateMarkup() {
-                    return n(99)
+                    return n(103)
                 }
                 stylesheetMarkup() {
-                    return n(100)
+                    return n(104)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -2024,7 +2035,7 @@
                         keyUp: this._handleKeyUp.bind(this)
                     }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._teamVoiceEATNotification = null, this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._isInGame = !1, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._teamVoiceRestricted = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
                     const e = r.Audio.getChannel(i.SOUND_CHANNEL);
-                    this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._partyPttClickSound = e.createSound(l.default), this._partyPttReleaseSound = e.createSound(s.default), this._joinSound = e.createSound(c.default), this._leaveSound = e.createSound(p.default), this._partyChannelConnectSound = e.createSound(d.default), this._partyChannelDisconnectSound = e.createSound(h.default), this._teamChannelConnectSound = e.createSound(m.default), this._teamChannelDisconnectSound = e.createSound(u.default), this._elements = {
+                    this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._teamPttDeniedSound = e.createSound(l.default), this._partyPttClickSound = e.createSound(s.default), this._partyPttReleaseSound = e.createSound(c.default), this._partyPttDeniedSound = e.createSound(p.default), this._joinSound = e.createSound(d.default), this._leaveSound = e.createSound(h.default), this._partyChannelConnectSound = e.createSound(m.default), this._partyChannelDisconnectSound = e.createSound(u.default), this._teamChannelConnectSound = e.createSound(g.default), this._teamChannelDisconnectSound = e.createSound(A.default), this._elements = {
                         voiceButton: ".lol-premade-voice-button"
                     }, this._initDataBinding()
                 }
@@ -2101,7 +2112,7 @@
                     this._isInLobby = !!t, this._isInCustomGame = t && e.gameConfig.isCustom, this._isInPremade = n && !e.gameConfig.isCustom, this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), this._checkIfTeamVoiceEATNeeded()
                 }
                 _initDataBinding() {
-                    this.lobbyDataListener = this.lobbyUpdated.bind(this), b.default.observe("lobby", this.lobbyDataListener), b.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), g.default.observe("availability", this.availabilityDataListener), g.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), A.default.observe("availability", this.teamVoiceAvailabilityListener), A.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), g.default.observe("firstExperience", this._voiceFirstExperienceListener), g.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), v.default.observe("session", this.gameflowSessionListener), v.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), g.default.observe("settings", this.settingsDataListener), g.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), g.default.observe("participants", this.participantsDataListener), g.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), A.default.observe("session", this.teamVoiceSessionListener), A.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), _.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), _.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
+                    this.lobbyDataListener = this.lobbyUpdated.bind(this), f.default.observe("lobby", this.lobbyDataListener), f.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), _.default.observe("availability", this.availabilityDataListener), _.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), v.default.observe("availability", this.teamVoiceAvailabilityListener), v.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), _.default.observe("firstExperience", this._voiceFirstExperienceListener), _.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), y.default.observe("session", this.gameflowSessionListener), y.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), _.default.observe("settings", this.settingsDataListener), _.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), _.default.observe("participants", this.participantsDataListener), _.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), v.default.observe("session", this.teamVoiceSessionListener), v.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), b.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), b.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
                 }
                 gameflowSessionUpdated(e) {
                     if (!e || !e.phase) return;
@@ -2122,20 +2133,20 @@
                     this.parentNode && (this.parentNode.style && (this._voiceDisabled ? (this.addClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "none") : (this.removeClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "inherit")), this._parentNode = this.parentNode)
                 }
                 _checkIfTooltipNeeded() {
-                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== E.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(E.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== E.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(E.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== E.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(E.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
+                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== C.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(C.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== C.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(C.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== C.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(C.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
                 }
                 _attachDisabledTooltip(e) {
                     this._tooltipType && this._detachDisabledTooltip(), this._tooltipType = e;
                     const t = document.createElement("lol-uikit-tooltip");
                     let n;
                     switch (e) {
-                        case E.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
+                        case C.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
                             n = r.tra.get("parties_comm_button_error_in_custom_game");
                             break;
-                        case E.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
+                        case C.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
                             n = r.tra.get("parties_comm_button_error_not_in_party");
                             break;
-                        case E.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
+                        case C.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
                             n = r.tra.get("parties_comm_button_error_disabled")
                     }
                     const i = this._tooltipContentBlock(n);
@@ -2157,7 +2168,7 @@
                     this._showFirstExperience = e ? e.showFirstExperienceInLCU : null, this._checkIfFirstExperience()
                 }
                 _checkIfFirstExperience() {
-                    this._isSocial && this._showFirstExperience && this._isInPremade && !this._showedFirstExperience && this.parentNode && (this._showPanel(!1), this._attachFirstExperienceTooltip(), g.default.firstExperienceCompleted(), this._showedFirstExperience = !0)
+                    this._isSocial && this._showFirstExperience && this._isInPremade && !this._showedFirstExperience && this.parentNode && (this._showPanel(!1), this._attachFirstExperienceTooltip(), _.default.firstExperienceCompleted(), this._showedFirstExperience = !0)
                 }
                 _attachFirstExperienceTooltip() {
                     const e = this._tooltipContentBlock(r.tra.get("parties_comm_panel_tooltip_first_experience"));
@@ -2193,20 +2204,20 @@
                     return !this._teamVoiceEATShown && this._teamVoicePluginEnabled && this._isInLobby && this.parentNode
                 }
                 _checkIfTeamVoiceEATNeeded() {
-                    this._canShowTeamVoiceEAT() && null === this._teamVoiceEATSeen && (this._teamVoiceEATSeen = !1, y.default.evaluate().then((async ({
+                    this._canShowTeamVoiceEAT() && null === this._teamVoiceEATSeen && (this._teamVoiceEATSeen = !1, E.default.evaluate().then((async ({
                         migrated: e,
                         rows: t
                     }) => {
                         if (!e) return void(this._teamVoiceEATSeen = !0);
-                        const n = t.filter((e => w[e.id])),
-                            r = await y.default.isOutcomeCurrent(n);
+                        const n = t.filter((e => T[e.id])),
+                            r = await E.default.isOutcomeCurrent(n);
                         this._teamVoiceEATSeen = !0, r && this._canShowTeamVoiceEAT() && this._showTeamVoiceEAT(t)
                     })).catch((e => {
                         this._teamVoiceEATSeen = null, r.logger.error(`voice-button -- error reading team voice keybind migration: ${e}`)
                     })))
                 }
                 _teamVoiceEATKeyDisplay(e) {
-                    const t = (0, f.keybindTokens)(e);
+                    const t = (0, x.keybindTokens)(e);
                     return 0 === t.length ? null : t.join(r.tra.get("parties_comm_panel_team_voice_eat_hotkey_separator"))
                 }
                 _teamVoiceEATHotkeyValue({
@@ -2227,7 +2238,7 @@
                 }
                 _setTeamVoiceEATHotkeys(e, t) {
                     (t || []).forEach((t => {
-                        const n = w[t.id];
+                        const n = T[t.id];
                         n && (e.setAttribute(`${n.attribute}-label`, r.localeDirectionOverrides.wrapWithDirectionOverride(r.tra.get(n.label))), e.setAttribute(`${n.attribute}-value`, this._teamVoiceEATHotkeyValue(t)))
                     }))
                 }
@@ -2248,26 +2259,26 @@
                     this._teamVoiceEATNotification && (this._teamVoiceEATNotification.parentNode && this._teamVoiceEATNotification.parentNode.removeChild(this._teamVoiceEATNotification), this._teamVoiceEATNotification = null)
                 }
                 participantsUpdated(e) {
-                    const t = e && e.length > 0 ? x.VOICE_CONNECTED_STATE : x.VOICE_DISCONNECTED_STATE,
+                    const t = e && e.length > 0 ? k.VOICE_CONNECTED_STATE : k.VOICE_DISCONNECTED_STATE,
                         n = e ? e.length : 0;
-                    this._connectionState === x.VOICE_DISCONNECTED_STATE && t === x.VOICE_CONNECTED_STATE ? (this._partyChannelConnectSound.play(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._connectionState === k.VOICE_DISCONNECTED_STATE && t === k.VOICE_CONNECTED_STATE ? (this._partyChannelConnectSound.play(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
-                    }), 500)) : this._connectionState === x.VOICE_CONNECTED_STATE && t === x.VOICE_DISCONNECTED_STATE ? this._partyChannelDisconnectSound.play() : this._connectionState === x.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === x.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
+                    }), 500)) : this._connectionState === k.VOICE_CONNECTED_STATE && t === k.VOICE_DISCONNECTED_STATE ? this._partyChannelDisconnectSound.play() : this._connectionState === k.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === k.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
                     const r = this._connectionState !== t;
                     this._connectionState = t, this._previousParticipantCount = n, r && this._updateCombinedAvailability(!0)
                 }
                 teamVoiceSessionUpdated(e) {
                     const t = e && e.participants && e.participants.length > 0,
-                        n = t ? x.VOICE_CONNECTED_STATE : x.VOICE_DISCONNECTED_STATE;
+                        n = t ? k.VOICE_CONNECTED_STATE : k.VOICE_DISCONNECTED_STATE;
                     this._teamVoiceRestricted = !(!e || !e.isRestricted), this._teamVoicePluginEnabled && (!this._previousTeamSessionActive && t ? this._playTeamChannelConnectSound() : this._previousTeamSessionActive && !t && this._playTeamChannelDisconnectSound());
                     const r = this._teamConnectionState !== n;
                     this._teamConnectionState = n, this._previousTeamSessionActive = t, r && this._updateCombinedAvailability(!0)
                 }
                 _handleKeyDown(e) {
-                    this._teamVoicePluginEnabled && (!this._pttTeamKey || this._teamConnectionState !== x.VOICE_CONNECTED_STATE || this._teamVoiceRestricted || e.key !== this._pttTeamKey || e.repeat || (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === x.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))
+                    this._teamVoicePluginEnabled && !S(e) && (this._pttTeamKey && e.key === this._pttTeamKey && !e.repeat && (this._teamConnectionState !== k.VOICE_CONNECTED_STATE || this._teamVoiceRestricted ? this._teamPttDeniedSound.play() : (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play())), this._pttKey && this._pttActive && e.key === this._pttKey && !e.repeat && (this._connectionState === k.VOICE_CONNECTED_STATE ? (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()) : this._partyPttDeniedSound.play()))
                 }
                 _handleKeyUp(e) {
-                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === x.VOICE_CONNECTED_STATE && !this._teamVoiceRestricted && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === x.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
+                    this._teamVoicePluginEnabled && !S(e) && (this._pttTeamKey && this._teamConnectionState === k.VOICE_CONNECTED_STATE && !this._teamVoiceRestricted && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === k.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
                 }
                 _playJoinSound() {
                     this._joinSound.play()
@@ -2287,9 +2298,9 @@
                     this._teamChannelDisconnectSound.play()
                 }
             }
-            $.tagName = "lol-parties-comm-button";
-            var S = $;
-            t.default = S
+            P.tagName = "lol-parties-comm-button";
+            var O = P;
+            t.default = O
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "sfx-vc-team-ptt-click.ogg"
@@ -2298,10 +2309,16 @@
             e.exports = n.p + "sfx-vc-team-ptt-release.ogg"
         }, (e, t, n) => {
             "use strict";
+            e.exports = n.p + "sfx-vc-team-ptt-click-denied.ogg"
+        }, (e, t, n) => {
+            "use strict";
             e.exports = n.p + "sfx-vc-party-ptt-click.ogg"
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "sfx-vc-party-ptt-release.ogg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "sfx-vc-party-ptt-click-denied.ogg"
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "sfx-voicechat-notif-join.ogg"
@@ -2341,9 +2358,9 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                i = l(n(29)),
-                a = l(n(28)),
-                o = n(97);
+                i = l(n(31)),
+                a = l(n(30)),
+                o = n(101);
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -2620,8 +2637,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-button"></div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, '.lol-premade-voice-button {\n  display: flex;\n  width: 38px;\n  height: 32px;\n  background-image: url("/fe/lol-premade-voice/voice-button.png");\n  background-position-y: 0px;\n  background-size: cover;\n  cursor: pointer;\n}\n.lol-premade-voice-button:hover:not(.button-disabled) {\n  background-position-y: -32px;\n}\n.lol-premade-voice-button:active:not(.button-disabled) {\n  background-position-y: -64px;\n}\n.lol-premade-voice-button.button-disabled {\n  background-position-y: -160px;\n  cursor: default;\n}\n.lol-premade-voice-button.active {\n  background-position-y: -96px;\n}\n.lol-premade-voice-team-voice-eat-title {\n  font-family: var(--font-display);\n}\n.lol-premade-voice-team-voice-eat-body {\n  font-family: var(--font-body);\n}\n.lol-premade-voice-team-voice-eat-title,\n.lol-premade-voice-team-voice-eat-body {\n  -webkit-user-select: none;\n}\n.lol-premade-voice-team-voice-eat-title,\n.lol-premade-voice-team-voice-eat-body {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-premade-voice-team-voice-eat-title {\n  text-transform: uppercase;\n}\n.lol-premade-voice-team-voice-eat-title:lang(ko-kr),\n.lol-premade-voice-team-voice-eat-title:lang(ja-jp),\n.lol-premade-voice-team-voice-eat-title:lang(tr-tr),\n.lol-premade-voice-team-voice-eat-title:lang(el-gr),\n.lol-premade-voice-team-voice-eat-title:lang(th-th),\n.lol-premade-voice-team-voice-eat-title:lang(zh-tw) {\n  text-transform: none;\n}\n.lol-premade-voice-team-voice-eat-title {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.lol-premade-voice-team-voice-eat-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-team-voice-eat-body {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-premade-voice-team-voice-eat-body:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-button.voice-disabled {\n  display: none;\n}\nlol-uikit-content-block.lol-premade-voice-button-tooltip[type=tooltip-small] {\n  padding: 9px;\n}\n.lol-premade-voice-team-voice-eat {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  gap: 12px;\n  padding: 16px 8px 16px 12px;\n  width: 280px;\n}\n.lol-premade-voice-team-voice-eat-icon {\n  flex-shrink: 0;\n  width: 48px;\n  height: 48px;\n  background-image: url("/fe/lol-premade-voice/team-voice-eat-icon.png");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n.lol-premade-voice-team-voice-eat-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1;\n  white-space: normal;\n}\n.lol-premade-voice-team-voice-eat-title {\n  font-weight: bold;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.lol-premade-voice-team-voice-eat-body {\n  margin-top: 4px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-button/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -2651,16 +2668,16 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(16)),
-                i = u(n(23)),
-                a = u(n(25)),
-                o = u(n(27)),
+                i = u(n(25)),
+                a = u(n(27)),
+                o = u(n(29)),
                 l = n(1),
-                s = u(n(40)),
+                s = u(n(42)),
                 c = u(n(17)),
                 p = u(n(18)),
-                d = u(n(20)),
-                h = u(n(21)),
-                m = u(n(22));
+                d = u(n(22)),
+                h = u(n(23)),
+                m = u(n(24));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -2678,10 +2695,10 @@
             }
             class A extends r.default {
                 templateMarkup() {
-                    return n(102)
+                    return n(106)
                 }
                 stylesheetMarkup() {
-                    return n(103)
+                    return n(107)
                 }
                 constructor() {
                     super(), this._lastSliderUpdate = 0, this._teamVoicePluginEnabled = !1, this._isDraggingSlider = !1, this._nameOverride = null;
@@ -2788,15 +2805,15 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-participant">\r\n    <lol-parties-comm-halo size="small">\r\n      <lol-social-avatar-icon\r\n        class="lol-premade-voice-panel-chat-icon"\r\n        icon-id=""\r\n        availability=""\r\n        show-availability="true"\r\n      >\r\n      </lol-social-avatar-icon>\r\n    </lol-parties-comm-halo>\r\n    <div class="lol-premade-voice-panel-participant-content">\r\n      <div class="lol-premade-voice-panel-participant-volume-row">\r\n        <div class="lol-premade-voice-panel-participant-name">\r\n          <lol-uikit-player-name format="tooltip" puuid="" summoner-id="" />\r\n        </div>\r\n      </div>\r\n      <lol-uikit-slider for="participantVolume" percentage value="0" clickset="true" trackTooltipPosition="true"> </lol-uikit-slider>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-participant-mute"></div>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44),
-                a = n(45),
-                o = n(104),
-                l = n(105),
-                s = n(106),
-                c = n(107),
-                p = n(108),
-                d = n(109),
+            var r = n(45),
+                i = n(46),
+                a = n(47),
+                o = n(108),
+                l = n(109),
+                s = n(110),
+                c = n(111),
+                p = n(112),
+                d = n(113),
                 h = i(r),
                 m = a(o),
                 u = a(l),
@@ -2836,10 +2853,10 @@
                 value: !0
             }), t.default = void 0;
             var r = s(n(16)),
-                i = s(n(23)),
-                a = s(n(25)),
-                o = n(111),
-                l = n(112);
+                i = s(n(25)),
+                a = s(n(27)),
+                o = n(115),
+                l = n(116);
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -2848,10 +2865,10 @@
             }
             class c extends r.default {
                 templateMarkup() {
-                    return n(113)
+                    return n(117)
                 }
                 stylesheetMarkup() {
-                    return n(114)
+                    return n(118)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2930,7 +2947,7 @@
                     l = n * r.MIN_BLUR_MULTIPLIER;
                 return (o - l) * a + ("small" === e ? 1 : 2)
             };
-            var r = n(112)
+            var r = n(116)
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2951,8 +2968,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-comm-halo">\r\n    <slot></slot>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, ":host .lol-premade-voice-comm-halo {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n:host .lol-premade-voice-comm-halo:before {\n  content: '';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo.speaking:before {\n  opacity: 1;\n}\n:host .lol-premade-voice-comm-halo.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo {\n  border-radius: 50%;\n}\n:host .lol-premade-voice-comm-halo:before {\n  border-radius: 50%;\n}\n:host {\n  --premade-voice-halo-margin: 0 0 0 0;\n  --premade-voice-halo-width: auto;\n  --premade-voice-halo-height: auto;\n  --premade-voice-halobefore-box-shadow: none;\n}\n:host .lol-premade-voice-comm-halo {\n  margin: var(--premade-voice-halo-margin);\n  width: var(--premade-voice-halo-width);\n  height: var(--premade-voice-halo-height);\n}\n:host .lol-premade-voice-comm-halo:before {\n  box-shadow: var(--premade-voice-halobefore-box-shadow);\n}\n:host .lol-premade-voice-comm-halo.team-voice:before {\n  box-shadow: 0 0 0 2px #e88700;\n}\n:host .lol-premade-voice-comm-halo.team-voice.small:before {\n  box-shadow: 0 0 0 1px #e88700;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-halo/style.styl"],
@@ -2968,9 +2985,9 @@
             }), t.default = void 0;
             var r = n(1),
                 i = s(n(16)),
-                a = s(n(23)),
-                o = n(111),
-                l = s(n(40));
+                a = s(n(25)),
+                o = n(115),
+                l = s(n(42));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -2979,10 +2996,10 @@
             }
             class c extends i.default {
                 templateMarkup() {
-                    return n(116)
+                    return n(120)
                 }
                 stylesheetMarkup() {
-                    return n(117)
+                    return n(121)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -3049,8 +3066,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-voice-mic-test-label"></div>\r\n  <div class="lol-voice-mic-test-button"></div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, '.lol-voice-mic-test-label {\n  font-family: var(--font-body);\n}\n.lol-voice-mic-test-label {\n  font-family: var(--font-body);\n}\n.lol-voice-mic-test-label {\n  -webkit-user-select: none;\n}\n.lol-voice-mic-test-label {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-voice-mic-test-label {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-voice-mic-test-label:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-voice-mic-test-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-voice-mic-test-button {\n  display: flex;\n  width: 38px;\n  height: 32px;\n  background-image: url("/fe/lol-premade-voice/voice-button.png");\n  background-position-y: 0px;\n  background-size: cover;\n  cursor: pointer;\n}\n.lol-voice-mic-test-button:hover:not(.button-disabled) {\n  background-position-y: -32px;\n}\n.lol-voice-mic-test-button:active:not(.button-disabled) {\n  background-position-y: -64px;\n}\n.lol-voice-mic-test-button.button-disabled {\n  background-position-y: -160px;\n  cursor: default;\n}\n.lol-voice-mic-test-button.active {\n  background-position-y: -96px;\n}\n.lol-voice-mic-test-button {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n.lol-voice-mic-test-button:before {\n  content: \'\';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n.lol-voice-mic-test-button.speaking:before {\n  opacity: 1;\n}\n.lol-voice-mic-test-button.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n.lol-voice-mic-test-label {\n  min-height: 16px;\n  margin-bottom: 5px;\n}\n.lol-voice-mic-test-button.active {\n  background-position-y: -96px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/mic-test-button/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl"],
@@ -3069,10 +3086,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(119)
+                    return n(123)
                 }
                 stylesheetMarkup() {
-                    return n(120)
+                    return n(124)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -3122,8 +3139,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="key-bind-indicator">\r\n    <span class="key-bind-indicator-key"></span>\r\n  </div>\r\n  <div class="key-bind-indicator-unbound" style="display: none;">\r\n    <span class="key-bind-indicator-unbound-square"></span>\r\n    <span class="key-bind-indicator-unbound-text"></span>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, ".key-bind-indicator-key,\n.key-bind-indicator-unbound-text {\n  font-family: var(--font-body);\n}\n.key-bind-indicator-key,\n.key-bind-indicator-unbound-text {\n  font-family: var(--font-body);\n}\n:host {\n  display: flex;\n  align-items: center;\n}\n.key-bind-indicator {\n  display: inline-flex;\n  align-items: center;\n}\n.key-bind-indicator-key {\n  font-size: 11px;\n  color: #010a13;\n  background: #a09b8c;\n  border-radius: 3px;\n  padding: 1px 3px;\n  min-width: 10px;\n  text-align: center;\n}\n.key-bind-indicator-unbound {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n}\n.key-bind-indicator-unbound-square {\n  width: 16px;\n  height: 16px;\n  border: 1px solid #ff2345;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n.key-bind-indicator-unbound-text {\n  font-size: 12px;\n  line-height: 16px;\n  letter-spacing: 0.6px;\n  color: #ff2345;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/key-bind-indicator/style.styl"],
@@ -3142,10 +3159,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(122)
+                    return n(126)
                 }
                 stylesheetMarkup() {
-                    return n(123)
+                    return n(127)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -3173,8 +3190,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="team-voice-tooltip">\r\n    <div class="team-voice-tooltip-header"></div>\r\n    <div class="team-voice-tooltip-body"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, ".team-voice-tooltip-header {\n  font-family: var(--font-display);\n}\n.team-voice-tooltip-body {\n  font-family: var(--font-body);\n}\n.team-voice-tooltip-header {\n  font-family: var(--font-display);\n}\n.team-voice-tooltip-body {\n  font-family: var(--font-body);\n}\n:host {\n  display: block;\n}\n.team-voice-tooltip {\n  direction: ltr /*rtl:rtl*/;\n  display: flex;\n  flex-direction: column;\n  width: 180px;\n  padding: 9px;\n  text-align: center;\n  color: #a09b8c;\n  white-space: normal;\n  word-wrap: break-word;\n}\n.team-voice-tooltip-header {\n  color: #c8aa6e;\n  font-weight: bold;\n  font-size: 12px;\n  margin-bottom: 4px;\n}\n.team-voice-tooltip-body {\n  font-size: 12px;\n  line-height: 1.3;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/team-voice-tooltip/style.styl"],
@@ -3212,10 +3229,10 @@
             t.HOTKEY_ROW_IDS = o;
             class l extends i.default {
                 templateMarkup() {
-                    return n(125)
+                    return n(129)
                 }
                 stylesheetMarkup() {
-                    return n(126)
+                    return n(130)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -3271,8 +3288,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="team-voice-eat">\r\n    <div class="team-voice-eat-dismiss" role="button" aria-label="close"></div>\r\n    <div class="team-voice-eat-content">\r\n      <svg class="team-voice-eat-caret" xmlns="http://www.w3.org/2000/svg" width="18" height="25" viewBox="0 0 18 25" fill="none">\r\n        <path d="M9 25L-1.72313e-08 16L18 16L9 25Z" fill="#C89B3C" />\r\n        <path d="M13 12L9 16L5 12L9 8L13 12Z" fill="#785A28" stroke="#785A28" />\r\n      </svg>\r\n      <div class="team-voice-eat-icon">\r\n        <img\r\n          src="/fe/lol-premade-voice/team-voice-microphone.svg"\r\n          alt=""\r\n          class="team-voice-eat-icon-image"\r\n        />\r\n      </div>\r\n      <div class="team-voice-eat-text">\r\n        <div class="team-voice-eat-text-title"></div>\r\n        <div class="team-voice-eat-text-msg"></div>\r\n        <div class="team-voice-eat-hotkeys">\r\n          <div class="team-voice-eat-hotkeys-title"></div>\r\n          <div class="team-voice-eat-hotkey-row">\r\n            <span class="team-voice-eat-hotkey-label team-voice-eat-hotkey-party-label"></span>\r\n            <span class="team-voice-eat-hotkey-value team-voice-eat-hotkey-party-value"></span>\r\n          </div>\r\n          <div class="team-voice-eat-hotkey-row">\r\n            <span class="team-voice-eat-hotkey-label team-voice-eat-hotkey-team-label"></span>\r\n            <span class="team-voice-eat-hotkey-value team-voice-eat-hotkey-team-value"></span>\r\n          </div>\r\n          <div class="team-voice-eat-hotkey-row">\r\n            <span class="team-voice-eat-hotkey-label team-voice-eat-hotkey-character-label"></span>\r\n            <span class="team-voice-eat-hotkey-value team-voice-eat-hotkey-character-value"></span>\r\n          </div>\r\n          <div class="team-voice-eat-hotkey-row">\r\n            <span class="team-voice-eat-hotkey-label team-voice-eat-hotkey-role-label"></span>\r\n            <span class="team-voice-eat-hotkey-value team-voice-eat-hotkey-role-value"></span>\r\n          </div>\r\n        </div>\r\n        <div class="team-voice-eat-footer"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(43),
-                i = n(44)(r);
+            var r = n(45),
+                i = n(46)(r);
             i.push([e.id, '.team-voice-eat-text-title {\n  font-family: var(--font-display);\n}\n.team-voice-eat-text-msg,\n.team-voice-eat-hotkeys-title,\n.team-voice-eat-hotkey-label,\n.team-voice-eat-hotkey-value,\n.team-voice-eat-footer {\n  font-family: var(--font-body);\n}\n.team-voice-eat-text-title,\n.team-voice-eat-text-msg,\n.team-voice-eat-hotkeys-title,\n.team-voice-eat-hotkey-label,\n.team-voice-eat-hotkey-value,\n.team-voice-eat-footer {\n  -webkit-user-select: none;\n}\n.team-voice-eat-text-title,\n.team-voice-eat-text-msg,\n.team-voice-eat-hotkeys-title,\n.team-voice-eat-hotkey-label,\n.team-voice-eat-hotkey-value,\n.team-voice-eat-footer {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.team-voice-eat-text-title {\n  text-transform: uppercase;\n}\n.team-voice-eat-text-title:lang(ko-kr),\n.team-voice-eat-text-title:lang(ja-jp),\n.team-voice-eat-text-title:lang(tr-tr),\n.team-voice-eat-text-title:lang(el-gr),\n.team-voice-eat-text-title:lang(th-th),\n.team-voice-eat-text-title:lang(zh-tw) {\n  text-transform: none;\n}\n.team-voice-eat-text-title {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.team-voice-eat-text-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.team-voice-eat-text-msg,\n.team-voice-eat-hotkeys-title,\n.team-voice-eat-hotkey-label,\n.team-voice-eat-hotkey-value {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.team-voice-eat-text-msg:lang(ar-ae),\n.team-voice-eat-hotkeys-title:lang(ar-ae),\n.team-voice-eat-hotkey-label:lang(ar-ae),\n.team-voice-eat-hotkey-value:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.team-voice-eat-footer {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.team-voice-eat-footer:lang(ja-jp) {\n  font-size: 13px;\n}\n.team-voice-eat-footer:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  direction: ltr /*rtl:rtl*/;\n  display: block;\n  width: 375px;\n  min-height: 115px;\n  position: relative;\n}\n.team-voice-eat {\n  position: relative;\n  width: 100%;\n  min-height: 100%;\n}\n.team-voice-eat-dismiss {\n  display: block;\n  height: 12px;\n  width: 12px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url("/fe/lol-static-assets/images/close.svg");\n  background-position: center;\n  background-repeat: no-repeat;\n  cursor: pointer;\n  border-radius: 4px;\n  padding: 4px;\n  z-index: 2;\n}\n.team-voice-eat-content {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  min-height: 100px;\n  border-radius: 2px;\n  overflow: visible;\n  background: #c89b3c;\n  position: relative;\n}\n.team-voice-eat-caret {\n  position: absolute;\n  right: 15px;\n  bottom: -9px;\n  width: 18px;\n  height: 25px;\n  pointer-events: none;\n}\n.team-voice-eat-icon {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  width: 81px;\n  height: 100%;\n  flex-shrink: 0;\n}\n.team-voice-eat-icon-image {\n  width: 42px;\n  height: 42px;\n  margin-top: 20px;\n  padding: 8px;\n  box-sizing: border-box;\n  background-color: #3d2e1d;\n  border-radius: 50%;\n  object-fit: contain;\n}\n.team-voice-eat-text {\n  display: flex;\n  flex-direction: column;\n  width: 266px;\n  height: 100%;\n  align-self: flex-start;\n  white-space: normal;\n  text-align: left /*rtl:right*/;\n}\n.team-voice-eat-text-title {\n  font-weight: bold;\n  margin-top: 20px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.team-voice-eat-text-msg {\n  margin-top: 5px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.team-voice-eat-hotkeys {\n  display: flex;\n  flex-direction: column;\n  margin-top: 16px;\n}\n.team-voice-eat-hotkeys-title {\n  font-weight: bold;\n  margin-bottom: 4px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.team-voice-eat-hotkey-row {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1px 0;\n}\n.team-voice-eat-hotkey-label {\n  flex: 1 1 auto;\n  min-width: 0;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.team-voice-eat-hotkey-value {\n  flex: 0 0 auto;\n  font-weight: bold;\n  margin-left: 8px /*rtl:0*/;\n  margin-right: 0 /*rtl:8px*/;\n  color: #3d2e1d;\n  text-transform: none;\n  white-space: nowrap;\n}\n.team-voice-eat-footer {\n  font-style: italic;\n  margin-top: 12px;\n  margin-bottom: 20px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/team-voice-eat/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -3284,8 +3301,8 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1),
-                i = o(n(26)),
-                a = o(n(96));
+                i = o(n(28)),
+                a = o(n(100));
 
             function o(e) {
                 return e && e.__esModule ? e : {
