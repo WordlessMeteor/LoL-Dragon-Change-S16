@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "بعد كل 4 هجمات أو تعويذات يتم إلقاؤها، يكسب بانثيون حماية من الهجوم التالي."
+        "description": "بعد كل @AttacksRequired@ من الهجمات أو استخدامات التعويذات، يكسب بانثيون حماية من الهجوم التالي."
     },
     "spells": [
         {
@@ -807,7 +807,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يقذف بانثيون رمحه على خصم، فيلحق به الضرر.",
-            "dynamicDescription": "يقذف بانثيون رمحه على خصم، فيلحق به <physicalDamage> @TotalDamage@ ضرر مادي</physicalDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يقذف بانثيون رمحه على خصم، فيلحق به<physicalDamage> @TotalDamage@ ضرر مادي</physicalDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -956,8 +956,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يقفز بانثيون على عدو ويخبطه بدرعه فيصعقه.  بعد إنهاء الهجوم، يستعد بانثيون لصد الهجوم التالي.",
-            "dynamicDescription": "يقفز بانثيون نحو العدو المستهدف ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> و<status>يصعقه</status> لمدة @StunDuration@ث. كما يجدد بانثيون تأثير <spellName>حماية الدرع</spellName> على الفور.@SpellModifierDescriptionAppend@",
+            "description": "يقفز بانثيون على عدو ويخبطه بدرعه، فيصعقه. بعد إنهاء الهجوم، يستعد بانثيون لصد الهجوم التالي.",
+            "dynamicDescription": "يقفز بانثيون نحو العدو المستهدف ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>يصعقه</status> لمدة @StunDuration@ث. يجدد بانثيون أيضًا تأثير <spellName>حماية الدرع</spellName> على الفور.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يركز بانثيون ثم يطلق 3 ضربات سريعة على المنطقة أمامه، فيلحق ضررًا مضاعفًا بالأبطال. كما يصبح بانثيون أكثر إدراكًا لنقاط ضعف أعدائه، مما يتيح له توجيه ضربات حرجة دائمًا ضد الأعداء الذين تقل صحتهم عن 15%.",
-            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تكسب <spellName>ضربة الرمح</spellName> و<spellName>ضربة مستهدف القلب</spellName> وهجمات بانثيون الأساسية فرصة ضربة حرجة بنسبة 100% ضد الأهداف التي تقل صحتها عن @PassiveCritThreshold*100@%.<br><br><spellActive>تأثير نشط:</spellActive> يحضّر بانثيون ليضرب @NumberOfStrikes@ من الضربات السريعة أمامه تلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> لكل ضربة (بإجمالي <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "يركز بانثيون ثم يطلق ضربات سريعة على المنطقة أمامه، فيلحق ضررًا إضافيًا بالأبطال. كما يصبح بانثيون أكثر إدراكًا لنقاط ضعف أعدائه، مما يتيح له توجيه ضربات حرجة للأعداء الجرحى.",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تحقق <spellName>ضربة الرمح</spellName> و<spellName>ضربة مستهدف القلب</spellName> وهجمات بانثيون الأساسية ضربات حرجة بالأهداف التي تقل صحتها عن @PassiveCritThreshold*100@%.<br><br><spellActive>تأثير نشط:</spellActive> يحضّر بانثيون لتوجيه @NumberOfStrikes@ من الضربات السريعة إلى المنطقة أمامه، مما يلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> لكل ضربة (بإجمالي <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1257,7 +1257,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يستجمع بانثيون قوته ثم يقفز في الهواء نحو هدف، فيضرب جميع الوحدات المعادية في منطقة معينة. يتلقى الأعداء الأقرب إلى نقطة الارتطام ضررًا أكبر.",
-            "dynamicDescription": "يستجمع بانثيون قوته ثم يقفز عاليًا في الهواء، فيهوي على المنطقة المستهدفة بعد بضع ثوانٍ. يلحق ما يصل إلى <magicDamage>@MaxDamage@ ضرر سحر</magicDamage> بالوحدات الموجودة في المركز (ينخفض إلى <magicDamage>@MinDamage@ ضرر سحر</magicDamage> عند الأطراف) و <status>يبطئها</status> بنسبة @SlowAmount*100@% لمدة @SlowDuration@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يستجمع بانثيون قوته ثم يقفز عاليًا في الهواء، فيهوي على المنطقة المستهدفة بعد بضع ثوانٍ. يلحق ما يصل إلى <magicDamage>@MaxDamage@ ضرر سحر</magicDamage> بالوحدات الموجودة في المركز (ينخفض إلى <magicDamage>@MinDamage@ ضرر سحر</magicDamage> عند الأطراف)، كما <status>يبطئها</status> بنسبة @SlowAmount*100@% لمدة @SlowDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

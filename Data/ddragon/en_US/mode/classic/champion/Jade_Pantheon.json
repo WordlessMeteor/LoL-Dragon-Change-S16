@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Pantheon": {
             "id": "Jade_Pantheon",
@@ -12,7 +12,7 @@
                 "full": "Jade_Pantheon.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -412,7 +412,7 @@
                         "full": "Jade_PantheonQ.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 384,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -422,7 +422,7 @@
                 {
                     "id": "Jade_PantheonW",
                     "name": "Aegis of Zeonia",
-                    "description": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them.  After finishing the attack, Pantheon readies himself to block the next attack.",
+                    "description": "Pantheon leaps at an enemy and bashes the enemy with his shield, stunning them. After finishing the attack, Pantheon readies himself to block the next attack.",
                     "tooltip": "Pantheon leaps at the target enemy and deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Stuns</status> them for {{ stunduration }} second(s). Pantheon also instantly refreshes his <spellName>Aegis Protection</spellName>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -553,7 +553,7 @@
                         "full": "Jade_PantheonW.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 432,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -563,8 +563,8 @@
                 {
                     "id": "Jade_PantheonE",
                     "name": "Heartseeker Strike",
-                    "description": "Pantheon focuses and unleashes 3 swift strikes to the area in front of him, dealing double damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to always crit enemies below 15% health.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, and Pantheon's basic attacks gain 100% critical strike chance against targets below {{ passivecritthreshold*100 }}% health.<br /><br /><spellActive>Active:</spellActive> Pantheon channels and deals {{ numberofstrikes }} swift strikes in front of him for <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> per strike (total <physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>).{{ spellmodifierdescriptionappend }}",
+                    "description": "Pantheon focuses and unleashes swift strikes to the area in front of him, dealing increased damage to champions. Pantheon also becomes more aware of his enemy's vital spots, allowing him to critically strike against wounded enemies.",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, and Pantheon's basic attacks critically strike against targets below {{ passivecritthreshold*100 }}% health.<br /><br /><spellActive>Active:</spellActive> Pantheon channels and deals {{ numberofstrikes }} swift strikes to the area in front of him for <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> per strike (total <physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -696,8 +696,8 @@
                         "full": "Jade_PantheonE.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 96,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -811,8 +811,8 @@
                         "full": "Jade_PantheonR.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 96,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -821,12 +821,12 @@
             ],
             "passive": {
                 "name": "Aegis Protection",
-                "description": "After every 4 attacks or spell casts, Pantheon gains protection from the next attack.",
+                "description": "After every @AttacksRequired@ attacks or spell casts, Pantheon gains protection from the next attack.",
                 "image": {
                     "full": "Jade_Pantheon_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 48,
+                    "x": 144,
                     "y": 48,
                     "w": 48,
                     "h": 48

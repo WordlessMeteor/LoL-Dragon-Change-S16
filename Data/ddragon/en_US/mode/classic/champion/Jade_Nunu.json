@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Nunu": {
             "id": "Jade_Nunu",
@@ -12,8 +12,8 @@
                 "full": "Jade_Nunu.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 0,
+                "x": 48,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -185,6 +185,13 @@
                     "name": "Classic Nunu & Willump (Sasquatch)",
                     "chromas": false,
                     "parentSkin": 301
+                },
+                {
+                    "id": "60020303",
+                    "num": 303,
+                    "name": "Classic Nunu & Willump (Grungy)",
+                    "chromas": false,
+                    "parentSkin": 301
                 }
             ],
             "lore": "- Blood Boil (W) grants attack and movement speed<br>- Ice Blast (E) a single point and click snowball<br>- Consume (Q) can't target champions but gain buffs based on whats eaten<br>- Visionary (P) every 5 basic attacks the next spell costs no mana - Nunu & Willump get an extra line as they are 2 characters",
@@ -229,7 +236,7 @@
                     "id": "Jade_NunuQ",
                     "name": "Consume",
                     "description": "Nunu commands the yeti to take a bite out of a target minion or monster, dealing heavy damage to it and healing himself.",
-                    "tooltip": "Commands the yeti to bite out of a minion or monster, dealing <trueDamage>{{ basedamage }} true damage</trueDamage> to the target and <healing>healing</healing> himself for {{ totalhealing }}.<br /><br />Nunu gains bonuses for {{ consumeduration }} seconds based on what he consumed.<br /><br /><attention>Wolves</attention> or <attention>Reptiles: </attention>Your attacks and spells deal an additional <magicDamage>1% of your maximum health as magic damage</magicDamage>.<br /><attention>Golems:</attention> 10% increased Size and <scaleHealth>Maximum Health</scaleHealth>.<br /><attention>Wraiths:</attention> Killing a unit grants <speed>15% Movement Speed</speed> for 3 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Commands the yeti to bite out of a minion or monster, dealing <trueDamage>{{ basedamage }} true damage</trueDamage> to the target and <healing>healing</healing> himself for {{ totalhealing }}.<br /><br />Nunu gains bonuses for {{ consumeduration }} seconds based on what he consumed.<br /><br /><attention>Wolves</attention> or <attention>Reptiles: </attention>Your attacks and spells deal an additional <magicDamage>{{ reptiledamage }} magic damage</magicDamage>.<br /><attention>Golems:</attention> {{ golemsizebonus*100 }}% increased Size and <scaleHealth>{{ golemhealthbonus*100 }}% Maximum Health</scaleHealth>.<br /><attention>Wraiths:</attention> Killing a unit grants <speed>{{ wraithmovespeed*100 }}% Movement Speed</speed> for {{ wraithmovespeedduration }} seconds.</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -363,8 +370,8 @@
                         "full": "Jade_NunuQ.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 0,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -374,7 +381,7 @@
                     "id": "Jade_NunuW",
                     "name": "Blood Boil",
                     "description": "Nunu invigorates himself and an allied unit by heating their blood, increasing their Movement and Attack Speeds.",
-                    "tooltip": "The heat of Nunu and a target ally's blood rises, increasing <speed>Movement Speed by {{ movespeed*100 }}%</speed> and <attackSpeed>Attack Speed by {{ attackspeed*100 }}%</attackSpeed> for 12 seconds. Nunu may target themself.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "The heat of Nunu and a target ally's blood rises, increasing <speed>Movement Speed by {{ movespeed*100 }}%</speed> and <attackSpeed>Attack Speed by {{ attackspeed*100 }}%</attackSpeed> for {{ buffduration }} seconds. Nunu may target themself.</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Attack Speed",
@@ -504,8 +511,8 @@
                         "full": "Jade_NunuW.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 48,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -515,7 +522,7 @@
                     "id": "Jade_NunuE",
                     "name": "Ice Blast",
                     "description": "Nunu launches a ball of ice at an enemy unit, dealing damage and temporarily slowing their Movement and Attack Speeds.",
-                    "tooltip": "Nunu launches a ball of ice at an enemy unit, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> their Movement Speed by {{ slowamount*-100 }}% and Attack Speed by 25% for 3 seconds.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nunu launches a ball of ice at an enemy unit, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> their Movement Speed by {{ slowamount*-100 }}% and Attack Speed by {{ attackspeedmod*-100 }}% for {{ slowduration }} seconds.</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -647,8 +654,8 @@
                         "full": "Jade_NunuE.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 48,
+                        "x": 96,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -658,7 +665,7 @@
                     "id": "Jade_NunuR",
                     "name": "Absolute Zero",
                     "description": "Nunu begins to sap the area of heat, slowing all nearby enemies. When the spell ends, he deals massive damage to all enemies caught in the area.",
-                    "tooltip": "Nunu saps the area of heat, channeling up to 3 seconds, enemies within the zone are <status>Slowed</status> by 50% and their <attackSpeed>Attack Speed</attackSpeed> reduced by 25%.<br /><br />Enemies caught in the area when the channel ends receive up to <magicDamage>{{ totaldamage }} magic damage</magicDamage>, depending on how long the spell was channeled.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nunu saps the area of heat, channeling while enemies within the zone are <status>Slowed</status> by {{ movementspeedmod*-100 }}% and their <attackSpeed>Attack Speed</attackSpeed> is reduced by {{ attackspeedmod*-100 }}%.<br /><br />Enemies caught in the area when the channel ends receive up to <magicDamage>{{ totaldamage }} magic damage</magicDamage>, depending on how long the spell was channeled.</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -762,8 +769,8 @@
                         "full": "Jade_NunuR.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 48,
+                        "x": 144,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -772,13 +779,13 @@
             ],
             "passive": {
                 "name": "Visionary",
-                "description": "Nunu can cast a spell for free after 5 attacks.",
+                "description": "Nunu can cast a spell for free after several attacks.",
                 "image": {
                     "full": "Jade_NunuPassive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 432,
-                    "y": 0,
+                    "x": 48,
+                    "y": 48,
                     "w": 48,
                     "h": 48
                 }

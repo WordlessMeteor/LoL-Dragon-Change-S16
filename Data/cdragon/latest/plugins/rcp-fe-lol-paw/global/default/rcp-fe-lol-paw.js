@@ -148,12 +148,12 @@
             }), Object.defineProperty(t, "QUEUES", {
                 enumerable: !0,
                 get: function() {
-                    return p.default
+                    return m.default
                 }
             }), Object.defineProperty(t, "RANKED", {
                 enumerable: !0,
                 get: function() {
-                    return m.default
+                    return p.default
                 }
             }), Object.defineProperty(t, "REWARD_TRACKER", {
                 enumerable: !0,
@@ -181,21 +181,21 @@
                     return l.getGameKeyFromGameMode
                 }
             });
-            var a = _(n(4)),
-                s = _(n(5)),
+            var a = f(n(4)),
+                s = f(n(5)),
                 l = n(6),
-                o = _(n(7)),
-                i = _(n(8)),
-                c = _(n(19)),
-                r = _(n(20)),
-                p = _(n(21)),
-                m = _(n(22)),
-                u = _(n(23)),
-                d = _(n(24)),
-                h = _(n(25)),
-                g = _(n(26));
+                o = f(n(7)),
+                i = f(n(8)),
+                c = f(n(19)),
+                r = f(n(20)),
+                m = f(n(21)),
+                p = f(n(22)),
+                u = f(n(23)),
+                d = f(n(24)),
+                h = f(n(25)),
+                g = f(n(26));
 
-            function _(e) {
+            function f(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -280,8 +280,8 @@
                 i = d(n(13)),
                 c = d(n(14)),
                 r = d(n(15)),
-                p = d(n(16)),
-                m = d(n(17)),
+                m = d(n(16)),
+                p = d(n(17)),
                 u = d(n(18));
 
             function d(e) {
@@ -297,8 +297,8 @@
                 MEDIA_LOAD_TYPES: i.default,
                 MODAL_TYPES: c.default,
                 OFFER_PURCHASE_STATES: r.default,
-                OFFER_VALIDATION_STATES: p.default,
-                SCROLL_LIST_DISPLAY_TYPES: m.default,
+                OFFER_VALIDATION_STATES: m.default,
+                SCROLL_LIST_DISPLAY_TYPES: p.default,
                 TEMPLATE_TYPES: u.default
             };
             t.default = h
@@ -477,16 +477,16 @@
                 i = "CHERRY",
                 c = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
-                p = "RANKED_TFT_TURBO",
-                m = "RANKED_TFT_PAIRS",
+                m = "RANKED_TFT_TURBO",
+                p = "RANKED_TFT_PAIRS",
                 u = [n, a, l, o],
                 d = [...u, s],
                 h = [i],
                 g = [c, r],
-                _ = [p, m],
-                f = [...g, ..._],
+                f = [m, p],
+                _ = [...g, ...f],
                 E = [...d, ...g],
-                T = [..._, ...h];
+                T = [...f, ...h];
             var w = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: a,
@@ -496,13 +496,13 @@
                 RANKED_CHERRY_QUEUE_TYPE: i,
                 RANKED_TFT_QUEUE_TYPE: c,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
-                RANKED_TFT_TURBO_QUEUE_TYPE: p,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: m,
+                RANKED_TFT_TURBO_QUEUE_TYPE: m,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: p,
                 RANKED_LOL_QUEUE_TYPES: d,
                 RANKED_SR_QUEUE_TYPES: u,
                 RANKED_TFT_QUEUE_TYPES: g,
-                RATED_TFT_QUEUE_TYPES: _,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: f,
+                RATED_TFT_QUEUE_TYPES: f,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: _,
                 ALL_RANKED_QUEUE_TYPES: E,
                 ALL_RATED_QUEUE_TYPES: T,
                 ALL_RANKED_AND_RATED_QUEUE_TYPES: [...E, ...T]
@@ -522,14 +522,14 @@
                 c = ["IV", "III", "II", "I"],
                 r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function p(e) {
+            function m(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var m = {
+            var p = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -547,8 +547,8 @@
                 HIGHEST_DIVISION: c[c.length - 1],
                 LOWEST_DIVISION: c[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: p(s),
-                DIVISION_TO_ORDINAL: p(c),
+                TIER_NAME_TO_ORDINAL: m(s),
+                DIVISION_TO_ORDINAL: m(c),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -578,7 +578,7 @@
                 DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
                 TIERS_WITH_DECAY: i
             };
-            t.default = m
+            t.default = p
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -742,22 +742,23 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = E(n(31)),
+                s = T(n(31)),
                 l = n(32),
                 o = n(33),
-                i = E(n(35)),
-                c = E(n(38)),
-                r = E(n(41)),
-                p = E(n(44)),
-                m = E(n(47)),
-                u = E(n(50)),
-                d = E(n(53)),
-                h = E(n(56)),
-                g = E(n(59)),
-                _ = E(n(62)),
-                f = E(n(65));
+                i = T(n(35)),
+                c = T(n(38)),
+                r = T(n(40)),
+                m = T(n(43)),
+                p = T(n(46)),
+                u = T(n(49)),
+                d = T(n(52)),
+                h = T(n(55)),
+                g = T(n(58)),
+                f = T(n(61)),
+                _ = T(n(64)),
+                E = T(n(67));
 
-            function E(e) {
+            function T(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -852,49 +853,49 @@
                         name: "rcp-fe-lol-paw",
                         tra: e,
                         ComponentFactory: a.componentFactory,
-                        PawRootComponent: n(66),
-                        TopBannerComponent: n(72),
-                        RelatedItemsOverlayComponent: n(75),
-                        ItemDetailsComponent: n(78),
-                        PurchaseOptionsComponent: n(81),
-                        PurchaseWarningsComponent: n(84),
-                        ItemSplashComponent: n(87),
-                        OverlayImageComponent: n(90),
-                        ContentDescriptionComponent: n(93),
-                        DependencyDetailsComponent: n(96),
-                        PriceDetailsComponent: n(99),
-                        PriceButtonComponent: n(102),
-                        DisclaimerCheckboxComponent: n(105),
-                        ItemUnlockedComponent: n(108),
-                        CelebrationVideoComponent: n(111),
-                        PreviewVideoToggleComponent: n(113),
-                        BadgeOverlayComponent: n(116),
+                        PawRootComponent: n(68),
+                        TopBannerComponent: n(73),
+                        RelatedItemsOverlayComponent: n(76),
+                        ItemDetailsComponent: n(79),
+                        PurchaseOptionsComponent: n(82),
+                        PurchaseWarningsComponent: n(85),
+                        ItemSplashComponent: n(88),
+                        OverlayImageComponent: n(91),
+                        ContentDescriptionComponent: n(94),
+                        DependencyDetailsComponent: n(97),
+                        PriceDetailsComponent: n(100),
+                        PriceButtonComponent: n(103),
+                        DisclaimerCheckboxComponent: n(106),
+                        ItemUnlockedComponent: n(109),
+                        CelebrationVideoComponent: n(112),
+                        PreviewVideoToggleComponent: n(114),
+                        BadgeOverlayComponent: n(117),
                         DigitalGoodsDisclaimerComponent: a.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
-                        PawChoiceComponent: n(119),
-                        ItemChoiceComponent: n(122),
-                        ItemChoiceDetailsComponent: n(127),
-                        ItemChoiceDetailFullComponent: n(130),
-                        BundleRootComponent: n(133),
-                        BundleTitleComponent: n(136),
-                        BundleDescriptionComponent: n(139),
-                        BundleItemsComponent: n(142),
-                        BundlePriceComponent: n(145),
-                        BundlePurchaseComponent: n(148),
-                        BundleUpsellComponent: n(151),
-                        ChromaBundleDetailsComponent: n(154),
-                        ChromaBundleOverlayImageComponent: n(156),
-                        ChromaButtonComponent: n(159),
-                        ChromaBundleContentItemsComponent: n(162),
-                        PurchaseWidgetService: n(163),
+                        PawChoiceComponent: n(120),
+                        ItemChoiceComponent: n(123),
+                        ItemChoiceDetailsComponent: n(128),
+                        ItemChoiceDetailFullComponent: n(131),
+                        BundleRootComponent: n(134),
+                        BundleTitleComponent: n(137),
+                        BundleDescriptionComponent: n(140),
+                        BundleItemsComponent: n(143),
+                        BundlePriceComponent: n(146),
+                        BundlePurchaseComponent: n(149),
+                        BundleUpsellComponent: n(152),
+                        ChromaBundleDetailsComponent: n(155),
+                        ChromaBundleOverlayImageComponent: n(157),
+                        ChromaButtonComponent: n(160),
+                        ChromaBundleContentItemsComponent: n(163),
+                        PurchaseWidgetService: c.default,
                         PawTemplateService: i.default,
-                        PawTemplateLargeTwoColumnLandscapeTemplateComponent: c.default,
-                        PawTemplateImageCarouselComponent: r.default,
+                        PawTemplateLargeTwoColumnLandscapeTemplateComponent: r.default,
+                        PawTemplateImageCarouselComponent: m.default,
                         PawTemplateMediaComponent: p.default,
-                        PawTemplatePurchaseComponent: m.default,
-                        PawTemplateScrollListComponent: u.default,
-                        PawTemplateTextComponent: d.default,
-                        PawTemplateTitleSubtitleComponent: h.default,
-                        PawTemplateVerticalListComponent: g.default,
+                        PawTemplatePurchaseComponent: u.default,
+                        PawTemplateScrollListComponent: d.default,
+                        PawTemplateTextComponent: h.default,
+                        PawTemplateTitleSubtitleComponent: g.default,
+                        PawTemplateVerticalListComponent: f.default,
                         PawTemplateWindowComponent: _.default
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "PAWRPTopUpModalComponent",
@@ -934,7 +935,7 @@
                 getBaseSkinLineData(e) {
                     return new Promise(((t, n) => {
                         this.bindings.paw.get(o.BASE_SKIN_LINE_DATA_URL + "/" + e).then((a => {
-                            a ? t((0, f.default)(a, this.tra)) : n(`offer id ${e} not found`)
+                            a ? t((0, E.default)(a, this.tra)) : n(`offer id ${e} not found`)
                         })).catch((e => {
                             n(e)
                         }))
@@ -1082,7 +1083,7 @@
             const {
                 computed: r
             } = a.Ember;
-            var p = a.Ember.Service.extend(i.default, {
+            var m = a.Ember.Service.extend(i.default, {
                 pawTemplateDataCache: void 0,
                 isWaitingForAsyncPopulate: !0,
                 isWaitingToPresent: !0,
@@ -1253,7 +1254,7 @@
                     this.set("offerValidationProgress.state", o.PAW.OFFER_VALIDATION_STATES.COMPLETED), e ? e.validationErrors.length > 0 && (e.validationErrors[0].errorKey === l.default.GENERIC_ERROR && this.set("genericError", !0), e.validationErrors[0].errorKey, l.default.NOT_ENOUGH_CURRENCY, this.set("offerValidationProgress.errorKey", e.validationErrors[0].errorKey)) : this.set("offerValidationProgress.errorKey", l.default.GENERIC_ERROR), this._checkIfReadyToPresent()
                 }
             });
-            t.default = p
+            t.default = m
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1306,6 +1307,171 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            var a, s = n(1),
+                l = (a = n(39)) && a.__esModule ? a : {
+                    default: a
+                },
+                o = n(33),
+                i = n(32);
+            const c = (0, s.emberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
+                logPrefix: "service:purchasewidget",
+                boundProperties: {
+                    orderNotifications: "/lol-purchase-widget/v1/order-notifications",
+                    summoner: "/lol-summoner/v1/current-summoner"
+                }
+            });
+            var r = s.Ember.Service.extend(c, {
+                init() {
+                    this._super(...arguments), this._dataBinding = (0, s.dataBinding)("lol-purchase-widget"), s.db.get("/lol-game-data/assets/v1/lolcurrency.json").then((e => {
+                        this.set("gameDataCurrencies", e)
+                    })), s.db.get("/lol-game-data-inventory/v1/items/itemIds/inventoryTypes/CHAMPION_SKIN").then((e => {
+                        this.set("skins", e)
+                    })), s.db.get("/lol-client-config/v3/client-config/lol.client_settings.missingVO").then((e => {
+                        this.set("missingVOConfig", e)
+                    })), s.db.get("/riotclient/region-locale").then((e => {
+                        this.set("currentLocale", e?.locale)
+                    }))
+                },
+                getMissingVOData(e = []) {
+                    const t = this.get("missingVOConfig"),
+                        n = this.get("currentLocale");
+                    if (!Array.isArray(t) || !n) return null;
+                    const a = t.filter((e => e.locale === n));
+                    if (0 === a.length) return null;
+                    for (const t of a) {
+                        const n = t.items || [];
+                        if (e.some((e => !(!e || void 0 === e.itemId || null === e.itemId) && n.some((t => Number(t.itemId) === Number(e.itemId) && t.inventoryType === e.inventoryType))))) return {
+                            disclaimerText: t.disclaimerText,
+                            checkboxText: t.checkboxText
+                        }
+                    }
+                    return null
+                },
+                getItem(e, t) {
+                    const n = `/v1/purchasable-item?inventoryType=${t}&itemId=${e}`;
+                    return this._dataBinding.get(n, {
+                        skipCache: !0
+                    }).then(this._mapValidationErrors)
+                },
+                getItems(e, t) {
+                    const n = `/v1/purchasable-items/${t}`;
+                    return this._dataBinding.post(n, e).then(this._mapValidationErrors)
+                },
+                getRelatedItems(e, t) {
+                    const n = `v1/items/${e}/related-bundles?inventoryType=${t}`;
+                    return this._dataBinding.get(n)
+                },
+                _mapValidationErrors(e) {
+                    const t = Object.assign({}, e);
+                    if (t.validationErrors) {
+                        const e = t.validationErrors.map((function(e) {
+                            return l.default.fromErrorKey(e.id)
+                        }));
+                        t.validationErrors = e
+                    }
+                    return t
+                },
+                _getTimeoutPromise: e => new Promise((function(t, n) {
+                    setTimeout((function() {
+                        n(new Error(`Request has not return after ${e}ms`))
+                    }), e)
+                })),
+                purchaseItem(e, t, n) {
+                    const a = [];
+                    return e.priceDetails.forEach((e => {
+                        a.push({
+                            itemKey: e.itemKey,
+                            purchaseCurrencyInfo: {
+                                currencyType: e.price.currencyType,
+                                price: e.price.price,
+                                purchasable: !0
+                            },
+                            source: t,
+                            featuredSection: n,
+                            quantity: 1
+                        })
+                    })), s.Telemetry.sendCustomData(i.TELEMETRY_EVENT_NAME, {
+                        id: i.TELEMETRY_EVENT_ID.START_PURCHASE,
+                        purchaseDataItems: JSON.stringify(a)
+                    }), Promise.race([this._getTimeoutPromise(o.MAX_WAITING_TIME_IN_MS), this._dataBinding.post("/v2/purchaseItems", {
+                        items: a
+                    })])
+                }
+            });
+            t.default = r
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            class n {
+                constructor(e) {
+                    this.id = e, this.messageKey = this._buildMessageKey(e)
+                }
+                _buildMessageKey(e) {
+                    return `cat_paw_error_${e.replace(/\./g,"_")}`
+                }
+            }
+            const a = {
+                    ALREADY_OWNED: "validation.item.owned",
+                    BASE_SKIN_NOT_OWNED: "validation.item.base.skin.not.owned",
+                    MALFORMED: "validation.item.malformed",
+                    MISSING_REQUEST_FIELDS: "validation.request.missing.fields",
+                    NO_PRICE: "validation.item.no.price",
+                    NOT_ENOUGH_CURRENCY: "validation.item.not.enough.currency",
+                    NOT_VALID: "validation.not.valid",
+                    OVER_LIMIT: "validation.item.over.limit",
+                    PARENT_NOT_OWNED: "validation.item.parent.not.owned",
+                    UNKNOWN_ITEM: "validation.item.nonexistant",
+                    UNPURCHASABLE_ITEM: "validation.item.not.active",
+                    PAW_ITEM_PURCHASE_DISABLED: "validation.item.paw.purchase.disabled",
+                    CONNECTION_TIME_OUT: "validation.connection.failed"
+                },
+                s = {
+                    ALREADY_OWNED: new n("validation.item.owned"),
+                    GENERIC_ERROR: new n("validation.generic"),
+                    NOT_ENOUGH_CURRENCY: new n("validation.item.not.enough.currency"),
+                    NOT_VALID: new n("validation.not.valid"),
+                    UNSUPPORTED_INVENTORY_TYPE: new n("validation.not.valid"),
+                    UNKNOWN_ITEM: new n("validation.item.nonexistant"),
+                    UNPURCHASABLE_ITEM: new n("validation.item.not.active"),
+                    BASE_SKIN_NOT_OWNED: new n("validation.item.base.skin.not.owned"),
+                    PARENT_NOT_OWNED: new n("validation.item.parent.not.owned"),
+                    PAW_ITEM_PURCHASE_DISABLED: new n("validation.item.purchase.disabled"),
+                    CONNECTION_TIME_OUT: new n("validation.generic")
+                },
+                l = new Map([
+                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
+                    [a.BASE_SKIN_NOT_OWNED, s.BASE_SKIN_NOT_OWNED],
+                    [a.PARENT_NOT_OWNED, s.PARENT_NOT_OWNED],
+                    [a.UNKNOWN_ITEM, s.UNKNOWN_ITEM],
+                    [a.UNPURCHASABLE_ITEM, s.UNPURCHASABLE_ITEM],
+                    [a.NOT_ENOUGH_CURRENCY, s.NOT_ENOUGH_CURRENCY],
+                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
+                    [a.MALFORMED, s.NOT_VALID],
+                    [a.NO_PRICE, s.NOT_VALID],
+                    [a.OVER_LIMIT, s.NOT_VALID],
+                    [a.MISSING_REQUEST_FIELDS, s.NOT_VALID],
+                    [a.NOT_VALID, s.NOT_VALID],
+                    [a.PAW_ITEM_PURCHASE_DISABLED, s.PAW_ITEM_PURCHASE_DISABLED],
+                    [a.CONNECTION_TIME_OUT, s.CONNECTION_TIME_OUT]
+                ]);
+            var o = {
+                Errors: s,
+                fromErrorKey: function(e) {
+                    let t = s.GENERIC_ERROR;
+                    return l.has(e) && (t = l.get(e)), t
+                },
+                ValidationErrorKeys: a
+            };
+            t.default = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             var a = n(1),
                 s = n(3);
             const {
@@ -1313,8 +1479,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-large-two-column-landscape-template"],
-                layout: n(39),
-                style: n(40),
+                layout: n(41),
+                style: n(42),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 componentData0: l.readOnly("pawTemplateService.pawTemplateDataCache.template.components.0"),
                 componentData1: l.readOnly("pawTemplateService.pawTemplateDataCache.template.components.1"),
@@ -1354,8 +1520,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ms9uZLzK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["genericError"]]],null,5,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-column-0 paw-template-large-two-column-landscape-template-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-0 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area0ComponentName"]]],[["areaIndex","componentData"],[0,["get",["componentData0"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-1 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area1ComponentName"]]],[["areaIndex","componentData"],[1,["get",["componentData1"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-column-1 paw-template-large-two-column-landscape-template-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-2 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area2ComponentName"]]],[["areaIndex","componentData"],[2,["get",["componentData2"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-3 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area3ComponentName"]]],[["areaIndex","componentData"],[3,["get",["componentData3"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-4 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area4ComponentName"]]],[["areaIndex","componentData"],[4,["get",["componentData4"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex paw-template-large-two-column-landscape-template-spinner"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingToPresent"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex paw-template-large-two-column-landscape-template-success"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["successImagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-right-panel"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-clock-image-wrapper"],["flush-element"],["text","\\n        "],["open-element","object",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-clock-image"],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/circle-lines-gold.svg",null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-lock-image"],["flush-element"],["text","\\n          "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/lock-open-gold.svg",null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-title"],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_unlocked_header"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-name"],["flush-element"],["append",["unknown",["successItemName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-description"],["flush-element"],["append",["unknown",["successItemDescription"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-action"],["flush-element"],["text","\\n          "],["append",["unknown",["successDeepLinkConextPrefix"]],false],["text","\\n          "],["open-element","span",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-action-icon"],["flush-element"],["text","\\n            "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/backpack-light-gold.svg",null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["append",["unknown",["successDeepLinkConextSuffix"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-flex"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-close"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCloseButton"],null],null],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_confirmation"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCollectionsButton"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-flex"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-image"],["flush-element"],["text","\\n              "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/backpack-gold.svg",null],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-text"],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_deep_link_button"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseSuccess"]]],null,3,2]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-column"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-title"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-icon-panel"],["flush-element"],["text","\\n      "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/poro-sweat-exclamation.svg",null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message-header"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_header"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message-body"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCloseButton"],null],null],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "7mBjT+YQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\large-two-column-landscape-template-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["genericError"]]],null,5,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-column-0 paw-template-large-two-column-landscape-template-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-0 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area0ComponentName"]]],[["areaIndex","componentData"],[0,["get",["componentData0"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-1 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area1ComponentName"]]],[["areaIndex","componentData"],[1,["get",["componentData1"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-column-1 paw-template-large-two-column-landscape-template-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-2 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area2ComponentName"]]],[["areaIndex","componentData"],[2,["get",["componentData2"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-3 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area3ComponentName"]]],[["areaIndex","componentData"],[3,["get",["componentData3"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-area-4 paw-template-large-two-column-landscape-template-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-content"],["flush-element"],["text","\\n          "],["append",["helper",["component"],[["get",["area4ComponentName"]]],[["areaIndex","componentData"],[4,["get",["componentData4"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex paw-template-large-two-column-landscape-template-spinner"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingToPresent"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-flex paw-template-large-two-column-landscape-template-success"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["successImagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-right-panel"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-clock-image-wrapper"],["flush-element"],["text","\\n        "],["open-element","object",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-clock-image"],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/circle-lines-gold.svg",null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-lock-image"],["flush-element"],["text","\\n          "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/lock-open-gold.svg",null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-title"],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_unlocked_header"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-name"],["flush-element"],["append",["unknown",["successItemName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-description"],["flush-element"],["append",["unknown",["successItemDescription"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-text paw-template-large-two-column-landscape-template-success-action"],["flush-element"],["text","\\n          "],["append",["unknown",["successDeepLinkConextPrefix"]],false],["text","\\n          "],["open-element","span",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-action-icon"],["flush-element"],["text","\\n            "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/backpack-light-gold.svg",null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["append",["unknown",["successDeepLinkConextSuffix"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-flex"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-close"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCloseButton"],null],null],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_confirmation"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCollectionsButton"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-flex"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-image"],["flush-element"],["text","\\n              "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/backpack-gold.svg",null],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-success-button-collections-text"],["flush-element"],["append",["unknown",["tra","cat_pawt_celebration_deep_link_button"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseSuccess"]]],null,3,2]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-column"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-title"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-icon-panel"],["flush-element"],["text","\\n      "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/poro-sweat-exclamation.svg",null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message-header"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_header"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-message-body"],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-large-two-column-landscape-template-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onCloseButton"],null],null],["flush-element"],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1372,8 +1538,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-image-carousel"],
-                layout: n(42),
-                style: n(43),
+                layout: n(44),
+                style: n(45),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 selectedDisplayIndex: 0,
                 scrollPosition: 0,
@@ -1433,8 +1599,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "IBQ2UuDp",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-arrow-button",[]],["static-attr","class","paw-template-image-carousel-arrow-image paw-template-image-carousel-left-arrow"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onLeftArrowButton"],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-wrapper-outer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-wrapper-inner"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-scroll"],["dynamic-attr","style",["concat",["transform: translateX(",["unknown",["scrollPosition"]],"px)"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["thumbnails"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","lol-uikit-arrow-button",[]],["static-attr","class","paw-template-image-carousel-arrow-image"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onRightArrowButton"],null],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-template-image-carousel-thumbnail\\n            ",["helper",["if"],[["get",["thumbnail","selected"]],"paw-template-image-carousel-thumbnail-selected"],null]]]],["flush-element"],["text","\\n          "],["open-element","button",[]],["dynamic-attr","class",["concat",["paw-template-image-carousel-thumbnail-button\\n              ",["helper",["if"],[["get",["thumbnail","selected"]],"paw-template-image-carousel-thumbnail-button-selected"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onThumbnailButton",["get",["thumbnail"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-button-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["thumbnail","imagePath"]],")"]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-border"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-border-inner"],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["thumbnail","index"]}],"hasPartials":false}',
+                id: "m8ffw1N5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\image-carousel-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-arrow-button",[]],["static-attr","class","paw-template-image-carousel-arrow-image paw-template-image-carousel-left-arrow"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onLeftArrowButton"],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-wrapper-outer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-wrapper-inner"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-content-scroll"],["dynamic-attr","style",["concat",["transform: translateX(",["unknown",["scrollPosition"]],"px)"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["thumbnails"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","lol-uikit-arrow-button",[]],["static-attr","class","paw-template-image-carousel-arrow-image"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onRightArrowButton"],null],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-template-image-carousel-thumbnail\\n            ",["helper",["if"],[["get",["thumbnail","selected"]],"paw-template-image-carousel-thumbnail-selected"],null]]]],["flush-element"],["text","\\n          "],["open-element","button",[]],["dynamic-attr","class",["concat",["paw-template-image-carousel-thumbnail-button\\n              ",["helper",["if"],[["get",["thumbnail","selected"]],"paw-template-image-carousel-thumbnail-button-selected"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onThumbnailButton",["get",["thumbnail"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-button-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["thumbnail","imagePath"]],")"]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-border"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-image-carousel-thumbnail-border-inner"],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["thumbnail","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1452,8 +1618,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-media"],
-                layout: n(45),
-                style: n(46),
+                layout: n(47),
+                style: n(48),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 captionTitle: l("componentData.caption.localizedTitle", "componentData.sourceConnectionData", (function() {
                     return this.get("componentData.sourceConnectionData.associatedText") || this.get("componentData.caption.localizedTitle")
@@ -1478,8 +1644,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "7ggjEPTc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-media-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["media","isVideo"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","paw-template-media-caption"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-flex"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-title"],["flush-element"],["append",["unknown",["captionTitle"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-subtitle-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-media-content-subtitle-icon"],["flush-element"],["text","\\n          "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["static-attr","data","/fe/lol-static-assets/svg/mask-group.svg"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-subtitle-text"],["flush-element"],["append",["unknown",["captionText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-template-media-content"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["media","path"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","video",[]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","class","paw-template-media-video"],["dynamic-attr","src",["unknown",["media","path"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "kNXM3Tdy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\media-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-media-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["media","isVideo"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","paw-template-media-caption"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-flex"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-title"],["flush-element"],["append",["unknown",["captionTitle"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-subtitle-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-media-content-subtitle-icon"],["flush-element"],["text","\\n          "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["static-attr","data","/fe/lol-static-assets/svg/mask-group.svg"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-media-caption-subtitle-text"],["flush-element"],["append",["unknown",["captionText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-template-media-content"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["media","path"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","video",[]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","class","paw-template-media-video"],["dynamic-attr","src",["unknown",["media","path"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1497,8 +1663,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-purchase"],
-                layout: n(48),
-                style: n(49),
+                layout: n(50),
+                style: n(51),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 validateError: l("pawTemplateService.offerValidationProgress.errorKey", (function() {
                     const e = this.get("pawTemplateService.offerValidationProgress.errorKey");
@@ -1551,8 +1717,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "+JLZbchd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseInProgress"]]],null,10,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-padding-left"],["flush-element"],["append",["unknown",["purchaseOption","currencyName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["purchaseOption","currencyImagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-purchase-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onPurchaseButton",["get",["purchaseOption"]]],null],null],["dynamic-attr","disabled",["unknown",["purchaseOption","disabled"]],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-flex-base"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseOption","currencyImagePath"]]],null,1],["text","            "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-padding-left"],["flush-element"],["append",["unknown",["purchaseOption","price"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["purchaseOption","currencyName"]]],null,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["block",["each"],[["get",["purchaseOptions"]]],null,2]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-purchase-disclaimer-text"],["flush-element"],["text","\\n        "],["append",["unknown",["disclaimerTextPrefix"]],false],["text","\\n        "],["open-element","a",[]],["static-attr","class","paw-template-purchase-disclaimer-link"],["dynamic-attr","href",["unknown",["tra","cat_paw_purchase_non_refundable_disclaimer_link"]],null],["static-attr","target","_blank"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","cat_paw_purchase_disclaimer_link_text"]],false],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-purchase-disclaimer-link-icon"],["flush-element"],["text","\\n            "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/external-link-blue.svg",null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["append",["unknown",["disclaimerTextSuffix"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-template-purchase-disclaimer-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onDisclaimerButton"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","cat_paw_bundled_disclaimers_ok"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseError"]]],null,5]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error"],["flush-element"],["append",["unknown",["validateError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-template-flex-base paw-template-purchase-upper-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error-icon"],["flush-element"],["text","\\n        "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data",["unknown",["validationIcon"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["validateError"]]],null,7,6],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showError"]]],null,8],["text","  "],["open-element","div",[]],["static-attr","class","paw-template-flex-base paw-template-purchase-lower-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showNonRefundableDisclaimer"]]],null,4,3],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-flex-base"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LQmglF5Z",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseInProgress"]]],null,10,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-padding-left"],["flush-element"],["append",["unknown",["purchaseOption","currencyName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["purchaseOption","currencyImagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","paw-template-purchase-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onPurchaseButton",["get",["purchaseOption"]]],null],null],["dynamic-attr","disabled",["unknown",["purchaseOption","disabled"]],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-flex-base"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseOption","currencyImagePath"]]],null,1],["text","            "],["open-element","div",[]],["static-attr","class","paw-template-purchase-button-currency-padding-left"],["flush-element"],["append",["unknown",["purchaseOption","price"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["purchaseOption","currencyName"]]],null,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["block",["each"],[["get",["purchaseOptions"]]],null,2]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-purchase-disclaimer-text"],["flush-element"],["text","\\n        "],["append",["unknown",["disclaimerTextPrefix"]],false],["text","\\n        "],["open-element","a",[]],["static-attr","class","paw-template-purchase-disclaimer-link"],["dynamic-attr","href",["unknown",["tra","cat_paw_purchase_non_refundable_disclaimer_link"]],null],["static-attr","target","_blank"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","cat_paw_purchase_disclaimer_link_text"]],false],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-template-purchase-disclaimer-link-icon"],["flush-element"],["text","\\n            "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data","/fe/lol-static-assets/svg/external-link-blue.svg",null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["append",["unknown",["disclaimerTextSuffix"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-template-purchase-disclaimer-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onDisclaimerButton"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","cat_paw_bundled_disclaimers_ok"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseError"]]],null,5]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error"],["flush-element"],["append",["unknown",["validateError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-template-flex-base paw-template-purchase-upper-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-template-purchase-error-icon"],["flush-element"],["text","\\n        "],["open-element","object",[]],["static-attr","type","image/svg+xml"],["dynamic-attr","data",["unknown",["validationIcon"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["validateError"]]],null,7,6],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showError"]]],null,8],["text","  "],["open-element","div",[]],["static-attr","class","paw-template-flex-base paw-template-purchase-lower-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showNonRefundableDisclaimer"]]],null,4,3],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-flex-base"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1570,8 +1736,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-scroll-list"],
-                layout: n(51),
-                style: n(52),
+                layout: n(53),
+                style: n(54),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 scrollListSections: l("componentData.sections", (function() {
                     const e = [];
@@ -1610,8 +1776,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "CUSB8vH1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","paw-template-scroll-list-scrollable"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["scrollListSections"]]],null,6],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-detailed"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-image-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title-subtitle-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title paw-template-scroll-list-item-detailed-title"],["flush-element"],["append",["unknown",["item","localizedTitle"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-subtitle"],["flush-element"],["append",["unknown",["item","localizedSubtitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-right-text"],["flush-element"],["append",["unknown",["item","localizedRightText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isDetailed"]]],null,0]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-compact"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isCompact"]]],null,2,1]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-expanded"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-expanded-image-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-image paw-template-scroll-list-item-expanded-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title-subtitle-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title paw-template-scroll-list-item-expanded-title"],["flush-element"],["append",["unknown",["item","localizedTitle"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-expanded-subtitle"],["flush-element"],["append",["unknown",["item","localizedSubtitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isExpanded"]]],null,4,3]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-section-title"],["flush-element"],["append",["unknown",["section","localizedTitle"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["section","items"]]],null,5],["text","      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
+                id: "d2lTpwuq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\scroll-list-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","paw-template-scroll-list-scrollable"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["scrollListSections"]]],null,6],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-detailed"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-image-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title-subtitle-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title paw-template-scroll-list-item-detailed-title"],["flush-element"],["append",["unknown",["item","localizedTitle"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-subtitle"],["flush-element"],["append",["unknown",["item","localizedSubtitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-detailed-right-text"],["flush-element"],["append",["unknown",["item","localizedRightText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isDetailed"]]],null,0]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-compact"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isCompact"]]],null,2,1]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","class","paw-template-scroll-list-item paw-template-scroll-list-item-expanded"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onItemSelected",["get",["item"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-expanded-image-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-image paw-template-scroll-list-item-expanded-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title-subtitle-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-title paw-template-scroll-list-item-expanded-title"],["flush-element"],["append",["unknown",["item","localizedTitle"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-item-expanded-subtitle"],["flush-element"],["append",["unknown",["item","localizedSubtitle"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","isExpanded"]]],null,4,3]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-template-scroll-list-section-title"],["flush-element"],["append",["unknown",["section","localizedTitle"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["section","items"]]],null,5],["text","      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1628,8 +1794,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-text"],
-                layout: n(54),
-                style: n(55),
+                layout: n(56),
+                style: n(57),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 text: s.readOnly("componentData.localizedText")
             });
@@ -1637,8 +1803,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "PmY60F37",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\index.js\\" "],["text","\\n"],["append",["unknown",["text"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "gWxpdYTd",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\text-component\\\\index.js\\" "],["text","\\n"],["append",["unknown",["text"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1655,8 +1821,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-title-subtitle"],
-                layout: n(57),
-                style: n(58),
+                layout: n(59),
+                style: n(60),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 title: s.readOnly("componentData.localizedTitle"),
                 subtitle: s.readOnly("componentData.localizedSubtitle")
@@ -1665,8 +1831,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "XCKVvMIu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-title-subtitle-base paw-template-title-subtitle-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-title-subtitle-base paw-template-title-subtitle-subtitle"],["flush-element"],["append",["unknown",["subtitle"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "eDvbkRkO",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\title-subtitle-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-title-subtitle-base paw-template-title-subtitle-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-template-title-subtitle-base paw-template-title-subtitle-subtitle"],["flush-element"],["append",["unknown",["subtitle"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1683,8 +1849,8 @@
             } = a.Ember;
             var l = a.Ember.Component.extend({
                 classNames: ["paw-template-vertical-list"],
-                layout: n(60),
-                style: n(61),
+                layout: n(62),
+                style: n(63),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 items: s("componentData.items.[]", (function() {
                     const e = [];
@@ -1703,8 +1869,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "vlh0dasc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["items"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-description"],["flush-element"],["text","\\n          "],["append",["unknown",["item","description"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-name"],["flush-element"],["text","\\n          "],["append",["unknown",["item","name"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","imagePath"]]],null,2],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-text-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","name"]]],null,1],["text","\\n"],["block",["if"],[["get",["item","description"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
+                id: "ZTfNvfjK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\vertical-list-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["items"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-description"],["flush-element"],["text","\\n          "],["append",["unknown",["item","description"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-name"],["flush-element"],["text","\\n          "],["append",["unknown",["item","name"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-image"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["item","imagePath"]],")"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","imagePath"]]],null,2],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-template-vertical-list-element-text-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","name"]]],null,1],["text","\\n"],["block",["if"],[["get",["item","description"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1722,8 +1888,8 @@
             } = a.Ember;
             var o = a.Ember.Component.extend({
                 classNames: ["paw-template-window"],
-                layout: n(63),
-                style: n(64),
+                layout: n(65),
+                style: n(66),
                 pawTemplateService: a.Ember.inject.service("paw-template"),
                 isLargeTwoColumnLandscapeTemplate: l("pawTemplateService.pawTemplateDataCache.template.templateType", (function() {
                     return this.get("pawTemplateService.pawTemplateDataCache.template.templateType") === s.PAW.TEMPLATE_TYPES.LARGE_TWO_COLUMN_LANDSCAPE
@@ -1733,8 +1899,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Ote3ftIL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isLargeTwoColumnLandscapeTemplate"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["paw-template-large-two-column-landscape-template"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "kHta7TLT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-template\\\\window-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isLargeTwoColumnLandscapeTemplate"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["paw-template-large-two-column-landscape-template"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1875,14 +2041,14 @@
             "use strict";
             var a = n(1),
                 s = n(3),
-                l = m(n(37)),
-                o = m(n(34)),
-                i = m(n(67)),
+                l = p(n(37)),
+                o = p(n(34)),
+                i = p(n(39)),
                 c = n(32),
                 r = n(33),
-                p = n(68);
+                m = n(69);
 
-            function m(e) {
+            function p(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -1890,10 +2056,10 @@
             const {
                 Component: u,
                 computed: d
-            } = a.Ember, h = "/lol-client-config/v3/client-config/", g = h + "lol.experiments", _ = a.dataBinding.bindTo(a.socket), f = [i.default.Errors.NOT_ENOUGH_CURRENCY], E = [i.default.Errors.NOT_ENOUGH_CURRENCY, i.default.Errors.PARENT_NOT_OWNED], T = [s.PAW.INVENTORY_TYPES.CHAMPION_SKIN, s.PAW.INVENTORY_TYPES.BUNDLES], w = ["HEXTECH_BUNDLE", "MEGA_BUNDLE", "RECOLOR"], y = u.extend(l.default, {
+            } = a.Ember, h = "/lol-client-config/v3/client-config/", g = h + "lol.experiments", f = a.dataBinding.bindTo(a.socket), _ = [i.default.Errors.NOT_ENOUGH_CURRENCY], E = [i.default.Errors.NOT_ENOUGH_CURRENCY, i.default.Errors.PARENT_NOT_OWNED], T = [s.PAW.INVENTORY_TYPES.CHAMPION_SKIN, s.PAW.INVENTORY_TYPES.BUNDLES], w = ["HEXTECH_BUNDLE", "MEGA_BUNDLE", "RECOLOR"], y = u.extend(l.default, {
                 isLoadingCatalogItemInfo: !0,
-                layout: n(70),
-                style: n(71),
+                layout: n(71),
+                style: n(72),
                 inventoryType: null,
                 itemId: null,
                 items: null,
@@ -2029,9 +2195,9 @@
                     this._super(...arguments), this.get("isPawTemplateModal") && this.get("pawTemplateService").initializeWithData(this.get("pawTemplateData"))
                 },
                 didInsertElement() {
-                    this._super(...arguments), _.get(h + "operational.awConfig").then((e => {
+                    this._super(...arguments), f.get(h + "operational.awConfig").then((e => {
                         this.set("_awSettings", e)
-                    })), _.get(g).then((e => {
+                    })), f.get(g).then((e => {
                         this.set("isUpsellFlagEnabled", "enable" === e?.paw_skin_bundles_upsell), this.get("isPawTemplateModal") ? this.get("pawTemplateService").validateOffer() : this._loadCatalogItemInfo()
                     }))
                 },
@@ -2041,7 +2207,7 @@
                     }
                 },
                 willDestroy() {
-                    this.set("onPurchased", null), this._clearTimeoutTimer(), _.unobserve(g, this), this._super(...arguments)
+                    this.set("onPurchased", null), this._clearTimeoutTimer(), f.unobserve(g, this), this._super(...arguments)
                 },
                 _purchase(e) {
                     const t = a.datadogRum.proxy.startDurationVital("client.xp.storefront.product.purchase");
@@ -2287,7 +2453,7 @@
                     const l = !(!s?.boostContentId || "BOOST" !== n || String(t) !== String(s.boostContentId));
                     if (this.set("isAw", l), !t || !n) return;
                     const o = e?.item?.duration;
-                    _.get(`/lol-inventory/v2/inventory/${n}`).then((e => {
+                    f.get(`/lol-inventory/v2/inventory/${n}`).then((e => {
                         const n = Array.isArray(e) && e.find((e => String(e.uuid) === String(t))),
                             a = !!n;
                         this.set("_aramWardrobeOwnedBeforePurchase", a);
@@ -2299,11 +2465,11 @@
                                 s = this.get("tra.moment"),
                                 i = a.exists("moment_date_format") ? a.get("moment_date_format") : "L",
                                 c = a.exists("moment_time_format") ? a.get("moment_time_format") : "LT",
-                                p = s(e).format(i),
-                                m = s(e).format(c),
+                                m = s(e).format(i),
+                                p = s(e).format(c),
                                 u = a.formatString("cat_paw_aw_max_extension_warning", {
-                                    expiryDate: p,
-                                    expiryTime: m
+                                    expiryDate: m,
+                                    expiryTime: p
                                 });
                             t > l ? (this.set("bottomErrorMessageClass", "aw-expiry-info"), this.set("bottomErrorMessage", u)) : (this.set("isAwExtension", !0), this.set("awExtensionMessage", this.get("tra").formatString("cat_paw_aw_extension_info", {
                                 duration: o
@@ -2328,14 +2494,14 @@
                     const i = this.get("_aramWardrobeOwnedBeforePurchase"),
                         c = this.get("tra"),
                         r = i ? c.get("cat_paw_aw_fsc_extension_title") : c.get("cat_paw_aw_fsc_activation_title"),
-                        p = r,
-                        m = i ? c.get("cat_paw_aw_fsc_extension_description") : c.get("cat_paw_aw_fsc_activation_description"),
+                        m = r,
+                        p = i ? c.get("cat_paw_aw_fsc_extension_description") : c.get("cat_paw_aw_fsc_activation_description"),
                         u = {
                             id: `paw-fsc-${o}-${Date.now()}`,
                             canvas: {
                                 title: r,
-                                subtitle: p,
-                                description: m,
+                                subtitle: m,
+                                description: p,
                                 canvasBackgroundImage: "/fe/lol-static-assets/images/aram-wardrobe/celebration-bg.png",
                                 canvasSize: "LARGE",
                                 canvasDesign: "DESCRIPTION_BELOW",
@@ -2356,14 +2522,14 @@
                                 subtitle: ""
                             }]
                         };
-                    this.set("fscTriggered", !0), _.post("/lol-rewards/v1/celebrations/fsc", u).then((() => {
+                    this.set("fscTriggered", !0), f.post("/lol-rewards/v1/celebrations/fsc", u).then((() => {
                         a.privateAPI.removePAWModal()
                     })).catch((e => {
                         a.logger.error("Failed to trigger FSC celebration: ", e)
                     }))
                 },
                 _transformCatalogItemMetadata(e) {
-                    return (0, p.transformCatalogItemMetadata)(e, this.get("skins"))
+                    return (0, m.transformCatalogItemMetadata)(e, this.get("skins"))
                 },
                 _showLoadingSpinner() {
                     this.set("isLoadingCatalogItemInfo", !0)
@@ -2373,7 +2539,7 @@
                 },
                 _filterTopBannerErrorMessage: e => e.filter((e => E.includes(e))).shift(),
                 _filterBottomErrorMessage: e => e.filter((e => !E.includes(e))).shift(),
-                _filterBundleErrorMessage: e => e.filter((e => !f.includes(e))).shift(),
+                _filterBundleErrorMessage: e => e.filter((e => !_.includes(e))).shift(),
                 _filterAndExtractHumanReadableErrorMessage(e, t) {
                     if (!e || e.length <= 0) return null;
                     const n = t(e);
@@ -2400,72 +2566,6 @@
                 }
             });
             e.exports = y
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            class n {
-                constructor(e) {
-                    this.id = e, this.messageKey = this._buildMessageKey(e)
-                }
-                _buildMessageKey(e) {
-                    return `cat_paw_error_${e.replace(/\./g,"_")}`
-                }
-            }
-            const a = {
-                    ALREADY_OWNED: "validation.item.owned",
-                    BASE_SKIN_NOT_OWNED: "validation.item.base.skin.not.owned",
-                    MALFORMED: "validation.item.malformed",
-                    MISSING_REQUEST_FIELDS: "validation.request.missing.fields",
-                    NO_PRICE: "validation.item.no.price",
-                    NOT_ENOUGH_CURRENCY: "validation.item.not.enough.currency",
-                    NOT_VALID: "validation.not.valid",
-                    OVER_LIMIT: "validation.item.over.limit",
-                    PARENT_NOT_OWNED: "validation.item.parent.not.owned",
-                    UNKNOWN_ITEM: "validation.item.nonexistant",
-                    UNPURCHASABLE_ITEM: "validation.item.not.active",
-                    PAW_ITEM_PURCHASE_DISABLED: "validation.item.paw.purchase.disabled",
-                    CONNECTION_TIME_OUT: "validation.connection.failed"
-                },
-                s = {
-                    ALREADY_OWNED: new n("validation.item.owned"),
-                    GENERIC_ERROR: new n("validation.generic"),
-                    NOT_ENOUGH_CURRENCY: new n("validation.item.not.enough.currency"),
-                    NOT_VALID: new n("validation.not.valid"),
-                    UNSUPPORTED_INVENTORY_TYPE: new n("validation.not.valid"),
-                    UNKNOWN_ITEM: new n("validation.item.nonexistant"),
-                    UNPURCHASABLE_ITEM: new n("validation.item.not.active"),
-                    BASE_SKIN_NOT_OWNED: new n("validation.item.base.skin.not.owned"),
-                    PARENT_NOT_OWNED: new n("validation.item.parent.not.owned"),
-                    PAW_ITEM_PURCHASE_DISABLED: new n("validation.item.purchase.disabled"),
-                    CONNECTION_TIME_OUT: new n("validation.generic")
-                },
-                l = new Map([
-                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
-                    [a.BASE_SKIN_NOT_OWNED, s.BASE_SKIN_NOT_OWNED],
-                    [a.PARENT_NOT_OWNED, s.PARENT_NOT_OWNED],
-                    [a.UNKNOWN_ITEM, s.UNKNOWN_ITEM],
-                    [a.UNPURCHASABLE_ITEM, s.UNPURCHASABLE_ITEM],
-                    [a.NOT_ENOUGH_CURRENCY, s.NOT_ENOUGH_CURRENCY],
-                    [a.ALREADY_OWNED, s.ALREADY_OWNED],
-                    [a.MALFORMED, s.NOT_VALID],
-                    [a.NO_PRICE, s.NOT_VALID],
-                    [a.OVER_LIMIT, s.NOT_VALID],
-                    [a.MISSING_REQUEST_FIELDS, s.NOT_VALID],
-                    [a.NOT_VALID, s.NOT_VALID],
-                    [a.PAW_ITEM_PURCHASE_DISABLED, s.PAW_ITEM_PURCHASE_DISABLED],
-                    [a.CONNECTION_TIME_OUT, s.CONNECTION_TIME_OUT]
-                ]);
-            var o = {
-                Errors: s,
-                fromErrorKey: function(e) {
-                    let t = s.GENERIC_ERROR;
-                    return l.has(e) && (t = l.get(e)), t
-                },
-                ValidationErrorKeys: a
-            };
-            t.default = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2565,11 +2665,11 @@
                 if (!e || !e.tags || !e.tags.length) return null;
                 const n = e.tags,
                     a = "/fe/lol-paw/images/silvershields.svg";
-                if (n.includes(p)) return {
+                if (n.includes(m)) return {
                     iconUrl: a,
                     text: t.get("cat_paw_silvershields_badge_text_3000")
                 };
-                if (n.includes(m)) return {
+                if (n.includes(p)) return {
                     iconUrl: a,
                     text: t.get("cat_paw_silvershields_badge_text_5000")
                 };
@@ -2645,12 +2745,12 @@
                     default: a
                 },
                 i = n(33),
-                c = n(69);
+                c = n(70);
             const {
                 CHAMPION_SKIN: r
             } = s.PAW.INVENTORY_TYPES;
-            const p = "silvershields_3000",
-                m = "silvershields_5000";
+            const m = "silvershields_3000",
+                p = "silvershields_5000";
 
             function u(e, t) {
                 const n = e?.bundledItemPrice?.discountPrices?.find((e => e.currency === t));
@@ -2705,8 +2805,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "hCFKOJWX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["static-attr","no-default-padding",""],["static-attr","dismissable-icon-background",""],["flush-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-modal-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPawTemplateModal"]]],null,10,9],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["celebration-video"],null,[["bundleUpsell"],[["get",["showUpsellModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["top-banner"],null,[["sale","itemPurchaseOption","message"],[["get",["sale"]],["get",["itemPurchaseOption"]],["get",["topBannerErrorMessage"]]]]],false],["text","\\n                "],["append",["helper",["component"],[["get",["contentRendererComponent"]]],[["catalogItemPurchaseOption","dependencies","bundledItems","purchaseSuccess","isJadeStore","awInfo"],[["get",["catalogItemPurchaseOption"]],["get",["dependencies"]],["get",["bundledItems"]],["get",["purchaseSuccess"]],["get",["isJadeStore"]],["get",["awInfo"]]]]],false],["text","\\n                "],["append",["helper",["purchase-options"],null,[["wallet","itemPurchaseOption","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","itemUnlockedMessage","awInfo","errorMessage","errorMessageClass","purchase"],[["get",["wallet"]],["get",["itemPurchaseOption"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["itemUnlockedMessage"]],["get",["awInfo"]],["get",["bottomErrorMessage"]],["get",["bottomErrorMessageClass"]],"purchase"]]],false],["text","\\n              "]],"locals":[]},{"statements":[["text","                "],["append",["helper",["bundle-root"],null,[["catalogItemPurchaseOption","itemPurchaseOption","wallet","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","validationErrors","purchase"],[["get",["catalogItemPurchaseOption"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bundleErrorMessage"]],["get",["validationErrors"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isBundledItem"]]],null,2,1]],"locals":[]},{"statements":[["text","                "],["append",["helper",["bundle-upsell"],null,[["relatedBundlesToShow","catalogItemPurchaseOption","selectedBundle","wallet","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","validationErrors","source","purchase"],[["get",["relatedBundlesToShow"]],["get",["baseSkinItem"]],["get",["selectedBundle"]],["get",["wallet"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bundleErrorMessage"]],["get",["validationErrors"]],["get",["source"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showUpsellModal"]]],null,4,3]],"locals":[]},{"statements":[["text","              "],["append",["helper",["paw-choice"],null,[["choices","wallet","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","purchase"],[["get",["catalogItemPurchaseOption","choices"]],["get",["wallet"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bottomErrorMessage"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-content ",["helper",["if"],[["get",["supportsMultipleItems"]],"no-padding"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["supportsMultipleItems"]]],null,6,5],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["showCelebrationVideo"]]],null,0]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n            "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-window\\n          ",["unknown",["inventoryTypeSpecialStyle"]],"\\n          ",["helper",["if"],[["get",["isAw"]],"paw-window-aw"],null],"\\n          ",["helper",["if"],[["get",["supportsMultipleItems"]],"paw-window-choice"],null],"\\n          ",["helper",["if"],[["get",["showBundlesSplashPawModal"]],"paw-window-bundles-splash"],null],"\\n          ",["helper",["if"],[["get",["showUpsellModal"]],"paw-window-upsell"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,8,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["paw-template-window"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "/nWkrono",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-root-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["static-attr","no-default-padding",""],["static-attr","dismissable-icon-background",""],["flush-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-modal-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPawTemplateModal"]]],null,10,9],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["celebration-video"],null,[["bundleUpsell"],[["get",["showUpsellModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["top-banner"],null,[["sale","itemPurchaseOption","message"],[["get",["sale"]],["get",["itemPurchaseOption"]],["get",["topBannerErrorMessage"]]]]],false],["text","\\n                "],["append",["helper",["component"],[["get",["contentRendererComponent"]]],[["catalogItemPurchaseOption","dependencies","bundledItems","purchaseSuccess","isJadeStore","awInfo"],[["get",["catalogItemPurchaseOption"]],["get",["dependencies"]],["get",["bundledItems"]],["get",["purchaseSuccess"]],["get",["isJadeStore"]],["get",["awInfo"]]]]],false],["text","\\n                "],["append",["helper",["purchase-options"],null,[["wallet","itemPurchaseOption","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","itemUnlockedMessage","awInfo","errorMessage","errorMessageClass","purchase"],[["get",["wallet"]],["get",["itemPurchaseOption"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["itemUnlockedMessage"]],["get",["awInfo"]],["get",["bottomErrorMessage"]],["get",["bottomErrorMessageClass"]],"purchase"]]],false],["text","\\n              "]],"locals":[]},{"statements":[["text","                "],["append",["helper",["bundle-root"],null,[["catalogItemPurchaseOption","itemPurchaseOption","wallet","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","validationErrors","purchase"],[["get",["catalogItemPurchaseOption"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bundleErrorMessage"]],["get",["validationErrors"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isBundledItem"]]],null,2,1]],"locals":[]},{"statements":[["text","                "],["append",["helper",["bundle-upsell"],null,[["relatedBundlesToShow","catalogItemPurchaseOption","selectedBundle","wallet","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","validationErrors","source","purchase"],[["get",["relatedBundlesToShow"]],["get",["baseSkinItem"]],["get",["selectedBundle"]],["get",["wallet"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bundleErrorMessage"]],["get",["validationErrors"]],["get",["source"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showUpsellModal"]]],null,4,3]],"locals":[]},{"statements":[["text","              "],["append",["helper",["paw-choice"],null,[["choices","wallet","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","isJadeStore","errorMessage","purchase"],[["get",["catalogItemPurchaseOption","choices"]],["get",["wallet"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["isJadeStore"]],["get",["bottomErrorMessage"]],"purchase"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-content ",["helper",["if"],[["get",["supportsMultipleItems"]],"no-padding"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["supportsMultipleItems"]]],null,6,5],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["showCelebrationVideo"]]],null,0]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n            "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-window\\n          ",["unknown",["inventoryTypeSpecialStyle"]],"\\n          ",["helper",["if"],[["get",["isAw"]],"paw-window-aw"],null],"\\n          ",["helper",["if"],[["get",["supportsMultipleItems"]],"paw-window-choice"],null],"\\n          ",["helper",["if"],[["get",["showBundlesSplashPawModal"]],"paw-window-bundles-splash"],null],"\\n          ",["helper",["if"],[["get",["showUpsellModal"]],"paw-window-upsell"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,8,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["paw-template-window"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2715,14 +2815,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-top-banner", "fade-in"],
-                layout: n(73),
-                style: n(74),
+                layout: n(74),
+                style: n(75),
                 saleValue: o("sale.discount", (function() {
                     return Math.round(this.get("sale.discount"))
                 })),
@@ -2740,8 +2840,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "aay2WKAU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["message"]]],null,5],["block",["if"],[["get",["isOnSale"]]],null,4],["block",["if"],[["get",["extraDecoratorBadges"]]],null,3],["block",["if"],[["get",["silvershieldsBadge"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","silvershields-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","silvershields-badge-icon"],["dynamic-attr","src",["unknown",["silvershieldsBadge","iconUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","silvershields-badge-text"],["flush-element"],["append",["unknown",["silvershieldsBadge","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["item-metadata-decorator-badge ",["unknown",["badge","className"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["badge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["badge"]},{"statements":[["block",["each"],[["get",["extraDecoratorBadges"]]],null,1]],"locals":[]},{"statements":[["block",["if"],[["get",["extraDecoratorBadges","length"]]],null,2]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","on-sale-banner"],["flush-element"],["text","\\n    -"],["append",["unknown",["saleValue"]],false],["text","%\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-message"],["flush-element"],["text","\\n    "],["append",["unknown",["message"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Wgr5N42z",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["message"]]],null,5],["block",["if"],[["get",["isOnSale"]]],null,4],["block",["if"],[["get",["extraDecoratorBadges"]]],null,3],["block",["if"],[["get",["silvershieldsBadge"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","silvershields-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","silvershields-badge-icon"],["dynamic-attr","src",["unknown",["silvershieldsBadge","iconUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","silvershields-badge-text"],["flush-element"],["append",["unknown",["silvershieldsBadge","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["item-metadata-decorator-badge ",["unknown",["badge","className"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["badge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["badge"]},{"statements":[["block",["each"],[["get",["extraDecoratorBadges"]]],null,1]],"locals":[]},{"statements":[["block",["if"],[["get",["extraDecoratorBadges","length"]]],null,2]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","on-sale-banner"],["flush-element"],["text","\\n    -"],["append",["unknown",["saleValue"]],false],["text","%\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-message"],["flush-element"],["text","\\n    "],["append",["unknown",["message"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2750,13 +2850,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
-                layout: n(76),
-                style: n(77),
+                layout: n(77),
+                style: n(78),
                 purchaseWidgetService: a.Ember.inject.service("purchaseWidget"),
                 currencyIconPaths: o("items.@each.currencyType", "purchaseWidgetService.gameDataCurrencies", (function() {
                     const e = this.get("items") || [],
@@ -2802,8 +2902,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "pG/fw7kd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","related-items-overlay"],["flush-element"],["text","\\n"],["block",["each"],[["get",["enrichedItems"]]],null,3],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["unknown",["item","price"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","discounted-price"],["flush-element"],["append",["unknown",["item","adjustedPrice"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","original-price"],["flush-element"],["append",["unknown",["item","unadjustedPrice"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","related-item-limited-time-badge"],["flush-element"],["text","\\n            "],["open-element","hextech-ui-badge",[]],["dynamic-attr","icon",["concat",[["unknown",["item","limitedTimeBadge","icon"]]]]],["dynamic-attr","background-color",["unknown",["item","limitedTimeBadge","color"]],null],["static-attr","size","small"],["flush-element"],["append",["unknown",["item","limitedTimeBadge","text"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","related-item-entry"],["modifier",["action"],[["get",[null]],"selectCurrentItem",["get",["item"]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["related-item-thumbnail ",["helper",["if"],[["helper",["eq"],[["get",["selectedItem","id"]],["get",["item","id"]]],null],"selected"],null]]]],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["item","imagePath"]],"\');"]]],["flush-element"],["text","\\n        "],["append",["helper",["badge-overlay"],null,[["item","discount"],[["get",["item"]],["get",["item","discount"]]]]],false],["text","\\n"],["block",["if"],[["get",["item","limitedTimeBadge"]]],null,2],["text","        "],["open-element","div",[]],["static-attr","class","related-item-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","related-item-name"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","related-item-price-row"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","related-item-currency-icon"],["dynamic-attr","src",["concat",[["helper",["get"],[["get",["currencyIconPaths"]],["get",["item","currencyType"]]],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","related-item-price-amount"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasDiscount"]]],null,1,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
+                id: "T403iWDl",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\related-items-overlay-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","related-items-overlay"],["flush-element"],["text","\\n"],["block",["each"],[["get",["enrichedItems"]]],null,3],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["unknown",["item","price"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","discounted-price"],["flush-element"],["append",["unknown",["item","adjustedPrice"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","original-price"],["flush-element"],["append",["unknown",["item","unadjustedPrice"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","related-item-limited-time-badge"],["flush-element"],["text","\\n            "],["open-element","hextech-ui-badge",[]],["dynamic-attr","icon",["concat",[["unknown",["item","limitedTimeBadge","icon"]]]]],["dynamic-attr","background-color",["unknown",["item","limitedTimeBadge","color"]],null],["static-attr","size","small"],["flush-element"],["append",["unknown",["item","limitedTimeBadge","text"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","related-item-entry"],["modifier",["action"],[["get",[null]],"selectCurrentItem",["get",["item"]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["related-item-thumbnail ",["helper",["if"],[["helper",["eq"],[["get",["selectedItem","id"]],["get",["item","id"]]],null],"selected"],null]]]],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["item","imagePath"]],"\');"]]],["flush-element"],["text","\\n        "],["append",["helper",["badge-overlay"],null,[["item","discount"],[["get",["item"]],["get",["item","discount"]]]]],false],["text","\\n"],["block",["if"],[["get",["item","limitedTimeBadge"]]],null,2],["text","        "],["open-element","div",[]],["static-attr","class","related-item-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","related-item-name"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","related-item-price-row"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","related-item-currency-icon"],["dynamic-attr","src",["concat",[["helper",["get"],[["get",["currencyIconPaths"]],["get",["item","currencyType"]]],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","related-item-price-amount"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasDiscount"]]],null,1,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2819,24 +2919,24 @@
             const {
                 Component: i,
                 computed: c
-            } = s.Ember, r = "1, 10, 19", p = "/lol-client-config/v3/client-config/lol.experiments", m = "/lol-settings/v2/local/lol-user-experience", u = s.dataBinding.bindTo(s.socket), d = i.extend({
+            } = s.Ember, r = "1, 10, 19", m = "/lol-client-config/v3/client-config/lol.experiments", p = "/lol-settings/v2/local/lol-user-experience", u = s.dataBinding.bindTo(s.socket), d = i.extend({
                 classNames: ["paw-content-details"],
-                layout: n(79),
-                style: n(80),
+                layout: n(80),
+                style: n(81),
                 itemPurchaseOption: c.readOnly("catalogItemPurchaseOption.item"),
                 pawSplashImage: c.readOnly("catalogItemPurchaseOption.pawSplashImage"),
                 init() {
                     this._super(...arguments), this.set("isPreviewVideoToggleEnabled", !1), this.initDataBindings()
                 },
                 initDataBindings() {
-                    u.observe(p, this, (function(e) {
+                    u.observe(m, this, (function(e) {
                         this.set("isPreviewVideoToggleEnabled", "enable" === e?.paw_skin_preview)
-                    })), u.observe(m, this, (function(e) {
+                    })), u.observe(p, this, (function(e) {
                         this.set("isPotatoModeEnabled", e?.data?.potatoModeEnabled ?? !1)
                     }))
                 },
                 willDestroy() {
-                    u.unobserve(p, this), u.unobserve(m, this)
+                    u.unobserve(m, this), u.unobserve(p, this)
                 },
                 showPreviewVideoToggle: c("itemPurchaseOption", "isPreviewVideoToggleEnabled", (function() {
                     return this.get("itemPurchaseOption.subInventoryType") !== o.default.CHROMA && this.get("itemPurchaseOption.assets.previewVideoUrl") && this.get("isPreviewVideoToggleEnabled")
@@ -2875,8 +2975,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "bBPFJoCO",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\index.js\\" "],["text","\\n"],["block",["unless"],[["get",["showBoostSplashAsBackground"]]],null,3],["open-element","div",[]],["dynamic-attr","class",["concat",["item-inner-content ",["helper",["if"],[["get",["showBoostSplashAsBackground"]],"item-inner-content--boost-splash"],null]]]],["dynamic-attr","style",["unknown",["itemInnerContentStyle"]],null],["flush-element"],["text","\\n  "],["append",["helper",["overlay-image"],null,[["showOverlayImage","itemPurchaseOption","awInfo"],[["get",["showOverlayImage"]],["get",["itemPurchaseOption"]],["get",["awInfo"]]]]],false],["text","\\n"],["block",["if"],[["get",["showPreviewVideoToggle"]]],null,2],["text","  "],["append",["helper",["content-description"],null,[["itemPurchaseOption","purchaseSuccess","isJadeStore","awInfo"],[["get",["itemPurchaseOption"]],["get",["purchaseSuccess"]],["get",["isJadeStore"]],["get",["awInfo"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["dependencies"]]],null,1],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isItemDependencyLoyaltyUnlocked"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","loyalty-hint"],["flush-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","loyalty-hint__text"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","loyalty-hint__logo"],["static-attr","src","/fe/lol-static-assets/images/xbox-game-pass-loyalty-hint.svg"],["static-attr","alt","Rewards Program Logo"],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["loyaltyHintText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["dependency-details"],null,[["dependencies"],[["get",["dependencies"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["preview-video-toggle"],null,[["onToggle"],[["helper",["action"],[["get",[null]],"setVideoMode"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-splash"],null,[["itemPurchaseOption","pawSplashImage","showOverlayImage","isVideoMode","isPotatoModeEnabled"],[["get",["itemPurchaseOption"]],["get",["pawSplashImage"]],["get",["showOverlayImage"]],["get",["isVideoMode"]],["get",["isPotatoModeEnabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "HK99hKY4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-details-component\\\\index.js\\" "],["text","\\n"],["block",["unless"],[["get",["showBoostSplashAsBackground"]]],null,3],["open-element","div",[]],["dynamic-attr","class",["concat",["item-inner-content ",["helper",["if"],[["get",["showBoostSplashAsBackground"]],"item-inner-content--boost-splash"],null]]]],["dynamic-attr","style",["unknown",["itemInnerContentStyle"]],null],["flush-element"],["text","\\n  "],["append",["helper",["overlay-image"],null,[["showOverlayImage","itemPurchaseOption","awInfo"],[["get",["showOverlayImage"]],["get",["itemPurchaseOption"]],["get",["awInfo"]]]]],false],["text","\\n"],["block",["if"],[["get",["showPreviewVideoToggle"]]],null,2],["text","  "],["append",["helper",["content-description"],null,[["itemPurchaseOption","purchaseSuccess","isJadeStore","awInfo"],[["get",["itemPurchaseOption"]],["get",["purchaseSuccess"]],["get",["isJadeStore"]],["get",["awInfo"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["dependencies"]]],null,1],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isItemDependencyLoyaltyUnlocked"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","loyalty-hint"],["flush-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","loyalty-hint__text"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","loyalty-hint__logo"],["static-attr","src","/fe/lol-static-assets/images/xbox-game-pass-loyalty-hint.svg"],["static-attr","alt","Rewards Program Logo"],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["loyaltyHintText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["dependency-details"],null,[["dependencies"],[["get",["dependencies"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["preview-video-toggle"],null,[["onToggle"],[["helper",["action"],[["get",[null]],"setVideoMode"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-splash"],null,[["itemPurchaseOption","pawSplashImage","showOverlayImage","isVideoMode","isPotatoModeEnabled"],[["get",["itemPurchaseOption"]],["get",["pawSplashImage"]],["get",["showOverlayImage"]],["get",["isVideoMode"]],["get",["isPotatoModeEnabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2891,15 +2991,30 @@
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-purchase-options"],
+                purchaseWidgetService: a.Ember.inject.service("purchaseWidget"),
                 purchaseDisclaimerChecked: !1,
-                layout: n(82),
-                style: n(83),
-                purchaseEnabled: o("alwaysShowPurchaseDisclaimer", "purchaseDisclaimerChecked", (function() {
-                    return !this.get("alwaysShowPurchaseDisclaimer") || this.get("purchaseDisclaimerChecked")
+                missingVOChecked: !1,
+                layout: n(83),
+                style: n(84),
+                missingVOData: o("itemPurchaseOption.itemId", "itemPurchaseOption.inventoryType", "purchaseWidgetService.missingVOConfig", "purchaseWidgetService.currentLocale", (function() {
+                    const e = this.get("purchaseWidgetService"),
+                        t = this.get("itemPurchaseOption");
+                    return e && t && t.itemId ? e.getMissingVOData([{
+                        itemId: t.itemId,
+                        inventoryType: t.inventoryType
+                    }]) : null
+                })),
+                purchaseEnabled: o("alwaysShowPurchaseDisclaimer", "purchaseDisclaimerChecked", "missingVOData", "missingVOChecked", (function() {
+                    const e = !this.get("alwaysShowPurchaseDisclaimer") || this.get("purchaseDisclaimerChecked"),
+                        t = !this.get("missingVOData") || this.get("missingVOChecked");
+                    return e && t
                 })),
                 actions: {
                     toggleDisclaimerValue(e) {
                         this.set("purchaseDisclaimerChecked", e)
+                    },
+                    toggleMissingVOCheckbox(e) {
+                        this.set("missingVOChecked", e.target.checked)
                     },
                     closeModal() {
                         this.element.dispatchEvent(new Event(s.PAW_MODAL_CLOSE_EVENT_NAME, {
@@ -2915,8 +3030,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "XBKS6aWZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,6,5]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["disclaimer-checkbox"],null,[["toggleDisclaimerValue"],["toggleDisclaimerValue"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,0],["text","  "],["append",["helper",["price-details"],null,[["purchaseOptions","itemPurchaseOption","wallet","purchaseEnabled","purchase","padding"],[["get",["purchaseOptions"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseEnabled"]],"purchase",["get",["padding"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-purchase-options-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["dynamic-attr","class",["concat",[["unknown",["errorMessageClass"]]]]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-purchase-options-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,2,1]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "9HvwaiRV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-options-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,8,7]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","missingVOCheckbox"],["static-attr","class","paw-purchase-disclaimer"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","missingVOCheckbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleMissingVOCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","missingVOCheckbox"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["missingVOData","checkboxText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["disclaimer-checkbox"],null,[["toggleDisclaimerValue"],["toggleDisclaimerValue"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings missing-vo-disclaimer"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["unknown",["missingVOData","disclaimerText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"],["block",["if"],[["get",["missingVOData"]]],null,2],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,1],["block",["if"],[["get",["missingVOData"]]],null,0],["text","  "],["append",["helper",["price-details"],null,[["purchaseOptions","itemPurchaseOption","wallet","purchaseEnabled","purchase","padding"],[["get",["purchaseOptions"]],["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseEnabled"]],"purchase",["get",["padding"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-purchase-options-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["dynamic-attr","class",["concat",[["unknown",["errorMessageClass"]]]]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","paw-purchase-options-error-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_error_purchase_internal_fail_close"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,6,5]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2930,8 +3045,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-warnings-wrapper"],
-                layout: n(85),
-                style: n(86),
+                layout: n(86),
+                style: n(87),
                 warnings: l("itemPurchaseOption", (function() {
                     const e = this.get("itemPurchaseOption.tags") || [],
                         t = this.get("tra");
@@ -2950,8 +3065,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "hdbjvP9c",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["warnings"]]],null,1],["block",["if"],[["get",["silvershieldsPromoText"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-silvershields-promo-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["silvershieldsPromoText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["get",["warning"]],false],["close-element"],["text","\\n"]],"locals":["warning"]}],"hasPartials":false}',
+                id: "iPujfJa+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["warnings"]]],null,1],["block",["if"],[["get",["silvershieldsPromoText"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-silvershields-promo-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["silvershieldsPromoText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["get",["warning"]],false],["close-element"],["text","\\n"]],"locals":["warning"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2965,8 +3080,8 @@
                 computed: l
             } = a.Ember, o = "/lol-client-config/v3/client-config/lol.client_settings.paw.embeddedVideoSettings", i = a.dataBinding.bindTo(a.socket), c = s.extend({
                 classNames: ["paw-item-splash"],
-                layout: n(88),
-                style: n(89),
+                layout: n(89),
+                style: n(90),
                 init() {
                     this._super(...arguments), this.initDataBindings()
                 },
@@ -3017,8 +3132,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "XV9oUBn8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isVideoMode"]]],null,3,2],["block",["if"],[["get",["showEmblem"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","emblem-image"],["dynamic-attr","src",["concat",[["unknown",["emblem","emblemPath","large"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["emblem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","emblem-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["emblems"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","class",["concat",["background-image ",["helper",["if"],[["get",["showOverlayImage"]],"half-opacity"],null]]]],["dynamic-attr","src",["concat",[["unknown",["backgroundImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","iframe",[]],["static-attr","class","overlay-video-background"],["dynamic-attr","src",["concat",[["unknown",["videoUrl"]]]]],["static-attr","frameborder","0"],["static-attr","allow","autoplay; encrypted-media"],["static-attr","allowfullscreen",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Qv08zxN/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-splash-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isVideoMode"]]],null,3,2],["block",["if"],[["get",["showEmblem"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","emblem-image"],["dynamic-attr","src",["concat",[["unknown",["emblem","emblemPath","large"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["emblem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","emblem-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["emblems"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","class",["concat",["background-image ",["helper",["if"],[["get",["showOverlayImage"]],"half-opacity"],null]]]],["dynamic-attr","src",["concat",[["unknown",["backgroundImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","iframe",[]],["static-attr","class","overlay-video-background"],["dynamic-attr","src",["concat",[["unknown",["videoUrl"]]]]],["static-attr","frameborder","0"],["static-attr","allow","autoplay; encrypted-media"],["static-attr","allowfullscreen",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3037,8 +3152,8 @@
             } = s.Ember, r = i.extend({
                 classNames: ["paw-overlay-image-content"],
                 classNameBindings: ["inventoryTypeSpecialStyle"],
-                layout: n(91),
-                style: n(92),
+                layout: n(92),
+                style: n(93),
                 overlayImagePath: c("itemPurchaseOption.assets.iconPath", "itemPurchaseOption.inventoryType", "itemPurchaseOption.imagePath", "awInfo", (function() {
                     if ("BOOST" === this.get("itemPurchaseOption.inventoryType")) {
                         if (this.get("awInfo.isAw")) return "/fe/lol-static-assets/images/aram-wardrobe/celebration-icon.png";
@@ -3073,8 +3188,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "j51SOmE/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["renderOverlayImage"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-paw/images/icon-chroma.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["overlay-image-wrapper ",["unknown",["inventoryTypeSpecialStyle"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["overlayBackgroundPath"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["overlay-image-border ",["unknown",["inventoryTypeSpecialStyle"]]]]],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["paw-purchase-overlay-image ",["helper",["if"],[["get",["awInfo","isAw"]],"aram-wardrobe"],null]]]],["dynamic-attr","src",["concat",[["unknown",["overlayImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showChromaIcon"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "/CkV5zF5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\overlay-image-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["renderOverlayImage"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-paw/images/icon-chroma.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["overlay-image-wrapper ",["unknown",["inventoryTypeSpecialStyle"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["overlayBackgroundPath"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["overlay-image-border ",["unknown",["inventoryTypeSpecialStyle"]]]]],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["paw-purchase-overlay-image ",["helper",["if"],[["get",["awInfo","isAw"]],"aram-wardrobe"],null]]]],["dynamic-attr","src",["concat",[["unknown",["overlayImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showChromaIcon"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3083,7 +3198,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(94),
+                s = n(95),
                 l = n(33);
             const {
                 Component: o,
@@ -3095,7 +3210,7 @@
             }
             const r = o.extend({
                 classNames: ["paw-content-description"],
-                layout: n(95),
+                layout: n(96),
                 awInfo: {
                     isExtension: !1
                 },
@@ -3179,8 +3294,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "HSEUiQbi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\content-description-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\content-description-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","padding","small"],["static-attr","class","item-description"],["flush-element"],["text","\\n  "],["open-element","h3",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["subtitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["enrichedFlavorText"]]],null,1],["block",["if"],[["get",["awInfo","isExtension"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","aw-extension-info"],["flush-element"],["append",["unknown",["awInfo","extensionMessage"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","aw-expiry-info"],["flush-element"],["append",["unknown",["awInfo","expiryMessage"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","p",[]],["static-attr","class","map-availability-info"],["flush-element"],["append",["unknown",["enrichedFlavorText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "rEejSi2i",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\content-description-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\content-description-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","padding","small"],["static-attr","class","item-description"],["flush-element"],["text","\\n  "],["open-element","h3",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["subtitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["enrichedFlavorText"]]],null,1],["block",["if"],[["get",["awInfo","isExtension"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","aw-extension-info"],["flush-element"],["append",["unknown",["awInfo","extensionMessage"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","aw-expiry-info"],["flush-element"],["append",["unknown",["awInfo","expiryMessage"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","p",[]],["static-attr","class","map-availability-info"],["flush-element"],["append",["unknown",["enrichedFlavorText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3191,8 +3306,8 @@
                 computed: l
             } = a.Ember, o = a.Ember.A, i = s.extend({
                 classNames: ["paw-dependency-details"],
-                layout: n(97),
-                style: n(98),
+                layout: n(98),
+                style: n(99),
                 shouldShowContentBlock: l("dependencies", (function() {
                     return (this.get("dependencies") || []).findIndex((e => !e.owned)) > -1
                 })),
@@ -3213,8 +3328,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "2Fo+KDP4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowContentBlock"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","icon-container fade-in"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","icon-inner-border"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","tile-icon fade-in"],["dynamic-attr","src",["unknown",["dependentItem","tilePath"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","dependency-description fade-in"],["flush-element"],["append",["unknown",["dependentItem","description"]],false],["close-element"],["text","\\n"]],"locals":["dependentItem"]},{"statements":[["text","  "],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","dependency-content"],["static-attr","padding","none"],["flush-element"],["text","\\n"],["block",["each"],[["get",["dependentItems"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "N0zr6GV4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\dependency-details-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowContentBlock"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","icon-container fade-in"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","icon-inner-border"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","tile-icon fade-in"],["dynamic-attr","src",["unknown",["dependentItem","tilePath"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","dependency-description fade-in"],["flush-element"],["append",["unknown",["dependentItem","description"]],false],["close-element"],["text","\\n"]],"locals":["dependentItem"]},{"statements":[["text","  "],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","dependency-content"],["static-attr","padding","none"],["flush-element"],["text","\\n"],["block",["each"],[["get",["dependentItems"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3228,8 +3343,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-price-details"],
-                layout: n(100),
-                style: n(101),
+                layout: n(101),
+                style: n(102),
                 showBoostRefundDisclaimer: l.equal("itemPurchaseOption.inventoryType", "BOOST"),
                 paddingWithDefault: a.Ember.computed("padding", (function() {
                     return this.get("padding") || "medium"
@@ -3244,8 +3359,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "7idPElf8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["dynamic-attr","padding",["concat",[["unknown",["paddingWithDefault"]]]]],["static-attr","class","paw-price-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showBoostRefundDisclaimer"]]],null,1],["text","  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-price-details-digital-goods-disclaimer"]]],false],["text","\\n"],["block",["each"],[["get",["purchaseOptions"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-price-details-boost-refund-disclaimer digital-goods-disclaimer"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_boost_refund_disclaimer_text"]],false],["text","\\n      "],["open-element","a",[]],["static-attr","class","digital-goods-disclaimer-url"],["dynamic-attr","href",["concat",[["unknown",["tra","cat_paw_boost_refund_disclaimer_url"]]]]],["static-attr","target","_blank"],["static-attr","rel","noopener noreferrer"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","cat_paw_boost_refund_disclaimer_learn_more"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "uvGts2OV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-details-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["dynamic-attr","padding",["concat",[["unknown",["paddingWithDefault"]]]]],["static-attr","class","paw-price-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showBoostRefundDisclaimer"]]],null,1],["text","  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-price-details-digital-goods-disclaimer"]]],false],["text","\\n"],["block",["each"],[["get",["purchaseOptions"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["itemPurchaseOption"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-price-details-boost-refund-disclaimer digital-goods-disclaimer"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","cat_paw_boost_refund_disclaimer_text"]],false],["text","\\n      "],["open-element","a",[]],["static-attr","class","digital-goods-disclaimer-url"],["dynamic-attr","href",["concat",[["unknown",["tra","cat_paw_boost_refund_disclaimer_url"]]]]],["static-attr","target","_blank"],["static-attr","rel","noopener noreferrer"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","cat_paw_boost_refund_disclaimer_learn_more"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3260,8 +3375,8 @@
             } = a.Ember, o = "/lol-client-config/v3/client-config/", i = o + "lol.client_settings.paw.enableRPTopUp", c = a.dataBinding.bindTo((0, a.getProvider)().getSocket()), r = s.extend({
                 classNames: ["paw-price-button", "fade-in"],
                 classNameBindings: ["hasSplashImage:paw-price-button--has-splash-image"],
-                layout: n(103),
-                style: n(104),
+                layout: n(104),
+                style: n(105),
                 init() {
                     this._super(...arguments), this.initDataBindings()
                 },
@@ -3403,8 +3518,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "65jqDfFg",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isRPTopUpEnabled"]]],null,8,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","currency-remaining"],["flush-element"],["text","\\n          "],["append",["unknown",["balance","remaining"]],false],["text"," "],["append",["unknown",["balance","currencyName"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["balance"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","new-balance-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_new_balance"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["newBalance"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","cant-afford"],["flush-element"],["append",["unknown",["cantAffordBalance","cantAffordMessage"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceDetail","currencyType"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceDetail","price"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","multiple-currency-separator"],["flush-element"],["text","+"],["close-element"],["text","\\n"]],"locals":["priceDetail"]},{"statements":[["text","  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","multi-currency-purchase-button"],["static-attr","data-dd-action-name","button.store.paw.purchase"],["dynamic-attr","disabled",["helper",["if"],[["get",["purchaseDisabled"]],true],null],null],["modifier",["action"],[["get",[null]],"startPurchase"]],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregatedPriceDetails"]]],null,3],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["cantAffordBalance"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","currency-remaining"],["flush-element"],["text","\\n          "],["append",["unknown",["balance","remaining"]],false],["text"," "],["append",["unknown",["balance","currencyName"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["balance"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","new-balance-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_new_balance"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["newBalance"]]],null,5],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceDetail","currencyType"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceDetail","price"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","multiple-currency-separator"],["flush-element"],["text","+"],["close-element"],["text","\\n"]],"locals":["priceDetail"]},{"statements":[["text","  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","multi-currency-purchase-button"],["static-attr","data-dd-action-name","button.store.paw.purchase"],["dynamic-attr","disabled",["helper",["if"],[["get",["purchaseDisabled"]],true],null],null],["modifier",["action"],[["get",[null]],"startPurchase"]],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregatedPriceDetails"]]],null,7],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["cantAffordBalance"]]],null,6]],"locals":[]}],"hasPartials":false}',
+                id: "/2BrPjI5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\price-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isRPTopUpEnabled"]]],null,8,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","currency-remaining"],["flush-element"],["text","\\n          "],["append",["unknown",["balance","remaining"]],false],["text"," "],["append",["unknown",["balance","currencyName"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["balance"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","new-balance-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_new_balance"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["newBalance"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","cant-afford"],["flush-element"],["append",["unknown",["cantAffordBalance","cantAffordMessage"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceDetail","currencyType"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceDetail","price"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","multiple-currency-separator"],["flush-element"],["text","+"],["close-element"],["text","\\n"]],"locals":["priceDetail"]},{"statements":[["text","  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","multi-currency-purchase-button"],["static-attr","data-dd-action-name","button.store.paw.purchase"],["dynamic-attr","disabled",["helper",["if"],[["get",["purchaseDisabled"]],true],null],null],["modifier",["action"],[["get",[null]],"startPurchase"]],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregatedPriceDetails"]]],null,3],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["cantAffordBalance"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","currency-remaining"],["flush-element"],["text","\\n          "],["append",["unknown",["balance","remaining"]],false],["text"," "],["append",["unknown",["balance","currencyName"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["balance"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","balance-info"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","new-balance-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_new_balance"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["newBalance"]]],null,5],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceDetail","currencyType"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceDetail","price"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","multiple-currency-separator"],["flush-element"],["text","+"],["close-element"],["text","\\n"]],"locals":["priceDetail"]},{"statements":[["text","  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","multi-currency-purchase-button"],["static-attr","data-dd-action-name","button.store.paw.purchase"],["dynamic-attr","disabled",["helper",["if"],[["get",["purchaseDisabled"]],true],null],null],["modifier",["action"],[["get",[null]],"startPurchase"]],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregatedPriceDetails"]]],null,7],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["cantAffordBalance"]]],null,6]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3417,8 +3532,8 @@
                 computed: s,
                 Component: l
             } = a.Ember, o = l.extend({
-                layout: n(106),
-                style: n(107),
+                layout: n(107),
+                style: n(108),
                 tokenizedConfirmationText: s("tra.cat_paw_purchase_disclaimer", (function() {
                     const e = this.get("tra.cat_paw_purchase_disclaimer");
                     return /(.*){{confirmationLink}}(.*)/.exec(e)
@@ -3455,8 +3570,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "r3T8rxnu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-purchase-disclaimer"],["flush-element"],["text","\\n  "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-purchase-disclaimer-checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n    "],["append",["unknown",["confirmationTextPrefix"]],false],["text","\\n    "],["open-element","a",[]],["static-attr","target","_blank"],["dynamic-attr","class",["concat",["paw-purchase-confirmation-link ",["helper",["unless"],[["get",["confirmationLinkText"]],"hidden"],null]]]],["dynamic-attr","href",["concat",[["unknown",["tra","cat_paw_purchase_disclaimer_link"]]]]],["flush-element"],["text","\\n      "],["append",["unknown",["confirmationLinkText"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["unknown",["confirmationTextPostfix"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "jOLJuCGg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\disclaimer-checkbox-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-purchase-disclaimer"],["flush-element"],["text","\\n  "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-purchase-disclaimer-checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n    "],["append",["unknown",["confirmationTextPrefix"]],false],["text","\\n    "],["open-element","a",[]],["static-attr","target","_blank"],["dynamic-attr","class",["concat",["paw-purchase-confirmation-link ",["helper",["unless"],[["get",["confirmationLinkText"]],"hidden"],null]]]],["dynamic-attr","href",["concat",[["unknown",["tra","cat_paw_purchase_disclaimer_link"]]]]],["flush-element"],["text","\\n      "],["append",["unknown",["confirmationLinkText"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["unknown",["confirmationTextPostfix"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3466,7 +3581,7 @@
             "use strict";
             var a = n(1),
                 s = n(33),
-                l = n(94);
+                l = n(95);
             const {
                 Component: o,
                 computed: i
@@ -3475,10 +3590,10 @@
             function r(e, t, n) {
                 return e.exists(t) ? t : n
             }
-            const p = o.extend({
+            const m = o.extend({
                 classNames: ["paw-item-unlocked", "fade-in"],
-                layout: n(109),
-                style: n(110),
+                layout: n(110),
+                style: n(111),
                 init() {
                     this._super(...arguments), c.get("/riotclient/region-locale").then((e => {
                         this.set("region", e?.region)
@@ -3522,12 +3637,12 @@
                     }
                 }
             });
-            e.exports = p
+            e.exports = m
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "jxS29col",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\index.js\\" "],["text","\\n"],["open-element","p",[]],["static-attr","class","unlock-success-message"],["flush-element"],["append",["unknown",["unlockSuccessMessage"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["open-element","div",[]],["static-attr","class","done-button-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["static-attr","data-dd-action-name","button.store.paw.done"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_modal_button_done"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","kr-purchase-success-message"],["flush-element"],["append",["unknown",["krPurchaseSuccessMessage"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "5zd/5dX0",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\item-unlocked-component\\\\index.js\\" "],["text","\\n"],["open-element","p",[]],["static-attr","class","unlock-success-message"],["flush-element"],["append",["unknown",["unlockSuccessMessage"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["open-element","div",[]],["static-attr","class","done-button-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeModal"],null],null],["static-attr","data-dd-action-name","button.store.paw.done"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_modal_button_done"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","kr-purchase-success-message"],["flush-element"],["append",["unknown",["krPurchaseSuccessMessage"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3546,7 +3661,7 @@
                 type: "intro",
                 src: "/fe/lol-paw/videos/UnlockCeremony.webm",
                 bundleUpsell: !1,
-                style: n(112),
+                style: n(113),
                 didInsertElement() {
                     this.element.play()
                 }
@@ -3563,8 +3678,8 @@
                 Component: l
             } = a.Ember, o = l.extend({
                 classNames: ["paw-preview-video-toggle"],
-                layout: n(114),
-                style: n(115),
+                layout: n(115),
+                style: n(116),
                 isVideoMode: !1,
                 videoStartTime: null,
                 willDestroy() {
@@ -3605,8 +3720,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "wm3hRe1U",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","media-toggle"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleSkinPreview"],null],null],["flush-element"],["text","\\n  "],["open-element","button",[]],["static-attr","type","button"],["dynamic-attr","class",["concat",["media-toggle-button splash ",["helper",["if"],[["get",["isVideoMode"]],"inactive","active"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",["/fe/lol-static-assets/images/",["helper",["if"],[["get",["isVideoMode"]],"splash-inactive.png","splash-active.png"],null]]]],["static-attr","alt","Splash Icon"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_preview_video_toggle_splash"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","button",[]],["static-attr","type","button"],["dynamic-attr","class",["concat",["media-toggle-button video ",["helper",["if"],[["get",["isVideoMode"]],"active","inactive"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",["/fe/lol-static-assets/images/",["helper",["if"],[["get",["isVideoMode"]],"video-active.png","video-inactive.png"],null]]]],["static-attr","alt","Skin Icon"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_preview_video_toggle_preview"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "yhHmSv6n",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\preview-video-toggle-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","media-toggle"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleSkinPreview"],null],null],["flush-element"],["text","\\n  "],["open-element","button",[]],["static-attr","type","button"],["dynamic-attr","class",["concat",["media-toggle-button splash ",["helper",["if"],[["get",["isVideoMode"]],"inactive","active"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",["/fe/lol-static-assets/images/",["helper",["if"],[["get",["isVideoMode"]],"splash-inactive.png","splash-active.png"],null]]]],["static-attr","alt","Splash Icon"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_preview_video_toggle_splash"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","button",[]],["static-attr","type","button"],["dynamic-attr","class",["concat",["media-toggle-button video ",["helper",["if"],[["get",["isVideoMode"]],"active","inactive"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",["/fe/lol-static-assets/images/",["helper",["if"],[["get",["isVideoMode"]],"video-active.png","video-inactive.png"],null]]]],["static-attr","alt","Skin Icon"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["tra","cat_paw_preview_video_toggle_preview"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3615,13 +3730,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
-                layout: n(117),
-                style: n(118),
+                layout: n(118),
+                style: n(119),
                 decoratorBadge: o("item.data.item", (function() {
                     const e = this.get("item");
                     if (!e?.data?.item) return null;
@@ -3633,8 +3748,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "/BFmbE9V",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","badge-overlay-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","badge-overlay-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["decoratorBadge"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","item-extra-decorator-badge"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["decoratorBadge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "2Z6oou0C",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\badge-overlay-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","badge-overlay-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","badge-overlay-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["decoratorBadge"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","item-extra-decorator-badge"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["decoratorBadge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3649,8 +3764,8 @@
             const {
                 Component: o
             } = s.Ember, i = o.extend(l.default, {
-                layout: n(120),
-                style: n(121),
+                layout: n(121),
+                style: n(122),
                 choices: null,
                 wallet: null,
                 purchaseOptions: null,
@@ -3686,8 +3801,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "PHXxkH6Z",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-window"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-content-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,5,4],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-window-details option",["get",["index"]]," ",["helper",["if"],[["get",["isSingleItem"]],"active"],null]]]],["flush-element"],["text","\\n            "],["append",["helper",["item-choice-details"],null,[["item","contents","displayType","backgroundImage","purchaseOptions","fullPrice","wallet","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","itemUnlockedMessage","isMultipleItems","errorMessage","purchase","goBack"],[["get",["choice","item"]],["get",["choice","contents"]],["get",["choice","displayType"]],["get",["choice","backgroundImage"]],["get",["choice","purchaseOptions"]],["get",["choice","fullPrice"]],["get",["wallet"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["itemUnlockedMessage"]],["get",["isMultipleItems"]],["get",["errorMessage"]],"purchase",["helper",["action"],[["get",[null]],"goBack"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["choice","index"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-choice-separator-background"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","paw-choice-separator-background-insert"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","h3",[]],["static-attr","class","paw-choice-separator-text"],["flush-element"],["append",["unknown",["tra","cat_paw_choice_separator_text"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,1],["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-window-option option",["get",["index"]]]]],["flush-element"],["text","\\n              "],["append",["helper",["item-choice"],null,[["index","title","itemId","subTitle","description","backgroundImage","discount","pricing","inventoryType","triggerDetails"],[["get",["index"]],["get",["choice","item","name"]],["get",["choice","item","itemId"]],["get",["choice","item","subTitle"]],["get",["choice","item","description"]],["get",["choice","backgroundImage"]],["get",["choice","discount"]],["get",["choice","item","prices"]],["get",["choice","item","inventoryType"]],["helper",["action"],[["get",[null]],"triggerDetails"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["choice","index"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-choice-window-page item-select"],["flush-element"],["text","\\n"],["block",["each"],[["get",["choices"]]],null,2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isMultipleItems"]]],null,3],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","class","paw-choice-window-page item-details"],["flush-element"],["text","\\n"],["block",["each"],[["get",["choices"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","paw-choice-error"],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LZbt7Yq9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-window"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-content-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,5,4],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-window-details option",["get",["index"]]," ",["helper",["if"],[["get",["isSingleItem"]],"active"],null]]]],["flush-element"],["text","\\n            "],["append",["helper",["item-choice-details"],null,[["item","contents","displayType","backgroundImage","purchaseOptions","fullPrice","wallet","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","itemUnlockedMessage","isMultipleItems","errorMessage","purchase","goBack"],[["get",["choice","item"]],["get",["choice","contents"]],["get",["choice","displayType"]],["get",["choice","backgroundImage"]],["get",["choice","purchaseOptions"]],["get",["choice","fullPrice"]],["get",["wallet"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["itemUnlockedMessage"]],["get",["isMultipleItems"]],["get",["errorMessage"]],"purchase",["helper",["action"],[["get",[null]],"goBack"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["choice","index"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","paw-choice-separator-background"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","paw-choice-separator-background-insert"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","h3",[]],["static-attr","class","paw-choice-separator-text"],["flush-element"],["append",["unknown",["tra","cat_paw_choice_separator_text"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,1],["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-window-option option",["get",["index"]]]]],["flush-element"],["text","\\n              "],["append",["helper",["item-choice"],null,[["index","title","itemId","subTitle","description","backgroundImage","discount","pricing","inventoryType","triggerDetails"],[["get",["index"]],["get",["choice","item","name"]],["get",["choice","item","itemId"]],["get",["choice","item","subTitle"]],["get",["choice","item","description"]],["get",["choice","backgroundImage"]],["get",["choice","discount"]],["get",["choice","item","prices"]],["get",["choice","item","inventoryType"]],["helper",["action"],[["get",[null]],"triggerDetails"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["choice","index"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-choice-window-page item-select"],["flush-element"],["text","\\n"],["block",["each"],[["get",["choices"]]],null,2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isMultipleItems"]]],null,3],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","class","paw-choice-window-page item-details"],["flush-element"],["text","\\n"],["block",["each"],[["get",["choices"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","paw-choice-error"],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3697,17 +3812,17 @@
             "use strict";
             var a, s = n(1),
                 l = n(32),
-                o = (a = n(123)) && a.__esModule ? a : {
+                o = (a = n(124)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(124);
+                i = n(125);
             const {
                 Component: c,
                 computed: r
-            } = s.Ember, p = "linear-gradient(to top, black 0px, rgba(0,0,0, 0.8) 310px, transparent 80%)", m = c.extend({
+            } = s.Ember, m = "linear-gradient(to top, black 0px, rgba(0,0,0, 0.8) 310px, transparent 80%)", p = c.extend({
                 classNames: ["paw-content-choice"],
-                layout: n(125),
-                style: n(126),
+                layout: n(126),
+                style: n(127),
                 purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
                 title: null,
                 subTitle: null,
@@ -3720,7 +3835,7 @@
                 itemId: null,
                 backgroundImageHover: r("backgroundImage", (function() {
                     const e = this.get("backgroundImage");
-                    return `${p}, url(${e})`
+                    return `${m}, url(${e})`
                 })),
                 sales: r("pricing", (function() {
                     return this.get("pricing").reduce(((e, t) => {
@@ -3744,11 +3859,11 @@
                 })),
                 backgroundImageHoverOut: r("backgroundImage", (function() {
                     const e = this.get("backgroundImage");
-                    return `${p}, url(${e})`
+                    return `${m}, url(${e})`
                 })),
                 backgroundImageHoverIn: r("backgroundImage", (function() {
                     const e = this.get("backgroundImage");
-                    return `linear-gradient(180deg, rgba(240, 230, 210, 0.1) 0%, transparent 100%), ${p}, url(${e})`
+                    return `linear-gradient(180deg, rgba(240, 230, 210, 0.1) 0%, transparent 100%), ${m}, url(${e})`
                 })),
                 safeChoiceOption: s.Ember.computed("index", "inventoryType", (function() {
                     const e = this.get("index"),
@@ -3780,7 +3895,7 @@
                     s.Telemetry.sendCustomData(l.TELEMETRY_EVENT_NAME, i)
                 }
             });
-            e.exports = m
+            e.exports = p
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -3818,8 +3933,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "vnJHH+jU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-wrapper"],["dynamic-attr","style",["concat",["background-image:",["unknown",["backgroundImageHover"]],";"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderSale"]]],null,4],["block",["if"],[["get",["isDiscount"]]],null,3],["text","  "],["open-element","div",[]],["static-attr","class","paw-choice-item-description"],["flush-element"],["text","\\n    "],["open-element","h3",[]],["static-attr","class","paw-choice-option-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n    "],["open-element","h5",[]],["static-attr","class","paw-choice-option-subtitle"],["flush-element"],["append",["unknown",["subTitleWithDefault"]],false],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","paw-choice-option-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-item-pricing"],["flush-element"],["text","\\n"],["block",["each"],[["get",["pricing"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-item-pricing-option ",["unknown",["priceType","currency"]]]]],["flush-element"],["text","\\n          "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","cost"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-item-pricing-sale ",["unknown",["priceType","currency"]]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","regular-price"],["flush-element"],["text","\\n            "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","cost"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","strikethrough"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","sale-price"],["flush-element"],["text","\\n            "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","sale","cost"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","sale-discount"],["flush-element"],["text","("],["append",["unknown",["priceType","sale","discount"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["priceType","sale"]]],null,1,0]],"locals":["priceType"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-choice-discount"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-choice-discount-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","h3",[]],["static-attr","class","paw-choice-discount-amount"],["flush-element"],["append",["unknown",["discountFormatted"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-choice-discount-divider"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-choice-sale"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","sale-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-choice-sale-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_sale_flag_text"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","sale-box sale-blur"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ZYCaaMd8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-wrapper"],["dynamic-attr","style",["concat",["background-image:",["unknown",["backgroundImageHover"]],";"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderSale"]]],null,4],["block",["if"],[["get",["isDiscount"]]],null,3],["text","  "],["open-element","div",[]],["static-attr","class","paw-choice-item-description"],["flush-element"],["text","\\n    "],["open-element","h3",[]],["static-attr","class","paw-choice-option-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n    "],["open-element","h5",[]],["static-attr","class","paw-choice-option-subtitle"],["flush-element"],["append",["unknown",["subTitleWithDefault"]],false],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","paw-choice-option-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-choice-item-pricing"],["flush-element"],["text","\\n"],["block",["each"],[["get",["pricing"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-item-pricing-option ",["unknown",["priceType","currency"]]]]],["flush-element"],["text","\\n          "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","cost"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-choice-item-pricing-sale ",["unknown",["priceType","currency"]]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","regular-price"],["flush-element"],["text","\\n            "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","cost"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","strikethrough"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","sale-price"],["flush-element"],["text","\\n            "],["open-element","h5",[]],["dynamic-attr","class",["concat",["currency-icon ",["unknown",["priceType","currency"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","price"],["flush-element"],["append",["unknown",["priceType","sale","cost"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","sale-discount"],["flush-element"],["text","("],["append",["unknown",["priceType","sale","discount"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["priceType","sale"]]],null,1,0]],"locals":["priceType"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-choice-discount"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-choice-discount-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","h3",[]],["static-attr","class","paw-choice-discount-amount"],["flush-element"],["append",["unknown",["discountFormatted"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-choice-discount-divider"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-choice-sale"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","sale-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-choice-sale-label"],["flush-element"],["append",["unknown",["tra","cat_paw_modal_sale_flag_text"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","sale-box sale-blur"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3828,14 +3943,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(124);
+                s = n(125);
             const {
                 Component: l,
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-content-choice-details"],
-                layout: n(128),
-                style: n(129),
+                layout: n(129),
+                style: n(130),
                 item: null,
                 contents: null,
                 backgroundImage: null,
@@ -3961,8 +4076,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "nevqXhG1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowBackButton"]]],null,13],["open-element","div",[]],["static-attr","class","paw-choice-item-details-visual"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImage"]],")"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-item-details-view"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","item-details-view-header"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","item-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","item-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDetails"]]],null,12,0],["text","  "],["append",["helper",["purchase-options"],null,[["wallet","itemPurchaseOption","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","itemUnlockedMessage","errorMessage","purchase","padding"],[["get",["wallet"]],["get",["item"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["itemUnlockedMessage"]],["get",["errorMessage"]],"purchase","small"]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","cat_paw_modal_item_unlocked_title"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["item-choice-detail-full"],null,[["title","iconUrl","subTitle","description","inventoryType"],[["get",["content","title"]],["get",["content","iconUrl"]],["get",["content","subTitle"]],["get",["content","description"]],["get",["inventoryType"]]]]],false],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["block",["each"],[["get",["contents"]]],null,1],["text","        "]],"locals":[]},{"statements":[["block",["if"],[["get",["isFullDisplay"]]],null,2]],"locals":[]},{"statements":[["text","                "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_adjusted_title"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["adjustedPrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","h6",[]],["static-attr","class","discount-calculation-pack"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_modal_sale_flag_text"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["additionalSaleDiscount"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack sale-discounted"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_adjusted_title"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency sale-discounted"],["flush-element"],["append",["unknown",["totalSalePrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","h4",[]],["static-attr","class","discount-amount"],["flush-element"],["append",["unknown",["formattedDiscount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","h4",[]],["static-attr","class","discount-amount"],["flush-element"],["append",["unknown",["formattedSaleDiscount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","overflow-line"],["flush-element"],["append",["unknown",["overflowTextFirstLine"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","overflow-line decorator"],["flush-element"],["append",["unknown",["tra","cat_paw_choice_list_extra_items_decorator"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","item-list-name"],["flush-element"],["append",["unknown",["content","title"]],false],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","item-list-name"],["flush-element"],["append",["unknown",["content","title"]],false],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","paw-choice-item-list"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","item-list-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["firstColumnContents"]]],null,10],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","item-list-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["secondColumnContents"]]],null,9],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isLimitedContents"]]],null,8],["text","          "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","lol-uikit-content-block",[]],["static-attr","class","item-discount-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowSales"]]],null,7,6],["text","            "],["open-element","div",[]],["static-attr","class","discount-breakdown"],["flush-element"],["text","\\n              "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack unadjusted"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_unadjusted_title"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","amount-currency unadjusted"],["flush-element"],["append",["unknown",["fullPrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","h6",[]],["static-attr","class","discount-calculation-pack"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_calculated_title"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["adjustedDiscountAmount"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowSales"]]],null,5,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","item-details-view-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","item-details-view-list"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isListDisplay"]]],null,11,3],["text","        "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-choice-back-button"],["modifier",["action"],[["get",[null]],"goBackToMain"]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Ge0W//Zp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-details-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowBackButton"]]],null,13],["open-element","div",[]],["static-attr","class","paw-choice-item-details-visual"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImage"]],")"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-choice-item-details-view"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","item-details-view-header"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","item-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","item-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDetails"]]],null,12,0],["text","  "],["append",["helper",["purchase-options"],null,[["wallet","itemPurchaseOption","purchaseOptions","alwaysShowPurchaseDisclaimer","purchaseSuccess","isPurchasing","itemUnlockedMessage","errorMessage","purchase","padding"],[["get",["wallet"]],["get",["item"]],["get",["purchaseOptions"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["purchaseSuccess"]],["get",["isPurchasing"]],["get",["itemUnlockedMessage"]],["get",["errorMessage"]],"purchase","small"]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","cat_paw_modal_item_unlocked_title"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["item-choice-detail-full"],null,[["title","iconUrl","subTitle","description","inventoryType"],[["get",["content","title"]],["get",["content","iconUrl"]],["get",["content","subTitle"]],["get",["content","description"]],["get",["inventoryType"]]]]],false],["text","\\n            "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["block",["each"],[["get",["contents"]]],null,1],["text","        "]],"locals":[]},{"statements":[["block",["if"],[["get",["isFullDisplay"]]],null,2]],"locals":[]},{"statements":[["text","                "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_adjusted_title"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["adjustedPrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","h6",[]],["static-attr","class","discount-calculation-pack"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_modal_sale_flag_text"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["additionalSaleDiscount"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack sale-discounted"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_adjusted_title"]],false],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","amount-currency sale-discounted"],["flush-element"],["append",["unknown",["totalSalePrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","h4",[]],["static-attr","class","discount-amount"],["flush-element"],["append",["unknown",["formattedDiscount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","h4",[]],["static-attr","class","discount-amount"],["flush-element"],["append",["unknown",["formattedSaleDiscount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","overflow-line"],["flush-element"],["append",["unknown",["overflowTextFirstLine"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","overflow-line decorator"],["flush-element"],["append",["unknown",["tra","cat_paw_choice_list_extra_items_decorator"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","item-list-name"],["flush-element"],["append",["unknown",["content","title"]],false],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["text","                "],["open-element","p",[]],["static-attr","class","item-list-name"],["flush-element"],["append",["unknown",["content","title"]],false],["close-element"],["text","\\n"]],"locals":["content"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","paw-choice-item-list"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","item-list-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["firstColumnContents"]]],null,10],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","item-list-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["secondColumnContents"]]],null,9],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isLimitedContents"]]],null,8],["text","          "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","lol-uikit-content-block",[]],["static-attr","class","item-discount-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowSales"]]],null,7,6],["text","            "],["open-element","div",[]],["static-attr","class","discount-breakdown"],["flush-element"],["text","\\n              "],["open-element","h6",[]],["static-attr","class","discount-breakdown-pack unadjusted"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_unadjusted_title"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","amount-currency unadjusted"],["flush-element"],["append",["unknown",["fullPrice"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","h6",[]],["static-attr","class","discount-calculation-pack"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_calculated_title"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","amount-currency"],["flush-element"],["append",["unknown",["adjustedDiscountAmount"]],false],["text"," "],["append",["unknown",["mainCurrency"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowSales"]]],null,5,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","item-details-view-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","item-details-view-list"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isListDisplay"]]],null,11,3],["text","        "],["open-element","div",[]],["static-attr","class","paw-choice-separator"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-choice-back-button"],["modifier",["action"],[["get",[null]],"goBackToMain"]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3977,8 +4092,8 @@
                 computed: o
             } = a.Ember, i = l.extend({
                 classNames: ["paw-content-choice-detail"],
-                layout: n(131),
-                style: n(132),
+                layout: n(132),
+                style: n(133),
                 title: null,
                 subTitle: null,
                 description: null,
@@ -3993,8 +4108,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "EsotOrcE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","item-details-component"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","item-details-icon"],["dynamic-attr","src",["concat",[["unknown",["iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","item-details-info"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","item-details-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subTitleForInventoryType"]]],null,0],["text","    "],["open-element","span",[]],["static-attr","class","item-details-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","item-details-sub-title"],["flush-element"],["append",["unknown",["subTitleForInventoryType"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "m8TcWb/s",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\paw-choice-ui\\\\item-choice-detail-full-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","item-details-component"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","item-details-icon"],["dynamic-attr","src",["concat",[["unknown",["iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","item-details-info"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","item-details-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subTitleForInventoryType"]]],null,0],["text","    "],["open-element","span",[]],["static-attr","class","item-details-description"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","item-details-sub-title"],["flush-element"],["append",["unknown",["subTitleForInventoryType"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4008,18 +4123,18 @@
                     default: a
                 },
                 i = n(33),
-                c = n(68);
+                c = n(69);
             const {
                 Component: r,
-                computed: p
-            } = s.Ember, m = r.extend({
+                computed: m
+            } = s.Ember, p = r.extend({
                 classNames: ["paw-bundle-root-component"],
-                layout: n(134),
-                style: n(135),
-                hasDiscount: p("catalogItemPurchaseOption.sale.discount", (function() {
+                layout: n(135),
+                style: n(136),
+                hasDiscount: m("catalogItemPurchaseOption.sale.discount", (function() {
                     return this.get("catalogItemPurchaseOption.sale.discount") > 0
                 })),
-                formattedBundledItems: p("catalogItemPurchaseOption.bundledItems", "catalogItemPurchaseOption.hiddenBundleItems", "isJadeStore", (function() {
+                formattedBundledItems: m("catalogItemPurchaseOption.bundledItems", "catalogItemPurchaseOption.hiddenBundleItems", "isJadeStore", (function() {
                     const e = this.get("catalogItemPurchaseOption.hiddenBundleItems");
                     return this.get("catalogItemPurchaseOption.bundledItems").filter((t => !e || !e.find((e => t.itemId === e.itemId && t.inventoryType === e.inventoryType)))).map((e => {
                         const {
@@ -4028,23 +4143,23 @@
                             assets: a,
                             hasVisibleLootOdds: s,
                             subInventoryType: r,
-                            bundledItemPrice: p
+                            bundledItemPrice: m
                         } = e, {
-                            CHAMPION_SKIN: m
+                            CHAMPION_SKIN: p
                         } = l.PAW.INVENTORY_TYPES, {
                             iconPath: u,
                             tilePath: d
-                        } = a, h = p.quantity, g = e.owned, _ = (0, c.getStatstoneRarity)(e), f = this.get("isJadeStore"), E = (0, c.getItemSubtitle)(e, this.get("tra")), T = (0, c.getMapAvailability)(e, this.get("tra"), f), w = h > 1 ? this.get("tra").formatString("cat_paw_bundle_item_quantity_and_name", {
+                        } = a, h = m.quantity, g = e.owned, f = (0, c.getStatstoneRarity)(e), _ = this.get("isJadeStore"), E = (0, c.getItemSubtitle)(e, this.get("tra")), T = (0, c.getMapAvailability)(e, this.get("tra"), _), w = h > 1 ? this.get("tra").formatString("cat_paw_bundle_item_quantity_and_name", {
                             quantity: h,
                             name: e.name
                         }) : e.name;
                         let y = u || d || e.imagePath || i.NOT_FOUND_ICON;
-                        return t === m && r !== o.default.CHROMA && (y = d || u || e.imagePath || i.NOT_FOUND_ICON), {
-                            itemBackgroundPath: t === m ? i.DEFAULT_BACKGROUND_PATH : void 0,
+                        return t === p && r !== o.default.CHROMA && (y = d || u || e.imagePath || i.NOT_FOUND_ICON), {
+                            itemBackgroundPath: t === p ? i.DEFAULT_BACKGROUND_PATH : void 0,
                             imagePath: y,
                             itemId: n,
                             owned: g,
-                            itemRarity: _,
+                            itemRarity: f,
                             itemSubtitle: E,
                             mapAvailability: T,
                             hasVisibleLootOdds: s,
@@ -4053,7 +4168,7 @@
                         }
                     }))
                 })),
-                bundleEnrichedFlavorText: p("catalogItemPurchaseOption.bundledItems.@each.tags", "catalogItemPurchaseOption.bundledItems.@each.inventoryType", "purchaseSuccess", "isJadeStore", (function() {
+                bundleEnrichedFlavorText: m("catalogItemPurchaseOption.bundledItems.@each.tags", "catalogItemPurchaseOption.bundledItems.@each.inventoryType", "purchaseSuccess", "isJadeStore", (function() {
                     if (this.get("purchaseSuccess") || this.get("isJadeStore")) return null;
                     const e = this.get("catalogItemPurchaseOption.bundledItems") || [],
                         t = this.get("tra");
@@ -4063,7 +4178,7 @@
                         return !t.includes("jade_exclusive") && !t.includes("jade_compatible")
                     })) ? t.get("cat_paw_jade_bundle_partial_incompatibility_flavor_text") : null
                 })),
-                showBundleDescription: p("catalogItemPurchaseOption.item.description", "bundleEnrichedFlavorText", (function() {
+                showBundleDescription: m("catalogItemPurchaseOption.item.description", "bundleEnrichedFlavorText", (function() {
                     return !(!this.get("catalogItemPurchaseOption.item.description") && !this.get("bundleEnrichedFlavorText"))
                 })),
                 isChromaBundle: s.Ember.computed("catalogItemPurchaseOption.item.subInventoryType", (function() {
@@ -4075,10 +4190,10 @@
                         n = this.get("alwaysShowPurchaseDisclaimer");
                     return (0, c.shouldDisplayBundleNonRefundableDisclaimer)(e, t, n)
                 })),
-                showPrice: p("errorMessage", (function() {
+                showPrice: m("errorMessage", (function() {
                     return !this.get("errorMessage")
                 })),
-                infoContainerWidthClass: p("catalogItemPurchaseOption.pawSplashImage", (function() {
+                infoContainerWidthClass: m("catalogItemPurchaseOption.pawSplashImage", (function() {
                     return !!this.get("catalogItemPurchaseOption.pawSplashImage") ? "paw-bundle-root-info-container-half-size" : "paw-bundle-root-info-container-full-size"
                 })),
                 actions: {
@@ -4087,12 +4202,12 @@
                     }
                 }
             });
-            e.exports = m
+            e.exports = p
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Qo9mSsKK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["catalogItemPurchaseOption","pawSplashImage"]]],null,3],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-bundle-root-info-container ",["unknown",["infoContainerWidthClass"]]]]],["flush-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-title"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-title"],null,[["title","subtitle"],[["get",["catalogItemPurchaseOption","item","name"]],["get",["catalogItemPurchaseOption","item","subtitle"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showBundleDescription"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-items"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-items"],null,[["catalogItemPurchaseOption","formattedBundledItems","displayBundleNonRefundableDisclaimer","alwaysShowPurchaseDisclaimer","showPrice"],[["get",["catalogItemPurchaseOption"]],["get",["formattedBundledItems"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["showPrice"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showPrice"]]],null,0],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-footer"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-purchase"],null,[["catalogItemPurchaseOption","wallet","purchase","isPurchasing","purchaseSuccess","alwaysShowPurchaseDisclaimer","displayBundleNonRefundableDisclaimer","errorMessage","validationErrors"],[["get",["catalogItemPurchaseOption"]],["get",["wallet"]],"purchase",["get",["isPurchasing"]],["get",["purchaseSuccess"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["errorMessage"]],["get",["validationErrors"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-price"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-price"],null,[["catalogItemPurchaseOption"],[["get",["catalogItemPurchaseOption"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-root-description"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-description"],null,[["description","enrichedFlavorText"],[["get",["catalogItemPurchaseOption","item","description"]],["get",["bundleEnrichedFlavorText"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","paw-bundle-chroma-overlay-image"],["static-attr","src","/fe/lol-static-assets/svg/chroma-icon.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-image-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-image-and-tags"],["flush-element"],["text","\\n      "],["append",["helper",["top-banner"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n      "],["open-element","img",[]],["static-attr","class","paw-bundle-image"],["dynamic-attr","src",["unknown",["catalogItemPurchaseOption","pawSplashImage"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isChromaBundle"]]],null,2],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-vertical-line"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "IUCaPcWz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-root-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["catalogItemPurchaseOption","pawSplashImage"]]],null,3],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-bundle-root-info-container ",["unknown",["infoContainerWidthClass"]]]]],["flush-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-title"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-title"],null,[["title","subtitle"],[["get",["catalogItemPurchaseOption","item","name"]],["get",["catalogItemPurchaseOption","item","subtitle"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showBundleDescription"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-items"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-items"],null,[["catalogItemPurchaseOption","formattedBundledItems","displayBundleNonRefundableDisclaimer","alwaysShowPurchaseDisclaimer","showPrice"],[["get",["catalogItemPurchaseOption"]],["get",["formattedBundledItems"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["showPrice"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showPrice"]]],null,0],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-footer"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-purchase"],null,[["catalogItemPurchaseOption","wallet","purchase","isPurchasing","purchaseSuccess","alwaysShowPurchaseDisclaimer","displayBundleNonRefundableDisclaimer","errorMessage","validationErrors"],[["get",["catalogItemPurchaseOption"]],["get",["wallet"]],"purchase",["get",["isPurchasing"]],["get",["purchaseSuccess"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["errorMessage"]],["get",["validationErrors"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-price"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-price"],null,[["catalogItemPurchaseOption"],[["get",["catalogItemPurchaseOption"]]]]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-root-description"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-description"],null,[["description","enrichedFlavorText"],[["get",["catalogItemPurchaseOption","item","description"]],["get",["bundleEnrichedFlavorText"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","paw-bundle-chroma-overlay-image"],["static-attr","src","/fe/lol-static-assets/svg/chroma-icon.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-image-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-root-image-and-tags"],["flush-element"],["text","\\n      "],["append",["helper",["top-banner"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption"]]]]],false],["text","\\n      "],["open-element","img",[]],["static-attr","class","paw-bundle-image"],["dynamic-attr","src",["unknown",["catalogItemPurchaseOption","pawSplashImage"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isChromaBundle"]]],null,2],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-root-vertical-line"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4106,15 +4221,15 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-bundle-title-component"],
-                layout: n(137),
-                style: n(138)
+                layout: n(138),
+                style: n(139)
             });
             e.exports = o
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "o/q2PDjG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-title-top"],["flush-element"],["append",["unknown",["title"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "KD8AVkSC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-title-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-title-top"],["flush-element"],["append",["unknown",["title"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4128,8 +4243,8 @@
                 computed: l
             } = a.Ember, o = s.extend({
                 classNames: ["paw-bundle-description-component"],
-                layout: n(140),
-                style: n(141),
+                layout: n(141),
+                style: n(142),
                 isOverflowing: !1,
                 seeMoreIsExpanded: !1,
                 didInsertElement() {
@@ -4153,8 +4268,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "MTsZSpal",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-bundle-description-container ",["helper",["if"],[["get",["descriptionIsExpanded"]],"paw-bundle-description-container--expanded"],null]]]],["flush-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-description-text"],["flush-element"],["text","\\n    "],["append",["unknown",["description"]],true],["text","\\n"],["block",["if"],[["get",["enrichedFlavorText"]]],null,3],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["descriptionIsExpanded"]]],null,2],["block",["if"],[["get",["isOverflowing"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-bundle-description-shadow"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-description-expand-container"],["modifier",["action"],[["get",[null]],"toggleSeeMore"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["descriptionIsShrunk"]]],null,0],["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-description-expand-text"],["flush-element"],["append",["unknown",["tra","cat_paw_bundle_see_more"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-bundle-description-down-carat"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-description-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","map-availability-info"],["flush-element"],["append",["unknown",["enrichedFlavorText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "+tnr43ZJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-description-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["paw-bundle-description-container ",["helper",["if"],[["get",["descriptionIsExpanded"]],"paw-bundle-description-container--expanded"],null]]]],["flush-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-description-text"],["flush-element"],["text","\\n    "],["append",["unknown",["description"]],true],["text","\\n"],["block",["if"],[["get",["enrichedFlavorText"]]],null,3],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["descriptionIsExpanded"]]],null,2],["block",["if"],[["get",["isOverflowing"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","paw-bundle-description-shadow"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-description-expand-container"],["modifier",["action"],[["get",[null]],"toggleSeeMore"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["descriptionIsShrunk"]]],null,0],["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-description-expand-text"],["flush-element"],["append",["unknown",["tra","cat_paw_bundle_see_more"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-bundle-description-down-carat"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-description-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","map-availability-info"],["flush-element"],["append",["unknown",["enrichedFlavorText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4167,9 +4282,9 @@
                 Component: s
             } = a.Ember, l = s.extend({
                 classNames: ["paw-bundle-item-component"],
-                layout: n(143),
+                layout: n(144),
                 lootTableItemName: null,
-                style: n(144),
+                style: n(145),
                 actions: {
                     closeLootTableModal() {
                         this.set("lootTableItemName", null)
@@ -4183,8 +4298,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "H/EDV4ru",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-item-header"],["flush-element"],["append",["unknown",["tra","cat_paw_bundle_purchase_summary"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-item-wrapper"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["formattedBundledItems"]]],null,8],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["lootTableItemName"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["lootTableItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeLootTableModal"],null]]],0]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","paw-bundle-item-price"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","itemPrice","price"]],false],["text"," "],["append",["unknown",["item","itemPrice","currencyType"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","itemPrice"]]],null,2]],"locals":[]},{"statements":[["block",["if"],[["get",["showItemPrices"]]],null,3]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","cat_paw_bundled_item_purchased"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","paw-bundle-item-loot-table-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLootTableModal",["get",["item","itemId"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","cat_paw_bundle_view_drop_rates"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","paw-bundle-item-subtitle"],["flush-element"],["text","\\n              "],["append",["unknown",["item","mapAvailability"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-item-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-overlay"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-overlay-image"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["item","itemBackgroundPath"]]]]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["item","imagePath"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-title"],["flush-element"],["text","\\n            "],["append",["unknown",["item","name"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-type"],["flush-element"],["text","\\n            "],["append",["unknown",["item","itemRarity"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-subtitle"],["flush-element"],["text","\\n            "],["append",["unknown",["item","itemSubtitle"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","mapAvailability"]]],null,7],["block",["if"],[["get",["item","hasVisibleLootOdds"]]],null,6],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-purchased"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,5,4],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
+                id: "rzRxVw6/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-items-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-item-header"],["flush-element"],["append",["unknown",["tra","cat_paw_bundle_purchase_summary"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-item-wrapper"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["formattedBundledItems"]]],null,8],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["lootTableItemName"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["lootTableItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeLootTableModal"],null]]],0]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","paw-bundle-item-price"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","itemPrice","price"]],false],["text"," "],["append",["unknown",["item","itemPrice","currencyType"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","itemPrice"]]],null,2]],"locals":[]},{"statements":[["block",["if"],[["get",["showItemPrices"]]],null,3]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","cat_paw_bundled_item_purchased"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","paw-bundle-item-loot-table-link"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLootTableModal",["get",["item","itemId"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","cat_paw_bundle_view_drop_rates"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","paw-bundle-item-subtitle"],["flush-element"],["text","\\n              "],["append",["unknown",["item","mapAvailability"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-item-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-overlay"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-overlay-image"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["item","itemBackgroundPath"]]]]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["item","imagePath"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-title"],["flush-element"],["text","\\n            "],["append",["unknown",["item","name"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-type"],["flush-element"],["text","\\n            "],["append",["unknown",["item","itemRarity"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","paw-bundle-item-subtitle"],["flush-element"],["text","\\n            "],["append",["unknown",["item","itemSubtitle"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","mapAvailability"]]],null,7],["block",["if"],[["get",["item","hasVisibleLootOdds"]]],null,6],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","paw-bundle-item-purchased"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,5,4],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4193,7 +4308,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(68);
+                s = n(69);
             const {
                 Component: l,
                 computed: o
@@ -4208,8 +4323,8 @@
                 },
                 classNames: ["paw-bundle-price-component"],
                 discountDisabledIds: null,
-                layout: n(146),
-                style: n(147),
+                layout: n(147),
+                style: n(148),
                 bundleCurrency: o.readOnly("catalogItemPurchaseOption.purchaseOptions.0.priceDetails.0.price.currencyType"),
                 currencyIconPath: o("bundleCurrency", (function() {
                     const e = "/lol-game-data/assets/ASSETS/Currencies/images";
@@ -4255,8 +4370,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "dy1RcCE2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-price-total"],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_unadjusted_title"]],false],["close-element"],["text","\\n"],["open-element","img",[]],["static-attr","class","paw-bundle-price-currency-icon"],["dynamic-attr","src",["unknown",["currencyIconPath"]],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-price-amount"],["flush-element"],["append",["unknown",["adjustedTotalAmount"]],false],["text"," "],["append",["unknown",["translatedCurrencyName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-price-discount"],["flush-element"],["append",["unknown",["unadjustedTotalAmount"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-price-percent"],["flush-element"],["text","-"],["append",["unknown",["discountPercentage"]],false],["text","%"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasDiscount"]]],null,0]],"locals":[]}],"hasPartials":false}',
+                id: "2LKN3PJQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-price-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-price-total"],["flush-element"],["append",["unknown",["tra","cat_paw_bundled_discount_unadjusted_title"]],false],["close-element"],["text","\\n"],["open-element","img",[]],["static-attr","class","paw-bundle-price-currency-icon"],["dynamic-attr","src",["unknown",["currencyIconPath"]],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-price-amount"],["flush-element"],["append",["unknown",["adjustedTotalAmount"]],false],["text"," "],["append",["unknown",["translatedCurrencyName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-price-discount"],["flush-element"],["append",["unknown",["unadjustedTotalAmount"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-price-percent"],["flush-element"],["text","-"],["append",["unknown",["discountPercentage"]],false],["text","%"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasDiscount"]]],null,0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4265,7 +4380,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                l = (a = n(67)) && a.__esModule ? a : {
+                l = (a = n(39)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -4273,9 +4388,26 @@
                 computed: i
             } = s.Ember, c = o.extend({
                 classNames: ["paw-bundle-purchase-component"],
-                layout: n(149),
-                style: n(150),
+                purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
+                layout: n(150),
+                style: n(151),
                 disclaimersAccepted: !1,
+                missingVOChecked: !1,
+                missingVOData: i("catalogItemPurchaseOption.item.itemId", "catalogItemPurchaseOption.item.inventoryType", "catalogItemPurchaseOption.bundledItems.[]", "purchaseWidgetService.missingVOConfig", "purchaseWidgetService.currentLocale", (function() {
+                    const e = this.get("purchaseWidgetService"),
+                        t = this.get("catalogItemPurchaseOption");
+                    if (!e || !t) return null;
+                    const n = this.get("catalogItemPurchaseOption.item") || {},
+                        a = this.get("catalogItemPurchaseOption.bundledItems") || [],
+                        s = [{
+                            itemId: n.itemId,
+                            inventoryType: n.inventoryType
+                        }, ...a.filter((e => !!e)).map((e => ({
+                            itemId: e.itemId || e.item?.itemId,
+                            inventoryType: e.inventoryType || e.item?.inventoryType
+                        })))];
+                    return e.getMissingVOData(s)
+                })),
                 didInsertElement: function() {
                     window.splash = this
                 },
@@ -4290,10 +4422,20 @@
                     const e = this.get("validationErrors");
                     if (e) return !!e.find((e => e.id === l.default.ValidationErrorKeys.PARENT_NOT_OWNED))
                 })),
-                purchaseEnabled: !1,
+                showStandardDisclaimer: i("displayBundleNonRefundableDisclaimer", "alwaysShowPurchaseDisclaimer", (function() {
+                    return this.get("displayBundleNonRefundableDisclaimer") || this.get("alwaysShowPurchaseDisclaimer")
+                })),
+                purchaseEnabled: i("disclaimersAccepted", "missingVOData", "missingVOChecked", "alwaysShowPurchaseDisclaimer", "displayBundleNonRefundableDisclaimer", (function() {
+                    const e = !(this.get("alwaysShowPurchaseDisclaimer") || this.get("displayBundleNonRefundableDisclaimer")) || this.get("disclaimersAccepted"),
+                        t = !this.get("missingVOData") || this.get("missingVOChecked");
+                    return e && t
+                })),
                 actions: {
                     toggleTosCheck(e) {
-                        this.set("purchaseEnabled", e.target.checked)
+                        this.set("disclaimersAccepted", e.target.checked)
+                    },
+                    toggleMissingVOCheckbox(e) {
+                        this.set("missingVOChecked", e.target.checked)
                     },
                     purchase: function(e) {
                         this.sendAction("purchase", e)
@@ -4304,8 +4446,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Esu74klT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,10,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","item"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","        "],["append",["unknown",["termsOfServiceDisclaimer"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","cat_paw_bundled_disclaimer_bundle_non_refundable"]],false],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","paw-bundle-purchase-disclaimers"],["flush-element"],["text","\\n  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["catalogItemPurchaseOption","item"]]]]],false],["text","\\n"],["text","  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleNonRefundableDisclaimer"]]],null,2],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-bundle-digital-goods-disclaimer"]]],false],["text","\\n"],["close-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-purchase-buttons-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["catalogItemPurchaseOption","purchaseOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-generic-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,4,3]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase"],["flush-element"],["text","\\n    "],["append",["helper",["price-details"],null,[["purchaseOptions","wallet","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","purchaseOptions"]],["get",["wallet"]],false,"purchase"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseRestricted"]]],null,6,5]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption","catalogItemPurchaseOption","item"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "CwxNDT2h",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-purchase-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,13,12]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["price-button"],null,[["itemPurchaseOption","wallet","purchaseOption","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","item"]],["get",["wallet"]],["get",["purchaseOption"]],["get",["purchaseEnabled"]],"purchase"]]],false],["text","\\n"]],"locals":["purchaseOption"]},{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","missingVOCheckbox"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","missingVOCheckbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleMissingVOCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","missingVOCheckbox"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n        "],["append",["unknown",["missingVOData","checkboxText"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["termsOfServiceDisclaimer"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","cat_paw_bundled_disclaimer_bundle_non_refundable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-checkbox"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","pawPurchaseDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pawPurchaseDisclaimer"],["static-attr","class","paw-bundle-purchase-disclaimer-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleNonRefundableDisclaimer"]]],null,3],["block",["if"],[["get",["alwaysShowPurchaseDisclaimer"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings missing-vo-disclaimer"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["unknown",["missingVOData","disclaimerText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","paw-bundle-purchase-disclaimers"],["flush-element"],["text","\\n  "],["append",["helper",["purchase-warnings"],null,[["itemPurchaseOption"],[["get",["catalogItemPurchaseOption","item"]]]]],false],["text","\\n"],["block",["if"],[["get",["missingVOData"]]],null,5],["block",["if"],[["get",["showStandardDisclaimer"]]],null,4],["block",["if"],[["get",["missingVOData"]]],null,1],["text","  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["paw-bundle-digital-goods-disclaimer"]]],false],["text","\\n"],["close-element"],["text","\\n"],["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-purchase-buttons-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["catalogItemPurchaseOption","purchaseOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-generic-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorMessage"]]],null,7,6]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase-error"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["errorMessage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-purchase"],["flush-element"],["text","\\n    "],["append",["helper",["price-details"],null,[["purchaseOptions","wallet","purchaseEnabled","purchase"],[["get",["catalogItemPurchaseOption","purchaseOptions"]],["get",["wallet"]],false,"purchase"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseRestricted"]]],null,9,8]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["src"],["/fe/lol-paw/images/spinner.png"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,11,10]],"locals":[]},{"statements":[["text","  "],["append",["helper",["item-unlocked"],null,[["itemPurchaseOption"],[["get",["itemPurchaseOption","catalogItemPurchaseOption","item"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4320,16 +4462,16 @@
                 },
                 i = n(32),
                 c = n(33),
-                r = n(68);
+                r = n(69);
             const {
-                Component: p,
-                computed: m
+                Component: m,
+                computed: p
             } = s.Ember, {
                 CHAMPION_SKIN: u
-            } = l.PAW.INVENTORY_TYPES, d = 1, h = 2, g = 3, _ = 4, f = p.extend({
+            } = l.PAW.INVENTORY_TYPES, d = 1, h = 2, g = 3, f = 4, _ = m.extend({
                 classNames: ["paw-bundle-upsell-component"],
-                layout: n(152),
-                style: n(153),
+                layout: n(153),
+                style: n(154),
                 purchaseWidgetService: s.Ember.inject.service("purchaseWidget"),
                 selectedBundle: null,
                 selectedBundlePurchaseOption: null,
@@ -4342,27 +4484,27 @@
                     const e = this.get("selectedBundle");
                     e && e.data && this.set("selectedBundlePurchaseOption", e.data)
                 },
-                pawSessionId: m((function() {
+                pawSessionId: p((function() {
                     return `paw_${Date.now()}_${Math.random().toString(36).substr(2,9)}`
                 })),
-                backgroundImageUrl: m("catalogItemPurchaseOption.item.assets.splashPath", "catalogItemPurchaseOption.pawSplashImage", (function() {
+                backgroundImageUrl: p("catalogItemPurchaseOption.item.assets.splashPath", "catalogItemPurchaseOption.pawSplashImage", (function() {
                     const e = this.get("catalogItemPurchaseOption.item.assets.splashPath");
                     return this.get("catalogItemPurchaseOption.pawSplashImage") || e || c.DEFAULT_BACKGROUND_PATH
                 })),
-                bundleOverlayImageUrl: m("selectedBundlePurchaseOption", (function() {
+                bundleOverlayImageUrl: p("selectedBundlePurchaseOption", (function() {
                     const e = this.get("selectedBundlePurchaseOption");
                     if (!e) return null;
                     const t = e.pawSplashImage;
                     return e?.item?.subInventoryType !== o.default.CHROMA_BUNDLE && t ? t : null
                 })),
-                subTitle: m("selectedBundle", "catalogItemPurchaseOption", (function() {
+                subTitle: p("selectedBundle", "catalogItemPurchaseOption", (function() {
                     const e = this.get("selectedBundle"),
                         t = this.get("tra");
                     if (e) return (0, r.getItemSubtitle)(e.data.item, t);
                     const n = this.get("catalogItemPurchaseOption.item");
                     return (0, r.getItemSubtitle)(n, t)
                 })),
-                formattedBundledItems: m("catalogItemPurchaseOption", "selectedBundle", (function() {
+                formattedBundledItems: p("catalogItemPurchaseOption", "selectedBundle", (function() {
                     const e = this.get("catalogItemPurchaseOption.item"),
                         t = this.get("catalogItemPurchaseOption.hiddenBundleItems"),
                         n = this.get("catalogItemPurchaseOption.dependencies") || [],
@@ -4374,25 +4516,25 @@
                     }))) : this.get("catalogItemPurchaseOption.bundledItems") || [];
                     let i = [];
                     i = e && n.length > 0 ? [...n, ...s] : s;
-                    const p = (a ? s : [e, ...i].filter(Boolean)).filter((e => !t || !t.find((t => e.itemId === t.itemId && e.inventoryType === t.inventoryType)))).map((e => {
+                    const m = (a ? s : [e, ...i].filter(Boolean)).filter((e => !t || !t.find((t => e.itemId === t.itemId && e.inventoryType === t.inventoryType)))).map((e => {
                         const {
                             inventoryType: t,
                             itemId: n,
                             assets: a,
                             hasVisibleLootOdds: s,
                             subInventoryType: i,
-                            bundledItemPrice: p
+                            bundledItemPrice: m
                         } = e, {
-                            CHAMPION_SKIN: m
+                            CHAMPION_SKIN: p
                         } = l.PAW.INVENTORY_TYPES, {
                             iconPath: u,
                             tilePath: d
-                        } = a || {}, h = p ? p.quantity : 1, g = e.owned, _ = (0, r.getStatstoneRarity)(e), f = (0, r.getItemSubtitle)(e, this.get("tra")), E = h > 1 ? this.get("tra").formatString("cat_paw_bundle_item_quantity_and_name", {
+                        } = a || {}, h = m ? m.quantity : 1, g = e.owned, f = (0, r.getStatstoneRarity)(e), _ = (0, r.getItemSubtitle)(e, this.get("tra")), E = h > 1 ? this.get("tra").formatString("cat_paw_bundle_item_quantity_and_name", {
                             quantity: h,
                             name: e.name
                         }) : e.name;
                         let T = u || d || e.imagePath || c.NOT_FOUND_ICON;
-                        t === m && i !== o.default.CHROMA && (T = d || u || e.imagePath || c.NOT_FOUND_ICON);
+                        t === p && i !== o.default.CHROMA && (T = d || u || e.imagePath || c.NOT_FOUND_ICON);
                         let w = null;
                         if (!g) {
                             const a = this.get("catalogItemPurchaseOption");
@@ -4415,19 +4557,19 @@
                             }
                         }
                         return {
-                            itemBackgroundPath: t === m || t === l.PAW.INVENTORY_TYPES.CHAMPION ? c.DEFAULT_BACKGROUND_PATH : void 0,
+                            itemBackgroundPath: t === p || t === l.PAW.INVENTORY_TYPES.CHAMPION ? c.DEFAULT_BACKGROUND_PATH : void 0,
                             imagePath: T,
                             itemId: n,
                             owned: g,
-                            itemRarity: _,
-                            itemSubtitle: f,
+                            itemRarity: f,
+                            itemSubtitle: _,
                             hasVisibleLootOdds: s,
                             name: E,
                             subInventoryType: i,
                             itemPrice: w
                         }
                     }));
-                    return p
+                    return m
                 })),
                 isChromaBundle: s.Ember.computed("selectedBundle.data.item.subInventoryType", (function() {
                     return (0, r.isChromaBundle)(this.get("selectedBundle.data.item.subInventoryType"))
@@ -4438,18 +4580,18 @@
                         n = this.get("alwaysShowPurchaseDisclaimer");
                     return (0, r.shouldDisplayBundleNonRefundableDisclaimer)(e, t, n)
                 })),
-                limitedTimeBadge: m("catalogItemPurchaseOption.item", "selectedBundle.inactiveDate", "selectedBundle.data.item", (function() {
+                limitedTimeBadge: p("catalogItemPurchaseOption.item", "selectedBundle.inactiveDate", "selectedBundle.data.item", (function() {
                     const e = this.get("selectedBundle"),
                         t = this.get("catalogItemPurchaseOption"),
                         n = this.get("tra");
                     return e ? (0, r.getLimitedTimeBadge)(e?.data?.item, n) : t?.item ? (0, r.getLimitedTimeBadge)(t.item, n) : null
                 })),
-                dynamicCatalogItemPurchaseOption: m("catalogItemPurchaseOption", "selectedBundlePurchaseOption", "catalogItemPurchaseOption.dependencies", (function() {
+                dynamicCatalogItemPurchaseOption: p("catalogItemPurchaseOption", "selectedBundlePurchaseOption", "catalogItemPurchaseOption.dependencies", (function() {
                     const e = this.get("catalogItemPurchaseOption"),
                         t = this.get("selectedBundlePurchaseOption");
                     return t || e
                 })),
-                allItemsToShow: m("catalogItemPurchaseOption", "relatedBundlesToShow", "bundlePurchaseOptionsCache", (function() {
+                allItemsToShow: p("catalogItemPurchaseOption", "relatedBundlesToShow", "bundlePurchaseOptionsCache", (function() {
                     const e = this.get("catalogItemPurchaseOption"),
                         t = this.get("relatedBundlesToShow") || [],
                         n = this.get("bundlePurchaseOptionsCache"),
@@ -4466,7 +4608,7 @@
                         }))
                     })), o.sort(((e, t) => e.sortPriority - t.sortPriority)), o
                 })),
-                selectedItem: m("selectedBundle", "catalogItemPurchaseOption", (function() {
+                selectedItem: p("selectedBundle", "catalogItemPurchaseOption", (function() {
                     const e = this.get("selectedBundle"),
                         t = this.get("catalogItemPurchaseOption");
                     return e || (t && t.item.inventoryType === u ? {
@@ -4497,7 +4639,7 @@
                         const a = e.item.itemId,
                             s = e.item.subInventoryType,
                             l = n[a] || e;
-                        let i = _;
+                        let i = f;
                         return s === o.default.BORDER_SET_BUNDLE ? i = h : (0, r.isChromaBundle)(s) && (i = g), {
                             id: e.item.itemId,
                             inventoryType: t,
@@ -4552,12 +4694,12 @@
                     }
                 }
             });
-            e.exports = f
+            e.exports = _
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "In4yYzij",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-left-section"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["paw-bundle-upsell-image fade-in ",["helper",["if"],[["get",["bundleOverlayImageUrl"]],"blurred"],null]]]],["dynamic-attr","src",["unknown",["backgroundImageUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-image-container-shroud"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-gradient"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isChromaBundle"]]],null,4],["block",["if"],[["get",["bundleOverlayImageUrl"]]],null,3],["block",["if"],[["get",["limitedTimeBadge"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["relatedBundlesToShow","length"]]],null,1],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-vertical-line"],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-info-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-title"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-title"],null,[["title","subtitle"],[["get",["catalogItemPurchaseOption","item","name"]],["get",["catalogItemPurchaseOption","item","subtitle"]]]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-sub-title"],["flush-element"],["append",["unknown",["subTitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItemPurchaseOption","item","description"]]],null,0],["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-items fade-in"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-items"],null,[["catalogItemPurchaseOption","formattedBundledItems","displayBundleNonRefundableDisclaimer","alwaysShowPurchaseDisclaimer","showPrice","showItemPrices"],[["get",["catalogItemPurchaseOption"]],["get",["formattedBundledItems"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["alwaysShowPurchaseDisclaimer"]],true,true]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n  \\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-price fade-in"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-price"],null,[["catalogItemPurchaseOption"],[["get",["dynamicCatalogItemPurchaseOption"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-footer-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-footer"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-purchase"],null,[["catalogItemPurchaseOption","wallet","purchase","isPurchasing","purchaseSuccess","alwaysShowPurchaseDisclaimer","displayBundleNonRefundableDisclaimer","errorMessage","validationErrors"],[["get",["dynamicCatalogItemPurchaseOption"]],["get",["wallet"]],"purchase",["get",["isPurchasing"]],["get",["purchaseSuccess"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["errorMessage"]],["get",["validationErrors"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-description"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-description"],null,[["description"],[["get",["catalogItemPurchaseOption","item","description"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-sidenav-overlay"],["flush-element"],["text","\\n      "],["append",["helper",["related-items-overlay"],null,[["items","selectedItem","selectCurrentItem"],[["get",["allItemsToShow"]],["get",["selectedItem"]],"selectCurrentItem"]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-limited-time-badge"],["flush-element"],["text","\\n        "],["open-element","hextech-ui-badge",[]],["dynamic-attr","icon",["concat",[["unknown",["limitedTimeBadge","icon"]]]]],["dynamic-attr","background-color",["unknown",["limitedTimeBadge","color"]],null],["static-attr","size","medium"],["flush-element"],["append",["unknown",["limitedTimeBadge","text"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","paw-bundle-overlay-image fade-in"],["dynamic-attr","src",["unknown",["bundleOverlayImageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","paw-bundle-chroma-overlay-image fade-in"],["static-attr","src","/fe/lol-static-assets/svg/paw-upsell-chroma-overlay.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "huN/5KX0",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\bundle\\\\bundle-upsell-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-left-section"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["paw-bundle-upsell-image fade-in ",["helper",["if"],[["get",["bundleOverlayImageUrl"]],"blurred"],null]]]],["dynamic-attr","src",["unknown",["backgroundImageUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-image-container-shroud"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-bottom-gradient"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isChromaBundle"]]],null,4],["block",["if"],[["get",["bundleOverlayImageUrl"]]],null,3],["block",["if"],[["get",["limitedTimeBadge"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["relatedBundlesToShow","length"]]],null,1],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-vertical-line"],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-info-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-title"],["flush-element"],["text","\\n    "],["append",["helper",["bundle-title"],null,[["title","subtitle"],[["get",["catalogItemPurchaseOption","item","name"]],["get",["catalogItemPurchaseOption","item","subtitle"]]]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-sub-title"],["flush-element"],["append",["unknown",["subTitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItemPurchaseOption","item","description"]]],null,0],["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-items fade-in"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-items"],null,[["catalogItemPurchaseOption","formattedBundledItems","displayBundleNonRefundableDisclaimer","alwaysShowPurchaseDisclaimer","showPrice","showItemPrices"],[["get",["catalogItemPurchaseOption"]],["get",["formattedBundledItems"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["alwaysShowPurchaseDisclaimer"]],true,true]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n  \\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-price fade-in"],["flush-element"],["text","\\n      "],["append",["helper",["bundle-price"],null,[["catalogItemPurchaseOption"],[["get",["dynamicCatalogItemPurchaseOption"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-separator"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-footer-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-footer"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-purchase"],null,[["catalogItemPurchaseOption","wallet","purchase","isPurchasing","purchaseSuccess","alwaysShowPurchaseDisclaimer","displayBundleNonRefundableDisclaimer","errorMessage","validationErrors"],[["get",["dynamicCatalogItemPurchaseOption"]],["get",["wallet"]],"purchase",["get",["isPurchasing"]],["get",["purchaseSuccess"]],["get",["alwaysShowPurchaseDisclaimer"]],["get",["displayBundleNonRefundableDisclaimer"]],["get",["errorMessage"]],["get",["validationErrors"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-description"],["flush-element"],["text","\\n        "],["append",["helper",["bundle-description"],null,[["description"],[["get",["catalogItemPurchaseOption","item","description"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","paw-bundle-upsell-sidenav-overlay"],["flush-element"],["text","\\n      "],["append",["helper",["related-items-overlay"],null,[["items","selectedItem","selectCurrentItem"],[["get",["allItemsToShow"]],["get",["selectedItem"]],"selectCurrentItem"]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-bundle-limited-time-badge"],["flush-element"],["text","\\n        "],["open-element","hextech-ui-badge",[]],["dynamic-attr","icon",["concat",[["unknown",["limitedTimeBadge","icon"]]]]],["dynamic-attr","background-color",["unknown",["limitedTimeBadge","color"]],null],["static-attr","size","medium"],["flush-element"],["append",["unknown",["limitedTimeBadge","text"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","paw-bundle-overlay-image fade-in"],["dynamic-attr","src",["unknown",["bundleOverlayImageUrl"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","paw-bundle-chroma-overlay-image fade-in"],["static-attr","src","/fe/lol-static-assets/svg/paw-upsell-chroma-overlay.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4566,7 +4708,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                l = (a = n(78)) && a.__esModule ? a : {
+                l = (a = n(79)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(3);
@@ -4574,7 +4716,7 @@
                 computed: i
             } = s.Ember, c = l.default.extend({
                 showOverlayImage: !0,
-                layout: n(155),
+                layout: n(156),
                 champion: i("bundledItems", (function() {
                     const e = this.get("bundledItems");
                     return e ? e.find((e => e.inventoryType === o.PAW.INVENTORY_TYPES.CHAMPION)) : null
@@ -4592,14 +4734,14 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "h7+4ag87",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-details-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-details-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["item-splash"],null,[["itemPurchaseOption","pawSplashImage","showOverlayImage"],[["get",["skin"]],["get",["pawSplashImage"]],["get",["showOverlayImage"]]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","item-inner-content"],["flush-element"],["text","\\n  "],["append",["helper",["chroma-bundle-overlay-image"],null,[["showOverlayImage","bundledItems"],[["get",["showOverlayImage"]],["get",["bundledItems"]]]]],false],["text","\\n  "],["append",["helper",["content-description"],null,[["itemPurchaseOption","purchaseSuccess","itemSubtitle"],[["get",["itemPurchaseOption"]],["get",["purchaseSuccess"]],["get",["itemSubtitle"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["chroma-bundle-content-items"],null,[["bundledItems"],[["get",["bundledItems"]]]]],false],["text","\\n"],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "SMATPHPT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-details-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-details-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["item-splash"],null,[["itemPurchaseOption","pawSplashImage","showOverlayImage"],[["get",["skin"]],["get",["pawSplashImage"]],["get",["showOverlayImage"]]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","item-inner-content"],["flush-element"],["text","\\n  "],["append",["helper",["chroma-bundle-overlay-image"],null,[["showOverlayImage","bundledItems"],[["get",["showOverlayImage"]],["get",["bundledItems"]]]]],false],["text","\\n  "],["append",["helper",["content-description"],null,[["itemPurchaseOption","purchaseSuccess","itemSubtitle"],[["get",["itemPurchaseOption"]],["get",["purchaseSuccess"]],["get",["itemSubtitle"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["chroma-bundle-content-items"],null,[["bundledItems"],[["get",["bundledItems"]]]]],false],["text","\\n"],["open-element","hr",[]],["static-attr","class","content-separator"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = i(n(90)),
+                s = i(n(91)),
                 l = n(3),
                 o = i(n(34));
 
@@ -4613,8 +4755,8 @@
             } = a.Ember, r = s.default.extend({
                 classNames: ["paw-overlay-image-content", "paw-chroma-bundle-overlay-image-content"],
                 showChromaIcon: !0,
-                layout: n(157),
-                style: n(158),
+                layout: n(158),
+                style: n(159),
                 overlayImagePath: c.readOnly("showingChroma.assets.iconPath"),
                 skin: c("bundledItems", (function() {
                     return this.get("bundledItems") ? this.get("bundledItems").find((e => e.inventoryType === l.PAW.INVENTORY_TYPES.CHAMPION_SKIN && !e.subInventoryType)) : null
@@ -4640,8 +4782,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "QFB5Kxri",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showOverlayImage"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["chroma-button"],null,[["chroma","showPreview","showingChroma"],[["get",["chroma"]],"showPreview",["get",["showingChroma"]]]]],false],["text","\\n"]],"locals":["chroma"]},{"statements":[["text","        "],["append",["helper",["chroma-button"],null,[["chroma","showPreview","showingChroma"],[["get",["skin"]],"showPreview",["get",["showingChroma"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-paw/images/icon-chroma.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","overlay-image-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","overlay-image-border"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["overlayBackgroundPath"]]]]],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","paw-purchase-overlay-image"],["dynamic-attr","src",["concat",[["unknown",["overlayImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showChromaIcon"]]],null,2],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","chroma-selection"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["skin","owned"]]],null,1],["block",["each"],[["get",["unownedChromas"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "lSv8JFe+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-bundle-overlay-image-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showOverlayImage"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["chroma-button"],null,[["chroma","showPreview","showingChroma"],[["get",["chroma"]],"showPreview",["get",["showingChroma"]]]]],false],["text","\\n"]],"locals":["chroma"]},{"statements":[["text","        "],["append",["helper",["chroma-button"],null,[["chroma","showPreview","showingChroma"],[["get",["skin"]],"showPreview",["get",["showingChroma"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-paw/images/icon-chroma.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","overlay-image-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","overlay-image-border"],["dynamic-attr","style",["concat",["background-image: ",["unknown",["overlayBackgroundPath"]]]]],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","paw-purchase-overlay-image"],["dynamic-attr","src",["concat",[["unknown",["overlayImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showChromaIcon"]]],null,2],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","chroma-selection"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["skin","owned"]]],null,1],["block",["each"],[["get",["unownedChromas"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4656,8 +4798,8 @@
             } = a.Ember, o = s.extend({
                 classNames: ["paw-chroma-button"],
                 classNameBindings: ["active"],
-                layout: n(160),
-                style: n(161),
+                layout: n(161),
+                style: n(162),
                 active: l("showingChroma", "chroma", (function() {
                     return this.get("showingChroma") === this.get("chroma")
                 })),
@@ -4673,8 +4815,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "9vPBg9Iz",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","contents"],["dynamic-attr","style",["concat",["background:",["unknown",["color"]]]]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "1SMaubDg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\chroma-bundle\\\\chroma-button-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","contents"],["dynamic-attr","style",["concat",["background:",["unknown",["color"]]]]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4683,7 +4825,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = i(n(96)),
+                s = i(n(97)),
                 l = n(3),
                 o = i(n(34));
 
@@ -4694,7 +4836,7 @@
             }
             const {
                 computed: c
-            } = a.Ember, r = a.Ember.A, p = s.default.extend({
+            } = a.Ember, r = a.Ember.A, m = s.default.extend({
                 dependentItems: c.alias("containedItems"),
                 shouldShowContentBlock: c.gt("containedItems.length", 0),
                 containedItems: c("tra.metadata", "bundledItems", (function() {
@@ -4726,84 +4868,7 @@
                     }), t.pushObject(s)
                 }
             });
-            e.exports = p
-        }, (e, t, n) => {
-            "use strict";
-            var a, s = n(1),
-                l = (a = n(67)) && a.__esModule ? a : {
-                    default: a
-                },
-                o = n(33),
-                i = n(32);
-            const c = (0, s.emberDataBinding)({
-                    Ember: s.Ember,
-                    websocket: (0, s.getProvider)().getSocket(),
-                    logPrefix: "service:purchasewidget",
-                    boundProperties: {
-                        orderNotifications: "/lol-purchase-widget/v1/order-notifications",
-                        summoner: "/lol-summoner/v1/current-summoner"
-                    }
-                }),
-                r = s.Ember.Service.extend(c, {
-                    init() {
-                        this._super(...arguments), this._dataBinding = (0, s.dataBinding)("lol-purchase-widget"), s.db.get("/lol-game-data/assets/v1/lolcurrency.json").then((e => {
-                            this.set("gameDataCurrencies", e)
-                        })), s.db.get("/lol-game-data-inventory/v1/items/itemIds/inventoryTypes/CHAMPION_SKIN").then((e => {
-                            this.set("skins", e)
-                        }))
-                    },
-                    getItem(e, t) {
-                        const n = `/v1/purchasable-item?inventoryType=${t}&itemId=${e}`;
-                        return this._dataBinding.get(n, {
-                            skipCache: !0
-                        }).then(this._mapValidationErrors)
-                    },
-                    getItems(e, t) {
-                        const n = `/v1/purchasable-items/${t}`;
-                        return this._dataBinding.post(n, e).then(this._mapValidationErrors)
-                    },
-                    getRelatedItems(e, t) {
-                        const n = `v1/items/${e}/related-bundles?inventoryType=${t}`;
-                        return this._dataBinding.get(n)
-                    },
-                    _mapValidationErrors(e) {
-                        const t = Object.assign({}, e);
-                        if (t.validationErrors) {
-                            const e = t.validationErrors.map((function(e) {
-                                return l.default.fromErrorKey(e.id)
-                            }));
-                            t.validationErrors = e
-                        }
-                        return t
-                    },
-                    _getTimeoutPromise: e => new Promise((function(t, n) {
-                        setTimeout((function() {
-                            n(new Error(`Request has not return after ${e}ms`))
-                        }), e)
-                    })),
-                    purchaseItem(e, t, n) {
-                        const a = [];
-                        return e.priceDetails.forEach((e => {
-                            a.push({
-                                itemKey: e.itemKey,
-                                purchaseCurrencyInfo: {
-                                    currencyType: e.price.currencyType,
-                                    price: e.price.price,
-                                    purchasable: !0
-                                },
-                                source: t,
-                                featuredSection: n,
-                                quantity: 1
-                            })
-                        })), s.Telemetry.sendCustomData(i.TELEMETRY_EVENT_NAME, {
-                            id: i.TELEMETRY_EVENT_ID.START_PURCHASE,
-                            purchaseDataItems: JSON.stringify(a)
-                        }), Promise.race([this._getTimeoutPromise(o.MAX_WAITING_TIME_IN_MS), this._dataBinding.post("/v2/purchaseItems", {
-                            items: a
-                        })])
-                    }
-                });
-            e.exports = r
+            e.exports = m
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
@@ -4825,8 +4890,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "psBHbDZ7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_17\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["static-attr","class","rp-top-up-modal-container"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["unknown",["tra","cat_paw_rp_header_message"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-message-container"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["dialogMessage"]]],null],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","up-sell-text"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","cat_paw_rp_up_sell_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "csgR93wR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.18\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\paw-rp-top-up-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["static-attr","class","rp-top-up-modal-container"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["unknown",["tra","cat_paw_rp_header_message"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-message-container"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["dialogMessage"]]],null],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","up-sell-text"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","cat_paw_rp_up_sell_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

@@ -218,10 +218,10 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{cfd78be4}": {
-        "mRootSpell": "{081e4e0c}",
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility": {
+        "mRootSpell": "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility/Jade_NautilusQ",
         "mChildSpells": [
-            "{081e4e0c}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility/Jade_NautilusQ",
             "{c94a70e4}",
             "{15bbdc37}",
             "{2b7e13b1}"
@@ -229,7 +229,7 @@
         "mName": "Jade_NautilusQAbility",
         "__type": "AbilityObject"
     },
-    "{081e4e0c}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility/Jade_NautilusQ": {
         "ObjectName": "Jade_NautilusQ",
         "objectPath": "{081e4e0c}",
         "mScriptName": "Jade_NautilusQ",
@@ -682,7 +682,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{21299f85}",
+            "mMissileEffectKey": "Jade_Nautilus_Q_mis",
             "mLineWidth": 90.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
@@ -758,10 +758,10 @@
         },
         "__type": "SpellObject"
     },
-    "{73f26ecf}": {
-        "mRootSpell": "{0c75f6c0}",
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility": {
+        "mRootSpell": "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility/Jade_NautilusR",
         "mChildSpells": [
-            "{0c75f6c0}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility/Jade_NautilusR",
             "{7499df8f}",
             "{8c8d7e10}",
             "{9dbad3d7}",
@@ -770,7 +770,7 @@
         "mName": "Jade_NautilusRAbility",
         "__type": "AbilityObject"
     },
-    "{0c75f6c0}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility/Jade_NautilusR": {
         "ObjectName": "Jade_NautilusR",
         "objectPath": "{0c75f6c0}",
         "mScriptName": "Jade_NautilusR",
@@ -856,8 +856,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
-            "mCoefficient2": 0.800000011920929,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_GrandLine.dds"
@@ -971,11 +969,6 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "SecondaryDamage",
-                                    "nameOverride": "Spell_ListType_PassThroughDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "PrimaryDamage",
                                     "nameOverride": "Spell_ListType_ExplosionDamage",
                                     "__type": "TooltipInstanceListElement"
@@ -983,6 +976,11 @@
                                 {
                                     "type": "StunDuration",
                                     "nameOverride": "Spell_ListType_StunDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SecondaryDamage",
+                                    "nameOverride": "Spell_ListType_PassThroughDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -1306,7 +1304,7 @@
         },
         "__type": "SpellObject"
     },
-    "{1251e0ce}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusWideswingAttack": {
         "ObjectName": "Jade_NautilusWideswingAttack",
         "objectPath": "{1251e0ce}",
         "mScriptName": "Jade_NautilusWideswingAttack",
@@ -1403,17 +1401,17 @@
         },
         "__type": "SpellObject"
     },
-    "{fb807a88}": {
-        "mRootSpell": "{1bc64ffc}",
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility": {
+        "mRootSpell": "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility/Jade_NautilusE",
         "mChildSpells": [
-            "{1bc64ffc}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility/Jade_NautilusE",
             "{d95a1472}",
             "{bf2a3d84}"
         ],
         "mName": "Jade_NautilusEAbility",
         "__type": "AbilityObject"
     },
-    "{1bc64ffc}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility/Jade_NautilusE": {
         "ObjectName": "Jade_NautilusE",
         "objectPath": "{1bc64ffc}",
         "mScriptName": "Jade_NautilusE",
@@ -1559,7 +1557,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.5,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_RippleEffect.dds"
@@ -1645,8 +1642,7 @@
                     "mLocKeys": {
                         "keyName": "Spell_NautilusE_Jade_Name",
                         "keySummary": "Spell_NautilusE_Jade_Summary",
-                        "keyTooltip": "Spell_NautilusE_Jade_Tooltip",
-                        "keyTooltipExtendedBelowLine": "Spell_NautilusE_Jade_TooltipExtendedBelowLine"
+                        "keyTooltip": "Spell_NautilusE_Jade_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2051,7 +2047,7 @@
         },
         "__type": "SpellObject"
     },
-    "{65436bbb}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusBasicAttack": {
         "ObjectName": "Jade_NautilusBasicAttack",
         "objectPath": "{65436bbb}",
         "mScriptName": "Jade_NautilusBasicAttack",
@@ -2118,7 +2114,7 @@
             "castConeDistance": 100.0,
             "castFrame": 11.744999885559082,
             "missileSpeed": 1000.0,
-            "mHitEffectKey": "{47fe83f2}",
+            "mHitEffectKey": "Jade_Nautilus_BA_tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2138,7 +2134,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6876aff3}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusCritAttack": {
         "ObjectName": "Jade_NautilusCritAttack",
         "objectPath": "{6876aff3}",
         "mScriptName": "Jade_NautilusCritAttack",
@@ -2222,17 +2218,17 @@
         },
         "__type": "SpellObject"
     },
-    "{d54c977a}": {
-        "mRootSpell": "{7e20d8f0}",
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility": {
+        "mRootSpell": "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility/Jade_NautilusW",
         "mChildSpells": [
-            "{7e20d8f0}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility/Jade_NautilusW",
             "{95110bd8}",
             "{d3167378}"
         ],
         "mName": "Jade_NautilusWAbility",
         "__type": "AbilityObject"
     },
-    "{7e20d8f0}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility/Jade_NautilusW": {
         "ObjectName": "Jade_NautilusW",
         "objectPath": "{7e20d8f0}",
         "mScriptName": "Jade_NautilusW",
@@ -2285,13 +2281,13 @@
                 {
                     "name": "DotDamageBase",
                     "values": [
-                        20.0,
+                        25.0,
                         40.0,
                         55.0,
                         70.0,
                         85.0,
                         100.0,
-                        110.0
+                        115.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2333,6 +2329,19 @@
                         -0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DotDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2365,7 +2374,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_Wrath.dds"
@@ -2716,7 +2724,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8ee6d249}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusRavageStrikeAttack": {
         "ObjectName": "Jade_NautilusRavageStrikeAttack",
         "objectPath": "{8ee6d249}",
         "mScriptName": "Jade_NautilusRavageStrikeAttack",
@@ -2815,7 +2823,7 @@
         },
         "__type": "SpellObject"
     },
-    "{db85a03e}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusBackswingAttack": {
         "ObjectName": "Jade_NautilusBackswingAttack",
         "objectPath": "{db85a03e}",
         "mScriptName": "Jade_NautilusBackswingAttack",
@@ -2913,7 +2921,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f22248ab}": {
+    "Characters/Jade_Nautilus/Spells/Jade_NautilusBasicAttack2": {
         "ObjectName": "Jade_NautilusBasicAttack2",
         "objectPath": "{f22248ab}",
         "mScriptName": "Jade_NautilusBasicAttack2",
@@ -2980,7 +2988,7 @@
             "castConeDistance": 100.0,
             "castFrame": 11.569999694824219,
             "missileSpeed": 1000.0,
-            "mHitEffectKey": "{47fe83f2}",
+            "mHitEffectKey": "Jade_Nautilus_BA_tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -3000,7 +3008,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8f7f4547}": {
+    "Characters/Jade_Nautilus/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{a0ba6dcb}": {
@@ -3057,7 +3065,7 @@
         },
         "__type": "CharScript"
     },
-    "{b3a2657b}": {
+    "Characters/Jade_Nautilus/CharacterRecords/Root": {
         "mCharacterName": "Jade_Nautilus",
         "baseHPModifiable": {
             "baseValue": 518.0,
@@ -3178,10 +3186,10 @@
             "Jade_NautilusRAbility/Jade_NautilusR"
         ],
         "spells": [
-            "{081e4e0c}",
-            "{7e20d8f0}",
-            "{1bc64ffc}",
-            "{0c75f6c0}"
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility/Jade_NautilusQ",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility/Jade_NautilusW",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility/Jade_NautilusE",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility/Jade_NautilusR"
         ],
         "extraSpells": [
             "Jade_NautilusAnchorDragMissile",
@@ -3203,11 +3211,11 @@
         ],
         "extraSpellsList": [
             "{15bbdc37}",
-            "{8ee6d249}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusRavageStrikeAttack",
             "{d95a1472}",
-            "{0c75f6c0}",
-            "{db85a03e}",
-            "{1251e0ce}",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility/Jade_NautilusR",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusBackswingAttack",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusWideswingAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3221,16 +3229,16 @@
         ],
         "mAbilities": [
             "{ba65b59a}",
-            "{cfd78be4}",
-            "{d54c977a}",
-            "{fb807a88}",
-            "{73f26ecf}"
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusQAbility",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusWAbility",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusEAbility",
+            "Characters/Jade_Nautilus/Spells/Jade_NautilusRAbility"
         ],
         "passiveName": "Spell_Jade_NautilusPassive_Name",
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_NautilusPassive_Summary",
         "passiveSpell": "Jade_NautilusPassive",
-        "passive1IconName": "{6ad4b897c9aa2a87}",
+        "passive1IconName": "assets/characters/jade_nautilus/hud/icons2d/jade_nautilus_staggeringblow.dds",
         "name": "game_character_displayname_Jade_Nautilus",
         "weaponMaterials": [
             "Jade_NautilusBasicAttack"

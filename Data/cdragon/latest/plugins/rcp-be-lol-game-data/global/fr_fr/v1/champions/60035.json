@@ -522,22 +522,22 @@
     ],
     "passive": {
         "name": "Traîtrise",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_CarefulStrikes.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_CarefulStrikes.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60035/ability_60035_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60035/ability_60035_P1.jpg",
-        "description": "Quand il frappe dans le dos d'une unité, Shaco inflige 20% de dégâts bonus."
+        "description": "Les attaques et les compétences de Shaco infligent des dégâts bonus lorsqu'il se trouve derrière l'ennemi."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Tromperie",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_ManiacalCloak2.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_ManiacalCloak2.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shaco devient invisible et se téléporte vers la position ciblée. Sa prochaine attaque infligera un coup critique garanti.",
-            "dynamicDescription": "Shaco se téléporte à proximité et devient <keywordStealth>invisible</keywordStealth> pendant 3.5 sec.<br><br>Sa prochaine attaque de base dans les @EnhancedAttackDuration@ sec sera un coup critique, infligeant @ModifiedQCritDamageTooltip@ pts de dégâts.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shaco se téléporte à proximité et devient <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec.<br><br>Sa prochaine attaque de base dans les @EnhancedAttackDuration@ sec sera un coup critique, infligeant @ModifiedQCritDamageTooltip@ de dégâts.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -681,7 +681,7 @@
         {
             "spellKey": "w",
             "name": "Boîte surprise",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_DeathWard.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_DeathWard.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -713,54 +713,54 @@
                 16.0
             ],
             "coefficients": {
-                "coefficient1": 0.2,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    20.0,
-                    35.0,
-                    50.0,
-                    65.0,
-                    80.0,
-                    95.0,
-                    110.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    100.0,
-                    200.0,
-                    300.0,
-                    400.0,
-                    500.0,
-                    600.0,
-                    700.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.25,
-                    0.5,
-                    0.75,
-                    1.0,
-                    1.25,
-                    1.5,
-                    1.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -831,7 +831,7 @@
         {
             "spellKey": "e",
             "name": "Poison double",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_IncrediblyPrecise.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_IncrediblyPrecise.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -981,13 +981,13 @@
         {
             "spellKey": "r",
             "name": "Hallucination",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_HallucinogenBomb.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shaco_HallucinogenBomb.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60035/ability_60035_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60035/ability_60035_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shaco crée un double de lui-même à ses côtés qui peut attaquer les ennemis proches. À sa mort, il explose et inflige des dégâts aux ennemis à proximité.",
-            "dynamicDescription": "Shaco disparaît brièvement et réapparaît avec un clone qui reste actif pendant @CloneLifetime@ sec au maximum. Le clone inflige @CloneAADamagePercent*100@% des dégâts de Shaco et subit @Jade_ShacoDamageTakenTooltip*100@% de dégâts bonus.<br><br>À sa mort, le clone explose, infligeant <magicDamage>@ExplosionTotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis à proximité.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shaco disparaît brièvement et réapparaît avec un clone qui reste actif pendant @CloneLifetime@ sec au maximum. Le clone inflige @CloneAADamagePercent*100@% des dégâts de Shaco et subit @CloneBonusDamageTakenTooltip@ de dégâts supplémentaires.<br><br>À sa mort, le clone explose, infligeant <magicDamage>@ExplosionTotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis à proximité.@SpellModifierDescriptionAppend@",
             "range": [
                 200.0,
                 200.0,
@@ -1054,13 +1054,13 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,

@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Κέλυφος με Καρφιά",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Όσο σκληραίνει το κέλυφός του, ο Ράμους προκαλεί περισσότερη ζημιά και μετατρέπει το 25% της Θωράκισης του σε Ζημιά Επίθεσης."
+        "description": "Όσο σκληραίνει το κέλυφός του, ο Ράμους προκαλεί περισσότερη ζημιά και μετατρέπει το ένα μέρος της Θωράκισής του σε Ζημιά Επίθεσης."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Μπάλα Επίθεσης",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Ράμους κινείται γρήγορα με τη μορφή μπάλας προς τους εχθρούς του και τους προκαλεί ζημιά, ενώ επιβραδύνει τους στόχους που επηρεάζονται από τη σύγκρουση.",
-            "dynamicDescription": "Ο Ράμους επιταχύνει σε μορφή μπάλας για 7 δευτερόλεπτα προς τους εχθρούς του, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς κατά την πρόσκρουση και <status>Επιβραδύνοντάς</status> τους κατά @SlowPercent*-100@% για 3 δευτερόλεπτα.<br><br><recast>Χρησιμοποιήστε ξανά</recast> την ικανότητα για να καταργήσετε αυτή την επίδραση.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ράμους επιταχύνει σε μορφή μπάλας για @Duration@ δευτ. προς τους εχθρούς του, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς κατά την πρόσκρουση και <status>Επιβραδύνοντάς</status> τους κατά @SlowPercent*-100@% για @SlowDuration@ δευτ.<br><br><recast>Χρησιμοποιήστε ξανά</recast> την ικανότητα για να καταργήσετε αυτή την επίδραση.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Αμυντική Συσπείρωση",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Ράμους κινείται αμυντικά, αυξάνοντας σημαντικά την Θωράκιση και την Αντίσταση Μαγείας, ενώ παράλληλα προκαλεί ζημιά σε κάθε επίθεση.",
-            "dynamicDescription": "Ο Ράμους παίρνει αμυντική στάση για 6 δευτερόλεπτα, αυξάνοντας τη <scaleArmor>Θωράκιση</scaleArmor> και την <scaleMR>Αντίσταση Μαγείας</scaleMR> του κατά @Armour@ και επιστρέφοντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους επιτιθέμενους.<br><br><recast>Χρησιμοποιήστε ξανά</recast> την ικανότητα για να καταργήσετε αυτή την επίδραση.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ράμους παίρνει αμυντική στάση για @Duration@ δευτ., αυξάνοντας τη <scaleArmor>Θωράκιση</scaleArmor> και την <scaleMR>Αντίσταση Μαγείας</scaleMR> του κατά @Armour@ και επιστρέφοντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους επιτιθέμενους.<br><br><recast>Χρησιμοποιήστε ξανά</recast> την ικανότητα για να καταργήσετε αυτή την επίδραση.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Εμπαιγμός Διάτρησης",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Δονήσεις",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Ράμους δημιουργεί κύματα καταστροφής μέσα από το έδαφος, προκαλώντας ζημιά σε μονάδες και κτίρια που βρίσκονται κοντά του.",
-            "dynamicDescription": "Ο Ράμους δημιουργεί δονήσεις στο έδαφος που πατάει, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> κάθε δευτερόλεπτο σε κοντινές μονάδες και κτίρια για 8 δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ράμους δημιουργεί δονήσεις στο έδαφος που πατάει, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> κάθε δευτ. σε κοντινές μονάδες και κτίρια για @Duration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

@@ -1747,6 +1747,11 @@
         "name": "Characters/Leona/Skins/Skin65/Materials/Leona_Skin65_HairGold",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin65/leona_skin65_hair_gradient_tx_cm.tex",
                 "addressU": 2,
@@ -1864,7 +1869,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -2573,6 +2578,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
@@ -3850,6 +3865,11 @@
         "name": "Characters/Leona/Skins/Skin65/Materials/Leona_Skin65_Aspect_inst",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin65/leona_skin65_hair_tx_cm.tex",
                 "addressU": 2,
@@ -3967,7 +3987,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -4725,6 +4745,16 @@
         ],
         "switches": [
             {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -4930,6 +4960,11 @@
         "name": "Characters/Leona/Skins/Skin65/Materials/Leona_Skin65_Aspect_R_inst",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin65/leona_skin65_r_hair_tx_cm.tex",
                 "addressU": 2,
@@ -5047,7 +5082,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -5793,6 +5828,16 @@
         ],
         "switches": [
             {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -6331,6 +6376,11 @@
         "name": "Characters/Leona/Skins/Skin65/Materials/Leona_Skin65_Hair_inst",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin65/leona_skin65_tx_cm.tex",
                 "addressU": 2,
@@ -6448,7 +6498,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -7205,6 +7255,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
@@ -8046,6 +8106,11 @@
         "name": "Characters/Leona/Skins/Skin65/Materials/Leona_Skin65_Aspect_Card_inst",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin65/leona_skin65_hair_card_tx_cm.tex",
                 "addressU": 2,
@@ -8163,7 +8228,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -8890,6 +8955,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,

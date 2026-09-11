@@ -614,6 +614,12 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Tristana/Spells/Skin80JumpResetTracker": {
+        "ObjectName": "Skin80JumpResetTracker",
+        "objectPath": "Characters/Tristana/Spells/Skin80JumpResetTracker",
+        "mScriptName": "Skin80JumpResetTracker",
+        "__type": "SpellObject"
+    },
     "Characters/Tristana/Spells/TristanaWAbility": {
         "mRootSpell": "Characters/Tristana/Spells/TristanaWAbility/TristanaW",
         "mChildSpells": [
@@ -1360,6 +1366,69 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Tristana/Spells/TristanaSkin80Manager": {
+        "ObjectName": "TristanaSkin80Manager",
+        "objectPath": "Characters/Tristana/Spells/TristanaSkin80Manager",
+        "mScriptName": "TristanaSkin80Manager",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "GoldToNextForm",
+                    "values": [
+                        2000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillTransform",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillEmote",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WEmpoweredFormDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Tristana/Spells/TristanaWAbility/TristanaW": {
         "ObjectName": "TristanaW",
         "objectPath": "Characters/Tristana/Spells/TristanaWAbility/TristanaW",
@@ -1935,6 +2004,42 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Tristana/Spells/SkinProxy": {
+        "ObjectName": "SkinProxy",
+        "objectPath": "Characters/Tristana/Spells/SkinProxy",
+        "mScriptName": "SkinProxy",
+        "__type": "SpellObject"
+    },
+    "{12d1fb20}": {
+        "__type": "{6c87d653}"
+    },
+    "{19d444bc}": {
+        "__type": "{6c87d653}"
+    },
+    "{1bd447e2}": {
+        "__type": "{6c87d653}"
+    },
+    "{a2ca8f0b}": {
+        "__type": "{6c87d653}"
+    },
+    "{a4d99cbb}": {
+        "__type": "{6c87d653}"
+    },
+    "{a6ccd3ee}": {
+        "__type": "{6c87d653}"
+    },
+    "{a6cf1285}": {
+        "__type": "{6c87d653}"
+    },
+    "{a7dbe00b}": {
+        "__type": "{6c87d653}"
+    },
+    "{adcf1d8a}": {
+        "__type": "{6c87d653}"
+    },
+    "{d3578c51}": {
+        "__type": "{6c87d653}"
+    },
     "{9c1ce2f7}": {
         "name": "stat_stone_set_name_1",
         "catalogEntry": {
@@ -1960,7 +2065,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaMaxE",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -1988,7 +2093,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaRHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2016,7 +2121,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaRClose",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2045,7 +2150,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaRocketJumpResets",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2087,7 +2192,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaAirborneE",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2115,7 +2220,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaQAttacks",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2143,7 +2248,7 @@
         "mDescriptionTraKey": "stat_stone_description_TristanaEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2199,7 +2304,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 230,
+                "EventToTrack": 234,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2540,6 +2645,21 @@
             {
                 "mParentPassiveBuff": "Characters/Tristana/Spells/TristanaPassiveAbility/TristanaPassive",
                 "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Characters/Tristana/Spells/SkinProxy",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Characters/Tristana/Spells/TristanaSkin80Manager",
+                "SkinFilter": {
+                    "skinIds": [
+                        80,
+                        79
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
             }
         ],
         "{c5c48b41}": 1,
@@ -2623,23 +2743,6 @@
                 "MapId": 11,
                 "Position": "bottom",
                 "IsDefaultRecommendation": true,
-                "mDefaultPriority": [
-                    3,
-                    2,
-                    0,
-                    1
-                ],
-                "mEarlyLevelOverrides": [
-                    2,
-                    1,
-                    0,
-                    2
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
-                "MapId": 11,
-                "Position": "middle",
                 "mDefaultPriority": [
                     3,
                     2,

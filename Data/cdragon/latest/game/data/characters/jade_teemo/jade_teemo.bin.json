@@ -20,45 +20,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "MaxAmmo",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ArmTime",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MushroomDuration",
-                    "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BaseDamage",
                     "values": [
                         75.0,
@@ -68,6 +29,19 @@
                         575.0,
                         700.0,
                         825.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -98,28 +72,28 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "APRatioPerTick",
+                    "name": "MaxAmmo",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MaxTraps",
+                    "name": "MushroomDuration",
                     "values": [
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0,
-                        25000.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -132,7 +106,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "APRatioPerTick",
+                            "mDataValue": "APRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -279,8 +253,7 @@
                     "mLocKeys": {
                         "keyName": "Spell_TeemoR_Jade_Name",
                         "keySummary": "Spell_TeemoR_Jade_Summary",
-                        "keyTooltip": "Spell_TeemoR_Jade_Tooltip",
-                        "keyTooltipExtended": "Spell_TeemoR_Jade_ExtTooltip"
+                        "keyTooltip": "Spell_TeemoR_Jade_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -365,7 +338,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bdbce814}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility": {
         "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
         "mChildSpells": [
             "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility/Jade_TeemoPassive",
@@ -406,14 +379,27 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedBonus",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "BonusAttackSpeed": {
                     "mFormulaParts": [
                         {
-                            "mNumber": 0.4000000059604645,
-                            "__type": "NumberCalculationPart"
+                            "mDataValue": "AttackSpeedBonus",
+                            "__type": "NamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -1316,22 +1302,6 @@
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "TickCalculatedDamage",
                     "__type": "GameCalculationModified"
-                },
-                "{8b70cfd6}": {
-                    "mMultiplier": {
-                        "mDataValue": "monstermod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "ImpactCalculatedDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "{938cba49}": {
-                    "mMultiplier": {
-                        "mDataValue": "monstermod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TickCalculatedDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "{fe87f21e}": [
@@ -1662,19 +1632,6 @@
                         2.25,
                         2.5,
                         2.75
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MissChance",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -5646,7 +5603,7 @@
             "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility",
             "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility",
             "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility",
-            "{bdbce814}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoPassiveAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Teemo",
         "passiveLuaName": "Jade_TeemoPassive_Jade",

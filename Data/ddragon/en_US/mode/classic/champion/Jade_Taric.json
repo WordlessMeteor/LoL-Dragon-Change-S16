@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Taric": {
             "id": "Jade_Taric",
@@ -12,7 +12,7 @@
                 "full": "Jade_Taric.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -250,7 +250,7 @@
                     "id": "Jade_TaricQ",
                     "name": "Imbue",
                     "description": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself. Additionally,Taric's basic attacks reduce Imbue's cooldown.",
-                    "tooltip": "Taric brings forth earthen energy, restoring <healing>{{ healamount }} health</healing> to an ally and himself. If he targets himself, the heal increases by 40% restoring <healing>{{ healamountselftt }} health</healing>.<br /><br />Taric's basic attacks reduce <spellName>Imbue's</spellName> cooldown by 1 second (3 seconds if attacking an enemy champion).</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Taric brings forth earthen energy, restoring <healing>{{ healamount }} health</healing> to an ally and himself. If he targets himself, the heal increases, restoring <healing>{{ healamountself }} health</healing>.<br /><br />Taric's basic attacks reduce <spellName>Imbue's</spellName> cooldown by {{ basicattackcooldownreduction }} second ({{ championbasicattackcooldownreduction }} seconds if attacking an enemy champion).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Heal",
@@ -284,46 +284,46 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.15,
-                            0.3,
-                            0.45,
-                            0.6,
-                            0.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.75,
-                            1.5,
-                            2.25,
-                            3,
-                            3.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25,
-                            50,
-                            75,
-                            100,
-                            125
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            2,
-                            3,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -356,12 +356,12 @@
                     ],
                     "effectBurn": [
                         null,
-                        "25",
-                        "1",
-                        "0.15/0.3/0.45/0.6/0.75",
-                        "0.75/1.5/2.25/3/3.75",
-                        "25/50/75/100/125",
-                        "1/2/3/4/5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -380,10 +380,10 @@
                     "rangeBurn": "750",
                     "image": {
                         "full": "Jade_TaricQ.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 96,
+                        "x": 0,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -393,7 +393,7 @@
                     "id": "Jade_TaricW",
                     "name": "Shatter",
                     "description": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Taric's gemstones increase his <scaleArmor>Armor by {{ armorbonus }}</scaleArmor>. Additionally, nearby allied champions gain <scaleArmor>{{ bonustoallies }} Armor</scaleArmor> ({{ armorbonuscoefficient*100 }}% of Taric's Armor).<br /><br /><spellActive>Active: </spellActive>Taric shatters his armor, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies and reducing their <scaleArmor>Armor by {{ armorshred*-1 }}</scaleArmor> for 4 seconds. Taric loses <scaleArmor>{{ armorbonus }} Armor</scaleArmor> while <spellName>Shatter</spellName> is on cooldown.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Taric's gemstones increase his <scaleArmor>Armor by {{ armorbonus }}</scaleArmor>. Additionally, nearby allied champions gain <scaleArmor>{{ bonustoallies }} Armor</scaleArmor> ({{ armorbonuscoefficient*100 }}% of Taric's Armor).<br /><br /><spellActive>Active: </spellActive>Taric shatters his armor, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies and reducing their <scaleArmor>Armor by {{ armorshred*-1 }}</scaleArmor> for {{ armorshredduration }} seconds. Taric loses <scaleArmor>{{ armorbonus }} Armor</scaleArmor> while <spellName>Shatter</spellName> is on cooldown.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -434,32 +434,32 @@
                             0
                         ],
                         [
-                            7,
-                            8,
-                            9,
-                            10,
-                            11
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1300,
-                            1300,
-                            1300,
-                            1300,
-                            1300
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -500,10 +500,10 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "7/8/9/10/11",
-                        "2.5",
-                        "1000",
-                        "1300",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -523,10 +523,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_TaricW.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 96,
+                        "x": 48,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -536,17 +536,17 @@
                     "id": "Jade_TaricE",
                     "name": "Dazzle",
                     "description": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them.",
-                    "tooltip": "Taric fires a prismatic sphere at a target enemy, dealing between <magicDamage>{{ totaldamage }}</magicDamage> and <magicDamage>{{ totalmaxdamagett }} magic damage</magicDamage> and <status>Stunning</status> for between {{ minstunlength }} and {{ maxstunlength }} seconds. Dazzle's damage increases the closer Taric is to the target, and the stun length increases the further from the target.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Taric fires a prismatic sphere at a target enemy, dealing between <magicDamage>{{ totaldamage }}</magicDamage> and <magicDamage>{{ totalmaxdamagett }} magic damage</magicDamage> and <status>Stunning</status> for between {{ minstunlength }} and {{ maxstunlength }} seconds.<br /><br />Dazzle's damage increases the closer Taric is to the target, while the stun length increases the farther from the target.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Cooldown",
                             "Minimum Damage",
-                            "Maximum Damage"
+                            "Maximum Damage",
+                            "Cooldown"
                         ],
                         "effect": [
-                            "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ mindamage }} -> {{ mindamageNL }}",
-                            "{{ maxdmagett }} -> {{ maxdmagettNL }}"
+                            "{{ maxdmagett }} -> {{ maxdmagettNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -570,25 +570,25 @@
                     "effect": [
                         null,
                         [
-                            90,
-                            130,
-                            170,
-                            210,
-                            250
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -642,9 +642,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "90/130/170/210/250",
-                        "1.5",
-                        "1",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -666,10 +666,10 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "Jade_TaricE.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 96,
+                        "x": 96,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -679,7 +679,7 @@
                     "id": "Jade_TaricR",
                     "name": "Radiance",
                     "description": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy empowering Taric and his allies with bonus Attack Damage and Ability Power",
-                    "tooltip": "Taric slams his hammer into the ground, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies.<br /><br />For the next 10 seconds, Taric's gems radiate energy, granting him <physicalDamage>{{ damageincrease }} Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>. His nearby allies gain <physicalDamage>{{ allybonus }} Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>.</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Taric slams his hammer into the ground, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies.<br /><br />For the next {{ radianceduration }} seconds, Taric's gems radiate energy, granting him <physicalDamage>{{ damageincrease }} Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>. His nearby allies gain <physicalDamage>{{ allybonus }} Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -783,10 +783,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_TaricR.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 96,
+                        "x": 144,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -800,7 +800,7 @@
                     "full": "Jade_Taric_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 96,
+                    "x": 288,
                     "y": 96,
                     "w": 48,
                     "h": 48

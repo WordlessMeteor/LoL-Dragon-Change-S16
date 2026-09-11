@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Sau mỗi 4 đòn đánh hoặc kỹ năng tung ra, Pantheon được bảo vệ khỏi đòn đánh kế tiếp."
+        "description": "Sau mỗi @AttacksRequired@ đòn đánh hoặc kỹ năng tung ra, Pantheon được bảo vệ khỏi đòn đánh kế tiếp."
     },
     "spells": [
         {
@@ -807,7 +807,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Pantheon phóng một mũi lao vào kẻ địch, gây sát thương.",
-            "dynamicDescription": "Pantheon phóng một mũi lao vào kẻ địch, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Pantheon phóng một mũi lao vào kẻ địch, gây<physicalDamage> @TotalDamage@ sát thương vật lý</physicalDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Pantheon nhảy xổ vào một kẻ địch rồi cầm chiếc khiên của mình táng ngay vào mục tiêu khiến nạn nhân bị choáng váng.  Sau khi kết thúc kỹ năng, Pantheon liền sẵn sàng để chặn đứng một đòn đánh tiếp theo tung vào hắn.",
+            "description": "Pantheon nhảy xổ vào một kẻ địch rồi cầm chiếc khiên của mình táng ngay vào mục tiêu khiến nạn nhân bị choáng váng. Sau khi kết thúc kỹ năng, Pantheon liền sẵn sàng để chặn đứng một đòn đánh tiếp theo tung vào hắn.",
             "dynamicDescription": "Pantheon nhảy vào kẻ địch chỉ định và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> đồng thời <status>Làm Choáng</status> chúng trong @StunDuration@ giây. Pantheon cũng ngay lập tức làm mới <spellName>Che Chắn</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Pantheon tập trung và tung ra ba đòn công kích liên tục vào khu vực trước mặt, gây gấp đôi sát thương lên tướng. Đồng thời, Pantheon trở nên rất nhạy cảm với những điểm chí tử của kẻ địch, cho phép hắn chắc chắn đánh chí mạng lên những mục tiêu còn dưới 15% máu.",
-            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> <spellName>Phóng Lao</spellName>, <spellName>Công Kích Vũ Bão</spellName> và các đòn đánh thường của Pantheon có 100% tỉ lệ chí mạng lên những mục tiêu dưới @PassiveCritThreshold*100@% máu.<br><br><spellActive>Kích Hoạt:</spellActive> Pantheon vận sức và tung ra @NumberOfStrikes@ đòn công kích liên tục vào khu vực trước mặt, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> mỗi đòn (tổng cộng <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon tập trung và tung ra ba đòn công kích liên tục vào khu vực trước mặt, gây nhiều sát thương hơn lên tướng. Đồng thời, Pantheon trở nên rất nhạy cảm với những điểm chí tử của kẻ địch, cho phép hắn gây chí mạng lên những kẻ địch đang bị thương.",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> <spellName>Phóng Lao</spellName>, <spellName>Công Kích Vũ Bão</spellName> và các đòn đánh thường của Pantheon có thể chí mạng lên những mục tiêu dưới @PassiveCritThreshold*100@% máu.<br><br><spellActive>Kích Hoạt:</spellActive> Pantheon vận sức và tung ra @NumberOfStrikes@ đòn công kích liên tục vào khu vực trước mặt, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> mỗi đòn (tổng cộng <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "トゲトゲ",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "甲羅が強化されて追加ダメージを与えるようになり、自身の物理防御の25%が攻撃力に変換される。"
+        "description": "甲羅が強化されて追加ダメージを与えるようになり、自身の物理防御の一部が攻撃力に変換される。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "ころころ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "体を丸めて高速回転し、移動速度が増加する。突進して衝突した敵にダメージを与え、スロウ効果を付与する。",
-            "dynamicDescription": "7秒間、体を丸めて加速し、敵に向かって転がる。衝突時に周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、3秒間@SlowPercent*-100@%の<status>スロウ効果</status>を付与する。<br><br><recast>再発動</recast>するとこの効果が解除される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、体を丸めて加速し、敵に向かって転がる。衝突時に周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@SlowPercent*-100@%の<status>スロウ効果</status>を付与する。<br><br><recast>再発動</recast>するとこの効果が解除される。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "かたくなる",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "防御体勢を取って物理防御と魔法防御を大幅に増加させ、通常攻撃を行ってきた相手にダメージを跳ね返す。",
-            "dynamicDescription": "6秒間、防御体勢を取って<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@Armour@増加させ、通常攻撃を行ってきた相手に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を跳ね返す。<br><br><recast>再発動</recast>するとこの効果が解除される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、防御体勢を取って<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@Armour@増加させ、通常攻撃を行ってきた相手に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を跳ね返す。<br><br><recast>再発動</recast>するとこの効果が解除される。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "ちくちく",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "ドスンドスン",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "地面を伝わる衝撃波を発生させ、周囲の敵ユニットと建造物にダメージとスロウ効果を与える。",
-            "dynamicDescription": "足元に地震を発生させて、8秒間、周囲のユニットと建造物に毎秒<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "足元に地震を発生させて、@Duration@秒間、周囲のユニットと建造物に毎秒<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

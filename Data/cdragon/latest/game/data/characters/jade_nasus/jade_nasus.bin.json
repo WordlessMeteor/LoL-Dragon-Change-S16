@@ -139,19 +139,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SlowPerTick",
-                    "values": [
-                        0.0,
-                        3.0,
-                        6.0,
-                        9.0,
-                        12.0,
-                        15.0,
-                        18.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxSlowTooltipOnly",
                     "values": [
                         35.0,
@@ -255,6 +242,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
+                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 },
                 "{99eb5a88}": {
@@ -268,6 +256,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
+                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 }
             },
@@ -479,7 +468,7 @@
         "mScriptName": "Jade_NasusSiblingRivalryReady",
         "__type": "SpellObject"
     },
-    "{7f98aae4}": {
+    "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility": {
         "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive",
         "mChildSpells": [
             "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility/Jade_NasusPassive"
@@ -728,19 +717,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "BonusRange",
-                    "values": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BonusDamage",
                     "values": [
                         10.0,
@@ -778,19 +754,6 @@
                         6.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BuffDuration",
-                    "values": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -814,12 +777,35 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{2ff1a8cd}": {
+                "{d7740e71}": {
                     "mFormulaParts": [
                         {
-                            "mStat": 9,
+                            "mPart1": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mDataValue": "BonusDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    {
+                                        "mStat": 2,
+                                        "mCoefficient": 1.0,
+                                        "__type": "StatByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mBuffName": "{5665a78c}",
+                            "mIconKey": "%i:JadeNasusStackIcon%",
                             "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "__type": "BuffCounterByCoefficientCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1292,19 +1278,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "TickRate",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxDamageCap",
                     "values": [
                         240.0,
@@ -1327,32 +1300,6 @@
                         15.0,
                         15.0,
                         15.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseAoERadius",
-                    "values": [
-                        376.0,
-                        376.0,
-                        376.0,
-                        376.0,
-                        376.0,
-                        376.0,
-                        376.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinAoERadius",
-                    "values": [
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2475,7 +2422,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Nasus/Spells/Jade_NasusEAbility",
-            "{7f98aae4}",
+            "Characters/Jade_Nasus/Spells/Jade_NasusPassiveAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusQAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusRAbility",
             "Characters/Jade_Nasus/Spells/Jade_NasusWAbility"
@@ -2551,6 +2498,8 @@
             ],
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"

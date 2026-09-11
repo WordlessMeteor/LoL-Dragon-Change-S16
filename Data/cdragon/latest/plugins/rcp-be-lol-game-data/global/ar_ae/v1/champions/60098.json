@@ -6,7 +6,7 @@
     "name": "شين",
     "alias": "Jade_Shen",
     "title": "عين الغسق",
-    "shortBio": "- تعد ضربة كي (تأثير كامن) والنصل القاطع (Q) قدرتين مختلفتين.<br>- تمنح قدرة حاجز كي (W) درعًا لمدة قصيرة.<br>- تصيب قدرة اندفاع الشبح (E) الأبطال فقط",
+    "shortBio": "- يعد تأثير ضربة كي (كامن) والنصل القاطع (Q) قدرتين مختلفتين.<br>- وتمنح قدرة المراوغة (W) درعًا لمدة قصيرة.<br>- وتصيب قدرة اندفاع الشبح (E) الأبطال فقط",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "كل 9ث، يلحق هجوم شين التالي ضررًا إضافيًا. كلما هاجم شين، يتم تقليص فترة تبريد ضربة كي."
+        "description": "يلحق هجوم شين التالي ضررًا إضافيًا بشكل دوري. كلما هاجم شين تابعًا أو وحشًا أو بطلًا، يتم تقليص فترة تبريد ضربة كي."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يدرع شين نفسه، فيمتص الضرر المتلقى لبضع ثوانٍ.",
-            "dynamicDescription": "يمنح شين نفسه <shield>درعًا بقيمة @TotalShieldAmount@</shield> لمدة @ShieldDuration@ث. أثناء عمل هذه القدرة، تقلص هجماته فترة تبريد <keywordMajor>ضربة كي</keywordMajor> بمقدار 1ث إضافية.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يمنح شين نفسه <shield>درعًا بقيمة @TotalShieldAmount@</shield> لمدة @ShieldDuration@ث. أثناء عمل هذه القدرة، تقلص هجماته فترة تبريد <keywordMajor>ضربة كي</keywordMajor> بمقدار @PassiveCooldownReduction@ث إضافية.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

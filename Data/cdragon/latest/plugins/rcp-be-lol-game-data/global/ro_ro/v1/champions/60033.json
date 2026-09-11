@@ -556,22 +556,22 @@
     ],
     "passive": {
         "name": "Carapace cu țepi",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScavengeArmor.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60033/ability_60033_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60033/ability_60033_P1.jpg",
-        "description": "Rammus câștigă un plus de forță în atac când carapacea sa este întărită, transformând 25% din armura sa în daune din atac."
+        "description": "Rammus câștigă un plus de forță în atac când carapacea sa este întărită, transformând o parte din armura sa în daune din atac."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Mingea puterii",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_Powerball.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Rammus se năpustește asupra inamicilor sub formă de minge, provocându-le daune și încetinind țintele afectate de impact.",
-            "dynamicDescription": "Rammus accelerează sub formă de minge timp de 7 secunde către inamicii săi, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere la impact și <status>încetinindu-i</status> cu @SlowPercent*-100@% timp de 3 secunde.<br><br><recast>Refolosește</recast> ca să elimini acest efect.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus accelerează sub formă de minge timp de @Duration@ sec. către inamicii săi, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere la impact și <status>încetinindu-i</status> cu @SlowPercent*-100@% timp de @SlowDuration@ sec.<br><br><recast>Refolosește</recast> ca să elimini acest efect.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -715,13 +715,13 @@
         {
             "spellKey": "w",
             "name": "Ghem defensiv",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Rammus adoptă o formă defensivă care îi amplifică armura și rezistența la magie. În plus, dacă e lovit de un atac în acest timp, atacatorul suferă și el o parte din daune.",
-            "dynamicDescription": "Rammus adoptă o formă defensivă timp de 6 secunde, crescându-și <scaleArmor>armura</scaleArmor> și <scaleMR>rezistența la magie</scaleMR> cu @Armour@. În plus, dacă e lovit de un atac în acest timp, atacatorul suferă și el <magicDamage>@TotalDamage@ daune magice</magicDamage>.<br><br><recast>Refolosește</recast> ca să elimini acest efect.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus adoptă o formă defensivă timp de @Duration@ sec., crescându-și <scaleArmor>armura</scaleArmor> și <scaleMR>rezistența la magie</scaleMR> cu @Armour@. În plus, dacă e lovit de un atac în acest timp, atacatorul suferă și el <magicDamage>@TotalDamage@ daune magice</magicDamage>.<br><br><recast>Refolosește</recast> ca să elimini acest efect.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "e",
             "name": "Provocare amăgitoare",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ScaledPlating.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -1015,13 +1015,13 @@
         {
             "spellKey": "r",
             "name": "Trepidații",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Rammus_RecklessCharge.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60033/ability_60033_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60033/ability_60033_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Rammus creează unde seismice distrugătoare, provocându-le daune unităților și structurilor de lângă el.",
-            "dynamicDescription": "Rammus creează trepidații sub el, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> în fiecare secundă unităților și structurilor din apropiere timp de 8 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rammus creează trepidații sub el, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> în fiecare secundă unităților și structurilor din apropiere timp de @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

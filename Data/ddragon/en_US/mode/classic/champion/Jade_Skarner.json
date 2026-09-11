@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Skarner": {
             "id": "Jade_Skarner",
@@ -12,8 +12,8 @@
                 "full": "Jade_Skarner.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 144,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -166,7 +166,7 @@
                     "id": "Jade_SkarnerQ",
                     "name": "Crystal Slash",
                     "description": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck.  If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage and slows all targets hit.",
-                    "tooltip": "Skarner deals <physicalDamage>{{ totalbasedamage }} physical damage</physicalDamage> to all nearby enemies and charges himself with <keywordMajor>Crystal Energy</keywordMajor> for 5 seconds if a unit is struck.<br /><br />While Skarner is charged, <spellName>Crystal Slash</spellName> deals <magicDamage>{{ totalprocdamage }} bonus magic damage</magicDamage> and <status>Slows</status> by {{ slowpercent*-100 }}% for 2 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Skarner deals <physicalDamage>{{ totalbasedamage }} physical damage</physicalDamage> to all nearby enemies and charges himself with <keywordMajor>Crystal Energy</keywordMajor> for {{ crystalenergyduration }} seconds if a unit is struck.<br /><br />While Skarner is charged, <spellName>Crystal Slash</spellName> deals <magicDamage>{{ totalprocdamage }} bonus magic damage</magicDamage> and <status>Slows</status> by {{ slowpercent*-100 }}% for {{ slowduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -300,8 +300,8 @@
                         "full": "Jade_SkarnerQ.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 384,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -311,7 +311,7 @@
                     "id": "Jade_SkarnerW",
                     "name": "Crystalline Exoskeleton",
                     "description": "Skarner gains a shield, and while the shield persists his movement speed and attack speed are both increased.",
-                    "tooltip": "Skarner is <shield>shielded</shield> for {{ blockdamage }} damage for 6 seconds. While the shield persists, Skarner gains <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ msbonus*100 }}% Movement Speed</speed>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Skarner is <shield>shielded</shield> for {{ blockdamage }} damage for {{ shieldduration }} seconds. While the shield persists, Skarner gains <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ msbonus*100 }}% Movement Speed</speed>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -443,8 +443,8 @@
                         "full": "Jade_SkarnerW.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 432,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -454,7 +454,7 @@
                     "id": "Jade_SkarnerE",
                     "name": "Fracture",
                     "description": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and marks them. Striking enemies will consume the mark to heal Skarner. Killing targets outright will also activate the heal.",
-                    "tooltip": "Skarner deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemies in a line and marks them for 6 seconds.<br /><br />Striking enemies will consume the mark to <healing>heal</healing> Skarner for {{ totalhealing }}. Killing targets outright will also activate the heal. (Each activation heals for 50% less.){{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Skarner deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemies in a line and marks them for {{ markduration }} seconds.<br /><br />Striking enemies will consume the mark to <healing>heal</healing> Skarner for {{ totalhealing }}. Killing targets outright will also activate the heal. (Each activation heals for {{ subsequenthealmultiplier*100 }}% less.){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -586,8 +586,8 @@
                         "full": "Jade_SkarnerE.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 48,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -597,7 +597,7 @@
                     "id": "Jade_SkarnerR",
                     "name": "Impale",
                     "description": "Skarner suppresses an enemy champion and deals magic damage to it.  During this time, Skarner can move freely and will drag his helpless victim around with him.  When the effect ends, Skarner's target will be dealt additional damage.",
-                    "tooltip": "Skarner <status>Suppresses</status> an enemy champion for 1.75 seconds and deals <magicDamage>{{ totadamage }} magic damage</magicDamage>. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt an additional <magicDamage>{{ totadamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Skarner <status>Suppresses</status> an enemy champion for {{ suppressionduration }} seconds and deals <magicDamage>{{ totadamage }} magic damage</magicDamage>. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt an additional <magicDamage>{{ totadamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -703,8 +703,8 @@
                         "full": "Jade_SkarnerR.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 48,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -713,13 +713,13 @@
             ],
             "passive": {
                 "name": "Energize",
-                "description": "Basic attacks lower all ability cooldowns by 0.5 seconds. Double effect when attacking champions.",
+                "description": "Basic attacks reduce all ability cooldowns. This effect is stronger against champions.",
                 "image": {
                     "full": "Jade_Skarner_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 432,
-                    "y": 48,
+                    "x": 144,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }

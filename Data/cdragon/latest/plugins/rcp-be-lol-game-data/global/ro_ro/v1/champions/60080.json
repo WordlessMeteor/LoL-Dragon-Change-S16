@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "După fiecare 4 atacuri sau vrăji, Pantheon obține protecție din următorul atac."
+        "description": "După fiecare @AttacksRequired@ atacuri sau vrăji, Pantheon obține protecție din următorul atac."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Pantheon sare spre un inamic și îl lovește cu scutul, amețindu-l.  După ce termină cu atacul, Pantheon se pregătește să blocheze următorul atac.",
+            "description": "Pantheon sare spre un inamic și îl lovește cu scutul, amețindu-l. După ce termină cu atacul, Pantheon se pregătește să blocheze următorul atac.",
             "dynamicDescription": "Pantheon sare asupra inamicului țintă și îi provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> și îl <status>amețește</status> timp de @StunDuration@ sec. Pantheon își reînnoiește instantaneu <spellName>''Scutul de protecție''</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Pantheon se concentrează și lansează 3 lovituri rapide în zona din fața lui, provocându-le daune duble campionilor. Pantheon devine și mai conștient de punctele vitale ale inamicilor, permițându-i să lovească mereu critic inamicii cu mai puțin de 15% viață.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> <spellName>''Aruncarea suliței''</spellName>, <spellName>''Atac la inimă''</spellName> și atacurile de bază ale lui Pantheon au 100% șanse de lovitură critică împotriva țintelor cu mai puțin de @PassiveCritThreshold*100@% viață.<br><br><spellActive>Activă:</spellActive> Pantheon se pregătește și lovește rapid în fața lui de @NumberOfStrikes@ ori, provocând <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> cu fiecare lovitură (<physicalDamage>@MaximumDamageTooltip@</physicalDamage> în total).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon se concentrează și lansează lovituri rapide în zona din fața lui, provocându-le daune crescute campionilor. Pantheon devine și mai conștient de punctele vitale ale inamicilor, permițându-i să lovească mereu critic inamicii răniți.",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> <spellName>''Aruncarea suliței''</spellName>, <spellName>''Atac la inimă''</spellName> și atacurile de bază ale lui Pantheon lovesc critic țintele cu mai puțin de @PassiveCritThreshold*100@% viață.<br><br><spellActive>Activă:</spellActive> Pantheon se pregătește și lovește rapid în zona din fața lui de @NumberOfStrikes@ ori, provocând <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> cu fiecare lovitură (<physicalDamage>@MaximumDamageTooltip@</physicalDamage> în total).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

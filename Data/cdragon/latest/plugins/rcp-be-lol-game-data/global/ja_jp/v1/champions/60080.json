@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "通常攻撃かスキルを4回使用すると、次の通常攻撃から守られる。"
+        "description": "通常攻撃かスキルを@AttacksRequired@回使用すると、次の通常攻撃から守られる。"
     },
     "spells": [
         {
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "集中力を高め、正面の範囲内に3連続で攻撃して、チャンピオンに2倍のダメージを与える。また、敵の急所が明確になり、体力が15%以下の敵に対しては常にクリティカルが発生するようになる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 体力が@PassiveCritThreshold*100@%未満の対象に対しては、<spellName>痛恨の槍</spellName>、<spellName>急所乱撃</spellName>、通常攻撃のクリティカル率が100%になる。<br><br><spellActive>発動効果:</spellActive> 詠唱して前方に素早い突きを@NumberOfStrikes@回繰り出し、攻撃ごとに<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える(合計<physicalDamage>@MaximumDamageTooltip@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "description": "集中力を高め、正面の範囲内に連続で攻撃する。チャンピオンには与えるダメージが増加する。また、敵の急所が明確になり、体力が低い敵に対してはクリティカルが発生する。",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 体力が@PassiveCritThreshold*100@%未満の対象に対しては、<spellName>痛恨の槍</spellName>、<spellName>急所乱撃</spellName>、通常攻撃がクリティカルになる。<br><br><spellActive>発動効果:</spellActive> 詠唱して正面の範囲内に素早い突きを@NumberOfStrikes@回繰り出し、攻撃ごとに<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える(合計<physicalDamage>@MaximumDamageTooltip@</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

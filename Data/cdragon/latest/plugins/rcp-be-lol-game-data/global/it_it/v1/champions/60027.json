@@ -406,16 +406,16 @@
     ],
     "passive": {
         "name": "Bastione potenziato",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_EmpoweredBulwark.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_EmpoweredBulwark.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60027/ability_60027_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60027/ability_60027_P1.jpg",
-        "description": "Aumenta la <scaleHealth>salute</scaleHealth> di Singed di 25 per ogni 100 mana che possiede."
+        "description": "Aumenta la Salute di Singed in base al suo mana massimo."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Scia velenosa",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_AcidSpray.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_AcidSpray.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60027/ability_60027_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60027/ability_60027_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -447,7 +447,7 @@
                 0.0
             ],
             "coefficients": {
-                "coefficient1": 0.1,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -565,13 +565,13 @@
         {
             "spellKey": "w",
             "name": "Mega adesivo",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/ChemMan_MegaAdhesive.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/ChemMan_MegaAdhesive.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60027/ability_60027_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60027/ability_60027_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Lancia una fiala di mega adesivo sul terreno, rallentando i nemici che ci camminano sopra.",
-            "dynamicDescription": "Lascia un'area appiccicosa sul terreno per 5 secondi, <status>rallentando</status> i nemici nell'area di un @SlowPercent@% (l'effetto dura 1 secondo dopo che l'hanno lasciata).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lascia un'area appiccicosa sul terreno per @WDuration@ secondo/i, <status>rallentando</status> i nemici nell'area di un @SlowPercent@% (l'effetto dura @SlowDuration@ secondo/i dopo che l'hanno lasciata).@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -715,7 +715,7 @@
         {
             "spellKey": "e",
             "name": "Scagliamento",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_fling.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_fling.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60027/ability_60027_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60027/ability_60027_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -747,54 +747,54 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.55,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    50.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    260.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    1.0,
-                    1.25,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    6.0,
-                    6.0,
-                    6.5,
-                    7.0,
-                    7.5,
-                    8.0,
-                    8.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    420.0,
-                    420.0,
-                    420.0,
-                    420.0,
-                    420.0,
-                    420.0,
-                    420.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    300.0,
-                    300.0,
-                    300.0,
-                    300.0,
-                    300.0,
-                    300.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -865,7 +865,7 @@
         {
             "spellKey": "r",
             "name": "Pozione della pazzia",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_ChemicalRage.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Singed_ChemicalRage.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60027/ability_60027_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60027/ability_60027_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
@@ -897,7 +897,7 @@
                 100.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

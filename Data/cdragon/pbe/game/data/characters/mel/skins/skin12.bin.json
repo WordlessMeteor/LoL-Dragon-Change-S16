@@ -1,5 +1,5 @@
 {
-    "{d5d2b294}": {
+    "Characters/Mel/Skins/Skin12": {
         "skinClassification": 1,
         "championSkinName": "MelSkin12",
         "metaDataTags": "faction:noxus,gender:female,race:human,element:light,skinline:coven",
@@ -147,7 +147,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{86c5c059}",
+            "animationGraphData": "Characters/Mel/Animations/Skin12",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -165,32 +165,32 @@
             "submeshRenderOrder": "Body Dress Sleeve",
             "materialOverride": [
                 {
-                    "Material": "{b770df7e}",
+                    "Material": "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{b770df7e}",
+                    "Material": "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Sleeve",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{b770df7e}",
+                    "Material": "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Dress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{b770df7e}",
+                    "Material": "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "InnerDress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{ba997af8}",
+                    "Material": "Characters/Mel/Skins/Skin12/Materials/Eyes_Flipbook_inst",
                     "submesh": "Eyes_Dress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{8283c6a649596086}",
+                    "texture": "assets/characters/mel/skins/skin12/mel_skin12_recall_tx_cm.tex",
                     "submesh": "Recall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -254,12 +254,12 @@
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{4e6aac8d}",
+                "effectKey": "Mel_Idle_Foot",
                 "boneName": "R_Toe",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{4e6aac8d}",
+                "effectKey": "Mel_Idle_Foot",
                 "boneName": "L_Toe",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
@@ -267,19 +267,19 @@
         "mContextualActionData": "Characters/Mel/CAC/Mel_Base",
         "iconCircle": "assets/characters/mel/hud/mel_circle_0.tex",
         "iconSquare": "assets/characters/mel/hud/mel_square_0.tex",
-        "iconAvatar": "assets/characters/mel/hud/mel_circle_0.tex",
+        "iconAvatar": "assets/characters/mel/hud/mel_circle_12.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
             "CharacterStateIndicatorMaxCount": 3,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{6c2e3016}",
+        "mResourceResolver": "Characters/Mel/Skins/Skin12/Resources",
         "{55d3758e}": "ASSETS/Characters/Mel/Skins/Skin12/ChromaPreview.tex",
         "objectPath": "{d5d2b294}",
         "__type": "SkinCharacterDataProperties"
     },
-    "{6c2e3016}": {
+    "Characters/Mel/Skins/Skin12/Resources": {
         "resourceMap": {
             "Mel_BasicAttack_mis": "{13470ee8}",
             "Mel_BasicAttack_tar": "{bdf2ff34}",
@@ -346,7 +346,7 @@
             "{3e7c8792}": "{4a981427}",
             "{e409c6ba}": "{00f3a618}",
             "{1784d15a}": "{d895680a}",
-            "{4e6aac8d}": "{7946da60}",
+            "Mel_Idle_Foot": "Characters/Mel/Skins/Skin12/Particles/Mel_Skin12_Idle_Foot",
             "{1c7f10be}": "{ffb28b27}",
             "{a3d4a049}": "{93030d83}",
             "{083e6352}": "{661accc6}",
@@ -354,7 +354,7 @@
         },
         "__type": "ResourceResolver"
     },
-    "{7946da60}": {
+    "Characters/Mel/Skins/Skin12/Particles/Mel_Skin12_Idle_Foot": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1434,10 +1434,10 @@
         ],
         "particleName": "Mel_Skin12_Idle_Foot",
         "particlePath": "Characters/Mel/Skins/Skin12/Particles/Mel_Skin12_Idle_Foot",
-        "objectPath": "{7946da60}",
+        "objectPath": "Characters/Mel/Skins/Skin12/Particles/Mel_Skin12_Idle_Foot",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b770df7e}": {
+    "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst": {
         "name": "Characters/Mel/Skins/Skin12/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
@@ -1645,7 +1645,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{ba997af8}": {
+    "Characters/Mel/Skins/Skin12/Materials/Eyes_Flipbook_inst": {
         "name": "Characters/Mel/Skins/Skin12/Materials/Eyes_Flipbook_inst",
         "samplerValues": [
             {
@@ -1655,7 +1655,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "{ae4db9a3f4e71b0f}",
+                "texturePath": "assets/characters/mel/skins/skin12/mel_skin12_eyes_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1663,7 +1663,7 @@
             },
             {
                 "TextureName": "FlipbookBlend_Tex",
-                "texturePath": "{ae4db9a3f4e71b0f}",
+                "texturePath": "assets/characters/mel/skins/skin12/mel_skin12_eyes_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }

@@ -1,5 +1,5 @@
 {
-    "{d4d2b101}": {
+    "Characters/Mel/Skins/Skin15": {
         "skinClassification": 2,
         "championSkinName": "MelSkin15",
         "skinParent": 12,
@@ -152,7 +152,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{86c5c059}",
+            "animationGraphData": "Characters/Mel/Animations/Skin12",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -170,32 +170,32 @@
             "submeshRenderOrder": "Body Dress Sleeve",
             "materialOverride": [
                 {
-                    "Material": "{ed0b6315}",
+                    "Material": "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{ed0b6315}",
+                    "Material": "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Sleeve",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{ed0b6315}",
+                    "Material": "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "Dress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{ed0b6315}",
+                    "Material": "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst",
                     "submesh": "InnerDress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{8fcdb957}",
+                    "Material": "Characters/Mel/Skins/Skin15/Materials/Eyes_Flipbook_inst",
                     "submesh": "Eyes_Dress",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{962e1ab223403e8f}",
+                    "texture": "assets/characters/mel/skins/skin15/mel_skin15_recall_tx_cm.tex",
                     "submesh": "Recall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -259,12 +259,12 @@
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{4e6aac8d}",
+                "effectKey": "Mel_Idle_Foot",
                 "boneName": "R_Toe",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{4e6aac8d}",
+                "effectKey": "Mel_Idle_Foot",
                 "boneName": "L_Toe",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
@@ -272,14 +272,14 @@
         "mContextualActionData": "Characters/Mel/CAC/Mel_Base",
         "iconCircle": "assets/characters/mel/hud/mel_circle_0.tex",
         "iconSquare": "assets/characters/mel/hud/mel_square_0.tex",
-        "iconAvatar": "assets/characters/mel/hud/mel_circle_0.tex",
+        "iconAvatar": "assets/characters/mel/hud/mel_circle_12.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
             "CharacterStateIndicatorMaxCount": 3,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{7b9ba263}",
+        "mResourceResolver": "Characters/Mel/Skins/Skin15/Resources",
         "{55d3758e}": "ASSETS/Characters/Mel/Skins/Skin15/ChromaPreview.tex",
         "objectPath": "{d4d2b101}",
         "__type": "SkinCharacterDataProperties"
@@ -288,7 +288,7 @@
         "texturePath": "{877197a6c22b09de}",
         "__type": "TextureResource"
     },
-    "{7b9ba263}": {
+    "Characters/Mel/Skins/Skin15/Resources": {
         "resourceMap": {
             "Mel_BasicAttack_mis": "{13470ee8}",
             "Mel_BasicAttack_tar": "{bdf2ff34}",
@@ -355,7 +355,7 @@
             "{3e7c8792}": "{4a981427}",
             "{e409c6ba}": "{00f3a618}",
             "{1784d15a}": "{d895680a}",
-            "{4e6aac8d}": "{fe4be946}",
+            "Mel_Idle_Foot": "Characters/Mel/Skins/Skin15/Particles/Mel_Skin15_Idle_Foot",
             "{1c7f10be}": "{ffb28b27}",
             "{a3d4a049}": "{93030d83}",
             "{083e6352}": "{661accc6}",
@@ -363,7 +363,7 @@
         },
         "__type": "ResourceResolver"
     },
-    "{8fcdb957}": {
+    "Characters/Mel/Skins/Skin15/Materials/Eyes_Flipbook_inst": {
         "name": "Characters/Mel/Skins/Skin15/Materials/Eyes_Flipbook_inst",
         "samplerValues": [
             {
@@ -566,7 +566,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{ed0b6315}": {
+    "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst": {
         "name": "Characters/Mel/Skins/Skin15/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
@@ -774,7 +774,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{fe4be946}": {
+    "Characters/Mel/Skins/Skin15/Particles/Mel_Skin15_Idle_Foot": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1849,7 +1849,7 @@
         ],
         "particleName": "Mel_Skin15_Idle_Foot",
         "particlePath": "Characters/Mel/Skins/Skin15/Particles/Mel_Skin15_Idle_Foot",
-        "objectPath": "{fe4be946}",
+        "objectPath": "Characters/Mel/Skins/Skin15/Particles/Mel_Skin15_Idle_Foot",
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": [

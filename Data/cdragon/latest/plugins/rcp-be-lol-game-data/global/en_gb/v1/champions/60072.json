@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "Basic attacks lower all ability cooldowns by 0.5 seconds. Double effect when attacking champions."
+        "description": "Basic attacks reduce all ability cooldowns. This effect is stronger against champions."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck.  If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage and slows all targets hit.",
-            "dynamicDescription": "Skarner deals <physicalDamage>@TotalBaseDamage@ physical damage</physicalDamage> to all nearby enemies and charges himself with <keywordMajor>Crystal Energy</keywordMajor> for 5 seconds if a unit is struck.<br><br>While Skarner is charged, <spellName>Crystal Slash</spellName> deals <magicDamage>@TotalProcDamage@ bonus magic damage</magicDamage> and <status>Slows</status> by @SlowPercent*-100@% for 2 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner deals <physicalDamage>@TotalBaseDamage@ physical damage</physicalDamage> to all nearby enemies and charges himself with <keywordMajor>Crystal Energy</keywordMajor> for @CrystalEnergyDuration@ seconds if a unit is struck.<br><br>While Skarner is charged, <spellName>Crystal Slash</spellName> deals <magicDamage>@TotalProcDamage@ bonus magic damage</magicDamage> and <status>Slows</status> by @SlowPercent*-100@% for @SlowDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner gains a shield, and while the shield persists his movement speed and attack speed are both increased.",
-            "dynamicDescription": "Skarner is <shield>shielded</shield> for @BlockDamage@ damage for 6 seconds. While the shield persists, Skarner gains <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> and <speed>@MSBonus*100@% Movement Speed</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner is <shield>shielded</shield> for @BlockDamage@ damage for @ShieldDuration@ seconds. While the shield persists, Skarner gains <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> and <speed>@MSBonus*100@% Movement Speed</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and marks them. Striking enemies will consume the mark to heal Skarner. Killing targets outright will also activate the heal.",
-            "dynamicDescription": "Skarner deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies in a line and marks them for 6 seconds.<br><br>Striking enemies will consume the mark to <healing>heal</healing> Skarner for @TotalHealing@. Killing targets outright will also activate the heal. (Each activation heals for 50% less.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies in a line and marks them for @MarkDuration@ seconds.<br><br>Striking enemies will consume the mark to <healing>heal</healing> Skarner for @TotalHealing@. Killing targets outright will also activate the heal. (Each activation heals for @SubsequentHealMultiplier*100@% less.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Skarner suppresses an enemy champion and deals magic damage to it.  During this time, Skarner can move freely and will drag his helpless victim around with him.  When the effect ends, Skarner's target will be dealt additional damage.",
-            "dynamicDescription": "Skarner <status>Suppresses</status> an enemy champion for 1.75 seconds and deals <magicDamage>@TotaDamage@ magic damage</magicDamage>. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt an additional <magicDamage>@TotaDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Skarner <status>Suppresses</status> an enemy champion for @SuppressionDuration@ seconds and deals <magicDamage>@TotaDamage@ magic damage</magicDamage>. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt an additional <magicDamage>@TotaDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

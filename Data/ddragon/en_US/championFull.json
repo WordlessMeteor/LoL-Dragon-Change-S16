@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -2855,6 +2855,13 @@
                     "name": "Spirit Blossom Akali (Paragon)",
                     "chromas": false,
                     "parentSkin": 92
+                },
+                {
+                    "id": "84104",
+                    "num": 104,
+                    "name": "Empyrean Akali (Paragon)",
+                    "chromas": false,
+                    "parentSkin": 82
                 }
             ],
             "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
@@ -14012,8 +14019,8 @@
                 "mp": 350,
                 "mpperlevel": 50,
                 "movespeed": 335,
-                "armor": 34,
-                "armorperlevel": 5,
+                "armor": 32,
+                "armorperlevel": 4.7,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 500,
@@ -21827,11 +21834,11 @@
                     "effect": [
                         null,
                         [
-                            75,
-                            110,
-                            145,
-                            180,
-                            215
+                            65,
+                            100,
+                            135,
+                            170,
+                            205
                         ],
                         [
                             3,
@@ -21899,7 +21906,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "75/110/145/180/215",
+                        "65/100/135/170/205",
                         "3",
                         "30/35/40/45/50",
                         "3",
@@ -22102,13 +22109,13 @@
                     ],
                     "cooldownBurn": "0.75",
                     "cost": [
-                        40,
-                        40,
-                        40,
-                        40,
-                        40
+                        45,
+                        45,
+                        45,
+                        45,
+                        45
                     ],
-                    "costBurn": "40",
+                    "costBurn": "45",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -28953,13 +28960,13 @@
                     ],
                     "cooldownBurn": "9/8.5/8/7.5/7",
                     "cost": [
+                        40,
                         50,
                         60,
                         70,
-                        80,
-                        90
+                        80
                     ],
-                    "costBurn": "50/60/70/80/90",
+                    "costBurn": "40/50/60/70/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -67709,7 +67716,7 @@
                     "id": "7005",
                     "num": 5,
                     "name": "Elderwood LeBlanc",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "7006",
@@ -68086,6 +68093,13 @@
                     "name": "Prestige Sinful Shores LeBlanc (Vivid)",
                     "chromas": false,
                     "parentSkin": 59
+                },
+                {
+                    "id": "7061",
+                    "num": 61,
+                    "name": "Elderwood LeBlanc (Paragon)",
+                    "chromas": false,
+                    "parentSkin": 5
                 }
             ],
             "lore": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone, anywhere, and even be in many places at once. Always plotting just out of sight, LeBlanc's true motives are as inscrutable as her shifting identity.",
@@ -80503,7 +80517,7 @@
                 "mpperlevel": 42,
                 "movespeed": 355,
                 "armor": 33,
-                "armorperlevel": 4.5,
+                "armorperlevel": 5,
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 175,
@@ -90166,7 +90180,7 @@
                 "mpregenperlevel": 0.5,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 61,
+                "attackdamage": 58,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 1,
                 "attackspeed": 0.706
@@ -96739,6 +96753,26 @@
                     "name": "T1 Orianna (Elite)",
                     "chromas": false,
                     "parentSkin": 38
+                },
+                {
+                    "id": "61040",
+                    "num": 40,
+                    "name": "Risen Legend Orianna",
+                    "chromas": true
+                },
+                {
+                    "id": "61041",
+                    "num": 41,
+                    "name": "Risen Legend Orianna (Paragon)",
+                    "chromas": false,
+                    "parentSkin": 40
+                },
+                {
+                    "id": "61042",
+                    "num": 42,
+                    "name": "Risen Legend Orianna (Mythclimber)",
+                    "chromas": false,
+                    "parentSkin": 40
                 }
             ],
             "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
@@ -99575,7 +99609,7 @@
                     "id": "PoppyQ",
                     "name": "Hammer Shock",
                     "description": "Poppy swings her hammer, dealing damage and creating a zone that will slow enemies and explode after a delay.",
-                    "tooltip": "Poppy smashes the ground, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> and making the ground unstable. <br /><br />The unstable area <status>Slows</status> enemies by {{ movespeedmod }}% and erupts after {{ delaybetweentwohits }} second, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> again.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Poppy smashes the ground, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> and making the ground unstable. <br /><br />The unstable area <status>Slows</status> enemies by {{ movespeedmod }} and erupts after {{ delaybetweentwohits }} second, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> again.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -116374,24 +116408,22 @@
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "Slow Duration",
-                            "Cooldown"
+                            "Slow Duration"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ slowduration }} -> {{ slowdurationNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ slowduration }} -> {{ slowdurationNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
                         11,
-                        10.5,
-                        10,
-                        9.5,
-                        9
+                        11,
+                        11,
+                        11,
+                        11
                     ],
-                    "cooldownBurn": "11/10.5/10/9.5/9",
+                    "cooldownBurn": "11",
                     "cost": [
                         60,
                         60,
@@ -130167,13 +130199,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        13,
                         12,
                         11,
                         10,
-                        9,
-                        8
+                        9
                     ],
-                    "cooldownBurn": "12/11/10/9/8",
+                    "cooldownBurn": "13/12/11/10/9",
                     "cost": [
                         60,
                         70,
@@ -131537,7 +131569,7 @@
                     "id": "163001",
                     "num": 1,
                     "name": "Freljord Taliyah",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "163002",
@@ -131694,6 +131726,13 @@
                     "num": 24,
                     "name": "Durand's Legacy Taliyah",
                     "chromas": false
+                },
+                {
+                    "id": "163033",
+                    "num": 33,
+                    "name": "Freljord Taliyah (Paragon)",
+                    "chromas": false,
+                    "parentSkin": 1
                 }
             ],
             "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble.",
@@ -136868,6 +136907,18 @@
                     "name": "Rain Shepherd Tristana (Obsidian)",
                     "chromas": false,
                     "parentSkin": 70
+                },
+                {
+                    "id": "18079",
+                    "num": 79,
+                    "name": "Risen Legend Tristana",
+                    "chromas": false
+                },
+                {
+                    "id": "18080",
+                    "num": 80,
+                    "name": "Immortalized Legend Tristana",
+                    "chromas": false
                 }
             ],
             "lore": "While many other yordles channel their energy into discovery, invention, or just plain mischief-making, Tristana was always inspired by the adventures of great warriors. She had heard much about Runeterra, its factions, and its wars, and believed her kind could become worthy of legend too. Setting foot in the world for the first time, she took up her trusty cannon Boomer, and now leaps into battle with steadfast courage and optimism.",

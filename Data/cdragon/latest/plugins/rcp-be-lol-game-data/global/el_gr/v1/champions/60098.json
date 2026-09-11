@@ -6,7 +6,7 @@
     "name": "Σεν",
     "alias": "Jade_Shen",
     "title": "Το Μάτι του Λυκόφωτος",
-    "shortBio": "- Το Χτύπημα Κι (Παθητική) και η Κοφτερή Λεπίδα (Q) είναι διαφορετικές ικανότητες<br>- Το Φράγμα Κι (W) παρέχει μια ασπίδα για μικρή διάρκεια<br>- Το Τρέξιμο Σκιάς (E) χτυπά μόνο Ήρωες",
+    "shortBio": "- Το Χτύπημα Κι (Παθητική) και η Κοφτερή Λεπίδα (Q) είναι διαφορετικές ικανότητες<br>- Η Προσποίηση (W) παρέχει μια ασπίδα για μικρή διάρκεια<br>- Το Τρέξιμο Σκιάς (E) χτυπά μόνο Ήρωες",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -67,7 +67,7 @@
             "relatedPrimeContentId": "d22d7c59-9936-43e2-a81a-00f26170a61a",
             "relatedPrimeItemId": 98002,
             "isBase": false,
-            "name": "Yellow Jacket Σεν",
+            "name": "Σεν στα κίτρινα",
             "skinClassification": "kChampion",
             "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Skin02/Images/Jade_Shen_splash_centered_2.project_jade.jpg",
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Skin02/Images/Jade_Shen_splash_uncentered_2.project_jade.jpg",
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Κάθε 9 δευτερόλεπτα, η επόμενη επίθεση του Σεν προκαλεί μπόνους ζημιά. Κάθε φορά που επιτίθεται ο Σεν, μειώνεται ο Χρόνος Επαναφόρτισης του Χτυπήματος Κι."
+        "description": "Η επόμενη επίθεσή του Σεν προκαλεί μπόνους ζημιά κατά διαστήματα. Κάθε φορά που ο Σεν επιτίθεται σε έναν υπηρέτη, σε ένα τέρας ή σε έναν ήρωα, ο χρόνος επαναφόρτισης του Χτυπήματος Κι μειώνεται."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Σεν προστατεύει τον εαυτό του, απορροφώντας την εισερχόμενη ζημιά για μερικά δευτερόλεπτα.",
-            "dynamicDescription": "Ο Σεν δίνει στον εαυτό του <shield>@TotalShieldAmount@ Ασπίδα</shield> για @ShieldDuration@ δευτ. Όσο αυτή η ικανότητα είναι ενεργή, οι επιθέσεις του μειώνουν τον Χρόνο Επαναφόρτισης του <keywordMajor>Χτυπήματος Κι</keywordMajor> κατά 1 επιπλέον δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Σεν δίνει στον εαυτό του <shield>@TotalShieldAmount@ Ασπίδα</shield> για @ShieldDuration@ δευτερόλεπτα. Όσο αυτή η ικανότητα είναι ενεργή, οι επιθέσεις του μειώνουν τον Χρόνο Επαναφόρτισης του <keywordMajor>Χτυπήματος Κι</keywordMajor> κατά @PassiveCooldownReduction@ επιπλέον δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

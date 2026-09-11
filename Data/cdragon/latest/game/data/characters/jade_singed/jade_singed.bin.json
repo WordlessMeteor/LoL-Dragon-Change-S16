@@ -219,7 +219,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.10000000149011612,
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Singed_AcidSpray.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Singed_AcidSpray.dds"
@@ -525,6 +524,19 @@
                         0.375,
                         0.375,
                         0.375
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1009,6 +1021,33 @@
                 ],
                 "__type": "ObjectTags"
             },
+            "DataValues": [
+                {
+                    "name": "PassiveHealthPerMana",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "BonusHealth": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "{137cf12a}": "PassiveHealthPerMana",
+                            "__type": "{2b25a73a}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Singed_EmpoweredBulwark.dds"
             ],
@@ -1057,7 +1096,6 @@
                 "mTooltipData": {
                     "mObjectName": "Jade_SingedP",
                     "mFormat": "{476ec0b8}",
-                    "EnableExtendedTooltip": false,
                     "mLocKeys": {
                         "keyTooltip": "Spell_SingedPassive_Jade_Tooltip",
                         "keyName": "Spell_SingedPassive_Jade_Name",
@@ -1098,83 +1136,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        50.0,
-                        80.0,
-                        125.0,
-                        170.0,
-                        215.0,
-                        260.0,
-                        100.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.75,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        6.0,
-                        6.5,
-                        7.0,
-                        7.5,
-                        8.0,
-                        8.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        420.0,
-                        420.0,
-                        420.0,
-                        420.0,
-                        420.0,
-                        420.0,
-                        420.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -1188,6 +1149,19 @@
                         305.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1198,14 +1172,13 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.75,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.550000011920929,
             "mAnimationName": "Spell5",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Singed_fling.dds"
@@ -1459,7 +1432,6 @@
                     "__type": "SpellDataValueVector"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Singed_ChemicalRage.dds"

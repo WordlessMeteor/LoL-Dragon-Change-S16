@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "每进行4次攻击或施放技能后，潘森会获得防护，格挡下一次攻击。"
+        "description": "每进行@AttacksRequired@次攻击或施放技能后，潘森会获得防护，格挡下一次攻击。"
     },
     "spells": [
         {
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "潘森集中精神，朝前方区域快速发动3次攻击，对英雄造成双倍伤害。潘森还会洞察敌人的致命弱点，对生命值低于15%的敌人必定触发暴击。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive><spellName>长矛投掷</spellName>、<spellName>穿心刺击</spellName>和潘森的普攻会对生命值低于@PassiveCritThreshold*100@%的目标拥有100%暴击机率。<br><br><spellActive>主动：</spellActive>潘森集中精神，朝前方快速发动@NumberOfStrikes@次攻击，每次造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>（总计造成<physicalDamage>@MaximumDamageTooltip@</physicalDamage>）。@SpellModifierDescriptionAppend@",
+            "description": "潘森集中精神，朝前方区域快速发动攻击，对英雄造成更高伤害。潘森还会洞察敌人的致命弱点，对受伤的敌人必定触发暴击。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive><spellName>长矛投掷</spellName>、<spellName>穿心刺击</spellName>和潘森的普攻对生命值低于@PassiveCritThreshold*100@%的目标会触发暴击。<br><br><spellActive>主动：</spellActive>潘森集中精神，朝前方区域快速发动@NumberOfStrikes@次攻击，每次造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>（总计造成<physicalDamage>@MaximumDamageTooltip@</physicalDamage>）。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

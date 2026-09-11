@@ -588,6 +588,23 @@
                     "descriptions": [],
                     "description": "",
                     "rarities": []
+                },
+                {
+                    "id": 60020303,
+                    "name": "Nunu și Willump clasici (Din împărăția gunoaielor)",
+                    "contentId": "c36d738a-296c-495f-a8c2-e0ae64dbf3ab",
+                    "relatedPrimeContentId": "151983d5-8434-42f9-8092-236b63cf5931",
+                    "relatedPrimeItemId": 20003,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60020/60020303.png",
+                    "colors": [
+                        "#2756CE",
+                        "#2756CE"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
                 }
             ],
             "emblems": null,
@@ -599,22 +616,22 @@
     ],
     "passive": {
         "name": "Vizionar",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_FrostNova.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60020/ability_60020_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60020/ability_60020_P1.jpg",
-        "description": "Nunu poate folosi o vrajă fără să consume mană după 5 atacuri."
+        "description": "Nunu poate folosi o vrajă fără să consume mană după câteva atacuri."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Hap",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Consume.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nunu îi poruncește yeti-ului să muște din minionul sau monstrul țintă, producându-i daune majore și vindecându-se pe sine.",
-            "dynamicDescription": "<mainText>Îi poruncești yeti-ului să muște un minion sau un monstru, provocându-i <trueDamage>@BaseDamage@ daune reale</trueDamage> țintei și <healing>vindecându-se</healing> cu @TotalHealing@.<br><br>Nunu primește bonusuri timp de @ConsumeDuration@ secunde, în funcție de ceea ce a consumat.<br><br><attention>Lupi</attention> sau <attention>reptile: </attention>atacurile și vrăjile tale provoacă <magicDamage>daune magice suplimentare în valoare de 1% din viața ta maximă</magicDamage>.<br><attention>Golemi:</attention> dimensiune și <scaleHealth>viață maximă</scaleHealth> crescute cu 10%.<br><attention>Spectre:</attention> uciderea unei unități îți oferă <speed>15% viteză de mișcare</speed> timp de 3 secunde.",
+            "dynamicDescription": "<mainText>Îi poruncești yeti-ului să muște un minion sau un monstru, provocându-i <trueDamage>@BaseDamage@ daune reale</trueDamage> țintei și <healing>vindecându-se</healing> cu @TotalHealing@.<br><br>Nunu primește bonusuri timp de @ConsumeDuration@ secunde, în funcție de ceea ce a consumat.<br><br><attention>Lupi</attention> sau <attention>reptile: </attention>atacurile și vrăjile tale provoacă <magicDamage>@ReptileDamage@ daune magice</magicDamage> suplimentare.<br><attention>Golemi:</attention> dimensiune crescută cu @GolemSizeBonus*100@% și <scaleHealth>viață maximă crescută cu @GolemHealthBonus*100@%</scaleHealth>.<br><attention>Spectre:</attention> uciderea unei unități îți oferă <speed>@WraithMoveSpeed*100@% viteză de mișcare</speed> timp de @WraithMoveSpeedDuration@ secunde.",
             "range": [
                 125.0,
                 125.0,
@@ -758,13 +775,13 @@
         {
             "spellKey": "w",
             "name": "Clocotul sângelui",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_YetiSmash.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nunu și un aliat se înviorează, încălzindu-și sângele și mărindu-și vitezele de mișcare și de atac.",
-            "dynamicDescription": "<mainText>Sângele lui Nunu și al unui aliat se înfierbântă, crescându-și <speed>viteza de mișcare cu @MoveSpeed*100@%</speed> și <attackSpeed>viteza de atac cu @AttackSpeed*100@%</attackSpeed> timp de 12 secunde. Nunu se poate ținti pe sine.",
+            "dynamicDescription": "<mainText>Sângele lui Nunu și al unui aliat se înfierbântă, crescându-și <speed>viteza de mișcare cu @MoveSpeed*100@%</speed> și <attackSpeed>viteza de atac cu @AttackSpeed*100@%</attackSpeed> timp de @BuffDuration@ secunde. Nunu se poate ținti pe sine.",
             "range": [
                 700.0,
                 700.0,
@@ -908,13 +925,13 @@
         {
             "spellKey": "e",
             "name": "Explozie de gheață",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_IceBlast.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nunu lansează o minge de gheață asupra unei unități inamice, provocându-i daune și reducându-i temporar viteza de atac și viteza de mișcare.",
-            "dynamicDescription": "<mainText>Nunu lansează o minge de gheață asupra unei unități inamice, provocându-i <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinindu-i</status> viteza de mișcare cu @SlowAmount*-100@% și viteza de atac cu 25% timp de 3 secunde.",
+            "dynamicDescription": "<mainText>Nunu lansează o minge de gheață asupra unei unități inamice, provocându-i <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinindu-i</status> viteza de mișcare cu @SlowAmount*-100@% și viteza de atac cu @AttackSpeedMod*-100@% timp de @SlowDuration@ secunde.",
             "range": [
                 550.0,
                 550.0,
@@ -1058,13 +1075,13 @@
         {
             "spellKey": "r",
             "name": "Zero absolut",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60020/ability_60020_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60020/ability_60020_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nunu absoarbe toată căldura din zonă, încetinindu-și toți inamicii aflați în apropiere. După ce vraja lui a încetat, Nunu le provoacă daune masive tuturor inamicilor prinși în zonă.",
-            "dynamicDescription": "<mainText>Nunu absoarbe toată căldura din zonă, pregătindu-se până la 3 secunde, iar inamicii din acea zonă sunt <status>încetiniți</status> cu 50% și li se reduce <attackSpeed>viteza de atac</attackSpeed> cu 25%.<br><br>Inamicii prinși în zonă când vraja se încheie suferă până la <magicDamage>@TotalDamage@ daune magice</magicDamage>, în funcție de timpul de pregătire.",
+            "dynamicDescription": "<mainText>Nunu absoarbe toată căldura din zonă, pregătindu-se în timp ce inamicii din acea zonă sunt <status>încetiniți</status> cu @MovementSpeedMod*-100@% și li se reduce <attackSpeed>viteza de atac</attackSpeed> cu @AttackSpeedMod*-100@%.<br><br>Inamicii prinși în zonă când vraja se încheie suferă până la <magicDamage>@TotalDamage@ daune magice</magicDamage>, în funcție de timpul de pregătire.",
             "range": [
                 650.0,
                 650.0,

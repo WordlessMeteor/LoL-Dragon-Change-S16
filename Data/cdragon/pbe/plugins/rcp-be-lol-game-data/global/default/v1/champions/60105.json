@@ -617,13 +617,13 @@
                     1.5
                 ],
                 "Effect5Amount": [
-                    600.0,
-                    600.0,
-                    600.0,
-                    600.0,
-                    600.0,
-                    600.0,
-                    600.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     1.0,
@@ -700,7 +700,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fizz's Trident causes rending wounds in his opponents, dealing magic damage to the target based on their missing health.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Fizz's attacks rend his enemies, dealing <magicDamage>@DoTDamage@ plus @MaxHealthScaling*100@%</magicDamage> of the target's missing health as <magicDamage>magic damage</magicDamage> over @PassiveDoTDuration@ seconds. (Max @MaxMonsterDamage@ vs. minions).<br><br><spellActive>Active:</spellActive> For @ActiveDuration@ seconds, Fizz's attacks deal an additional <magicDamage>@ActiveDamage@ magic damage</magicDamage> on hit and apply <status>Grievous Wounds</status> to his target, reducing incoming healing by 50%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Fizz's attacks rend his enemies, dealing <magicDamage>@DoTDamage@ plus @MaxHealthScaling*100@%</magicDamage> of the target's missing health as <magicDamage>magic damage</magicDamage> over @PassiveDoTDuration@ seconds. (Max @MaxMonsterDamage@ vs. minions).<br><br><spellActive>Active:</spellActive> For @ActiveDuration@ seconds, Fizz's attacks deal an additional <magicDamage>@ActiveDamage@ magic damage</magicDamage> on hit and apply <status>Grievous Wounds</status> to his target, reducing incoming healing by @GrievousWounds*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fizz hops into the air, landing gracefully upon his spear becoming untargetable. From this position, Fizz can either slam the ground or choose to jump again before smashing back down.",
-            "dynamicDescription": "Fizz hops toward your cursor onto his spear, becoming untargetable, and then slams the ground dealing <magicDamage>@EDamage@ magic damage</magicDamage> to nearby enemies and <status>Slowing</status> them by @SlowAmount*100@% for 2 seconds.<br><br>Reactivating this ability while Fizz is on top of his spear causes Fizz to jump again towards your cursor and deal <magicDamage>@EDamage@ magic damage</magicDamage> in a smaller area to enemies nearby, instead of slamming the ground.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fizz hops toward your cursor onto his spear, becoming untargetable, and then slams the ground dealing <magicDamage>@EDamage@ magic damage</magicDamage> to nearby enemies and <status>Slowing</status> them by @SlowAmount*100@% for @SlowDuration@ seconds.<br><br>Reactivating this ability while Fizz is on top of his spear causes Fizz to jump again towards your cursor and deal <magicDamage>@EDamage@ magic damage</magicDamage> in a smaller area to enemies nearby, instead of slamming the ground.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

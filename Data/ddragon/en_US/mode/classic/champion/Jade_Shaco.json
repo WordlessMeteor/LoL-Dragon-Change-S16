@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Shaco": {
             "id": "Jade_Shaco",
@@ -12,7 +12,7 @@
                 "full": "Jade_Shaco.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -201,7 +201,7 @@
                     "id": "Jade_ShacoDeceive",
                     "name": "Deceive",
                     "description": "Shaco becomes invisible and teleports to target location. His next attack is guaranteed to critically strike.",
-                    "tooltip": "Shaco teleports nearby and becomes <keywordStealth>Invisible</keywordStealth> for 3.5 seconds.<br /><br />His next basic attack within the next {{ enhancedattackduration }} seconds will critically strike for {{ modifiedqcritdamagetooltip }} damage.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shaco teleports nearby and becomes <keywordStealth>Invisible</keywordStealth> for {{ stealthduration }} seconds.<br /><br />His next basic attack within the next {{ enhancedattackduration }} seconds will critically strike for {{ modifiedqcritdamagetooltip }} damage.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Critical Strike Damage",
@@ -329,10 +329,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_ShacoDeceive.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 144,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -376,39 +376,39 @@
                     "effect": [
                         null,
                         [
-                            35,
-                            50,
-                            65,
-                            80,
-                            95
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            200,
-                            300,
-                            400,
-                            500,
-                            600
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.5,
-                            0.75,
-                            1,
-                            1.25,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -448,11 +448,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "35/50/65/80/95",
-                        "200/300/400/500/600",
-                        "0.5/0.75/1/1.25/1.5",
-                        "40",
-                        "2",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -472,10 +472,10 @@
                     "rangeBurn": "425",
                     "image": {
                         "full": "Jade_ShacoJackInTheBox.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 144,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -617,10 +617,10 @@
                     "rangeBurn": "625",
                     "image": {
                         "full": "Jade_ShacoTwoShivPoison.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -630,7 +630,7 @@
                     "id": "Jade_ShacoHallucinateFull",
                     "name": "Hallucinate",
                     "description": "Shaco creates an illusion of himself near him, which can attack nearby enemies. Upon death, it explodes, dealing damage to nearby enemies.",
-                    "tooltip": "Shaco vanishes briefly and reappears with a clone that lasts up to {{ clonelifetime }} seconds. The clone deals {{ cloneaadamagepercent*100 }}% of Shaco's damage and receives {{ jade_shacodamagetakentooltip*100 }}% increased damage.<br /><br />On death, the clone detonates, dealing <magicDamage>{{ explosiontotaldamage }} magic damage</magicDamage> to nearby enemies.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shaco vanishes briefly and reappears with a clone that lasts up to {{ clonelifetime }} seconds. The clone deals {{ cloneaadamagepercent*100 }}% of Shaco's damage and receives {{ clonebonusdamagetakentooltip }} increased damage.<br /><br />On death, the clone detonates, dealing <magicDamage>{{ explosiontotaldamage }} magic damage</magicDamage> to nearby enemies.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "On Death Damage",
@@ -678,9 +678,9 @@
                             0
                         ],
                         [
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -714,7 +714,7 @@
                         "0",
                         "0",
                         "0",
-                        "6",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -732,10 +732,10 @@
                     "rangeBurn": "200",
                     "image": {
                         "full": "Jade_ShacoHallucinateFull.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -744,12 +744,12 @@
             ],
             "passive": {
                 "name": "Backstab",
-                "description": "Shaco deals 20% bonus damage when striking a unit from behind.",
+                "description": "Shaco's Attacks and abilities deal bonus damage from behind.",
                 "image": {
                     "full": "Jester_CarefulStrikes.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 192,
+                    "x": 336,
                     "y": 48,
                     "w": 48,
                     "h": 48

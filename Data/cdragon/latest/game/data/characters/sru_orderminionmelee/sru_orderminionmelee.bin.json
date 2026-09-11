@@ -881,119 +881,76 @@
         "sequences": {
             "{6a7835b9}": {
                 "blocks": [
+                    null,
                     {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "e9fb2cab-0693-4496-bc4f-9eb2fabcb6c7",
-                        "ToSay": {
-                            "value": "Jade Order Melee",
-                            "__type": "StringGet"
+                        "{d851ffa3}": "9c91aa8a-ebcb-44d0-9c68-178617d364ad",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{50f0bcb0}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
                         },
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "1ee9d3ad-4355-4800-b04f-917b2f62b3ef",
                         "Sequence": {
                             "blocks": [
-                                {
-                                    "{d851ffa3}": "3694105b-e794-43f9-856c-33a5b4099b43",
-                                    "__type": "ScriptCommentBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "9758a21b-941d-4a42-9937-2a8f5f9d1575",
-                                    "Src": {
-                                        "__type": "IntGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "InhibsDestroyed",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "99d32bf0-4c24-4fbe-84ac-041cc03de2ef",
-                                    "Src": {
-                                        "value": 100,
-                                        "__type": "IntGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "HpInhibitor",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "71477d71-7a1d-42e3-a7ac-c8421f2eae38",
-                                    "Src": {
-                                        "value": 10,
-                                        "__type": "IntGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "DamageInhibitor",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
                                 null,
                                 {
-                                    "{d851ffa3}": "5ba790a7-d4f6-4054-8697-2c56611b5b20",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{358b1671}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Value2": {
-                                            "__type": "IntGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
+                                    "{d851ffa3}": "e5558697-bfb9-41d8-ace4-8902ae25835c",
+                                    "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                                    "Dest": {
+                                        "Var": "FreeUpgrades",
+                                        "__type": "ScriptTableSet"
                                     },
-                                    "__type": "{e524b2fc}"
+                                    "__type": "{15ebaa9c}"
                                 },
                                 {
-                                    "{d851ffa3}": "c082dbe1-8adc-4e5d-a89c-875cd90b2d2a",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "16011be5-6700-4cf4-a648-47951a215e07",
-                                                "Formula": "iv.DamageInhibitor * ptp.InhibsDestroyed",
-                                                "Dest": {
-                                                    "Table": {
-                                                        "__type": "InstanceVars"
-                                                    },
-                                                    "Var": "DamageInhibitor",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "{15ebaa9c}"
-                                            },
-                                            {
-                                                "{d851ffa3}": "c9fa25e7-0016-4b1a-95f9-0ce04dbf7188",
-                                                "Formula": "iv.HpInhibitor * ptp.InhibsDestroyed",
-                                                "Dest": {
-                                                    "Table": {
-                                                        "__type": "InstanceVars"
-                                                    },
-                                                    "Var": "HpInhibitor",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "{15ebaa9c}"
-                                            },
-                                            null,
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
+                                    "{d851ffa3}": "f147c2b1-7450-4633-a1c0-5333ecf7949f",
+                                    "Formula": "1.2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeExp",
+                                        "__type": "ScriptTableSet"
                                     },
-                                    "__type": "{e524b2fc}"
-                                }
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "a40a6586-12e6-4539-8f9f-c7a6d8b67102",
+                                    "Formula": "0.2*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeGold",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "aa40c30c-f5de-4dd8-9d6b-e135f1f93f77",
+                                    "Formula": "15*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeHealth",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "9c45373e-d49b-4e78-b384-0cc64f42130b",
+                                    "Formula": "1*ptp.FreeUpgrades",
+                                    "Dest": {
+                                        "Var": "FreeDamage",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                null
                             ],
                             "__type": "ScriptSequence"
                         },
-                        "__type": "ScriptCommentBlock"
+                        "__type": "{e524b2fc}"
                     }
                 ],
                 "__type": "RootScriptSequence"

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Setelah setiap 4 kali serangan atau cast spell, Pantheon mendapatkan perlindungan dari serangan berikutnya."
+        "description": "Setelah setiap @AttacksRequired@ serangan atau cast spell, Pantheon mendapatkan perlindungan dari serangan berikutnya."
     },
     "spells": [
         {
@@ -806,8 +806,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Pantheon melempar tombaknya ke lawan dan menghasilkan damage.",
-            "dynamicDescription": "Pantheon melempar tombaknya ke lawan, menghasilkan<physicalDamage> @TotalDamage@ physical damage</physicalDamage>. @SpellModifierDescriptionAppend@",
+            "description": "Pantheon melempar tombak ke lawan dan menghasilkan damage.",
+            "dynamicDescription": "Pantheon melempar tombak ke lawan, menghasilkan<physicalDamage> @TotalDamage@ physical damage</physicalDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Pantheon melompat ke arah musuh lalu menghantam mereka dengan perisainya, membuat mereka terkena stun.  Setelah menyelesaikan serangan tersebut, Pantheon bersiap untuk memblokir serangan berikutnya.",
+            "description": "Pantheon melompat ke arah musuh lalu menghantam mereka dengan perisainya, membuat mereka terkena stun. Setelah menyelesaikan serangan tersebut, Pantheon bersiap untuk memblokir serangan berikutnya.",
             "dynamicDescription": "Pantheon melompat ke target musuh dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> serta <status>Stun</status> selama @StunDuration@ detik. Pantheon juga langsung me-refresh <spellName>Aegis Protection</spellName> miliknya.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Pantheon memusatkan fokus dan melepaskan 3 serangan cepat ke area di depannya, menghasilkan double damage ke champion. Pantheon juga menjadi lebih peka terhadap titik vital musuh, membuatnya selalu menghasilkan critical strike terhadap musuh dengan health di bawah 15%.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, dan basic attack Pantheon mendapatkan 100% critical strike chance terhadap target dengan health di bawah @PassiveCritThreshold*100@%.<br><br><spellActive>Aktif:</spellActive> Pantheon melakukan channeling dan menghasilkan @NumberOfStrikes@ serangan cepat ke depan sebesar <physicalDamage>@TotalDamage@ physical damage</physicalDamage> per serangan (total <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon memusatkan tenaga dan melancarkan serangan cepat ke area di hadapannya, menghasilkan peningkatan damage kepada champion. Pantheon juga jadi lebih peka terhadap titik vital musuhnya, memungkinkannya melakukan critical strike ke musuh yang terluka.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <spellName>Spear Shot</spellName>, <spellName>Heartseeker Strike</spellName>, dan basic attack Pantheon memberikan critical strike terhadap target dengan health di bawah @PassiveCritThreshold*100@%.<br><br><spellActive>Aktif:</spellActive> Pantheon melakukan channeling dan menghasilkan @NumberOfStrikes@ serangan cepat ke area di hadapannya sebesar <physicalDamage>@TotalDamage@ physical damage</physicalDamage> per serangan (total <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1257,7 +1257,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Pantheon mengumpulkan tenaga dan melompat ke udara, lalu menghantam semua unit musuh dalam 1 area saat mendarat. Musuh yang lebih dekat dengan titik benturan menerima lebih banyak damage.",
-            "dynamicDescription": "Pantheon mengumpulkan kekuatannya lalu melompat tinggi ke udara, menghantam area target beberapa detik kemudian. Memberikan hingga <magicDamage>@MaxDamage@ magic damage</magicDamage> ke unit di tengah area (berkurang hingga <magicDamage>@MinDamage@ magic damage</magicDamage> di tepi area) dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Pantheon mengumpulkan kekuatannya lalu melompat tinggi ke udara, menghantam area target beberapa detik kemudian. Menghasilkan hingga <magicDamage>@MaxDamage@ magic damage</magicDamage> ke unit di tengah area (berkurang hingga <magicDamage>@MinDamage@ magic damage</magicDamage> di tepi area) dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

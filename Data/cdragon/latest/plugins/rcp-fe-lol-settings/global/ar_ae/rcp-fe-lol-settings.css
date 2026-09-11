@@ -1485,33 +1485,37 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-selected-row {
     align-items: center;
     display: flex;
-    gap: 16px
+    gap: 10px
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-selected-dropdown {
-    width: 414px
+    flex: 1 1 auto;
+    min-width: 0
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview {
-    align-items: center;
-    background-color: #1e2328;
-    border: 1px solid #c8aa6e;
-    box-shadow: 0 0 0 1px rgba(1, 10, 19, .85), inset 0 0 0 1px rgba(1, 10, 19, .85);
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 39px;
-    height: 32px;
-    justify-content: center;
-    margin-top: 8px;
-    padding: 0;
-    width: 39px
+    --flat-button-width: 32px;
+    --flat-button-height: 32px;
+    --flat-button-min-height: 32px;
+    flex: 0 0 32px;
+    margin-top: 8px
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview span {
-    background: url(/fe/lol-settings/voice-skin-preview.svg) no-repeat 50%;
+    background-color: #cdbe91;
     display: block;
-    height: 9.6px;
-    width: 8px
+    height: 20px;
+    -webkit-mask: url(/fe/lol-settings/voice-skin-preview.svg) no-repeat center;
+    -webkit-mask-size: 20px 20px;
+    width: 20px
+}
+
+.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview[aria-pressed=true] span {
+    background-color: #010a13
+}
+
+.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview[disabled] span {
+    background-color: #5c5b57
 }
 
 .lol-settings-voice-input hr {

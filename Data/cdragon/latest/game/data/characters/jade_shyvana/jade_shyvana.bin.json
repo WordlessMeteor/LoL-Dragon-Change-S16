@@ -1,0 +1,3984 @@
+{
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility": {
+        "mRootSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaR",
+        "mName": "Jade_ShyvanaRAbility",
+        "mType": 2,
+        "__type": "AbilityObject"
+    },
+    "{094b8cba}": {
+        "ObjectName": "Jade_ShyvanaRPassive",
+        "objectPath": "{094b8cba}",
+        "mScriptName": "Jade_ShyvanaRPassive",
+        "__type": "SpellObject"
+    },
+    "{172b346f}": {
+        "ObjectName": "Jade_ShyvanaRTransform",
+        "objectPath": "{172b346f}",
+        "mScriptName": "Jade_ShyvanaRTransform",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaDragonsDescent.dds"
+            ],
+            "alwaysSnapFacing": true,
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_ShyvanaRTransform",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_ShyvanaRAbility_Name",
+                    "keyTooltip": "Buff_Jade_ShyvanaRAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "CanTimeoutWhileCasting": false,
+            "mShowDuration": false,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaR": {
+        "ObjectName": "Jade_ShyvanaR",
+        "objectPath": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaR",
+        "mScriptName": "Jade_ShyvanaR",
+        "mSpell": {
+            "flags": 16,
+            "mAffectsTypeFlags": 6154,
+            "mCastRequirementsCaster": [
+                {
+                    "mSuccessesRequired": 1,
+                    "mSubRequirements": [
+                        {
+                            "mUnit": "Characters/Sylas/CharacterRecords/Root",
+                            "__type": "IsSpecifiedUnitCastRequirement"
+                        },
+                        {
+                            "slot": 0,
+                            "{c073c624}": 1.0,
+                            "{7a2ca292}": true,
+                            "__type": "{e2ef74d0}"
+                        }
+                    ],
+                    "__type": "HasAtleastNSubRequirementsCastRequirement"
+                }
+            ],
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_Transformation",
+                "Trait_DamageAbility",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "MinCastRange",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "JumpDelay",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "JumpDampening",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "JumpGravity",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "JumpForwardMultiplier",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Width",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FuryGainPerHit",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FuryDrainPerSecond",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Fury_Generation",
+                    "values": [
+                        0.6666600108146667,
+                        0.6666600108146667,
+                        0.6666600108146667,
+                        0.6666600108146667,
+                        0.6666600108146667,
+                        0.6666600108146667,
+                        0.6666600108146667
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        100.0,
+                        200.0,
+                        300.0,
+                        400.0,
+                        500.0,
+                        600.0,
+                        700.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TargetMoveGravity",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TargetMoveSpeed",
+                    "values": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SeasonOne_ArmorMRGain",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{57d26a55}": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 1100.0,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{20df6036}": {
+                    "ResultModifier": 4,
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "Fury_Generation",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mNumber": 1.5,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{4fee5853}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 5.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "{6b0dcb11}": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mSpellCalculationKey": "{4fee5853}",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "mPart2": {
+                                "mNumber": 2.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaDragonsDescent.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mIgnoreRangeCheck": true,
+            "mDoesNotConsumeMana": true,
+            "mDoesNotConsumeCooldown": true,
+            "castRange": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_ShyvanaSkin301_ShyvanaDragonR_obd"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaR_Jade_Name",
+                        "keySummary": "Spell_ShyvanaR_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SeasonOne_ArmorMRGain",
+                                    "nameOverride": "ListType_Jade_Shyvana_AR_MR",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "startLocator": {
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 3,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "alwaysDraw": true,
+                        "lineStopsAtEndPosition": true,
+                        "minimumDisplayedRange": 100.0,
+                        "arrowSize": 225.0,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility": {
+        "mRootSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility/Jade_ShyvanaQ",
+        "mName": "Jade_ShyvanaQAbility",
+        "__type": "AbilityObject"
+    },
+    "{0fbd769c}": {
+        "ObjectName": "Jade_ShyvanaQPassive",
+        "objectPath": "{0fbd769c}",
+        "mScriptName": "Jade_ShyvanaQPassive",
+        "__type": "SpellObject"
+    },
+    "{19d61764}": {
+        "ObjectName": "Jade_ShyvanaQAttackDragon",
+        "objectPath": "{19d61764}",
+        "mScriptName": "Jade_ShyvanaQAttackDragon",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_ShyvanaQAttackDragon",
+            "mAnimationName": "Spell1_Wing",
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mCantCancelWhileChanneling": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaQAttackDragon2_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaQAttackDragon2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{448047c2}": {
+        "ObjectName": "Jade_ShyvanaQAttackReady",
+        "objectPath": "{448047c2}",
+        "mScriptName": "Jade_ShyvanaQAttackReady",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaTwinBite.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_ShyvanaQAttackReady",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_ShyvanaQ_Jade_Name",
+                    "keyTooltip": "Buff_Jade_ShyvanaQ_AttackReady_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility/Jade_ShyvanaQ": {
+        "ObjectName": "Jade_ShyvanaQ",
+        "objectPath": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility/Jade_ShyvanaQ",
+        "mScriptName": "Jade_ShyvanaQ",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 8192,
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "PositiveEffect_EmpowerAttack",
+                "Trait_DamageAbility",
+                "Trait_Strike",
+                "Trait_SignatureSpell",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "EnhanceDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LockoutDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Cooldown_Reduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDamage_Ratio",
+                    "values": [
+                        0.75,
+                        0.800000011920929,
+                        0.8500000238418579,
+                        0.8999999761581421,
+                        0.949999988079071,
+                        1.0,
+                        1.0499999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DragonQRadius",
+                    "values": [
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{747d5218}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "BonusDamage_Ratio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1Cone",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaTwinBite.dds"
+            ],
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                10.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0
+                ],
+                "{0a3e0478}": 11.0,
+                "__type": "{0a0eddc9}"
+            },
+            "cannotBeSuppressed": true,
+            "mSpellRevealsChampion": false,
+            "mCanMoveWhileChanneling": true,
+            "mDisableCastBar": true,
+            "bIsToggleSpell": true,
+            "mIgnoreRangeCheck": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_ShyvanaSkin301_ShyvanaQAttackReady_OnBuffDeactivate",
+                "18": "Play_sfx_ShyvanaSkin301_ShyvanaQ_buffactivate_loop"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaQ_Jade_Name",
+                        "keySummary": "Spell_ShyvanaQ_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage_Ratio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_TotalADScalar",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b54657bb}": {
+        "ObjectName": "Jade_ShyvanaQAttack",
+        "objectPath": "{b54657bb}",
+        "mScriptName": "Jade_ShyvanaQAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_ShyvanaQAttack",
+            "mAnimationName": "Spell1Cone",
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "bHaveHitEffect": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0
+                ],
+                "{0a3e0478}": 125.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 467.0,
+            "mHitEffectKey": "Jade_Shyvana_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaQAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaQAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility": {
+        "mRootSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility/Jade_ShyvanaE",
+        "mName": "Jade_ShyvanaEAbility",
+        "__type": "AbilityObject"
+    },
+    "{1121cc88}": {
+        "ObjectName": "Jade_ShyvanaE_Dragon_Sound_Missile",
+        "objectPath": "{1121cc88}",
+        "mScriptName": "Jade_ShyvanaE_Dragon_Sound_Missile",
+        "mSpell": {
+            "mAffectsTypeFlags": 22538,
+            "mAlternateName": "Jade_ShyvanaE_Dragon_Missile",
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaFlameBreath.dds"
+            ],
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0
+                ],
+                "{0a3e0478}": 850.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mUseGroundHeightAtTarget": false,
+                    "mSpeed": 1700.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 1700.0,
+            "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{24374ce7}",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileLaunch",
+                "15": "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{99672f12}": {
+        "ObjectName": "Jade_ShyvanaE_Debuff",
+        "objectPath": "{99672f12}",
+        "mScriptName": "Jade_ShyvanaE_Debuff",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Ranged_Piercing",
+                "Trait_AoE"
+            ],
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaFlameBreath.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 1,
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 90.0,
+            "mCastType": 1,
+            "missileSpeed": 1700.0,
+            "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{4a124ef8}",
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Shyvana_Jade_ShyvanaFireballMissile_OnBuffActivate",
+                "19": "Play_sfx_Shyvana_Jade_ShyvanaFireballMissile_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaE_Debuff",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaE_Jade_Name",
+                        "keySummary": "Spell_ShyvanaE_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_ShyvanaE_Debuff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_ShyvanaEAbility_Name",
+                    "keyTooltip": "Buff_Jade_ShyvanaEAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility/Jade_ShyvanaE": {
+        "ObjectName": "Jade_ShyvanaE",
+        "objectPath": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility/Jade_ShyvanaE",
+        "mScriptName": "Jade_ShyvanaE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Ranged_Piercing",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        305.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffMaxHealthPerc",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamageToMinions",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileRange",
+                    "values": [
+                        925.0,
+                        925.0,
+                        925.0,
+                        925.0,
+                        925.0,
+                        925.0,
+                        925.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SeasonOneDamagePercent",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShred",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "BonusDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "SeasonOneDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 7,
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaFlameBreath.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 1,
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0
+                ],
+                "{0a3e0478}": 925.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 90.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mUseGroundHeightAtTarget": false,
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 1700.0,
+            "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{24374ce7}",
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaE_OnCast",
+                "15": "Play_sfx_Shyvana_ShyvanaE_OnMissileCast",
+                "13": "Play_sfx_Shyvana_ShyvanaE_hitlocation",
+                "16": "Play_sfx_Shyvana_ShyvanaE_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaE_Jade_Name",
+                        "keySummary": "Spell_ShyvanaE_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 3,
+                        "alwaysDraw": true,
+                        "arrowSize": 50.0,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                900.0,
+                                900.0,
+                                900.0,
+                                900.0,
+                                900.0,
+                                900.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c4a30b5f}": {
+        "ObjectName": "Jade_ShyvanaE_Dragon",
+        "objectPath": "{c4a30b5f}",
+        "mScriptName": "Jade_ShyvanaE_Dragon",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Ranged_Piercing",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        305.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffMaxHealthPerc",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamageToMinions",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileRange",
+                    "values": [
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SeasonOneDamagePercent",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShred",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "BonusDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "SeasonOneDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 7,
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaFlameBreath.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 1,
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0
+                ],
+                "{0a3e0478}": 850.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 90.0,
+            "missileSpeed": 1700.0,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaEDragon_OnCast",
+                "15": "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileCast",
+                "16": "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileLaunuch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaE_Dragon",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaE_Jade_Name",
+                        "keySummary": "Spell_ShyvanaE_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 24.700000762939453,
+                        "coneRange": 850.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c613c718}": {
+        "ObjectName": "Jade_ShyvanaE_Dragon_Missile",
+        "objectPath": "{c613c718}",
+        "mScriptName": "Jade_ShyvanaE_Dragon_Missile",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Ranged_Piercing",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        305.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffMaxHealthPerc",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamageToMinions",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileRange",
+                    "values": [
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SeasonOneDamagePercent",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShred",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "BonusDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "SeasonOneDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 7,
+                    "{72c5c2a8}": 1,
+                    "mModifiedGameCalculation": "Damage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaFlameBreath.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 1,
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0
+                ],
+                "{0a3e0478}": 850.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 90.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mUseGroundHeightAtTarget": false,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 1700.0,
+            "mMissileEffectKey": "{dd8e9c1e}",
+            "mHitEffectKey": "{24374ce7}",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "14": "Play_sfx_Shyvana_ShyvanaEDragon_hitlocation"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaE_Dragon_Missile",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaE_Jade_Name",
+                        "keySummary": "Spell_ShyvanaE_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageAPRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_APRatio",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0,
+                                850.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{162b12d7}": {
+        "ObjectName": "Jade_ShyvanaBasicAttack",
+        "objectPath": "{162b12d7}",
+        "mScriptName": "Jade_ShyvanaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAlternateName": "Jade_ShyvanaBasicAttack",
+            "spellCastTime": 0.32464998960494995,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0,
+                    125.0
+                ],
+                "{0a3e0478}": 125.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Shyvana_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaBasicAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3bfd97b0}": {
+        "ObjectName": "Jade_ShyvanaDragonBasicAttack2",
+        "objectPath": "{3bfd97b0}",
+        "mScriptName": "Jade_ShyvanaDragonBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "RenektonBasicAttack2",
+            "mAnimationName": "Attack2",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.100000381469727,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_Shyvana_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6208cc00}": {
+        "ObjectName": "Jade_ShyvanaDragonCritAttack",
+        "objectPath": "{6208cc00}",
+        "mScriptName": "Jade_ShyvanaDragonCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAnimationName": "Crit",
+            "spellCastTime": 0.32464998960494995,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{bf27db3f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaDragonCritAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaDragonCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8e1597a2}": {
+        "ObjectName": "Jade_ShyvanaDragonBasicAttack",
+        "objectPath": "{8e1597a2}",
+        "mScriptName": "Jade_ShyvanaDragonBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "RenektonBasicAttack",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_Shyvana_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b06d958f}": {
+        "ObjectName": "Jade_ShyvanaCritAttack",
+        "objectPath": "{b06d958f}",
+        "mScriptName": "Jade_ShyvanaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAnimationName": "Crit",
+            "spellCastTime": 0.32464998960494995,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{bf27db3f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaCritAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{cacebe7f}": {
+        "ObjectName": "Jade_ShyvanaBasicAttack2",
+        "objectPath": "{cacebe7f}",
+        "mScriptName": "Jade_ShyvanaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAlternateName": "Jade_ShyvanaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "spellCastTime": 0.32464998960494995,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Shyvana_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaBasicAttack_OnCast",
+                "13": "Play_sfx_Shyvana_ShyvanaBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{433d4e3c}": {
+        "mRootSpell": "{8d873073}",
+        "mChildSpells": [
+            "{8d873073}"
+        ],
+        "mName": "Jade_ShyvanaPassiveAbility",
+        "mType": 3,
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility": {
+        "mRootSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility/Jade_ShyvanaW",
+        "mName": "Jade_ShyvanaWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility/Jade_ShyvanaW": {
+        "ObjectName": "Jade_ShyvanaW",
+        "objectPath": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility/Jade_ShyvanaW",
+        "mScriptName": "Jade_ShyvanaW",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 8192,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Shield",
+                "Trait_Low_Damage",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "Duration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Radius",
+                    "values": [
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0,
+                        325.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseMoveSpeed",
+                    "values": [
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedReductionPerSec",
+                    "values": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DurationIncreasePerHit",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDurationIncrease",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DragonAoEDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DragonAoETick",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaScorchedEarth.dds"
+            ],
+            "cooldownTime": [
+                13.0,
+                13.0,
+                12.25,
+                11.5,
+                10.75,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Shyvana_ShyvanaW_buffcast",
+                "18": "Play_sfx_Shyvana_ShyvanaW_buffactivate",
+                "19": "Play_sfx_Shyvana_ShyvanaW_buffdeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_ShyvanaW_Jade_Name",
+                        "keySummary": "Spell_ShyvanaW_Jade_Summary",
+                        "keyTooltip": "Spell_ShyvanaW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseMoveSpeed",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_ShyvanaW",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_ShyvanaW_Jade_Name",
+                    "keyTooltip": "Buff_Jade_ShyvanaWAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8d873073}": {
+        "ObjectName": "Jade_ShyvanaPassive",
+        "objectPath": "{8d873073}",
+        "mScriptName": "Jade_ShyvanaPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "PassiveScale",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TwinBite_CDR_Reduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Burnout_Duration_Increase",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Burnout_Duration_MaxIncrease",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Flamebreath_Damage_Percent",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Ult_Attack_Rage_Generation",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Ult_Passive_Rage_Generation",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Ult_Passive_Rage_Generation_Tick",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{4fee5853}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 5.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "{6b0dcb11}": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mSpellCalculationKey": "{4fee5853}",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "mPart2": {
+                                "mNumber": 2.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ShyvanaReinforcedScales.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_ShyvanaPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Jade_Shyvana_Passive_Name",
+                        "keySummary": "Spell_Jade_Shyvana_P_Summary",
+                        "keyTooltip": "Spell_Jade_Shyvana_Passive_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{2fc4ebe0}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "None",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    0,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{31fc8679}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1101",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1102",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1103",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1055",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3115",
+                            "Items/3073",
+                            "Items/3078"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4633",
+                            "Items/3161",
+                            "Items/6610"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6610",
+                            "Items/3161",
+                            "Items/4010",
+                            "Items/6653",
+                            "Items/3053",
+                            "Items/6333"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3157",
+                            "Items/3135",
+                            "Items/4010",
+                            "Items/6665",
+                            "Items/3161"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771054"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/771055"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773091",
+                            "Items/773072",
+                            "Items/773022",
+                            "Items/773153",
+                            "Items/773068",
+                            "Items/773071",
+                            "Items/773143",
+                            "Items/773083",
+                            "Items/773026",
+                            "Items/773102",
+                            "Items/773047",
+                            "Items/771053",
+                            "Items/773144",
+                            "Items/773134",
+                            "Items/771036",
+                            "Items/771028",
+                            "Items/771033",
+                            "Items/771037",
+                            "Items/771038",
+                            "Items/771042",
+                            "Items/771043",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "mPosition": "jungle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771039"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773109",
+                            "Items/773091",
+                            "Items/773072",
+                            "Items/773022",
+                            "Items/773153",
+                            "Items/773068",
+                            "Items/773071",
+                            "Items/773143",
+                            "Items/773083",
+                            "Items/773026",
+                            "Items/773106",
+                            "Items/773111",
+                            "Items/771053",
+                            "Items/773144",
+                            "Items/773134",
+                            "Items/771036",
+                            "Items/771028",
+                            "Items/771033",
+                            "Items/771037",
+                            "Items/771038",
+                            "Items/771042",
+                            "Items/771043",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{c85d9144}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{e49b2ea1}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "Characters/Jade_Shyvana/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Shyvana",
+        "baseHPModifiable": {
+            "baseValue": 530.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 95.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.6100000143051147,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.1599999964237213,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 5,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 10.0,
+            "arMaxSegments": 10,
+            "arHasRegenText": false,
+            "arDisplayAsPips": true,
+            "{fa70e5c9}": true,
+            "{4eb6a404}": 1,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 58.400001525878906,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.4000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 25.350000381469727,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.3499999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "mrPerLevel": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6579999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6579999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.5,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.600000023841858,
+            "mAttackCastTime": 0.25,
+            "mAttackName": "Jade_ShyvanaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Jade_ShyvanaBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_ShyvanaDragonBasicAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_ShyvanaDragonBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_ShyvanaQAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_ShyvanaQAttackDragon",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "Jade_ShyvanaCritAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_ShyvanaDragonCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_ShyvanaQAbility/Jade_ShyvanaQ",
+            "Jade_ShyvanaWAbility/Jade_ShyvanaW",
+            "Jade_ShyvanaEAbility/Jade_ShyvanaE",
+            "Jade_ShyvanaRAbility/Jade_ShyvanaR"
+        ],
+        "spells": [
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility/Jade_ShyvanaQ",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility/Jade_ShyvanaW",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility/Jade_ShyvanaE",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaR"
+        ],
+        "extraSpellsList": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{433d4e3c}",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaWAbility",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility",
+            "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Shyvana",
+        "passiveLuaName": "Jade_ShyvanaPassive",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Shyvana",
+        "passiveSpell": "Jade_ShyvanaPassive",
+        "passive1IconName": "assets/characters/shyvana/hud/icons2d/shyvana_passive.dds",
+        "name": "game_character_displayname_Jade_Shyvana",
+        "weaponMaterials": [
+            "Jade_ShyvanaBasicAttack"
+        ],
+        "mUseCCAnimations": true,
+        "outlineBBoxExpansion": 100.0,
+        "selectionHeight": 100.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "skillOrder": 1,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            0,
+            7
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Master Yi moves like a blur through the battlefield, moving and attacking faster",
+                    "displayName": "Highlander",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Shyvana",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "alternateForms": [
+                {
+                    "champion": "Jade_ShyvanaDragon",
+                    "name": "Jade_ShyvanaDragon",
+                    "theSwitch": "Champion",
+                    "__type": "ToolAlternateForm"
+                }
+            ],
+            "searchTags": "fighter",
+            "searchTagsSecondary": "tank",
+            "championId": 60102,
+            "roles": "BRAWLER",
+            "PARFadeColor": "55 55 55",
+            "magicRank": 3,
+            "difficultyRank": 4,
+            "description": "game_character_description_Jade_Shyvana",
+            "defenseRank": 6,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.30000001192092896,
+            "attackRank": 8,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "RecSpellRankUpInfolist": {
+            "RecSpellRankUpInfos": [
+                {
+                    "IsDefaultRecommendation": true,
+                    "mEarlyLevelOverrides": [
+                        1,
+                        2,
+                        0
+                    ],
+                    "__type": "RecSpellRankUpInfo"
+                }
+            ],
+            "__type": "RecSpellRankUpInfoList"
+        },
+        "flags": 8398600,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Sorcery/ManaflowBand",
+                    "mReplaceWith": "Perks/Styles/Sorcery/NullifyingOrb",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Precision/PresenceOfMind",
+                    "mReplaceWith": "Perks/Styles/Precision/Triumph",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{8d873073}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{8d873073}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{b780973f}",
+        "__type": "CharacterRecord"
+    },
+    "{b780973f}": {
+        "ScriptName": "charscriptJade_Shyvana",
+        "path": "{b780973f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "e1083396-f3bd-420a-b563-b3182199292e",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "EndTransformOnArrival",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "c55df1bf-ca1f-49e1-9450-79cee6e97bb7",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "5dd0a816-e894-4fed-91bb-a12a7efb6d41",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "Slot_AA",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{78e4e28e}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{368259a8}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "a212031c-147c-4477-87e4-94a8e5c26d52",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "AddStack",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "27392e8a-c319-4086-9a49-ff548f2e357c",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToAdd",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "b796f040-3807-4e14-9392-2aaefdd03c0a",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "AddStackx10",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "831c6094-46bc-4237-83fe-f224f1015b3e",
+                                    "Src": {
+                                        "value": 10,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToAdd",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "1fd2164a-38d0-44a9-b768-dbb887b00a68",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveStack",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "8151c55b-1a4f-4474-b523-2aae7da90565",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToRemove",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "8eabbae2-9a84-4e33-8054-6259217beb73",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveStackx10",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "1fd9cdfa-d4d7-4c56-9da2-41e768e0f7c9",
+                                    "Src": {
+                                        "value": 10,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "StacksToRemove",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "5ddf5222-0267-4b0f-b35c-6d82c6edb91c",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "RemoveAllStacks",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "459ac14a-de7d-41f1-bcb1-510b5c012ac1",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "EndTransform",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "99dd0976-13cd-452d-9822-9efc11cad497",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{53571352}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "EndTransformOnArrival",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "cefae7fb-7b5a-4264-b950-15df363f26cb",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Table": {
+                                                "__type": "CharacterVars"
+                                            },
+                                            "Var": "{e6c74da0}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "BoolGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "26bec52b-2b10-42bf-ba09-83ed037325f6",
+                                                "Src": {
+                                                    "value": true,
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "EndTransformOnArrival",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "719d2a59-e340-4e91-afe2-7711c67bdfd1",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "03c1f4e8-8f87-4ceb-8818-2819ba351eb1",
+                                                "Src": {
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "EndTransformOnArrival",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "6ded88f0-304a-4892-83c5-ad18de97b4ca",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_Shyvana/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

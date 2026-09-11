@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Mắt Hoàng Hôn",
-    "shortBio": "- Đòn Nội Lực (Nội Tại) và Lưỡi Gươm Tai Ương (Q) là các kỹ năng khác nhau<br>- Lá Chắn Kiếm Khí (W) tạo lá chắn trong thời gian ngắn<br>- Vô Ảnh Bộ (E) chỉ tác động lên tướng",
+    "shortBio": "- Đòn Nội Lực (Nội Tại) và Lưỡi Gươm Tai Ương (Q) là các kỹ năng khác<br>- Động Tác Giả (W) tạo lá chắn trong thời gian ngắn<br>- Vô Ảnh Bộ (E) chỉ trúng tướng",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Cứ mỗi 9 giây, đòn đánh tiếp theo của Shen gây thêm sát thương. Mỗi lần Shen tấn công, thời gian hồi chiêu của Đòn Nội Lực được giảm."
+        "description": "Đòn đánh tiếp theo của Shen sẽ định kỳ gây thêm sát thương. Mỗi khi Shen tấn công một lính, quái hoặc tướng, thời gian hồi chiêu của Đòn Nội Lực được giảm đi."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Shen tạo lá chắn cho bản thân, hấp thụ sát thương nhận vào trong vài giây.",
-            "dynamicDescription": "Shen tạo cho bản thân <shield>@TotalShieldAmount@ Lá Chắn</shield> trong @ShieldDuration@ giây. Trong khi Kỹ Năng này được duy trì, các đòn đánh của hắn giảm thêm 1 giây Hồi Chiêu của <keywordMajor>Đòn Nội Lực</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen tạo cho bản thân <shield>@TotalShieldAmount@ Lá Chắn</shield> trong @ShieldDuration@ giây. Trong khi Kỹ Năng này được duy trì, các đòn đánh của hắn giảm thêm @PassiveCooldownReduction@ giây Hồi Chiêu của <keywordMajor> Đòn Nội Lực</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

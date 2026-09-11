@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Shen": {
             "id": "Jade_Shen",
@@ -12,7 +12,7 @@
                 "full": "Jade_Shen.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 240,
+                "x": 384,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -249,8 +249,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅会命中英雄",
-            "blurb": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅会命中英雄",
+            "lore": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅命中英雄",
+            "blurb": "- 被动和Q是与当前版本完全不同的技能<br>- W提供持续一小段时间的护盾值<br>- E仅命中英雄",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -420,10 +420,10 @@
                     "rangeBurn": "475",
                     "image": {
                         "full": "Jade_ShenQ.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 144,
+                        "x": 384,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -433,7 +433,7 @@
                     "id": "Jade_ShenW",
                     "name": "奥义！空我",
                     "description": "慎为自己提供护盾，从而吸收即将到来的伤害，持续若干秒。",
-                    "tooltip": "慎为自己提供持续{{ shieldduration }}秒的<shield>{{ totalshieldamount }}护盾值</shield>。当这个技能持续时，他的攻击会使<keywordMajor>忍法！诛邪斩</keywordMajor>的冷却时间缩短额外的1秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "慎为自己提供持续{{ shieldduration }}秒的<shield>{{ totalshieldamount }}护盾值</shield>。当这个技能持续时，他的攻击会使<keywordMajor>忍法！诛邪斩</keywordMajor>的冷却时间缩短额外的{{ passivecooldownreduction }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "已格挡的伤害",
@@ -561,10 +561,10 @@
                     "rangeBurn": "20",
                     "image": {
                         "full": "Jade_ShenW.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 144,
+                        "x": 432,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -702,10 +702,10 @@
                     "rangeBurn": "575",
                     "image": {
                         "full": "Jade_ShenE.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 144,
+                        "x": 0,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -817,10 +817,10 @@
                     "rangeBurn": "25000",
                     "image": {
                         "full": "Jade_ShenR.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 144,
+                        "x": 48,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -829,12 +829,12 @@
             ],
             "passive": {
                 "name": "忍法！诛邪斩",
-                "description": "每9秒，慎的下一次攻击会造成额外伤害。慎的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。",
+                "description": "每过一段时间，慎的下一次攻击会造成额外伤害。慎对小兵、野怪或英雄的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。",
                 "image": {
                     "full": "Jade_Shen_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 240,
+                    "x": 384,
                     "y": 48,
                     "w": 48,
                     "h": 48

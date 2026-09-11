@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Pantheon her 4 saldırı veya yetenek kullanımının ardından bir sonraki saldırıya karşı koruma kazanır."
+        "description": "Pantheon her @AttacksRequired@ saldırı veya yetenek kullanımının ardından bir sonraki saldırıya karşı koruma kazanır."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Pantheon bir rakibin üstüne atılır ve kalkanıyla rakibe vurarak onu sersemletir.  Saldırıyı tamamladıktan sonra Pantheon, bir sonraki saldırıyı engellemeye hazırlanır.",
+            "description": "Pantheon bir rakibin üstüne atılır ve kalkanıyla rakibe vurarak onu sersemletir. Saldırıyı tamamladıktan sonra Pantheon, bir sonraki saldırıyı engellemeye hazırlanır.",
             "dynamicDescription": "Pantheon hedef rakibin üstüne atılarak <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onu @StunDuration@ saniyeliğine <status>sersemletir</status>. Pantheon ayrıca <spellName>Kalkan Koruması</spellName>'nı anında yeniler.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Pantheon odaklanır ve önündeki alana 3 hızlı vuruş yaparak şampiyonlara iki kat hasar verir. Pantheon ayrıca rakibinin hayati noktalarını daha iyi sezer ve canı %15'in altındaki rakiplere daima kritik vuruş yapar.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <spellName>Mızrak Atışı</spellName>, <spellName>Yürek Deşen</spellName> ve Pantheon'un normal saldırıları; canı %@PassiveCritThreshold*100@ değerinin altındaki hedeflere karşı %100 Kritik Vuruş İhtimali kazanır.<br><br><spellActive>Aktif:</spellActive> Pantheon yoğunlaşarak önündeki alana @NumberOfStrikes@ hızlı vuruş yapar ve her bir vuruş <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir (toplam <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon odaklanır ve önündeki alana 3 hızlı vuruş yaparak şampiyonlara fazladan hasar verir. Pantheon ayrıca rakibinin hayati noktalarını daha iyi sezer ve yaralı rakiplere kritik vuruş yapabilir.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <spellName>Mızrak Atışı</spellName>, <spellName>Yürek Deşen</spellName> ve Pantheon'un normal saldırıları; canı %@PassiveCritThreshold*100@ değerinin altındaki hedeflere karşı kritik vuruş yapar.<br><br><spellActive>Aktif:</spellActive> Pantheon yoğunlaşarak önündeki alana @NumberOfStrikes@ hızlı vuruş yapar ve her bir vuruş <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir (toplam <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

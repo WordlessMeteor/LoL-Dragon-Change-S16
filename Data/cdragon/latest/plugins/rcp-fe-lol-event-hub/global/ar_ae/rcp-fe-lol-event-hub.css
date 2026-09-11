@@ -480,24 +480,13 @@
     letter-spacing: 0
 }
 
-.eh-reward-details-title {
-    color: #f0e6d2;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: .05em;
-    line-height: 28px
-}
-
-.eh-reward-details-title:lang(ar-ae) {
-    letter-spacing: 0
-}
-
 .eh-help-modal-title,
 .eh-page-header-title-block .eh-page-header-subtitle,
 .eh-page-header-title-text,
 .eh-purchase-bundles-modal-success-text,
 .eh-purchase-bundles-modal-summary-final-price-text,
 .eh-purchase-bundles-modal-summary-title,
+.eh-reward-details-title,
 .event-shop-card-multi-purchase-item-title,
 .season-pass-card-roman-numeral {
     color: #f0e6d2;
@@ -513,6 +502,7 @@
 .eh-purchase-bundles-modal-success-text:lang(ar-ae),
 .eh-purchase-bundles-modal-summary-final-price-text:lang(ar-ae),
 .eh-purchase-bundles-modal-summary-title:lang(ar-ae),
+.eh-reward-details-title:lang(ar-ae),
 .event-shop-card-multi-purchase-item-title:lang(ar-ae),
 .season-pass-card-roman-numeral:lang(ar-ae) {
     letter-spacing: 0
@@ -3871,6 +3861,7 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 
 .eh-reward-details-info {
     color: #c8aa6e;
+    flex-shrink: 0;
     line-height: 24px
 }
 
@@ -3879,12 +3870,16 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 }
 
 .eh-reward-details-title {
-    line-height: 36px;
+    flex-shrink: 0;
+    font-size: 20px;
+    line-height: 26px;
     text-shadow: 0 0 8px rgba(0, 0, 0, .8)
 }
 
 .eh-reward-details-description {
-    color: #f0e6d2
+    color: #f0e6d2;
+    flex: 1 1 auto;
+    min-height: 48px
 }
 
 .eh-reward-details-description::-webkit-scrollbar-thumb {
@@ -3894,6 +3889,7 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 .reward-purchase-description {
     align-items: center;
     display: flex;
+    flex-shrink: 0;
     height: 16px;
     margin-left: -2px
 }
@@ -3909,6 +3905,7 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 }
 
 .eh-reward-details-replay-button {
+    flex-shrink: 0;
     margin-top: auto
 }
 
@@ -3926,6 +3923,7 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 .eh-reward-details-claimed {
     align-items: center;
     display: flex;
+    flex-shrink: 0;
     gap: 4px
 }
 

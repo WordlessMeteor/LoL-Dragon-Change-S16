@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Teemo": {
             "id": "Jade_Teemo",
@@ -12,7 +12,7 @@
                 "full": "Jade_Teemo.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -426,10 +426,10 @@
                     "rangeBurn": "680",
                     "image": {
                         "full": "Jade_TeemoQ.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -439,7 +439,7 @@
                     "id": "Jade_TeemoW",
                     "name": "小莫快跑",
                     "description": "提莫动如脱兔，移动速度增加，直到被敌方英雄或防御塔击中为止。提莫可在短时间内疾跑，获得额外移动速度，且不会因被击中而中断。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>提莫的<speed>移动速度</speed>提升{{ passivemovespeedbonus*100 }}%。受到来自敌方英雄或防御塔的伤害时，此效果在接下来5秒内不会生效。<br /><br /><spellActive>主动：</spellActive>提莫开始疾跑，获得<speed>{{ activemovespeedbonus*100 }}%移动速度</speed>，持续3秒。被击中时，该加成不会消失。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>提莫的<speed>移动速度</speed>提升{{ passivemovespeedbonus*100 }}%。若在最近{{ passivecooldownondamagetaken }}秒内受到来自敌方英雄或防御塔的伤害，则此效果移除。<br /><br /><spellActive>主动：</spellActive>提莫急速奔跑，持续{{ activemovespeedbuffduration }}秒的<speed>{{ activemovespeedbonus*100 }}%移动速度</speed>。这个加速效果在被击中时也不会移除。</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动移动速度",
@@ -567,10 +567,10 @@
                     "rangeBurn": "0",
                     "image": {
                         "full": "Jade_TeemoW.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -579,8 +579,8 @@
                 {
                     "id": "Jade_TeemoE",
                     "name": "毒性射击",
-                    "description": "提莫每次攻击附带毒液伤害，造成持续性伤害，持续4秒。",
-                    "tooltip": "提莫的普通攻击会使目标中毒，在命中瞬间造成<magicDamage>{{ impactcalculateddamage }}魔法伤害</magicDamage>并在之后每秒造成<magicDamage>{{ tickcalculateddamage }}魔法伤害</magicDamage>，持续4秒。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "description": "提莫每次攻击附带毒液伤害，造成命中伤害和持续伤害。",
+                    "tooltip": "提莫的普通攻击会使目标中毒，在命中瞬间造成<magicDamage>{{ impactcalculateddamage }}魔法伤害</magicDamage>并在之后每秒造成<magicDamage>{{ tickcalculateddamage }}魔法伤害</magicDamage>，持续{{ poisonduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "立即伤害",
@@ -708,10 +708,10 @@
                     "rangeBurn": "680",
                     "image": {
                         "full": "Jade_TeemoE.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -721,7 +721,7 @@
                     "id": "Jade_TeemoR",
                     "name": "种蘑菇",
                     "description": "提莫用背包里的蘑菇布置一个可爆炸的毒性陷阱。陷阱会在被敌方踩中时爆炸，释放出一团毒云，对附近的敌人造成减速效果和持续伤害。",
-                    "tooltip": "消耗一个储存的蘑菇，放置一个陷阱。陷阱被敌人踩到后引爆，向附近敌人施加毒素，使其减速<status></status>{{ slowamount }}%，并在4秒内造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能有3层充能({{ ammorechargetime }}秒充能时间)。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "提莫种下一个蘑菇陷阱，它会在被敌方踩中时爆炸。陷阱造成持续{{ debuffduration }}秒的{{ slowamount }}%<status>减速</status>并在此期间持续造成共<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。敌人会被显形相同的时长 。<br /><br />陷阱持续{{ mushroomduration }}分钟并且处于潜行状态。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒充能时间)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -827,10 +827,10 @@
                     "rangeBurn": "230",
                     "image": {
                         "full": "Jade_TeemoR.png",
-                        "sprite": "spell5.png",
+                        "sprite": "spell6.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -844,7 +844,7 @@
                     "full": "Jade_TeemoPassive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 336,
                     "y": 96,
                     "w": 48,
                     "h": 48

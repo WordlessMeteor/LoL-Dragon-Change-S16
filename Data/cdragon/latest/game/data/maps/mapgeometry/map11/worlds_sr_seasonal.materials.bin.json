@@ -230223,67 +230223,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Periph_Top_H_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/periph_top_h_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_B4_OrderBase_A_MAT",
         "type": 0,
@@ -234767,47 +234706,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Ground_C3_MidLane_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlane_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Base_A_MAT",
         "type": 0,
@@ -236297,6 +236195,47 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_a2_ordertop_a.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT": {
+        "name": "Maps/KitPieces/SRS/Base/Materials/Default/HOL2026_Ground_C3_MidLane_A_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/base/textures/ground_c3_midlanecaps_a.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -243374,1031 +243313,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A4_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A4_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_a4_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E2_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E2_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_e2_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D4_DragonPit_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D4_DragonPit_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_d4_dragonpit_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E3_ChaosBot_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E3_ChaosBot_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_e3_chaosbot_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C4_OrderRed_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C4_OrderRed_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_c4_orderred_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B2_BaronPit_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B2_BaronPit_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_b2_baronpit_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E4_ChaosBot_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E4_ChaosBot_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_e4_chaosbot_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E5_AlcoveBot_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E5_AlcoveBot_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_e5_alcovebot_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C5_OrderBot_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C5_OrderBot_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_c5_orderbot_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A3_OrderTop_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A3_OrderTop_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_a3_ordertop_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A1_AlcoveTop_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A1_AlcoveTop_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_a1_alcovetop_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C2_ChaosRed_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C2_ChaosRed_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_c2_chaosred_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A2_OrderTop_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A2_OrderTop_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_a2_ordertop_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C3_MidLane_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C3_MidLane_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_c3_midlane_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D3_ChaosBlue_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D3_ChaosBlue_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_d3_chaosblue_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E1_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_E1_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_e1_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B4_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B4_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_b4_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C1_ChaosTop_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_C1_ChaosTop_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_c1_chaostop_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B1_ChaosTop_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B1_ChaosTop_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_b1_chaostop_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D5_OrderBot_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D5_OrderBot_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_d5_orderbot_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D1_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D1_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_d1_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B3_OrderBlue_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B3_OrderBlue_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_b3_orderblue_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A5_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_A5_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_a5_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D2_ChaosBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_D2_ChaosBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_d2_chaosbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B5_OrderBase_A_MAT": {
-        "name": "Maps/KitPieces/SRS/Milkshake/Materials/Default/Milkshake_Ground_B5_OrderBase_A_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/milkshake/textures/milkshake_ground_b5_orderbase_a.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_PropKit_C_MAT": {
         "name": "Maps/KitPieces/SRS/Sodapop/Materials/Default/Sodapop_PropKit_C_MAT",
         "type": 0,
@@ -246766,7 +245680,6 @@
         "complexEmitterDefinitionData": [
             {
                 "emitterName": "CubeGridMesh1",
-                "disabled": true,
                 "alphaRef": 0,
                 "VfxComponents": {
                     "LifetimeComponent": {
@@ -247931,7 +246844,7 @@
                     "RenderComponent": {
                         "{1f14dbe7}": {
                             "Material": {
-                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid_02#3575969173",
+                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid_02#CubeGridMeshShimmer",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -248944,6 +247857,7 @@
                     "__type": "{1cf263eb}"
                 },
                 "emitterName": "CubeGridMeshShimmer",
+                "disabled": true,
                 "__type": "{94be93d1}"
             }
         ],
@@ -250051,7 +248965,6 @@
             },
             {
                 "emitterName": "CubeGridMesh1",
-                "disabled": true,
                 "alphaRef": 0,
                 "VfxComponents": {
                     "LifetimeComponent": {
@@ -251127,7 +250040,6 @@
             },
             {
                 "emitterName": "CubeGridMesh3",
-                "disabled": true,
                 "pass": 2,
                 "alphaRef": 0,
                 "VfxComponents": {
@@ -252293,7 +251205,7 @@
                     "RenderComponent": {
                         "{1f14dbe7}": {
                             "Material": {
-                                "name": "Materials/Templates/Particles/ShaderPreset/VFX_Uber_StaticMesh_Unlit_BaseMat_EmbeddedInstance",
+                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid#CubeGridMeshShimmer",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -253355,7 +252267,7 @@
                     "RenderComponent": {
                         "{1f14dbe7}": {
                             "Material": {
-                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid#1185785796",
+                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid#CubeGridMeshShimmer1",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -254367,6 +253279,7 @@
                     "__type": "{1cf263eb}"
                 },
                 "emitterName": "CubeGridMeshShimmer1",
+                "disabled": true,
                 "__type": "{94be93d1}"
             },
             {
@@ -254429,7 +253342,7 @@
                     "RenderComponent": {
                         "{1f14dbe7}": {
                             "Material": {
-                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid#837068814",
+                                "name": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid#CubeGridMeshShimmer3",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -255466,6 +254379,7 @@
                     "__type": "{1cf263eb}"
                 },
                 "emitterName": "CubeGridMeshShimmer3",
+                "disabled": true,
                 "__type": "{94be93d1}"
             }
         ],
@@ -283954,7 +282868,7 @@
                 ],
                 "name": "CubemapProbe1",
                 "mVisibilityFlags": 1,
-                "CubemapProbePath": "ASSETS/Maps/CubeMaps/Maps/MapGeometry/Map11/Base_SRX/b2ebdf57-0589-4b33-a3ba-0acba7004df3_cubemap.dds",
+                "CubemapProbePath": "assets/maps/cubemaps/maps/mapgeometry/map11/base_srx/b2ebdf57-0589-4b33-a3ba-0acba7004df3_cubemap.dds",
                 "CubemapProbeScale": 3.462409019470215,
                 "__type": "MapCubemapProbe"
             },
@@ -314733,7 +313647,37 @@
             "{8bfba8d4}": null,
             "{e00e67de}": null,
             "{567e1d79}": null,
-            "{ed41a404}": null
+            "{ed41a404}": null,
+            "{355dbc2d}": {
+                "transform": [
+                    [
+                        0.8755214810371399,
+                        0.0,
+                        0.24909645318984985,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.9102675318717957,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.24909645318984985,
+                        0.0,
+                        0.8755214810371399,
+                        0.0
+                    ],
+                    [
+                        2034.254638671875,
+                        39.61114501953125,
+                        14314.2626953125,
+                        1.0
+                    ]
+                ],
+                "name": "{9529afba}",
+                "__type": "{fa42cdaf}"
+            }
         },
         "__type": "MapPlaceableContainer"
     },
@@ -319273,7 +318217,7 @@
                 "__type": "MapSunProperties"
             },
             {
-                "TerrainPaintTexturePath": "ASSETS/Maps/TerrainPaint/Maps/MapGeometry/SR/Base_SRX_array_1_of_1.tex",
+                "TerrainPaintTexturePath": "assets/maps/terrainpaint/maps/mapgeometry/sr/base_srx_array_1_of_1.tex",
                 "__type": "MapTerrainPaint"
             },
             null,

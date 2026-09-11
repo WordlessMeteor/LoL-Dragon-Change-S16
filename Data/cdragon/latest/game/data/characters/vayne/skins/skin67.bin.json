@@ -2079,6 +2079,11 @@
         "name": "Characters/Vayne/Skins/Skin67/Materials/DemonEye",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/vayne/skins/skin67/vayne_skin67_demon_eyes_tx_cm.tex",
                 "addressU": 2,
@@ -2198,7 +2203,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -2950,6 +2955,16 @@
         ],
         "switches": [
             {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -3187,6 +3202,11 @@
         "name": "Characters/Vayne/Skins/Skin67/Materials/R_Hand",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/vayne/skins/skin67/vayne_skin67_r_hand_tx_cm.tex",
                 "addressU": 2,
@@ -3304,7 +3324,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -4055,6 +4075,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
@@ -5739,6 +5769,11 @@
         "name": "Characters/Vayne/Skins/Skin67/Materials/DemonHand01",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/vayne/skins/skin67/vayne_skin67_demon_hand01_tx_cm.tex",
                 "addressU": 2,
@@ -5858,7 +5893,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -6609,6 +6644,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,

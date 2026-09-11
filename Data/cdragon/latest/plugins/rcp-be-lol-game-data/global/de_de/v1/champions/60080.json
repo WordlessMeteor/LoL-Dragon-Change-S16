@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Nach jedem 4. Angriff oder Fähigkeit erhält Pantheon Schutz vor dem nächsten Angriff."
+        "description": "Nach jeweils @AttacksRequired@ Angriffen oder Fähigkeitsaktivierungen erhält Pantheon Schutz vor dem nächsten Angriff."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Pantheon springt zu einem Gegner und schlägt ihn mit seinem Schild, wodurch dieser betäubt wird.  Nach dem Angriff macht sich Pantheon bereit, den nächsten Angriff zu blocken.",
+            "description": "Pantheon springt zu einem Gegner, schlägt ihn mit seinem Schild und betäubt ihn dadurch. Nach dem Angriff macht sich Pantheon bereit, den nächsten Angriff zu blocken.",
             "dynamicDescription": "Pantheon springt zu dem anvisierten Gegner, fügt ihm <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und <status>betäubt</status> ihn @StunDuration@ Sekunde(n) lang. Pantheon setzt außerdem seinen <spellName>Ägidenschutz</spellName> sofort zurück.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Pantheon konzentriert sich und führt dann 3 schnelle Schläge in den Bereich vor sich aus, wobei alle Champions doppelten Schaden erleiden. Pantheon sieht zudem die verwundbaren Stellen der Gegner deutlich vor sich, wodurch er Gegner mit weniger als 15 % Leben immer kritisch trifft.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> <spellName>Speerwurf</spellName>, <spellName>Herzsucher-Schlag</spellName> und Pantheons normale Angriffe erhalten 100 % Chance auf kritische Treffer gegen Ziele mit weniger als @PassiveCritThreshold*100@ % Leben.<br><br><spellActive>Aktiv:</spellActive> Pantheon kanalisiert und führt @NumberOfStrikes@ schnelle Hiebe nach vorne aus, die pro Hieb <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> (insgesamt <physicalDamage>@MaximumDamageTooltip@</physicalDamage>) verursachen.@SpellModifierDescriptionAppend@",
+            "description": "Pantheon konzentriert sich und führt dann schnelle Schläge in den Bereich vor sich aus, wobei alle Champions erhöhten Schaden erleiden. Pantheon sieht zudem die verwundbaren Stellen der Gegner deutlich vor sich, wodurch er verwundete Gegner immer kritisch trifft.",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> <spellName>Speerwurf</spellName>, <spellName>Herzsucher-Schlag</spellName> und Pantheons normale Angriffe treffen Ziele mit weniger als @PassiveCritThreshold*100@ % Leben kritisch.<br><br><spellActive>Aktiv:</spellActive> Pantheon kanalisiert und führt @NumberOfStrikes@ schnelle Hiebe in den Bereich vor sich aus, die pro Hieb <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> verursachen (insgesamt <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1256,8 +1256,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Pantheon sammelt sich und springt dann hoch in die Luft auf einen Zielort zu, wobei er alle Gegner in diesem Gebiet trifft. Je näher ein Gegner dabei an Pantheons Zielort steht, desto mehr Schaden erleidet er.",
-            "dynamicDescription": "Pantheon sammelt seine Kräfte und springt dann hoch in die Luft, um ein paar Sekunden später im gewählten Gebiet zu landen. Dort verursacht er bis zu <magicDamage>@MaxDamage@ magischen Schaden</magicDamage> bei Einheiten im Zentrum (am Rand nur <magicDamage>@MinDamage@ magischen Schaden</magicDamage>) und <status>verlangsamt</status> sie @SlowDuration@ Sekunde lang um @SlowAmount*100@ %.@SpellModifierDescriptionAppend@",
+            "description": "Pantheon sammelt sich und springt dann hoch in die Luft auf einen Zielort zu, wobei er alle Gegner in diesem Bereich trifft. Je näher ein Gegner dabei an Pantheons Zielort steht, desto mehr Schaden erleidet er.",
+            "dynamicDescription": "Pantheon sammelt seine Kräfte und springt dann hoch in die Luft, um ein paar Sekunden später im gewählten Bereich zu landen. Dort verursacht er bis zu <magicDamage>@MaxDamage@ magischen Schaden</magicDamage> bei Einheiten im Zentrum (am Rand nur <magicDamage>@MinDamage@ magischen Schaden</magicDamage>) und <status>verlangsamt</status> sie @SlowDuration@ Sekunde lang um @SlowAmount*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 5500.0,
                 5500.0,

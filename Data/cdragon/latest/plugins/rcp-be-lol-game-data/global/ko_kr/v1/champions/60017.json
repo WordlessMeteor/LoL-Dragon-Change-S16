@@ -881,7 +881,7 @@
     ],
     "passive": {
         "name": "위장",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade_16_18.png",
         "abilityVideoPath": "champion-abilities/60017/ability_60017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60017/ability_60017_P1.jpg",
         "description": "티모가 아무 행동도 하지 않고 잠시 서 있으면 무기한 투명 상태가 됩니다. 투명 상태에서 벗어나면 기습공격 효과를 얻어 몇 초간 공격 속도가 증가합니다."
@@ -890,7 +890,7 @@
         {
             "spellKey": "q",
             "name": "실명 다트",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_Q1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
@@ -1040,13 +1040,13 @@
         {
             "spellKey": "w",
             "name": "신속한 이동",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_W1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "티모의 이동 속도가 증가합니다. 포탑이나 적 챔피언에게 공격받으면 효과가 중단됩니다.  티모는 짧은 시간 공격당하지 않으면 다시 이동 속도 증가 효과를 얻을 수 있습니다.",
-            "dynamicDescription": "<mainText><spellPassive>기본 지속 효과: </spellPassive>티모가 적 챔피언 또는 포탑에게 5초 동안 공격당하지 않았다면 <speed>이동 속도</speed>가 @PassiveMoveSpeedBonus*100@% 증가합니다.<br><br><spellActive>사용 시: </spellActive>티모가 전력으로 질주하여 3초 동안 <speed>이동 속도가 @ActiveMoveSpeedBonus*100@%</speed> 증가합니다. 이 효과는 공격당해도 사라지지 않습니다.",
+            "dynamicDescription": "<mainText><spellPassive>기본 지속 효과: </spellPassive>티모가 적 챔피언 또는 포탑에게 @PassiveCooldownOnDamageTaken@초 동안 공격당하지 않았다면 <speed>이동 속도</speed>가 @PassiveMoveSpeedBonus*100@% 증가합니다.<br><br><spellActive>사용 시: </spellActive>티모가 전력으로 질주하여, @ActiveMoveSpeedBuffDuration@초 동안 <speed>@ActiveMoveSpeedBonus*100@%의 이동 속도</speed>를 얻습니다. 이 효과는 공격당해도 사라지지 않습니다.",
             "range": [
                 0.0,
                 0.0,
@@ -1190,13 +1190,13 @@
         {
             "spellKey": "e",
             "name": "맹독 다트",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "티모의 기본 공격에 맞은 적은 중독되어 4초 동안 매초 피해를 입습니다. 기본 공격을 맞힐 때마다 독 피해도 같이 들어갑니다.",
-            "dynamicDescription": "<mainText>티모의 기본 공격 명중 시 적을 중독시켜 <magicDamage>@ImpactCalculatedDamage@의 마법 피해</magicDamage>를 입히고 4초 동안 매초 <magicDamage>@TickCalculatedDamage@의 마법 피해</magicDamage>를 입힙니다.",
+            "description": "티모의 기본 공격이 대상을 중독시켜, 적중 시 추가 피해를 입히고 지속 피해 효과를 적용합니다.",
+            "dynamicDescription": "티모의 기본 공격이 대상을 중독시켜, 적중 시 <magicDamage>@ImpactCalculatedDamage@의 마법 피해</magicDamage>를 입히고 @PoisonDuration@초 동안 매초 <magicDamage>@TickCalculatedDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1340,13 +1340,13 @@
         {
             "spellKey": "r",
             "name": "유독성 함정",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade_16_18.png",
             "abilityVideoPath": "champion-abilities/60017/ability_60017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/60017/ability_60017_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "티모가 가방에 있던 버섯을 사용하여 폭발성 독 함정을 설치합니다.  적이 함정을 밟으면 독 구름이 퍼져 나와 몇 초에 걸쳐 적의 이동 속도를 늦추고 피해를 입힙니다.",
-            "dynamicDescription": "가지고 있던 버섯으로 적이 밟으면 폭발하는 함정을 설치합니다. 함정이 터지면 독이 퍼져 주변 적이 4초 동안 @SlowAmount@% <status>둔화</status>되고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입습니다.<br><br>이 스킬은 3회까지 충전됩니다. (@AmmoRechargeTime@초마다 충전)<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "티모가 밟으면 터지는 버섯 함정을 설치합니다. 함정은 @DebuffDuration@초 동안 @SlowAmount@%의 <status>둔화</status>를 적용하고, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 또한 그동안 적중한 적의 위치를 드러냅니다.<br><br>함정은 @MushroomDuration@분 동안 지속되며, 은신 상태를 유지합니다. 이 스킬은 @MaxAmmo@회까지 충전됩니다. (@AmmoRechargeTime@초마다 충전)@SpellModifierDescriptionAppend@",
             "range": [
                 230.0,
                 230.0,

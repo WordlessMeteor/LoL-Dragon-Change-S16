@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Nautilus hurls his anchor forward. If it hits a champion, he drags both himself and the opponent close together. If it hits terrain, Nautilus instead pulls himself to the anchor and the cooldown of Dredge Line is reduced by half.",
+            "description": "Nautilus hurls his anchor forward. If it hits a champion, he drags both himself and the opponent close together. If it hits terrain, Nautilus instead pulls himself to the anchor and the cooldown of Dredge Line is reduced.",
             "dynamicDescription": "Nautilus hurls his anchor forward. If it hits an enemy, Nautilus drags himself and the target together, dealing <magicDamage>@QDamageCalc@ magic damage</magicDamage> and <status>Stunning</status> them briefly.<br><br>Hitting terrain instead <status>Pulls</status> Nautilus forward and reduces this ability's cooldown by @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nautilus gains a temporary Shield.  While it persists, his Attacks deal damage over time to his target and surrounding enemies.",
-            "dynamicDescription": "Nautilus surrounds himself with dark energies, granting him <shield>@ShieldCalc@ Shield</shield> for @ShieldDuration@ seconds.<br><br>While the <shield>Shield</shield> persists, Nautilus' Attacks deal <magicDamage>@DotDamageCalc@ magic damage</magicDamage> over 2 seconds to the target and surrounding enemies.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus surrounds himself with dark energies, granting him <shield>@ShieldCalc@ Shield</shield> for @ShieldDuration@ seconds.<br><br>While the <shield>Shield</shield> persists, Nautilus' Attacks deal <magicDamage>@DotDamageCalc@ magic damage</magicDamage> over @DotDuration@ seconds to the target and surrounding enemies.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -773,7 +773,7 @@
                 17.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nautilus slams the ground, causing the earth to explode around him in a set of three explosions. Each explosion damages and slows enemies.",
-            "dynamicDescription": "Nautilus slams the ground, creating three explosions that each deal <magicDamage>@DamageCalc@ magic damage</magicDamage> and <status>Slow</status> enemies by @SlowPercent*100@% decaying over @SlowDuration@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus slams the ground, creating three explosions that each deal <magicDamage>@DamageCalc@ magic damage</magicDamage> and <status>Slow</status> enemies by @SlowPercent*100@% decaying over @SlowDuration@ seconds. A unit can be hit by more than one explosion, but they take <magicDamage>@DamageHalvedTooltip@ damage</magicDamage> from additional explosions.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -923,7 +923,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1073,8 +1073,8 @@
                 -10.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
-                "coefficient2": 0.8
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

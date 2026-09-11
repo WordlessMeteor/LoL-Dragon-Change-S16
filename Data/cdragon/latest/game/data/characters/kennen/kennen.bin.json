@@ -2333,6 +2333,36 @@
         "mScriptName": "KennenBringTheLight",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
+            "mCastRequirementsCaster": [
+                {
+                    "mUnitsRequirements": [
+                        {
+                            "mAffectsTypeFlags": 6154,
+                            "__type": "HasTypeAndStatusFlags"
+                        },
+                        {
+                            "mSuccessesRequired": 1,
+                            "mSubRequirements": [
+                                {
+                                    "mBuffName": "{4b420fff}",
+                                    "mFromAnyone": true,
+                                    "__type": "HasBuffCastRequirement"
+                                },
+                                {
+                                    "mBuffName": "{7f21e168}",
+                                    "mFromAnyone": true,
+                                    "__type": "HasBuffCastRequirement"
+                                }
+                            ],
+                            "__type": "HasAtleastNSubRequirementsCastRequirement"
+                        }
+                    ],
+                    "mUnitsRequired": 1,
+                    "mRange": 775.0,
+                    "mDistanceType": 1,
+                    "__type": "HasNNearbyUnitsRequirement"
+                }
+            ],
             "mSpellTags": [
                 "Trait_DamageAbility",
                 "Trait_AoE"
@@ -2768,7 +2798,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenRMultiTrack",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2797,7 +2827,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenRMultiStuns",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2825,7 +2855,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenEPasses",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2853,7 +2883,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenWKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2909,7 +2939,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 230,
+                "EventToTrack": 234,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3032,7 +3062,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenQLongRange",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3060,7 +3090,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenPStuns",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3088,7 +3118,7 @@
         "mDescriptionTraKey": "stat_stone_description_KennenWDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 253,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3105,6 +3135,18 @@
         "TriggeredFromScript": true,
         "stoneName": "KennenWDamage",
         "__type": "StatStoneData"
+    },
+    "{32e9e6e9}": {
+        "__type": "{6c87d653}"
+    },
+    "{34e9ea0f}": {
+        "__type": "{6c87d653}"
+    },
+    "{e9f0b64c}": {
+        "__type": "{6c87d653}"
+    },
+    "{edf0bc98}": {
+        "__type": "{6c87d653}"
     },
     "Characters/Kennen/CharacterRecords/Root": {
         "mCharacterName": "Kennen",

@@ -1921,7 +1921,7 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "data": [
                     2.0,
                     0.0,
@@ -1930,7 +1930,7 @@
                 ],
                 "logicalParameters": [
                     {
-                        "name": "Fresnel_subtract",
+                        "name": "Fresnel_pow",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -2528,6 +2528,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_PATTERN_TWO",
                 "__type": "ShaderStaticSwitch"
             },
@@ -2538,6 +2542,10 @@
             {
                 "name": "USE_FRESNEL_COLOR_TEXTURE",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_INNER_FRESNEL",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -2635,6 +2643,11 @@
                 "__type": "ShaderTexture"
             },
             {
+                "name": "Fresnel_Mask",
+                "defaultTexturePath": "assets/shared/materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
                 "name": "FlowMap_Texture_02",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
@@ -2661,7 +2674,7 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Fresnel_Mask",
+                "name": "Inner_Fresnel_Mask",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
             },

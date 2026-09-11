@@ -417,7 +417,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.png",
         "abilityVideoPath": "champion-abilities/60072/ability_60072_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60072/ability_60072_P1.jpg",
-        "description": "기본 공격 시 모든 스킬의 재사용 대기시간이 0.5초 감소합니다. 챔피언에게 기본 공격을 가하면 효과가 두 배로 적용됩니다."
+        "description": "기본 공격 시 모든 스킬의 재사용 대기시간이 감소합니다. 이 효과는 대상이 챔피언일 때 더 강력합니다."
     },
     "spells": [
         {
@@ -429,7 +429,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "스카너가 집게를 휘둘러 주변의 모든 적에게 물리 피해를 입히고, 유닛을 맞혔다면 몇 초 동안 수정 에너지를 충전합니다.  수정 에너지가 충전된 상태로 다시 수정 베기를 사용하면 적중한 모든 대상에게 추가 마법 피해를 입히고 둔화시킵니다.",
-            "dynamicDescription": "스카너가 주변의 모든 적에게 <physicalDamage>@TotalBaseDamage@의 물리 피해</physicalDamage>를 입히고, 유닛을 맞혔다면 5초 동안 <keywordMajor>수정 에너지</keywordMajor>를 충전합니다.<br><br>수정 에너지가 충전된 상태로 <spellName>수정 베기</spellName>를 사용하면 대상에게 <magicDamage>@TotalProcDamage@의 추가 마법 피해</magicDamage>를 입히고 2초간 @SlowPercent*-100@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "스카너가 주변의 모든 적에게 <physicalDamage>@TotalBaseDamage@의 물리 피해</physicalDamage>를 입히고, 유닛을 맞혔다면 @CrystalEnergyDuration@초 동안 <keywordMajor>수정 에너지</keywordMajor>를 충전합니다.<br><br>수정 에너지가 충전된 상태로 <spellName>수정 베기</spellName>를 사용하면 대상에게 <magicDamage>@TotalProcDamage@의 추가 마법 피해</magicDamage>를 입히고, @SlowDuration@초간 @SlowPercent*-100@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -579,7 +579,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "스카너가 보호막을 얻고, 보호막이 지속되는 동안 공격 속도 및 이동 속도가 증가합니다.",
-            "dynamicDescription": "스카너가 6초 동안 @BlockDamage@의 피해를 흡수하는 <shield>보호막</shield>을 얻습니다. 보호막이 지속되는 동안 <attackSpeed>공격 속도가 @ASBonus*100@%</attackSpeed>, <speed>이동 속도가 @MSBonus*100@%</speed> 증가합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "스카너가 @ShieldDuration@초 동안 @BlockDamage@의 피해를 흡수하는 <shield>보호막</shield>을 얻습니다. 보호막이 지속되는 동안 <attackSpeed>공격 속도가 @ASBonus*100@%</attackSpeed>, <speed>이동 속도가 @MSBonus*100@%</speed> 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -729,7 +729,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "스카너가 수정 에너지를 소환하여, 적중한 적에게 피해를 입히고 표식을 남깁니다. 표식이 있는 적을 공격하면 이를 소모하여 체력을 회복합니다. 체력 회복 효과는 대상이 아예 처치되어도 발동합니다.",
-            "dynamicDescription": "스카너가 일직선상의 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 6초 동안 표식을 남깁니다.<br><br>표식이 있는 적을 공격하면 이를 소모하여 @TotalHealing@의 <healing>체력을 회복</healing>합니다. 체력 회복 효과는 대상이 아예 처치되어도 발동합니다. (발동할 때마다 체력 회복량이 50%씩 감소합니다.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "스카너가 일직선상의 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @MarkDuration@초 동안 표식을 남깁니다.<br><br>표식이 있는 적을 공격하면 이를 소모하여 @TotalHealing@의 <healing>체력을 회복</healing>합니다. 체력 회복 효과는 대상이 처치되어도 발동합니다. (발동할 때마다 체력 회복량이 @SubsequentHealMultiplier*100@%씩 감소합니다.)@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -879,7 +879,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "스카너가 적 챔피언을 제압하고 마법 피해를 입힙니다.  그동안 스카너는 제압된 대상을 끌고 다니며 자유롭게 이동할 수 있습니다.  효과가 종료되면 대상이 추가로 피해를 받습니다.",
-            "dynamicDescription": "스카너가 적 챔피언을 1.75초 동안 <status>제압</status>하고 <magicDamage>@TotaDamage@의 마법 피해</magicDamage>를 입힙니다. 그동안 스카너는 제압된 대상을 끌고 다니며 자유롭게 이동할 수 있습니다. 효과가 종료되면 대상이 <magicDamage>@TotaDamage@의 마법 피해</magicDamage>를 추가로 받습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "스카너가 적 챔피언을 @SuppressionDuration@초 동안 <status>제압</status>하고 <magicDamage>@TotaDamage@의 마법 피해</magicDamage>를 입힙니다. 그동안 스카너는 제압된 대상을 끌고 다니며 자유롭게 이동할 수 있습니다. 효과가 종료되면 대상이 <magicDamage>@TotaDamage@의 마법 피해</magicDamage>를 추가로 받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

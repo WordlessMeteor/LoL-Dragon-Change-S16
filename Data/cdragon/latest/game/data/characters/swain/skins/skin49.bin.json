@@ -55472,6 +55472,11 @@
         "name": "Characters/Swain/Skins/Skin49/Materials/Arm",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/swain/skins/skin49/swain_skin49_tx_cm.tex",
                 "addressU": 2,
@@ -55589,7 +55594,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -56322,6 +56327,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
@@ -56839,6 +56854,11 @@
         "name": "Characters/Swain/Skins/Skin49/Materials/ArmRecall",
         "samplerValues": [
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/swain/skins/skin49/swain_skin49_recall_tx_cm.tex",
                 "addressU": 2,
@@ -56956,7 +56976,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_subtract",
+                "name": "Fresnel_pow",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -57689,6 +57709,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_INNER_FRESNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,

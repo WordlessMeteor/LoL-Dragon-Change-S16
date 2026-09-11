@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Pantheon": {
             "id": "Jade_Pantheon",
@@ -12,7 +12,7 @@
                 "full": "Jade_Pantheon.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 48,
+                "x": 144,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -412,7 +412,7 @@
                         "full": "Jade_PantheonQ.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 384,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -422,7 +422,7 @@
                 {
                     "id": "Jade_PantheonW",
                     "name": "圣盾打击",
-                    "description": "潘森跳向一名敌人并对该敌人进行盾击，从而使其晕眩。盾击结束后刷新圣盾庇护，以格挡下一次攻击。",
+                    "description": "潘森跳向一名敌人并对目标敌人进行盾击，对其造成晕眩效果。在完成该次攻击后，潘森会准备好格挡下一次攻击。",
                     "tooltip": "潘森跳向目标敌人，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ stunduration }}秒<status>晕眩</status>。同时潘森会立刻刷新<spellName>圣盾庇护</spellName>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -553,7 +553,7 @@
                         "full": "Jade_PantheonW.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 432,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -563,8 +563,8 @@
                 {
                     "id": "Jade_PantheonE",
                     "name": "穿心长矛",
-                    "description": "潘森使用长矛向前方范围发动三连击，对英雄造成的伤害翻倍。同时，潘森也变得更了解敌人的弱点，必定对生命值低于15%的敌人触发暴击。",
-                    "tooltip": "<spellPassive>被动：</spellPassive><spellName>长矛飞掷</spellName>、<spellName>穿心长矛</spellName>和潘森的普通攻击对生命值低于{{ passivecritthreshold*100 }}%的敌人有100%几率造成暴击。<br /><br /><spellActive>主动：</spellActive>潘森进行引导，对面前范围发动{{ numberofstrikes }}次快速打击，每一击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>(总计<physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "description": "潘森使用长矛向前方锥形范围发动三连击，对英雄造成额外伤害。同时潘森也变得更了解敌人的弱点，从而让他总能对受伤的敌人进行暴击。",
+                    "tooltip": "<spellPassive>被动：</spellPassive> <spellName>长矛飞掷</spellName>、<spellName>穿心长矛</spellName>以及潘森的普攻会对低于{{ passivecritthreshold*100 }}%生命值的目标们产生暴击。<br /><br /><spellActive>主动：</spellActive>潘森进行引导并在他前方的区域打出{{ numberofstrikes }}次迅捷打击，每次打击造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>(总伤害：<physicalDamage>{{ maximumdamagetooltip }}</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -696,8 +696,8 @@
                         "full": "Jade_PantheonE.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 96,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -811,8 +811,8 @@
                         "full": "Jade_PantheonR.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 96,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -821,12 +821,12 @@
             ],
             "passive": {
                 "name": "圣盾庇护",
-                "description": "每攻击或施法4次后，潘森可格挡下一次攻击。",
+                "description": "每攻击或施法@AttacksRequired@次后，潘森就可以格挡下一次攻击。",
                 "image": {
                     "full": "Jade_Pantheon_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 48,
+                    "x": 144,
                     "y": 48,
                     "w": 48,
                     "h": 48

@@ -6,7 +6,7 @@
     "name": "Shen",
     "alias": "Jade_Shen",
     "title": "Eye of Twilight",
-    "shortBio": "- Ki Strike (Passive) and Vorpal Blade (Q) are different abilities<br>- Ki Barirer (W) grants a shield for a short duration<br>- Shadow Dash (E) only hits champions",
+    "shortBio": "- Ki Strike (Passive) and Vorpal Blade (Q) are different abilities<br>- Feint (W) grants a shield for a short duration<br>- Shadow Dash (E) only hits champions",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 5,
@@ -812,7 +812,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "champion-abilities/60098/ability_60098_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60098/ability_60098_P1.jpg",
-        "description": "Every 9 seconds, Shen's next attack deals bonus damage. Each time Shen attacks, Ki Strike's cooldown is reduced."
+        "description": "Periodically, Shen's next attack deals bonus damage. Each time Shen attacks a minion, monster, or champion, Ki Strike's cooldown is reduced."
     },
     "spells": [
         {
@@ -974,7 +974,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shen shields himself, absorbing incoming damage for a few seconds.",
-            "dynamicDescription": "Shen grants himself <shield>@TotalShieldAmount@ Shield</shield> for @ShieldDuration@ seconds. While this Ability holds, his attacks reduce <keywordMajor>Ki Strike's</keywordMajor> Cooldown by an additional 1 second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen grants himself <shield>@TotalShieldAmount@ Shield</shield> for @ShieldDuration@ seconds. While this Ability holds, his attacks reduce <keywordMajor>Ki Strike's</keywordMajor> Cooldown by an additional @PassiveCooldownReduction@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1300,7 +1300,7 @@
                 160.0
             ],
             "coefficients": {
-                "coefficient1": 1.35,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Nidalee": {
             "id": "Jade_Nidalee",
@@ -12,8 +12,8 @@
                 "full": "Jade_Nidalee.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -221,7 +221,7 @@
                     "id": "Jade_NidaleeJavelinToss",
                     "name": "Javelin Toss / Takedown",
                     "description": "In human form, Nidalee throws a spiked javelin at her target that gains damage as it flies.  As a cougar, her next attack will attempt to fatally wound her target, dealing more damage the less life they have.",
-                    "tooltip": "<keywordMajor>Human:</keywordMajor> Nidalee tosses her javelin, dealing between <magicDamage>{{ startingdamage }}</magicDamage> and <magicDamage>{{ maxdamage }} magic damage</magicDamage> on impact based on how far Nidalee is away from the target. <br /><br /><keywordMajor>Cougar:</keywordMajor> Nidalee's next attack deals <physicalDamage>{{ spell.jade_nidaleeaspectofthecougar:totaltakedowndamage }} physical damage</physicalDamage>, and the damage is increased against wounded targets (up to 300% total damage).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>Human:</keywordMajor> Nidalee tosses her javelin, dealing between <magicDamage>{{ startingdamage }}</magicDamage> and <magicDamage>{{ maxdamage }} magic damage</magicDamage> on impact based on how far Nidalee is away from the target. <br /><br /><keywordMajor>Cougar:</keywordMajor> Nidalee's next attack deals between <physicalDamage>{{ spell.jade_nidaleeaspectofthecougar:totaltakedowndamage }}</physicalDamage> and <physicalDamage>{{ spell.jade_nidaleeaspectofthecougar:totaltakedownmaximumdamage }} physical damage</physicalDamage> based on the target's missing Health.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Javelin Mana Cost",
@@ -351,8 +351,8 @@
                         "full": "Jade_NidaleeJavelinToss.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 0,
+                        "x": 288,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -361,8 +361,8 @@
                 {
                     "id": "Jade_NidaleeBushwhack",
                     "name": "Bushwhack / Pounce",
-                    "description": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, reveals the target and reduces their Armor and Magic Resist for 12 seconds. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
-                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>{{ damagepersecond }} magic damage</magicDamage> over 2 seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by {{ resistdecreases*100 }}% for 12 seconds. Traps last for 4 minutes. <br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }} magic damage</magicDamage> to surrounding enemies.{{ spellmodifierdescriptionappend }}",
+                    "description": "In human form, Nidalee lays a damaging trap for unwary opponents that, when sprung, damages, reveals, reduces the target's Armor and Magic Resist. As a cougar, she pounces forward, dealing a small amount of damage when she lands.",
+                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee lays a trap that deals <magicDamage>{{ damagepersecond }} magic damage</magicDamage> over {{ damageduration }} seconds, reveals the target, and <status>shreds</status> their <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> by {{ resistdecreases*100 }}% for {{ shredduration }} seconds. Traps last for {{ trapdurationmins }} minutes. <br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee lunges forward, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalpouncedamage }} magic damage</magicDamage> to surrounding enemies.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Trap Damage",
@@ -408,39 +408,39 @@
                             0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            13,
-                            12,
-                            11,
-                            10,
-                            9
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            100,
-                            150,
-                            200,
-                            250
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            120,
-                            120,
-                            120,
-                            120,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            80,
-                            120,
-                            160,
-                            200
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -468,11 +468,11 @@
                         null,
                         "0",
                         "0",
-                        "4",
-                        "13/12/11/10/9",
-                        "50/100/150/200/250",
-                        "120",
-                        "40/80/120/160/200",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -492,8 +492,8 @@
                         "full": "Jade_NidaleeBushwhack.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 0,
+                        "x": 336,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -503,7 +503,7 @@
                     "id": "Jade_NidaleePrimalSurge",
                     "name": "Primal Surge / Swipe",
                     "description": "In human form, Nidalee channels the spirit of the cougar to heal her allies and imbue them with attack speed for a short duration.  As a cougar, she rapidly claws enemies in front of her.",
-                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee heals an allied champion for <healing>{{ totalhealing }}</healing> and grants them <attackSpeed>{{ bonusas*100 }}% Attack Speed</attackSpeed> for 7 seconds.<br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee claws at enemies in front of her, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalswipedamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee heals an allied champion for <healing>{{ totalhealing }}</healing> and grants them <attackSpeed>{{ bonusas*100 }}% Attack Speed</attackSpeed> for {{ asduration }} seconds.<br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee claws at enemies in front of her, dealing <magicDamage>{{ spell.jade_nidaleeaspectofthecougar:totalswipedamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Primal Surge Heal",
@@ -624,18 +624,18 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        900,
-                        900,
-                        900,
-                        900,
-                        900
+                        575,
+                        575,
+                        575,
+                        575,
+                        575
                     ],
-                    "rangeBurn": "900",
+                    "rangeBurn": "575",
                     "image": {
                         "full": "Jade_NidaleePrimalSurge.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 384,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -646,7 +646,7 @@
                     "id": "Jade_NidaleeAspectOfTheCougar",
                     "name": "Aspect Of The Cougar",
                     "description": "Nidalee transforms into a cougar, gaining new abilities and increased Movement Speed.",
-                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee transforms into a vicious cougar, gaining <speed>20 Movement Speed</speed>, and her basic abilities become <spellName>Takedown</spellName>, <spellName>Pounce</spellName>, and <spellName>Swipe</spellName>.<br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee transforms back into human form.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>Human: </keywordMajor>Nidalee transforms into a vicious cougar, gaining <speed>{{ cougarmovespeed }} Movement Speed</speed>, and her basic abilities become <spellName>Takedown</spellName>, <spellName>Pounce</spellName>, and <spellName>Swipe</spellName>.<br /><br /><keywordMajor>Cougar: </keywordMajor>Nidalee transforms back into human form.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Takedown Damage",
@@ -701,9 +701,9 @@
                             0
                         ],
                         [
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -733,7 +733,7 @@
                         "0",
                         "0",
                         "0",
-                        "6",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -752,7 +752,7 @@
                         "full": "Jade_NidaleeAspectOfTheCougar.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 432,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -762,13 +762,13 @@
             ],
             "passive": {
                 "name": "Prowl",
-                "description": "Moving through brush increases Nidalee's Movement Speed by 15% for 2 seconds.",
+                "description": "Moving through brush increases Nidalee's Movement Speed.",
                 "image": {
                     "full": "Jade_Nidalee_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 384,
-                    "y": 0,
+                    "x": 0,
+                    "y": 48,
                     "w": 48,
                     "h": 48
                 }

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Po zaatakowaniu lub użyciu umiejętności 4 razy Pantheon zyskuje ochronę przed następnym atakiem."
+        "description": "Po zaatakowaniu lub użyciu umiejętności @AttacksRequired@ razy Pantheon zyskuje ochronę przed następnym atakiem."
     },
     "spells": [
         {
@@ -956,7 +956,7 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pantheon skacze na wroga i uderza tarczą, ogłuszając go.  Po zakończeniu ataku Pantheon przygotowuje się do zablokowania następnego ataku.",
+            "description": "Pantheon skacze na wroga i uderza tarczą, ogłuszając go. Po zakończeniu ataku Pantheon przygotowuje się do zablokowania następnego ataku.",
             "dynamicDescription": "Pantheon skacze na wybranego wroga, zadaje mu <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> oraz <status>ogłusza</status> go na @StunDuration@ sek. Pantheon natychmiastowo odnawia też <spellName>Ochronę Egidy</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pantheon skupia się oraz wykonuje 3 szybkie ciosy przed siebie, zadając podwójne obrażenia bohaterom. Lepiej wyczuwa też czułe punkty wroga, przez co zawsze trafia krytycznie wrogów, których poziom zdrowia spadł poniżej 15%.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> <spellName>Rzut Włócznią</spellName>, <spellName>Cios w Serce</spellName> oraz ataki podstawowe Pantheona zyskują 100% szansy na trafienie krytyczne przeciwko celom, których poziom zdrowia spadł poniżej @PassiveCritThreshold*100@%.<br><br><spellActive>Użycie:</spellActive> Pantheon przygotowuje się i wyprowadza następującą liczbę szybkich ciosów przed siebie: @NumberOfStrikes@, z których każdy zadaje <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> (łącznie <physicalDamage>@MaximumDamageTooltip@</physicalDamage> pkt.).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon skupia się oraz wykonuje 3 szybkie ciosy przed siebie, zadając zwiększone obrażenia bohaterom. Lepiej wyczuwa też czułe punkty wroga, przez co trafia krytycznie zranionych wrogów.",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> <spellName>Rzut Włócznią</spellName>, <spellName>Cios w Serce</spellName> oraz ataki podstawowe Pantheona trafiają krytycznie cele, które mają poniżej @PassiveCritThreshold*100@% zdrowia.<br><br><spellActive>Użycie:</spellActive> Pantheon przygotowuje się i wyprowadza następującą liczbę szybkich ciosów przed siebie: @NumberOfStrikes@, z których każdy zadaje <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> (łącznie <physicalDamage>@MaximumDamageTooltip@</physicalDamage> pkt.).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

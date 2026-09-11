@@ -96,6 +96,45 @@
                         105.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MarkDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SubsequentHealMultiplier",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumHealingMultiplier",
+                    "values": [
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625,
+                        0.0625
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -359,7 +398,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2959969c}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility": {
         "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive",
         "mChildSpells": [
             "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive"
@@ -423,6 +462,32 @@
                         -0.4000000059604645,
                         -0.44999998807907104,
                         -0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CrystalEnergyDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1087,6 +1152,19 @@
                         350.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SuppressionDuration",
+                    "values": [
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1335,6 +1413,19 @@
                         0.550000011920929
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1549,6 +1640,34 @@
         "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility/Jade_SkarnerPassive",
         "mScriptName": "Jade_SkarnerPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "CooldownReduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChampionCooldownReduction",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.dds"
             ],
@@ -2250,18 +2369,7 @@
                                                 "Condition": null,
                                                 "Sequence": {
                                                     "blocks": [
-                                                        {
-                                                            "{d851ffa3}": "17bf524b-c906-48d2-a7b6-58b01a9c514c",
-                                                            "Src": {
-                                                                "value": 1,
-                                                                "__type": "IntGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "CDR",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        }
+                                                        null
                                                     ],
                                                     "__type": "ScriptSequence"
                                                 },
@@ -2271,18 +2379,7 @@
                                                 "{d851ffa3}": "9c193f8e-2113-4905-9c5a-126b15b1e11a",
                                                 "Sequence": {
                                                     "blocks": [
-                                                        {
-                                                            "{d851ffa3}": "6d2e7031-582f-4d08-89fa-46721f6088c6",
-                                                            "Src": {
-                                                                "value": 0.5,
-                                                                "__type": "FloatGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "CDR",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        }
+                                                        null
                                                     ],
                                                     "__type": "ScriptSequence"
                                                 },
@@ -2598,7 +2695,7 @@
             "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility",
             "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility",
             "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility",
-            "{2959969c}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerPassiveAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Skarner",
         "passiveLuaName": "Jade_SkarnerPassive",

@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "普攻或施放技能4次後，潘森可以格擋下一次普攻。"
+        "description": "普攻或施放技能@AttacksRequired@次後，潘森可以格擋下一次普攻。"
     },
     "spells": [
         {
@@ -957,7 +957,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "潘森躍向一名敵軍，揮動護盾猛擊對方，使其暈眩。在結束後潘森將會舉盾防禦，格檔下一次普攻。",
-            "dynamicDescription": "潘森躍向目標敵軍，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並<status>暈眩</status>@StunDuration@秒。且潘森立即重置<spellName>聖盾庇護</spellName>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "潘森躍向目標敵軍，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並<status>暈眩</status>@StunDuration@秒，且潘森立即重置<spellName>聖盾庇護</spellName>。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "潘森用長矛對面前區域發出三連擊，對英雄造成雙倍傷害。潘森也同時能察覺到敵軍的弱點，使他永遠能對生命低於15%的敵人造成暴擊。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive><spellName>長矛飛擲</spellName>、<spellName>穿心長矛</spellName>和潘森的普攻對生命低於@PassiveCritThreshold*100@%的目標獲得100%暴擊率。<br><br><spellActive>主動：</spellActive>潘森詠唱並向前方發動@NumberOfStrikes@次連續迅捷攻擊，每次造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>(總共<physicalDamage>@MaximumDamageTooltip@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "description": "潘森用長矛對面前區域發出高速連擊，對英雄造成額外傷害。潘森也同時能察覺到敵軍的弱點，使他永遠能對受傷的敵軍造成暴擊。",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive><spellName>長矛飛擲</spellName>、<spellName>穿心長矛</spellName>和潘森的普攻對生命低於@PassiveCritThreshold*100@%的目標必定暴擊。<br><br><spellActive>主動：</spellActive>潘森詠唱並向前方區域發動@NumberOfStrikes@次連續迅捷攻擊，每次造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>(總共<physicalDamage>@MaximumDamageTooltip@</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

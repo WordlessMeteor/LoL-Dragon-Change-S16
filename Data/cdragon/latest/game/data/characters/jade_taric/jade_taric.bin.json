@@ -132,74 +132,6 @@
             "mSpellTags": [
                 "PositiveEffect_Boon"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        7.0,
-                        8.0,
-                        9.0,
-                        10.0,
-                        11.0,
-                        12.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1300.0,
-                        1300.0,
-                        1300.0,
-                        1300.0,
-                        1300.0,
-                        1300.0,
-                        1300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "ArmorBonus",
@@ -252,6 +184,45 @@
                         0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShredDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -263,12 +234,12 @@
                         },
                         {
                             "mStat": 1,
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "ArmorRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -284,8 +255,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.30000001192092896,
-            "mCoefficient2": 0.10000000149011612,
             "mAnimationName": "Spell2_Jade",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Shatter.dds"
@@ -774,65 +743,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        50.0,
-                        90.0,
-                        130.0,
-                        170.0,
-                        210.0,
-                        250.0,
-                        290.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "MinDamage",
@@ -885,22 +795,34 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAPRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxAPRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        19.0,
-                        19.0,
-                        17.5,
-                        16.0,
-                        14.5,
-                        13.0,
-                        13.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -909,8 +831,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MinAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -923,15 +845,13 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.800000011920929,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MaxAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.5,
-            "mCoefficient2": 0.5,
             "mAnimationName": "Passive_Attack2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Dazzle.dds"
@@ -949,14 +869,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    17.0,
+                    15.0,
                     14.0,
                     13.0,
                     12.0,
                     11.0,
                     10.0,
-                    10.0
+                    9.0
                 ],
+                "{0a3e0478}": 15.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1077,10 +998,6 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "MinDamage",
                                     "nameOverride": "Spell_ListType_MinimumDamage",
                                     "__type": "TooltipInstanceListElement"
@@ -1088,6 +1005,10 @@
                                 {
                                     "type": "MaxDmageTT",
                                     "nameOverride": "Spell_ListType_MaximumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1248,6 +1169,32 @@
                         60.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RadianceDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1258,15 +1205,13 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.5,
-            "mCoefficient2": 0.5,
             "mAnimationName": "Spell4_Jade",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Radiance.dds"
@@ -1478,7 +1423,7 @@
         "mName": "Jade_TaricQAbility",
         "__type": "AbilityObject"
     },
-    "{97b93084}": {
+    "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility": {
         "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive",
         "mChildSpells": [
             "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility/Jade_TaricPassive"
@@ -1504,25 +1449,39 @@
                         0.019999999552965164
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChampionRatioTT",
+                    "values": [
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "{0f379d64}": {
                     "mFormulaParts": [
                         {
-                            "mCoefficient": 0.019999999552965164,
-                            "__type": "AbilityResourceByCoefficientCalculationPart"
+                            "{137cf12a}": "RatioTT",
+                            "__type": "{2b25a73a}"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
                 "{321779cc}": {
-                    "mMultiplier": {
-                        "mNumber": 2.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "{0f379d64}",
-                    "__type": "GameCalculationModified"
+                    "mFormulaParts": [
+                        {
+                            "{137cf12a}": "ChampionRatioTT",
+                            "__type": "{2b25a73a}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
             "mImgIconName": [
@@ -1588,92 +1547,6 @@
             "mSpellTags": [
                 "PositiveEffect_Boon"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.30000001192092896,
-                        0.44999998807907104,
-                        0.6000000238418579,
-                        0.75,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.75,
-                        0.75,
-                        1.5,
-                        2.25,
-                        3.0,
-                        3.75,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        50.0,
-                        75.0,
-                        100.0,
-                        125.0,
-                        125.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        2.0,
-                        3.0,
-                        4.0,
-                        5.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseHeal",
@@ -1702,7 +1575,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SelfCastRatio",
+                    "name": "SelfCastHealMod",
                     "values": [
                         1.399999976158142,
                         1.399999976158142,
@@ -1711,6 +1584,32 @@
                         1.399999976158142,
                         1.399999976158142,
                         1.399999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BasicAttackCooldownReduction",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChampionBasicAttackCooldownReduction",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1729,18 +1628,15 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{245d67c1}": {
+                "{41769c81}": {
                     "mMultiplier": {
-                        "mNumber": 1.399999976158142,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "SelfCastHealMod",
+                        "__type": "NamedDataValueCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mModifiedGameCalculation": "HealAmount",
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.15000000596046448,
-            "mCoefficient2": 0.75,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Imbue.dds"
@@ -1930,10 +1826,6 @@
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mDescription": "game_buff_tooltip_Jade_TaricQ",
-            "__type": "BuffData"
         },
         "BotData": {
             "DamageTag": 4,
@@ -2377,10 +2269,12 @@
                                                 },
                                                 "__type": "SetVarInTableBlock"
                                             },
+                                            null,
                                             {
                                                 "{d851ffa3}": "a5194a0f-e219-4f6c-93d5-0c09f9c56795",
                                                 "Src": {
-                                                    "__type": "IntGet"
+                                                    "Var": "BasicAttackCooldownReduction",
+                                                    "__type": "FloatTableGet"
                                                 },
                                                 "Dest": {
                                                     "Var": "CDR",
@@ -2393,11 +2287,12 @@
                                                 "Condition": null,
                                                 "Sequence": {
                                                     "blocks": [
+                                                        null,
                                                         {
                                                             "{d851ffa3}": "88b57905-cd60-4d0b-a26c-15e5cbd4a422",
                                                             "Src": {
-                                                                "value": 3,
-                                                                "__type": "IntGet"
+                                                                "Var": "ChampionBasicAttackCooldownReduction",
+                                                                "__type": "FloatTableGet"
                                                             },
                                                             "Dest": {
                                                                 "Var": "CDR",
@@ -2918,7 +2813,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Taric/Spells/Jade_TaricEAbility",
-            "{97b93084}",
+            "Characters/Jade_Taric/Spells/Jade_TaricPassiveAbility",
             "Characters/Jade_Taric/Spells/Jade_TaricQAbility",
             "Characters/Jade_Taric/Spells/Jade_TaricRAbility",
             "Characters/Jade_Taric/Spells/Jade_TaricWAbility"
@@ -2950,6 +2845,8 @@
         "characterToolData": {
             "mapAIPresence": {
                 "8": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
                     "__type": "ToolAiPresence"

@@ -458,7 +458,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Vayne_NightHunter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60067/ability_60067_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60067/ability_60067_P1.jpg",
-        "description": "베인은 악당을 사냥할 때 자비가 없습니다. 베인이 주변의 적 챔피언을 향해 이동할 때 30의 이동 속도를 얻습니다."
+        "description": "베인이 악당을 무자비하게 사냥합니다. 주변의 적 챔피언을 향해 이동할 때 추가 이동 속도를 얻습니다."
     },
     "spells": [
         {
@@ -619,8 +619,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_W1.jpg",
             "cost": "<spellPassive>기본 지속 효과</spellPassive>",
             "cooldown": "",
-            "description": "베인은 사악한 존재에게 치명적인 희귀 금속으로 된 화살을 사용합니다.  동일한 대상에게 기본 공격이나 스킬을 3회 맞힐 때마다 그 최대 체력에 비례하는 고정 피해를 추가로 입힙니다. (몬스터에게는 최대 200의 피해를 입힙니다.)",
-            "dynamicDescription": "동일한 대상에게 기본 공격이나 스킬을 3회 맞힐 때마다, @BaseDamage@+적 최대 체력의 @MaxHealthRatio*100@%에 해당하는 <trueDamage>고정 피해</trueDamage>를 추가로 입힙니다. (몬스터에게는 최대 200의 피해를 입힙니다.)@SpellModifierDescriptionAppend@",
+            "description": "베인은 사악한 존재에게 치명적인 희귀 금속으로 된 화살을 사용합니다.  동일한 대상에게 기본 공격이나 스킬을 3회 맞힐 때마다 그 최대 체력에 비례하는 고정 피해를 추가로 입힙니다.",
+            "dynamicDescription": "동일한 대상에게 기본 공격이나 스킬을 3회 맞힐 때마다, @BaseDamage@+적 최대 체력의 @MaxHealthRatio*100@%에 해당하는 <trueDamage>고정 피해</trueDamage>를 추가로 입힙니다. (몬스터 대상 최대 피해량: @MonsterDamageCap@)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -770,7 +770,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "베인이 등의 커다란 석궁으로 대상에게 거대한 화살을 날려 피해를 입히고 뒤로 밀어냅니다.  대상이 지형과 충돌하면 그대로 꿰뚫려 추가 피해를 받고 기절합니다.",
-            "dynamicDescription": "화살을 발사해 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 뒤로 밀어냅니다. 적이 지형과 충돌하면 <physicalDamage>@TotalDamagewithSpell@의 물리 피해</physicalDamage>를 추가로 받고 1.5초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "화살을 발사해 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 뒤로 밀어냅니다. 적이 지형과 충돌하면 <physicalDamage>@TotalDamagewithSpell@의 물리 피해</physicalDamage>를 추가로 받고 @StunDuration@초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -919,8 +919,8 @@
             "abilityVideoImagePath": "champion-abilities/60067/ability_60067_R1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "베인이 격렬한 전투를 대비합니다. 공격력을 얻고, 구르기 사용 시 투명 상태가 되며, 어둠 사냥꾼이 부여하는 추가 이동 속도가 세 배로 증가합니다.",
-            "dynamicDescription": "@Duration@초 동안 <physicalDamage>@ADMod@의 추가 공격력</physicalDamage>을 얻습니다. 활성화 중 구르기를 사용하면 1초 동안 <keywordStealth>투명</keywordStealth> 상태가 되고, <spellName>어둠 사냥꾼</spellName>이 부여하는 추가 <speed>이동 속도</speed>가 90으로 증가합니다.@SpellModifierDescriptionAppend@",
+            "description": "베인이 격렬한 전투를 대비하며 추가 공격력을 얻습니다. 또한 구르기 사용 시 투명 상태가 되고, 어둠 사냥꾼이 부여하는 추가 이동 속도가 대폭 증가합니다.",
+            "dynamicDescription": "베인이 격렬한 전투를 대비하며 @Duration@초 동안 <physicalDamage>@ADMod@의 추가 공격력</physicalDamage>을 얻습니다. 또한 활성화 중 구르기를 사용하면 @InvisibilityDuration@초간 <keywordStealth>투명</keywordStealth> 상태가 되고, <spellName>어둠 사냥꾼</spellName>이 부여하는 추가 <speed>이동 속도</speed>가 @UltimateMovementSpeed@만큼으로 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,

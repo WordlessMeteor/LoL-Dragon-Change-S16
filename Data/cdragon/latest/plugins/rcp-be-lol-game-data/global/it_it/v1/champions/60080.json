@@ -795,7 +795,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.png",
         "abilityVideoPath": "champion-abilities/60080/ability_60080_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60080/ability_60080_P1.jpg",
-        "description": "Dopo 4 attacchi o lanci di abilità, Pantheon guadagna la protezione dal prossimo attacco."
+        "description": "Dopo @AttacksRequired@ attacchi o lanci di abilità, Pantheon ottiene una protezione dall'attacco successivo."
     },
     "spells": [
         {
@@ -956,8 +956,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Pantheon balza su un nemico e lo colpisce con il suo scudo, stordendolo.  Dopo aver terminato l'attacco, Pantheon si prepara a bloccare il prossimo attacco.",
-            "dynamicDescription": "Pantheon balza sul nemico bersaglio e infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> e lo <status>stordisce</status> per @StunDuration@ secondo/i. Pantheon ricarica istantaneamente anche la sua <spellName>Protezione delle Insegne</spellName>.@SpellModifierDescriptionAppend@",
+            "description": "Pantheon balza su un nemico e lo colpisce con il suo scudo, stordendolo. Dopo aver terminato l'attacco, Pantheon si prepara a bloccare il prossimo attacco.",
+            "dynamicDescription": "Pantheon balza sul nemico bersaglio, gli infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> e lo <status>stordisce</status> per @StunDuration@ secondo/i. Pantheon ricarica istantaneamente anche la sua <spellName>Protezione delle Insegne</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1106,8 +1106,8 @@
             "abilityVideoImagePath": "champion-abilities/60080/ability_60080_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Pantheon si concentra e sferra 3 rapidi colpi nell'area di fronte a sé, infliggendo il doppio dei danni ai campioni. Pantheon diventa anche più consapevole dei punti vitali dei suoi nemici, permettendogli di infliggere sempre colpi critici ai nemici con meno del 15% di salute.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> <spellName>Colpo della lancia</spellName>, <spellName>Fendenti assassini</spellName> e gli attacchi base di Pantheon ottengono il 100% di probabilità di colpo critico contro i bersagli con meno di un @PassiveCritThreshold*100@% di salute.<br><br><spellActive>Attiva:</spellActive> Pantheon canalizza e sferra @NumberOfStrikes@ rapidi colpi davanti a sé, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> per ogni colpo (per un totale di <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "description": "Pantheon si concentra e sferra rapidi colpi nell'area di fronte a sé, infliggendo danni aumentati ai campioni. Pantheon diventa anche più consapevole dei punti vitali dei suoi nemici, permettendogli di infliggere colpi critici ai nemici feriti.",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> <spellName>Colpo della lancia</spellName>, <spellName>Fendenti assassini</spellName> e gli attacchi base di Pantheon infliggono colpi critici contro i bersagli con meno di un @PassiveCritThreshold*100@% di salute.<br><br><spellActive>Attiva:</spellActive> Pantheon canalizza e sferra @NumberOfStrikes@ rapidi colpi nell'area davanti a sé, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> per ogni colpo (per un totale di <physicalDamage>@MaximumDamageTooltip@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

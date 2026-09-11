@@ -612,7 +612,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_OnTheProwl.project_jade.png",
         "abilityVideoPath": "champion-abilities/60076/ability_60076_P1.webm",
         "abilityVideoImagePath": "champion-abilities/60076/ability_60076_P1.jpg",
-        "description": "A bokorban haladó Nidalee mozgási sebessége 2 másodperc erejéig 15%-kal nagyobb."
+        "description": "A bokorban haladó Nidalee mozgási sebessége megnő."
     },
     "spells": [
         {
@@ -624,7 +624,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Emberi alakban Nidalee elhajít egy tüskés dárdát, amely minél messzebb repül, annál többet sebez.  Puma alakban a következő támadással végzetes csapást próbál mérni az ellenfelére, és minél kevesebb a célpont életereje, annál jobban sebzi azt.",
-            "dynamicDescription": "<keywordMajor>Ember:</keywordMajor> Nidalee elhajítja a dárdáját, amely a becsapódáskor <magicDamage>@StartingDamage@</magicDamage> és <magicDamage>@MaxDamage@ közötti varázssebzést</magicDamage> okoz attól függően, hogy Nidalee milyen messze van a célponttól. <br><br><keywordMajor>Puma:</keywordMajor> Nidalee következő támadása <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@ fizikai sebzést</physicalDamage> okoz, amely a sérült célpontok ellen megnövekszik (legfeljebb a teljes sebzés 300%-áig).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ember:</keywordMajor> Nidalee elhajítja a dárdáját, amely a becsapódáskor <magicDamage>@StartingDamage@</magicDamage>–<magicDamage>@MaxDamage@ varázssebzést</magicDamage> okoz attól függően, hogy Nidalee milyen messze van a célponttól. <br><br><keywordMajor>Puma:</keywordMajor> Nidalee következő támadása <physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownDamage@</physicalDamage>–<physicalDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalTakedownMaximumDamage@ fizikai sebzést</physicalDamage> okoz a célpont hiányzó életereje alapján.@SpellModifierDescriptionAppend@",
             "range": [
                 1500.0,
                 1500.0,
@@ -773,8 +773,8 @@
             "abilityVideoImagePath": "champion-abilities/60076/ability_60076_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Emberi alakjában Nidalee egy csapdát helyez el, amely felfedi az azt aktiváló óvatlan ellenfelet, és 12 másodpercre csökkenti a páncélját és a varázsellenállását. Pumaként előreugrik, és földet éréskor kis mértékű sebzést okoz.",
-            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee egy csapdát helyez el, amely 2 másodperc alatt <magicDamage>@DamagePerSecond@ varázssebzést</magicDamage> okoz, felfedi a célpontot, és 12 másodpercre @ResistDecreases*100@%-kal <status>csökkenti</status> annak <scaleArmor>páncélját</scaleArmor> és <scaleMR>varázsellenállását</scaleMR>. A csapdák 4 percig maradnak aktívak. <br><br><keywordMajor>Puma: </keywordMajor>Nidalee előreugrik, és <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek.@SpellModifierDescriptionAppend@",
+            "description": "Emberi alakjában Nidalee egy csapdát helyez el, amely felfedi és megsebzi az azt aktiváló óvatlan ellenfelet, valamint csökkenti a páncélját és a varázsellenállását. Pumaként előreugrik, és földet éréskor kis mértékű sebzést okoz.",
+            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee egy csapdát helyez el, amely @DamageDuration@ másodperc alatt <magicDamage>@DamagePerSecond@ varázssebzést</magicDamage> okoz, felfedi a célpontot, és @ShredDuration@ másodpercre @ResistDecreases*100@%-kal <status>csökkenti</status> annak <scaleArmor>páncélját</scaleArmor> és <scaleMR>varázsellenállását</scaleMR>. A csapdák @TrapDurationMins@ percig maradnak aktívak. <br><br><keywordMajor>Puma: </keywordMajor>Nidalee előreugrik, és <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalPounceDamage@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -800,8 +800,8 @@
                 18.0
             ],
             "coefficients": {
-                "coefficient1": 0.05,
-                "coefficient2": 0.2
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -823,49 +823,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    14.0,
-                    13.0,
-                    12.0,
-                    11.0,
-                    10.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
-                    50.0,
-                    100.0,
-                    150.0,
-                    200.0,
-                    250.0,
-                    300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
-                    40.0,
-                    80.0,
-                    120.0,
-                    160.0,
-                    200.0,
-                    240.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -924,14 +924,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Emberi alakjában Nidalee megidézi a puma szellemét, hogy meggyógyítsa a szövetségeseit, és egy rövid időre megnövekedett támadási sebességgel ruházhassa fel őket.  Pumaként gyorsan megkarmolja az előtte lévő ellenfeleket.",
-            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee <healing>@TotalHealing@</healing> egységnyi életerővel gyógyít egy szövetséges hőst, valamint 7 másodperc erejéig <attackSpeed>@BonusAS*100@%-kal megnöveli a támadási sebességét</attackSpeed> is.<br><br><keywordMajor>Puma:</keywordMajor> lesújt a karmaival az előtte lévő ellenfelekre, és <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ varázssebzést</magicDamage> okoz nekik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee <healing>@TotalHealing@</healing> egységnyi életerővel gyógyít egy szövetséges hőst, valamint @ASDuration@ másodperc erejéig <attackSpeed>@BonusAS*100@%-kal megnöveli a támadási sebességét</attackSpeed> is.<br><br><keywordMajor>Puma:</keywordMajor> lesújt a karmaival az előtte lévő ellenfelekre, és <magicDamage>@spell.Jade_NidaleeAspectOfTheCougar:TotalSwipeDamage@ varázssebzést</magicDamage> okoz nekik.@SpellModifierDescriptionAppend@",
             "range": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
             ],
             "costCoefficients": [
                 60.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Nidalee átalakul pumává, és ezáltal új képességekre és nagyobb mozgási sebességre tesz szert.",
-            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee vad pumává változik, amivel <speed>20 mozgási sebességre</speed> tesz szert, az alapképességei pedig a következők lesznek: <spellName>Harapás</spellName>, <spellName>Szökkenés</spellName> és <spellName>Karmolás</spellName>.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee visszaváltozik emberi alakba.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Ember: </keywordMajor>Nidalee vad pumává változik, amivel <speed>@CougarMoveSpeed@ mozgási sebességre</speed> tesz szert, az alapképességei pedig a következők lesznek: <spellName>Harapás</spellName>, <spellName>Szökkenés</spellName> és <spellName>Karmolás</spellName>.<br><br><keywordMajor>Puma: </keywordMajor>Nidalee visszaváltozik emberi alakba.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1150,13 +1150,13 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,

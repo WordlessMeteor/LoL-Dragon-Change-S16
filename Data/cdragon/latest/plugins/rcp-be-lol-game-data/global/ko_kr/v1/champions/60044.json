@@ -656,7 +656,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "타릭이 대지의 기운을 불러와 아군과 자신의 체력을 회복시킵니다. 대상이 자신뿐인 경우 체력 회복량이 증가합니다. 또한 기본 공격을 가할 때마다 이 스킬의 재사용 대기시간이 감소합니다.",
-            "dynamicDescription": "<mainText>타릭이 대지의 기운을 불러와 아군과 자신의 <healing>체력을 @HealAmount@</healing>만큼 회복시킵니다. 자신을 대상으로 지정하면 체력 회복량이 40% 증가해, <healing>@HealAmountSelfTT@의 체력</healing>을 회복합니다.<br><br>타릭이 기본 공격을 가할 때마다 <spellName>원기 부여</spellName>의 재사용 대기시간이 1초 감소합니다. (적 챔피언 공격 시 3초)",
+            "dynamicDescription": "타릭이 대지의 기운을 불러와, 아군과 자신의 <healing>체력을 @HealAmount@</healing>만큼 회복시킵니다. 자신이 대상인 경우 체력 회복량이 증가해 <healing>@HealAmountSelf@의 체력</healing>을 회복합니다.<br><br>타릭이 기본 공격을 가할 때마다 <spellName>원기 부여</spellName>의 재사용 대기시간이 @BasicAttackCooldownReduction@초씩 감소합니다. (적 챔피언이 대상일 때 @ChampionBasicAttackCooldownReduction@초)@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -682,63 +682,63 @@
                 15.0
             ],
             "coefficients": {
-                "coefficient1": 0.15,
-                "coefficient2": 0.75
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.3,
-                    0.45,
-                    0.6,
-                    0.75,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.75,
-                    0.75,
-                    1.5,
-                    2.25,
-                    3.0,
-                    3.75,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    125.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    2.0,
-                    3.0,
-                    4.0,
-                    5.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -806,7 +806,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "타릭이 경화의 오라를 발산해, 자신과 주변 아군 챔피언의 방어력을 증가시킵니다. 또는 자신을 둘러싼 마법 보석을 부숴, 잠시 추가 방어력을 잃는 대신 주변 적에게 피해를 입히고 방어력을 감소시킬 수도 있습니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>보석이 타릭의 <scaleArmor>방어력을 @ArmorBonus@</scaleArmor>만큼 증가시킵니다. 또한 주변의 아군 챔피언이 <scaleArmor>@BonustoAllies@의 방어력</scaleArmor>(타릭 방어력의 @ArmorBonusCoefficient*100@%)을 얻습니다.<br><br><spellActive>사용 시: </spellActive>타릭이 자신의 방어구를 산산조각 내, 주변 적에게 <magicDamage>@TotalDamage@의 피해</magicDamage>를 입히고 4초 동안 <scaleArmor>방어력을 @ArmorShred*-1@</scaleArmor>만큼 감소시킵니다. 타릭은 <spellName>산산조각</spellName>이 재사용 대기 중일 때 <scaleArmor>@ArmorBonus@의 방어력</scaleArmor>을 잃습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>보석이 타릭의 <scaleArmor>방어력을 @ArmorBonus@</scaleArmor>만큼 증가시킵니다. 또한 주변의 아군 챔피언이 <scaleArmor>@BonustoAllies@의 방어력</scaleArmor>(타릭 방어력의 @ArmorBonusCoefficient*100@%)을 얻습니다.<br><br><spellActive>사용 시: </spellActive>타릭이 자신의 방어구를 산산조각 내, 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @ArmorShredDuration@초 동안 <scaleArmor>방어력을 @ArmorShred*-1@</scaleArmor>만큼 감소시킵니다. 타릭은 <spellName>산산조각</spellName>이 재사용 대기 중일 때 <scaleArmor>@ArmorBonus@의 방어력</scaleArmor>을 잃습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -832,8 +832,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -846,40 +846,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    7.0,
-                    8.0,
-                    9.0,
-                    10.0,
-                    11.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -956,7 +956,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "타릭이 보석 박힌 방패에서 찬란한 빛의 구체를 발사해, 대상을 기절시키고 피해를 입힙니다. 대상과 타릭의 거리가 가까울수록 피해량이 증가합니다.",
-            "dynamicDescription": "<mainText>타릭이 지정한 적에게 찬란한 빛의 구체를 발사해, <magicDamage>@TotalDamage@</magicDamage>~<magicDamage>@TotalMaxDamageTT@의 마법 피해</magicDamage>를 입히고 @MinStunLength@~@MaxStunLength@초 동안 <status>기절</status>시킵니다. 황홀한 강타는 타릭이 대상과 가까울수록 큰 피해를 입히고, 대상과 멀수록 오랫동안 기절시킵니다.",
+            "dynamicDescription": "타릭이 지정한 적에게 찬란한 빛의 구체를 발사해, <magicDamage>@TotalDamage@</magicDamage>~<magicDamage>@TotalMaxDamageTT@의 마법 피해</magicDamage>를 입히고 @MinStunLength@~@MaxStunLength@초 동안 <status>기절</status>시킵니다.<br><br>황홀한 강타는 타릭이 대상과 가까울수록 큰 피해를 입히고, 대상과 멀수록 오랫동안 기절시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -979,39 +979,39 @@
                 12.0,
                 11.0,
                 10.0,
-                10.0
+                9.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0,
-                    290.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1106,7 +1106,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "타릭이 망치로 지면을 강타하여 주변 적에게 마법 피해를 입힙니다. 이후 타릭의 보석이 잠시 에너지를 발산하여, 타릭과 아군에게 추가 공격력과 주문력을 부여합니다.",
-            "dynamicDescription": "<mainText>타릭이 망치로 지면을 강타하여 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>이후 10초간 타릭의 보석이 에너지를 발산하여, 타릭에게 <physicalDamage>@DamageIncrease@의 공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 부여합니다. 근처의 아군 또한 <physicalDamage>@AllyBonus@의 공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 얻습니다.",
+            "dynamicDescription": "타릭이 망치로 지면을 강타하여 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>이후 @RadianceDuration@초 동안 타릭의 보석이 에너지를 발산하여, 타릭에게 <physicalDamage>@DamageIncrease@의 공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 부여합니다. 근처의 아군 또한 <physicalDamage>@AllyBonus@의 공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1132,8 +1132,8 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

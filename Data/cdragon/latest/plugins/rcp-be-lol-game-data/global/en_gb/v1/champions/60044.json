@@ -656,7 +656,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself. Additionally,Taric's basic attacks reduce Imbue's cooldown.",
-            "dynamicDescription": "<mainText>Taric brings forth earthen energy, restoring <healing>@HealAmount@ health</healing> to an ally and himself. If he targets himself, the heal increases by 40% restoring <healing>@HealAmountSelfTT@ health</healing>.<br><br>Taric's basic attacks reduce <spellName>Imbue's</spellName> cooldown by 1 second (3 seconds if attacking an enemy champion).",
+            "dynamicDescription": "Taric brings forth earthen energy, restoring <healing>@HealAmount@ health</healing> to an ally and himself. If he targets himself, the heal increases, restoring <healing>@HealAmountSelf@ health</healing>.<br><br>Taric's basic attacks reduce <spellName>Imbue's</spellName> cooldown by @BasicAttackCooldownReduction@ second (@ChampionBasicAttackCooldownReduction@ seconds if attacking an enemy champion).@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -682,63 +682,63 @@
                 15.0
             ],
             "coefficients": {
-                "coefficient1": 0.15,
-                "coefficient2": 0.75
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0,
-                    25.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.3,
-                    0.45,
-                    0.6,
-                    0.75,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.75,
-                    0.75,
-                    1.5,
-                    2.25,
-                    3.0,
-                    3.75,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    25.0,
-                    25.0,
-                    50.0,
-                    75.0,
-                    100.0,
-                    125.0,
-                    125.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    2.0,
-                    3.0,
-                    4.0,
-                    5.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -806,7 +806,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Taric's gemstones increase his <scaleArmor>Armor by @ArmorBonus@</scaleArmor>. Additionally, nearby allied champions gain <scaleArmor>@BonustoAllies@ Armor</scaleArmor> (@ArmorBonusCoefficient*100@% of Taric's Armor).<br><br><spellActive>Active: </spellActive>Taric shatters his armor, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies and reducing their <scaleArmor>Armor by @ArmorShred*-1@</scaleArmor> for 4 seconds. Taric loses <scaleArmor>@ArmorBonus@ Armor</scaleArmor> while <spellName>Shatter</spellName> is on cooldown.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Taric's gemstones increase his <scaleArmor>Armor by @ArmorBonus@</scaleArmor>. Additionally, nearby allied champions gain <scaleArmor>@BonustoAllies@ Armor</scaleArmor> (@ArmorBonusCoefficient*100@% of Taric's Armor).<br><br><spellActive>Active: </spellActive>Taric shatters his armor, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies and reducing their <scaleArmor>Armor by @ArmorShred*-1@</scaleArmor> for @ArmorShredDuration@ seconds. Taric loses <scaleArmor>@ArmorBonus@ Armor</scaleArmor> while <spellName>Shatter</spellName> is on cooldown.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -832,8 +832,8 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.3,
-                "coefficient2": 0.1
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -846,40 +846,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    7.0,
-                    8.0,
-                    9.0,
-                    10.0,
-                    11.0,
-                    12.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5,
-                    2.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0,
-                    1300.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -956,7 +956,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them.",
-            "dynamicDescription": "<mainText>Taric fires a prismatic sphere at a target enemy, dealing between <magicDamage>@TotalDamage@</magicDamage> and <magicDamage>@TotalMaxDamageTT@ magic damage</magicDamage> and <status>Stunning</status> for between @MinStunLength@ and @MaxStunLength@ seconds. Dazzle's damage increases the closer Taric is to the target, and the stun length increases the further from the target.",
+            "dynamicDescription": "Taric fires a prismatic sphere at a target enemy, dealing between <magicDamage>@TotalDamage@</magicDamage> and <magicDamage>@TotalMaxDamageTT@ magic damage</magicDamage> and <status>Stunning</status> for between @MinStunLength@ and @MaxStunLength@ seconds.<br><br>Dazzle's damage increases the closer Taric is to the target, while the stun length increases the farther from the target.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -979,39 +979,39 @@
                 12.0,
                 11.0,
                 10.0,
-                10.0
+                9.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    50.0,
-                    90.0,
-                    130.0,
-                    170.0,
-                    210.0,
-                    250.0,
-                    290.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -1106,7 +1106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy empowering Taric and his allies with bonus Attack Damage and Ability Power",
-            "dynamicDescription": "<mainText>Taric slams his hammer into the ground, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies.<br><br>For the next 10 seconds, Taric's gems radiate energy, granting him <physicalDamage>@DamageIncrease@ Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>. His nearby allies gain <physicalDamage>@AllyBonus@ Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>.",
+            "dynamicDescription": "Taric slams his hammer into the ground, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to nearby enemies.<br><br>For the next @RadianceDuration@ seconds, Taric's gems radiate energy, granting him <physicalDamage>@DamageIncrease@ Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>. His nearby allies gain <physicalDamage>@AllyBonus@ Attack Damage</physicalDamage> and <magicDamage>Ability Power</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1132,8 +1132,8 @@
                 60.0
             ],
             "coefficients": {
-                "coefficient1": 0.5,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

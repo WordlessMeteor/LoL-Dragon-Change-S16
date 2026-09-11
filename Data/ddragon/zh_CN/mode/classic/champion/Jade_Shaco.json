@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Shaco": {
             "id": "Jade_Shaco",
@@ -12,7 +12,7 @@
                 "full": "Jade_Shaco.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 192,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -201,7 +201,7 @@
                     "id": "Jade_ShacoDeceive",
                     "name": "欺诈魔术",
                     "description": "萨科进入隐形状态并传送到目标位置。他的下一次攻击必定暴击。",
-                    "tooltip": "萨科传送到附近，并进入<keywordStealth>隐身</keywordStealth>状态，持续3.5秒。<br /><br />他在{{ enhancedattackduration }}秒内的下一次普通攻击将触发暴击，造成{{ modifiedqcritdamagetooltip }}伤害。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "萨科传送到附近，并进入<keywordStealth>隐身</keywordStealth>状态，持续{{ stealthduration }}秒。<br /><br />他在{{ enhancedattackduration }}秒内的下一次普通攻击将触发暴击，造成{{ modifiedqcritdamagetooltip }}伤害。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "暴击伤害",
@@ -329,10 +329,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_ShacoDeceive.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 144,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -376,39 +376,39 @@
                     "effect": [
                         null,
                         [
-                            35,
-                            50,
-                            65,
-                            80,
-                            95
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            200,
-                            300,
-                            400,
-                            500,
-                            600
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.5,
-                            0.75,
-                            1,
-                            1.25,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -448,11 +448,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "35/50/65/80/95",
-                        "200/300/400/500/600",
-                        "0.5/0.75/1/1.25/1.5",
-                        "40",
-                        "2",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -472,10 +472,10 @@
                     "rangeBurn": "425",
                     "image": {
                         "full": "Jade_ShacoJackInTheBox.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 144,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -617,10 +617,10 @@
                     "rangeBurn": "625",
                     "image": {
                         "full": "Jade_ShacoTwoShivPoison.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -630,7 +630,7 @@
                     "id": "Jade_ShacoHallucinateFull",
                     "name": "幻像",
                     "description": "萨科在身边制造一个分身，攻击附近的敌人。分身会在阵亡时爆炸，对附近敌人造成伤害。",
-                    "tooltip": "萨科短暂消失，并与一个最多持续{{ clonelifetime }}秒的分身共同重新现身。分身造成萨科{{ cloneaadamagepercent*100 }}%的伤害，并承受{{ jade_shacodamagetakentooltip*100 }}%额外伤害。<br /><br />分身会在阵亡时爆炸，对附近敌人造成<magicDamage>{{ explosiontotaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "萨科短暂消失，并与一个最多持续{{ clonelifetime }}秒的分身共同重新现身。分身造成萨科{{ cloneaadamagepercent*100 }}%的伤害，并承受{{ clonebonusdamagetakentooltip }}额外伤害。<br /><br />分身会在阵亡时爆炸，对附近敌人造成<magicDamage>{{ explosiontotaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "死亡时伤害",
@@ -678,9 +678,9 @@
                             0
                         ],
                         [
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -714,7 +714,7 @@
                         "0",
                         "0",
                         "0",
-                        "6",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -732,10 +732,10 @@
                     "rangeBurn": "200",
                     "image": {
                         "full": "Jade_ShacoHallucinateFull.png",
-                        "sprite": "spell4.png",
+                        "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -744,12 +744,12 @@
             ],
             "passive": {
                 "name": "背刺",
-                "description": "萨科从背后打击一名敌人时造成20%额外伤害。",
+                "description": "萨科从目标背后发起的攻击和技能会造成额外伤害。",
                 "image": {
                     "full": "Jester_CarefulStrikes.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 192,
+                    "x": 336,
                     "y": 48,
                     "w": 48,
                     "h": 48

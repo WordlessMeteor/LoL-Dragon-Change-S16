@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.17.1",
+    "version": "16.18.1",
     "data": {
         "Jade_Skarner": {
             "id": "Jade_Skarner",
@@ -12,8 +12,8 @@
                 "full": "Jade_Skarner.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 144,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -166,7 +166,7 @@
                     "id": "Jade_SkarnerQ",
                     "name": "水晶横扫",
                     "description": "斯卡纳用爪子猛击周围敌军，对附近所有敌人造成物理伤害。如果斯卡纳击中了一个目标，身上就会暂时充盈水晶能量。充盈水晶能量期间，斯卡纳的【水晶横扫】将造成额外魔法伤害，并减速所有命中的目标。",
-                    "tooltip": "斯卡纳对附近所有敌人造成<physicalDamage>{{ totalbasedamage }}物理伤害</physicalDamage>。若击中一个目标，则斯卡纳会充盈<keywordMajor>水晶能量</keywordMajor>，持续5秒。<br /><br />斯卡纳处于充能状态时，<spellName>水晶横扫</spellName>造成<magicDamage>{{ totalprocdamage }}额外魔法伤害</magicDamage>和持续2秒的{{ slowpercent*-100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "斯卡纳对附近所有敌人造成<physicalDamage>{{ totalbasedamage }}物理伤害</physicalDamage>。若击中一个目标，则斯卡纳会充盈<keywordMajor>水晶能量</keywordMajor>，持续{{ crystalenergyduration }}秒。<br /><br />斯卡纳处于充能状态时，<spellName>水晶横扫</spellName>造成<magicDamage>{{ totalprocdamage }}额外魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slowpercent*-100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -300,8 +300,8 @@
                         "full": "Jade_SkarnerQ.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 384,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -311,7 +311,7 @@
                     "id": "Jade_SkarnerW",
                     "name": "水晶蝎甲",
                     "description": "斯卡纳获得护盾，在护盾存在期间，他的移动速度和攻击速度提高。",
-                    "tooltip": "斯卡纳获得可以吸收{{ blockdamage }}伤害的<shield>护盾</shield>，持续6秒。护盾存在期间，斯卡纳获得<attackSpeed>{{ asbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ msbonus*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "斯卡纳获得持续{{ shieldduration }}秒的{{ blockdamage }}<shield>护盾值</shield>。护盾存在期间，斯卡纳获得<attackSpeed>{{ asbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ msbonus*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -443,8 +443,8 @@
                         "full": "Jade_SkarnerW.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 432,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -454,7 +454,7 @@
                     "id": "Jade_SkarnerE",
                     "name": "晶体破碎",
                     "description": "斯卡纳召唤一股水晶能量，对命中的敌人造成伤害并将其标记。攻击敌人会消耗标记，为斯卡纳治疗生命值。直接击杀目标同样可触发该治疗效果。",
-                    "tooltip": "斯卡纳对一条直线上的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并将其标记6秒。<br /><br />攻击敌人会消耗标记，为斯卡纳<healing>治疗</healing>{{ totalhealing }}生命值。直接击杀目标同样可触发该治疗效果。(每次激活的治疗效果降低50%。){{ spellmodifierdescriptionappend }}",
+                    "tooltip": "斯卡纳对一条直线上的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并将其标记{{ markduration }}秒。<br /><br />攻击敌人会消耗标记，为斯卡纳<healing>治疗</healing>{{ totalhealing }}生命值。直接击杀目标同样可触发该治疗效果。(每次激活的治疗效果降低{{ subsequenthealmultiplier*100 }}%。){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -586,8 +586,8 @@
                         "full": "Jade_SkarnerE.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 48,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -597,7 +597,7 @@
                     "id": "Jade_SkarnerR",
                     "name": "晶状毒刺",
                     "description": "斯卡纳压制一名敌方英雄并对其造成魔法伤害。在此期间，斯卡纳可以自由移动并拖拽目标。效果结束时，斯卡纳会对目标造成额外伤害。",
-                    "tooltip": "斯卡纳<status>压制</status>一名敌方英雄1.75秒，并造成<magicDamage>{{ totadamage }}魔法伤害</magicDamage>。在此期间，斯卡纳可以自由移动并拖拽目标。效果结束时，斯卡纳会对目标造成额外的<magicDamage>{{ totadamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "斯卡纳<status>压制</status>一名敌方英雄{{ suppressionduration }}秒，并造成<magicDamage>{{ totadamage }}魔法伤害</magicDamage>。在此期间，斯卡纳可以自由移动并拖拽目标。效果结束时，斯卡纳会对目标造成额外的<magicDamage>{{ totadamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -703,8 +703,8 @@
                         "full": "Jade_SkarnerR.png",
                         "sprite": "spell5.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 48,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -713,13 +713,13 @@
             ],
             "passive": {
                 "name": "水晶能量",
-                "description": "普通攻击使所有技能的冷却时间缩短0.5秒。攻击英雄时将此效果翻倍。",
+                "description": "普通攻击使所有技能的冷却时间缩短。这个效果在对抗英雄时会更强。",
                 "image": {
                     "full": "Jade_Skarner_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 432,
-                    "y": 48,
+                    "x": 144,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }
