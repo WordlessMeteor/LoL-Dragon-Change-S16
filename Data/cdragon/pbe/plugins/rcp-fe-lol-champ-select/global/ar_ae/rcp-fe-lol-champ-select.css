@@ -14,6 +14,17 @@
     position: absolute
 }
 
+.position-assignment .map-intro-video-demacia {
+    left: 306px;
+    position: absolute;
+    top: -7px
+}
+
+.position-assignment .map-intro-video-demacia.map-side-red {
+    left: 745px;
+    top: -219px
+}
+
 .position-assignment .map-static-image {
     height: 720px;
     left: 0;
@@ -59,6 +70,10 @@
 
 .position-assignment .position-text .position-assignment-label {
     font: normal normal 700 normal 30px/32px LoL Display
+}
+
+.position-assignment.is-demacia .position-text {
+    bottom: 90px
 }
 
 .position-assignment.defocussed {
@@ -123,6 +138,11 @@
     transition-timing-function: cubic-bezier(1, 0, 1, 1)
 }
 
+.is-demacia .position-text.slot-id-0 .position-assignment-label,
+.is-demacia .position-text.slot-id-0 .position-assignment-title {
+    animation-delay: 1.85s
+}
+
 .position-text.slot-id-0 .position-assignment-title {
     animation-delay: .72s
 }
@@ -130,6 +150,11 @@
 .position-autofill-container.slot-id-0,
 .position-text.slot-id-0 .position-assignment-label {
     animation-delay: .85s
+}
+
+.is-demacia .position-text.slot-id-1 .position-assignment-label,
+.is-demacia .position-text.slot-id-1 .position-assignment-title {
+    animation-delay: 1.85s
 }
 
 .position-text.slot-id-1 .position-assignment-title {
@@ -141,6 +166,11 @@
     animation-delay: 1.55s
 }
 
+.is-demacia .position-text.slot-id-2 .position-assignment-label,
+.is-demacia .position-text.slot-id-2 .position-assignment-title {
+    animation-delay: 1.85s
+}
+
 .position-text.slot-id-2 .position-assignment-title {
     animation-delay: 2.12s
 }
@@ -148,6 +178,11 @@
 .position-autofill-container.slot-id-2,
 .position-text.slot-id-2 .position-assignment-label {
     animation-delay: 2.25s
+}
+
+.is-demacia .position-text.slot-id-3 .position-assignment-label,
+.is-demacia .position-text.slot-id-3 .position-assignment-title {
+    animation-delay: 1.85s
 }
 
 .position-text.slot-id-3 .position-assignment-title {
@@ -159,6 +194,11 @@
     animation-delay: 2.95s
 }
 
+.is-demacia .position-text.slot-id-4 .position-assignment-label,
+.is-demacia .position-text.slot-id-4 .position-assignment-title {
+    animation-delay: 1.85s
+}
+
 .position-text.slot-id-4 .position-assignment-title {
     animation-delay: 3.52s
 }
@@ -166,6 +206,11 @@
 .position-autofill-container.slot-id-4,
 .position-text.slot-id-4 .position-assignment-label {
     animation-delay: 3.65s
+}
+
+.is-demacia .position-text.slot-id-5 .position-assignment-label,
+.is-demacia .position-text.slot-id-5 .position-assignment-title {
+    animation-delay: 1.85s
 }
 
 .position-text.slot-id-5 .position-assignment-title {
@@ -353,6 +398,19 @@
 
 .position-assignment .position-assignment-pins .position-assignment-pin .pin-intro-video {
     position: absolute
+}
+
+.position-assignment .position-assignment-pins .position-assignment-pin.is-demacia.is-self .pin-intro-video {
+    bottom: 14px;
+    left: 3px;
+    z-index: 1
+}
+
+.position-assignment .position-assignment-pins .position-assignment-pin.is-demacia .pin-intro-video {
+    bottom: -8px;
+    left: -23px;
+    visibility: hidden;
+    z-index: 1
 }
 
 .position-assignment .position-assignment-pins .position-assignment-pin.is-self .pin-container .pin-static-image {
@@ -5658,9 +5716,15 @@ lol-uikit-content-block[type=tooltip-system].grid-champion-bonus-select-tooltip 
     background-image: url(/fe/lol-champ-select/images/config/overlay-defocus.png);
     height: 100%;
     left: 0;
+    opacity: 1;
     position: absolute;
     top: 0;
+    transition: opacity .4s ease;
     width: 100%
+}
+
+.champion-select .champion-splash-background.show-position-assignment {
+    opacity: .2
 }
 
 .champion-select .champion-splash-background.mask-splash .background-vignette-container {

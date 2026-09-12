@@ -2590,7 +2590,7 @@
                     expandVoiceSkinsDropdown: function(e) {
                         const t = e.currentTarget;
                         requestAnimationFrame((() => {
-                            t.shadowRoot.querySelector(".ui-dropdown-options-container lol-uikit-scrollable").style.maxHeight = "none"
+                            t.shadowRoot.querySelector(".ui-dropdown-options-container lol-uikit-scrollable").style.maxHeight = "280px"
                         }))
                     },
                     viewAgreement: function() {
