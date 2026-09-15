@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Du erhältst den Beschwörerzauber <spellName>Täuschen</spellName>.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich und wirst <keywordStealth>unsichtbar</keywordStealth>. Während du <keywordStealth>unsichtbar</keywordStealth> bist, verursacht dein nächster Angriff zusätzlichen <physicalDamage>normalen Schaden</physicalDamage>.<br>Wenn du stirbst, erscheint eine explodierende Kiste, die hohen <magicDamage>magischen Schaden</magicDamage> verursacht und Gegner in der Nähe in <status>Furcht</status> versetzt.",
+            "desc": "Du erhältst den Beschwörerzauber <spellName>Täuschen</spellName>.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich, wirst <keywordStealth>unsichtbar</keywordStealth> und verursachst zusätzlichen <physicalDamage>normalen Schaden</physicalDamage> beim nächsten Angriff. <br><br>Wenn du stirbst, erscheint eine explodierende Kiste, die hohen <trueDamage>absoluten Schaden</trueDamage> verursacht und Gegner in der Nähe in <status>Furcht</status> versetzt.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Clown-Hochschule",
             "rarity": 2,
-            "tooltip": "<spellName>Heimtücke</spellName>: Du verursachst @BasicAttackDamage@ <physicalDamage>zusätzlichen normalen Schaden</physicalDamage>, wenn du hinterrücks angreifst.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich und wirst @StealthDuration@&nbsp;Sekunden lang <keywordStealth>unsichtbar</keywordStealth>. Während du <keywordStealth>unsichtbar</keywordStealth> bist, verursacht dein nächster Angriff zusätzlich <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage>. Wird der Angriff hinterrücks ausgeführt, trifft er kritisch und verursacht @QCritDamageMod@&nbsp;Schaden.<br><br><spellName>Halluzination: Tod</spellName>: Bei deinem Tod verursachst du <magicDamage>magischen Schaden in Höhe von @FearDamage*100@&nbsp;% des maximalen Lebens</magicDamage> und versetzt dein Umfeld @FearDuration@&nbsp;Sekunde(n) lang in Furcht."
+            "tooltip": "<spellName>Heimtücke</spellName>: Du verursachst @BasicAttackDamage@ <physicalDamage>zusätzlichen normalen Schaden</physicalDamage>, wenn du hinterrücks angreifst.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich und wirst @StealthDuration@&nbsp;Sekunden lang <keywordStealth>unsichtbar</keywordStealth>. Während du <keywordStealth>unsichtbar</keywordStealth> bist, verursacht dein nächster Angriff zusätzlich <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage>. Wird der Angriff hinterrücks ausgeführt, trifft er kritisch und verursacht @QCritDamageMod@&nbsp;Schaden.<br><br><spellName>Halluzination: Tod</spellName>: Bei deinem Tod verursachst du absoluten Schaden in Höhe von <magicDamage>@FearDamage*100@&nbsp;% des maximalen Lebens</magicDamage> und versetzt dein Umfeld @FearDuration@&nbsp;Sek. lang in Furcht."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll.<br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, <keywordMajor>wenn du ein Dämonen-Team besiegst</keywordMajor>.",
+            "desc": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll. <br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, wenn du ein <keywordMajor>Dämonen-Team</keywordMajor> besiegst.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Verbündeter Jäger",
             "rarity": 4,
-            "tooltip": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll.<br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, <keywordMajor>wenn du ein Dämonen-Team besiegst</keywordMajor>."
+            "tooltip": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll. <br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, wenn du ein <keywordMajor>Dämonen-Team</keywordMajor> besiegst."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Du erhältst @RangeIncrease@&nbsp;Angriffsreichweite.",
+            "desc": "Du erhältst @MeleeRangeIncrease@&nbsp;Angriffsreichweite (für Fernkämpfer verringert auf @RangedRangeIncrease@).",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Bestes Zielfernrohr",
             "rarity": 2,
-            "tooltip": "Du erhältst @RangeIncrease@&nbsp;Angriffsreichweite."
+            "tooltip": "Du erhältst @MeleeRangeIncrease@&nbsp;Angriffsreichweite (für Fernkämpfer verringert auf @RangedRangeIncrease@)."
         },
         {
             "apiName": "SlimeTime",

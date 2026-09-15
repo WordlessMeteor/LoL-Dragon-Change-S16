@@ -4074,7 +4074,8 @@
                 }
                 showTFTHome(e) {
                     this.sendTFTHomeTelemetryEvent(e), this.setTFTHomeSeen(!0);
-                    i.Router.navigateTo("rcp-fe-lol-tft")
+                    const t = this._services.tft.getTFTNewTabEnabled() ? "rcp-fe-tft" : "rcp-fe-lol-tft";
+                    i.Router.navigateTo(t)
                 }
                 showJadeHome(e) {
                     i.Router.navigateTo("rcp-fe-lol-jade")
@@ -14008,10 +14009,10 @@
             const l = i.UIKit.getToastCelebrationManager();
             t.default = class {
                 constructor(e) {
-                    this.NavigationPlugin = e, this.menuItemId = e.getNavBarMenuItemId("TFT"), this.navigationItem = void 0, this.platformConfigBinding = void 0, this._battlePassV2 = void 0, this._tftPromoOfferIds = void 0, this._tftPromoSeenOfferIds = void 0, this._regionData = void 0, this._isTFTPlayer = !1
+                    this.NavigationPlugin = e, this.menuItemId = e.getNavBarMenuItemId("TFT"), this.navigationItem = void 0, this.platformConfigBinding = void 0, this._battlePassV2 = void 0, this._tftPromoOfferIds = void 0, this._tftPromoSeenOfferIds = void 0, this._regionData = void 0, this._isTFTPlayer = !1, this._tftService = e.getTFTService()
                 }
                 init() {
-                    this.navigationItem = this.createNavigationItem(), this.NavigationPlugin.setItemEnabled(this.navigationItem, !0), this._setupNavigationAlert(), this.platformConfigBinding = (0, i.dataBinding)("/lol-platform-config", i.websocket), this.settingsBinding = (0, i.dataBinding)("/lol-settings", i.websocket), this.platformConfigBinding.observe("/v1/initial-configuration-complete", this, (e => {
+                    this._setupNewTFTTabObserver(), this.platformConfigBinding = (0, i.dataBinding)("/lol-platform-config", i.websocket), this.settingsBinding = (0, i.dataBinding)("/lol-settings", i.websocket), this.platformConfigBinding.observe("/v1/initial-configuration-complete", this, (e => {
                         e && this.platformConfigBinding.unobserve("/v1/initial-configuration-complete", this)
                     })), this._setupIsTFTPlayerObserver(), this._setUpRegionObserver()
                 }
@@ -14520,7 +14521,7 @@
                 PERMANENT: [n.COLLECTIONS, n.LOOT],
                 PURCHASE: [n.YOURSHOP, n.STORE]
             };
-            t.NAV_BAR_MENU_ITEMS = i;
+            t.NAV_BAR_MENU_ITEMS = i, n.TFTU = "rcp-fe-tft", i.MAIN.push(n.TFTU);
             t.EAT_TEXT_DISPLAY = {
                 LARGE: "large",
                 SMALL: "small"
@@ -24278,7 +24279,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(401)),
-                o = (i = n(500)) && i.__esModule ? i : {
+                o = (i = n(503)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -24310,42 +24311,42 @@
                         name: "HonorLateRecognitionComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLateRecognitionComponent: n(504).default,
-                        HonorLateRecognitionIconComponent: n(507).default
+                        HonorLateRecognitionComponent: n(507).default,
+                        HonorLateRecognitionIconComponent: n(510).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelupVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelupVignetteComponent: n(510).default
+                        HonorLevelupVignetteComponent: n(513).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorSeasonRewardComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorSeasonRewardComponent: n(514).default,
+                        HonorSeasonRewardComponent: n(517).default,
                         MissionCelebrationRewardComponent: n(155)
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelChangeTooltipComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelChangeTooltipComponent: n(517).default
+                        HonorLevelChangeTooltipComponent: n(520).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "ChallengesLevelUpVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        ChallengesLevelUpVignetteComponent: n(523).default
+                        ChallengesLevelUpVignetteComponent: n(526).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "ParentalControlsModalComponent",
-                        ParentalControlsModalRootComponent: n(526).default,
+                        ParentalControlsModalRootComponent: n(529).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "VanguardIsComingModalComponent",
-                        VanguardIsComingModalRootComponent: n(529).default,
+                        VanguardIsComingModalRootComponent: n(532).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "DeprecationModalComponent",
-                        DeprecationModalRootComponent: n(532).default,
+                        DeprecationModalRootComponent: n(535).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
@@ -24356,7 +24357,7 @@
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "MacGraphicsUpgradeModalComponent",
-                        MacGraphicsUpgradeModalRootComponent: n(535).default,
+                        MacGraphicsUpgradeModalRootComponent: n(538).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     })
@@ -24396,71 +24397,72 @@
                         LoyaltyBadgeComponent: n(421),
                         TftAnnouncementModalComponent: n(424),
                         TftLootDeprecationPreModalComponent: n(427),
-                        LegalRatingScreenComponent: n(430),
-                        LoadingTabComponent: n(431),
+                        TftFullLaunchAnnouncementModalComponent: n(430),
+                        LegalRatingScreenComponent: n(433),
+                        LoadingTabComponent: n(434),
                         HextechLoadingAnimationComponent: o,
                         CallToActionPipComponent: s,
                         ParticleGlowOverlayComponent: r,
-                        StatusTickerContentComponent: n(432),
-                        CurrencyContainerTooltipComponent: n(434),
-                        AppUpdateService: n(436).default,
-                        AcPipManagerService: n(447).default,
-                        CelebrationsService: n(448).default,
-                        ChallengesCelebrationService: n(451).default,
-                        ChampionMasteryCelebrationsService: n(452).default,
-                        ConfigurationService: n(453).default,
-                        DeepLinksService: n(454).default,
-                        Dx9DeprecationService: n(455).default,
-                        EventHubService: n(456).default,
-                        EsportsSpectateService: n(457).default,
-                        GameflowService: n(458),
-                        LateRecognitionsService: n(459).default,
-                        LootOddsService: n(460).default,
-                        MacGraphicsUpgradeService: n(461).default,
-                        ModalManagerObserverService: n(462).default,
-                        NavigationService: n(463),
-                        ParentalControlsModalService: n(464).default,
-                        PlayerFeedbackService: n(465).default,
-                        PlaytimeReminderService: n(466),
-                        ReadyCheckService: n(468),
-                        ServiceStatusService: n(469).default,
-                        SessionService: n(470),
-                        ShutdownLawService: n(471),
-                        StatusTickerService: n(472),
-                        SummonerService: n(473).default,
-                        TftService: n(474).default,
-                        VanguardIsComingModalService: n(475),
-                        VanguardSessionService: n(476).default,
-                        Win7DeprecationService: n(477).default,
-                        TftOsCompatibilityService: n(478).default,
-                        IndexRoute: n(479),
+                        StatusTickerContentComponent: n(435),
+                        CurrencyContainerTooltipComponent: n(437),
+                        AppUpdateService: n(439).default,
+                        AcPipManagerService: n(450).default,
+                        CelebrationsService: n(451).default,
+                        ChallengesCelebrationService: n(454).default,
+                        ChampionMasteryCelebrationsService: n(455).default,
+                        ConfigurationService: n(456).default,
+                        DeepLinksService: n(457).default,
+                        Dx9DeprecationService: n(458).default,
+                        EventHubService: n(459).default,
+                        EsportsSpectateService: n(460).default,
+                        GameflowService: n(461),
+                        LateRecognitionsService: n(462).default,
+                        LootOddsService: n(463).default,
+                        MacGraphicsUpgradeService: n(464).default,
+                        ModalManagerObserverService: n(465).default,
+                        NavigationService: n(466),
+                        ParentalControlsModalService: n(467).default,
+                        PlayerFeedbackService: n(468).default,
+                        PlaytimeReminderService: n(469),
+                        ReadyCheckService: n(471),
+                        ServiceStatusService: n(472).default,
+                        SessionService: n(473),
+                        ShutdownLawService: n(474),
+                        StatusTickerService: n(475),
+                        SummonerService: n(476).default,
+                        TftService: n(477).default,
+                        VanguardIsComingModalService: n(478),
+                        VanguardSessionService: n(479).default,
+                        Win7DeprecationService: n(480).default,
+                        TftOsCompatibilityService: n(481).default,
+                        IndexRoute: n(482),
                         TEMPLATES: {
-                            application: n(480),
-                            index: n(481),
-                            loading: n(482),
-                            "components/blue-essence-currency": n(483),
-                            "components/currency-container": n(484),
-                            "components/deep-links-promo": n(485),
-                            "components/menu-item": n(486),
-                            "components/nav-bar": n(487),
-                            "components/navigation-root": n(488),
-                            "components/status-ticker": n(489),
+                            application: n(483),
+                            index: n(484),
+                            loading: n(485),
+                            "components/blue-essence-currency": n(486),
+                            "components/currency-container": n(487),
+                            "components/deep-links-promo": n(488),
+                            "components/menu-item": n(489),
+                            "components/nav-bar": n(490),
+                            "components/navigation-root": n(491),
+                            "components/status-ticker": n(492),
                             "components/status-ticker-incident": n(412),
-                            "components/ready-check-button-accept": n(490),
-                            "components/ready-check-button-decline": n(491),
-                            "components/ready-check-icon": n(492),
-                            "components/ready-check-map-background": n(493),
-                            "components/ready-check-root": n(494),
-                            "components/ready-check-status-text": n(495),
-                            "components/ready-check-timer": n(496),
-                            "components/loyalty-badge": n(497),
-                            "components/legal-rating-screen": n(498),
-                            "components/loading-tab": n(499),
+                            "components/ready-check-button-accept": n(493),
+                            "components/ready-check-button-decline": n(494),
+                            "components/ready-check-icon": n(495),
+                            "components/ready-check-map-background": n(496),
+                            "components/ready-check-root": n(497),
+                            "components/ready-check-status-text": n(498),
+                            "components/ready-check-timer": n(499),
+                            "components/loyalty-badge": n(500),
+                            "components/legal-rating-screen": n(501),
+                            "components/loading-tab": n(502),
                             "components/tft-announcement-modal": n(425),
-                            "components/tft-loot-deprecation-pre-modal": n(428)
+                            "components/tft-loot-deprecation-pre-modal": n(428),
+                            "components/tft-full-launch-announcement-modal": n(431)
                         }
                     };
-                    0;
                     return t
                 }(e)
             };
@@ -24899,9 +24901,11 @@
                 },
                 click: function() {
                     if (this.get("disabled") || this.get("active")) return;
-                    this.trigger("hideLobby"), this.sendAction(), this.get("item").id === a.NAV_BAR_MENU_ITEM_NAME_TO_ID.TFT && (this.get("tftService").sendTFTHomeTelemetryEvent("TFT nav tab clicked"), this.get("tftService").setTFTHomeSeen(!0));
-                    const e = this.get("item.navigateWithTooltipRouteOptions") && !this.get("attentionTooltipSeen") ? this.get("attentionTooltip.routeOptions") : {};
-                    this.navigateToRoute(e)
+                    this.trigger("hideLobby"), this.sendAction();
+                    const e = this.get("item").id;
+                    (e === a.NAV_BAR_MENU_ITEM_NAME_TO_ID.TFT || e === a.NAV_BAR_MENU_ITEM_NAME_TO_ID.TFTU) && (this.get("tftService").sendTFTHomeTelemetryEvent("TFT nav tab clicked"), this.get("tftService").setTFTHomeSeen(!0));
+                    const t = this.get("item.navigateWithTooltipRouteOptions") && !this.get("attentionTooltipSeen") ? this.get("attentionTooltip.routeOptions") : {};
+                    this.navigateToRoute(t)
                 },
                 mouseEnter: function() {
                     this._assignTooltip()
@@ -25916,6 +25920,66 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
+            var i, a = n(1),
+                s = (i = n(431)) && i.__esModule ? i : {
+                    default: i
+                };
+            n(432);
+            const o = [{
+                imagePath: "/fe/lol-navigation/images/tft-tftu-modal-1.png",
+                headerKey: "tft_full_launch_announcement_item_1_header",
+                bodyKey: "tft_full_launch_announcement_item_1_body"
+            }, {
+                imagePath: "/fe/lol-navigation/images/tft-tftu-modal-2.png",
+                headerKey: "tft_full_launch_announcement_item_2_header",
+                bodyKey: "tft_full_launch_announcement_item_2_body"
+            }, {
+                imagePath: "/fe/lol-navigation/images/tft-tftu-modal-3.png",
+                headerKey: "tft_full_launch_announcement_item_3_header",
+                bodyKey: "tft_full_launch_announcement_item_3_body"
+            }];
+            e.exports = a.Ember.Component.extend({
+                classNames: ["tft-full-launch-announcement-modal"],
+                layout: s.default,
+                tra: a.tra,
+                tftService: a.Ember.inject.service("tft"),
+                tftNewTabEnabled: a.Ember.computed.alias("tftService.tftNewTabEnabled"),
+                fullLaunchEnabled: a.Ember.computed.alias("tftService.fullLaunchEnabled"),
+                fullLaunchAnnouncementSeen: a.Ember.computed.alias("tftService.fullLaunchAnnouncementSeen"),
+                isAnnouncementGameflowPhase: a.Ember.computed.alias("tftService.isAnnouncementGameflowPhase"),
+                isNewPlayerFlow: a.Ember.computed.alias("tftService.isNewPlayerFlow"),
+                summonerLevel: a.Ember.computed.alias("tftService.summonerLevel"),
+                showFullLaunchAnnouncement: a.Ember.computed("tftNewTabEnabled", "fullLaunchEnabled", "fullLaunchAnnouncementSeen", "isAnnouncementGameflowPhase", "isNewPlayerFlow", "summonerLevel", (function() {
+                    return this.get("tftNewTabEnabled") && !0 === this.get("fullLaunchEnabled") && null !== this.get("summonerLevel") && !this.get("fullLaunchAnnouncementSeen") && this.get("isAnnouncementGameflowPhase") && !this.get("isNewPlayerFlow")
+                })),
+                fullLaunchAnnouncementItems: a.Ember.computed("tra", (function() {
+                    return o.map((e => ({
+                        imagePath: e.imagePath,
+                        header: this.get(`tra.${e.headerKey}`),
+                        body: this.get(`tra.${e.bodyKey}`)
+                    })))
+                })),
+                actions: {
+                    close() {
+                        this.get("tftService").recordFullLaunchAnnouncementSeen()
+                    },
+                    acknowledge() {
+                        this.get("tftService").recordFullLaunchAnnouncementSeen(), a.Navigation.showTFTHome("full launch announcement")
+                    }
+                }
+            })
+        }, (e, t, n) => {
+            const i = n(1).Ember;
+            e.exports = i.HTMLBars.template({
+                id: "SjzdIVdk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\tft-full-launch-announcement-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\tft-full-launch-announcement-modal.js\\" "],["text","\\n"],["open-element","lc-modal",[]],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"close"],null],null],["dynamic-attr","open",["unknown",["showFullLaunchAnnouncement"]],null],["flush-element"],["text","\\n  "],["open-element","lc-modal-content",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-dialog-frame",[]],["static-attr","orientation","bottom"],["static-attr","dismissable",""],["static-attr","dismissable-type","inside"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-title"],["flush-element"],["append",["unknown",["tra","tft_full_launch_announcement_title"]],false],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","tft-full-launch-announcement-separator-icon"],["static-attr","src","/fe/lol-navigation/images/full-launch-announcement-separator.png"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["fullLaunchAnnouncementItems"]]],null,0],["text","          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acknowledge"],null],null],["static-attr","primary","true"],["flush-element"],["append",["unknown",["tra","tft_full_launch_announcement_confirm_button"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-body-item"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","tft-full-launch-announcement-body-item-image"],["dynamic-attr","src",["concat",[["unknown",["data","imagePath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-body-item-heading"],["flush-element"],["text","\\n                  "],["append",["unknown",["data","header"]],false],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","tft-full-launch-announcement-body-item-text"],["flush-element"],["append",["unknown",["data","body"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["data"]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
             var i = n(1);
             const {
                 RunMixin: a
@@ -25960,7 +26024,7 @@
         }, (e, t, n) => {
             "use strict";
             const i = n(1).Ember.Component.extend({
-                layout: n(433),
+                layout: n(436),
                 classNames: ["navigation-status-ticker-content"],
                 init() {
                     this._super(...arguments), this.externalLinkText = this.get("tra.externalLink")
@@ -26005,7 +26069,7 @@
                 })(e)
             }
             const s = i.Ember.Component.extend({
-                layout: n(435),
+                layout: n(438),
                 classNames: ["currency-container-tooltip"],
                 text: i.Ember.computed("traString", "tra.metadata", (function() {
                     return this.get("tra").get(this.get("traString"))
@@ -26029,7 +26093,7 @@
                 value: !0
             });
             const i = n(1),
-                a = n(437),
+                a = n(440),
                 s = "/lol-patch/v1/product-integration/app-update/available";
             t.default = i.Ember.Service.extend({
                 initDataBindings() {
@@ -26083,8 +26147,8 @@
                     once: !0
                 })
             };
-            const o = s(n(438));
-            a(n(439), t), a(n(443), t), a(n(446), t);
+            const o = s(n(441));
+            a(n(442), t), a(n(446), t), a(n(449), t);
             const r = new o.default;
             t.default = r
         }, (e, t) => {
@@ -26155,15 +26219,15 @@
                 };
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.SettingsCategoryName = t.SettingsCategory = void 0, a(n(440), t);
-            var s = n(441);
+            }), t.SettingsCategoryName = t.SettingsCategory = void 0, a(n(443), t);
+            var s = n(444);
             Object.defineProperty(t, "SettingsCategory", {
                 enumerable: !0,
                 get: function() {
                     return s.SettingsCategory
                 }
             });
-            var o = n(442);
+            var o = n(445);
             Object.defineProperty(t, "SettingsCategoryName", {
                 enumerable: !0,
                 get: function() {
@@ -26244,7 +26308,7 @@
                 };
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), a(n(444), t), a(n(445), t)
+            }), a(n(447), t), a(n(448), t)
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -26346,8 +26410,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(449),
-                s = n(450);
+                a = n(452),
+                s = n(453);
             const o = (0, i.emberDataBinding)({
                     Ember: i.Ember,
                     websocket: (0, i.getProvider)().getSocket(),
@@ -27101,7 +27165,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getTranslationKey = t.getAssetPath = t.deepTreeMapTraverse = void 0;
-            var i = n(449);
+            var i = n(452);
             const a = function(e, t) {
                 let n = e;
                 for (let e = 0; e < t.length; e++) {
@@ -27952,7 +28016,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(467);
+                a = n(470);
             const s = "/lol-kr-playtime-reminder",
                 o = "/v1/hours-played";
             e.exports = i.Ember.Service.extend({
@@ -28309,7 +28373,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(467);
+                a = n(470);
             const s = "/lol-kr-shutdown-law",
                 o = "/v1/notification",
                 r = "/v1/queue-status",
@@ -28531,8 +28595,12 @@
                 d = "temp_set_seen",
                 u = "/lol-lobby/v2/lobby",
                 m = "/lol-client-config/v3/client-config/lol.client_settings.tft.bridge_enabled",
-                h = ["None", "Lobby", "Matchmaking"];
-            var p = i.Ember.Service.extend({
+                h = "tftFullLaunchAnnouncementSeen",
+                p = "/lol-client-config/v3/client-config/lol.client_settings.tft.full_launch_enabled",
+                g = "/lol-gameflow/v1/session",
+                f = "/lol-summoner/v1/current-summoner",
+                _ = ["None", "Lobby", "Matchmaking"];
+            var v = i.Ember.Service.extend({
                 lastTftSetCoreNameSeen: null,
                 setAnnouncementSeenLocal: null,
                 currentDefaultTFTSet: null,
@@ -28551,7 +28619,7 @@
                     this._super(...arguments), this._setLocale(), this.handleWalletChanged = this.handleWalletChanged.bind(this), this.initDataBindings(), this.initGenericAssets()
                 },
                 initDataBindings() {
-                    i.db.observe(a, this, this.handleWalletChanged), i.db.observe(s, this, this.handleTFTPreferencesChanged), i.db.observe(l, this, this.handleTFTSetChanged), i.db.observe(c, this, this.handleTFTMapDataChanged), i.db.observe(o, this, this.handleFirstTouchChanged), i.db.observe(u, this, this.handleLobby), i.db.observe(m, this, this.handleBridgeEnabledChanged)
+                    i.db.observe(a, this, this.handleWalletChanged), i.db.observe(s, this, this.handleTFTPreferencesChanged), i.db.observe(l, this, this.handleTFTSetChanged), i.db.observe(c, this, this.handleTFTMapDataChanged), i.db.observe(o, this, this.handleFirstTouchChanged), i.db.observe(u, this, this.handleLobby), i.db.observe(m, this, this.handleBridgeEnabledChanged), i.db.observe(p, this, this.handleFullLaunchEnabledChanged), i.db.observe(g, this, this.handleAnnouncementGameflowChanged), i.db.observe(f, this, this.handleCurrentSummonerChanged)
                 },
                 initGenericAssets() {
                     i.db.get("/lol-game-data/assets/v1/generic-assets.json").then((e => {
@@ -28559,7 +28627,7 @@
                     })).catch((e => i.logger.error("Failed to load generic assets", e)))
                 },
                 handleFirstTouchChanged(e) {
-                    e && e.data && e.data.modeSelected || i.db.get("/lol-summoner/v1/current-summoner").then((e => {
+                    this.set("hasSelectedGameMode", Boolean(e && e.data && e.data.modeSelected)), this._checkFullLaunchAnnouncementForNewPlayer(), e && e.data && e.data.modeSelected || i.db.get("/lol-summoner/v1/current-summoner").then((e => {
                         e && e.summonerLevel < 2 && this.recordSetAnnouncementSeen()
                     })).catch((e => i.logger.error("Failed to load current summoner", e)))
                 },
@@ -28569,7 +28637,7 @@
                             if (22 === t.id && "TFT" === t.gameMode && "" === t.gameMutator) return void this.set("mapData", t)
                 },
                 handleTFTPreferencesChanged(e) {
-                    e && e.data && (this.set("lastTftSetCoreNameSeen", e.data[r] || ""), this.set("bridgeAnnouncementSeen", Boolean(e.data.tftBridgeAnnouncementSeen)), this._checkSetAnnouncementSeen())
+                    e && e.data && (this.set("lastTftSetCoreNameSeen", e.data[r] || ""), this.set("bridgeAnnouncementSeen", Boolean(e.data.tftBridgeAnnouncementSeen)), this.set("fullLaunchAnnouncementSeen", Boolean(e.data[h])), this._checkSetAnnouncementSeen())
                 },
                 handleTFTSetChanged(e) {
                     e && (this.set("currentDefaultTFTSet", e.LCTFTModeData.mDefaultSet.SetCoreName), this._checkSetAnnouncementSeen())
@@ -28603,7 +28671,7 @@
                 },
                 handleAnnouncementGameflowChanged(e) {
                     const t = e && e.phase;
-                    this.set("isAnnouncementGameflowPhase", !t || h.includes(t))
+                    this.set("isAnnouncementGameflowPhase", !t || _.includes(t))
                 },
                 handleCurrentSummonerChanged(e) {
                     this.set("summonerLevel", e ? e.summonerLevel : null), this._checkFullLaunchAnnouncementForNewPlayer()
@@ -28618,16 +28686,14 @@
                 recordFullLaunchAnnouncementSeen() {
                     if (this.get("fullLaunchAnnouncementSeen")) return;
                     this.set("fullLaunchAnnouncementSeen", !0);
-                    const e = {
-                        tftFullLaunchAnnouncementSeen: !0
-                    };
-                    i.db.patch(s, {
+                    const e = {};
+                    e[h] = !0, i.db.patch(s, {
                         data: e,
                         schemaVersion: 1
                     })
                 },
                 willDestroy() {
-                    this._super(...arguments), i.db.unobserve(a, this), i.db.unobserve(s, this), i.db.unobserve(l, this), i.db.unobserve(c, this), i.db.unobserve(o, this), i.db.unobserve(u, this), i.db.unobserve(m, this)
+                    this._super(...arguments), i.db.unobserve(a, this), i.db.unobserve(s, this), i.db.unobserve(l, this), i.db.unobserve(c, this), i.db.unobserve(o, this), i.db.unobserve(u, this), i.db.unobserve(m, this), i.db.unobserve(p, this), i.db.unobserve(g, this), i.db.unobserve(f, this)
                 },
                 _setLocale() {
                     i.db.get("/riotclient/region-locale").then((e => {
@@ -28650,7 +28716,9 @@
                 setTFTNewTabEnabled(e) {
                     this.set("tftNewTabEnabled", e)
                 },
-                getTFTNewTabEnabled: () => !1,
+                getTFTNewTabEnabled() {
+                    return this.get("tftNewTabEnabled")
+                },
                 async sendTFTScreenLoadTelemetryEvent(e) {
                     const t = Number(await i.Telemetry.getApplicationStartTime()),
                         n = Date.now(),
@@ -28665,7 +28733,7 @@
                     i.Telemetry.sendCustomData("screen_load", a)
                 }
             });
-            t.default = p
+            t.default = v
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -29067,8 +29135,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "GukitE3m",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","fake-ember-application"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","fake-application-template"],["flush-element"],["text","\\n"],["text","    "],["append",["unknown",["ready-check-root"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["unknown",["loading-tab"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","navbar_backdrop"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderLegalRatingScreen"]]],null,1],["text","  "],["append",["unknown",["patcher-and-play-button"]],false],["text","\\n  "],["append",["unknown",["navigation-root"]],false],["text","\\n  "],["append",["unknown",["outlet"]],false],["text","\\n  "],["comment"," TODO Remove After 32-bit deprecation "],["text","\\n  "],["open-element","lc-alert-modal",[]],["dynamic-attr","okText",["concat",[["unknown",["tra","lib_ui_dialog_alert_ok"]]]]],["dynamic-attr","dismissible",false,null],["dynamic-attr","open",["unknown",["showDeprecationWarning"]],null],["flush-element"],["text","\\n    "],["open-element","lc-modal-content",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","deprecation-dialog"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","deprecation-dialog-title"],["flush-element"],["append",["unknown",["deprecationWarningTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","deprecation-dialog-body"],["flush-element"],["append",["unknown",["tra","client_game_32_bit_deprecation_body"]],true],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["tft-announcement-modal"]],false],["text","\\n"],["append",["unknown",["tft-loot-deprecation-pre-modal"]],false],["text","\\n"],["block",["if"],[["helper",["riot-future"],["tft-full-launch-announcement-modal"],null]],null,0],["text","\\n"],["append",["helper",["uikit-toast-celebration"],[["get",["celebrations","rewardToasts"]]],null],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["tft-full-launch-announcement-modal"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["legal-rating-screen"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "/0G84drI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","fake-ember-application"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","fake-application-template"],["flush-element"],["text","\\n"],["text","    "],["append",["unknown",["ready-check-root"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["unknown",["loading-tab"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","navbar_backdrop"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderLegalRatingScreen"]]],null,0],["text","  "],["append",["unknown",["patcher-and-play-button"]],false],["text","\\n  "],["append",["unknown",["navigation-root"]],false],["text","\\n  "],["append",["unknown",["outlet"]],false],["text","\\n  "],["comment"," TODO Remove After 32-bit deprecation "],["text","\\n  "],["open-element","lc-alert-modal",[]],["dynamic-attr","okText",["concat",[["unknown",["tra","lib_ui_dialog_alert_ok"]]]]],["dynamic-attr","dismissible",false,null],["dynamic-attr","open",["unknown",["showDeprecationWarning"]],null],["flush-element"],["text","\\n    "],["open-element","lc-modal-content",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","deprecation-dialog"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","deprecation-dialog-title"],["flush-element"],["append",["unknown",["deprecationWarningTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","deprecation-dialog-body"],["flush-element"],["append",["unknown",["tra","client_game_32_bit_deprecation_body"]],true],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["tft-announcement-modal"]],false],["text","\\n"],["append",["unknown",["tft-loot-deprecation-pre-modal"]],false],["text","\\n"],["append",["unknown",["tft-full-launch-announcement-modal"]],false],["text","\\n\\n"],["append",["helper",["uikit-toast-celebration"],[["get",["celebrations","rewardToasts"]]],null],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["legal-rating-screen"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -29210,8 +29278,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = o(n(501)),
-                s = o(n(503));
+                a = o(n(504)),
+                s = o(n(506));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29262,7 +29330,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(502);
+            n(505);
             var a = class {
                 constructor() {}
                 showNotification(e, t, n) {
@@ -29322,9 +29390,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(449);
-            n(505);
-            var s, o = (s = n(506)) && s.__esModule ? s : {
+                a = n(452);
+            n(508);
+            var s, o = (s = n(509)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -29363,9 +29431,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(449);
-            n(508);
-            var s, o = (s = n(509)) && s.__esModule ? s : {
+                a = n(452);
+            n(511);
+            var s, o = (s = n(512)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -29405,11 +29473,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(449),
-                s = n(450),
-                o = l(n(511));
-            n(512);
-            var r = l(n(513));
+                a = n(452),
+                s = n(453),
+                o = l(n(514));
+            n(515);
+            var r = l(n(516));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29746,12 +29814,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(515);
-            var a, s = (a = n(516)) && a.__esModule ? a : {
+            n(518);
+            var a, s = (a = n(519)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(450),
-                r = n(449);
+                o = n(453),
+                r = n(452);
             var l = i.Ember.Component.extend({
                 classNames: ["honor-season-rewards-vignette"],
                 layout: s.default,
@@ -29811,11 +29879,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(518);
-            var a = l(n(519)),
-                s = l(n(520)),
-                o = l(n(521)),
-                r = l(n(522));
+            n(521);
+            var a = l(n(522)),
+                s = l(n(523)),
+                o = l(n(524)),
+                r = l(n(525));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29873,9 +29941,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(524);
-            var a = o(n(525)),
-                s = o(n(511));
+            n(527);
+            var a = o(n(528)),
+                s = o(n(514));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30064,10 +30132,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(527)) && i.__esModule ? i : {
+                s = (i = n(530)) && i.__esModule ? i : {
                     default: i
                 };
-            n(528);
+            n(531);
             var o = a.Ember.Component.extend({
                 classNames: ["parental-controls-modal-root-element"],
                 layout: s.default,
@@ -30090,10 +30158,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(530)) && i.__esModule ? i : {
+                s = (i = n(533)) && i.__esModule ? i : {
                     default: i
                 };
-            n(531);
+            n(534);
             var o = a.Ember.Component.extend({
                 classNames: ["vanguard-is-coming-modal-root-element"],
                 layout: s.default,
@@ -30119,10 +30187,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(533)) && i.__esModule ? i : {
+                s = (i = n(536)) && i.__esModule ? i : {
                     default: i
                 };
-            n(534);
+            n(537);
             var o = a.Ember.Component.extend({
                 classNames: ["dx9-deprecation-modal-root-element"],
                 layout: s.default,
@@ -30159,10 +30227,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(536)) && i.__esModule ? i : {
+                s = (i = n(539)) && i.__esModule ? i : {
                     default: i
                 };
-            n(537);
+            n(540);
             var o = a.Ember.Component.extend({
                 classNames: ["mac-graphics-upgrade-modal-root-element"],
                 layout: s.default,
@@ -30281,10 +30349,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = l(n(540)),
-                s = l(n(542)),
-                o = l(n(541)),
-                r = l(n(543));
+                a = l(n(543)),
+                s = l(n(545)),
+                o = l(n(544)),
+                r = l(n(546));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -30329,7 +30397,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(541)) && i.__esModule ? i : {
+                s = (i = n(544)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -30416,7 +30484,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(541)) && i.__esModule ? i : {
+                s = (i = n(544)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -30439,10 +30507,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(544);
-            const a = n(545),
-                s = n(546),
-                o = n(547),
+            n(547);
+            const a = n(548),
+                s = n(549),
+                o = n(550),
                 r = "dismiss-me-pls",
                 l = {
                     celebration: {
@@ -30732,8 +30800,8 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = o(n(549)),
-                s = o(n(550));
+                a = o(n(552)),
+                s = o(n(553));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30872,10 +30940,10 @@
             t.default = o
         }, (e, t, n) => {
             "use strict";
-            var i, a = (i = n(552)) && i.__esModule ? i : {
+            var i, a = (i = n(555)) && i.__esModule ? i : {
                 default: i
             };
-            n(554), e.exports = function() {
+            n(557), e.exports = function() {
                 return new a.default
             }
         }, (e, t, n) => {
@@ -30884,7 +30952,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(553)) && i.__esModule ? i : {
+                s = (i = n(556)) && i.__esModule ? i : {
                     default: i
                 };
             const o = "lol-loading-screen-gameflow-state",
@@ -31092,7 +31160,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(556);
+            n(559);
             const a = "CHAMPION",
                 s = "CHAMPION_SKIN",
                 o = "WARD_SKIN",
@@ -31151,7 +31219,7 @@
                 }
                 _getCelebrationStaticContent(e, t) {
                     const i = document.createElement("img");
-                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(557), i.classList.add("lol-store-gift-celebration-image-generic")), i
+                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(560), i.classList.add("lol-store-gift-celebration-image-generic")), i
                 }
                 _getCelebrationContent(e, t) {
                     const n = e.type === h,
@@ -31290,7 +31358,7 @@
             var i = function() {
                 const {
                     routeToExperience: e
-                } = n(559);
+                } = n(562);
                 return e()
             };
             t.default = i
@@ -31342,11 +31410,11 @@
                 }
             };
             var i, a = n(1),
-                s = n(560),
-                o = (i = n(562)) && i.__esModule ? i : {
+                s = n(563),
+                o = (i = n(565)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(561);
+                r = n(564);
             const l = "rcp-fe-lol-npe-first-touch"
         }, (e, t, n) => {
             "use strict";
@@ -31383,7 +31451,7 @@
                 return a.SHOW_HOME
             }, t.getCommandLineInitialRouteParameter = T, t.getCurrentSummoner = m, t.getGameflowSession = h, t.getHasSeenTutorialPath = f, t.getHasSelectedGameMode = d, t.getHasSkippedTutorialPath = g, t.getIsGameSelectScreenEnabled = _, t.getIsNPEFlowEnabled = c, t.getIsUnderMaxNPELevel = p, t.getNPESettings = u, t.isInGameflow = v, t.isInTutorialModule = E, t.resolveTencentHubRedirect = b, t.updateSettings = y, t.waitForConfigReady = o, t.waitForLogin = s, t.waitForSettingsReady = r, t.waitForSummonerReady = l;
             var i = n(1),
-                a = n(561);
+                a = n(564);
 
             function s() {
                 return new Promise((e => {
@@ -31544,22 +31612,22 @@
                     name: "rcp-fe-lol-npe-first-touch",
                     tra: i.traService,
                     ComponentFactory: i.ComponentFactory,
-                    FirstTouchComponent: n(563).default,
-                    IntroVideoComponent: n(566).default,
-                    AliasCreateComponent: n(569).default,
-                    SummonerNameCreateComponent: n(575).default,
-                    PatchingExperienceComponent: n(578).default,
-                    ChampionCarouselComponent: n(581).default,
-                    ChampionCarouselItemComponent: n(584).default,
-                    ChampionInformationComponent: n(587).default,
-                    GameModeSelectComponent: n(590).default,
+                    FirstTouchComponent: n(566).default,
+                    IntroVideoComponent: n(569).default,
+                    AliasCreateComponent: n(572).default,
+                    SummonerNameCreateComponent: n(578).default,
+                    PatchingExperienceComponent: n(581).default,
+                    ChampionCarouselComponent: n(584).default,
+                    ChampionCarouselItemComponent: n(587).default,
+                    ChampionInformationComponent: n(590).default,
+                    GameModeSelectComponent: n(593).default,
                     ArrowFooterComponent: o,
                     PlayerNameComponent: r,
-                    FirstTouchService: n(593).default,
-                    LanguageFilterService: n(594).default,
-                    PlayerNameStateService: n(597).default,
-                    WaitForResolvedStringHelper: n(598).default,
-                    IsEqualHelper: n(599).default
+                    FirstTouchService: n(596).default,
+                    LanguageFilterService: n(597).default,
+                    PlayerNameStateService: n(600).default,
+                    WaitForResolvedStringHelper: n(601).default,
+                    IsEqualHelper: n(602).default
                 };
                 i.EmberApplicationFactory.setFactoryDefinition(l);
                 const c = i.ComponentFactory.create(l.name, {
@@ -31581,7 +31649,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(564);
+            n(567);
             const a = "patching-experience",
                 s = "summoner-name-create",
                 o = "game-mode-select",
@@ -31591,7 +31659,7 @@
                 d = [o, r];
             var u = i.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-npe-first-touch"],
-                layout: n(565),
+                layout: n(568),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 currentScreen: null,
                 patchingExperienceShouldShow: i.Ember.computed.equal("currentScreen", a),
@@ -31646,13 +31714,13 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(567);
+            n(570);
             const {
                 RunMixin: a
             } = i.EmberAddons.EmberLifeline;
             var s = i.Ember.Component.extend(a, {
                 classNames: ["intro-video-component"],
-                layout: n(568),
+                layout: n(571),
                 isSkipDisabled: !0,
                 init() {
                     this._super(...arguments), i.Navigation.hide(), this.handleVideoEnded = this.handleVideoEnded.bind(this)
@@ -31694,10 +31762,10 @@
                 value: !0
             }), t.errorStrings = t.dom = t.default = t.classNames = t.TAG_LINE_MAX = t.NAME_MIN = t.GAME_NAME_MAX = void 0, t.isPossiblyValid = T;
             var i = n(1),
-                a = n(570);
-            n(571);
-            var s, o = n(561),
-                r = (s = n(572)) && s.__esModule ? s : {
+                a = n(573);
+            n(574);
+            var s, o = n(564),
+                r = (s = n(575)) && s.__esModule ? s : {
                     default: s
                 };
             const l = {
@@ -31861,8 +31929,8 @@
                 messageClass: i.Ember.computed("message", (function() {
                     return b.get(this.get("message"))?.message
                 })),
-                startButtonSoundHover: n(573),
-                startButtonSoundClick: n(574),
+                startButtonSoundHover: n(576),
+                startButtonSoundClick: n(577),
                 disableRegisterButton: i.Ember.computed("isLoading", "validityVerified", (function() {
                     return this.get("isLoading") || !this.get("isValidityVerified")
                 })),
@@ -31967,7 +32035,7 @@
                 i.Telemetry.sendCustomData(t, n)
             };
             var i = n(1),
-                a = n(561)
+                a = n(564)
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -31990,15 +32058,15 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(570);
-            n(576);
-            var s = n(561);
+                a = n(573);
+            n(579);
+            var s = n(564);
             const {
                 RunMixin: o
             } = i.EmberAddons.EmberLifeline;
             var r = i.Ember.Component.extend(o, {
                 classNames: ["summoner-name-create-component"],
-                layout: n(577),
+                layout: n(580),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 languageFilterService: i.Ember.inject.service("language-filter"),
                 username: i.Ember.computed.alias("firstTouchService.session.username"),
@@ -32012,8 +32080,8 @@
                 isNameAvailabilityRequestError: !1,
                 isFormSubmitRequestErrorMessage: !1,
                 startNowButtonSound: {
-                    onHover: n(573),
-                    onClick: n(574)
+                    onHover: n(576),
+                    onClick: n(577)
                 },
                 init() {
                     this._super(...arguments);
@@ -32163,12 +32231,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(579);
-            var a = n(570),
-                s = n(561),
+            n(582);
+            var a = n(573),
+                s = n(564),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-patching-experience-component"],
-                    layout: n(580),
+                    layout: n(583),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     champions: i.Ember.computed.alias("firstTouchService.champions"),
                     didSendEvent: !1,
@@ -32200,16 +32268,16 @@
                 value: !0
             }), t.default = t.SFX_PIP_FORWARD = t.SFX_PIP_BACKWARD = void 0;
             var i = n(1);
-            n(582);
-            var a = n(570),
-                s = n(561);
+            n(585);
+            var a = n(573),
+                s = n(564);
             const o = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-backward-click.ogg";
             t.SFX_PIP_BACKWARD = o;
             const r = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-forward-click.ogg";
             t.SFX_PIP_FORWARD = r;
             var l = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-component"],
-                layout: n(583),
+                layout: n(586),
                 champions: null,
                 currentChampionIdx: 0,
                 lastChampionIdx: i.Ember.computed("champions", (function() {
@@ -32262,10 +32330,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(585);
+            n(588);
             var a = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-item-component"],
-                layout: n(586),
+                layout: n(589),
                 champion: null,
                 uncenteredSplashPath: i.Ember.computed("champion", (function() {
                     const e = this.get("champion");
@@ -32289,12 +32357,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(588);
-            var a = n(561),
-                s = n(570),
+            n(591);
+            var a = n(564),
+                s = n(573),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-champion-information-component"],
-                    layout: n(589),
+                    layout: n(592),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     locale: i.Ember.computed.alias("firstTouchService.locale"),
                     primaryRole: i.Ember.computed("champion.roles", (function() {
@@ -32337,12 +32405,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(591);
-            var a = n(570),
-                s = n(561),
+            n(594);
+            var a = n(573),
+                s = n(564),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-game-mode-select-component"],
-                    layout: n(592),
+                    layout: n(595),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     tftMapAssets: i.Ember.computed.alias("firstTouchService.tftMapAssets"),
                     init() {
@@ -32388,7 +32456,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(561);
+                a = n(564);
             const s = {
                 tftMapAssets: "/lol-maps/v2/map/22/tft",
                 tutorialPathSettings: "/lol-npe-tutorial-path/v1/settings",
@@ -32449,10 +32517,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(595)) && i.__esModule ? i : {
+                s = (i = n(598)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(596);
+                o = n(599);
             var r = a.Ember.Service.extend({
                 ready: !1,
                 init() {
@@ -32482,7 +32550,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(596);
+            var i = n(599);
             t.default = class {
                 build(e) {
                     this._allowedCharactersMap = {};
@@ -32588,7 +32656,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(601)) && i.__esModule ? i : {
+                s = (i = n(604)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -32600,24 +32668,24 @@
                     return e ? n : t
                 })(e)
             }
-            n(606);
+            n(609);
             var r = async function() {
                 const e = a.default.getProvider().get("rcp-fe-lol-l10n").tra(),
-                    t = n(614).default,
+                    t = n(617).default,
                     i = function() {
-                        const e = n(607).default,
+                        const e = n(610).default,
                             t = "rcp-fe-lol-reconnect",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     o = function() {
-                        const e = n(609).default,
+                        const e = n(612).default,
                             t = "rcp-fe-lol-game-in-progress",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     r = function() {
-                        const e = n(611).default,
+                        const e = n(614).default,
                             t = "rcp-fe-lol-repair-while-in-game",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
@@ -32646,7 +32714,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = o(n(602)),
+                a = o(n(605)),
                 s = o(n(77));
 
             function o(e) {
@@ -32762,8 +32830,8 @@
                 t.innerHTML = n, !1 !== e.showSpinner ? t.querySelector(".spinner").setAttribute("src", a.default) : t.querySelector(".spinner").style.display = "none";
                 return d(t, e), o = window.setInterval(c, 1e3, t, e), t
             };
-            var i = s(n(603)),
-                a = s(n(604));
+            var i = s(n(606)),
+                a = s(n(607));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -32795,7 +32863,7 @@
                 const s = t.lockoutText.replace(/\{\{lockoutTimeRemaining\}\}/, i);
                 r > 0 && (a += ` ${s}`), n.textContent = a
             }
-            n(605)
+            n(608)
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-uikit-dialog-frame class="dialog-frame" data-type="reconnect-notification">\r\n  <div class="dialog-content">\r\n    <lol-uikit-content-block type="dialog-medium">\r\n      <h4>{{TITLE}}</h4>\r\n      <hr class="heading-spacer" />\r\n      <p>{{BODY}}</p>\r\n\r\n      <img class="spinner" />\r\n    </lol-uikit-content-block>\r\n\r\n    <lol-uikit-flat-button-group type="dialog-frame">\r\n      <lol-uikit-flat-button class="button-shutdown" disabled> </lol-uikit-flat-button>\r\n    </lol-uikit-flat-button-group>\r\n  </div>\r\n</lol-uikit-dialog-frame>\r\n'
@@ -32814,7 +32882,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(608)) && i.__esModule ? i : {
+                s = (i = n(611)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -33007,7 +33075,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(610)) && i.__esModule ? i : {
+            var i, a = (i = n(613)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33072,7 +33140,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(612)) && i.__esModule ? i : {
+            var i, a = (i = n(615)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33128,7 +33196,7 @@
                     this._element.querySelector(".repair-body .header").innerText = e.get("game_in_progress_client_repair"), this._element.querySelector(".repair-body .body").innerText = e.get("game_in_progress_client_repair_explanation"), this._element.querySelector(".repair-body .link").innerHTML = e.get("game_in_progress_client_repair_learn")
                 }
                 _buildElement() {
-                    const e = n(613);
+                    const e = n(616);
                     return this._element = document.createElement("DIV"), this._element.innerHTML = e, this._element
                 }
             }
@@ -33371,12 +33439,12 @@
                 });
                 const u = n(52).default,
                     m = n(400).default,
-                    h = n(538).default,
-                    p = n(539).default;
+                    h = n(541).default,
+                    p = n(542).default;
                 t.default.SimpleDialogMessages = new p;
-                n(548)();
                 n(551)();
-                new(0, n(555).default);
+                n(554)();
+                new(0, n(558).default);
                 const g = t.default.Viewport,
                     f = g.getApiKey("rcp-fe-lol-navigation key"),
                     _ = g.overlay().getScreenRoot(f, "rcp-fe-lol-navigation-screen");
@@ -33407,8 +33475,8 @@
                 T.initLinks(), T._initMissionsAPI(), T._initRewardsAPI(), T._initAppControlsAPI(t.default), T._initEmailVerificationAPI(t.default), await t.default.add({
                     Navigation: T
                 });
-                (0, n(558).default)().then((() => (0, n(600).default)()));
-                const S = n(615);
+                (0, n(561).default)().then((() => (0, n(603).default)()));
+                const S = n(618);
                 return S.recordPotatoMode(), S.recordWebglSupport(), T
             }))
         }), {

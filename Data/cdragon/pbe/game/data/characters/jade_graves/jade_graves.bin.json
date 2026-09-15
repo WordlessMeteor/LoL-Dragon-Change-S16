@@ -871,9 +871,9 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 2100.0,
-            "mMissileEffectKey": "{8b771c77}",
+            "mMissileEffectKey": "Jade_Graves_R_mis",
             "mLineWidth": 100.0,
-            "mHitEffectKey": "{d06a1801}",
+            "mHitEffectKey": "Jade_Graves_R_hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 2,
@@ -1055,7 +1055,7 @@
             "mCastType": 3,
             "castFrame": 2.8499999046325684,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{d06a1801}",
+            "mMissileEffectKey": "Jade_Graves_R_hit",
             "mLineWidth": 20.0,
             "bHaveHitBone": true,
             "selectionPriority": 1,
@@ -1510,7 +1510,7 @@
             ],
             "castConeDistance": 100.0,
             "mMissileSpec": {
-                "mMissileWidth": 40.0,
+                "mMissileWidth": 50.0,
                 "movementComponent": {
                     "mTargetHeightAugment": 100.0,
                     "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
@@ -1537,8 +1537,8 @@
             "mCastType": 3,
             "castFrame": 15.074999809265137,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{2791eaae}",
-            "mLineWidth": 60.0,
+            "mMissileEffectKey": "Jade_Graves_Q_Mis",
+            "mLineWidth": 50.0,
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1588,12 +1588,12 @@
                         "lineStopsAtEndPosition": false,
                         "lineWidth": {
                             "mPerLevelValues": [
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
                             ],
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
@@ -1677,7 +1677,6 @@
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 7,
-                    "mExpandedTooltipCalculationDisplay": 2,
                     "mModifiedGameCalculation": "TotalDamage",
                     "__type": "GameCalculationModified"
                 }
@@ -1799,7 +1798,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_GravesQ_Jade_Name",
                         "keySummary": "Spell_GravesQ_Jade_Summary",
-                        "keyTooltip": "Spell_GravesQ_Jade_Tooltip"
+                        "keyTooltip": "Spell_GravesQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_GravesQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -1850,7 +1850,6 @@
             "mAffectsTypeFlags": 21711,
             "mAlternateName": "GravesBasicAttack",
             "mAnimationName": "Attack2",
-            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1873,10 +1872,8 @@
                 "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
-            "mCantCancelWhileWindingUp": true,
             "mApplyAttackDamage": true,
             "mApplyMaterialOnHitSound": true,
-            "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
                 284.6000061035156,
@@ -1931,11 +1928,11 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "castFrame": 7.0,
+            "castFrame": 2.0,
             "missileSpeed": 3000.0,
-            "mMissileEffectKey": "{6585623e}",
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
             "mLookAtPolicy": 1,
-            "mHitEffectKey": "{40125a6a}",
+            "mHitEffectKey": "Jade_Graves_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2643,7 +2640,6 @@
         "mScriptName": "Jade_GravesCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 21711,
-            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2668,7 +2664,6 @@
             },
             "mApplyAttackDamage": true,
             "mApplyMaterialOnHitSound": true,
-            "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
                 284.6000061035156,
@@ -2706,7 +2701,7 @@
                 "movementComponent": {
                     "mTargetHeightAugment": 100.0,
                     "mOffsetInitialTargetHeight": 100.0,
-                    "mStartBoneName": "R_hand",
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
                     "mSpeed": 3400.0,
                     "__type": "FixedSpeedMovement"
                 },
@@ -2726,8 +2721,8 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 3400.0,
-            "mMissileEffectKey": "{6585623e}",
-            "mHitEffectKey": "{7a9183ff}",
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
+            "mHitEffectKey": "Jade_Graves_BA_tar_crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2873,7 +2868,15 @@
         "objectPath": "{7bae926a}",
         "mScriptName": "Jade_GravesW_BoomSlow",
         "mBuff": {
-            "mDescription": "buff_desc_Jade_GravesW_BoomSlow",
+            "mTooltipData": {
+                "mObjectName": "Jade_GravesW_BoomSlow",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_GravesW_Jade_Name",
+                    "keyTooltip": "buff_desc_Jade_GravesW_BoomSlow"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -3056,7 +3059,7 @@
             "mCastType": 1,
             "castFrame": 7.974999904632568,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{c37de58c}",
+            "mMissileEffectKey": "Jade_Graves_W_mis",
             "mLineWidth": 120.0,
             "bHaveHitBone": true,
             "mHitBoneName": "pelvis",
@@ -3703,7 +3706,6 @@
             "mAffectsTypeFlags": 21711,
             "mAlternateName": "GravesBasicAttack",
             "mAnimationName": "Attack2",
-            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3726,10 +3728,8 @@
                 "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
-            "mCantCancelWhileWindingUp": true,
             "mApplyAttackDamage": true,
             "mApplyMaterialOnHitSound": true,
-            "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
                 284.6000061035156,
@@ -3766,7 +3766,7 @@
             "mMissileSpec": {
                 "movementComponent": {
                     "mTargetHeightAugment": 100.0,
-                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONB",
                     "mSpeed": 3000.0,
                     "__type": "FixedSpeedMovement"
                 },
@@ -3784,11 +3784,11 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "castFrame": 7.0,
+            "castFrame": 2.0,
             "missileSpeed": 3000.0,
-            "mMissileEffectKey": "{6585623e}",
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
             "mLookAtPolicy": 1,
-            "mHitEffectKey": "{40125a6a}",
+            "mHitEffectKey": "Jade_Graves_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -4004,8 +4004,8 @@
             "__type": "ModifiableFloat"
         },
         "basicAttack": {
-            "mAttackDelayCastOffsetPercent": -0.29499998688697815,
-            "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.10000000149011612,
+            "mAttackTotalTime": 1.600000023841858,
+            "mAttackCastTime": 0.25,
             "mAttackProbability": 0.5,
             "mAttackName": "Jade_GravesBasicAttack",
             "__type": "AttackSlotData"
@@ -4019,7 +4019,8 @@
         ],
         "critAttacks": [
             {
-                "mAttackDelayCastOffsetPercent": -0.29499998688697815,
+                "mAttackTotalTime": 1.600000023841858,
+                "mAttackCastTime": 0.25,
                 "mAttackName": "Jade_GravesCritAttack",
                 "__type": "AttackSlotData"
             }
@@ -4088,7 +4089,7 @@
         "charAudioNameOverride": "Jade_Graves_FUTURE",
         "selectionHeight": 140.0,
         "selectionRadius": 110.0,
-        "pathfindingCollisionRadius": 10.0,
+        "pathfindingCollisionRadius": 35.0,
         "unitTagsString": "Champion",
         "mEducationToolData": {
             "firstItem": 1055,

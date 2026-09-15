@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Získáš vyvolávačovo kouzlo <spellName>Oklamat</spellName>.<br><br><spellName>Oklamat</spellName>: Teleportuješ se a získáš <keywordStealth>neviditelnost</keywordStealth>. Tvůj příští útok provedený během <keywordStealth>neviditelnosti</keywordStealth> způsobí dodatečné <physicalDamage>fyzické poškození</physicalDamage>. <br><br>Když zemřeš, vyvoláš výbušnou krabičku, která způsobí okolním nepřátelům výrazné <magicDamage>magické poškození</magicDamage> a <status>zastraší</status> je.",
+            "desc": "Získáš vyvolávačovo kouzlo <spellName>Oklamat</spellName>.<br><br><spellName>Oklamat</spellName>: Teleportuješ se a získáš <keywordStealth>neviditelnost</keywordStealth>. Tvůj příští útok provedený během <keywordStealth>neviditelnosti</keywordStealth> způsobí dodatečné <physicalDamage>fyzické poškození</physicalDamage>. <br><br>Když zemřeš, vyvoláš výbušnou krabičku, která způsobí okolním nepřátelům výrazné <trueDamage>přímé poškození</trueDamage> a <status>zastraší</status> je.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Klaunská univerzita",
             "rarity": 2,
-            "tooltip": "<spellName>Bodnutí do zad</spellName>: Když zasáhneš nepřítele zezadu, způsobíš mu @BasicAttackDamage@ <physicalDamage>bodů bonusového fyzického poškození</physicalDamage>.<br><br><spellName>Oklamat</spellName>: Teleportuješ se a na @StealthDuration@&nbsp;sek. se <keywordStealth>zneviditelníš</keywordStealth>. Tvůj příští útok provedený během <keywordStealth>neviditelnosti</keywordStealth> způsobí dodatečných <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>. Při útoku zezadu tento útok způsobí kritický zásah s poškozením ve výši @QCritDamageMod@.<br><br><spellName>Halucinace: Smrt</spellName>: Po smrti způsobíš okolním jednotkám <magicDamage>magické poškození ve výši @FearDamage*100@&nbsp;% maximálního zdraví</magicDamage> a na @FearDuration@&nbsp;sek. je zastrašíš."
+            "tooltip": "<spellName>Bodnutí do zad</spellName>: Když zasáhneš nepřítele zezadu, způsobíš mu @BasicAttackDamage@ <physicalDamage>bodů bonusového fyzického poškození</physicalDamage>.<br><br><spellName>Oklamat</spellName>: Teleportuješ se a na @StealthDuration@&nbsp;sek. se <keywordStealth>zneviditelníš</keywordStealth>. Tvůj příští útok provedený během <keywordStealth>neviditelnosti</keywordStealth> způsobí dodatečných <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>. Při útoku zezadu tento útok způsobí kritický zásah s poškozením ve výši @QCritDamageMod@.<br><br><spellName>Halucinace: Smrt</spellName>: Po smrti způsobíš okolním jednotkám <magicDamage>přímé poškození ve výši @FearDamage*100@&nbsp;% maximálního zdraví</magicDamage> a na @FearDuration@&nbsp;sek. je zastrašíš."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, <keywordMajor>poražením týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>.",
+            "desc": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, poražením <keywordMajor>týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Spojenectví s lovci",
             "rarity": 4,
-            "tooltip": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, <keywordMajor>poražením týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>."
+            "tooltip": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, poražením <keywordMajor>týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Získáš +@RangeIncrease@ k dosahu útoků.",
+            "desc": "Získáš @MeleeRangeIncrease@ k dosahu útoků, u šampionů bojujících na dálku se tento bonus snižuje na @RangedRangeIncrease@.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Nejpřesnější mířidla",
             "rarity": 2,
-            "tooltip": "Získáš +@RangeIncrease@ k dosahu útoků."
+            "tooltip": "Získáš @MeleeRangeIncrease@ k dosahu útoků, u šampionů bojujících na dálku se tento bonus snižuje na @RangedRangeIncrease@."
         },
         {
             "apiName": "SlimeTime",

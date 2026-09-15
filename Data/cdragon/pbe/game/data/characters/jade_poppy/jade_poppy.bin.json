@@ -1746,6 +1746,87 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{dfd66c3f}": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mPart1": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "mPart2": {
+                                "mStat": 2,
+                                "mDataValue": "TotalADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{c8693ea4}": {
+                    "mExpandedTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{625f94c6}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "TotalADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{4703f6f4}": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{625f94c6}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mPart1": {
+                                "mStat": 2,
+                                "mDataValue": "TotalADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "",
@@ -1841,7 +1922,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_PoppyQ_Jade_Name",
                         "keySummary": "Spell_PoppyQ_Jade_Summary",
-                        "keyTooltip": "Spell_PoppyQ_Jade_Tooltip"
+                        "keyTooltip": "Spell_PoppyQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_PoppyQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {

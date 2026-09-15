@@ -829,7 +829,10 @@
             const i = new Set(["GameStart", "PreEndOfGame"]);
             const l = new class {
                 constructor() {
-                    this._application = null, this._applicationInstance = null, this._applicationRootElement = null, this._componentState = {}, this._router = null, this._objectivesModalVisibilityCallbacks = [], (0, n.registerEmberApplication)(), this._handleGameflowData = this._handleGameFlowData.bind(this), a.db.observe("/lol-gameflow/v1/session", this, this._handleGameflowData)
+                    this._application = null, this._applicationInstance = null, this._applicationRootElement = null, this._componentState = {}, this._router = null, this._objectivesModalVisibilityCallbacks = [], (0, n.registerEmberApplication)(), this._handleGameflowData = this._handleGameFlowData.bind(this), a.db.observe("/lol-gameflow/v1/session", this, this._handleGameflowData), this._tftFullLaunchEnabled = !1;
+                    a.db.observe("/lol-client-config/v3/client-config/lol.client_settings.tft.full_launch_enabled", this, (e => {
+                        this._tftFullLaunchEnabled = e
+                    }))
                 }
                 _createObjectivesComponent() {
                     return this._componentState = {
@@ -849,6 +852,7 @@
                     for (const t of this._objectivesModalVisibilityCallbacks) t && t(e)
                 }
                 _navigate(e = {}) {
+                    this._tftFullLaunchEnabled && "tft" === e.gameTab && (e.gameTab = "");
                     const t = e.gameTab ?? "",
                         s = e.group ?? "",
                         n = e.category ?? "",
@@ -874,7 +878,7 @@
                     s && t && i.has(t) && this.hide()
                 }
                 getTFTFullLaunchEnabled() {
-                    return !1
+                    return this._tftFullLaunchEnabled
                 }
             };
             Object.seal(l);
@@ -1057,7 +1061,8 @@
                 tabs: n.Ember.computed("selectedTab", "tra", (function() {
                     const e = this.get("selectedTab"),
                         t = this.get("tra");
-                    return Object.values(o.OBJECTIVES_GAME_TABS).map((s => {
+                    let s = Object.values(o.OBJECTIVES_GAME_TABS);
+                    return n.PrivateAPI.getTFTFullLaunchEnabled() && (s = s.filter((e => e !== o.OBJECTIVES_GAME_TABS.TFT_TAB))), s.map((s => {
                         const {
                             restingAssetPath: a,
                             activeAssetPath: n,

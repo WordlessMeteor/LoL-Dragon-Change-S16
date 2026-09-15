@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "<spellName>Kandırmaca</spellName> sihirdar büyüsünü kazanırsın.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>fiziksel hasar</physicalDamage> verir.<br><br>Katledildiğinde yakınındaki rakiplere yüksek miktarda <magicDamage>büyü hasarı</magicDamage> veren ve onları <status>korkutan</status> bir patlayan kutu ortaya çıkarırsın.",
+            "desc": "<spellName>Kandırmaca</spellName> sihirdar büyüsünü kazanırsın.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>fiziksel hasar</physicalDamage> verir.<br><br>Katledildiğinde yakınındaki rakiplere yüksek miktarda <trueDamage>gerçek hasar</trueDamage> veren ve onları <status>korkutan</status> bir patlayan kutu ortaya çıkarırsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Palyaço Koleji",
             "rarity": 2,
-            "tooltip": "<spellName>Arkadan Vuruş</spellName>: Arkadan saldırmak @BasicAttackDamage@ <physicalDamage>İlave Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve @StealthDuration@ saniyeliğine <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakibe arkadan saldırırsan bu saldırı kritik vuruş yaparak @QCritDamageMod@ Hasar verir.<br><br><spellName>Halüsinasyon: Katledilme</spellName>: Katledildiğinde etrafındaki rakiplere <magicDamage>azami canın %@FearDamage*100@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir ve onları @FearDuration@ saniyeliğine korkutursun."
+            "tooltip": "<spellName>Arkadan Vuruş</spellName>: Arkadan saldırmak @BasicAttackDamage@ <physicalDamage>İlave Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve @StealthDuration@ saniyeliğine <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakibe arkadan saldırırsan bu saldırı kritik vuruş yaparak @QCritDamageMod@ Hasar verir.<br><br><spellName>Halüsinasyon: Katledilme</spellName>: Katledildiğinde etrafındaki rakiplere <magicDamage>azami canın %@FearDamage*100@ kadarına eşdeğer miktarda gerçek hasar</magicDamage> verir ve onları @FearDuration@ saniyeliğine korkutursun."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, <keywordMajor>bir iblis takımını yendiğinde</keywordMajor> <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır.",
+            "desc": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, bir <keywordMajor>iblis takımını</keywordMajor> yendiğinde <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Müttefik Avcı",
             "rarity": 4,
-            "tooltip": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, <keywordMajor>bir iblis takımını yendiğinde</keywordMajor> <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır."
+            "tooltip": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, bir <keywordMajor>iblis takımını</keywordMajor> yendiğinde <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "@RangeIncrease@ Saldırı Menzili kazanırsın.",
+            "desc": "Yakın dövüşçüysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Saldırı Menzili kazanırsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "En Büyük Dürbünlü Silahlar",
             "rarity": 2,
-            "tooltip": "@RangeIncrease@ Saldırı Menzili kazanırsın."
+            "tooltip": "Yakın dövüşçüysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Saldırı Menzili kazanırsın."
         },
         {
             "apiName": "SlimeTime",

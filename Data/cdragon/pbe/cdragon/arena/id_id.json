@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Mendapatkan Summoner Spell <spellName>Deceive</spellName>.<br><br><spellName>Deceive</spellName>: Kamu melakukan teleport dan menjadi <keywordStealth>Tak Terlihat</keywordStealth>. Seranganmu berikutnya saat <keywordStealth>Tak Terlihat</keywordStealth> menghasilkan <physicalDamage>physical damage</physicalDamage> tambahan. <br><br>Saat kamu mati, memunculkan kotak peledak yang menghasilkan sejumlah besar <magicDamage>magic damage</magicDamage> dan menerapkan <status>Fear</status> pada musuh di sekitar.",
+            "desc": "Mendapatkan Summoner Spell <spellName>Deceive</spellName>.<br><br><spellName>Deceive</spellName>: Kamu melakukan teleport dan menjadi <keywordStealth>Tak Terlihat</keywordStealth>. Seranganmu berikutnya saat <keywordStealth>Tak Terlihat</keywordStealth> menghasilkan <physicalDamage>physical damage</physicalDamage> tambahan. <br><br>Saat kamu mati, memunculkan kotak peledak yang menghasilkan sejumlah besar <trueDamage>true damage</trueDamage> dan menerapkan <status>Fear</status> pada musuh di sekitar.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Clown College",
             "rarity": 2,
-            "tooltip": "<spellName>Backstab</spellName>: Kamu menghasilkan @BasicAttackDamage@ <physicalDamage>physical damage bonus</physicalDamage> jika menyerang dari belakang.<br><br><spellName>Deceive</spellName>: Kamu melakukan teleport dan menjadi <keywordStealth>Tak Terlihat</keywordStealth> selama @StealthDuration@ detik. Seranganmu berikutnya saat <keywordStealth>Tak Terlihat</keywordStealth> menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> tambahan. Jika menyerang dari belakang, Serangan ini akan critical strike sebesar @QCritDamageMod@ damage.<br><br><spellName>Hallucinate: Death</spellName>: Saat mati, menghasilkan <magicDamage>@FearDamage*100@% magic damage Health maksimum</magicDamage> dan menerapkan fear selama @FearDuration@ detik di sekitarmu."
+            "tooltip": "<spellName>Backstab</spellName>: Kamu menghasilkan @BasicAttackDamage@ <physicalDamage>physical damage bonus</physicalDamage> jika menyerang dari belakang.<br><br><spellName>Deceive</spellName>: Kamu melakukan teleport dan menjadi <keywordStealth>Tak Terlihat</keywordStealth> selama @StealthDuration@ detik. Seranganmu berikutnya saat <keywordStealth>Tak Terlihat</keywordStealth> menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> tambahan. Jika menyerang dari belakang, Serangan ini akan menghasilkan critical strike sebesar @QCritDamageMod@ damage.<br><br><spellName>Hallucinate: Death</spellName>: Saat mati, menghasilkan <magicDamage>true damage sebesar @FearDamage*100@% Health maksimum</magicDamage> dan menerapkan fear selama @FearDuration@ detik di sekitarmu."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> <keywordMajor>saat mengalahkan tim Demon</keywordMajor>.",
+            "desc": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> saat mengalahkan <keywordMajor>tim Demon</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Ally Hunter",
             "rarity": 4,
-            "tooltip": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> <keywordMajor>saat mengalahkan tim Demon</keywordMajor>."
+            "tooltip": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> saat mengalahkan <keywordMajor>tim Demon</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Mendapatkan @RangeIncrease@ Attack Range.",
+            "desc": "Mendapatkan @MeleeRangeIncrease@ Attack Range, berkurang menjadi @RangedRangeIncrease@ kalau kamu Ranged.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Scopiest Weapons",
             "rarity": 2,
-            "tooltip": "Mendapatkan @RangeIncrease@ Attack Range."
+            "tooltip": "Mendapatkan @MeleeRangeIncrease@ Attack Range, berkurang menjadi @RangedRangeIncrease@ kalau kamu Ranged."
         },
         {
             "apiName": "SlimeTime",

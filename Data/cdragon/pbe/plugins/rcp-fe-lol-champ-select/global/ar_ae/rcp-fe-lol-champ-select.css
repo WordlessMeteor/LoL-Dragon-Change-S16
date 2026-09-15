@@ -7569,6 +7569,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 
 .scouting-card-header {
     align-items: center;
+    direction: rtl;
     display: flex;
     gap: 8px;
     min-width: 0;
@@ -7588,9 +7589,10 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 
 .scouting-card-header .scouting-card-name {
     align-items: center;
+    direction: rtl;
     display: inline-flex;
     gap: 2px;
-    margin-right: auto;
+    margin: 0 0 0 auto;
     min-width: 0
 }
 
@@ -7620,6 +7622,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 }
 
 .scouting-card-header .scouting-card-game-name {
+    direction: rtl;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -7662,6 +7665,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 .scouting-card-section {
     border-image: linear-gradient(90deg, rgba(70, 55, 20, .6), transparent) 1;
     border-top: 1px solid transparent;
+    direction: rtl;
     margin-top: 10px;
     padding-top: 10px
 }
@@ -7676,6 +7680,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
     align-items: stretch;
     border-image: linear-gradient(90deg, rgba(70, 55, 20, .6), transparent) 1;
     border-top: 1px solid transparent;
+    direction: rtl;
     display: flex;
     gap: 0;
     margin-top: 10px;
@@ -7684,6 +7689,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 
 .scouting-card-ranks {
     align-items: center;
+    direction: rtl;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -7707,6 +7713,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 }
 
 .scouting-card-roles-section {
+    direction: rtl;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -7748,6 +7755,7 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 
 .scouting-card-rank-row .scouting-card-rank-tier {
     color: #cdbe91;
+    direction: rtl;
     font-size: 11px;
     line-height: 13px;
     max-width: 100%;
@@ -7877,7 +7885,8 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
 
 .scouting-card-champion .scouting-card-champion-primary.has-mastery-icon {
     align-items: center;
-    display: flex
+    display: flex;
+    flex-direction: row-reverse
 }
 
 .scouting-card-champion .scouting-card-champion-primary.has-mastery-icon:before {
@@ -25884,6 +25893,17 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     position: absolute;
     right: 17px;
     top: 41px
+}
+
+.loadouts-edit-component.is-Demacia .emotes-visibility-wrapper.visible:has(.emotes-edit-button.no-ward-skins) {
+    display: flex;
+    justify-content: center;
+    right: 0;
+    width: 151px
+}
+
+.loadouts-edit-component.is-Demacia .emotes-visibility-wrapper.visible:has(.emotes-edit-button.no-ward-skins) .emotes-edit-button.no-ward-skins {
+    margin: 0
 }
 
 .loadouts-edit-wrapper.is-Demacia .emotes-visibility-wrapper .emotes-edit-button-container .emotes-edit-button {

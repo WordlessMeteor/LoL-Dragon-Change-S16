@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Vous gagnez le sort d'invocateur <spellName>Tromperie</spellName>.<br><br><spellName>Tromperie</spellName> : vous vous téléportez et vous devenez <keywordStealth>invisible</keywordStealth>. Quand vous êtes <keywordStealth>invisible</keywordStealth>, votre prochaine attaque inflige <physicalDamage> pts de dégâts physiques</physicalDamage> bonus. Quand vous mourez, vous faites apparaître une boîte explosive qui inflige d'importants <magicDamage>dégâts magiques</magicDamage> et <status>effraie</status> les ennemis proches.",
+            "desc": "Vous gagnez le sort d'invocateur <spellName>Tromperie</spellName>.<br><br><spellName>Tromperie</spellName> : vous vous téléportez et vous devenez <keywordStealth>invisible</keywordStealth>. Quand vous êtes <keywordStealth>invisible</keywordStealth>, votre prochaine attaque inflige <physicalDamage> pts de dégâts physiques</physicalDamage> bonus. Quand vous mourez, vous faites apparaître une boîte explosive qui inflige d'importants <trueDamage>dégâts bruts</trueDamage> et <status>effraie</status> les ennemis proches.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Université des clowns",
             "rarity": 2,
-            "tooltip": "<spellName>Traîtrise</spellName> : vous infligez @BasicAttackDamage@ <physicalDamage>pts de dégâts physiques bonus</physicalDamage> quand vous frappez dans le dos d'un ennemi.<br><br><spellName>Tromperie</spellName> : vous vous téléportez et vous devenez <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec. Quand vous êtes <keywordStealth>invisible</keywordStealth>, votre prochaine attaque inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> bonus. Si cette attaque frappe le dos d'un ennemi, le coup est critique et inflige @QCritDamageMod@ pts de dégâts.<br><br><spellName>Hallucination : mort</spellName> : quand vous mourez, vous infligez des <magicDamage>dégâts magiques équivalents à @FearDamage*100@% des PV max</magicDamage> et vous effrayez les unités pendant @FearDuration@ sec autour de vous."
+            "tooltip": "<spellName>Traîtrise</spellName> : vous infligez @BasicAttackDamage@ <physicalDamage>pts de dégâts physiques bonus</physicalDamage> quand vous frappez dans le dos d'un ennemi.<br><br><spellName>Tromperie</spellName> : vous vous téléportez et vous devenez <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec. Quand vous êtes <keywordStealth>invisible</keywordStealth>, votre prochaine attaque inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> bonus. Si cette attaque frappe le dos d'un ennemi, le coup est critique et inflige @QCritDamageMod@ pts de dégâts.<br><br><spellName>Hallucination : mort</spellName> : quand vous mourez, vous infligez <magicDamage>des dégâts bruts équivalents à @FearDamage*100@% des PV max</magicDamage> et vous effrayez les unités pendant @FearDuration@ sec autour de vous."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> <keywordMajor>lorsque vous battez une équipe de démons</keywordMajor>.",
+            "desc": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "S'allier aux chasseurs",
             "rarity": 4,
-            "tooltip": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> <keywordMajor>lorsque vous battez une équipe de démons</keywordMajor>."
+            "tooltip": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Vous gagnez @RangeIncrease@ portée d'attaque.",
+            "desc": "Votre portée d'attaque est augmentée de @MeleeRangeIncrease@ (@RangedRangeIncrease@ pour les champions à distance).",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Armes à très grosse lunette",
             "rarity": 2,
-            "tooltip": "Vous gagnez @RangeIncrease@ portée d'attaque."
+            "tooltip": "Votre portée d'attaque est augmentée de @MeleeRangeIncrease@ (@RangedRangeIncrease@ pour les champions à distance)."
         },
         {
             "apiName": "SlimeTime",

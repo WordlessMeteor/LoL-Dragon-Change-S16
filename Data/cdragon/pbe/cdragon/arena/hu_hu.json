@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Megkapod a <spellName>Megtévesztés</spellName> idézői varázslatot.<br><br><spellName>Megtévesztés</spellName>: teleportálsz és <keywordStealth>lopakodni</keywordStealth> kezdesz. A következő támadásod <keywordStealth>lopakodás</keywordStealth> közben további <physicalDamage>fizikai sebzést</physicalDamage> okoz. <br><br>Amikor meghalsz, megjelenik egy robbanó doboz, amely jelentős <magicDamage>varázssebzést</magicDamage> okoz, és <status>megrémíti</status> a körülötted lévő ellenfeleket.",
+            "desc": "Megkapod a <spellName>Megtévesztés</spellName> idézői varázslatot.<br><br><spellName>Megtévesztés</spellName>: teleportálsz és <keywordStealth>lopakodni</keywordStealth> kezdesz. A következő támadásod <keywordStealth>lopakodás</keywordStealth> közben további <physicalDamage>fizikai sebzést</physicalDamage> okoz. <br><br>Amikor meghalsz, megjelenik egy robbanó doboz, amely jelentős <trueDamage>tényleges sebzést</trueDamage> okoz, és <status>megrémíti</status> a körülötted lévő ellenfeleket.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Bohóciskola",
             "rarity": 2,
-            "tooltip": "<spellName>Hátbaszúrás</spellName>: @BasicAttackDamage@ <physicalDamage>bónusz fizikai sebzést</physicalDamage> okozol, amikor hátulról támadsz az ellenfelekre.<br><br><spellName>Megtévesztés</spellName>: teleportálsz, és @StealthDuration@ másodpercig <keywordStealth>lopakodsz</keywordStealth>. A következő támadásod <keywordStealth>lopakodás</keywordStealth> közben további <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz. Ha hátulról támadsz, a támadás kritikus csapás lesz, és @QCritDamageMod@ sebzést okoz.<br><br><spellName>Hallucináció: halál</spellName>: halál esetén a maximális életerő <magicDamage>@FearDamage*100@%-ával egyenlő varázssebzést</magicDamage> okozol, valamint @FearDuration@ másodpercre megrémíted a körülötted lévő ellenfeleket."
+            "tooltip": "<spellName>Hátbaszúrás</spellName>: @BasicAttackDamage@ <physicalDamage>bónusz fizikai sebzést</physicalDamage> okozol, amikor hátulról támadsz az ellenfelekre.<br><br><spellName>Megtévesztés</spellName>: teleportálsz, és @StealthDuration@ másodpercig <keywordStealth>lopakodsz</keywordStealth>. A következő támadásod <keywordStealth>lopakodás</keywordStealth> közben további <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz. Ha hátulról támadsz, a támadás kritikus csapás lesz, és @QCritDamageMod@ sebzést okoz.<br><br><spellName>Hallucináció: halál</spellName>: halál esetén a maximális életerő <magicDamage>@FearDamage*100@%-ával egyenlő tényleges sebzést</magicDamage> okozol, valamint @FearDuration@ másodpercre megrémíted a körülötted lévő ellenfeleket."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok <keywordMajor>egy démon csapat legyőzésekor</keywordMajor>.",
+            "desc": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok egy <keywordMajor>démon csapat legyőzésekor</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Vadász szövetséges",
             "rarity": 4,
-            "tooltip": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok <keywordMajor>egy démon csapat legyőzésekor</keywordMajor>."
+            "tooltip": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok egy <keywordMajor>démon csapat legyőzésekor</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "@RangeIncrease@ támadási hatótávot biztosít.",
+            "desc": "@MeleeRangeIncrease@ egységnyi támadási hatótávot biztosít, távolsági harcos karakterek esetében csak @RangedRangeIncrease@ egységnyit.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Legtávcsövesebb fegyverek",
             "rarity": 2,
-            "tooltip": "@RangeIncrease@ támadási hatótávot biztosít."
+            "tooltip": "@MeleeRangeIncrease@ egységnyi támadási hatótávot biztosít, távolsági harcos karakterek esetében csak @RangedRangeIncrease@ egységnyit."
         },
         {
             "apiName": "SlimeTime",

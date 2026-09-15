@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "تكسب تعويذة مستدعي <spellName>الخداع</spellName>.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth>. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> <physicalDamage>ضررًا ماديًا</physicalDamage> إضافيًا. <br><br>عند موتك، يتولّد صندوقٌ متفجرٌ يلحق قدرًا كبيرًا من <magicDamage>ضرر السحر</magicDamage> ويثير <status>الخوف</status> في الأعداء القريبين.",
+            "desc": "تكسب تعويذة مستدعي <spellName>الخداع</spellName>.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth>. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> <physicalDamage>ضررًا ماديًا</physicalDamage> إضافيًا. <br><br>عند موتك، يتولّد صندوقٌ متفجرٌ يلحق قدرًا كبيرًا من <trueDamage>الضرر الحقيقي</trueDamage> ويثير <status>الخوف</status> في الأعداء القريبين.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "كلية المهرجين",
             "rarity": 2,
-            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تُلحق @QCritDamageMod@ ضرر.<br><br><spellName>هلوسة: الموت</spellName>: تلحق عند الموت <magicDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر سحر</magicDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
+            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تُلحق @QCritDamageMod@ ضرر.<br><br><spellName>هلوسة: الموت</spellName>: تلحق عند الموت <magicDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر حقيقي</magicDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> <keywordMajor>عند هزيمة فريق الشياطين</keywordMajor>.",
+            "desc": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> عند هزيمة <keywordMajor>فريق الشياطين</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "الحليف الصياد",
             "rarity": 4,
-            "tooltip": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> <keywordMajor>عند هزيمة فريق الشياطين</keywordMajor>."
+            "tooltip": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> عند هزيمة <keywordMajor>فريق الشياطين</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "تكسب @RangeIncrease@ مدى هجوم.",
+            "desc": "اكسب @MeleeRangeIncrease@ من مدى الهجوم، يُقلّصُ إلى @RangedRangeIncrease@ إذا كنت بعيد المدى.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "أسلحة القنص الأدق",
             "rarity": 2,
-            "tooltip": "تكسب @RangeIncrease@ مدى هجوم."
+            "tooltip": "اكسب @MeleeRangeIncrease@ من مدى الهجوم، يُقلّصُ إلى @RangedRangeIncrease@ إذا كنت بعيد المدى."
         },
         {
             "apiName": "SlimeTime",

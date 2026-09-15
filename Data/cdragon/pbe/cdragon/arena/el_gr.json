@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Αποκτάτε το Ξόρκι Επικαλεστή <spellName>Εξαπάτηση</spellName>.<br><br><spellName>Εξαπάτηση</spellName>: Τηλεμεταφέρεστε και γίνεστε <keywordStealth>Αόρατοι</keywordStealth>. Η επόμενη επίθεσή σας όταν είστε <keywordStealth>Αόρατοι</keywordStealth> προκαλεί επιπλέον <physicalDamage>Σωματική Ζημιά</physicalDamage>. Όταν πεθάνετε, δημιουργ. ένα εκρηκτικό κουτί που προκαλεί μια μεγάλη ποσότ. <magicDamage>Μαγικής Ζημιάς</magicDamage> και <status>Φόβο</status> στους κοντινούς εχθρούς.",
+            "desc": "Αποκτάτε το Ξόρκι Επικαλεστή <spellName>Εξαπάτηση</spellName>.<br><br><spellName>Εξαπάτηση</spellName>: Τηλεμεταφέρεστε και γίνεστε <keywordStealth>Αόρατοι</keywordStealth>. Η επόμενη επίθεσή σας όταν είστε <keywordStealth>Αόρατοι</keywordStealth> προκαλεί επιπλέον <physicalDamage>Σωματική Ζημιά</physicalDamage>. Όταν πεθάνετε, δημιουργ. ένα εκρηκτικό κουτί που προκαλεί μια μεγάλη ποσότ. <trueDamage>Μαγικής Ζημιάς</trueDamage> και <status>Φόβο</status> στους κοντινούς εχθρούς.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Η Μεγάλη των Κλόουν Σχολή",
             "rarity": 2,
-            "tooltip": "<spellName>Πισώπλατο Μαχαίρωμα</spellName>: Προκαλείτε @BasicAttackDamage@ <physicalDamage>μπόνους Σωματική Ζημιά</physicalDamage> όταν χτυπάτε εχθρούς από πίσω.<br><br><spellName>Εξαπάτηση</spellName>: Τηλεμεταφέρεστε και γίνεστε <keywordStealth>Αόρατοι</keywordStealth> για @StealthDuration@ δευτ. Η επόμενη επίθεσή σας όταν είστε <keywordStealth>Αόρατοι</keywordStealth> προκαλεί επιπλέον <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>. Αν το χτύπημα γίνεται από πίσω, αυτή η επίθεση προκαλεί επίσης Καίριο Χτύπημα με @QCritDamageMod@ ζημιά.<br><br><spellName>Παραισθήσεις: Θάνατος</spellName>: Όταν πεθάνετε, προκαλείτε το <magicDamage>@FearDamage*100@% της μέγιστης Ζωής ως Μαγική Ζημιά</magicDamage> και προκαλείτε φόβο για @FearDuration@δευτ. γύρω σας."
+            "tooltip": "<spellName>Πισώπλατο Μαχαίρωμα</spellName>: Προκαλείτε @BasicAttackDamage@ <physicalDamage>μπόνους Σωματική Ζημιά</physicalDamage> όταν χτυπάτε εχθρούς από πίσω.<br><br><spellName>Εξαπάτηση</spellName>: Τηλεμεταφέρεστε και γίνεστε <keywordStealth>Αόρατοι</keywordStealth> για @StealthDuration@ δευτ. Η επόμενη επίθεσή σας όταν είστε <keywordStealth>Αόρατοι</keywordStealth> προκαλεί επιπλέον <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>. Αν το χτύπημα γίνεται από πίσω, αυτή η επίθεση προκαλεί επίσης Καίριο Χτύπημα με @QCritDamageMod@ ζημιά.<br><br><spellName>Παραισθήσεις: Θάνατος</spellName>: Όταν πεθάνετε, προκαλείτε το <magicDamage>@FearDamage*100@% της μέγιστης Ζωής ως Πραγματική Ζημιά</magicDamage> και προκαλείτε φόβο για @FearDuration@δευτ. γύρω σας."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> <keywordMajor>όταν νικάτε μια ομάδα Δαιμόνων</keywordMajor>.",
+            "desc": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> όταν νικάτε μια <keywordMajor>ομάδα Δαιμόνων</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Σύμμαχος Κυνηγός",
             "rarity": 4,
-            "tooltip": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> <keywordMajor>όταν νικάτε μια ομάδα Δαιμόνων</keywordMajor>."
+            "tooltip": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> όταν νικάτε μια <keywordMajor>ομάδα Δαιμόνων</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Αποκτήστε @RangeIncrease@ Εμβέλεια Επίθεσης.",
+            "desc": "Αποκτάτε @MeleeRangeIncrease@ Εμβέλεια Επίθεσης, η οποία μειώνεται σε @RangedRangeIncrease@ αν μάχεστε από απόσταση.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Όπλα με Όλες τις Διόπτρες",
             "rarity": 2,
-            "tooltip": "Αποκτήστε @RangeIncrease@ Εμβέλεια Επίθεσης."
+            "tooltip": "Αποκτάτε @MeleeRangeIncrease@ Εμβέλεια Επίθεσης, η οποία μειώνεται σε @RangedRangeIncrease@ αν μάχεστε από απόσταση."
         },
         {
             "apiName": "SlimeTime",

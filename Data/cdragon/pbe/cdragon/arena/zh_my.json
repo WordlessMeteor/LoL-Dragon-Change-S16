@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "获得召唤师技能<spellName>欺诈魔术</spellName>。<br><br><spellName>欺诈魔术</spellName>：你会传送并进入<keywordStealth>隐形</keywordStealth>状态。在<keywordStealth>隐形</keywordStealth>期间的下一次普攻可造成额外<physicalDamage>物理伤害</physicalDamage>。<br><br>死亡时，生成一个会爆炸的盒子，对附近敌人造成大量<magicDamage>魔法伤害</magicDamage>和<status>恐惧</status>效果。",
+            "desc": "获得召唤师技能<spellName>欺诈魔术</spellName>。<br><br><spellName>欺诈魔术</spellName>：你会传送并进入<keywordStealth>隐形</keywordStealth>状态。在<keywordStealth>隐形</keywordStealth>期间的下一次普攻可造成额外<physicalDamage>物理伤害</physicalDamage>。<br><br>死亡时，生成一个会爆炸的盒子，对附近敌人造成大量<trueDamage>真实伤害</trueDamage>和<status>恐惧</status>效果。",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "小丑学院",
             "rarity": 2,
-            "tooltip": "<spellName>背刺</spellName>：从身后发动攻击时，造成@BasicAttackDamage@<physicalDamage>额外物理伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：传送并进入<keywordStealth>隐形</keywordStealth>状态，持续@StealthDuration@秒。在<keywordStealth>隐形</keywordStealth>期间的下一次普攻可造成额外<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这次普攻会触发暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：死亡</spellName>：死亡时，在周围造成<magicDamage>@FearDamage*100@%最大生命值的魔法伤害</magicDamage>及恐惧效果，持续@FearDuration@秒。"
+            "tooltip": "<spellName>背刺</spellName>：从身后发动攻击时，造成@BasicAttackDamage@<physicalDamage>额外物理伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：传送并进入<keywordStealth>隐形</keywordStealth>状态，持续@StealthDuration@秒。在<keywordStealth>隐形</keywordStealth>期间的下一次普攻可造成额外<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这次普攻会触发暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：死亡</spellName>：死亡时，在周围造成<magicDamage>@FearDamage*100@%最大生命值的真实伤害</magicDamage>及恐惧效果，持续@FearDuration@秒。"
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "为你的队伍投票，选择与恶魔猎人结盟。<br><br>与恶魔猎人结盟后，<keywordMajor>每当你击败恶魔队伍</keywordMajor>时，获得<gold>+%i:goldCoins%@BonusGold@额外金钱</gold>。",
+            "desc": "为你的队伍投票，选择与恶魔猎人结盟。<br><br>与恶魔猎人结盟后，每当你击败<keywordMajor>恶魔队伍</keywordMajor>时，获得额外<gold>+%i:goldCoins%@BonusGold@金钱</gold>。",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "友方猎人",
             "rarity": 4,
-            "tooltip": "为你的队伍投票，选择与恶魔猎人结盟。<br><br>与恶魔猎人结盟后，<keywordMajor>每当你击败恶魔队伍</keywordMajor>时，获得<gold>+%i:goldCoins%@BonusGold@额外金钱</gold>。"
+            "tooltip": "为你的队伍投票，选择与恶魔猎人结盟。<br><br>与恶魔猎人结盟后，每当你击败<keywordMajor>恶魔队伍</keywordMajor>时，获得额外<gold>+%i:goldCoins%@BonusGold@金钱</gold>。"
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "获得@RangeIncrease@攻击距离。",
+            "desc": "获得@MeleeRangeIncrease@攻击距离（远程角色减少至@RangedRangeIncrease@）。",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "超广域武器",
             "rarity": 2,
-            "tooltip": "获得@RangeIncrease@攻击距离。"
+            "tooltip": "获得@MeleeRangeIncrease@攻击距离（远程角色减少至@RangedRangeIncrease@）。"
         },
         {
             "apiName": "SlimeTime",

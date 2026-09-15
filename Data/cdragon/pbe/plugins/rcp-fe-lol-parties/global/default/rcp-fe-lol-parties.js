@@ -54,20 +54,41 @@
                 }
             };
             t.default = n
+        }, e => {
+            "use strict";
+            e.exports = {
+                _launchTFTCallback: null,
+                _isFullLaunchEnabledCallback: null,
+                _registerLaunchTFTCallback: function(e) {
+                    this._launchTFTCallback = e
+                },
+                _registerIsFullLaunchEnabledCallback: function(e) {
+                    this._isFullLaunchEnabledCallback = e
+                },
+                _unregisterLaunchTFTCallback: function() {
+                    this._launchTFTCallback = null, this._isFullLaunchEnabledCallback = null
+                },
+                isFullLaunchEnabled: function() {
+                    return !!this._isFullLaunchEnabledCallback && this._isFullLaunchEnabledCallback()
+                },
+                launchTFT: function() {
+                    return !!this._launchTFTCallback && (this._launchTFTCallback(), !0)
+                }
+            }
         }, (e, t, n) => {
             "use strict";
             var o = x(n(1)),
-                i = E(n(4)),
-                s = E(n(14)),
-                a = E(n(39)),
-                r = E(n(40)),
-                l = E(n(41)),
-                c = E(n(5)),
-                m = E(n(7)),
-                u = E(n(44)),
-                d = E(n(45)),
-                p = E(n(10)),
-                h = n(9),
+                i = E(n(5)),
+                s = E(n(15)),
+                a = E(n(40)),
+                r = E(n(41)),
+                l = E(n(42)),
+                c = E(n(6)),
+                m = E(n(8)),
+                u = E(n(45)),
+                d = E(n(3)),
+                p = E(n(11)),
+                h = n(10),
                 g = n(46),
                 b = x(n(47)),
                 f = E(n(48)),
@@ -180,8 +201,12 @@
                     return u.default.unsubscribeCanInvite(e)
                 }
                 acceptGameInvite(e) {
-                    const t = e.invitationId;
-                    e?.gameConfig?.gameMode, h.GAME_MODES.TFT, d.default.isFullLaunchEnabled();
+                    const t = e.invitationId,
+                        n = e?.gameConfig?.gameMode === h.GAME_MODES.TFT;
+                    if (d.default.isFullLaunchEnabled() && n) {
+                        if (d.default.launchTFT()) return v.default.gameInviteAccept(), Promise.resolve();
+                        o.logger.warn("[PartyAPI] TFT full launch callback not registered; falling through to lobby accept.")
+                    }
                     return this._binding.post(`/lol-lobby/v2/received-invitations/${t}/accept`).then((() => {
                         v.default.gameInviteAccept(), this.showParty(), "TFT" === e?.gameConfig?.gameMode && o.Navigation.sendTFTScreenLoadTelemetryEvent({
                             path: "/rcp-fe-lol-parties/root-component/parties-root tft-lobby",
@@ -583,8 +608,8 @@
                         } o.default = e, n && n.set(e, o);
                     return o
                 }(n(1)),
-                i = a(n(5)),
-                s = a(n(13));
+                i = a(n(6)),
+                s = a(n(14));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -676,17 +701,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = ((o = n(6)) && o.__esModule ? o : {
+            var i = ((o = n(7)) && o.__esModule ? o : {
                 default: o
             }).default.create();
             t.default = i
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(7)) && o.__esModule ? o : {
+                s = (o = n(8)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             const r = ["teammaxsizerestriction", "teamsizerestriction", "gameversionmismatch", "missingtoken"],
                 l = ["missingtoken", "playerranksoloonlyrestriction"],
                 c = "TeamSkillRestriction",
@@ -879,7 +904,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = ((o = n(8)) && o.__esModule ? o : {
+            var i = ((o = n(9)) && o.__esModule ? o : {
                 default: o
             }).default.create();
             t.default = i
@@ -889,9 +914,9 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1),
-                i = n(9),
-                s = r(n(10)),
-                a = r(n(5));
+                i = n(10),
+                s = r(n(11)),
+                a = r(n(6));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -1214,7 +1239,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = ((o = n(11)) && o.__esModule ? o : {
+            var i = ((o = n(12)) && o.__esModule ? o : {
                 default: o
             }).default.create();
             t.default = i
@@ -1224,7 +1249,7 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1),
-                i = n(12);
+                i = n(13);
             const s = Object.freeze({
                     LcuLobbyPotatoModeForced: !1,
                     LcuTutorialEnabled: !0,
@@ -1604,7 +1629,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(9);
+                i = n(10);
             let s = i.SETTINGS_API.SCHEMA_VERSION;
             e.exports = {
                 getWithTimeout: function(e, t, n) {
@@ -1655,7 +1680,7 @@
                         } o.default = e, n && n.set(e, o);
                     return o
                 }(n(1)),
-                i = n(15);
+                i = n(16);
 
             function s(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -1849,19 +1874,19 @@
                     return s.getGameKeyFromGameMode
                 }
             });
-            var o = b(n(16)),
-                i = b(n(17)),
-                s = n(18),
-                a = b(n(19)),
-                r = b(n(20)),
-                l = b(n(31)),
-                c = b(n(32)),
-                m = b(n(33)),
-                u = b(n(34)),
-                d = b(n(35)),
-                p = b(n(36)),
-                h = b(n(37)),
-                g = b(n(38));
+            var o = b(n(17)),
+                i = b(n(18)),
+                s = n(19),
+                a = b(n(20)),
+                r = b(n(21)),
+                l = b(n(32)),
+                c = b(n(33)),
+                m = b(n(34)),
+                u = b(n(35)),
+                d = b(n(36)),
+                p = b(n(37)),
+                h = b(n(38)),
+                g = b(n(39));
 
             function b(e) {
                 return e && e.__esModule ? e : {
@@ -1908,7 +1933,7 @@
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
                 return e === i.default.TFT ? s.TFT : s.LEAGUE_OF_LEGENDS
             };
-            var o, i = (o = n(19)) && o.__esModule ? o : {
+            var o, i = (o = n(20)) && o.__esModule ? o : {
                 default: o
             };
             const s = {
@@ -1941,16 +1966,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var o = p(n(21)),
-                i = p(n(22)),
-                s = p(n(23)),
-                a = p(n(24)),
-                r = p(n(25)),
-                l = p(n(26)),
-                c = p(n(27)),
-                m = p(n(28)),
-                u = p(n(29)),
-                d = p(n(30));
+            var o = p(n(22)),
+                i = p(n(23)),
+                s = p(n(24)),
+                a = p(n(25)),
+                r = p(n(26)),
+                l = p(n(27)),
+                c = p(n(28)),
+                m = p(n(29)),
+                u = p(n(30)),
+                d = p(n(31));
 
             function p(e) {
                 return e && e.__esModule ? e : {
@@ -2337,7 +2362,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(9);
+                i = n(10);
             const {
                 RunMixin: s
             } = o.EmberAddons.EmberLifeline;
@@ -2444,14 +2469,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = ((o = n(42)) && o.__esModule ? o : {
+            var i = ((o = n(43)) && o.__esModule ? o : {
                 default: o
             }).default.create();
             t.default = i
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
             const a = (0, i.emberDataBinding)({
@@ -2665,27 +2690,6 @@
                     return this._inviteCallback ? this._inviteRiotCallback(e) : Promise.reject(new Error("APPLICATION_NOT_INITIALIZED"))
                 }
             }
-        }, e => {
-            "use strict";
-            e.exports = {
-                _launchTFTCallback: null,
-                _isFullLaunchEnabledCallback: null,
-                _registerLaunchTFTCallback: function(e) {
-                    this._launchTFTCallback = e
-                },
-                _registerIsFullLaunchEnabledCallback: function(e) {
-                    this._isFullLaunchEnabledCallback = e
-                },
-                _unregisterLaunchTFTCallback: function() {
-                    this._launchTFTCallback = null, this._isFullLaunchEnabledCallback = null
-                },
-                isFullLaunchEnabled: function() {
-                    return !!this._isFullLaunchEnabledCallback && this._isFullLaunchEnabledCallback()
-                },
-                launchTFT: function() {
-                    return !!this._launchTFTCallback && (this._launchTFTCallback(), !0)
-                }
-            }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2693,8 +2697,8 @@
             }), t.getGameKeyFromQueueId = function(e) {
                 return i.TFT_QUEUE_IDS.includes(e) ? o.GAME_CONTEXT_KEYS.TFT : o.GAME_CONTEXT_KEYS.LEAGUE_OF_LEGENDS
             };
-            var o = n(15),
-                i = n(9)
+            var o = n(16),
+                i = n(10)
         }, (e, t, n) => {
             "use strict";
             var o = function(e, t) {
@@ -3813,6 +3817,8 @@
                     ...i.TftBridgeComponents
                 }), i.KiwiHubModules && Object.assign(Ce, {
                     ...i.KiwiHubModules
+                }), i.TftFullLaunchComponents && Object.assign(Ce, {
+                    ...i.TftFullLaunchComponents
                 }), Object.assign(Ce, {
                     DemaciaPositionPreferenceModalComponent: n(482),
                     DemaciaPositionCardComponent: n(486),
@@ -4396,7 +4402,7 @@
                 value: !0
             }), t.CherryProgressionModalComponent = void 0;
             const o = n(1),
-                i = n(15);
+                i = n(16);
             n(96), t.CherryProgressionModalComponent = o.Ember.Component.extend({
                 classNames: ["cherry-progression-modal"],
                 layout: n(97),
@@ -5221,7 +5227,7 @@
                         r = !!e && s === e.platformId,
                         l = o && r && a === e.product,
                         c = t && this.get("isAvailableTFTPlayer") && r;
-                    return i || l || c
+                    return !(!(n && this.get("isAvailableTFTPlayer") && r) || this.get("isMobileTFTPlayer")) || (i || l || c)
                 }
             });
             t.default = s
@@ -5321,12 +5327,12 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = n(9),
-                a = n(15),
-                r = n(12),
+                s = n(10),
+                a = n(16),
+                r = n(13),
                 l = n(109),
                 c = n(110),
-                m = (o = n(10)) && o.__esModule ? o : {
+                m = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 };
             const u = (0, i.emberDataBinding)({
@@ -6049,10 +6055,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = l(n(5)),
-                s = n(9),
-                a = n(12),
-                r = l(n(7));
+                i = l(n(6)),
+                s = n(10),
+                a = n(13),
+                r = l(n(8));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -6407,11 +6413,11 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(10)) && o.__esModule ? o : {
+                s = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9),
-                r = n(12);
+                a = n(10),
+                r = n(13);
             const l = (0, i.emberDataBinding)({
                 Ember: i.Ember,
                 websocket: (0, i.getProvider)().getSocket(),
@@ -6516,10 +6522,10 @@
             "use strict";
             var o, i = n(1),
                 s = n(110),
-                a = (o = n(10)) && o.__esModule ? o : {
+                a = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 },
-                r = n(9),
+                r = n(10),
                 l = n(109);
             const c = n(120),
                 m = (0, i.emberDataBinding)({
@@ -7300,7 +7306,7 @@
             "use strict";
             var o = n(1),
                 i = a(n(131)),
-                s = a(n(44));
+                s = a(n(45));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -7460,7 +7466,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(9),
+                i = n(10),
                 s = n(109),
                 a = n(133),
                 r = n(134),
@@ -8503,7 +8509,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(12);
+                i = n(13);
             e.exports = o.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments), this._binding = o.db, this._binding.observe("/lol-platform-config/v1/namespaces/Challenges/ClientState", this, this.handleLobbyChallengesEnabled)
@@ -8569,9 +8575,9 @@
             "use strict";
             var o = n(1),
                 i = l(n(131)),
-                s = l(n(43)),
+                s = l(n(44)),
                 a = l(n(145)),
-                r = l(n(10));
+                r = l(n(11));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -8821,7 +8827,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = r(n(43)),
+                i = r(n(44)),
                 s = r(n(149)),
                 a = r(n(48));
 
@@ -8949,10 +8955,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             n(153), e.exports = i.Ember.Component.extend(s.default, {
                 layout: n(154),
                 assets: i.Ember.inject.service(),
@@ -9014,12 +9020,12 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = m(n(43)),
+                i = m(n(44)),
                 s = m(n(156)),
                 a = n(110),
                 r = n(157),
                 l = m(n(158)),
-                c = n(9);
+                c = n(10);
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -9161,7 +9167,7 @@
                 value: !0
             }), t.default = void 0;
             var o, i = n(1),
-                s = (o = n(7)) && o.__esModule ? o : {
+                s = (o = n(8)) && o.__esModule ? o : {
                     default: o
                 },
                 a = n(159);
@@ -9276,7 +9282,7 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(10)) && o.__esModule ? o : {
+                s = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 };
             n(167);
@@ -9686,10 +9692,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(5)) && o.__esModule ? o : {
+                s = (o = n(6)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             n(175);
             const {
                 RunMixin: r
@@ -9978,7 +9984,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(131));
 
             function a(e) {
@@ -10143,11 +10149,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = u(n(43)),
+                i = u(n(44)),
                 s = u(n(131)),
                 a = u(n(156)),
                 r = u(n(145)),
-                l = u(n(10)),
+                l = u(n(11)),
                 c = u(n(73)),
                 m = n(182);
 
@@ -10548,7 +10554,7 @@
             var o = n(1),
                 i = r(n(156)),
                 s = r(n(131)),
-                a = r(n(43));
+                a = r(n(44));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -10608,7 +10614,7 @@
             var o = n(1);
             n(191);
             var i = a(n(131)),
-                s = a(n(43));
+                s = a(n(44));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -10798,9 +10804,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = l(n(5)),
-                s = l(n(7)),
-                a = n(9),
+                i = l(n(6)),
+                s = l(n(8)),
+                a = n(10),
                 r = l(n(48));
 
             function l(e) {
@@ -11013,10 +11019,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(12);
+                a = n(13);
             n(199);
             e.exports = i.Ember.Component.extend(s.default, {
                 layout: n(200),
@@ -11083,7 +11089,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(131));
 
             function a(e) {
@@ -11228,7 +11234,7 @@
             "use strict";
             var o = n(1);
             n(208);
-            var i, s = (i = n(43)) && i.__esModule ? i : {
+            var i, s = (i = n(44)) && i.__esModule ? i : {
                 default: i
             };
             const {
@@ -11266,8 +11272,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(10)),
-                s = a(n(43));
+                i = a(n(11)),
+                s = a(n(44));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -11408,10 +11414,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(12);
+                a = n(13);
             n(217);
             const {
                 RunMixin: r
@@ -11582,16 +11588,16 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = p(n(43)),
+                i = p(n(44)),
                 s = p(n(131)),
                 a = p(n(156)),
                 r = p(n(145)),
                 l = n(110),
                 c = n(182),
-                m = n(9),
+                m = n(10),
                 u = p(n(48));
             n(223);
-            var d = n(15);
+            var d = n(16);
 
             function p(e) {
                 return e && e.__esModule ? e : {
@@ -11658,6 +11664,7 @@
                         allQueuesForCategoryDisabled: Boolean(this.get("allQueuesForCategoryDisabled")),
                         isUnsupportedGameMode: Boolean(this.get("isUnsupportedGameMode"))
                     };
+                    e.tftDirectLaunchButtonDisabled = Boolean(this.get("tftDirectLaunchButtonDisabled"));
                     const t = Object.fromEntries(Object.entries(e).filter((([e, t]) => !0 === t))),
                         n = Object.values(t).some((e => !0 === e)),
                         i = this.get("confirmButtonDisabledReasons");
@@ -11689,10 +11696,12 @@
                     return o.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled ineligibleForAllQueues=${a} eligibilityCount=${i} queueCount=${s}`), a
                 })),
                 showTFTLaunchButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "selected.gameMode", "selected.isCreatingCustomGame", (function() {
-                    return !1
+                    const e = this.get("fullLaunchService.fullLaunchEnabled"),
+                        t = "TFT" === this.get("selected.gameMode") && !this.get("selected.isCreatingCustomGame");
+                    return e && t
                 })),
                 confirmButtonText: o.Ember.computed("tra.ready", "selected.isJoiningCustomGame", "customGameListService.confirmButtonText", "tra.parties_button_confirm", "showTFTLaunchButton", (function() {
-                    return this.get("selected.isJoiningCustomGame") ? this.get("customGameListService.confirmButtonText") : this.get("tra.parties_button_confirm")
+                    return this.get("showTFTLaunchButton") ? this.get("tra.tft_launch_button") : this.get("selected.isJoiningCustomGame") ? this.get("customGameListService.confirmButtonText") : this.get("tra.parties_button_confirm")
                 })),
                 isUnsupportedGameMode: o.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode", "showingState.isShowingGameSelect", "showingState.isInViewport", "selected.isCreatingCustomGame", "customGamesService.selectedSubcategory.gameMode", (function() {
                     const e = this.get("bridgeService.bridgeEnabled") && this.get("bridgeService.blockTFTMode") && this.get("showingState.isShowingGameSelect") && this.get("showingState.isInViewport"),
@@ -11717,10 +11726,16 @@
                     return e && this.get("bridgeService.bridgeTooltipsEnabled") && t && !n && o && this.get("confirmButtonEnabled") && this.get("showingState.isInViewport")
                 })),
                 tftDirectLaunchButtonDisabled: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "fullLaunchService.directLaunchEnabled", "selected.gameMode", "selected.isCreatingCustomGame", (function() {
-                    return !1
+                    const e = this.get("fullLaunchService.fullLaunchEnabled"),
+                        t = this.get("fullLaunchService.directLaunchEnabled"),
+                        n = "TFT" === this.get("selected.gameMode") && !this.get("selected.isCreatingCustomGame");
+                    return e && !t && n
                 })),
                 confirmButtonShowFullLaunchTooltip: o.Ember.computed("tftDirectLaunchButtonDisabled", "showingState.isShowingGameSelect", "showingState.isInViewport", (function() {
-                    return !1
+                    const e = this.get("tftDirectLaunchButtonDisabled"),
+                        t = this.get("showingState.isShowingGameSelect"),
+                        n = this.get("showingState.isInViewport");
+                    return e && t && n
                 })),
                 confirmButtonTooltipText: o.Ember.computed("patcherDisconnected", "confirmDisabledByLobby", "tra.ready", "tra.parties_patcher_not_connected", (function() {
                     let e = "";
@@ -11861,6 +11876,7 @@
                     }))
                 },
                 confirmButtonClicked: function() {
+                    if (this.get("showTFTLaunchButton")) return this.get("fullLaunchService").launchTFT(), Promise.resolve();
                     o.datadogRum.startOperation(o.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE, this._buildLobbyCreateContext());
                     try {
                         if (this.get("selected.isTrainingGame") && !this.get("selected.isCreatingCustomGame")) return this.startTutorial();
@@ -11984,9 +12000,9 @@
             var o = n(1),
                 i = c(n(156));
             n(229);
-            var s = c(n(43)),
-                a = n(9),
-                r = c(n(10)),
+            var s = c(n(44)),
+                a = n(10),
+                r = c(n(11)),
                 l = n(102);
 
             function c(e) {
@@ -12064,10 +12080,10 @@
                     return this.get("customGamesService.localSummonerLevel") >= this.get("customGameSubCategoryMinLevel")
                 })),
                 isDisabled: o.Ember.computed("noQueues", "noEligibleQueues", "isTraining", "customGameSubCategoryExists", "customGameSubCategoryMinLevelEligible", "hasSoloEligibilityWarning", "isUnsupportedGameMode", (function() {
-                    return !!this.get("isUnsupportedGameMode") || (this.get("requiresCustomGameSubCategory") ? !this.get("customGameSubCategoryExists") || !this.get("customGameSubCategoryMinLevelEligible") : this.get("isTraining") ? this.get("eligibilityService").isTutorialRestricted() : !!this.get("hasSoloEligibilityWarning") || this.get("noQueues"))
+                    return !!this.get("isUnsupportedGameMode") || !this.get("showTFTLaunchButton") && (this.get("requiresCustomGameSubCategory") ? !this.get("customGameSubCategoryExists") || !this.get("customGameSubCategoryMinLevelEligible") : this.get("isTraining") ? this.get("eligibilityService").isTutorialRestricted() : !!this.get("hasSoloEligibilityWarning") || this.get("noQueues"))
                 })),
                 shouldShowEligibilityWarning: o.Ember.computed("hasTeamEligibilityWarning", "hasSoloEligibilityWarning", "showTFTLaunchButton", (function() {
-                    return this.get("hasTeamEligibilityWarning") || this.get("hasSoloEligibilityWarning")
+                    return !this.get("showTFTLaunchButton") && (this.get("hasTeamEligibilityWarning") || this.get("hasSoloEligibilityWarning"))
                 })),
                 hasSoloEligibilityWarning: o.Ember.computed("eligibilityService.isSolo", "gameTypeQueues.[]", "eligibilityService.eligibilities.@each.summoners", "isTraining", "gameSelectModeGroup", "customGameSubCategoryMinLevelEligible", (function() {
                     if (this.get("eligibilityService.isSolo")) {
@@ -12358,7 +12374,7 @@
                 isUnsupportedGameMode: o.Ember.computed("isTFT", "tftBridgeService.bridgeEnabled", "tftBridgeService.blockTFTMode", "fullLaunchService.fullLaunchEnabled", (function() {
                     const e = this.get("isTFT"),
                         t = this.get("tftBridgeService"),
-                        n = this.get("tftBridgeService.bridgeEnabled"),
+                        n = this.get("tftBridgeService.bridgeEnabled") || this.get("fullLaunchService.fullLaunchEnabled"),
                         o = t.shouldBlockTFTMode();
                     return e && n && o
                 })),
@@ -12367,7 +12383,7 @@
                     return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
                 })),
                 showTFTLaunchButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "isTFT", (function() {
-                    return !1
+                    return this.get("fullLaunchService.fullLaunchEnabled") && this.get("isTFT")
                 })),
                 actions: {
                     selectGameType: function() {
@@ -12406,7 +12422,7 @@
                 a = (o = n(48)) && o.__esModule ? o : {
                     default: o
                 },
-                r = n(9);
+                r = n(10);
             n(232);
             const l = "hidden",
                 c = "clicked",
@@ -12546,9 +12562,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = l(n(43)),
-                s = l(n(10)),
-                a = n(9),
+                i = l(n(44)),
+                s = l(n(11)),
+                a = n(10),
                 r = n(235);
 
             function l(e) {
@@ -12656,8 +12672,8 @@
                 shouldShowPartySizeRequirement: o.Ember.computed("isRankedFives", (function() {
                     return this.get("isRankedFives")
                 })),
-                showQueueCountdown: o.Ember.computed("isRankedFives", "isQueueActive", (function() {
-                    return this.get("isRankedFives") && !this.get("isQueueActive")
+                showQueueCountdown: o.Ember.computed("isRankedFives", "isDisabled", (function() {
+                    return this.get("isRankedFives") && this.get("isDisabled")
                 })),
                 getServerTime() {
                     const e = window.RIOT.CONSTANTS.regionLocale.region,
@@ -12704,12 +12720,6 @@
                         hour: p
                     }), this.set("serverTimeTarget", b)
                 },
-                isQueueActive: o.Ember.computed("serverTime", (function() {
-                    if (!this.get("serverTime")) return !1;
-                    const e = this.get("serverTime.day"),
-                        t = this.get("serverTime.hour");
-                    return !!(5 === e && t >= 16 || 6 === e && t < 2 || 6 === e && t >= 16 || 0 === e && t < 2 || 0 === e && t >= 16 || 1 === e && t < 2)
-                })),
                 fivesQueueStartDate: o.Ember.computed("serverTime", "serverTimeTarget", (function() {
                     if (!this.get("serverTime")) return 0;
                     const e = this.get("serverTimeTarget");
@@ -12730,7 +12740,7 @@
                 })),
                 isTFT: null,
                 showDisabledRadioButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "isTFT", (function() {
-                    return !1
+                    return this.get("fullLaunchService.fullLaunchEnabled") && this.get("isTFT")
                 }))
             })
         }, (e, t) => {
@@ -12781,10 +12791,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(10)) && o.__esModule ? o : {
+                s = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             e.exports = i.Ember.Component.extend({
                 classNames: ["parties-game-navs"],
                 classNameBindings: ["hasAlphaQueues"],
@@ -12856,10 +12866,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(10)) && o.__esModule ? o : {
+                s = (o = n(11)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             e.exports = i.Ember.Component.extend({
                 tagName: "lol-uikit-navigation-item",
                 classNames: ["parties-game-navs-item"],
@@ -12953,7 +12963,7 @@
             "use strict";
             var o, i = n(1),
                 s = n(110),
-                a = n(12),
+                a = n(13),
                 r = (o = n(131)) && o.__esModule ? o : {
                     default: o
                 };
@@ -13020,21 +13030,47 @@
                     return this.get("playerInputs.numPlayersPerTeam") < o && this.send("teamSizeChange", o), o
                 })),
                 gameServerRegionOptions: i.Ember.computed.alias("customGamesService.gameServerRegionOptions"),
-                queueOptions: i.Ember.computed("tra.ready", "selectedSubcategory.mutators.@each.name", (function() {
+                _getQueue: function(e) {
+                    const t = this.get("queues");
+                    return t ? t.getQueueById(e) : null
+                },
+                _getMapIdForQueue: function(e) {
+                    const t = this._getQueue(e);
+                    return t ? t.mapId : 0
+                },
+                selectedQueueMapId: i.Ember.computed("playerInputs.mutatorId", "queues.queuesById", (function() {
+                    return this._getMapIdForQueue(this.get("playerInputs.mutatorId"))
+                })),
+                mapSelectionOptions: i.Ember.computed("tra.ready", "selectedSubcategory.mutators.@each.id", "selectedQueueMapId", "queues.queuesById", (function() {
+                    const e = this.get("selectedSubcategory.mutators") || [],
+                        t = [];
+                    if (e.forEach((e => {
+                            const n = this._getMapIdForQueue(parseInt(e.get("id"), 10));
+                            n && t.indexOf(n) < 0 && t.push(n)
+                        })), t.length < 2) return [];
+                    const n = this.get("selectedQueueMapId");
+                    return i.Ember.A(t.map((e => ({
+                        value: e,
+                        label: this.get(`tra.game_select_map_name_${e}`),
+                        isSelected: e === n
+                    }))))
+                })),
+                queueOptions: i.Ember.computed("tra.ready", "selectedSubcategory.mutators.@each.name", "selectedQueueMapId", "queues.queuesById", (function() {
                     const e = this.get("selectedSubcategory.mutators");
                     if (!e || e.length < 1) return;
                     const t = [],
-                        n = this.get("playerInputs.mutatorId");
-                    for (let o = 0; o < e.length; o++) {
-                        const i = e[o].get("name");
-                        let s = e[o].get("id");
-                        s = parseInt(s, 10);
-                        const a = this.get(`tra.custom_game_mutator_type_${i}`),
-                            r = s === n;
+                        n = this.get("playerInputs.mutatorId"),
+                        o = this.get("selectedQueueMapId");
+                    for (let i = 0; i < e.length; i++) {
+                        const s = e[i].get("name");
+                        let a = e[i].get("id");
+                        if (a = parseInt(a, 10), o && this._getMapIdForQueue(a) !== o) continue;
+                        const r = this.get(`tra.custom_game_mutator_type_${s}`),
+                            l = a === n;
                         t.push({
-                            value: s,
-                            label: a,
-                            isSelected: r
+                            value: a,
+                            label: r,
+                            isSelected: l
                         })
                     }
                     return i.Ember.A(t)
@@ -13150,6 +13186,11 @@
                 clearNameError: function() {
                     this.set("nameError", null), this.set("nameErrorMessage", null)
                 },
+                _selectQueue: function(e) {
+                    this.set("playerInputs.mutatorId", e), this.set("playerInputs.queueId", this.get("customGamesService").getQueueId(e));
+                    const t = this._getQueue(e);
+                    t && t.mapId && (this.set("selected.mapId", t.mapId), this.set("selected.gameMode", t.gameMode))
+                },
                 actions: {
                     nameKeyUp: function() {
                         this.haveNameLengthError() || this.clearNameError()
@@ -13171,8 +13212,19 @@
                         this.set("playerInputs.gameServerRegion", e)
                     },
                     queueChanged: function(e) {
-                        const t = parseInt(e, 10);
-                        this.set("playerInputs.mutatorId", t), this.set("playerInputs.queueId", this.get("customGamesService").getQueueId(t))
+                        this._selectQueue(parseInt(e, 10))
+                    },
+                    mapSelectionChanged: function(e) {
+                        const t = parseInt(e, 10),
+                            n = (this.get("selectedSubcategory.mutators") || []).map((e => parseInt(e.get("id"), 10))).filter((e => this._getMapIdForQueue(e) === t));
+                        if (n.length < 1) return;
+                        const o = this._getQueue(this.get("playerInputs.mutatorId")),
+                            i = o ? o.pickMode : null,
+                            s = n.find((e => {
+                                const t = this._getQueue(e);
+                                return t && t.pickMode === i
+                            }));
+                        this._selectQueue(s ?? n[0])
                     },
                     spectatorChanged: function() {
                         const e = this.element.querySelector("#custom-game-spectator lol-uikit-radio-input-option[selected]");
@@ -13203,14 +13255,14 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "8B3FmFeN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-custom-game-subcategory-select"],["flush-element"],["text","\\n"],["block",["each"],[["get",["subcategories"]]],null,24],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-custom-game-lower-half"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-custom-game-left"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-name-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-name"],["flush-element"],["append",["unknown",["tra","custom_game_setup_name_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","name","custom-game-name"],["static-attr","id","custom-game-name"],["dynamic-attr","value",["concat",[["unknown",["defaultGameName"]]]]],["static-attr","maxlength","30"],["modifier",["action"],[["get",[null]],"nameChange"],[["on"],["focusOut"]]],["modifier",["action"],[["get",[null]],"nameKeyUp"],[["on"],["keyUp"]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","parties-custom-game-dropdown-fields"],["flush-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","parties-custom-game-size-field"],["flush-element"],["text","\\n        "],["open-element","label",[]],["static-attr","for","custom-game-size"],["flush-element"],["append",["unknown",["tra","custom_game_setup_team_size_label"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-size"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teamSizeOptions"]]],null,23],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameServerRegionOptions"]]],null,20],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-password-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-password"],["flush-element"],["append",["unknown",["tra","custom_game_setup_password_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","password"],["static-attr","name","custom-game-password"],["static-attr","id","custom-game-password"],["modifier",["action"],[["get",[null]],"passwordChange"],[["on"],["change"]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-hide-publicly-checkbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPartyTypeClosed"]]],null,16,15],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-custom-game-right"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","parties-custom-game-dropdown-fields"],["flush-element"],["text","\\n"],["block",["if"],[["get",["queueOptions","length"]]],null,14],["block",["if"],[["get",["aramMapMutatorOptions","length"]]],null,10],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-spectator-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-spectator"],["flush-element"],["append",["unknown",["tra","custom_game_setup_spectator_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-radio-input",[]],["static-attr","id","custom-game-spectator"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"spectatorChanged"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["spectatorOptions"]]],null,6],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["spectatorDelayConfigurable"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","style","display: none;"],["flush-element"],["text","\\n  "],["append",["unknown",["nameErrorObserver"]],false],["text","\\n  "],["append",["unknown",["nameErrorTooltipObserver"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","lol-uikit-radio-input-option",[]],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n                "],["append",["unknown",["option","label"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","selected",""],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n                "],["append",["unknown",["option","label"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,1,0]],"locals":["option"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-custom-game-spectator-delay-field"],["flush-element"],["text","\\n        "],["open-element","label",[]],["static-attr","for","custom-game-spectator-delay"],["flush-element"],["append",["unknown",["tra","custom_game_setup_spectator_delay_label"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input",[]],["static-attr","id","custom-game-spectator-delay"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"spectatorDelayChanged"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["spectatorDelayOptions"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-radio-input-option",[]],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n              "],["append",["unknown",["option","label"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","selected",""],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n              "],["append",["unknown",["option","label"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,5,4]],"locals":["option"]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"aramMapMutatorChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"aramMapMutatorChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,8,7]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-type-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-aram-map-mutator"],["flush-element"],["append",["unknown",["tra","custom_game_setup_aram_map_mutator_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-aram-map-mutator"],["flush-element"],["text","\\n"],["block",["each"],[["get",["aramMapMutatorOptions"]]],null,9],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"queueChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"queueChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,12,11]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-type-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-queue"],["flush-element"],["append",["unknown",["tra","custom_game_setup_type_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-queue"],["flush-element"],["text","\\n"],["block",["each"],[["get",["queueOptions"]]],null,13],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","id","type","checked"],["input","custom-game-hide-publicly","checkbox",["get",["playerInputs","hidePublicly"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","custom-game-hide-publicly"],["flush-element"],["append",["unknown",["tra","custom_game_setup_hide_publicly_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","custom-game-hide-publicly"],["static-attr","type","checkbox"],["static-attr","checked","true"],["static-attr","disabled",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","custom-game-hide-publicly"],["flush-element"],["append",["unknown",["tra","custom_game_setup_hide_publicly_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","value"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","value"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,18,17]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-region-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,19],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"teamSizeChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["option","value"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"teamSizeChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["option","value"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,22,21]],"locals":["option"]},{"statements":[["text","    "],["append",["helper",["custom-game-subcategory-card"],null,[["index","animationLock","subcategory","selectedSubcategoryIndex","selected","compact"],[["get",["index"]],["get",["selected","animationLock"]],["get",["subcategory"]],["get",["playerInputs","subcategoryIndex"]],"selectSubcategory",["get",["compact"]]]]],false],["text","\\n"]],"locals":["subcategory","index"]}],"hasPartials":false}',
+                id: "ABx/8952",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\custom-game-setup-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-custom-game-subcategory-select"],["flush-element"],["text","\\n"],["block",["each"],[["get",["subcategories"]]],null,28],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-custom-game-lower-half"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-custom-game-left"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-name-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-name"],["flush-element"],["append",["unknown",["tra","custom_game_setup_name_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","name","custom-game-name"],["static-attr","id","custom-game-name"],["dynamic-attr","value",["concat",[["unknown",["defaultGameName"]]]]],["static-attr","maxlength","30"],["modifier",["action"],[["get",[null]],"nameChange"],[["on"],["focusOut"]]],["modifier",["action"],[["get",[null]],"nameKeyUp"],[["on"],["keyUp"]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","parties-custom-game-dropdown-fields"],["flush-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","parties-custom-game-size-field"],["flush-element"],["text","\\n        "],["open-element","label",[]],["static-attr","for","custom-game-size"],["flush-element"],["append",["unknown",["tra","custom_game_setup_team_size_label"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-size"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teamSizeOptions"]]],null,27],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameServerRegionOptions"]]],null,24],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-password-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-password"],["flush-element"],["append",["unknown",["tra","custom_game_setup_password_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","password"],["static-attr","name","custom-game-password"],["static-attr","id","custom-game-password"],["modifier",["action"],[["get",[null]],"passwordChange"],[["on"],["change"]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-hide-publicly-checkbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPartyTypeClosed"]]],null,20,19],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-custom-game-right"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","parties-custom-game-dropdown-fields"],["flush-element"],["text","\\n"],["block",["if"],[["get",["queueOptions","length"]]],null,18],["block",["if"],[["get",["mapSelectionOptions","length"]]],null,14],["block",["if"],[["get",["aramMapMutatorOptions","length"]]],null,10],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","parties-custom-game-spectator-field"],["flush-element"],["text","\\n      "],["open-element","label",[]],["static-attr","for","custom-game-spectator"],["flush-element"],["append",["unknown",["tra","custom_game_setup_spectator_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-radio-input",[]],["static-attr","id","custom-game-spectator"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"spectatorChanged"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["spectatorOptions"]]],null,6],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["spectatorDelayConfigurable"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","style","display: none;"],["flush-element"],["text","\\n  "],["append",["unknown",["nameErrorObserver"]],false],["text","\\n  "],["append",["unknown",["nameErrorTooltipObserver"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","lol-uikit-radio-input-option",[]],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n                "],["append",["unknown",["option","label"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","selected",""],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n                "],["append",["unknown",["option","label"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,1,0]],"locals":["option"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-custom-game-spectator-delay-field"],["flush-element"],["text","\\n        "],["open-element","label",[]],["static-attr","for","custom-game-spectator-delay"],["flush-element"],["append",["unknown",["tra","custom_game_setup_spectator_delay_label"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input",[]],["static-attr","id","custom-game-spectator-delay"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"spectatorDelayChanged"],null],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["spectatorDelayOptions"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-radio-input-option",[]],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n              "],["append",["unknown",["option","label"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","selected",""],["dynamic-attr","value",["concat",[["unknown",["option","value"]]]]],["flush-element"],["text","\\n              "],["append",["unknown",["option","label"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,5,4]],"locals":["option"]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"aramMapMutatorChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"aramMapMutatorChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,8,7]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-type-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-aram-map-mutator"],["flush-element"],["append",["unknown",["tra","custom_game_setup_aram_map_mutator_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-aram-map-mutator"],["flush-element"],["text","\\n"],["block",["each"],[["get",["aramMapMutatorOptions"]]],null,9],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"mapSelectionChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"mapSelectionChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,12,11]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-type-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-map-selection"],["flush-element"],["append",["unknown",["tra","custom_game_setup_map_selection_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-map-selection"],["flush-element"],["text","\\n"],["block",["each"],[["get",["mapSelectionOptions"]]],null,13],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"queueChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"queueChanged",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,16,15]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-type-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-queue"],["flush-element"],["append",["unknown",["tra","custom_game_setup_type_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-queue"],["flush-element"],["text","\\n"],["block",["each"],[["get",["queueOptions"]]],null,17],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","id","type","checked"],["input","custom-game-hide-publicly","checkbox",["get",["playerInputs","hidePublicly"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","custom-game-hide-publicly"],["flush-element"],["append",["unknown",["tra","custom_game_setup_hide_publicly_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","custom-game-hide-publicly"],["static-attr","type","checkbox"],["static-attr","checked","true"],["static-attr","disabled",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","custom-game-hide-publicly"],["flush-element"],["append",["unknown",["tra","custom_game_setup_hide_publicly_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","value"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["option","value"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,22,21]],"locals":["option"]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","parties-custom-game-region-field"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,23],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"teamSizeChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["option","value"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"teamSizeChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["option","value"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,26,25]],"locals":["option"]},{"statements":[["text","    "],["append",["helper",["custom-game-subcategory-card"],null,[["index","animationLock","subcategory","selectedSubcategoryIndex","selected","compact"],[["get",["index"]],["get",["selected","animationLock"]],["get",["subcategory"]],["get",["playerInputs","subcategoryIndex"]],"selectSubcategory",["get",["compact"]]]]],false],["text","\\n"]],"locals":["subcategory","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 },
                 a = n(110);
@@ -13327,7 +13379,7 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
             n(260), e.exports = i.Ember.Component.extend(s.default, {
@@ -13678,12 +13730,12 @@
             "use strict";
             var o = n(1),
                 i = m(n(131)),
-                s = m(n(43)),
+                s = m(n(44)),
                 a = m(n(270));
             n(271);
             var r = n(110),
                 l = n(266),
-                c = n(15);
+                c = n(16);
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -14133,7 +14185,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(274));
 
             function a(e) {
@@ -14450,7 +14502,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(126));
 
             function a(e) {
@@ -14614,8 +14666,8 @@
             "use strict";
             var o = n(1),
                 i = r(n(179)),
-                s = (n(12), n(9)),
-                a = r(n(10));
+                s = (n(13), n(10)),
+                a = r(n(11));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -14682,11 +14734,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = u(n(43)),
+                i = u(n(44)),
                 s = u(n(131)),
                 a = u(n(156)),
                 r = u(n(145)),
-                l = u(n(10)),
+                l = u(n(11)),
                 c = u(n(73)),
                 m = n(182);
 
@@ -15058,7 +15110,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(15),
+                i = n(16),
                 s = r(n(270));
             n(289);
             var a = r(n(157));
@@ -15412,7 +15464,7 @@
                 s = (o = n(298)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9),
+                a = n(10),
                 r = n(299);
             n(300);
             const {
@@ -15572,7 +15624,7 @@
                     default: o
                 };
             n(304);
-            var a = n(12);
+            var a = n(13);
             e.exports = i.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["autofill-notification-component"],
@@ -15651,9 +15703,9 @@
             var o = n(1),
                 i = n(109),
                 s = n(306),
-                a = n(9);
+                a = n(10);
             n(307);
-            var r, l = (r = n(10)) && r.__esModule ? r : {
+            var r, l = (r = n(11)) && r.__esModule ? r : {
                 default: r
             };
             const c = Object.freeze({
@@ -15945,12 +15997,12 @@
             var o = n(1);
             n(310);
             var i = n(109),
-                s = n(12),
+                s = n(13),
                 a = n(157),
                 r = n(182),
                 l = p(n(73)),
-                c = n(15),
-                m = n(9),
+                c = n(16),
+                m = n(10),
                 u = p(n(131)),
                 d = p(n(145));
 
@@ -16413,11 +16465,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = l(n(5));
+                i = l(n(6));
             n(313);
-            var s = l(n(7)),
-                a = n(12),
-                r = n(9);
+            var s = l(n(8)),
+                a = n(13),
+                r = n(10);
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -16696,11 +16748,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = c(n(43)),
+                i = c(n(44)),
                 s = c(n(158)),
-                a = c(n(10)),
+                a = c(n(11)),
                 r = n(157),
-                l = n(9);
+                l = n(10);
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -16862,13 +16914,13 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = m(n(43)),
+                i = m(n(44)),
                 s = m(n(131));
             n(320);
             var a = n(109),
                 r = n(157),
-                l = n(12),
-                c = m(n(13));
+                l = n(13),
+                c = m(n(14));
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -17244,7 +17296,7 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
             n(323);
@@ -17285,7 +17337,7 @@
             "use strict";
             var o = n(1),
                 i = a(n(131)),
-                s = a(n(43));
+                s = a(n(44));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -17526,10 +17578,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = r(n(10)),
-                s = r(n(43));
+                i = r(n(11)),
+                s = r(n(44));
             n(329);
-            var a = n(9);
+            var a = n(10);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -17671,7 +17723,7 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
             n(335);
@@ -17853,7 +17905,7 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(43)) && o.__esModule ? o : {
+                s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 },
                 a = n(157);
@@ -17903,7 +17955,7 @@
             "use strict";
             var o = n(1);
             n(347);
-            var i, s = (i = n(43)) && i.__esModule ? i : {
+            var i, s = (i = n(44)) && i.__esModule ? i : {
                     default: i
                 },
                 a = n(157),
@@ -18018,11 +18070,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(15),
-                s = c(n(43)),
-                a = n(12),
-                r = n(9),
-                l = c(n(10));
+                i = n(16),
+                s = c(n(44)),
+                a = n(13),
+                r = n(10),
+                l = c(n(11));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -18145,9 +18197,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = r(n(43)),
+                i = r(n(44)),
                 s = r(n(131)),
-                a = n(12);
+                a = n(13);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -18994,7 +19046,7 @@
             var s = n(135),
                 a = n(397),
                 r = n(398),
-                l = n(9),
+                l = n(10),
                 c = n(399);
             const {
                 RunMixin: m
@@ -19876,7 +19928,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(15);
+                i = n(16);
             n(428);
             const {
                 RunMixin: s
@@ -20440,7 +20492,7 @@
             "use strict";
             var o = n(1);
             n(449);
-            var i = n(9);
+            var i = n(10);
             e.exports = o.Ember.Component.extend({
                 layout: n(450),
                 classNames: ["quick-play-selection-rules-tooltip-component"],
@@ -20994,7 +21046,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(157));
 
             function a(e) {
@@ -21309,7 +21361,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = a(n(43)),
+                i = a(n(44)),
                 s = a(n(157));
 
             function a(e) {
@@ -22058,7 +22110,7 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1),
-                i = n(15);
+                i = n(16);
             n(496);
             var s = o.Ember.Component.extend({
                 layout: n(497),
@@ -22170,7 +22222,7 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1),
-                i = n(15);
+                i = n(16);
             const {
                 MILLISECONDS_IN_A_DAY: s,
                 MILLISECONDS_IN_A_HOUR: a
@@ -22384,7 +22436,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(9);
+                i = n(10);
             n(502);
             const s = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
                 a = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
@@ -22440,7 +22492,7 @@
             "use strict";
             var o = n(1);
             n(505);
-            var i = n(9);
+            var i = n(10);
             e.exports = o.Ember.Component.extend({
                 layout: n(506),
                 classNames: ["tft-playbook-menu"],
@@ -22508,7 +22560,7 @@
             "use strict";
             var o = n(1);
             n(508);
-            var i = n(9);
+            var i = n(10);
             const s = "playbook-equipped-icon",
                 a = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
                 r = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
@@ -23086,11 +23138,11 @@
             "use strict";
             var o = n(1);
             n(550);
-            var i = u(n(45)),
+            var i = u(n(3)),
                 s = u(n(105)),
                 a = u(n(156)),
                 r = u(n(131)),
-                l = u(n(43)),
+                l = u(n(44)),
                 c = n(551),
                 m = n(159);
 
@@ -23520,7 +23572,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = r(n(43)),
+                i = r(n(44)),
                 s = r(n(156)),
                 a = n(157);
 
@@ -23690,7 +23742,7 @@
                 s = (o = n(298)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(9);
+                a = n(10);
             n(571), e.exports = i.Ember.Component.extend(s.default, {
                 classNames: ["social-leaderboard-header"],
                 layout: n(572),
@@ -24582,7 +24634,7 @@
                     return o
                 }(n(1)),
                 i = r(n(158)),
-                s = r(n(7)),
+                s = r(n(8)),
                 a = r(n(73));
 
             function r(e) {
@@ -24927,7 +24979,7 @@
                         } o.default = e, n && n.set(e, o);
                     return o
                 }(n(1)),
-                s = n(15),
+                s = n(16),
                 a = (o = n(612)) && o.__esModule ? o : {
                     default: o
                 },
@@ -25206,10 +25258,10 @@
                 }(n(1)),
                 s = n(159),
                 a = n(112),
-                r = (o = n(7)) && o.__esModule ? o : {
+                r = (o = n(8)) && o.__esModule ? o : {
                     default: o
                 },
-                l = n(15);
+                l = n(16);
 
             function c(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -25458,7 +25510,7 @@
                     default: o
                 },
                 a = n(110),
-                r = n(9);
+                r = n(10);
 
             function l(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -26823,10 +26875,16 @@
                 }), (() => null)), e.getOptional("rcp-fe-lol-strawberry-hub").then((e => {
                     t.default.StrawberryModules = e.getStrawberryModules(), t.default.tra = t.default.tra.overlay("/fe/lol-strawberry-hub/trans.json")
                 }), (() => null)), e.getOptional("rcp-fe-tft").then((e => {
-                    t.default.TftBridgeComponents = e.getBridgeComponents(), t.default.tra = t.default.tra.overlay("/fe/tft/trans.json")
+                    t.default.TftBridgeComponents = e.getBridgeComponents();
+                    const n = e.getFullLaunchComponents();
+                    if (t.default.TftFullLaunchComponents = n, n && n.setFullLaunchProxy) {
+                        const e = __webpack_require__(3);
+                        n.setFullLaunchProxy(e)
+                    } else t.logger.warn("[init] setFullLaunchProxy not available on TFT fullLaunchComponents; cross-client invite callbacks will not be registered.");
+                    t.default.tra = t.default.tra.overlay("/fe/tft/trans.json")
                 }), (() => null)), t.default.tra = t.default.tra.overlay("/fe/lol-jade/trans.json")
             })).then((() => {
-                const e = new(__webpack_require__(3));
+                const e = new(__webpack_require__(4));
                 t.default.add({
                     PartyAPI: e
                 });

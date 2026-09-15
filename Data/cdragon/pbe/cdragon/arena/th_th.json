@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "ได้รับเวทซัมมอนเนอร์ <spellName>Deceive</spellName><br><br><spellName>Deceive</spellName>: วาร์ปตัวเองและเข้าสู่สถานะ<keywordStealth>ล่องหน</keywordStealth> จากนั้นการโจมตีครั้งถัดไปขณะ<keywordStealth>ล่องหน</keywordStealth> จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม</physicalDamage><br><br>อีกทั้งเมื่อถูกสังหาร เรียกกล่องระเบิดออกมา สร้าง<magicDamage>ความเสียหายเวท</magicDamage>รุนแรง และทำให้ศัตรูใกล้เคียง<status>หวาดกลัว</status>",
+            "desc": "ได้รับเวทซัมมอนเนอร์ <spellName>Deceive</spellName><br><br><spellName>Deceive</spellName>: คุณจะเทเลพอร์ตและ<keywordStealth>ล่องหน</keywordStealth> การโจมตีครั้งถัดไปของคุณขณะที่<keywordStealth>ล่องหน</keywordStealth> จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม</physicalDamage><br><br>เมื่อคุณตาย จะสร้างกล่องระเบิด ที่สร้าง<trueDamage>ความเสียหายจริง</trueDamage>ได้เป็นจำนวนมาก และทำให้ศัตรูใกล้เคียง<status>หวาดกลัว</status>",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Clown College",
             "rarity": 2,
-            "tooltip": "<spellName>Backstab</spellName>: สร้าง<physicalDamage>โบนัสความเสียหายกายภาพ</physicalDamage> @BasicAttackDamage@ หน่วยเมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: วาร์ปตัวเองและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที จากนั้นการโจมตีครั้งถัดไปขณะ<keywordStealth>ล่องหน</keywordStealth> จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลสร้างความเสียหาย @QCritDamageMod@ <br><br><spellName>Hallucinate: Death</spellName>: สร้าง<magicDamage>ความเสียหายเวท @FearDamage*100@% จากพลังชีวิตสูงสุด</magicDamage>เมื่อถูกสังหาร และทำให้ศัตรูรอบตัวหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
+            "tooltip": "<spellName>Backstab</spellName>: คุณสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ @BasicAttackDamage@ หน่วย</physicalDamage>เมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: คุณจะเทเลพอร์ตและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที การโจมตีครั้งถัดไปของคุณขณะที่<keywordStealth>ล่องหน</keywordStealth>จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลเป็นความเสียหาย @QCritDamageMod@<br><br><spellName>Hallucinate: Death</spellName>: เมื่อตาย จะสร้าง<magicDamage>ความเสียหายจริง @FearDamage*100@% ของพลังชีวิตสูงสุด</magicDamage> และทำให้ศัตรูรอบตัวคุณหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้ <keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้",
+            "desc": "โหวตให้ทีมของคุณ เป็นพันธมิตรกับเหล่านักล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่านักล่าปีศาจ จะมอบ<gold>โบนัสทอง +%i:goldCoins% @BonusGold@ ทอง</gold> ให้คุณเมื่อคุณเอาชนะ<keywordMajor>ทีมปีศาจ</keywordMajor>ได้",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Ally Hunter",
             "rarity": 4,
-            "tooltip": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้ <keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้"
+            "tooltip": "โหวตให้ทีมของคุณ เป็นพันธมิตรกับเหล่านักล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่านักล่าปีศาจ จะมอบ<gold>โบนัสทอง +%i:goldCoins% @BonusGold@ ทอง</gold> ให้คุณเมื่อคุณเอาชนะ<keywordMajor>ทีมปีศาจ</keywordMajor>ได้"
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "ได้รับระยะโจมตี @RangeIncrease@ หน่วย",
+            "desc": "ได้รับระยะโจมตี @MeleeRangeIncrease@ หน่วย และลดลงเหลือ @RangedRangeIncrease@ หน่วยสำหรับแชมเปี้ยนระยะไกล",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Scopiest Weapons",
             "rarity": 2,
-            "tooltip": "ได้รับระยะโจมตี @RangeIncrease@ หน่วย"
+            "tooltip": "ได้รับระยะโจมตี @MeleeRangeIncrease@ หน่วย และลดลงเหลือ @RangedRangeIncrease@ หน่วยสำหรับแชมเปี้ยนระยะไกล"
         },
         {
             "apiName": "SlimeTime",

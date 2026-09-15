@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Nhận Phép Bổ Trợ <spellName>Lừa Gạt</spellName>.<br><br><spellName>Lừa Gạt</spellName>: Dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth>. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>sát thương vật lý</physicalDamage>. <br><br>Khi bạn hy sinh, tạo một hộp phát nổ gây <magicDamage>sát thương phép</magicDamage> lớn và làm kẻ địch xung quanh <status>Hoảng Sợ</status>.",
+            "desc": "Nhận Phép Bổ Trợ <spellName>Lừa Gạt</spellName>.<br><br><spellName>Lừa Gạt</spellName>: Dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth>. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>sát thương vật lý</physicalDamage>. <br><br>Khi bạn hy sinh, tạo một hộp phát nổ gây <trueDamage>sát thương chuẩn</trueDamage> lớn và làm kẻ địch xung quanh <status>Hoảng Sợ</status>.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Học Thuật Làm Hề",
             "rarity": 2,
-            "tooltip": "<spellName>Đâm Lén</spellName>: Bạn gây thêm @BasicAttackDamage@ <physicalDamage>sát thương vật lý</physicalDamage> khi tấn công từ phía sau.<br><br><spellName>Lừa Gạt</spellName>: Bạn dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth> trong @StealthDuration@ giây. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>. Nếu tung đòn từ phía sau, đòn đánh sẽ chí mạng gây @QCritDamageMod@ sát thương.<br><br><spellName>Phân Thân: Hy Sinh</spellName>: Khi hy sinh, gây <magicDamage>sát thương phép bằng @FearDamage*100@% Máu tối đa</magicDamage> và khiến kẻ địch xung quanh hoảng sợ trong @FearDuration@ giây."
+            "tooltip": "<spellName>Đâm Lén</spellName>: Bạn gây thêm @BasicAttackDamage@ <physicalDamage>sát thương vật lý</physicalDamage> khi tấn công từ phía sau.<br><br><spellName>Lừa Gạt</spellName>: Bạn dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth> trong @StealthDuration@ giây. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>. Nếu tung đòn từ phía sau, đòn đánh sẽ chí mạng gây @QCritDamageMod@ sát thương.<br><br><spellName>Phân Thân: Hy Sinh</spellName>: Khi hy sinh, gây sát thương chuẩn bằng <magicDamage>@FearDamage*100@% Máu tối đa của bản thân</magicDamage> và khiến kẻ địch xung quanh hoảng sợ trong @FearDuration@ giây."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> <keywordMajor>khi bạn đánh bại một đội Quỷ</keywordMajor>.",
+            "desc": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> khi bạn đánh bại một <keywordMajor>đội Quỷ</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Liên Minh Thợ Săn",
             "rarity": 4,
-            "tooltip": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> <keywordMajor>khi bạn đánh bại một đội Quỷ</keywordMajor>."
+            "tooltip": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> khi bạn đánh bại một <keywordMajor>đội Quỷ</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Tăng @RangeIncrease@ Tầm Đánh.",
+            "desc": "Nhận @MeleeRangeIncrease@ Tầm Đánh, giảm xuống còn @RangedRangeIncrease@ nếu bạn là Tướng Đánh Xa.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Lắp Kính Nhắm Cỡ Đại",
             "rarity": 2,
-            "tooltip": "Tăng @RangeIncrease@ Tầm Đánh."
+            "tooltip": "Nhận @MeleeRangeIncrease@ Tầm Đánh, giảm xuống còn @RangedRangeIncrease@ nếu bạn là Tướng Đánh Xa."
         },
         {
             "apiName": "SlimeTime",

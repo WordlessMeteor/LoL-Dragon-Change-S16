@@ -1,20 +1,21 @@
 {
-    "{c350b9af}": {
+    "Characters/Jade_Graves/Animations/Skin0": {
         "mCascadeBlendValue": 0.0,
         "mClipDataMap": {
             "Attack1_UPPER": {
-                "mFlags": 1,
-                "mTrackDataName": "Default",
+                "mFlags": 4,
+                "mMaskDataName": "Upper",
+                "mTrackDataName": "Upper",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "assets/characters/jade_graves/skins/base/animations/jade_graves_attack2.anm",
                     "__type": "AnimationResourceData"
                 },
-                "startFrame": 5.0,
                 "__type": "AtomicClipData"
             },
             "{9d46c40a}": {
-                "mFlags": 1,
-                "mTrackDataName": "Default",
+                "mFlags": 4,
+                "mMaskDataName": "Upper",
+                "mTrackDataName": "Upper",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "{af2fe30bcd03932a}",
                     "__type": "AnimationResourceData"
@@ -26,7 +27,7 @@
                 "mEventDataMap": {
                     "Crit": {
                         "mStartFrame": 6.0,
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -116,7 +117,7 @@
                     "CAST": {
                         "mName": "CAST",
                         "mStartFrame": 6.0,
-                        "mEffectKey": "{23084e50}",
+                        "mEffectKey": "Jade_Graves_Q_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -141,7 +142,7 @@
                         "mName": "CAST",
                         "mStartFrame": 3.0,
                         "mEndFrame": 16.0,
-                        "mEffectKey": "{812a7a42}",
+                        "mEffectKey": "Jade_Graves_W_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "buffbone_cstm_weaponb",
@@ -193,7 +194,7 @@
                 "mEventDataMap": {
                     "{19499b5b}": {
                         "mName": "{19499b5b}",
-                        "mEffectKey": "{e4e231c3}",
+                        "mEffectKey": "Jade_GravesTaunt_BV2",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "Spine",
@@ -300,7 +301,7 @@
                     },
                     "CAST": {
                         "mName": "CAST",
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -322,23 +323,70 @@
             "Attack1": {
                 "mClipNameList": [
                     "{9fe0c9de}",
-                    "{212675b4}"
+                    "Attack1_UPPER"
                 ],
                 "__type": "ParallelClipData"
             },
             "{9fe0c9de}": {
                 "mFlags": 1,
-                "mTrackDataName": "Spells",
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{443c56f4}": {
+                        "mName": "{443c56f4}",
+                        "mStartFrame": 8.0,
+                        "mSoundName": "Play_sfx_Graves_GravesBasicAttack_pump",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "CAST": {
+                        "mName": "CAST",
+                        "mStartFrame": 7.0,
+                        "mEffectKey": "Jade_Graves_BA_cas",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "buffbone_cstm_weapona",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    }
+                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "assets/characters/jade_graves/skins/base/animations/jade_graves_attack2.anm",
                     "__type": "AnimationResourceData"
                 },
-                "startFrame": 5.0,
                 "__type": "AtomicClipData"
             },
             "{b73686eb}": {
                 "mFlags": 1,
-                "mTrackDataName": "Spells",
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{443c56f4}": {
+                        "mName": "{443c56f4}",
+                        "mStartFrame": 3.0,
+                        "mSoundName": "Play_sfx_Graves_GravesBasicAttack_pump",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "CAST": {
+                        "mName": "CAST",
+                        "mStartFrame": 2.0,
+                        "mEffectKey": "Jade_Graves_BA_cas",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "buffbone_cstm_weaponb",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    }
+                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "{af2fe30bcd03932a}",
                     "__type": "AnimationResourceData"
@@ -347,8 +395,8 @@
             },
             "Attack2": {
                 "mClipNameList": [
-                    "{212675b4}",
-                    "{b73686eb}"
+                    "{b73686eb}",
+                    "{9d46c40a}"
                 ],
                 "__type": "ParallelClipData"
             },
@@ -400,7 +448,7 @@
                     },
                     "CAST": {
                         "mName": "CAST",
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -425,7 +473,7 @@
                 "mEventDataMap": {
                     "CAST": {
                         "mName": "CAST",
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -464,7 +512,7 @@
                     },
                     "CAST": {
                         "mName": "CAST",
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_Buffbone_Glb_Center_Loc",
@@ -495,7 +543,7 @@
                 "mEventDataMap": {
                     "CAST": {
                         "mName": "CAST",
-                        "mEffectKey": "{60fbc5e0}",
+                        "mEffectKey": "Jade_Graves_BA_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",

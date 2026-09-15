@@ -3474,7 +3474,7 @@
             },
             "mSpellCalculations": {
                 "PassiveTotalDamage": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mDataValue": "PassiveBonusDamage",
@@ -3502,7 +3502,7 @@
                 },
                 "SpiderlingTotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mDataValue": "SpiderlingBaseDamage",
@@ -3528,7 +3528,7 @@
                         "mSubparts": [
                             {
                                 "SourceObject": "Characters/Elise/Spells/EliseSpiderEAbility/EliseSpiderEInitial",
-                                "{137cf12a}": "PBonusIncrease",
+                                "DataValue": "PBonusIncrease",
                                 "__type": "{9e9e2e5c}"
                             },
                             {
@@ -5719,15 +5719,26 @@
     "{ce715b4c}": {
         "OrderJunglePath": [
             {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
                 "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
+                "Camp": 4,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 4,
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {

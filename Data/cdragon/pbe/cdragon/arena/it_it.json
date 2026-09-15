@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Ottieni l'Incantesimo dell'evocatore <spellName>Inganno</spellName>.<br><br><spellName>Inganno</spellName>: ti teletrasporti e diventi <keywordStealth>invisibile</keywordStealth>. Il tuo attacco successivo mentre sei <keywordStealth>invisibile</keywordStealth> infligge <physicalDamage>danni fisici</physicalDamage> in più. <br><br>Quando muori generi una scatola esplosiva che infligge una grande quantità di <magicDamage>danni magici</magicDamage> e applica <status>paura</status> ai nemici nelle vicinanze.",
+            "desc": "Ottieni l'Incantesimo dell'evocatore <spellName>Inganno</spellName>.<br><br><spellName>Inganno</spellName>: ti teletrasporti e diventi <keywordStealth>invisibile</keywordStealth>. Il tuo attacco successivo mentre sei <keywordStealth>invisibile</keywordStealth> infligge <physicalDamage>danni fisici</physicalDamage> in più. <br><br>Quando muori generi una scatola esplosiva che infligge una grande quantità di <trueDamage>danni puri</trueDamage> e applica <status>paura</status> ai nemici nelle vicinanze.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Università dei clown",
             "rarity": 2,
-            "tooltip": "<spellName>Tradimento</spellName>: infliggi @BasicAttackDamage@ <physicalDamage>danni fisici bonus</physicalDamage> se colpisci alle spalle.<br><br><spellName>Inganno</spellName>: ti teletrasporti e diventi <keywordStealth>invisibile</keywordStealth> per @StealthDuration@ secondi. Il tuo primo attacco da <keywordStealth>invisibile</keywordStealth> infligge <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> in più. Se colpisci alle spalle, questo attacco infligge colpi critici per @QCritDamageMod@ danni.<br><br><spellName>Allucinazione: morte</spellName>: quando muori, infliggi un <magicDamage>@FearDamage*100@% della tua salute massima in danni magici</magicDamage> e applichi paura per @FearDuration@ secondo/i attorno a te."
+            "tooltip": "<spellName>Tradimento</spellName>: infliggi @BasicAttackDamage@ <physicalDamage>danni fisici bonus</physicalDamage> se colpisci alle spalle.<br><br><spellName>Inganno</spellName>: ti teletrasporti e diventi <keywordStealth>invisibile</keywordStealth> per @StealthDuration@ secondi. Il tuo primo attacco da <keywordStealth>invisibile</keywordStealth> infligge <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> in più. Se colpisci alle spalle, questo attacco infligge colpi critici per @QCritDamageMod@ danni.<br><br><spellName>Allucinazione: morte</spellName>: quando muori, infliggi un <magicDamage>@FearDamage*100@% della tua salute massima in danni puri</magicDamage> e applichi paura per @FearDuration@ secondo/i attorno a te."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Vota per far sì che la tua squadra si allei con i Cacciatori di demoni. <br><br>Allearsi con i Cacciatori di demoni fornisce <gold>+%i:goldCoins%@BonusGold@ oro bonus</gold> <keywordMajor>quando sconfiggete una squadra di Demoni</keywordMajor>.",
+            "desc": "Vota per far sì che la tua squadra si allei con i Cacciatori di Demoni. <br><br>Allearsi con i Cacciatori di Demoni fornisce <gold>+%i:goldCoins%@BonusGold@ oro bonus</gold> quando sconfiggete una <keywordMajor>squadra di Demoni</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Cacciatore alleato",
             "rarity": 4,
-            "tooltip": "Vota per far sì che la tua squadra si allei con i Cacciatori di demoni. <br><br>Allearsi con i Cacciatori di demoni fornisce <gold>+%i:goldCoins%@BonusGold@ oro bonus</gold> <keywordMajor>quando sconfiggete una squadra di Demoni</keywordMajor>."
+            "tooltip": "Vota per far sì che la tua squadra si allei con i Cacciatori di Demoni. <br><br>Allearsi con i Cacciatori di Demoni fornisce <gold>+%i:goldCoins%@BonusGold@ oro bonus</gold> quando sconfiggete una <keywordMajor>squadra di Demoni</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Ottieni @RangeIncrease@ gittata d'attacco.",
+            "desc": "Ottieni @MeleeRangeIncrease@ gittata d'attacco, ridotta a @RangedRangeIncrease@ se sei un campione a distanza.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Armi ancora più di precisione",
             "rarity": 2,
-            "tooltip": "Ottieni @RangeIncrease@ gittata d'attacco."
+            "tooltip": "Ottieni @MeleeRangeIncrease@ gittata d'attacco, ridotta a @RangedRangeIncrease@ se sei un campione a distanza."
         },
         {
             "apiName": "SlimeTime",

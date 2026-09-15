@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "Zyskujesz czar przywoływacza <spellName>Podstęp</spellName>.<br><br><spellName>Podstęp</spellName>: Teleportujesz się i zyskujesz <keywordStealth>niewidzialność</keywordStealth>. Twój następny atak po zyskaniu <keywordStealth>niewidzialności</keywordStealth> zadaje dodatkowe <physicalDamage>obrażenia fizyczne</physicalDamage>.<br><br>Gdy zginiesz, przy tobie pojawia się eksplodujące pudło, które zadaje dużą ilość <magicDamage>obrażeń magicznych</magicDamage> oraz <status>przestrasza</status> pobliskich wrogów.",
+            "desc": "Zyskujesz czar przywoływacza <spellName>Podstęp</spellName>.<br><br><spellName>Podstęp</spellName>: Teleportujesz się i zyskujesz <keywordStealth>niewidzialność</keywordStealth>. Twój następny atak po zyskaniu <keywordStealth>niewidzialności</keywordStealth> zadaje dodatkowe <physicalDamage>obrażenia fizyczne</physicalDamage>.<br><br>Gdy zginiesz, przy tobie pojawia się eksplodujące pudło, które zadaje dużą ilość <trueDamage>obrażeń nieuchronnych</trueDamage> oraz <status>przestrasza</status> pobliskich wrogów.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "Wyższa Szkoła Błaznowania",
             "rarity": 2,
-            "tooltip": "<spellName>Cios w Plecy</spellName>: Zadajesz @BasicAttackDamage@ pkt. <physicalDamage>dodatkowych obrażeń fizycznych</physicalDamage> podczas atakowania od tyłu.<br><br><spellName>Podstęp</spellName>: Teleportujesz się i zyskujesz <keywordStealth>niewidzialność</keywordStealth> na @StealthDuration@ sek. Twój następny atak po zyskaniu <keywordStealth>niewidzialności</keywordStealth> zadaje dodatkowo <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage>. Jeżeli atak zostanie wyprowadzony od tyłu, trafi krytycznie i zada @QCritDamageMod@ obrażeń.<br><br><spellName>Halucynacje: Śmierć</spellName>: Po śmierci zadaje <magicDamage>obrażenia magiczne równe @FearDamage*100@% maksymalnego zdrowia</magicDamage> i przestrasza na obszarze dookoła ciebie na @FearDuration@ sek."
+            "tooltip": "<spellName>Cios w Plecy</spellName>: Zadajesz @BasicAttackDamage@ pkt. <physicalDamage>dodatkowych obrażeń fizycznych</physicalDamage> podczas atakowania od tyłu.<br><br><spellName>Podstęp</spellName>: Teleportujesz się i zyskujesz <keywordStealth>niewidzialność</keywordStealth> na @StealthDuration@ sek. Twój następny atak po zyskaniu <keywordStealth>niewidzialności</keywordStealth> zadaje dodatkowo <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage>. Jeżeli atak zostanie wyprowadzony od tyłu, trafi krytycznie i zada @QCritDamageMod@ obrażeń.<br><br><spellName>Halucynacje: Śmierć</spellName>: Po śmierci zadaje <magicDamage>obrażenia nieuchronne równe @FearDamage*100@% maksymalnego zdrowia</magicDamage> i na obszarze dookoła ciebie nakłada przestraszenie na @FearDuration@ sek."
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "Zagłosuj, by twoja drużyna sprzymierzyła się z Łowcami Demonów. <br><br>Sojusz z Łowcami Demonów zapewnia <gold>+%i:goldCoins% @BonusGold@ szt. dodatkowego złota</gold> <keywordMajor>za pokonanie drużyny demonów</keywordMajor>.",
+            "desc": "Zagłosuj, by twoja drużyna sprzymierzyła się z Łowcami Demonów. <br><br>Sojusz z Łowcami Demonów zapewnia <gold>+%i:goldCoins%@BonusGold@ szt. dodatkowego złota</gold> za pokonanie <keywordMajor>drużyny demonów</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Sojusz z Łowcami",
             "rarity": 4,
-            "tooltip": "Zagłosuj, by twoja drużyna sprzymierzyła się z Łowcami Demonów. <br><br>Sojusz z Łowcami Demonów zapewnia <gold>+%i:goldCoins% @BonusGold@ szt. dodatkowego złota</gold> <keywordMajor>za pokonanie drużyny demonów</keywordMajor>."
+            "tooltip": "Zagłosuj, by twoja drużyna sprzymierzyła się z Łowcami Demonów. <br><br>Sojusz z Łowcami Demonów zapewnia <gold>+%i:goldCoins%@BonusGold@ szt. dodatkowego złota</gold> za pokonanie <keywordMajor>drużyny demonów</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -8174,13 +8174,13 @@
                     350.0
                 ]
             },
-            "desc": "Zyskujesz @RangeIncrease@ jedn. zasięgu ataku.",
+            "desc": "Zyskujesz @MeleeRangeIncrease@ jedn. zasięgu ataku lub @RangedRangeIncrease@ jedn. jeśli walczysz z dystansu.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Najbardziej Snajperskie Uzbrojenie",
             "rarity": 2,
-            "tooltip": "Zyskujesz @RangeIncrease@ jedn. zasięgu ataku."
+            "tooltip": "Zyskujesz @MeleeRangeIncrease@ jedn. zasięgu ataku lub @RangedRangeIncrease@ jedn. jeśli walczysz z dystansu."
         },
         {
             "apiName": "SlimeTime",

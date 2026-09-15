@@ -14868,9 +14868,8 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = function(e, t, n, P, N) {
-                (0, a.addAudioListeners)(e.allRegions, t, P), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, N), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, P), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, v.addOpenUiListeners)(e.allRegions, t), (0, E.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, k.addTastesListeners)(e.allRegions, t, n), (0, T.addTFTPassListeners)(e.allRegions, t, n), (0, C.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, R.addMetagamesListeners)(e.allRegions, t, n), !1;
-                (0, L.addDemaciaListener)(e.allRegions, t)
+            }), t.default = function(e, t, n, N, M) {
+                (0, a.addAudioListeners)(e.allRegions, t, N), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, M), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, N), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, v.addOpenUiListeners)(e.allRegions, t), (0, E.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, k.addTastesListeners)(e.allRegions, t, n), (0, T.addTFTPassListeners)(e.allRegions, t, n), (0, C.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, R.addMetagamesListeners)(e.allRegions, t, n), (0, L.addLaunchTFTListeners)(e.allRegions, t, n), (0, P.addDemaciaListener)(e.allRegions, t)
             };
             var a = n(388),
                 r = n(389),
@@ -14900,7 +14899,8 @@
                 S = n(416),
                 I = n(417),
                 R = n(418),
-                L = (n(419), n(420))
+                L = n(419),
+                P = n(420)
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

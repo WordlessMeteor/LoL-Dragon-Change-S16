@@ -1133,7 +1133,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BaseBasicAttackCDR",
+                    "name": "BasicAttackCDR",
                     "values": [
                         1.0,
                         1.0,
@@ -1293,21 +1293,6 @@
                     },
                     "mModifiedGameCalculation": "SubesquentDamage",
                     "__type": "GameCalculationModified"
-                },
-                "BasicAttackCDR": {
-                    "mFormulaParts": [
-                        {
-                            "mPart1": {
-                                "__type": "CooldownMultiplierCalculationPart"
-                            },
-                            "mPart2": {
-                                "mDataValue": "BaseBasicAttackCDR",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "__type": "ProductOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
                 },
                 "SingleTotalDamage": {
                     "mMultiplier": {
