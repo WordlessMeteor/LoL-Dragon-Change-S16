@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Kolos",
     "shortBio": "— Umiejętności są zupełnie inne. Przeczytaj opisy",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio osłania tarczą sojuszniczego bohatera, zwiększając jego pancerz i odporność na magię, oraz leczy siebie za każdym razem, gdy ten bohater otrzyma obrażenia.",
-            "dynamicDescription": "Galio osłania tarczą siebie lub sojuszniczego bohatera, a osłonięte cele zyskują <scaleArmor>@BonusDefense@ pkt. pancerza</scaleArmor> i <scaleMR>@BonusDefense@ pkt. odporności na magię</scaleMR> na 4 sek. Galio leczy się o <healing>@TotalHeal@ pkt.</healing> za każdym razem, gdy osłonięta jednostka otrzymuje obrażenia.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio wzmacnia sojuszniczego bohatera lub siebie, zapewniając <scaleArmor>@BonusDefense@ pkt. pancerza</scaleArmor> i <scaleMR>@BonusDefense@ pkt. odporności na magię</scaleMR> na @BuffDuration@ sek. Galio leczy się o <healing>@TotalHeal@</healing> pkt. za każdym razem, gdy odnosi obrażenia.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio macha skrzydłami, powodując podmuch potężnego wiatru, który zadaje wrogom obrażenia i zostawia po sobie prąd powietrzny. Prąd ten zwiększa prędkość ruchu sojuszników.",
-            "dynamicDescription": "Galio tworzy podmuch potężnego wiatru, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom na swej drodze. Kierunkowy strumień powietrza utrzymuje się przez 5 sek., a sojusznicy zyskują <speed>@MoveSpeedMod*100@% prędkości ruchu</speed>, gdy poruszają się wzdłuż niego.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio tworzy podmuch potężnego wiatru, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wszystkim wrogom na swojej drodze. Kierunkowy podmuch utrzymuje się przez @DraftDuration@ sek., a sojusznicy poruszający się wzdłuż niego zyskują <speed>@MoveSpeedMod*100@% prędkości ruchu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio przybiera postać posągu, prowokuje pobliskich wrogów i gromadzi energię z ich ciosów.  Następnie rozsadza swoją kamienną skorupę i uwalnia zgromadzoną energię, która zadaje obrażenia pobliskim przeciwnikom.",
-            "dynamicDescription": "Galio przygotowuje umiejętność przez 2 sek., prowokując pobliskich wrogów i otrzymując @ReducedDamage*100@% zmniejszonych obrażeń.<br><br>Po przygotowaniu Galio zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> pobliskim wrogom plus dodatkowe 5% obrażeń za każdy atak, który otrzymał podczas przygotowywania.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio przygotowuje się przez @ChannelDuration@ sek., prowokując pobliskich wrogów i otrzymując o @ReducedDamage*100@% zmniejszone obrażenia.<br><br>Następnie zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> pobliskim wrogom oraz dodatkowe @PercentPerHitIncrease*100@% obrażeń za każdy atak, który otrzymał podczas przygotowywania.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

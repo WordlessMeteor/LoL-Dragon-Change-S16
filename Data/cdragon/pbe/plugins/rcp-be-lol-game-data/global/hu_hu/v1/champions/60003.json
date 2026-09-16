@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "A kolosszus",
     "shortBio": "– A képességek teljesen megváltoztak. Olvasd el a leírásokat",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Galio pajzsot bocsát egy szövetséges hősre, amivel megnöveli a páncélját és a varázsellenállását. A hőst érő támadások gyógyítják Galiót.",
-            "dynamicDescription": "Galio pajzsot bocsát egy szövetséges hősre vagy önmagára, a pajzzsal védett célpontok pedig 4 másodpercre <scaleArmor>@BonusDefense@ páncélra</scaleArmor> és <scaleMR>@BonusDefense@ varázsellenállásra</scaleMR> tesznek szert. Valahányszor az egység megsérül, Galio <healing>@TotalHeal@</healing> értékkel gyógyul.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio felerősít egy szövetséges hőst vagy saját magát, amivel <scaleArmor>@BonusDefense@ páncélt</scaleArmor> és <scaleMR>@BonusDefense@ varázsellenállást</scaleMR> biztosít @BuffDuration@ másodpercre. Galio <healing>@TotalHeal@</healing> életerőt tölt vissza, valahányszor a célpont sebzést szenved el.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Galio összecsapja a szárnyait, és megrázó erejű szélrohamot bocsát az ellenfeleire, amely megsebzi őket. A szél nyomvonalat is hagy, amely növeli a rajta haladó szövetségesek mozgási sebességét.",
-            "dynamicDescription": "Galio megrázó erejű szélrohamot szabadít el, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az útjába kerülő ellenfeleknek. 5 másodpercig hátszél keletkezik az érintett területen, ami <speed>@MoveSpeedMod*100@% mozgási sebességet</speed> biztosít az azzal egy irányba haladó szövetségeseknek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio szélrohamot bocsát az ellenségre, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az útjába kerülő összes ellenfelének. Ezt követően hátszél keletkezik az érintett területen @DraftDuration@ másodpercig, ami <speed>@MoveSpeedMod*100@%-kal növeli az útvonalon végighaladó szövetségesek mozgási sebességét</speed>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Galio szoborszerű alakot ölt magára, felbőszíti a közeli ellenfeleket, és eltárolja az őt érő támadások energiáját.  Amikor Galio kitör a szoborburokból, a tárolt energiát a körülötte lévő ellenfelekre zúdítja.",
-            "dynamicDescription": "Galio 2 másodpercig varázsol, felbőszíti a közeli ellenfeleket, és @ReducedDamage*100@%-kal kevesebb sebzést szenved el.<br><br>A varázslás után Galio <magicDamage>@TotalDamage@ varázssebzést</magicDamage>, plusz a varázslás során elszenvedett támadások sebzésének 5%-ával egyenlő sebzést okoz a közeli ellenfeleknek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio @ChannelDuration@ másodpercig varázsol, ezalatt felbőszíti a közeli ellenfeleket, és közben @ReducedDamage*100@%-kal csökkentett sebzést szenved el.<br><br>A varázslást követően Galio <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a körülötte lévő ellenfeleknek, továbbá @PercentPerHitIncrease*100@% sebzést minden egyes olyan támadás után, amit a varázslás során szenvedett el.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

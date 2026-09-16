@@ -1,6 +1,7 @@
 {
     "Characters/Janna/Skins/Skin67": {
         "skinClassification": 1,
+        "championSkinId": 40067,
         "championSkinName": "JannaSkin67",
         "metaDataTags": "faction:zaun,gender:female,element:wind,skinline:coven,",
         "loadscreen": {
@@ -209,7 +210,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
+                    "Material": "{45ffae14}",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -234,7 +235,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
+                    "Material": "{45ffae14}",
                     "submesh": "EyeMask",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -254,17 +255,17 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
+                    "Material": "{5a2a33ed}",
                     "submesh": "WingsHair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
+                    "Material": "{5a2a33ed}",
                     "submesh": "Hair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst",
+                    "Material": "{1fe3e023}",
                     "submesh": "Cloths",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -390,7 +391,7 @@
         },
         "mEmblems": [
             {
-                "mEmblemData": "Emblems/11",
+                "mEmblemData": "Emblems/31",
                 "mLoadingScreenAnchor": 1,
                 "__type": "SkinEmblem"
             }
@@ -515,319 +516,73 @@
                     }
                 ],
                 "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "mBoolDriver": {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                "mTurnOnTimeSec": 0.0,
+                                "mTurnOffTimeSec": 0.0,
+                                "__type": "LerpMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.5,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{b798885e}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mBoolDriver": {
+                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOff": 6.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "SubmeshesToShow": [
+                    "{a9bc73d0}",
+                    "{de068f33}",
+                    "r_ear"
+                ],
+                "SubmeshesToHide": [
+                    "EyeMask",
+                    "Ear",
+                    "{3c22ed79}"
+                ],
+                "__type": "PersistentEffectConditionData"
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Janna/Skins/Skin67/ChromaPreview.tex",
         "objectPath": "Characters/Janna/Skins/Skin67",
         "__type": "SkinCharacterDataProperties"
-    },
-    "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst": {
-        "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Bloom_Mask",
-                "texturePath": "{13374fccd62518fc}",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Color",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_bodymask_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "iridescentTex",
-                "texturePath": "assets/shared/materials/default_gradient.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Bloom_Intensity",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Color",
-                "value": [
-                    0.6039215922355652,
-                    0.32549020648002625,
-                    0.4117647111415863,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Size",
-                "value": [
-                    0.24500000476837158,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Shadow_Bias",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MaxSpec",
-                "value": [
-                    64.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LQ_Lighting_Intensity",
-                "value": [
-                    4.25,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "RimLightOffset",
-                "value": [
-                    -0.41999998688697815,
-                    -0.41999998688697815,
-                    -0.41999998688697815,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SpecularColor",
-                "value": [
-                    0.9080643653869629,
-                    0.801190197467804,
-                    0.5334859490394592,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "IridescentControl",
-                "value": [
-                    1.0,
-                    0.5,
-                    0.5,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_BLOOM_MASK",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "IRIDESCENCE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Fresnel_Size",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 4.0,
-                        "mOffValue": 0.20000000298023224,
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "LQ_Lighting_Intensity",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.0,
-                        "mOffValue": 0.20000000298023224,
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Fresnel_Color",
-                    "Enabled": false,
-                    "driver": {
-                        "BoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "OnValue": [
-                            1.0,
-                            0.0,
-                            0.12999999523162842,
-                            1.0
-                        ],
-                        "OffValue": [
-                            0.5199999809265137,
-                            0.1899999976158142,
-                            0.1899999976158142,
-                            1.0
-                        ],
-                        "TurnOnTimeSec": 0.20000000298023224,
-                        "TurnOffTimeSec": 0.20000000298023224,
-                        "__type": "LerpVec4LogicDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "textures": [
-                {
-                    "name": "Diffuse_Color",
-                    "options": [
-                        {
-                            "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "{fd92a016617e35f6}",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                },
-                {
-                    "name": "Mask",
-                    "options": [
-                        {
-                            "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "{13374fccd62518fc}",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
     },
     "Characters/Janna/Skins/Skin67/Materials/Hair_inst": {
         "name": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
@@ -1354,14 +1109,262 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 4.0,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{fd92a016617e35f6}",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
                     "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "{1fe3e023}": {
+        "name": "Characters/Janna/Skins/Skin67/Materials/Cloths_DiffuseLerp_Plain_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture_2",
+                "texturePath": "{fd92a016617e35f6}",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Lerp_Factor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Mult",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexB_MaskStrength",
+                "value": [
+                    1.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Color",
+                "value": [
+                    0.32771801948547363,
+                    0.10832379758358002,
+                    0.13493552803993225,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Color",
+                "value": [
+                    0.5077286958694458,
+                    0.19642938673496246,
+                    0.19642938673496246,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Tiles",
+                "value": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Tiles",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Speed",
+                "value": [
+                    0.05999999865889549,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Speed",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLLTEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Diffuse_Lerp_Factor",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mBoolDriver": {
+                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOff": 6.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.15000000596046448,
+                        "mTurnOffTimeSec": 0.75,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
                 }
             ],
             "__type": "DynamicMaterialDef"
@@ -1766,6 +1769,250 @@
         },
         "__type": "StaticMaterialDef"
     },
+    "{45ffae14}": {
+        "name": "Characters/Janna/Skins/Skin67/Materials/Body_DiffuseLerp_Plain_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture_2",
+                "texturePath": "{fd92a016617e35f6}",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Lerp_Factor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Mult",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexB_MaskStrength",
+                "value": [
+                    1.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Color",
+                "value": [
+                    0.32771801948547363,
+                    0.10832379758358002,
+                    0.13493552803993225,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Color",
+                "value": [
+                    0.5077286958694458,
+                    0.19642938673496246,
+                    0.19642938673496246,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Tiles",
+                "value": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Tiles",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Speed",
+                "value": [
+                    0.05999999865889549,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Speed",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLLTEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Diffuse_Lerp_Factor",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mBoolDriver": {
+                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOff": 6.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.15000000596046448,
+                        "mTurnOffTimeSec": 0.75,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Janna/Skins/Skin67/Materials/Specular_Earrings_Fresnel_Masked_inst": {
         "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Earrings_Fresnel_Masked_inst",
         "samplerValues": [
@@ -1955,6 +2202,248 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "__type": "StaticMaterialDef"
+    },
+    "{5a2a33ed}": {
+        "name": "Characters/Janna/Skins/Skin67/Materials/Hair_DiffuseLerp_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture_2",
+                "texturePath": "{fd92a016617e35f6}",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_hairmask_tx_cm.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Lerp_Factor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Mult",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexB_MaskStrength",
+                "value": [
+                    1.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Color",
+                "value": [
+                    0.32771801948547363,
+                    0.10832379758358002,
+                    0.13493552803993225,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Color",
+                "value": [
+                    0.5077286958694458,
+                    0.19642938673496246,
+                    0.19642938673496246,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Tiles",
+                "value": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Tiles",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Speed",
+                "value": [
+                    0.05999999865889549,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Speed",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLLTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Diffuse_Lerp_Factor",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mBoolDriver": {
+                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOff": 6.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.15000000596046448,
+                        "mTurnOffTimeSec": 0.75,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Janna/Skins/Skin67/Materials/Specular_Metal_Fresnel_Masked_inst": {
@@ -2569,314 +3058,6 @@
             }
         ],
         "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst": {
-        "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Bloom_Mask",
-                "texturePath": "{13374fccd62518fc}",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Color",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_bodymask_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "iridescentTex",
-                "texturePath": "assets/shared/materials/default_gradient.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Bloom_Intensity",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    0.42750000953674316,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.08250000327825546,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Color",
-                "value": [
-                    0.4809796214103699,
-                    0.07051193714141846,
-                    0.16800183057785034,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Size",
-                "value": [
-                    0.4399999976158142,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Shadow_Bias",
-                "value": [
-                    0.6650000214576721,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MaxSpec",
-                "value": [
-                    50.82500076293945,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LQ_Lighting_Intensity",
-                "value": [
-                    0.5,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "RimLightOffset",
-                "value": [
-                    -0.41999998688697815,
-                    -0.41999998688697815,
-                    -0.41999998688697815,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SpecularColor",
-                "value": [
-                    1.0,
-                    0.95686274766922,
-                    0.6784313917160034,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "IridescentControl",
-                "value": [
-                    1.0,
-                    0.5,
-                    1.5,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_BLOOM_MASK",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "IRIDESCENCE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Fresnel_Size",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 4.0,
-                        "mOffValue": 0.20000000298023224,
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "LQ_Lighting_Intensity",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.0,
-                        "mOffValue": 0.30000001192092896,
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Fresnel_Color",
-                    "Enabled": false,
-                    "driver": {
-                        "BoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "OnValue": [
-                            1.0,
-                            0.0,
-                            0.12999999523162842,
-                            1.0
-                        ],
-                        "OffValue": [
-                            0.5199999809265137,
-                            0.1899999976158142,
-                            0.1899999976158142,
-                            1.0
-                        ],
-                        "TurnOnTimeSec": 0.20000000298023224,
-                        "TurnOffTimeSec": 0.20000000298023224,
-                        "__type": "LerpVec4LogicDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "textures": [
-                {
-                    "name": "Diffuse_Color",
-                    "options": [
-                        {
-                            "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "{fd92a016617e35f6}",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                },
-                {
-                    "name": "Mask",
-                    "options": [
-                        {
-                            "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "{13374fccd62518fc}",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
             "__type": "DynamicMaterialDef"
         },
         "__type": "StaticMaterialDef"
@@ -22972,7 +23153,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_W_Ground_AOE01_013_010.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_R_Ground_AOE01_013_010.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -26775,7 +26956,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.009999999776482582,
@@ -29602,7 +29783,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.009999999776482582,
@@ -37430,90 +37611,6 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Camille_Skin02_E_tarcolor-hold.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.20000000298023224,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Avatar_Fresnel3",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 10,
-                "alphaRef": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -2.0
-                ],
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_Weapon_TX_CM.tex",
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_R_Mask01.tex",
-                    "__type": "VfxTextureMultDefinitionData"
-                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -55585,7 +55682,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_W_Ground_AOE01_013_010.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_R_Ground_AOE01_013_010.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -59388,7 +59485,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.009999999776482582,
@@ -62215,7 +62312,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.009999999776482582,
@@ -69704,90 +69801,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.20000000298023224,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Avatar_Fresnel3",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 10,
-                "alphaRef": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -2.0
-                ],
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_Weapon_TX_CM.tex",
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_R_Mask01.tex",
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "rate": {
                     "constantValue": 15.0,
                     "__type": "ValueFloat"
@@ -70274,7 +70287,8 @@
             "Janna_Emote_Dance001": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance001",
             "Janna_Emote_Dance_Loop": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Loop",
             "Janna_Emote_Dance_Glow001": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Glow001",
-            "Janna_Emote_Taunt_01": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Taunt_01"
+            "Janna_Emote_Taunt_01": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Taunt_01",
+            "{b798885e}": "{dc57adf9}"
         },
         "__type": "ResourceResolver"
     },

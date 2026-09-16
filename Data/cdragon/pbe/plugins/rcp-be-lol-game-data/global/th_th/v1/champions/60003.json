@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "ยักษ์ศิลา",
     "shortBio": "- สกิลแตกต่างไปโดยสิ้นเชิง อย่าลืมอ่านคำอธิบาย",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Galio สร้างโล่ป้องกันแก่แชมเปี้ยนร่วมทีม เพิ่มเกราะกับต้านทานเวทให้พวกเขา และฟื้นฟูพลังชีวิต Galio ในทุกครั้งที่แชมเปี้ยนตัวนั้นได้รับความเสียหาย",
-            "dynamicDescription": "Galio สร้างโล่ป้องกันแก่แชมเปี้ยนฝ่ายเดียวกันหรือตัวเขาเอง มอบ<scaleArmor>เกราะ @BonusDefense@ หน่วย</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusDefense@ หน่วย</scaleMR>ให้กับเป้าหมายที่ได้รับโล่เป็นเวลา 4 วินาที อีกทั้งทุกครั้งที่ยูนิตนั้นได้รับความเสียหาย Galio จะฮีลพลังชีวิต <healing>@TotalHeal@</healing> หน่วยด้วย@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio เสริมพลังให้แชมเปี้ยนร่วมทีมหรือตัวเขาเอง ทำให้พวกเขาได้รับ<scaleArmor>เกราะ @BonusDefense@ หน่วย</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusDefense@ หน่วย</scaleMR>เป็นเวลา @BuffDuration@ วินาที Galio ได้รับฮีล <healing>@TotalHeal@</healing> หน่วยทุกครั้งที่ได้รับความเสียหาย@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Galio กระพือปีกปล่อยลมกระโชก สร้างความเสียหายแก่ศัตรูและทิ้งกระแสลมไว้ในทิศทางที่ปล่อยไป ซึ่งเพิ่มความเร็วเคลื่อนที่แก่เพื่อนร่วมทีม",
-            "dynamicDescription": "Galio ปล่อยลมกระโชก สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูทั้งหมดในเส้นทาง และทิ้งกระแสลมไว้เป็นเวลา 5 วินาที ทำให้เพื่อนร่วมทีมได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed> ขณะเคลื่อนที่ไปในทิศทางเดียวกับกระแสลม@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio ปล่อยลมกระแทกออกไป สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูทั้งหมดที่อยู่ในเส้นทาง กระแสลมจะยังคงอยู่เป็นเวลา @DraftDuration@ วินาที และเพื่อนร่วมทีมจะได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed> ขณะเคลื่อนที่ไปในทิศทางเดียวกับกระแสลม@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Galio กลายร่างเป็นรูปปั้น ยั่วยุศัตรูใกล้เคียง และสะสมพลังงานสั่นสะเทือนเมื่อถูกโจมตี  จากนั้น Galio จะระเบิดเปลือกรูปปั้น ปลดปล่อยพลังงานที่เก็บสะสมไว้เพื่อสร้างความเสียหายแก่ศัตรูโดยรอบ",
-            "dynamicDescription": "Galio ร่ายสกิลเป็นเวลา 2 วินาที ยั่วยุศัตรูใกล้เคียง และได้รับความเสียหายน้อยลง @ReducedDamage*100@%<br><br>หลังร่ายเสร็จสิ้น Galio จะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูโดยรอบ บวกด้วยความเสียหายเพิ่มเติม 5% ตามจำนวนครั้งที่โดนโจมตีขณะร่ายสกิล@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio ร่ายเป็นเวลา @ChannelDuration@ วินาทีเพื่อยั่วยุศัตรูใกล้เคียงและได้รับความเสียหายลดลง @ReducedDamage*100@%<br><br>หลังจากร่ายเสร็จ Galio จะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูโดยรอบ และสร้างความเสียหายเพิ่มเติมอีก @PercentPerHitIncrease*100@% ต่อการโจมตีแต่ละครั้งที่เขาได้รับขณะร่าย@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

@@ -1,13 +1,14 @@
 {
     "Characters/Jade_Graves/Skins/Skin36": {
         "skinClassification": 2,
+        "championSkinId": 60104036,
         "championSkinName": "Jade_GravesSkin36",
         "skinParent": 35,
         "metaDataTags": "faction:bilgewater,gender:male,race:human,element:light,skinline:sentinels",
         "skinUpgradeData": {
             "mGearSkinUpgrades": [
                 "{220fc516}",
-                "{ce202674}"
+                "Characters/Jade_Graves/Skins/Skin35/Gear/Transformation"
             ],
             "__type": "SkinUpgradeData"
         },
@@ -154,6 +155,14 @@
                     ],
                     "voiceOver": true,
                     "__type": "BankUnit"
+                },
+                {
+                    "name": "MODE_Jade_Graves_Skin301_Q_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_Graves_Skin301_Q_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_Graves_Skin301_Q_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
                 }
             ],
             "__type": "SkinAudioProperties"
@@ -254,17 +263,17 @@
         "armorMaterial": "Flesh",
         "idleParticlesEffects": [
             {
-                "effectKey": "{2fbebcd1}",
+                "effectKey": "Jade_Graves_Idle",
                 "boneName": "C_Buffbone_Cstm_Ring1",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{2fbebcd1}",
+                "effectKey": "Jade_Graves_Idle",
                 "boneName": "C_Buffbone_Cstm_Ring2",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "{3e3ab431}",
+        "mContextualActionData": "Characters/Jade_Graves/CAC/Jade_Graves_Skin35",
         "iconCircle": "assets/characters/jade_graves/hud/jade_graves_circle_classic.tex",
         "iconSquare": "assets/characters/jade_graves/hud/jade_graves_square.tex",
         "iconAvatar": "assets/characters/jade_graves/hud/jade_graves_circle_35.tex",
@@ -286,7 +295,7 @@
             }
         ],
         "mResourceResolver": "Characters/Jade_Graves/Skins/Skin36/Resources",
-        "objectPath": "{10408523}",
+        "objectPath": "Characters/Jade_Graves/Skins/Skin36",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Z_Crystal_1": {
@@ -7075,7 +7084,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{e6fe9524}",
+                            "effectKey": "Jade_Graves_Skin35_W_Souls_Trail",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -17254,7 +17263,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{e6fe9524}",
+                            "effectKey": "Jade_Graves_Skin35_W_Souls_Trail",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -22660,68 +22669,68 @@
     },
     "Characters/Jade_Graves/Skins/Skin36/Resources": {
         "resourceMap": {
-            "{e4e231c3}": "{6552f54c}",
-            "{60fbc5e0}": "{4092fda2}",
-            "{dbf4cf2e}": "{fcf70590}",
-            "{6585623e}": "{82e7fbec}",
-            "{40125a6a}": "{5d4c51a8}",
-            "{c396e710}": "{7844b692}",
-            "{babe9d04}": "{bde65ef2}",
-            "{bdbea1bd}": "{bce65d5f}",
-            "{bcbea02a}": "{bbe65bcc}",
-            "{b7be984b}": "{bae65a39}",
-            "{b6be96b8}": "{1904c1be}",
-            "{b9be9b71}": "{1804c02b}",
-            "{5c35bf14}": "{2894027e}",
-            "{2fbebcd1}": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Idle",
-            "{41d1f758}": "{f726b29e}",
-            "{3077dacb}": "{fb06e2ed}",
-            "{e53d7488}": "{6fbefae6}",
-            "{23084e50}": "{c801fa82}",
-            "{7a3533fa}": "{1f964e4c}",
-            "{2791eaae}": "{07dafccc}",
-            "{6ffe72f5}": "{14f83f87}",
-            "{66847fba}": "{e4bb4e88}",
-            "{78f9475d}": "{45ccfeef}",
-            "{688bab68}": "{d58729ba}",
-            "{d06a1801}": "{f54c8957}",
-            "{8b771c77}": "{aa7e8241}",
-            "{812a7a42}": "{7a57c190}",
-            "{78602c96}": "{39ee6264}",
-            "{c37de58c}": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_mis",
-            "{423f2d2c}": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_tar_green",
-            "{1260eecc}": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_tar_red",
-            "{e1e737e8}": "{75c8fc2e}",
-            "{91f94a6f}": "{3b480d91}",
-            "{70021975}": "{b275e58a}",
-            "{7a9183ff}": "{61bb91c5}",
-            "{e6fe9524}": "{a7027482}",
-            "{1e2f0c66}": "{a7ada2e8}",
-            "{02a541f9}": "{1d02a74b}",
-            "{dedb64b4}": "{dd4ec006}",
-            "{8686b7aa}": "{417ff2a4}",
+            "Jade_GravesTaunt_BV2": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_GravesTaunt",
+            "Jade_Graves_BA_cas": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_BA_cas",
+            "Jade_Graves_BA_Dummy_Controller": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_BA_Dummy_Controller",
+            "Jade_Graves_BA_mis": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_BA_mis",
+            "Jade_Graves_BA_tar": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_BA_tar",
+            "Jade_Graves_E_buf": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_buf",
+            "Jade_Graves_E_buf_1": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_buf_1",
+            "Jade_Graves_E_buf_2": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_buf_2",
+            "Jade_Graves_E_buf_3": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_buf_3",
+            "Jade_Graves_E_buf_4": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_buf_4",
+            "Jade_Graves_E_buf_5": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_E_buf_5",
+            "Jade_Graves_E_buf_6": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_E_buf_6",
+            "Jade_Graves_E_cas": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_E_cas",
+            "Jade_Graves_Idle": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Idle",
+            "Jade_Graves_P_ShotAttack_01": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_P_ShotAttack_01",
+            "Jade_Graves_Q_Bomb": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Bomb",
+            "Jade_Graves_Q_Bomb_Wall": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Bomb_Wall",
+            "Jade_Graves_Q_cas": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_cas",
+            "Jade_Graves_Q_Explosion": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Explosion",
+            "Jade_Graves_Q_Mis": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Mis",
+            "Jade_Graves_Q_Return_Mis": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Return_Mis",
+            "Jade_Graves_Q_Tar": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Tar",
+            "Jade_Graves_Q_Tar_Return": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Q_Tar_Return",
+            "Jade_Graves_R_ChargeShot_cas_01": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_R_ChargeShot_cas_01",
+            "Jade_Graves_R_hit": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_R_hit",
+            "Jade_Graves_R_mis": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_R_mis",
+            "Jade_Graves_W_cas": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_W_cas",
+            "Jade_Graves_W_hit": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_W_hit",
+            "Jade_Graves_W_mis": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_mis",
+            "Jade_Graves_W_tar_green": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_tar_green",
+            "Jade_Graves_W_tar_red": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_W_tar_red",
+            "Jade_Graves_W_Nearsight": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_W_Nearsight",
+            "Jade_Graves_R_Explosion_Cone": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_R_Explosion_Cone",
+            "{70021975}": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_Graves_ChargedShot_cas",
+            "Jade_Graves_BA_tar_crit": "Characters/Jade_Graves/Skins/Skin0/Particles/Jade_Graves_Base_BA_tar_crit",
+            "Jade_Graves_Skin35_W_Souls_Trail": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_W_Souls_Trail",
+            "Jade_Graves_Skin35_W_Dissipation": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_W_Dissipation",
+            "Jade_Graves_Skin35_R_cas": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_R_cas",
+            "Jade_Graves_Skin35_Recharge_Bullet_Parent": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recharge_Bullet_Parent",
+            "Jade_Graves_Skin35_Recharge_Bullet_Child": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recharge_Bullet_Child",
             "Jade_Graves_Skin35_Z_Crystal_1": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Z_Crystal_1",
-            "{f68d10ff}": "{f500d2ed}",
-            "{dfc4ed22}": "{775c0504}",
-            "{d4cbcae4}": "{a151ef86}",
+            "Jade_Graves_Skin35_Z_Crystal_2": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Z_Crystal_2",
+            "Jade_Graves_Skin35_Z_Crystal_Reloading": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Z_Crystal_Reloading",
+            "Jade_Graves_Skin35_Recall_Ground_Mesh": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_Ground_Mesh",
             "Jade_Graves_Skin35_Recall_Statue": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Recall_Statue",
             "Jade_Graves_Skin35_Recall_Monument": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Recall_Monument",
-            "{8288958b}": "{14309831}",
-            "{cdbfaaca}": "{05a88e88}",
+            "Jade_Graves_Skin35_R_Ground_Pushback": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_R_Ground_Pushback",
+            "Jade_Graves_Skin35_Emote_Respawn_GroundEffects": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Respawn_GroundEffects",
             "Jade_Graves_Skin35_Emote_Death_Ground_Swirls": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Emote_Death_Ground_Swirls",
-            "{074970ad}": "{9cefd9eb}",
-            "{48377c94}": "{54795212}",
-            "{2dc63c22}": "{70e03594}",
-            "{14d76903}": "{ffb41b31}",
-            "{844bf72a}": "{4c22b0b4}",
-            "{828f6ccf}": "{cc4e7145}",
-            "{19f4db0f}": "{e7491e79}",
-            "{3d04264b}": "{0f022d29}",
+            "Jade_Graves_Skin35_Emote_Death_Card_Glow": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Death_Card_Glow",
+            "Jade_Graves_Skin35_Emote_Death_Card_Poof": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Death_Card_Poof",
+            "Jade_Graves_Skin35_Emote_Death_TP_Out": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Death_TP_Out",
+            "Jade_Graves_Skin35_Recall_Soul01": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_Soul01",
+            "Jade_Graves_Skin35_Recall_Shoot_1": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_Shoot_1",
+            "Jade_Graves_Skin35_Recall_Shoot_Child": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_Shoot_Child",
+            "Jade_Graves_Skin35_Recall_Soul_Impact": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_Soul_Impact",
+            "Jade_Graves_Skin35_Recall_DarkMistMain": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_DarkMistMain",
             "Jade_Graves_Skin35_Recall_Statue_Explosion": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Recall_Statue_Explosion",
             "Jade_Graves_Skin35_Recall_Statue_Head": "Characters/Jade_Graves/Skins/Skin36/Particles/Jade_Graves_Skin36_Recall_Statue_Head",
-            "{6b116e4a}": "{b4d64d5c}",
-            "{ca97adb2}": "{3a79bf68}",
-            "{07156f55}": "{bff9e043}"
+            "Jade_Graves_Skin35_Recall_DarkGroundAppearance": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Recall_DarkGroundAppearance",
+            "Jade_Graves_Skin35_Emote_Laugh_Coins_Shine": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Laugh_Coins_Shine",
+            "Jade_Graves_Skin35_Emote_Dance_GroundEffects": "Characters/Jade_Graves/Skins/Skin35/Particles/Jade_Graves_Skin35_Emote_Dance_GroundEffects"
         },
         "__type": "ResourceResolver"
     },

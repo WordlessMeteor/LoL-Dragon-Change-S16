@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Kolos",
     "shortBio": "- Schopnosti jsou úplně jiné. Přečti si jejich popisy.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio zaštítí spojeneckého šampiona, čímž mu zvýší brnění a odolnost vůči magii a sám sobě obnoví zdraví pokaždé, když šampion utrpí poškození.",
-            "dynamicDescription": "Galio poskytne sobě nebo spojeneckému šampionovi štít. Cílová jednotka získá na 4 sek. <scaleArmor>@BonusDefense@ brnění</scaleArmor> a <scaleMR>@BonusDefense@ odolnosti vůči magii</scaleMR>. Kdykoliv tato jednotka utrpí poškození, získá Galio <healing>@TotalHeal@ zdraví</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio posílí spojeneckého šampiona nebo sám sebe a poskytne cíli na @BuffDuration@ sek. <scaleArmor>@BonusDefense@ k brnění</scaleArmor> a <scaleMR>@BonusDefense@ k odolnosti vůči magii</scaleMR>. Galio si při každém utrpěném poškození vyléčí <healing>@TotalHeal@</healing> zdraví.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio mávne křídly, čímž vyvolá mocný poryv větru, který nepřátele poškodí a ve své stopě zanechá proud vzduchu, jenž spojencům zvyšuje rychlost pohybu.",
-            "dynamicDescription": "Galio vyvolá omračující poryv větru, který všem zasaženým protivníkům způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Po dobu 5 sek. zůstane na místě směrovaný proud vzduchu. Spojenci, kteří se v něm pohybují příslušným směrem, získají <speed>@MoveSpeedMod*100@ % k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio vyšle poryv omračujícího větru, který všem nepřátelům v cestě způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Směrový proud přetrvává @DraftDuration@ sek. Spojenci, kteří se v něm pohybují daným směrem, získají <speed>@MoveSpeedMod*100@ % k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio zaujme podobu sochy, ve které bude provokovat okolní nepřátele a ukládat si omračující energii z jejich útoků.  Pak svůj ochranný krunýř rozbije, čímž nashromážděnou energii uvolní a poškodí okolní protivníky.",
-            "dynamicDescription": "Galio se 2 sek. soustředí, provokuje okolní nepřátele a je mu způsobováno o @ReducedDamage*100@ % nižší poškození.<br><br>Po skončení soustředění způsobí okolním nepřátelům <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> plus dalších 5 % za každý útok, který jej během soustředění zasáhl.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio se @ChannelDuration@ sek. soustředí, provokuje okolní nepřátele a je mu způsobováno o @ReducedDamage*100@ % nižší poškození.<br><br>Po dokončení soustředění způsobí Galio okolním nepřátelům <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Za každý útok, který během soustředění utrpěl, navíc způsobí o @PercentPerHitIncrease*100@ % vyšší poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

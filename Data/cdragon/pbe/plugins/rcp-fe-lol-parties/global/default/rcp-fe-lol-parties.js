@@ -1951,6 +1951,7 @@
             var n = {
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
+                CRAB: "CRAB",
                 CUSTOM: "CUSTOM",
                 JADE: "JADE",
                 KIWI: "KIWI",
@@ -6606,6 +6607,7 @@
                 spectatorV3DelayConfigurable: i.Ember.computed.alias("spectatorV3Config.isSpectatorDelayConfigurable"),
                 nameError: null,
                 isSwitchingTeamsOrSpectating: !1,
+                isSubteamActionOnCooldown: !1,
                 preventTeamChanges: !1,
                 platformConfigSingleton: a.default,
                 playerNames: i.playerNames,
@@ -6920,6 +6922,11 @@
                 teamToStringId: function(e) {
                     let t = "";
                     return 1 === e || "one" === e ? t = "100" : 2 !== e && "two" !== e || (t = "200"), t
+                },
+                startSubteamActionCooldown: function() {
+                    this.set("isSubteamActionOnCooldown", !0), i.Ember.run.later(this, (function() {
+                        this.get("isDestroyed") || this.get("isDestroying") || this.set("isSubteamActionOnCooldown", !1)
+                    }), 3e3)
                 },
                 switchTeams: function(e) {
                     this.set("isSwitchingTeamsOrSpectating", !0);
@@ -13390,8 +13397,8 @@
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 _buttonClickSound: "/fe/lol-parties/sfx-lobby-button-banner-click.ogg",
                 _spectatorSummoners: i.Ember.A(),
-                spectateButtonDisabled: i.Ember.computed("spectatorSlotsFull", "onlyOnePlayerOnTeams", "customGamesService.preventTeamChanges", "customGamesService.isSwitchingTeamsOrSpectating", "customGameService.isTFT", (function() {
-                    return this.get("spectatorSlotsFull") || !this.get("customGamesService.isTFT") && this.get("onlyOnePlayerOnTeams") || this.get("customGamesService.preventTeamChanges") || this.get("customGamesService.isSwitchingTeamsOrSpectating")
+                spectateButtonDisabled: i.Ember.computed("spectatorSlotsFull", "onlyOnePlayerOnTeams", "customGamesService.preventTeamChanges", "customGamesService.isSwitchingTeamsOrSpectating", "customGamesService.isTFT", "customGamesService.isSubteamActionOnCooldown", "lobbiesService.shouldShowMultiteamLobby", (function() {
+                    return Boolean(this.get("spectatorSlotsFull") || !this.get("customGamesService.isTFT") && this.get("onlyOnePlayerOnTeams") || this.get("customGamesService.preventTeamChanges") || this.get("customGamesService.isSwitchingTeamsOrSpectating") || this.get("lobbiesService.shouldShowMultiteamLobby") && this.get("customGamesService.isSubteamActionOnCooldown"))
                 })),
                 spectatorSlotsFull: i.Ember.computed("spectators", "spectators.@each.summonerId", "spectatorSlotLimit", (function() {
                     const e = this.get("spectatorSlotLimit");
@@ -13441,7 +13448,8 @@
                 })),
                 actions: {
                     currentPlayerToSpectator: function() {
-                        this.get("customGamesService.isSwitchingTeamsOrSpectating") || (this.playSound(this._buttonClickSound), this.get("customGamesService").joinSpectators(), this.get("lobbiesService").clearSubteamData())
+                        const e = this.get("lobbiesService.shouldShowMultiteamLobby");
+                        this.get("customGamesService.isSwitchingTeamsOrSpectating") || e && this.get("customGamesService.isSubteamActionOnCooldown") || (e && this.get("customGamesService").startSubteamActionCooldown(), this.playSound(this._buttonClickSound), this.get("customGamesService").joinSpectators(), this.get("lobbiesService").clearSubteamData())
                     }
                 }
             })
@@ -13675,13 +13683,10 @@
                         e.push(t)
                     }))
                 },
-                isSwapButtonClickable: o.Ember.computed.not("isSwapButtonOnCooldown"),
+                isSwapButtonClickable: o.Ember.computed.not("customGameService.isSubteamActionOnCooldown"),
                 actions: {
                     onSwapButtonClicked: function() {
-                        this.set("isSwapButtonOnCooldown", !0);
-                        this.runTask((() => {
-                            this.set("isSwapButtonOnCooldown", !1)
-                        }), 3e3)
+                        this.get("customGameService").startSubteamActionCooldown()
                     }
                 }
             })
@@ -13896,6 +13901,7 @@
                     let e = "";
                     return this.get("isPlayer") ? e = "player" : this.get("isBot") ? e = "bot" : this.get("isPlaceholder") && (e = "placeholder"), e
                 })),
+                currentPlayerIsSpectating: o.Ember.computed.equal("currentPlayersTeam", "spectator"),
                 isCurrentPlayer: o.Ember.computed("currentPlayer", "id", (function() {
                     return this.get("currentPlayer.summonerId") === this.get("id")
                 })),
@@ -14108,6 +14114,7 @@
                     },
                     onSwapButtonClicked: function() {
                         if (this.get("isSwapButtonClickable")) {
+                            if (this.get("currentPlayerIsSpectating") && this.get("member.summonerId")) return void this.showToast(this.get("tra.custom_game_spectator_cannot_swap_subteam"));
                             const [e, t] = this.get("member.subteamKey").split(",");
                             if (this.get("lobbiesService").setSubteamData(e, t), d.playSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg"), this.sendAction("onSwapButtonClicked"), !this.get("joinDisabled")) {
                                 this.set("_joinLocked", !0), this.playSound(this._buttonClickSound);

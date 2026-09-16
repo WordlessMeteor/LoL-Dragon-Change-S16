@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "El Coloso",
     "shortBio": "- Las habilidades cambiaron completamente. Lee las descripciones",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Galio le otorga a un campeón aliado un escudo que aumenta la armadura y la resistencia mágica. Mientras dure el escudo, la vida de Galio se restaura cada vez que el aliado recibe daño.",
-            "dynamicDescription": "Galio le confiere a un campeón aliado o a sí mismo un escudo que otorga <scaleArmor>@BonusDefense@ de Armadura</scaleArmor> y <scaleMR>@BonusDefense@ de Resistencia Mágica</scaleMR> durante 4 seg. Galio se cura en <healing>@TotalHeal@</healing> cada vez que la unidad recibe daño.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio le otorga <scaleArmor>@BonusDefense@ de Armadura</scaleArmor> y <scaleMR>@BonusDefense@ de Resistencia Mágica</scaleMR> a un campeón aliado o a sí mismo durante @BuffDuration@ seg. Galio se cura en <healing>@TotalHeal@</healing> cada vez que recibe daño.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Galio bate sus alas y desata una ráfaga de viento estruendoso, lo que inflige daño a los enemigos y deja a su paso una corriente direccional que aumenta la velocidad de movimiento de sus aliados.",
-            "dynamicDescription": "Galio desata una ráfaga de viento estruendoso que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a todos los enemigos a su paso. Una corriente direccional permanece durante 5 seg, y los aliados obtienen un <speed>@MoveSpeedMod*100@% de Velocidad de Movimiento</speed> mientras se mueven en dirección de la corriente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio desata una ráfaga de viento contundente que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a todos los enemigos a su paso. Una corriente direccional permanece durante @DraftDuration@ seg y los aliados obtienen un <speed>@MoveSpeedMod*100@% de Velocidad de Movimiento</speed> mientras se mueven en la misma dirección de la corriente.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Galio se convierte en una estatua que provoca a los enemigos cercanos y almacena energía cinética mientras lo atacan.  Luego emerge de su caparazón de estatua y libera la energía almacenada para infligir daño a los enemigos cercanos.",
-            "dynamicDescription": "Galio canaliza durante 2 seg, en los que provoca a los enemigos cercanos y recibe un @ReducedDamage*100@% menos de daño.<br><br>Tras canalizar, Galio inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos, más un 5% de daño adicional por cada ataque que haya recibido durante la canalización.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio canaliza durante @ChannelDuration@ seg, con lo que provoca a los enemigos cercanos. Mientras lo hace, recibe un @ReducedDamage*100@% menos de daño.<br><br>Después de canalizar, Galio inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos, más un @PercentPerHitIncrease*100@% de daño adicional por cada ataque recibido mientras canalizaba.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

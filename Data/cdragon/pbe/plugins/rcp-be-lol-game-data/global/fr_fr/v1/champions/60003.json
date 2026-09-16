@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Colosse",
     "shortBio": "- Les compétences sont totalement différentes. Lire les descriptions",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Galio protège un champion allié, augmentant son armure et sa résistance magique et convertissant une partie des dégâts que sa cible subit en PV pour lui-même.",
-            "dynamicDescription": "Galio se protège ou protège un champion allié. Le champion protégé gagne <scaleArmor>@BonusDefense@ armure</scaleArmor> et <scaleMR>@BonusDefense@ résistance magique</scaleMR> pendant 4 sec. Galio récupère <healing>@TotalHeal@ PV</healing> chaque fois que le champion protégé subit des dégâts.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio octroie à un champion allié ou à lui-même <scaleArmor>@BonusDefense@ armure</scaleArmor> et <scaleMR>@BonusDefense@ résistance magique</scaleMR> pendant @BuffDuration@ sec. Galio récupère <healing>@TotalHeal@ PV</healing> chaque fois que l'allié subit des dégâts.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Galio bat des ailes, provoquant une rafale de vent renversante qui blesse les ennemis et qui produit dans son dos un couloir d'aspiration qui augmente la vitesse de déplacement de ses alliés.",
-            "dynamicDescription": "Galio produit une rafale de vent renversante qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à tous les ennemis sur son chemin. Un couloir d'aspiration persiste pendant 5 sec, augmentant de <speed>@MoveSpeedMod*100@% la vitesse de déplacement</speed> des alliés qui se trouvent dedans.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio produit une rafale de vent renversante qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à tous les ennemis sur son chemin. Un couloir d'aspiration persiste derrière lui pendant @DraftDuration@ sec, augmentant la <speed>vitesse de déplacement des alliés qui se déplacent dedans de @MoveSpeedMod*100@%</speed>.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Galio prend la forme d'une statue et provoque les ennemis proches, emmagasinant une énergie explosive à chaque fois qu'il est attaqué.  Galio fait ensuite exploser sa carapace de pierre et libère cette énergie pour blesser les ennemis proches.",
-            "dynamicDescription": "Galio canalise pendant 2 sec, provoquant les ennemis à proximité et réduisant de @ReducedDamage*100@% les dégâts subis.<br><br>Une fois la canalisation terminée, Galio inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches, plus 5% de dégâts bonus par attaque subie lors de la canalisation.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio canalise pendant @ChannelDuration@ sec, provoquant les ennemis à proximité et subissant @ReducedDamage*100@% de dégâts réduits.<br><br>Une fois la canalisation terminée, Galio inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches, plus @PercentPerHitIncrease*100@% de dégâts bonus par attaque subie lors de la canalisation.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

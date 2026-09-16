@@ -447,6 +447,7 @@
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
+            "mDoesntBreakChannels": true,
             "mDoNotNeedToFaceTarget": true,
             "castRange": [
                 800.0,
@@ -1576,7 +1577,7 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Galio_RighteousGust.dds"
             ],
-            "spellCastTime": 0.4000000059604645,
+            "spellCastTime": 0.25,
             "spellTotalTime": 0.5,
             "cooldownTime": [
                 12.0,
@@ -1615,25 +1616,34 @@
             ],
             "castRangeValues": {
                 "values": [
-                    1100.0,
-                    1100.0,
-                    1100.0,
-                    1100.0,
-                    1100.0,
-                    1100.0,
-                    1100.0
+                    1175.0,
+                    1175.0,
+                    1175.0,
+                    1175.0,
+                    1175.0,
+                    1175.0,
+                    1175.0
                 ],
-                "{0a3e0478}": 1100.0,
+                "{0a3e0478}": 1175.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
+            ],
             "castRadius": [
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0
+                160.0,
+                160.0,
+                160.0,
+                160.0,
+                160.0,
+                160.0,
+                160.0
             ],
             "castConeAngle": 0.0,
             "castConeDistance": 0.0,
@@ -2123,9 +2133,9 @@
             "castConeDistance": 0.0,
             "luaOnMissileUpdateDistanceInterval": 75.0,
             "mMissileSpec": {
-                "mMissileWidth": 60.0,
+                "mMissileWidth": 160.0,
                 "movementComponent": {
-                    "mSpeed": 1200.0,
+                    "mSpeed": 1300.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "behaviors": [
@@ -2140,9 +2150,9 @@
             },
             "mCastType": 1,
             "castFrame": 10.0,
-            "missileSpeed": 1200.0,
+            "missileSpeed": 1300.0,
             "mMissileEffectKey": "{e43daadc}",
-            "mLineWidth": 60.0,
+            "mLineWidth": 160.0,
             "bHaveHitBone": true,
             "mFloatVarsDecimals": [
                 0,
@@ -3867,7 +3877,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{647fae64}"
+                                            "Characters/Jade_Poppy/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -3879,7 +3889,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{647fae64}"
+                                            "Characters/Jade_Poppy/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
@@ -4766,7 +4776,7 @@
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "{647fae64}"
+                                            "Characters/Jade_Poppy/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     },

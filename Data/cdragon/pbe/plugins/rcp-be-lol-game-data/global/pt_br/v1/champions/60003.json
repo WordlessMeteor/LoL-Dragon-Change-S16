@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "O Colosso",
     "shortBio": "– As Habilidades são completamente diferentes. Leia as descrições.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Galio concede Escudo a um Campeão aliado, aumentando a Armadura e a Resistência Mágica do alvo e restaurando a própria Vida sempre que o Campeão sofre dano.",
-            "dynamicDescription": "Galio concede Escudo a um Campeão aliado ou a si. Alvos com Escudo recebem <scaleArmor>@BonusDefense@ de Armadura</scaleArmor> e <scaleMR>@BonusDefense@ de Resistência Mágica</scaleMR> por 4s. Cada vez que a unidade sofre dano, Galio é curado em <healing>@TotalHeal@</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio fortalece um Campeão aliado ou a si, concedendo <scaleArmor>@BonusDefense@ de Armadura</scaleArmor> e <scaleMR>@BonusDefense@ de Resistência Mágica</scaleMR> por @BuffDuration@s. Cada vez que o Campeão sofre dano, Galio é curado em <healing>@TotalHeal@</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Galio bate as asas, lançando uma rajada de vento concussivo que causa dano a inimigos e deixa um rastro direcional que aumenta a Velocidade de Movimento de aliados.",
-            "dynamicDescription": "Galio lança uma rajada de vento concussivo que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os inimigos no trajeto. Uma corrente de ar direcional permanece por 5s. Aliados recebem <speed>@MoveSpeedMod*100@% de Velocidade de Movimento</speed> ao se moverem na mesma direção da corrente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio lança uma rajada de vento concussivo que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os inimigos no trajeto. Uma corrente de ar direcional permanece por @DraftDuration@s. Aliados recebem <speed>@MoveSpeedMod*100@% de Velocidade de Movimento</speed> ao se moverem na mesma direção da corrente.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Galio assume a forma de uma estátua, provocando inimigos próximos e armazenando energia concussiva conforme é atacado.  Em seguida, ele rompe a carapaça de estátua, liberando a energia acumulada e causando dano aos inimigos ao redor.",
-            "dynamicDescription": "Galio canaliza por 2s, provocando inimigos próximos e recebendo @ReducedDamage*100@% de dano reduzido.<br><br>Após canalizar, Galio causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos, mais 5% de dano adicional para cada Ataque sofrido durante a canalização.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio canaliza por @ChannelDuration@s, provocando inimigos próximos e recebendo @ReducedDamage*100@% de dano reduzido.<br><br>Após canalizar, Galio causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos próximos, mais @PercentPerHitIncrease*100@% de dano adicional por Ataque sofrido durante a canalização.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

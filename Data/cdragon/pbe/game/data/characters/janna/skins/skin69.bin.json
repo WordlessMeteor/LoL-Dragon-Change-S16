@@ -1,6 +1,7 @@
 {
     "Characters/Janna/Skins/Skin69": {
         "skinClassification": 2,
+        "championSkinId": 40069,
         "championSkinName": "JannaSkin69",
         "skinParent": 67,
         "metaDataTags": "faction:zaun,gender:female,element:wind,skinline:coven,",
@@ -395,7 +396,7 @@
         },
         "mEmblems": [
             {
-                "mEmblemData": "Emblems/11",
+                "mEmblemData": "Emblems/31",
                 "mLoadingScreenAnchor": 1,
                 "__type": "SkinEmblem"
             }
@@ -518,6 +519,68 @@
                         "effectKey": "{305eda6f}",
                         "__type": "PersistentVfxData"
                     }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "mBoolDriver": {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                "mTurnOnTimeSec": 0.0,
+                                "mTurnOffTimeSec": 0.0,
+                                "__type": "LerpMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.5,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{b798885e}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mBoolDriver": {
+                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOff": 6.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "SubmeshesToShow": [
+                    "{a9bc73d0}",
+                    "{de068f33}",
+                    "r_ear"
+                ],
+                "SubmeshesToHide": [
+                    "EyeMask",
+                    "Ear",
+                    "{3c22ed79}"
                 ],
                 "__type": "PersistentEffectConditionData"
             }
@@ -2465,8 +2528,12 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 4.0,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{0f1814ee4f088e18}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -3067,8 +3134,12 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 4.0,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{0f1814ee4f088e18}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -10803,7 +10874,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_W_Ground_AOE01_013_010.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_R_Ground_AOE01_013_010.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -14606,7 +14677,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.009999999776482582,
@@ -17433,7 +17504,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.009999999776482582,
@@ -24919,90 +24990,6 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Camille_Skin02_E_tarcolor-hold.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.20000000298023224,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Avatar_Fresnel3",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 10,
-                "alphaRef": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -2.0
-                ],
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_Weapon_TX_CM.tex",
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_R_Mask01.tex",
-                    "__type": "VfxTextureMultDefinitionData"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -53855,7 +53842,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_W_Ground_AOE01_013_010.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_R_Ground_AOE01_013_010.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -57658,7 +57645,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.009999999776482582,
@@ -60485,7 +60472,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_E_Background_Nebulae_3.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Zoe_Skin20_R_Background_Nebulae_3.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.009999999776482582,
@@ -68314,90 +68301,6 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Camille_Skin02_E_tarcolor-hold.tex",
                 "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.20000000298023224,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Avatar_Fresnel3",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 10,
-                "alphaRef": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -2.0
-                ],
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_Weapon_TX_CM.tex",
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_R_Mask01.tex",
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Janna_Skin69_R_CasRed",
@@ -70279,7 +70182,8 @@
             "Janna_Emote_Dance001": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance001",
             "Janna_Emote_Dance_Loop": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Loop",
             "Janna_Emote_Dance_Glow001": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Glow001",
-            "Janna_Emote_Taunt_01": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Taunt_01"
+            "Janna_Emote_Taunt_01": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Taunt_01",
+            "{b798885e}": "{dc57adf9}"
         },
         "__type": "ResourceResolver"
     },

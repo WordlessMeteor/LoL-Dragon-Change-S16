@@ -745,7 +745,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "菲兹的三叉戟会在他的对手们身上引发撕裂型伤口，从而对该目标造成基于其已损失生命值的魔法伤害。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>菲兹的攻击会撕裂他的敌人们，从而在@PassiveDoTDuration@秒里持续造成<magicDamage>@DoTDamage@外加该目标@MaxHealthScaling*100@%</magicDamage>已损失生命值的<magicDamage>魔法伤害</magicDamage>。(对小兵最多造成@MaxMonsterDamage@伤害)。<br><br><spellActive>主动：</spellActive>在@ActiveDuration@秒的持续时间里，菲兹的攻击对他的目标附带额外的<magicDamage>@ActiveDamage@魔法伤害</magicDamage>并施加<status>重伤</status>，从而使即将到来的治疗效果降低50%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>菲兹的攻击会撕裂他的敌人们，从而在@PassiveDoTDuration@秒里持续造成<magicDamage>@DoTDamage@外加该目标@MaxHealthScaling*100@%</magicDamage>已损失生命值的<magicDamage>魔法伤害</magicDamage>。(对小兵最多造成@MaxMonsterDamage@伤害)。<br><br><spellActive>主动：</spellActive>在@ActiveDuration@秒的持续时间里，菲兹的攻击对他的目标附带额外的<magicDamage>@ActiveDamage@魔法伤害</magicDamage>并施加<status>重伤</status>，从而使即将到来的治疗效果降低@GrievousWounds*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -894,8 +894,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "菲兹跳到空中，同时优雅地落在他的长矛上，变得不可被选取。在这个姿态下，菲兹可以选择立原地着陆，也可以选择在着陆之前再跳一段距离。",
-            "dynamicDescription": "菲兹朝你的指针跳跃并落在他的长矛上，变得不可被选取，然后猛击地面以对附近的敌人们造成<magicDamage>@EDamage@魔法伤害</magicDamage>和持续2秒的@SlowAmount*100@%<status>减速</status>。<br><br>在菲兹处于他的长矛上时再次激活这个技能，会使菲兹再次朝着你的指针跳跃并对一个较小范围内的敌人们造成<magicDamage>@EDamage@魔法伤害</magicDamage>，而非猛击地面。@SpellModifierDescriptionAppend@",
+            "description": "菲兹跳到空中，同时优雅地落在他的长矛上，变得不可被选取。在这个姿态下，菲兹可以选择原地着陆，也可以选择在着陆之前再跳一段距离。",
+            "dynamicDescription": "菲兹朝你的指针跳跃并落在他的长矛上，变得不可被选取，然后猛击地面以对附近的敌人们造成<magicDamage>@EDamage@魔法伤害</magicDamage>和持续@SlowDuration@秒的@SlowAmount*100@%<status>减速</status>。<br><br>在菲兹处于他的长矛上时再次激活这个技能，会使菲兹再次朝着你的指针跳跃并对一个较小范围内的敌人们造成<magicDamage>@EDamage@魔法伤害</magicDamage>，而非猛击地面。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

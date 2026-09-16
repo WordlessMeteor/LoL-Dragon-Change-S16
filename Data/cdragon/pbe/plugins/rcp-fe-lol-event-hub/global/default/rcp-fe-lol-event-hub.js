@@ -3474,6 +3474,7 @@
             var n = {
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
+                CRAB: "CRAB",
                 CUSTOM: "CUSTOM",
                 JADE: "JADE",
                 KIWI: "KIWI",

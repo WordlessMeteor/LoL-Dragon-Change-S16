@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Il colosso",
     "shortBio": "- Le abilità sono completamente diverse. Leggi le descrizioni",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Galio protegge un campione alleato, aumentandone armatura e resistenza magica. Galio recupera salute ogni volta che il campione alleato subisce danni.",
-            "dynamicDescription": "Galio protegge un campione alleato o se stesso; i bersagli protetti ottengono <scaleArmor>@BonusDefense@ armatura</scaleArmor> e <scaleMR>@BonusDefense@ resistenza magica</scaleMR> per 4 secondi. Ogni volta che l'unità subisce danni, Galio si cura di <healing>@TotalHeal@</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio potenzia un campione alleato o se stesso, conferendo <scaleArmor>@BonusDefense@ armatura</scaleArmor> e <scaleMR>@BonusDefense@ resistenza magica</scaleMR> per @BuffDuration@ secondo/i. Galio viene curato di <healing>@TotalHeal@</healing> ogni volta che subisce danni.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,14 +442,14 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Galio sbatte le ali, scatenando una raffica di vento che danneggia i nemici e lascia una scia direzionale, che aumenta la velocità di movimento degli alleati.",
-            "dynamicDescription": "Galio scatena una raffica di vento concussivo che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> a tutti i nemici sul suo percorso. Lascia sul posto una scia direzionale per 5 secondi; gli alleati ottengono <speed>@MoveSpeedMod*100@% velocità di movimento</speed> mentre si muovono sulla scia.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio scatena una raffica di vento che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> a tutti i nemici sulla sua traiettoria. Una corrente direzionale permane per @DraftDuration@ secondo/i; gli alleati ottengono <speed>@MoveSpeedMod*100@% velocità di movimento</speed> mentre si spostano seguendo la corrente.@SpellModifierDescriptionAppend@",
             "range": [
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0,
-                1100.0
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0,
+                1125.0
             ],
             "costCoefficients": [
                 70.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Galio assume la forma di una statua, provocando i nemici vicini e accumulando energia concussiva mentre lo attaccano.  Galio poi esplode dal suo guscio di statua, liberando l'energia accumulata per danneggiare i nemici circostanti.",
-            "dynamicDescription": "Galio si concentra per 2 secondi, provocando i nemici vicini e subendo @ReducedDamage*100@% danni ridotti.<br><br>Dopo aver canalizzato, Galio infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici circostanti, più un ulteriore 5% di danni per ogni attacco subito durante la canalizzazione.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio si concentra per @ChannelDuration@ secondo/i, provocando i nemici vicini e subendo un @ReducedDamage*100@% di danni ridotti.<br><br>Dopo aver canalizzato, Galio infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici circostanti, più un ulteriore @PercentPerHitIncrease*100@% di danni per ogni attacco subito durante la canalizzazione.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

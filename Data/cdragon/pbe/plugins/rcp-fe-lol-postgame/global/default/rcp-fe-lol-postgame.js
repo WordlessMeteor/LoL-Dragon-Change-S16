@@ -76,11 +76,13 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.UI_AUDIO_SFX_PATH = t.TFT_MAX_BENCH_SLOTS = t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = t.STAT_SWITCHER_STATS = t.STATIC_ASSETS_PATH = t.SFX_SUB_CHANNEL_UI_NAME = t.REWARD_CELEBRATION_NAME = t.POSTGAME_PLAYER_HONOR_NAME = t.POSTGAME_EMBER_APP_NAME = t.PLAYER_STATUS_TO_ORDER_MAP = t.PARTY_STATUS = t.MODAL_CATEGORY = t.LOTTIE_RADIAL_UNITS = t.HONOR_VIDEO_PATH = t.HONOR_DISABLED_GAME_MODES = t.HONOR_CATEGORY_DATA = t.HONOR_ASSET_PATH = t.GAME_MODES_WITH_SUBTEAMS = t.FULL_LIST_ERROR = t.DEFAULT_CHERRY_TEAM_SIZE = t.CONVERSATION_TYPE_POSTGAME = t.CHERRY_PLACEMENT_TRA_KEY = void 0;
+            }), t.UI_AUDIO_SFX_PATH = t.TFT_MAX_BENCH_SLOTS = t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = t.STAT_SWITCHER_STATS = t.STATIC_ASSETS_PATH = t.SFX_SUB_CHANNEL_UI_NAME = t.REWARD_CELEBRATION_NAME = t.POSTGAME_PLAYER_HONOR_NAME = t.POSTGAME_EMBER_APP_NAME = t.PLAYER_STATUS_TO_ORDER_MAP = t.PARTY_STATUS = t.MODAL_CATEGORY = t.LOTTIE_RADIAL_UNITS = t.JADE_POSTGAME_GAME_MODES = t.HONOR_VIDEO_PATH = t.HONOR_DISABLED_GAME_MODES = t.HONOR_CATEGORY_DATA = t.HONOR_ASSET_PATH = t.GAME_MODES_WITH_SUBTEAMS = t.FULL_LIST_ERROR = t.DEFAULT_CHERRY_TEAM_SIZE = t.CONVERSATION_TYPE_POSTGAME = t.CHERRY_PLACEMENT_TRA_KEY = void 0;
             var s = n(4);
             t.POSTGAME_EMBER_APP_NAME = "rcp-fe-lol-postgame-ember";
             const a = [s.GAME_MODES.CHERRY, s.GAME_MODES.STRAWBERRY, s.GAME_MODES.TFT, s.GAME_MODES.PROMETHIUM, s.GAME_MODES.CUSTOM, s.GAME_MODES.TUTORIAL, s.GAME_MODES.PRACTICETOOL];
             t.HONOR_DISABLED_GAME_MODES = a;
+            const o = [s.GAME_MODES.JADE, s.GAME_MODES.CRAB];
+            t.JADE_POSTGAME_GAME_MODES = o;
             t.TFT_MAX_BENCH_SLOTS = 10;
             t.FULL_LIST_ERROR = "max_roster_size_sender";
             t.REWARD_CELEBRATION_NAME = "PostgameRewardComponent";
@@ -153,18 +155,18 @@
                 ETERNALS: "eternals"
             };
             t.LOTTIE_RADIAL_UNITS = 75;
-            const o = {
+            const l = {
                 DEFAULT_WAITING_STATUS: "waiting",
                 READY_STATUS: "ready",
                 LEFT_PARTY_STATUS: "left"
             };
-            t.PARTY_STATUS = o;
-            const l = {
-                [o.READY_STATUS]: -1,
-                [o.DEFAULT_WAITING_STATUS]: 0,
-                [o.LEFT_PARTY_STATUS]: 1
+            t.PARTY_STATUS = l;
+            const i = {
+                [l.READY_STATUS]: -1,
+                [l.DEFAULT_WAITING_STATUS]: 0,
+                [l.LEFT_PARTY_STATUS]: 1
             };
-            t.PLAYER_STATUS_TO_ORDER_MAP = l;
+            t.PLAYER_STATUS_TO_ORDER_MAP = i;
             t.CHERRY_PLACEMENT_TRA_KEY = "cherry_placement_";
             t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = "subteam_placement_long_";
             t.GAME_MODES_WITH_SUBTEAMS = {
@@ -378,6 +380,7 @@
             var n = {
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
+                CRAB: "CRAB",
                 CUSTOM: "CUSTOM",
                 JADE: "JADE",
                 KIWI: "KIWI",
@@ -1008,8 +1011,8 @@
                     TftPlayerComponent: L.default,
                     TftTooltipComponent: I.default,
                     TftSkilltreeScoreboardComponent: O.default,
-                    TftSkilltreeScoreRowComponent: N.default,
-                    TftSkilltreeProgressionComponent: D.default,
+                    TftSkilltreeScoreRowComponent: D.default,
+                    TftSkilltreeProgressionComponent: N.default,
                     TftSkilltreeProgressionBannerSpineComponent: B.default,
                     PostgameSecondaryProgressionComponent: C.default,
                     PostgamePartyStatusComponent: w.default,
@@ -1026,7 +1029,7 @@
                     EternalsTokenComponent: Xe.default,
                     PostgameRootComponent: Ke.default,
                     PostgameSubNavigationComponent: $e.default,
-                    PostgameProgressionComponent: Je.default,
+                    PostgameProgressionComponent: ze.default,
                     PrestigeProgressionComponent: Ze.default,
                     PrestigeProgressionTooltipComponent: et.default,
                     LegendaryMasteryProgressionComponent: tt.default,
@@ -1048,7 +1051,7 @@
                     ScoreboardRowActionsMenuComponent: bt.default,
                     ScoreboardRowStatDisplayComponent: yt.default,
                     ScoreboardStatSwitcherComponent: vt.default,
-                    AnimatedPlayButtonComponent: ze.default,
+                    AnimatedPlayButtonComponent: Je.default,
                     SeasonPassProgressionComponent: _t.default,
                     SeasonPassErrorStateComponent: Et.default,
                     ScoreboardSpellComponent: Pt.default,
@@ -1082,12 +1085,12 @@
                     EndOfGameService: ne.default,
                     HonorService: $.default,
                     ChallengesService: Q.default,
-                    PerksService: z.default,
+                    PerksService: J.default,
                     GameDataService: Sn,
                     RiotclientService: xn,
                     SummonerService: Pn,
                     PlayerActionsService: se.default,
-                    RemedyService: J.default,
+                    RemedyService: z.default,
                     ChampionMasteryService: Z.default,
                     SkillTreeService: ae.default,
                     EventHubService: ee.default,
@@ -1128,8 +1131,8 @@
                         "components/postgame-root": Lt.default,
                         "components/postgame-sub-navigation": It.default,
                         "components/postgame-progression": Ot.default,
-                        "components/prestige-progression": Nt.default,
-                        "components/prestige-progression-tooltip": Dt.default,
+                        "components/prestige-progression": Dt.default,
+                        "components/prestige-progression-tooltip": Nt.default,
                         "components/legendary-mastery-progression": Bt.default,
                         "components/ranked-progression": Gt.default,
                         "components/rating-change": Ut.default,
@@ -1143,8 +1146,8 @@
                         "components/scoreboard-honor-flair": Kt.default,
                         "components/scoreboard-root": $t.default,
                         "components/cherry-scoreboard-row": Qt.default,
-                        "components/scoreboard-climb-indicator": zt.default,
-                        "components/scoreboard-row": Jt.default,
+                        "components/scoreboard-climb-indicator": Jt.default,
+                        "components/scoreboard-row": zt.default,
                         "components/scoreboard-row-actions-menu": Zt.default,
                         "components/scoreboard-row-stat-display": en.default,
                         "components/scoreboard-stat-switcher": tn.default,
@@ -1160,7 +1163,7 @@
                         "components/tft-skilltree-scoreboard": Le.default,
                         "components/tft-skilltree-score-row": Ie.default,
                         "components/tft-skilltree-progression": Oe.default,
-                        "components/tft-skilltree-progression-banner-spine": Ne.default
+                        "components/tft-skilltree-progression-banner-spine": De.default
                     }
                 };
                 s.SharedSeasonPassComponents && Object.assign(e, {
@@ -1176,7 +1179,7 @@
                     TftPromethiumProgressionBannerSpineComponent: j.default,
                     PromethiumService: oe.default
                 }), Object.assign(e.TEMPLATES, {
-                    "components/tft-promethium-scoreboard": De.default,
+                    "components/tft-promethium-scoreboard": Ne.default,
                     "components/tft-promethium-score-row": Be.default,
                     "components/tft-promethium-progression": Ge.default,
                     "components/tft-promethium-progression-banner-spine": Ue.default
@@ -1205,8 +1208,8 @@
                 });
                 const In = n(243),
                     On = n(244),
-                    Nn = n(245),
-                    Dn = n(246),
+                    Dn = n(245),
+                    Nn = n(246),
                     Bn = n(247),
                     Gn = n(248),
                     Un = n(249),
@@ -1214,8 +1217,8 @@
                 Object.assign(e.TEMPLATES, {
                     "components/jade-level-progression": In,
                     "components/jade-postgame": On,
-                    "components/jade-progression-screen": Nn,
-                    "components/jade-ranked-progression": Dn,
+                    "components/jade-progression-screen": Dn,
+                    "components/jade-ranked-progression": Nn,
                     "components/jade-scoreboard-header": Bn,
                     "components/jade-scoreboard-row": Gn,
                     "components/jade-scoreboard-screen": Un,
@@ -1282,8 +1285,8 @@
                 L = ln(n(66)),
                 I = ln(n(67)),
                 O = ln(n(68)),
-                N = ln(n(69)),
-                D = ln(n(70)),
+                D = ln(n(69)),
+                N = ln(n(70)),
                 B = ln(n(71)),
                 G = ln(n(72)),
                 U = ln(n(73)),
@@ -1298,8 +1301,8 @@
                 K = ln(n(82)),
                 $ = ln(n(83)),
                 Q = ln(n(84)),
-                z = ln(n(85)),
-                J = ln(n(86)),
+                J = ln(n(85)),
+                z = ln(n(86)),
                 Z = ln(n(87)),
                 ee = ln(n(88)),
                 te = ln(n(89)),
@@ -1336,8 +1339,8 @@
                 Le = ln(n(121)),
                 Ie = ln(n(122)),
                 Oe = ln(n(123)),
-                Ne = ln(n(124)),
-                De = ln(n(125)),
+                De = ln(n(124)),
+                Ne = ln(n(125)),
                 Be = ln(n(126)),
                 Ge = ln(n(127)),
                 Ue = ln(n(128)),
@@ -1352,8 +1355,8 @@
                 Ke = ln(n(141)),
                 $e = ln(n(142)),
                 Qe = ln(n(143)),
-                ze = ln(n(147)),
-                Je = ln(n(148)),
+                Je = ln(n(147)),
+                ze = ln(n(148)),
                 Ze = ln(n(150)),
                 et = ln(n(151)),
                 tt = ln(n(152)),
@@ -1390,8 +1393,8 @@
                 Lt = ln(n(197)),
                 It = ln(n(198)),
                 Ot = ln(n(199)),
-                Nt = ln(n(200)),
-                Dt = ln(n(201)),
+                Dt = ln(n(200)),
+                Nt = ln(n(201)),
                 Bt = ln(n(202)),
                 Gt = ln(n(203)),
                 Ut = ln(n(204)),
@@ -1406,8 +1409,8 @@
                 Kt = ln(n(213)),
                 $t = ln(n(214)),
                 Qt = ln(n(215)),
-                zt = ln(n(216)),
-                Jt = ln(n(217)),
+                Jt = ln(n(216)),
+                zt = ln(n(217)),
                 Zt = ln(n(218)),
                 en = ln(n(219)),
                 tn = ln(n(220)),
@@ -1497,18 +1500,19 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(4),
-                o = n(30);
-            var l = s.Ember.Controller.extend({
+                o = n(3),
+                l = n(30);
+            var i = s.Ember.Controller.extend({
                 gameflow: s.Ember.inject.service(),
                 postgame: s.Ember.inject.service(),
                 gameclientPostgame: s.Ember.inject.service(),
                 honor: s.Ember.inject.service(),
                 backgroundImgPath: s.Ember.computed.alias("gameflow.backgroundImgPath"),
                 backgroundImgPathDark: s.Ember.computed("gameflow.backgroundImgPathDark", "gameflow.gameMode", (function() {
-                    return this.get("gameflow.gameMode") === a.GAME_MODES.JADE ? "" : this.get("gameflow.backgroundImgPathDark") || ""
+                    return o.JADE_POSTGAME_GAME_MODES.includes(this.get("gameflow.gameMode")) ? "" : this.get("gameflow.backgroundImgPathDark") || ""
                 })),
                 postgameComponent: s.Ember.computed("gameflow.gameMode", (function() {
-                    return this.get("gameflow.gameMode") === a.GAME_MODES.JADE ? "jade-postgame" : "postgame-root"
+                    return o.JADE_POSTGAME_GAME_MODES.includes(this.get("gameflow.gameMode")) ? "jade-postgame" : "postgame-root"
                 })),
                 showPostgameV2: s.Ember.computed.not("gameflow.isTFT"),
                 haveGameClientStatsBlock: s.Ember.computed.bool("gameclientPostgame.gameClientStats"),
@@ -1516,12 +1520,12 @@
                 haveLoLGameClientStatsBlock: s.Ember.computed.bool("gameclientPostgame.lolGameClientStats"),
                 isCherryReadyToShow: s.Ember.computed.and("gameflow.isCherry", "haveLoLGameClientStatsBlock"),
                 haveEOGStatsBlock: s.Ember.computed.bool("postgame.eogStatsBlock"),
-                isEoGPhase: s.Ember.computed.equal("gameflow.phase", o.GAMEFLOW_PHASES.EndOfGame),
+                isEoGPhase: s.Ember.computed.equal("gameflow.phase", l.GAMEFLOW_PHASES.EndOfGame),
                 isSRReadyToShow: s.Ember.computed.and("haveEOGStatsBlock", "isEoGPhase"),
                 isCustomGame: s.Ember.computed.equal("gameflow.isCustomGame", !0),
                 isCustomGameReadyToShow: s.Ember.computed.and("haveEOGStatsBlock", "isCustomGame", "isEoGPhase"),
                 isPostgameReady: s.Ember.computed.or("isSRReadyToShow", "isCherryReadyToShow", "isTFTReadyToShow", "isCustomGameReadyToShow"),
-                isWaitingForStats: s.Ember.computed.equal("gameflow.phase", o.GAMEFLOW_PHASES.WaitingForStats),
+                isWaitingForStats: s.Ember.computed.equal("gameflow.phase", l.GAMEFLOW_PHASES.WaitingForStats),
                 isWaitingForChallenges: s.Ember.computed.equal("postgame.preEndOfGameSequence", a.PRE_END_OF_GAME_SEQUENCE_EVENTS.CHALLENGES),
                 isWaitingForMissions: s.Ember.computed.equal("postgame.preEndOfGameSequence", a.PRE_END_OF_GAME_SEQUENCE_EVENTS.MISSIONS),
                 isWaitingForRanked: s.Ember.computed.equal("postgame.preEndOfGameSequence", a.PRE_END_OF_GAME_SEQUENCE_EVENTS.RANKED),
@@ -1562,17 +1566,17 @@
                     const e = this.get("gameflow.phase"),
                         t = this.get("_previousGameflowPhase"),
                         n = this.get("gameflow.api.paths.root.api.paths.root.gameflowSession.gameData.gameId");
-                    e !== t && (e === o.GAMEFLOW_PHASES.WaitingForStats ? (s.Telemetry.startTracingEvent("client-waiting-for-stats-to-honor-shown"), s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME, {
+                    e !== t && (e === l.GAMEFLOW_PHASES.WaitingForStats ? (s.Telemetry.startTracingEvent("client-waiting-for-stats-to-honor-shown"), s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME, {
                         ...this.get("datadogContext"),
                         start: {
                             source: `gameflow-phase-${e}`
                         }
-                    })) : e === o.GAMEFLOW_PHASES.PreEndOfGame ? (s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME_PRE_END_OF_GAME, {
+                    })) : e === l.GAMEFLOW_PHASES.PreEndOfGame ? (s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME_PRE_END_OF_GAME, {
                         ...this.get("datadogContext"),
                         start: {
                             source: `gameflow-phase-${e}`
                         }
-                    }), s.TelemetryService.startTelemetryTimerEvent("eog_screen"), this.renderTime = Date.now()) : e === o.GAMEFLOW_PHASES.EndOfGame && (s.datadogRum.stopOperationWithOk(s.datadogRum.XP_CGL_POSTGAME_PRE_END_OF_GAME, {
+                    }), s.TelemetryService.startTelemetryTimerEvent("eog_screen"), this.renderTime = Date.now()) : e === l.GAMEFLOW_PHASES.EndOfGame && (s.datadogRum.stopOperationWithOk(s.datadogRum.XP_CGL_POSTGAME_PRE_END_OF_GAME, {
                         stop: {
                             source: `gameflow-phase-${e}`
                         }
@@ -1685,7 +1689,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -7029,11 +7033,12 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(4),
-                o = n(39);
+                o = n(3),
+                l = n(39);
             const {
-                RunMixin: l
-            } = s.EmberAddons.EmberLifeline, i = "/lol-summoner/v1/current-summoner", r = "/lol-lobby/v2/party/eog-status", m = "PROGRESSION", c = "SCOREBOARD", d = s.Ember.Object.extend(s.Ember.PromiseProxyMixin);
-            var p = s.Ember.Component.extend(l, {
+                RunMixin: i
+            } = s.EmberAddons.EmberLifeline, r = "/lol-summoner/v1/current-summoner", m = "/lol-lobby/v2/party/eog-status", c = "PROGRESSION", d = "SCOREBOARD", p = s.Ember.Object.extend(s.Ember.PromiseProxyMixin);
+            var u = s.Ember.Component.extend(i, {
                 classNames: ["postgame-root-component"],
                 classNameBindings: ["willAnimate:animating"],
                 parties: s.Ember.inject.service(),
@@ -7066,7 +7071,7 @@
                 })),
                 championDataProxy: s.Ember.computed("gameclientPostgame.lolGameClientStats.statsBlock.players.@each", (function() {
                     const e = this.get("gameclientPostgame.lolGameClientStats.statsBlock.players");
-                    return e.length && d.create({
+                    return e.length && p.create({
                         promise: Promise.all(e.map((async e => {
                             const t = e.championId,
                                 n = e.championSkinId,
@@ -7122,10 +7127,10 @@
                 isDetailsTabOpen: !1,
                 tabDefinitions: [{
                     name: "progression",
-                    value: m
+                    value: c
                 }, {
                     name: "scoreboard",
-                    value: c
+                    value: d
                 }],
                 tabs: s.Ember.computed("selectedTab", "isCustomGame", "gameMode", (function() {
                     const e = [],
@@ -7134,7 +7139,7 @@
                         s = this.get("isCustomGame"),
                         o = this.get("gameMode") === a.GAME_MODES.CHERRY;
                     return n.forEach((n => {
-                        (s || o) && n.value === m || e.push({
+                        (s || o) && n.value === c || e.push({
                             name: this.get(`tra.career_postgame_tab_${n.name}_name`),
                             value: n.value,
                             selected: n.value === t
@@ -7144,10 +7149,10 @@
                 selectedTab: s.Ember.computed("isCustomGame", "gameMode", (function() {
                     const e = this.get("isCustomGame"),
                         t = this.get("gameMode") === a.GAME_MODES.CHERRY;
-                    return e || t ? c : m
+                    return e || t ? d : c
                 })),
-                isProgressionTabSelected: s.Ember.computed.equal("selectedTab", m),
-                isScoreboardTabSelected: s.Ember.computed.equal("selectedTab", c),
+                isProgressionTabSelected: s.Ember.computed.equal("selectedTab", c),
+                isScoreboardTabSelected: s.Ember.computed.equal("selectedTab", d),
                 forwardButtonText: s.Ember.computed("selectedTab", "postgame.isClash", (function() {
                     const e = this.get("isProgressionTabSelected"),
                         t = this.get("postgame.isClash");
@@ -7156,15 +7161,15 @@
                 forwardHoverSound: "/fe/lol-postgame/sfx-nav-button-play-hover.ogg",
                 forwardClickSound: "/fe/lol-postgame/sfx-nav-button-play-click.ogg",
                 init() {
-                    this._super(...arguments), this.binding = s.dataBinding.bindTo(s.socket), this.binding.observe(i, this, this._handleCurrentSummoner), this.binding.observe(r, this, this._handlePartyStatus), this.set("modalDoneShowing", !1), this.set("extEmberModel", s.extEmberModel), this.get("remedy"), s.TelemetryService.startTelemetryTimerEvent("eog_tabs")
+                    this._super(...arguments), this.binding = s.dataBinding.bindTo(s.socket), this.binding.observe(r, this, this._handleCurrentSummoner), this.binding.observe(m, this, this._handlePartyStatus), this.set("modalDoneShowing", !1), this.set("extEmberModel", s.extEmberModel), this.get("remedy"), s.TelemetryService.startTelemetryTimerEvent("eog_tabs")
                 },
                 didInsertElement() {
-                    this._super(...arguments), this._startCountdown(), s.Telemetry.startTracingEvent(o.TELEMETRY_EVENT_NAMES.RENDER_PROGRESSION_SCREEN), s.Ember.run.scheduleOnce("afterRender", this, (() => {
-                        s.Telemetry.endTracingEvent(o.TELEMETRY_EVENT_NAMES.RENDER_POST_GAME), s.Telemetry.startTracingEvent(o.TELEMETRY_EVENT_NAMES.TIME_ON_EOG)
+                    this._super(...arguments), this._startCountdown(), s.Telemetry.startTracingEvent(l.TELEMETRY_EVENT_NAMES.RENDER_PROGRESSION_SCREEN), s.Ember.run.scheduleOnce("afterRender", this, (() => {
+                        s.Telemetry.endTracingEvent(l.TELEMETRY_EVENT_NAMES.RENDER_POST_GAME), s.Telemetry.startTracingEvent(l.TELEMETRY_EVENT_NAMES.TIME_ON_EOG)
                     }))
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this.cancelTask(this._proceedToScoreboardTimer), s.Telemetry.endTracingEvent(o.TELEMETRY_EVENT_NAMES.TIME_ON_EOG), this._observedUpdateChallengesPath && this.binding.unobserve(this._observedUpdateChallengesPath, this), this.binding.unobserve(i, this), this.binding.unobserve(r, this), s.TelemetryService.stopTelemetryTimerEvent("eog_tabs", "timeSpent", "postgame", {
+                    this._super(...arguments), this.cancelTask(this._proceedToScoreboardTimer), s.Telemetry.endTracingEvent(l.TELEMETRY_EVENT_NAMES.TIME_ON_EOG), this._observedUpdateChallengesPath && this.binding.unobserve(this._observedUpdateChallengesPath, this), this.binding.unobserve(r, this), this.binding.unobserve(m, this), s.TelemetryService.stopTelemetryTimerEvent("eog_tabs", "timeSpent", "postgame", {
                         game_id: this.get("gameflow.gameflowSession.gameData.gameId")
                     })
                 },
@@ -7230,7 +7235,7 @@
                 })),
                 _startCountdown() {
                     this._proceedToScoreboardTimer && this.cancelTask(this._proceedToScoreboardTimer), this.get("isCustomGame") || (this._proceedToScoreboardTimer = this.runTask((() => {
-                        this._selectTab(c), this._stopCountdown()
+                        this._selectTab(d), this._stopCountdown()
                     }), 12e4), this.set("timer", !0), this._animateCountdownMeter(119.75))
                 },
                 _stopCountdown() {
@@ -7299,7 +7304,7 @@
                     },
                     onButtonClick() {
                         const e = this.get("remedy");
-                        this.get("isProgressionTabSelected") ? (this.set("isContinueButtonClicked", !0), this._selectTab(c), this._stopCountdown()) : e.couldShowRemedyVerbalAbuseModal(this.get("gameId")) && !this.get("hasShownVerbalAbuseRemedyModal") ? this._showVerbalAbuseRemedyModal() : (s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME_PLAY_AGAIN, {
+                        this.get("isProgressionTabSelected") ? (this.set("isContinueButtonClicked", !0), this._selectTab(d), this._stopCountdown()) : e.couldShowRemedyVerbalAbuseModal(this.get("gameId")) && !this.get("hasShownVerbalAbuseRemedyModal") ? this._showVerbalAbuseRemedyModal() : (s.datadogRum.startOperation(s.datadogRum.XP_CGL_POSTGAME_PLAY_AGAIN, {
                             game: {
                                 key: a.GAME_CONTEXT_KEYS.LEAGUE_OF_LEGENDS
                             },
@@ -7340,12 +7345,12 @@
                         })))
                     },
                     handleTabSelected(e) {
-                        e && (this.get("selectedTab") !== e && this._selectTab(e), e === c && this._stopCountdown())
+                        e && (this.get("selectedTab") !== e && this._selectTab(e), e === d && this._stopCountdown())
                     },
                     displayAdvancedDetails: function() {
                         const e = () => this.set("isDetailsTabOpen", !1);
                         let t = ["stats", "graph", "runes"];
-                        this.get("gameMode") === a.GAME_MODES.JADE && (t = ["stats", "graph"]), (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((n => {
+                        o.JADE_POSTGAME_GAME_MODES.includes(this.get("gameMode")) && (t = ["stats", "graph"]), (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((n => {
                             n.displayMatchDetails({
                                 sections: t,
                                 defaultSection: "stats",
@@ -7377,7 +7382,7 @@
                     }
                 }
             });
-            t.default = p
+            t.default = u
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
