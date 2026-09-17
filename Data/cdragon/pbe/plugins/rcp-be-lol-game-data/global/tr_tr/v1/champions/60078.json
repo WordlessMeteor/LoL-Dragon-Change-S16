@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Demir Elçi",
     "shortBio": "- Kahraman Hücumu (E) yetenek gücü oranı kullanır.<br>- Pasif, Q, W ve R tamamen farklı. Yetenek açıklamalarını oku.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Poppy'nin aldığı mevcut canının %10'unu aşan tüm fiziksel hasar ve büyü hasarı %50 azalır. Bu, yapılardan aldığı hasarı azaltmaz."
+        "description": "Poppy'nin aldığı mevcut canını aşan tüm hasar azalır."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Poppy rakibini ezerek saldırı gücü artı sabit bir miktar ve hedefinin azami canının %8'ine eşdeğer miktarda ilave hasar verir. İlave hasar, yetenek seviyesine bağlı olarak belli bir eşiği aşamaz.",
-            "dynamicDescription": "Poppy'nin bir sonraki saldırısı <magicDamage>@FlatDamageCalc@ + azami canının %@HealthRatio*100@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir. Yüzdelik cana bağlı ilave hasar en fazla @HealthDamageCap@ olabilir.@SpellModifierDescriptionAppend@",
+            "description": "Poppy'nin bir sonraki saldırısı rakibini ezerek hedefin azami canına bağlı olarak ilave hasar verir.",
+            "dynamicDescription": "Poppy'nin bir sonraki saldırısı <magicDamage>@FlatDamageCalc@ + azami canının %@HealthRatio*100@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Pasif: Bir normal saldırıdan hasar aldığında veya normal saldırıyla hasar verdiğinde Poppy'nin zırhı ve hasarı 5 saniyeliğine artar. Bu etki 10 defa birikebilir. Aktif: Poppy azami Demacia'nın Gururu yükü kazanır ve hareket hızını 5 saniyeliğine arttırır.",
+            "description": "Pasif: Bir normal saldırıyla hasar verdiğinde veya normal saldırıdan hasar aldığında Poppy'nin zırhı ve hasarı artar. Bu etki birikebilir. Aktif: Poppy azami sayıda Demacia'nın Timsali yükü ve hareket hızı artışı kazanır.",
             "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy, her saldırı hasarı verdiğinde veya aldığında @PassiveDuration@ saniyeliğine @BonusStats@ <scaleArmor>Zırh</scaleArmor> ve <scaleAD>Saldırı Gücü</scaleAD> kazanır. Bu etki @MaxStacks@ defa birikebilir.<br><br><spellActive>Aktif:</spellActive> Poppy azami Demacia'nın Gururu yükü kazanır ve hareket hızını @ActiveDuration@ saniyeliğine %@Speed*100@ arttırır.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

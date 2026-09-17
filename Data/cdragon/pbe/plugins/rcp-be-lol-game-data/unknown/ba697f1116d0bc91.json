@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Nautilus arroja su ancla hacia adelante. Si impacta a un campeón, se impulsa hacia él y lo atrae al mismo tiempo. Si impacta en el suelo, Nautilus se desplaza hacia el ancla y el enfriamiento de Línea de Dragado se reduce a la mitad.",
+            "description": "Nautilus arroja su ancla. Si impacta a un campeón, se arrastra a sí mismo y al oponente para quedar lado a lado. Si impacta contra el terreno, Nautilus se arrastra a sí mismo hacia el ancla y el enfriamiento de Línea de Dragado se reduce.",
             "dynamicDescription": "Nautilus arroja su ancla hacia adelante. Si impacta a un enemigo, Nautilus se impulsa hacia el objetivo y lo atrae hacia él, lo que inflige <magicDamage>@QDamageCalc@ de daño mágico</magicDamage> y <status>aturde</status> al enemigo brevemente.<br><br>Si impacta en el suelo, Nautilus <status>se desplaza</status> hacia adelante y el enfriamiento de esta habilidad se reduce en un @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Nautilus obtiene un escudo temporal.  Al estar activo, sus ataques infligen daño prolongado a su objetivo y a los enemigos cercanos.",
-            "dynamicDescription": "Nautilus se rodea de energías oscuras, lo que le otorga <shield>@ShieldCalc@ de escudo</shield> durante @ShieldDuration@ seg.<br><br>Mientras el <shield>escudo</shield> persista, los ataques de Nautilus infligen <magicDamage>@DotDamageCalc@ de daño mágico</magicDamage> al objetivo y a los enemigos cercanos a lo largo de 2 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus se rodea de energías oscuras, lo que le otorga <shield>@ShieldCalc@ de escudo</shield> durante @ShieldDuration@ seg.<br><br>Mientras el <shield>escudo</shield> persista, los ataques de Nautilus infligen <magicDamage>@DotDamageCalc@ de daño mágico</magicDamage> prolongado a lo largo de @DotDuration@ seg al objetivo y a los enemigos cercanos.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Nautilus golpea el suelo, lo que provoca que la tierra a su alrededor estalle mediante una serie de tres explosiones. Cada explosión inflige daño y ralentiza a los enemigos.",
-            "dynamicDescription": "Nautilus golpea el suelo y crea tres explosiones que infligen <magicDamage>@DamageCalc@ de daño mágico</magicDamage> cada una y <status>ralentizan</status> a los enemigos en un @SlowPercent*100@%. Este efecto decae a lo largo de @SlowDuration@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus golpea el suelo y crea tres explosiones. Cada una inflige <magicDamage>@DamageCalc@ de daño mágico</magicDamage> y aplica una <status>ralentización</status> del @SlowPercent*100@% a los enemigos, que decae a lo largo de @SlowDuration@ seg. Una unidad puede ser alcanzada por más de una explosión, pero a partir de la segunda solo le infligen <magicDamage>@DamageHalvedTooltip@ de daño</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

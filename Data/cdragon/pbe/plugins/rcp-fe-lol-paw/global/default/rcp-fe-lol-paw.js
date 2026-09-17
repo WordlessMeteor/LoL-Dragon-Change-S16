@@ -2452,7 +2452,7 @@
                         s = this.get("_awSettings");
                     if (!s) return;
                     const l = !(!s?.boostContentId || "BOOST" !== n || String(t) !== String(s.boostContentId));
-                    if (this.set("isAw", l), !t || !n) return;
+                    if (this.set("isAw", l), !l || !t || !n) return;
                     const o = e?.item?.duration;
                     f.get(`/lol-inventory/v2/inventory/${n}`).then((e => {
                         const n = Array.isArray(e) && e.find((e => String(e.uuid) === String(t))),

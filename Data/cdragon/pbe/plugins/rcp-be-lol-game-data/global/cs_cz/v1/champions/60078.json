@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Železná vyslankyně",
     "shortBio": "- Hrdinský výpad (E) je závislý na síle schopností.<br>- Pasivní schopnost, Q, W a R jsou zcela odlišné. Přečti si jejich popisy.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Výše veškerého fyzického a magického poškození, které je Poppy způsobeno a překračuje 10 % jejího aktuálního zdraví, se snižuje o 50 %. To se netýká poškození způsobovaného budovami."
+        "description": "Poškození, které přesáhne určitou část Poppyina aktuálního zdraví, se sníží."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Poppy silně udeří svého protivníka. Kromě poškození útočným poškozením mu způsobí i bonusové přímé poškození ve výši 8 % maximální hodnoty jeho zdraví. Toto bonusové poškození nemůže přesáhnout limit určený stupněm schopnosti.",
-            "dynamicDescription": "Příštím útokem Poppy způsobí <magicDamage>magické poškození ve výši @FlatDamageCalc@ bodů + @HealthRatio*100@ % maximálního zdraví</magicDamage>. Bonusové poškození odvislé od procenta zdraví nemůže přesáhnout @HealthDamageCap@ bodů.@SpellModifierDescriptionAppend@",
+            "description": "Poppyin příští útok zasáhne protivníka drtivou ranou a způsobí mu bonusové poškození podle jeho maximálního zdraví.",
+            "dynamicDescription": "Poppy svým příštím útokem způsobí <magicDamage>magické poškození ve výši @FlatDamageCalc@ bodů + @HealthRatio*100@ % maximálního zdraví</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pasivní efekt: Utrpí-li Poppy zásah základním útokem nebo sama někomu způsobí poškození základním útokem, zvýší se jí na 5 sek. hodnota brnění a síla útoků. Tento efekt se může nasčítat až 10x. Aktivace: Poppy získá maximální počet stupňů Demacijského ideálu a na 5 sek. se jí zvýší rychlost pohybu.",
+            "description": "Pasivní efekt: Kdykoliv Poppy utrpí nebo způsobí poškození základním útokem, zvýší se jí hodnoty brnění a poškození. Tento efekt se může nasčítávat. Aktivace: Poppy získá maximální počet stupňů schopnosti Demacijský ideál a bonus k rychlosti pohybu.",
             "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Kdykoliv Poppy způsobí nebo utrpí poškození útokem, získá na @PassiveDuration@ sek. @BonusStats@ k hodnotám <scaleArmor>brnění</scaleArmor> a <scaleAD>útočného poškození</scaleAD>. Tento efekt se může nasčítat až @MaxStacks@x.<br><br><spellActive>Aktivace:</spellActive> Poppy získá maximální počet stupňů Demacijského ideálu a na @ActiveDuration@ sek. obdrží @Speed*100@ % k rychlosti pohybu.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

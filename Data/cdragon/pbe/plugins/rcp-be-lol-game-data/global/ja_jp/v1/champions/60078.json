@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "ポッピー",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "鋼鉄の大使",
     "shortBio": "- 「ヒロイックチャージ(E)」は魔力反映率を持つ<br>- 自動効果、Q、W、Rは全く異なる。詳細はスキル説明を参照",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "現在体力の10%を超えるあらゆる物理ダメージと魔法ダメージが50%軽減される。建造物から受けるダメージは軽減されない。"
+        "description": "自身の現在体力の一定割合を超えて受けたダメージが軽減される。"
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "敵を打ち砕き、攻撃力に加えて一定量と対象の最大体力の8%にあたる追加ダメージを与える。追加ダメージにはランクに応じた上限が存在する。",
-            "dynamicDescription": "次の通常攻撃が<magicDamage>@FlatDamageCalc@ + 最大体力の@HealthRatio*100@%の魔法ダメージ</magicDamage>を与える。体力に応じた追加ダメージの上限は@HealthDamageCap@。@SpellModifierDescriptionAppend@",
+            "description": "次の通常攻撃が相手を打ち砕き、対象の最大体力に応じた追加ダメージを与える。",
+            "dynamicDescription": "次の通常攻撃が<magicDamage>@FlatDamageCalc@ + 最大体力の@HealthRatio*100@%の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "自動効果: 通常攻撃でダメージを受けるか、ダメージを与えると、5秒間、自身の物理防御とダメージが増加する。この効果は10回スタックする。発動効果: 「デマーシアの規範」のスタックが最大になり、5秒間移動速度が増加する。",
+            "description": "自動効果: 通常攻撃でダメージを受けるか与えると、自身の物理防御とダメージが増加する。この効果はスタックする。発動効果: 「デマーシアの規範」のスタックが最大になり、移動速度が増加する。",
             "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 通常攻撃でダメージを受けるか、ダメージを与えると、@PassiveDuration@秒間、<scaleArmor>物理防御</scaleArmor>と<scaleAD>攻撃力</scaleAD>が@BonusStats@増加する。この効果は@MaxStacks@回スタックする。<br><br><spellActive>発動効果:</spellActive> 「デマーシアの規範」のスタックが最大になり、@ActiveDuration@秒間、移動速度が@Speed*100@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

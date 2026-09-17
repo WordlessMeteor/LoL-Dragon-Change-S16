@@ -9420,32 +9420,52 @@
                         restrictions: []
                     }, e.hasDmRestriction = !1;
                     let n = [],
-                        r = 0;
+                        r = 0,
+                        s = null;
 
-                    function s() {
-                        const t = [];
+                    function l() {
+                        s = null, c()
+                    }
+
+                    function c() {
+                        null !== s && (clearTimeout(s), s = null);
+                        const t = Date.now(),
+                            i = n.filter((function(e) {
+                                return function(e, t) {
+                                    const n = e && e.expirationData;
+                                    if (!n) return !0;
+                                    const r = n.expirationMillis;
+                                    if (r && r > 0) return r > t;
+                                    const o = n.redemptions;
+                                    return !(Array.isArray(o) && o.length > 0) || o.some((e => e && e.redemptionCountRemaining > 0))
+                                }(e, t)
+                            })),
+                            c = [];
                         a.forEach((function(e) {
-                            r > 0 && r < e.activeWhenHonorLevelBelow && t.push({
+                            r > 0 && r < e.activeWhenHonorLevelBelow && c.push({
                                 restrictionType: e.restrictionType
                             })
-                        })), e.restrictionView.restrictions = n.concat(t), o.sync()
+                        })), e.restrictionView.restrictions = i.concat(c), o.sync();
+                        const d = i.map((function(e) {
+                            return e.expirationData && e.expirationData.expirationMillis
+                        })).filter((function(e) {
+                            return e && e > t
+                        }));
+                        if (d.length > 0) {
+                            const e = Math.min.apply(Math, d),
+                                n = Math.min(e - t, 864e5);
+                            s = setTimeout(l, n)
+                        }
                     }
                     e.afterLogin((function() {
                         t.observe("/v1/get-restriction-view", e.restrictionView, (function(t) {
                             t && Array.isArray(t.restrictions) ? (e.hasDmRestriction = t.restrictions.some((function(e) {
                                 return e && "DM_RESTRICTION" === e.restrictionType
                             })), n = t.restrictions.filter((function(e) {
-                                return e && i.has(e.restrictionType) && function(e) {
-                                    const t = e && e.expirationData;
-                                    if (!t) return !0;
-                                    const n = t.expirationMillis;
-                                    if (n && n > 0) return n > Date.now();
-                                    const r = t.redemptions;
-                                    return !(Array.isArray(r) && r.length > 0) || r.some((e => e && e.redemptionCountRemaining > 0))
-                                }(e)
-                            }))) : (n = [], e.hasDmRestriction = !1), s()
+                                return e && i.has(e.restrictionType)
+                            }))) : (n = [], e.hasDmRestriction = !1), c()
                         })), t.observe("/v1/get-honor-view", e.restrictionView, (function(e) {
-                            r = e && "number" == typeof e.honorLevel ? e.honorLevel : 0, s()
+                            r = e && "number" == typeof e.honorLevel ? e.honorLevel : 0, c()
                         }))
                     }))
                 }

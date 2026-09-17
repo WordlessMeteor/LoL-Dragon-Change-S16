@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Nautilus lance son ancre devant lui. S'il touche un ennemi, il se rapproche de la cible et la cible est tirée vers lui. S'il touche le décor, il se rapproche du décor et le délai de récupération d'Abordage est réduit de moitié.",
+            "description": "Nautilus lance son ancre devant lui. S'il touche un ennemi, il se rapproche de la cible et la cible est tirée vers lui. S'il touche le terrain, il se rapproche du terrain et le délai de récupération d'Abordage est réduit.",
             "dynamicDescription": "Nautilus lance son ancre devant lui. S'il touche un ennemi, Nautilus et la cible sont tirés l'un vers l'autre, infligeant <magicDamage>@QDamageCalc@ pts de dégâts magiques</magicDamage> à l'ennemi et l'<status>étourdissant</status> brièvement.<br><br>Toucher un élément du décor <status>attire</status> Nautilus vers l'avant et réduit le délai de récupération de cette compétence de @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nautilus profite d'un bouclier temporaire.  Tant que le bouclier persiste, les attaques de Nautilus infligent des dégâts sur la durée à ses cibles et aux ennemis proches.",
-            "dynamicDescription": "Nautilus s'entoure d'énergie ténébreuse, lui conférant un <shield>bouclier de @ShieldCalc@ PV</shield> pendant @ShieldDuration@ sec.<br><br>Tant que le <shield>bouclier</shield> persiste, les attaques de Nautilus infligent <magicDamage>@DotDamageCalc@ pts de dégâts magiques</magicDamage> à sa cible et à tous les ennemis proches pendant 2 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus s'entoure d'énergie sombre, ce qui lui octroie un <shield>bouclier de @ShieldCalc@ PV</shield> pendant @ShieldDuration@ sec.<br><br>Tant que le <shield>bouclier</shield> persiste, les attaques de Nautilus infligent <magicDamage>@DotDamageCalc@ pts de dégâts magiques</magicDamage> à sa cible et aux ennemis proches pendant @DotDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nautilus frappe le sol, déclenchant une série de trois explosions autour de lui. Chaque explosion blesse et ralentit les ennemis.",
-            "dynamicDescription": "Nautilus frappe le sol, créant trois explosions qui infligent chacune <magicDamage>@DamageCalc@ pts de dégâts magiques</magicDamage> et <status>ralentissent</status> les ennemis de @SlowPercent*100@%, sur @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus frappe le sol, créant trois explosions qui infligent chacune <magicDamage>@DamageCalc@ pts de dégâts magiques</magicDamage> et <status>ralentissent</status> les ennemis de @SlowPercent*100@% (décroissant sur @SlowDuration@ sec). Une unité peut être touchée par plus d'une explosion, mais chaque explosion secondaire lui inflige alors <magicDamage>@DamageHalvedTooltip@ pts de dégâts</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -21176,7 +21176,7 @@
                         this._setSelectedQuestForm(e), this._overrideSplashPath(t.uncenteredSplashPath), this._overrideSkinDescription(t.description), this._overrideSplashVideoPath(t.collectionSplashVideoPath), this._overrideAugments(t.ownedSkinAugments), this._overrideSkinName(t.name)
                     }
                 })),
-                isPurchasable: k("currentSkin", (function() {
+                isPurchasable: k("currentSkin", "storeCatalogManager", (function() {
                     const e = _(this, "currentSkin"),
                         t = _(this, "storeCatalogManager");
                     return !(!e || !t) && (!e.ownership.owned && t.getSkinItemCatalog(e.id).isSinglePurchasable())

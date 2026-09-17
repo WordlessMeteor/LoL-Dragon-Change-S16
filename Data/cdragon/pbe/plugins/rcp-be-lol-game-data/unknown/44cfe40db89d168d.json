@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Наутилус бросает якорь вперед. При попадании по врагу Наутилус притягивает его к себе и одновременно притягивается к нему сам. При попадании по элементу ландшафта Наутилус притягивается к нему, а перезарядка Якорной цепи сокращается наполовину.",
+            "description": "Наутилус бросает вперед свой якорь. Поразив им врага, Наутилус притягивает того к себе и притягивается к нему сам. Поразив элемент ландшафта, Наутилус притягивается к нему и сокращает перезарядку Якорной цепи.",
             "dynamicDescription": "Наутилус бросает вперед якорь. Если якорь попадает во врага, они с Наутилусом притягиваются друг к другу, цель получает <magicDamage>@QDamageCalc@ ед. маг. урона</magicDamage> и ненадолго <status>оглушается</status>.<br><br>Если якорь попадает в элемент ландшафта, он <status>подтягивает</status> Наутилуса, сокращая перезарядку умения на @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Наутилус ненадолго накладывает на себя щит. Пока существует щит, автоатаки Наутилуса наносят периодический урон цели и окружающим врагам.",
-            "dynamicDescription": "Наутилус окружает себя темной энергией, на @ShieldDuration@ сек. получая <shield>щит прочностью @ShieldCalc@</shield>.<br><br>Пока существует <shield>щит</shield>, автоатаки Наутилуса наносят цели и окружающим врагам <magicDamage>@DotDamageCalc@ ед. маг. урона</magicDamage> в течение 2 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Наутилус окутывает себя покровом тьмы, получая <shield>щит прочностью @ShieldCalc@</shield> на @ShieldDuration@ сек.<br><br>Пока существует <shield>щит</shield>, автоатаки Наутилуса наносят цели и врагам поблизости <magicDamage>@DotDamageCalc@ ед. маг. урона</magicDamage> в течение @DotDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Наутилус бьет по земле, создавая сейсмическую волну, вызывающую 3 концентрических выброса воды. Каждый наносит урон и замедляет врагов.",
-            "dynamicDescription": "Наутилус бьет по земле, создавая 3 взрыва. Каждый наносит <magicDamage>@DamageCalc@ ед. маг. урона</magicDamage>, <status>замедляя</status> врагов на @SlowPercent*100@% (ослабевает за @SlowDuration@ сек.).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Наутилус бьет по земле, создавая 3 взрыва. Каждый наносит <magicDamage>@DamageCalc@ ед. маг. урона</magicDamage>, <status>замедляя</status> врагов на @SlowPercent*100@% (ослабевает за @SlowDuration@ сек.). Если боец поражен не одним взрывом, от доп. взрывов он получает <magicDamage>@DamageHalvedTooltip@ ед. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

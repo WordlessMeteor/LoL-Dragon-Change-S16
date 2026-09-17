@@ -210,7 +210,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{45ffae14}",
+                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -235,7 +235,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{45ffae14}",
+                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
                     "submesh": "EyeMask",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -255,17 +255,17 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{5a2a33ed}",
+                    "Material": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
                     "submesh": "WingsHair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{5a2a33ed}",
+                    "Material": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
                     "submesh": "Hair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{1fe3e023}",
+                    "Material": "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst",
                     "submesh": "Cloths",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -540,6 +540,26 @@
                                 "__type": "FloatLiteralMaterialDriver"
                             },
                             "__type": "FloatComparisonMaterialDriver"
+                        },
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "mBoolDriver": {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mTurnOnTimeSec": 0.0,
+                                "mTurnOffTimeSec": 0.0,
+                                "__type": "LerpMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.5,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -578,11 +598,435 @@
                     "{3c22ed79}"
                 ],
                 "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mAnimationNames": [
+                                "Taunt",
+                                "Dance"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{b798885e}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Janna/Skins/Skin67/ChromaPreview.tex",
         "objectPath": "Characters/Janna/Skins/Skin67",
         "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst": {
+        "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Body_Fresnel_Masked_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "{13374fccd62518fc}",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Color",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_bodymask_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "assets/shared/materials/default_gradient.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.6039215922355652,
+                    0.32549020648002625,
+                    0.4117647111415863,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    0.24500000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shadow_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxSpec",
+                "value": [
+                    64.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    4.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "value": [
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularColor",
+                "value": [
+                    0.9080643653869629,
+                    0.801190197467804,
+                    0.5334859490394592,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "IridescentControl",
+                "value": [
+                    1.0,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Fresnel_Size",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mOnValue": 4.0,
+                        "mOffValue": 0.20000000298023224,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "LQ_Lighting_Intensity",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 0.20000000298023224,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Fresnel_Color",
+                    "Enabled": false,
+                    "driver": {
+                        "BoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "OnValue": [
+                            1.0,
+                            0.0,
+                            0.12999999523162842,
+                            1.0
+                        ],
+                        "OffValue": [
+                            0.5199999809265137,
+                            0.1899999976158142,
+                            0.1899999976158142,
+                            1.0
+                        ],
+                        "TurnOnTimeSec": 0.20000000298023224,
+                        "TurnOffTimeSec": 0.20000000298023224,
+                        "__type": "LerpVec4LogicDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Color",
+                    "options": [
+                        {
+                            "driver": {
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{fd92a016617e35f6}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "{fd92a016617e35f6}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                },
+                {
+                    "name": "Mask",
+                    "options": [
+                        {
+                            "driver": {
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/Janna/Skins/Skin67/Materials/Hair_inst": {
         "name": "Characters/Janna/Skins/Skin67/Materials/Hair_inst",
@@ -1113,258 +1557,25 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 4.0,
+                                "mDelayOff": 6.0,
                                 "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{fd92a016617e35f6}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{fd92a016617e35f6}",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
                     "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "{1fe3e023}": {
-        "name": "Characters/Janna/Skins/Skin67/Materials/Cloths_DiffuseLerp_Plain_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture_2",
-                "texturePath": "{fd92a016617e35f6}",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Scroll_Texture",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Diffuse_Lerp_Factor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Mult",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineColor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineControl",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTex_TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexB_MaskStrength",
-                "value": [
-                    1.125,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Color",
-                "value": [
-                    0.32771801948547363,
-                    0.10832379758358002,
-                    0.13493552803993225,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Color",
-                "value": [
-                    0.5077286958694458,
-                    0.19642938673496246,
-                    0.19642938673496246,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Tiles",
-                "value": [
-                    4.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Tiles",
-                "value": [
-                    1.2999999523162842,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Speed",
-                "value": [
-                    0.05999999865889549,
-                    0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Speed",
-                "value": [
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "SCROLLTEX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Diffuse_Lerp_Factor",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mBoolDriver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "mDelayOff": 6.0,
-                            "__type": "DelayedBoolMaterialDriver"
-                        },
-                        "mTurnOnTimeSec": 0.15000000596046448,
-                        "mTurnOffTimeSec": 0.75,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
                 }
             ],
             "__type": "DynamicMaterialDef"
@@ -1769,250 +1980,6 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{45ffae14}": {
-        "name": "Characters/Janna/Skins/Skin67/Materials/Body_DiffuseLerp_Plain_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture_2",
-                "texturePath": "{fd92a016617e35f6}",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Scroll_Texture",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Diffuse_Lerp_Factor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Mult",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineColor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineControl",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTex_TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexB_MaskStrength",
-                "value": [
-                    1.125,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Color",
-                "value": [
-                    0.32771801948547363,
-                    0.10832379758358002,
-                    0.13493552803993225,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Color",
-                "value": [
-                    0.5077286958694458,
-                    0.19642938673496246,
-                    0.19642938673496246,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Tiles",
-                "value": [
-                    4.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Tiles",
-                "value": [
-                    1.2999999523162842,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Speed",
-                "value": [
-                    0.05999999865889549,
-                    0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Speed",
-                "value": [
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "SCROLLTEX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Diffuse_Lerp_Factor",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mBoolDriver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "mDelayOff": 6.0,
-                            "__type": "DelayedBoolMaterialDriver"
-                        },
-                        "mTurnOnTimeSec": 0.15000000596046448,
-                        "mTurnOffTimeSec": 0.75,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
     "Characters/Janna/Skins/Skin67/Materials/Specular_Earrings_Fresnel_Masked_inst": {
         "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Earrings_Fresnel_Masked_inst",
         "samplerValues": [
@@ -2202,248 +2169,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "__type": "StaticMaterialDef"
-    },
-    "{5a2a33ed}": {
-        "name": "Characters/Janna/Skins/Skin67/Materials/Hair_DiffuseLerp_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture_2",
-                "texturePath": "{fd92a016617e35f6}",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Scroll_Texture",
-                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_hairmask_tx_cm.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Diffuse_Lerp_Factor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Mult",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineColor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineControl",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTex_TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexB_MaskStrength",
-                "value": [
-                    1.125,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Color",
-                "value": [
-                    0.32771801948547363,
-                    0.10832379758358002,
-                    0.13493552803993225,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Color",
-                "value": [
-                    0.5077286958694458,
-                    0.19642938673496246,
-                    0.19642938673496246,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Tiles",
-                "value": [
-                    4.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Tiles",
-                "value": [
-                    1.2999999523162842,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Speed",
-                "value": [
-                    0.05999999865889549,
-                    0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Speed",
-                "value": [
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "SCROLLTEX_ON",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Diffuse_Lerp_Factor",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mBoolDriver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "mDelayOff": 6.0,
-                            "__type": "DelayedBoolMaterialDriver"
-                        },
-                        "mTurnOnTimeSec": 0.15000000596046448,
-                        "mTurnOffTimeSec": 0.75,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Janna/Skins/Skin67/Materials/Specular_Metal_Fresnel_Masked_inst": {
@@ -3058,6 +2783,408 @@
             }
         ],
         "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst": {
+        "name": "Characters/Janna/Skins/Skin67/Materials/Specular_Cloths_Fresnel_Masked_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "{13374fccd62518fc}",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Color",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_body_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask",
+                "texturePath": "assets/characters/janna/skins/skin67/janna_skin67_bodymask_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "assets/shared/materials/default_gradient.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    0.42750000953674316,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.08250000327825546,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.4809796214103699,
+                    0.07051193714141846,
+                    0.16800183057785034,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    0.4399999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shadow_Bias",
+                "value": [
+                    0.6650000214576721,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxSpec",
+                "value": [
+                    50.82500076293945,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "value": [
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularColor",
+                "value": [
+                    1.0,
+                    0.95686274766922,
+                    0.6784313917160034,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "IridescentControl",
+                "value": [
+                    1.0,
+                    0.5,
+                    1.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Fresnel_Size",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mOnValue": 4.0,
+                        "mOffValue": 0.20000000298023224,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "LQ_Lighting_Intensity",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 0.30000001192092896,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Fresnel_Color",
+                    "Enabled": false,
+                    "driver": {
+                        "BoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "OnValue": [
+                            1.0,
+                            0.0,
+                            0.12999999523162842,
+                            1.0
+                        ],
+                        "OffValue": [
+                            0.5199999809265137,
+                            0.1899999976158142,
+                            0.1899999976158142,
+                            1.0
+                        ],
+                        "TurnOnTimeSec": 0.20000000298023224,
+                        "TurnOffTimeSec": 0.20000000298023224,
+                        "__type": "LerpVec4LogicDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Color",
+                    "options": [
+                        {
+                            "driver": {
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{fd92a016617e35f6}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "{fd92a016617e35f6}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                },
+                {
+                    "name": "Mask",
+                    "options": [
+                        {
+                            "driver": {
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
             "__type": "DynamicMaterialDef"
         },
         "__type": "StaticMaterialDef"
@@ -46950,7 +47077,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Recall_Wings001.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_R_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -47024,7 +47151,7 @@
                 "disableBackfaceCull": true,
                 "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_E_cas_Mask031.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Recall_Wings001.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Janna_Skin67_R_TX_CM.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -48167,6 +48294,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi",
@@ -48331,6 +48462,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi1",
@@ -48473,6 +48608,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi2",
@@ -48498,7 +48637,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -48626,6 +48765,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi3",
@@ -48651,7 +48794,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -48783,6 +48926,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_",
                 "importance": 3,
@@ -48813,13 +48960,20 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.20000000298023224,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
                             [
                                 0.9100022912025452,
                                 0.9900053143501282,
+                                1.0,
+                                0.3499961793422699
+                            ],
+                            [
+                                1.0,
+                                1.0,
                                 1.0,
                                 0.3499961793422699
                             ],
@@ -48949,7 +49103,11 @@
             },
             {
                 "rate": {
-                    "constantValue": 2.0,
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -48976,7 +49134,7 @@
                         0.13000686466693878,
                         0.11999695003032684,
                         0.17000076174736023,
-                        0.6500037908554077
+                        1.0
                     ],
                     "__type": "ValueColor"
                 },
@@ -48985,7 +49143,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.699999988079071,
+                            0.550000011920929,
                             1.0
                         ],
                         "values": [
@@ -49080,6 +49238,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_2",
                 "importance": 3,
@@ -49110,7 +49272,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.6499999761581421,
                             1.0
                         ],
                         "values": [
@@ -49241,6 +49403,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_",
                 "importance": 3,
@@ -49263,7 +49429,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -49768,6 +49934,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark",
@@ -49789,7 +49959,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -49903,7 +50073,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 6.0,
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl",
                 "bindWeight": {
@@ -49932,7 +50106,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -50069,7 +50243,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.20000000298023224,
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "AoE_outerring",
@@ -50099,7 +50276,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -50396,6 +50573,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle",
@@ -50426,7 +50607,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -50545,6 +50726,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl1",
@@ -50574,7 +50759,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -50711,6 +50896,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl2",
@@ -50740,7 +50929,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -50884,7 +51073,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 3.0,
+                "lifetime": 2.9000000953674316,
                 "isSingleParticle": 1,
                 "emitterName": "Vertical_Glow_1",
                 "bindWeight": {
@@ -51097,6 +51286,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark1",
@@ -51122,7 +51315,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.6000000238418579,
+                            0.550000011920929,
                             0.8999999761581421
                         ],
                         "values": [
@@ -51237,6 +51430,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -51403,6 +51600,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 4.0,
@@ -51577,6 +51778,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center",
@@ -51602,7 +51807,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -51993,6 +52198,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi4",
@@ -52018,7 +52227,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -52133,6 +52342,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -52259,6 +52472,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "skyBeam1",
                 "bindWeight": {
@@ -52383,6 +52600,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -52767,6 +52988,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 4.0,
                 "isSingleParticle": 1,
                 "emitterName": "Vertical_Glow_3",
@@ -52807,7 +53032,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -52938,6 +53163,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Inner_Light",
                 "importance": 3,
@@ -52968,7 +53197,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.800000011920929,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -53055,9 +53284,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        21.5,
+                        21.0,
                         0.0,
-                        21.5
+                        21.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -53114,6 +53343,10 @@
             {
                 "rate": {
                     "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 6.0,
@@ -53265,6 +53498,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center2",
@@ -53406,7 +53643,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.0,
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle1",
                 "importance": 3,
@@ -53436,7 +53677,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.800000011920929,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -53555,6 +53796,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center3",
@@ -53653,6 +53898,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -53817,7 +54066,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 0.10000000149011612,
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.9000000953674316,
                 "isSingleParticle": 1,
                 "emitterName": "STENCIL_MASK_WRITE",
                 "importance": 3,
@@ -54422,6 +54675,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_1",
                 "importance": 3,
@@ -54532,6 +54789,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -54658,6 +54919,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -54803,6 +55068,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_4",
                 "importance": 3,
@@ -54944,6 +55213,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -55921,6 +56194,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_Noise",
                 "importance": 3,
@@ -55946,7 +56223,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.75,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -56098,6 +56375,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle2",
@@ -56128,7 +56409,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -56701,7 +56982,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -56839,6 +57120,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.700000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark3",
@@ -56864,7 +57149,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.30000001192092896,
+                            0.20000000298023224,
                             0.5,
                             1.0
                         ],
@@ -56873,7 +57158,7 @@
                                 1.0,
                                 1.0,
                                 1.0,
-                                0.5000076293945312
+                                0.0
                             ],
                             [
                                 1.0,
@@ -57007,7 +57292,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -59403,6 +59688,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "SpaceBackground_NavMeshMask",
@@ -61018,6 +61307,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark4",
@@ -61168,6 +61461,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_7",
                 "importance": 3,
@@ -61201,7 +61498,7 @@
                         "times": [
                             0.0,
                             0.30000001192092896,
-                            0.75,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -61307,6 +61604,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -61663,6 +61964,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -62230,6 +62535,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "SpaceBackground_NavMeshMask1",
@@ -62261,7 +62570,7 @@
                 "Color": {
                     "dynamics": {
                         "times": [
-                            0.699999988079071,
+                            0.6000000238418579,
                             0.949999988079071
                         ],
                         "values": [
@@ -62868,6 +63177,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -63648,6 +63961,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "AoE_outerring4",
@@ -63959,6 +64276,10 @@
                     "constantValue": 3.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_8",
                 "importance": 3,
@@ -64099,6 +64420,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -64248,6 +64573,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -64411,6 +64740,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Avatar_Fresnel",
@@ -64491,6 +64824,10 @@
                 "timeBeforeFirstEmission": 0.20000000298023224,
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -64583,7 +64920,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 1.0,
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "ground_blast",
                 "birthVelocity": {
                     "constantValue": [
@@ -64850,7 +65187,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "ground_blast1",
                 "birthVelocity": {
                     "constantValue": [
@@ -66752,7 +67089,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "particleLinger": 4.0,
                 "lifetime": 3.0,
                 "fieldCollectionDefinition": {
                     "fieldAccelerationDefinitions": [
@@ -67068,6 +67405,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_3",
                 "importance": 3,
@@ -67092,8 +67433,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
-                            1.0
+                            0.6000000238418579,
+                            0.949999988079071
                         ],
                         "values": [
                             [
@@ -67236,6 +67577,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.799999952316284,
                 "isSingleParticle": 1,
                 "emitterName": "heidi_4",
                 "importance": 3,
@@ -67260,8 +67606,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
-                            1.0
+                            0.6000000238418579,
+                            0.949999988079071
                         ],
                         "values": [
                             [
@@ -69831,7 +70177,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "particleLinger": 4.0,
                 "lifetime": 3.0,
                 "fieldCollectionDefinition": {
                     "fieldAccelerationDefinitions": [

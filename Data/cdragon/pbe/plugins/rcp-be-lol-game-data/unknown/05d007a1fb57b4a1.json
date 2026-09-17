@@ -700,7 +700,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يسبب رمح فيز الثلاثي جروحًا ممزقة لخصومه، فيلحق ضرر سحر بالهدف بناءً على مقدار صحته الناقصة.",
-            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تسبب هجمات فيز تمزيق أعدائه، فتلحق <magicDamage>@DoTDamage@ إضافة إلى @MaxHealthScaling*100@%</magicDamage> من صحة الهدف الناقصة على شكل <magicDamage>ضرر سحر</magicDamage> خلال @PassiveDoTDuration@ث. (الحد الأقصى @MaxMonsterDamage@ ضد الأتباع).<br><br><spellActive>تأثير نشط:</spellActive> لمدة @ActiveDuration@ث، تلحق هجمات فيز <magicDamage>@ActiveDamage@ ضرر سحر</magicDamage> إضافي عند الإصابة، وتطبق تأثير <status>الجراح الخطيرة</status> على هدفه، مما يقلص العلاج المتلقى بنسبة 50%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تتسبب هجمات فيز في تمزيق أعداءه، وتلحق <magicDamage>@DoTDamage@ إضافة إلى @MaxHealthScaling*100@%</magicDamage> من صحة الهدف الناقصة على شكل <magicDamage>ضرر سحر</magicDamage> على مدار @PassiveDoTDuration@ث. (الحد أقصى @MaxMonsterDamage@ ضد الأتباع).<br><br><spellActive>تأثير نشط:</spellActive> لمدة @ActiveDuration@ث، تلحق هجمات فيز <magicDamage>@ActiveDamage@ ضرر سحر</magicDamage> إضافي عند الإصابة وتطبق <status>الجراح الخطيرة</status> على هدفه، مما يقلص العلاج المتلقى بنسبة @GrievousWounds*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يقفز فيز في الهواء، ويهبط برشاقة فوق رمحه ليصبح غير قابل للاستهداف. ومن هذا الموضع، يستطيع فيز خبط الأرض أو اختيار القفز ثانية قبل توجيه ضربة الهبوط.",
-            "dynamicDescription": "يقفز فيز باتجاه مؤشرك على رمحه، ويصبح غير قابل للاستهداف، ثم يخبط الأرض ملحقًا <magicDamage>@EDamage@ ضرر سحر</magicDamage> بالأعداء القريبين، كما <status>يبطئهم</status> بنسبة @SlowAmount*100@% لمدة 2ث.<br><br>تؤدي إعادة تفعيل هذه القدرة أثناء وجود فيز فوق رمحه إلى جعل فيز يقفز مجددًا باتجاه مؤشرك، فيلحق <magicDamage>@EDamage@ ضرر سحر</magicDamage> بالأعداء القريبين في منطقة أصغر، بدلًا من خبط بالأرض.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يقفز فيز باتجاه مؤشرك ليستقر ممتطيًا رمحه، فيصبح غير قابل للاستهداف، ثم يخبط الأرض فيلحق <magicDamage>@EDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار، كما <status>يبطئهم</status> بنسبة @SlowAmount*100@% لمدة @SlowDuration@ث.<br><br>عند إعادة تفعيل هذه القدرة أثناء ركوب فيز على رمحه، يقفز مجددًا باتجاه مؤشرك ويلحق <magicDamage>@EDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار ضمن منطقة أصغر، بدلًا من خبط الأرض.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

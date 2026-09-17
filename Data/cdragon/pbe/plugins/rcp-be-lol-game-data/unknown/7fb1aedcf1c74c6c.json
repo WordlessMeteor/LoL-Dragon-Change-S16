@@ -700,7 +700,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "飛斯的三叉戟會撕裂敵軍，根據目標已損失生命造成魔法傷害。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>飛斯的普攻會撕裂敵軍，對目標造成<magicDamage>@DoTDamage@加上@MaxHealthScaling*100@%</magicDamage>目標已損失生命的<magicDamage>魔法傷害</magicDamage>，持續@PassiveDoTDuration@秒。(對士兵傷害上限：@MaxMonsterDamage@)。<br><br><spellActive>主動：</spellActive>在@ActiveDuration@秒內，飛斯的普攻會額外造成<magicDamage>@ActiveDamage@魔法傷害</magicDamage>，並對目標施加<status>重創</status>效果，使其受到的治療效果降低50%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>飛斯的普攻撕裂敵軍，在@PassiveDoTDuration@秒內造成<magicDamage>@DoTDamage@加@MaxHealthScaling*100@%</magicDamage>目標已損失生命的<magicDamage>魔法傷害</magicDamage>。(對士兵最大@MaxMonsterDamage@)。<br><br><spellActive>主動：</spellActive>在@ActiveDuration@秒內，飛斯的普攻命中目標時額外造成<magicDamage>@ActiveDamage@魔法傷害</magicDamage>和<status>重創</status>效果，使其受到的治療效果降低@GrievousWounds*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1000,7 +1000,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "飛斯釋放出一條魔法小魚，會咬住敵軍或懸浮在地形上，如果魚附著在英雄上，還會使他們緩速。短暫延遲後，一隻鯊魚從地面爆衝而出，對魚周圍的敵軍造成傷害並將他們擊飛。",
-            "dynamicDescription": "飛斯朝指定位置釋放一條魔法小魚，能夠附著在敵方英雄身上，<status>降低</status>他們的跑速@SlowAmount*100@%，持續@SlowDuration@秒。如果小魚沒有擊中敵方英雄，則會在地面上短暫停留，並附著在任何經過的敵方英雄上。<br><br>@DetonationTime@秒後，一隻鯊魚從地面爆衝而出，在大範圍內<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並將小魚所附著的目標<status>擊飛</status>且<status>擊退</status>其他敵軍，並使所有被擊中的敵軍<status>緩速</status>@SlowAmount*100@%，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "飛斯朝指定位置釋放一條魔法小魚，能夠附著在敵方英雄身上，<status>降低</status>他們的跑速@SlowAmount*100@%，持續@SlowDuration@秒。如果小魚沒有擊中敵方英雄，則會在地面上短暫停留，並附著在任何經過的敵方英雄上。<br><br>@DetonationTime@秒後，一隻鯊魚從地面爆衝而出，在大範圍內造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並將小魚所附著的目標<status>擊飛</status>且<status>擊退</status>其他敵軍，並使所有被擊中的敵軍<status>緩速</status>@SlowAmount*100@%，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1275.0,
                 1275.0,

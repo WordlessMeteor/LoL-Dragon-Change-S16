@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "菲奥娜暂时获得额外的攻击速度。在此期间，她的每次攻击或破空斩在击中时都会提升她的移动速度。击杀一个英雄会刷新此技能的冷却时间。",
-            "dynamicDescription": "菲奥娜获得持续@BuffDuration@秒的<attackSpeed>@ASBonus*100@%攻击速度</attackSpeed>。在此期间，每次攻击或<spellName>破空斩</spellName>在击中时都会为菲奥娜提供持续@BuffDuration@秒<speed>@MSBonus*100@%的移动速度</speed>，可叠加最多@MaxStacks@层。<br><br>击杀一个英雄会刷新此技能的冷却时间。(助攻会使该冷却时间缩短@HalfCooldown@秒)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "菲奥娜获得持续@BuffDuration@秒的<attackSpeed>@ASBonus*100@%攻击速度</attackSpeed>。在此期间，每次攻击或<spellName>破空斩</spellName>在击中时都会为菲奥娜提供持续@BuffDuration@秒的<speed>@MSBonus*100@%移动速度</speed>，可叠加最多@MaxStacks@层。<br><br>击杀一个英雄会刷新此技能的冷却时间。(助攻会使该冷却时间缩短@HalfCooldown@秒)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -755,21 +755,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

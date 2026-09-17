@@ -1172,6 +1172,7 @@
                 TFT: "TFT",
                 CLASSIC: "CLASSIC",
                 CHERRY: "CHERRY",
+                CRAB: "CRAB",
                 JADE: "JADE",
                 STRAWBERRY: "STRAWBERRY",
                 PRACTICETOOL: "PRACTICETOOL",
@@ -2374,6 +2375,8 @@
                 needsAdditionalGameConfig: !1,
                 isJoiningCustomGame: !1,
                 isTrainingGame: !1,
+                tftUnrealEntry: null,
+                isTftUnrealSelected: o.Ember.computed.bool("tftUnrealEntry"),
                 _trainingGameMode: null,
                 trainingGameMode: o.Ember.computed({
                     get: function() {
@@ -2389,7 +2392,7 @@
                         return this.get("_queueId")
                     },
                     set: function(e, t) {
-                        this.set("_queueId", t);
+                        this.set("_queueId", t), this.set("tftUnrealEntry", null);
                         const n = this.get("queues");
                         if (n) {
                             const e = n.getQueueById(t);
@@ -3654,58 +3657,59 @@
                     GameTypeCardComponent: n(228),
                     GameTypeIconComponent: n(231).default,
                     GameTypeCategorySelectComponent: n(234),
-                    CategorySelectComponent: n(242),
-                    PlayableCategoryComponent: n(244),
-                    EventCountdownComponent: n(246),
-                    CustomGameSetupComponent: n(251),
-                    CustomGameSubcategoryCardComponent: n(254),
-                    CustomGameRootComponent: n(256),
-                    SpectatorInfoComponent: n(259),
-                    SpectatorMemberComponent: n(262),
-                    CustomTeamsComponent: n(265),
-                    CustomTeamMemberComponent: n(269),
-                    CustomGameListComponent: n(273),
-                    CustomGameTournamentCodeComponent: n(277),
-                    CustomGameRowComponent: n(280),
-                    TftLobbyComponent: n(282),
-                    TftFooterComponent: n(285),
-                    TftPlayerCardComponent: n(288),
-                    LoadoutRandomizeButtonComponent: n(291),
-                    TftDoubleUpWarningComponent: n(294),
-                    SocialLeaderboardButtonComponent: n(297),
+                    GameTypeTftUnrealComponent: n(242),
+                    CategorySelectComponent: n(245),
+                    PlayableCategoryComponent: n(247),
+                    EventCountdownComponent: n(249),
+                    CustomGameSetupComponent: n(254),
+                    CustomGameSubcategoryCardComponent: n(257),
+                    CustomGameRootComponent: n(259),
+                    SpectatorInfoComponent: n(262),
+                    SpectatorMemberComponent: n(265),
+                    CustomTeamsComponent: n(268),
+                    CustomTeamMemberComponent: n(272),
+                    CustomGameListComponent: n(276),
+                    CustomGameTournamentCodeComponent: n(280),
+                    CustomGameRowComponent: n(283),
+                    TftLobbyComponent: n(285),
+                    TftFooterComponent: n(288),
+                    TftPlayerCardComponent: n(291),
+                    LoadoutRandomizeButtonComponent: n(294),
+                    TftDoubleUpWarningComponent: n(297),
+                    SocialLeaderboardButtonComponent: n(300),
                     CallToActionPipComponent: x,
-                    AutofillNotificationComponent: n(302),
+                    AutofillNotificationComponent: n(305),
                     AutofillModalComponent: f,
                     AutofillLpDescComponent: y,
-                    V2BannerComponent: n(305),
-                    V2FooterComponent: n(309),
-                    V2FooterNotificationsComponent: n(312),
-                    V2HeaderComponent: n(315),
-                    V2PartiesRootComponent: n(319),
-                    V2PlayerManagementButtonComponent: n(322),
-                    V2PlayerPartyControlsComponent: n(325),
-                    V2PointEligibilityComponent: n(328),
-                    V2PositionSelectorComponent: n(331),
-                    V2HorizontalOptionsShowcaseComponent: n(334),
-                    V2PositionIconComponent: n(337),
-                    V2BannerPositionIconComponent: n(340),
-                    V2PositionSelectorButtonComponent: n(343),
-                    V2PositionSelectorOptionComponent: n(346),
-                    V2PositionSelectorModalComponent: n(349),
-                    V2InviteInfoPanelComponent: n(352),
-                    V2InviteInfoPanelPlayerComponent: n(355),
-                    V2InviteInfoPanelGameModeProgressionComponent: n(358),
-                    V2InviteInfoPanelKiwiProgressionComponent: n(361),
-                    V2InviteInfoPanelTftProgressionComponent: n(364),
-                    V2BannerCrystalTooltipComponent: n(367),
-                    V2BannerPlaceholderComponent: n(370),
-                    IdentityTooltipComponent: n(373),
-                    RankIdentityTooltipComponent: n(376),
-                    SummonerIconIdentityTooltipComponent: n(379),
-                    PrestigeIdentityTooltipComponent: n(382),
-                    GenericButtonComponent: n(385),
-                    AnimatedFindMatchButtonComponent: n(389),
-                    CopySmartUrlButtonComponent: n(392),
+                    V2BannerComponent: n(308),
+                    V2FooterComponent: n(312),
+                    V2FooterNotificationsComponent: n(315),
+                    V2HeaderComponent: n(318),
+                    V2PartiesRootComponent: n(322),
+                    V2PlayerManagementButtonComponent: n(325),
+                    V2PlayerPartyControlsComponent: n(328),
+                    V2PointEligibilityComponent: n(331),
+                    V2PositionSelectorComponent: n(334),
+                    V2HorizontalOptionsShowcaseComponent: n(337),
+                    V2PositionIconComponent: n(340),
+                    V2BannerPositionIconComponent: n(343),
+                    V2PositionSelectorButtonComponent: n(346),
+                    V2PositionSelectorOptionComponent: n(349),
+                    V2PositionSelectorModalComponent: n(352),
+                    V2InviteInfoPanelComponent: n(355),
+                    V2InviteInfoPanelPlayerComponent: n(358),
+                    V2InviteInfoPanelGameModeProgressionComponent: n(361),
+                    V2InviteInfoPanelKiwiProgressionComponent: n(364),
+                    V2InviteInfoPanelTftProgressionComponent: n(367),
+                    V2BannerCrystalTooltipComponent: n(370),
+                    V2BannerPlaceholderComponent: n(373),
+                    IdentityTooltipComponent: n(376),
+                    RankIdentityTooltipComponent: n(379),
+                    SummonerIconIdentityTooltipComponent: n(382),
+                    PrestigeIdentityTooltipComponent: n(385),
+                    GenericButtonComponent: n(388),
+                    AnimatedFindMatchButtonComponent: n(392),
+                    CopySmartUrlButtonComponent: n(395),
                     ChallengeBannerTitleComponent: j,
                     ChallengeBannerTokenComponent: Q,
                     ChallengeBannerTokenContainerComponent: z,
@@ -3715,26 +3719,26 @@
                     RemainingTimeTextComponent: w,
                     CountdownWidgetComponent: T,
                     PlayerReadyStateBlockComponent: I,
-                    QuickPlayLoadoutSelectorComponent: n(395),
-                    QuickPlaySelectionRendererComponent: n(401),
-                    QuickPlayChampionSquareComponent: n(404),
-                    QuickPlayChampionGridComponent: n(407),
-                    QuickPlayGridChampionComponent: n(411),
-                    QuickPlayChampionSelectorComponent: n(414),
-                    QuickPlayPerksSelectorComponent: n(417),
-                    QuickPlayPerksPageDropdownComponent: n(421),
-                    QuickPlayPerksPageDropdownOptionComponent: n(424),
-                    QuickPlaySkinCarouselComponent: n(427),
-                    QuickPlaySkinSelectComponent: n(430),
-                    QuickPlaySummonerSpellPopupComponent: n(433),
-                    QuickPlaySummonerSpellRendererComponent: n(436),
-                    QuickPlaySummonerSpellSelectComponent: n(439),
-                    QuickPlayLoadoutTooltipComponent: n(442),
-                    QuickPlaySelectionsContainerComponent: n(445),
-                    QuickPlaySelectionRulesTooltipComponent: n(448),
-                    MultiteamLobbyRootComponent: n(451).default,
-                    MultiteamLobbySubteamComponent: n(458).default,
-                    MultiteamLobbySubteamPlayerSlotComponent: n(461).default,
+                    QuickPlayLoadoutSelectorComponent: n(398),
+                    QuickPlaySelectionRendererComponent: n(404),
+                    QuickPlayChampionSquareComponent: n(407),
+                    QuickPlayChampionGridComponent: n(410),
+                    QuickPlayGridChampionComponent: n(414),
+                    QuickPlayChampionSelectorComponent: n(417),
+                    QuickPlayPerksSelectorComponent: n(420),
+                    QuickPlayPerksPageDropdownComponent: n(424),
+                    QuickPlayPerksPageDropdownOptionComponent: n(427),
+                    QuickPlaySkinCarouselComponent: n(430),
+                    QuickPlaySkinSelectComponent: n(433),
+                    QuickPlaySummonerSpellPopupComponent: n(436),
+                    QuickPlaySummonerSpellRendererComponent: n(439),
+                    QuickPlaySummonerSpellSelectComponent: n(442),
+                    QuickPlayLoadoutTooltipComponent: n(445),
+                    QuickPlaySelectionsContainerComponent: n(448),
+                    QuickPlaySelectionRulesTooltipComponent: n(451),
+                    MultiteamLobbyRootComponent: n(454).default,
+                    MultiteamLobbySubteamComponent: n(461).default,
+                    MultiteamLobbySubteamPlayerSlotComponent: n(464).default,
                     CherryPlayerLevelDisplayComponent: a.CherryPlayerLevelDisplayComponent,
                     CherryProgressionChampionGridComponent: r.CherryProgressionChampionGridComponent,
                     CherryProgressionChampionItemComponent: l.CherryProgressionChampionItemComponent,
@@ -3742,7 +3746,7 @@
                     CherryProgressMaxLevelComponent: m.CherryProgressMaxLevelComponent,
                     CherryProgressTrackLevelBarComponent: u.CherryProgressTrackLevelBarComponent,
                     CherryProgressionModalComponent: d.CherryProgressionModalComponent,
-                    StrawberryLobbyRootComponent: n(464).default,
+                    StrawberryLobbyRootComponent: n(467).default,
                     ButtonMaskIconComponent: S,
                     ClickableIconButtonComponent: k,
                     FramedIconButtonComponent: A,
@@ -3800,16 +3804,16 @@
                     GameDataService: V,
                     QuickPlayService: fe,
                     ClientConfigService: ke,
-                    LobbyStateService: n(467).default,
+                    LobbyStateService: n(470).default,
                     RankedAssetsService: _,
                     LolMissionsService: v,
                     EqHelper: i.Ember.Helper.helper((e => e[0] === e[1]))
                 };
                 Object.assign(Ce, {
-                    TftLoadoutMenuButtonComponent: n(468),
-                    TftLoadoutMenuButtonDoubleUpComponent: n(473),
-                    TftLoadoutMenuComponent: n(476),
-                    TftLoadoutMenuOptionComponent: n(479)
+                    TftLoadoutMenuButtonComponent: n(471),
+                    TftLoadoutMenuButtonDoubleUpComponent: n(476),
+                    TftLoadoutMenuComponent: n(479),
+                    TftLoadoutMenuOptionComponent: n(482)
                 }), i.PromethiumModules && Object.assign(Ce, {
                     ...i.PromethiumModules
                 }), i.StrawberryModules && Object.assign(Ce, {
@@ -3821,54 +3825,54 @@
                 }), i.TftFullLaunchComponents && Object.assign(Ce, {
                     ...i.TftFullLaunchComponents
                 }), Object.assign(Ce, {
-                    DemaciaPositionPreferenceModalComponent: n(482),
-                    DemaciaPositionCardComponent: n(486),
-                    DemaciaProgressionWidgetComponent: n(488).default,
-                    JadeEatComponent: n(492),
-                    JadeRankUnlockFooterComponent: n(495).default,
-                    SummonersJourneyService: n(498).default
+                    DemaciaPositionPreferenceModalComponent: n(485),
+                    DemaciaPositionCardComponent: n(489),
+                    DemaciaProgressionWidgetComponent: n(491).default,
+                    JadeEatComponent: n(495),
+                    JadeRankUnlockFooterComponent: n(498).default,
+                    SummonersJourneyService: n(501).default
                 });
                 const Pe = Object.assign({}, Ce.TEMPLATES || {}, {
-                    "components/demacia-progression-widget": n(491),
-                    "components/demacia-position-preference-modal": n(485),
-                    "components/demacia-position-card": n(487)
+                    "components/demacia-progression-widget": n(494),
+                    "components/demacia-position-preference-modal": n(488),
+                    "components/demacia-position-card": n(490)
                 });
                 Ce.TEMPLATES = Pe, Object.assign(Ce, {
-                    AwBoostService: n(499).default
+                    AwBoostService: n(502).default
                 });
-                const we = n(500);
+                const we = n(503);
                 Object.assign(Ce, {
-                    TftPlaybookIconComponent: n(501),
-                    TftPlaybookMenuComponent: n(504),
-                    TftPlaybookItemComponent: n(507),
-                    TftPlaybookItemDetailsComponent: n(510),
-                    TftPlaybookCardComponent: n(513),
-                    TftPlaybookTutorialComponent: n(516),
+                    TftPlaybookIconComponent: n(504),
+                    TftPlaybookMenuComponent: n(507),
+                    TftPlaybookItemComponent: n(510),
+                    TftPlaybookItemDetailsComponent: n(513),
+                    TftPlaybookCardComponent: n(516),
+                    TftPlaybookTutorialComponent: n(519),
                     TftPlaybookService: we
                 }), Ce = g.registerToFactoryDefinition(Ce), i.EmberApplicationFactory.setFactoryDefinition(Ce), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "RoleSwapFTUXModalComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    RoleSwapFTUXModalComponent: n(519).default
+                    RoleSwapFTUXModalComponent: n(522).default
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "TftRewardCelebration",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    TftRewardCelebrationComponent: n(522).default
+                    TftRewardCelebrationComponent: n(525).default
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "PartyQueueErrorDialogComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    PartyQueueErrorDialogComponent: n(525),
-                    PartyQueueErrorDialogGenericComponent: n(527),
-                    PartyQueueErrorDialogMinLevelComponent: n(529),
-                    PartyQueueErrorDialogLeaverBustedComponent: n(531),
-                    PartyQueueErrorDialogLeaverBusterLockoutComponent: n(533),
-                    PartyQueueErrorDialogLeaverBusterTaintedWarningComponent: n(536),
-                    PartyQueueErrorDialogQueueDodgeComponent: n(538),
-                    PartyQueueErrorDialogPrerequisiteQueuesNotPlayedComponent: n(541),
-                    PartyQueueErrorDialogReadyCheckFailerComponent: n(543),
-                    PartyQueueErrorDialogDisruptiveGameplayLockoutComponent: n(546),
+                    PartyQueueErrorDialogComponent: n(528),
+                    PartyQueueErrorDialogGenericComponent: n(530),
+                    PartyQueueErrorDialogMinLevelComponent: n(532),
+                    PartyQueueErrorDialogLeaverBustedComponent: n(534),
+                    PartyQueueErrorDialogLeaverBusterLockoutComponent: n(536),
+                    PartyQueueErrorDialogLeaverBusterTaintedWarningComponent: n(539),
+                    PartyQueueErrorDialogQueueDodgeComponent: n(541),
+                    PartyQueueErrorDialogPrerequisiteQueuesNotPlayedComponent: n(544),
+                    PartyQueueErrorDialogReadyCheckFailerComponent: n(546),
+                    PartyQueueErrorDialogDisruptiveGameplayLockoutComponent: n(549),
                     LobbiesService: se,
                     SummonerService: ie,
                     QueueEligibilityService: le,
@@ -3877,8 +3881,8 @@
                     name: "PartiesInviteDialog",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    PartiesInviteDialogComponent: n(549),
-                    InviteDialogGroupComponent: n(553),
+                    PartiesInviteDialogComponent: n(552),
+                    InviteDialogGroupComponent: n(556),
                     LobbiesService: se,
                     ChatService: ne,
                     DiscordIntegrationService: oe,
@@ -3897,35 +3901,35 @@
                     name: "LowPriorityQueueToastComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    LowPriorityQueueToastComponent: n(556)
+                    LowPriorityQueueToastComponent: n(559)
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "LowPriorityQueueModalComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    LowPriorityQueueToastComponent: n(559)
+                    LowPriorityQueueToastComponent: n(562)
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "GameModeTutorialComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    GameModeTutorialComponent: n(561)
+                    GameModeTutorialComponent: n(564)
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "GameModeOnePageTutorialComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    GameModeTutorialComponent: n(564)
+                    GameModeTutorialComponent: n(567)
                 }), i.EmberApplicationFactory.setFactoryDefinition({
                     name: "SocialLeaderboardFeatureFlyoutComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    SocialLeaderboardFeatureFlyoutComponent: n(567),
-                    SocialLeaderboardHeaderComponent: n(570),
-                    SocialLeaderboardCountdownTimerComponent: n(573),
-                    SocialLeaderboardTableComponent: n(577),
-                    SocialLeaderboardRowComponent: n(580),
-                    SocialLeaderboardFriendFilterComponent: n(583),
-                    SocialLeaderboardFriendNotFoundComponent: n(586),
-                    SocialLeaderboardNotEnoughFriendsComponent: n(589),
-                    SocialLeaderboardErrorStateComponent: n(592),
+                    SocialLeaderboardFeatureFlyoutComponent: n(570),
+                    SocialLeaderboardHeaderComponent: n(573),
+                    SocialLeaderboardCountdownTimerComponent: n(576),
+                    SocialLeaderboardTableComponent: n(580),
+                    SocialLeaderboardRowComponent: n(583),
+                    SocialLeaderboardFriendFilterComponent: n(586),
+                    SocialLeaderboardFriendNotFoundComponent: n(589),
+                    SocialLeaderboardNotEnoughFriendsComponent: n(592),
+                    SocialLeaderboardErrorStateComponent: n(595),
                     HextechLoadingAnimationComponent: C,
                     LobbiesService: se,
                     SummonerService: ie,
@@ -3942,7 +3946,7 @@
                     name: "RankedFtuxModalComponent",
                     tra: h,
                     ComponentFactory: i.ComponentFactory,
-                    RankedFtuxModalComponent: n(595).default
+                    RankedFtuxModalComponent: n(598).default
                 })
             }
             e.exports.registerPartyApplication = async function() {
@@ -11702,9 +11706,9 @@
                     const a = i === s;
                     return o.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled ineligibleForAllQueues=${a} eligibilityCount=${i} queueCount=${s}`), a
                 })),
-                showTFTLaunchButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "selected.gameMode", "selected.isCreatingCustomGame", (function() {
+                showTFTLaunchButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "selected.isTftUnrealSelected", "selected.gameMode", "selected.isCreatingCustomGame", (function() {
                     const e = this.get("fullLaunchService.fullLaunchEnabled"),
-                        t = "TFT" === this.get("selected.gameMode") && !this.get("selected.isCreatingCustomGame");
+                        t = this.get("selected.isTftUnrealSelected") && "TFT" === this.get("selected.gameMode") && !this.get("selected.isCreatingCustomGame");
                     return e && t
                 })),
                 confirmButtonText: o.Ember.computed("tra.ready", "selected.isJoiningCustomGame", "customGameListService.confirmButtonText", "tra.parties_button_confirm", "showTFTLaunchButton", (function() {
@@ -11984,6 +11988,9 @@
                     return o.Ember.A(e)
                 })),
                 actions: {
+                    selectTftUnreal: function(e) {
+                        this.set("selected.tftUnrealEntry", e)
+                    },
                     selectQueue: function(e) {
                         if (e.queueId) {
                             this.set("selected.queueId", e.queueId);
@@ -11998,8 +12005,8 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "s7U9svp5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\index.js\\" "],["text","\\n"],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["gameTypes"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["game-type-card"],null,[["showingState","mapId","gameMode","gameSelectModeGroup","assetMutator","requiresCustomGameSubCategory","queues","animationLock","compact","selectedCategory","selectedMapId","selectedGameMode","selectedGameModeGroup","selectedAssetMutator","selectedQueueId","selectedTrainingGameMode","selectQueue"],[["get",["showingState"]],["get",["gameType","mapId"]],["get",["gameType","gameMode"]],["get",["gameType","gameSelectModeGroup"]],["get",["gameType","assetMutator"]],["get",["gameType","requiresCustomGameSubCategory"]],["get",["queues"]],["get",["selected","animationLock"]],["get",["compact"]],["get",["selected","category"]],["get",["selected","mapId"]],["get",["selected","gameMode"]],["get",["selected","gameSelectModeGroup"]],["get",["selected","assetMutator"]],["get",["selected","queueId"]],["get",["selected","trainingGameMode"]],"selectQueue"]]],false],["text","\\n"]],"locals":["gameType"]}],"hasPartials":false}',
+                id: "aEcL8b59",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\index.js\\" "],["text","\\n"],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["gameTypes"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["game-type-card"],null,[["showingState","mapId","gameMode","gameSelectModeGroup","assetMutator","requiresCustomGameSubCategory","queues","animationLock","compact","selectedCategory","selectedMapId","selectedGameMode","selectedGameModeGroup","selectedAssetMutator","selectedQueueId","selectedTrainingGameMode","selectedTftUnrealEntry","selectQueue","selectTftUnreal"],[["get",["showingState"]],["get",["gameType","mapId"]],["get",["gameType","gameMode"]],["get",["gameType","gameSelectModeGroup"]],["get",["gameType","assetMutator"]],["get",["gameType","requiresCustomGameSubCategory"]],["get",["queues"]],["get",["selected","animationLock"]],["get",["compact"]],["get",["selected","category"]],["get",["selected","mapId"]],["get",["selected","gameMode"]],["get",["selected","gameSelectModeGroup"]],["get",["selected","assetMutator"]],["get",["selected","queueId"]],["get",["selected","trainingGameMode"]],["get",["selected","tftUnrealEntry"]],"selectQueue","selectTftUnreal"]]],false],["text","\\n"]],"locals":["gameType"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -12043,7 +12050,9 @@
                 selectedGameMode: !1,
                 selectedQueueId: !1,
                 selectedTrainingGameMode: !1,
+                selectedTftUnrealEntry: null,
                 animationLock: !1,
+                isTftUnrealSelected: o.Ember.computed.bool("selectedTftUnrealEntry"),
                 hasQueueWithPip: o.Ember.computed("gameSelectQueuePipService.shouldShowPipQueueIds.[]", "gameTypeQueues.[]", (function() {
                     const e = this.get("gameTypeQueues") || [];
                     return this.get("gameSelectQueuePipService.shouldShowPipQueueIds").find((t => e.includes(t)))
@@ -12392,6 +12401,9 @@
                 showTFTLaunchButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "isTFT", (function() {
                     return this.get("fullLaunchService.fullLaunchEnabled") && this.get("isTFT")
                 })),
+                tftuQueueEntries: o.Ember.computed("fullLaunchService.set17ExtensionConfig", (function() {
+                    return this.get("fullLaunchService").getTFTuQueueEntries() || []
+                })),
                 actions: {
                     selectGameType: function() {
                         this.get("animationLock") || (this.get("isDisabled") ? (this.playSound("/fe/lol-uikit/sfx-uikit-button-locked-click.ogg"), this.get("isUnsupportedGameMode") && this.set("isFlyoutOpen", !this.get("isFlyoutOpen"))) : this.get("isCurrentlySelected") || this._selectQueue())
@@ -12400,6 +12412,9 @@
                         this.get("isCurrentlySelected") && !this.get("isDisabled") && this.sendAction("selectQueue", {
                             queueId: e
                         })
+                    },
+                    selectTftUnreal: function(e) {
+                        this.get("isCurrentlySelected") && !this.get("isDisabled") && this.sendAction("selectTftUnreal", e)
                     },
                     gameServerRegionChange: function(e) {
                         this.updateGameServerRegionSelection(e)
@@ -12415,8 +12430,8 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "987j1/Lw",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-upper-half"],["modifier",["action"],[["get",[null]],"selectGameType"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTFT"]]],null,14],["text","  "],["append",["helper",["game-type-icon"],null,[["mapId","currentlySelected","gameTypeName","mapSubtitle","isTraining","isDisabledFeaturedGameMode","gameMode","assetMutator","gameSelectModeGroup","isAlternativeLeagueMode","hasQueueWithPip","compact"],[["get",["queueDataToDisplay","mapId"]],["get",["isCurrentlySelected"]],["get",["gameTypeName"]],["get",["mapVersus"]],["get",["isTraining"]],["get",["isDisabledFeaturedGameMode"]],["get",["queueDataToDisplay","gameMode"]],["get",["queueDataToDisplay","assetMutator"]],["get",["gameSelectModeGroup"]],["get",["isAlternativeLeagueMode"]],["get",["hasQueueWithPip"]],["get",["compact"]]]]],false],["text","\\n"],["block",["if"],[["get",["isUnsupportedGameMode"]]],null,13,12],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-lower-half"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeDescription"]]],null,8],["block",["if"],[["get",["shouldDisplayGameServerRegionOptions"]]],null,5],["text","\\n"],["block",["if"],[["get",["shouldDisplayQueueSelect"]]],null,1],["close-element"],["text","\\n"],["append",["unknown",["computeDisabledReasons"]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["game-type-category-select"],null,[["queues","queueId","shouldShowPipQueueIds","selectedQueueId","compact","selectCategory","isTFT"],[["get",["queues"]],["get",["queueId"]],["get",["gameSelectQueuePipService","shouldShowPipQueueIds"]],["get",["selectedQueueId"]],["get",["compact"]],"selectCategory",["get",["isTFT"]]]]],false],["text","\\n"]],"locals":["queueId"]},{"statements":[["text","  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","parties-game-type-card-categories"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameTypeQueues"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["option","value"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["option","value"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,3,2]],"locals":["option"]},{"statements":[["text","    "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,4],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","secondary-description-icon"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","src",["unknown",["gameTypeSecondaryDescriptionIconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeSecondaryDescriptionIcon"]]],null,6],["text","      "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameTypeSecondaryDescriptionText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["gameTypeDescription"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeSecondaryDescription"]]],null,7],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","         "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,9],["text","          "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","parties-eligibility-error"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],10],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowEligibilityWarning"]]],null,11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","parties-eligibility-error clickable"],["flush-element"],["close-element"],["text","\\n      "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeFlyout"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2.5"],["static-attr","offsety","35"],["flush-element"],["text","\\n        "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","game-mode-blocked-tooltip"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["flyoutTooltipText"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "vxikZFah",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-upper-half"],["modifier",["action"],[["get",[null]],"selectGameType"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTFT"]]],null,16],["text","  "],["append",["helper",["game-type-icon"],null,[["mapId","currentlySelected","gameTypeName","mapSubtitle","isTraining","isDisabledFeaturedGameMode","gameMode","assetMutator","gameSelectModeGroup","isAlternativeLeagueMode","hasQueueWithPip","compact"],[["get",["queueDataToDisplay","mapId"]],["get",["isCurrentlySelected"]],["get",["gameTypeName"]],["get",["mapVersus"]],["get",["isTraining"]],["get",["isDisabledFeaturedGameMode"]],["get",["queueDataToDisplay","gameMode"]],["get",["queueDataToDisplay","assetMutator"]],["get",["gameSelectModeGroup"]],["get",["isAlternativeLeagueMode"]],["get",["hasQueueWithPip"]],["get",["compact"]]]]],false],["text","\\n"],["block",["if"],[["get",["isUnsupportedGameMode"]]],null,15,14],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-lower-half"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeDescription"]]],null,10],["block",["if"],[["get",["shouldDisplayGameServerRegionOptions"]]],null,7],["text","\\n"],["block",["if"],[["get",["shouldDisplayQueueSelect"]]],null,3],["close-element"],["text","\\n"],["append",["unknown",["computeDisabledReasons"]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["game-type-tft-unreal"],null,[["entry","selectedEntry","isDisabled","selectTftUnreal"],[["get",["entryText"]],["get",["selectedTftUnrealEntry"]],["get",["isUnsupportedGameMode"]],"selectTftUnreal"]]],false],["text","\\n"]],"locals":["entryText"]},{"statements":[["block",["each"],[["get",["tftuQueueEntries"]]],null,0]],"locals":[]},{"statements":[["text","      "],["append",["helper",["game-type-category-select"],null,[["queues","queueId","shouldShowPipQueueIds","selectedQueueId","isTftUnrealSelected","compact","selectCategory"],[["get",["queues"]],["get",["queueId"]],["get",["gameSelectQueuePipService","shouldShowPipQueueIds"]],["get",["selectedQueueId"]],["get",["isTftUnrealSelected"]],["get",["compact"]],"selectCategory"]]],false],["text","\\n"]],"locals":["queueId"]},{"statements":[["text","  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","parties-game-type-card-categories"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameTypeQueues"]]],null,2],["block",["if"],[["get",["showTFTLaunchButton"]]],null,1],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["option","value"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["option","value"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,5,4]],"locals":["option"]},{"statements":[["text","    "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,6],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","secondary-description-icon"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","src",["unknown",["gameTypeSecondaryDescriptionIconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeSecondaryDescriptionIcon"]]],null,8],["text","      "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameTypeSecondaryDescriptionText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["gameTypeDescription"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeSecondaryDescription"]]],null,9],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","         "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,11],["text","          "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","parties-eligibility-error"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],12],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowEligibilityWarning"]]],null,13]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","parties-eligibility-error clickable"],["flush-element"],["close-element"],["text","\\n      "],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeFlyout"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2.5"],["static-attr","offsety","35"],["flush-element"],["text","\\n        "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","game-mode-blocked-tooltip"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["flyoutTooltipText"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -12586,7 +12601,6 @@
                 classNameBindings: ["isSelected:selected", "isDisabled:disabled"],
                 eligibilityService: o.Ember.inject.service("queue-eligibility"),
                 summonerService: o.Ember.inject.service("summoner"),
-                fullLaunchService: o.Ember.inject.service("full-launch"),
                 platformConfigSingleton: s.default,
                 layout: n(241),
                 summonerId: o.Ember.computed.alias("summonerService.localSummonerId"),
@@ -12594,8 +12608,9 @@
                     const e = this.get("queueId");
                     return (this.get("shouldShowPipQueueIds") || []).includes(e)
                 })),
-                isSelected: o.Ember.computed("selectedQueueId", "queueId", "isDisabled", (function() {
-                    return this.get("selectedQueueId") === this.get("queueId") && !this.get("isDisabled")
+                isTftUnrealSelected: !1,
+                isSelected: o.Ember.computed("selectedQueueId", "queueId", "isDisabled", "isTftUnrealSelected", (function() {
+                    return this.get("selectedQueueId") === this.get("queueId") && !this.get("isDisabled") && !this.get("isTftUnrealSelected")
                 })),
                 queueObj: o.Ember.computed("queueId", (function() {
                     return this.get("queues").getQueueById(this.get("queueId"))
@@ -12744,10 +12759,6 @@
                 unlockVideo: o.Ember.computed("queueId", (function() {
                     const e = this.get("queueId");
                     return c[e % c.length]
-                })),
-                isTFT: null,
-                showDisabledRadioButton: o.Ember.computed("fullLaunchService.fullLaunchEnabled", "isTFT", (function() {
-                    return this.get("fullLaunchService.fullLaunchEnabled") && this.get("isTFT")
                 }))
             })
         }, (e, t) => {
@@ -12791,8 +12802,60 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "OEqSRhGN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showDisabledRadioButton"]]],null,13,12],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","game-mode-description-text"],["flush-element"],["append",["unknown",["tra","game_select_ranked_premade_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showSeconds","timerText","showBackground","digits","separator","showUnits"],[["get",["fivesQueueStartDate"]],true,false,["get",["tra","parties_queue_availability_tooltip"]],false,1," ",true]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","queue-id-info"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],5],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,8],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,10],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],11],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],9],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-id"],["flush-element"],["text","\\n      "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["showQueueCountdown"]]],null,6],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,4],["block",["if"],[["get",["isSwiftPlay"]]],null,3],["block",["if"],[["get",["shouldShowPartySizeRequirement"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","unselectable parties-game-type-card-category-btn"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "pJ8FoeII",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],11],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],9],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","queue-id"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["showQueueCountdown"]]],null,6],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,4],["block",["if"],[["get",["isSwiftPlay"]]],null,3],["block",["if"],[["get",["shouldShowPartySizeRequirement"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","game-mode-description-text"],["flush-element"],["append",["unknown",["tra","game_select_ranked_premade_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showSeconds","timerText","showBackground","digits","separator","showUnits"],[["get",["fivesQueueStartDate"]],true,false,["get",["tra","parties_queue_availability_tooltip"]],false,1," ",true]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","queue-id-info"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],5],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,8],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,7],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n      "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,10],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            var o, i = n(1),
+                s = (o = n(44)) && o.__esModule ? o : {
+                    default: o
+                };
+            n(243), e.exports = i.Ember.Component.extend(s.default, {
+                classNames: ["parties-game-type-card-tft-unreal-div"],
+                classNameBindings: ["isSelected:selected", "isDisabled:disabled"],
+                layout: n(244),
+                entry: null,
+                selectedEntry: null,
+                isDisabled: !1,
+                isSelected: i.Ember.computed("selectedEntry", "entry", "isDisabled", (function() {
+                    const e = this.get("entry");
+                    return Boolean(e) && this.get("selectedEntry") === e && !this.get("isDisabled")
+                })),
+                tooltipConfig: {
+                    targetAnchor: {
+                        x: "center",
+                        y: "bottom"
+                    },
+                    tooltipAnchor: {
+                        x: "center",
+                        y: "top"
+                    },
+                    offset: {
+                        x: 0,
+                        y: 0
+                    }
+                },
+                disabledTooltipText: i.Ember.computed("tra.tft_mode_unsupportedclientplatform_tooltip", "tra.tft_mode_unsupportedclientplatform_link", (function() {
+                    return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
+                })),
+                captionText: i.Ember.computed("entry", "tra.ready", (function() {
+                    const e = this.get("entry");
+                    return e ? this.get("tra").exists(e) ? this.get(`tra.${e}`) : e : ""
+                })),
+                click: function() {
+                    return this.get("isSelected") || this.get("isDisabled") || (this.sendAction("selectTftUnreal", this.get("entry")), this.playSound("/fe/lol-uikit/sfx-uikit-radio-click.ogg")), !1
+                }
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            const o = n(1).Ember;
+            e.exports = o.HTMLBars.template({
+                id: "5NUYWMZb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-tft-unreal-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-tft-unreal-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-tft-unreal-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-card-tft-unreal-radio-option"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["tft-unreal-unsupported-error queue-status-icon ",["helper",["if"],[["get",["isDisabled"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],0],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-tft-unreal-btn"]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-unreal-label"],["flush-element"],["append",["unknown",["captionText"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-tft-unreal-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["disabledTooltipText"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -12805,7 +12868,7 @@
             e.exports = i.Ember.Component.extend({
                 classNames: ["parties-game-navs"],
                 classNameBindings: ["hasAlphaQueues"],
-                layout: n(243),
+                layout: n(246),
                 customGamesService: i.Ember.inject.service("custom-games"),
                 eligibilityService: i.Ember.inject.service("queue-eligibility"),
                 platformConfigSingleton: s.default,
@@ -12882,7 +12945,7 @@
                 classNames: ["parties-game-navs-item"],
                 customGamesService: i.Ember.inject.service("custom-games"),
                 attributeBindings: ["disabled:disabled", "active:active", "category.name:data-category"],
-                layout: n(245),
+                layout: n(248),
                 platformConfigSingleton: s.default,
                 active: i.Ember.computed("category.name", "selected.category", (function() {
                     return this.get("category.name") === this.get("selected.category")
@@ -12927,10 +12990,10 @@
             var o = n(1);
             e.exports = o.Ember.Component.extend({
                 classNames: ["parties-game-select-event-countdown-component"],
-                layout: n(247),
-                style: n(248),
-                activeEventIcon: n(249),
-                activeEventBackground: n(250),
+                layout: n(250),
+                style: n(251),
+                activeEventIcon: n(252),
+                activeEventBackground: n(253),
                 queueId: null,
                 tftEventService: o.Ember.inject.service("tft-events"),
                 tftEventEnabled: o.Ember.computed.alias("tftEventService.eventEnabled"),
@@ -12974,7 +13037,7 @@
                 r = (o = n(131)) && o.__esModule ? o : {
                     default: o
                 };
-            n(252);
+            n(255);
             const l = i.UIKit.getTooltipManager(),
                 c = i.UIKit.getTemplateHelper();
             e.exports = i.Ember.Component.extend(r.default, {
@@ -12982,7 +13045,7 @@
                 classNameBindings: ["haveNameError:name-error"],
                 customGamesService: i.Ember.inject.service("custom-games"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
-                layout: n(253),
+                layout: n(256),
                 showingState: null,
                 selected: null,
                 queues: null,
@@ -13281,7 +13344,7 @@
                 subcategory: null,
                 selectedSubcategoryIndex: null,
                 animationLock: !1,
-                layout: n(255),
+                layout: n(258),
                 assets: i.Ember.inject.service(),
                 mapId: i.Ember.computed.alias("subcategory.mapId"),
                 availability: i.Ember.computed("subcategory.queueAvailability", (function() {
@@ -13340,8 +13403,8 @@
             "use strict";
             var o = n(1),
                 i = n(110);
-            n(257), e.exports = o.Ember.Component.extend({
-                layout: n(258),
+            n(260), e.exports = o.Ember.Component.extend({
+                layout: n(261),
                 classNames: ["custom-root"],
                 classNameBindings: ["isShowingParty:custom-lobby-show:custom-lobby-hide"],
                 selected: !1,
@@ -13389,9 +13452,9 @@
                 s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
-            n(260), e.exports = i.Ember.Component.extend(s.default, {
+            n(263), e.exports = i.Ember.Component.extend(s.default, {
                 classNames: ["custom-game-spectator-info"],
-                layout: n(261),
+                layout: n(264),
                 customGamesService: i.Ember.inject.service("custom-games"),
                 summonerService: i.Ember.inject.service("summoner"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
@@ -13469,8 +13532,8 @@
                 s = (o = n(131)) && o.__esModule ? o : {
                     default: o
                 };
-            n(263), e.exports = i.Ember.Component.extend(s.default, {
-                layout: n(264),
+            n(266), e.exports = i.Ember.Component.extend(s.default, {
+                layout: n(267),
                 tagName: "li",
                 classNames: ["spectator-info-spectators-list-item"],
                 lobbiesService: i.Ember.inject.service("lobbies"),
@@ -13575,14 +13638,14 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(266);
-            n(267);
+                i = n(269);
+            n(270);
             const {
                 RunMixin: s
             } = o.EmberAddons.EmberLifeline;
             e.exports = o.Ember.Component.extend(s, {
                 classNames: ["custom-game-teams"],
-                layout: n(268),
+                layout: n(271),
                 customGameService: o.Ember.inject.service("custom-games"),
                 playbook: o.Ember.inject.service("tft-playbook"),
                 lobbiesService: o.Ember.inject.service("lobbies"),
@@ -13736,10 +13799,10 @@
             var o = n(1),
                 i = m(n(131)),
                 s = m(n(44)),
-                a = m(n(270));
-            n(271);
+                a = m(n(273));
+            n(274);
             var r = n(110),
-                l = n(266),
+                l = n(269),
                 c = n(16);
 
             function m(e) {
@@ -13779,7 +13842,7 @@
                 classNames: ["custom-game-team-member"],
                 classNameBindings: ["isCurrentPlayer:is-current-custom-player", "canHover:is-other-player", "currentPlayerIsLeader:can-moderate", "isLeader:is-custom-leader", "isFriend:is-custom-friend:is-not-custom-friend", "isBot:is-bot", "isMultiteam:is-multiteam", "isTFT:is-tft"],
                 attributeBindings: ["memberType:data-custom-member-type", "id:data-custom-member-summoner-id", "botChampionId:data-bot-champion"],
-                layout: n(272),
+                layout: n(275),
                 key: null,
                 id: null,
                 member: null,
@@ -14193,14 +14256,14 @@
             "use strict";
             var o = n(1),
                 i = a(n(44)),
-                s = a(n(274));
+                s = a(n(277));
 
             function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(275);
+            n(278);
             const r = new s.default([], {
                 keys: [{
                     name: "lobbyName",
@@ -14211,7 +14274,7 @@
                 }]
             });
             e.exports = o.Ember.Component.extend(i.default, {
-                layout: n(276),
+                layout: n(279),
                 classNames: ["custom-game-list"],
                 classNameBindings: ["searchString:custom-game-list-searched"],
                 customGameListService: o.Ember.inject.service("custom-game-list"),
@@ -14517,8 +14580,8 @@
                     default: e
                 }
             }
-            n(278), e.exports = o.Ember.Component.extend(i.default, {
-                layout: n(279),
+            n(281), e.exports = o.Ember.Component.extend(i.default, {
+                layout: n(282),
                 classNames: ["custom-game-tournament-code-container"],
                 customGameListService: o.Ember.inject.service("custom-game-list"),
                 tournamentCodeInput: null,
@@ -14607,7 +14670,7 @@
             var o = n(1);
             e.exports = o.Ember.Component.extend({
                 customGame: null,
-                layout: n(281),
+                layout: n(284),
                 classNames: ["custom-game-list-table-body-row"],
                 classNameBindings: ["isSelected:custom-list-row-selected"],
                 tagName: "tr",
@@ -14681,10 +14744,10 @@
                     default: e
                 }
             }
-            n(283), e.exports = i.default.extend({
+            n(286), e.exports = i.default.extend({
                 classNames: ["tft-lobby"],
                 classNameBindings: ["isPair:tft-lobby-pair"],
-                layout: n(284),
+                layout: n(287),
                 platformConfigSingleton: a.default,
                 playbookEnabled: !1,
                 init() {
@@ -14754,13 +14817,13 @@
                     default: e
                 }
             }
-            n(286);
+            n(289);
             const {
                 RunMixin: d
             } = o.EmberAddons.EmberLifeline, p = "QUEUE_DODGER", h = "LEAVER_BUSTED", g = "LEAVER_BUSTER_QUEUE_LOCKOUT", b = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             e.exports = o.Ember.Component.extend(d, a.default, i.default, s.default, r.default, {
                 classNames: ["tft-footer-container"],
-                layout: n(287),
+                layout: n(290),
                 _notifiedSearchErrorIds: o.Ember.A(),
                 matchmakingService: o.Ember.inject.service("matchmaking"),
                 lobbiesService: o.Ember.inject.service("lobbies"),
@@ -15118,8 +15181,8 @@
             "use strict";
             var o = n(1),
                 i = n(16),
-                s = r(n(270));
-            n(289);
+                s = r(n(273));
+            n(292);
             var a = r(n(157));
 
             function r(e) {
@@ -15165,7 +15228,7 @@
                     }
                 });
             e.exports = o.Ember.Component.extend(m, s.default, {
-                layout: n(290),
+                layout: n(293),
                 classNames: ["tft-player-card"],
                 classNameBindings: ["isMe:tft-player-card-self", "isPlaceholder:tft-player-placeholder", "isInvited:tft-player-invited", "isNotReady:tft-player-not-ready", "isFullCard:tft-player-card-full", "isDoubleUp:tft-player-card-du", "shouldShowSelfCardBackground: tft-player-card-bg-self"],
                 member: null,
@@ -15359,12 +15422,12 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(292), e.exports = o.Ember.Component.extend({
+            n(295), e.exports = o.Ember.Component.extend({
                 isMe: null,
                 useFavorites: !1,
                 animation: "randomizer_dice_clicked_anim",
                 playDiceAnimation: !1,
-                layout: n(293),
+                layout: n(296),
                 classNames: "loadout-randomize-button",
                 tftCosmeticsService: o.Ember.inject.service("tft-cosmetics-v2"),
                 init() {
@@ -15403,9 +15466,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(295), e.exports = o.Ember.Component.extend({
+            n(298), e.exports = o.Ember.Component.extend({
                 classNames: ["tft-double-up-warning"],
-                layout: n(296),
+                layout: n(299),
                 eligibilitiesService: o.Ember.inject.service("queue-eligibility"),
                 _tooltip: null,
                 isVisible: !0,
@@ -15468,18 +15531,18 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(298)) && o.__esModule ? o : {
+                s = (o = n(301)) && o.__esModule ? o : {
                     default: o
                 },
                 a = n(10),
-                r = n(299);
-            n(300);
+                r = n(302);
+            n(303);
             const {
                 RunMixin: l
             } = i.EmberAddons.EmberLifeline;
             e.exports = i.Ember.Component.extend(l, s.default, {
                 classNames: ["social-leaderboard-button"],
-                layout: n(301),
+                layout: n(304),
                 isPipShown: !1,
                 socialLeaderboardService: i.Ember.inject.service("socialLeaderboard"),
                 numFriends: i.Ember.computed("friendsList", (function() {
@@ -15627,10 +15690,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(303)) && o.__esModule ? o : {
+                s = (o = n(306)) && o.__esModule ? o : {
                     default: o
                 };
-            n(304);
+            n(307);
             var a = n(13);
             e.exports = i.Ember.Component.extend({
                 layout: s.default,
@@ -15709,9 +15772,9 @@
             "use strict";
             var o = n(1),
                 i = n(109),
-                s = n(306),
+                s = n(309),
                 a = n(10);
-            n(307);
+            n(310);
             var r, l = (r = n(11)) && r.__esModule ? r : {
                 default: r
             };
@@ -15735,7 +15798,7 @@
                     }
                 });
             e.exports = o.Ember.Component.extend(m, {
-                layout: n(308),
+                layout: n(311),
                 classNames: ["v2-banner-component"],
                 classNameBindings: ["lobbyChallengesEnabled:challenges-enabled:challenges-disabled", "isPlayerReady:player-ready", "isLocalPlayer:local-player"],
                 selected: null,
@@ -16002,7 +16065,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(310);
+            n(313);
             var i = n(109),
                 s = n(13),
                 a = n(157),
@@ -16032,7 +16095,7 @@
                 _ = "LEAVER_BUSTED",
                 v = "LEAVER_BUSTER_QUEUE_LOCKOUT";
             e.exports = o.Ember.Component.extend(u.default, d.default, h, {
-                layout: n(311),
+                layout: n(314),
                 classNames: ["v2-footer-component"],
                 init(...e) {
                     this._super(...e), this._playerNames = o.playerNames
@@ -16473,7 +16536,7 @@
             "use strict";
             var o = n(1),
                 i = l(n(6));
-            n(313);
+            n(316);
             var s = l(n(8)),
                 a = n(13),
                 r = n(10);
@@ -16487,7 +16550,7 @@
                 RunMixin: c
             } = o.EmberAddons.EmberLifeline, m = o.UIKit.getTooltipManager(), u = o.UIKit.getTemplateHelper(), d = "QPPlayerScarcePositionCoverageRestriction", p = "QPNonUniquePrimarySlotRestriction", h = "QPNonUniquePrimarySlotChampionRestriction", g = "QPNonUniquePrimarySlotPositionRestriction", b = "QPPartyChampionCoverageRestriction";
             e.exports = o.Ember.Component.extend(c, {
-                layout: n(314),
+                layout: n(317),
                 classNames: ["v2-footer-notifications"],
                 disabledReasons: o.Ember.A(),
                 isQuickPlayModal: !1,
@@ -16766,8 +16829,8 @@
                     default: e
                 }
             }
-            n(316), n(317), e.exports = o.Ember.Component.extend(i.default, {
-                layout: n(318),
+            n(319), n(320), e.exports = o.Ember.Component.extend(i.default, {
+                layout: n(321),
                 classNames: ["v2-header-component"],
                 classNameBindings: ["willAnimate:hidden", "isDemacia"],
                 platformConfigSingleton: a.default,
@@ -16798,8 +16861,8 @@
                         n = this.get("assets").getMap(e, this.get("gameMode"), t);
                     return n.locStrings && n.locStrings.map_name_override ? n.locStrings.map_name_override : n.name
                 })),
-                showMapNameShortHand: o.Ember.computed("isStrawberry", "isDemacia", (function() {
-                    return !this.get("isStrawberry") && !this.get("isDemacia")
+                showMapNameShortHand: o.Ember.computed("isStrawberry", "isDemacia", "isCrab", (function() {
+                    return !this.get("isStrawberry") && !this.get("isDemacia") && !this.get("isCrab")
                 })),
                 mapNameShorthand: o.Ember.computed("mapId", "assets.availableMaps", "tra", "gameMode", (function() {
                     if ("KIWI_JADE" === this.get("gameMode")) return this.get("tra.map_name_short_mode_KIWI_JADE");
@@ -16903,7 +16966,8 @@
                         }))
                     }
                 },
-                isDemacia: o.Ember.computed.equal("gameMode", l.GAME_MODES.JADE)
+                isDemacia: o.Ember.computed.equal("gameMode", l.GAME_MODES.JADE),
+                isCrab: o.Ember.computed.equal("gameMode", l.GAME_MODES.CRAB)
             })
         }, (e, t, n) => {
             "use strict";
@@ -16923,7 +16987,7 @@
             var o = n(1),
                 i = m(n(44)),
                 s = m(n(131));
-            n(320);
+            n(323);
             var a = n(109),
                 r = n(157),
                 l = n(13),
@@ -16938,7 +17002,7 @@
                 RunMixin: u
             } = o.EmberAddons.EmberLifeline;
             e.exports = o.Ember.Component.extend(u, i.default, s.default, {
-                layout: n(321),
+                layout: n(324),
                 classNames: ["v2-lobby-root-component"],
                 classNameBindings: ["willAnimate:hidden"],
                 init(...e) {
@@ -17306,12 +17370,12 @@
                 s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
-            n(323);
+            n(326);
             const {
                 RunMixin: a
             } = i.EmberAddons.EmberLifeline;
             e.exports = i.Ember.Component.extend(a, s.default, {
-                layout: n(324),
+                layout: n(327),
                 classNames: ["v2-player-management-button-component"],
                 tagName: "button",
                 classNameBindings: ["typeClass"],
@@ -17351,7 +17415,7 @@
                     default: e
                 }
             }
-            n(326);
+            n(329);
             const r = (0, o.emberDataBinding)({
                     Ember: o.Ember,
                     websocket: (0, o.getProvider)().getSocket(),
@@ -17363,7 +17427,7 @@
                 }),
                 l = "/lol-parental-controls/v1/status";
             e.exports = o.Ember.Component.extend(r, i.default, s.default, {
-                layout: n(327),
+                layout: n(330),
                 classNames: ["v2-player-party-controls"],
                 classNameBindings: ["isMe:main-player-controls:other-player-controls"],
                 isLeader: !1,
@@ -17587,7 +17651,7 @@
             var o = n(1),
                 i = r(n(11)),
                 s = r(n(44));
-            n(329);
+            n(332);
             var a = n(10);
 
             function r(e) {
@@ -17596,7 +17660,7 @@
                 }
             }
             e.exports = o.Ember.Component.extend(s.default, {
-                layout: n(330),
+                layout: n(333),
                 classNames: ["v2-point-eligibility-component"],
                 classNameBindings: ["isCustomGame:parties-point-eligibility-custom"],
                 platformConfig: i.default,
@@ -17685,9 +17749,9 @@
             "use strict";
             var o = n(1),
                 i = n(109);
-            n(332);
+            n(335);
             e.exports = o.Ember.Component.extend({
-                layout: n(333),
+                layout: n(336),
                 classNames: ["v2-position-selector-component"],
                 isInQueue: !1,
                 lobbiesService: o.Ember.inject.service("lobbies"),
@@ -17733,13 +17797,13 @@
                 s = (o = n(44)) && o.__esModule ? o : {
                     default: o
                 };
-            n(335);
+            n(338);
             var a = n(109),
                 r = n(157);
             const l = [a.POSITIONS.TOP, a.POSITIONS.JUNGLE, a.POSITIONS.MIDDLE, a.POSITIONS.BOTTOM, a.POSITIONS.UTILITY],
                 c = [a.POSITIONS.JUNGLE, a.POSITIONS.BOTTOM];
             e.exports = i.Ember.Component.extend(s.default, {
-                layout: n(336),
+                layout: n(339),
                 classNames: ["horizontal-options-showcase"],
                 classNameBindings: ["isQuickPlayModal:quick-play"],
                 isQuickPlayModal: !1,
@@ -17862,8 +17926,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(338), e.exports = o.Ember.Component.extend({
-                layout: n(339),
+            n(341), e.exports = o.Ember.Component.extend({
+                layout: n(342),
                 classNames: ["v2-position-icon-component"],
                 classNameBindings: ["position", "selected", "hovered", "inDemand", "isQuickPlayModal:quick-play"]
             })
@@ -17880,8 +17944,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(341), e.exports = o.Ember.Component.extend({
-                layout: n(342),
+            n(344), e.exports = o.Ember.Component.extend({
+                layout: n(345),
                 classNames: ["v2-banner-position-icon-component"],
                 isPrimary: !1,
                 isQuickplayModal: !1,
@@ -17916,13 +17980,13 @@
                     default: o
                 },
                 a = n(157);
-            n(344);
+            n(347);
             var r = n(109);
             const {
                 RunMixin: l
             } = i.EmberAddons.EmberLifeline;
             e.exports = i.Ember.Component.extend(l, s.default, {
-                layout: n(345),
+                layout: n(348),
                 classNames: ["position-selector-button"],
                 classNameBindings: ["ordinal", "position", "disabled:disabled", "hidden:hidden"],
                 disabled: !1,
@@ -17961,14 +18025,14 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(347);
+            n(350);
             var i, s = (i = n(44)) && i.__esModule ? i : {
                     default: i
                 },
                 a = n(157),
                 r = n(109);
             e.exports = o.Ember.Component.extend(s.default, {
-                layout: n(348),
+                layout: n(351),
                 classNames: ["v2-position-selector-option"],
                 classNameBindings: ["position", "isPositionAlreadySelected:already-selected", "inDemand", "hovered", "showPositionText:show-text", "isFill:fill", "isQuickPlayModal:quick-play"],
                 useGenerousHitbox: !1,
@@ -18023,9 +18087,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(350);
+            n(353);
             e.exports = o.Ember.Component.extend({
-                layout: n(351),
+                layout: n(354),
                 classNames: ["selection-modal"],
                 classNameBindings: ["isAnimatingOutro:is-closing", "isQuickPlayModal:quick-play"],
                 selectingOrdinal: null,
@@ -18088,9 +18152,9 @@
                     default: e
                 }
             }
-            n(353);
+            n(356);
             e.exports = o.Ember.Component.extend(s.default, {
-                layout: n(354),
+                layout: n(357),
                 classNames: ["v2-parties-invite-info-panel"],
                 currentPlayerCanInvite: !1,
                 isCustom: !1,
@@ -18213,7 +18277,7 @@
                     default: e
                 }
             }
-            n(356);
+            n(359);
             const l = (0, o.emberDataBinding)({
                 Ember: o.Ember,
                 websocket: (0, o.getProvider)().getSocket(),
@@ -18248,7 +18312,7 @@
                     const e = this.get("summonerId");
                     e && e !== this.get("_previousSummonerId") && (this.set("_invitedFromSuggested", !1), this.set("_previousSummonerId", e))
                 })),
-                layout: n(357),
+                layout: n(360),
                 name: o.Ember.computed("player.summonerName", "invitedPlayer.toSummonerName", (function() {
                     return this.get("player.summonerName") || this.get("invitedPlayer.toSummonerName") || ""
                 })),
@@ -18310,12 +18374,12 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(359);
+            n(362);
             const {
                 RunMixin: i
             } = o.EmberAddons.EmberLifeline;
             e.exports = o.Ember.Component.extend(i, {
-                layout: n(360),
+                layout: n(363),
                 classNames: ["v2-parties-invite-panel-game-mode-progression"],
                 eventHubService: o.Ember.inject.service("event-hub"),
                 gameMode: "",
@@ -18356,8 +18420,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(362), e.exports = o.Ember.Component.extend({
-                layout: n(363),
+            n(365), e.exports = o.Ember.Component.extend({
+                layout: n(366),
                 classNames: ["v2-parties-invite-panel-kiwi-progression"],
                 kiwiHubService: o.Ember.inject.service("kiwiHub"),
                 actions: {
@@ -18379,12 +18443,12 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(365);
+            n(368);
             const {
                 RunMixin: i
             } = o.EmberAddons.EmberLifeline;
             e.exports = o.Ember.Component.extend(i, {
-                layout: n(366),
+                layout: n(369),
                 classNames: ["v2-parties-invite-panel-tft-progression"],
                 tftService: o.Ember.inject.service("tft"),
                 media: o.Ember.computed.alias("tftService.media"),
@@ -18426,10 +18490,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(368);
+            n(371);
             const i = "NONE";
             e.exports = o.Ember.Component.extend({
-                layout: n(369),
+                layout: n(372),
                 classNames: ["banner-crystal-tooltip-component"],
                 challengesSummary: null,
                 crystalImagePath: "",
@@ -18486,8 +18550,8 @@
                 s = (o = n(48)) && o.__esModule ? o : {
                     default: o
                 };
-            n(371), e.exports = i.Ember.Component.extend({
-                layout: n(372),
+            n(374), e.exports = i.Ember.Component.extend({
+                layout: n(375),
                 classNames: ["v2-banner-placeholder"],
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 partySettingsService: i.Ember.inject.service("party-settings"),
@@ -18532,8 +18596,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(374), e.exports = o.Ember.Component.extend({
-                layout: n(375),
+            n(377), e.exports = o.Ember.Component.extend({
+                layout: n(378),
                 classNames: ["identity-tooltip-component"],
                 challengesSummary: null,
                 lobbyChallengesEnabled: !0,
@@ -18562,8 +18626,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(377), e.exports = o.Ember.Component.extend({
-                layout: n(378),
+            n(380), e.exports = o.Ember.Component.extend({
+                layout: n(381),
                 classNames: ["rank-identity-tooltip-component"],
                 rankedData: null,
                 selectedQueue: null,
@@ -18639,7 +18703,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(380);
+            n(383);
             const i = {
                 1: {
                     traKey: "tra.parties_tooltip_icon_rare",
@@ -18663,7 +18727,7 @@
                 }
             };
             e.exports = o.Ember.Component.extend({
-                layout: n(381),
+                layout: n(384),
                 classNames: ["icon-identity-tooltip-component"],
                 assets: o.Ember.inject.service(),
                 player: null,
@@ -18703,8 +18767,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(383), e.exports = o.Ember.Component.extend({
-                layout: n(384),
+            n(386), e.exports = o.Ember.Component.extend({
+                layout: n(387),
                 classNames: ["prestige-identity-tooltip-component"],
                 player: null,
                 summonerRegalia: null,
@@ -18738,13 +18802,13 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(386);
-            n(387);
+                i = n(389);
+            n(390);
             const s = "sfx-ui",
                 a = o.Ember.Component.extend({
                     classNames: ["generic-button"],
                     classNameBindings: ["matchHeight:match-h", "matchWidth:match-w", "isImgFlippedX:flip-x", "isImgFlippedY:flip-y"],
-                    layout: n(388),
+                    layout: n(391),
                     canBeSelected: !1,
                     triggerSelected: !1,
                     selectionGroup: null,
@@ -18905,11 +18969,11 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(390)) && o.__esModule ? o : {
+                s = (o = n(393)) && o.__esModule ? o : {
                     default: o
                 };
-            n(391);
-            var a = n(386);
+            n(394);
+            var a = n(389);
             const r = "/fe/lol-static-assets/videos",
                 l = "sfx-ui",
                 c = "intro",
@@ -19000,10 +19064,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(393);
+            n(396);
             const i = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
             e.exports = o.Ember.Component.extend({
-                layout: n(394),
+                layout: n(397),
                 classNames: ["copy-smart-url-button"],
                 copySmartUrlTooltipBodyText: o.tra.get("tra.parties_copy_smart_url_body_copy"),
                 smartUrl: null,
@@ -19049,12 +19113,12 @@
             "use strict";
             var o = n(1),
                 i = n(109);
-            n(396);
+            n(399);
             var s = n(135),
-                a = n(397),
-                r = n(398),
+                a = n(400),
+                r = n(401),
                 l = n(10),
-                c = n(399);
+                c = n(402);
             const {
                 RunMixin: m
             } = o.EmberAddons.EmberLifeline, u = {
@@ -19062,7 +19126,7 @@
                 COSMETICS: "COSMETICS"
             };
             e.exports = o.Ember.Component.extend(m, {
-                layout: n(400),
+                layout: n(403),
                 classNames: ["quick-play-loadout-selector-component"],
                 quickPlayService: o.Ember.inject.service("quick-play"),
                 matchmakingService: o.Ember.inject.service("matchmaking"),
@@ -19400,13 +19464,13 @@
             "use strict";
             var o = n(1),
                 i = n(109);
-            n(402);
+            n(405);
             var s = n(135),
-                a = n(397),
-                r = n(398),
-                l = n(399);
+                a = n(400),
+                r = n(401),
+                l = n(402);
             e.exports = o.Ember.Component.extend({
-                layout: n(403),
+                layout: n(406),
                 classNames: ["quick-play-selection-renderer-component"],
                 classNameBindings: ["isLocalPlayer", "isClickable", "disabled"],
                 lobbiesService: o.Ember.inject.service("lobbies"),
@@ -19520,10 +19584,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(405);
+            n(408);
             var i = n(103);
             e.exports = o.Ember.Component.extend({
-                layout: n(406),
+                layout: n(409),
                 classNames: ["champion-square-component"],
                 isQuickplayModal: !1,
                 selectedSkinId: null,
@@ -19572,12 +19636,12 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(408)) && o.__esModule ? o : {
+                s = (o = n(411)) && o.__esModule ? o : {
                     default: o
                 };
-            n(409);
+            n(412);
             e.exports = i.Ember.Component.extend({
-                layout: n(410),
+                layout: n(413),
                 classNames: ["quick-play-champion-grid-component"],
                 playerSlots: [],
                 items: [],
@@ -19625,10 +19689,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(412);
+            n(415);
             var i = n(157);
             e.exports = o.Ember.Component.extend({
-                layout: n(413),
+                layout: n(416),
                 classNames: ["quick-play-grid-champion-component"],
                 classNameBindings: ["isChampionSelected:selected", "isChampionPrimary:primary", "isSecondarySlotShown:secondary", "champion.favorite:favorite", "champion.disabled:disabled"],
                 quickPlayService: o.Ember.inject.service("quick-play"),
@@ -19684,14 +19748,14 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(415);
+            n(418);
             var i = n(109),
-                s = n(398);
+                s = n(401);
             const {
                 RunMixin: a
             } = o.EmberAddons.EmberLifeline, r = o.ChampionStatistics.getPlayRates(), l = document.documentElement.lang;
             e.exports = o.Ember.Component.extend(a, {
-                layout: n(416),
+                layout: n(419),
                 classNames: ["quick-play-champion-selector-component"],
                 playerSlots: [],
                 activeSort: null,
@@ -19768,11 +19832,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(418);
-            var i = n(419),
-                s = n(397);
+            n(421);
+            var i = n(422),
+                s = n(400);
             e.exports = o.Ember.Component.extend({
-                layout: n(420),
+                layout: n(423),
                 classNames: ["quick-play-perks-selector-component"],
                 matchmakingService: o.Ember.inject.service("matchmaking"),
                 isPerkSelectionDisabled: o.Ember.computed("matchmakingService.isNotSearching", (function() {
@@ -19877,9 +19941,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(422);
+            n(425);
             e.exports = o.Ember.Component.extend({
-                layout: n(423),
+                layout: n(426),
                 classNames: ["quick-play-perks-page-dropdown-component"],
                 tooltipConfig: {
                     targetAnchor: {
@@ -19915,8 +19979,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(425), e.exports = o.Ember.Component.extend({
-                layout: n(426),
+            n(428), e.exports = o.Ember.Component.extend({
+                layout: n(429),
                 classNames: ["quick-play-perks-page-dropdown-option-component"],
                 iconClassName: o.Ember.computed("page.isValid", "page.isTemporary", "page.autoModifiedSelections.length", (function() {
                     return this.get("page.isValid") ? this.get("page.isTemporary") ? "recommended-page" : this.get("page.autoModifiedSelections.length") ? "modified" : "removed" : "invalid"
@@ -19936,12 +20000,12 @@
             "use strict";
             var o = n(1),
                 i = n(16);
-            n(428);
+            n(431);
             const {
                 RunMixin: s
             } = o.EmberAddons.EmberLifeline, a = "skinsViewer", r = "quest-skin";
             e.exports = o.Ember.Component.extend(s, {
-                layout: n(429),
+                layout: n(432),
                 classNames: ["quick-play-skin-carousel-component"],
                 selectingSkinIndex: 0,
                 selectedSkin: null,
@@ -20065,8 +20129,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(431), e.exports = o.Ember.Component.extend({
-                layout: n(432),
+            n(434), e.exports = o.Ember.Component.extend({
+                layout: n(435),
                 classNames: ["quick-play-skin-select-component"],
                 selectingSlot: {},
                 skins: [],
@@ -20172,8 +20236,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(434), e.exports = o.Ember.Component.extend({
-                layout: n(435),
+            n(437), e.exports = o.Ember.Component.extend({
+                layout: n(438),
                 classNames: ["quick-play-summoner-spell-popup-component"],
                 contextSpellLockedDescription: o.Ember.computed("contextSpell.isEligibleToUseSpell", "contextSpell.isSpellDisabledForMode", "tra.quick_play_spell_modal_spell_requires_level", "tra.quick_play_spell_modal_spell_disabled", (function() {
                     const e = this.get("contextSpell.isEligibleToUseSpell"),
@@ -20215,10 +20279,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(437);
+            n(440);
             var i = n(134);
             e.exports = o.Ember.Component.extend({
-                layout: n(438),
+                layout: n(441),
                 classNames: ["quick-play-summoner-spell-renderer-component"],
                 classNameBindings: ["isDisabled:is-disabled", "isSpellLocked:locked"],
                 isSmiteLocked: !1,
@@ -20250,10 +20314,10 @@
                 s = (o = n(157)) && o.__esModule ? o : {
                     default: o
                 };
-            n(440);
+            n(443);
             var a = n(134);
             e.exports = i.Ember.Component.extend({
-                layout: n(441),
+                layout: n(444),
                 classNames: ["quick-play-summoner-spell-select-component"],
                 classNameBindings: [],
                 flyoutOptions: {
@@ -20330,10 +20394,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(443);
-            var i = n(399);
+            n(446);
+            var i = n(402);
             e.exports = o.Ember.Component.extend({
-                layout: n(444),
+                layout: n(447),
                 classNames: ["quick-play-loadout-tootip-component"],
                 inventoryService: o.Ember.inject.service("inventory"),
                 quickPlayService: o.Ember.inject.service("quick-play"),
@@ -20405,9 +20469,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(446);
+            n(449);
             e.exports = o.Ember.Component.extend({
-                layout: n(447),
+                layout: n(450),
                 classNames: ["quick-play-selections-container-component"],
                 quickPlayViewSlots: [],
                 isLocalPlayer: !1,
@@ -20498,10 +20562,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(449);
+            n(452);
             var i = n(10);
             e.exports = o.Ember.Component.extend({
-                layout: n(450),
+                layout: n(453),
                 classNames: ["quick-play-selection-rules-tooltip-component"],
                 lobbiesService: o.Ember.inject.service("lobbies"),
                 queueId: o.Ember.computed.alias("lobbiesService.lobby.gameConfig.queueId"),
@@ -20560,36 +20624,36 @@
                 value: !0
             }), t.default = void 0;
             var o, i = n(1),
-                s = (o = n(319)) && o.__esModule ? o : {
+                s = (o = n(322)) && o.__esModule ? o : {
                     default: o
                 };
-            n(452);
+            n(455);
             const a = 3e3,
                 r = i.Audio.getChannel("sfx-ui"),
                 l = {
                     SELF_TO_EMPTY: {
-                        filePath: n(453),
+                        filePath: n(456),
                         priority: 2,
                         duration: 250
                     },
                     SELF_TO_PLAYER: {
-                        filePath: n(454),
+                        filePath: n(457),
                         priority: 2,
                         duration: 1500
                     },
                     PLAYER_TO_SELF: {
-                        filePath: n(455),
+                        filePath: n(458),
                         priority: 1,
                         duration: 1e3
                     },
                     PLAYER_TO_PLAYER: {
-                        filePath: n(456),
+                        filePath: n(459),
                         priority: 0,
                         duration: 250
                     }
                 };
             var c = s.default.extend({
-                layout: n(457),
+                layout: n(460),
                 classNames: ["multiteam-lobby-root-component"],
                 classNameBindings: ["useCompactGridLayout:compact-layout:", "isTFT:multiteam-lobby-root-component-tft"],
                 selected: null,
@@ -20712,9 +20776,9 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1);
-            n(459);
+            n(462);
             var i = o.Ember.Component.extend({
-                layout: n(460),
+                layout: n(463),
                 classNames: ["multiteam-lobby-subteam-component"],
                 classNameBindings: ["hasAnyPlayer::no-players", "isSearching:is-in-queue", "isTFT:multiteam-lobby-subteam-component-tft"],
                 selected: null,
@@ -20777,7 +20841,7 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1);
-            n(462);
+            n(465);
             const i = ".player-slot__container",
                 s = "lol-uikit-tooltip",
                 a = ":hover",
@@ -20803,7 +20867,7 @@
                     }
                 });
             var u = o.Ember.Component.extend(c, m, {
-                layout: n(463),
+                layout: n(466),
                 classNames: ["multiteam-lobby-subteam-player-slot-component"],
                 classNameBindings: ["isReadyOrSearching::multiteam-lobby-subteam-player-slot-component__not-ready", "shouldShowInviteButton:showing-invite-button", "isSearching::showing-swap-button", "isTFT:multiteam-lobby-subteam-player-slot-component-tft", "isActiveTFTTeam:multiteam-lobby-subteam-player-slot-component-tft__active"],
                 selected: null,
@@ -21011,12 +21075,12 @@
                 value: !0
             }), t.default = void 0;
             var o, i = n(1),
-                s = (o = n(319)) && o.__esModule ? o : {
+                s = (o = n(322)) && o.__esModule ? o : {
                     default: o
                 };
-            n(465);
+            n(468);
             var a = s.default.extend({
-                layout: n(466),
+                layout: n(469),
                 classNames: ["strawberry-lobby-root-component"],
                 selected: null,
                 showingState: null,
@@ -21061,15 +21125,15 @@
                     default: e
                 }
             }
-            n(469);
-            const r = n(470),
-                l = (n(471), "show-wip-cosmetic-tooltip");
+            n(472);
+            const r = n(473),
+                l = (n(474), "show-wip-cosmetic-tooltip");
             e.exports = o.Ember.Component.extend(i.default, {
                 isMe: null,
                 companionIconId: null,
                 mapSkinIconId: null,
                 isDoubleUp: null,
-                layout: n(472),
+                layout: n(475),
                 classNames: "tft-loadout-menu-button",
                 classNameBindings: ["isMe:is-me", "isNotMe:is-not-me"],
                 isNotMe: o.Ember.computed.not("isMe"),
@@ -21289,8 +21353,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(474);
-            var i, s = (i = n(468)) && i.__esModule ? i : {
+            n(477);
+            var i, s = (i = n(471)) && i.__esModule ? i : {
                 default: i
             };
             e.exports = s.default.extend({
@@ -21298,7 +21362,7 @@
                 mapSkinIconId: null,
                 isMe: null,
                 isNotMe: o.Ember.computed.not("isMe"),
-                layout: n(475),
+                layout: n(478),
                 classNames: "is-double-up"
             })
         }, (e, t, n) => {
@@ -21314,7 +21378,7 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(477), e.exports = o.Ember.Component.extend({
+            n(480), e.exports = o.Ember.Component.extend({
                 tftService: o.Ember.inject.service("tft"),
                 isAugmentPillarEnabled: o.Ember.computed("tftService", (function() {
                     return this.get("tftService.isAugmentPillarEnabled")
@@ -21322,7 +21386,7 @@
                 isMe: null,
                 closeLoadoutMenu: null,
                 openLoadoutMenu: null,
-                layout: n(478),
+                layout: n(481),
                 classNames: "tft-loadout-menu",
                 shouldShowRandomize: o.Ember.computed.alias("isMe"),
                 showLoadoutsModalRoot: !1,
@@ -21376,14 +21440,14 @@
                     default: e
                 }
             }
-            n(480);
+            n(483);
             e.exports = o.Ember.Component.extend(i.default, {
                 type: "",
                 openLoadoutsModalRoot: null,
-                layout: n(481),
+                layout: n(484),
                 classNames: ["tft-loadout-menu-option"],
                 tftCosmeticsService: o.Ember.inject.service("tft-cosmetics-v2"),
-                wipBadgeIcon: n(470),
+                wipBadgeIcon: n(473),
                 selectedItem: o.Ember.computed("type", "tftCosmeticsService.equippedCompanion.itemId", "tftCosmeticsService.equippedMapSkin.itemId", "tftCosmeticsService.equippedDamageSkin.itemId", "tftCosmeticsService.equippedZoomSkin.itemId", (function() {
                     switch (this.get("type")) {
                         case "companions":
@@ -21430,10 +21494,10 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(483)) && o.__esModule ? o : {
+                s = (o = n(486)) && o.__esModule ? o : {
                     default: o
                 };
-            n(484);
+            n(487);
             const a = "/lol-settings/v2/account/LCUPreferences/lol-parties-jade-position",
                 r = "orderedPositions",
                 l = Object.freeze({
@@ -21462,7 +21526,7 @@
                     nameKey: "jade_position_support"
                 }];
             e.exports = i.Ember.Component.extend({
-                layout: n(485),
+                layout: n(488),
                 classNames: ["jade-position-preference-modal"],
                 showModal: !1,
                 primaryPosition: null,
@@ -21663,7 +21727,7 @@
             "use strict";
             var o = n(1);
             e.exports = o.Ember.Component.extend({
-                layout: n(487),
+                layout: n(490),
                 classNames: ["jade-position-pref-card"],
                 classNameBindings: ["pos.isFirst:jade-position-pref-card--first", "pos.isDisabled:jade-position-pref-card--disabled", "isDragSource:jade-position-pref-card--grabbing"],
                 pos: null,
@@ -21732,11 +21796,11 @@
                 value: !0
             }), t.default = void 0;
             var o, i = n(1),
-                s = (o = n(483)) && o.__esModule ? o : {
+                s = (o = n(486)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(489);
-            n(490);
+                a = n(492);
+            n(493);
             const r = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 l = "/events/0724e93d-6b74-449f-abef-8785262c3890/reward-track/items",
                 c = "[jade-progression-widget]",
@@ -21762,7 +21826,7 @@
                     WARD_SKIN: "jade_inventory_type_ward_skin"
                 };
             var g = i.Ember.Component.extend({
-                layout: n(491),
+                layout: n(494),
                 classNames: ["jade-progression-widget"],
                 classNameBindings: ["isLevelZero:is-level-zero", "isMaxLevel:is-max-level", "compact:is-compact"],
                 summonersJourneyService: i.Ember.inject.service("summoners-journey"),
@@ -22073,8 +22137,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(493), e.exports = o.Ember.Component.extend({
-                layout: n(494),
+            n(496), e.exports = o.Ember.Component.extend({
+                layout: n(497),
                 classNames: ["jade-eat"],
                 titleKey: null,
                 descriptionKey: null,
@@ -22118,9 +22182,9 @@
             }), t.default = void 0;
             var o = n(1),
                 i = n(16);
-            n(496);
+            n(499);
             var s = o.Ember.Component.extend({
-                layout: n(497),
+                layout: n(500),
                 classNames: ["jade-rank-unlock-footer-component"],
                 challengerCrestPath: o.LeagueTierNames.getRankedMiniRegaliaSvg("CHALLENGER"),
                 legendCrestPath: o.LeagueTierNames.getRankedMiniRegaliaSvg("LEGEND", i.QUEUES.JADE_RANKED_SOLO_5x5)
@@ -22142,7 +22206,7 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1),
-                i = n(489);
+                i = n(492);
             const s = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 a = `/lol-progression/v1/groups/${s}/configuration`,
                 r = `/lol-progression/v1/groups/${s}/instanceData`,
@@ -22444,11 +22508,11 @@
             "use strict";
             var o = n(1),
                 i = n(10);
-            n(502);
+            n(505);
             const s = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
                 a = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
             e.exports = o.Ember.Component.extend({
-                layout: n(503),
+                layout: n(506),
                 classNames: ["tft-playbook-icon"],
                 playbook: o.Ember.inject.service("tft-playbook"),
                 queueId: 0,
@@ -22498,10 +22562,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(505);
+            n(508);
             var i = n(10);
             e.exports = o.Ember.Component.extend({
-                layout: n(506),
+                layout: n(509),
                 classNames: ["tft-playbook-menu"],
                 playbook: o.Ember.inject.service("tft-playbook"),
                 isEnabled: o.Ember.computed.alias("playbook.playbookEnabled"),
@@ -22566,13 +22630,13 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(508);
+            n(511);
             var i = n(10);
             const s = "playbook-equipped-icon",
                 a = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
                 r = o.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
             e.exports = o.Ember.Component.extend({
-                layout: n(509),
+                layout: n(512),
                 classNames: ["tft-playbook-item"],
                 playbook: o.Ember.inject.service("tft-playbook"),
                 item: {},
@@ -22623,8 +22687,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(511), e.exports = o.Ember.Component.extend({
-                layout: n(512),
+            n(514), e.exports = o.Ember.Component.extend({
+                layout: n(515),
                 classNames: ["tft-playbook-item-details"],
                 classNameBindings: ["isShown"],
                 playbook: o.Ember.inject.service("tft-playbook"),
@@ -22648,10 +22712,10 @@
         }, (module, __unused_webpack_exports, __webpack_require__) => {
             "use strict";
             var _riotclientAsyncProviderProxy = __webpack_require__(1);
-            __webpack_require__(514);
+            __webpack_require__(517);
             const GDS_PLAYBOOK_ASSET_AUGMENT_CARD_HOLDER_KEY = "playbook-augment-card-holder";
             module.exports = _riotclientAsyncProviderProxy.Ember.Component.extend({
-                layout: __webpack_require__(515),
+                layout: __webpack_require__(518),
                 classNames: ["tft-playbook-card"],
                 playbook: _riotclientAsyncProviderProxy.Ember.inject.service("tft-playbook"),
                 name: "",
@@ -22695,8 +22759,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(517), e.exports = o.Ember.Component.extend({
-                layout: n(518),
+            n(520), e.exports = o.Ember.Component.extend({
+                layout: n(521),
                 classNames: ["tft-playbook-tutorial"],
                 playbook: o.Ember.inject.service("tft-playbook"),
                 actions: {
@@ -22721,9 +22785,9 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1);
-            n(520);
+            n(523);
             var i = o.Ember.Component.extend({
-                layout: n(521),
+                layout: n(524),
                 classNames: ["role-swap-ftux-modal-component"]
             });
             t.default = i
@@ -22743,11 +22807,11 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1);
-            n(523);
+            n(526);
             const i = o.UIKit.getVignetteCelebrationManager();
             var s = o.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-parties-reward-celebration"],
-                layout: n(524),
+                layout: n(527),
                 selectedReward: null,
                 softSelectionMade: !1,
                 didDestroyElement() {
@@ -22780,7 +22844,7 @@
             var o = n(1),
                 i = n(112);
             const s = o.Ember.Component.extend({
-                layout: n(526),
+                layout: n(529),
                 classNames: ["parties-queue-error-dialog"],
                 lobbiesService: o.Ember.inject.service("lobbies"),
                 currentPlayer: o.Ember.computed.alias("lobbiesService.currentPlayer"),
@@ -22820,7 +22884,7 @@
             "use strict";
             var o = n(1);
             e.exports = o.Ember.Component.extend({
-                layout: n(528)
+                layout: n(531)
             })
         }, (e, t, n) => {
             const o = n(1).Ember;
@@ -22833,7 +22897,7 @@
             "use strict";
             var o = n(1);
             e.exports = o.Ember.Component.extend({
-                layout: n(530)
+                layout: n(533)
             })
         }, (e, t, n) => {
             const o = n(1).Ember;
@@ -22846,7 +22910,7 @@
             "use strict";
             var o = n(1);
             e.exports = o.Ember.Component.extend({
-                layout: n(532)
+                layout: n(535)
             })
         }, (e, t, n) => {
             const o = n(1).Ember;
@@ -22859,7 +22923,7 @@
             "use strict";
             var o = n(1),
                 i = n(113);
-            n(534);
+            n(537);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin),
                 a = o.Ember.Object.extend({
                     penalizedSummonerId: 0,
@@ -22873,7 +22937,7 @@
                     playerNameFull: ""
                 });
             e.exports = o.Ember.Component.extend({
-                layout: n(535),
+                layout: n(538),
                 classNames: ["leaver-buster-lockout-error-dialog"],
                 init(...e) {
                     this._super(...e), this._playerNames = o.playerNames, this.set("penalizedSummoners", o.Ember.A()), this.binding = o.dataBinding.bindTo((0, o.getProvider)().getSocket()), this.binding.observe("/lol-matchmaking/v1/search", this, this.handleMatchMakingSearch)
@@ -22944,7 +23008,7 @@
             var o = n(1);
             const i = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             e.exports = o.Ember.Component.extend({
-                layout: n(537),
+                layout: n(540),
                 penalizedSummonerNameProxy: o.Ember.computed("errorData.penalizedSummonerId", (function() {
                     const e = this.get("searchError.penalizedSummonerId");
                     return e && i.create({
@@ -22974,7 +23038,7 @@
                 s = (o = n(113)) && o.__esModule ? o : {
                     default: o
                 };
-            n(539);
+            n(542);
             const a = i.Ember.Object.extend(i.Ember.PromiseProxyMixin),
                 r = (0, i.emberDataBinding)({
                     Ember: i.Ember,
@@ -22996,7 +23060,7 @@
                     }
                 });
             e.exports = i.Ember.Component.extend(r, {
-                layout: n(540),
+                layout: n(543),
                 classNames: ["queue-dodge-error-dialog"],
                 init(...e) {
                     this._super(...e), this._playerNames = i.playerNames
@@ -23044,7 +23108,7 @@
             "use strict";
             var o = n(1);
             e.exports = o.Ember.Component.extend({
-                layout: n(542)
+                layout: n(545)
             })
         }, (e, t, n) => {
             const o = n(1).Ember;
@@ -23059,10 +23123,10 @@
                 s = (o = n(113)) && o.__esModule ? o : {
                     default: o
                 };
-            n(544);
+            n(547);
             const a = i.Ember.Object.extend(i.Ember.PromiseProxyMixin);
             e.exports = i.Ember.Component.extend({
-                layout: n(545),
+                layout: n(548),
                 classNames: ["ready-check-failer-error-dialog"],
                 init(...e) {
                     this._super(...e), this._playerNames = i.playerNames
@@ -23103,10 +23167,10 @@
                 s = (o = n(113)) && o.__esModule ? o : {
                     default: o
                 };
-            n(547);
+            n(550);
             const a = i.Ember.Object.extend(i.Ember.PromiseProxyMixin);
             e.exports = i.Ember.Component.extend({
-                layout: n(548),
+                layout: n(551),
                 classNames: ["disruptive-gameplay-lockout-error-dialog"],
                 init(...e) {
                     this._super(...e), this._playerNames = i.playerNames
@@ -23144,13 +23208,13 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(550);
+            n(553);
             var i = u(n(3)),
                 s = u(n(105)),
                 a = u(n(156)),
                 r = u(n(131)),
                 l = u(n(44)),
-                c = n(551),
+                c = n(554),
                 m = n(159);
 
             function u(e) {
@@ -23166,7 +23230,7 @@
                 return e.isHonorRecognized && t.isHonorRecognized ? t.gameId - e.gameId : e.isHonorRecognized && t.isRecentlyPlayed ? -1 : e.isRecentlyPlayed && t.isHonorRecognized ? 1 : e.isRecentlyPlayed && t.isRecentlyPlayed ? t.gameId - e.gameId : void 0
             }
             e.exports = o.Ember.Component.extend(d, r.default, l.default, a.default, {
-                layout: n(552),
+                layout: n(555),
                 classNames: ["parties-invite-dialog"],
                 chatService: o.Ember.inject.service("chat"),
                 customGamesService: o.Ember.inject.service("custom-games"),
@@ -23497,8 +23561,8 @@
             "use strict";
             var o = n(1),
                 i = n(159);
-            n(554), e.exports = o.Ember.Component.extend({
-                layout: n(555),
+            n(557), e.exports = o.Ember.Component.extend({
+                layout: n(558),
                 classNames: ["invite-dialog-group"],
                 classNameBindings: ["isExpanded:expanded"],
                 isExpanded: !0,
@@ -23528,8 +23592,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(557), e.exports = o.Ember.Component.extend({
-                layout: n(558)
+            n(560), e.exports = o.Ember.Component.extend({
+                layout: n(561)
             })
         }, (e, t, n) => {
             "use strict";
@@ -23562,7 +23626,7 @@
                 }
             });
             e.exports = i.Ember.Component.extend(a, {
-                layout: n(560),
+                layout: n(563),
                 classNames: ["low-priority-dialog"],
                 lowPrioritytimeRemaining: i.Ember.computed.readOnly("search.lowPriorityData.penaltyTimeRemaining"),
                 timeRemainingFormatted: i.Ember.computed("lowPrioritytimeRemaining", (function() {
@@ -23588,8 +23652,8 @@
                     default: e
                 }
             }
-            n(562), e.exports = o.Ember.Component.extend(s.default, i.default, {
-                layout: n(563),
+            n(565), e.exports = o.Ember.Component.extend(s.default, i.default, {
+                layout: n(566),
                 classNames: ["game-mode-tutorial"],
                 currentIndex: null,
                 tutorialCards: [],
@@ -23651,8 +23715,8 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(565), e.exports = o.Ember.Component.extend({
-                layout: n(566),
+            n(568), e.exports = o.Ember.Component.extend({
+                layout: n(569),
                 classNames: ["game-mode-one-page-tutorial"],
                 classNameBindings: ["isLongCardLayout:long-card-layout", "isLandscapeImageLayout:landscape-image-layout"],
                 title: null,
@@ -23678,10 +23742,10 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(299);
-            n(568), e.exports = o.Ember.Component.extend({
+                i = n(302);
+            n(571), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-feature-flyout"],
-                layout: n(569),
+                layout: n(572),
                 lobbiesService: o.Ember.inject.service("lobbies"),
                 socialLeaderboardService: o.Ember.inject.service("socialLeaderboard"),
                 leaderboardData: [],
@@ -23746,13 +23810,13 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(298)) && o.__esModule ? o : {
+                s = (o = n(301)) && o.__esModule ? o : {
                     default: o
                 },
                 a = n(10);
-            n(571), e.exports = i.Ember.Component.extend(s.default, {
+            n(574), e.exports = i.Ember.Component.extend(s.default, {
                 classNames: ["social-leaderboard-header"],
-                layout: n(572),
+                layout: n(575),
                 countdownLabel: i.Ember.computed.alias("tra.social_leaderboard_next_ladder_update_countdown_label"),
                 socialLeaderboardQueueText: i.Ember.computed("tra", "selected.queue.name", (function() {
                     const e = this.get("selected.queue.type"),
@@ -23774,14 +23838,14 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(574);
+                i = n(577);
 
             function s(e) {
                 return e < 10 ? "0" + e : e
             }
-            n(575), e.exports = o.Ember.Component.extend({
+            n(578), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-countdown-timer"],
-                layout: n(576),
+                layout: n(579),
                 totalTime: 0,
                 elapsedTime: 0,
                 countdownToTime: 0,
@@ -23853,9 +23917,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(578), e.exports = o.Ember.Component.extend({
+            n(581), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-table"],
-                layout: n(579),
+                layout: n(582),
                 currentSummonerId: null,
                 currentSummonerPuuid: null
             })
@@ -23872,11 +23936,11 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1),
-                i = n(574);
-            n(581), e.exports = o.Ember.Component.extend({
+                i = n(577);
+            n(584), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-row"],
                 classNameBindings: ["isPlayerRow"],
-                layout: n(582),
+                layout: n(585),
                 invitesService: o.Ember.inject.service("invites"),
                 contextMenuManager: o.UIKit.getContextMenuManager(),
                 didInsertElement() {
@@ -23981,9 +24045,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(584), e.exports = o.Ember.Component.extend({
+            n(587), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-friend-filter"],
-                layout: n(585),
+                layout: n(588),
                 nameFilter: "",
                 leaderboardModifiedData: o.Ember.computed("leaderboardData", (function() {
                     const e = this.get("leaderboardData"),
@@ -24033,9 +24097,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(587), e.exports = o.Ember.Component.extend({
+            n(590), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-friend-not-found"],
-                layout: n(588),
+                layout: n(591),
                 actions: {}
             })
         }, (e, t, n) => {
@@ -24051,12 +24115,12 @@
         }, (e, t, n) => {
             "use strict";
             var o, i = n(1),
-                s = (o = n(298)) && o.__esModule ? o : {
+                s = (o = n(301)) && o.__esModule ? o : {
                     default: o
                 };
-            n(590), e.exports = i.Ember.Component.extend(s.default, {
+            n(593), e.exports = i.Ember.Component.extend(s.default, {
                 classNames: ["not-enough-friends"],
-                layout: n(591),
+                layout: n(594),
                 notEnoughFriendsDescription: i.Ember.computed("tra.social_leaderboard_add_friends_description", "minFriendCount", (function() {
                     return this.get("tra").formatString("social_leaderboard_add_friends_description", {
                         minFriendCount: this.get("minFriendCount")
@@ -24081,9 +24145,9 @@
         }, (e, t, n) => {
             "use strict";
             var o = n(1);
-            n(593), e.exports = o.Ember.Component.extend({
+            n(596), e.exports = o.Ember.Component.extend({
                 classNames: ["social-leaderboard-error-state"],
-                layout: n(594)
+                layout: n(597)
             })
         }, (e, t, n) => {
             "use strict";
@@ -24101,9 +24165,9 @@
                 value: !0
             }), t.default = void 0;
             var o = n(1);
-            n(596);
+            n(599);
             var i = o.Ember.Component.extend({
-                layout: n(597),
+                layout: n(600),
                 classNames: ["ranked-ftux-modal"],
                 queueTypeQueueId: 710,
                 region: window.RIOT.CONSTANTS.regionLocale.region,
@@ -24130,17 +24194,17 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var o = g(n(599)),
-                i = g(n(605)),
-                s = g(n(608)),
-                a = g(n(611)),
-                r = g(n(617)),
-                l = g(n(620)),
-                c = g(n(624)),
-                m = g(n(627)),
-                u = g(n(631)),
-                d = g(n(634)),
-                p = g(n(637)),
+            var o = g(n(602)),
+                i = g(n(608)),
+                s = g(n(611)),
+                a = g(n(614)),
+                r = g(n(620)),
+                l = g(n(623)),
+                c = g(n(627)),
+                m = g(n(630)),
+                u = g(n(634)),
+                d = g(n(637)),
+                p = g(n(640)),
                 h = n(1);
 
             function g(e) {
@@ -24213,10 +24277,10 @@
             i.UIKit.getModalManager();
             class b extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(600)
+                    return n(603)
                 }
                 stylesheetMarkup() {
-                    return n(601)
+                    return n(604)
                 }
                 constructor() {
                     super(), this._dataBinding = (0, i.dataBinding)("/lol-cosmetics", r), this._type = null, this._setName = "default", this._subscriber = null, this._showNoneOption = null, this._mouseOverHandler = this._handleMouseOver.bind(this), this._iconClickHandler = this._handleIconClick.bind(this), this._orientation = "left", this._selectedItemId = null, this._modal = null
@@ -24270,7 +24334,7 @@
                     this._selectedItemId = e.itemId;
                     const t = this._getIcon();
                     if (0 === e.itemId) {
-                        const e = n(604);
+                        const e = n(607);
                         t.style.backgroundImage = "url(" + e + ")", t.classList.add("none-icon")
                     } else t.style.backgroundImage = "url(" + e.loadoutsIcon + ")", t.classList.remove("none-icon")
                 }
@@ -24297,8 +24361,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-picker">\r\n  <div class="loadouts-icon"></div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ":host {\n  --rcp-fe-lol-parties-cosmetics-picker-border-width: 2px;\n}\n:host {\n  display: block;\n}\n:host .loadouts-icon {\n  box-sizing: border-box;\n  border-width: var(--rcp-fe-lol-parties-cosmetics-picker-border-width);\n  border-style: solid;\n  border-color: #f0e6d2;\n  width: 100%;\n  height: 100%;\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  cursor: pointer;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.5);\n  border-image: linear-gradient(to bottom, #c89b3c, #785a28) 2;\n}\n:host .loadouts-icon.none-icon {\n  background-size: 50%;\n}\n:host .loadouts-icon:hover {\n  -webkit-filter: brightness(110%);\n  border-image: linear-gradient(to bottom, #f0e6d2, #c89b3c) 1;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-picker/component-style.styl"],
@@ -24387,10 +24451,10 @@
                 l = "sfx-ui";
             class c extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(606)
+                    return n(609)
                 }
                 stylesheetMarkup() {
-                    return n(607)
+                    return n(610)
                 }
                 constructor() {
                     super(), this._cachedInviteIds = [], this._patcherState = null, this._settings = null, this._listeners = {}, this._listeners.onClickClearAll = this._onClickClearAll.bind(this), this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._patcherConnected = !0, i.Navigation.subscribe("isConnectedToServer", this._updatePatcherConnected.bind(this)), this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", r), this._patcherBinding = (0, i.dataBinding)("/patcher", r), this._chatBinding = (0, i.dataBinding)("/lol-chat", r), this._settingsBinding = (0, i.dataBinding)("/lol-settings", r), this._observePatcher(), this._observeSettings(), this._observeCurrentPlayerChat(), this._observeUXSettings()
@@ -24609,8 +24673,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-invites">\r\n  <div class="parties-game-info-panel-invites">\r\n    <div class="parties-game-invite-heading">\r\n      <div class="parties-game-invite-heading-container">\r\n        <div class="parties-game-invite-heading-text"></div>\r\n        <div class="parties-game-invite-count parties-hide-game-invite-count"></div>\r\n      </div>\r\n      <button class="parties-clear-all-button parties-hide-clear-all"></button>\r\n    </div>\r\n    <div class="parties-game-invites parties-game-invite-scroll parties-blue-scroll"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .parties-game-invite-heading {\n  font-family: var(--font-display);\n}\n:host .parties-game-invite-heading {\n  -webkit-user-select: none;\n}\n:host .parties-game-invite-heading {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-invite-heading {\n  text-transform: uppercase;\n}\n:host .parties-game-invite-heading:lang(ko-kr),\n:host .parties-game-invite-heading:lang(ja-jp),\n:host .parties-game-invite-heading:lang(tr-tr),\n:host .parties-game-invite-heading:lang(el-gr),\n:host .parties-game-invite-heading:lang(th-th),\n:host .parties-game-invite-heading:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-game-invite-heading {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .parties-game-invite-heading:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-invite-heading:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-info-panel-invites {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  max-height: 202px;\n  direction: ltr;\n}\n:host .parties-game-invite-heading {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-shrink: 0;\n  pointer-events: none;\n  margin-top: 1px;\n}\n:host .hover-highlight {\n  pointer-events: auto;\n}\n:host .hover-highlight:hover {\n  background: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n  cursor: pointer;\n  color: #f0e6d2;\n}\n:host .hover-highlight:active {\n  color: #cdbe91;\n}\n:host .parties-game-invite-heading-container {\n  flex: 1;\n  display: flex;\n  margin-right: 7px;\n  overflow: hidden;\n}\n:host .parties-game-invite-heading-text {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n:host .parties-game-invite-count {\n  padding-left: 5px;\n}\n:host .parties-game-invite-count.parties-hide-game-invite-count {\n  display: none;\n}\n:host .parties-clear-all-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/clear_mask.png") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n  pointer-events: auto;\n}\n:host .parties-clear-all-button:hover {\n  background-color: #f0e6d2;\n}\n:host .parties-clear-all-button:active {\n  background-color: #463714;\n}\n:host .parties-clear-all-button.parties-hide-clear-all {\n  display: none;\n  pointer-events: none;\n}\n:host lol-parties-game-invite {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  flex-shrink: 0;\n}\n:host .parties-game-invite-scroll {\n  flex-grow: 1;\n}\n:host .parties-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n:host .parties-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n:host .parties-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n:host .parties-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n:host lol-parties-game-invite.use-animation {\n  animation: game-invite-slide-in 0.3s 1;\n}\n:host lol-parties-game-invite.use-animation {\n  animation: game-invite-slide-in 0.3s 1;\n}\n@-moz-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@-webkit-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@-o-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-invites/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -24662,10 +24726,10 @@
                 m = "sfx-ui";
             class u extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(609)
+                    return n(612)
                 }
                 stylesheetMarkup() {
-                    return n(610)
+                    return n(613)
                 }
                 constructor() {
                     super(), this._errorOpen = !1, this._gameInvite = null, this._patcherConnected = null, this._patcherState = null, this._chatSettings = null, this._listeners = {}, this._listeners.onMouseOver = this._onMouseOver.bind(this), this._listeners.onMouseOut = this._onMouseOut.bind(this), this._listeners.onAcceptClicked = this._acceptGameInvite.bind(this), this._listeners.onDeclineClicked = this._declineGameInvite.bind(this), this._listeners.onCloseErrorClicked = this._closeError.bind(this), this._playerNames = o.playerNames, this._summonerBinding = (0, o.dataBinding)("/lol-summoner", c), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", c), this._toastManager = o.UIKit.getToastManager(), this._templateHelper = o.UIKit.getTemplateHelper()
@@ -24955,8 +25019,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-invite">\r\n  <div class="parties-game-invite">\r\n    <div class="parties-map-icon"></div>\r\n\r\n    <div class="parties-game-info-container parties-game-info-container-dnd parties-game-invite-hide">\r\n      <div class="parties-game-invite-name"></div>\r\n      <div class="parties-game-info-subtitle-hold parties-game-info-subtitle-disabled"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-info-container parties-game-info-container-available">\r\n      <div class="parties-game-invite-name"></div>\r\n      <div class="parties-game-info-subtitle parties-game-name"></div>\r\n      <div class="parties-game-info-subtitle parties-game-type"></div>\r\n      <div class="parties-game-info-subtitle parties-game-info-subtitle-disabled"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-invite-buttons use-animation">\r\n      <div class="parties-accept-btn"></div>\r\n      <div class="parties-decline-btn"></div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class="parties-error-message parties-game-invite-hide">\r\n    <div class="parties-error-message-text"></div>\r\n    <div class="parties-error-message-close-btn"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  font-family: var(--font-body);\n}\n:host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  -webkit-user-select: none;\n}\n:host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-invite-name {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-invite-name:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-info-subtitle {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-info-subtitle:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-info-subtitle:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-map-icon {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-map-icon.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-map-icon.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-map-icon.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-map-icon.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-map-icon.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-map-icon.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-map-icon.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-map-icon.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-map-icon.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host.parties-hide-divider .parties-game-invite::after {\n  background: none;\n}\n:host .parties-game-invite {\n  direction: ltr;\n  display: flex;\n  align-items: center;\n  height: 72px;\n  flex-shrink: 0;\n}\n:host .parties-game-invite:lang(ar-ae) {\n  direction: rtl;\n}\n:host .parties-mini {\n  height: 44px;\n}\n:host .parties-game-invite::after {\n  content: \'\';\n  position: absolute;\n  bottom: 0;\n  left: 10px;\n  width: calc(100% - 20px);\n  height: 1px;\n  background-color: #005a82;\n}\n:host .parties-game-invite:hover::after {\n  background: none;\n}\n:host .parties-map-icon {\n  margin: 0 10px;\n  background-position: center top;\n}\n:host .parties-map-icon.disabled {\n  background-position-y: -32px;\n}\n:host .parties-game-info-container {\n  line-height: 16px;\n  flex: 1;\n  overflow: hidden;\n}\n:host .parties-game-info-container > * {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n:host .parties-game-invite-name {\n  color: #f0e6d2;\n}\n:host .parties-game-info-subtitle {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n:host .parties-game-info-subtitle.parties-game-info-subtitle-hide {\n  display: none;\n}\n:host .parties-game-info-subtitle-disabled {\n  white-space: normal;\n}\n:host .parties-game-invite:hover {\n  background-image: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n}\n:host .parties-game-invite-buttons {\n  display: flex;\n  max-width: 35px;\n}\n:host .parties-game-invite-buttons.acceptable {\n  max-width: 67px;\n}\n:host .parties-accept-btn,\n:host .parties-decline-btn {\n  width: 30px;\n  height: 30px;\n  cursor: pointer;\n  flex-shrink: 0;\n}\n:host .parties-accept-btn {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  background-image: url("/fe/lol-parties/bluebutton_checkmark.png");\n  background-size: cover;\n  background-position-y: 0px;\n}\n:host .parties-accept-btn:hover {\n  background-position-y: -30px;\n}\n:host .parties-accept-btn:active {\n  background-position-y: -60px;\n}\n:host .parties-accept-btn:disabled,\n:host .parties-accept-btn[disabled],\n:host .parties-accept-btn.disabled {\n  cursor: default;\n  background-position-y: -90px;\n}\n:host .parties-decline-btn {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") no-repeat center;\n  background-color: #0ac8b9;\n  -webkit-mask-size: 18px;\n  margin: 0 3px 0 0;\n}\n:host .parties-decline-btn:hover {\n  background-color: #cdfafa;\n}\n:host .parties-decline-btn:active {\n  background-color: #005a82;\n}\n:host .parties-decline-btn:lang(ar-ae) {\n  margin: 0 0 0 3px;\n}\n:host .parties-error-message {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background-color: #bc213b;\n  color: #fff;\n  padding: 8px 10px;\n  direction: ltr;\n}\n:host .parties-error-message-close-btn {\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") center no-repeat;\n  -webkit-mask-size: 18px;\n  background-color: #fff;\n  height: 18px;\n  width: 18px;\n  margin: 0 0 0 5px;\n  cursor: pointer;\n}\n:host .parties-error-message-close-btn:lang(ar-ae) {\n  margin: 0 5px 0 0;\n}\n:host .parties-game-invite-hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-invite/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -24987,7 +25051,7 @@
                     return o
                 }(n(1)),
                 s = n(16),
-                a = (o = n(612)) && o.__esModule ? o : {
+                a = (o = n(615)) && o.__esModule ? o : {
                     default: o
                 },
                 r = n(112);
@@ -25003,10 +25067,10 @@
             const c = i.default.getProvider().getSocket();
             class m extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(615)
+                    return n(618)
                 }
                 stylesheetMarkup() {
-                    return n(616)
+                    return n(619)
                 }
                 constructor() {
                     super(), this._animationsEnabled = !0, this._gameflowAvailable = !1, this._gameflowPhase = s.GAMEFLOW_PHASES.NONE, this._gameflowSession = null, this._haveGameInvites = !1, this._haveGameSearch = !1, this._isInQueueDelay = !1, this._previousGameflowPhase = s.GAMEFLOW_PHASES.NONE, this._searchCount = 0, this._searchState = void 0, this._listeners = {}, this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._matchmakingBinding = (0, i.dataBinding)("/lol-matchmaking", c), this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", c), this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", c), this._templateHelper = i.UIKit.getTemplateHelper(), this._toastManager = i.UIKit.getToastManager()
@@ -25218,8 +25282,8 @@
         }, (e, t, n) => {
             "use strict";
             const o = {
-                backgroundVideo: n(613),
-                queueDelayVideo: n(614)
+                backgroundVideo: n(616),
+                queueDelayVideo: n(617)
             };
             e.exports = o
         }, (e, t, n) => {
@@ -25232,8 +25296,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-info-panel">\r\n  <div class="parties-game-section">\r\n    <div class="parties-game-info-panel-bg-container"></div>\r\n    <div class="parties-game-info-panel-content">\r\n      <lol-parties-game-search class="parties-game-search-hide"></lol-parties-game-search>\r\n      <lol-parties-game-invites class="parties-game-invites-hide"></lol-parties-game-invites>\r\n      <lol-parties-status-card class="parties-status-card-hide"></lol-parties-status-card>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .parties-game-section {\n  flex: 0 0 auto;\n  position: relative;\n  overflow: hidden;\n}\n:host .parties-game-section:not(.use-animation) lol-parties-game-search.parties-game-search-hide {\n  display: none;\n}\n:host .parties-game-section:not(.use-animation) lol-parties-game-invites.parties-game-invites-hide {\n  display: none;\n}\n:host .parties-game-section.use-animation lol-parties-game-search {\n  transition: height 300ms cubic-bezier(0, 0, 0, 1);\n  overflow: hidden;\n  height: 90px;\n}\n:host .parties-game-section.use-animation lol-parties-game-search.parties-game-search-hide {\n  height: 0px;\n}\n:host .parties-game-section.use-animation lol-parties-game-invites {\n  transition: max-height 300ms cubic-bezier(0, 0, 0, 1);\n  max-height: 202px;\n}\n:host .parties-game-section.use-animation lol-parties-game-invites.parties-game-invites-hide {\n  max-height: 0px;\n}\n:host .parties-game-info-panel-bg-container {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  margin-top: -101px;\n  width: 100%;\n  height: 202px;\n  background-image: url("../../images/elements/static_game_panel_bg.png");\n}\n:host .parties-game-info-panel-bg-container.queue-delay {\n  background-image: url("../../images/elements/static_queue_delay_bg.jpg");\n}\n:host .parties-game-info-panel-content {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  max-height: 202px;\n}\n:host video {\n  height: 100%;\n}\n:host .parties-status-card-hide.hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-info-panel/component-style.styl"],
@@ -25281,10 +25345,10 @@
             const m = i.default.getProvider().getSocket();
             class u extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(618)
+                    return n(621)
                 }
                 stylesheetMarkup() {
-                    return n(619)
+                    return n(622)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -25482,8 +25546,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-search">\r\n  <div class="parties-game-search-status">\r\n    <div class="parties-game-search-header">\r\n      <div class="parties-game-search-header-text"></div>\r\n      <div class="parties-game-search-cancel"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-search-body">\r\n      <div class="parties-game-search-map"></div>\r\n      <div class="parties-game-search-body-data">\r\n        <div class="parties-game-search-elapsed"></div>\r\n        <div class="parties-game-search-info"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class="parties-game-search-divider parties-game-search-hide"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .parties-game-search-elapsed,\n:host .parties-game-search-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-game-search-info {\n  font-family: var(--font-body);\n}\n:host .parties-game-search-info,\n:host .parties-game-search-elapsed {\n  -webkit-user-select: none;\n}\n:host .parties-game-search-info,\n:host .parties-game-search-elapsed {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-search-elapsed {\n  text-transform: uppercase;\n}\n:host .parties-game-search-elapsed:lang(ko-kr),\n:host .parties-game-search-elapsed:lang(ja-jp),\n:host .parties-game-search-elapsed:lang(tr-tr),\n:host .parties-game-search-elapsed:lang(el-gr),\n:host .parties-game-search-elapsed:lang(th-th),\n:host .parties-game-search-elapsed:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-game-search-elapsed {\n  color: #f0e6d2;\n  font-size: 30px;\n  font-weight: 700;\n  line-height: 32px;\n  letter-spacing: 0.05em;\n}\n:host .parties-game-search-elapsed:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-search-info {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-search-info:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-search-info:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-search-elapsed,\n:host .parties-game-search-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-game-search-info {\n  font-family: var(--font-body);\n}\n:host .parties-game-search-map {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-game-search-map.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-game-search-map.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-game-search-map.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-game-search-map.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-game-search-map.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-game-search-map.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-game-search-map.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-game-search-map.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-game-search-map.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host {\n  display: block;\n  position: relative;\n  flex: 0 0 auto;\n/* Divider line below each game queue */\n/* Hide the divider if the game queue is hovered */\n}\n:host .parties-game-search-status {\n  direction: ltr;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info {\n  position: relative;\n  color: #a09b8c;\n  display: flex;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #f0e6d2;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info::before {\n  position: absolute;\n  left: 142px /*rtl:0px*/;\n  top: -2px;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-divider {\n  background-color: #413b07;\n}\n:host .parties-game-search-header {\n  display: flex;\n  justify-content: space-between;\n  height: 32px;\n  align-items: center;\n  padding: 0 9px;\n}\n:host .parties-game-search-body-data {\n  flex: 1;\n}\n:host .parties-game-search-info {\n  color: #0acbe6;\n}\n:host .parties-game-search-elapsed {\n  display: flex;\n  align-items: center;\n}\n:host .parties-game-search-elapsed.priority-warning::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #c89b3c;\n}\n:host .parties-game-search-elapsed.priority-alert::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #ff2345;\n}\n:host .parties-game-search-elapsed.priority-max-alert {\n  color: #ff2345;\n}\n:host .parties-game-search-elapsed.priority-max-alert::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #ff2345;\n}\n:host .parties-game-search-body {\n  display: flex;\n  align-items: flex-start;\n  position: relative;\n  padding: 0 5px 10px 10px /*rtl:0 10px 10px 5px*/;\n}\n:host .parties-game-search-map {\n  margin: 5px 10px 0 0 /*rtl:5px 0 0 10px*/;\n}\n:host .parties-game-search-header-text {\n  color: #a09b8c;\n  font-size: 12px;\n  text-transform: uppercase;\n  font-weight: normal;\n  line-height: 16px;\n  margin: 2px 0;\n  letter-spacing: 1px;\n  display: flex;\n  position: relative;\n}\n:host .parties-game-search-cancel {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n}\n:host .parties-game-search-cancel:hover {\n  background-color: #f0e6d2;\n}\n:host .parties-game-search-cancel:active {\n  background-color: #463714;\n}\n:host .parties-game-search-divider {\n  content: \'\';\n  position: absolute;\n  bottom: 0;\n  left: 10px;\n  width: calc(100% - 20px);\n  height: 1px;\n  background-color: #005a82;\n}\n:host .parties-game-search-status:hover .parties-game-search-divider {\n  background: none;\n}\n:host .parties-game-search-hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-search/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -25528,8 +25592,8 @@
                 })(e)
             }
             const c = {
-                    open: n(621),
-                    closed: n(613)
+                    open: n(624),
+                    closed: n(616)
                 },
                 m = {
                     open: "parties_open_party_status_header",
@@ -25538,10 +25602,10 @@
                 u = i.default.getProvider().getSocket();
             class d extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(622)
+                    return n(625)
                 }
                 stylesheetMarkup() {
-                    return n(623)
+                    return n(626)
                 }
                 constructor() {
                     super(), this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", u), this._playerSettingsBinding = (0, i.dataBinding)("/lol-settings", u), this._observeLobby(), this._templateHelper = i.UIKit.getTemplateHelper(), this._tooltipManager = i.UIKit.getTooltipManager()
@@ -25700,8 +25764,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-status-card">\r\n  <div class="parties-status-card parties-status-card-hide">\r\n    <div class="parties-status-card-bg-container"></div>\r\n\r\n    <div class="parties-status-card-header">\r\n      <div class="parties-status-card-header-icon"></div>\r\n      <div class="parties-status-card-header-text"></div>\r\n      <lol-uikit-info-icon class="parties-status-card-header-info"></lol-uikit-info-icon>\r\n    </div>\r\n\r\n    <div class="parties-status-card-body">\r\n      <div class="parties-status-card-map"></div>\r\n      <div class="parties-status-card-data">\r\n        <div class="parties-status-member-icons"></div>\r\n        <div class="parties-status-mode-text"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class="parties-status-card-divider"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .parties-status-card-header .parties-status-card-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  -webkit-user-select: none;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  text-transform: uppercase;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ko-kr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(ja-jp),\n:host .parties-status-card-header .parties-status-card-header-text:lang(tr-tr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(el-gr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(th-th),\n:host .parties-status-card-header .parties-status-card-header-text:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-status-card-body .parties-status-card-map {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n.parties-header-container .lobby-header-wrapper.custom-header-wrapper .lobby-header-map-icon.game_map_453 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Jade/img/game-select-mode-icon-selected.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\nlol-uikit-content-block.parties-status-card-info {\n  width: 250px;\n  white-space: normal;\n}\nlol-uikit-content-block.parties-status-card-info h6 {\n  margin-bottom: 8px;\n  display: flex;\n  justify-content: center;\n}\nlol-uikit-content-block.parties-status-card-info h6 .parties-status-card-header-text {\n  margin-left: 2px;\n  margin-top: 2px;\n}\nlol-uikit-content-block.parties-status-card-info h6 .parties-status-card-header-text:lang(ar-ae) {\n  margin-right: 0;\n  margin-right: 2px;\n}\n.parties-status-card-header-icon {\n  background-image: url("/fe/lol-parties/party_panel_header_icon.png");\n  width: 20px;\n  height: 20px;\n  background-repeat: no-repeat;\n  background-size: contain;\n  display: inline-block;\n}\n:host .parties-status-card {\n  position: relative;\n  cursor: pointer;\n}\n:host .parties-status-card.open {\n  background: #143c14;\n}\n:host .parties-status-card.closed {\n  background: #0d2641;\n}\n:host .parties-status-card .parties-status-card-bg-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 202px;\n  color: #36d987;\n}\n:host .parties-status-card-hide {\n  display: none;\n}\n:host .parties-status-card-header {\n  direction: ltr;\n  display: flex;\n  justify-content: space-between;\n  height: 22px;\n  position: relative;\n  align-items: center;\n  padding: 5px;\n  margin: 0 0 0 8px;\n}\n:host .parties-status-card-header:lang(ar-ae) {\n  direction: rtl;\n  margin: 0 8px 0 0;\n}\n:host .parties-status-card-header .parties-status-card-header-icon {\n  background-image: url("/fe/lol-parties/party_panel_header_icon.png");\n  width: 20px;\n  height: 20px;\n  flex-grow: 0;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-grow: 1;\n  pointer-events: none;\n  margin-top: 1px;\n  text-transform: uppercase;\n}\n:host .parties-status-card-header .parties-status-card-header-info {\n  flex-grow: 0;\n  width: 16px;\n  height: 16px;\n  margin-right: 10px;\n  visibility: hidden;\n}\n:host .parties-status-card-body {\n  direction: ltr;\n  display: flex;\n  align-items: center;\n  position: relative;\n  margin-top: -4px;\n  padding: 0 5px 10px 10px;\n}\n:host .parties-status-card-body:lang(ar-ae) {\n  direction: rtl;\n  padding: 0 10px 10px 5px;\n}\n:host .parties-status-card-body .parties-status-card-map {\n  margin: 7px 10px 0 0;\n}\n:host .parties-status-card-body .parties-status-card-map:lang(ar-ae) {\n  margin: 7px 0 0 10px;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_453 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Jade/img/game-select-mode-icon-selected.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-status-card-body .parties-status-member-icons {\n  display: flex;\n  align-items: flex-start;\n  padding: 0 0 0 6px;\n}\n:host .parties-status-card-body .parties-status-member-icons:lang(ar-ae) {\n  padding: 0 6px 0 0;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-empty {\n  width: 34px;\n  height: 34px;\n  margin: 0 0 0 -16px;\n  background-image: url("/fe/lol-parties/player_empty.png");\n  background-repeat: no-repeat;\n  background-position: center top;\n  background-size: contain;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-empty:lang(ar-ae) {\n  margin: 0 -16px 0 0;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-joined {\n  width: 34px;\n  height: 34px;\n  margin: 0 0 0 -16px;\n  background-image: url("/fe/lol-parties/player_joined.png");\n  background-repeat: no-repeat;\n  background-position: center top;\n  background-size: contain;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-joined:lang(ar-ae) {\n  margin: 0 -16px 0 0;\n}\n:host .parties-status-card-body .parties-status-number-counter-display {\n  color: #ccc4b3;\n  line-height: 34px;\n  font-size: 18px;\n  font-weight: 550;\n  letter-spacing: 0.05em;\n  margin-left: -3px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-status-card/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -25718,10 +25782,10 @@
             var o = n(1);
             class i extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(625)
+                    return n(628)
                 }
                 stylesheetMarkup() {
-                    return n(626)
+                    return n(629)
                 }
                 constructor() {
                     super(), this.shadowRoot.querySelector(".loadouts-purchase-dialog-body-title").innerText = o.tra.get("tft_upgrade_purchase_dialog_body_title"), this._fallback = !1
@@ -25759,8 +25823,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-loadouts-purchase-dialog-content">\r\n  <div class="loadouts-purchase-dialog-content-wrapper">\r\n    <div class="loadouts-purchase-dialog-body-title"></div>\r\n    <div class="little-legend-container">\r\n      <img class="little-legend-img" />\r\n      <div class="little-legend-overlay"></div>\r\n      <lol-uikit-lottie\r\n        class="lottie-animation"\r\n        image-path="/fe/lol-parties/lottie/LLUpgradeConfirm_StarIcons/images/"\r\n        loop="true"\r\n        autoplay="true"\r\n      >\r\n      </lol-uikit-lottie>\r\n    </div>\r\n    <div class="loadouts-purchase-dialog-body-content"></div>\r\n    <div class="lol-parties-purchase-dialog-error-message"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  font-family: var(--font-display);\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  -webkit-user-select: none;\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  text-transform: uppercase;\n}\n:host .loadouts-purchase-dialog-body-title:lang(ko-kr),\n:host .lol-parties-purchase-dialog-error-message:lang(ko-kr),\n:host .loadouts-purchase-dialog-body-title:lang(ja-jp),\n:host .lol-parties-purchase-dialog-error-message:lang(ja-jp),\n:host .loadouts-purchase-dialog-body-title:lang(tr-tr),\n:host .lol-parties-purchase-dialog-error-message:lang(tr-tr),\n:host .loadouts-purchase-dialog-body-title:lang(el-gr),\n:host .lol-parties-purchase-dialog-error-message:lang(el-gr),\n:host .loadouts-purchase-dialog-body-title:lang(th-th),\n:host .lol-parties-purchase-dialog-error-message:lang(th-th),\n:host .loadouts-purchase-dialog-body-title:lang(zh-tw),\n:host .lol-parties-purchase-dialog-error-message:lang(zh-tw) {\n  text-transform: none;\n}\n:host .loadouts-purchase-dialog-body-title {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host .loadouts-purchase-dialog-body-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .lol-parties-purchase-dialog-error-message {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .lol-parties-purchase-dialog-error-message:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .lol-parties-purchase-dialog-error-message:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .loadouts-purchase-dialog-content-wrapper {\n  padding-top: 10px;\n  padding-bottom: 51px;\n  background: linear-gradient(180deg, #1e2328 0%, #010a13 100%);\n  font-size: 14px;\n  letter-spacing: 0.03em;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 518px;\n  height: 341px;\n}\n:host .loadouts-purchase-dialog-body-title {\n  color: #c8aa6e;\n  padding-bottom: 20px;\n  font-size: 24px;\n  line-height: 36px;\n}\n:host .loadouts-purchase-dialog-body-content {\n  color: #a09b8c;\n  padding-top: 26px;\n  padding-left: 20px;\n  padding-right: 20px;\n  font-size: 14px;\n  line-height: 32px;\n}\n:host .lol-parties-purchase-dialog-error-message {\n  position: absolute;\n  bottom: 36px;\n  left: 0;\n  width: 100%;\n  line-height: 24px;\n  font-size: 12px;\n  color: #ff2345;\n}\n:host .lottie-animation {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 209px;\n  height: 209px;\n}\n:host .little-legend-container {\n  position: relative;\n  width: 209px;\n  height: 209px;\n  border: 4px solid;\n  border-image: linear-gradient(180deg, #c8aa6e 0%, #c89b3c 48.96%, #785a28 100%) 50 stretch stretch;\n}\n:host .little-legend-container::before {\n  position: absolute;\n  content: " ";\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  top: -5px;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-container::after {\n  position: absolute;\n  display: block;\n  content: "";\n}\n:host .little-legend-container.rarity::after {\n  bottom: -43px;\n  left: 48px;\n  width: 112px;\n  height: 64px;\n  background-size: 100% 100%;\n}\n:host .little-legend-container.rarity-0::after {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .little-legend-container.rarity-1::after {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .little-legend-container.rarity-2::after {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .little-legend-container.rarity-3::after {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .little-legend-container.rarity-tag::after {\n  top: -32px;\n  left: 50%;\n  margin-left: -56px;\n  width: 112px;\n  height: 64px;\n  background-size: cover;\n  background-position: center;\n  background-image: var(--purchase-dialog-rarity-tag);\n}\n:host .little-legend-img {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  object-fit: cover;\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-overlay {\n  position: absolute;\n  height: 83px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.77) 66.15%);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-loadouts-purchase-dialog-content/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -25793,7 +25857,7 @@
                 s = (o = n(157)) && o.__esModule ? o : {
                     default: o
                 },
-                a = n(628),
+                a = n(631),
                 r = n(133);
 
             function l(e) {
@@ -25810,10 +25874,10 @@
                 d = "equip";
             class p extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(629)
+                    return n(632)
                 }
                 stylesheetMarkup() {
-                    return n(630)
+                    return n(633)
                 }
                 constructor() {
                     super(), this._showNoneOption = null, this._sortByLastAcquiredBinding = (0, i.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_sortByLastAcquired", c), this._disabledContentIdsBinding = (0, i.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_disabled_content_by_queue", c), this._favorites = [], this._configAllowsSortByLastAcquired = !1, this._favoritesEnabled = !1, this._moonEnabled = !1, this._rarityTagEnabled = !1, this._rarityTags = null, this._hideUnowned = !0, this._hideDisabled = !0, this._isShardShardsEnabled = !1, this._isRewardsProgramEnabled = r.REWARDS_PROGRAM_STATUS.UNSET, this._searchString = "", this._sortType = r.SORTING_TYPES.DEFAULT, this._type = "", this._removedRecentHighlighting = [], this._starShardsAmount = 0, this._templateHelper = i.UIKit.getTemplateHelper(), this._tooltipManager = i.UIKit.getTooltipManager(), this._maxFavorites = 8, this._fallback = !1, this._alwaysShowWIPBadge = !1, this._disabledContentIds = [], this._queueId = null, i.db.get("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_favorites_max").then((e => {
@@ -26192,7 +26256,7 @@
                     let s;
                     t.appendChild(this._createCosmeticOption({
                         itemId: 0,
-                        loadoutsIcon: n(604),
+                        loadoutsIcon: n(607),
                         level: 0,
                         contentId: "NONE_OPTION",
                         name: o,
@@ -26446,8 +26510,8 @@
             "use strict";
             e.exports = '\ufeff\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-panel">\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ":host {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  position: relative;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-panel/component-style.styl"],
@@ -26468,10 +26532,10 @@
                 a = n(133);
             class r extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(632)
+                    return n(635)
                 }
                 stylesheetMarkup() {
-                    return n(633)
+                    return n(636)
                 }
                 constructor() {
                     super(), this._onClickBinding = this._onClicked.bind(this), this._onMouseInBinding = this._onMouseIn.bind(this), this._eventPreventDefaultCallback = e => e.preventDefault(), this._fallback = !0, this.isRewardsProgramEnabled = a.REWARDS_PROGRAM_STATUS.UNSET
@@ -26583,8 +26647,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-renderer">\r\n  <div class="cosmetics-renderer">\r\n    <img class="cosmetics-renderer-icon" />\r\n    <div class="cosmetics-renderer-filter"></div>\r\n    <div class="cosmetics-renderer-favorited-icon hidden"></div>\r\n    <div class="cosmetics-renderer-rank-container hidden">\r\n      <div class="cosmetics-renderer-rank-bounding-container">\r\n        <span class="cosmetics-renderer-star rank-1 unowned"></span>\r\n        <span class="cosmetics-renderer-star rank-2 unowned"></span>\r\n        <span class="cosmetics-renderer-star rank-3 unowned"></span>\r\n      </div>\r\n    </div>\r\n    <div class="cosmetics-renderer-rarity"></div>\r\n    <div class="cosmetics-renderer-loyalty hidden"></div>\r\n    <div class="cosmetics-renderer-rewards-program hidden"></div>\r\n    <div class="cosmetics-renderer-compensation hidden"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host {\n  --rcp-fe-lol-parties-cosmetics-renderer-border-width: 2px;\n}\n:host {\n  position: relative;\n  width: 64px;\n  height: 72px;\n  margin: 7px;\n  box-sizing: border-box;\n  cursor: pointer;\n}\n:host .cosmetics-renderer {\n  position: relative;\n  width: 100%;\n  height: 64px;\n  box-sizing: border-box;\n  border: thin solid #1e2328;\n}\n:host .cosmetics-renderer.selected {\n  filter: none;\n  border-width: 2px;\n  border: 2px solid #c79a3b;\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -30px;\n  background-image: var(--cosmetic-rarity-tag);\n  pointer-events: none;\n}\n:host .cosmetics-renderer:hover,\n:host .cosmetics-renderer.highlighted {\n  filter: brightness(110%);\n  border-width: 2px;\n  border-image: linear-gradient(to bottom, #f0e6d2, #c89b3c) 1;\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-0,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-1,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-2,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-3,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-tag,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -30px;\n  background-image: var(--cosmetic-rarity-tag-hover);\n  pointer-events: none;\n}\n:host .cosmetics-renderer:hover:not(.selected) .cosmetics-renderer-loyalty::after,\n:host .cosmetics-renderer.highlighted:not(.selected) .cosmetics-renderer-loyalty::after {\n  transform: translate(229%, -336%);\n}\n:host .cosmetics-renderer:not(.owned)::before {\n  content: \'\';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  background-color: #000;\n  background-size: 100% 100%;\n  opacity: 50%;\n}\n:host .cosmetics-renderer:not(.owned)::before::hover {\n  opacity: 0;\n}\n:host .cosmetics-renderer:not(.owned)::after {\n  content: \' \';\n  position: absolute;\n  width: 100%;\n  height: 40px;\n  left: 0;\n  background-image: url("/fe/lol-parties/lock.png");\n  background-position: center bottom;\n  background-repeat: no-repeat;\n  background-size: 40px 40px;\n  transform: translate(0, -52%) /*rtl:translate(0, -52%)*/;\n}\n:host .cosmetics-renderer:not(.owned):hover::before {\n  background-color: rgba(0,0,0,0.3);\n}\n:host .cosmetics-renderer:not(.owned):hover::after {\n  background-image: url("/fe/lol-parties/lock_hover.png");\n  height: 54px;\n  background-size: 54px 54px;\n  transform: translate(0, -47%) /*rtl:translate(0, -52%)*/;\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0,0,0,0.6);\n  border: thin solid #000;\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter.owned,\n:host .cosmetics-renderer .cosmetics-renderer-filter:not(.disabled) {\n  background-color: rgba(0,0,0,0);\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter:not(.owned) {\n  background-color: rgba(0,0,0,0.6);\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter.disabled {\n  background-color: rgba(0,0,0,0.6);\n  background-image: url("/fe/lol-parties/WrenchFist_Disabled.png");\n  background-size: 50%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .cosmetics-renderer .cosmetics-renderer-favorited-icon {\n  position: absolute;\n  bottom: 2px;\n  right: 2px;\n  width: 20px;\n  height: 20px;\n  background: transparent url("/fe/lol-parties/favorites-heart.png") no-repeat top;\n  background-size: contain;\n}\n:host .cosmetics-renderer .cosmetics-renderer-favorited-icon.hidden {\n  display: none;\n}\n:host .cosmetics-renderer .cosmetics-renderer-icon {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  position: relative;\n}\n:host .cosmetics-renderer .cosmetics-renderer-icon::before {\n  content: "";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: inset 0 0 1 10px #000;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity {\n  position: absolute;\n  bottom: -19px;\n  left: 4px;\n  width: 56px;\n  height: 32px;\n  background-position: center bottom;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -29px;\n  background-image: var(--cosmetic-rarity-tag);\n  pointer-events: none;\n}\n:host .cosmetics-renderer .cosmetics-renderer-loyalty {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n:host .cosmetics-renderer .cosmetics-renderer-loyalty::after {\n  content: \' \';\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background-image: url("/fe/lol-parties/Loyalty.png");\n  background-position: center bottom;\n  background-size: 22px 22px;\n  transform: translate(233%, -340%);\n}\n:host .cosmetics-renderer .cosmetics-renderer-compensation {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n:host .cosmetics-renderer .cosmetics-renderer-compensation::after {\n  content: \' \';\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background-image: url("/fe/lol-parties/Compensation.png");\n  background-position: center bottom;\n  background-size: 22px 22px;\n  transform: translate(233%, -340%);\n}\n:host .cosmetics-renderer .cosmetics-renderer-rewards-program {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rewards-program::after {\n  content: \' \';\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background-image: url("/fe/lol-static-assets/images/loyalty-nav-bar.svg");\n  background-position: center bottom;\n  background-size: 22px 22px;\n  transform: translate(233%, -340%);\n}\n:host .cosmetics-renderer .hidden {\n  visibility: hidden;\n  opacity: 0;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer {\n  border-width: 2px;\n  border-image: linear-gradient(to bottom, #fdfaf1, #78531c) 1;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-rarity.rarity-tag {\n  left: 50%;\n  bottom: -29px;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-icon {\n  filter: drop-shadow(0px 0px 5px rgba(255,193,34,0.25)) drop-shadow(0px 0px 4px rgba(255,184,0,0.25)) drop-shadow(0px 0px 8px #ffcf53);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-renderer/component-style.styl"],
@@ -26604,10 +26668,10 @@
                 };
             class a extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(635)
+                    return n(638)
                 }
                 stylesheetMarkup() {
-                    return n(636)
+                    return n(639)
                 }
                 constructor() {
                     super(), this._listenersAdded = !1, this._fallback = !1
@@ -26668,8 +26732,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-upgrade-celebration">\r\n  <lol-uikit-lottie\r\n    id="bg-particles-intro"\r\n    class="lottie-animation"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/LLUpgradeCeremony_Scene_IN.json"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/images/"\r\n    autoplay="false"\r\n  >\r\n  </lol-uikit-lottie>\r\n  <lol-uikit-lottie\r\n    id="bg-particles-loop"\r\n    class="lottie-animation hidden"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/LLUpgradeCeremony_Scene_LOOP.json"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/images/"\r\n    autoplay="false"\r\n    loop="true"\r\n  >\r\n  </lol-uikit-lottie>\r\n\r\n  <lol-uikit-video\r\n    class="bg-video bg-video-intro"\r\n    type="intro"\r\n    preload\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_02BGParticles/videos/LLUpgradeCeremony_ParticlesBG_IN.webm"\r\n  >\r\n  </lol-uikit-video>\r\n  <lol-uikit-video\r\n    class="bg-video bg-video-loop"\r\n    type="idle"\r\n    preload\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_02BGParticles/videos/LLUpgradeCeremony_ParticlesBG_LOOP.webm"\r\n  >\r\n  </lol-uikit-video>\r\n\r\n  <div class="little-legend-container hidden">\r\n    <img class="little-legend-img new-tier-img" />\r\n    <img class="little-legend-img previous-tier-img" />\r\n    <div class="little-legend-overlay"></div>\r\n  </div>\r\n\r\n  <lol-uikit-video\r\n    class="bg-video lighting-bolts"\r\n    type="intro"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_04FGLightning/videos/LLUpgradeCeremony_BoltsFG.webm"\r\n  >\r\n  </lol-uikit-video>\r\n\r\n  <lol-uikit-video\r\n    class="rarity-bolts"\r\n    type="intro"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_05RarityBolts/videos/LLUpgradeCeremony_RarityBolts.webm"\r\n  >\r\n  </lol-uikit-video>\r\n  <lol-uikit-lottie\r\n    id="bg-particles-stars"\r\n    class="lottie-animation"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_06LevelStarIcons/images/"\r\n    autoplay="false"\r\n  >\r\n  </lol-uikit-lottie>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host {\n  width: 1280px;\n  height: 720px;\n  position: relative;\n}\n:host .hidden {\n  visibility: hidden;\n}\n:host .lottie-animation {\n  position: absolute;\n  width: 1280px;\n  height: 720px;\n}\n:host .bg-video {\n  position: absolute;\n  width: 720px;\n  height: 720px;\n  left: 280px;\n  top: 0;\n  mix-blend-mode: screen;\n}\n:host .rarity-bolts {\n  position: absolute;\n  width: 96px;\n  height: 96px;\n  left: 592px;\n  top: 408px;\n}\n:host .rarity-bolts.rarity-tag {\n  top: 191px;\n}\n:host .little-legend-container {\n  position: absolute;\n  width: 208px;\n  height: 208px;\n  left: 532px;\n  top: 236px;\n  border: 4px solid;\n  border-image: linear-gradient(180deg, #c8aa6e 0%, #c89b3c 48.96%, #785a28 100%) 50 stretch stretch;\n}\n:host .little-legend-container::before {\n  position: absolute;\n  content: " ";\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  top: -5px;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-container::after {\n  position: absolute;\n  content: "";\n}\n:host .little-legend-container.rarity::after {\n  bottom: -43px;\n  left: 48px;\n  width: 112px;\n  height: 64px;\n  background-size: 100% 100%;\n}\n:host .little-legend-container.rarity-0::after {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .little-legend-container.rarity-1::after {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .little-legend-container.rarity-2::after {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .little-legend-container.rarity-3::after {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .little-legend-container.rarity-tag::after {\n  top: -32px;\n  left: 50%;\n  margin-left: -56px;\n  width: 112px;\n  height: 64px;\n  background-size: cover;\n  background-position: center;\n  background-image: var(--upgrade-celebration-rarity-tag);\n}\n:host .little-legend-img {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-overlay {\n  position: absolute;\n  height: 83px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.77) 66.15%);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-upgrade-celebration/component-style.styl"],
@@ -26687,10 +26751,10 @@
             const i = (0, o.getProvider)().getSocket();
             class s extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(638)
+                    return n(641)
                 }
                 stylesheetMarkup() {
-                    return n(639)
+                    return n(642)
                 }
                 constructor() {
                     super(), this._selectedSeries = "", this._selectedOuterRadius = "44px", this._selectedInnerRadius = "38px", this._dataBinding = (0, o.dataBinding)("/lol-missions", i), this._created = !0
@@ -26759,8 +26823,8 @@
             "use strict";
             e.exports = '\ufeff\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-series-button">\r\n  <div class="series-button-container">\r\n    <div class="series-tracker-label"></div>\r\n    <div class="series-tracker-button"></div>\r\n    <div class="series-tracker-reminder-label hidden"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var o = n(602),
-                i = n(603)(o);
+            var o = n(605),
+                i = n(606)(o);
             i.push([e.id, ':host .series-button-container .series-tracker-reminder-label {\n  font-family: var(--font-display);\n}\n:host .series-button-container .series-tracker-label {\n  font-family: var(--font-body);\n}\n:host .series-button-container .series-tracker-label,\n:host .series-button-container .series-tracker-reminder-label {\n  -webkit-user-select: none;\n}\n:host .series-button-container .series-tracker-label,\n:host .series-button-container .series-tracker-reminder-label {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  text-transform: uppercase;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ko-kr),\n:host .series-button-container .series-tracker-reminder-label:lang(ja-jp),\n:host .series-button-container .series-tracker-reminder-label:lang(tr-tr),\n:host .series-button-container .series-tracker-reminder-label:lang(el-gr),\n:host .series-button-container .series-tracker-reminder-label:lang(th-th),\n:host .series-button-container .series-tracker-reminder-label:lang(zh-tw) {\n  text-transform: none;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .series-button-container .series-tracker-label {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .series-button-container .series-tracker-label:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .series-button-container .series-tracker-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host([type="simple"]) .series-button-container .series-tracker-label {\n  display: none;\n}\n:host([type="simple"]) .series-button-container .series-tracker-button {\n  transform: none;\n}\n:host([type="simple"]) .series-button-container .series-tracker-reminder-label {\n  transform: none;\n}\n:host {\n  height: 48px;\n}\n:host .series-button-container {\n  height: var(--outer-radius);\n  position: relative;\n  margin-right: 8px;\n  margin-top: 4px;\n  display: flex;\n  align-items: center;\n}\n:host .series-button-container .series-tracker-label {\n  height: 29px;\n  border-radius: 10px;\n  background: rgba(0,0,0,0.54);\n  text-align: right;\n  padding-right: 25px;\n  padding-left: 15px;\n  line-height: 29px;\n  flex: 0 0 auto;\n  cursor: pointer;\n}\n:host .series-button-container .series-tracker-button {\n  position: relative;\n  width: var(--outer-radius);\n  height: var(--outer-radius);\n  border: 1px solid rgba(0,0,0,0.35);\n  border-radius: 50%;\n  box-sizing: border-box;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(#c1a05e, #6c5228);\n  flex: 0 0 auto;\n  transform: translateX(-35%);\n  cursor: pointer;\n}\n:host .series-button-container .series-tracker-button::before {\n  content: "";\n  position: absolute;\n  width: var(--inner-radius);\n  height: var(--inner-radius);\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.35);\n  background-image: url("/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/Missions/SeriesIcons/series_icon.svg");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 45%;\n  background-color: #1e2328;\n  border-radius: 50%;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  width: 21px;\n  height: 18px;\n  position: absolute;\n  background: #c89b3c;\n  border-radius: 4px;\n  right: -4px;\n  top: -4px;\n  font-size: 12px;\n  line-height: 18px;\n  letter-spacing: 0.03em;\n  text-align: center;\n  color: #000;\n  box-shadow: 0 0 0 #c89b3c;\n  animation: flash 1s infinite alternate;\n  transform: translateX(-35%);\n}\n:host .series-button-container .series-tracker-reminder-label.hidden {\n  opacity: 0;\n}\n@-moz-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@-webkit-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@-o-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n:host .series-button-container:hover {\n  filter: brightness(125%);\n}\n:host .series-button-container:hover .series-tracker-reminder-label {\n  animation: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-series-button/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -26864,7 +26928,7 @@
                 Telemetry: e => e.get("rcp-fe-common-libs").getTelemetry(1),
                 TemplateHelper: e => e.get("rcp-fe-lol-uikit").getTemplateHelper(),
                 TooltipManager: e => e.get("rcp-fe-lol-uikit").getTooltipManager(),
-                tra: e => e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-parties/trans.json").overlay("/fe/lol-social/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-tft/trans.json").overlay("/fe/ember-libs/trans-loadouts-modal.json"),
+                tra: e => e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-parties/trans.json").overlay("/fe/lol-social/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-tft/trans.json").overlay("/fe/lol-navigation/trans.json").overlay("/fe/ember-libs/trans-loadouts-modal.json"),
                 UIKit: e => e.get("rcp-fe-lol-uikit"),
                 UXSettings: e => e.get("rcp-fe-lol-shared-components").getApi_UXSettings(),
                 Viewport: e => e.get("rcp-fe-lol-shared-components").getApi_Viewport(),
@@ -26895,7 +26959,7 @@
                 t.default.add({
                     PartyAPI: e
                 });
-                __webpack_require__(598)();
+                __webpack_require__(601)();
                 return t.default.HomeRegistry.resolvePartiesHandler((() => e.show())), e
             }))))
         }), {

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Die eiserne Botschafterin",
     "shortBio": "– „Heroischer Ansturm“ (E) skaliert mit Fähigkeitsstärke.<br>– Passiv, Q, W und R unterscheiden sich grundlegend. Lies dir die Fähigkeitsbeschreibungen durch",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Normaler und magischer Schaden, der 10 % von Poppys aktuellem Leben übersteigt, wird um 50 % reduziert. Gilt nicht für den Schaden durch Gebäude."
+        "description": "Schaden, der Poppy zugefügt wird und einen Teil ihres aktuellen Lebens übersteigt, wird verringert."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Poppy zerschmettert ihren Gegner und verursacht dabei neben dem Angriffsschaden einen konstanten Wert plus zusätzlich 8 % des maximalen Lebens ihres Ziels als zusätzlichen Schaden. Der zusätzliche Schaden kann einen auf dem Rang basierenden Schwellenwert nicht überschreiten.",
-            "dynamicDescription": "Poppys nächster Angriff verursacht <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@ % des maximalen Lebens als magischen Schaden</magicDamage>. Der prozentuale zusätzliche Schaden abhängig vom Leben kann @HealthDamageCap@ nicht übersteigen.@SpellModifierDescriptionAppend@",
+            "description": "Poppys nächster Angriff zerschmettert ihren Gegner und verursacht zusätzlichen Schaden, der auf dem max. Leben ihres Ziels basiert.",
+            "dynamicDescription": "Poppys nächster Angriff verursacht <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@ % des maximalen Lebens als magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Passiv: Erleidet Poppy Schaden durch einen normalen Angriff oder verursacht sie mit einem solchen Schaden, erhöhen sich ihr Schaden und ihre Rüstung 5 Sekunden lang. Dieser Effekt kann 10-mal gesteigert werden. Aktiv: Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und ihr Lauftempo erhöht sich 5 Sekunden lang.",
+            "description": "Passiv: Wenn Poppy durch einen normalen Angriff Schaden erleidet oder damit Schaden verursacht, werden ihre Rüstung und ihr Schaden erhöht. Dieser Effekt ist steigerbar. Aktiv: Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und erhöhtes Lauftempo.",
             "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Poppy erhält @PassiveDuration@ Sekunden lang @BonusStats@ <scaleArmor>Rüstung</scaleArmor> und <scaleAD>Angriffsschaden</scaleAD>, wenn sie Angriffsschaden verursacht oder erleidet. Dieser Effekt kann @MaxStacks@-mal gesteigert werden.<br><br><spellActive>Aktiv:</spellActive> Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und ihr Lauftempo wird @ActiveDuration@ Sekunden lang um @Speed*100@ % erhöht.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

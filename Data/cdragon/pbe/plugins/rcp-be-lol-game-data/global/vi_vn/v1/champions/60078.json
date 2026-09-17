@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Sứ Giả Thép",
     "shortBio": "- Xung Phong (E) sử dụng tỉ lệ sức mạnh phép thuật<br>- Nội tại, Q, W, R hoàn toàn khác. Đọc mô tả kỹ năng",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Giảm 50% toàn bộ sát thương vật lý và sát thương phép gây ra lên Poppy nếu sát thương đó vượt quá 10% Máu hiện tại của cô. Không giảm sát thương từ công trình."
+        "description": "Sát thương gây lên Poppy vượt quá một phần Máu hiện tại của cô sẽ bị giảm."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Poppy nghiền nát đối thủ, gây ra sức mạnh công kích cộng với một lượng cố định và 8% máu tối đa của mục tiêu dưới dạng sát thương cộng thêm. Sát thương cộng thêm không thể vượt quá ngưỡng nhất định dựa trên cấp chiêu.",
-            "dynamicDescription": "Đòn đánh tiếp theo của Poppy gây sát thương phép tương đương <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% Máu tối đa</magicDamage>. Sát thương cộng thêm theo phần trăm máu không thể vượt quá @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Đòn đánh tiếp theo của Poppy nghiền nát đối thủ, gây sát thương cộng thêm dựa trên Máu tối đa của mục tiêu.",
+            "dynamicDescription": "Đòn đánh tiếp theo của Poppy gây sát thương phép tương đương <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% Máu tối đa</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Nội Tại: Khi nhận sát thương hoặc gây sát thương bằng đòn đánh thường, giáp và sát thương của Poppy được tăng trong 5 giây. Hiệu ứng này có thể cộng dồn 10 lần. Kích Hoạt: Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tốc độ di chuyển của cô ấy được tăng trong 5 giây.",
+            "description": "Nội tại: Khi nhận hoặc gây sát thương bằng đòn đánh thường, Giáp và sát thương của Poppy được tăng lên, có thể cộng dồn. Kích hoạt: Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tăng tốc độ di chuyển.",
             "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Poppy nhận được @BonusStats@ <scaleArmor>Giáp</scaleArmor> và <scaleAD>Sức Mạnh Công Kích</scaleAD> trong @PassiveDuration@ giây mỗi khi cô gây hoặc nhận sát thương từ Đòn Đánh. Hiệu ứng này có thể cộng dồn @MaxStacks@ lần.<br><br><spellActive>Kích Hoạt:</spellActive> Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tốc độ di chuyển của cô ấy được tăng thêm @Speed*100@% trong @ActiveDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Żelazna Ambasador",
     "shortBio": "— Bohaterska Szarża [E] skaluje się z mocą umiejętności<br>— Umiejętność bierna oraz [Q], [W] i [R] są zupełnie inne. Przeczytaj opisy umiejętności",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Zadawane Poppy obrażenia fizyczne i magiczne przekraczające 10% jej bieżącego zdrowia zostają zmniejszone o 50%. Nie zmniejsza to obrażeń zadawanych przez budowle."
+        "description": "Obrażenia zadawane Poppy, które przekraczają część jej bieżącego zdrowia, są zmniejszone."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Poppy miażdży przeciwnika, zadając dodatkowe obrażenia równe sumie obrażeń od ataku, stałej wartości plus 8% maksymalnego zdrowia jej celu. Dodatkowe obrażenia nie mogą przekroczyć progu określonego przez poziom umiejętności.",
-            "dynamicDescription": "Następny atak Poppy zadaje <magicDamage>obrażenia magiczne równe @FlatDamageCalc@ pkt. + @HealthRatio*100@% maksymalnego zdrowia</magicDamage>. Suma dodatkowych obrażeń procentowych od zdrowia nie może przekroczyć @HealthDamageCap@ pkt.@SpellModifierDescriptionAppend@",
+            "description": "Następny atak Poppy zmiażdży jej przeciwnika, zadając dodatkowe obrażenia w zależności od maks. zdrowia celu.",
+            "dynamicDescription": "Następny atak Poppy zadaje <magicDamage>obrażenia magiczne równe @FlatDamageCalc@ pkt. + @HealthRatio*100@% maksymalnego zdrowia</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Biernie: Po otrzymaniu obrażeń od ataku podstawowego lub zadaniu obrażeń atakiem podstawowym pancerz i obrażenia Poppy wzrastają na 5 sek. Ten efekt kumuluje się do 10 razy. Użycie: Poppy zyskuje maksymalną liczbę ładunków Chluby Demacii, a jej prędkość ruchu wzrasta na 5 sek.",
+            "description": "Biernie: Gdy Poppy otrzyma lub zada obrażenia od ataku podstawowego, zyskuje premię do pancerza i obrażeń, która może się kumulować. Użycie: Poppy zyskuje maks. liczbę ładunków Chluby Demacii, zwiększając swoją prędkość ruchu.",
             "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Poppy zyskuje @BonusStats@ <scaleArmor>pkt. pancerza</scaleArmor> i <scaleAD>obrażeń od ataku</scaleAD> na @PassiveDuration@ sek., gdy zada lub otrzyma obrażenia od ataku. Ten efekt kumuluje się do @MaxStacks@ razy.<br><br><spellActive>Użycie:</spellActive> Poppy zyskuje maksymalną liczbę ładunków Chluby Demacii, a jej prędkość ruchu wzrasta o @Speed*100@% na @ActiveDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

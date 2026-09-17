@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "غاليو",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "العملاق",
     "shortBio": "- أصبحت القدرات مختلفة بالكامل. اقرأ الأوصاف",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يدرّع غاليو بطلًا حليفًا فيزيد من الدروع ومقاومة السحر لديه، ويستعيد غاليو الصحة كلما تعرض ذلك البطل للضرر.",
-            "dynamicDescription": "يمنح غاليو درعًا لبطل حليف أو لنفسه، فتكسب الأهداف المدرعة <scaleArmor>@BonusDefense@ دروع</scaleArmor> و <scaleMR>@BonusDefense@ مقاومة سحر</scaleMR> لمدة 4ث. يتم علاج غاليو بمقدار <healing>@TotalHeal@</healing> في كل مرة تتعرض فيها الوحدة للضرر.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يعزز غاليو بطلًا حليفًا أو نفسه، مما يمنحه <scaleArmor>@BonusDefense@ دروع</scaleArmor> و <scaleMR>@BonusDefense@ مقاومة سحر</scaleMR> لمدة @BuffDuration@ث. يعالج غاليو بمقدار <healing>@TotalHeal@</healing> في كل مرة يتعرض فيها للضرر.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يصفق غاليو بجناحيه مطلقًا زوبعة رياح ارتجاجية تلحق الضرر بالأعداء وتترك في أثرها تيارًا هوائيًا موجهًا يزيد سرعة حركة الحلفاء.",
-            "dynamicDescription": "يطلق غاليو زوبعة رياح ارتجاجية تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بجميع الأعداء في دربها. يبقى تيار هوائي موجّه لمدة 5ث، ويكسب الحلفاء <speed>@MoveSpeedMod*100@% سرعة حركة</speed> أثناء التحرك مع اتجاه التيار.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق غاليو زوبعة رياح ارتجاجية تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بجميع الأعداء في طريقها. يبقى تيارٌ موجهٌ لمدة @DraftDuration@ث، ويكسب الحلفاء <speed>@MoveSpeedMod*100@% سرعة حركة</speed> أثناء تحركهم مع اتجاه التيار.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يتخذ غاليو هيئة تمثال، فيستفز الأعداء المجاورين ويخزن طاقة ارتجاجية أثناء مهاجمتهم له.  ثم ينبثق غاليو من غلاف تمثاله، ويطلق الطاقة المخزنة لإلحاق الضرر بالخصوم المحيطين.",
-            "dynamicDescription": "يقوم غاليو بالتحضير لمدة 2ث، فيستفز الأعداء القريبين، ويتلقى ضررًا مقلصًا بنسبة @ReducedDamage*100@%.<br><br>بعد التحضير، يلحق غاليو <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء المحيطين، بالإضافة إلى ضرر إضافي بنسبة 5% مقابل كل هجوم تعرض له أثناء التحضير.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يقوم غاليو بالتحضير لمدة @ChannelDuration@ث، فيستفز الأعداء في الجوار ويتلقى ضررًا مقلصًا بنسبة @ReducedDamage*100@%.<br><br>بعد التحضير، يلحق غاليو <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء المحيطين به، بالإضافة إلى @PercentPerHitIncrease*100@% ضرر إضافي مقابل كل هجوم تعرض له أثناء التحضير.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

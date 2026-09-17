@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Nautilus wirft seinen Anker nach vorne. Trifft er einen Champion, zieht er sich und seinen Gegner näher zusammen. Trifft er Terrain, zieht Nautilus sich an die getroffene Stelle und die Abklingzeit von „Schlepphaken“ wird halbiert.",
+            "description": "Nautilus wirft seinen Anker nach vorne. Trifft er einen Champion, zieht er sich und den Gegner zusammen. Trifft er auf Terrain, zieht sich Nautilus stattdessen zum Anker und die Abklingzeit von „Schlepphaken“ wird verringert.",
             "dynamicDescription": "Nautilus wirft seinen Anker nach vorne. Trifft er einen Gegner, zieht Nautilus sich selbst und das Ziel zusammen, wodurch es <magicDamage>@QDamageCalc@ magischen Schaden</magicDamage> erleidet und kurzzeitig <status>betäubt</status> wird.<br><br>Trifft er stattdessen Terrain, <status>zieht</status> sich Nautilus nach vorn und die Abklingzeit dieser Fähigkeit wird um @TerrainCDR*100@ % verringert.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nautilus erhält vorübergehend einen Schild. Während er abgeschirmt wird, fügen seine Angriffe dem Ziel und umstehenden Gegnern Schaden über Zeit zu.",
-            "dynamicDescription": "Nautilus umgibt sich mit dunklen Energien, die ihm @ShieldDuration@ Sekunden lang einen <shield>Schild in Höhe von @ShieldCalc@</shield> gewähren.<br><br>Während der <shield>Schild</shield> besteht, fügen Nautilus' Angriffe dem Ziel und umstehenden Gegnern <magicDamage>@DotDamageCalc@ magischen Schaden</magicDamage> über 2 Sekunden zu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus umgibt sich mit dunklen Energien, die ihm @ShieldDuration@ Sekunden lang einen <shield>Schild in Höhe von @ShieldCalc@</shield> gewähren.<br><br>Solange der <shield>Schild</shield> aktiv ist, fügen die Angriffe von Nautilus dem Ziel und Gegnern in der Nähe @DotDuration@ Sekunden lang <magicDamage>@DotDamageCalc@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nautilus schlägt auf den Boden und sorgt dafür, dass die Erde um ihn herum in drei Explosionen aufbricht. Jede Explosion fügt Gegnern Schaden zu und verlangsamt sie.",
-            "dynamicDescription": "Nautilus schlägt auf den Boden und erzeugt drei Explosionen, die jeweils <magicDamage>@DamageCalc@ magischen Schaden</magicDamage> verursachen und Gegner über @SlowDuration@ Sekunden hinweg um @SlowPercent*100@ % <status>verlangsamen</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus schlägt auf den Boden und erzeugt drei Explosionen, die jeweils <magicDamage>@DamageCalc@ magischen Schaden</magicDamage> verursachen und Gegner um @SlowPercent*100@ % <status>verlangsamen</status>. Die Verlangsamung fällt im Verlauf von @SlowDuration@ Sekunden ab. Eine Einheit kann durch mehrere Explosionen getroffen werden, erleidet durch zusätzliche Explosionen aber <magicDamage>@DamageHalvedTooltip@ Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

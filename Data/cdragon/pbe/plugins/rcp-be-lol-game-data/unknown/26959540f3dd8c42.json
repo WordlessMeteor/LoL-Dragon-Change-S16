@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "纳帝鲁斯向前掷出他的锚。如果命中英雄，则会将自己与目标一起拉近。如果命中地形，纳帝鲁斯会将自己拉向铁锚，并使“深渊铁锚”的冷却时间减半。",
+            "description": "纳帝鲁斯向前掷出他的锚。如果命中一名英雄，他会将自己和对手一同拉近。如果命中地形，纳帝鲁斯会将自己拉向铁锚，并且深渊铁锚的冷却时间会缩短。",
             "dynamicDescription": "纳帝鲁斯向前掷出他的锚。如果命中敌人，纳帝鲁斯会将自己与目标一起拉近，造成<magicDamage>@QDamageCalc@魔法伤害</magicDamage>并使其短暂<status>晕眩</status>。<br><br>如果命中地形，则会将纳帝鲁斯<status>拉向</status>前方，并使该技能的冷却时间缩短@TerrainCDR*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "纳帝鲁斯获得一个短暂的护盾。当护盾存在时，他的攻击会对目标以及目标周围的敌人造成持续伤害。",
-            "dynamicDescription": "纳帝鲁斯用黑暗能量包裹自身，获得<shield>@ShieldCalc@护盾</shield>，持续@ShieldDuration@秒。<br><br><shield>护盾</shield>存在期间，纳帝鲁斯的普攻会在2秒内对目标及其附近敌人造成<magicDamage>@DotDamageCalc@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "纳帝鲁斯被暗能量环绕，为自己获得 <shield>@ShieldCalc@ 护盾</shield> ，持续 @ShieldDuration@ 秒。<br><br>在 <shield>护盾</shield> 持续期间，纳帝鲁斯的普攻会在 @DotDuration@ 秒内对目标及周围敌人造成 <magicDamage>@DotDamageCalc@ 魔法伤害</magicDamage> 。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "纳帝鲁斯猛击地面，使周围大地连续发生三次爆炸。每次爆炸都会对敌人造成伤害和减速效果。",
-            "dynamicDescription": "纳帝鲁斯猛击地面，制造三次爆炸，每次造成<magicDamage>@DamageCalc@魔法伤害</magicDamage>，并使敌人<status>减速</status>@SlowPercent*100@%，在@SlowDuration@秒内持续衰减。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "纳帝鲁斯猛击地面，制造三次爆炸，每次造成 <magicDamage>@DamageCalc@ 魔法伤害</magicDamage> ，并对敌人施加 <status>缓速</status> 效果，缓速值为 @SlowPercent*100@%，在 @SlowDuration@ 秒内逐渐衰减。一个单位可能会被多个爆炸命中，但他们只会从额外的爆炸中受到 <magicDamage>@DamageHalvedTooltip@ 伤害</magicDamage> 。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

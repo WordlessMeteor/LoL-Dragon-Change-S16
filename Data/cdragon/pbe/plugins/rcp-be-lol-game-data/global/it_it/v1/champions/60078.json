@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "L'Ambasciatrice di ferro",
     "shortBio": "- Carica eroica (E) sfrutta la crescita del potere magico<br>- Passiva, Q, W, R sono completamente diverse Leggi le descrizioni delle abilità",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "I danni fisici e magici inflitti a Poppy che superano il 10% della sua salute attuale sono ridotti del 50%. Questo non riduce i danni dalle strutture."
+        "description": "I danni inflitti a Poppy che superano una parte della sua salute attuale vengono ridotti."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Poppy schiaccia il suo avversario, infliggendo attacco fisico più una quantità base e l'8% della salute massima del suo bersaglio come danni bonus. I danni bonus non possono superare una soglia che dipende dal livello.",
-            "dynamicDescription": "Il prossimo attacco di Poppy infligge <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% della salute massima come danni magici</magicDamage>. I danni bonus sulla percentuale di salute non possono superare @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Il prossimo attacco di Poppy schiaccia il suo avversario, infliggendo danni bonus in base alla salute massima del bersaglio.",
+            "dynamicDescription": "Il prossimo attacco di Poppy infligge <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% della salute massima come danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Passiva: quando subisce danni o infligge danni con un attacco base, l'armatura e i danni di Poppy aumentano per 5 secondi. Questo effetto è cumulabile 10 volte. Attiva: Poppy ottiene il massimo delle cariche di Eroe di Demacia e la sua velocità di movimento aumenta per 5 secondi.",
+            "description": "Passiva: quando subisce danni o infligge danni con un attacco base, l'armatura e i danni di Poppy aumentano e possono accumularsi. Attiva: Poppy ottiene il massimo di cariche di Eroe di Demacia e velocità di movimento aumentata.",
             "dynamicDescription": "<spellPassive>Passiva:</spellPassive> Poppy ottiene @BonusStats@ <scaleArmor>armatura</scaleArmor> e <scaleAD>attacco fisico</scaleAD> per @PassiveDuration@ secondo/i ogni volta che infligge o subisce danni da attacchi. Questo effetto è cumulabile fino a @MaxStacks@ volte.<br><br><spellActive>Attiva:</spellActive> Poppy ottiene il massimo delle cariche di Eroe di Demacia e la sua velocità di movimento aumenta di un @Speed*100@% per @ActiveDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

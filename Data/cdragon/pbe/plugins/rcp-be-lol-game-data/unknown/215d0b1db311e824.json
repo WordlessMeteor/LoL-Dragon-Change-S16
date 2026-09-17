@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "노틸러스가 전방으로 닻을 던집니다. 챔피언을 맞히면 자신과 대상을 가까이 끌어당깁니다. 지형을 맞히면 노틸러스가 닻을 향해 끌려가고, 닻줄 견인의 재사용 대기시간이 절반으로 감소합니다.",
+            "description": "노틸러스가 전방으로 닻을 던집니다. 챔피언을 맞히면 자신과 대상을 가까이 끌어당깁니다. 지형을 맞히면 노틸러스가 닻을 향해 끌려가고, 닻줄 견인의 재사용 대기시간이 감소합니다.",
             "dynamicDescription": "노틸러스가 전방으로 닻을 던집니다. 적을 맞히면 자신과 대상을 가까이 끌어당기며 <magicDamage>@QDamageCalc@의 마법 피해</magicDamage>를 입히고 잠시 <status>기절</status>시킵니다.<br><br>지형을 맞히면 노틸러스가 전방으로 <status>끌려가고</status>, 이 스킬의 재사용 대기시간이 @TerrainCDR*100@% 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "노틸러스가 잠시 보호막을 얻습니다. 보호막이 지속되는 동안 노틸러스의 기본 공격은 대상과 대상 주위의 적에게 지속 피해를 입힙니다.",
-            "dynamicDescription": "노틸러스가 어둠의 기운으로 자신을 감싸, @ShieldDuration@초 동안 <shield>@ShieldCalc@의 보호막</shield>을 얻습니다.<br><br><shield>보호막</shield>이 지속되는 동안, 노틸러스의 기본 공격이 대상과 그 주변의 적에게 2초에 걸쳐 <magicDamage>@DotDamageCalc@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "노틸러스가 어둠의 기운으로 자신을 감싸, @ShieldDuration@초 동안 <shield>@ShieldCalc@의 보호막</shield>을 얻습니다.<br><br><shield>보호막</shield>이 지속되는 동안, 노틸러스의 기본 공격이 대상과 그 주변의 적에게 @DotDuration@초에 걸쳐 <magicDamage>@DotDamageCalc@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "노틸러스가 지면을 강타하여 주위의 땅을 3회 연속 폭발시킵니다. 각 폭발은 적에게 피해를 입히고 둔화시킵니다.",
-            "dynamicDescription": "노틸러스가 지면을 강타하여 3회의 폭발을 일으킵니다. 각 폭발은 적에게 <magicDamage>@DamageCalc@의 마법 피해</magicDamage>를 입히고, @SlowDuration@초에 걸쳐 서서히 감소하는 @SlowPercent*100@%의 <status>둔화</status>를 적용합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "노틸러스가 지면을 강타하여 3회의 폭발을 일으킵니다. 각 폭발은 적에게 <magicDamage>@DamageCalc@의 마법 피해</magicDamage>를 입히고, @SlowDuration@초에 걸쳐 서서히 감소하는 @SlowPercent*100@%의 <status>둔화</status>를 적용합니다. 한 유닛이 여러 번의 폭발에 맞을 수도 있지만, 두 번째 이후로 적중하는 폭발부터는 <magicDamage>@DamageHalvedTooltip@의 마법 피해</magicDamage>만을 받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

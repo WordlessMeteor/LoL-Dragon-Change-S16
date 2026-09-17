@@ -607,7 +607,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                d = e
+                u = e
             };
             const a = n(1),
                 i = "/lol-client-config/v3/client-config/",
@@ -615,16 +615,17 @@
                 l = i + "lol.client_settings.tft.new_tab.overrideUrl",
                 o = i + "lol.client_settings.deepLinks",
                 r = "/deep-links/v1/settings",
-                c = "/riotclient/region-locale";
-            let d = null;
+                c = i + "lol.client_settings.tft.set17_extension_config",
+                d = "/riotclient/region-locale";
+            let u = null;
             t.default = a.Ember.Service.extend({
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), d && (d._registerLaunchTFTCallback(this.launchTFT.bind(this)), d._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this))), this.set("fullLaunchEnabled", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), a.dataBinding.observe(s, this, (e => {
+                    this._super(...arguments), u && (u._registerLaunchTFTCallback(this.launchTFT.bind(this)), u._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this))), this.set("fullLaunchEnabled", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), a.dataBinding.observe(s, this, (e => {
                         this.set("fullLaunchEnabled", e)
                     })), a.dataBinding.observe(l, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), a.dataBinding.observe(c, this, (e => {
+                    })), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), a.dataBinding.observe(d, this, (e => {
                         this.set("isTencentRegion", "TENCENT" === e?.region)
                     })), this.handleExternalLinksSettingsChanged = e => {
                         if (!e) return void a.logger.warning("No external link settings received.");
@@ -634,7 +635,9 @@
                             const n = `${t}://${e.launchTftUrl}`;
                             a.logger.info(`Saving launchUrl product with link: ${n}`), this.set("launchLink", n)
                         }))
-                    }, a.dataBinding.observe(r, this, this.handleExternalLinksSettingsChanged)
+                    }, a.dataBinding.observe(r, this, this.handleExternalLinksSettingsChanged), a.dataBinding.observe(c, this, (e => {
+                        e ? this.set("set17ExtensionConfig", e) : a.logger.warning("No set17 extension config received.")
+                    }))
                 },
                 isFullLaunchEnabled: function() {
                     return this.get("fullLaunchEnabled")
@@ -643,7 +646,7 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(l, this), a.dataBinding.unobserve(c, this), a.dataBinding.unobserve(r, this), d && d._unregisterLaunchTFTCallback()
+                    this._super(...arguments), a.dataBinding.unobserve(s, this), a.dataBinding.unobserve(l, this), a.dataBinding.unobserve(d, this), a.dataBinding.unobserve(r, this), u && u._unregisterLaunchTFTCallback()
                 },
                 launchTFT: function() {
                     if (this.get("isTencentRegion")) return a.logger.info("Launching bundled executable for Tencent."), void a.dataBinding.post("/lol-gameflow/v1/launch-tft");
@@ -660,6 +663,12 @@
                 },
                 toggleDirectLaunchEnabled: function() {
                     this.set("directLaunchEnabled", !this.get("directLaunchEnabled"))
+                },
+                isSet17ExtensionEnabled() {
+                    return !0 === this.get("set17ExtensionConfig")?.enabled
+                },
+                getTFTuQueueEntries() {
+                    return this.isSet17ExtensionEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries || []
                 }
             })
         }, (e, t, n) => {

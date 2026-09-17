@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "A vas nagykövete",
     "shortBio": "– A Hősi roham (E) varázserővel erősödik<br>– A passzív képesség, a Q, a W és az R teljesen megváltozott. Olvasd el a képességek leírását",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "A Poppyt érő összes olyan fizikai és varázssebzés, amely meghaladja aktuális életerejének 10%-át, 50%-kal csökken. A hatás nem csökkenti az építmények által okozott sebzést."
+        "description": "Csökken a Poppyt érő összes olyan sebzés, amely meghaladja az aktuális életerejének bizonyos részét."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Poppy szétzúzza ellenfelét, a sebzésével, bónuszként egy fix értékkel, valamint ellenfele maximális életerejének 8%-ával egyenértékű sebzést okozva. A bónusz sebzés nem lépheti túl a szint által megszabott határértéket.",
-            "dynamicDescription": "Poppy következő támadása <magicDamage>@FlatDamageCalc@ + a maximális életerő @HealthRatio*100@%-ával egyenlő varázssebzést</magicDamage> okoz. Az életerővel arányos bónusz sebzés maximális összege @HealthDamageCap@ lehet.@SpellModifierDescriptionAppend@",
+            "description": "Poppy következő támadása szétzúzza az ellenfelét, és a célpont maximális életerejével arányos bónusz sebzést okoz.",
+            "dynamicDescription": "Poppy következő támadása <magicDamage>@FlatDamageCalc@ + a maximális életerő @HealthRatio*100@%-ával egyenlő varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Passzív: ha Poppy alaptámadással sebzést okoz vagy szenved el, 5 másodpercre megnő a páncélja és a sebzése. Ez a hatás 10-szer halmozódhat. Aktív: Poppy azonnal megkapja a maximális számú Demacia eszménye jelzőt, és a mozgási sebessége 5 másodpercre megnő.",
+            "description": "Passzív: ha alaptámadás éri Poppyt, vagy ha ő okoz sebzést az alaptámadásával, megnő a páncélja és a sebzése. Ez a hatás halmozható. Aktív: megkapja a maximális számú Demacia eszménye jelzőt, és megnő a mozgási sebessége.",
             "dynamicDescription": "<spellPassive>Passzív:</spellPassive> ha Poppy sebzést okoz vagy szenved el, @PassiveDuration@ másodpercig @BonusStats@ <scaleArmor>páncélra</scaleArmor> és <scaleAD>sebzésre</scaleAD> tesz szert. Ez a hatás @MaxStacks@ alkalommal halmozódhat.<br><br><spellActive>Aktív:</spellActive> Poppy azonnal megkapja a maximális számú Demacia eszménye jelzőt, és a mozgási sebessége @ActiveDuration@ másodpercre @Speed*100@%-kal megnő.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

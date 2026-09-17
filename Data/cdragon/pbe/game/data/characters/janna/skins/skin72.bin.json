@@ -545,6 +545,26 @@
                                 "__type": "FloatLiteralMaterialDriver"
                             },
                             "__type": "FloatComparisonMaterialDriver"
+                        },
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "mBoolDriver": {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mTurnOnTimeSec": 0.0,
+                                "mTurnOffTimeSec": 0.0,
+                                "__type": "LerpMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.5,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -581,6 +601,28 @@
                     "EyeMask",
                     "Ear",
                     "{3c22ed79}"
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mAnimationNames": [
+                                "Taunt",
+                                "Dance"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{b798885e}",
+                        "__type": "PersistentVfxData"
+                    }
                 ],
                 "__type": "PersistentEffectConditionData"
             }
@@ -939,8 +981,24 @@
                     "Enabled": false,
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mOnValue": 4.0,
                         "mOffValue": 0.20000000298023224,
@@ -955,8 +1013,24 @@
                     "Enabled": false,
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mOnValue": 0.0,
                         "mOffValue": 0.20000000298023224,
@@ -971,8 +1045,24 @@
                     "Enabled": false,
                     "driver": {
                         "BoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "OnValue": [
                             1.0,
@@ -996,8 +1086,24 @@
                     "name": "Bloom_Intensity",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mTurnOnTimeSec": 0.0,
                         "mTurnOffTimeSec": 0.0,
@@ -1016,8 +1122,19 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 4.0,
+                                "mDelayOff": 6.0,
                                 "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{a80da2b659a69dfe}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -1030,8 +1147,23 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{13374fccd62518fc}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -1649,8 +1781,24 @@
                     "Enabled": false,
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mOnValue": 4.0,
                         "mOffValue": 0.20000000298023224,
@@ -1665,8 +1813,24 @@
                     "Enabled": false,
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mOnValue": 0.0,
                         "mOffValue": 0.30000001192092896,
@@ -1681,8 +1845,24 @@
                     "Enabled": false,
                     "driver": {
                         "BoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "OnValue": [
                             1.0,
@@ -1706,8 +1886,24 @@
                     "name": "Bloom_Intensity",
                     "driver": {
                         "mBoolDriver": {
-                            "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         },
                         "mTurnOnTimeSec": 0.0,
                         "mTurnOffTimeSec": 0.0,
@@ -1722,8 +1918,23 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{a80da2b659a69dfe}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -1736,8 +1947,23 @@
                     "options": [
                         {
                             "driver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 6.0,
+                                "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{13374fccd62518fc}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{13374fccd62518fc}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -2895,8 +3121,19 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 4.0,
+                                "mDelayOff": 6.0,
                                 "__type": "DelayedBoolMaterialDriver"
+                            },
+                            "TextureName": "{a80da2b659a69dfe}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt",
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -9450,6 +9687,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi",
@@ -9614,6 +9855,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi1",
@@ -9756,6 +10001,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi2",
@@ -9781,7 +10030,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -9909,6 +10158,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi3",
@@ -9934,7 +10187,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -10066,6 +10319,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_",
                 "importance": 3,
@@ -10096,13 +10353,20 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.20000000298023224,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
                             [
                                 0.9100022912025452,
                                 0.9900053143501282,
+                                1.0,
+                                0.3499961793422699
+                            ],
+                            [
+                                1.0,
+                                1.0,
                                 1.0,
                                 0.3499961793422699
                             ],
@@ -10232,7 +10496,11 @@
             },
             {
                 "rate": {
-                    "constantValue": 2.0,
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -10259,7 +10527,7 @@
                         0.13000686466693878,
                         0.11999695003032684,
                         0.17000076174736023,
-                        0.6500037908554077
+                        1.0
                     ],
                     "__type": "ValueColor"
                 },
@@ -10268,7 +10536,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.699999988079071,
+                            0.550000011920929,
                             1.0
                         ],
                         "values": [
@@ -10363,6 +10631,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_2",
                 "importance": 3,
@@ -10393,7 +10665,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.6499999761581421,
                             1.0
                         ],
                         "values": [
@@ -10524,6 +10796,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_",
                 "importance": 3,
@@ -10546,7 +10822,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11051,6 +11327,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark",
@@ -11072,7 +11352,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11186,7 +11466,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 6.0,
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl",
                 "bindWeight": {
@@ -11215,7 +11499,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11352,7 +11636,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.20000000298023224,
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "AoE_outerring",
@@ -11382,7 +11669,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11679,6 +11966,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle",
@@ -11709,7 +12000,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11828,6 +12119,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl1",
@@ -11857,7 +12152,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -11994,6 +12289,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "BottomSwirl2",
@@ -12023,7 +12322,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -12167,7 +12466,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 3.0,
+                "lifetime": 2.9000000953674316,
                 "isSingleParticle": 1,
                 "emitterName": "Vertical_Glow_1",
                 "bindWeight": {
@@ -12380,6 +12679,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark1",
@@ -12405,7 +12708,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.6000000238418579,
+                            0.550000011920929,
                             0.8999999761581421
                         ],
                         "values": [
@@ -12520,6 +12823,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -12686,6 +12993,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 4.0,
@@ -12860,6 +13171,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center",
@@ -12885,7 +13200,7 @@
                         "times": [
                             0.0,
                             0.15000000596046448,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -13276,6 +13591,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "heidi4",
@@ -13301,7 +13620,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -13416,6 +13735,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -13542,6 +13865,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "skyBeam1",
                 "bindWeight": {
@@ -13666,6 +13993,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -14050,6 +14381,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 4.0,
                 "isSingleParticle": 1,
                 "emitterName": "Vertical_Glow_3",
@@ -14090,7 +14425,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.699999988079071,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -14221,6 +14556,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Inner_Light",
                 "importance": 3,
@@ -14251,7 +14590,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.800000011920929,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -14338,9 +14677,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        21.5,
+                        21.0,
                         0.0,
-                        21.5
+                        21.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -14397,6 +14736,10 @@
             {
                 "rate": {
                     "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 6.0,
@@ -14548,6 +14891,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center2",
@@ -14689,7 +15036,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.0,
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle1",
                 "importance": 3,
@@ -14719,7 +15070,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.800000011920929,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -14838,6 +15189,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "center3",
@@ -14936,6 +15291,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.950000047683716,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -15100,7 +15459,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 0.10000000149011612,
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.9000000953674316,
                 "isSingleParticle": 1,
                 "emitterName": "STENCIL_MASK_WRITE",
                 "importance": 3,
@@ -15705,6 +16068,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_1",
                 "importance": 3,
@@ -15815,6 +16182,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -15941,6 +16312,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -16086,6 +16461,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_4",
                 "importance": 3,
@@ -16227,6 +16606,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -17204,6 +17587,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_Noise",
                 "importance": 3,
@@ -17229,7 +17616,7 @@
                         "times": [
                             0.0,
                             0.05000000074505806,
-                            0.75,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -17381,6 +17768,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "TeamCircle2",
@@ -17411,7 +17802,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -17984,7 +18375,7 @@
                         "times": [
                             0.0,
                             0.1727699488401413,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -18122,6 +18513,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.700000047683716,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark3",
@@ -18147,7 +18542,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.30000001192092896,
+                            0.20000000298023224,
                             0.5,
                             1.0
                         ],
@@ -18156,7 +18551,7 @@
                                 1.0,
                                 1.0,
                                 1.0,
-                                0.5000076293945312
+                                0.0
                             ],
                             [
                                 1.0,
@@ -18290,7 +18685,7 @@
                         "times": [
                             0.0,
                             0.10000000149011612,
-                            0.75,
+                            0.6200000047683716,
                             1.0
                         ],
                         "values": [
@@ -20686,6 +21081,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "SpaceBackground_NavMeshMask",
@@ -22301,6 +22700,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Dark4",
@@ -22451,6 +22854,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_7",
                 "importance": 3,
@@ -22484,7 +22891,7 @@
                         "times": [
                             0.0,
                             0.30000001192092896,
-                            0.75,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -22590,6 +22997,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -22946,6 +23357,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -23513,6 +23928,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "SpaceBackground_NavMeshMask1",
@@ -23544,7 +23963,7 @@
                 "Color": {
                     "dynamics": {
                         "times": [
-                            0.699999988079071,
+                            0.6000000238418579,
                             0.949999988079071
                         ],
                         "values": [
@@ -24153,6 +24572,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "AoE_outerring3",
@@ -24475,7 +24898,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Yorick_Skin50_W_Ground_AOE01_011_010.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -24931,6 +25354,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "AoE_outerring4",
@@ -25242,6 +25669,10 @@
                     "constantValue": 3.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Alpha_8",
                 "importance": 3,
@@ -25382,6 +25813,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -25531,6 +25966,10 @@
             {
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -25694,6 +26133,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Avatar_Fresnel",
@@ -25774,6 +26217,10 @@
                 "timeBeforeFirstEmission": 0.20000000298023224,
                 "rate": {
                     "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.9000000953674316,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -25866,7 +26313,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 1.0,
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "ground_blast",
                 "birthVelocity": {
                     "constantValue": [
@@ -26133,7 +26580,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "ground_blast1",
                 "birthVelocity": {
                     "constantValue": [
@@ -28035,7 +28482,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "particleLinger": 4.0,
                 "lifetime": 3.0,
                 "fieldCollectionDefinition": {
                     "fieldAccelerationDefinitions": [
@@ -28351,6 +28798,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
                 "isSingleParticle": 1,
                 "emitterName": "heidi_3",
                 "importance": 3,
@@ -28375,8 +28826,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
-                            1.0
+                            0.6000000238418579,
+                            0.949999988079071
                         ],
                         "values": [
                             [
@@ -28519,6 +28970,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.799999952316284,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.799999952316284,
                 "isSingleParticle": 1,
                 "emitterName": "heidi_4",
                 "importance": 3,
@@ -28543,8 +28999,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
-                            1.0
+                            0.6000000238418579,
+                            0.949999988079071
                         ],
                         "values": [
                             [
@@ -31114,7 +31570,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "particleLinger": 4.0,
                 "lifetime": 3.0,
                 "fieldCollectionDefinition": {
                     "fieldAccelerationDefinitions": [
@@ -37812,7 +38268,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_Recall_Wings001.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Janna_Skin72_R_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -37886,7 +38342,7 @@
                 "disableBackfaceCull": true,
                 "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_E_cas_Mask031.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_Recall_Wings001.tex",
+                    "textureMult": "ASSETS/Characters/Janna/Skins/Skin72/Janna_Skin72_R_TX_CM.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -40308,7 +40764,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_waterspike32.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -41067,7 +41523,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Base_R_Range.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Blitzcrank_Skin66_P_Glow_05_02.tex",
                     "uvScaleMult": {
@@ -53799,7 +54255,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -54305,7 +54761,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Darius_Skin43_Q_Trail_01_Alpha.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
@@ -54468,7 +54924,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Janna/Skins/Skin72/Particles/Janna_Skin72_E_cas_Mask021.tex",
+                "texture": "ASSETS/Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_E_cas_Mask029.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.6499999761581421,

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "ผู้แทนเหล็กกล้า",
     "shortBio": "- Heroic Charge (E) มีสเกลพลังเวท<br>- สกิลติดตัว, Q, W และ R แตกต่างไปจากเดิมโดยสิ้นเชิง อย่าลืมอ่านคำอธิบายสกิล",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "ลดความเสียหายกายภาพและเวททั้งหมดที่ Poppy ได้รับซึ่งเกิน 10% จากพลังชีวิตปัจจุบันของเธอลง 50% เอฟเฟกต์นี้ไม่ลดความเสียหายจากสิ่งปลูกสร้าง"
+        "description": "ลดความเสียหายที่ Poppy ได้รับซึ่งเกินส่วนหนึ่งจากพลังชีวิตปัจจุบันของเธอ"
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Poppy ทุบใส่ศัตรู สร้างความเสียหายบวกกับค่าคงที่ และโบนัสความเสียหาย 8% จากพลังชีวิตสูงสุดของเป้าหมาย โบนัสความเสียหายไม่สามารถเกินขีดจำกัดตามเลเวลสกิล",
-            "dynamicDescription": "การโจมตีครั้งถัดไปของ Poppy สร้าง<magicDamage>ความเสียหายเวท @FlatDamageCalc@ หน่วย + @HealthRatio*100@% จากพลังชีวิตสูงสุด</magicDamage> เปอร์เซ็นต์โบนัสความเสียหายไม่สามารถเกิน @HealthDamageCap@ หน่วยได้@SpellModifierDescriptionAppend@",
+            "description": "การโจมตีครั้งถัดไปของ Poppy บดขยี้ศัตรู สร้างโบนัสความเสียหายเพิ่มเติมตามพลังชีวิตสูงสุดของเป้าหมาย",
+            "dynamicDescription": "การโจมตีครั้งถัดไปของ Poppy สร้าง<magicDamage>ความเสียหายเวท @FlatDamageCalc@ หน่วย + @HealthRatio*100@% จากพลังชีวิตสูงสุด</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ติดตัว: Poppy เพิ่มเกราะและความเสียหายที่ทำได้เป็นเวลา 5 วินาที เมื่อได้รับหรือสร้างความเสียหายจากการโจมตีปกติ เอฟเฟกต์นี้สแตคได้สูงสุด 10 ครั้ง กดใช้: Poppy เพิ่มสแตค Paragon of Demacia จนเต็ม และได้รับความเร็วเคลื่อนที่เป็นเวลา 5 วินาที",
+            "description": "ติดตัว: เมื่อได้รับหรือสร้างความเสียหายจากการโจมตีปกติ Poppy จะได้รับเกราะและสร้างความเสียหายเพิ่มขึ้น ซึ่งสามารถสแตคซ้อนทับกันได้ กดใช้: Poppy เพิ่มสแตค Paragon of Demacia จนเต็ม และได้รับความเร็วเคลื่อนที่เพิ่มขึ้น",
             "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Poppy ได้รับ<scaleArmor>เกราะ</scaleArmor>และ<scaleAD>พลังโจมตี</scaleAD> @BonusStats@ หน่วยเป็นเวลา @PassiveDuration@ วินาที เมื่อสร้างหรือได้รับความเสียหายจากการโจมตีปกติ เอฟเฟกต์นี้สแตคได้สูงสุด @MaxStacks@ ครั้ง<br><br><spellActive>กดใช้:</spellActive> Poppy เพิ่มสแตค Paragon of Demacia จนเต็ม และได้รับความเร็วเคลื่อนที่เพิ่มขึ้น @Speed*100@% เป็นเวลา @ActiveDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

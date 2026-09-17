@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "La Embajadora de Hierro",
     "shortBio": "- Carga heroica (E) tiene progresión de poder de habilidad.<br>- La pasiva, la Q, la W y la R son completamente diferentes. Lee las descripciones de las habilidades.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Todo el daño físico y mágico infligido a Poppy que supere el 10% de su vida actual se reduce un 50%. Esto no reduce el daño de las estructuras."
+        "description": "El daño infligido a Poppy que supere un cierto porcentaje de su vida actual se reduce."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Poppy aplasta a su rival, lo que inflige su daño de ataque + una cantidad fija + 8% de la vida máxima de su objetivo como daño adicional. El daño adicional no puede superar un determinado umbral, que depende del nivel.",
-            "dynamicDescription": "El siguiente ataque de Poppy inflige <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% de la vida máxima como daño mágico</magicDamage>. El porcentaje de daño adicional en función de la vida no puede superar @HealthDamageCap@ de daño.@SpellModifierDescriptionAppend@",
+            "description": "El siguiente ataque de Poppy aplasta a su oponente, lo que inflige daño adicional según la vida máxima del objetivo.",
+            "dynamicDescription": "El siguiente ataque de Poppy inflige <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% de la vida máxima como daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pasiva: Al recibir o infligir daño con un ataque básico, el daño y la armadura de Poppy aumentan durante 5 s. Este efecto se puede acumular 10 veces. Activa: Poppy obtiene el máximo de acumulaciones de Modelo de Demacia, y su velocidad de movimiento aumenta durante 5 s.",
+            "description": "Pasiva: Al recibir daño o al infligir daño con un ataque básico, el daño y la armadura de Poppy aumentan, y este efecto se puede acumular. Activa: Poppy obtiene las acumulaciones máximas de Modelo de Demacia y su velocidad de movimiento aumenta.",
             "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Poppy obtiene @BonusStats@ de <scaleArmor>armadura</scaleArmor> y <scaleAD>daño de ataque</scaleAD> durante @PassiveDuration@ s cada vez que inflige o recibe daño de ataque. Este efecto se acumula @MaxStacks@ veces.<br><br><spellActive>Activa:</spellActive> Poppy obtiene el máximo de acumulaciones de Modelo de Demacia, y su velocidad de movimiento aumenta un @Speed*100@% durante @ActiveDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

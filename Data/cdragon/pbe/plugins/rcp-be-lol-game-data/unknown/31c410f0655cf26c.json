@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "指定方向に錨を投げる。チャンピオンに命中した場合、互いを同時に引き寄せる。フィールド上の地形に命中すると、碇をたぐってそこまで移動し、このスキルのクールダウンが半分に短縮される。",
+            "description": "前方に錨を投げる。チャンピオンに命中した場合、互いを同時に引き寄せる。地形に命中した場合、錨をたぐってそこまで移動し、このスキルのクールダウンが短縮される。",
             "dynamicDescription": "指定方向に錨を投げる。敵ユニットに命中すると自身と対象を同時に引き寄せ、対象に<magicDamage>@QDamageCalc@の魔法ダメージ</magicDamage>を与えて短時間<status>スタン</status>させる。<br><br>地形に命中した場合は、その地点まで自身を<status>引き寄せ</status>、このスキルのクールダウンが@TerrainCDR*100@%短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一時的にシールドを獲得する。シールドが持続している間は通常攻撃が対象と周囲の敵に継続ダメージを与える。",
-            "dynamicDescription": "@ShieldDuration@秒間、深海の力を身にまとい、<shield>@ShieldCalc@のダメージを防ぐシールド</shield>を展開する。<br><br><shield>シールド</shield>が持続している間は、通常攻撃が2秒かけて対象と周囲の敵に<magicDamage>@DotDamageCalc@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@ShieldDuration@秒間、邪悪なエネルギーに包み込まれ、<shield>耐久値@ShieldCalc@のシールド</shield>を獲得する。<br><br><shield>シールド</shield>が持続している間は、通常攻撃が@DotDuration@秒かけて対象と周囲のすべての敵に<magicDamage>@DotDamageCalc@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "地面を踏みつけて、自身の周囲に爆発を3度引き起こす。爆発のたびに敵にダメージとスロウ効果を与える。",
-            "dynamicDescription": "地面を踏みつけて爆発を3度引き起こし、それぞれが敵に<magicDamage>@DamageCalc@の魔法ダメージ</magicDamage>を与え、@SlowPercent*100@%の<status>スロウ効果</status>を付与する。このスロウ効果は@SlowDuration@秒かけて元に戻る。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "地面を叩きつけ、3回爆発を発生させる。爆発はそれぞれ<magicDamage>@DamageCalc@の魔法ダメージ</magicDamage>を与え、敵に@SlowPercent*100@%の<status>スロウ効果</status>を付与する。このスロウ効果は@SlowDuration@秒かけて徐々に元に戻る。同じユニットが複数の爆発を受ける可能性があるが、2回目以降の爆発から受けるダメージは<magicDamage>@DamageHalvedTooltip@</magicDamage>になる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Nautilus vrhne vpřed svou kotvu. Pokud s ní zasáhne šampiona, sebe i svého protivníka přitáhne k sobě navzájem. Jestliže s ní zasáhne terén, přitáhne se ke kotvě a přebíjecí doba schopnosti Zakotvit se zkrátí na polovinu.",
+            "description": "Nautilus vrhne vpřed svou kotvu. Pokud s ní zasáhne šampiona, sebe i svého protivníka přitáhne k sobě navzájem. Jestliže s ní zasáhne terén, přitáhne se Nautilus ke kotvě a přebíjecí doba schopnosti Zakotvit se zkrátí.",
             "dynamicDescription": "Nautilus vrhne vpřed svou kotvu. Pokud zasáhne nepřítele, přitáhnou se s Nautilem navzájem k sobě, cíl utrpí <magicDamage>@QDamageCalc@ bodů magického poškození</magicDamage> a bude na chvíli <status>omráčen</status>.<br><br>Zásah terénu naopak <status>přitáhne</status> Nautila vpřed a zkrátí přebíjecí dobu této schopnosti o @TerrainCDR*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nautilus získá dočasný štít.  Dokud nedojde k jeho zničení, způsobují Nautilovy útoky cíli i okolním nepřátelům poškození rozložené v čase.",
-            "dynamicDescription": "Nautilus se obklopí temnou energií a získá na @ShieldDuration@ sek. <shield>štít o síle @ShieldCalc@ bodů</shield>.<br><br>Dokud <shield>štít</shield> trvá, Nautilovy útoky působí cíli a okolním nepřátelům <magicDamage>@DotDamageCalc@ bodů magického poškození</magicDamage> rozloženého do 2 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus se obklopí temnou energií, která mu na @ShieldDuration@ sek. poskytne <shield>štít o síle @ShieldCalc@ bodů</shield>.<br><br>Dokud <shield>štít</shield> trvá, Nautilovy útoky způsobují cíli a okolním nepřátelům <magicDamage>@DotDamageCalc@ bodů magického poškození</magicDamage> po dobu @DotDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nautilus udeří do země a oblast kolem něj vybuchne v sérii tří výbuchů. Každý výbuch nepřátele poškodí a zpomalí.",
-            "dynamicDescription": "Nautilus udeří do země a vyvolá tři exploze, z nichž každá způsobí <magicDamage>@DamageCalc@ bodů magického poškození</magicDamage> a <status>zpomalí</status> nepřátele o @SlowPercent*100@ %. Zpomalení během @SlowDuration@ sek. postupně slábne.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus udeří do země a vyvolá tři exploze. Každá z nich způsobí <magicDamage>@DamageCalc@ bodů magického poškození</magicDamage> a <status>zpomalí</status> nepřátele o @SlowPercent*100@ %. Zpomalení během @SlowDuration@ sek. postupně odezní. Jednotku může zasáhnout více explozí, ale každá další jí způsobí jen <magicDamage>@DamageHalvedTooltip@ bodů poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

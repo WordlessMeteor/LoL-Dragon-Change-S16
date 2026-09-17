@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Nautilus ขว้างสมอเรือไปข้างหน้า หากโดนแชมเปี้ยน เขาจะดึงทั้งตัวเองและศัตรูเข้าหากัน หากโดนกำแพง Nautilus จะดึงตัวเองเข้าหาสมอเรือแทน และลดคูลดาวน์ของ Dredge Line ลงครึ่งหนึ่ง",
+            "description": "Nautilus ขว้างสมอเรือไปข้างหน้า หากสมอโดนแชมเปี้ยน เขาจะดึงทั้งตัว⁠เองและศัตรูเข้าหากัน หากสมอโดนกำแพง Nautilus จะดึงตัวเองเข้า⁠หาสมอแทน และคูลดาวน์ของ Dredge Line ลดลง",
             "dynamicDescription": "Nautilus ขว้างสมอเรือไปข้างหน้า หากโดนศัตรู Nautilus จะดึงตัวเองและเป้าหมายเข้าหากัน สร้าง<magicDamage>ความเสียหายเวท @QDamageCalc@ หน่วย</magicDamage> และ<status>สตัน</status>พวกเขาชั่วครู่<br><br>หากโดนกำแพง Nautilus จะ<status>ดึง</status>ตัวเองไปข้างหน้า และลดคูลดาวน์ของสกิลนี้ลง @TerrainCDR*100@%@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nautilus ได้รับโล่ป้องกันชั่วขณะ ในขณะที่มีโล่อยู่ การโจมตีจะสร้างความเสียหายต่อเนื่องให้กับเป้า⁠หมายของเขาและศัตรูที่อยู่รอบข้าง",
-            "dynamicDescription": "Nautilus ห้อมล้อมตัวเองด้วยพลังงานมืด ได้รับ<shield>โล่ป้องกัน @ShieldCalc@ หน่วย</shield>เป็นเวลา @ShieldDuration@ วินาที<br><br>โดยขณะ<shield>โล่ป้องกัน</shield>ยังอยู่ การโจมตีของ Nautilus จะสร้าง<magicDamage>ความเสียหายเวท @DotDamageCalc@ หน่วย</magicDamage>แก่เป้าหมายและศัตรูรอบ ๆ ในช่วงเวลา 2 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus ห่อหุ้มตัวเองด้วยพลังงานมืด ได้รับ<shield>โล่ป้องกัน @ShieldCalc@ หน่วย</shield>เป็นเวลา @ShieldDuration@ วินาที<br><br>ขณะ<shield>โล่ป้องกัน</shield>ยังอยู่ การโจมตีของ Nautilus จะสร้าง<magicDamage>ความเสียหายเวท @DotDamageCalc@ หน่วย</magicDamage>แก่เป้าหมายและศัตรูรอบข้างในช่วงเวลา @DotDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nautilus กระทืบพื้น ทำให้เกิดระเบิดน้ำรอบตัวสามระลอก แต่ละครั้งสร้างความเสียหายและสโลว์ศัตรู",
-            "dynamicDescription": "Nautilus กระทืบพื้น ทำให้เกิดระเบิดน้ำรอบตัวสามระลอก แต่ละครั้งสร้าง<magicDamage>ความเสียหายเวท @DamageCalc@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @SlowPercent*100@% ซึ่งค่อย ๆ ลดลงในเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus กระแทกพื้น สร้างแรงระเบิดสามครั้ง แต่ละครั้งสร้าง<magicDamage>ความเสียหายเวท @DamageCalc@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @SlowPercent*100@% ซึ่งค่อย ๆ ลดลงในเวลา @SlowDuration@ วินาที ยูนิตสามารถโดนระเบิดได้มากกว่าหนึ่งครั้ง แต่จะได้รับ<magicDamage>ความเสียหาย @DamageHalvedTooltip@ หน่วย</magicDamage>จากระเบิดครั้งถัด ๆ ไป@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Nautilus melemparkan jangkarnya ke depan. Jika mengenai champion, dia menarik dirinya dan lawan jadi berdekatan. Jika mengenai medan, Nautilus akan menarik dirinya ke jangkar dan cooldown Dredge Line berkurang setengah.",
+            "description": "Nautilus melemparkan jangkarnya ke depan. Jika mengenai champion, dia akan menarik dirinya dan lawan jadi berdekatan. Jika mengenai medan, Nautilus akan menarik dirinya ke anchor dan cooldown Dredge Line dikurangi.",
             "dynamicDescription": "Nautilus melemparkan jangkarnya ke depan. Jika mengenai musuh, Nautilus menyeret dirinya dan target bersama-sama, menghasilkan <magicDamage>@QDamageCalc@ magic damage</magicDamage> dan menerapkan <status>Stun</status> singkat pada mereka.<br><br>Menghantam medan akan <status>Pull</status> Nautilus ke depan dan mengurangi cooldown ability ini sebesar @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nautilus mendapatkan Shield sementara.  Ketika shield aktif, Serangannya memberikan damage berkelanjutan ke target dan musuh di sekitar.",
-            "dynamicDescription": "Nautilus menyelimuti dirinya dengan energi gelap, memberinya <shield>@ShieldCalc@ Shield</shield> selama @ShieldDuration@ detik.<br><br>Selama <shield>Shield</shield> aktif, serangan Nautilus menghasilkan <magicDamage>@DotDamageCalc@ magic damage</magicDamage> selama 2 detik pada target dan musuh di sekitarnya.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus menyelimuti dirinya dengan energi gelap, memberinya <shield>@ShieldCalc@ Shield</shield> selama @ShieldDuration@ detik.<br><br>Selama <shield>Shield</shield> aktif, Serangan Nautilus menghasilkan <magicDamage>@DotDamageCalc@ magic damage</magicDamage> selama @DotDuration@ detik ke target dan musuh di sekitarnya.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nautilus menghantam tanah, menyebabkan tanah meledak di sekelilingnya dalam bentuk tiga ledakan. Tiap ledakan menghasilkan damage dan menerapkan slow pada musuh.",
-            "dynamicDescription": "Nautilus menghantam tanah, menciptakan tiga ledakan. Setiap ledakan menghasilkan <magicDamage>@DamageCalc@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada musuh sebesar @SlowPercent*100@% yang berkurang selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus menghantam tanah, menciptakan tiga ledakan yang masing-masing menghasilkan <magicDamage>@DamageCalc@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada musuh sebesar @SlowPercent*100@% yang berkurang selama @SlowDuration@ detik. Satu unit bisa terkena lebih dari satu ledakan, tetapi mereka hanya menerima <magicDamage>@DamageHalvedTooltip@ damage</magicDamage> dari ledakan tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

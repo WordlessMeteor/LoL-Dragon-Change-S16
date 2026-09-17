@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Nautilus își aruncă ancora înainte. Dacă aceasta nimerește un campion, el și adversarul sunt trași unul spre altul. Dacă ancora nimerește în teren, Nautilus se trage înainte către ea și timpul de reactivare al ''Liniei de dragare'' se reduce la jumătate.",
+            "description": "Nautilus își aruncă ancora înainte. Dacă aceasta nimerește un campion, el și adversarul sunt trași unul spre altul. Dacă ancora nimerește în teren, Nautilus se trage înainte către ea și timpul de reactivare al ''Liniei de dragare'' se reduce.",
             "dynamicDescription": "Nautilus își aruncă ancora înainte. Dacă nimerește un inamic, el și adversarul sunt trași unul spre altul, iar ținta suferă <magicDamage>@QDamageCalc@ daune magice</magicDamage> și este <status>amețită</status> pentru scurt timp.<br><br>Dacă lovești terenul în schimb, îl <status>trage</status> pe Nautilus înainte și reduce timpul de reactivare al acestei abilități cu @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nautilus primește un scut temporar.  Cât timp scutul rezistă, atacurile lui le provoacă daune în timp țintei și inamicilor din jur.",
-            "dynamicDescription": "Nautilus se înconjoară de energii întunecate, protejându-se cu un <shield>scut în valoare de @ShieldCalc@</shield> timp de @ShieldDuration@ secunde.<br><br>Cât timp <shield>scutul</shield> rezistă, atacurile lui Nautilus le provoacă <magicDamage>@DotDamageCalc@ daune magice</magicDamage> de-a lungul a 2 secunde țintei și tuturor inamicilor din jur.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus se înconjoară de energii întunecate, protejându-se cu un <shield>scut în valoare de @ShieldCalc@</shield> timp de @ShieldDuration@ secunde.<br><br>Cât timp <shield>scutul</shield> rezistă, atacurile lui Nautilus le provoacă <magicDamage>@DotDamageCalc@ daune magice</magicDamage> de-a lungul a @DotDuration@ secunde țintei și tuturor inamicilor din jur.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Nautilus izbește pământul, făcând solul să explodeze în jur într-o serie de trei explozii. Fiecare explozie provoacă daune și îi încetinește pe inamici.",
-            "dynamicDescription": "Nautilus lovește pământul, creând trei explozii care provoacă fiecare <magicDamage>@DamageCalc@ daune magice</magicDamage> și <status>încetinesc</status> inamicii cu @SlowPercent*100@%, valoare ce scade de-a lungul a @SlowDuration@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus lovește pământul, creând trei explozii care provoacă fiecare <magicDamage>@DamageCalc@ daune magice</magicDamage> și <status>încetinesc</status> inamicii cu @SlowPercent*100@%, valoare ce scade de-a lungul a @SlowDuration@ secunde. O unitate poate fi lovită de mai multe explozii, însă cele suplimentare îi provoacă <magicDamage>@DamageHalvedTooltip@ daune</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

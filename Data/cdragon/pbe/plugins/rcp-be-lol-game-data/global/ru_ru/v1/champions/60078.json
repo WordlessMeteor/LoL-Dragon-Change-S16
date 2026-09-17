@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Поппи",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Железный посол",
     "shortBio": "– Героический рывок [E] масштабируется от силы умений<br>– Пассивное умение, [Q], [W] и [R] полностью переработаны. Почитайте описания",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Если Поппи получает физ. или маг. урон выше 10% от ее текущего здоровья, он снижается на 50%. Не распространяется на урон от строений."
+        "description": "Урон, который получает Поппи, снижается, если превышает определенную долю ее текущ. здоровья."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Со следующей автоатакой Поппи сокрушает своего врага, дополнительно нанося фикс. маг. урон плюс 8% от макс. здоровья цели. Доп. урон не выше порога, зависящего от уровня умения.",
-            "dynamicDescription": "Следующая атака Поппи наносит маг. урон в размере <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% от макс. здоровья</magicDamage>. Доп. урон в размере доли здоровья не выше @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Следующая автоатака Поппи сокрушает врага, нанося доп. урон, зависящий от макс. здоровья цели.",
+            "dynamicDescription": "Следующая атака Поппи наносит маг. урон в размере <magicDamage>@FlatDamageCalc@ ед. + @HealthRatio*100@% от макс. здоровья</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Пассивно: когда Поппи наносит вражескому чемпиону урон автоатакой или получает урон от вражеской автоатаки, ее броня и урон на 5 сек. растут. Суммируется до 10 р. Активно: Поппи получает 10 зар. Героя Демасии и бонус к скорости передвижения на 5 сек.",
+            "description": "Пассивно: получая урон от автоатак или нанося урон ими, Поппи получает броню и бонус к урону (эффект суммируется). Активно: Поппи получает макс. зарядов бонуса к скорости передвижения от Героя Демасии.",
             "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> когда Поппи наносит или получает урон автоатакой, ее <scaleArmor>броня</scaleArmor> и <scaleAD>сила атаки</scaleAD> растут на @BonusStats@ на @PassiveDuration@ сек. Суммируется до @MaxStacks@ р.<br><br><spellActive>Активно:</spellActive> Поппи получает 10 зар. Героя Демасии и @Speed*100@% скорости передвижения на @ActiveDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

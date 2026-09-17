@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Nautilus ciska przed siebie kotwicą. Jeśli trafi bohatera, przyciąga się do niego i jego do siebie. Jeśli trafi na przeszkodę, przyciąga się do kotwicy, a połowa czasu odnowienia i kosztu many Zakotwiczenia zostaje zwrócona.",
+            "description": "Nautilus ciska przed siebie kotwicą. Jeśli trafi bohatera, przyciąga się do niego i jego do siebie. Jeśli trafi na przeszkodę, przyciąga się do kotwicy, a czas odnowienia i koszt many Zakotwiczenia zostają zmniejszone.",
             "dynamicDescription": "Nautilus ciska przed siebie kotwicą. Jeśli trafi wroga, Nautilus przyciąga się do niego i go do siebie oraz zadaje mu <magicDamage>@QDamageCalc@ pkt. obrażeń magicznych</magicDamage>, <status>ogłuszając</status> go na chwilę.<br><br>Trafienie w teren zamiast tego <status>przyciąga</status> Nautilusa do przodu i skraca czas odnowienia tej umiejętności o @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nautilus osłania się tymczasową tarczą.  Gdy jest ona aktywna, jego ataki zadają rozłożone w czasie obrażenia celowi i pobliskim wrogom.",
-            "dynamicDescription": "Nautilus otacza się mroczną energią, zyskując <shield>@ShieldCalc@ pkt. tarczy</shield> na @ShieldDuration@ sek.<br><br>Dopóki <shield>tarcza</shield> jest aktywna, ataki Nautilusa przez 2 sek. zadają dodatkowo <magicDamage>@DotDamageCalc@ pkt. obrażeń magicznych</magicDamage> celowi i wszystkim pobliskim wrogom.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus otacza się mroczną energią, zyskując tarczę o wytrzymałości <shield>@ShieldCalc@ pkt.</shield> na @ShieldDuration@ sek.<br><br>Dopóki <shield>tarcza</shield> jest aktywna, ataki Nautilusa zadają <magicDamage>@DotDamageCalc@ pkt. obrażeń magicznych</magicDamage> przez @DotDuration@ sek. celowi i pobliskim wrogom.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Nautilus uderza w grunt, sprawiając, że ziemia dookoła eksploduje trzykrotnie. Każdy wybuch zadaje obrażenia i spowalnia wrogów.",
-            "dynamicDescription": "Nautilus uderza w ziemię, wywołując trzy eksplozje. Każda z nich zadaje <magicDamage>@DamageCalc@ pkt. obrażeń magicznych</magicDamage> i <status>spowalnia</status> wrogów o @SlowPercent*100@%. Efekt spowolnienia zanika w ciągu @SlowDuration@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus uderza w ziemię, tworząc trzy eksplozje, z których każda zadaje <magicDamage>@DamageCalc@ pkt. obrażeń magicznych</magicDamage> i <status>spowalnia</status> o @SlowPercent*100@%. Efekt spowolnienia zanika w ciągu @SlowDuration@ sek. Dana jednostka może znaleźć się w zasięgu kilku eksplozji, ale kolejne zadają jej <magicDamage>@DamageHalvedTooltip@ pkt. obrażeń</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

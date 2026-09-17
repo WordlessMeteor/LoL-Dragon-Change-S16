@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Πόπι",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Η Σιδηρά Πρέσβειρα",
     "shortBio": "- Η Ηρωική Εφόρμηση (E) έχει αναλογική αύξηση της Ισχύος Ικανότητας<br>- Η Παθητική, το Q, το W και το R είναι εντελώς διαφορετικά. Διαβάστε τις περιγραφές των ικανοτήτων",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -453,7 +453,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
         "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Όλη η Σωματική και Μαγική Ζημιά που δέχεται η Πόπι, η οποία ξεπερνά το 10% της τρέχουσας Ζωής της μειώνεται κατά 50%. Αυτό δεν μειώνει τη ζημιά από κτίρια."
+        "description": "Η ζημιά στην Πόπι που υπερβαίνει ένα μέρος της τρέχουσας Ζωής της μειώνεται."
     },
     "spells": [
         {
@@ -464,8 +464,8 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Πόπι διαλύει τον αντίπαλό της, προκαλώντας μπόνους ζημιά ίση με τη Ζημιά Επίθεσης συν ένα σταθερό ποσό συν το 8% της μέγιστης Ζωής του στόχου της. Η μπόνους ζημιά δεν μπορεί να υπερβεί ένα ανώτατο όριο που βασίζεται στο επίπεδο της ικανότητας.",
-            "dynamicDescription": "Η επόμενη επίθεση της Πόπι προκαλεί <magicDamage> Μαγική Ζημιά ίση με @FlatDamageCalc@ + @HealthRatio*100@% της μέγιστης Ζωής</magicDamage>. Η μπόνους ζημιά βάσει ποσοστού Ζωής δεν μπορεί να είναι μεγαλύτερη από @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Η επόμενη επίθεση της Πόπι διαλύει τον αντίπαλό της και προκαλεί μπόνους ζημιά με βάση τη μέγιστη Ζωή του στόχου της.",
+            "dynamicDescription": "Η επόμενη επίθεση της Πόπι προκαλεί <magicDamage> Μαγική Ζημιά ίση με @FlatDamageCalc@ + @HealthRatio*100@% της μέγιστης Ζωής</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -614,7 +614,7 @@
             "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Παθητική: Όταν δέχεται ζημιά ή προκαλεί ζημιά με μια βασική επίθεση, η Θωράκιση και η ζημιά της Πόπι αυξάνονται για 5 δευτ. Αυτή η επίδραση μπορεί να συσσωρευτεί έως 10 φορές. Ενεργή: Η Πόπι αποκτά τις μέγιστες στοίβες του Προτύπου της Ντεμάσια και η Ταχύτητα Κίνησής της αυξάνεται για 5 δευτ.",
+            "description": "Παθητική: Όταν δέχεται ζημιά από ή προκαλεί ζημιά με μια βασική επίθεση, η Θωράκιση και η ζημιά της Πόπι αυξάνονται και αυτό μπορεί να συσσωρευτεί. Ενεργή: Η Πόπι αποκτά το μέγιστο αριθμό από στοίβες του Πρότυπου της Ντεμάσια και η Ταχύτητα Κίνησής της αυξάνεται.",
             "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η Πόπι αποκτά @BonusStats@ <scaleArmor>Θωράκιση</scaleArmor> και <scaleAD>Ζημιά Επίθεσης</scaleAD> για @PassiveDuration@ δευτ. κάθε φορά που προκαλεί ή δέχεται ζημιά από επιθέσεις. Αυτή η επίδραση μπορεί να συσσωρευτεί @MaxStacks@ φορές.<br><br><spellActive>Ενεργή:</spellActive> Η Πόπι αποκτά τις μέγιστες στοίβες του Προτύπου της Ντεμάσια και η Ταχύτητα Κίνησής της αυξάνεται κατά @Speed*100@% για @ActiveDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,

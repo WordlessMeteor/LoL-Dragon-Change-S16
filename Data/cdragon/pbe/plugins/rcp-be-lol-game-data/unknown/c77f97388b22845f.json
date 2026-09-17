@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Nautilus ném mỏ neo về phía trước. Nếu trúng một tướng, hắn sẽ lôi cả bản thân lẫn mục tiêu lại gần nhau. Nếu trúng địa hình, Nautilus sẽ tự kéo bản thân về cái mỏ neo, và thời gian hồi của Phóng Mỏ Neo được giảm đi một nửa.",
+            "description": "Nautilus ném mỏ neo về phía trước. Nếu trúng một tướng, hắn sẽ kéo cả bản thân và đối thủ lại gần nhau. Nếu trúng địa hình, Nautilus sẽ kéo bản thân đến mỏ neo và hồi chiêu của Phóng Mỏ Neo được giảm xuống.",
             "dynamicDescription": "Nautilus ném mỏ neo về phía trước. Nếu trúng kẻ địch, Nautilus kéo bản thân lẫn mục tiêu lại gần nhau đồng thời gây <magicDamage>@QDamageCalc@ sát thương phép</magicDamage> và <status>Làm Choáng</status> nạn nhân trong thoáng chốc.<br><br>Nếu trúng địa hình, <status>kéo</status> Nautilus về phía trước và giảm hồi chiêu của kĩ năng này đi @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nautilus nhận một Lá chắn tạm thời. Khi còn tồn tại, Đòn đánh của Nautilus sẽ gây sát thương theo thời gian lên mục tiêu và cả những kẻ địch xung quanh.",
-            "dynamicDescription": "Nautilus bao quanh mình bằng năng lượng hắc ám, nhận <shield>@ShieldCalc@ Lá Chắn</shield> trong @ShieldDuration@ giây.<br><br>Trong khi <shield>Lá Chắn</shield> còn tồn tại, đòn đánh của Nautilus gây <magicDamage>@DotDamageCalc@ sát thương phép</magicDamage> lên mục tiêu và kẻ địch xung quanh trong 2 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus bao quanh mình bằng năng lượng hắc ám, cho hắn <shield>@ShieldCalc@ Lá Chắn</shield> trong @ShieldDuration@ giây.<br><br>Khi <shield>Lá Chắn</shield> còn tồn tại, Đòn Đánh của Nautilus gây <magicDamage>@DotDamageCalc@ sát thương phép</magicDamage> trong vòng @DotDuration@ giây lên mục tiêu và kẻ địch xung quanh.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nautilus nện mạnh xuống mặt đất, tạo ra 3 vụ nổ liên tiếp quanh hắn. Mỗi vụ nổ sẽ gây sát thương và làm chậm kẻ địch.",
-            "dynamicDescription": "Nautilus đập xuống đất, tạo ra ba vụ nổ, mỗi vụ nổ gây <magicDamage>@DamageCalc@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch đi @SlowPercent*100@%, giảm dần trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nautilus đập xuống đất, tạo ra ba vụ nổ, mỗi vụ gây <magicDamage>@DamageCalc@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch @SlowPercent*100@%, giảm dần trong @SlowDuration@ giây. Một đơn vị có thể bị trúng nhiều vụ nổ, nhưng chỉ chịu <magicDamage>@DamageHalvedTooltip@ sát thương</magicDamage> từ các vụ nổ sau.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
