@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Γκάλιο",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Ο Κολοσσός",
     "shortBio": "- Οι ικανότητες είναι εντελώς διαφορετικές. Διαβάστε τις περιγραφές",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Γκάλιο προστατεύει ένα σύμμαχο Ήρωα, αυξάνοντας την Θωράκιση και την Αντίσταση Μαγείας του και αναπληρώνοντας τη Ζωή του κάθε φορά που ο Ήρωας δέχεται ζημιά.",
-            "dynamicDescription": "Ο Γκάλιο προστατεύει με Ασπίδα έναν σύμμαχο Ήρωα ή τον εαυτό του. Οι στόχοι της Ασπίδας αποκτούν <scaleArmor>@BonusDefense@ Θωράκιση</scaleArmor> και <scaleMR>@BonusDefense@ Αντίσταση Μαγείας</scaleMR> για 4 δευτ. Κάθε φορά που η μονάδα δέχεται ζημιά, ο Γκάλιο θεραπεύεται κατά <healing>@TotalHeal@</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Γκάλιο ενισχύει έναν σύμμαχο Ήρωα ή τον εαυτό του και του δίνει <scaleArmor>@BonusDefense@ Θωράκιση</scaleArmor> και <scaleMR>@BonusDefense@ Αντίσταση Μαγείας</scaleMR> για @BuffDuration@ δευτ. Ο Γκάλιο θεραπεύεται κατά <healing>@TotalHeal@</healing> κάθε φορά που δέχεται ζημιά.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Γκάλιο χτυπά τα φτερά του και εξαπολύει έναν ισχυρό άνεμο που προκαλεί ζημιά στους εχθρούς και αφήνει στο πέρασμά του κατευθυντικό ρεύμα αέρα που αυξάνει την Ταχύτητα Κίνησης των συμμάχων.",
-            "dynamicDescription": "Ο Γκάλιο εξαπολύει μια πανίσχυρη ριπή ανέμου που προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους εχθρούς στην πορεία της. Η ριπή αφήνει πίσω της ένα κατευθυντικό ρεύμα αέρα για 5 δευτ. Οι σύμμαχοι αποκτούν <speed>@MoveSpeedMod*100@% Ταχύτητα Κίνησης</speed> όταν κινούνται στην ίδια ευθεία με το ρεύμα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Γκάλιο εξαπολύει έναν πανίσχυρο άνεμο που προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε όλους τους εχθρούς στην πορεία του. Ένα κατευθυντικό ρεύμα αέρος παραμένει για @DraftDuration@ δευτ. Οι σύμμαχοι αποκτούν <speed>@MoveSpeedMod*100@% Ταχύτητα Κίνησης</speed> όταν κινούνται στην ίδια ευθεία με το ρεύμα αέρος.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Γκάλιο παίρνει τη μορφή ενός αγάλματος, Προκαλώντας τους κοντινούς εχθρούς και αποθηκεύοντας εκρηκτική ενέργεια καθώς του επιτίθενται.  Στη συνέχεια, ο Γκάλιο βγαίνει με ορμή από το πέτρινο περίβλημά του, απελευθερώνοντας την αποθηκευμένη ενέργεια για να προκαλέσει ζημιά στους εχθρούς γύρω του.",
-            "dynamicDescription": "Ο Γκάλιο διοχευτεύει ενέργεια για 2 δευτ., προκαλώντας τους κοντινούς εχθρούς και μειώνοντας τη ζημιά που δέχεται κατά @ReducedDamage*100@%.<br><br>Αφού διοχετεύσει ενέργεια, ο Γκάλιο προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους γύρω εχθρούς, συν επιπλέον 5% ζημιά για κάθε επίθεση που δέχτηκε ενώ διοχέτευε ενέργεια.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Γκάλιο διοχετεύει ενέργεια για @ChannelDuration@ δευτ., προκαλεί τους γύρω εχθρούς και δέχεται @ReducedDamage*100@% λιγότερη ζημιά.<br><br>Μετά τη διοχέτευση ενέργειας, ο Γκάλιο προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στους γύρω εχθρούς, συν επιπλέον @PercentPerHitIncrease*100@% ζημιά για κάθε επίθεση που δέχτηκε κατά τη διάρκεια της διοχέτευσης ενέργειας.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

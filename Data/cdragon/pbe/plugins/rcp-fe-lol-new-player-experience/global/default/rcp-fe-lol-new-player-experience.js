@@ -101,12 +101,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                i = l(n(12)),
-                o = l(n(47)),
+                i = r(n(12)),
+                o = r(n(47)),
                 s = n(48),
-                r = l(n(53));
+                l = r(n(53));
 
-            function l(e) {
+            function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -199,7 +199,7 @@
                     }))
                 }
                 _addNewPlayerExperience() {
-                    !this.isShowing && this.screenRoot && (a.logger.trace("NPE: Bumping new player experience viewport."), this.screenRoot.bump(), this.isShowing = !0, (0, r.default)((e => e.hasSeenTutorialPath = !0)), this._hideNavigationExceptPatcher(), o.default.showNewPlayerTutorial(), a.Telemetry.invokeWithLowProbability((() => {
+                    !this.isShowing && this.screenRoot && (a.logger.trace("NPE: Bumping new player experience viewport."), this.screenRoot.bump(), this.isShowing = !0, (0, l.default)((e => e.hasSeenTutorialPath = !0)), this._hideNavigationExceptPatcher(), o.default.showNewPlayerTutorial(), a.Telemetry.invokeWithLowProbability((() => {
                         a.Telemetry.recordNonTimingTracingEvent("npe-tutorial-seen", 1, "click")
                     })), this.application = this._createApp(), this.screenRoot.getElement().appendChild(this.application.domNode))
                 }
@@ -242,13 +242,13 @@
                     default: a
                 };
             const s = "rcp-fe-lol-new-player-experience";
-            var r = {
+            var l = {
                 register: () => {
                     const e = (0, o.default)(i.Ember, i.tra),
                         t = n(14),
                         a = n(15),
-                        r = n(16),
-                        l = n(17),
+                        l = n(16),
+                        r = n(17),
                         c = n(18),
                         u = n(19),
                         m = n(44),
@@ -273,8 +273,8 @@
                         MissionsButtonComponent: d.MissionsButtonComponent,
                         GameflowService: t,
                         NpeService: a,
-                        GameDataService: r,
-                        SummonerService: l,
+                        GameDataService: l,
+                        SummonerService: r,
                         PartiesService: c,
                         EndOfGameService: u,
                         PatcherService: m,
@@ -289,8 +289,8 @@
                         NpeRewardCelebrationComponent: n(77),
                         GameflowService: t,
                         NpeService: a,
-                        GameDataService: r,
-                        SummonerService: l,
+                        GameDataService: l,
+                        SummonerService: r,
                         PartiesService: c,
                         EndOfGameService: u,
                         PatcherService: m
@@ -298,7 +298,7 @@
                 },
                 create: e => i.ComponentFactory.create(s, e)
             };
-            t.default = r
+            t.default = l
         }, e => {
             "use strict";
 
@@ -688,12 +688,12 @@
             }), Object.defineProperty(t, "PAW", {
                 enumerable: !0,
                 get: function() {
-                    return r.default
+                    return l.default
                 }
             }), Object.defineProperty(t, "PRE_END_OF_GAME_SEQUENCE_EVENTS", {
                 enumerable: !0,
                 get: function() {
-                    return l.default
+                    return r.default
                 }
             }), Object.defineProperty(t, "PROFILE_PRIVACY", {
                 enumerable: !0,
@@ -740,8 +740,8 @@
                 i = g(n(22)),
                 o = n(23),
                 s = g(n(24)),
-                r = g(n(25)),
-                l = g(n(36)),
+                l = g(n(25)),
+                r = g(n(36)),
                 c = g(n(37)),
                 u = g(n(38)),
                 m = g(n(39)),
@@ -833,8 +833,8 @@
                 i = d(n(27)),
                 o = d(n(28)),
                 s = d(n(29)),
-                r = d(n(30)),
-                l = d(n(31)),
+                l = d(n(30)),
+                r = d(n(31)),
                 c = d(n(32)),
                 u = d(n(33)),
                 m = d(n(34)),
@@ -850,8 +850,8 @@
                 CURRENCY_TYPES: i.default,
                 INVENTORY_TYPES: o.default,
                 MEDIA_TYPES: s.default,
-                MEDIA_LOAD_TYPES: r.default,
-                MODAL_TYPES: l.default,
+                MEDIA_LOAD_TYPES: l.default,
+                MODAL_TYPES: r.default,
                 OFFER_PURCHASE_STATES: c.default,
                 OFFER_VALIDATION_STATES: u.default,
                 SCROLL_LIST_DISPLAY_TYPES: m.default,
@@ -1030,15 +1030,15 @@
                 i = "RANKED_FLEX_TT",
                 o = "RANKED_PREMADE_5x5",
                 s = "JADE_RANKED_SOLO_5x5",
-                r = "CHERRY",
-                l = "RANKED_TFT",
+                l = "CHERRY",
+                r = "RANKED_TFT",
                 c = "RANKED_TFT_DOUBLE_UP",
                 u = "RANKED_TFT_TURBO",
                 m = "RANKED_TFT_PAIRS",
                 p = [n, a, o, s],
                 d = [...p, i],
-                h = [r],
-                E = [l, c],
+                h = [l],
+                E = [r, c],
                 g = [u, m],
                 f = [...E, ...g],
                 b = [...d, ...E],
@@ -1049,8 +1049,8 @@
                 RANKED_PREMADE_5X5_QUEUE_TYPE: o,
                 JADE_RANKED_SOLO_5x5: s,
                 RANKED_FLEX_TT_QUEUE_TYPE: i,
-                RANKED_CHERRY_QUEUE_TYPE: r,
-                RANKED_TFT_QUEUE_TYPE: l,
+                RANKED_CHERRY_QUEUE_TYPE: l,
+                RANKED_TFT_QUEUE_TYPE: r,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: c,
                 RANKED_TFT_TURBO_QUEUE_TYPE: u,
                 RANKED_TFT_PAIRS_QUEUE_TYPE: m,
@@ -1074,8 +1074,8 @@
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 o = "LEGEND",
                 s = a[a.length - 1],
-                r = [s, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                l = ["IV", "III", "II", "I"],
+                l = [s, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                r = ["IV", "III", "II", "I"],
                 c = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
             function u(e) {
@@ -1099,12 +1099,12 @@
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: s,
                 LOWEST_TIER: a[0],
-                DIVISIONS: l,
-                HIGHEST_DIVISION: l[l.length - 1],
-                LOWEST_DIVISION: l[0],
+                DIVISIONS: r,
+                HIGHEST_DIVISION: r[r.length - 1],
+                LOWEST_DIVISION: r[0],
                 LP_PER_DIVISION: 100,
                 TIER_NAME_TO_ORDINAL: u(i),
-                DIVISION_TO_ORDINAL: u(l),
+                DIVISION_TO_ORDINAL: u(r),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1132,7 +1132,7 @@
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
                 DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
-                TIERS_WITH_DECAY: r
+                TIERS_WITH_DECAY: l
             };
             t.default = m
         }, (e, t) => {
@@ -1207,11 +1207,11 @@
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
             t.TIME_CONVERSIONS = s;
-            var r = {
+            var l = {
                 TIME_UNITS: n,
                 TIME_CONVERSIONS: s
             };
-            t.default = r
+            t.default = l
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1351,8 +1351,8 @@
                     o = Object.defineProperty && Object.getOwnPropertyDescriptor;
                 for (var s in e)
                     if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                        var r = o ? Object.getOwnPropertyDescriptor(e, s) : null;
-                        r && (r.get || r.set) ? Object.defineProperty(a, s, r) : a[s] = e[s]
+                        var l = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                        l && (l.get || l.set) ? Object.defineProperty(a, s, l) : a[s] = e[s]
                     } a.default = e, n && n.set(e, a);
                 return a
             }(n(1));
@@ -1502,19 +1502,19 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "m0D+0IaO",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","bg-spinner-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-bg-ticks ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"animated"],null]]]],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n      "],["open-element","circle",[]],["static-attr","class","radial-ticks"],["static-attr","cx","287"],["static-attr","cy","287"],["static-attr","r","287"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["npe-tutorial-path-header"]],false],["text","\\n"],["block",["if"],[["get",["isTutorialDataReady"]]],null,0],["text","\\n"],["append",["helper",["npe-tutorial-path-footer"],null,[["playTutorial","selectedTutorial","isTutorialDataReady","exit"],["playTutorial",["get",["selectedTutorial"]],["get",["isTutorialDataReady"]],["helper",["action"],[["get",[null]],"exitTutorials"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["npe-tutorial-path-carousel"],null,[["class","tutorials","selectTutorial","exit"],["npe-tutorial-carousel",["get",["tutorials"]],"selectTutorial",["helper",["action"],[["get",[null]],"exitTutorials"],null]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "5QeVgLzw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","bg-spinner-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-bg-ticks ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"animated"],null]]]],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n      "],["open-element","circle",[]],["static-attr","class","radial-ticks"],["static-attr","cx","287"],["static-attr","cy","287"],["static-attr","r","287"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["npe-tutorial-path-header"]],false],["text","\\n"],["block",["if"],[["get",["isTutorialDataReady"]]],null,0],["text","\\n"],["append",["helper",["npe-tutorial-path-footer"],null,[["playTutorial","selectedTutorial","isTutorialDataReady","exit"],["playTutorial",["get",["selectedTutorial"]],["get",["isTutorialDataReady"]],["helper",["action"],[["get",[null]],"exitTutorials"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["npe-tutorial-path-carousel"],null,[["class","tutorials","selectTutorial","exit"],["npe-tutorial-carousel",["get",["tutorials"]],"selectTutorial",["helper",["action"],[["get",[null]],"exitTutorials"],null]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                i = r(n(47));
+                i = l(n(47));
             n(52);
-            var o = r(n(53)),
+            var o = l(n(53)),
                 s = n(54);
 
-            function r(e) {
+            function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -1564,17 +1564,17 @@
                         n = this.get("selectedTutorialPlayable"),
                         i = this.get("isReconnecting"),
                         o = this.get("isInLobby"),
-                        r = this.get("isInQueue"),
-                        l = this.get("selectedTutorialIsCard"),
+                        l = this.get("isInQueue"),
+                        r = this.get("selectedTutorialIsCard"),
                         c = this.get("gameflowService.isInBasicTutorial"),
                         u = this.get("optimisticLock"),
                         m = this.get("patcherService.isPlayable");
-                    t && m ? this.set("exitButtonDisabled", null) : this.set("exitButtonDisabled", "disabled"), r || o || t && m ? this.set("playButtonCloseDisabled", null) : this.set("playButtonCloseDisabled", "disabled");
+                    t && m ? this.set("exitButtonDisabled", null) : this.set("exitButtonDisabled", "disabled"), l || o || t && m ? this.set("playButtonCloseDisabled", null) : this.set("playButtonCloseDisabled", "disabled");
                     const p = {
                             tutorialDataNotReady: !e,
                             selectedTutorialNotPlayable: !n,
                             inGameFlowAndNotReconnecting: !(t || i),
-                            selectedTutorialIsNotCard: !l,
+                            selectedTutorialIsNotCard: !r,
                             isInBasicTutorial: c,
                             optimisticLock: u,
                             notPlayable: !m
@@ -1593,9 +1593,9 @@
                         i = this.get("patcherService.isPlayable"),
                         o = this.get("isInEog"),
                         s = this.get("npeService.experimentGroup"),
-                        r = this.get("selectedTutorial");
-                    let l = "tra.npe_tutorial_path_confirm_button_text";
-                    return e ? l = "tra.npe_tutorial_path_button_text_RECONNECT" : t ? l = "tra.npe_tutorial_path_button_text_IN_GAME" : a ? l = "tra.npe_tutorial_path_button_text_IN_QUEUE" : o ? l = "tra.npe_tutorial_path_button_text_CONCLUDING" : n || i ? r?.isExperimentCard && "brawl" === s ? l = "tra.npe_tutorial_path_button_text_QUEUE_BRAWL" : r?.isExperimentCard && "swiftplay" === s && (l = "tra.npe_tutorial_path_button_text_QUEUE_SWIFTPLAY") : l = "tra.npe_tutorial_path_button_text_PATCHING", this.get(l)
+                        l = this.get("selectedTutorial");
+                    let r = "tra.npe_tutorial_path_confirm_button_text";
+                    return e ? r = "tra.npe_tutorial_path_button_text_RECONNECT" : t ? r = "tra.npe_tutorial_path_button_text_IN_GAME" : a ? r = "tra.npe_tutorial_path_button_text_IN_QUEUE" : o ? r = "tra.npe_tutorial_path_button_text_CONCLUDING" : n || i ? l?.isExperimentCard && "brawl" === s ? r = "tra.npe_tutorial_path_button_text_QUEUE_BRAWL" : l?.isExperimentCard && "swiftplay" === s && (r = "tra.npe_tutorial_path_button_text_QUEUE_SWIFTPLAY") : r = "tra.npe_tutorial_path_button_text_PATCHING", this.get(r)
                 })),
                 closeButtonLocText: a.Ember.computed("isInQueue", "tra.ready", (function() {
                     let e = "tra.npe_tutorial_path_leave";
@@ -1667,8 +1667,8 @@
                 };
                 o();
                 const s = Math.max(1, Math.floor(t / n)),
-                    r = window.setInterval((function() {
-                        i += s, i >= t && (i = t, window.clearInterval(r)), o()
+                    l = window.setInterval((function() {
+                        i += s, i >= t && (i = t, window.clearInterval(l)), o()
                     }), a)
             }
         }, e => {
@@ -1689,8 +1689,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Tw7e85a7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["arrow-footer"],null,[["removeCloseButton","confirmButtonText","confirmButtonDisabled","confirmButtonClicked","closeButtonClicked","closeButtonDisabled","confirmButtonHoverSound","confirmButtonClickSound","closeButtonHoverSound","closeButtonClickSound","closeButtonTooltipText","closeButtonShowTooltip","closeButtonTooltipType","closeDatadogActionName","confirmDatadogActionName"],[["get",["playButtonCloseHidden"]],["get",["playButtonLocText"]],["get",["playButtonDisabled"]],"startTutorial","arrowFooterCloseClicked",["get",["playButtonCloseDisabled"]],["get",["buttonSounds","playHover"]],["get",["buttonSounds","playClick"]],["get",["buttonSounds","closeHover"]],["get",["buttonSounds","closeClick"]],["get",["closeButtonLocText"]],"true","tooltip-system","button.npe.tutorials.close","button.npe.tutorials.start"]]],false],["text","\\n\\n"],["block",["if"],[["get",["isNew"]]],null,2,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["comment"," bottom-right-buttons "],["text","\\n  "],["open-element","div",[]],["static-attr","class","bottom-right-buttons"],["flush-element"],["text","\\n    "],["open-element","lol-social-chat-toggle-button",[]],["static-attr","position","inside"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["npe-tutorial-path-footer-missions-tracker"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","npe_tutorial_path_leave"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-close-button",[]],["dynamic-attr","disabled",["unknown",["exitButtonDisabled"]],null],["static-attr","arrow-right","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exitTutorial"],null],null],["static-attr","data-dd-action-name","button.npe.tutorials.leave"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "pCyVx76Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\footer-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["arrow-footer"],null,[["removeCloseButton","confirmButtonText","confirmButtonDisabled","confirmButtonClicked","closeButtonClicked","closeButtonDisabled","confirmButtonHoverSound","confirmButtonClickSound","closeButtonHoverSound","closeButtonClickSound","closeButtonTooltipText","closeButtonShowTooltip","closeButtonTooltipType","closeDatadogActionName","confirmDatadogActionName"],[["get",["playButtonCloseHidden"]],["get",["playButtonLocText"]],["get",["playButtonDisabled"]],"startTutorial","arrowFooterCloseClicked",["get",["playButtonCloseDisabled"]],["get",["buttonSounds","playHover"]],["get",["buttonSounds","playClick"]],["get",["buttonSounds","closeHover"]],["get",["buttonSounds","closeClick"]],["get",["closeButtonLocText"]],"true","tooltip-system","button.npe.tutorials.close","button.npe.tutorials.start"]]],false],["text","\\n\\n"],["block",["if"],[["get",["isNew"]]],null,2,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["comment"," bottom-right-buttons "],["text","\\n  "],["open-element","div",[]],["static-attr","class","bottom-right-buttons"],["flush-element"],["text","\\n    "],["open-element","lol-social-chat-toggle-button",[]],["static-attr","position","inside"],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["npe-tutorial-path-footer-missions-tracker"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","npe_tutorial_path_leave"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-close-button",[]],["dynamic-attr","disabled",["unknown",["exitButtonDisabled"]],null],["static-attr","arrow-right","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exitTutorial"],null],null],["static-attr","data-dd-action-name","button.npe.tutorials.leave"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1887,8 +1887,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "zTZapzb+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,5],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-carousel ",["helper",["if"],[["get",["hasRendered"]],"visible"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["tutorials"]]],[["key"],["id"]],4],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["tutorials","length"]]],null,0],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-block ",["helper",["if"],[["get",["isUnableToReconnect"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer"],["flush-element"],["append",["unknown",["timeRemainingToExitGame"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer-label"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_ESTIMATED"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-info"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_UNABLE_TO_RECONNECT_TEXT"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-block ",["helper",["if"],[["get",["isInQueue"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer"],["flush-element"],["append",["unknown",["timeInQueue"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-info"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_QUEUE_TEXT"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["npe-tutorial-path-carousel-navigation"],null,[["carouselNavItemSelect","tutorials","selectedIndex","isUnableToLaunch","class"],["carouselNavItemSelect",["get",["tutorials"]],["get",["selectedIndex"]],["get",["isUnableToLaunch"]],"npe-tutorial-navigation"]]],false],["text","\\n\\n"],["open-element","button",[]],["static-attr","class","npe-tutorial-carousel-arrow npe-tutorial-carousel-left-arrow"],["dynamic-attr","disabled",["unknown",["navigateLeftDisabled"]],null],["modifier",["action"],[["get",[null]],"onLeftArrowClicked"]],["flush-element"],["close-element"],["text","\\n"],["open-element","button",[]],["static-attr","class","npe-tutorial-carousel-arrow npe-tutorial-carousel-right-arrow"],["dynamic-attr","disabled",["unknown",["navigateRightDisabled"]],null],["modifier",["action"],[["get",[null]],"onRightArrowClicked"]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["style"],["pointer-events: none;"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["npe-tutorial-path-item-reward"],null,[["tutorial","onSelect","class"],[["get",["tutorial"]],["helper",["action"],[["get",[null]],"onItemClick",["get",["index"]],["get",["tutorial"]]],null],"npe-tutorial-carousel-item"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["npe-tutorial-path-item-card"],null,[["tutorial","largeAreaAnimationsEnabled","onUnlocked","onCompleted","onSelect","class","isNotInGameFlow"],[["get",["tutorial"]],["get",["largeAreaAnimationsEnabled"]],["helper",["action"],[["get",[null]],"cardUnlocked",["get",["index"]],["get",["tutorial"]]],null],["helper",["action"],[["get",[null]],"cardCompleted",["get",["index"]],["get",["tutorial"]]],null],["helper",["action"],[["get",[null]],"onItemClick",["get",["index"]],["get",["tutorial"]]],null],"npe-tutorial-carousel-item",["get",["isNotInGameFlow"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","npe-tutorial-carousel-item-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,3],["block",["if"],[["get",["tutorial","isCard"]]],null,2,1]],"locals":["tutorial","index"]},{"statements":[["text","  "],["open-element","video",[]],["static-attr","visible-value","true"],["dynamic-attr","class",["concat",["npe-tutorial-item-magic-video ",["helper",["unless"],[["get",["updatingSelection"]],"visible"],null]]]],["static-attr","src","/fe/lol-new-player-experience/vfx-vertical-magic-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","autoplay",""],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "L0e2XPev",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,5],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-carousel ",["helper",["if"],[["get",["hasRendered"]],"visible"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["tutorials"]]],[["key"],["id"]],4],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["tutorials","length"]]],null,0],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-block ",["helper",["if"],[["get",["isUnableToReconnect"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer"],["flush-element"],["append",["unknown",["timeRemainingToExitGame"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer-label"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_ESTIMATED"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-info"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_UNABLE_TO_RECONNECT_TEXT"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-block ",["helper",["if"],[["get",["isInQueue"]],"visible","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-timer"],["flush-element"],["append",["unknown",["timeInQueue"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-info"],["flush-element"],["append",["unknown",["tra","npe_tutorial_patch_QUEUE_TEXT"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["npe-tutorial-path-carousel-navigation"],null,[["carouselNavItemSelect","tutorials","selectedIndex","isUnableToLaunch","class"],["carouselNavItemSelect",["get",["tutorials"]],["get",["selectedIndex"]],["get",["isUnableToLaunch"]],"npe-tutorial-navigation"]]],false],["text","\\n\\n"],["open-element","button",[]],["static-attr","class","npe-tutorial-carousel-arrow npe-tutorial-carousel-left-arrow"],["dynamic-attr","disabled",["unknown",["navigateLeftDisabled"]],null],["modifier",["action"],[["get",[null]],"onLeftArrowClicked"]],["flush-element"],["close-element"],["text","\\n"],["open-element","button",[]],["static-attr","class","npe-tutorial-carousel-arrow npe-tutorial-carousel-right-arrow"],["dynamic-attr","disabled",["unknown",["navigateRightDisabled"]],null],["modifier",["action"],[["get",[null]],"onRightArrowClicked"]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["style"],["pointer-events: none;"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["npe-tutorial-path-item-reward"],null,[["tutorial","onSelect","class"],[["get",["tutorial"]],["helper",["action"],[["get",[null]],"onItemClick",["get",["index"]],["get",["tutorial"]]],null],"npe-tutorial-carousel-item"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["npe-tutorial-path-item-card"],null,[["tutorial","largeAreaAnimationsEnabled","onUnlocked","onCompleted","onSelect","class","isNotInGameFlow"],[["get",["tutorial"]],["get",["largeAreaAnimationsEnabled"]],["helper",["action"],[["get",[null]],"cardUnlocked",["get",["index"]],["get",["tutorial"]]],null],["helper",["action"],[["get",[null]],"cardCompleted",["get",["index"]],["get",["tutorial"]]],null],["helper",["action"],[["get",[null]],"onItemClick",["get",["index"]],["get",["tutorial"]]],null],"npe-tutorial-carousel-item",["get",["isNotInGameFlow"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","npe-tutorial-carousel-item-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,3],["block",["if"],[["get",["tutorial","isCard"]]],null,2,1]],"locals":["tutorial","index"]},{"statements":[["text","  "],["open-element","video",[]],["static-attr","visible-value","true"],["dynamic-attr","class",["concat",["npe-tutorial-item-magic-video ",["helper",["unless"],[["get",["updatingSelection"]],"visible"],null]]]],["static-attr","src","/fe/lol-new-player-experience/vfx-vertical-magic-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","autoplay",""],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1925,8 +1925,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "D5lzTjfi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","nav-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","nav-pips"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tutorialNavItems"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_REWARD_DESCRIPTION"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["nav-pip ",["helper",["if"],[["get",["navItem","isReward"]],"reward",["get",["navItem","statusClass"]]],null]," ",["unknown",["navItem","selectedClass"]]]]],["modifier",["action"],[["get",[null]],"selectCarouselItem",["get",["navItem"]]],[["on"],["click"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["navItem","isReward"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["navItem"]}],"hasPartials":false}',
+                id: "I7CKjqo6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-carousel-component\\\\carousel-navigation-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","nav-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","nav-pips"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tutorialNavItems"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_REWARD_DESCRIPTION"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["nav-pip ",["helper",["if"],[["get",["navItem","isReward"]],"reward",["get",["navItem","statusClass"]]],null]," ",["unknown",["navItem","selectedClass"]]]]],["modifier",["action"],[["get",[null]],"selectCarouselItem",["get",["navItem"]]],[["on"],["click"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["navItem","isReward"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["navItem"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1996,8 +1996,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "J+FW9fMU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["dynamic-attr","appearance",["concat",[["helper",["if"],[["get",["isLocked"]],"disabled"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tutorial-item-card-animation"],["modifier",["action"],[["get",[null]],"onClicked"]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["concat",[["unknown",["backgroundUrlSource"]]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-top-block"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-sequence-block"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-sequence ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["stepNumber"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-text-block"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-title ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-description ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-rewards-block"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isCompleted"]]],null,3,0],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-overlay checkmark\\n        ",["helper",["if"],[["get",["isSelected"]],"selected"],null],"\\n        ",["helper",["if"],[["get",["isCompleted"]],"visible","hidden"],null],"\\n        ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"largeAreaAnimationsEnabled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-checkmark"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-overlay lock\\n        ",["helper",["if"],[["get",["isSelected"]],"selected"],null],"\\n        ",["helper",["if"],[["get",["isLocked"]],"visible","hidden"],null],"\\n        ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"largeAreaAnimationsEnabled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-lock-text ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_DESCRIPTION"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-tutorial-item-complete-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-tutorial-complete.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-tutorial-item-unlock-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-tutorial-unlock.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-description"],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_COMPLETED"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-block"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","npe-tutorial-item-reward-icon"],["dynamic-attr","src",["concat",[["unknown",["reward","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-description ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["text","\\n                "],["append",["unknown",["reward","description"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-title ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","npe_tutorial_item_REWARDS"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["each"],[["get",["rewards"]]],null,1]],"locals":[]},{"statements":[["block",["if"],[["get",["rewards","length"]]],null,2]],"locals":[]}],"hasPartials":false}',
+                id: "94X/7Hcl",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["dynamic-attr","appearance",["concat",[["helper",["if"],[["get",["isLocked"]],"disabled"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tutorial-item-card-animation"],["modifier",["action"],[["get",[null]],"onClicked"]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["concat",[["unknown",["backgroundUrlSource"]]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-top-block"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-sequence-block"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-sequence ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["stepNumber"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-text-block"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-title ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-description ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-rewards-block"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isCompleted"]]],null,3,0],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-overlay checkmark\\n        ",["helper",["if"],[["get",["isSelected"]],"selected"],null],"\\n        ",["helper",["if"],[["get",["isCompleted"]],"visible","hidden"],null],"\\n        ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"largeAreaAnimationsEnabled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-checkmark"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-overlay lock\\n        ",["helper",["if"],[["get",["isSelected"]],"selected"],null],"\\n        ",["helper",["if"],[["get",["isLocked"]],"visible","hidden"],null],"\\n        ",["helper",["if"],[["get",["largeAreaAnimationsEnabled"]],"largeAreaAnimationsEnabled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-lock-text ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_DESCRIPTION"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-tutorial-item-complete-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-tutorial-complete.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-tutorial-item-unlock-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-tutorial-unlock.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-description"],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_COMPLETED"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-block"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","npe-tutorial-item-reward-icon"],["dynamic-attr","src",["concat",[["unknown",["reward","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-description ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["text","\\n                "],["append",["unknown",["reward","description"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-title ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","npe_tutorial_item_REWARDS"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["each"],[["get",["rewards"]]],null,1]],"locals":[]},{"statements":[["block",["if"],[["get",["rewards","length"]]],null,2]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2049,8 +2049,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "gbSWAonM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-wrapper"],["modifier",["action"],[["get",[null]],"onClicked"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-switch"],["flush-element"],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,2,1],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-checkmark\\n      ",["helper",["if"],[["get",["isCompleted"]],"completed"],null],"\\n      ",["helper",["if"],[["get",["isLocked"]],"locked"],null],"\\n      ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-lock-text ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_REWARD_DESCRIPTION"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","video",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-video ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["static-attr","src","/fe/lol-new-player-experience/vfx-capsule-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","autoplay",""],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "1OLBN4kH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\tutorial-item-reward-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-wrapper"],["modifier",["action"],[["get",[null]],"onClicked"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","npe-tutorial-item-reward-switch"],["flush-element"],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,2,1],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-checkmark\\n      ",["helper",["if"],[["get",["isCompleted"]],"completed"],null],"\\n      ",["helper",["if"],[["get",["isLocked"]],"locked"],null],"\\n      ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-lock-text ",["helper",["if"],[["get",["isSelected"]],"selected"],null]]]],["flush-element"],["append",["unknown",["tra","npe_tutorial_item_LOCKED_REWARD_DESCRIPTION"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["npe-tutorial-reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","video",[]],["dynamic-attr","class",["concat",["npe-tutorial-item-reward-video ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["static-attr","src","/fe/lol-new-player-experience/vfx-capsule-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","autoplay",""],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2092,8 +2092,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "szvgiZIM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-header-league-logo"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["static-attr","class","npe-header-league-logo-video"],["dynamic-attr","src",["unknown",["leagueLogoIdle"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","summoner-info-anchor"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","fancy-icon-with-level"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["concat",[["unknown",["percentCompleteForNextLevel"]]]]],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["flush-element"],["text","\\n      "],["comment"," Summoner icon with summoner level rendering "],["text","\\n      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","class-has-icon",["concat",[["unknown",["hasSummonerIconUrl"]]]]],["dynamic-attr","src",["concat",[["unknown",["summonerIconUrl"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level"],["dynamic-attr","class-has-long-summoner-level",["concat",[["unknown",["hasLongSummonerLevel"]]]]],["flush-element"],["append",["unknown",["currentPlayerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","current-player-name"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["currentPlayerPuuid"]],["get",["currentPlayerSummonerName"]],["get",["currentPlayerGameName"]],["get",["currentPlayerTagLine"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","tutorial-path-nav"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-items"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-item-text"],["flush-element"],["append",["unknown",["tra","npe_tutorial_path_nav_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "AlOQXqph",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-header-league-logo"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","type","idle"],["static-attr","class","npe-header-league-logo-video"],["dynamic-attr","src",["unknown",["leagueLogoIdle"]],null],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","summoner-info-anchor"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","fancy-icon-with-level"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["concat",[["unknown",["percentCompleteForNextLevel"]]]]],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["flush-element"],["text","\\n      "],["comment"," Summoner icon with summoner level rendering "],["text","\\n      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","class-has-icon",["concat",[["unknown",["hasSummonerIconUrl"]]]]],["dynamic-attr","src",["concat",[["unknown",["summonerIconUrl"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level"],["dynamic-attr","class-has-long-summoner-level",["concat",[["unknown",["hasLongSummonerLevel"]]]]],["flush-element"],["append",["unknown",["currentPlayerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","current-player-name"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["currentPlayerPuuid"]],["get",["currentPlayerSummonerName"]],["get",["currentPlayerGameName"]],["get",["currentPlayerTagLine"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","tutorial-path-nav"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-items"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","tutorial-path-nav-item-text"],["flush-element"],["append",["unknown",["tra","npe_tutorial_path_nav_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2124,8 +2124,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "JgJqsjnh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["missions-button"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "GuA+PTWS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\missions-tracker-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["missions-button"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2159,8 +2159,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "iu82vq72",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-reward-celebration-animation"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-wrapper capsule-container ",["helper",["if"],[["get",["isShowRewardState"]],"hide"],null]]]],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-reward-capsule-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-capsule-open.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-wrapper blue-essence-container ",["helper",["if"],[["get",["isRewardVisibleState"]],"show"],null]," ",["helper",["if"],[["get",["isHideRewardState"]],"hide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,1,0],["text","    "],["open-element","div",[]],["static-attr","class","reward-text-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reward-text"],["flush-element"],["append",["unknown",["tra","npe_reward_celebration_text"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reward-footer"],["flush-element"],["append",["unknown",["tra","npe_reward_celebration_footer"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","npe-reward-blue-essence-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","uikit-video",[]],["static-attr","class","npe-reward-blue-essence-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-essence-big-blue-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "0Z5Nj7WI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.19\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-new-player-experience\\\\src\\\\components\\\\reward-celebration-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","npe-reward-celebration-animation"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-wrapper capsule-container ",["helper",["if"],[["get",["isShowRewardState"]],"hide"],null]]]],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","class","npe-reward-capsule-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-capsule-open.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-wrapper blue-essence-container ",["helper",["if"],[["get",["isRewardVisibleState"]],"show"],null]," ",["helper",["if"],[["get",["isHideRewardState"]],"hide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["largeAreaAnimationsEnabled"]]],null,1,0],["text","    "],["open-element","div",[]],["static-attr","class","reward-text-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reward-text"],["flush-element"],["append",["unknown",["tra","npe_reward_celebration_text"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reward-footer"],["flush-element"],["append",["unknown",["tra","npe_reward_celebration_footer"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","npe-reward-blue-essence-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","uikit-video",[]],["static-attr","class","npe-reward-blue-essence-video"],["static-attr","src","/fe/lol-new-player-experience/vfx-essence-big-blue-loop.webm"],["static-attr","cache-name","rcp-fe-lol-npe-tutorial-path"],["static-attr","preload",""],["static-attr","loop",""],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, e => {

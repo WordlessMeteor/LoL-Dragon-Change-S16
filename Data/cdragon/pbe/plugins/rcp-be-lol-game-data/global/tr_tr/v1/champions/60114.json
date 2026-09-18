@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Büyük Düellocu",
     "shortBio": "- Hamle (Q) yeniden kullanılabilen hedefli bir atılma.<br>- Karşı Hamle (W) pasif saldırı gücü sağlar ve kılıç hamleleri hedefi sersemletmez veya yavaşlatmaz.<br>- Hız Artışı (E) saldırılarda hareket hızı kazandırır ve katletme halinde yenilenir.<br>- Pasif ve R tamamen farklı. Yetenek açıklamalarını oku.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -265,7 +265,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora ileri atılıp hedefine saldırarak fiziksel hasar verir. Fiora birkaç saniye içinde mana harcamadan ikinci kez atılabilir.",
-            "dynamicDescription": "Fiora ileri atılıp hedefine saldırarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>Fiora 4 saniye içinde <scaleMana>mana</scaleMana> harcamadan bu yeteneği bir kez daha <recast>yeniden kullanarak</recast> ikinci kez atılabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora ileri atılarak hedefine saldırır ve <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>Fiora bu yeteneği @RecastWindow@ saniye içinde <scaleMana>mana</scaleMana> bedeli olmadan <recast>yeniden kullanabilir</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -415,7 +415,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora'nın saldırı gücü artar. Etkinleştirildiğinde Fiora bir sonraki normal saldırıyı savuşturur ve saldıran birime büyü hasarı yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Fiora'nın <physicalDamage>saldırı gücü</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> artar.<br><br><spellActive>Aktif:</spellActive> Fiora 1,5 saniye içinde gelen bir sonraki saldırıyı savuşturur ve saldıran birime <magicDamage>@ReflectionDamage@ Büyü Hasarı</magicDamage> yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Fiora'nın <physicalDamage>saldırı gücü</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> artar.<br><br><spellActive>Aktif:</spellActive> Fiora sonraki @ParryDuration@ saniye içindeki ilk saldırıyı savuşturur ve saldıran birime <magicDamage>@ReflectionDamage@ Büyü Hasarı</magicDamage> yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora geçici olarak ilave saldırı hızı kazanır. Bu süre boyunca isabet ettirdiği her saldırı veya Hamle hareket hızını arttırır. Bir şampiyon katletmek, bu yeteneğin bekleme süresini yeniler.",
-            "dynamicDescription": "Fiora 3 saniyeliğine <attackSpeed>%@ASBonus*100@ Saldırı Hızı</attackSpeed> kazanır. Bu süre boyunca isabet ettirdiği her saldırı veya <spellName>Hamle</spellName>, Fiora'ya 3 saniyeliğine <speed>%@MSBonus*100@ Hareket Hızı</speed> kazandırır. Bu etki en fazla 3 defaya kadar birikebilir.<br><br>Bir şampiyon katletmek bu yeteneğin bekleme süresini sıfırlar. (Asistler bekleme süresini @HalfCooldown@ saniye azaltır.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora @BuffDuration@ saniyeliğine <attackSpeed>%@ASBonus*100@ Saldırı Hızı</attackSpeed> kazanır. Bu süre boyunca hedefe isabet ettirdiği her saldırı veya <spellName>Hamle</spellName> yeteneği Fiora'ya @BuffDuration@ saniyeliğine <speed>%@MSBonus*100@ Hareket Hızı</speed> kazandırır. Bu etki @MaxStacks@ defaya kadar birikebilir.<br><br>Bir şampiyon katletmek bu yeteneğin bekleme süresini sıfırlar. (Asistler bekleme süresini @HalfCooldown@ saniye azaltır.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

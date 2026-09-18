@@ -596,7 +596,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يقذف نوتيلوس مرساته إلى الأمام. إذا أصابت بطلًا، يسحب نفسه مع الخصم ليقتربا من بعضهما. وإذا أصابت التضاريس، يسحب نوتيلوس نفسه إلى المرساة بدل ذلك، ويتم تقليص فترة تبريد ضربة المرساة بمقدار النصف.",
+            "description": "يقذف نوتيلوس مرساته إلى الأمام. إذا أصابت بطلًا، يسحب نفسه والخصم ليقتربا من بعضهما. وإذا أصابت التضاريس، يسحب نوتيلوس نفسه بدلًا من ذلك نحو المرساة وتتقلص فترة تبريد ضربة المرساة.",
             "dynamicDescription": "يقذف نوتيلوس مرساته إلى الأمام. إذا أصاب عدوًا، يسحب نوتيلوس نفسه مع الهدف معًا، فيلحق به <magicDamage>@QDamageCalc@ ضرر سحر</magicDamage> كما <status>يصعقه</status> لفترة وجيزة.<br><br>تؤدي إصابة التضاريس إلى <status>سحب</status> نوتيلوس بدل ذلك إلى الأمام وتقلص فترة تبريد هذه القدرة بنسبة @TerrainCDR*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
@@ -747,7 +747,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يكتسب نوتيلوس درعًا مؤقتًا.  ما دام الدرع موجودًا، تلحق هجماته ضررًا بمرور الوقت بالأهداف والأعداء المحيطين.",
-            "dynamicDescription": "يحيط نوتيلوس نفسه بمصادر طاقة ظلامية، مما يمنحه <shield>@ShieldCalc@ درع</shield> لمدة @ShieldDuration@ث.<br><br>ما دام <shield>الدرع</shield> موجودًا، تلحق هجمات نوتيلوس <magicDamage>@DotDamageCalc@ ضرر سحر</magicDamage> خلال 2ث بالهدف وبجميع الأعداء المحيطين به.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يحيط نوتيلوس نفسه بمصادر طاقة مظلمة، مما يمنحه <shield>@ShieldCalc@ درع</shield> لمدة @ShieldDuration@ث.<br><br>أثناء وجود <shield>الدرع</shield>، تلحق هجمات نوتيلوس <magicDamage>@DotDamageCalc@ ضرر سحر</magicDamage> على مدار @DotDuration@ث بالهدف والأعداء المحيطين به.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -897,7 +897,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يخبط نوتيلوس الأرض، فيسبب انفجار الأرض من حوله في مجموعة من ثلاثة انفجارات. يلحق كل انفجار ضررًا بالأعداء ويبطئهم.",
-            "dynamicDescription": "يخبط نوتيلوس الأرض، فيسبب ثلاثة انفجارات يلحق كل منها <magicDamage>@DamageCalc@ ضرر سحر</magicDamage> ويسبب <status>إبطاء</status> الأعداء بنسبة @SlowPercent*100@% تتلاشى خلال @SlowDuration@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يخبط نوتيلوس الأرض، محدثًا ثلاثة انفجارات يلحق كل منها <magicDamage>@DamageCalc@ ضرر سحر</magicDamage> كما <status>يبطئ</status> الأعداء بنسبة @SlowPercent*100@% تتلاشى خلال @SlowDuration@ث. يمكن إصابة وحدة بأكثر من انفجار واحد، لكنها تتلقى <magicDamage>@DamageHalvedTooltip@ ضرر</magicDamage> من الانفجارات الإضافية.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

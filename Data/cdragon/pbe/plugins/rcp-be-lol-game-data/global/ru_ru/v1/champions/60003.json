@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Галио",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Колосс",
     "shortBio": "– Умения совершенно другие. Почитайте описания",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Галио защищает союзного чемпиона, повышая его броню и сопр. магии. Когда защищенный чемпион получает урон, Галио восстанавливает здоровье.",
-            "dynamicDescription": "Галио защищает союзного чемпиона или себя, давая <scaleArmor>@BonusDefense@ брони</scaleArmor> и <scaleMR>@BonusDefense@ сопр. магии</scaleMR> на 4 сек. Когда защищенный чемпион получает урон, Галио восстанавливает <healing>@TotalHeal@</healing> здоровья.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Галио усиливает союзного чемпиона или себя, давая цели <scaleArmor>@BonusDefense@ брони</scaleArmor> и <scaleMR>@BonusDefense@ сопр. магии</scaleMR> на @BuffDuration@ сек. Галио восстанавливает <healing>@TotalHeal@</healing> здоровья, когда цель получает урон.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Галио хлопает крыльями, создавая вихрь, наносящий урон противникам и оставляющий ветряной след, дающий союзникам в нем скорость передвижения.",
-            "dynamicDescription": "Галио создает вихрь, наносящий <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам на своем пути. На 5 сек. остается ветряной след; союзники, передвигающиеся в одну сторону с ним, получают <speed>@MoveSpeedMod*100@% скорости передвижения</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Галио создает вихрь, наносящий <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам на пути. Ветряной след от вихря сохраняется в течение @DraftDuration@ сек., повышая скорость передвижения (в соотв. направлении) попавших в него союзников на <speed>@MoveSpeedMod*100@%</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Галио принимает форму статуи, заставляя ближайших противников атаковать его и сохраняя энергию их ударов. Затем Галио вырывается из оболочки статуи и высвобождает сохраненную энергию, нанося урон окружающим врагам.",
-            "dynamicDescription": "В течение 2 сек. Галио провоцирует врагов поблизости и получает на @ReducedDamage*100@% меньше урона.<br><br>В это время он наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам поблизости. Урон выше на 5% за каждую автоатаку, поразившую его за этот срок.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Галио готовится @ChannelDuration@ сек., провоцируя врагов поблизости и получая лишь @ReducedDamage*100@% урона.<br><br>После подготовки Галио наносит врагам поблизости <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> (плюс @PercentPerHitIncrease*100@% за каждую автоатаку, поразившую его во время подготовки).@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

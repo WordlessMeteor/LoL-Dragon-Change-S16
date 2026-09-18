@@ -1579,6 +1579,57 @@
     margin-bottom: -4px
 }
 
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer,
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer:lang(ja-jp) {
+    font-size: 13px
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link {
+    color: #cdbe91
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link.hover,
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link:hover {
+    color: #f0e6d2
+}
+
 .paw-purchase-options {
     align-items: center;
     direction: rtl;
@@ -1598,6 +1649,15 @@
 
 .paw-purchase-options .paw-purchase-options-error-close-button {
     padding-bottom: 10px
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer {
+    padding: 0 16px 8px;
+    text-align: left
+}
+
+.paw-purchase-options .paw-purchase-options-aw-skin-list-disclaimer .paw-aw-skin-list-link {
+    cursor: pointer
 }
 
 .scrollable-paw-warnings {
@@ -2113,6 +2173,99 @@
     flex-shrink: 0;
     height: 30px;
     width: 35px
+}
+
+.paw-aw-skin-list-error,
+.paw-aw-skin-list-name,
+.paw-aw-skin-list-no-results {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.paw-aw-skin-list-error:lang(ja-jp),
+.paw-aw-skin-list-name:lang(ja-jp),
+.paw-aw-skin-list-no-results:lang(ja-jp) {
+    font-size: 13px
+}
+
+.paw-aw-skin-list-error:lang(ar-ae),
+.paw-aw-skin-list-name:lang(ar-ae),
+.paw-aw-skin-list-no-results:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.paw-aw-skin-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    text-align: center
+}
+
+.paw-aw-skin-list-back-button {
+    background-color: #0a1428;
+    background-image: url(/fe/lol-paw/images/caret.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 24px;
+    left: 8px;
+    opacity: .8;
+    position: absolute;
+    top: 8px;
+    transform: rotate(180deg);
+    transition: opacity .05s ease-in-out;
+    width: 24px
+}
+
+.paw-aw-skin-list-back-button:hover {
+    opacity: 1
+}
+
+.paw-aw-skin-list-header {
+    padding-top: 36px
+}
+
+.paw-aw-skin-list-title {
+    line-height: 24px;
+    padding-bottom: 7px
+}
+
+.paw-aw-skin-list-search {
+    padding: 0 22px 10px
+}
+
+.paw-aw-skin-list-scrollable {
+    height: 326px
+}
+
+.paw-aw-skin-list-names {
+    padding: 10px 22px
+}
+
+.paw-aw-skin-list-name {
+    margin: 0
+}
+
+.paw-aw-skin-list-error,
+.paw-aw-skin-list-no-results {
+    align-items: center;
+    color: #5b5a56;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 10px 22px
 }
 
 .paw-choice-window .paw-choice-content-wrapper .paw-choice-window-page.item-select .paw-choice-separator-background .paw-choice-separator-text {

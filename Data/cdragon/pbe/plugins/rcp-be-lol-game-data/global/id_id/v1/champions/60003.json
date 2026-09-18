@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "The Colossus",
     "shortBio": "- Ability-nya benar-benar berbeda. Baca deskripsinya",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Galio memberi shield ke Champion sekutu, meningkatkan Armor dan Magic Resistance mereka, serta memulihkan health Galio setiap kali Champion tersebut menerima damage.",
-            "dynamicDescription": "Galio memberi shield ke champion sekutu atau dirinya sendiri, target yang diberi shield akan mendapatkan <scaleArmor>@BonusDefense@ Armor</scaleArmor> dan <scaleMR>@BonusDefense@ Magic Resistance</scaleMR> selama 4 detik. Galio menerima heal sebesar <healing>@TotalHeal@</healing> setiap kali unit menerima damage.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio memperkuat champion sekutu atau dirinya sendiri, memberi mereka <scaleArmor>@BonusDefense@ Armor</scaleArmor> dan <scaleMR>@BonusDefense@ Magic Resistance</scaleMR> selama @BuffDuration@ detik. Galio akan mendapatkan heal sebesar <healing>@TotalHeal@</healing> setiap kali dia menerima damage.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Galio mengepakkan sayapnya, mengembuskan angin kencang yang menghasilkan damage pada musuh dan meninggalkan arus angin searah yang meningkatkan movement speed sekutu.",
-            "dynamicDescription": "Galio mengembuskan angin kencang yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada semua musuh yang dilewati angin tersebut. Arus angin searah bertahan selama 5 detik, sekutu mendapatkan <speed>@MoveSpeedMod*100@% Movement Speed</speed> saat bergerak searah dengan arus angin tersebut.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio melepaskan embusan angin dahsyat yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke semua musuh di jalurnya. Aliran udara terarah bertahan selama @DraftDuration@ detik, sekutu mendapatkan <speed>@MoveSpeedMod*100@% Movement Speed</speed> saat bergerak searah dengan aliran udara itu.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Galio berubah menjadi patung, melakukan taunt pada musuh di sekitar dan menyimpan energi ledakan saat mereka menyerangnya.  Galio lalu keluar dari cangkang patungnya, melepaskan energi yang tersimpan untuk menghasilkan damage pada musuh di sekitar.",
-            "dynamicDescription": "Galio melakukan channeling selama 2 detik, melakukan taunt pada musuh di sekitarnya dan menerima @ReducedDamage*100@% damage yang dikurangi.<br><br>Setelah channeling, Galio menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada musuh di sekitarnya, plus 5% damage tambahan untuk setiap serangan yang dia terima saat channeling.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio melakukan channeling selama @ChannelDuration@ detik, taunt musuh di sekitarnya dan menerima @ReducedDamage*100@% pengurangan damage.<br><br>Setelah channeling, Galio menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitarnya, ditambah @PercentPerHitIncrease*100@% damage tambahan untuk setiap serangan yang dia terima saat channeling.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

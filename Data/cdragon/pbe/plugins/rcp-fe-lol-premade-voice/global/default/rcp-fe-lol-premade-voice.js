@@ -569,13 +569,13 @@
                     e && (this._teamVoiceAvailability = e.available, this._teamVoiceAvailabilityReason = e.reason || null, this._updateTeamToggleState(), this._updateTeamUnavailableStatus())
                 }
                 partyVoiceSessionUpdated(e) {
-                    this._partySession = e, this._updateVoiceSkinIndicator()
+                    this._partySession = e
                 }
                 voiceFontsUpdated(e) {
                     this._voiceFonts = e || [], this._updateVoiceSkinIndicator()
                 }
                 teamVoiceSessionUpdated(e) {
-                    this._teamSession = e, this._teamVoicePluginEnabled ? (this._teamParticipants = e && e.participants || [], this._teamParticipantMap = new Map(this._teamParticipants.map((e => [e.puuid, e]))), this._teamVoiceRestricted = !(!e || !e.isRestricted), this._updateTeamParticipants(), this._refreshTeamConnectionState(), this._updateTeamToggleState(), this._updateTeamUnavailableStatus(), this._updateVoiceSkinIndicator()) : this._updateVoiceSkinIndicator()
+                    this._teamSession = e, this._teamVoicePluginEnabled && (this._teamParticipants = e && e.participants || [], this._teamParticipantMap = new Map(this._teamParticipants.map((e => [e.puuid, e]))), this._teamVoiceRestricted = !(!e || !e.isRestricted), this._updateTeamParticipants(), this._refreshTeamConnectionState(), this._updateTeamToggleState(), this._updateTeamUnavailableStatus())
                 }
                 _refreshConnectionState() {
                     const e = this._participants.length > 0,
@@ -589,9 +589,8 @@
                     if (!this.shadowRoot.querySelector(this._selectors.currentPlayerVoiceSkin)) return;
                     const e = this._settings && this._settings.voiceFontId,
                         t = (this._voiceFonts || []).find((t => t.id === e)),
-                        n = this._partySession && this._partySession.isVoiceFontEnabled,
-                        r = this._teamVoicePluginEnabled && this._teamSession && this._teamSession.isVoiceFontEnabled;
-                    if (!t || !n && !r) return this.hide(this._selectors.currentPlayerVoiceSkin), void this._removeToggleTooltip(this._selectors.currentPlayerVoiceSkin);
+                        n = this._settings && (this._settings.voiceFontEnabledForParty || this._settings.voiceFontEnabledForTeam);
+                    if (!t || !n) return this.hide(this._selectors.currentPlayerVoiceSkin), void this._removeToggleTooltip(this._selectors.currentPlayerVoiceSkin);
                     this.show(this._selectors.currentPlayerVoiceSkin), this._attachToggleTooltip(this._selectors.currentPlayerVoiceSkin, i.tra.get("parties_comm_panel_tooltip_voice_skin"), t.name || t.id)
                 }
                 _updateKeyBindIndicators() {

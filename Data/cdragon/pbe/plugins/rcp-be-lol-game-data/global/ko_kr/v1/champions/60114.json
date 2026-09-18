@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "피오라",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "결투의 대가",
     "shortBio": "- 찌르기(Q)가 대상을 지정하는 돌진 스킬이고, 재사용할 수 있습니다.<br>- 응수(W)가 기본 지속 효과로 공격력을 제공하며, 반격 시 기절이나 둔화를 적용하지 않습니다.<br>- 가속(E)은 기본 공격 시 이동 속도를 제공하고, 처치 시 초기화됩니다.<br>- 기본 지속 효과와 궁극기가 완전히 다릅니다. 스킬 설명을 읽어 보세요.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -265,7 +265,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "피오라가 전방으로 돌진하여 대상을 공격해 물리 피해를 입힙니다. 사용 후 몇 초 내로 마나 소모 없이 한 번 더 돌진할 수 있습니다.",
-            "dynamicDescription": "피오라가 전방으로 돌진하여 대상을 공격해 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다.<br><br>사용 후 4초 내로 <scaleMana>마나</scaleMana> 소모 없이 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "피오라가 전방으로 돌진하여 대상을 공격해 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다.<br><br>사용 후 @RecastWindow@초 내로 <scaleMana>마나</scaleMana> 소모 없이 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -415,7 +415,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "피오라의 공격력이 증가합니다. 사용 시 피오라가 다음에 들어오는 기본 공격을 막아내고, 공격자에게 마법 피해를 돌려줍니다. 챔피언, 몬스터, 대형 미니언에게 사용할 수 있습니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>피오라의 <physicalDamage>공격력</physicalDamage>이 <physicalDamage>@BonusAD@</physicalDamage> 증가합니다.<br><br><spellActive>사용 시: </spellActive>피오라가 1.5초 내로 들어오는 기본 공격을 막아내고, 공격자에게 <magicDamage>@ReflectionDamage@의 마법 피해</magicDamage>를 돌려줍니다. 챔피언, 몬스터, 대형 미니언에게 사용할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>피오라의 <physicalDamage>공격력</physicalDamage>이 <physicalDamage>@BonusAD@</physicalDamage> 증가합니다.<br><br><spellActive>사용 시: </spellActive>피오라가 @ParryDuration@초 내로 들어오는 기본 공격을 막아내고, 공격자에게 <magicDamage>@ReflectionDamage@의 마법 피해</magicDamage>를 돌려줍니다. 챔피언, 몬스터, 대형 미니언에게 사용할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -565,7 +565,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "피오라가 일시적으로 추가 공격 속도를 얻습니다. 그동안 기본 공격이나 찌르기를 맞히면 이동 속도가 증가합니다. 챔피언 처치 시 이 스킬의 재사용 대기시간이 초기화됩니다.",
-            "dynamicDescription": "피오라가 3초 동안 <attackSpeed>@ASBonus*100@%의 공격 속도</attackSpeed>를 얻습니다. 그동안 기본 공격이나 <spellName>찌르기</spellName>를 맞힐 때마다 3초간 <speed>@MSBonus*100@%의 이동 속도</speed>를 얻습니다. 이 효과는 최대 3회 중첩됩니다.<br><br>챔피언 처치 시 이 스킬의 재사용 대기시간이 초기화됩니다. (어시스트 시 재사용 대기시간이 @HalfCooldown@초 감소합니다.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "피오라가 @BuffDuration@초 동안 <attackSpeed>@ASBonus*100@%의 공격 속도</attackSpeed>를 얻습니다. 그동안 기본 공격이나 <spellName>찌르기</spellName>를 맞힐 때마다 피오라에게 @BuffDuration@초간 <speed>@MSBonus*100@%의 이동 속도</speed>가 부여됩니다. 이 효과는 최대 @MaxStacks@회 중첩됩니다.<br><br>챔피언 처치 시 이 스킬의 재사용 대기시간이 초기화됩니다. (어시스트 시 재사용 대기시간이 @HalfCooldown@초 감소합니다.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

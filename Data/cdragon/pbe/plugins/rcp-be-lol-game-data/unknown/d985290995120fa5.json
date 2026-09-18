@@ -582,12 +582,12 @@
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    10.0,
-                    25.0,
-                    40.0,
-                    55.0,
-                    70.0,
-                    85.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -850,7 +850,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "피즈가 공중으로 도약한 뒤 창 위에 우아하게 착지하며 대상 지정 불가 상태가 됩니다. 이 상태에서 바로 지면을 강타하거나, 다시 한번 도약하여 바닥을 내리찍을 수 있습니다.",
-            "dynamicDescription": "피즈가 커서 방향으로 도약하여 창 위에 선 뒤, 지면을 강타하여 주변 적에게 <magicDamage>@EDamage@의 마법 피해</magicDamage>를 입히고 2초 동안 @SlowAmount*100@% <status>둔화</status>시킵니다.<br><br>피즈가 창 위에 있는 동안 이 스킬을 재사용하면, 다시 한번 커서 방향으로 도약하며 바닥을 내리찍어 더 좁은 범위의 적에게 <magicDamage>@EDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "피즈가 커서 방향으로 도약하여 창 위에 선 뒤, 지면을 강타하며 주변 적에게 <magicDamage>@EDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowAmount*100@% <status>둔화</status>시킵니다.<br><br>피즈가 창 위에 있는 동안 이 스킬을 재사용하면, 다시 한번 커서 방향으로 도약하며 바닥을 내리찍어 더 좁은 범위의 적에게 <magicDamage>@EDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

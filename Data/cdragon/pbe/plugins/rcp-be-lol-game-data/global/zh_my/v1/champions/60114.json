@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "菲欧拉",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "孤高剑客",
     "shortBio": "- 破空斩（Q）是一个可指定目标的突进技能，可再次施放<br>- 斗转之力（W）被动提供物理攻击，刺击没有眩晕或减速效果<br>- 极速爆发（E）在击杀时提升移动速度，并在击杀时刷新<br>- 被动和R技能完全不同。阅读技能描述",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -265,7 +265,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲欧拉向前冲刺，打击目标并造成物理伤害。菲欧拉可在接下来的数秒内再次冲刺，且不消耗魔力",
-            "dynamicDescription": "菲欧拉向前冲刺，打击目标并造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>菲欧拉可在接下来的4秒内<recast>重施技能</recast>以再次冲刺，且不消耗<scaleMana>魔力</scaleMana>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "菲欧拉向前突进，攻击目标，造成 <physicalDamage>@TotalDamage@ 物理伤害</physicalDamage>。<br><br>菲奥娜可以在 @RecastWindow@ 秒内 <recast>再次施放</recast> 此技能，且不消耗 <scaleMana>法力值</scaleMana> 。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -415,7 +415,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲欧拉的物理攻击已提升。激活时，菲欧拉会格挡下一次普攻，并以魔法伤害的形式反弹给攻击者。对英雄、野怪和大型士兵有效。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>菲欧拉的<physicalDamage>物理攻击</physicalDamage>提升<physicalDamage>@BonusAD@</physicalDamage>。<br><br><spellActive>主动：</spellActive>菲欧拉在1.5秒内格挡下一次普攻，并向攻击者反弹<magicDamage>@ReflectionDamage@魔法伤害</magicDamage>。对英雄、野怪和大型士兵有效。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>菲欧拉的 <physicalDamage>物理攻击</physicalDamage> 提升 <physicalDamage>@BonusAD@</physicalDamage>。<br><br><spellActive>主动：</spellActive>菲欧拉在 @ParryDuration@ 秒内格挡下一次攻击，并将 <magicDamage>@ReflectionDamage@ 魔法伤害</magicDamage> 反弹给攻击者。对英雄、野怪和大型士兵有效。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲欧拉会短暂获得额外攻速。在此期间，她的每次普攻或“移形之体”命中，都会提升自身移动速度。击杀一名英雄会重置此技能的冷却时间。",
-            "dynamicDescription": "菲欧拉获得<attackSpeed>@ASBonus*100@%攻击速度</attackSpeed>，持续3秒。在此期间，她的每次普攻或<spellName>移形之体</spellName>命中，都会使菲欧拉的移动速度提升<speed>@MSBonus*100@%</speed>，持续3秒，最多可叠加3次。<br><br>击败一名英雄会刷新该技能的冷却时间。（助攻可使冷却时间减少@HalfCooldown@秒）@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "菲欧拉获得<attackSpeed>@ASBonus*100@%攻击速度</attackSpeed>，持续@BuffDuration@秒。在此期间，每次攻击或 <spellName>猛冲</spellName> 命中都会使菲欧拉获得 <speed>@MSBonus*100@%移动速度</speed> ，持续 @BuffDuration@ 秒，可叠加至 @MaxStacks@ 层。<br><br>击败一名英雄会重置该技能的冷却时间。（助攻可使冷却时间减少 @HalfCooldown@ 秒）@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

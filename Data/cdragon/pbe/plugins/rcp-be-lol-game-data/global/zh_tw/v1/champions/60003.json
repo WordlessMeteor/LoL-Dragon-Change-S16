@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "加里歐",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "禦國巨像",
     "shortBio": "- 這些技能完全不同。查看說明",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里歐為一名友方英雄施加護盾，提升其雙防，且該英雄受到傷害時，加里歐會回復生命。",
-            "dynamicDescription": "加里歐為一名友方英雄或自己施加護盾，受護盾保護的目標會獲得<scaleArmor>@BonusDefense@物防</scaleArmor>和<scaleMR>@BonusDefense@魔防</scaleMR>，持續4秒。該單位受到傷害時，加里歐會回復<healing>@TotalHeal@</healing>生命。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里歐強化一名友方英雄或自身，賦予<scaleArmor>@BonusDefense@物防</scaleArmor>和<scaleMR>@BonusDefense@魔防</scaleMR>，持續@BuffDuration@秒。受強化的目標每次受到傷害時，加里歐回復<healing>@TotalHeal@</healing>生命值。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里歐拍動雙翼，釋放一陣震盪強風，對敵軍造成傷害，並在路徑上留下定向氣流，助友軍提升跑速。",
-            "dynamicDescription": "加里歐釋放一陣震盪強風，對路徑上所有敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。定向氣流會持續5秒，友軍順著氣流移動時，會提升<speed>@MoveSpeedMod*100@%跑速</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里歐釋放一道強烈衝擊的狂風，對路徑上所有敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。定向氣流持續@DraftDuration@秒，友軍順著氣流移動可獲得<speed>@MoveSpeedMod*100@%跑速</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里歐變身為石像，嘲諷鄰近敵軍，並在他們攻擊時儲存震盪能量。加里歐隨後打破石像外殼，釋放儲存的能量，傷害周圍敵軍。",
-            "dynamicDescription": "加里歐詠唱2秒，嘲諷鄰近敵軍且所受傷害減輕@ReducedDamage*100@%。<br><br>詠唱結束後，加里歐對周遭敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，且詠唱期間每受到一次攻擊，額外造成5%傷害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里歐詠唱@ChannelDuration@秒，嘲諷附近的敵軍並使自身受到的傷害降低@ReducedDamage*100@%。<br><br>加里歐詠唱結束後，對周圍敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>；詠唱期間每受到一次攻擊，此傷害額外提升@PercentPerHitIncrease*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

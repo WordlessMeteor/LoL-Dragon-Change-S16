@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Colosul",
     "shortBio": "- Abilitățile sunt complet diferite. Citește descrierile",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Galio protejează un campion aliat, mărindu-i armura și rezistența la magie, iar viața lui Galio se reface ori de câte ori campionul respectiv suferă daune.",
-            "dynamicDescription": "Galio creează un scut pentru un campion aliat sau pentru el însuși, iar țintele protejate primesc <scaleArmor>@BonusDefense@ armură</scaleArmor> și <scaleMR>@BonusDefense@ rezistență la magie</scaleMR> timp de 4 secunde. Galio își reface <healing>@TotalHeal@</healing> viață de fiecare dată când unitatea suferă daune.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio crește puterea unui campion aliat sau puterea proprie, oferind <scaleArmor>@BonusDefense@ armură</scaleArmor> și <scaleMR>@BonusDefense@ rezistență la magie</scaleMR> timp de @BuffDuration@ secunde. Galio își reface <healing>@TotalHeal@</healing> viață de fiecare dată când unitatea suferă daune.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Galio bate din aripi, stârnind un vânt violent care le provoacă daune inamicilor. Vântul generează și un curent direcționat care mărește viteza de mișcare a aliaților.",
-            "dynamicDescription": "Galio stârnește un vânt violent care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> tuturor inamicilor din calea sa. Vântul generează și un curent direcționat care durează 5 secunde, mărind cu <speed>@MoveSpeedMod*100@% viteza de mișcare</speed> a aliaților care trec prin el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio stârnește un vânt violent care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> tuturor inamicilor din calea sa. Vântul generează și un curent direcționat care durează @DraftDuration@ secunde, mărind cu <speed>@MoveSpeedMod*100@% viteza de mișcare</speed> a aliaților care trec prin el.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Galio se preface în stană de piatră, provocând inamicii din apropiere și, dacă aceștia îl atacă, stocând energia eliberată de loviturile lor.  După aceea, Galio iese din starea de statuie și eliberează energia acumulată, provocând daune inamicilor din jur.",
-            "dynamicDescription": "Galio se concentrează timp de 2 secunde, provocând inamicii din apropiere și suferind cu @ReducedDamage*100@% mai puține daune.<br><br>După pregătire, Galio le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din jur, plus 5% daune suplimentare pentru fiecare atac primit în timpul pregătirii.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio se concentrează timp de @ChannelDuration@ secunde, provocând inamicii din apropiere și suferind cu @ReducedDamage*100@% mai puține daune.<br><br>După pregătire, Galio le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din jur, plus @PercentPerHitIncrease*100@% daune suplimentare pentru fiecare atac primit în timpul pregătirii.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

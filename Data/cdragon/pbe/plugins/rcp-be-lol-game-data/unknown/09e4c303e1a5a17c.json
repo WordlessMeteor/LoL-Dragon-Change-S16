@@ -582,12 +582,12 @@
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    10.0,
-                    25.0,
-                    40.0,
-                    55.0,
-                    70.0,
-                    85.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -850,7 +850,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "地面に槍を突き立て飛び上がった後、槍の上に器用に乗って敵から対象指定されなくなる。そこから、その場に着地、または再度ジャンプして別の指定地点に着地し範囲内の敵にダメージを与える。",
-            "dynamicDescription": "カーソルの位置までジャンプして槍の上に飛び乗り、対象指定不可状態になってから、地面に飛び降りて周囲の敵に<magicDamage>@EDamage@の魔法ダメージ</magicDamage>を与え、2秒間、@SlowAmount*100@%の<status>スロウ効果</status>を付与する。<br><br>槍の上に乗った状態でこのスキルを再発動すると、地面に飛び降りる代わりに、カーソルで指定した位置に向かってもう一度ジャンプし、周囲の狭い範囲内にいる敵に<magicDamage>@EDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "槍を使ってカーソル方向に飛び跳ね、対象指定不可状態になり、その後、地面を強打して周囲の敵に<magicDamage>@EDamage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間、@SlowAmount*100@%の<status>スロウ効果</status>を与える。<br><br>フィズが槍の上にいる間にこのスキルを再発動すると、地面を叩きつける代わりに、カーソル方向にもう一度ジャンプして、狭い範囲内の周囲の敵に<magicDamage>@EDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

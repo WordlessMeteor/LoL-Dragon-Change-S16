@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Inegalabilul duelist",
     "shortBio": "- ''Năpustire'' (Q) este o năpustire țintită cu refolosire<br>- ''Ripostă'' (W) oferă daune din atac pasive, înjunghierea nu are amețire sau încetinire<br>- ''Bonus de viteză'' (E) oferă viteză de mișcare la atacuri și se reîmprospătează după doborâri<br>- Pasiva și R-ul sunt complet diferite. Citește descrierile abilităților",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -265,7 +265,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i daune fizice. Fiora se mai poate năpusti o data în decurs de câteva secunde, fără să mai consume mană.",
-            "dynamicDescription": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Fiora poate <recast>refolosi</recast> abilitatea pentru a se năpusti încă o dată în decurs de 4 secunde, fără să mai consume <scaleMana>mană</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Fiora poate <recast>refolosi</recast> abilitatea pentru a se năpusti în decurs de @RecastWindow@ secunde, fără să mai consume <scaleMana>mană</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -415,7 +415,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Daunele din atac ale Fiorei sunt crescute. La activare, Fiora parează următorul atac de bază și reflectă daune magice înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive><physicalDamage>daunele din atac</physicalDamage> ale Fiorei sunt crescute cu <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activă: </spellActive>Fiora parează următorul atac în decurs de 1,5 secunde și reflectă <magicDamage>@ReflectionDamage@ daune magice</magicDamage> înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive><physicalDamage>daunele din atac</physicalDamage> ale Fiorei sunt crescute cu <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activă: </spellActive>Fiora parează următorul atac în decurs de @ParryDuration@ secunde și reflectă <magicDamage>@ReflectionDamage@ daune magice</magicDamage> înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Fiora primește temporar viteză de atac suplimentară. Fiecare atac sau ''Năpustire'' reușite în acest interval îi cresc viteza de mișcare. Dacă ucide un campion, resetează timpul de reactivare al abilității.",
-            "dynamicDescription": "Fiora primește <attackSpeed>@ASBonus*100@% viteză de atac</attackSpeed> timp de 3 secunde. Fiecare atac sau <spellName>''Năpustire''</spellName> pe care ea îl reușește în acest timp îi oferă <speed>@MSBonus*100@% viteză de mișcare</speed> timp de 3 secunde, cumulându-se de până la 3 ori.<br><br>Dacă ucide un campion, timpul de reactivare al acestei abilități se resetează. (Participările reduc timpul de reactivare cu @HalfCooldown@ secunde)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora primește <attackSpeed>@ASBonus*100@% viteză de atac</attackSpeed> timp de @BuffDuration@ secunde. Fiecare atac sau <spellName>''Năpustire''</spellName> pe care ea îl reușește în acest timp îi oferă <speed>@MSBonus*100@% viteză de mișcare</speed> timp de @BuffDuration@ secunde, cumulându-se de până la @MaxStacks@ ori.<br><br>Dacă ucide un campion, timpul de reactivare al acestei abilități se resetează. (Participările reduc timpul de reactivare cu @HalfCooldown@ secunde)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

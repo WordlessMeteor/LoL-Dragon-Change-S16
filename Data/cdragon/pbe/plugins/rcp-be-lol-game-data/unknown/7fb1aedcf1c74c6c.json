@@ -582,12 +582,12 @@
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    10.0,
-                    25.0,
-                    40.0,
-                    55.0,
-                    70.0,
-                    85.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "飛斯跳到空中，利用他的三叉戟優雅落地並進入無法被指定的狀態。飛斯處在這個狀態的時候，可以選擇直擊地面或是在落地前再次跳躍。",
-            "dynamicDescription": "飛斯朝游標方向跳躍並跳上三叉戟，期間變得無法被指定，然後猛擊地面，對鄰近敵軍造成<magicDamage>@EDamage@魔法傷害</magicDamage>，並使他們緩速<status></status>@SlowAmount*100@%，持續2秒。<br><br>飛斯站上三叉戟時重施技能，會讓飛斯再次朝游標方向跳躍，並對附近敵軍造成<magicDamage>@EDamage@魔法傷害</magicDamage>，不再是猛擊地面且範圍較小。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "飛斯朝游標方向跳上長矛，進入無法被指定狀態，然後猛擊地面，對鄰近敵軍造成<magicDamage>@EDamage@魔法傷害</magicDamage>並使其<status>緩速</status>@SlowAmount*100@%，持續@SlowDuration@秒。<br><br>飛斯站在長矛上時再次發動此技能，再次朝游標位置跳躍，改為對附近較小範圍內的敵軍造成<magicDamage>@EDamage@魔法傷害</magicDamage>，而非猛擊地面。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

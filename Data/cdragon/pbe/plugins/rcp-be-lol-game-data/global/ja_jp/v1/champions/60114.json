@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "フィオラ",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "高潔なるデュエリスト",
     "shortBio": "- 「ファント(Q)」は対象指定のダッシュで、再発動が可能<br>- 「リポスト(W)」は自動効果で攻撃力が増加し、突きにはスタン効果もスロウ効果も付与されない<br>- 「スピードバースト(E)」は通常攻撃で移動速度が増加し、キルで効果時間がリフレッシュされる<br>- 自動効果とRは完全に異なる。詳細はスキル説明を参照",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -265,7 +265,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "前方にダッシュして対象を攻撃し、物理ダメージを与える。数秒以内であれば、マナを消費せずに再度ダッシュを行える。",
-            "dynamicDescription": "前方にダッシュして対象を攻撃し、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br>4秒以内であれば、<scaleMana>マナ</scaleMana>を消費せずにこのスキルを<recast>再発動</recast>して再度ダッシュを行える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "前方にダッシュして対象を攻撃し、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br>@RecastWindow@秒以内であれば、<scaleMana>マナ</scaleMana>コストなしでこのスキルを<recast>再発動</recast>してダッシュできる。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -415,7 +415,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "攻撃力が増加する。発動すると、次の通常攻撃を受け流して、攻撃者に魔法ダメージを反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive><physicalDamage>攻撃力</physicalDamage>が<physicalDamage>@BonusAD@</physicalDamage>増加する。<br><br><spellActive>発動効果: </spellActive>1.5秒間、次の通常攻撃を受け流して、攻撃者に<magicDamage>@ReflectionDamage@の魔法ダメージ</magicDamage>を反射する。チャンピオン、モンスター、大型ミニオンに対して機能する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive><physicalDamage>攻撃力</physicalDamage>が<physicalDamage>@BonusAD@</physicalDamage>増加する。<br><br><spellActive>発動効果: </spellActive>@ParryDuration@秒以内に受ける次の通常攻撃をパリィし、攻撃してきた敵に<magicDamage>@ReflectionDamage@の魔法ダメージ</magicDamage>を跳ね返す。チャンピオン、モンスター、大型ミニオンに対して効果を発揮する。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -565,7 +565,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一時的に攻撃速度が追加で増加する。この効果時間中に通常攻撃か「ファント」が敵に命中するたびに、自身の移動速度が増加する。チャンピオンをキルすると、このスキルのクールダウンが解消される。",
-            "dynamicDescription": "3秒間、<attackSpeed>攻撃速度が@ASBonus*100@%</attackSpeed>増加する。この効果時間中に通常攻撃か<spellName>ファント</spellName>が敵に命中するたびに、3秒間、自身の<speed>移動速度が@MSBonus*100@%</speed>増加する。この効果は3回までスタックする。<br><br>チャンピオンをキルすると、このスキルのクールダウンが解消される。(アシストを獲得するとクールダウンが@HalfCooldown@秒短縮される)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@BuffDuration@秒間、<attackSpeed>攻撃速度が@ASBonus*100@%</attackSpeed>増加する。効果時間中に通常攻撃か<spellName>ファント</spellName>を当てるたびに、@BuffDuration@秒間、<speed>移動速度が@MSBonus*100@%</speed>増加する。この効果は@MaxStacks@回までスタックする。<br><br>チャンピオンをキルすると、このスキルのクールダウンが解消される(アシストを獲得するとクールダウンが@HalfCooldown@秒短縮される)。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

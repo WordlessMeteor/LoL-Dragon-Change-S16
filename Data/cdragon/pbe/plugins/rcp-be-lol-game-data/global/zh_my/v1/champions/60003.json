@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "加里欧",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "御国巨像",
     "shortBio": "- 技能完全改变。请阅读这些说明",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里欧为一名友方英雄提供护盾，提升其物理防御和魔法防御，每当该英雄受到伤害时，加里欧会回复生命值。",
-            "dynamicDescription": "加里欧为一名友方英雄或自己提供护盾，受护盾保护的目标在4秒内获得<scaleArmor>@BonusDefense@物理防御</scaleArmor>和<scaleMR>@BonusDefense@魔法防御</scaleMR>。每当该单位受到伤害时，加里欧会回复<healing>@TotalHeal@</healing>生命值。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里欧为一名友方英雄或自己赋能，使其在 @BuffDuration@ 秒内获得 <scaleArmor>@BonusDefense@ 物理防御</scaleArmor> 和 <scaleMR>@BonusDefense@魔法防御</scaleMR> 。每当他们受到伤害时，加里欧会回复 <healing>@TotalHeal@</healing> 生命值。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里欧拍打双翼，释放出一阵震荡强风，对敌人造成伤害，并在路径上留下一股定向气流，提升友军的移动速度。",
-            "dynamicDescription": "加里欧释放一阵震荡强风，对沿途经过的所有敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。一道定向气流会持续5秒，队友在顺着气流移动时可获得 <speed>@MoveSpeedMod*100@%移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里欧释放一阵冲击之风，对路径上的所有敌人造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage>  。定向气流会持续 @DraftDuration@ 秒，队友在顺着气流方向移动时可获得 <speed>@MoveSpeedMod*100@%移动速度</speed> 加成。@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "加里欧化身为石像，嘲讽附近敌人，并在敌人攻击他时储存震荡能量。加里欧随后会从雕像外壳中迸出，释放已储存的能量，对周围的敌人造成伤害。",
-            "dynamicDescription": "加里欧蓄力2秒，嘲讽附近的敌人，并承受@ReducedDamage*100@%的减伤。<br><br>引导结束后，加里欧对周围敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，引导期间每受到一次攻击都会额外造成5%的伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "加里欧蓄力 @ChannelDuration@ 秒，嘲讽附近的敌人，并承受 @ReducedDamage*100@%的减伤。<br><br>蓄力后，加里欧对周围敌人造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage> ，并且每次在蓄力期间受到攻击时，额外造成 @PercentPerHitIncrease*100@%伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

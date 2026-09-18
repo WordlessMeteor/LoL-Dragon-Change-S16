@@ -582,12 +582,12 @@
             "effectAmounts": {
                 "Effect1Amount": [
                     0.0,
-                    10.0,
-                    25.0,
-                    40.0,
-                    55.0,
-                    70.0,
-                    85.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -850,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "飞斯跳到空中，利用三叉戟优雅降落并进入不可选定状态。飞斯跳到空中，利用三叉戟优雅降落并进入不可选定状态。处于这一状态时，飞斯可以选择猛击地面，或再次跳跃并打击落地。",
-            "dynamicDescription": "飞斯朝鼠标指针方向跃起并落在三叉戟上，进入不可选定状态，随后猛击地面，对附近敌人造成<magicDamage>@EDamage@魔法伤害</magicDamage>并使其<status>减速</status>@SlowAmount*100@%，持续2秒。<br><br>当飞斯站在三叉戟上重施技能时，会朝鼠标指针方向再次跳跃，并改为对较小范围内的附近敌人造成<magicDamage>@EDamage@魔法伤害</magicDamage>，而不是猛击地面。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "飞斯朝你的鼠标方向跃起，跳到他的三叉戟上，期间无法被选中，随后猛击地面，对附近敌人造成 <magicDamage>@EDamage@ 魔法伤害</magicDamage> 并使他们减速 ，<status>减速</status>幅度为@SlowAmount*100@%，持续@SlowDuration@秒。<br><br>当飞斯站在长矛上时再次释放该技能，会让飞斯再次朝你的鼠标方向跳跃，并在较小范围内对附近敌人造成 <magicDamage>@EDamage@魔法伤害</magicDamage>，而不是猛击地面。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

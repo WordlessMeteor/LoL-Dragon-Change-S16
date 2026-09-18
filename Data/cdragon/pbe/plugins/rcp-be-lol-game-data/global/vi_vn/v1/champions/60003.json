@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 3,
     "name": "Galio",
     "alias": "Jade_Galio",
-    "title": "",
+    "title": "Vệ Thần Khổng Lồ",
     "shortBio": "- Các kỹ năng hoàn toàn khác. Đọc mô tả",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -292,7 +292,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Galio tạo lá chắn cho một Tướng đồng minh, tăng Giáp và Kháng Phép của họ, đồng thời hồi máu cho Galio mỗi khi Tướng đó chịu sát thương.",
-            "dynamicDescription": "Galio tạo lá chắn cho một tướng đồng minh hoặc bản thân, mục tiêu được bảo vệ nhận <scaleArmor>@BonusDefense@ Giáp</scaleArmor> và <scaleMR>@BonusDefense@ Kháng Phép</scaleMR> trong 4 giây. Galio được hồi lại <healing>@TotalHeal@</healing> máu cho mỗi lần đơn vị chịu sát thương.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio cường hóa một tướng đồng minh hoặc bản thân, cho họ <scaleArmor>@BonusDefense@ Giáp</scaleArmor> và <scaleMR>@BonusDefense@ Kháng Phép</scaleMR> trong @BuffDuration@ giây. Galio được hồi <healing>@TotalHeal@</healing> mỗi khi họ chịu sát thương.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Galio vỗ cánh, tạo ra một luồng gió chấn động gây sát thương lên kẻ địch và để lại một luồng gió theo hướng di chuyển, giúp tăng tốc độ di chuyển cho đồng minh.",
-            "dynamicDescription": "Galio tung ra một luồng gió chấn động gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên tất cả kẻ địch trên đường đi của nó. Một luồng gió định hướng tồn tại trong 5 giây, đồng minh nhận được <speed>@MoveSpeedMod*100@% Tốc Độ Di Chuyển</speed> khi di chuyển theo hướng của luồng gió.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio tung ra một luồng gió chấn động gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên tất cả kẻ địch trên đường đi. Một luồng gió định hướng tồn tại trong @DraftDuration@ giây, đồng minh nhận <speed>@MoveSpeedMod*100@% Tốc Độ Di Chuyển</speed> khi di chuyển cùng hướng với luồng gió.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Galio hóa thành tượng, khiêu khích kẻ địch xung quanh và tích trữ năng lượng chấn động khi chúng tấn công ông.  Sau đó, Galio phá vỡ lớp vỏ tượng của mình, giải phóng năng lượng tích trữ để gây sát thương lên kẻ địch xung quanh.",
-            "dynamicDescription": "Galio vận sức trong 2 giây, khiêu khích kẻ địch xung quanh và nhận @ReducedDamage*100@% giảm sát thương.<br><br>Sau khi vận sức, Galio gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch xung quanh, + 5% sát thương cho mỗi đòn đánh mà ông gánh chịu trong lúc vận sức.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Galio vận chiêu trong @ChannelDuration@ giây, khiêu khích kẻ địch xung quanh và chỉ nhận @ReducedDamage*100@% sát thương.<br><br>Sau khi vận chiêu, Galio gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch xung quanh, cộng thêm @PercentPerHitIncrease*100@% sát thương với mỗi đòn đánh hắn phải chịu trong lúc vận chiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
