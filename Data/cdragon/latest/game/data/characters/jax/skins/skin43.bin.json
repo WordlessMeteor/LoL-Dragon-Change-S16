@@ -1,6 +1,7 @@
 {
     "Characters/Jax/Skins/Skin43": {
         "skinClassification": 2,
+        "championSkinId": 24043,
         "championSkinName": "JaxSkin43",
         "skinParent": 42,
         "metaDataTags": "gender:male,race:human,skinline:magmachamber",
@@ -1933,6 +1934,16 @@
         "name": "Characters/Jax/Skins/Skin43/Materials/Jax_Skin43_HeadFlowMap",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/jax/skins/skin42/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -1954,6 +1965,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -2174,6 +2249,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -10110,8 +10195,8 @@
             "Jax_Idle_R_FootPrint": "Characters/Jax/Skins/Skin43/Particles/Jax_Skin43_Idle_R_FootPrint",
             "Jax_Idle_GlowFire": "Characters/Jax/Skins/Skin43/Particles/Jax_Skin43_Idle_GlowFire",
             "{ef129a9f}": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_GroundMacma",
-            "{4e091cc2}": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_Spin",
-            "{cdc740fe}": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_PoroSpitting",
+            "Jax_Z_Spin": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_Spin",
+            "Jax_Z_PoroSpitting": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_PoroSpitting",
             "{bcab0124}": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Z_PoroSpitting02"
         },
         "__type": "ResourceResolver"

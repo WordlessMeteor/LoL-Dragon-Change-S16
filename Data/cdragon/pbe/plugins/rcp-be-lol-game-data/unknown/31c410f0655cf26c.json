@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 111,
     "name": "ノーチラス",
     "alias": "Jade_Nautilus",
-    "title": "",
+    "title": "深海の巨人",
     "shortBio": "- ノーチラスの変更は、海の底で忘れ去られている",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -144,7 +144,7 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111003.png",
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nautilus/Skins/Skin3/ChromaPreview.project_jade_16_19.png",
             "chromas": [
                 {
                     "id": 60111008,
@@ -236,7 +236,7 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111009.png",
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nautilus/Skins/Skin9/ChromaPreview.project_jade_16_19.png",
             "chromas": [
                 {
                     "id": 60111010,
@@ -415,7 +415,7 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111018.png",
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Nautilus/Skins/Skin18/ChromaPreview.project_jade_16_19.png",
             "chromas": [
                 {
                     "id": 60111019,
@@ -583,8 +583,8 @@
     "passive": {
         "name": "鉄の錨",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_StaggeringBlow.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60111/ability_60111_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60111/ability_60111_P1.jpg",
         "description": "通常攻撃時に追加物理ダメージを与え、対象にスネア効果を付与する。ただし、同じ対象には数秒に1度しか効果が発動しない。"
     },
     "spells": [
@@ -592,8 +592,8 @@
             "spellKey": "q",
             "name": "錨投げ",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_AnchorChain.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60111/ability_60111_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60111/ability_60111_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "前方に錨を投げる。チャンピオンに命中した場合、互いを同時に引き寄せる。地形に命中した場合、錨をたぐってそこまで移動し、このスキルのクールダウンが短縮される。",
@@ -742,8 +742,8 @@
             "spellKey": "w",
             "name": "大海の激憤",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_Wrath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60111/ability_60111_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60111/ability_60111_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一時的にシールドを獲得する。シールドが持続している間は通常攻撃が対象と周囲の敵に継続ダメージを与える。",
@@ -892,12 +892,12 @@
             "spellKey": "e",
             "name": "粉砕水",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_RippleEffect.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60111/ability_60111_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60111/ability_60111_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "地面を踏みつけて、自身の周囲に爆発を3度引き起こす。爆発のたびに敵にダメージとスロウ効果を与える。",
-            "dynamicDescription": "地面を叩きつけ、3回爆発を発生させる。爆発はそれぞれ<magicDamage>@DamageCalc@の魔法ダメージ</magicDamage>を与え、敵に@SlowPercent*100@%の<status>スロウ効果</status>を付与する。このスロウ効果は@SlowDuration@秒かけて徐々に元に戻る。同じユニットが複数の爆発を受ける可能性があるが、2回目以降の爆発から受けるダメージは<magicDamage>@DamageHalvedTooltip@</magicDamage>になる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "地面を叩きつけ、3回爆発を発生させる。爆発はそれぞれ<magicDamage>@DamageCalc@の魔法ダメージ</magicDamage>を与え、敵に@SlowPercent*100@%の<status>スロウ効果</status>を付与する。この効果は@SlowDuration@秒かけて徐々に元に戻る。同じユニットが複数の爆発を受ける可能性があるが、2回目以降の爆発から受けるダメージは<magicDamage>@DamageHalvedTooltip@</magicDamage>になる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1042,8 +1042,8 @@
             "spellKey": "r",
             "name": "爆雷発射",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_GrandLine.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60111/ability_60111_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60111/ability_60111_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "錨を地面にたたきつけ、狙った敵1体を追尾する衝撃波を発生させる。この衝撃波は追尾中に触れた敵をノックアップする。狙った敵に衝撃波が命中すると爆発が起き、対象をノックアップしてスタンさせる。",

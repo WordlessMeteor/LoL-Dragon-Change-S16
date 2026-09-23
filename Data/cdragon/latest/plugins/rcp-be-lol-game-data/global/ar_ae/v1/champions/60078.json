@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "بوبي",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "سفيرة الحديد",
     "shortBio": "- تستخدم قدرة الاندفاع البطولي (E) تزايد قوة القدرة<br>- ويختلف التأثير الكامن و Q و W و R تمامًا. اقرأ أوصاف القدرات",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "المقاتلة الباسلة",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "يتم تقليص كل الضرر المادي وضرر السحر الذي تتلقاه بوبي والذي يتجاوز 10% من صحتها الحالية بنسبة 50%. لا ينطبق ذلك على الضرر المتلقى من المباني."
+        "description": "يتقلص الضرر الذي تتلقاه بوبي إذا تجاوز نسبة من صحتها الحالية."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "الانفجار المدمر",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تسحق بوبي خصمها، ملحقةً ضرر هجوم بالإضافة إلى مقدارٍ ثابت و 8% من الصحة القصوى للهدف على شكل ضرر إضافي. لا يمكن أن يتجاوز الضرر الإضافي عتبةً معينةً بناءً على مستوى القدرة.",
-            "dynamicDescription": "يلحق هجوم بوبي التالي <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% من الصحة القصوى كضرر سحر</magicDamage>. لا يمكن أن يتجاوز ضرر نسبة الصحة المئوية الإضافي @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "يسحق هجوم بوبي التالي خصمها، ملحقًا ضررًا إضافيًا بناءً على صحة هدفها القصوى.",
+            "dynamicDescription": "يلحق هجوم بوبي التالي <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% من الصحة القصوى على شكل ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "أمثولة ديماسيا",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تأثير كامن: عقب تلقي الضرر من هجوم أساسي أو إلحاق الضرر بواسطة هجوم أساسي، تزداد دروع بوبي وضررها لمدة 5ث. يمكن أن يتكدس هذا التأثير 10 مرات. تأثير نشط: تكسب بوبي الحد الأقصى من تكدسات أمثولة ديماسيا، وتزداد سرعة حركتها لمدة 5ث.",
+            "description": "تأثير كامن: عند تلقي بوبي ضررًا من هجوم أساسي أو إلحاقها الضرر بهجوم أساسي، تزداد دروعها وضررها، ويمكن أن يتكدس هذا التأثير. تأثير نشط: تكسب بوبي الحد الأقصى من تكدسات زيادة سرعة الحركة من أمثولة ديماسيا.",
             "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تكسب بوبي @BonusStats@ <scaleArmor>دروع</scaleArmor> و <scaleAD>ضرر هجوم</scaleAD> لمدة @PassiveDuration@ث كلما ألحقت أو تلقت ضرر هجوم. هذا التأثير قابل للتكدس @MaxStacks@ من المرات.<br><br><spellActive>تأثير نشط:</spellActive> تكسب بوبي الحد الأقصى من تكدسات أمثولة ديماسيا، وتزداد سرعة حركتها بنسبة @Speed*100@% لمدة @ActiveDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "الاندفاع البطولي",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع بوبي نحو عدو وتحمله لمسافة أبعد. يلحق الارتطام الأولي قدرًا بسيطًا من الضرر، وإذا اصطدم الهدف بالتضاريس، يتلقى قدرًا كبيرًا من الضرر ويصاب بالصعق.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "الحصانة الدبلوماسية",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تركّز بوبي بشدة على بطل معادٍ واحد، فتلحق به ضررًا إضافيًا. تصبح بوبي منيعة ضد أي ضرر أو قدرات من الأعداء باستثناء هدفها.",

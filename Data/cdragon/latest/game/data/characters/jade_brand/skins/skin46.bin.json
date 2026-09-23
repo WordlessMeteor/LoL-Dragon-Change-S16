@@ -1,6 +1,7 @@
 {
     "Characters/Jade_Brand/Skins/Skin46": {
         "skinClassification": 2,
+        "championSkinId": 60063046,
         "championSkinName": "Jade_BrandSkin46",
         "skinParent": 42,
         "metaDataTags": "gender:male,element:fire,skinline:empyrean",
@@ -397,6 +398,16 @@
         "name": "Characters/Jade_Brand/Skins/Skin46/Materials/FlowMap_Bloom_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/jade_brand/skins/skin42/particles/cloudfm_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -418,6 +429,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -632,6 +707,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -2415,25 +2500,25 @@
             "Jade_Brand_E_Range_Ring_ext": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_E_Range_Ring_ext",
             "Jade_Brand_P_redring_Ignition_Child": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_P_redring_Ignition_Child",
             "Jade_Brand_E_Conflagration_buf_child": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_E_Conflagration_buf_child",
-            "{40465440}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Gate_01",
-            "{434658f9}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Gate_02",
-            "{2d6d9da9}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Port_Start_Gate",
-            "{ccaa0014}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Power_End",
-            "{6758688d}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_1",
-            "{645863d4}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_2",
-            "{35dabee2}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Power",
-            "{1e8f1b01}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Port_Start_Gate2",
-            "{d3cf9531}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Rising_Avatar",
-            "{1decadf2}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Ground",
-            "{e629ce6b}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_03",
-            "{7850352a}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire2_Trail",
-            "{016bf5c5}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire3_Trail",
-            "{db7564e8}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Tar",
-            "{945063ff}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire1_Trail",
-            "{53cdc32e}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Tar2",
-            "{59364d7a}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_Trail",
-            "{514eff0f}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Recall_scene",
-            "{a069693d}": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Windown"
+            "Jade_Brand_Z_Gate_01": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Gate_01",
+            "Jade_Brand_Z_Gate_02": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Gate_02",
+            "Jade_Brand_Z_Port_Start_Gate": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Port_Start_Gate",
+            "Jade_Brand_Z_Power_End": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Power_End",
+            "Jade_Brand_Z_Fire_1": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_1",
+            "Jade_Brand_Z_Fire_2": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_2",
+            "Jade_Brand_Z_Power": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Power",
+            "Jade_Brand_Z_Port_Start_Gate2": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Port_Start_Gate2",
+            "Jade_Brand_Z_Rising_Avatar": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Rising_Avatar",
+            "Jade_Brand_Z_Ground": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Ground",
+            "Jade_Brand_Z_Fire_03": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_03",
+            "Jade_Brand_Z_Fire2_Trail": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire2_Trail",
+            "Jade_Brand_Z_Fire3_Trail": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire3_Trail",
+            "Jade_Brand_Z_Tar": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Tar",
+            "Jade_Brand_Z_Fire1_Trail": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire1_Trail",
+            "Jade_Brand_Z_Tar2": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Tar2",
+            "Jade_Brand_Z_Fire_Trail": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Fire_Trail",
+            "Jade_Brand_Z_Recall_scene": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Recall_scene",
+            "Jade_Brand_Z_Windown": "Characters/Jade_Brand/Skins/Skin42/Particles/Jade_Brand_Skin42_Z_Windown"
         },
         "__type": "ResourceResolver"
     },

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Nữ Kiếm Sư",
     "shortBio": "- Lao Tới (Q) là một kỹ năng lướt chỉ định mục tiêu với khả năng tái kích hoạt<br>- Phản Đòn (W) có nội tại tăng Sức Mạnh Công Kích, cú đâm không Làm Choáng hay Làm Chậm<br>- Bùng Nổ Tốc Độ (E) tăng Tốc Độ Di Chuyển khi tung Đòn Đánh và được làm mới khi hạ gục<br>- Nội Tại và R hoàn toàn khác biệt. Đọc mô tả kỹ năng",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Kiếm Sư",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora hồi máu theo thời gian khi cô gây sát thương. Tấn công tướng địch sẽ khiến hiệu ứng này cộng dồn nhiều lần."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Lao Tới",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Fiora lao tới tấn công mục tiêu, gây sát thương vật lý. Fiora có thể lướt lần thứ hai trong vài giây mà không tốn năng lượng.",
-            "dynamicDescription": "Fiora lao tới tấn công mục tiêu, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>.<br><br>Fiora có thể <recast>Tái Kích Hoạt</recast> Kỹ Năng này để lướt lần thứ hai trong vòng 4 giây mà không tốn <scaleMana>Năng Lượng</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora lướt về phía trước để tấn công mục tiêu, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>.<br><br>Fiora có thể <recast>Tái Kích Hoạt</recast> Kỹ Năng này để lướt trong vòng @RecastWindow@ giây mà không tốn <scaleMana>Năng Lượng</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Phản Đòn",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sức Mạnh Công Kích của Fiora được tăng lên. Khi kích hoạt, Fiora sẽ đỡ đòn đánh thường tiếp theo và phản lại sát thương phép lên kẻ tấn công. Có tác dụng lên tướng, quái và lính lớn.",
-            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive><physicalDamage>Sức Mạnh Công Kích</physicalDamage> của Fiora được tăng thêm <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Kích Hoạt: </spellActive>Fiora đỡ Đòn Đánh tiếp theo trong vòng 1,5 giây và phản lại <magicDamage>@ReflectionDamage@ sát thương phép</magicDamage> lên kẻ tấn công. Có tác dụng lên tướng, quái và lính lớn.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive><physicalDamage>Sức Mạnh Công Kích</physicalDamage> của Fiora được tăng thêm <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Kích Hoạt: </spellActive>Fiora đỡ Đòn Đánh tiếp theo trong vòng @ParryDuration@ giây và phản lại <magicDamage>@ReflectionDamage@ sát thương phép</magicDamage> lên kẻ tấn công. Có tác dụng lên tướng, quái và lính lớn.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Bùng Nổ Tốc Độ",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Fiora tạm thời nhận thêm Tốc Độ Đánh. Mỗi đòn đánh hoặc Lao Tới mà cô thực hiện trong thời gian này sẽ tăng Tốc Độ Di Chuyển của cô. Hạ gục một tướng sẽ làm mới Hồi Chiêu của Kỹ Năng này.",
-            "dynamicDescription": "Fiora nhận <attackSpeed>@ASBonus*100@% Tốc Độ Đánh</attackSpeed> trong 3 giây. Mỗi Đòn Đánh hoặc <spellName>Lao Tới</spellName> mà cô thực hiện trong thời gian này sẽ cho Fiora <speed>@MSBonus*100@% Tốc Độ Di Chuyển</speed> trong 3 giây, cộng dồn tối đa 3 lần.<br><br>Hạ gục một tướng sẽ làm mới Thời Gian Hồi Chiêu của Kỹ Năng này. (Hỗ trợ giảm Thời Gian Hồi Chiêu đi @HalfCooldown@ giây)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora nhận <attackSpeed>@ASBonus*100@% Tốc Độ Đánh</attackSpeed> trong @BuffDuration@ giây. Mỗi Đòn Đánh hoặc <spellName>Lao Tới</spellName> trúng đích trong thời gian này sẽ cho Fiora <speed>@MSBonus*100@% Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây, cộng dồn tối đa @MaxStacks@ lần.<br><br>Hạ gục một tướng sẽ làm mới Hồi Chiêu của Kỹ Năng này. (Hỗ trợ giảm Hồi Chiêu đi @HalfCooldown@ giây)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Điệu Van Tử Thần",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Fiora lướt quanh chiến trường để gây sát thương vật lý lên tướng địch. Những đòn đánh tiếp theo lên cùng một mục tiêu sẽ gây ít sát thương hơn.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

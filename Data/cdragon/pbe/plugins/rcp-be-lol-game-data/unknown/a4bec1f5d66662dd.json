@@ -1,0 +1,701 @@
+{
+    "id": 60266,
+    "contentId": "fc0acbfd-eaea-4ed7-8ffe-3d3d7e02a915",
+    "relatedPrimeContentId": "3a2a3fff-0e45-4e43-971f-dd14c0bb578b",
+    "relatedPrimeItemId": 266,
+    "name": "Атрокс",
+    "alias": "Jade_Aatrox",
+    "title": "",
+    "shortBio": "",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 3,
+        "difficulty": 3,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 3,
+        "crowdControl": 2,
+        "mobility": 2,
+        "utility": 2
+    },
+    "championTagInfo": {
+        "championTagPrimary": "Стаб. урон",
+        "championTagSecondary": "Самолечение"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60266.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60266.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60266.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60266.ogg",
+    "roles": [
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60266000,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": true,
+            "name": "Атрокс",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        },
+        {
+            "id": 60266301,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "Колодец крови",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Passive.project_jade.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "При применении умения, стоящего здоровья, Атрокс сохраняет часть нанесенного себе урона в виде крови в Колодце. Получив смертельный урон, Атрокс в течение некоторого времени поглощает сохраненную в Колодце кровь, восстанавливая себе здоровье. Его скорость атаки выше на 1% за каждые 2% наполнения Колодца."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "Темный полет",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Q.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@QHealthCostPercent*100@% тек. здоровья (@HealthCost@).",
+            "cooldown": "@Cooldown@ сек. %i:cooldown%",
+            "description": "Атрокс взмывает вверх и обрушивается в указанное место, нанося урон всем окружающим врагам и подбрасывая тех из них, кто оказался в центре удара.",
+            "dynamicDescription": "Атрокс взмывает вверх и обрушивается в указанное место, нанося <physicalDamage>@QDamage@ ед. физ. урона</physicalDamage> всем окружающим врагам и на @QKnockupDuration@ сек. <status>подбрасывая</status> тех из них, кто оказался в центре удара.@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "Жажда крови / Цена крови",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_W2.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "@Cooldown@ сек. %i:cooldown%",
+            "description": "Когда умение включено, Атрокс при каждой 3-й автоатаке наносит доп. урон за счет собственного здоровья. Когда умение выключено, Атрокс при каждой 3-й автоатаке восстанавливает здоровье.",
+            "dynamicDescription": "Когда умение выключено, действуют эффекты <keywordMajor>Жажды крови</keywordMajor>. Когда включено, <keywordMajor>Жажду крови</keywordMajor> замещает <keywordMajor>Цена крови</keywordMajor>.<br><br><keywordMajor>Жажда крови:</keywordMajor> при каждой 3-й автоатаке Атрокс восстанавливает <healing>@WHeal@ здоровья</healing> (выше на @WLowHealthHealBonus@%, если <scaleHealth>здоровья меньше половины</scaleHealth>).<br><br><keywordMajor>Цена крови:</keywordMajor> при каждой 3-й автоатаке Атрокс наносит дополнительно <physicalDamage>@WDamage@ ед. физ. урона</physicalDamage>, теряя <scaleHealth>@SelfDamage@ здоровья</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "range": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "Клинки мучений",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_E.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@EHealthCostPercent*100@% тек. здоровья (@HealthCost@).",
+            "cooldown": "@Cooldown@ сек. %i:cooldown%",
+            "description": "Атрокс высвобождает магическую силу своего клинка, нанося урон всем пораженным врагам и замедляя их.",
+            "dynamicDescription": "Атрокс высвобождает магическую силу своего клинка, нанося <magicDamage>@EDamage@ ед. маг. урона</magicDamage> всем пораженным врагам и <status>замедляя</status> их на @ESlowAmount@% на @ESlowDuration@ сек.@SpellModifierDescriptionAppend@",
+            "range": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "Резня",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_R.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "@Cooldown@ сек. %i:cooldown%",
+            "description": "Атрокс насыщается кровью врагов, нанося урон вражеским чемпионам вокруг. Его скорость атаки и дальность атаки на короткое время растут.",
+            "dynamicDescription": "Атрокс насыщается кровью врагов, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> враж. чемпионам вокруг. Его <attackSpeed>скорость атаки растет на @RAttackSpeed*100@%</attackSpeed>, он получает @RBonusRange@ дальности атаки на @RDuration@ сек.@SpellModifierDescriptionAppend@",
+            "range": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                100.0,
+                85.0,
+                70.0,
+                55.0,
+                40.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 1.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

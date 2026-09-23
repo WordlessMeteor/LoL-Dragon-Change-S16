@@ -23,7 +23,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinQLongRange",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -51,7 +51,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -79,7 +79,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRQCombos",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -135,7 +135,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRHitsTowardTeam",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -163,7 +163,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinW1Blocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -191,7 +191,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinQ2toKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -330,7 +330,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 234,
+                "EventToTrack": 232,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -1142,13 +1142,13 @@
                         "mSubparts": [
                             {
                                 "SourceObject": "Characters/LeeSin/Spells/LeeSinQOneAbility/LeeSinQOne",
-                                "{137cf12a}": "Q2BaseDamage",
+                                "DataValue": "Q2BaseDamage",
                                 "__type": "{9e9e2e5c}"
                             },
                             {
                                 "mStat": 2,
                                 "{a519b194}": "Characters/LeeSin/Spells/LeeSinQOneAbility/LeeSinQOne",
-                                "{137cf12a}": "Q2ADRatio",
+                                "DataValue": "Q2ADRatio",
                                 "__type": "{1d452085}"
                             }
                         ],
@@ -1879,7 +1879,7 @@
                         "mFormulaParts": [
                             {
                                 "SourceObject": "Characters/LeeSin/Spells/LeeSinEOneAbility/LeeSinEOne",
-                                "{137cf12a}": "SlowDuration",
+                                "DataValue": "SlowDuration",
                                 "__type": "{9e9e2e5c}"
                             }
                         ],
@@ -2752,6 +2752,26 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "{79b24f3f}": {
+                        "ShieldAmount": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "ShieldValue",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 1.2000000476837158,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 0.800000011920929,

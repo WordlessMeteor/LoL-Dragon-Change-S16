@@ -105,6 +105,32 @@
                         1.350000023841858
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mCoefficient": 0.30000001192092896,
@@ -494,26 +520,26 @@
                 {
                     "name": "Damage",
                     "values": [
-                        -10.0,
-                        160.0,
-                        330.0,
-                        500.0,
-                        670.0,
-                        840.0,
-                        1010.0
+                        -5.0,
+                        125.0,
+                        255.0,
+                        385.0,
+                        515.0,
+                        645.0,
+                        775.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "ExtraHitDmgAmount",
                     "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -541,7 +567,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.149999976158142,
+                            "mCoefficient": 0.8500000238418579,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -549,16 +575,14 @@
                 },
                 "{819bcbb6}": {
                     "mMultiplier": {
-                        "mNumber": 0.25,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "ExtraHitDmgAmount",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "TotalDamage",
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
-            "mCoefficient2": 1.0,
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.dds"
             ],
@@ -575,14 +599,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    170.0,
+                    150.0,
                     130.0,
-                    130.0,
-                    120.0,
                     110.0,
-                    110.0,
-                    110.0,
-                    110.0
+                    90.0,
+                    70.0,
+                    50.0
                 ],
+                "{0a3e0478}": 170.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -623,10 +648,11 @@
                     100.0,
                     100.0,
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0
                 ],
+                "{0a3e0478}": 100.0,
                 "__type": "{630af303}"
             },
             "SpellEventToAudioEventSuffix": {
@@ -982,6 +1008,19 @@
                         1200.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecastWindow",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1253,9 +1292,8 @@
                 "mMissileWidth": 70.0,
                 "movementComponent": {
                     "mUseHeightOffsetAtEnd": true,
-                    "mTracksTarget": false,
                     "mStartBoneName": "",
-                    "mSpeed": 3200.0,
+                    "mSpeed": 1400.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
@@ -1266,7 +1304,7 @@
                 },
                 "behaviors": [
                     {
-                        "__type": "CastOnHit"
+                        "__type": "CastOnMovementComplete"
                     },
                     {
                         "__type": "DestroyOnMovementComplete"
@@ -1274,7 +1312,7 @@
                 ],
                 "__type": "MissileSpecification"
             },
-            "mCastType": 3,
+            "mCastType": 1,
             "castFrame": 7.53000020980835,
             "missileSpeed": 3200.0,
             "mMissileEffectKey": "Jade_Fiora_W_Stun_Mis",
@@ -1282,9 +1320,6 @@
             "mHitEffectKey": "Jade_Fiora_W_CC_Hit_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
-            "mTargetingTypeData": {
-                "__type": "Location"
-            },
             "SpellEventToAudioEventSuffix": {
                 "16": "Play_sfx_Fiora_FioraWMissile_OnMissileLaunch",
                 "13": "Play_sfx_Fiora_FioraWStun_hit",
@@ -1454,6 +1489,19 @@
                         30.0,
                         35.0,
                         40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ParryDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
                     ],
                     "__type": "SpellDataValue"
                 }

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "The Grand Duelist",
     "shortBio": "- Lunge (Q) is a targeted dash with a recast<br>- Riposte (W) has passive Attack Damage, the stab has no Stun or Slow<br>- Burst of Speed (E) grants Movement Speed on attacks and refreshes on kill<br>- Passive and R are completely different. Read the ability descriptions",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelist",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora regenerates health over time when she deals damage. Striking champions will cause this effect to stack multiple times."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Lunge",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple of seconds at no mana cost",
-            "dynamicDescription": "Fiora dashes forward to strike her target, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>Fiora can <recast>Recast</recast> this Ability to dash a second time within 4 seconds at no <scaleMana>Mana</scaleMana> cost.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora dashes forward to strike her target, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>Fiora can <recast>Recast</recast> this Ability to dash within @RecastWindow@ seconds at no <scaleMana>Mana</scaleMana> cost.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Riposte",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora's Attack Damage is increased. When activated, Fiora parries the next basic attack and reflects magic damage back to the attacker. Works against champions, monsters, and large minions.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Fiora's <physicalDamage>Attack Damage</physicalDamage> is increased by <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Active: </spellActive>Fiora parries the next Attack within 1.5 seconds and reflects <magicDamage>@ReflectionDamage@ magic damage</magicDamage> back to the attacker. Works against champions, monsters, and large minions.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Fiora's <physicalDamage>Attack Damage</physicalDamage> is increased by <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Active: </spellActive>Fiora parries the next Attack within @ParryDuration@ seconds and reflects <magicDamage>@ReflectionDamage@ magic damage</magicDamage> back to the attacker. Works against champions, monsters, and large minions.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Burst of Speed",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora temporarily gains additional Attack Speed. Each attack or Lunge she lands during this time increases her Move Speed. Killing a champion refreshes the Cooldown on this Ability.",
-            "dynamicDescription": "Fiora gains <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> for 3 seconds. Each Attack or <spellName>Lunge</spellName> she lands during this time grants Fiora <speed>@MSBonus*100@% Move Speed</speed> for 3 seconds, stacking up to 3 times.<br><br>Killing a champion refreshes this Ability's Cooldown. (Assists reduce the Cooldown by @HalfCooldown@ seconds)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora gains <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> for @BuffDuration@ seconds. Each Attack or <spellName>Lunge</spellName> she lands during this time grants Fiora <speed>@MSBonus*100@% Move Speed</speed> for @BuffDuration@ seconds, stacking up to @MaxStacks@ times.<br><br>Killing a champion refreshes this Ability's Cooldown. (Assists reduce the Cooldown by @HalfCooldown@ seconds)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Blade Waltz",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora dashes around the battlefield to deal physical damage to enemy champions. Successive strikes against the same target deal less damage.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

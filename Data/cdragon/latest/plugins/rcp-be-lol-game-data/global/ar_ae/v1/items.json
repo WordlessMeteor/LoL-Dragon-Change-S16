@@ -8000,7 +8000,7 @@
     {
         "id": 3866,
         "name": "بوصلة الرون",
-        "description": "<mainText><stats><attention> 100</attention> صحة<br><attention> 50%</attention> تجدد الصحة الأساسية<br><attention> 50%</attention> تجدد المانا الأساسي<br><attention> 5</attention> ذهب كل 10 ثوان</stats><br><br><passive>مهمة دعم</passive><br>تكسب <keywordMajor>0</keywordMajor> ذهب من هذا العنصر لتحويله إلى <rarityGeneric>جائزة العوالم</rarityGeneric>. <br><br><passive>الثروات المشتركة</passive>  (0ث، حد الشحنات الأقصى هو 0)<br>أثناء وجودك بالقرب من بطل حليف، ألحق الضرر بأبطال العدو أو اقتل الأتباع لكسب الذهب. <active>تأثير نشط</active> (3 من الشحنات)<br>تنصب كاشف تخفٍ <keyword>غير مرئي</keyword> يمنح رؤية.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> صحة<br><attention> 75%</attention> تجدد الصحة الأساسية<br><attention> 50%</attention> تجدد المانا الأساسي<br><attention> 5</attention> ذهب كل 10 ثوان</stats><br><br><passive>مهمة دعم</passive><br>تكسب <keywordMajor>0</keywordMajor> ذهب من هذا العنصر لتحويله إلى <rarityGeneric>جائزة العوالم</rarityGeneric>. <br><br><passive>الثروات المشتركة</passive>  (0ث، حد الشحنات الأقصى هو 0)<br>أثناء وجودك بالقرب من بطل حليف، ألحق الضرر بأبطال العدو أو اقتل الأتباع لكسب الذهب. <active>تأثير نشط</active> (3 من الشحنات)<br>تنصب كاشف تخفٍ <keyword>غير مرئي</keyword> يمنح رؤية.</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "نصل تعويذة القمر البديع",
+        "description": "<mainText><stats><attention> 50</attention> قوة القدرة<br><attention> 50</attention> الدروع<br><attention> 50</attention> مقاومة سحر</stats><br><br><jadeUnique>التماسك:</jadeUnique> يتم تقليص مدة تأثيرات <status>الصعق والإبطاء والاستفزاز والخوف والإسكات والإعماء</status> وكذلك <status>شل الحركة</status> بنسبة <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "العباءة والخنجر",
+        "description": "<mainText><stats><attention> 20%</attention> سرعة هجوم<br><attention> 20%</attention> فرصة ضربة حرجة</stats><br><br><jadeUnique>التماسك:</jadeUnique> يتم تقليص مدة تأثيرات <status>الصعق والإبطاء والاستفزاز والخوف والإسكات والإعماء</status> وكذلك <status>شل الحركة</status> بنسبة <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "موريلونوميكون",
         "description": "<mainText><stats><attention> 75</attention> قوة القدرة<br><attention> 12</attention> تجدد مانا كل 5ث<br><attention> 20%</attention> تقليص فترة تبريد</stats><br><br><jadeUnique>كراهية موريلو:</jadeUnique> يؤدي إلحاق ضرر السحر بأبطال العدو الذين تقل صحتهم عن <scaleHealth>40%</scaleHealth> إلى إصابتهم بتأثير <status>الجراح الخطيرة</status> لمدة 4ث.<br><br><jadeRules>(تقلص <status>الجراح الخطيرة</status> من تأثيرات العلاج وتجدد الصحة المتلقاة بنسبة 50%.)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "بوابة ززروت",
-        "description": "<mainText><stats><attention> 50</attention> الدروع<br><attention> 50</attention> مقاومة سحر<br><attention> 5</attention> تجدد صحة كل 5ث</stats><br><br><jadeUnique>العدّاء الأساسي:</jadeUnique> يمنح <speed>+30% سرعة حركة إضافية</speed> تتراكم على مدار 2ث عند الوجود قرب أبراج الحماية أو بوابات الفويد. <jadeUnique>تأثير نشط</jadeUnique>  150ث<br>تولّد بوابة في الموقع المستهدف لمدة 150ث (لا يمكن وضعها بالقرب من أبراج الحماية). كل 4ث، تولّد البوابة <keywordMajor>مخلوق فويد</keywordMajor> متفجرًا يتحرك في أقرب مسار. <br><br>بعد 4ث، تتلاشى صحة <keywordMajor>مخلوق الفويد</keywordMajor> بسرعة إلى 0. يلحق <keywordMajor>مخلوق الفويد</keywordMajor> الرابع وكل <keywordMajor>مخلوق فويد</keywordMajor> يليه ضررًا إضافيًا يعادل 50% من مقاوماتك.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> الدروع<br><attention> 50</attention> مقاومة سحر<br><attention> 5</attention> تجدد صحة كل 5ث</stats><br><br><jadeUnique>العدّاء الأساسي:</jadeUnique> يمنحك الوقوف بالقرب من أبراج الحماية أو <keywordMajor>بوابات الفويد</keywordMajor> ما يصل إلى <speed>30% من سرعة الحركة</speed> تتراكم على مدار 2ث. <jadeUnique>تأثير نشط</jadeUnique>  150ث<br>تولّد <keywordMajor>بوابة فويد</keywordMajor> في الموقع المستهدف لمدة 150ث. كل 4ث، تولّد البوابة <keywordMajor>مخلوق فويد</keywordMajor> متفجرًا يتحرك في أقرب مسار.</mainText>",
         "active": true,
         "inStore": true,
         "from": [

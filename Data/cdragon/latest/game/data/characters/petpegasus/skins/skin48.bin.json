@@ -1,5 +1,6 @@
 {
     "Characters/PetPegasus/Skins/Skin48": {
+        "championSkinId": 22048,
         "championSkinName": "PetPegasus_Ink_Ink2_Tier3",
         "loadscreen": {
             "image": "assets/characters/petpegasus/hud/loadscreen_pegasus_ink_ink2_tier3.tex",
@@ -9990,6 +9991,16 @@
         "name": "Characters/PetPegasus/Skins/Skin48/Material/FlowMap_Bloom_body_inst02",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/petdowsie/themes/ink/diana_skin11_q_smokemult.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -10011,6 +10022,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -10225,6 +10300,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

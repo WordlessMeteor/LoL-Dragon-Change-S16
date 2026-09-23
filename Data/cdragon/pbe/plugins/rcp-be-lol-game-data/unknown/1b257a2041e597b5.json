@@ -1,0 +1,701 @@
+{
+    "id": 60039,
+    "contentId": "cd05c068-3a2f-4c4d-bf1b-332505bc72bf",
+    "relatedPrimeContentId": "deffb7bb-c3b8-4e88-bdac-4a0bfa84cc52",
+    "relatedPrimeItemId": 39,
+    "name": "이렐리아",
+    "alias": "Jade_Irelia",
+    "title": "",
+    "shortBio": "",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 4,
+        "difficulty": 3,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 2,
+        "durability": 2,
+        "crowdControl": 2,
+        "mobility": 3,
+        "utility": 2
+    },
+    "championTagInfo": {
+        "championTagPrimary": "기동력",
+        "championTagSecondary": "결투가"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60039.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60039.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60039.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60039.ogg",
+    "roles": [
+        "fighter",
+        "assassin"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60039000,
+            "contentId": "89389e69-84ef-4217-b3bf-9335f5a2ad28",
+            "relatedPrimeContentId": "4f4d0491-d970-4787-8e38-00bcdeeca9b4",
+            "relatedPrimeItemId": 39000,
+            "isBase": true,
+            "name": "이렐리아",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Jade_IreliaLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        },
+        {
+            "id": 60039301,
+            "contentId": "b4dc84f0-c6cd-4222-8683-7103d2c2538d",
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_centered_301.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_uncentered_301.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_tile_301.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Jade_IreliaLoadScreen_301.project_jade.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Jade_IreliaLoadScreen_301_LE.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "아이오니아의 열정",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "주변의 적 챔피언 수에 비례해 기절, 둔화, 도발, 공포, 이동 불가 효과의 지속시간이 감소합니다."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "칼날 쇄도",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_Bladesurge.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "이렐리아가 대상에게 돌진하여 타격합니다. 칼날 쇄도로 대상을 처치하면 재사용 대기시간이 초기화되고 35의 마나를 돌려받습니다.",
+            "dynamicDescription": "이렐리아가 대상에게 돌진하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다.<br><br>대상을 처치하면 <spellName>칼날 쇄도</spellName>의 재사용 대기시간이 초기화되고 <scaleMana>@ManaReturn@의 마나</scaleMana>를 돌려받습니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                620.0,
+                620.0,
+                620.0,
+                620.0,
+                620.0,
+                620.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                14.0,
+                12.0,
+                10.0,
+                8.0,
+                6.0,
+                5.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "비천어검류",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_HitenStyle.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "이렐리아는 비천어검류의 달인으로, 기본 공격 시 기본 지속 효과로 체력을 회복합니다.  비천어검류를 사용하면 일정 시간 동안 기본 공격으로 고정 피해를 입힙니다.",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 <healing>@Health@의 체력을 회복</healing>합니다.<br><br><spellActive>사용 시:</spellActive> @HealthRestoreDuration@초 동안 이렐리아의 기본 공격이 <trueDamage>@Damage@의 고정 피해</trueDamage>를 입히고, <healing>체력 회복량</healing>이 두 배가 됩니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                825.0,
+                825.0,
+                825.0,
+                825.0,
+                825.0,
+                825.0
+            ],
+            "costCoefficients": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "cooldownCoefficients": [
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "균형의 일격",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_EquilibriumStrike.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "이렐리아의 공격이 균형을 바로잡아, 대상에게 피해를 입히고 둔화시킵니다.  대상의 남은 체력 비율이 이렐리아보다 높다면 대신 기절을 적용합니다.",
+            "dynamicDescription": "이렐리아가 대상을 검으로 꿰뚫어, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @StunDuration@초 동안 @SlowAmount@% <status>둔화</status>시킵니다.<br><br>대상의 <scaleHealth>남은 체력 비율</scaleHealth>이 이렐리아보다 높다면 대신 <status>기절</status>을 적용합니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "costCoefficients": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "초월의 검",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_TranscendentBlades.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "이렐리아가 4개의 영혼검을 소환합니다. 이후 검을 던져 경로상의 적에게 물리 피해를 입히고 체력을 흡수할 수 있습니다.",
+            "dynamicDescription": "이렐리아가 4개의 영혼검을 소환합니다. 이후 검을 던져 경로상의 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힐 수 있습니다. 챔피언에게 입힌 피해의 @ChampionHealPercent@%만큼, 미니언에게 입힌 피해의 @MinionHealPercent@%만큼 이렐리아가 <healing>체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "costCoefficients": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "cooldownCoefficients": [
+                70.0,
+                60.0,
+                50.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

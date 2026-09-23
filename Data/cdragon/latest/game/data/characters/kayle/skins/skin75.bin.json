@@ -1,6 +1,7 @@
 {
     "Characters/Kayle/Skins/Skin75": {
         "skinClassification": 2,
+        "championSkinId": 10075,
         "championSkinName": "KayleSkin75",
         "skinParent": 66,
         "metaDataTags": "race:angel,gender:female,skinline:empyrean",
@@ -16536,6 +16537,16 @@
         "name": "Characters/Kayle/Skins/Skin75/Materials/Kayle_Hair",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -16557,6 +16568,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -16765,6 +16840,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -17382,7 +17467,7 @@
             "Kayle_Z_Joke": "Characters/Kayle/Skins/Skin66/Particles/Kayle_Skin66_Z_Joke",
             "Kayle_Z_Joke_start": "Characters/Kayle/Skins/Skin66/Particles/Kayle_Skin66_Z_Joke_start",
             "Kayle_Evolve_3": "{00000000}",
-            "{242d8e55}": "Characters/Kayle/CAC/Kayle_Conversation_Base",
+            "Kayle_CAC_Conversation": "Characters/Kayle/CAC/Kayle_Conversation_Base",
             "Kayle_Emote_Taunt": "Characters/Kayle/Skins/Skin66/Particles/Kayle_Skin66_Emote_Taunt",
             "Kayle_Recall_Rising_Avatar": "Characters/Kayle/Skins/Skin66/Particles/Kayle_Skin66_Recall_Rising_Avatar",
             "Kayle_Q_Cas_Child": "Characters/Kayle/Skins/Skin66/Particles/Kayle_Skin66_Q_Cas_Child",

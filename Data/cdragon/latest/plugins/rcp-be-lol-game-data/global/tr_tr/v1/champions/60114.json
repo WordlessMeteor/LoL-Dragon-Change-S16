@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Büyük Düellocu",
     "shortBio": "- Hamle (Q) yeniden kullanılabilen hedefli bir atılma.<br>- Karşı Hamle (W) pasif saldırı gücü sağlar ve kılıç hamleleri hedefi sersemletmez veya yavaşlatmaz.<br>- Hız Artışı (E) saldırılarda hareket hızı kazandırır ve katletme halinde yenilenir.<br>- Pasif ve R tamamen farklı. Yetenek açıklamalarını oku.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Düellocu",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora, hasar verdiğinde zamanla can yeniler. Şampiyonlara saldırmak bu etkinin birkaç defa birikmesini sağlar."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Hamle",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora ileri atılıp hedefine saldırarak fiziksel hasar verir. Fiora birkaç saniye içinde mana harcamadan ikinci kez atılabilir.",
-            "dynamicDescription": "Fiora ileri atılıp hedefine saldırarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>Fiora 4 saniye içinde <scaleMana>mana</scaleMana> harcamadan bu yeteneği bir kez daha <recast>yeniden kullanarak</recast> ikinci kez atılabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora ileri atılarak hedefine saldırır ve <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>Fiora bu yeteneği @RecastWindow@ saniye içinde <scaleMana>mana</scaleMana> bedeli olmadan <recast>yeniden kullanabilir</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Karşı Hamle",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora'nın saldırı gücü artar. Etkinleştirildiğinde Fiora bir sonraki normal saldırıyı savuşturur ve saldıran birime büyü hasarı yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Fiora'nın <physicalDamage>saldırı gücü</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> artar.<br><br><spellActive>Aktif:</spellActive> Fiora 1,5 saniye içinde gelen bir sonraki saldırıyı savuşturur ve saldıran birime <magicDamage>@ReflectionDamage@ Büyü Hasarı</magicDamage> yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Fiora'nın <physicalDamage>saldırı gücü</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> artar.<br><br><spellActive>Aktif:</spellActive> Fiora sonraki @ParryDuration@ saniye içindeki ilk saldırıyı savuşturur ve saldıran birime <magicDamage>@ReflectionDamage@ Büyü Hasarı</magicDamage> yansıtır. Şampiyonlara, canavarlara ve büyük minyonlara karşı etkilidir.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Hız Artışı",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora geçici olarak ilave saldırı hızı kazanır. Bu süre boyunca isabet ettirdiği her saldırı veya Hamle hareket hızını arttırır. Bir şampiyon katletmek, bu yeteneğin bekleme süresini yeniler.",
-            "dynamicDescription": "Fiora 3 saniyeliğine <attackSpeed>%@ASBonus*100@ Saldırı Hızı</attackSpeed> kazanır. Bu süre boyunca isabet ettirdiği her saldırı veya <spellName>Hamle</spellName>, Fiora'ya 3 saniyeliğine <speed>%@MSBonus*100@ Hareket Hızı</speed> kazandırır. Bu etki en fazla 3 defaya kadar birikebilir.<br><br>Bir şampiyon katletmek bu yeteneğin bekleme süresini sıfırlar. (Asistler bekleme süresini @HalfCooldown@ saniye azaltır.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora @BuffDuration@ saniyeliğine <attackSpeed>%@ASBonus*100@ Saldırı Hızı</attackSpeed> kazanır. Bu süre boyunca hedefe isabet ettirdiği her saldırı veya <spellName>Hamle</spellName> yeteneği Fiora'ya @BuffDuration@ saniyeliğine <speed>%@MSBonus*100@ Hareket Hızı</speed> kazandırır. Bu etki @MaxStacks@ defaya kadar birikebilir.<br><br>Bir şampiyon katletmek bu yeteneğin bekleme süresini sıfırlar. (Asistler bekleme süresini @HalfCooldown@ saniye azaltır.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Kılıç Valsi",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Fiora savaş alanında atılarak rakip şampiyonlara fiziksel hasar verir. Aynı hedefe yönelik art arda yapılan saldırılar daha az hasar verir.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

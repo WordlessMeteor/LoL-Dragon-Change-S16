@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Sublime bretteuse",
     "shortBio": "- Fente (A) est une ruée ciblée qui peut être réactivée<br>- Riposte (Z) octroie passivement des dégâts d'attaque, et le coup n'applique ni étourdissement ni ralentissement<br>- Élan de vitesse (E) octroie de la vitesse de déplacement lors des attaques et se réinitialise en cas d'élimination<br>- La compétence passive et l'ultime sont complètement différents Lire la description des compétences",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelliste",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora récupère des PV sur la durée lorsqu'elle inflige des dégâts. Frapper des champions lui permet de cumuler cet effet plusieurs fois."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Fente",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Fiora fonce vers l'avant pour frapper sa cible, lui infligeant des dégâts physiques. Fiora peut effectuer une seconde ruée dans les quelques secondes qui suivent, sans coût en mana.",
-            "dynamicDescription": "Fiora se rue vers l'avant pour frapper sa cible, lui infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>.<br><br>Fiora peut <recast>relancer</recast> cette compétence pour effectuer une seconde ruée dans les 4 sec qui suivent, sans coût en <scaleMana>mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora se rue en avant pour frapper sa cible, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>.<br><br>Fiora peut <recast>relancer</recast> cette compétence pour se ruer dans les @RecastWindow@ sec, sans coût de <scaleMana>mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Riposte",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Les dégâts d'attaque de Fiora sont augmentés. Lorsque cette compétence est activée, Fiora pare la prochaine attaque de base et renvoie des dégâts magiques à l'attaquant. Fonctionne contre les champions, les monstres et les grands sbires.",
-            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les <physicalDamage>dégâts d'attaque</physicalDamage> de Fiora sont augmentés de <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Actif : </spellActive>lorsque cette compétence est activée, Fiora pare la prochaine attaque pendant 1,5 sec et renvoie <magicDamage>@ReflectionDamage@ pts de dégâts magiques</magicDamage> à l'attaquant. Fonctionne contre les champions, les monstres et les grands sbires.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passif : </spellPassive>les <physicalDamage>dégâts d'attaque</physicalDamage> de Fiora sont augmentés de <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Actif : </spellActive>Fiora pare la prochaine attaque pendant @ParryDuration@ sec et renvoie <magicDamage>@ReflectionDamage@ pts de dégâts magiques</magicDamage> à son adversaire. Fonctionne contre les champions, les monstres et les grands sbires.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Élan de vitesse",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Fiora gagne temporairement de la vitesse d'attaque bonus. Chaque attaque ou Fente qu'elle réussit pendant cette période augmente sa vitesse de déplacement. Éliminer un champion réinitialise le délai de récupération de cette compétence.",
-            "dynamicDescription": "Fiora gagne <attackSpeed>@ASBonus*100@% de vitesse d'attaque</attackSpeed> pendant 3 sec. Chaque attaque ou <spellName>Fente</spellName> qu'elle réussit pendant cette période augmente sa <speed>vitesse de déplacement de @MSBonus*100@%</speed> pendant 3 sec (cumulable 3 fois).<br><br>Éliminer un champion réinitialise le délai de récupération de cette compétence. (Les assistances réduisent le délai de récupération de @HalfCooldown@ sec)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora gagne <attackSpeed>@ASBonus*100@% de vitesse d'attaque</attackSpeed> pendant @BuffDuration@ sec. Chaque attaque ou <spellName>Fente</spellName> que Fiora réussit pendant cette période lui octroie <speed>@MSBonus*100@% de vitesse de déplacement</speed> pendant @BuffDuration@ sec, cumulable jusqu'à @MaxStacks@ fois.<br><br>Éliminer un champion réinitialise le délai de récupération de cette compétence. (Les assistances réduisent le délai de récupération de @HalfCooldown@ sec)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Valse de l'épée",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Fiora se rue sur le champ de bataille pour infliger des dégâts physiques aux champions ennemis. Les coups suivants contre la même cible infligent moins de dégâts.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

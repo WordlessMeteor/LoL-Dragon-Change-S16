@@ -1,0 +1,4319 @@
+{
+    "{078a5e76}": {
+        "ObjectName": "Jade_GravesAttackSequencer",
+        "objectPath": "{078a5e76}",
+        "mScriptName": "Jade_GravesAttackSequencer",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesWAbility": {
+        "mRootSpell": "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW",
+        "mChildSpells": [
+            "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW"
+        ],
+        "mName": "Jade_GravesWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesQAbility": {
+        "mRootSpell": "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ",
+        "mChildSpells": [
+            "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ"
+        ],
+        "mName": "Jade_GravesQAbility",
+        "__type": "AbilityObject"
+    },
+    "{1aff4cf9}": {
+        "ObjectName": "Jade_GravesSkin35_GearManager",
+        "objectPath": "{1aff4cf9}",
+        "mScriptName": "Jade_GravesSkin35_GearManager",
+        "__type": "SpellObject"
+    },
+    "{e843909c}": {
+        "mRootSpell": "{b8da9de7}",
+        "mChildSpells": [
+            "{b8da9de7}"
+        ],
+        "mName": "Jade_GravesPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{1b0deafc}": {
+        "ObjectName": "Jade_GravesPassive_Counter",
+        "objectPath": "{1b0deafc}",
+        "mScriptName": "Jade_GravesPassive_Counter",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveMaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{90aa99bc}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 1.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 1.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 12,
+                                    "mAdditionalBonusAtThisLevel": 1.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesTrueGrit.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GravesPassive_Counter",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_GravesPassive_Jade_Name",
+                    "keyTooltip": "Buff_Jade_GravesPassive_Counter_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b8da9de7}": {
+        "ObjectName": "Jade_GravesPassive",
+        "objectPath": "{b8da9de7}",
+        "mScriptName": "Jade_GravesPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveMaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{90aa99bc}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 1.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 1.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 1.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesTrueGrit.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesPassive",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "Spell_GravesPassive_Jade_Name",
+                        "keySummary": "Spell_GravesPassive_Jade_Summary",
+                        "keyTooltip": "Spell_GravesPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_GravesPassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility": {
+        "mRootSpell": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR",
+        "mChildSpells": [
+            "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR"
+        ],
+        "mName": "Jade_GravesRAbility",
+        "__type": "AbilityObject"
+    },
+    "{1f211142}": {
+        "ObjectName": "Jade_GravesR_Xplode",
+        "objectPath": "{1f211142}",
+        "mScriptName": "Jade_GravesR_Xplode",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "GravesChargeShotXplode",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        5.0,
+                        60.0,
+                        115.0,
+                        170.0,
+                        225.0,
+                        280.0,
+                        335.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "Attack2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesHighNoon.dds"
+            ],
+            "spellTotalTime": 0.5,
+            "cooldownTime": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                ],
+                "{0a3e0478}": 5.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "alwaysSnapFacing": true,
+            "castRangeValues": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "castConeAngle": 30.0,
+            "castConeDistance": 800.0,
+            "castFrame": 18.0,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 30.0,
+                        "coneRange": 735.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR": {
+        "ObjectName": "Jade_GravesR",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR",
+        "mScriptName": "Jade_GravesR",
+        "mSpell": {
+            "mAffectsTypeFlags": 13327,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_GravesChargeShot",
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "RBaseDamage",
+                    "values": [
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        550.0,
+                        650.0,
+                        750.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RFalloffDamage",
+                    "values": [
+                        30.0,
+                        140.0,
+                        250.0,
+                        360.0,
+                        470.0,
+                        580.0,
+                        690.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "Damage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "RBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 1.399999976158142,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "FalloffDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "RFalloffDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 1.2000000476837158,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.5,
+            "mCoefficient2": 1.2000000476837158,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesHighNoon.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                100.0,
+                100.0,
+                80.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "Cooldown": {
+                "values": [
+                    110.0,
+                    100.0,
+                    90.0,
+                    80.0,
+                    70.0,
+                    60.0,
+                    50.0
+                ],
+                "{0a3e0478}": 110.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 1400.0,
+            "mLineWidth": 100.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Graves_GravesChargeShot_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GravesR_Jade_Name",
+                        "keySummary": "Spell_GravesR_Jade_Summary",
+                        "keyTooltip": "Spell_GravesR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "RBaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_GravesPrimaryDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "RFalloffDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_GravesConeDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "startLocator": {
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 3,
+                        "minimumDisplayedRange": 1000.0,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1000.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "startLocator": {
+                            "distanceOffset": 1000.0,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "distanceOffset": 1000.0,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 3,
+                        "coneFollowsEnd": true,
+                        "coneAngleDegrees": 30.0,
+                        "coneRange": 720.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "Damage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{438e8f5c}": {
+        "ObjectName": "Jade_GravesR_Shot",
+        "objectPath": "{438e8f5c}",
+        "mScriptName": "Jade_GravesR_Shot",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "GravesChargeShot",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.0,
+                        20.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        110.0,
+                        135.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesHighNoon.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_weaponb",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2100.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 2100.0,
+            "mMissileEffectKey": "Jade_Graves_R_mis",
+            "mLineWidth": 100.0,
+            "mHitEffectKey": "Jade_Graves_R_hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesChargeShotShot_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesChargeShotShot_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{78a40464}": {
+        "ObjectName": "Jade_GravesR_FxMissile2",
+        "objectPath": "{78a40464}",
+        "mScriptName": "Jade_GravesR_FxMissile2",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        55.0,
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6499999761581421,
+            "mAnimationName": "Spell1",
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 2.8499999046325684,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_Graves_R_hit",
+            "mLineWidth": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{fd6938be}": {
+        "ObjectName": "Jade_GravesR_FxMissile",
+        "objectPath": "{fd6938be}",
+        "mScriptName": "Jade_GravesR_FxMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        55.0,
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6499999761581421,
+            "mAnimationName": "Spell1",
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 2.8499999046325684,
+            "missileSpeed": 2000.0,
+            "mLineWidth": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{269b4e31}": {
+        "ObjectName": "Jade_GravesQ_SoundMissile",
+        "objectPath": "{269b4e31}",
+        "mScriptName": "Jade_GravesQ_SoundMissile",
+        "mSpell": {
+            "mAffectsTypeFlags": 22538,
+            "mAlternateName": "Jade_GravesQ",
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesBuckshot.dds"
+            ],
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                13.0,
+                13.0,
+                11.25,
+                9.5,
+                7.75,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0
+                ],
+                "{0a3e0478}": 1200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "",
+                    "__type": "FixedSpeedMovement"
+                },
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 15.074999809265137,
+            "missileSpeed": 2000.0,
+            "mLineWidth": 50.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesClusterShotSoundMissile_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesClusterShotSoundMissile_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "startLocator": {
+                            "orientationType": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 4,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 3,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                375.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1175.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8fa176bc}": {
+        "ObjectName": "Jade_GravesQ_Attack",
+        "objectPath": "{8fa176bc}",
+        "mScriptName": "Jade_GravesQ_Attack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_GravesQ_Attack",
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesBuckshot.dds"
+            ],
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                13.0,
+                13.0,
+                11.25,
+                9.5,
+                7.75,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 50.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 15.074999809265137,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_Graves_Q_Mis",
+            "mLineWidth": 50.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Graves_GravesQReturn_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ": {
+        "ObjectName": "Jade_GravesQ",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ",
+        "mScriptName": "Jade_GravesQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_GravesQ",
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        60.0,
+                        95.0,
+                        130.0,
+                        165.0,
+                        200.0,
+                        235.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FirstADRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MultiHitPenalty",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "FirstADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ReducedDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "MultiHitPenalty",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 7,
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesBuckshot.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                13.0,
+                13.0,
+                11.25,
+                9.5,
+                7.75,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0,
+                    925.0
+                ],
+                "{0a3e0478}": 925.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeAngle": 15.319999694824219,
+            "castConeDistance": 900.0,
+            "castFrame": 7.5,
+            "missileSpeed": 902.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "manaValues": {
+                "values": [
+                    60.0,
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Graves_GravesClusterShot_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GravesQ_Jade_Name",
+                        "keySummary": "Spell_GravesQ_Jade_Summary",
+                        "keyTooltip": "Spell_GravesQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_GravesQ_TooltipExtendedBelowLine"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 16.0,
+                        "coneRange": 925.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesBasicAttack2": {
+        "ObjectName": "Jade_GravesBasicAttack2",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesBasicAttack2",
+        "mScriptName": "Jade_GravesBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAlternateName": "GravesBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRangeValues": {
+                "values": [
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156
+                ],
+                "{0a3e0478}": 284.6000061035156,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONB",
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 3.25,
+            "missileSpeed": 3000.0,
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
+            "mLookAtPolicy": 1,
+            "mHitEffectKey": "Jade_Graves_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesBasicAttack_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Graves_GravesBasicAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesEAbility": {
+        "mRootSpell": "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE",
+        "mChildSpells": [
+            "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE"
+        ],
+        "mName": "Jade_GravesEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE": {
+        "ObjectName": "Jade_GravesE",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE",
+        "mScriptName": "Jade_GravesE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_GravesMove",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_PlayerSelectedDashDirection"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownPerHit",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASIncrease",
+                    "values": [
+                        0.20000000298023224,
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashMovespeed",
+                    "values": [
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDistance",
+                    "values": [
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesQuickDraw.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                17.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0
+            ],
+            "Cooldown": {
+                "values": [
+                    24.0,
+                    22.0,
+                    20.0,
+                    18.0,
+                    16.0,
+                    14.0,
+                    12.0
+                ],
+                "{0a3e0478}": 24.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 25.850000381469727,
+            "missileSpeed": 0.0,
+            "mLineWidth": 50.0,
+            "mana": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "manaValues": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Graves_GravesMove_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GravesE_Jade_Name",
+                        "keySummary": "Spell_GravesE_Jade_Summary",
+                        "keyTooltip": "Spell_GravesE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "ASIncrease",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "minimumDisplayedRange": 400.0,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 7,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{eb7375f9}": {
+        "ObjectName": "Jade_GravesE_Buff",
+        "objectPath": "{eb7375f9}",
+        "mScriptName": "Jade_GravesE_Buff",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesQuickDraw.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                17.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0
+                ],
+                "{0a3e0478}": 17.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 25.850000381469727,
+            "missileSpeed": 0.0,
+            "mLineWidth": 50.0,
+            "mana": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "manaValues": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesE_Buff",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GravesE_Buff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_GravesMove_Name",
+                    "keyTooltip": "Buff_Jade_GravesE_Buff_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 7,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesCritAttack": {
+        "ObjectName": "Jade_GravesCritAttack",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesCritAttack",
+        "mScriptName": "Jade_GravesCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRangeValues": {
+                "values": [
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156
+                ],
+                "{0a3e0478}": 284.6000061035156,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
+                    "mSpeed": 3400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 5.0,
+            "missileSpeed": 3400.0,
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
+            "mHitEffectKey": "Jade_Graves_BA_tar_crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesCritAttack_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesCritAttack_OnMissileLaunch",
+                "12": "Play_sfx_Graves_GravesCritAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{718502bc}": {
+        "ObjectName": "Jade_GravesClusterShotRicochet",
+        "objectPath": "{718502bc}",
+        "mScriptName": "Jade_GravesClusterShotRicochet",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "VolleyAttack",
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0
+                ],
+                "{0a3e0478}": 1200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONA",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 15.074999809265137,
+            "missileSpeed": 2000.0,
+            "mMissileEffectName": "doesnotexist.troy",
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7bae926a}": {
+        "ObjectName": "Jade_GravesW_BoomSlow",
+        "objectPath": "{7bae926a}",
+        "mScriptName": "Jade_GravesW_BoomSlow",
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GravesW_BoomSlow",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_GravesW_Jade_Name",
+                    "keyTooltip": "buff_desc_Jade_GravesW_BoomSlow"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b5418ccb}": {
+        "ObjectName": "Jade_GravesW_Boom",
+        "objectPath": "{b5418ccb}",
+        "mScriptName": "Jade_GravesW_Boom",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 23567,
+            "mAlternateName": "Jade_GravesW",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        60.0,
+                        60.0,
+                        110.0,
+                        160.0,
+                        210.0,
+                        260.0,
+                        310.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesSmokeGrenade.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                26.0,
+                26.0,
+                24.0,
+                22.0,
+                20.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
+                ],
+                "{0a3e0478}": 1500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castTargetAdditionalUnitsRadius": 325.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 75.0,
+                    "mOffsetInitialTargetHeight": 75.0,
+                    "mStartBoneName": "buffbone_cstm_weaponb",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 3000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.974999904632568,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "Jade_Graves_W_mis",
+            "mLineWidth": 120.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "pelvis",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesSmokeGrenadeBoom_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesSmokeGrenadeBoom_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW": {
+        "ObjectName": "Jade_GravesW",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW",
+        "mScriptName": "Jade_GravesW",
+        "mSpell": {
+            "mAffectsTypeFlags": 1029,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mEffectAmount": [
+                {
+                    "value": [
+                        60.0,
+                        60.0,
+                        110.0,
+                        160.0,
+                        210.0,
+                        260.0,
+                        310.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        60.0,
+                        110.0,
+                        160.0,
+                        210.0,
+                        260.0,
+                        310.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SmokeRadius",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeedMod",
+                    "values": [
+                        -10.0,
+                        -15.0,
+                        -20.0,
+                        -25.0,
+                        -30.0,
+                        -35.0,
+                        -40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SmokeBombSlowTime",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SmokeDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ImpactDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/GravesSmokeGrenade.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                26.0,
+                26.0,
+                24.0,
+                22.0,
+                20.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    21.0,
+                    20.0,
+                    19.0,
+                    18.0,
+                    17.0,
+                    16.0,
+                    15.0
+                ],
+                "{0a3e0478}": 21.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0
+            ],
+            "castConeDistance": 100.0,
+            "castTargetAdditionalUnitsRadius": 325.0,
+            "castFrame": 8.5,
+            "missileSpeed": 1650.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "manaValues": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Graves_GravesSmokeGrenade_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GravesW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GravesW_Jade_Name",
+                        "keySummary": "Spell_GravesW_Jade_Summary",
+                        "keyTooltip": "Spell_GravesW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MovementSpeedMod",
+                                    "multiplier": -1.0,
+                                    "nameOverride": "Spell_TwitchW_listtype_SlowAmount_Jade",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "ImpactDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c2ed1915}": {
+        "ObjectName": "Jade_GravesSmokeGrenadeSecretPassive",
+        "objectPath": "{c2ed1915}",
+        "mScriptName": "Jade_GravesSmokeGrenadeSecretPassive",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesClusterShotSoundMissile": {
+        "ObjectName": "Jade_GravesClusterShotSoundMissile",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesClusterShotSoundMissile",
+        "mScriptName": "Jade_GravesClusterShotSoundMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        55.0,
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6499999761581421,
+            "mAnimationName": "Spell1",
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 2.8499999046325684,
+            "missileSpeed": 2000.0,
+            "mMissileEffectName": "doesnotexist.troy",
+            "mLineWidth": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Spells/Jade_GravesBasicAttack": {
+        "ObjectName": "Jade_GravesBasicAttack",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesBasicAttack",
+        "mScriptName": "Jade_GravesBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAlternateName": "GravesBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRangeValues": {
+                "values": [
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156,
+                    284.6000061035156
+                ],
+                "{0a3e0478}": 284.6000061035156,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPONB",
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 3.25,
+            "missileSpeed": 3000.0,
+            "mMissileEffectKey": "Jade_Graves_BA_mis",
+            "mLookAtPolicy": 1,
+            "mHitEffectKey": "Jade_Graves_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Graves_GravesBasicAttack_OnMissileCast",
+                "16": "Play_sfx_Graves_GravesBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Graves_GravesBasicAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Graves/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{6330a5e6}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{b715cd8f}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{c18f1672}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "None",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "Characters/Jade_Graves/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Graves",
+        "baseHPModifiable": {
+            "baseValue": 494.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 84.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.2400000095367432,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.14000000059604645,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 295.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.4900000095367432,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.14000000059604645,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 54.099998474121094,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 22.200000762939453,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 330.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 525.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.9000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackTotalTime": 1.600000023841858,
+            "mAttackCastTime": 0.25,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_GravesBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_GravesBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackTotalTime": 1.600000023841858,
+                "mAttackCastTime": 0.25,
+                "mAttackName": "Jade_GravesCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_GravesQAbility/Jade_GravesQ",
+            "Jade_GravesWAbility/Jade_GravesW",
+            "Jade_GravesEAbility/Jade_GravesE",
+            "Jade_GravesRAbility/Jade_GravesR"
+        ],
+        "spells": [
+            "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ",
+            "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW",
+            "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE",
+            "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR"
+        ],
+        "extraSpells": [
+            "Jade_GravesChargeShotShot",
+            "Jade_GravesPassiveShotAttack",
+            "Jade_GravesChargeShotXplode",
+            "Jade_GravesSmokeGrenadeBoom",
+            "Jade_GravesClusterShotAttack",
+            "Jade_GravesChargeShotFxMissile",
+            "Jade_GravesChargeShotFxMissile2",
+            "Jade_GravesClusterShotSoundMissile",
+            "BaseSpell",
+            "Jade_GravesBasicAttackSpread",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "{438e8f5c}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "{b5418ccb}",
+            "{8fa176bc}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Graves/Spells/Jade_GravesRAbility",
+            "Characters/Jade_Graves/Spells/Jade_GravesEAbility",
+            "{e843909c}",
+            "Characters/Jade_Graves/Spells/Jade_GravesQAbility",
+            "Characters/Jade_Graves/Spells/Jade_GravesWAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Graves",
+        "passiveLuaName": "Jade_GravesPassive",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Graves",
+        "passiveSpell": "Jade_GravesPassive",
+        "passive1IconName": "assets/characters/jade_graves/hud/icons2d/jade_gravestruegrit.dds",
+        "name": "game_character_displayname_Jade_Graves",
+        "charAudioNameOverride": "Jade_Graves_FUTURE",
+        "selectionHeight": 140.0,
+        "selectionRadius": 110.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            14,
+            0,
+            0
+        ],
+        "characterToolData": {
+            "recItems": [
+                "1055",
+                "3006",
+                "3035",
+                "3031",
+                "3131",
+                "3072"
+            ],
+            "sound": {
+                "attack": [
+                    "Cardmaster_Attack1.wav",
+                    "Cardmaster_Attack2.wav",
+                    "Cardmaster_Attack3.wav",
+                    "Cardmaster_Attack4.wav"
+                ],
+                "click": [
+                    "Cardmaster_Click1.wav",
+                    "Cardmaster_Click2.wav",
+                    "Cardmaster_Click3.wav",
+                    "Cardmaster_Click4.wav"
+                ],
+                "move": [
+                    "Cardmaster_Move1.wav",
+                    "Cardmaster_Move2.wav",
+                    "Cardmaster_Move3.wav",
+                    "Cardmaster_Move4.wav"
+                ],
+                "death": "Cardmaster_Death.wav",
+                "ready": "Cardmaster_Ready2.wav",
+                "__type": "ToolSoundData"
+            },
+            "spellData": [
+                {
+                    "desc": "Fires 3 cards in a cone pattern, dealing damage to enemies they hit.",
+                    "displayName": "Wild Cards",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Twisted Fate's attacks can deal extra damage, extra AoE damage with slow, or lots of extra AoE damage with stun!",
+                    "displayName": "Pick a Card",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Teleports Twisted Fate to target distant location.",
+                    "displayName": "Gate",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Reveals all enemy Champions and slows their movement speed for a short duration.",
+                    "displayName": "Destiny",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "Adds +10% Attack Rate.",
+                "Adds +15% Attack Rate.",
+                "Adds +20% Attack Rate."
+            ],
+            "searchTags": "marksman",
+            "championId": 60104,
+            "roles": "ATTACKER",
+            "PostAttackMoveDelay": 0.20000000298023224,
+            "magicRank": 3,
+            "LevelSpellEffectiveness": 3.0,
+            "difficultyRank": 3,
+            "description": "game_character_description_Jade_Graves",
+            "defenseRank": 5,
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "attackRank": 8,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Domination",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
+                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
+                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{b8da9de7}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{1aff4cf9}",
+                "SkinFilter": {
+                    "skinIds": [
+                        35
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{b8da9de7}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{078a5e76}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{afb96d7f}",
+        "__type": "CharacterRecord"
+    },
+    "{afb96d7f}": {
+        "ScriptName": "charscriptJade_Graves",
+        "path": "{afb96d7f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "7157d3e7-2080-443f-8e89-6fba7151059c",
+                        "Src": {
+                            "value": 3,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "PassiveDuration",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b0a2e552-c0f4-4afd-8989-97c65a6f06bf",
+                        "Src": {
+                            "value": 10,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "PassiveMaxStacks",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "75c48b1f-5ce4-4c0e-84cb-d72de2c535d6",
+                        "Src": {
+                            "value": 1,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ArmorAmount",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{dd84d169}": {
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

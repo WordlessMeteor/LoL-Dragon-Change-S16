@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "La Estocada Excelsa",
     "shortBio": "- Embestida (Q) es un deslizamiento hacia un objetivo que se puede reactivar.<br>- Réplica (W) tiene daño de ataque pasivo, pero la estocada no aplica aturdimiento ni ralentización.<br>- Impulso de velocidad (E) otorga velocidad de movimiento a los ataques y se reinicia al asesinar.<br>- La pasiva y la (R) son completamente diferentes. Lee las descripciones de las habilidades.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelista",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora regenera vida a lo largo del tiempo cuando inflige daño. Golpear a campeones hará que este efecto se acumule varias veces."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Embestida",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Fiora se desliza hacia delante para golpear a su objetivo, lo que inflige daño físico. Fiora puede abalanzarse una segunda vez tras un par de segundos sin coste de maná.",
-            "dynamicDescription": "Fiora se desliza hacia delante para golpear a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Fiora puede <recast>reactivar</recast> esta habilidad para deslizarse una segunda vez en los próximos 4 s sin coste de <scaleMana>maná</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora se desliza hacia delante para golpear a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Fiora puede <recast>reactivar</recast> esta habilidad para deslizarse durante @RecastWindow@ s sin coste de <scaleMana>maná</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Réplica",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Aumenta el daño de ataque de Fiora. Cuando está activa, Fiora detiene el siguiente ataque básico y refleja el daño mágico contra su atacante. Eficaz contra campeones, monstruos y súbditos grandes.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> El <physicalDamage>daño de ataque</physicalDamage> de Fiora aumenta en <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activa:</spellActive> Fiora detiene el siguiente ataque en 1,5 s y devuelve <magicDamage>@ReflectionDamage@ de daño mágico</magicDamage> al atacante. Eficaz contra campeones, monstruos y súbditos grandes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> El <physicalDamage>daño de ataque</physicalDamage> de Fiora aumenta en <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activa:</spellActive> Fiora detiene el siguiente ataque en un plazo de @ParryDuration@ s y devuelve <magicDamage>@ReflectionDamage@ de daño mágico</magicDamage> al atacante. Funciona contra campeones, monstruos y súbditos grandes.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Impulso de velocidad",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Fiora obtiene velocidad de ataque adicional de forma temporal. Cada ataque o Embestida que acierte durante este tiempo aumenta su velocidad de movimiento. Asesinar a un campeón reinicia el enfriamiento de esta habilidad.",
-            "dynamicDescription": "Fiora obtiene un <attackSpeed>@ASBonus*100@% de velocidad de ataque</attackSpeed> durante 3 s. Cada ataque básico o <spellName>Embestida</spellName> que acierte durante este tiempo otorga a Fiora un <speed>@MSBonus*100@% de velocidad de movimiento</speed> durante 3 s, acumulable hasta 3 veces.<br><br>Asesinar a un campeón reinicia el enfriamiento de esta habilidad (las asistencias reducen el enfriamiento en @HalfCooldown@ s).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora obtiene un <attackSpeed>@ASBonus*100@% de velocidad de ataque</attackSpeed> durante @BuffDuration@ s. Cada ataque o <spellName>Embestida</spellName> que aseste durante este tiempo otorga a Fiora un <speed>@MSBonus*100@% de velocidad de movimiento</speed> durante @BuffDuration@&nbsp;s, lo que se acumula hasta @MaxStacks@ veces.<br><br>Asesinar a un campeón reinicia el enfriamiento de esta habilidad. (Las asistencias reducen el enfriamiento en @HalfCooldown@ s).@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Danza de la espada",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Fiora se desliza por el campo de batalla para infligir daño físico a los campeones enemigos. Los ataques sucesivos contra un mismo objetivo infligen menos daño.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

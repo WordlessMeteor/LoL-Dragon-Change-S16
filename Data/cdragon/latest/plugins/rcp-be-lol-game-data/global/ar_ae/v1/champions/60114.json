@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "فيورا",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "المبارزة المهيبة",
     "shortBio": "- تصبح قدرة الاندفاع (Q) اندفاعًا موجهًا مع إمكانية إعادة الإلقاء<br>- تملك قدرة الهجوم المضاد (W) ضرر هجوم كامنًا، ولا تمتلك الطعنة تأثير الصعق أو الإبطاء<br>- تمنح دفقة السرعة (E) سرعة حركة عند شن الهجمات وتتجدد عند القتل<br>- يختلف التأثير الكامن والقدرة R تمامًا. اقرأ أوصاف القدرات",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "المبارزة",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "تجدد فيورا الصحة بمرور الوقت عندما تلحق ضررًا. تؤدي إصابة الأبطال إلى تكدس هذا التأثير عدة مرات."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "الاندفاع",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع فيورا إلى الأمام لتضرب هدفها، فتلحق ضررًا ماديًا. تستطيع فيورا تنفيذ الاندفاع مرة ثانية خلال بضع ثوانٍ دون تكلفة مانا.",
-            "dynamicDescription": "تندفع فيورا إلى الأمام لتضرب هدفها، فتلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>.<br><br>تستطيع فيورا <recast>إعادة إلقاء</recast> هذه القدرة لتنفيذ الاندفاع مرة ثانية خلال 4ث بلا تكلفة <scaleMana>مانا</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تندفع فيورا إلى الأمام لضرب هدفها، فتلحق به <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>.<br><br>تستطيع فيورا <recast>إعادة إلقاء</recast> هذه القدرة لتندفع خلال @RecastWindow@ث دون استهلاك <scaleMana>المانا</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "الهجوم المضاد",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يزداد ضرر هجوم فيورا. عند التفعيل، تتفادى فيورا الهجوم الأساسي التالي وتعكس ضرر السحر لتعيده إلى المهاجم. يعمل هذا ضد الأبطال والوحوش والأتباع الكبار.",
-            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>يزداد <physicalDamage>ضرر هجوم</physicalDamage> فيورا بمقدار <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>تأثير نشط: </spellActive>تتفادى فيورا الهجوم التالي خلال 1.5ث وتعكس <magicDamage>@ReflectionDamage@ضرر سحر</magicDamage> لتعيده إلى المهاجم. يعمل هذا ضد الأبطال والوحوش والأتباع الكبار.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>يزداد <physicalDamage>ضرر هجوم</physicalDamage> فيورا بمقدار <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>تأثير نشط: </spellActive>تتصدى فيورا للهجوم التالي خلال @ParryDuration@ث وترد <magicDamage>@ReflectionDamage@ ضرر سحر</magicDamage> إلى المهاجم. يعمل هذا التأثير ضد الأبطال والوحوش والأتباع الكبار.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "دفقة سرعة",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تكسب فيورا سرعة هجوم إضافية مؤقتة. يزيد كل هجوم أو اندفاع تنفذه بنجاح خلال هذا الوقت من سرعة حركتها. يجدد قتل بطل فترة تبريد هذه القدرة.",
-            "dynamicDescription": "تكسب فيورا <attackSpeed>@ASBonus*100@% سرعة هجوم</attackSpeed> لمدة 3ث. يؤدي كل هجوم أو <spellName>اندفاع</spellName> تنفذه فيورا بنجاح خلال هذا الوقت إلى منح فيورا <speed>@MSBonus*100@% سرعة حركة</speed> لمدة 3ث، ويتكدس ذلك حتى 3 من المرات.<br><br>يجدد قتل بطل فترة تبريد هذه القدرة. (تقلص المساعدات فترة التبريد بمقدار @HalfCooldown@ث)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تكسب فيورا <attackSpeed>@ASBonus*100@% سرعة هجوم</attackSpeed> لمدة @BuffDuration@ث. يمنح كل هجوم أو قدرة <spellName>الاندفاع</spellName> تصيب بها هدفها خلال هذه المدة فيورا <speed>@MSBonus*100@% سرعة حركة</speed> لمدة @BuffDuration@ث، ويتكدس التأثير إلى حد أقصاه @MaxStacks@ من المرات.<br><br>يؤدي قتل بطل إلى تجديد فترة تبريد هذه القدرة. (تقلص عمليات المساعدة فترة التبريد بمقدار @HalfCooldown@ث)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "رقصة النصال",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع فيورا عبر ساحة المعركة لتلحق ضررًا ماديًا بأبطال العدو. تلحق الضربات المتتالية ضد نفس الهدف ضررًا أقل.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

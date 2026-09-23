@@ -608,7 +608,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mNumber": 0.10000000149011612,
+                            "mNumber": 0.15000000596046448,
                             "__type": "NumberCalculationPart"
                         }
                     ],
@@ -1126,13 +1126,13 @@
                 {
                     "name": "MiniDamageRatioMax",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.1599999964237213,
+                        0.1599999964237213,
+                        0.1599999964237213,
+                        0.1599999964237213,
+                        0.1599999964237213,
+                        0.1599999964237213,
+                        0.1599999964237213
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2733,7 +2733,7 @@
                     },
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 9.0,
+                            "mLevel1Value": 8.0,
                             "mBreakpoints": [
                                 {
                                     "mLevel": 3,
@@ -4323,7 +4323,7 @@
                 "SpellDamage": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 70.0,
+                            "mLevel1Value": 80.0,
                             "mBreakpoints": [
                                 {
                                     "mLevel": 3,
@@ -4982,8 +4982,7 @@
                     "mFormulaParts": [
                         {
                             "mStartValue": 0.019999999552965164,
-                            "mEndValue": 0.07100000232458115,
-                            "mScalePastDefaultMaxLevel": false,
+                            "mEndValue": 0.07999999821186066,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         }
                     ],
@@ -6752,7 +6751,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosChakram",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6780,7 +6779,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosSeverum",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6808,7 +6807,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosInfernum",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6836,7 +6835,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosMultiWeaponKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6864,7 +6863,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosGravitumQMulti",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6892,7 +6891,7 @@
         "mDescriptionTraKey": "stat_stone_description_LongRangeDmg",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -6921,7 +6920,7 @@
         "mDescriptionTraKey": "stat_stone_description_ApheliosLongRangeKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7074,7 +7073,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 234,
+                "EventToTrack": 232,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7342,7 +7341,7 @@
         },
         "platformEnabled": true,
         "{1abb82c0}": {
-            "{0cfb5881}": [
+            "List": [
                 {
                     "mRequirements": [
                         {
@@ -7610,6 +7609,18 @@
             }
         ],
         "{c5c48b41}": 1,
+        "{6854087e}": [
+            {
+                "{e4f7105d}": "Maps/Shipping/Map30/Modes/CHERRY",
+                "{cf19cb5d}": {
+                    "damagePerLevel": 1.0,
+                    "baseMoveSpeed": 5.0,
+                    "hpPerLevel": 12.0,
+                    "__type": "{770f7888}"
+                },
+                "__type": "{47f13ab0}"
+            }
+        ],
         "__type": "CharacterRecord"
     },
     "Characters/Aphelios/Skins/Meta": {
@@ -7629,9 +7640,9 @@
                     1
                 ],
                 "mEarlyLevelOverrides": [
-                    0,
                     1,
                     2,
+                    0,
                     0
                 ],
                 "__type": "RecSpellRankUpInfo"
@@ -7641,9 +7652,9 @@
                 "Position": "None",
                 "{5b968ffb}": true,
                 "mEarlyLevelOverrides": [
-                    1,
                     2,
                     0,
+                    1,
                     0
                 ],
                 "__type": "RecSpellRankUpInfo"

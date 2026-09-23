@@ -1,0 +1,701 @@
+{
+    "id": 60266,
+    "contentId": "fc0acbfd-eaea-4ed7-8ffe-3d3d7e02a915",
+    "relatedPrimeContentId": "3a2a3fff-0e45-4e43-971f-dd14c0bb578b",
+    "relatedPrimeItemId": 266,
+    "name": "エイトロックス",
+    "alias": "Jade_Aatrox",
+    "title": "",
+    "shortBio": "",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 3,
+        "difficulty": 3,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 3,
+        "crowdControl": 2,
+        "mobility": 2,
+        "utility": 2
+    },
+    "championTagInfo": {
+        "championTagPrimary": "サステインダメージ",
+        "championTagSecondary": "自身を回復"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60266.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60266.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60266.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60266.ogg",
+    "roles": [
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60266000,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": true,
+            "name": "エイトロックス",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        },
+        {
+            "id": 60266301,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "ブラッドウェル",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Passive.project_jade.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "体力を消費するスキルを使用すると、自分自身で受けたダメージを「ブラッドウェル」に蓄積する。致命的なダメージを受けると、「ブラッドウェル」から血を抽出して、短時間の間にその分を体力として回復する。さらに、「ブラッドウェル」に血が2%溜まるごとに、攻撃速度が1%増加する。"
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "ダークフライト",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Q.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "現在体力の@QHealthCostPercent*100@%(@HealthCost@)を消費する。",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "飛翔して指定地点に急降下してダメージを与え、中心部にいた敵をノックアップする。",
+            "dynamicDescription": "飛翔して指定地点に急降下し、周囲の敵すべてに<physicalDamage>@QDamage@の物理ダメージ</physicalDamage>を与え、中心部にいた対象を@QKnockupDuration@秒間<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "ブラッドサースト/ブラッドプライス",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_W2.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "オンにしている間は、3回目の通常攻撃ごとに自身の体力を犠牲にして追加ダメージを与える。オフにしている間は、3回目の通常攻撃ごとに体力を回復する。",
+            "dynamicDescription": "オフにしている間は<keywordMajor>ブラッドサースト</keywordMajor>の効果を得る。オンにしている間は<keywordMajor>ブラッドプライス</keywordMajor>が発動し、<keywordMajor>ブラッドサースト</keywordMajor>の効果が取り除かれる。<br><br><keywordMajor>ブラッドサースト: </keywordMajor>3回目の通常攻撃ごとに、<healing>体力を@WHeal@</healing>回復する。この効果は<scaleHealth>体力が半分</scaleHealth>未満になると@WLowHealthHealBonus@%増加する。<br><br><keywordMajor>ブラッドプライス: </keywordMajor>3回目の通常攻撃ごとに、<physicalDamage>@WDamage@の追加物理ダメージ</physicalDamage>を与え、自身の<scaleHealth>体力を@SelfDamage@</scaleHealth>失う。@SpellModifierDescriptionAppend@",
+            "range": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "ブレード・オブ・トーメント",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_E.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "現在体力の@EHealthCostPercent*100@%(@HealthCost@)を消費する。",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "剣の力を解放し、命中したすべての敵にダメージを与えてスロウ効果を付与する。",
+            "dynamicDescription": "剣の力を解放し、命中したすべての敵に<magicDamage>@EDamage@の魔法ダメージ</magicDamage>を与え、@ESlowDuration@秒間@ESlowAmount@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "range": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "大虐殺",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_R.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "敵の血を吸い込み、周囲の敵チャンピオンすべてにダメージを与え、短時間、自身の攻撃速度と通常攻撃の射程が増加する。",
+            "dynamicDescription": "敵の血を吸い込み、周囲の敵チャンピオンすべてに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@RDuration@秒間、自身の<attackSpeed>攻撃速度が@RAttackSpeed*100@%</attackSpeed>、通常攻撃の射程が@RBonusRange@増加する。@SpellModifierDescriptionAppend@",
+            "range": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                100.0,
+                85.0,
+                70.0,
+                55.0,
+                40.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 1.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

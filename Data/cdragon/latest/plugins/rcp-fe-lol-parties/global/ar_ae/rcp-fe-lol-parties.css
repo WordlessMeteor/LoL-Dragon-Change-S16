@@ -4784,10 +4784,12 @@ lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited 
 
 .game-type-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
 .game-type-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.game-type-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.CRAB video,
 .game-type-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
 .game-type-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video,
 .parties-custom-game-subcategory-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
 .parties-custom-game-subcategory-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.parties-custom-game-subcategory-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.CRAB video,
 .parties-custom-game-subcategory-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
 .parties-custom-game-subcategory-card .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video {
     margin-left: 3px;
@@ -4866,9 +4868,9 @@ lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited 
 
 .game-type-card .parties-game-type-icon.is-demacia .icon-bg.video-icon video,
 .parties-custom-game-subcategory-card .parties-game-type-icon.is-demacia .icon-bg.video-icon video {
-    left: 5px;
+    left: 1px;
     max-width: 95px;
-    top: 5px
+    top: 1px
 }
 
 .game-type-card .parties-game-type-card-break,
@@ -4948,10 +4950,12 @@ lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited 
 
 .game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
 .game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CRAB video,
 .game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
 .game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video,
 .parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
 .parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CRAB video,
 .parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
 .parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video {
     left: -1px;
@@ -4965,9 +4969,9 @@ lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited 
 
 .game-type-card.compact .parties-game-type-icon.is-demacia .icon-bg.video-icon video,
 .parties-custom-game-subcategory-card.compact .parties-game-type-icon.is-demacia .icon-bg.video-icon video {
-    left: 4px;
-    max-width: 73px;
-    top: 4px
+    left: -1px;
+    max-width: 77px;
+    top: -1px
 }
 
 body[data-locale=ja-JP] .game-type-card .parties-game-type-card-name {
@@ -5194,12 +5198,6 @@ hr {
     cursor: default
 }
 
-.parties-game-type-card-category-btn.unselectable {
-    color: #cdbe91;
-    cursor: default;
-    pointer-events: none
-}
-
 .parties-game-type-card-category-btn[data-queue-id="1210"]:lang(ru-RU) {
     font-size: 11px
 }
@@ -5208,6 +5206,127 @@ hr {
     height: 27px;
     margin-left: auto;
     width: 33px
+}
+
+.parties-game-type-card-tft-unreal-btn {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.parties-game-type-card-tft-unreal-btn:lang(el-gr),
+.parties-game-type-card-tft-unreal-btn:lang(ja-jp),
+.parties-game-type-card-tft-unreal-btn:lang(ko-kr),
+.parties-game-type-card-tft-unreal-btn:lang(th-th),
+.parties-game-type-card-tft-unreal-btn:lang(tr-tr),
+.parties-game-type-card-tft-unreal-btn:lang(zh-tw) {
+    text-transform: none
+}
+
+.parties-game-type-card-tft-unreal-btn {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.parties-game-type-card-tft-unreal-btn:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.parties-game-type-card-tft-unreal-btn {
+    text-shadow: 0 1px 2px rgba(1, 10, 19, .5)
+}
+
+.parties-game-type-card-tft-unreal-div {
+    align-items: center;
+    display: flex;
+    margin: 0 5px 10px 0;
+    overflow: hidden;
+    position: relative
+}
+
+.parties-game-type-card-tft-unreal-div:last-child {
+    margin-bottom: 0
+}
+
+.parties-game-type-card-tft-unreal-div .queue-status-icon {
+    display: none;
+    flex-shrink: 0;
+    margin: 0 10px 0 0
+}
+
+.parties-game-type-card-tft-unreal-div .queue-status-icon.queue-status-icon-visible {
+    display: block
+}
+
+.parties-game-type-card-tft-unreal-div .tft-unreal-unsupported-error {
+    background: url(/fe/lol-parties/icon-warning-red.png) no-repeat;
+    background-size: contain;
+    height: 15px;
+    width: 15px
+}
+
+.parties-game-type-card-tft-unreal-div .parties-game-type-card-tft-unreal-radio-option {
+    background: url(/fe/lol-parties/btn_icon.png) no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0 6px 0 0;
+    width: 20px
+}
+
+.parties-game-type-card-tft-unreal-div:hover .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -20px
+}
+
+.parties-game-type-card-tft-unreal-div:active .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -40px
+}
+
+.parties-game-type-card-tft-unreal-div.disabled .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -60px
+}
+
+.parties-game-type-card-tft-unreal-div.selected .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -80px
+}
+
+.parties-game-type-card-tft-unreal-div.selected:hover .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -100px
+}
+
+.parties-game-type-card-tft-unreal-div.selected:active .parties-game-type-card-tft-unreal-radio-option {
+    background-position: 0 -120px
+}
+
+.parties-game-type-card-tft-unreal-btn {
+    color: #cdbe91;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    transition: color .3s ease
+}
+
+.parties-game-type-card-tft-unreal-btn.current,
+.parties-game-type-card-tft-unreal-btn:hover {
+    color: #f0e6d2
+}
+
+.parties-game-type-card-tft-unreal-btn.disabled {
+    color: #5c5b57;
+    cursor: default
+}
+
+.parties-game-type-card-tft-unreal-btn .tft-unreal-label {
+    display: flex
 }
 
 .parties-game-select-event-countdown-component {

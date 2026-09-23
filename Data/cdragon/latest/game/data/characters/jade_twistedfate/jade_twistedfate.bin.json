@@ -58,14 +58,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    120.0,
+                    150.0,
+                    135.0,
                     120.0,
                     105.0,
                     90.0,
                     75.0,
-                    60.0,
                     60.0
                 ],
+                "{0a3e0478}": 150.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -598,97 +599,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BlueCritMultiplier",
-                    "values": [
-                        0.574999988079071,
-                        0.574999988079071,
-                        0.574999988079071,
-                        0.574999988079071,
-                        0.574999988079071,
-                        0.574999988079071,
-                        0.574999988079071
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "RedCritMultiplier",
-                    "values": [
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "GoldCritMultiplier",
-                    "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ttBlueAP",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ttRedAP",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ttGoldAP",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ttAD",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "ManaRestore",
                     "values": [
                         25.0,
@@ -698,19 +608,6 @@
                         125.0,
                         150.0,
                         175.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Stun",
-                    "values": [
-                        0.75,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -737,6 +634,19 @@
                         2.5,
                         2.5,
                         2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Stun",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -795,36 +705,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "ttBlueDamage": {
-                    "mMultiplier": {
-                        "mNumber": 1.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "mModifiedGameCalculation": "BlueDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "ttRedDamage": {
-                    "mMultiplier": {
-                        "mNumber": 1.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "mModifiedGameCalculation": "RedDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "ttGoldDamage": {
-                    "mMultiplier": {
-                        "mNumber": 1.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "mModifiedGameCalculation": "GoldDamage",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell1",
@@ -2055,7 +1935,8 @@
     "{9def94f4}": {
         "mRootSpell": "{728fc9c1}",
         "mChildSpells": [
-            "{728fc9c1}"
+            "{728fc9c1}",
+            "{adb0957e}"
         ],
         "mName": "Jade_TwistedFateSecondSightAbility",
         "__type": "AbilityObject"
@@ -2156,6 +2037,12 @@
             },
             "__type": "SpellDataResource"
         },
+        "__type": "SpellObject"
+    },
+    "{adb0957e}": {
+        "ObjectName": "Jade_TwistedFatePassiveGoldModifier",
+        "objectPath": "{adb0957e}",
+        "mScriptName": "Jade_TwistedFatePassiveGoldModifier",
         "__type": "SpellObject"
     },
     "Characters/Jade_TwistedFate/Spells/Jade_TwistedFateSealFateMissile": {
@@ -2665,14 +2552,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    130.0,
-                    130.0,
-                    110.0,
+                    210.0,
+                    180.0,
+                    150.0,
+                    120.0,
                     90.0,
-                    90.0,
-                    90.0,
-                    90.0
+                    60.0,
+                    30.0
                 ],
+                "{0a3e0478}": 210.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2723,11 +2611,11 @@
             "manaValues": {
                 "values": [
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    125.0,
+                    100.0,
+                    75.0,
+                    50.0,
+                    25.0
                 ],
                 "{0a3e0478}": 150.0,
                 "__type": "{630af303}"

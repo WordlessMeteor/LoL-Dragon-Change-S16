@@ -1,6 +1,7 @@
 {
     "Characters/Brand/Skins/Skin53": {
         "skinClassification": 1,
+        "championSkinId": 63053,
         "championSkinName": "BrandSkin53",
         "metaDataTags": "gender:male,element:fire,skinline:sinfulshores",
         "loadscreen": {
@@ -121347,11 +121348,11 @@
             "{43363324}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Body01",
             "{463637dd}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Body02",
             "{2f9771fa}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_HandTrail01",
-            "{1eb5c017}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Emote_crab",
+            "Brand_Z_Emote_crab": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Emote_crab",
             "{b0883e1f}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Water01",
             "{7abff55d}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_CrabTrail",
             "{185f1165}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Smoke01",
-            "{57083154}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Rotating",
+            "Brand_Z_Rotating": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Rotating",
             "{1a75d7fa}": "Characters/Brand/Skins/Skin53/Particles/Brand_Skin53_Z_Pool01"
         },
         "__type": "ResourceResolver"
@@ -121359,6 +121360,16 @@
     "Characters/Brand/Skins/Skin53/Materials/Brand_Skin53_Hair_inst": {
         "name": "Characters/Brand/Skins/Skin53/Materials/Brand_Skin53_Hair_inst",
         "samplerValues": [
+            {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/brand/skins/skin53/cloudfm_tx_cm.tex",
@@ -121381,6 +121392,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -121589,6 +121664,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

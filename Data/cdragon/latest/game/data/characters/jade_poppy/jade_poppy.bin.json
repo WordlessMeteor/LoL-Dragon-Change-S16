@@ -1650,101 +1650,6 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 8192,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        55.0,
-                        80.0,
-                        105.0,
-                        130.0,
-                        130.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        9.0,
-                        9.0,
-                        9.0,
-                        9.0,
-                        9.0,
-                        9.0,
-                        9.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        80.0,
-                        110.0,
-                        140.0,
-                        170.0,
-                        170.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -1841,9 +1746,89 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{dfd66c3f}": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mPart1": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "mPart2": {
+                                "mStat": 2,
+                                "mDataValue": "TotalADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{c8693ea4}": {
+                    "mExpandedTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "HealthDamageCap",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "TotalADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{4703f6f4}": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "HealthDamageCap",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mPart1": {
+                                "mStat": 2,
+                                "mDataValue": "TotalADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mStat": 9,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.dds",
@@ -1937,7 +1922,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_PoppyQ_Jade_Name",
                         "keySummary": "Spell_PoppyQ_Jade_Summary",
-                        "keyTooltip": "Spell_PoppyQ_Jade_Tooltip"
+                        "keyTooltip": "Spell_PoppyQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_PoppyQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2095,7 +2081,6 @@
             "__type": "SpellDataResource"
         },
         "mBuff": {
-            "mDescription": "Buff_PoppyPassive_Jade_Tooltip",
             "__type": "BuffData"
         },
         "__type": "SpellObject"

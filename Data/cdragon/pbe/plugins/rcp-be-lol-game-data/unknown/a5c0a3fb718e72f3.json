@@ -1,0 +1,701 @@
+{
+    "id": 60266,
+    "contentId": "fc0acbfd-eaea-4ed7-8ffe-3d3d7e02a915",
+    "relatedPrimeContentId": "3a2a3fff-0e45-4e43-971f-dd14c0bb578b",
+    "relatedPrimeItemId": 266,
+    "name": "아트록스",
+    "alias": "Jade_Aatrox",
+    "title": "",
+    "shortBio": "",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 3,
+        "difficulty": 3,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 3,
+        "crowdControl": 2,
+        "mobility": 2,
+        "utility": 2
+    },
+    "championTagInfo": {
+        "championTagPrimary": "지속 피해",
+        "championTagSecondary": "자가 체력 회복"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60266.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60266.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60266.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60266.ogg",
+    "roles": [
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60266000,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": true,
+            "name": "아트록스",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        },
+        {
+            "id": 60266301,
+            "contentId": "103eddd2-0deb-4718-9396-fa4c64f059e9",
+            "relatedPrimeContentId": "60ff32e6-f83b-4aa4-ba00-b29470937586",
+            "relatedPrimeItemId": 266000,
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Images/Jade_Aatrox_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Aatrox/Skins/Base/Jade_AatroxLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "피의 샘",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Passive.project_jade.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "아트록스가 체력을 소모하는 스킬을 사용할 때마다 스스로 받은 피해를 피의 샘에 저장합니다. 이후 치명적인 피해를 받으면 피의 샘을 소모해 짧은 시간에 걸쳐 체력을 회복합니다. 또한 피의 샘이 2% 차오를 때마다 1%의 공격 속도를 얻습니다."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "어둠 강림",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_Q.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "현재 체력의 @QHealthCostPercent*100@% 소모 (@HealthCost@)",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "아트록스가 몸을 날렸다가 지정한 위치를 내리찍으며 주변에 피해를 입히고, 착지 지점 중앙의 대상을 공중에 띄웁니다.",
+            "dynamicDescription": "아트록스가 몸을 날렸다가 지정한 위치를 내리찍으며 주변의 모든 적에게 <physicalDamage>@QDamage@의 물리 피해</physicalDamage>를 입히고, 착지 지점 중앙의 대상을 @QKnockupDuration@초 동안 <status>공중에 띄웁니다</status>.@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "피의 갈증 / 피의 대가",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_W2.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "활성화 시 아트록스가 세 번째 기본 공격을 가할 때마다 체력을 소모하여 추가 피해를 입힙니다. 비활성화 시 아트록스가 세 번째 기본 공격을 가할 때마다 체력을 회복합니다.",
+            "dynamicDescription": "비활성화하면 아트록스가 <keywordMajor>피의 갈증</keywordMajor> 효과를 얻고, 활성화하면 <keywordMajor>피의 대가</keywordMajor> 효과를 얻는 대신 <keywordMajor>피의 갈증</keywordMajor>을 잃습니다.<br><br><keywordMajor>피의 갈증: </keywordMajor>아트록스가 세 번째 기본 공격을 가할 때마다 <healing>@WHeal@의 체력</healing>을 회복합니다. <scaleHealth>체력이 절반 이하</scaleHealth>인 경우 회복량이 @WLowHealthHealBonus@% 증가합니다.<br><br><keywordMajor>피의 대가: </keywordMajor>아트록스가 세 번째 기본 공격을 가할 때마다 <scaleHealth>@SelfDamage@의 체력</scaleHealth>을 소모하여 <physicalDamage>@WDamage@의 추가 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "고통의 검",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_E.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "현재 체력의 @EHealthCostPercent*100@% 소모 (@HealthCost@)",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "아트록스가 검기를 날려, 적중한 모든 적에게 피해를 입히고 둔화시킵니다.",
+            "dynamicDescription": "아트록스가 검기를 날려, 적중한 모든 적에게 <magicDamage>@EDamage@의 마법 피해</magicDamage>를 입히고 @ESlowDuration@초 동안 @ESlowAmount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "대학살",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_R.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "Spell_Jade_AatroxW_Cost",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "아트록스가 적의 피를 흡수하여, 주변의 모든 적 챔피언에게 피해를 입히고 잠시 공격 속도와 공격 사거리를 얻습니다.",
+            "dynamicDescription": "아트록스가 적들의 피를 흡수하여, 주변의 모든 적 챔피언에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @RDuration@초 동안 <attackSpeed>@RAttackSpeed*100@%의 공격 속도</attackSpeed>와 @RBonusRange@의 공격 사거리를 얻습니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                100.0,
+                85.0,
+                70.0,
+                55.0,
+                40.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 1.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

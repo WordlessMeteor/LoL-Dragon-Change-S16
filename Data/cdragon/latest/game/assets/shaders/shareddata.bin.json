@@ -25,7 +25,8 @@
             "Shaders/SharedData/ConstantBuffers/ClusterData",
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticleVS",
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS",
-            "Shaders/SharedData/ConstantBuffers/GameplayTexture"
+            "Shaders/SharedData/ConstantBuffers/GameplayTexture",
+            "{2a373559}"
         ],
         "textures": [
             {
@@ -437,6 +438,18 @@
         "mipFilter": 0,
         "__type": "X3DSharedSamplerDef"
     },
+    "{2a373559}": {
+        "name": "EnvEffectorVertex",
+        "constants": [
+            {
+                "name": "EnvEffectorInfo",
+                "type": 3,
+                "Count": 128,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
     "Shaders/SharedData/ConstantBuffers/PerFrameVertex": {
         "name": "PerFrameVertexCB",
         "constants": [
@@ -823,6 +836,10 @@
             },
             {
                 "name": "PROBE_CAPTURE_MODE",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "SCENE_TRANSPARENCY_ALPHA",
                 "__type": "X3DSharedConstantDef"
             }
         ],

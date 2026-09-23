@@ -465,10 +465,10 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 
 .tft-home-card__card-label {
     color: #f0e6d2;
+    filter: drop-shadow(0 0 16px #000);
     overflow: hidden;
     text-align: left;
     text-overflow: ellipsis;
-    text-shadow: 0 0 16px #000;
     white-space: nowrap
 }
 
@@ -636,7 +636,8 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 
 .tft-home-header_container {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    padding-top: 25px
 }
 
 .tft-home-header_super-title {
@@ -702,116 +703,6 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     justify-content: center;
     position: absolute;
     width: 100%
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading,
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-title {
-    font-family: var(--font-display)
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-text {
-    font-family: var(--font-body)
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading {
-    -webkit-font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(el-gr),
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(ja-jp),
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(ko-kr),
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(th-th),
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(tr-tr),
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(zh-tw) {
-    text-transform: none
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading {
-    color: #f0e6d2;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: .05em;
-    line-height: 22px
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading:lang(ar-ae) {
-    letter-spacing: 0
-}
-
-.tft-full-launch-announcement {
-    background-color: #d9d9d9;
-    display: inline-flex;
-    width: 1024px
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left {
-    align-items: center;
-    direction: rtl;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    gap: 12px;
-    justify-content: center;
-    padding: 40px 0 20px;
-    position: relative;
-    width: 100%
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-title {
-    color: #111;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body {
-    align-items: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    justify-content: center;
-    padding: 0 40px;
-    width: 100%
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: flex-start;
-    text-align: center;
-    width: 33%
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-image {
-    background-color: #000;
-    border-radius: 50%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-heading {
-    color: #111;
-    text-transform: uppercase
-}
-
-.tft-full-launch-announcement .tft-full-launch-announcement-left .tft-full-launch-announcement-body .tft-full-launch-announcement-body-item .tft-full-launch-announcement-body-item-text {
-    color: #666;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: .24px;
-    line-height: 20px;
-    text-align: center
 }
 
 .tft-launch-button-wrapper .tft-launch-button-container .tft-launch-button-btn {

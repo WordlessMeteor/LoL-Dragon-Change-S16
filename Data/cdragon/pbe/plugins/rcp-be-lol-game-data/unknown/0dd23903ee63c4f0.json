@@ -1,0 +1,701 @@
+{
+    "id": 60039,
+    "contentId": "cd05c068-3a2f-4c4d-bf1b-332505bc72bf",
+    "relatedPrimeContentId": "deffb7bb-c3b8-4e88-bdac-4a0bfa84cc52",
+    "relatedPrimeItemId": 39,
+    "name": "Irelia",
+    "alias": "Jade_Irelia",
+    "title": "",
+    "shortBio": "",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 4,
+        "difficulty": 3,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 2,
+        "durability": 2,
+        "crowdControl": 2,
+        "mobility": 3,
+        "utility": 2
+    },
+    "championTagInfo": {
+        "championTagPrimary": "Mobilní",
+        "championTagSecondary": "Duelista"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60039.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60039.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60039.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60039.ogg",
+    "roles": [
+        "fighter",
+        "assassin"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60039000,
+            "contentId": "89389e69-84ef-4217-b3bf-9335f5a2ad28",
+            "relatedPrimeContentId": "4f4d0491-d970-4787-8e38-00bcdeeca9b4",
+            "relatedPrimeItemId": 39000,
+            "isBase": true,
+            "name": "Irelia",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Images/Jade_Irelia_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Base/Jade_IreliaLoadscreen.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        },
+        {
+            "id": 60039301,
+            "contentId": "b4dc84f0-c6cd-4222-8683-7103d2c2538d",
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_centered_301.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_uncentered_301.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Images/jade_irelia_splash_tile_301.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Jade_IreliaLoadScreen_301.project_jade.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Irelia/Skins/Skin301/Jade_IreliaLoadScreen_301_LE.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "Ionský zápal",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "Za každého nepřátelského šampiona v okolí se Irelii zkrátí doba trvání omráčení, zpomalení, provokací, zastrašení, omezení pohybu a znehybnění."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "Prudká ostří",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_Bladesurge.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@: @Cost@",
+            "cooldown": "@Cooldown@ sek. %i:cooldown%",
+            "description": "Irelia popoběhne dopředu a zaútočí na svůj cíl. Pokud tím svůj cíl zabije, přebíjecí doba Prudkých ostří se obnoví a Irelii se vrátí 35 bodů many.",
+            "dynamicDescription": "Irelia se přeběhem přesune k cíli a způsobí mu <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Pokud tím svůj cíl zabije, přebíjecí doba <spellName>Prudkých ostří</spellName> se obnoví a Irelii se vrátí <scaleMana>@ManaReturn@ bodů many</scaleMana>.@SpellModifierDescriptionAppend@",
+            "range": [
+                620.0,
+                620.0,
+                620.0,
+                620.0,
+                620.0,
+                620.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                14.0,
+                12.0,
+                10.0,
+                8.0,
+                6.0,
+                5.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "Hitenský styl",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_HitenStyle.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@: @Cost@",
+            "cooldown": "@Cooldown@ sek. %i:cooldown%",
+            "description": "Irelia je znalkyní umění Hiten, díky čemuž jí fyzické útoky pasivně obnovují zdraví.  Při aktivaci Hitenského stylu budou její základní útoky po krátkou dobu způsobovat přímé poškození.",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Základní útoky <healing>obnovují @Health@ zdraví</healing>.<br><br><spellActive>Aktivace:</spellActive> Ireliiny základní útoky způsobují <trueDamage>@Damage@ bodů přímého poškození</trueDamage> a na @HealthRestoreDuration@ sek. zdvojnásobují množství <healing>obnoveného zdraví</healing>.@SpellModifierDescriptionAppend@",
+            "range": [
+                825.0,
+                825.0,
+                825.0,
+                825.0,
+                825.0,
+                825.0
+            ],
+            "costCoefficients": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "cooldownCoefficients": [
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "Vyrovnaný úder",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_EquilibriumStrike.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@: @Cost@",
+            "cooldown": "@Cooldown@ sek. %i:cooldown%",
+            "description": "Ireliin útok vytvoří na bojišti rovnovážný stav, čímž cíl poškodí a zpomalí.  Pokud má cíl vyšší procento zdraví než Irelia, úder jej místo zpomalení omráčí.",
+            "dynamicDescription": "Irelia probodne svůj cíl, čímž mu způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @StunDuration@ sek. ho <status>zpomalí</status> o @SlowAmount@ %.<br><br>Pokud má cíl vyšší <scaleHealth>procento zdraví</scaleHealth> než Irelia, bude namísto toho po uvedenou dobu <status>omráčen</status>.@SpellModifierDescriptionAppend@",
+            "range": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "costCoefficients": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "Prostupující čepele",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_TranscendentBlades.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@: @Cost@",
+            "cooldown": "@Cooldown@ sek. %i:cooldown%",
+            "description": "Irelia vyvolá 4 přízračné čepele, které může mrštit po nepřátelích. Protivníkům, kterými zbraně projdou, způsobí fyzické poškození a vysaje jim část zdraví.",
+            "dynamicDescription": "Irelia vyvolá 4 přízračné čepele, které může mrštit po nepřátelích. Protivníkům, kterými zbraně projdou, způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>. Sama se naopak <healing>vyléčí</healing> ve výši @ChampionHealPercent@ % poškození způsobeného šampionům a @MinionHealPercent@ % poškození způsobeného poskokům.@SpellModifierDescriptionAppend@",
+            "range": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "costCoefficients": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "cooldownCoefficients": [
+                70.0,
+                60.0,
+                50.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "菲歐拉",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "孤高劍客",
     "shortBio": "- 移形之體(Q)是有二段施放的指定衝刺技能<br>- 斗轉之力(W)被動提供物攻，刺擊沒有暈眩或緩速效果<br>- 迅雷之技(E)會在普攻時提供跑速，且擊殺時會重置<br>- 被動和R技能與當前版本完全不同。查看技能說明",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "決鬥者",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "菲歐拉在造成傷害時會逐漸回復生命。攻擊英雄可累加此效果。"
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "移形之體",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲歐拉向前衝刺攻擊目標，造成物理傷害。菲歐拉可在幾秒內再次衝刺，而且不會消耗魔力。",
-            "dynamicDescription": "菲歐拉向前衝刺攻擊目標，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。<br><br>菲歐拉可以在4秒內<recast>重施技能</recast>再次衝刺，且不會消耗<scaleMana>魔力</scaleMana>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "菲歐拉向前衝刺攻擊目標，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。<br><br>菲歐拉可於@RecastWindow@秒內<recast>重施</recast>此技能進行衝刺，且不消耗<scaleMana>魔力</scaleMana>。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "斗轉之力",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲歐拉提升物攻。發動時，菲歐拉會招架下一次普攻，並以魔法傷害反擊攻擊者。對英雄、野怪和大型士兵有效。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>菲歐拉的<physicalDamage>物攻</physicalDamage>增加<physicalDamage>@BonusAD@</physicalDamage>。<br><br><spellActive>主動：</spellActive>菲歐拉在1.5秒內招架下一次普攻，並以<magicDamage>@ReflectionDamage@魔法傷害</magicDamage>反擊攻擊者。對英雄、野怪和大型士兵有效。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>菲歐拉的<physicalDamage>物攻</physicalDamage>提升<physicalDamage>@BonusAD@</physicalDamage>。<br><br><spellActive>主動：</spellActive>菲歐拉在@ParryDuration@秒內格擋下一次普攻，並向攻擊者反彈<magicDamage>@ReflectionDamage@魔法傷害</magicDamage>。對英雄、野怪和大型士兵有效。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "迅雷之技",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲歐拉暫時獲得額外攻速。在此期間，她每次普攻或「移形之體」命中都會提升跑速。擊殺英雄會重置此技能的冷卻時間。",
-            "dynamicDescription": "菲歐拉提升<attackSpeed>@ASBonus*100@%攻速</attackSpeed>，持續3秒。在此期間，菲歐拉每次普攻或「<spellName>移形之體</spellName>」命中目標時，會獲得<speed>@MSBonus*100@%跑速</speed>，持續3秒，最多可疊加3次。<br><br>擊殺英雄會重置此技能的冷卻時間(助攻可使冷卻時間縮短@HalfCooldown@秒)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "菲歐拉獲得<attackSpeed>@ASBonus*100@%攻速</attackSpeed>，持續@BuffDuration@秒。在此期間，菲歐拉每次普攻或「<spellName>移形之體</spellName>」命中目標時，都會獲得<speed>@MSBonus*100@%跑速</speed>，持續@BuffDuration@秒，最多疊加@MaxStacks@層。<br><br>擊殺英雄會重置此技能的冷卻時間(助攻可使冷卻時間縮短@HalfCooldown@秒)。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "劍舞之心",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "菲歐拉在戰場上迅速衝刺，對敵方英雄造成物理傷害。若連續攻擊相同目標，其後續傷害將降低。",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

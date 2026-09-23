@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Die große Duellantin",
     "shortBio": "– „Ausfallschritt“ (Q) ist ein gezielter Sprung mit Reaktivierung<br>– „Konter“ (W) hat passiven Angriffsschaden, der Stich kann nicht betäuben oder verlangsamen<br>– „Lauftemposchub“ (E) gewährt Lauftempo bei Angriffen und wird bei Kills zurückgesetzt<br>– Passiv und R unterscheiden sich grundlegend. Lies dir die Fähigkeitsbeschreibungen durch",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duellantin",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora regeneriert Leben über Zeit, wenn sie Schaden verursacht. Wenn du Champions triffst, wird dieser Effekt mehrfach gesteigert."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Ausfallschritt",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Fiora springt nach vorne, um ihr Ziel zu treffen und ihm normalen Schaden zuzufügen. Fiora kann den Sprung innerhalb weniger Sekunden ein zweites Mal ohne Manakosten ausführen.",
-            "dynamicDescription": "Fiora springt nach vorne, um ihr Ziel zu treffen und ihm <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zuzufügen.<br><br>Fiora kann diese Fähigkeit innerhalb von 4 Sekunden ein zweites Mal ohne <scaleMana>Manakosten</scaleMana> <recast>reaktivieren</recast>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora stürmt nach vorn, um ihr Ziel anzugreifen, und fügt ihm <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zu.<br><br>Fiora kann diese Fähigkeit innerhalb von @RecastWindow@ Sekunden ohne <scaleMana>Manakosten</scaleMana> <recast>reaktivieren</recast>, um erneut loszustürmen.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Konter",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Fioras Angriffsschaden ist erhöht. Wenn aktiviert, pariert Fiora den nächsten normalen Angriff und reflektiert magischen Schaden zurück auf den Angreifer. Wirkt gegen Champions, Monster und große Vasallen.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Fioras <physicalDamage>Angriffsschaden</physicalDamage> ist um <physicalDamage>@BonusAD@</physicalDamage> erhöht.<br><br><spellActive>Aktiv: </spellActive>Fiora pariert den nächsten Angriff innerhalb von 1,5 Sekunden und reflektiert <magicDamage>@ReflectionDamage@ magischen Schaden</magicDamage> zurück auf den Angreifer. Wirkt gegen Champions, Monster und große Vasallen.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Fioras <physicalDamage>Angriffsschaden</physicalDamage> ist um <physicalDamage>@BonusAD@</physicalDamage> erhöht.<br><br><spellActive>Aktiv: </spellActive>Fiora pariert den nächsten Angriff innerhalb von @ParryDuration@ Sekunden und wirft <magicDamage>@ReflectionDamage@ magischen Schaden</magicDamage> auf den Angreifer zurück. Funktioniert bei Champions, Monstern und großen Vasallen.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Geschwindigkeitsschub",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Fiora erhält vorübergehend zusätzliches Angriffstempo. Jeder Angriff oder Ausfallschritt während dieser Zeit erhöht ihr Lauftempo. Wenn du einen Champion tötest, wird die Abklingzeit dieser Fähigkeit zurückgesetzt.",
-            "dynamicDescription": "Fiora erhält 3 Sekunden lang <attackSpeed>@ASBonus*100@ % Angriffstempo</attackSpeed>. Jeder Angriff oder <spellName>Ausfallschritt</spellName> während dieser Zeit gewährt Fiora 3 Sekunden lang <speed>@MSBonus*100@ % Lauftempo</speed> (bis zu 3-mal steigerbar).<br><br>Wird ein Champion getötet, wird die Abklingzeit dieser Fähigkeit zurückgesetzt. (Unterstützungen verringern die Abklingzeit um @HalfCooldown@ Sekunden)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora erhält @BuffDuration@ Sekunden lang <attackSpeed>@ASBonus*100@ % Angriffstempo</attackSpeed>. Jeder erfolgreiche Angriff oder <spellName>Ausfallschritt</spellName>, den Fiora während dieser Zeit ausführt, gewährt ihr @BuffDuration@ Sekunden lang <speed>@MSBonus*100@ % Lauftempo</speed>. Dieser Effekt ist bis zu @MaxStacks@-mal steigerbar.<br><br>Wenn Fiora einen Champion tötet, wird die Abklingzeit dieser Fähigkeit zurückgesetzt. (Unterstützungen verringern die Abklingzeit um @HalfCooldown@ Sekunden.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Klingenwalzer",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Fiora springt über das Schlachtfeld und fügt gegnerischen Champions normalen Schaden zu. Folgetreffer gegen dasselbe Ziel verursachen weniger Schaden.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

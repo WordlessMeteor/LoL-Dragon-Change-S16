@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
-    "shortBio": "- Lunge (Q) เป็นสกิลพุ่งตัวแบบเลือกเป้าหมายที่สามารถกดใช้ซ้ำได้<br>- Riposte (W) มอบพลังโจมตีแบบติดตัว และการแทงไม่สตันหรือสโลว์ศัตรู<br>- Burst of Speed (E) มอบความเร็วเคลื่อนที่เมื่อโจมตี และรีเฟรชเมื่อสังหารศัตรู<br>- สกิลติดตัวและ R แตกต่างไปโดยสิ้นเชิง อย่าลืมอ่านคำอธิบายสกิล",
+    "title": "ยอดนักประลอง",
+    "shortBio": "- Lunge (Q) เป็นสกิลพุ่งตัวแบบเลือกเป้าหมายที่สามารถกดใช้ซ้ำได้<br>- Riposte (W) มอบพลังโจมตีแบบติดตัว และการแทงไม่สตันหรือ⁠ส⁠โลว์ศัตรู<br>- Burst of Speed (E) มอบความเร็วเคลื่อนที่เมื่อโจมตี และรีเฟรชเมื่อสังหารศัตรู<br>- สกิลติดตัวและ R แตกต่างไปโดยสิ้นเชิง อย่าลืมอ่านคำอธิบายสกิล",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 3,
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelist",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora ฟื้นฟูพลังชีวิตอย่างต่อเนื่องเมื่อสร้างความเสียหาย การโจมตีแชมเปี้ยนสแตคเอฟเฟกต์นี้ได้หลายครั้ง"
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Lunge",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Fiora พุ่งไปข้างหน้าเพื่อจู่โจมเป้าหมาย สร้างความเสียหายกายภาพ และสามารถพุ่งตัวครั้งที่สองโดยไม่เสียมานาในระยะเวลาที่กำหนด",
-            "dynamicDescription": "Fiora พุ่งไปข้างหน้าเพื่อจู่โจมเป้าหมาย สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage><br><br>Fiora สามารถ<recast>กดใช้ซ้ำ</recast>สกิลนี้เพื่อพุ่งตัวครั้งที่สองภายใน 4 วินาที โดยไม่เสีย<scaleMana>มานา</scaleMana>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora พุ่งไปข้างหน้าเพื่อโจมตีเป้าหมาย สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage><br><br>Fiora สามารถ<recast>กดใช้ซ้ำ</recast>สกิลนี้เพื่อพุ่งตัวได้ภายใน @RecastWindow@ วินาทีโดยไม่เสีย<scaleMana>มานา</scaleMana>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Riposte",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Fiora ได้รับพลังโจมตีเพิ่มขึ้น โดยเมื่อเปิดใช้งาน Fiora จะปัดป้องการโจมตีปกติครั้งถัดไปและสะท้อนความเสียหายเวทกลับไปยังผู้โจมตี ใช้งานได้กับแชมเปี้ยน มอนสเตอร์ และมินเนี่ยนขนาดใหญ่",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>Fiora ได้รับ<physicalDamage>พลังโจมตี</physicalDamage>เพิ่มขึ้น <physicalDamage>@BonusAD@</physicalDamage> หน่วย<br><br><spellActive>กดใช้: </spellActive>Fiora ปัดป้องการโจมตีปกติครั้งถัดไปภายใน 1.5 วินาที และสะท้อน<magicDamage>ความเสียหายเวท @ReflectionDamage@ หน่วย</magicDamage>กลับไปยังผู้โจมตี ใช้งานได้กับแชมเปี้ยน มอนสเตอร์ และมินเนี่ยนขนาดใหญ่@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive><physicalDamage>พลังโจมตี</physicalDamage>ของ Fiora เพิ่มขึ้น <physicalDamage>@BonusAD@</physicalDamage> หน่วย<br><br><spellActive>กดใช้: </spellActive>Fiora ปัดป้องการโจมตีครั้งถัดไปภายใน @ParryDuration@ วินาที และสะท้อน<magicDamage>ความเสียหายเวท @ReflectionDamage@ หน่วย</magicDamage>กลับไปยังผู้โจมตี ใช้ได้ผลกับแชมเปี้ยน มอนสเตอร์ และมินเนี่ยนขนาดใหญ่@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Burst of Speed",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Fiora ได้รับความเร็วโจมตีเพิ่มเติมชั่วขณะ อีกทั้งทุก ๆ ครั้งที่โจมตีปกติหรือใช้สกิล Lunge โดนศัตรูในช่วงเวลานี้จะมอบความเร็วเคลื่อนที่ให้กับเธอ การสังหารแชมเปี้ยนจะรีเฟรชคูลดาวน์ของสกิลนี้",
-            "dynamicDescription": "Fiora ได้รับ<attackSpeed>ความเร็วโจมตี @ASBonus*100@%</attackSpeed> เป็นเวลา 3 วินาที อีกทั้งทุก ๆ ครั้งที่โจมตีปกติหรือใช้สกิล <spellName>Lunge</spellName> โดนศัตรูในช่วงเวลานี้จะมอบ<speed>ความเร็วเคลื่อนที่ @MSBonus*100@%</speed> ให้กับเธอเป็นเวลา 3 วินาที สแตคได้สูงสุด 3 ครั้ง<br><br>การสังหารแชมเปี้ยนจะรีเฟรชคูลดาวน์ของสกิลนี้ (การช่วยสังหารจะลดคูลดาวน์ลง @HalfCooldown@ วินาที)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora ได้รับ<attackSpeed>ความเร็วโจมตี @ASBonus*100@%</attackSpeed> เป็นเวลา @BuffDuration@ วินาที การโจมตีแต่ละครั้งหรือ <spellName>Lunge</spellName> ที่เธอใช้ในช่วงเวลานี้จะมอบ<speed>ความเร็วเคลื่อนที่ @MSBonus*100@%</speed> ให้แก่ Fiora เป็นเวลา @BuffDuration@ วินาที สแตคได้สูงสุด @MaxStacks@ ครั้ง<br><br>การสังหารแชมเปี้ยนจะรีเฟรชคูลดาวน์ของสกิลนี้ (การช่วยสังหารจะลดคูลดาวน์ลง @HalfCooldown@ วินาที)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Blade Waltz",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Fiora พุ่งไปรอบ ๆ สนามรบ สร้างความเสียหายกายภาพแก่แชมเปี้ยนศัตรู การโจมตีซ้ำใส่เป้าหมายเดิมจะสร้างความเสียหายน้อยลง",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

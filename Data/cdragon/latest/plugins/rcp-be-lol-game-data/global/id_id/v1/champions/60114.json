@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "The Grand Duelist",
     "shortBio": "- Lunge (Q) adalah dash yang menarget musuh dengan recast<br>- Riposte (W) memiliki Attack Damage pasif, tusukannya tidak menerapkan Stun atau Slow<br>- Burst of Speed (E) memberikan Movement Speed pada serangan dan di-refresh saat kill<br>- Pasif dan R benar-benar berbeda. Baca deskripsi ability",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelist",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora memulihkan health seiring waktu saat dia menghasilkan damage. Menyerang champion akan membuat efek ini menambah stack beberapa kali."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Lunge",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Fiora dash ke depan untuk menyerang target, menghasilkan physical damage. Fiora bisa dash untuk kedua kalinya dalam beberapa detik tanpa biaya mana.",
-            "dynamicDescription": "Fiora dash ke depan untuk menyerang targetnya, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>Fiora bisa <recast>Recast</recast> Ability ini untuk dash yang kedua kalinya dalam 4 detik tanpa biaya <scaleMana>Mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora dash ke depan untuk menyerang targetnya, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>Fiora bisa <recast>Recast</recast> Ability ini untuk dash dalam @RecastWindow@ detik tanpa <scaleMana>Mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Riposte",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Attack Damage Fiora meningkat. Saat diaktifkan, Fiora menepis basic attack berikutnya dan memantulkan magic damage kembali ke penyerang. Hal itu berlaku jika melawan champion, monster, dan minion besar.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive><physicalDamage>Attack Damage</physicalDamage> Fiora meningkat sebesar <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Aktif: </spellActive>Fiora menepis Serangan berikutnya dalam 1,5 detik dan memantulkan <magicDamage>@ReflectionDamage@ magic damage</magicDamage> kembali ke penyerang. Hal itu berlaku jika melawan champion, monster, dan minion besar.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive><physicalDamage>Attack Damage</physicalDamage> Fiora meningkat sebesar <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Aktif: </spellActive>Fiora menangkis Serangan berikutnya dalam @ParryDuration@ detik dan memantulkan <magicDamage>@ReflectionDamage@ magic damage</magicDamage> kembali ke penyerang. Berlaku untuk champion, monster, dan minion besar.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Burst of Speed",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Fiora mendapatkan Attack Speed tambahan sementara. Setiap serangan atau Lunge yang berhasil mengenai musuh selama durasi ini akan meningkatkan Move Speed-nya. Kill champion akan mereset Cooldown Ability ini.",
-            "dynamicDescription": "Fiora mendapatkan <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> selama 3 detik. Setiap Serangan atau <spellName>Lunge</spellName> yang berhasil mengenai musuh selama durasi ini akan memberi Fiora <speed>@MSBonus*100@% Move Speed</speed> selama 3 detik, bisa di-stack hingga 3 kali.<br><br>Kill champion akan mereset Cooldown Ability ini. (Assist mengurangi Cooldown sebanyak @HalfCooldown@ detik)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora mendapatkan <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed> selama @BuffDuration@ detik. Setiap Serangan atau <spellName>Lunge</spellName> yang mengenai musuh selama durasi ini akan memberi Fiora <speed>@MSBonus*100@% Move Speed</speed> selama @BuffDuration@ detik, bisa stack hingga @MaxStacks@ kali.<br><br>Membunuh champion akan me-refresh Cooldown Ability ini. (Assist mengurangi Cooldown sebesar @HalfCooldown@ detik)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Blade Waltz",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Fiora dash ke sekitar battlefield untuk menghasilkan physical damage pada champion musuh. Serangan berturut-turut ke target yang sama akan menghasilkan damage lebih sedikit.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

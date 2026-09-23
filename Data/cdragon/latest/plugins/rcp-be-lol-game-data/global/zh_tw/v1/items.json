@@ -2639,7 +2639,7 @@
     {
         "id": 2052,
         "name": "普羅的飼料",
-        "description": "<mainText><stats></stats><br><br> <active>主動─消耗：</active>將一勺美味的飼料餵給附近的普羅，讓他越長越大。<br><br><flavorText>這種可口飼料的主要成份是艾伐洛森母雞，以及每日現採後急速冷凍的弗雷爾卓德在地藥草，富含的必要營養素保證讓普羅情緒平穩又安定。<br><br>所有收益都將捐贈，用於保育瀕危斑點普羅棲地。</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>主動─消耗：</active>將一勺美味的飼料餵給附近的普羅，讓他越長越大。<br><br><flavorText>這種可口飼料的主要成分是艾伐洛森母雞，以及每日現採後急速冷凍的弗雷爾卓德在地藥草，富含的必要營養素保證讓普羅情緒平穩又安定。<br><br>所有收益都將捐贈，用於保育瀕危斑點普羅棲地。</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -8000,7 +8000,7 @@
     {
         "id": 3866,
         "name": "符文指針",
-        "description": "<mainText><stats><attention> 100</attention> 生命<br><attention> 50%</attention> 基礎生命回復<br><attention> 50%</attention> 基礎魔力回復<br>每 10 秒 + <attention> 5</attention> 金錢</stats><br><br><passive>輔助任務：</passive><br>透過此道具取得<keywordMajor>0</keywordMajor>金錢可升級成<rarityGeneric>跨界獎賞</rarityGeneric>。<br><br><passive>分享財富</passive>(0秒，最多0次使用次數)<br>位於友方英雄附近時，傷害敵方英雄或擊殺士兵可獲得金錢。<active>主動</active>(3次使用次數)<br>設置一個<keyword>隱形</keyword>的潛行守衛，可賦予視野。</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> 生命<br><attention> 75%</attention> 基礎生命回復<br><attention> 50%</attention> 基礎魔力回復<br>每 10 秒 + <attention> 5</attention> 金錢</stats><br><br><passive>輔助任務：</passive><br>透過此道具取得<keywordMajor>0</keywordMajor>金錢可升級成<rarityGeneric>跨界獎賞</rarityGeneric>。<br><br><passive>分享財富</passive>(0秒，最多0次使用次數)<br>位於友方英雄附近時，傷害敵方英雄或擊殺士兵可獲得金錢。<active>主動</active>(3次使用次數)<br>設置一個<keyword>隱形</keyword>的潛行守衛，可賦予視野。</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -12141,7 +12141,7 @@
     {
         "id": 220013,
         "name": "普羅的飼料",
-        "description": "<mainText><stats></stats><br><br> <active>主動─消耗：</active>將一勺美味的飼料餵給附近的普羅，讓他越長越大。<br><br><flavorText>這種可口飼料的主要成份是艾伐洛森母雞和弗雷爾卓德藥草，並透過蒂瑪西亞糖藝精心製作，其富含的必要營養素保證能讓普羅容光煥發。<br><br>所有收益將全數捐贈給雲之地青年合唱團。幫助蒂瑪西亞孩子購買星之琴，今天就開始行動吧！</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>主動─消耗：</active>將一勺美味的飼料餵給附近的普羅，讓他越長越大。<br><br><flavorText>這種可口飼料的主要成分是艾伐洛森母雞以及弗雷爾卓德藥草，並透過蒂瑪西亞糖藝精心製作，其富含的必要營養素保證能讓普羅容光煥發。<br><br>所有收益將全數捐贈給雲之地青年合唱團。幫助蒂瑪西亞孩子購買星之琴，今天就開始行動吧！</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "月光魔劍",
+        "description": "<mainText><stats><attention> 50</attention> 魔法攻擊<br><attention> 50</attention> 物理防禦<br><attention> 50</attention> 魔法防禦</stats><br><br><jadeUnique>韌性：</jadeUnique>使<status>暈眩、緩速、嘲諷、恐懼、沉默、致盲</status>和<status>硬控場</status>等減益效果的持續時間縮短<attention>35%</attention>。</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "斗篷與匕首",
+        "description": "<mainText><stats><attention> 20%</attention> 攻擊速度<br><attention> 20%</attention> 暴擊率</stats><br><br><jadeUnique>韌性：</jadeUnique>使<status>暈眩、緩速、嘲諷、恐懼、沉默、致盲</status>和<status>硬控場</status>等減益效果的持續時間縮短<attention>35%</attention>。</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "黑魔禁書",
         "description": "<mainText><stats><attention> 75</attention> 魔法攻擊<br>每5秒+<attention> 12</attention>魔力回復<br><attention> 20%</attention>冷卻時間減免</stats><br><br><jadeUnique>黑魔的怨恨：</jadeUnique>對<scaleHealth>生命低於40%</scaleHealth>的敵方英雄造成魔法傷害時，對其施加<status>重創</status>，持續4秒。<br><br><jadeRules>(<status>重創</status>會使受到的治療和回復效果降低50%。)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "虛空之門",
-        "description": "<mainText><stats><attention> 50</attention> 物理防禦<br><attention> 50</attention> 魔法防禦<br><attention>每5秒5</attention>生命回復</stats><br><br><jadeUnique>要塞衝鋒：</jadeUnique>靠近防禦塔或虛空之門時，在2秒內逐漸提升<speed>30%額外跑速</speed>。<jadeUnique>主動</jadeUnique> 150秒<br>在指定位置生成一道傳送門，持續150秒(無法放置在防禦塔附近)。每隔4秒，傳送門會召喚1隻狂暴的<keywordMajor>虛空蟲</keywordMajor>，牠會沿著最靠近的路線前進。<br><br>4秒後，<keywordMajor>虛空蟲</keywordMajor>的生命會迅速衰減至0。第四隻<keywordMajor>虛空蟲</keywordMajor>及後續每一隻<keywordMajor>虛空蟲</keywordMajor>都會造成等同你50%雙防的額外傷害。</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> 物理防禦<br><attention> 50</attention> 魔法防禦<br><attention>每5秒5</attention>生命回復</stats><br><br><jadeUnique>要塞衝鋒：</jadeUnique>站在防禦塔或<keywordMajor>虛空之門</keywordMajor>附近時，在2秒內逐漸增加至最多<speed>30%跑速</speed>。 <jadeUnique>主動</jadeUnique> 150秒<br>在指定位置生成一道<keywordMajor>虛空之門</keywordMajor>，持續150秒。每隔4秒，傳送門會召喚1隻狂暴的<keywordMajor>虛空蟲</keywordMajor>，牠會沿著最靠近的路線前進。</mainText>",
         "active": true,
         "inStore": true,
         "from": [

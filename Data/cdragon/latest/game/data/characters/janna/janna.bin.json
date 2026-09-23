@@ -1079,7 +1079,7 @@
                     "__type": "GameCalculation"
                 },
                 "BonusDamage": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mStat": 7,
@@ -2874,6 +2874,12 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Janna/Spells/JannaSkin67Manager": {
+        "ObjectName": "JannaSkin67Manager",
+        "objectPath": "Characters/Janna/Spells/JannaSkin67Manager",
+        "mScriptName": "JannaSkin67Manager",
+        "__type": "SpellObject"
+    },
     "{e77e7e8e}": {
         "name": "stat_stone_set_name_2",
         "catalogEntry": {
@@ -2898,7 +2904,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2926,7 +2932,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaEBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2954,7 +2960,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaWTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3107,7 +3113,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 234,
+                "EventToTrack": 232,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3148,7 +3154,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaQKnockups",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3176,7 +3182,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaDamageBlockedWithE",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3204,7 +3210,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaEBonus",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3233,7 +3239,7 @@
         "mDescriptionTraKey": "stat_stone_description_JannaMonsoonMulti",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3766,6 +3772,7 @@
         "passive1IconName": "assets/characters/janna/hud/icons2d/jannap.dds",
         "name": "game_character_displayname_Janna",
         "mUseCCAnimations": true,
+        "outlineBBoxExpansion": 91.0,
         "selectionHeight": 200.0,
         "selectionRadius": 125.0,
         "pathfindingCollisionRadius": 35.0,
@@ -3892,6 +3899,16 @@
                 "SkinFilter": {
                     "skinIds": [
                         5
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Characters/Janna/Spells/JannaSkin67Manager",
+                "SkinFilter": {
+                    "skinIds": [
+                        67
                     ],
                     "__type": "SkinFilterData"
                 },

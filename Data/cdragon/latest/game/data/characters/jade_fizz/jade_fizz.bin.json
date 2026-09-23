@@ -1,0 +1,3842 @@
+{
+    "Characters/Jade_Fizz/Spells/Jade_FizzQAbility": {
+        "mRootSpell": "Characters/Jade_Fizz/Spells/Jade_FizzQAbility/Jade_FizzQ",
+        "mChildSpells": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzQAbility/Jade_FizzQ"
+        ],
+        "mName": "Jade_FizzQAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzRAbility": {
+        "mRootSpell": "Characters/Jade_Fizz/Spells/Jade_FizzRAbility/Jade_FizzR",
+        "mChildSpells": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzRAbility/Jade_FizzR",
+            "{2348413f}",
+            "{e06bed78}",
+            "{7a77a9e9}"
+        ],
+        "mName": "Jade_FizzRAbility",
+        "mType": 2,
+        "AbilityTraits": 2050,
+        "__type": "AbilityObject"
+    },
+    "{2348413f}": {
+        "ObjectName": "Jade_FizzRHop",
+        "objectPath": "{2348413f}",
+        "mScriptName": "Jade_FizzRHop",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 4106,
+            "mAffectsStatusFlags": 32,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_FizzMarinerDoom",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        90.0,
+                        150.0,
+                        245.0,
+                        315.0,
+                        440.0,
+                        565.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.25,
+                        2.5,
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        0.0,
+                        0.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzMarinerDoom.dds"
+            ],
+            "mCastTime": 0.25099998712539673,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 50.0099983215332,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 15.0,
+                    "mOffsetInitialTargetHeight": 15.0,
+                    "mStartBoneName": "L_hand",
+                    "mAcceleration": 3000.0,
+                    "mMinSpeed": 1200.0,
+                    "mMaxSpeed": 10000.0,
+                    "mInitialSpeed": 1200.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 5000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "Jade_Fizz_R_mis",
+            "mLineWidth": 80.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7a77a9e9}": {
+        "ObjectName": "Jade_FizzRCling",
+        "objectPath": "{7a77a9e9}",
+        "mScriptName": "Jade_FizzRCling",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzMarinerDoom.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_FizzRCling",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_Jade_FizzR_Name",
+                    "keyTooltip": "Buff_Jade_FizzR_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzRAbility/Jade_FizzR": {
+        "ObjectName": "Jade_FizzR",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzRAbility/Jade_FizzR",
+        "mScriptName": "Jade_FizzR",
+        "mSpell": {
+            "mAffectsTypeFlags": 8192,
+            "mAlternateName": "Jade_FizzR",
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "DetonationTime",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929,
+                        0.8999999761581421,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        75.0,
+                        200.0,
+                        325.0,
+                        450.0,
+                        575.0,
+                        700.0,
+                        825.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AOESize",
+                    "values": [
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockDistance",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockModifier",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SnagDistance",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzMarinerDoom.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                120.0,
+                120.0,
+                100.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "Cooldown": {
+                "values": [
+                    115.0,
+                    100.0,
+                    85.0,
+                    70.0,
+                    55.0,
+                    40.0,
+                    25.0
+                ],
+                "{0a3e0478}": 115.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1275.0,
+                1275.0,
+                1275.0,
+                1275.0,
+                1275.0,
+                1275.0,
+                1275.0
+            ],
+            "castRadius": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 1300.0,
+            "mLineWidth": 150.0,
+            "mHitBoneName": "head",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzR_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_FizzR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Jade_FizzR_Name",
+                        "keyTooltip": "Spell_Jade_FizzR_Tooltip",
+                        "keySummary": "Spell_Jade_FizzR_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowAmount",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "minimumDisplayedRange": 300.0,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                90.0,
+                                90.0,
+                                90.0,
+                                90.0,
+                                90.0,
+                                90.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "DetonationTime",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16777216,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 1.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 150.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e06bed78}": {
+        "ObjectName": "Jade_FizzRMissile",
+        "objectPath": "{e06bed78}",
+        "mScriptName": "Jade_FizzRMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 4106,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_FizzMarinerDoom",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        90.0,
+                        150.0,
+                        245.0,
+                        315.0,
+                        440.0,
+                        565.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.25,
+                        2.5,
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        0.0,
+                        0.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzMarinerDoom.dds"
+            ],
+            "mCastTime": 0.25099998712539673,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 50.0099983215332,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_hand",
+                    "mSpeed": 1350.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 1300.0,
+            "mMissileEffectKey": "Jade_Fizz_R_mis",
+            "mLineWidth": 120.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_Fizz_FizzRMissile_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ea1f4430}": {
+        "ObjectName": "Jade_FizzRBomb",
+        "objectPath": "{ea1f4430}",
+        "mScriptName": "Jade_FizzRBomb",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzMarinerDoom.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzWAbility": {
+        "mRootSpell": "Characters/Jade_Fizz/Spells/Jade_FizzWAbility/Jade_FizzW",
+        "mChildSpells": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzWAbility/Jade_FizzW",
+            "{4e2bbf53}",
+            "{db8f4429}"
+        ],
+        "mName": "Jade_FizzWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzBasicAttack2": {
+        "ObjectName": "Jade_FizzBasicAttack2",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzBasicAttack2",
+        "mScriptName": "Jade_FizzBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_FizzBasicAttack2",
+            "mAnimationName": "Attack2",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.800000190734863,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Fizz_BA",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzBasicAttack_OnCast",
+                "13": "Play_sfx_Fizz_FizzBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4e2bbf53}": {
+        "ObjectName": "Jade_FizzWDOT",
+        "objectPath": "{4e2bbf53}",
+        "mScriptName": "Jade_FizzWDOT",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastoneActive.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_FizzWDOT",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_Jade_FizzW_Name",
+                    "keyTooltip": "Buff_Jade_FizzW_DoT_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b356173e}": {
+        "ObjectName": "Jade_FizzWActive",
+        "objectPath": "{b356173e}",
+        "mScriptName": "Jade_FizzWActive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastoneActive.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_Fizz_FizzW_OnBuffDeactivate"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_FizzWActive",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_Jade_FizzW_Name",
+                    "keyTooltip": "Buff_Jade_FizzW_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "mBuffAttributeFlag": 32,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{db8f4429}": {
+        "ObjectName": "Jade_FizzWPassive",
+        "objectPath": "{db8f4429}",
+        "mScriptName": "Jade_FizzWPassive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastonePassive.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzWAbility/Jade_FizzW": {
+        "ObjectName": "Jade_FizzW",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzWAbility/Jade_FizzW",
+        "mScriptName": "Jade_FizzW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack",
+                "Trait_AttackReset",
+                "Trait_DamageAbility",
+                "Trait_DoT",
+                "Trait_AttackBuff_Duration",
+                "Trait_Strike",
+                "Trait_Low_Damage"
+            ],
+            "DataValues": [
+                {
+                    "name": "DoTBaseDamage",
+                    "values": [
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DoTRatio",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveBaseDamage",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveRatio",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DotRate",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveDoTDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxMonsterDamage",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHealthScaling",
+                    "values": [
+                        0.029999999329447746,
+                        0.03999999910593033,
+                        0.05000000074505806,
+                        0.05999999865889549,
+                        0.07000000029802322,
+                        0.07999999821186066,
+                        0.09000000357627869
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GrievousWounds",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WoundsDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "DoTDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "DoTBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DoTRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ActiveDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ActiveBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "ActiveRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Idle1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastonePassive.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastoneActive.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0,
+                3.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 1400.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                30.0,
+                40.0,
+                50.0,
+                60.0,
+                70.0,
+                80.0
+            ],
+            "manaValues": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzW_OnCast",
+                "18": "Play_sfx_Fizz_FizzW_OnBuffActivate",
+                "19": "Play_sfx_Fizz_FizzW_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_FizzW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Jade_FizzW_Name",
+                        "keyTooltip": "Spell_Jade_FizzW_Tooltip",
+                        "keySummary": "Spell_Jade_FizzW_Summary",
+                        "keyTooltipExtendedBelowLine": "Jade_GreviousWounds_Buff"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "DoTBaseDamage",
+                                    "nameOverride": "Spell_ListType_PassiveDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaxHealthScaling",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_FizzW_HealthScaling",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ActiveBaseDamage",
+                                    "nameOverride": "Spell_ListType_ActiveDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_FizzW",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_Jade_FizzW_Name",
+                    "keyTooltip": "Buff_Jade_FizzW_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "mBuffAttributeFlag": 32,
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "ActiveDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 32,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzEAbility": {
+        "mRootSpell": "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+        "mChildSpells": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+            "{4e52446e}",
+            "{db86a688}",
+            "{5947b64e}"
+        ],
+        "mName": "Jade_FizzEAbility",
+        "AbilityTraits": 32,
+        "__type": "AbilityObject"
+    },
+    "{4e52446e}": {
+        "ObjectName": "Jade_FizzEBuffer",
+        "objectPath": "{4e52446e}",
+        "mScriptName": "Jade_FizzEBuffer",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 15375,
+            "mAlternateName": "Jade_FizzJump",
+            "mSpellTags": [
+                "Trait_FreeRecast",
+                "Trait_PlayerSelectedDashDirection"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        45.0,
+                        85.0,
+                        125.0,
+                        165.0,
+                        205.0,
+                        245.0,
+                        285.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0,
+                        65.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        75.0,
+                        150.0,
+                        225.0,
+                        300.0,
+                        375.0,
+                        450.0,
+                        525.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        45.0,
+                        90.0,
+                        135.0,
+                        180.0,
+                        225.0,
+                        270.0,
+                        315.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzJumpTwo.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "SourceObject": "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+                                "DataValue": "SlowDuration",
+                                "__type": "{9e9e2e5c}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{5947b64e}": {
+        "ObjectName": "Jade_FizzETwo",
+        "objectPath": "{5947b64e}",
+        "mScriptName": "Jade_FizzETwo",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 7183,
+            "mAlternateName": "Jade_FizzJump",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_FreeRecast",
+                "Trait_PlayerSelectedDashDirection"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0,
+                        65.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.75,
+            "mAnimationName": "Idle3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzJumpTwo.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                16.0,
+                16.0,
+                14.5,
+                13.0,
+                11.5,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    16.0,
+                    16.0,
+                    14.5,
+                    13.0,
+                    11.5,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castRadius": [
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.534999847412109,
+            "missileSpeed": 20.0,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzJumpTwo_OnCast"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+                "mTargeterDefinitions": [
+                    {
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureOverrideName": "assets/spells/textures/circularrangeindicator_dark.tex",
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_leona_outer.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE": {
+        "ObjectName": "Jade_FizzE",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+        "mScriptName": "Jade_FizzE",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 15567,
+            "mAlternateName": "Jade_FizzE",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Untargetable",
+                "Trait_SignatureSpell",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SmallAoESize",
+                    "values": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LargeAoESize",
+                    "values": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.550000011920929,
+                        0.6000000238418579,
+                        0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "SlowAmount",
+                            "values": [
+                                0.44999998807907104,
+                                0.5,
+                                0.550000011920929,
+                                0.6000000238418579,
+                                0.6499999761581421,
+                                0.699999988079071,
+                                0.75
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        13.0,
+                        13.0,
+                        11.75,
+                        10.5,
+                        9.25,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "EDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Idle3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzJump.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                16.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    18.0,
+                    16.0,
+                    14.0,
+                    12.0,
+                    10.0,
+                    8.0,
+                    6.0
+                ],
+                "{0a3e0478}": 18.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castRadius": [
+                330.0,
+                330.0,
+                330.0,
+                330.0,
+                330.0,
+                330.0,
+                330.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.534999847412109,
+            "missileSpeed": 20.0,
+            "mana": [
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0,
+                100.0
+            ],
+            "manaValues": {
+                "values": [
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0,
+                    130.0,
+                    140.0
+                ],
+                "{0a3e0478}": 90.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzJump_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_FizzE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Jade_FizzE_Name",
+                        "keyTooltip": "Spell_Jade_FizzE_Tooltip",
+                        "keySummary": "Spell_Jade_FizzE_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowAmount",
+                                    "typeIndex": 2,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "nameOverride": "Spell_ListType_Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0,
+                                375.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureOverrideName": "assets/spells/textures/circularrangeindicator_dark.tex",
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_leona_outer.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "EDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 131072,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 0.75,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "SlowDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{db86a688}": {
+        "ObjectName": "Jade_FizzEOne",
+        "objectPath": "{db86a688}",
+        "mScriptName": "Jade_FizzEOne",
+        "mSpell": {
+            "flags": 32,
+            "mAffectsTypeFlags": 15567,
+            "mAlternateName": "Jade_FizzJump",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0,
+                        65.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.75,
+            "mAnimationName": "Crit",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzJump.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
+                ],
+                "{0a3e0478}": 8.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0
+                ],
+                "{0a3e0478}": 325.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 20.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzQAbility/Jade_FizzQ": {
+        "ObjectName": "Jade_FizzQ",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzQAbility/Jade_FizzQ",
+        "mScriptName": "Jade_FizzQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_FizzQ",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_DamageAbility",
+                "Trait_Strike",
+                "Trait_Low_Damage"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        550.0,
+                        650.0,
+                        750.0,
+                        850.0,
+                        950.0,
+                        1050.0,
+                        1150.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        -20.0,
+                        10.0,
+                        40.0,
+                        70.0,
+                        100.0,
+                        130.0,
+                        160.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashDistance",
+                    "values": [
+                        600.0,
+                        600.0,
+                        600.0,
+                        600.0,
+                        600.0,
+                        600.0,
+                        600.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "QDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.550000011920929,
+            "mCoefficient2": 1.0,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzPiercingStrike.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                8.5,
+                8.0,
+                7.5,
+                7.0,
+                6.5,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0
+                ],
+                "{0a3e0478}": 11.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 20.0,
+            "mHitEffectOrientType": 2,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+            ],
+            "manaValues": {
+                "values": [
+                    50.0,
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzPiercingStrike_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_FizzQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Jade_FizzQ_Name",
+                        "keyTooltip": "Spell_Jade_FizzQ_Tooltip",
+                        "keySummary": "Spell_Jade_FizzQ_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                550.0,
+                                550.0,
+                                550.0,
+                                550.0,
+                                550.0,
+                                550.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 2,
+                            "distanceOffset": 50.0,
+                            "orientationType": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                65.0,
+                                65.0,
+                                65.0,
+                                65.0,
+                                65.0,
+                                65.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureBaseOverrideName": "assets/spells/textures/reticle_gradient_base_q_01.tex",
+                        "textureTargetOverrideName": "assets/spells/textures/reticle_gradient_base_q_02.tex",
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSubparts": [
+                            {
+                                "mSpellCalculationKey": "TotalDamage",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            {
+                                "mSpellCalculationKey": "QDamage",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8eaf4393}": {
+        "ObjectName": "Jade_FizzBasicAttack",
+        "objectPath": "{8eaf4393}",
+        "mScriptName": "Jade_FizzBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_FizzBasicAttack",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.800000190734863,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Fizz_BA",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzBasicAttack_OnCast",
+                "13": "Play_sfx_Fizz_FizzBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e4195fd2}": {
+        "mRootSpell": "{973f309c}",
+        "mChildSpells": [
+            "{973f309c}"
+        ],
+        "mName": "Jade_FizzPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{973f309c}": {
+        "ObjectName": "Jade_FizzPassive",
+        "objectPath": "{973f309c}",
+        "mScriptName": "Jade_FizzPassive",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_FizzPassive",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        35.0,
+                        50.0,
+                        65.0,
+                        80.0,
+                        95.0,
+                        110.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mSpellCalculations": {
+                "DamageReductionCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 4.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 4,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 10,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 19,
+                                    "mAdditionalBonusAtThisLevel": 2.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.4000000059604645,
+            "mCoefficient2": 0.30000001192092896,
+            "mAnimationName": "Idle1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/FizzPassive.dds"
+            ],
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 1400.0,
+            "mana": [
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "manaValues": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_FizzPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyTooltip": "Spell_Jade_FizzPassive_Tooltip",
+                        "keyName": "Spell_Jade_FizzPassive_Name",
+                        "keySummary": "Spell_Jade_FizzPassive_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_FizzPassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Spells/Jade_FizzCritAttack": {
+        "ObjectName": "Jade_FizzCritAttack",
+        "objectPath": "Characters/Jade_Fizz/Spells/Jade_FizzCritAttack",
+        "mScriptName": "Jade_FizzCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "spellCastTime": 0.3499999940395355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.360000133514404,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Fizz_BA_crit",
+            "mAfterEffectKey": "Jade_Fizz_BA_crit_Splash",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Fizz_FizzCritAttack_OnCast",
+                "13": "Play_sfx_Fizz_FizzCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "textureOrientation": 1,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Fizz/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{2fe363c6}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{52be493d}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{cb88bb27}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{f1a1b200}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/4636",
+                            "Items/4633",
+                            "Items/3152"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3100",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4629"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3100",
+                            "Items/3135",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4629",
+                            "Items/3165"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3145"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/4635"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/4636",
+                            "Items/4633",
+                            "Items/3152"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3100",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4629"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3100",
+                            "Items/3135",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4629",
+                            "Items/3165"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771056"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773116",
+                            "Items/773146",
+                            "Items/773001",
+                            "Items/773151",
+                            "Items/773135",
+                            "Items/773089",
+                            "Items/773128",
+                            "Items/773157",
+                            "Items/773165",
+                            "Items/773026",
+                            "Items/773102",
+                            "Items/773020",
+                            "Items/773136",
+                            "Items/773145",
+                            "Items/773108",
+                            "Items/773144",
+                            "Items/771052",
+                            "Items/771026",
+                            "Items/771058",
+                            "Items/771028",
+                            "Items/771011",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "Characters/Jade_Fizz/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Fizz",
+        "baseHPModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 86.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.5399999618530273,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.14000000059604645,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 80.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 240.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.3100000619888306,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 56.0,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 20.100000381469727,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.4000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "mrPerLevel": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 175.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6579999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6579999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.0999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.09700000286102295,
+            "mAttackProbability": 0.5,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_FizzBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.125,
+                "mAttackName": "Jade_FizzWBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.0774800032377243,
+                "mAttackName": "Jade_FizzCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_FizzQAbility/Jade_FizzQ",
+            "Jade_FizzWAbility/Jade_FizzW",
+            "Jade_FizzEAbility/Jade_FizzE",
+            "Jade_FizzRAbility/Jade_FizzR"
+        ],
+        "spells": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzQAbility/Jade_FizzQ",
+            "Characters/Jade_Fizz/Spells/Jade_FizzWAbility/Jade_FizzW",
+            "Characters/Jade_Fizz/Spells/Jade_FizzEAbility/Jade_FizzE",
+            "Characters/Jade_Fizz/Spells/Jade_FizzRAbility/Jade_FizzR"
+        ],
+        "extraSpells": [
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_FizzWAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "{e06bed78}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Fizz/Spells/Jade_FizzQAbility",
+            "Characters/Jade_Fizz/Spells/Jade_FizzWAbility",
+            "Characters/Jade_Fizz/Spells/Jade_FizzEAbility",
+            "Characters/Jade_Fizz/Spells/Jade_FizzRAbility",
+            "{e4195fd2}"
+        ],
+        "passiveName": "",
+        "passiveLuaName": "Jade_FizzPassive",
+        "passiveToolTip": "",
+        "passiveSpell": "Jade_FizzPassive",
+        "passive1IconName": "assets/characters/jade_fizz/hud/icons2d/jade_fizz_p.dds",
+        "name": "game_character_displayname_Jade_Fizz",
+        "weaponMaterials": [
+            "Jade_FizzBasicAttack"
+        ],
+        "selectionHeight": 138.88890075683594,
+        "selectionRadius": 108.33329772949219,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            14,
+            8
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "{e9f30ef6}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Fizz",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "assassin",
+            "searchTagsSecondary": "fighter",
+            "championId": 60105,
+            "roles": "BRAWLER",
+            "magicRank": 7,
+            "difficultyRank": 6,
+            "description": "game_character_description_Jade_Fizz",
+            "defenseRank": 4,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.30000001192092896,
+            "{aa75da9d}": false,
+            "attackRank": 6,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Domination",
+        "mCharacterPassiveSpell": "{973f309c}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{973f309c}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

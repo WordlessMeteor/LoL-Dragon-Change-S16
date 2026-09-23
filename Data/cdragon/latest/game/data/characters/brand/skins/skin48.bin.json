@@ -1,6 +1,7 @@
 {
     "Characters/Brand/Skins/Skin48": {
         "skinClassification": 2,
+        "championSkinId": 63048,
         "championSkinName": "BrandSkin48",
         "skinParent": 42,
         "metaDataTags": "gender:male,element:fire,skinline:empyrean",
@@ -2004,6 +2005,16 @@
         "name": "Characters/Brand/Skins/Skin48/Materials/FlowMap_Bloom_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/brand/skins/skin42/particles/cloudfm_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -2025,6 +2036,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -2240,6 +2315,16 @@
         ],
         "switches": [
             {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -2400,25 +2485,25 @@
             "Brand_E_Range_Ring_ext": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_E_Range_Ring_ext",
             "Brand_P_redring_Ignition_Child": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_P_redring_Ignition_Child",
             "Brand_E_Conflagration_buf_child": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_E_Conflagration_buf_child",
-            "{261dbd17}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Gate_01",
-            "{271dbeaa}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Gate_02",
-            "{9dce9e5e}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Port_Start_Gate",
-            "{34e38f63}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Power_End",
-            "{867d69fc}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_1",
-            "{897d6eb5}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_2",
-            "{3767de7d}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Power",
-            "{d8436404}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Port_Start_Gate2",
-            "{8d7759c6}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Rising_Avatar",
-            "{38377787}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Ground",
-            "{067098f4}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_03",
-            "{48e39579}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire2_Trail",
-            "{3eff0e2e}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire3_Trail",
-            "{7d4b0c53}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Tar",
-            "{06f56140}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire1_Trail",
-            "{9e247cb3}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Tar2",
-            "{2093a6a3}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_Trail",
-            "{46486702}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Recall_scene",
-            "{afeb7af2}": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Windown"
+            "Brand_Z_Gate_01": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Gate_01",
+            "Brand_Z_Gate_02": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Gate_02",
+            "Brand_Z_Port_Start_Gate": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Port_Start_Gate",
+            "Brand_Z_Power_End": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Power_End",
+            "Brand_Z_Fire_1": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_1",
+            "Brand_Z_Fire_2": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_2",
+            "Brand_Z_Power": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Power",
+            "Brand_Z_Port_Start_Gate2": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Port_Start_Gate2",
+            "Brand_Z_Rising_Avatar": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Rising_Avatar",
+            "Brand_Z_Ground": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Ground",
+            "Brand_Z_Fire_03": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_03",
+            "Brand_Z_Fire2_Trail": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire2_Trail",
+            "Brand_Z_Fire3_Trail": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire3_Trail",
+            "Brand_Z_Tar": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Tar",
+            "Brand_Z_Fire1_Trail": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire1_Trail",
+            "Brand_Z_Tar2": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Tar2",
+            "Brand_Z_Fire_Trail": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Fire_Trail",
+            "Brand_Z_Recall_scene": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Recall_scene",
+            "Brand_Z_Windown": "Characters/Brand/Skins/Skin42/Particles/Brand_Skin42_Z_Windown"
         },
         "__type": "ResourceResolver"
     },

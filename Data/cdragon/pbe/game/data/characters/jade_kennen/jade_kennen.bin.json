@@ -1807,7 +1807,7 @@
         },
         "__type": "SpellObject"
     },
-    "{575dbab2}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenPassiveAbility": {
         "mRootSpell": "Characters/Jade_Kennen/Spells/Jade_KennenPassiveAbility/Jade_KennenPassive",
         "mChildSpells": [
             "Characters/Jade_Kennen/Spells/Jade_KennenPassiveAbility/Jade_KennenPassive",
@@ -2784,7 +2784,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Kennen/Spells/Jade_KennenRAbility",
-            "{575dbab2}",
+            "Characters/Jade_Kennen/Spells/Jade_KennenPassiveAbility",
             "Characters/Jade_Kennen/Spells/Jade_KennenQAbility",
             "Characters/Jade_Kennen/Spells/Jade_KennenEAbility",
             "Characters/Jade_Kennen/Spells/Jade_KennenWAbility"
@@ -2969,92 +2969,6 @@
                 "__type": "RootScriptSequence"
             },
             "{eb530788}": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "968ca423-6319-473b-92f9-9e8aa994e88a",
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "40dd53cc-f122-4f91-8647-e0eae36818c3",
-                                    "Src": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "RingActive",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                null,
-                                null,
-                                null,
-                                null,
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "26e593a1-6050-4288-ac62-41dabfb5ef22",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{d9626144}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Operation": 3,
-                                        "Value2": {
-                                            "value": 1,
-                                            "__type": "IntGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "f23fa222-187a-4de3-953a-fed8d25e73e0",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{a9d892b5}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Operation": 3,
-                                        "Value2": {
-                                            "Var": "{8283e071}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "type": 1,
-                                    "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "74c9caf8-5955-4390-a08a-d2b25776c789",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{875e52b6}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Value2": {
-                                            "__type": "IntGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "type": 1,
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "ScriptCommentBlock"
-                    }
-                ],
                 "__type": "RootScriptSequence"
             }
         },

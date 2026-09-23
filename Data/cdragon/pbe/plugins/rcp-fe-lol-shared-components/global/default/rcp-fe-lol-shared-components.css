@@ -1409,12 +1409,24 @@ div.preload-watch {
     background-repeat: repeat-x;
     display: flex;
     flex-grow: 1;
+    gap: 8px;
     justify-content: center;
     padding: 0 10px
 }
 
 .arrow-footer[version="7.13"] .confirm-button-container button.confirm .middle-confirm:lang(ar-ae) {
     direction: ltr
+}
+
+.arrow-footer[version="7.13"] .confirm-button-container button.confirm .middle-confirm .middle-confirm-icon {
+    background-color: currentColor;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 16px;
+    -webkit-mask-image: url(/fe/lol-navigation/activity-center/external-link-rest.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    width: 16px
 }
 
 .arrow-footer[version="7.13"] .confirm-button-container button.confirm .right-confirm {

@@ -2639,7 +2639,7 @@
     {
         "id": 2052,
         "name": "Poro-nasi",
-        "description": "<mainText><stats></stats><br><br> <active>Aktív – Felhasználás:</active> Egy jókora adagot adsz egy közeli porónak, amitől nagyobbra nő.<br><br><flavorText>Ez az avarosai tyúk húsából, minden nap frissen szedett és gyorsfagyasztott freljordi fűszernövények hozzáadásával készült, ízletes étel minden olyan tápanyagot tartalmaz, amelytől a poród nyugodt és békés marad a harc hevében is.<br><br>A teljes bevételt a veszélyeztetett foltos poro élőhelyének megőrzésére fordítjuk.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Aktív – Felhasználás:</active> Egy jókora adagot adsz egy közeli porónak, amitől nagyobbra nő.<br><br><flavorText>Ez az avarosai tyúk húsából, mindennap frissen szedett és gyorsfagyasztott freljordi fűszernövények hozzáadásával készült, ízletes étel minden olyan tápanyagot tartalmaz, amelytől a poród nyugodt és békés marad a harc hevében is.<br><br>A teljes bevételt a veszélyeztetett foltos poro élőhelyének megőrzésére fordítjuk.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -8000,7 +8000,7 @@
     {
         "id": 3866,
         "name": "Rúnairánytű",
-        "description": "<mainText><stats><attention> 100</attention> életerő<br><attention> 50%</attention> alap életerő-regen<br><attention> 50%</attention> alap mana-regen<br><attention> 5</attention> arany 10 másodpercenként</stats><br><br><passive>Támogatói küldetés</passive><br>Gyűjts <keywordMajor>0</keywordMajor> aranyat ezzel a tárggyal, amely ezután átalakul a <rarityGeneric>Világok zsákmánya</rarityGeneric> tárggyá. <br><br><passive>Közös jutalom</passive>  (0 másodperc, legfeljebb 0 töltet)<br>Szövetséges hősök közelében az ellenséges hősök megsebzéséért vagy minionok megöléséért aranyat kapsz. <active>Aktív</active> (3 töltet)<br> Elhelyez egy <keyword>Láthatatlan őrszemet</keyword>, amely rálátást biztosít.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> életerő<br><attention> 75%</attention> alap életerő-regen<br><attention> 50%</attention> alap mana-regen<br><attention> 5</attention> arany 10 másodpercenként</stats><br><br><passive>Támogatói küldetés</passive><br>Gyűjts <keywordMajor>0</keywordMajor> aranyat ezzel a tárggyal, amely ezután átalakul a <rarityGeneric>Világok zsákmánya</rarityGeneric> tárggyá. <br><br><passive>Közös jutalom</passive>  (0 másodperc, legfeljebb 0 töltet)<br>Szövetséges hősök közelében az ellenséges hősök megsebzéséért vagy minionok megöléséért aranyat kapsz. <active>Aktív</active> (3 töltet)<br> Elhelyez egy <keyword>Láthatatlan őrszemet</keyword>, amely rálátást biztosít.</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "Holdfény varázspenge",
+        "description": "<mainText><stats><attention> 50</attention> varázserő<br><attention> 50</attention> páncél<br><attention> 50</attention> varázsellenállás</stats><br><br><jadeUnique>Kitartás:</jadeUnique> <attention>35%</attention>-kal csökkenti a <status>kábítás, a lassítás, a felbőszítés, a rettegés, a némítás, a vakítás</status> és a különféle <status>mozgásképtelenségek</status> hatásának időtartamát.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "Köpeny és tőr",
+        "description": "<mainText><stats><attention> 20%</attention> támadási sebesség<br><attention> 20%</attention> kritikus csapási esély</stats><br><br><jadeUnique>Kitartás:</jadeUnique> <attention>35%</attention>-kal csökkenti a <status>kábítás, a lassítás, a felbőszítés, a rettegés, a némítás, a vakítás</status> és a különféle <status>mozgásképtelenségek</status> hatásának időtartamát.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "Morellonomikon",
         "description": "<mainText><stats><attention> 75</attention> varázserő<br><attention> 12</attention> mana-regen 5 másodpercenként<br><attention> 20%-kal</attention> csökkentett töltési idő</stats><br><br><jadeUnique>Morello gyűlölete:</jadeUnique> <scaleHealth>40% alatti életerővel</scaleHealth> rendelkező ellenséges hősökre mért varázssebzés esetén az áldozat 4 másodpercig <status>Súlyos seb</status> hatást szenved el.<br><br><jadeRules>(A <status>Súlyos seb</status> 50%-kal csökkenti a kapott gyógyító és a regeneráló hatások hatékonyságát.)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "Zz'Rot-kapu",
-        "description": "<mainText><stats><attention> 50</attention> páncél<br><attention> 50</attention> varázsellenállás<br><attention> 5</attention> életerő-regen 5 másodpercenként</stats><br><br><jadeUnique>Toronyiránt:</jadeUnique> 2 másodperc alatt fokozatosan erősödő, maximum <speed>+30% bónusz mozgási sebességet</speed> biztosít tornyok és ürességkapuk közelében. <jadeUnique>Aktív</jadeUnique>  150 másodperc<br>Megidéz egy kaput a célhelyen 150 másodpercre (nem helyezhető tornyok közelébe). A kapu 4 másodpercenként megidéz egy instabil <keywordMajor>ürességivadékot</keywordMajor>, amely elindul a legközelebbi ösvényen. <br><br>4 másodperc elteltével az <keywordMajor>ürességivadék</keywordMajor> életereje gyors ütemben 0-ra csökken. A negyedik és onnantól számítva mindegyik további <keywordMajor>ürességivadék</keywordMajor> az ellenállásaid 50%-ával megegyező bónusz sebzést okoz.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> páncél<br><attention> 50</attention> varázsellenállás<br><attention> 5</attention> életerő-regen 5 másodpercenként</stats><br><br><jadeUnique>Toronyiránt:</jadeUnique> 2 másodperc alatt fokozatosan erősödő, maximum <speed>+30% mozgási sebességet</speed> biztosít tornyok és <keywordMajor>ürességkapuk</keywordMajor> közelében. <jadeUnique>Aktív</jadeUnique>  150 mp.<br>Megidéz egy <keywordMajor>Ürességkaput</keywordMajor> a célterületen 150 másodpercre. A kapu 4 másodpercenként megidéz egy instabil <keywordMajor>ürességivadékot</keywordMajor>, amely elindul a legközelebbi ösvényen.</mainText>",
         "active": true,
         "inStore": true,
         "from": [

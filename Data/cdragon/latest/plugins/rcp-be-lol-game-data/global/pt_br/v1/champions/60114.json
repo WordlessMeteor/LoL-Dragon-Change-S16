@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "A Grande Duelista",
     "shortBio": "– Estocada (Q) é um avanço teleguiado com uma reconjuração.<br>– Ripostar (W) tem Dano de Ataque passivo, e o golpe não causa Atordoamento nem Lentidão.<br>– Explosão de Velocidade (E) concede Velocidade de Movimento ao atacar e redefine com abates.<br>– A Passiva e o R mudam completamente. Leia as descrições das Habilidades.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelista",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora regenera Vida ao longo do tempo quando causa dano. Atingir Campeões faz esse efeito acumular múltiplas vezes."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Estocada",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora avança para a frente, golpeando o alvo e causando Dano Físico a ele. Após alguns segundos, Fiora pode avançar mais uma vez sem Custo de Mana.",
-            "dynamicDescription": "Fiora avança para golpear o alvo, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage>.<br><br>Fiora pode <recast>reconjurar</recast> esta Habilidade para avançar mais uma vez dentro de 4s sem <scaleMana>Custo de Mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora avança para golpear o alvo, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage>.<br><br>Fiora pode <recast>Reconjurar</recast> esta Habilidade para avançar dentro de @RecastWindow@s sem Custo de <scaleMana>Mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Ripostar",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora tem um aumento no Dano de Ataque. Ao ativar esta Habilidade, Fiora bloqueia o próximo Ataque básico e reflete o Dano Mágico de volta ao atacante. Funciona contra Campeões, monstros e tropas grandes.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive> o <physicalDamage>Dano de Ataque</physicalDamage> de Fiora aumenta em <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Ativo: </spellActive>Fiora bloqueia o próximo Ataque dentro de 1,5s e reflete <magicDamage>@ReflectionDamage@ de Dano Mágico</magicDamage> de volta ao atacante. Funciona contra Campeões, monstros e tropas grandes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>o <physicalDamage>Dano de Ataque</physicalDamage> de Fiora aumenta em <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Ativo: </spellActive>Fiora bloqueia o próximo Ataque dentro de @ParryDuration@s e reflete <magicDamage>@ReflectionDamage@ de Dano Mágico</magicDamage> de volta ao atacante. Funciona contra Campeões, monstros e tropas grandes.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Explosão de Velocidade",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora recebe Velocidade de Ataque adicional temporária. Nesse período, cada acerto de Ataque ou de Estocada aumenta a Velocidade de Movimento dela. Abater um Campeão reinicia o Tempo de Recarga desta Habilidade.",
-            "dynamicDescription": "Fiora recebe <attackSpeed>@ASBonus*100@% de Velocidade de Ataque</attackSpeed> por 3s. Nesse período, cada acerto de Ataque ou de <spellName>Estocada</spellName> aumenta a <speed>Velocidade de Movimento</speed> de Fiora em @MSBonus*100@% por 3s. Acumula até 3 vezes.<br><br>Abater um Campeão redefine o Tempo de Recarga desta Habilidade. (Assistências reduzem o Tempo de Recarga em @HalfCooldown@s.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora recebe <attackSpeed>@ASBonus*100@% de Velocidade de Ataque</attackSpeed> por @BuffDuration@s. Nesse período, cada acerto de Ataque ou de <spellName>Estocada</spellName> aumenta a <speed>Velocidade de Movimento</speed> de Fiora em @MSBonus*100@% por @BuffDuration@s. Acumula até @MaxStacks@ vezes.<br><br>Abater um Campeão redefine o Tempo de Recarga desta Habilidade. (Assistências reduzem o Tempo de Recarga em @HalfCooldown@s.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Valsa da Lâmina",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fiora avança pelo campo de batalha, causando Dano Físico a Campeões inimigos. Golpes sucessivos contra o mesmo alvo causam menos dano.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

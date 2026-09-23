@@ -1,6 +1,7 @@
 {
     "Characters/Illaoi/Skins/Skin38": {
         "skinClassification": 2,
+        "championSkinId": 420038,
         "championSkinName": "IllaoiSkin38",
         "skinParent": 37,
         "metaDataTags": "faction:bilgewater,gender:female,race:human,element:water,skinline:dayjob",
@@ -997,6 +998,16 @@
         "name": "Characters/Illaoi/Skins/Skin38/Materials/FoodUpDown",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/shared/materials/flowmap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -1018,6 +1029,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -1238,6 +1313,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -11109,27 +11194,27 @@
             "Illaoi_Q_cas_Child": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Q_cas_Child",
             "Illaoi_P_cas_Child": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_P_cas_Child",
             "Illaoi_E_SpiritTimer_Child": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_E_SpiritTimer_Child",
-            "{50c11322}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_01",
-            "{3bd9a664}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_01",
-            "{4fc1118f}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_02",
-            "{4ec10ffc}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_03",
-            "{3ed9ab1d}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_02",
-            "{3dd9a98a}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_03",
-            "{29508890}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Pot_01",
-            "{4511ba1b}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_End",
-            "{dc1cdd21}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_01",
-            "{d91cd868}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_02",
-            "{da1cd9fb}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_03",
-            "{df1ce1da}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_04",
-            "{e01ce36d}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_05",
-            "{dd1cdeb4}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_06",
-            "{ab0eba01}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_06_Child",
-            "{44315aef}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Hands",
-            "{9563837f}": "Characters/Illaoi/Skins/Skin38/Particles/Illaoi_Skin38_Z_Recall_SeaFoods",
-            "{b12aa6d1}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_Pot",
-            "{ab6bc25b}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust",
-            "{e2af7379}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust02",
-            "{e1af71e6}": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust03"
+            "Illaoi_Z_Recall_Ground_01": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_01",
+            "Illaoi_Z_Recall_Ground_Soup_01": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_01",
+            "Illaoi_Z_Recall_Ground_02": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_02",
+            "Illaoi_Z_Recall_Ground_03": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_03",
+            "Illaoi_Z_Recall_Ground_Soup_02": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_02",
+            "Illaoi_Z_Recall_Ground_Soup_03": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Ground_Soup_03",
+            "Illaoi_Z_Recall_Pot_01": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Pot_01",
+            "Illaoi_Z_Recall_Cooking_End": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_End",
+            "Illaoi_Z_Recall_Cooking_01": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_01",
+            "Illaoi_Z_Recall_Cooking_02": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_02",
+            "Illaoi_Z_Recall_Cooking_03": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_03",
+            "Illaoi_Z_Recall_Cooking_04": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_04",
+            "Illaoi_Z_Recall_Cooking_05": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_05",
+            "Illaoi_Z_Recall_Cooking_06": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_06",
+            "Illaoi_Z_Recall_Cooking_06_Child": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_06_Child",
+            "Illaoi_Z_Recall_Hands": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Hands",
+            "Illaoi_Z_Recall_SeaFoods": "Characters/Illaoi/Skins/Skin38/Particles/Illaoi_Skin38_Z_Recall_SeaFoods",
+            "Illaoi_Z_Recall_Cooking_Pot": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Cooking_Pot",
+            "Illaoi_Z_Recall_Dust": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust",
+            "Illaoi_Z_Recall_Dust02": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust02",
+            "Illaoi_Z_Recall_Dust03": "Characters/Illaoi/Skins/Skin37/Particles/Illaoi_Skin37_Z_Recall_Dust03"
         },
         "__type": "ResourceResolver"
     },

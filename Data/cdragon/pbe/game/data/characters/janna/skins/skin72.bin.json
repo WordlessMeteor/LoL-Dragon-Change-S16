@@ -457,7 +457,8 @@
                                         "mAnimationNames": [
                                             "Recall",
                                             "Recall_Winddown",
-                                            "Respawn"
+                                            "Respawn",
+                                            "Death"
                                         ],
                                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                     },
@@ -526,52 +527,76 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "mOperator": 4,
-                            "mValueA": {
-                                "mBoolDriver": {
-                                    "mBoolDriver": {
-                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mDelayOff": 6.0,
-                                    "__type": "DelayedBoolMaterialDriver"
-                                },
-                                "mTurnOnTimeSec": 0.0,
-                                "mTurnOffTimeSec": 0.0,
-                                "__type": "LerpMaterialDriver"
-                            },
-                            "mValueB": {
-                                "mValue": 0.5,
-                                "__type": "FloatLiteralMaterialDriver"
-                            },
-                            "__type": "FloatComparisonMaterialDriver"
-                        },
-                        {
-                            "mOperator": 4,
-                            "mValueA": {
-                                "mBoolDriver": {
-                                    "mAnimationNames": [
-                                        "Taunt",
-                                        "Dance"
+                            "mDrivers": [
+                                {
+                                    "mDrivers": [
+                                        {
+                                            "Submeshes": [
+                                                "{a9bc73d0}"
+                                            ],
+                                            "__type": "SubmeshVisibilityBoolDriver"
+                                        },
+                                        {
+                                            "mDriver": {
+                                                "mBoolDriver": {
+                                                    "Submeshes": [
+                                                        "{a9bc73d0}"
+                                                    ],
+                                                    "__type": "SubmeshVisibilityBoolDriver"
+                                                },
+                                                "mDelayOn": 1.0,
+                                                "__type": "DelayedBoolMaterialDriver"
+                                            },
+                                            "__type": "NotMaterialDriver"
+                                        },
+                                        {
+                                            "mDriver": {
+                                                "mBoolDriver": {
+                                                    "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                                    "{149271dd}": false,
+                                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                },
+                                                "mDelayOff": 6.0,
+                                                "__type": "DelayedBoolMaterialDriver"
+                                            },
+                                            "__type": "NotMaterialDriver"
+                                        }
                                     ],
-                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                    "__type": "AllTrueMaterialDriver"
                                 },
-                                "mTurnOnTimeSec": 0.0,
-                                "mTurnOffTimeSec": 0.0,
-                                "__type": "LerpMaterialDriver"
-                            },
-                            "mValueB": {
-                                "mValue": 0.5,
-                                "__type": "FloatLiteralMaterialDriver"
-                            },
-                            "__type": "FloatComparisonMaterialDriver"
+                                {
+                                    "mDrivers": [
+                                        {
+                                            "mDriver": {
+                                                "Submeshes": [
+                                                    "{a9bc73d0}"
+                                                ],
+                                                "__type": "SubmeshVisibilityBoolDriver"
+                                            },
+                                            "__type": "NotMaterialDriver"
+                                        },
+                                        {
+                                            "mBoolDriver": {
+                                                "Submeshes": [
+                                                    "{a9bc73d0}"
+                                                ],
+                                                "__type": "SubmeshVisibilityBoolDriver"
+                                            },
+                                            "mDelayOff": 1.0,
+                                            "__type": "DelayedBoolMaterialDriver"
+                                        }
+                                    ],
+                                    "__type": "AllTrueMaterialDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {
-                        "boneName": "Root",
+                        "boneName": "C_Buffbone_Glb_Layout_Loc",
                         "effectKey": "{b798885e}",
                         "__type": "PersistentVfxData"
                     }
@@ -582,12 +607,27 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "mBoolDriver": {
-                                "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "mDelayOff": 6.0,
-                            "__type": "DelayedBoolMaterialDriver"
+                            "mDrivers": [
+                                {
+                                    "mBoolDriver": {
+                                        "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
+                                        "{149271dd}": false,
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mDelayOff": 6.0,
+                                    "__type": "DelayedBoolMaterialDriver"
+                                },
+                                {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance",
+                                        "Dance_In",
+                                        "Dance_Loop"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -601,28 +641,6 @@
                     "EyeMask",
                     "Ear",
                     "{3c22ed79}"
-                ],
-                "__type": "PersistentEffectConditionData"
-            },
-            {
-                "OwnerCondition": {
-                    "mDrivers": [
-                        {
-                            "mAnimationNames": [
-                                "Taunt",
-                                "Dance"
-                            ],
-                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                        }
-                    ],
-                    "__type": "AllTrueMaterialDriver"
-                },
-                "PersistentVfxs": [
-                    {
-                        "boneName": "Root",
-                        "effectKey": "{b798885e}",
-                        "__type": "PersistentVfxData"
-                    }
                 ],
                 "__type": "PersistentEffectConditionData"
             }
@@ -998,7 +1016,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mOnValue": 4.0,
                         "mOffValue": 0.20000000298023224,
@@ -1030,7 +1048,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mOnValue": 0.0,
                         "mOffValue": 0.20000000298023224,
@@ -1062,7 +1080,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "OnValue": [
                             1.0,
@@ -1103,7 +1121,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mTurnOnTimeSec": 0.0,
                         "mTurnOffTimeSec": 0.0,
@@ -1122,7 +1140,7 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 6.0,
+                                "mDelayOff": 6.5,
                                 "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
@@ -1130,11 +1148,15 @@
                         },
                         {
                             "driver": {
-                                "mAnimationNames": [
-                                    "Taunt",
-                                    "Dance"
-                                ],
-                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 0.5,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -1798,7 +1820,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mOnValue": 4.0,
                         "mOffValue": 0.20000000298023224,
@@ -1830,7 +1852,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mOnValue": 0.0,
                         "mOffValue": 0.30000001192092896,
@@ -1862,7 +1884,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "OnValue": [
                             1.0,
@@ -1903,7 +1925,7 @@
                                     "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 }
                             ],
-                            "__type": "OneTrueMaterialDriver"
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "mTurnOnTimeSec": 0.0,
                         "mTurnOffTimeSec": 0.0,
@@ -1922,7 +1944,7 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 6.0,
+                                "mDelayOff": 6.5,
                                 "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
@@ -1930,11 +1952,15 @@
                         },
                         {
                             "driver": {
-                                "mAnimationNames": [
-                                    "Taunt",
-                                    "Dance"
-                                ],
-                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 0.5,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"
@@ -3121,7 +3147,7 @@
                                     "Spell": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
                                     "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "mDelayOff": 6.0,
+                                "mDelayOff": 6.5,
                                 "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
@@ -3129,11 +3155,15 @@
                         },
                         {
                             "driver": {
-                                "mAnimationNames": [
-                                    "Taunt",
-                                    "Dance"
-                                ],
-                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                "mBoolDriver": {
+                                    "mAnimationNames": [
+                                        "Taunt",
+                                        "Dance"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mDelayOff": 0.5,
+                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "TextureName": "{a80da2b659a69dfe}",
                             "__type": "DynamicMaterialTextureSwapOption"

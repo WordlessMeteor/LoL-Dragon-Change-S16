@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Demir Elçi",
     "shortBio": "- Kahraman Hücumu (E) yetenek gücü oranı kullanır.<br>- Pasif, Q, W ve R tamamen farklı. Yetenek açıklamalarını oku.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Cesur Dövüşçü",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Poppy'nin aldığı mevcut canının %10'unu aşan tüm fiziksel hasar ve büyü hasarı %50 azalır. Bu, yapılardan aldığı hasarı azaltmaz."
+        "description": "Poppy'nin aldığı mevcut canını aşan tüm hasar azalır."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Sarsan Çekiç",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Poppy rakibini ezerek saldırı gücü artı sabit bir miktar ve hedefinin azami canının %8'ine eşdeğer miktarda ilave hasar verir. İlave hasar, yetenek seviyesine bağlı olarak belli bir eşiği aşamaz.",
-            "dynamicDescription": "Poppy'nin bir sonraki saldırısı <magicDamage>@FlatDamageCalc@ + azami canının %@HealthRatio*100@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir. Yüzdelik cana bağlı ilave hasar en fazla @HealthDamageCap@ olabilir.@SpellModifierDescriptionAppend@",
+            "description": "Poppy'nin bir sonraki saldırısı rakibini ezerek hedefin azami canına bağlı olarak ilave hasar verir.",
+            "dynamicDescription": "Poppy'nin bir sonraki saldırısı <magicDamage>@FlatDamageCalc@ + azami canının %@HealthRatio*100@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Demacia'nın Gururu",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Pasif: Bir normal saldırıdan hasar aldığında veya normal saldırıyla hasar verdiğinde Poppy'nin zırhı ve hasarı 5 saniyeliğine artar. Bu etki 10 defa birikebilir. Aktif: Poppy azami Demacia'nın Gururu yükü kazanır ve hareket hızını 5 saniyeliğine arttırır.",
+            "description": "Pasif: Bir normal saldırıyla hasar verdiğinde veya normal saldırıdan hasar aldığında Poppy'nin zırhı ve hasarı artar. Bu etki birikebilir. Aktif: Poppy azami sayıda Demacia'nın Timsali yükü ve hareket hızı artışı kazanır.",
             "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy, her saldırı hasarı verdiğinde veya aldığında @PassiveDuration@ saniyeliğine @BonusStats@ <scaleArmor>Zırh</scaleArmor> ve <scaleAD>Saldırı Gücü</scaleAD> kazanır. Bu etki @MaxStacks@ defa birikebilir.<br><br><spellActive>Aktif:</spellActive> Poppy azami Demacia'nın Gururu yükü kazanır ve hareket hızını @ActiveDuration@ saniyeliğine %@Speed*100@ arttırır.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Kahraman Hücumu",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Poppy bir rakibe atılır ve onu ileri sürükler. İlk çarpma az miktarda hasar verir ve hedef bir yüzey şekline çarparsa yüksek miktarda hasar alıp sersemler.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomatik Dokunulmazlık",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Poppy tek bir rakip şampiyona odaklanır ve ona daha fazla hasar verir. Poppy hedefi hariç diğer rakiplerden gelen her hasara ve yeteneğe karşı bağışıklık kazanır.",

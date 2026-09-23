@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "ตัวแทนแห่งเหล็กกล้า",
     "shortBio": "- Heroic Charge (E) มีสเกลพลังเวท<br>- สกิลติดตัว, Q, W และ R แตกต่างไปจากเดิมโดยสิ้นเชิง อย่าลืมอ่านคำอธิบายสกิล",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Valiant Fighter",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "ลดความเสียหายกายภาพและเวททั้งหมดที่ Poppy ได้รับซึ่งเกิน 10% จากพลังชีวิตปัจจุบันของเธอลง 50% เอฟเฟกต์นี้ไม่ลดความเสียหายจากสิ่งปลูกสร้าง"
+        "description": "ลดความเสียหายที่ Poppy ได้รับซึ่งเกินส่วนหนึ่งของพลังชีวิตปัจจุบันของเธอ"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Devastating Blow",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Poppy ทุบใส่ศัตรู สร้างความเสียหายบวกกับค่าคงที่ และโบนัสความเสียหาย 8% จากพลังชีวิตสูงสุดของเป้าหมาย โบนัสความเสียหายไม่สามารถเกินขีดจำกัดตามเลเวลสกิล",
-            "dynamicDescription": "การโจมตีครั้งถัดไปของ Poppy สร้าง<magicDamage>ความเสียหายเวท @FlatDamageCalc@ หน่วย + @HealthRatio*100@% จากพลังชีวิตสูงสุด</magicDamage> เปอร์เซ็นต์โบนัสความเสียหายไม่สามารถเกิน @HealthDamageCap@ หน่วยได้@SpellModifierDescriptionAppend@",
+            "description": "การโจมตีครั้งถัดไปของ Poppy จะบดขยี้ศัตรูของเธอ สร้างโบนัสความเสียหายเพิ่มเติมตามพลังชีวิตสูงสุดของเป้าหมาย",
+            "dynamicDescription": "การโจมตีครั้งถัดไปของ Poppy สร้าง<magicDamage>ความเสียหายเวท @FlatDamageCalc@ หน่วย + @HealthRatio*100@% ของพลังชีวิตสูงสุด</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Paragon of Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ติดตัว: Poppy เพิ่มเกราะและความเสียหายที่ทำได้เป็นเวลา 5 วินาที เมื่อได้รับหรือสร้างความเสียหายจากการโจมตีปกติ เอฟเฟกต์นี้สแตคได้สูงสุด 10 ครั้ง กดใช้: Poppy เพิ่มสแตค Paragon of Demacia จนเต็ม และได้รับความเร็วเคลื่อนที่เป็นเวลา 5 วินาที",
+            "description": "ติดตัว: เมื่อได้รับหรือสร้างความเสียหายจากการโจมตีปกติ เกราะและความเสียหายของ Poppy จะเพิ่มขึ้น และสามารถสแตคกันได้ กดใช้: Poppy ได้รับ Paragon of Demacia ที่สแตคสูงสุด และได้รับความเร็วเคลื่อนที่เพิ่มขึ้น",
             "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Poppy ได้รับ<scaleArmor>เกราะ</scaleArmor>และ<scaleAD>พลังโจมตี</scaleAD> @BonusStats@ หน่วยเป็นเวลา @PassiveDuration@ วินาที เมื่อสร้างหรือได้รับความเสียหายจากการโจมตีปกติ เอฟเฟกต์นี้สแตคได้สูงสุด @MaxStacks@ ครั้ง<br><br><spellActive>กดใช้:</spellActive> Poppy เพิ่มสแตค Paragon of Demacia จนเต็ม และได้รับความเร็วเคลื่อนที่เพิ่มขึ้น @Speed*100@% เป็นเวลา @ActiveDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Heroic Charge",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Poppy พุ่งเข้าใส่ศัตรูและชนพวกเขาต่อไป การปะทะครั้งแรกสร้างความเสียหายเล็กน้อย จากนั้นหากเป้า⁠หมายชนเข้ากับกำแพง พวกเขาจะได้รับความเสียหายรุนแรงและถูกสตัน",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomatic Immunity",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Poppy จดจ่อกับแชมเปี้ยนศัตรูเพียงตัวเดียว สร้างความเสียหายเพิ่มขึ้นแก่เป้าหมายนั้น และไม่ได้รับความ⁠เสีย⁠หายหรือสกิลใด ๆ จากศัตรูตัวอื่นที่ไม่ใช่เป้าหมายของเธอ",

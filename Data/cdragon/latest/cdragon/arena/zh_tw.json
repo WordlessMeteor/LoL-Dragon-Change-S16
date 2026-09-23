@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,7 +3398,7 @@
                     3.0
                 ]
             },
-            "desc": "獲得召喚師技能「<spellName>欺詐魔術</spellName>」。<br><br><spellName>欺詐魔術</spellName>：傳送並進入<keywordStealth>隱形</keywordStealth>狀態。<keywordStealth>隱形</keywordStealth>期間，下一次普攻造成額外<physicalDamage>物理傷害</physicalDamage>。<br><br>死亡時生成一個會爆炸的盒子，對鄰近敵軍造成大量<magicDamage>魔法傷害</magicDamage>及<status>恐懼效果</status>。",
+            "desc": "獲得召喚師技能<spellName>欺詐魔術</spellName>。<br><br><spellName>欺詐魔術</spellName>：傳送並進入<keywordStealth>隱形</keywordStealth>狀態。<keywordStealth>隱形</keywordStealth>期間，下一次普攻造成額外<physicalDamage>物理傷害</physicalDamage>。<br><br>死亡時生成一個會爆炸的盒子，對鄰近敵軍造成大量<magicDamage>魔法傷害</magicDamage>及<status>恐懼效果</status>。",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
@@ -7460,13 +7460,13 @@
                     1.0
                 ],
                 "HealPowerToDamageConversion": [
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5
                 ],
                 "HealPowerToDamageTooltip": [
                     350.0,
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -10914,13 +10914,13 @@
             "calculations": {},
             "dataValues": {
                 "LargeBonusDamage": [
+                    0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
-                    0.44999998807907104,
-                    0.5
+                    0.44999998807907104
                 ],
                 "MaxLevel": [
                     3.0,
@@ -10932,13 +10932,13 @@
                     3.0
                 ],
                 "MedBonusDamage": [
+                    0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
-                    0.3499999940395355,
-                    0.4000000059604645
+                    0.3499999940395355
                 ],
                 "MovespeedMod": [
                     0.25,
@@ -10959,22 +10959,22 @@
                     0.30000001192092896
                 ],
                 "SmallBonusDamage": [
+                    0.0,
                     0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
-                    0.30000001192092896,
-                    0.3499999940395355
+                    0.30000001192092896
                 ],
                 "XLargeBonusDamage": [
+                    0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
                     0.44999998807907104,
-                    0.5,
-                    0.550000011920929
+                    0.5
                 ]
             },
             "desc": "體型變小，增加<speed>跑速</speed>，並根據目標英雄與你的體型差距造成額外傷害。",

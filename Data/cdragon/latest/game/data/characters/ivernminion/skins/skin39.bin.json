@@ -101,6 +101,16 @@
         "name": "Characters/IvernMinion/Skins/Skin39/Materials/Reed_FlowMap_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/shared/particles/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -122,6 +132,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -330,6 +404,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -595,6 +679,16 @@
         "name": "Characters/IvernMinion/Skins/Skin39/Materials/Foam_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/shared/materials/velvet_nrm_pyke.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -616,6 +710,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -867,6 +1025,16 @@
         ],
         "switches": [
             {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -1063,14 +1231,14 @@
             "{32c5c6b1}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_W_BrushChild",
             "{419136bd}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_R_SmallMisChild02",
             "{6042b9e7}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Groun08",
-            "{3c4ac3a2}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Cloud",
+            "Ivern_Z_Cloud": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Cloud",
             "{220804d0}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Rain08",
-            "{d5f82fc5}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Sun",
+            "Ivern_Z_Sun": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Sun",
             "{aecbc50c}": "Characters/Ivern/Skins/Skin39/Particles/Ivern_Skin39_Z_Bubble08",
             "{040fcc0a}": "Characters/Ivern/Skins/Skin39/Particles/Ivern_Skin39_Z_WaterGround",
             "{cbe605e9}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_BodyDrip",
             "{85e85c5f}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_WaterSlap",
-            "{d365cdea}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Sing",
+            "Ivern_Z_Sing": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_Sing",
             "{d56524ba}": "Characters/Ivern/Skins/Skin39/Particles/Ivern_Skin39_Idle_MinionWaterfall01",
             "Ivern_Idle_Cloud": "Characters/Ivern/Skins/Skin39/Particles/Ivern_Skin39_Idle_Cloud",
             "{9ab59856}": "Characters/Ivern/Skins/Skin31/Particles/Ivern_Skin31_Z_WaterSlapSmall",

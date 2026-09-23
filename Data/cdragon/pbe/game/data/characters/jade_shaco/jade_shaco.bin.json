@@ -906,7 +906,7 @@
         },
         "__type": "SpellObject"
     },
-    "{244d7ae4}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility": {
         "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive",
         "mChildSpells": [
             "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility/Jade_ShacoPassive"
@@ -1294,7 +1294,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{280af5cc}",
+                            "mDataValue": "CloneIncomingDamagePercent",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -2796,7 +2796,7 @@
             "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility",
             "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility",
             "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility",
-            "{244d7ae4}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoPassiveAbility",
             "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility"
         ],
         "passiveName": "",
@@ -2968,42 +2968,6 @@
                 "__type": "RootScriptSequence"
             },
             "{d576330f}": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "444cb709-1347-493a-911d-227bb5ddbe91",
-                        "Condition": null,
-                        "Invert": true,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "1d539b86-64fb-4e22-a983-47dfda10973f",
-                                    "Condition": null,
-                                    "Invert": true,
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "IsDisabled": true,
-                                                "{d851ffa3}": "8f493f3c-41bb-4e48-8322-5236b9d3dc1e",
-                                                "Formula": "ptp.DamageAmount * 1.2",
-                                                "Dest": {
-                                                    "Var": "DamageAmount",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "{15ebaa9c}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
                 "__type": "RootScriptSequence"
             },
             "{b3ccfba0}": {
@@ -3013,7 +2977,6 @@
                         "Condition": null,
                         "Sequence": {
                             "blocks": [
-                                null,
                                 null,
                                 null,
                                 {
@@ -3328,28 +3291,6 @@
                                         "__type": "ScriptSequence"
                                     },
                                     "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "feb32146-a581-4c49-89c7-6dd22afbd778",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{822e38a2}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Value2": {
-                                            "value": "Jade_ShacoHallucinateFull",
-                                            "__type": "StringGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
                                 }
                             ],
                             "__type": "ScriptSequence"
@@ -3361,132 +3302,6 @@
             },
             "{419e53ac}": {
                 "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "e92f0b7f-2eb1-4846-b3d8-6f8771c8fdf6",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{f92c5c91}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 3,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "4b041cb6-cbe9-4853-bbde-7d4c48d32009",
-                                    "Formula": "ptp.GameTime - cv.ShacoCastingRTime",
-                                    "Dest": {
-                                        "Var": "DeltaTime",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "{15ebaa9c}"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "990955a1-8d10-42ed-a184-8b3dda1e93f0",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{9d2c8a58}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Operation": 4,
-                                        "Value2": {
-                                            "value": 0.30000001192092896,
-                                            "__type": "FloatGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            null,
-                                            {
-                                                "IsDisabled": true,
-                                                "{d851ffa3}": "1ad36316-ed52-4d4f-89a0-072e158501fb",
-                                                "Condition": {
-                                                    "Value1": {
-                                                        "Var": "{822e38a2}",
-                                                        "__type": "ScriptTableGet"
-                                                    },
-                                                    "Value2": {
-                                                        "value": "Jade_ShacoHallucinateFull",
-                                                        "__type": "StringGet"
-                                                    },
-                                                    "__type": "ComparisonScriptCondition"
-                                                },
-                                                "Sequence": {
-                                                    "blocks": [
-                                                        {
-                                                            "IsDisabled": true,
-                                                            "{d851ffa3}": "31f1485a-99be-48d4-bf18-de913c4e4810",
-                                                            "Sequence": {
-                                                                "blocks": [
-                                                                    null,
-                                                                    {
-                                                                        "IsDisabled": true,
-                                                                        "{d851ffa3}": "af4cfe70-f742-48f4-b67b-7bfcc0f695bc",
-                                                                        "Condition": null,
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "IsDisabled": true,
-                                                                                    "{d851ffa3}": "1a1d0b56-def3-44d6-8035-e6cb8893bae3",
-                                                                                    "Condition": null,
-                                                                                    "Sequence": {
-                                                                                        "blocks": [
-                                                                                            null,
-                                                                                            {
-                                                                                                "IsDisabled": true,
-                                                                                                "{d851ffa3}": "e630423f-e17f-4c18-9f41-dbb0c4d1da3b",
-                                                                                                "Src": {
-                                                                                                    "Var": "{bf23cb82}",
-                                                                                                    "__type": "ScriptTableGet"
-                                                                                                },
-                                                                                                "Dest": {
-                                                                                                    "Table": {
-                                                                                                        "__type": "CharacterVars"
-                                                                                                    },
-                                                                                                    "Var": "ShacoBufferedCloneOrderTargetPos",
-                                                                                                    "__type": "ScriptTableSet"
-                                                                                                },
-                                                                                                "__type": "SetVarInTableBlock"
-                                                                                            }
-                                                                                        ],
-                                                                                        "__type": "ScriptSequence"
-                                                                                    },
-                                                                                    "__type": "{e524b2fc}"
-                                                                                }
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    }
-                                                                ],
-                                                                "__type": "ScriptSequence"
-                                                            },
-                                                            "__type": "ScriptCommentBlock"
-                                                        }
-                                                    ],
-                                                    "__type": "ScriptSequence"
-                                                },
-                                                "__type": "{e524b2fc}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
                     null,
                     {
                         "{d851ffa3}": "69393188-da42-4262-9d4c-27519f43b4af",

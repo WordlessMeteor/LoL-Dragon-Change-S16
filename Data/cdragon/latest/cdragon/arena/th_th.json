@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3404,7 +3404,7 @@
             "id": 310,
             "name": "Clown College",
             "rarity": 2,
-            "tooltip": "<spellName>Backstab</spellName>: สร้าง<physicalDamage>โบนัสความเสียหายกายภาพ</physicalDamage> @BasicAttackDamage@ หน่วยเมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: วาร์ปตัวเองและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที จากนั้นการโจมตีครั้งถัดไปขณะ<keywordStealth>ล่องหน</keywordStealth> จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลสร้างความเสียหาย @QCritDamageMod@ <br><br><spellName>Hallucinate: Death</spellName>: สร้าง<magicDamage>ความเสียหายเวท @FearDamage*100@% จากพลังชีวิตสูงสุด</magicDamage>เมื่อถูกสังหาร และทำให้ศัตรูรอบตัวหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
+            "tooltip": "<spellName>Backstab</spellName>: สร้าง<physicalDamage>โบนัสความเสียหายกายภาพ</physicalDamage> @BasicAttackDamage@ หน่วยเมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: วาร์ปตัวเองและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที จากนั้นการโจมตีครั้งถัดไปขณะ<keywordStealth>ล่องหน</keywordStealth>จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลเป็นความเสียหาย @QCritDamageMod@<br><br><spellName>Hallucinate: Death</spellName>: สร้าง<magicDamage>ความเสียหายเวท @FearDamage*100@% จากพลังชีวิตสูงสุด</magicDamage>เมื่อถูกสังหาร และทำให้ศัตรูรอบตัวหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้ <keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้",
+            "desc": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้<keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "Ally Hunter",
             "rarity": 4,
-            "tooltip": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้ <keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้"
+            "tooltip": "โหวตให้ทีมของคุณเป็นพันธมิตรกับนักล่าปีศาจ <br><br>การเป็นพันธมิตรกับนักล่าปีศาจจะมอบ<gold>โบนัส +@BonusGold@ ทอง %i:goldCoins%</gold> ให้<keywordMajor>เมื่อเอาชนะทีมปีศาจ</keywordMajor>ได้"
         },
         {
             "apiName": "AugmentedPower",
@@ -7460,13 +7460,13 @@
                     1.0
                 ],
                 "HealPowerToDamageConversion": [
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5
                 ],
                 "HealPowerToDamageTooltip": [
                     350.0,
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -9097,13 +9097,13 @@
                     40.0
                 ]
             },
-            "desc": "การสร้างความเสียหายแก่แชมเปี้ยนศัตรู จะลด<shield>โล่ป้องกัน</shield>ของพวกเขา",
+            "desc": "การสร้างความเสียหายให้กับแชมเปี้ยนศัตรูจะลด<shield>โล่ป้องกัน</shield>ของพวกเขา",
             "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
             "id": 392,
             "name": "Swindler's Orb",
             "rarity": 4,
-            "tooltip": "การสร้างความเสียหายแก่แชมเปี้ยนศัตรูจะลด<shield>โล่ป้องกัน</shield>ที่พวกเขาได้รับ @ShieldShred@% เป็นเวลา @DebuffDuration@ วินาที<br><br><rules>มีผลกับโล่ป้องกันทั่วไปและโล่ป้องกัน<physicalDamage>ความเสียหายกายภาพ</physicalDamage> แต่ไม่มีผลกับโล่ป้องกัน<magicDamage>ความเสียหายเวท</magicDamage>ล้วน</rules>"
+            "tooltip": "การสร้างความเสียหายให้กับแชมเปี้ยนศัตรูจะลด<shield>โล่ป้องกัน</shield>ที่พวกเขามีหรือได้รับ @ShieldShred@% เป็นเวลา @DebuffDuration@ วินาที<br><br><rules>มีผลกับโล่ป้องกันทั่วไปและโล่ป้องกัน<physicalDamage>ความเสียหายกายภาพ</physicalDamage> แต่ไม่มีผลกับโล่ป้องกัน<magicDamage>ความเสียหายเวท</magicDamage>ล้วน</rules>"
         },
         {
             "apiName": "TankEngine",
@@ -10914,13 +10914,13 @@
             "calculations": {},
             "dataValues": {
                 "LargeBonusDamage": [
+                    0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
-                    0.44999998807907104,
-                    0.5
+                    0.44999998807907104
                 ],
                 "MaxLevel": [
                     3.0,
@@ -10932,13 +10932,13 @@
                     3.0
                 ],
                 "MedBonusDamage": [
+                    0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
-                    0.3499999940395355,
-                    0.4000000059604645
+                    0.3499999940395355
                 ],
                 "MovespeedMod": [
                     0.25,
@@ -10959,22 +10959,22 @@
                     0.30000001192092896
                 ],
                 "SmallBonusDamage": [
+                    0.0,
                     0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
-                    0.30000001192092896,
-                    0.3499999940395355
+                    0.30000001192092896
                 ],
                 "XLargeBonusDamage": [
+                    0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
                     0.44999998807907104,
-                    0.5,
-                    0.550000011920929
+                    0.5
                 ]
             },
             "desc": "กลายเป็นตัวจิ๋ว ได้รับ<speed>ความเร็วเคลื่อนที่</speed> และสร้างโบนัสความเสียหายให้กับแชมเปี้ยน ตามความต่างของขนาดตัว ระหว่างพวกเขากับคุณ",

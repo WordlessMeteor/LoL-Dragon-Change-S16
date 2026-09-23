@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "A vas nagykövete",
     "shortBio": "– A Hősi roham (E) varázserővel erősödik<br>– A passzív képesség, a Q, a W és az R teljesen megváltozott. Olvasd el a képességek leírását",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Derék harcos",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "A Poppyt érő összes olyan fizikai és varázssebzés, amely meghaladja aktuális életerejének 10%-át, 50%-kal csökken. A hatás nem csökkenti az építmények által okozott sebzést."
+        "description": "Csökken a Poppyt érő összes olyan sebzés, amely meghaladja aktuális életerejének bizonyos részét."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Pusztító ütés",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Poppy szétzúzza ellenfelét, a sebzésével, bónuszként egy fix értékkel, valamint ellenfele maximális életerejének 8%-ával egyenértékű sebzést okozva. A bónusz sebzés nem lépheti túl a szint által megszabott határértéket.",
-            "dynamicDescription": "Poppy következő támadása <magicDamage>@FlatDamageCalc@ + a maximális életerő @HealthRatio*100@%-ával egyenlő varázssebzést</magicDamage> okoz. Az életerővel arányos bónusz sebzés maximális összege @HealthDamageCap@ lehet.@SpellModifierDescriptionAppend@",
+            "description": "Poppy következő támadása szétzúzza az ellenfelét, és a célpont maximális életerejével arányos bónusz sebzést okoz.",
+            "dynamicDescription": "Poppy következő támadása <magicDamage>@FlatDamageCalc@ + a maximális életerő @HealthRatio*100@%-ának megfelelő varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Demacia eszménye",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Passzív: ha Poppy alaptámadással sebzést okoz vagy szenved el, 5 másodpercre megnő a páncélja és a sebzése. Ez a hatás 10-szer halmozódhat. Aktív: Poppy azonnal megkapja a maximális számú Demacia eszménye jelzőt, és a mozgási sebessége 5 másodpercre megnő.",
+            "description": "Passzív: ha alaptámadás éri Poppyt, vagy ha ő okoz sebzést az alaptámadásával, megnő a páncélja és a sebzése. Ez a hatás halmozható. Aktív: megkapja a maximális számú Demacia eszménye jelzőt, és megnő a mozgási sebessége.",
             "dynamicDescription": "<spellPassive>Passzív:</spellPassive> ha Poppy sebzést okoz vagy szenved el, @PassiveDuration@ másodpercig @BonusStats@ <scaleArmor>páncélra</scaleArmor> és <scaleAD>sebzésre</scaleAD> tesz szert. Ez a hatás @MaxStacks@ alkalommal halmozódhat.<br><br><spellActive>Aktív:</spellActive> Poppy azonnal megkapja a maximális számú Demacia eszménye jelzőt, és a mozgási sebessége @ActiveDuration@ másodpercre @Speed*100@%-kal megnő.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Hősi roham",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Poppy nekiront egy ellenfélnek, és magával sodorja. A kezdeti becsapódás kismértékű sebzést okoz, de ha a célpont a lökéssel falba vagy tereptárgyba ütközik, nagy mértékben sebződik és elkábul.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomáciai védettség",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Poppy elszántan, egyetlen ellenséges hősre összpontosít, és megnövelt sebzést okoz neki. Poppy immunis a célpontján kívüli ellenséges egységek minden sebzésére és képességére.",

@@ -4993,14 +4993,16 @@ body[data-locale=ja-JP] .parties-game-type-card-name {
 
 .parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
-.parties-game-type-card-category-div span.quick-play-text {
+.parties-game-type-card-category-div span.quick-play-text,
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text {
     font-family: var(--font-body)
 }
 
 .parties-game-type-card-category-btn,
 .parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
-.parties-game-type-card-category-div span.quick-play-text {
+.parties-game-type-card-category-div span.quick-play-text,
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -5030,6 +5032,27 @@ body[data-locale=ja-JP] .parties-game-type-card-name {
 
 .parties-game-type-card-category-btn:lang(ar-ae) {
     letter-spacing: 0
+}
+
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text {
+    color: #a09b8c;
+    font-size: 12px;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text:lang(ja-jp) {
+    font-size: 13px
+}
+
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text {
+    font-weight: 400;
+    letter-spacing: .05em
 }
 
 .parties-game-type-card-category-div .game-mode-description-text,
@@ -5119,6 +5142,19 @@ hr {
 
 .parties-game-type-card-category-div .queue-id-info {
     margin-left: 5px
+}
+
+.parties-game-type-card-category-div .parties-queue-countdown__icon {
+    align-self: center;
+    background: url(/fe/lol-static-assets/warning_icon_gold_circle.svg) 50%/contain no-repeat;
+    flex-shrink: 0;
+    height: 14px;
+    margin-inline-end: 5px;
+    width: 14px
+}
+
+.parties-game-type-card-category-div .parties-queue-countdown__icon--enabled {
+    background-image: url(/fe/lol-static-assets/clock-icon-gold4.svg)
 }
 
 .parties-game-type-card-category-div .solo-rewards-icon {
@@ -5211,6 +5247,16 @@ hr {
     height: 27px;
     margin-left: auto;
     width: 33px
+}
+
+lol-uikit-content-block.parties-queue-countdown__tooltip .parties-queue-countdown__text {
+    display: inline-block;
+    font-style: normal;
+    margin: 0;
+    text-align: start;
+    text-shadow: none;
+    text-transform: none;
+    white-space: nowrap
 }
 
 .parties-game-type-card-tft-unreal-btn {
@@ -11493,30 +11539,6 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voic
 
 .pass-progression-widget-wrapper {
     width: 100%
-}
-
-.v2-parties-invite-panel-kiwi-progression {
-    color: #c8aa6e;
-    font-family: var(--font-display);
-    font-weight: 700;
-    text-transform: uppercase
-}
-
-.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-milestone-rank {
-    font-size: 16px
-}
-
-.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-xp {
-    font-size: 14px
-}
-
-.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-button {
-    background-color: #c8aa6e;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 5px;
-    text-align: center
 }
 
 .v2-parties-invite-panel-tft-progression .progression-complete .progression-complete-title,

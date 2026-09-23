@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Ambasadoarea de fier",
     "shortBio": "- ''Avânt eroic'' (E) crește în funcție de puterea abilităților<br>- Pasiva, Q, W, R sunt complet diferite. Citește descrierile abilităților",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Războinic neînfricat",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Toate daunele fizice și magice provocate lui Poppy care depășesc 10% din viața ei actuală sunt reduse cu 50%. Efectul nu reduce daunele împotriva structurilor."
+        "description": "Daunele provocate lui Poppy care depășesc o parte din viața ei actuală sunt reduse."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Explozie devastatoare",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Poppy își strivește adversarul, provocând daune din atac plus o cantitate fixă și 8% din viața maximă a țintei ei drept daune bonus. Daunele bonus nu pot depăși un anumit prag, în funcție de nivel.",
-            "dynamicDescription": "Următorul atac al lui Poppy provoacă <magicDamage>daune magice în valoare de @FlatDamageCalc@ + @HealthRatio*100@% din viața maximă</magicDamage>. Daunele bonus în funcție de viață nu pot depăși @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Următorul atac al lui Poppy zdrobește adversarul, provocând daune bonus în funcție de viața maximă a țintei.",
+            "dynamicDescription": "Următorul atac al lui Poppy provoacă <magicDamage>daune magice în valoare de @FlatDamageCalc@ + @HealthRatio*100@% din viața maximă</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Perfecțiune demaciană",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Pasivă: când e lovită sau când provoacă daune printr-un atac de bază, armura și daunele lui Poppy cresc timp de 5 secunde. Acest efect se cumulează de 10 ori. Activă: Poppy câștigă număr maxim de cumuluri ale ''Perfecțiunii demaciene'' și viteza ei de mișcare crește timp de 5 secunde.",
+            "description": "Pasivă: când e lovită sau când provoacă daune printr-un atac de bază, armura și daunele lui Poppy cresc, efect ce se poate cumula. Activă: Poppy câștigă număr maxim de cumuluri ale ''Perfecțiunii demaciene'' și viteza ei de mișcare crește.",
             "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Poppy primește @BonusStats@ <scaleArmor>armură</scaleArmor> și <scaleAD>daune din atac</scaleAD> timp de @PassiveDuration@ secunde ori de câte ori provoacă sau suferă daune din atac. Efectul se poate cumula de @MaxStacks@ ori.<br><br><spellActive>Activă:</spellActive> Poppy câștigă număr maxim de cumuluri ale ''Perfecțiunii demaciene'' și viteza ei de mișcare crește cu @Speed*100@% timp de @ActiveDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Avânt eroic",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Poppy se năpustește spre un inamic și îl împinge mai departe. Impactul inițial provoacă puține daune, dar, dacă ținta ei se izbește de teren, va suferi daune mari și va fi amețită.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Imunitate diplomatică",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Poppy se concentrează intens pe un singur campion inamic, pentru a-i provoca daune sporite. Poppy e imună la orice daune și abilități din partea altor inamici în afară de ținta ei.",

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Фиора",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Бесподобный дуэлянт",
     "shortBio": "– Выпад [Q] – рывок с выбором цели, который можно применить повторно<br>– Парирование [W] дает силу атаки. Ответный удар не оглушает и не замедляет врагов<br>– Всплеск скорости [E] дает скорость передвижения при автоатаках, его длительность сбрасывается при убийстве<br>– Пассивное умение и [R] полностью переработаны. Почитайте описания",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Дуэлянт",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Нанося урон, Фиора постепенно восстанавливает здоровье. При нанесении урона чемпионам эффект суммируется несколько раз."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Выпад",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Фиора совершает рывок и делает выпад, нанося физ. урон цели. Рывок можно совершить повторно без затрат маны в течение пары секунд.",
-            "dynamicDescription": "Фиора совершает рывок и делает выпад, нанося цели <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>.<br><br>Умение можно <recast>применить повторно</recast> без затрат <scaleMana>маны</scaleMana> в течение 4 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Фиора делает выпад в указанном направлении, нанося пораженному врагу <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>.<br><br>Фиора может <recast>повторно применить</recast> умение в пределах @RecastWindow@ сек. без затрат <scaleMana>маны</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Парирование",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Сила атаки Фиоры повышена. В течение краткого срока Фиора парирует следующую автоатаку и отражает маг. урон в нападающего (действует против чемпионов, монстров и больших миньонов).",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <physicalDamage>сила атаки</physicalDamage> Фиоры выше на <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Активно:</spellActive> Фиора парирует следующую автоатаку, совершенную по ней в течение 1,5 сек., отражая <magicDamage>@ReflectionDamage@ ед. маг. урона</magicDamage> в нападающего. Действует против чемпионов, монстров и больших миньонов.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <physicalDamage>сила атаки</physicalDamage> Фиоры выше на <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Активно:</spellActive> в течение @ParryDuration@ сек. Фиора парирует следующую автоатаку, возвращая атакующему <magicDamage>@ReflectionDamage@ ед. маг. урона</magicDamage>. Действует против чемпионов, монстров и больших миньонов.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Всплеск скорости",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Фиора временно получает доп. скорость атаки. Каждая атака и Выпад во время действия этого умения дают ей скорость передвижения. Убийство чемпиона сбрасывает перезарядку этого умения.",
-            "dynamicDescription": "Фиора получает <attackSpeed>@ASBonus*100@% скорости атаки</attackSpeed> на 3 сек. Каждая атака и <spellName>Выпад</spellName> во время действия этого умения дают ей <speed>@MSBonus*100@% скорости передвижения</speed> на 3 сек. (суммируется до 3 р.).<br><br>Убийство чемпиона сбрасывает перезарядку этого умения. (Участие в убийстве сокращает перезарядку на @HalfCooldown@ сек.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Фиора получает <attackSpeed>@ASBonus*100@% скорости атаки</attackSpeed> на @BuffDuration@ сек. Каждая автоатака и <spellName>Выпад</spellName> во время действия этого умения дают ей <speed>@MSBonus*100@% скорости передвижения</speed> на @BuffDuration@ сек. (суммир. до @MaxStacks@ р.).<br><br>Убийство чемпиона сбрасывает перезарядку этого умения, содействие – сокращает на @HalfCooldown@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Вальс клинков",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Фиора мечется по полю боя, нанося физ. урон вражеским чемпионам. Последовательные удары по одной и той же цели наносят меньше урона.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

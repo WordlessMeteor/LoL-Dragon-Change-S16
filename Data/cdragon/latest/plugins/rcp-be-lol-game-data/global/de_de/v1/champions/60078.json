@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Die eiserne Botschafterin",
     "shortBio": "– „Heroischer Ansturm“ (E) skaliert mit Fähigkeitsstärke.<br>– Passiv, Q, W und R unterscheiden sich grundlegend. Lies dir die Fähigkeitsbeschreibungen durch",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Tapfere Kämpferin",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Normaler und magischer Schaden, der 10 % von Poppys aktuellem Leben übersteigt, wird um 50 % reduziert. Gilt nicht für den Schaden durch Gebäude."
+        "description": "Schaden, der Poppy zugefügt wird und einen Teil ihres aktuellen Lebens übersteigt, wird verringert."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Vernichtender Schlag",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Poppy zerschmettert ihren Gegner und verursacht dabei neben dem Angriffsschaden einen konstanten Wert plus zusätzlich 8 % des maximalen Lebens ihres Ziels als zusätzlichen Schaden. Der zusätzliche Schaden kann einen auf dem Rang basierenden Schwellenwert nicht überschreiten.",
-            "dynamicDescription": "Poppys nächster Angriff verursacht <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@ % des maximalen Lebens als magischen Schaden</magicDamage>. Der prozentuale zusätzliche Schaden abhängig vom Leben kann @HealthDamageCap@ nicht übersteigen.@SpellModifierDescriptionAppend@",
+            "description": "Poppys nächster Angriff zerschmettert ihren Gegner und verursacht zusätzlichen Schaden, der auf dem max. Leben ihres Ziels basiert.",
+            "dynamicDescription": "Poppys nächster Angriff verursacht <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@ % des maximalen Lebens als magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Tugend von Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Passiv: Erleidet Poppy Schaden durch einen normalen Angriff oder verursacht sie mit einem solchen Schaden, erhöhen sich ihr Schaden und ihre Rüstung 5 Sekunden lang. Dieser Effekt kann 10-mal gesteigert werden. Aktiv: Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und ihr Lauftempo erhöht sich 5 Sekunden lang.",
+            "description": "Passiv: Wenn Poppy durch einen normalen Angriff Schaden erleidet oder damit Schaden verursacht, werden ihre Rüstung und ihr Schaden erhöht. Dieser Effekt ist steigerbar. Aktiv: Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und erhöhtes Lauftempo.",
             "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Poppy erhält @PassiveDuration@ Sekunden lang @BonusStats@ <scaleArmor>Rüstung</scaleArmor> und <scaleAD>Angriffsschaden</scaleAD>, wenn sie Angriffsschaden verursacht oder erleidet. Dieser Effekt kann @MaxStacks@-mal gesteigert werden.<br><br><spellActive>Aktiv:</spellActive> Poppy erhält die maximale Anzahl an Steigerungen von „Tugend von Demacia“ und ihr Lauftempo wird @ActiveDuration@ Sekunden lang um @Speed*100@ % erhöht.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Heroischer Ansturm",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Poppy stürmt auf einen Gegner zu und drängt ihn weiter. Der ursprüngliche Aufprall verursacht wenig Schaden, aber kollidieren beide mit der Umgebung, erleidet das Ziel sehr viel Schaden und wird betäubt.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomatische Immunität",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Poppy fokussiert sich aufmerksam auf einen einzelnen gegnerischen Champion und verursacht erhöhten Schaden an diesem. Poppy ist immun gegen jeden Schaden und Fähigkeiten, die nicht von ihrem Ziel gewirkt werden.",

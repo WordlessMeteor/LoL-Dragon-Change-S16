@@ -1123,13 +1123,13 @@
             "mSpellCalculations": {
                 "{2afc05a4}": {
                     "mMultiplier": {
-                        "mDataValue": "{96692a65}",
+                        "mDataValue": "AllyShareRatio",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{e6e6e0ea}",
+                            "mDataValue": "ActiveAD",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -1137,7 +1137,7 @@
                 },
                 "{a2a00bc1}": {
                     "mMultiplier": {
-                        "mDataValue": "{96692a65}",
+                        "mDataValue": "AllyShareRatio",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -2359,7 +2359,6 @@
                     null,
                     null,
                     null,
-                    null,
                     {
                         "{d851ffa3}": "be7a2ab1-ee2a-4a9d-9302-751660a29c00",
                         "Condition": {
@@ -2443,49 +2442,6 @@
             "{eb530788}": {
                 "blocks": [
                     null,
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "82e0930f-806e-4d11-89d8-b3fea8711613",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "Level",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Operation": 2,
-                            "Value2": {
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "99f46053-7839-4e1f-a94b-657c81db5c0e",
-                                    "Condition": null,
-                                    "Invert": true,
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "IsDisabled": true,
-                                                "{d851ffa3}": "e31910fe-4dfd-4697-a940-10263b2eabcc",
-                                                "Var": {
-                                                    "Var": "Attacker",
-                                                    "__type": "{622705af}"
-                                                },
-                                                "__type": "{851b8dc5}"
-                                            },
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
                     null,
                     {
                         "{d851ffa3}": "16df19b1-a547-49b7-be67-ed393b1785ed",

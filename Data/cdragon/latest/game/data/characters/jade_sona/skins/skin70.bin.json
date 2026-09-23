@@ -1,6 +1,7 @@
 {
     "Characters/Jade_Sona/Skins/Skin70": {
         "skinClassification": 2,
+        "championSkinId": 60037070,
         "championSkinName": "Jade_SonaSkin70",
         "skinParent": 66,
         "metaDataTags": "faction:demacia,gender:female,race:human,skinline:spiritblossomsprings",
@@ -5470,6 +5471,16 @@
         "name": "Characters/Jade_Sona/Skins/Skin70/Materials/Leaves_Flow",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/jade_sona/skins/skin66/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -5491,6 +5502,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -5699,6 +5774,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -10393,7 +10478,7 @@
             "{4a6af716}": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_W_ZoneSelfChild",
             "Jade_Sona_Idle_Strings": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Idle_Strings",
             "{c2088884}": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_R_MissileChild",
-            "{4fe0adec}": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Z_Ground",
+            "Jade_Sona_Z_Ground": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Z_Ground",
             "Jade_Sona_Idle_Cloud": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Idle_Cloud",
             "{d7b558d9}": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Z_WaterSmall01",
             "{aac779df}": "Characters/Jade_Sona/Skins/Skin66/Particles/Jade_Sona_Skin66_Z_WaterBig",

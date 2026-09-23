@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "La magnifica duellante",
     "shortBio": "- Attacco repentino (Q) è uno scatto mirato con un rilancio<br>- Contrattacco (W) fornisce attacco fisico passivo, il colpo non applica stordimento né rallentamento<br>- Aumento di velocità (E) conferisce velocità di movimento sull'attacco e si ricarica con un'uccisione<br>- Passiva e R sono completamente diverse Leggi le descrizioni delle abilità",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duellante",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora rigenera salute nel tempo quando infligge danni. Colpire i campioni farà accumulare questo effetto più volte."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Attacco repentino",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Fiora scatta in avanti per colpire il suo bersaglio, infliggendo danni fisici. Fiora può eseguire lo scatto una seconda volta entro pochi secondi senza spendere mana",
-            "dynamicDescription": "Fiora scatta in avanti per colpire il suo bersaglio, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>.<br><br>Fiora può <recast>rilanciare</recast> questa abilità per scattare una seconda volta entro 4 secondi senza alcun costo in <scaleMana>mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora scatta in avanti per colpire il proprio bersaglio, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>.<br><br>Fiora può <recast>rilanciare</recast> questa abilità per eseguire uno scatto entro @RecastWindow@ secondo/i senza alcun costo in <scaleMana>mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Contrattacco",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "L'attacco fisico di Fiora è aumentato. All'attivazione, Fiora para il prossimo attacco base e riflette danni magici all'attaccante. Funziona contro campioni, mostri e minion grandi.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>l'<physicalDamage>attacco fisico</physicalDamage> di Fiora è aumentato di <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Attiva: </spellActive>Fiora para il prossimo attacco base entro 1,5 secondi e riflette <magicDamage>@ReflectionDamage@ danni magici</magicDamage> all'attaccante. Funziona contro campioni, mostri e minion grandi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>l'<physicalDamage>attacco fisico</physicalDamage> di Fiora aumenta di <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Attiva: </spellActive>Fiora para il primo attacco che riceve entro @ParryDuration@ secondo/i e riflette <magicDamage>@ReflectionDamage@ danni magici</magicDamage> all'attaccante. Funziona contro campioni, mostri e minion grandi.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Aumento di velocità",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Fiora ottiene temporaneamente velocità d'attacco aggiuntiva. Ogni attacco base o Attacco repentino che mette a segno durante questo periodo aumenta la sua velocità di movimento. Uccidere un campione azzera il tempo di ricarica di questa abilità.",
-            "dynamicDescription": "Fiora ottiene un <attackSpeed>@ASBonus*100@% di velocità d'attacco</attackSpeed> in più per 3 secondi. Ogni attacco base o <spellName>Attacco repentino</spellName> che mette a segno durante questo periodo aumenta di un <speed>@MSBonus*100@% la sua velocità di movimento</speed> per 3 secondi, accumulandosi fino a 3 volte.<br><br>Uccidere un campione azzera il tempo di ricarica di questa abilità. (Gli assist riducono il tempo di ricarica di @HalfCooldown@ secondo/i)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora ottiene <attackSpeed>@ASBonus*100@% velocità d'attacco</attackSpeed> per @BuffDuration@ secondo/i. Ogni attacco o <spellName>Attacco repentino</spellName> che mette a segno durante questo periodo le fornisce <speed>@MSBonus*100@% velocità di movimento</speed> per @BuffDuration@ secondo/i, che si accumula fino a @MaxStacks@ volte.<br><br>Uccidere un campione azzera il tempo di ricarica di questa abilità. (Gli assist riducono il tempo di ricarica di @HalfCooldown@ secondo/i)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Valzer delle lame",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Fiora scatta sul campo di battaglia per infliggere danni fisici ai campioni nemici. I colpi consecutivi contro lo stesso bersaglio infliggono meno danni.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

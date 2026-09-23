@@ -8000,7 +8000,7 @@
     {
         "id": 3866,
         "name": "Runiczny Kompas",
-        "description": "<mainText><stats><attention> 100 pkt.</attention> zdrowia<br><attention> 50%</attention> podstawowej regeneracji zdrowia<br><attention> 50%</attention> podstawowej regeneracji many<br><attention> 5 szt.</attention> złota co 10 sek.</stats><br><br><passive>Zadanie wspierających:</passive><br>Zdobądź <keywordMajor>0</keywordMajor> szt. złota przy użyciu tego przedmiotu, by przemienić go w <rarityGeneric>Bogactwo Światów</rarityGeneric>. <br><br><passive>Wspólne Bogactwo</passive>  (0 sek., maksymalna liczba ładunków: 0)<br>Gdy jesteś w pobliżu sojuszniczego bohatera, zyskujesz złoto za zadawanie bohaterom obrażeń lub zabijanie stworów. <active>Użycie</active> (ładunki: 3)<br>Umieszczasz <keyword>niewidzialny</keyword> Totem Ukrycia, który zapewnia wizję.</mainText>",
+        "description": "<mainText><stats><attention> 60 pkt.</attention> zdrowia<br><attention> 75%</attention> podstawowej regeneracji zdrowia<br><attention> 50%</attention> podstawowej regeneracji many<br><attention> 5 szt.</attention> złota co 10 sek.</stats><br><br><passive>Zadanie wspierających:</passive><br>Zdobądź <keywordMajor>0</keywordMajor> szt. złota przy użyciu tego przedmiotu, by przemienić go w <rarityGeneric>Bogactwo Światów</rarityGeneric>. <br><br><passive>Wspólne Bogactwo</passive>  (0 sek., maksymalna liczba ładunków: 0)<br>Gdy jesteś w pobliżu sojuszniczego bohatera, zyskujesz złoto za zadawanie bohaterom obrażeń lub zabijanie stworów. <active>Użycie</active> (ładunki: 3)<br>Umieszczasz <keyword>niewidzialny</keyword> Totem Ukrycia, który zapewnia wizję.</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "Księżycowe Czaroostrze",
+        "description": "<mainText><stats><attention> 50 pkt.</attention> mocy umiejętności<br><attention> 50 pkt.</attention> pancerza<br><attention> 50 pkt.</attention> odporności na magię</stats><br><br><jadeUnique>Nieustępliwość:</jadeUnique> Skraca czas działania <status>ogłuszeń, spowolnień, prowokacji, przestraszeń, uciszeń, oślepień</status> oraz <status>unieruchomień</status> o <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "Płaszcz i Sztylet",
+        "description": "<mainText><stats><attention> 20%</attention> prędkości ataku<br><attention> 20%</attention> szansy na trafienie krytyczne</stats><br><br><jadeUnique>Nieustępliwość:</jadeUnique> Skraca czas działania <status>ogłuszeń, spowolnień, prowokacji, przestraszeń, uciszeń, oślepień</status> oraz <status>unieruchomień</status> o <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "Morellonomicon",
         "description": "<mainText><stats><attention> 75 pkt.</attention> mocy umiejętności<br><attention> 12</attention> pkt. regeneracji many / 5 sek.<br><attention> 20%</attention> skrócenia czasu odnowienia</stats><br><br><jadeUnique>Nienawiść Morello:</jadeUnique> Zadanie obrażeń magicznych wrogim bohaterom, których poziom zdrowia jest niższy niż <scaleHealth>40%</scaleHealth>, nakłada na nich <status>Głębokie Rany</status> na 4 sek.<br><br><jadeRules>(<status>Głębokie Rany</status> zmniejszają działanie efektów leczenia i regeneracji o 50%).</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "Portal Zz'Rot",
-        "description": "<mainText><stats><attention> 50 pkt.</attention> pancerza<br><attention> 50 pkt.</attention> odporności na magię<br><attention> 5</attention> pkt. regeneracji zdrowia / 5 sek.</stats><br><br><jadeUnique>Szybkonogi:</jadeUnique> Zapewnia <speed>+30% dodatkowej prędkości ruchu</speed>, która narasta przez 2 sek., gdy znajdujesz się w pobliżu wież lub Bram Pustki. <jadeUnique>Użycie</jadeUnique>  150 sek.<br>Tworzy w wybranym miejscu bramę na 150 sek. (Bramy nie można umieścić w pobliżu wież). Co 4 sek. z bramy wychodzi niestabilny <keywordMajor>Pomiot Pustki</keywordMajor>, który zaczyna wędrować najbliższą aleją.<br><br>Po 4 sek. zdrowie <keywordMajor>Pomiotu Pustki</keywordMajor> zacznie gwałtownie spadać do 0. Czwarty i każdy kolejny <keywordMajor>Pomiot Pustki</keywordMajor> będą zadawać dodatkowe obrażenia równe 50% twojego pancerza i odporności na magię.</mainText>",
+        "description": "<mainText><stats><attention> 50 pkt.</attention> pancerza<br><attention> 50 pkt.</attention> odporności na magię<br><attention> 5</attention> pkt. regeneracji zdrowia / 5 sek.</stats><br><br><jadeUnique>Szybkonogi:</jadeUnique> Przebywanie w pobliżu wież lub <keywordMajor>Bram Pustki</keywordMajor> zapewnia do <speed>30% prędkości ruchu</speed>, kumulującej się w ciągu 2 sek. <jadeUnique>Użycie</jadeUnique>  150 sek.<br>Tworzy <keywordMajor>Bramę Pustki</keywordMajor> w wybranym miejscu na 150 sek. Co 4 sek. z bramy wychodzi niestabilny <keywordMajor>Pomiot Pustki</keywordMajor>, który zaczyna wędrować najbliższą aleją.</mainText>",
         "active": true,
         "inStore": true,
         "from": [

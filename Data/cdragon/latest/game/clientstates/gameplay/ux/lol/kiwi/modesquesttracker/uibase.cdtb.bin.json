@@ -18,7 +18,7 @@
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX",
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup",
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCount",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup",
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIconFrame",
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIcon",
             "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestHitArea",
@@ -331,6 +331,46 @@
         },
         "__type": "UiElementIconData"
     },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "{e13c4b8e}": true,
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup/ModesQuestCompletedOverlay"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup/ModesQuestCompletedOverlay": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/CompletedGroup/ModesQuestCompletedOverlay",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.0
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "assets/ux/kiwi/questcomplete_check.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
@@ -415,37 +455,6 @@
         },
         "TextureData": {
             "TextureName": "assets/ux/kiwi/augmentsets/tooltipaugmentframe_hover.png",
-            "__type": "LooseUiTextureData"
-        },
-        "__type": "UiElementIconData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
-        "Layer": 8,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    -27.0,
-                    -28.0
-                ],
-                "Size": [
-                    50.0,
-                    50.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "{0be0de52}": 1,
-                "{0ce0dfe5}": 1,
-                "__type": "{f090d2e7}"
-            },
-            "__type": "UiPositionRect"
-        },
-        "TextureData": {
-            "TextureName": "assets/ux/kiwi/questcomplete_check.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementIconData"

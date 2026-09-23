@@ -219,11 +219,60 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
-                    "AnySubmesh": false,
-                    "Submeshes": [
-                        "Ball"
+                    "mDrivers": [
+                        {
+                            "AnySubmesh": false,
+                            "Submeshes": [
+                                "Ball"
+                            ],
+                            "__type": "SubmeshVisibilityBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mDrivers": [
+                                    {
+                                        "Spell": "Shared/Spells/ZhonyasRingShield",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mDrivers": [
+                                            {
+                                                "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "mDriver": {
+                                                    "Spell": "Characters/Senna/Spells/SennaECamo",
+                                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                },
+                                                "__type": "NotMaterialDriver"
+                                            }
+                                        ],
+                                        "__type": "AllTrueMaterialDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mScriptName": "LissandraPassiveVictim",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    }
+                                ],
+                                "__type": "OneTrueMaterialDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
                     ],
-                    "__type": "SubmeshVisibilityBoolDriver"
+                    "__type": "AllTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {

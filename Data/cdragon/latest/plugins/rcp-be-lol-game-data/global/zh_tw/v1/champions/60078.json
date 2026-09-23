@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "波比",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "鋼鐵使者",
     "shortBio": "-「英勇衝鋒」(E)會獲得魔攻加成<br>- 被動、Q、W、R與當前版本完全不同。查看技能說明",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "勇者無畏",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "波比受到的物理、魔法傷害，只要超過她當前生命的10%，其傷害便減少50%。不會減少來自防禦塔的傷害。"
+        "description": "波比受到傷害時，超過她當前生命一定比例的部分會減少。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "毀滅重擊",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "波比粉碎對手，造成物攻加固定數值的傷害，並額外造成目標8%最大生命的額外傷害。額外傷害無法超過取決於等級的上限。",
-            "dynamicDescription": "波比的下一次普攻會造成<magicDamage>@FlatDamageCalc@ + @HealthRatio*100@%最大生命的魔法傷害</magicDamage>。百分比生命的額外傷害不會超過@HealthDamageCap@。@SpellModifierDescriptionAppend@",
+            "description": "波比的下一次普攻會重擊對手，根據目標最大生命造成額外傷害。",
+            "dynamicDescription": "波比的下一次普攻會造成<magicDamage>@FlatDamageCalc@ + @HealthRatio*100@%最大生命的魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "蒂瑪西亞楷模",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "被動：波比受到普攻傷害或造成普攻傷害時，她的物防和傷害會提升，持續5秒。此效果可累加10層。主動：波比獲得蒂瑪西亞楷模的最大層數，且跑速提升，持續5秒。",
+            "description": "被動：波比受到或造成普攻傷害時，她的物防和物攻會提升，效果可累加。主動：波比獲得蒂瑪西亞光輝的最大層數並提升跑速。",
             "dynamicDescription": "<spellPassive>被動：</spellPassive>波比造成或受到物理傷害時，獲得@BonusStats@<scaleArmor>物防</scaleArmor>和<scaleAD>物攻</scaleAD>，持續@PassiveDuration@秒。此效果可累加@MaxStacks@層。<br><br><spellActive>主動：</spellActive>波比獲得蒂瑪西亞楷模的最大層數，且跑速提升@Speed*100@%，持續@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "英勇衝鋒",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "波比衝向敵軍並將其推向遠方。初次衝擊會造成少量傷害，如果該目標撞到地形，將會受到大量傷害並被暈眩。",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "外交豁免",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "波比專注鎖定一名敵方英雄，對其造成更高的傷害。波比不會受到目標以外敵軍的任何傷害和技能影響。",

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "The Iron Ambassador",
     "shortBio": "- Heroic Charge (E) menggunakan scaling ability power<br>- Pasif, Q, W, R benar-benar berbeda. Baca deskripsi ability",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Valiant Fighter",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Semua physical damage dan magic damage yang diterima Poppy melebihi 10% dari health-nya saat ini akan berkurang sebesar 50%. Efek ini tidak mengurangi damage dari bangunan."
+        "description": "Damage yang diterima Poppy yang melebihi sebagian health saat ini akan dikurangi."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Devastating Blow",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Poppy menghancurkan lawan, menghasilkan attack damage ditambah sejumlah flat damage dan 8% dari health maksimum targetnya sebagai damage bonus. Damage bonus tidak bisa melebihi batas tertentu berdasarkan rank.",
-            "dynamicDescription": "Serangan Poppy berikutnya menghasilkan <magicDamage>@FlatDamageCalc@ + magic damage sebesar @HealthRatio*100@% dari Health maksimum</magicDamage>. Damage bonus dari persentase health tidak bisa melebihi @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Serangan Poppy berikutnya menghancurkan lawannya, menghasilkan damage bonus berdasarkan health maksimum targetnya.",
+            "dynamicDescription": "Serangan Poppy berikutnya menghasilkan <magicDamage>@FlatDamageCalc@ + magic damage sebesar @HealthRatio*100@% dari Health maksimum</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Paragon of Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Pasif: Saat menerima atau menghasilkan damage dari basic attack, armor dan damage Poppy meningkat selama 5 detik. Efek ini bisa stack hingga 10 kali. Aktif: Poppy mendapatkan stack maksimum Paragon of Demacia dan movement speed miliknya meningkat selama 5 detik.",
+            "description": "Pasif: Saat menerima damage dari atau menghasilkan damage dengan basic attack, armor dan damage Poppy meningkat, dan efek ini bisa di-stack. Aktif: Poppy mendapatkan stack maksimum Paragon of Demacia dan movement speed yang meningkat.",
             "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy mendapatkan @BonusStats@ <scaleArmor>Armor</scaleArmor> dan <scaleAD>Attack Damage</scaleAD> selama @PassiveDuration@ detik setiap kali dia menghasilkan atau menerima Attack damage. Efek ini bisa stack @MaxStacks@ kali.<br><br><spellActive>Aktif:</spellActive> Poppy mendapatkan stack maksimum Paragon of Demacia dan movement speed miliknya meningkat sebesar @Speed*100@% selama @ActiveDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Heroic Charge",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Poppy menerjang musuh dan membawanya lebih jauh. Benturan awal menghasilkan sedikit damage. Jika target bertabrakan dengan medan, mereka akan menerima damage tinggi dan terkena stun.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomatic Immunity",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Poppy memusatkan fokus pada satu champion musuh, menghasilkan damage yang meningkat kepada target tersebut. Poppy kebal terhadap semua damage dan ability dari musuh selain targetnya.",

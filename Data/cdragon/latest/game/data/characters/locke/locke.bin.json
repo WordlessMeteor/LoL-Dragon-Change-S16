@@ -368,18 +368,6 @@
         ],
         "ChaosJunglePath": [
             {
-                "Camp": 7,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 6,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 8,
-                "__type": "TakeCamp"
-            },
-            {
                 "Camp": 9,
                 "__type": "TakeCamp"
             },
@@ -1590,6 +1578,19 @@
                                 50.0,
                                 50.0,
                                 50.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "ExecuteThresholdPerStack",
+                            "values": [
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -3423,52 +3424,52 @@
                         {
                             "name": "MinOnHitStartValue",
                             "values": [
-                                7.5,
-                                7.5,
-                                7.5,
-                                7.5,
-                                7.5,
-                                7.5,
-                                7.5
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0
                             ],
                             "__type": "SpellDataValue"
                         },
                         {
                             "name": "MinOnHitEndValue",
                             "values": [
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
                             ],
                             "__type": "SpellDataValue"
                         },
                         {
                             "name": "MaxOnHitStartValue",
                             "values": [
-                                15.0,
-                                15.0,
-                                15.0,
-                                15.0,
-                                15.0,
-                                15.0,
-                                15.0
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0,
+                                20.0
                             ],
                             "__type": "SpellDataValue"
                         },
                         {
                             "name": "MaxOnHitEndValue",
                             "values": [
-                                120.0,
-                                120.0,
-                                120.0,
-                                120.0,
-                                120.0,
-                                120.0,
-                                120.0
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -3509,7 +3510,7 @@
             "{fe87f21e}": [
                 {
                     "{6166b756}": "MinOnHitDamage",
-                    "{01987941}": [
+                    "Requirements": [
                         {
                             "mCurrentPercentHealth": 0.30000001192092896,
                             "__type": "AboveHealthPercentCastRequirement"
@@ -3519,7 +3520,7 @@
                 },
                 {
                     "{6166b756}": "MaxOnHitDamage",
-                    "{01987941}": [
+                    "Requirements": [
                         {
                             "mInvertResult": true,
                             "mCurrentPercentHealth": 0.30000001192092896,
@@ -3999,7 +4000,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeESkillshotsDodged",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4026,7 +4027,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeWDistanceTraveled",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4054,7 +4055,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeRMultiHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4095,7 +4096,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeWHealingTotal",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4122,7 +4123,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeRChampsExecuted",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4149,7 +4150,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeQMarksTriggered",
         "EventsToTrack": [
             {
-                "EventToTrack": 257,
+                "EventToTrack": 255,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4275,7 +4276,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 234,
+                "EventToTrack": 232,
                 "__type": "StatStoneEventToTrack"
             }
         ],

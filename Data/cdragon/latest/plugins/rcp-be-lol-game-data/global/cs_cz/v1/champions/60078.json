@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Železná vyslankyně",
     "shortBio": "- Hrdinský výpad (E) je závislý na síle schopností.<br>- Pasivní schopnost, Q, W a R jsou zcela odlišné. Přečti si jejich popisy.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Udatný bojovník",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Výše veškerého fyzického a magického poškození, které je Poppy způsobeno a překračuje 10 % jejího aktuálního zdraví, se snižuje o 50 %. To se netýká poškození způsobovaného budovami."
+        "description": "Poškození, které přesáhne určitou část Poppyina aktuálního zdraví, se sníží."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Ničivá rána",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Poppy silně udeří svého protivníka. Kromě poškození útočným poškozením mu způsobí i bonusové přímé poškození ve výši 8 % maximální hodnoty jeho zdraví. Toto bonusové poškození nemůže přesáhnout limit určený stupněm schopnosti.",
-            "dynamicDescription": "Příštím útokem Poppy způsobí <magicDamage>magické poškození ve výši @FlatDamageCalc@ bodů + @HealthRatio*100@ % maximálního zdraví</magicDamage>. Bonusové poškození odvislé od procenta zdraví nemůže přesáhnout @HealthDamageCap@ bodů.@SpellModifierDescriptionAppend@",
+            "description": "Poppyin příští útok zasáhne protivníka drtivou ranou a způsobí mu bonusové poškození podle jeho maximálního zdraví.",
+            "dynamicDescription": "Poppyin příští útok způsobí <magicDamage>magické poškození ve výši @FlatDamageCalc@ bodů + @HealthRatio*100@ % maximálního zdraví</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Demacijský ideál",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pasivní efekt: Utrpí-li Poppy zásah základním útokem nebo sama někomu způsobí poškození základním útokem, zvýší se jí na 5 sek. hodnota brnění a síla útoků. Tento efekt se může nasčítat až 10x. Aktivace: Poppy získá maximální počet stupňů Demacijského ideálu a na 5 sek. se jí zvýší rychlost pohybu.",
+            "description": "Pasivní efekt: Kdykoliv Poppy utrpí nebo způsobí poškození základním útokem, zvýší se jí hodnoty brnění a poškození. Tento efekt se může nasčítávat. Aktivace: Poppy získá maximální počet stupňů schopnosti Demacijský ideál a bonus k rychlosti pohybu.",
             "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Kdykoliv Poppy způsobí nebo utrpí poškození útokem, získá na @PassiveDuration@ sek. @BonusStats@ k hodnotám <scaleArmor>brnění</scaleArmor> a <scaleAD>útočného poškození</scaleAD>. Tento efekt se může nasčítat až @MaxStacks@x.<br><br><spellActive>Aktivace:</spellActive> Poppy získá maximální počet stupňů Demacijského ideálu a na @ActiveDuration@ sek. obdrží @Speed*100@ % k rychlosti pohybu.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Hrdinský výpad",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Poppy naběhne na protivníka a o kus jej odnese s sebou. Úvodní náraz způsobí jen malé poškození; jestliže však narazí na terénní překážku, utrpí cíl výrazné poškození a ještě navíc bude omráčen.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Diplomatická imunita",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Poppy se soustředí výhradně na boj s vybraným šampionem a způsobuje mu zvýšené poškození. Poppy je imunní vůči veškerému poškození a schopnostem od jiných jednotek, než je její cíl.",

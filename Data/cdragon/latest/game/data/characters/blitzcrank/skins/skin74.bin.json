@@ -1,6 +1,7 @@
 {
     "Characters/Blitzcrank/Skins/Skin74": {
         "skinClassification": 2,
+        "championSkinId": 53074,
         "championSkinName": "BlitzcrankSkin74",
         "skinParent": 66,
         "metaDataTags": "faction:zaun,skinline:toybox",
@@ -18674,6 +18675,16 @@
         "name": "Characters/Blitzcrank/Skins/Skin74/Materials/Blitzcrank_Skin74_Machine",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/blitzcrank/skins/skin66/chogath_skin14_fm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -18695,6 +18706,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -18873,6 +18948,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -22535,13 +22620,13 @@
             "Blitzcrank_Skin66_W_Overdrive_02": "Characters/Blitzcrank/Skins/Skin74/Particles/Blitzcrank_Skin74_W_Overdrive_02",
             "Blitzcrank_Skin66_Q_mis_Chind": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Q_mis_Chind",
             "Blitzcrank_Idle_steam_Chind": "Characters/Blitzcrank/Skins/Skin74/Particles/Blitzcrank_Skin74_Idle_steam_Chind",
-            "{2597c391}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Recall_FrogBook_Pull_Chind",
-            "{cde8f4e0}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Recall_FrogBook_Pull_Chind1",
-            "{b7d3e06e}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_ElbowMagic_Chind",
-            "{59fe4405}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_WalkSplash",
-            "{df455ddc}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_WalkSplash1",
-            "{74b9edf5}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Glow_L",
-            "{22a82433}": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Dizzy",
+            "Blitzcrank_Z_Recall_FrogBook_Pull_Chind": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Recall_FrogBook_Pull_Chind",
+            "Blitzcrank_Z_Recall_FrogBook_Pull_Chind1": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Recall_FrogBook_Pull_Chind1",
+            "Blitzcrank_Z_ElbowMagic_Chind": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_ElbowMagic_Chind",
+            "Blitzcrank_Z_WalkSplash": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_WalkSplash",
+            "Blitzcrank_Z_WalkSplash1": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_WalkSplash1",
+            "Blitzcrank_Z_Glow_L": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Glow_L",
+            "Blitzcrank_Z_Dizzy": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_Dizzy",
             "Blitzcrank_Skin66_Z_ElbowMagic_2": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_Z_ElbowMagic_2",
             "Blitzcrank_Skin66_R_cas_Edge": "Characters/Blitzcrank/Skins/Skin66/Particles/Blitzcrank_Skin66_R_cas_Edge"
         },

@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Mistrzyni Fechtunku",
     "shortBio": "— Wypad [Q] to doskok do celu z możliwością ponownego użycia<br>— Riposta [W] ma bierne obrażenia od ataku, ale to pchnięcie nie ma ogłuszenia ani spowolnienia<br>— Zwinność Szermierza [E] zapewnia prędkość ruchu przy atakach i odświeża się przy zabójstwie<br>— Umiejętność bierna i [R] są zupełnie inne. Przeczytaj opisy umiejętności",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Fechtunek",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora regeneruje zdrowie w czasie, gdy zadaje obrażenia. Trafianie bohaterów sprawia, że efekt ten wielokrotnie się kumuluje."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Wypad",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora doskakuje do przodu, by uderzyć swój cel, zadając obrażenia fizyczne. W ciągu kilku sekund Fiora może wykonać drugi doskok, który nie kosztuje many.",
-            "dynamicDescription": "Fiora doskakuje do przodu, by uderzyć swój cel, zadając <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage>.<br><br>Fiora może w ciągu 4 sek. <recast>użyć tej umiejętności ponownie</recast>, aby wykonać drugi doskok, który nie kosztuje <scaleMana>many</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora doskakuje do przodu, by uderzyć swój cel, zadając <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage>.<br><br>Fiora może <recast>ponownie użyć</recast> tej umiejętności, by wykonać doskok w ciągu @RecastWindow@ sek., nie ponosząc kosztu <scaleMana>many</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Riposta",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Obrażenia od ataku Fiory zostają zwiększone. Po użyciu Fiora paruje następny atak podstawowy i odbija go do atakującego jako obrażenia magiczne. Działa to przeciwko bohaterom, potworom i dużym stworom.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> <physicalDamage>Obrażenia od ataku</physicalDamage> Fiory zostają zwiększone o <physicalDamage>@BonusAD@ pkt.</physicalDamage><br><br><spellActive>Użycie: </spellActive>Fiora paruje następny atak występujący w ciągu 1,5 sek. i odbija do atakującego <magicDamage>@ReflectionDamage@ pkt. obrażeń magicznych</magicDamage>. Działa to przeciwko bohaterom, potworom i dużym stworom.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie: </spellPassive><physicalDamage>Obrażenia od ataku</physicalDamage> Fiory wzrastają o <physicalDamage>@BonusAD@ pkt.</physicalDamage><br><br><spellActive>Użycie: </spellActive>Fiora paruje następny atak w ciągu @ParryDuration@ sek. i odbija <magicDamage>@ReflectionDamage@ pkt. obrażeń magicznych</magicDamage> w atakującego. Działa przeciwko bohaterom, potworom i dużym stworom.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Zwinność Szermierza",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora tymczasowo zyskuje dodatkową prędkość ataku. Każdy atak lub Wypad, którym trafi w tym czasie, zwiększa jej prędkość ruchu. Zabicie bohatera odświeża czas odnowienia tej umiejętności.",
-            "dynamicDescription": "Fiora zyskuje <attackSpeed>@ASBonus*100@% prędkości ataku</attackSpeed> na 3 sek. Każdy atak lub <spellName>Wypad</spellName>, którym trafi w tym czasie, zapewnia Fiorze <speed>@MSBonus*100@% prędkości ruchu</speed> na 3 sek. Efekt kumuluje się do 3 razy.<br><br>Zabicie bohatera odświeża czas odnowienia tej umiejętności. (Asysty skracają czas odnowienia o @HalfCooldown@ sek.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora zyskuje <attackSpeed>@ASBonus*100@% prędkości ataku</attackSpeed> na @BuffDuration@ sek. Każdy udany atak lub <spellName>Wypad</spellName> w tym czasie zapewnia Fiorze <speed>@MSBonus*100@% prędkości ruchu</speed> na @BuffDuration@ sek. Efekt kumuluje się do @MaxStacks@ razy.<br><br>Zabicie bohatera odświeża czas odnowienia tej umiejętności. (Asysty skracają czas odnowienia o @HalfCooldown@ sek.).@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Taniec Ostrzy",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora robi doskoki po polu bitwy, zadając obrażenia fizyczne wrogim bohaterom. Kolejne trafienia tego samego celu zadają mniejsze obrażenia.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

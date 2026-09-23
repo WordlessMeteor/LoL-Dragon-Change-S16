@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "La Embajadora de Hierro",
     "shortBio": "- Carga heroica (E) tiene progresión de poder de habilidad.<br>- La pasiva, la Q, la W y la R son completamente diferentes. Lee las descripciones de las habilidades.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Luchador valiente",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Todo el daño físico y mágico infligido a Poppy que supere el 10% de su vida actual se reduce un 50%. Esto no reduce el daño de las estructuras."
+        "description": "El daño infligido a Poppy que supere un cierto porcentaje de su vida actual se reduce."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Golpe devastador",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Poppy aplasta a su rival, lo que inflige su daño de ataque + una cantidad fija + 8% de la vida máxima de su objetivo como daño adicional. El daño adicional no puede superar un determinado umbral, que depende del nivel.",
-            "dynamicDescription": "El siguiente ataque de Poppy inflige <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% de la vida máxima como daño mágico</magicDamage>. El porcentaje de daño adicional en función de la vida no puede superar @HealthDamageCap@ de daño.@SpellModifierDescriptionAppend@",
+            "description": "El siguiente ataque de Poppy aplasta a su oponente, lo que inflige daño adicional según la vida máxima del objetivo.",
+            "dynamicDescription": "El siguiente ataque de Poppy inflige <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% de la vida máxima como daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Modelo de Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pasiva: Al recibir o infligir daño con un ataque básico, el daño y la armadura de Poppy aumentan durante 5 s. Este efecto se puede acumular 10 veces. Activa: Poppy obtiene el máximo de acumulaciones de Modelo de Demacia, y su velocidad de movimiento aumenta durante 5 s.",
+            "description": "Pasiva: Al recibir daño o al infligir daño con un ataque básico, el daño y la armadura de Poppy aumentan, y este efecto se puede acumular. Activa: Poppy obtiene las acumulaciones máximas de Modelo de Demacia y su velocidad de movimiento aumenta.",
             "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Poppy obtiene @BonusStats@ de <scaleArmor>armadura</scaleArmor> y <scaleAD>daño de ataque</scaleAD> durante @PassiveDuration@ s cada vez que inflige o recibe daño de ataque. Este efecto se acumula @MaxStacks@ veces.<br><br><spellActive>Activa:</spellActive> Poppy obtiene el máximo de acumulaciones de Modelo de Demacia, y su velocidad de movimiento aumenta un @Speed*100@% durante @ActiveDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Carga heroica",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Poppy carga contra un enemigo y lo empuja más lejos. El impacto inicial inflige una pequeña cantidad de daño. Si el enemigo choca contra un obstáculo del terreno, le inflige una gran cantidad de daño y lo aturde.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Inmunidad diplomática",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Poppy se concentra en un solo campeón enemigo para infligirle cada vez más daño. Poppy es inmune al daño y las habilidades provenientes de enemigos que no sean su objetivo.",

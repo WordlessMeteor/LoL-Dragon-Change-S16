@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Inegalabilul duelist",
     "shortBio": "- ''Năpustire'' (Q) este o năpustire țintită cu refolosire<br>- ''Ripostă'' (W) oferă daune din atac pasive, înjunghierea nu are amețire sau încetinire<br>- ''Bonus de viteză'' (E) oferă viteză de mișcare la atacuri și se reîmprospătează după doborâri<br>- Pasiva și R-ul sunt complet diferite. Citește descrierile abilităților",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelist",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora își regenerează viață în timp atunci când provoacă daune. Dacă lovește campioni, efectul se va cumula de mai multe ori."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Năpustire",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i daune fizice. Fiora se mai poate năpusti o data în decurs de câteva secunde, fără să mai consume mană.",
-            "dynamicDescription": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Fiora poate <recast>refolosi</recast> abilitatea pentru a se năpusti încă o dată în decurs de 4 secunde, fără să mai consume <scaleMana>mană</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora se năpustește în față pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Fiora poate <recast>refolosi</recast> abilitatea pentru a se năpusti în decurs de @RecastWindow@ secunde, fără să mai consume <scaleMana>mană</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Ripostă",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Daunele din atac ale Fiorei sunt crescute. La activare, Fiora parează următorul atac de bază și reflectă daune magice înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive><physicalDamage>daunele din atac</physicalDamage> ale Fiorei sunt crescute cu <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activă: </spellActive>Fiora parează următorul atac în decurs de 1,5 secunde și reflectă <magicDamage>@ReflectionDamage@ daune magice</magicDamage> înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive><physicalDamage>daunele din atac</physicalDamage> ale Fiorei sunt crescute cu <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Activă: </spellActive>Fiora parează următorul atac în decurs de @ParryDuration@ secunde și reflectă <magicDamage>@ReflectionDamage@ daune magice</magicDamage> înapoi atacatorului. Funcționează împotriva campionilor, monștrilor și minionilor mari.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Bonus de viteză",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Fiora primește temporar viteză de atac suplimentară. Fiecare atac sau ''Năpustire'' reușite în acest interval îi cresc viteza de mișcare. Dacă ucide un campion, resetează timpul de reactivare al abilității.",
-            "dynamicDescription": "Fiora primește <attackSpeed>@ASBonus*100@% viteză de atac</attackSpeed> timp de 3 secunde. Fiecare atac sau <spellName>''Năpustire''</spellName> pe care ea îl reușește în acest timp îi oferă <speed>@MSBonus*100@% viteză de mișcare</speed> timp de 3 secunde, cumulându-se de până la 3 ori.<br><br>Dacă ucide un campion, timpul de reactivare al acestei abilități se resetează. (Participările reduc timpul de reactivare cu @HalfCooldown@ secunde)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora primește <attackSpeed>@ASBonus*100@% viteză de atac</attackSpeed> timp de @BuffDuration@ secunde. Fiecare atac sau <spellName>''Năpustire''</spellName> pe care ea îl reușește în acest timp îi oferă <speed>@MSBonus*100@% viteză de mișcare</speed> timp de @BuffDuration@ secunde, cumulându-se de până la @MaxStacks@ ori.<br><br>Dacă ucide un campion, timpul de reactivare al acestei abilități se resetează. (Participările reduc timpul de reactivare cu @HalfCooldown@ secunde)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Valsul săbiilor",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Fiora provoacă daune fizice campionilor inamici de pe câmpul de luptă, trecând de la unul la altul. Loviturile succesive împotriva aceleiași ținte provoacă mai puține daune.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

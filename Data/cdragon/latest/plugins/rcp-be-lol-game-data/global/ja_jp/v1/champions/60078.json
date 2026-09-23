@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "ポッピー",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "鋼鉄の大使",
     "shortBio": "- 「ヒロイックチャージ(E)」は魔力反映率を持つ<br>- 自動効果、Q、W、Rは全く異なる。詳細はスキル説明を参照",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "勇敢な戦士",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "現在体力の10%を超えるあらゆる物理ダメージと魔法ダメージが50%軽減される。建造物から受けるダメージは軽減されない。"
+        "description": "自身の現在体力の一定割合を超えて受けたダメージが軽減される。"
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "渾身の一撃",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "敵を打ち砕き、攻撃力に加えて一定量と対象の最大体力の8%にあたる追加ダメージを与える。追加ダメージにはランクに応じた上限が存在する。",
-            "dynamicDescription": "次の通常攻撃が<magicDamage>@FlatDamageCalc@ + 最大体力の@HealthRatio*100@%の魔法ダメージ</magicDamage>を与える。体力に応じた追加ダメージの上限は@HealthDamageCap@。@SpellModifierDescriptionAppend@",
+            "description": "次の通常攻撃が相手を打ち砕き、対象の最大体力に応じた追加ダメージを与える。",
+            "dynamicDescription": "次の通常攻撃が<magicDamage>@FlatDamageCalc@ + 最大体力の@HealthRatio*100@%の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "デマーシアの規範",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "自動効果: 通常攻撃でダメージを受けるか、ダメージを与えると、5秒間、自身の物理防御とダメージが増加する。この効果は10回スタックする。発動効果: 「デマーシアの規範」のスタックが最大になり、5秒間移動速度が増加する。",
+            "description": "自動効果: 通常攻撃でダメージを受けるか与えると、自身の物理防御とダメージが増加する。この効果はスタックする。発動効果: 「デマーシアの規範」のスタックが最大になり、移動速度が増加する。",
             "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 通常攻撃でダメージを受けるか、ダメージを与えると、@PassiveDuration@秒間、<scaleArmor>物理防御</scaleArmor>と<scaleAD>攻撃力</scaleAD>が@BonusStats@増加する。この効果は@MaxStacks@回スタックする。<br><br><spellActive>発動効果:</spellActive> 「デマーシアの規範」のスタックが最大になり、@ActiveDuration@秒間、移動速度が@Speed*100@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "ヒロイックチャージ",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵に向かって突撃して、敵もろとも、さらに遠くへ移動する。最初の衝突で少量のダメージを与え、対象が地形に衝突した場合は、大ダメージを与えてスタンさせる。",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "絶対的特権",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "1体の敵チャンピオンに集中し、その対象に与えるダメージが増加する。対象以外の敵からのダメージとスキルは無効化される。",

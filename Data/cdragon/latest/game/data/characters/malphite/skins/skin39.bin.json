@@ -1,6 +1,7 @@
 {
     "Characters/Malphite/Skins/Skin39": {
         "skinClassification": 2,
+        "championSkinId": 54039,
         "championSkinName": "MalphiteSkin39",
         "skinParent": 37,
         "metaDataTags": "gender:male,element:earth,faction:ixtal,skinline:lunarrevel",
@@ -19496,7 +19497,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{91c4186e}",
+                            "effectKey": "Malphite_Z_Background_Explosion_child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -32388,6 +32389,16 @@
         "name": "Characters/Malphite/Skins/Skin39/Materials/Malphite_Skin39_FlowMap3_Bloom_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/malphite/skins/skin37/malphite_skin37_cloudfm_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -32409,6 +32420,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -32624,6 +32699,16 @@
         ],
         "switches": [
             {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -32705,6 +32790,16 @@
         "name": "Characters/Malphite/Skins/Skin39/Materials/Malphite_Skin39_FlowMap2_Bloom_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/malphite/skins/skin37/malphite_skin37_cloudfm_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -32726,6 +32821,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -32946,6 +33105,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -33561,6 +33730,16 @@
         "name": "Characters/Malphite/Skins/Skin39/Materials/Malphite_Skin39_FlowMap_Bloom_inst",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/characters/malphite/skins/skin37/malphite_skin37_cloudfm_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -33582,6 +33761,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -33802,6 +34045,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -34427,13 +34680,13 @@
             "Malphite_W_buf_hands_NextHit_L": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_W_buf_hands_NextHit",
             "Malphite_R_hit_aoe_child": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_R_hit_aoe_child",
             "Malphite_Idle_Sphere": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Idle_Sphere",
-            "{6d3539bf}": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Background",
-            "{91c4186e}": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Background_Explosion_child",
-            "{426c3769}": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Hand_L",
-            "{3c6c2df7}": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Hand_R",
-            "{daa41118}": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_People",
-            "{8beb83e6}": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Clound",
-            "{9b12b403}": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Sun"
+            "Malphite_Z_Background": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Background",
+            "Malphite_Z_Background_Explosion_child": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Background_Explosion_child",
+            "Malphite_Z_Hand_L": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Hand_L",
+            "Malphite_Z_Hand_R": "Characters/Malphite/Skins/Skin39/Particles/Malphite_Skin39_Z_Hand_R",
+            "Malphite_Z_People": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_People",
+            "Malphite_Z_Clound": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Clound",
+            "Malphite_Z_Sun": "Characters/Malphite/Skins/Skin37/Particles/Malphite_Skin37_Z_Sun"
         },
         "__type": "ResourceResolver"
     },

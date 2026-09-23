@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Mocná duelistka",
     "shortBio": "- Bodnutí (Q) je cílený přeběh s možností opětovného seslání.<br>- Odveta (W) má pasivní bonus k útočnému poškození, bodnutí z W nezpůsobuje omráčení ani zpomalení.<br>- Nával rychlosti (E) poskytuje při útocích bonus k rychlosti pohybu a při zářezu se obnovuje.<br>- Pasivní schopnost a R jsou úplně jiné. Přečti si jejich popisy.",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Duelistka",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fioře se způsobováním poškození postupně obnovuje zdraví. Při zásazích šampionů se může tento efekt nasčítat i několikrát."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Bodnutí",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora se přeběhem přesune k cíli a způsobí mu fyzické poškození. Během několika následujících sekund může provést tento přeběh ještě jednou, aniž by ji to stálo manu.",
-            "dynamicDescription": "Fiora se přeběhem přesune k cíli a způsobí mu <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Fiora může tuto schopnost <recast>znovu použít</recast> a během následujících 4 sek. provést tento přeběh ještě jednou, aniž by ji to stálo <scaleMana>manu</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora se vrhne vpřed a zasáhne svůj cíl, kterému tak způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Fiora může tuto schopnost během @RecastWindow@ sek. <recast>seslat znovu</recast> a popoběhnout, aniž by ji to stálo <scaleMana>manu</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Odveta",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora má zvýšené útočné poškození. Po aktivaci Fiora vykryje příští základní útok a odrazí zpět na útočníka magické poškození. Tato schopnost funguje proti šampionům, příšerám a velkým poskokům.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Fiora má +<physicalDamage>@BonusAD@</physicalDamage> k <physicalDamage>útočnému poškození</physicalDamage>.<br><br><spellActive>Aktivace: </spellActive>Fiora vykryje příští základní útok provedený během 1,5 sek. a odrazí zpět na útočníka <magicDamage>@ReflectionDamage@ bodů magického poškození</magicDamage>. Tato schopnost funguje proti šampionům, příšerám a velkým poskokům.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Fiořino <physicalDamage>útočné poškození</physicalDamage> se zvýší o <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Aktivace: </spellActive>Fiora vykryje první nepřátelský útok provedený během následujících @ParryDuration@ sek. a odrazí zpět na útočníka <magicDamage>@ReflectionDamage@ bodů magického poškození</magicDamage>. Tento efekt funguje proti šampionům, příšerám a velkým poskokům.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Nával rychlosti",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora získá dočasně bonus k rychlosti útoků. Každý útok nebo Bodnutí, které během této doby provede, jí zvýší rychlost pohybu. Zabitím šampiona se přebíjecí doba této schopnosti obnoví.",
-            "dynamicDescription": "Fiora získá na 3 sek. <attackSpeed>@ASBonus*100@ % k rychlosti útoků</attackSpeed>. Každý útok nebo <spellName>Bodnutí</spellName>, které během této doby provede, jí na 3 sek. přidá <speed>@MSBonus*100@ % k rychlosti pohybu</speed>. Tento efekt se může nasčítat až 3x.<br><br>Zabitím šampiona se přebíjecí doba této schopnosti obnoví. (Asistence zkracují přebíjecí dobu o @HalfCooldown@ sek.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora získá na @BuffDuration@ sek. <attackSpeed>@ASBonus*100@ % k rychlosti útoků</attackSpeed>. Každý útok nebo <spellName>Bodnutí</spellName>, kterými Fiora během této doby někoho zasáhne, jí poskytnou na @BuffDuration@ sek. <speed>@MSBonus*100@ % k rychlosti pohybu</speed>. Tento efekt se může nasčítat až @MaxStacks@x.<br><br>Zabití šampiona obnoví přebíjecí dobu této schopnosti. (Asistence zkracují přebíjecí dobu o @HalfCooldown@ sek.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Tanec ostří",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Fiora se rychle pohybuje po bojišti a způsobuje nepřátelským šampionům fyzické poškození. Série úderů proti stejnému cíli způsobí nižší poškození.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

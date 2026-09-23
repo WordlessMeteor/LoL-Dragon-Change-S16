@@ -1,6 +1,7 @@
 {
     "Characters/Yasuo/Skins/Skin87": {
         "skinClassification": 1,
+        "championSkinId": 157087,
         "championSkinName": "YasuoSkin87",
         "metaDataTags": "gender:male,faction:ionia,race:human,element:wind,skinline:nightbringer",
         "skinUpgradeData": {
@@ -157100,14 +157101,14 @@
             "Yasuo_R_Sword": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_R_Sword",
             "Yasuo_Q2_Flask_01": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Q2_Flask_01",
             "Yasuo_R_Flask_01": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_R_Flask_01",
-            "{1b284d8d}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_EnergyGlow",
-            "{f3c9befd}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_01",
-            "{6d4ca76f}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Atmosphere_02",
-            "{b5a3229a}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Bloom_02",
-            "{f0c9ba44}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_02",
-            "{f1c9bbd7}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_03",
-            "{eec9b71e}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_04",
-            "{b6a3242d}": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Bloom_03",
+            "Yasuo_Z_Recall_EnergyGlow": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_EnergyGlow",
+            "Yasuo_Z_Recall_Transformation_01": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_01",
+            "Yasuo_Z_Recall_Atmosphere_02": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Atmosphere_02",
+            "Yasuo_Z_Recall_Bloom_02": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Bloom_02",
+            "Yasuo_Z_Recall_Transformation_02": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_02",
+            "Yasuo_Z_Recall_Transformation_03": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_03",
+            "Yasuo_Z_Recall_Transformation_04": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Transformation_04",
+            "Yasuo_Z_Recall_Bloom_03": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_Z_Recall_Bloom_03",
             "Yasuo_R_Footprint": "Characters/Yasuo/Skins/Skin87/Particles/Yasuo_Skin87_R_Footprint"
         },
         "__type": "ResourceResolver"
@@ -157944,6 +157945,16 @@
         "name": "Characters/Yasuo/Skins/Skin87/Materials/Hair_R",
         "samplerValues": [
             {
+                "TextureName": "PatternTexture",
+                "texturePath": "assets/shared/materials/bc_testtexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "FlowMap",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -157967,6 +157978,70 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "rimOffset",
                 "value": [
@@ -158169,6 +158244,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "MASK_VERSION_TWO",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

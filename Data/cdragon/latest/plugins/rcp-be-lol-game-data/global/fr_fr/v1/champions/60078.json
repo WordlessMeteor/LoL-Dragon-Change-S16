@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "L'Ambassadrice de fer",
     "shortBio": "- Charge héroïque (E) dispose d'un ratio de puissance<br>- La compétence passive, le A, le Z et le R complètement différents. Lire la description des compétences",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Combattante courageuse",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Tous les dégâts physiques et magiques supérieurs à 10% des PV actuels de Poppy sont réduits de 50%. Cet effet ne s'applique pas aux dégâts infligés par les structures."
+        "description": "Les dégâts infligés à Poppy supérieurs à une partie de ses PV actuels sont réduits."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Dévastation",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Poppy écrase son adversaire et lui inflige ses dégâts d'attaque ainsi que 8% des PV max de sa cible en dégâts bonus. Les dégâts bonus ne peuvent pas dépasser un seuil en fonction du niveau de la compétence.",
-            "dynamicDescription": "La prochaine attaque de Poppy inflige des <magicDamage>dégâts magiques équivalents à @FlatDamageCalc@ + @HealthRatio*100@% des PV max</magicDamage>. Les dégâts bonus selon les PV max ne peuvent pas excéder @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "La prochaine attaque de Poppy écrase son adversaire, infligeant des dégâts bonus en fonction des PV max de sa cible.",
+            "dynamicDescription": "La prochaine attaque de Poppy inflige <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% des PV max en dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Parangon de Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Passif : lorsque Poppy subit des dégâts d'une attaque de base ou inflige des dégâts avec une attaque de base, l'armure et les dégâts de Poppy sont augmentés pendant 5 sec. Cet effet est cumulable 10 fois. Actif : Poppy bénéficie de l'effet max de Parangon de Demacia et sa vitesse de déplacement augmente pendant 5 sec.",
+            "description": "Passif : lorsque Poppy est touchée par une attaque de base ou lorsqu'elle inflige des dégâts avec une attaque de base, son armure et ses dégâts sont augmentés. Cet effet est cumulable. Actif : Poppy bénéficie du maximum d'effets de Parangon de Demacia et sa vitesse de déplacement est augmentée.",
             "dynamicDescription": "<spellPassive>Passif :</spellPassive> Poppy gagne @BonusStats@ <scaleArmor>armure</scaleArmor> et <scaleAD>dégâts d'attaque</scaleAD> pendant @PassiveDuration@ sec chaque fois qu'elle inflige ou subit des dégâts d'attaque. Cet effet est cumulable @MaxStacks@ fois.<br><br><spellActive>Actif :</spellActive> Poppy bénéficie de l'effet max de Parangon de Demacia et sa vitesse de déplacement augmente de @Speed*100@% pendant @ActiveDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Charge héroïque",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Poppy fonce sur un ennemi et le repousse plus loin. L'impact inflige quelques dégâts magiques. Si Poppy traîne sa victime sur un élément du terrain, la cible subit d'importants dégâts magiques et est étourdie.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Immunité diplomatique",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Poppy se concentre sur un champion ennemi, lui infligeant plus de dégâts. Poppy est immunisée contre toutes les attaques et compétences ne provenant pas de sa cible.",

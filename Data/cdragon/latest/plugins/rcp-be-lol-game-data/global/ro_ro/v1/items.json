@@ -8000,7 +8000,7 @@
     {
         "id": 3866,
         "name": "Busolă runică",
-        "description": "<mainText><stats><attention> 100</attention> viață<br><attention> 50%</attention> regenerare de bază a vieții<br><attention> 50%</attention> regenerare de bază a manei<br><attention> 5</attention> aur la fiecare 10 secunde</stats><br><br><passive>Misiune de suport</passive><br>Obține <keywordMajor>0</keywordMajor> aur folosind acest obiect pentru a-l transforma în <rarityGeneric>''Recompensa lumilor''</rarityGeneric>. <br><br><passive>Bogății împărtășite</passive>  (timp de reactivare: 0sec., maximum 0 cumuluri)<br>Când te afli lângă un campion aliat, provoacă-i daune unui campion inamic sau ucide minioni ca să primești aur. <active>Activă</active> (3 cumuluri)<br>Plasează o ''Gardă ascunsă'' <keyword>invizibilă</keyword>, care oferă viziune.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> viață<br><attention> 75%</attention> regenerare de bază a vieții<br><attention> 50%</attention> regenerare de bază a manei<br><attention> 5</attention> aur la fiecare 10 secunde</stats><br><br><passive>Misiune de suport</passive><br>Obține <keywordMajor>0</keywordMajor> aur folosind acest obiect pentru a-l transforma în <rarityGeneric>''Recompensa lumilor''</rarityGeneric>. <br><br><passive>Bogății împărtășite</passive>  (timp de reactivare: 0sec., maximum 0 cumuluri)<br>Când te afli lângă un campion aliat, provoacă-i daune unui campion inamic sau ucide minioni ca să primești aur. <active>Activă</active> (3 cumuluri)<br>Plasează o ''Gardă ascunsă'' <keyword>invizibilă</keyword>, care oferă viziune.</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -19312,7 +19312,8 @@
         "from": [],
         "to": [
             773031,
-            773046
+            773046,
+            773162
         ],
         "categories": [
             "CriticalStrike"
@@ -19657,6 +19658,7 @@
             773006,
             773046,
             773085,
+            773162,
             773101,
             773114,
             773153
@@ -19881,6 +19883,7 @@
         "inStore": true,
         "from": [],
         "to": [
+            773161,
             773064,
             773211,
             773001,
@@ -23137,6 +23140,62 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/Jade/3160_Feral_Flare.png"
     },
     {
+        "id": 773161,
+        "name": "Sabia lunii",
+        "description": "<mainText><stats><attention> 50</attention> puterea abilităților<br><attention> 50</attention> armură<br><attention> 50</attention> rezistență la magie</stats><br><br><jadeUnique>Tenacitate:</jadeUnique> reduce durata efectelor de <status>amețire, încetinire, provocare, terifiere, amuțire, orbire</status> și <status>imobilizare</status> cu <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            773191,
+            771057
+        ],
+        "to": [],
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "SpellDamage",
+            "Tenacity"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 720,
+        "priceTotal": 2600,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3170_Moonflair_Spellblade.project_jade.png"
+    },
+    {
+        "id": 773162,
+        "name": "Mantia și pumnalul",
+        "description": "<mainText><stats><attention> 20%</attention> viteză de atac<br><attention> 20%</attention> șanse de lovitură critică</stats><br><br><jadeUnique>Tenacitate:</jadeUnique> reduce durata efectelor de <status>amețire, încetinire, provocare, terifiere, amuțire, orbire</status> și <status>imobilizare</status> cu <attention>35%</attention>.</mainText>",
+        "active": false,
+        "inStore": true,
+        "from": [
+            771018,
+            771042
+        ],
+        "to": [],
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "maxStacks": 1,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 200,
+        "priceTotal": 1330,
+        "displayInItemSets": false,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3172_Cloak_and_Dagger.project_jade.png"
+    },
+    {
         "id": 773165,
         "name": "Morellonomicon",
         "description": "<mainText><stats><attention> 75</attention> puterea abilităților<br><attention> 12</attention> regenerare mană la fiecare 5 secunde<br><attention> 20%</attention> reducerea timpilor de reactivare</stats><br><br><jadeUnique>Ura lui Morello:</jadeUnique> când le provoci daune magice campionilor inamici care au sub <scaleHealth>40% viață</scaleHealth>, le aplici <status>''Răni grave''</status> timp de 4 secunde.<br><br><jadeRules>(<status>''Rănile grave''</status> reduc efectele de vindecare și regenerare primite cu 50%.)</jadeRules></mainText>",
@@ -23319,7 +23378,8 @@
             771029
         ],
         "to": [
-            773157
+            773157,
+            773161
         ],
         "categories": [
             "Armor",
@@ -23577,7 +23637,7 @@
     {
         "id": 773512,
         "name": "Portal Zz'Rot",
-        "description": "<mainText><stats><attention> 50</attention> armură<br><attention> 50</attention> rezistență la magie<br><attention> 5</attention> regenerare viață la fiecare 5 secunde</stats><br><br><jadeUnique>Alergător de marcă:</jadeUnique> oferă <speed>+30% viteză de mișcare bonus</speed> care se acumulează de-a lungul a 2 secunde când ești lângă turnuri sau porți ale Vidului. <jadeUnique>Activă</jadeUnique>  150 sec<br>Deschide o poartă în locația-țintă timp de 150 de secunde (nu se poate poziționa lângă turnuri). O dată la 4 secunde, poarta generează o <keywordMajor>videmeridă</keywordMajor> volatilă care se deplasează pe cel mai apropiat culoar. <br><br>După 4 secunde, viața <keywordMajor>videmeridei</keywordMajor> va scădea rapid până la 0. A patra <keywordMajor>videmeridă</keywordMajor> și fiecare <keywordMajor>videmeridă</keywordMajor> ulterioară vor provoca daune bonus egale cu 50% din rezistențele tale.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> armură<br><attention> 50</attention> rezistență la magie<br><attention> 5</attention> regenerare viață la fiecare 5 secunde</stats><br><br><jadeUnique>Alergător de marcă:</jadeUnique> dacă stai lângă turnuri sau <keywordMajor>porți ale Vidului</keywordMajor>, primești până la <speed>30% viteză de mișcare</speed> care se acumulează de-a lungul a 2 secunde. <jadeUnique>Activă</jadeUnique>  150 sec<br>Deschide o <keywordMajor>poartă a Vidului</keywordMajor> în locația-țintă timp de 150 secunde. O dată la 4 secunde, poarta generează o <keywordMajor>videmeridă</keywordMajor> volatilă care se deplasează pe cel mai apropiat culoar.</mainText>",
         "active": true,
         "inStore": true,
         "from": [

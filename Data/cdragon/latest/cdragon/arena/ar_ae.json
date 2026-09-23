@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3404,7 +3404,7 @@
             "id": 310,
             "name": "كلية المهرجين",
             "rarity": 2,
-            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تُلحق @QCritDamageMod@ ضرر.<br><br><spellName>هلوسة: الموت</spellName>: تلحق عند الموت <magicDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر سحر</magicDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
+            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تلحق @QCritDamageMod@ ضرر.<br><br><spellName>هلوسة: الموت</spellName>: تلحق عند الموت <magicDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر سحر</magicDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
         },
         {
             "apiName": "NumbToPain",
@@ -7460,13 +7460,13 @@
                     1.0
                 ],
                 "HealPowerToDamageConversion": [
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5
                 ],
                 "HealPowerToDamageTooltip": [
                     350.0,
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -10914,13 +10914,13 @@
             "calculations": {},
             "dataValues": {
                 "LargeBonusDamage": [
+                    0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
-                    0.44999998807907104,
-                    0.5
+                    0.44999998807907104
                 ],
                 "MaxLevel": [
                     3.0,
@@ -10932,13 +10932,13 @@
                     3.0
                 ],
                 "MedBonusDamage": [
+                    0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
-                    0.3499999940395355,
-                    0.4000000059604645
+                    0.3499999940395355
                 ],
                 "MovespeedMod": [
                     0.25,
@@ -10959,22 +10959,22 @@
                     0.30000001192092896
                 ],
                 "SmallBonusDamage": [
+                    0.0,
                     0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
-                    0.30000001192092896,
-                    0.3499999940395355
+                    0.30000001192092896
                 ],
                 "XLargeBonusDamage": [
+                    0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
                     0.44999998807907104,
-                    0.5,
-                    0.550000011920929
+                    0.5
                 ]
             },
             "desc": "عندما تصبح صغيرًا، تكسب <speed>سرعة حركة</speed> وتلحق ضرر إضافي بالأبطال بناءً على حجمهم الأكبر منك.",

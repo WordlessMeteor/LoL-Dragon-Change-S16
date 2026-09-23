@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 114,
     "name": "Φιόρα",
     "alias": "Jade_Fiora",
-    "title": "",
+    "title": "Η Ανίκητη Ξιφομάχος",
     "shortBio": "- Ο Ξιφισμός (Q) είναι μια στοχευμένη εφόρμηση με δυνατότητα εκ νέου χρήσης<br>- Η Απόκρουση (W) έχει παθητική Ζημιά Επίθεσης, το χτύπημα δεν προκαλεί Ακινητοποίηση ή Επιβράδυνση<br>- Η Έκρηξη Ταχύτητας (E) δίνει Ταχύτητα Κίνησης με τις επιθέσεις και ανανεώνεται με τις εκτελέσεις<br>- Η Παθητική και η R είναι εντελώς διαφορετικές. Διαβάστε τις περιγραφές των ικανοτήτων",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Ξιφομάχος",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Η Φιόρα αναπληρώνει Ζωή σταδιακά όταν προκαλεί ζημιά. Τα χτυπήματα σε Ήρωες συσσωρεύουν αυτή την επίδραση πολλές φορές."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Ξιφισμός",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Φιόρα ορμάει μπροστά για να χτυπήσει τον στόχο της, προκαλώντας Σωματική Ζημιά. Η Φιόρα μπορεί να εκτελέσει την εφόρμηση για δεύτερη φορά μέσα σε μερικά δευτ. χωρίς κόστος Μάνα",
-            "dynamicDescription": "Η Φιόρα εφορμά προς τα εμπρός για να χτυπήσει τον στόχο της, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>.<br><br>Η Φιόρα μπορεί να <recast>χρησιμοποιήσει ξανά</recast> αυτή την ικανότητα για να εφορμήσει και δεύτερη φορά εντός 4 δευτ. χωρίς κόστος σε <scaleMana>Μάνα</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Φιόρα ορμάει μπροστά για να χτυπήσει τον στόχο της, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>.<br><br>Η Φιόρα μπορεί να <recast>χρησιμοποιήσει ξανά</recast> αυτή την ικανότητα για να εφορμήσει μέσα σε @RecastWindow@ δευτ. χωρίς κόστος <scaleMana>Μάνα</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Απόκρουση",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Ζημιά Επίθεσης της Φιόρα αυξάνεται. Όταν ενεργοποιηθεί, η Φιόρα αποκρούει την επόμενη βασική επίθεση και επιστρέφει Μαγική Ζημιά στον επιτιθέμενο. Λειτουργεί ενάντια σε Ήρωες, μεγάλα τέρατα και μεγάλους υπηρέτες.",
-            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Η <physicalDamage>Ζημιά Επίθεσης</physicalDamage> της Φιόρα αυξάνεται κατά <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Ενεργή: </spellActive>Η Φιόρα αποκρούει την επόμενη επίθεση εντός 1,5 δευτ. και επιστρέφει <magicDamage>@ReflectionDamage@ Μαγική Ζημιά</magicDamage> στον επιτιθέμενο. Λειτουργεί ενάντια σε Ήρωες, μεγάλα τέρατα και μεγάλους υπηρέτες.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Η <physicalDamage>Ζημιά Επίθεσης</physicalDamage> της Φιόρα αυξάνεται κατά <physicalDamage>@BonusAD@</physicalDamage>.<br><br><spellActive>Ενεργή: </spellActive>Η Φιόρα αποκρούει την επόμενη επίθεση εντός @ParryDuration@ δευτ. και αντανακλά <magicDamage>@ReflectionDamage@ Μαγική Ζημιά</magicDamage> πίσω στον επιτιθέμενο. Αυτό λειτουργεί εναντίον Ηρώων, τεράτων και μεγάλων Υπηρετών.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Έκρηξη Ταχύτητας",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Φιόρα αποκτά προσωρινά επιπλέον Ταχύτητα Επίθεσης. Κάθε επίθεση ή Ξιφισμός που βρίσκει στόχο σε αυτό το χρονικό διάστημα, αυξάνει την Ταχύτητα Κίνησής της. Ο Χρόνος Επαναφόρτισης αυτής της ικανότητας μηδενίζεται όταν εκτελεί έναν Ήρωα.",
-            "dynamicDescription": "Η Φιόρα αποκτά <attackSpeed>@ASBonus*100@% Ταχύτητα Επίθεσης</attackSpeed> για 3 δευτ. Κάθε επίθεση ή <spellName>Ξιφισμός</spellName> που βρίσκει στόχο σε αυτό το χρονικό διάστημα, δίνει στη Φιόρα <speed>@MSBonus*100@ Ταχύτητα Κίνησης</speed> για 3 δευτ. Συσσωρεύεται έως 3 φορές.<br><br>Αν σκοτώσει έναν Ήρωα, ο Χρόνος Επαναφόρτισης της ικανότητας μηδενίζεται. (Οι Βοήθειες μειώνουν τον Χρόνο Επαναφόρτισης κατά @HalfCooldown@ δευτ.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Φιόρα αποκτά <attackSpeed>@ASBonus*100@% Ταχύτητα Επίθεσης</attackSpeed> για @BuffDuration@ δευτ. Κάθε επίθεση ή <spellName>Ξιφισμός</spellName> που πετυχαίνει κατά τη διάρκεια αυτής της περιόδου δίνει στη Φιόρα <speed>@MSBonus*100@% Ταχύτητα Κίνησης</speed> για @BuffDuration@ δευτ., η οποία συσσωρεύεται έως και @MaxStacks@ φορές.<br><br>Αν σκοτώσει έναν Ήρωα, ο Χρόνος Επαναφόρτισης αυτής της ικανότητας μηδενίζεται. (Οι Βοήθειες μειώνουν τον Χρόνο Επαναφόρτισης κατά @HalfCooldown@ δευτ.)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Βαλς της Λεπίδας",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Φιόρα διασχίζει γρήγορα το πεδίο της μάχης και προκαλεί Σωματική Ζημιά στους αντίπαλους Ήρωες. Τα διαδοχικά χτυπήματα στον ίδιο στόχο προκαλούν λιγότερη ζημιά.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

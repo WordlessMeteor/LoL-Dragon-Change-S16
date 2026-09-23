@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 114,
     "name": "Fiora",
     "alias": "Jade_Fiora",
-    "title": "",
-    "shortBio": "– A Kitörés (Q) egy célzott roham, amely újra elsüthető<br>– A Visszavágás (W) passzívan sebzést ad, a szúrás nem okoz kábítást vagy lassítást<br>– A Hihetetlen sebesség (E) mozgási sebességet ad a támadások után, és gyilkosság esetén frissül<br>– A passzív képesség és az R teljesen megváltozott Olvasd el a képességek leírását",
+    "title": "A nagy párbajhős",
+    "shortBio": "– A Kitörés (Q) egy célzott roham, amely újra elsüthető<br>– A Visszavágás (W) passzívan sebzést ad, a szúrás nem okoz kábítást vagy lassítást<br>– A Hihetetlen sebesség (E) mozgási sebességet ad a támadások után, és gyilkosság esetén frissül<br>– A passzív képesség és az R teljesen megváltozott. Olvasd el a képességek leírását",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 3,
@@ -251,8 +251,8 @@
     "passive": {
         "name": "Párbajhős",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Duelist.project_jade.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/60114/ability_60114_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60114/ability_60114_P1.jpg",
         "description": "Fiora folyamatosan életerőt nyer vissza, amikor sebzést okoz. Hősök eltalálása esetén ez a hatás több alkalommal halmozódik."
     },
     "spells": [
@@ -260,12 +260,12 @@
             "spellKey": "q",
             "name": "Kitörés",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Lunge.project_jade_16_18.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Fiora előretör, és lecsap a célpontjára, amivel fizikai sebzést okoz. Néhány másodpercen belül Fiora további manaköltség nélkül megismételheti a támadást.",
-            "dynamicDescription": "Fiora előretör, és lecsap a célpontjára, amivel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz.<br><br>Fiora 4 másodpercen belül további <scaleMana>manaköltség</scaleMana> nélkül <recast>újra elsütheti</recast> a képességet, és másodszor is előretörhet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora előretör, és lecsap a célpontjára, amivel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz.<br><br>Fiora @RecastWindow@ másodpercen belül <scaleMana>manaköltség</scaleMana> nélkül <recast>újraaktiválhatja</recast> ezt a képességet egy rohamozáshoz.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -410,12 +410,12 @@
             "spellKey": "w",
             "name": "Visszavágás",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_Parry.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Fiora sebzése nagyobb. Aktiváláskor Fiora elhárítja a következő alaptámadást, és varázssebzést ver vissza a támadóra. Hősök, szörnyek és nagy minionok ellen használható.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>Fiora <physicalDamage>sebzése</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> ponttal nő.<br><br><spellActive>Aktív:</spellActive> Fiora 1,5 másodpercen belül elhárítja a következő támadást, és <magicDamage>@ReflectionDamage@ varázssebzést</magicDamage> ver vissza a támadóra. Hősök, szörnyek és nagy minionok ellen használható.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>Fiora <physicalDamage>sebzése</physicalDamage> <physicalDamage>@BonusAD@</physicalDamage> értékkel nő.<br><br><spellActive>Aktív: </spellActive>Fiora kivédi a következő, @ParryDuration@ másodpercen belül beérkező támadást, és <magicDamage>@ReflectionDamage@ varázssebzést</magicDamage> okoz a támadónak. Hősök, szörnyek és nagy minionok ellen hatásos.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -560,12 +560,12 @@
             "spellKey": "e",
             "name": "Hihetetlen sebesség",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_BurstofSpeed.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Fiora támadási sebessége ideiglenesen megnő. Minden ezalatt bevitt támadás vagy Kitörés növeli a mozgási sebességét. Egy hős megölésével a képesség töltési ideje lenullázódik.",
-            "dynamicDescription": "Fiora 3 másodpercre <attackSpeed>@ASBonus*100@% támadási sebességre</attackSpeed> tesz szert. Minden ezalatt bevitt támadás vagy <spellName>Kitörés</spellName> 3 másodpercre <speed>@MSBonus*100@%-kal növeli a mozgási sebességét</speed>, ami legfeljebb 3 jelző erejéig halmozódhat.<br><br>Egy hős megölésével a képesség töltési ideje lenullázódik. (Az asszisztok @HalfCooldown@ másodperccel csökkentik a töltési időt.)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Fiora @BuffDuration@ másodpercig <attackSpeed>@ASBonus*100@% támadási sebességre</attackSpeed> tesz szert. Minden egyes támadás vagy <spellName>Kitörés</spellName>, amely ez idő alatt célba talál, @BuffDuration@ másodpercre <speed>@MSBonus*100@% mozgási sebességet</speed> biztosít Fiorának. A hatás legfeljebb @MaxStacks@ alkalommal halmozódhat.<br><br>Ha megöl egy ellenséges hőst, nullázza a képesség töltési idejét. (Az asszisztok @HalfCooldown@ másodperccel csökkentik a töltési időt)@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -710,8 +710,8 @@
             "spellKey": "r",
             "name": "Pengetánc",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Fiora_DanceofDeath.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60114/ability_60114_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60114/ability_60114_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Fiora cikázni kezd a harcmezőn, és fizikai sebzést okoz az ellenséges hősöknek. Az ugyanazon célpont elleni egymást követő támadások kisebb sebzést okoznak.",
@@ -728,21 +728,21 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
+                150.0,
                 130.0,
-                120.0,
                 110.0,
-                110.0,
-                110.0,
-                110.0
+                90.0,
+                70.0,
+                50.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 1.0
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

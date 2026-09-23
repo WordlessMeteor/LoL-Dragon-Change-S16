@@ -5,7 +5,7 @@
     "relatedPrimeItemId": 78,
     "name": "Poppy",
     "alias": "Jade_Poppy",
-    "title": "",
+    "title": "Sứ Giả Thép",
     "shortBio": "- Xung Phong (E) sử dụng tỉ lệ sức mạnh phép thuật<br>- Nội tại, Q, W, R hoàn toàn khác. Đọc mô tả kỹ năng",
     "isVisibleInClient": true,
     "tacticalInfo": {
@@ -451,21 +451,21 @@
     "passive": {
         "name": "Chiến Binh Quả Cảm",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_ValiantFighter.project_jade.png",
-        "abilityVideoPath": "",
+        "abilityVideoPath": "champion-abilities/60078/ability_60078_P1.webm",
         "abilityVideoImagePath": "",
-        "description": "Giảm 50% toàn bộ sát thương vật lý và sát thương phép gây ra lên Poppy nếu sát thương đó vượt quá 10% Máu hiện tại của cô. Không giảm sát thương từ công trình."
+        "description": "Sát thương gây lên Poppy vượt quá một phần Máu hiện tại của cô sẽ bị giảm."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Cú Đánh Ngàn Cân",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDevastatingBlow.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Poppy nghiền nát đối thủ, gây ra sức mạnh công kích cộng với một lượng cố định và 8% máu tối đa của mục tiêu dưới dạng sát thương cộng thêm. Sát thương cộng thêm không thể vượt quá ngưỡng nhất định dựa trên cấp chiêu.",
-            "dynamicDescription": "Đòn đánh tiếp theo của Poppy gây sát thương phép tương đương <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% Máu tối đa</magicDamage>. Sát thương cộng thêm theo phần trăm máu không thể vượt quá @HealthDamageCap@.@SpellModifierDescriptionAppend@",
+            "description": "Đòn đánh tiếp theo của Poppy nghiền nát đối thủ, gây sát thương cộng thêm dựa trên Máu tối đa của mục tiêu.",
+            "dynamicDescription": "Đòn đánh tiếp theo của Poppy gây sát thương phép tương đương <magicDamage>@FlatDamageCalc@ + @HealthRatio*100@% Máu tối đa</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -491,72 +491,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -610,11 +610,11 @@
             "spellKey": "w",
             "name": "Mẫu Mực Demacia",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/PoppyDefenseOfDemacia.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Nội Tại: Khi nhận sát thương hoặc gây sát thương bằng đòn đánh thường, giáp và sát thương của Poppy được tăng trong 5 giây. Hiệu ứng này có thể cộng dồn 10 lần. Kích Hoạt: Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tốc độ di chuyển của cô ấy được tăng trong 5 giây.",
+            "description": "Nội tại: Khi nhận hoặc gây sát thương bằng đòn đánh thường, Giáp và sát thương của Poppy được tăng lên, có thể cộng dồn. Kích hoạt: Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tăng tốc độ di chuyển.",
             "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Poppy nhận được @BonusStats@ <scaleArmor>Giáp</scaleArmor> và <scaleAD>Sức Mạnh Công Kích</scaleAD> trong @PassiveDuration@ giây mỗi khi cô gây hoặc nhận sát thương từ Đòn Đánh. Hiệu ứng này có thể cộng dồn @MaxStacks@ lần.<br><br><spellActive>Kích Hoạt:</spellActive> Poppy nhận tối đa cộng dồn Mẫu Mực Demacia và tốc độ di chuyển của cô ấy được tăng thêm @Speed*100@% trong @ActiveDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
@@ -760,8 +760,8 @@
             "spellKey": "e",
             "name": "Xung Phong",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_HeroicCharge.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Poppy lao vào kẻ địch và đẩy chúng đi xa hơn. Cú va chạm ban đầu gây một lượng sát thương nhỏ, và nếu mục tiêu va vào địa hình, nạn nhân sẽ chịu một lượng sát thương lớn và bị choáng.",
@@ -910,8 +910,8 @@
             "spellKey": "r",
             "name": "Miễn Nhiễm Ngoại Giao",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Poppy_DiplomaticImmunity.project_jade.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/60078/ability_60078_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60078/ability_60078_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Poppy tập trung toàn bộ sự chú ý vào một tướng địch duy nhất, gây thêm sát thương lên kẻ đó. Poppy miễn nhiễm với mọi sát thương và kỹ năng từ kẻ địch không phải mục tiêu của cô.",

@@ -2292,7 +2292,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e2a9235c}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathPassiveAbility": {
         "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathPassiveAbility/Jade_ChogathPassive",
         "mChildSpells": [
             "Characters/Jade_Chogath/Spells/Jade_ChogathPassiveAbility/Jade_ChogathPassive"
@@ -3033,7 +3033,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{e2a9235c}",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathPassiveAbility",
             "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility",
             "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility",
             "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility",
@@ -3555,65 +3555,6 @@
                 "__type": "RootScriptSequence"
             },
             "{b415ce8f}": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "fc17db34-abb2-42c8-a6ca-5ba61dbef655",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{70954771}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 2,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "48e39f52-ac04-45e2-a269-999a6a3c25ba",
-                                    "ToSay": {
-                                        "value": "level:",
-                                        "__type": "StringGet"
-                                    },
-                                    "Src": {
-                                        "Var": "Level",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "__type": "DebugPrintToChatBlock"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "69788f4d-10cd-4f11-bb12-43112efb3b18",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "Level",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Value2": {
-                                            "value": 1,
-                                            "__type": "IntGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
                 "__type": "RootScriptSequence"
             },
             "{edb2eab3}": {
@@ -3738,9 +3679,6 @@
                 "__type": "RootScriptSequence"
             },
             "{eb530788}": {
-                "blocks": [
-                    null
-                ],
                 "__type": "RootScriptSequence"
             },
             "{d576330f}": {

@@ -580,6 +580,7 @@
             "apiName": "UndyingGuard",
             "calculations": {
                 "TotalDamage": {
+                    "DamageType": 0,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -597,8 +598,7 @@
                             "mCoefficient": 1.100000023841858
                         }
                     ],
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "{72c5c2a8}": 0
+                    "mSimpleTooltipCalculationDisplay": 6
                 }
             },
             "dataValues": {
@@ -3398,13 +3398,13 @@
                     3.0
                 ]
             },
-            "desc": "获得召唤师技能<spellName>欺诈魔术</spellName>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>。你在<keywordStealth>隐形</keywordStealth>状态下的下一次攻击造成额外<physicalDamage>物理伤害</physicalDamage>。在你阵亡时，生成一个爆炸盒子来对附近的敌人们造成大量<magicDamage>魔法伤害</magicDamage>和<status>恐惧</status>。",
+            "desc": "获得召唤师技能<spellName>欺诈魔术</spellName>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>。你在<keywordStealth>隐形</keywordStealth>状态下的下一次攻击造成额外<physicalDamage>物理伤害</physicalDamage>。<br><br>在你阵亡时，生成一个爆炸盒子来对附近的敌人们造成大量<magicDamage>魔法伤害</magicDamage>和<status>恐惧</status>。",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
             "name": "小丑学院",
             "rarity": 2,
-            "tooltip": "<spellName>背刺</spellName>：你从背后袭击敌人时，会造成@BasicAttackDamage@<physicalDamage>额外物理伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>，持续@StealthDuration@秒。你在<keywordStealth>隐形</keywordStealth>状态下的第一次攻击将造成额外的<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这个攻击会暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：阵亡</spellName>：在阵亡时，在你周围造成<magicDamage>@FearDamage*100@%最大生命值的魔法伤害</magicDamage>以及@FearDuration@秒恐惧。"
+            "tooltip": "<spellName>背刺</spellName>：你从背后袭击敌人时，会造成@BasicAttackDamage@<physicalDamage>额外物理伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>，持续@StealthDuration@秒。你在<keywordStealth>隐形</keywordStealth>状态下的第一次攻击将造成额外的<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这个攻击会暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：阵亡</spellName>：在阵亡时，在你周围造成<magicDamage>@FearDamage*100@%最大生命值的真实伤害</magicDamage>以及@FearDuration@秒恐惧。"
         },
         {
             "apiName": "NumbToPain",
@@ -3505,13 +3505,13 @@
                     1.0
                 ]
             },
-            "desc": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会<keywordMajor>在你打败一个【恶魔】战队时</keywordMajor>为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。",
+            "desc": "为你的战队投票，选择与【恶魔猎人】结盟。<br><br>与【恶魔猎人】结盟，会在你击败一个<keywordMajor>【恶魔】战队</keywordMajor>时为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.png",
             "id": 362,
             "name": "与【猎人】结盟",
             "rarity": 4,
-            "tooltip": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会<keywordMajor>在你打败一个【恶魔】战队时</keywordMajor>为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。"
+            "tooltip": "为你的战队投票，选择与【恶魔猎人】结盟。<br><br>与【恶魔猎人】结盟，会在你击败一个<keywordMajor>【恶魔】战队</keywordMajor>时为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。"
         },
         {
             "apiName": "AugmentedPower",
@@ -7460,13 +7460,13 @@
                     1.0
                 ],
                 "HealPowerToDamageConversion": [
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5,
-                    3.5
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5,
+                    4.5
                 ],
                 "HealPowerToDamageTooltip": [
                     350.0,
@@ -7942,6 +7942,7 @@
             "apiName": "HiveMind",
             "calculations": {
                 "BeeDamage": {
+                    "DamageType": 1,
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -7958,8 +7959,7 @@
                             "mCoefficient": 0.25,
                             "mStat": 2
                         }
-                    ],
-                    "{72c5c2a8}": 1
+                    ]
                 }
             },
             "dataValues": {
@@ -10914,13 +10914,13 @@
             "calculations": {},
             "dataValues": {
                 "LargeBonusDamage": [
+                    0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
-                    0.44999998807907104,
-                    0.5
+                    0.44999998807907104
                 ],
                 "MaxLevel": [
                     3.0,
@@ -10932,13 +10932,13 @@
                     3.0
                 ],
                 "MedBonusDamage": [
+                    0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
                     0.30000001192092896,
-                    0.3499999940395355,
-                    0.4000000059604645
+                    0.3499999940395355
                 ],
                 "MovespeedMod": [
                     0.25,
@@ -10959,22 +10959,22 @@
                     0.30000001192092896
                 ],
                 "SmallBonusDamage": [
+                    0.0,
                     0.05000000074505806,
                     0.10000000149011612,
                     0.15000000596046448,
                     0.20000000298023224,
                     0.25,
-                    0.30000001192092896,
-                    0.3499999940395355
+                    0.30000001192092896
                 ],
                 "XLargeBonusDamage": [
+                    0.20000000298023224,
                     0.25,
                     0.30000001192092896,
                     0.3499999940395355,
                     0.4000000059604645,
                     0.44999998807907104,
-                    0.5,
-                    0.550000011920929
+                    0.5
                 ]
             },
             "desc": "体型变小，获得<speed>移动速度</speed>，并基于敌方英雄体型大于你的程度造成额外伤害。",
