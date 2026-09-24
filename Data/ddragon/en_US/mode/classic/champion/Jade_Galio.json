@@ -1,18 +1,18 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.18.1",
+    "version": "16.19.1",
     "data": {
         "Jade_Galio": {
             "id": "Jade_Galio",
             "key": "60003",
             "name": "Galio",
-            "title": "",
+            "title": "The Colossus",
             "image": {
                 "full": "Jade_Galio.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 288,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -219,7 +219,7 @@
                         "full": "Jade_GalioQ.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -230,7 +230,7 @@
                     "id": "Jade_GalioW",
                     "name": "Bulwark",
                     "description": "Galio shields an ally Champion, increasing their Armor and Magic Resistance, and restoring Galio's health each time that Champion suffers damage.",
-                    "tooltip": "Galio shields a friendly champion or himself, shielded targets gain <scaleArmor>{{ bonusdefense }} Armor</scaleArmor> and <scaleMR>{{ bonusdefense }} Magic Resistance</scaleMR> for 4 seconds. Galio is healed for <healing>{{ totalheal }}</healing> each time the unit suffers damage.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Galio empowers a friendly champion or himself, giving them <scaleArmor>{{ bonusdefense }} Armor</scaleArmor> and <scaleMR>{{ bonusdefense }} Magic Resistance</scaleMR> for {{ buffduration }} seconds. Galio is healed for <healing>{{ totalheal }}</healing> each time they suffer damage.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Armor and Magic Resist",
@@ -262,32 +262,11 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
-                        ],
-                        [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
-                        [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
-                        ],
-                        [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -297,53 +276,74 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "2",
-                        "15",
-                        "0.5",
                         "0",
-                        "1",
-                        "1.5",
-                        "2",
-                        "1.25",
-                        "4"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -360,7 +360,7 @@
                         "full": "Jade_GalioW.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -371,7 +371,7 @@
                     "id": "Jade_GalioE",
                     "name": "Righteous Gust",
                     "description": "Galio claps his wings, unleashing a gust of concussive wind that damages enemies and leaves a directional draft in its wake that increases ally movement speed.",
-                    "tooltip": "Galio unleashes a gust of concussive wind that deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>  to all enemies in its path. A directional draft remains for 5 seconds, allies gain <speed>{{ movespeedmod*100 }}% Movement Speed</speed> while moving in line with the draft.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Galio unleashes a gust of concussive wind that deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>  to all enemies in its path. A directional draft remains for {{ draftduration }} seconds, allies gain <speed>{{ movespeedmod*100 }}% Movement Speed</speed> while moving in line with the draft.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -492,18 +492,18 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1100,
-                        1100,
-                        1100,
-                        1100,
-                        1100
+                        1125,
+                        1125,
+                        1125,
+                        1125,
+                        1125
                     ],
-                    "rangeBurn": "1100",
+                    "rangeBurn": "1125",
                     "image": {
                         "full": "Jade_GalioE.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 96,
+                        "x": 288,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -514,7 +514,7 @@
                     "id": "Jade_GalioR",
                     "name": "Idol of Durand",
                     "description": "Galio assumes the form of a statue, taunting nearby enemies and storing concussive energy as they attack him.  Galio then bursts from his statue shell, releasing the stored energy to damage surrounding foes.",
-                    "tooltip": "Galio channels for 2 seconds, taunting nearby foes and taking {{ reduceddamage*100 }}% of reduced damage.<br /><br />After channeling, Galio deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemies, plus an additional 5% damage for each attack he suffered while channeling.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Galio channels for {{ channelduration }} seconds, taunting nearby foes and taking {{ reduceddamage*100 }}% of reduced damage.<br /><br />After channeling, Galio deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to surrounding enemies, plus an additional {{ percentperhitincrease*100 }}% damage for each attack he suffered while channeling.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Damage",
@@ -618,7 +618,7 @@
                         "full": "Jade_GalioR.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 144,
+                        "x": 336,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -633,7 +633,7 @@
                     "full": "Jade_Galio_Passive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 288,
+                    "x": 336,
                     "y": 48,
                     "w": 48,
                     "h": 48

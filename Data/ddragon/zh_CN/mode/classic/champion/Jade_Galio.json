@@ -1,18 +1,18 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.18.1",
+    "version": "16.19.1",
     "data": {
         "Jade_Galio": {
             "id": "Jade_Galio",
             "key": "60003",
             "name": "哨兵之殇",
-            "title": "",
+            "title": "加里奥",
             "image": {
                 "full": "Jade_Galio.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 288,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -219,7 +219,7 @@
                         "full": "Jade_GalioQ.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -230,7 +230,7 @@
                     "id": "Jade_GalioW",
                     "name": "坚强壁垒",
                     "description": "加里奥为一名友方英雄提供护盾，从而提升其护甲和魔法抗性，并在该英雄每次遭受伤害时回复加里奥的生命值。",
-                    "tooltip": "加里奥为一名友方英雄或他自身提供护盾，从而使该目标获得持续4秒的<scaleArmor>{{ bonusdefense }}护甲</scaleArmor>和<scaleMR>{{ bonusdefense }}魔法抗性</scaleMR>。加里奥会在该英雄每次遭受伤害时治疗自身<healing>{{ totalheal }}</healing>生命值。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "加里奥强化一名友方英雄或他自身，从而使该目标获得持续{{ buffduration }}秒的<scaleArmor>{{ bonusdefense }}护甲</scaleArmor>和<scaleMR>{{ bonusdefense }}魔法抗性</scaleMR>。加里奥会在目标每次遭受伤害时治疗<healing>{{ totalheal }}</healing>生命值。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护甲和魔法抗性",
@@ -262,32 +262,11 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
-                        ],
-                        [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
-                        [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
-                        ],
-                        [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -297,53 +276,74 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "2",
-                        "15",
-                        "0.5",
                         "0",
-                        "1",
-                        "1.5",
-                        "2",
-                        "1.25",
-                        "4"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -360,7 +360,7 @@
                         "full": "Jade_GalioW.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -371,7 +371,7 @@
                     "id": "Jade_GalioE",
                     "name": "正义罡风",
                     "description": "加里奥扇动他的双翼，从而释放出一股震荡强风，来对敌人们造成伤害并留下一条指向气流来提升友军的移动速度。",
-                    "tooltip": "加里奥释放出一股震荡强风，对途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。然后留下一条持续5秒的指向气流，友军们在气流中移动时会获得<speed>{{ movespeedmod*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "加里奥释放出一股震荡强风，对途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。然后留下一条持续{{ draftduration }}秒的指向气流，友军们在气流中移动时会获得<speed>{{ movespeedmod*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -492,18 +492,18 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1100,
-                        1100,
-                        1100,
-                        1100,
-                        1100
+                        1125,
+                        1125,
+                        1125,
+                        1125,
+                        1125
                     ],
-                    "rangeBurn": "1100",
+                    "rangeBurn": "1125",
                     "image": {
                         "full": "Jade_GalioE.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 96,
+                        "x": 288,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -514,7 +514,7 @@
                     "id": "Jade_GalioR",
                     "name": "杜朗石像",
                     "description": "加里奥现出石像形态，从而嘲讽附近的敌人们并在他们攻击他时储存震荡能量。加里奥随后从他的石像甲壳中爆裂而出，从而释放已储存的能量来伤害周围的敌人们。",
-                    "tooltip": "加里奥引导2秒，从而嘲讽附近的敌人们并获得{{ reduceddamage*100 }}%伤害减免。<br /><br />在引导之后，加里奥对周围的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并且他在引导期间每遭受一次攻击，就会造成5%额外伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "加里奥引导{{ channelduration }}秒，从而嘲讽附近的敌人们并获得{{ reduceddamage*100 }}%伤害减免。<br /><br />在引导之后，加里奥对周围的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并且他在引导期间每遭受一次攻击，就会造成{{ percentperhitincrease*100 }}%额外伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础伤害",
@@ -618,7 +618,7 @@
                         "full": "Jade_GalioR.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 144,
+                        "x": 336,
                         "y": 0,
                         "w": 48,
                         "h": 48
@@ -633,7 +633,7 @@
                     "full": "Jade_Galio_Passive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 288,
+                    "x": 336,
                     "y": 48,
                     "w": 48,
                     "h": 48

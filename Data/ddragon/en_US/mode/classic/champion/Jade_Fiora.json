@@ -1,13 +1,13 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.18.1",
+    "version": "16.19.1",
     "data": {
         "Jade_Fiora": {
             "id": "Jade_Fiora",
             "key": "60114",
             "name": "Fiora",
-            "title": "",
+            "title": "The Grand Duelist",
             "image": {
                 "full": "Jade_Fiora.png",
                 "sprite": "champion0.png",
@@ -112,7 +112,7 @@
                     "id": "Jade_FioraQ",
                     "name": "Lunge",
                     "description": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple of seconds at no mana cost",
-                    "tooltip": "Fiora dashes forward to strike her target, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage>.<br /><br />Fiora can <recast>Recast</recast> this Ability to dash a second time within 4 seconds at no <scaleMana>Mana</scaleMana> cost.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Fiora dashes forward to strike her target, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage>.<br /><br />Fiora can <recast>Recast</recast> this Ability to dash within {{ recastwindow }} seconds at no <scaleMana>Mana</scaleMana> cost.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -253,7 +253,7 @@
                     "id": "Jade_FioraW",
                     "name": "Riposte",
                     "description": "Fiora's Attack Damage is increased. When activated, Fiora parries the next basic attack and reflects magic damage back to the attacker. Works against champions, monsters, and large minions.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Fiora's <physicalDamage>Attack Damage</physicalDamage> is increased by <physicalDamage>{{ bonusad }}</physicalDamage>.<br /><br /><spellActive>Active: </spellActive>Fiora parries the next Attack within 1.5 seconds and reflects <magicDamage>{{ reflectiondamage }} magic damage</magicDamage> back to the attacker. Works against champions, monsters, and large minions.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Fiora's <physicalDamage>Attack Damage</physicalDamage> is increased by <physicalDamage>{{ bonusad }}</physicalDamage>.<br /><br /><spellActive>Active: </spellActive>Fiora parries the next Attack within {{ parryduration }} seconds and reflects <magicDamage>{{ reflectiondamage }} magic damage</magicDamage> back to the attacker. Works against champions, monsters, and large minions.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Attack Damage",
@@ -396,7 +396,7 @@
                     "id": "Jade_FioraE",
                     "name": "Burst of Speed",
                     "description": "Fiora temporarily gains additional Attack Speed. Each attack or Lunge she lands during this time increases her Move Speed. Killing a champion refreshes the Cooldown on this Ability.",
-                    "tooltip": "Fiora gains <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed> for 3 seconds. Each Attack or <spellName>Lunge</spellName> she lands during this time grants Fiora <speed>{{ msbonus*100 }}% Move Speed</speed> for 3 seconds, stacking up to 3 times.<br /><br />Killing a champion refreshes this Ability's Cooldown. (Assists reduce the Cooldown by {{ halfcooldown }} seconds){{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Fiora gains <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed> for {{ buffduration }} seconds. Each Attack or <spellName>Lunge</spellName> she lands during this time grants Fiora <speed>{{ msbonus*100 }}% Move Speed</speed> for {{ buffduration }} seconds, stacking up to {{ maxstacks }} times.<br /><br />Killing a champion refreshes this Ability's Cooldown. (Assists reduce the Cooldown by {{ halfcooldown }} seconds){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Attack Speed",
@@ -552,11 +552,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
+                        150,
                         130,
-                        120,
                         110
                     ],
-                    "cooldownBurn": "130/120/110",
+                    "cooldownBurn": "150/130/110",
                     "cost": [
                         100,
                         100,

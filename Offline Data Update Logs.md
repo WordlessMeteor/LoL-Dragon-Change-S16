@@ -2488,5 +2488,17 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-24 09-25-53</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 1/2</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: 16.19.820.7193 -> 16.19.821.7343 (No changes)</li>
+						<li>PBE: 16.20.820.9878 -> 16.20.821.4880</li>
+					</ul>
+				DDragon: 16.18.1 -> 16.19.1
+			</td>
+		</tr>
 	</tbody>
 </table>

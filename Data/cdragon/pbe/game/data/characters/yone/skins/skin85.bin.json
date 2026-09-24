@@ -1,5 +1,5 @@
 {
-    "{8cd3b8ad}": {
+    "Characters/Yone/Skins/Skin85": {
         "skinClassification": 2,
         "championSkinId": 777085,
         "championSkinName": "YoneSkin85",
@@ -11,6 +11,10 @@
         },
         "loadscreen": {
             "image": "assets/characters/yone/skins/skin77/yoneloadscreen_77.tex",
+            "__type": "CensoredImage"
+        },
+        "loadscreenVintage": {
+            "image": "assets/characters/yone/skins/skin77/yoneloadscreen_77_le.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -149,7 +153,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{68f92cdb}",
+            "animationGraphData": "Characters/Yone/Animations/Skin77",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -158,7 +162,6 @@
             "texture": "assets/characters/yone/skins/skin85/yone_skin85_tx_cm.tex",
             "skinScale": 0.9300000071525574,
             "selfIllumination": 0.699999988079071,
-            "brushAlphaOverride": 0.5,
             "overrideBoundingBox": [
                 230.0,
                 180.0,
@@ -174,12 +177,12 @@
             "submeshRenderOrder": "Body Instrument Bow_Smear Fish GhostKatana GhostKatana_Smear Katana Katana_Smear Sushi Skirt_Inner Skirt Sheath Strings PizzaBox Recall_Props Floor SwordsVFX",
             "materialOverride": [
                 {
-                    "texture": "{0cf87cd1371dc633}",
+                    "texture": "assets/characters/yone/skins/skin77/streak_red_tx_cm.tex",
                     "submesh": "GhostKatana_Smear",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{f69321659e53519c}",
+                    "texture": "assets/characters/yone/skins/skin77/streak_white_tx_cm.tex",
                     "submesh": "Katana_Smear",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -194,12 +197,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{56bf41b2}",
+                    "Material": "Characters/Yone/Skins/Skin85/Materials/Yone_Skin85_MatcapRed_inst",
                     "submesh": "GhostKatana",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{f69321659e53519c}",
+                    "texture": "assets/characters/yone/skins/skin77/streak_white_tx_cm.tex",
                     "submesh": "Bow_Smear",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -312,12 +315,13 @@
         "mContextualActionData": "Characters/Yone/CAC/Yone_Base",
         "iconCircle": "assets/characters/yone/hud/yone_circle_0.tex",
         "iconSquare": "assets/characters/yone/hud/yone_square.tex",
+        "iconAvatar": "assets/characters/yone/hud/yone_circle_77.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{3db43ad7}",
+        "mResourceResolver": "Characters/Yone/Skins/Skin85/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -345,6 +349,54 @@
                                 "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
                                 "mDeactivateEarlySeconds": -1.0,
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mDrivers": [
+                                    {
+                                        "Spell": "Shared/Spells/ZhonyasRingShield",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mDrivers": [
+                                            {
+                                                "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "mDriver": {
+                                                    "Spell": "Characters/Senna/Spells/SennaECamo",
+                                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                },
+                                                "__type": "NotMaterialDriver"
+                                            }
+                                        ],
+                                        "__type": "AllTrueMaterialDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mScriptName": "LissandraPassiveVictim",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Pyke/Spells/PykeEAbility/PykeEMissile",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    }
+                                ],
+                                "__type": "OneTrueMaterialDriver"
                             },
                             "__type": "NotMaterialDriver"
                         }
@@ -397,111 +449,145 @@
                     }
                 ],
                 "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDriver": {
+                        "mDrivers": [
+                            {
+                                "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            {
+                                "mDriver": {
+                                    "Spell": "Characters/Senna/Spells/SennaECamo",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "__type": "NotMaterialDriver"
+                            }
+                        ],
+                        "__type": "AllTrueMaterialDriver"
+                    },
+                    "__type": "NotMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Instrument",
+                        "effectKey": "Yone_Emote_Dance_01",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Instrument",
+                        "effectKey": "Yone_Emote_Dance_02",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Yone/Skins/Skin85/ChromaPreview.tex",
-        "objectPath": "{8cd3b8ad}",
+        "objectPath": "Characters/Yone/Skins/Skin85",
         "__type": "SkinCharacterDataProperties"
     },
-    "{3db43ad7}": {
+    "Characters/Yone/Skins/Skin85/Resources": {
         "resourceMap": {
-            "{63a4d78d}": "{7407ac12}",
-            "{60a4d2d4}": "{7307aa7f}",
-            "Yone_BA_Tar_01": "{8fd1ae8a}",
-            "Yone_BA_Tar_02": "{8ed1acf7}",
-            "Yone_BA_Slash_01": "{29726320}",
-            "Yone_BA_Slash_02": "{2c7267d9}",
-            "Yone_BA_Slash_03": "{2b726646}",
-            "Yone_R_Tar_Initial": "{1b219ea1}",
-            "Yone_Q1_Tar": "{c65be15c}",
-            "Yone_Q1_Slash": "{d0b14aca}",
-            "Yone_Q3_Knockup": "{35287fdc}",
-            "Yone_Q3_Ready_Buf": "{fa7f793f}",
-            "Yone_W_Cas": "{96209e4a}",
-            "Yone_E_Beam": "{5dcc71a0}",
-            "Yone_E_Demon_Avatar": "{de7587d7}",
-            "Yone_Q3_Ready_Ring": "{2adc1304}",
-            "Yone_E_Demon_Head": "{44d29b50}",
-            "Yone_R_Cas_Warning": "{4707eae5}",
-            "Yone_R_Cas_Residual": "{034665ce}",
-            "Yone_E_Invulnerable_Buf": "{5e00f015}",
-            "Yone_Q3_Tar": "{3896bd46}",
-            "Yone_W_Tar": "{f5645790}",
-            "Yone_E_Timer": "{88c96f5c}",
-            "Yone_E_Tar": "{b523b9ee}",
-            "Yone_Q1_Tell": "{2b769802}",
-            "Yone_W_Slash": "{dfe88e6e}",
-            "Yone_W_Tell_Child": "{7b79d344}",
-            "Yone_E_Demon_Trails": "{997ac0c3}",
-            "Yone_E_Mark": "{ec5c5c42}",
-            "Yone_Q3_Slash": "{ab6fcb50}",
-            "Yone_E_Sheath": "{b2cb0f82}",
-            "Yone_E_Sheath_Child": "{89456948}",
-            "Yone_E_Mark_Execute": "{af4b4de1}",
-            "Yone_E_Mark_End": "{97a90f6f}",
-            "Yone_W_Avatar": "{d9531368}",
-            "Yone_E_Slash_01": "{e146778b}",
-            "Yone_E_Slash_02": "{e246791e}",
-            "Yone_E_Slash_03": "{e3467ab1}",
-            "Yone_E_Slash_04": "{e4467c44}",
-            "Yone_Q3_Charging_Ring": "{df5ac1e2}",
-            "Yone_W_Tell": "{78a2fe26}",
-            "Yone_E_Dash": "{f25b04bb}",
-            "Yone_E_Dash_Head": "{1e5c1aa1}",
-            "Yone_R_Dash_Mis": "{a71e6543}",
-            "Yone_R_Cas_Dust": "{c2e14f7d}",
-            "Yone_R_Cas_Avatar": "{beedc21c}",
-            "Yone_R_Tar_Residual": "{72f1f8a4}",
-            "Yone_BA_Slash_04": "{2e726aff}",
-            "{592073d0}": "{f8fcdf31}",
-            "Yone_Q3_Dash_Tell": "{6c716738}",
-            "Yone_Q3_Dash_Mis_Secondary": "{39f34590}",
+            "{63a4d78d}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BATarCrit01",
+            "{60a4d2d4}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BATarCrit02",
+            "Yone_BA_Tar_01": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BATar01",
+            "Yone_BA_Tar_02": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BATar02",
+            "Yone_BA_Slash_01": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BASlash01",
+            "Yone_BA_Slash_02": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BASlash02",
+            "Yone_BA_Slash_03": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BASlash03",
+            "Yone_R_Tar_Initial": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_TarInitial",
+            "Yone_Q1_Tar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q1Tar",
+            "Yone_Q1_Slash": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q1Slash",
+            "Yone_Q3_Knockup": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3Knockup",
+            "Yone_Q3_Ready_Buf": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3ReadyBuf",
+            "Yone_W_Cas": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Cas",
+            "Yone_E_Beam": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Beam",
+            "Yone_E_Demon_Avatar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_DemonAvatar",
+            "Yone_Q3_Ready_Ring": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3ReadyRing",
+            "Yone_E_Demon_Head": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_DemonHead",
+            "Yone_R_Cas_Warning": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_CasWarningEnemy",
+            "Yone_R_Cas_Residual": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_CasResidual",
+            "Yone_E_Invulnerable_Buf": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_E_InvulnerableBuf",
+            "Yone_Q3_Tar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3Tar",
+            "Yone_W_Tar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Tar",
+            "Yone_E_Timer": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Timer",
+            "Yone_E_Tar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Tar",
+            "Yone_Q1_Tell": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q1Tell",
+            "Yone_W_Slash": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Slash",
+            "Yone_W_Tell_Child": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_TellChild",
+            "Yone_E_Demon_Trails": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_DemonTrails",
+            "Yone_E_Mark": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Mark",
+            "Yone_Q3_Slash": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3Slash",
+            "Yone_E_Sheath": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Sheath",
+            "Yone_E_Sheath_Child": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_SheathChild",
+            "Yone_E_Mark_Execute": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_MarkExecute",
+            "Yone_E_Mark_End": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_MarkEnd",
+            "Yone_W_Avatar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Avatar",
+            "Yone_E_Slash_01": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Slash01",
+            "Yone_E_Slash_02": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Slash02",
+            "Yone_E_Slash_03": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Slash03",
+            "Yone_E_Slash_04": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Slash04",
+            "Yone_Q3_Charging_Ring": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3ChargingRing",
+            "Yone_W_Tell": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Tell",
+            "Yone_E_Dash": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_Dash",
+            "Yone_E_Dash_Head": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_DashHead",
+            "Yone_R_Dash_Mis": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_DashMis",
+            "Yone_R_Cas_Dust": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_CasDust",
+            "Yone_R_Cas_Avatar": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_CasAvatar",
+            "Yone_R_Tar_Residual": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_TarResidual",
+            "Yone_BA_Slash_04": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_BASlash04",
+            "{592073d0}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_MarkTar",
+            "Yone_Q3_Dash_Tell": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3DashTell",
+            "Yone_Q3_Dash_Mis_Secondary": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3DashMisSecondary",
             "{1fcd45db}": "{00000000}",
             "{31bb08ba}": "{00000000}",
             "{013f008c}": "{00000000}",
             "{043f0545}": "{00000000}",
             "{033f03b2}": "{00000000}",
             "{b105b754}": "{00000000}",
-            "{a514f09f}": "{107466cb}",
-            "{b1e8dcf3}": "{cd1fd7e0}",
-            "{ef7ddc33}": "{cdaf55f7}",
-            "{c207423d}": "{cfc20cd8}",
-            "{d0943066}": "{1d7518a0}",
-            "{408fdd45}": "{3f4e56a1}",
+            "{a514f09f}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Recall_SwordDespawn",
+            "{b1e8dcf3}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Joke_Shadow",
+            "{ef7ddc33}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Joke_FishSlice01",
+            "{c207423d}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Taunt",
+            "{d0943066}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Death_Sword",
+            "{408fdd45}": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Dissipate",
             "{fb6e4811}": "{00000000}",
-            "{092220b5}": "{f1cf7821}",
-            "Yone_R_Cas_Warning_Ally": "{6b9da581}",
-            "Yone_W_Sword_Trail": "{a0d6d83e}",
-            "{ac7f804e}": "{ceaf578a}",
-            "{c82db79f}": "{f38ee19a}",
-            "Yone_W_Shield": "{282e56bc}",
-            "Yone_W_Shield_Destroy": "{ba05873e}",
-            "Yone_Q3_Dash_Mis_Child": "{01ff1c4c}",
-            "{b2ad3130}": "{3f8843c8}",
-            "{f80e1e6f}": "{5eaad4a0}",
-            "Yone_R_tar_Knockback": "{6c271ee2}",
+            "{092220b5}": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Respawn",
+            "Yone_R_Cas_Warning_Ally": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_CasWarningAlly",
+            "Yone_W_Sword_Trail": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_SwordTrail",
+            "{ac7f804e}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Joke_FishSlice02",
+            "{c82db79f}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Joke_SushiTrail",
+            "Yone_W_Shield": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_Shield",
+            "Yone_W_Shield_Destroy": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_W_ShieldDestroy",
+            "Yone_Q3_Dash_Mis_Child": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q3DashMisChild",
+            "{b2ad3130}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_E_DashEnd",
+            "{f80e1e6f}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Dance_Dust",
+            "Yone_R_tar_Knockback": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_TarKnockback",
             "{c44eb555}": "{161c9300}",
-            "{e3ef8669}": "{e3fe02fc}",
-            "{e0ef81b0}": "{e6fe07b5}",
-            "{3fb5c161}": "{92348ae5}",
-            "{64f3f02f}": "{7fef61c1}",
-            "{9347c2d5}": "{eb39d284}",
-            "{3c1d29a5}": "{ea560446}",
-            "{570366cf}": "{06dc5b4a}",
-            "{58036862}": "{05dc59b7}",
-            "{590369f5}": "{04dc5824}",
-            "{9272c35c}": "{59679df3}",
-            "{62a964c9}": "{648db358}",
-            "{5fa96010}": "{678db811}",
-            "{65f3f1c2}": "{7cef5d08}",
-            "{9e984eae}": "{24f23165}",
-            "{d3849cdb}": "{6d3dd8ea}",
-            "{d52c8690}": "{bfb7a832}",
+            "{e3ef8669}": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword01",
+            "{e0ef81b0}": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword02",
+            "{3fb5c161}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Q_DashMis01",
+            "Yone_Emote_Dance_01": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Emote_Dance_01",
+            "{9347c2d5}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Ground01",
+            "{3c1d29a5}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_StickerChibi",
+            "{570366cf}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Slash01",
+            "{58036862}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Slash02",
+            "{590369f5}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Slash03",
+            "{9272c35c}": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Props_Recall_Props",
+            "{62a964c9}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_Tar01",
+            "{5fa96010}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_R_Tar02",
+            "Yone_Emote_Dance_02": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Emote_Dance_02",
+            "{9e984eae}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Blink01",
+            "{d3849cdb}": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Prop01",
+            "Yone_Z_Pizza": "Characters/Yone/Skins/Skin77/Particles/Yone_Skin77_Z_Pizza",
             "{1209f7ee}": "{00000000}"
         },
         "__type": "ResourceResolver"
     },
-    "{3f4e56a1}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Dissipate": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2226,10 +2312,10 @@
         "particleName": "Yone_Skin85_Z_Death_Dissipate",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Dissipate",
         "flags": 199,
-        "objectPath": "{3f4e56a1}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Dissipate",
         "__type": "VfxSystemDefinitionData"
     },
-    "{59679df3}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Props_Recall_Props": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2333,10 +2419,10 @@
         "particleName": "Yone_Skin85_Z_Props_Recall_Props",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Props_Recall_Props",
         "flags": 1239,
-        "objectPath": "{59679df3}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Props_Recall_Props",
         "__type": "VfxSystemDefinitionData"
     },
-    "{5e00f015}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_E_InvulnerableBuf": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5099,10 +5185,10 @@
         ],
         "particleName": "Yone_Skin85_E_InvulnerableBuf",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_E_InvulnerableBuf",
-        "objectPath": "{5e00f015}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_E_InvulnerableBuf",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e3fe02fc}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5340,16 +5426,16 @@
         "particleName": "Yone_Skin85_Idle_Sword01",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword01",
         "flags": 215,
-        "objectPath": "{e3fe02fc}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e6fe07b5}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword02": {
         "particleName": "Yone_Skin85_Idle_Sword02",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword02",
-        "objectPath": "{e6fe07b5}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Idle_Sword02",
         "__type": "VfxSystemDefinitionData"
     },
-    "{f1cf7821}": {
+    "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Respawn": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -6377,10 +6463,10 @@
         "particleName": "Yone_Skin85_Z_Death_Respawn",
         "particlePath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Respawn",
         "flags": 199,
-        "objectPath": "{f1cf7821}",
+        "objectPath": "Characters/Yone/Skins/Skin85/Particles/Yone_Skin85_Z_Death_Respawn",
         "__type": "VfxSystemDefinitionData"
     },
-    "{56bf41b2}": {
+    "Characters/Yone/Skins/Skin85/Materials/Yone_Skin85_MatcapRed_inst": {
         "name": "Characters/Yone/Skins/Skin85/Materials/Yone_Skin85_MatcapRed_inst",
         "samplerValues": [
             {
@@ -6393,7 +6479,7 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "{50e1bbe58b684d55}",
+                "texturePath": "assets/characters/yone/skins/skin77/yone_skin65_matcap_red_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -6687,6 +6773,73 @@
                                 0.0
                             ],
                             "__type": "Float4LiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Alpha",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mDriver": {
+                                        "mDrivers": [
+                                            {
+                                                "Spell": "Shared/Spells/ZhonyasRingShield",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "mDrivers": [
+                                                    {
+                                                        "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                    },
+                                                    {
+                                                        "mDriver": {
+                                                            "Spell": "Characters/Senna/Spells/SennaECamo",
+                                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                        },
+                                                        "__type": "NotMaterialDriver"
+                                                    }
+                                                ],
+                                                "__type": "AllTrueMaterialDriver"
+                                            },
+                                            {
+                                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "mScriptName": "LissandraPassiveVictim",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "Spell": "Characters/Pyke/Spells/PykeEAbility/PykeEMissile",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            }
+                                        ],
+                                        "__type": "OneTrueMaterialDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 1.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
                         },
                         "__type": "SwitchMaterialDriver"
                     },

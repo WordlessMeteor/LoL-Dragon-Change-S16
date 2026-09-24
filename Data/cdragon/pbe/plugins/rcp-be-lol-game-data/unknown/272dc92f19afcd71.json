@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Toutes les quelques attaques de base, Caitlyn tire dans la tête de sa cible, infligeant 150% de dégâts à un champion ou 250% de dégâts à un sbire."
+        "description": "Toutes les quelques attaques de base, Caitlyn tire dans la tête de sa cible, infligeant des dégâts bonus."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Caitlyn fait monter son fusil en puissance pendant 1 sec pour effectuer un tir perforant qui inflige des dégâts physiques (les cibles consécutives subissent moins de dégâts).",
+            "description": "Caitlyn fait monter son fusil en puissance pour effectuer un tir perforant qui inflige des dégâts physiques (les cibles consécutives subissent moins de dégâts).",
             "dynamicDescription": "Caitlyn fait monter son fusil en puissance pendant @CastTime@ sec pour effectuer un tir perforant qui inflige <physicalDamage>@InitialDamage@ pts de dégâts physiques</physicalDamage>. Elle inflige des dégâts réduits de @ExtraHitPercentReduction*100@% à chaque cible suivante, jusqu'à un minimum de @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Caitlyn pose un piège pour trouver des yordles sournois. Quand il est déclenché, le piège immobilise le champion, le révèle un court moment et inflige des dégâts magiques en 1,5 sec.",
-            "dynamicDescription": "Caitlyn pose un piège qui se déclenche au passage d'un champion ennemi, <status>l'immobilisant</status> brièvement et le révélant pendant @VisibilityDuration@ sec. Le piège inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en 1,5 sec et reste actif pendant @Duration@ min. Il peut y avoir @MaxTraps@ pièges actifs simultanément.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pose un piège pour trouver des yordles sournois. Quand il est déclenché, le piège immobilise le champion, le révèle et inflige des dégâts magiques pendant une courte durée.",
+            "dynamicDescription": "Caitlyn pose un piège qui se déclenche au passage d'un champion ennemi, <status>l'immobilisant</status> brièvement et le révélant pendant @VisibilityDuration@ sec. Le piège inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en @DOTTime@ sec et reste actif pendant @Duration@ min. Il peut y avoir @MaxTraps@ pièges actifs simultanément.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

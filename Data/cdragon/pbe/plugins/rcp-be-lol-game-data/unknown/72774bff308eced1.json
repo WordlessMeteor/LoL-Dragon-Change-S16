@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Alle paar normalen Angriffe feuert Caitlyn einen Kopfschuss ab, der Champions 150 % und Vasallen 250 % Schaden zufügt."
+        "description": "Alle paar normalen Angriffe feuert Caitlyn einen Kopfschuss ab, der zusätzlichen Schaden verursacht."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Caitlyn legt ihr Gewehr 1 Sekunde lang an und feuert einen durchdringenden Schuss ab, der normalen Schaden verursacht (weitere getroffene Gegner erleiden weniger Schaden).",
+            "description": "Caitlyn legt ihr Gewehr an und feuert einen durchdringenden Schuss ab, der normalen Schaden verursacht (weitere getroffene Gegner erleiden weniger Schaden).",
             "dynamicDescription": "Caitlyn legt ihr Gewehr @CastTime@ Sekunde lang an und feuert einen durchdringenden Schuss ab, der <physicalDamage>@InitialDamage@ normalen Schaden</physicalDamage> verursacht. Verursacht bei jedem weiteren Ziel @ExtraHitPercentReduction*100@ % weniger Schaden, bis zu einem Minimum von @MinimumDamagePercent*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Caitlyn stellt eine Falle, um hinterhältige Yordle zu finden. Wird sie ausgelöst, macht die den Champion bewegungsunfähig, deckt ihn kurzzeitig auf und verursacht 1,5 Sekunden lang magischen Schaden.",
-            "dynamicDescription": "Caitlyn stellt eine Falle auf, die ein gegnerischer Champion auslösen kann, woraufhin er kurzzeitig <status>bewegungsunfähig</status> ist und @VisibilityDuration@ Sekunden lang aufgedeckt wird. Die Falle verursacht über 1,5 Sekunden hinweg <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und hält @Duration@ Minuten lang an. Es können höchstens @MaxTraps@ Fallen gleichzeitig aktiv sein.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn stellt eine Falle auf, um hinterhältige Yordle zu finden. Wird sie ausgelöst, macht sie den Champion bewegungsunfähig, deckt ihn auf und verursacht für kurze Zeit magischen Schaden.",
+            "dynamicDescription": "Caitlyn stellt eine Falle auf, die ein gegnerischer Champion auslösen kann, woraufhin er für kurze Zeit <status>bewegungsunfähig</status> ist und @VisibilityDuration@ Sekunden lang aufgedeckt wird. Die Falle verursacht über @DOTTime@ Sekunden hinweg <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und hält @Duration@ Minuten lang an. Es können höchstens @MaxTraps@ Fallen gleichzeitig aktiv sein.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

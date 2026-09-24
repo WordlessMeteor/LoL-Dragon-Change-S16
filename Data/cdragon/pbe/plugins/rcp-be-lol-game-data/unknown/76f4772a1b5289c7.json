@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Caitlyn ยิงกระสุน Headshot สร้างความเสียหาย 150% แก่แชมเปี้ยน หรือ 250% แก่มินเนี่ยน เมื่อโจมตีครบจำนวนที่กำหนด"
+        "description": "Caitlyn ยิงกระสุน Headshot ที่สร้างความเสียหายเพิ่มเติมเมื่อโจมตีครบจำนวนที่กำหนด"
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Caitlyn เร่งการทำงานของไรเฟิลของเธอขึ้นมาในช่วง 1 วินาที เพื่อยิงกระสุนทะลุทะลวงสร้างความเสียหายกายภาพ (เป้าหมายต่อ ๆ ไปจะรับความเสียหายน้อยลง)",
+            "description": "Caitlyn เร่งการทำงานของไรเฟิลของเธอ เพื่อยิงกระสุนทะลุทะลวงสร้างความเสียหายกายภาพ (เป้าหมายต่อ ๆ ไปจะรับความเสียหายน้อยลง)",
             "dynamicDescription": "Caitlyn ชาร์จไรเฟิลของเธอเป็นเวลา @CastTime@ วินาทีเพื่อยิงกระสุนทะลุทะลวง สร้าง<physicalDamage>ความเสียหายกายภาพ @InitialDamage@ หน่วย</physicalDamage> สร้างความเสียหายลดลง @ExtraHitPercentReduction*100@% ทุกครั้งที่โดนศัตรู โดยจะลดต่ำสุดที่ @MinimumDamagePercent*100@%@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Caitlyn วางกับดักเพื่อตามหา Yordle เจ้าเล่ห์ เมื่อกับดักทำงาน จะหยุดการเคลื่อนที่ของแชมเปี้ยน เปิดเผยตำแหน่งพวกเขาเป็นเวลาสั้น ๆ และสร้างความเสียหายเวทเป็นเวลา 1.5 วินาที",
-            "dynamicDescription": "Caitlyn วางกับดักที่แชมเปี้ยนศัตรูสามารถเหยียบได้ ซึ่งจะ<status>หยุด</status>พวกเขาเป็นเวลาสั้น ๆ และเปิดเผยตำแหน่งของพวกเขาเป็นเวลา @VisibilityDuration@ วินาที กับดักสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ในเวลา 1.5 วินาที และจะคงอยู่เป็นเวลา @Duration@ นาที สามารถวางกับดักพร้อมกันได้สูงสุด @MaxTraps@ อัน@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn วางกับดักเพื่อตามหา Yordle เจ้าเล่ห์ เมื่อกับดักทำงาน จะหยุดการเคลื่อนที่ของแชมเปี้ยน เปิดเผยตำแหน่งและสร้างความเสียหายเวทเป็นเวลาสั้น ๆ",
+            "dynamicDescription": "Caitlyn วางกับดักที่แชมเปี้ยนศัตรูสามารถเหยียบได้ ซึ่งจะ<status>ตรึง</status>พวกเขาเป็นเวลาสั้น ๆ และเปิดเผยตำแหน่งของพวกเขาเป็นเวลา @VisibilityDuration@ วินาที กับดักสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ในเวลา @DOTTime@ วินาที และจะคงอยู่เป็นเวลา @Duration@ นาที สามารถวางกับดักพร้อมกันได้สูงสุด @MaxTraps@ อัน@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

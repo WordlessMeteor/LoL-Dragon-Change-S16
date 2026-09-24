@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Cada pocos ataques básicos, Caitlyn realiza un disparo a la cabeza que inflige un 150% de daño a campeones o un 250% de daño a súbditos."
+        "description": "Cada pocos ataques básicos, Caitlyn realiza un disparo a la cabeza que inflige daño adicional."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Caitlyn carga su rifle durante 1 s para disparar un tiro penetrante que inflige daño físico (inflige menos daño a los objetivos posteriores).",
+            "description": "Caitlyn carga su rifle para disparar un tiro penetrante que inflige daño físico (inflige menos daño a los objetivos posteriores).",
             "dynamicDescription": "Caitlyn carga su rifle durante @CastTime@ s para liberar un disparo penetrante que inflige <physicalDamage>@InitialDamage@ de daño físico</physicalDamage>. Inflige un @ExtraHitPercentReduction*100@% menos de daño a cada objetivo subsiguiente, hasta un mínimo del @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Caitlyn pone una trampa para encontrar a los yordles furtivos. Al activarse, la trampa inmoviliza al campeón, lo revela durante unos instantes y le inflige daño mágico a lo largo de 1,5 s.",
-            "dynamicDescription": "Caitlyn coloca una trampa que un campeón enemigo puede activar, lo que lo <status>enraíza</status> brevemente y lo revela durante @VisibilityDuration@ s. La trampa inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a lo largo de 1,5 s y dura @Duration@ min. Puede haber @MaxTraps@ trampas activas al mismo tiempo.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pone una trampa para encontrar a los yordles furtivos. Al activarse, la trampa inmoviliza al campeón, lo revela y le inflige daño mágico durante un breve periodo.",
+            "dynamicDescription": "Caitlyn coloca una trampa que un campeón enemigo puede activar, lo que lo <status>enraíza</status> brevemente y lo revela durante @VisibilityDuration@&nbsp;s. La trampa inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a lo largo de @DOTTime@&nbsp;s y dura @Duration@&nbsp;min. Puede haber @MaxTraps@ trampas activas al mismo tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

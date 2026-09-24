@@ -59,17 +59,24 @@
             e.exports = {
                 _launchTFTCallback: null,
                 _isFullLaunchEnabledCallback: null,
+                _isHextechTFTQueueCallback: null,
                 _registerLaunchTFTCallback: function(e) {
                     this._launchTFTCallback = e
                 },
                 _registerIsFullLaunchEnabledCallback: function(e) {
                     this._isFullLaunchEnabledCallback = e
                 },
-                _unregisterLaunchTFTCallback: function() {
-                    this._launchTFTCallback = null, this._isFullLaunchEnabledCallback = null
+                _registerIsHextechTFTQueueCallback: function(e) {
+                    this._isHextechTFTQueueCallback = e
+                },
+                _unregisterCallbacks: function() {
+                    this._launchTFTCallback = null, this._isFullLaunchEnabledCallback = null, this._isHextechTFTQueueCallback = null
                 },
                 isFullLaunchEnabled: function() {
                     return !!this._isFullLaunchEnabledCallback && this._isFullLaunchEnabledCallback()
+                },
+                isHextechTFTQueue: function(e) {
+                    return !!this._isHextechTFTQueueCallback && this._isHextechTFTQueueCallback(e)
                 },
                 launchTFT: function() {
                     return !!this._launchTFTCallback && (this._launchTFTCallback(), !0)
@@ -202,8 +209,10 @@
                 }
                 acceptGameInvite(e) {
                     const t = e.invitationId,
-                        n = e?.gameConfig?.gameMode === h.GAME_MODES.TFT;
-                    if (d.default.isFullLaunchEnabled() && n) {
+                        n = e?.gameConfig?.gameMode === h.GAME_MODES.TFT,
+                        i = d.default.isFullLaunchEnabled(),
+                        s = d.default.isHextechTFTQueue(e?.gameConfig?.queueId);
+                    if (i && n && !s) {
                         if (d.default.launchTFT()) return v.default.gameInviteAccept(), Promise.resolve();
                         o.logger.warn("[PartyAPI] TFT full launch callback not registered; falling through to lobby accept.")
                     }

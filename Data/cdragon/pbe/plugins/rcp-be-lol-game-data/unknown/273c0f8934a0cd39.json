@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "通常攻撃数回ごとにヘッドショットを繰り出し、チャンピオンには150%、ミニオンには250%のダメージを与える。"
+        "description": "通常攻撃数回ごとにヘッドショットを繰り出し、追加ダメージを与える。"
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "1秒間ライフルをチャージし、指定方向に貫通弾を発射する。貫通弾は命中した敵ユニットに物理ダメージを与える(2体目以降へのダメージは徐々に減少する)。",
+            "description": "ライフルをチャージし、指定方向に貫通弾を発射する。貫通弾は命中した敵ユニットに物理ダメージを与える(2体目以降へのダメージは徐々に減少する)。",
             "dynamicDescription": "@CastTime@秒間ライフルをチャージし、貫通弾を発射して<physicalDamage>@InitialDamage@の物理ダメージ</physicalDamage>を与える。追加の敵に命中するたびにダメージが@ExtraHitPercentReduction*100@%ずつ低下していく(最小@MinimumDamagePercent*100@%)。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "こそこそと動き回るヨードルを狙うトラップを仕掛ける。トラップに触れた敵チャンピオンを少しの間移動不能状態にして可視化し、1.5秒かけて魔法ダメージを与える。",
-            "dynamicDescription": "指定地点に敵チャンピオンが踏むと発動するトラップを仕掛ける。トラップはかかったチャンピオンに少しの間<status>スネア効果</status>を付与し、@VisibilityDuration@秒間可視化する。トラップは1.5秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@Duration@分間持続する。トラップは同時に@MaxTraps@個まで設置しておくことができる。@SpellModifierDescriptionAppend@",
+            "description": "こそこそと動き回るヨードルを狙うトラップを仕掛ける。トラップに触れた敵チャンピオンを移動不能状態にして可視化し、短い時間をかけて魔法ダメージを与える。",
+            "dynamicDescription": "指定地点に敵チャンピオンが踏むと発動するトラップを仕掛ける。トラップはかかったチャンピオンに少しの間<status>スネア効果</status>を付与し、@VisibilityDuration@秒間可視化する。トラップは@DOTTime@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@Duration@分間持続する。トラップは同時に@MaxTraps@個まで設置しておくことができる。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

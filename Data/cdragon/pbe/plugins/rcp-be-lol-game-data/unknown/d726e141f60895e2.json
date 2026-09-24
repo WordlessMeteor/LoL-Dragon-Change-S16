@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Após alguns Ataques básicos, Caitlyn dispara um Bem na Mira, causando 150% de dano a um Campeão ou 250% de dano a uma tropa."
+        "description": "Após alguns Ataques básicos, Caitlyn dispara um tiro Bem na Mira que causa dano adicional."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn prepara seu rifle por 1s para fazer um disparo penetrante que causa Dano Físico (causa menos dano a alvos subsequentes).",
+            "description": "Caitlyn prepara seu rifle por para executar um disparo penetrante que causa Dano Físico (causa menos dano a alvos subsequentes).",
             "dynamicDescription": "Caitlyn prepara seu rifle por @CastTime@s para disparar um projétil perfurante que causa <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage>. Causa @ExtraHitPercentReduction*100@% a menos de dano a cada alvo subsequente. O dano total é reduzido em até @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn coloca uma armadilha para encontrar yordles sorrateiros. Ao ser acionada, a armadilha imobiliza o Campeão, revelando-o por um breve período e causando Dano Mágico por 1,5s.",
-            "dynamicDescription": "Caitlyn posiciona uma armadilha que, ao ser acionada por um Campeão inimigo, o <status>Enraíza</status> e revela por @VisibilityDuration@s. A armadilha causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> por 1,5s e dura @Duration@min. Apenas @MaxTraps@ armadilhas podem ficar ativas ao mesmo tempo.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn coloca uma armadilha para encontrar yordles sorrateiros. Ao ser acionada, a armadilha imobiliza o Campeão, revelando-o e causando Dano Mágico por um breve período.",
+            "dynamicDescription": "Caitlyn posiciona uma armadilha que, ao ser acionada por um Campeão inimigo, o <status>Enraíza</status> e revela por @VisibilityDuration@s. A armadilha causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> por @DOTTime@s e dura @Duration@min. Apenas @MaxTraps@ armadilhas podem ficar ativas ao mesmo tempo.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

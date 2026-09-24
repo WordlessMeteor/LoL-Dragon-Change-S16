@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Néhány alaptámadásonként Caitlyn fejlövést ad le, amely hősöknek 150%-os, minionoknak pedig 250%-os sebzést okoz."
+        "description": "Néhány alaptámadásonként Caitlyn fejlövést ad le, ami extra sebzést okoz."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Caitlyn 1 másodpercig felpörgeti a puskáját, majd kilő egy lövedéket, ami áthatol a célpontokon, és fizikai sebzést okoz (a sorban következő ellenfeleket kevésbé sebzi).",
+            "description": "Caitlyn felpörgeti a puskáját, majd kilő egy lövedéket, ami áthatol a célpontokon, és fizikai sebzést okoz (a sorban következő ellenfeleket kevésbé sebzi).",
             "dynamicDescription": "Caitlyn @CastTime@ másodpercre felpörgeti a puskáját, és egy lövést ad le, amely áthatol a célponton, és <physicalDamage>@InitialDamage@ fizikai sebzést okoz</physicalDamage>. Minden további célpontnak @ExtraHitPercentReduction*100@%-kal kevesebb sebzést okoz, de legalább @MinimumDamagePercent*100@%-ot.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Caitlyn felállít egy csapdát a trükkös yordle-ök elfogására. A csapdába lépő hős mozgásképtelenné és rövid időre láthatóvá válik, valamint 1,5 másodpercen át varázssebzést szenved el.",
-            "dynamicDescription": "Caitlyn kihelyez egy csapdát, amely @VisibilityDuration@ másodpercre <status>mozgásképtelenné teszi</status> és felfedi a belelépő ellenséges hőst. A csapda <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz 1,5 másodperc alatt, és @Duration@ percig marad aktív. Egyszerre legfeljebb @MaxTraps@ csapda lehet aktív.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn felállít egy csapdát a trükkös yordle-ök elfogására. A csapdába lépő hős mozgásképtelenné és rövid időre láthatóvá válik, valamint varázssebzést szenved el.",
+            "dynamicDescription": "Caitlyn kihelyez egy csapdát, amely @VisibilityDuration@ másodpercre <status>mozgásképtelenné teszi</status> és felfedi a belelépő ellenséges hőst. A csapda <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz @DOTTime@ másodperc alatt, és @Duration@ percig marad aktív. Egyszerre legfeljebb @MaxTraps@ csapda lehet aktív.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

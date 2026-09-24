@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Co kilka ataków podstawowych Caitlyn trafi przeciwnika w głowę, zadając 150% obrażeń bohaterom lub 250% stworom."
+        "description": "Co kilka ataków podstawowych Caitlyn trafi przeciwnika w głowę, zadając dodatkowe obrażenia."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Przez 1 sek. Caitlyn przymierza się do strzału, po czym wystrzeliwuje penetrujący pocisk, który zadaje obrażenia fizyczne zmniejszające się wraz z każdym trafionym celem.",
+            "description": "Caitlyn przymierza się do strzału, po czym wystrzeliwuje penetrujący pocisk, który zadaje obrażenia fizyczne zmniejszające się wraz z każdym trafionym celem.",
             "dynamicDescription": "Caitlyn celuje przez @CastTime@ sek. i wystrzeliwuje penetrujący pocisk zadający <physicalDamage>@InitialDamage@ pkt. obrażeń fizycznych</physicalDamage>. Obrażenia te są zmniejszone o @ExtraHitPercentReduction*100@% dla każdego kolejnego celu – minimalnie do @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn zastawia pułapkę na Yordle. Gdy wrogi bohater wchodzi w pułapkę, zostaje unieruchomiony, chwilowo ujawniony i otrzymuje obrażenia magiczne przez 1,5 sek.",
-            "dynamicDescription": "Caitlyn ustawia pułapkę, która po aktywowaniu przez wrogiego bohatera <status>unieruchamia</status> go na krótką chwilę i ujawnia na @VisibilityDuration@ sek. Pułapka zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu 1,5 sek. Pułapka pozostaje aktywna przez @Duration@ min. Jednocześnie można zastawić następującą liczbę pułapek: @MaxTraps@.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn zastawia pułapkę na Yordle. Gdy wrogi bohater wchodzi w pułapkę, zostaje unieruchomiony, ujawniony i otrzymuje obrażenia magiczne przez krótki czas.",
+            "dynamicDescription": "Caitlyn ustawia pułapkę, która po aktywowaniu przez wrogiego bohatera <status>unieruchamia</status> go na krótką chwilę i ujawnia na @VisibilityDuration@ sek. Pułapka zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DOTTime@ sek. i pozostaje aktywna przez @Duration@ min. Jednocześnie można zastawić następującą liczbę pułapek: @MaxTraps@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

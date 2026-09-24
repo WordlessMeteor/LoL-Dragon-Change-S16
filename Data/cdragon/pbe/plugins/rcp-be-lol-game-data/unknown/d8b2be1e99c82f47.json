@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Setelah beberapa kali basic attack, Caitlyn akan menembakkan headshot yang menghasilkan 150% damage ke champion atau 250% damage ke minion."
+        "description": "Setelah beberapa kali basic attack, Caitlyn akan menembakkan headshot yang menghasilkan damage ekstra."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Caitlyn mengaktifkan senapannya selama 1 detik untuk mengeluarkan tembakan menembus yang menghasilkan physical damage (menghasilkan lebih sedikit damage ke target berikutnya).",
+            "description": "Caitlyn mengisi senapannya untuk melepaskan tembakan tembus yang menghasilkan physical damage (menghasilkan damage lebih kecil kepada target-target berikutnya).",
             "dynamicDescription": "Caitlyn mengaktifkan senapannya selama @CastTime@ detik untuk mengeluarkan tembakan penembus yang menghasilkan <physicalDamage>@InitialDamage@ physical damage</physicalDamage>. Menghasilkan @ExtraHitPercentReduction*100@% lebih sedikit damage ke tiap target berikutnya hingga minimum @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Caitlyn memasang jebakan untuk menemukan yordle cerdik. Saat terpicu, jebakan ini membuat champion tidak bisa bergerak, mengungkap posisi mereka selama beberapa saat, dan menghasilkan magic damage selama 1,5 detik.",
-            "dynamicDescription": "Caitlyn memasang jebakan yang bisa dipicu oleh Champion musuh, yang akan <status>Root</status> mereka  selama beberapa saat dan mengunkap mereka selama @VisibilityDuration@ detik. Jebakan ini menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama 1,5 detik, dan bertahan selama @Duration@ menit. Hanya @MaxTraps@ jebakan yang bisa aktif sekaligus.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn memasang jebakan untuk menemukan yordle cerdik. Saat terpicu, jebakan ini menerapkan immobilize pada champion, mengungkap posisi mereka dan menghasilkan magic damage selama beberapa saat.",
+            "dynamicDescription": "Caitlyn memasang jebakan yang bisa dipicu oleh Champion musuh, yang akan <status>Root</status> mereka  selama beberapa saat dan mengunkap mereka selama @VisibilityDuration@ detik. Jebakan ini menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @DOTTime@ detik, dan bertahan selama @Duration@ menit. Hanya @MaxTraps@ jebakan yang bisa aktif sekaligus.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

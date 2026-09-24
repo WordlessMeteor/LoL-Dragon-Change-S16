@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.18.1",
+    "version": "16.19.1",
     "data": {
         "Jade_Akali": {
             "id": "Jade_Akali",
@@ -186,8 +186,8 @@
                     "parentSkin": 301
                 }
             ],
-            "lore": "- 阿卡丽的被动基于额外攻击力和法术强度提供若干加成<br>- 阿卡丽的Q是一个目标选取式技能<br>- 阿卡丽的E在她周围造成范围伤害<br>- 阿卡丽的R是一个目标选取式冲刺",
-            "blurb": "- 阿卡丽的被动基于额外攻击力和法术强度提供若干加成<br>- 阿卡丽的Q是一个目标选取式技能<br>- 阿卡丽的E在她周围造成范围伤害<br>- 阿卡丽的R是一个目标选取式冲刺",
+            "lore": "- 【忍法！苍绯印】(被动)基于额外攻击力和法术强度提供若干加成<br>- 【奥义！绯叶】(Q)是一个目标选取式技能<br>- 【奥义！散华】(E)在她周围造成范围伤害<br>- 【秘奥义！幻樱杀缭乱】(R)是一个目标选取式冲刺",
+            "blurb": "- 【忍法！苍绯印】(被动)基于额外攻击力和法术强度提供若干加成<br>- 【奥义！绯叶】(Q)是一个目标选取式技能<br>- 【奥义！散华】(E)在她周围造成范围伤害<br>- 【秘奥义！幻樱杀缭乱】(R)是一个目标选取式冲刺",
             "allytips": [],
             "enemytips": [],
             "tags": [
@@ -521,30 +521,32 @@
                     "leveltip": {
                         "label": [
                             "基础伤害",
-                            "冷却时间"
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ basecost }} -> {{ basecostNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        7,
-                        6,
                         5,
                         4,
-                        3
+                        3,
+                        2,
+                        1
                     ],
-                    "cooldownBurn": "7/6/5/4/3",
+                    "cooldownBurn": "5/4/3/2/1",
                     "cost": [
                         60,
-                        60,
-                        60,
-                        60,
-                        60
+                        55,
+                        50,
+                        45,
+                        40
                     ],
-                    "costBurn": "60",
+                    "costBurn": "60/55/50/45/40",
                     "datavalues": {},
                     "effect": [
                         null,

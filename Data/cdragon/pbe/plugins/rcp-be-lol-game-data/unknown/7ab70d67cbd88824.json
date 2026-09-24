@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Dopo qualche attacco base, Caitlyn spara un Colpo alla testa che infligge 150% danni a un campione o 250% danni a un minion."
+        "description": "Dopo qualche attacco base, Caitlyn spara un colpo alla testa che infligge danni aggiuntivi."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Caitlyn carica il suo fucile per 1 secondo per sparare un colpo penetrante che infligge danni fisici (che diminuiscono con i bersagli successivi).",
+            "description": "Caitlyn carica il suo fucile per sparare un colpo penetrante che infligge danni fisici (che diminuiscono con i bersagli successivi).",
             "dynamicDescription": "Caitlyn carica il fucile per @CastTime@ secondo/i per sparare un colpo perforante che infligge <physicalDamage>@InitialDamage@ danni fisici</physicalDamage>. Infligge un @ExtraHitPercentReduction*100@% di danni in meno a ogni bersaglio successivo, fino a un minimo di @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Caitlyn piazza una trappola per stanare gli yordle. Se attivata, la trappola immobilizza il campione, lo rivela per un breve periodo e infligge danni magici nell'arco di 1,5 secondi.",
-            "dynamicDescription": "Caitlyn posiziona una trappola che può essere attivata da un campione nemico, <status>trattenendolo</status> e rivelandolo per @VisibilityDuration@ secondo/i. La trappola infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> nell'arco di 1,5 secondi e dura per @Duration@ minuti. È possibile avere fino a @MaxTraps@ trappole attive contemporaneamente.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn piazza una trappola per stanare gli yordle. Se attivata, la trappola immobilizza il campione, lo rivela e infligge danni magici per un breve periodo.",
+            "dynamicDescription": "Caitlyn posiziona una trappola che può essere attivata da un campione nemico, <status>trattenendolo</status> brevemente e rivelandolo per @VisibilityDuration@ secondo/i. La trappola infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> nell'arco di @DOTTime@ secondi e dura per @Duration@ minuti. È possibile avere fino a @MaxTraps@ trappole attive contemporaneamente.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

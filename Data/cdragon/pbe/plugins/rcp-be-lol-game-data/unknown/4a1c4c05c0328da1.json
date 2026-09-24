@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "凱特琳每普攻幾次，就會觸發一次爆頭，對英雄造成150%傷害，對士兵造成250%傷害。"
+        "description": "凱特琳每普攻幾次，就會觸發一次爆頭，造成額外傷害。"
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凱特琳的步槍蓄能1秒後射出會穿透目標的子彈，造成物理傷害(穿透後傷害遞減)。",
+            "description": "凱特琳的步槍蓄能後射出會穿透目標的子彈，造成物理傷害(穿透後傷害遞減)。",
             "dynamicDescription": "凱特琳為她的步槍蓄能@CastTime@秒，發射一發穿透子彈，造成<physicalDamage>@InitialDamage@物理傷害</physicalDamage>。對後續目標的傷害逐個降低@ExtraHitPercentReduction*100@%，最低降至@MinimumDamagePercent*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凱特琳設置陷阱來捕捉狡猾的約德爾人。陷阱觸發時，會硬控場英雄、短暫揭露其位置，並在1.5秒內造成魔法傷害。",
-            "dynamicDescription": "凱特琳設置一個陷阱，敵方英雄觸發後將被<status>定身</status>並揭露位置@VisibilityDuration@秒。陷阱會在1.5秒內造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並持續@Duration@分鐘。最多一次可放置@MaxTraps@個陷阱。@SpellModifierDescriptionAppend@",
+            "description": "凱特琳設置陷阱來捕捉狡猾的約德爾人。陷阱觸發時，會硬控場英雄、揭露其位置，並在短時間內持續造成魔法傷害。",
+            "dynamicDescription": "凱特琳設置一個陷阱，敵方英雄觸發後將被<status>定身</status>並揭露位置@VisibilityDuration@秒。陷阱會在@DOTTime@秒內造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並持續@Duration@分鐘。可同時放置@MaxTraps@個陷阱。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

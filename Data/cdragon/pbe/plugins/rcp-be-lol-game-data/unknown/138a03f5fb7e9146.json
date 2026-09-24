@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Her birkaç normal saldırıda bir Caitlyn tam kafadan vurarak bir şampiyona %150 veya bir minyona %250 Hasar verir."
+        "description": "Caitlyn her birkaç normal saldırıda bir hedefini Tam Kafadan vurarak fazladan hasar verir."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Caitlyn 1 saniyeliğine silahını kurduktan sonra fiziksel hasar veren ve önündeki rakipleri deşip geçen bir atış yapar. İlk hedeften sonraki hedeflere daha az hasar verir.",
+            "description": "Caitlyn silahını kurduktan sonra fiziksel hasar veren ve önündeki rakipleri deşip geçen bir atış yapar. İlk hedeften sonraki hedeflere daha az hasar verir.",
             "dynamicDescription": "Caitlyn @CastTime@ saniyeliğini tüfeğini kurarak yaptığı delici atışla <physicalDamage>@InitialDamage@ Fiziksel Hasar</physicalDamage> verir. Atışlar ilkinden sonraki her hedefe %@ExtraHitPercentReduction*100@ daha az hasar verir (en az %@MinimumDamagePercent*100@).@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Caitlyn ele avuca sığmaz yordle'ları yakalamak için bir kapan kurar. Kapan tetiklendiğinde şampiyonu hareketsiz bırakır, kısa süreliğine açığa çıkarır ve 1,5 saniye boyunca büyü hasarı verir.",
-            "dynamicDescription": "Caitlyn yakalanan bir rakip şampiyonu kısa süreliğine <status>sabitleyen</status> ve @VisibilityDuration@ saniyeliğine açığa çıkaran bir kapan kurar. Kapan 1,5 saniye boyunca <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve @Duration@ dakika boyunca varlığını korur. Aynı anda @MaxTraps@ kapan etkin olabilir.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn ele avuca sığmaz yordle'ları yakalamak için bir kapan kurar. Kapan tetiklendiğinde şampiyonu hareketsiz bırakır, açığa çıkarır ve kısa süreliğine büyü hasarı verir.",
+            "dynamicDescription": "Caitlyn yakalanan bir rakip şampiyonu kısa süreliğine <status>sabitleyen</status> ve @VisibilityDuration@ saniyeliğine açığa çıkaran bir kapan kurar. Kapan @DOTTime@ saniye boyunca <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve @Duration@ dakika boyunca varlığını korur. Aynı anda @MaxTraps@ kapan etkin olabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

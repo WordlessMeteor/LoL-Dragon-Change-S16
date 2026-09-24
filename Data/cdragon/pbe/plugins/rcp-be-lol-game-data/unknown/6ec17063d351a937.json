@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "كل بضعة هجمات أساسية، تطلق كايتلين إصابة في الرأس تلحق ضررًا بنسبة 150% ببطل أو ضررًا بنسبة 250% بتابع."
+        "description": "كل بضع هجمات أساسية، تطلق كايتلين إصابة في الرأس تلحق ضررًا إضافيًا."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تشحن كايتلين بندقيتها لمدة 1ث، ثم تطلق طلقة نافذة تلحق ضررًا ماديًا (تلحق ضررًا أقل بالأهداف اللاحقة).",
+            "description": "تشحن كايتلين بندقيتها، ثم تطلق طلقة نافذة تلحق ضررًا ماديًا (تلحق ضررًا أقل بالأهداف اللاحقة).",
             "dynamicDescription": "تشحن كايتلين بندقيتها لمدة @CastTime@ث لتطلق رصاصة نافذة تلحق <physicalDamage>@InitialDamage@ ضرر مادي</physicalDamage>. تلحق ضررًا أقل بنسبة @ExtraHitPercentReduction*100@% بكل هدف لاحق، وصولًا إلى حدٍ أدنى قدره @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تنصب كايتلين فخًا للعثور على المتسللين من اليوردل. عند تفعيله، يشل الفخ حركة البطل ويكشفه لفترة قصيرة، ويلحق به ضرر سحر لمدة 1.5ث.",
-            "dynamicDescription": "تنصب كايتلين فخًا يمكن لبطل معادٍ الوقوع فيه، مما يؤدي إلى <status>تثبيته</status> لمدة قصيرة وكشفه لمدة @VisibilityDuration@ث. يلحق الفخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> لمدة 1.5ث، ويستمر لمدة @Duration@د. يمكن تفعيل @MaxTraps@ من الفخاخ فقط في الوقت نفسه.@SpellModifierDescriptionAppend@",
+            "description": "تنصب كايتلين فخًا للعثور على المتسللين من اليوردل. عند تفعيله، يشل الفخ حركة البطل، ويكشفه ويلحق به ضرر سحر خلال فترة قصيرة.",
+            "dynamicDescription": "تنصب كايتلين فخًا يمكن لبطل معادٍ الوقوع فيه، مما يؤدي إلى <status>تثبيته</status> لمدة قصيرة وكشفه لمدة @VisibilityDuration@ث. يلحق الفخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> خلال @DOTTime@ث، ويستمر لمدة @Duration@د. يمكن تفعيل @MaxTraps@ من الفخاخ فقط في الوقت نفسه.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

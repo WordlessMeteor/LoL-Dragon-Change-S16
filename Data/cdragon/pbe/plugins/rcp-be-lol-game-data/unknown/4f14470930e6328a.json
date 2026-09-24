@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "La fiecare câteva atacuri de bază, Caitlyn trage direct în capul adversarului, provocând fie 150% daune în cazul unui campion, fie 250% daune în cazul unui minion."
+        "description": "La fiecare câteva atacuri de bază, Caitlyn trage direct în capul adversarului, provocând daune suplimentare."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Caitlyn își armează pușca timp de 1 secundă, pentru a trage un glonț care străpunge țintele, provocând daune fizice (mai mici la țintele secundare următoare).",
+            "description": "Caitlyn își armează pușca, pentru a trage un glonț care străpunge țintele, provocând daune fizice (mai mici la țintele secundare următoare).",
             "dynamicDescription": "Caitlyn armează pușca timp de @CastTime@ secundă pentru a lansa o lovitură puternică, ce provoacă <physicalDamage>@InitialDamage@ daune fizice</physicalDamage>. Provoacă cu @ExtraHitPercentReduction*100@% mai puține daune fiecărei ținte lovite ulterior, până la un minimum de @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Caitlyn pune o capcană pentru a prinde yordelii buclucași. Când se declanșează, capcana imobilizează campionii, dezvăluindu-i pentru scurt timp, și provoacă daune magice de-a lungul a 1,5 secunde.",
-            "dynamicDescription": "Caitlyn pune o capcană pe care un campion inamic o poate activa, rămânând <status>țintuit</status> pentru scurt timp și fiind dezvăluit timp de @VisibilityDuration@ secunde. Capcana provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> de-a lungul a 1,5 secunde și durează @Duration@ minute. Pot fi active doar @MaxTraps@ capcane în același timp.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pune o capcană pentru a prinde yordelii buclucași. Când se declanșează, capcana imobilizează campionii, dezvăluindu-i, și provoacă daune magice pentru scurt timp.",
+            "dynamicDescription": "Caitlyn pune o capcană pe care un campion inamic o poate activa, rămânând <status>țintuit</status> pentru scurt timp și fiind dezvăluit timp de @VisibilityDuration@ secunde. Capcana provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> de-a lungul a @DOTTime@ secunde și durează @Duration@ minute. Pot fi active doar @MaxTraps@ capcane în același timp.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

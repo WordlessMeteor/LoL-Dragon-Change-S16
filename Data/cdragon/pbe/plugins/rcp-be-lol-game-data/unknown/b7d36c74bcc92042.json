@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "케이틀린은 기본 공격을 일정 횟수 가할 때마다 헤드샷을 발사해, 챔피언에게는 150%의 피해를 입히고 미니언에게는 250%의 피해를 입힙니다."
+        "description": "케이틀린은 기본 공격을 일정 횟수 가할 때마다 헤드샷을 발사해 추가 피해를 입힙니다."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "케이틀린이 소총을 1초 동안 조준한 후, 관통하는 탄환을 발사하여 물리 피해를 입힙니다. (추가로 적중하는 대상은 감소한 피해를 받습니다.)",
+            "description": "케이틀린이 소총을 조준한 후, 관통하는 탄환을 발사하여 물리 피해를 입힙니다. (추가로 적중하는 대상은 감소한 피해를 받습니다.)",
             "dynamicDescription": "케이틀린이 소총을 @CastTime@초 동안 조준한 후, 관통하는 탄환을 발사하여 <physicalDamage>@InitialDamage@의 물리 피해</physicalDamage>를 입힙니다. 대상을 추가로 맞힐 때마다 피해량이 @ExtraHitPercentReduction*100@%씩, 최소 @MinimumDamagePercent*100@%까지 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "케이틀린이 교활한 요들을 잡기 위한 덫을 설치합니다. 덫이 발동하면 대상 챔피언을 이동 불가 상태로 만들고, 잠시 위치를 드러내며, 1.5초에 걸쳐 마법 피해를 입힙니다.",
-            "dynamicDescription": "케이틀린이 덫을 설치해, 이를 밟은 적 챔피언을 잠시 <status>속박</status>하고 @VisibilityDuration@초 동안 위치를 드러냅니다. 덫은 1.5초에 걸쳐 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고, @Duration@분간 유지됩니다. 한 번에 @MaxTraps@개까지만 설치할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "description": "케이틀린이 교활한 요들을 잡기 위한 덫을 설치합니다. 덫은 발동 시 대상 챔피언을 이동 불가 상태로 만들고, 위치를 드러내며, 짧은 시간에 걸쳐 마법 피해를 입힙니다.",
+            "dynamicDescription": "케이틀린이 덫을 설치해, 이를 밟은 적 챔피언을 잠시 <status>속박</status>하고 @VisibilityDuration@초 동안 위치를 드러냅니다. 덫은 @DOTTime@초에 걸쳐 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @Duration@분간 유지됩니다. 한 번에 @MaxTraps@개까지만 설치할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

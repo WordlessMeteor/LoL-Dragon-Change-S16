@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Vždy po několika základních útocích vypálí Caitlyn přesnou střelu, která způsobí 150% poškození šampionům nebo 250% poškození poskokům."
+        "description": "Vždy po několika základních útocích vypálí Caitlyn přesnou střelu, která způsobí dodatečné poškození."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn na 1 sek. pečlivě zamíří a vystřelí průraznou střelu, která způsobí fyzické poškození (následným cílům způsobí menší poškození).",
+            "description": "Caitlyn pečlivě zamíří a vystřelí průraznou střelu, která způsobí fyzické poškození (následným cílům způsobí menší poškození).",
             "dynamicDescription": "Po přípravě dlouhé @CastTime@ sek. vypálí Caitlyn průraznou střelu, která způsobí <physicalDamage>@InitialDamage@ bodů fyzického poškození</physicalDamage>. Poškození způsobené každému následujícímu cíli se snižuje o @ExtraHitPercentReduction*100@ % až na minimální hodnotu @MinimumDamagePercent*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn nastraží past na záludné yordly. Když se past spustí, znehybní šampiona, na krátkou dobu ho odhalí a způsobí mu magické poškození rozložené do 1,5 sek.",
-            "dynamicDescription": "Caitlyn nastraží past na nepřátelské šampiony, která je po spuštění na chvíli <status>znehybní</status> a na @VisibilityDuration@ sek. odhalí jejich pozici. Past způsobuje <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> rozloženého do 1,5 sek. a vydrží @Duration@ min. V jeden okamžik lze na mapě mít sadu až @MaxTraps@ pastí.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn nastraží past na záludné yordly. Když se past spustí, znehybní šampiona, na krátkou dobu ho odhalí a způsobí mu magické poškození rozložené do krátkého časového úseku.",
+            "dynamicDescription": "Caitlyn nastraží past na nepřátelské šampiony, která je po spuštění na chvíli <status>znehybní</status> a na @VisibilityDuration@ sek. odhalí jejich pozici. Past způsobuje <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> rozloženého do @DOTTime@ sek. a vydrží @Duration@ min. V jeden okamžik lze na mapě mít sadu až @MaxTraps@ pastí.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

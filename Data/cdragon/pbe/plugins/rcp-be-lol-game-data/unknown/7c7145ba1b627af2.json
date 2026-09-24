@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Μετά από μερικές βασικές επιθέσεις, η Κέιτλιν ρίχνει μια βολή στο κεφάλι, προκαλώντας 150% ζημιά σε έναν ήρωα ή 250% ζημιά σε έναν υπηρέτη."
+        "description": "Μετά από μερικές βασικές επιθέσεις, η Κέιτλιν ρίχνει μια βολή στο κεφάλι, προκαλώντας επιπλέον ζημιά."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κέιτλιν προετοιμάζει το τουφέκι της για 1 δευτερόλεπτο για να εξαπολύσει μια διεισδυτική βολή που προκαλεί Σωματική Ζημιά (προκαλεί λιγότερη ζημιά στους επόμενους στόχους).",
+            "description": "Η Κέιτλιν προετοιμάζει το τουφέκι της για να εξαπολύσει μια διεισδυτική βολή που προκαλεί Σωματική Ζημιά (προκαλεί λιγότερη ζημιά στους επόμενους στόχους).",
             "dynamicDescription": "Η Κέιτλιν προετοιμάζει το τουφέκι της για @CastTime@ δευτ. για να εξαπολύσει μια διαπεραστική βολή που προκαλεί <physicalDamage>@InitialDamage@ Σωματική Ζημιά</physicalDamage>. Προκαλεί @ExtraHitPercentReduction*100@% λιγότερη ζημιά σε κάθε επόμενο στόχο, με ελάχιστη ζημιά @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κέιτλιν τοποθετεί μια παγίδα για να πιάσει ύπουλα Γιορντλ. Μόλις ενεργοποιηθεί, η παγίδα ακινητοποιεί τον Ήρωα για σύντομο χρονικό διάστημα και προκαλεί Μαγική Ζημιά σε 1,5 δευτ.",
-            "dynamicDescription": "Η Κέιτλιν τοποθετεί μια παγίδα, η οποία μπορεί να ενεργοποιηθεί από αντίπαλο Ήρωα, <status>ριζώνοντάς</status>τον για μικρό χρονικό διάστημα και αποκαλύπτοντάς τον για @VisibilityDuration@ δευτ. Η παγίδα προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε διάστημα 1,5 δευτ. και διαρκεί για @Duration@ λεπτά. Μπορούν να είναι ενεργές ταυτόχρονα μόνο έως @MaxTraps@ παγίδες.@SpellModifierDescriptionAppend@",
+            "description": "Η Κέιτλιν τοποθετεί μια παγίδα για να πιάσει ύπουλα Γιορντλ. Μόλις ενεργοποιηθεί, η παγίδα ακινητοποιεί τον Ήρωα, τον αποκαλύπτει και προκαλεί Μαγική Ζημιά μέσα σε ένα σύντομο χρονικό διάστημα.",
+            "dynamicDescription": "Η Κέιτλιν τοποθετεί μια παγίδα, η οποία μπορεί να ενεργοποιηθεί από αντίπαλο Ήρωα, <status>ριζώνοντάς</status> τον για μικρό χρονικό διάστημα και αποκαλύπτοντάς τον για @VisibilityDuration@ δευτ. Η παγίδα προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε διάστημα @DOTTime@ δευτ. και διαρκεί για @Duration@ λεπτά. Μπορούν να είναι ενεργές ταυτόχρονα μόνο έως @MaxTraps@ παγίδες.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

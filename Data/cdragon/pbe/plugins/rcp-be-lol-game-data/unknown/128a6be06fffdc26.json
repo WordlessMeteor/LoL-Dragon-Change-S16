@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Sau mỗi vài đòn đánh thường, Caitlyn sẽ bắn một phát thiện xạ gây 150% sát thương lên tướng hoặc 250% sát thương lên lính."
+        "description": "Sau mỗi vài đòn đánh thường, Caitlyn sẽ bắn một phát thiện xạ gây thêm sát thương."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Caitlyn nâng khẩu súng trường của mình lên trong 1 giây rồi bắn ra một phát đạn xuyên phá gây sát thương vật lý (sát thương giảm dần lên các mục tiêu trúng đòn tiếp theo).",
+            "description": "Caitlyn nâng khẩu súng trường của mình lên rồi bắn ra một phát đạn xuyên phá gây sát thương vật lý (sát thương giảm dần lên các mục tiêu trúng đòn tiếp theo).",
             "dynamicDescription": "Caitlyn lên nòng súng trong @CastTime@ giây để bắn ra một phát đạn xuyên thấu, gây <physicalDamage>@InitialDamage@ sát thương vật lý</physicalDamage>. Giảm @ExtraHitPercentReduction*100@% sát thương với mỗi đơn vị trúng đòn, giảm tối thiểu còn @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Caitlyn đặt bẫy để tìm đám Yordle lén lút. Khi kích hoạt, bẫy sẽ trói chân tướng, làm lộ diện mục tiêu trong khoảng thời gian ngắn và gây sát thương phép trong 1,5 giây.",
-            "dynamicDescription": "Caitlyn đặt một cái bẫy, khi Tướng địch dẫm phải sẽ bị <status>Trói Chân</status> trong thời gian ngắn và lộ diện trong @VisibilityDuration@ giây. Bẫy gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong 1,5 giây và tồn tại trong @Duration@ phút. Chỉ có thể kích hoạt cùng lúc @MaxTraps@ bẫy.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn đặt bẫy để tìm đám Yordle lén lút. Khi kích hoạt, bẫy sẽ trói chân tướng, làm lộ diện mục tiêu trong khoảng thời gian ngắn và gây sát thương phép trong thời gian ngắn.",
+            "dynamicDescription": "Caitlyn đặt một cái bẫy, khi Tướng địch dẫm phải sẽ bị <status>Trói Chân</status> trong thời gian ngắn và lộ diện trong @VisibilityDuration@ giây. Bẫy gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong @DOTTime@ giây và tồn tại trong @Duration@ phút. Chỉ có thể kích hoạt cùng lúc @MaxTraps@ bẫy.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

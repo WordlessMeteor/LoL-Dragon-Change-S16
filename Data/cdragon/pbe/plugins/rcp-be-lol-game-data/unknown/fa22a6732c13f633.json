@@ -218,7 +218,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_Headshot.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Раз в несколько автоатак Кейтлин совершает выстрел в голову, нанося 150% урона чемпиону или 250% урона миньону."
+        "description": "Раз в несколько автоатак Кейтлин совершает выстрел в голову, нанося больше урона."
     },
     "spells": [
         {
@@ -229,7 +229,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Кейтлин готовится в течение 1 сек., а затем делает пробивающий врагов насквозь выстрел, нанося физ. урон. Цели после первой получают меньше урона.",
+            "description": "Кейтлин готовится, а затем делает пробивающий врагов насквозь выстрел, нанося физ. урон. Цели после 1-й получают меньше урона.",
             "dynamicDescription": "Кейтлин готовится @CastTime@ сек. и совершает пробивающий выстрел, наносящий <physicalDamage>@InitialDamage@ ед. физ. урона</physicalDamage>. Каждая последующая цель получает на @ExtraHitPercentReduction*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Кейтлин устанавливает ловушку на скрытных йордлов. Ловушка обездвиживает вражеского чемпиона, ненадолго раскрывая его и нанося маг. урон в течение 1,5 сек.",
-            "dynamicDescription": "Кейтлин устанавливает ловушку. Ловушка ненадолго <status>обездвиживает</status> враж. чемпиона, раскрывая его на @VisibilityDuration@ сек. Ловушка наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за 1,5 сек. и существует @Duration@ мин. Макс. ловушек одновременно: @MaxTraps@.@SpellModifierDescriptionAppend@",
+            "description": "Кейтлин устанавливает ловушку на скрытных йордлов. Ловушка обездвиживает враж. чемпиона, ненадолго раскрывая его и нанося маг. урон.",
+            "dynamicDescription": "Кейтлин устанавливает ловушку. Ловушка ненадолго <status>обездвиживает</status> враж. чемпиона, раскрывая его на @VisibilityDuration@ сек. Ловушка наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @DOTTime@ сек. и существует @Duration@ мин. Макс. ловушек одновременно: @MaxTraps@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
