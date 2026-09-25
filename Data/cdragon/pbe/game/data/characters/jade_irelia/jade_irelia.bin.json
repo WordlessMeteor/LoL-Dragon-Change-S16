@@ -1,11 +1,11 @@
 {
-    "{01900b78}": {
+    "Characters/Jade_Irelia/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{11e178e2}": {
-        "mRootSpell": "{aa89a839}",
+    "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility": {
+        "mRootSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
         "mChildSpells": [
-            "{aa89a839}"
+            "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ"
         ],
         "mName": "Jade_IreliaQAbility",
         "__type": "AbilityObject"
@@ -16,9 +16,9 @@
         "mScriptName": "Jade_IreliaSkin37Manager",
         "__type": "SpellObject"
     },
-    "{2d9a9dad}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaBasicAttack": {
         "ObjectName": "Jade_IreliaBasicAttack",
-        "objectPath": "{2d9a9dad}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaBasicAttack",
         "mScriptName": "Jade_IreliaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -81,7 +81,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "missileSpeed": 467.0,
-            "mHitEffectKey": "{b88d7046}",
+            "mHitEffectKey": "Jade_Irelia_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -101,10 +101,10 @@
         },
         "__type": "SpellObject"
     },
-    "{53f8aef9}": {
-        "mRootSpell": "{54130935}",
+    "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility": {
+        "mRootSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
         "mChildSpells": [
-            "{54130935}",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
             "{2e8e3399}"
         ],
         "mName": "Jade_IreliaRAbility",
@@ -329,7 +329,7 @@
                     "mUseHeightOffsetAtEnd": true,
                     "mTracksTarget": false,
                     "mProjectTargetToCastRange": true,
-                    "mSpeed": 2000.0,
+                    "mSpeed": 1600.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
@@ -350,7 +350,7 @@
             },
             "mCastType": 3,
             "castFrame": 7.0,
-            "missileSpeed": 2000.0,
+            "missileSpeed": 1600.0,
             "mMissileEffectKey": "{d021a251}",
             "mLineWidth": 160.0,
             "mFloatVarsDecimals": [
@@ -488,9 +488,9 @@
         },
         "__type": "SpellObject"
     },
-    "{54130935}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR": {
         "ObjectName": "Jade_IreliaR",
-        "objectPath": "{54130935}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
         "mScriptName": "Jade_IreliaR",
         "mSpell": {
             "flags": 4,
@@ -548,13 +548,13 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
-                        },
-                        {
                             "mStat": 2,
                             "mStatFormula": 2,
                             "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -822,11 +822,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.dds"
@@ -1109,17 +1104,17 @@
         },
         "__type": "SpellObject"
     },
-    "{8f685ebe}": {
-        "mRootSpell": "{70aebe51}",
+    "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility": {
+        "mRootSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
         "mChildSpells": [
-            "{70aebe51}"
+            "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE"
         ],
         "mName": "Jade_IreliaEAbility",
         "__type": "AbilityObject"
     },
-    "{70aebe51}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE": {
         "ObjectName": "Jade_IreliaE",
-        "objectPath": "{70aebe51}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
         "mScriptName": "Jade_IreliaE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1263,7 +1258,7 @@
             "castConeDistance": 0.0,
             "castFrame": 15.0,
             "missileSpeed": 0.0,
-            "mMissileEffectKey": "{53797172}",
+            "mMissileEffectKey": "Jade_Irelia_E_Mis_01",
             "mana": [
                 50.0,
                 55.0,
@@ -1347,9 +1342,9 @@
         },
         "__type": "SpellObject"
     },
-    "{80f071ad}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaCritAttack": {
         "ObjectName": "Jade_IreliaCritAttack",
-        "objectPath": "{80f071ad}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaCritAttack",
         "mScriptName": "Jade_IreliaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
@@ -1404,7 +1399,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{b9628c23}",
+            "mHitEffectKey": "Jade_Irelia_BA_Hit_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1424,9 +1419,9 @@
         },
         "__type": "SpellObject"
     },
-    "{aa89a839}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ": {
         "ObjectName": "Jade_IreliaQ",
-        "objectPath": "{aa89a839}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
         "mScriptName": "Jade_IreliaQ",
         "mSpell": {
             "flags": 4,
@@ -1675,10 +1670,10 @@
         "mScriptName": "Jade_IreliaPassiveStacksMax_DEPRECATED",
         "__type": "SpellObject"
     },
-    "{f02de10c}": {
-        "mRootSpell": "{edf8cf89}",
+    "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility": {
+        "mRootSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW",
         "mChildSpells": [
-            "{edf8cf89}",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW",
             "{eb845177}"
         ],
         "mName": "Jade_IreliaWAbility",
@@ -1930,9 +1925,9 @@
         },
         "__type": "SpellObject"
     },
-    "{edf8cf89}": {
+    "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW": {
         "ObjectName": "Jade_IreliaW",
-        "objectPath": "{edf8cf89}",
+        "objectPath": "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW",
         "mScriptName": "Jade_IreliaW",
         "mSpell": {
             "flags": 4,
@@ -1965,7 +1960,20 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "HealthRestoreDuration",
+                    "name": "HealthRestoreActive",
+                    "values": [
+                        6.0,
+                        10.0,
+                        14.0,
+                        18.0,
+                        22.0,
+                        26.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDuration",
                     "values": [
                         6.0,
                         6.0,
@@ -1978,20 +1986,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        0.0,
-                        16.0,
-                        15.0,
-                        14.0,
-                        13.0,
-                        12.0,
-                        0.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Irelia_HitenStyle.dds"
@@ -2130,13 +2124,18 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Damage",
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Health",
+                                    "nameOverride": "Spell_ListType_Healing",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Health",
-                                    "nameOverride": "Spell_ListType_Healing",
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_ActiveDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthRestoreActive",
+                                    "nameOverride": "Spell_Jade_IreliaW_EmpoweredHeal",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2242,7 +2241,7 @@
         },
         "__type": "CharScript"
     },
-    "{712ae6ee}": {
+    "Characters/Jade_Irelia/CharacterRecords/Root": {
         "mCharacterName": "Jade_Irelia",
         "baseHPModifiable": {
             "baseValue": 546.0,
@@ -2350,10 +2349,10 @@
             "Jade_IreliaRAbility/Jade_IreliaR"
         ],
         "spells": [
-            "{aa89a839}",
-            "{edf8cf89}",
-            "{70aebe51}",
-            "{54130935}"
+            "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -2393,17 +2392,17 @@
         ],
         "mAbilities": [
             "{ec2ef434}",
-            "{11e178e2}",
-            "{f02de10c}",
-            "{8f685ebe}",
-            "{53f8aef9}"
+            "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility",
+            "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility"
         ],
         "passiveName": "Spell_Jade_IreliaPassive_Name",
         "passiveLuaName": "BadDesc",
         "passiveToolTip": "Spell_Jade_IreliaPassive_Summary",
         "passiveSpell": "Jade_IreliaPassive",
         "passiveRange": 1200.0,
-        "passive1IconName": "{9b318b1349a587bc}",
+        "passive1IconName": "assets/characters/jade_irelia/hud/icons2d/jade_irelia_passive.dds",
         "name": "game_character_displayname_Jade_Irelia",
         "weaponMaterials": [
             "Jade_IreliaBasicAttack"
@@ -2493,7 +2492,7 @@
         "Script": "{36a0f863}",
         "__type": "CharacterRecord"
     },
-    "{a5ed4390}": {
+    "Characters/Jade_Irelia/CAC/Jade_Irelia_Skin03": {
         "mCooldown": 15.0,
         "mSituations": {
             "UseItem": {
@@ -3046,7 +3045,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{2d9a9dad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3072,7 +3071,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{80f071ad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3098,7 +3097,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{aa89a839}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3124,7 +3123,7 @@
                         "mRuleName": "W",
                         "mConditions": [
                             {
-                                "mSpell": "{edf8cf89}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaWAbility/Jade_IreliaW",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -3147,7 +3146,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{70aebe51}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3173,7 +3172,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{54130935}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4040,7 +4039,7 @@
         "mObjectPath": "Characters/Jade_Irelia/CAC/Jade_Irelia_Skin03",
         "__type": "ContextualActionData"
     },
-    "{a9ef8873}": {
+    "Characters/Jade_Irelia/CAC/Jade_Irelia_Skin37": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -4533,7 +4532,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{2d9a9dad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4559,7 +4558,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{80f071ad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4585,7 +4584,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{aa89a839}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4607,7 +4606,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{70aebe51}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4633,7 +4632,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{54130935}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -5358,7 +5357,7 @@
         "mObjectPath": "Characters/Jade_Irelia/CAC/Jade_Irelia_Skin37",
         "__type": "ContextualActionData"
     },
-    "{b7f41bab}": {
+    "Characters/Jade_Irelia/CAC/Jade_Irelia_Skin55": {
         "mCooldown": 15.0,
         "mSituations": {
             "AttackChampion2D": {
@@ -6791,7 +6790,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{2d9a9dad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6817,7 +6816,7 @@
                         "mRuleName": "Crit ",
                         "mConditions": [
                             {
-                                "mSpell": "{80f071ad}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6843,7 +6842,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{aa89a839}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaQAbility/Jade_IreliaQ",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6869,7 +6868,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{70aebe51}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaEAbility/Jade_IreliaE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6895,7 +6894,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{54130935}",
+                                "mSpell": "Characters/Jade_Irelia/Spells/Jade_IreliaRAbility/Jade_IreliaR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],

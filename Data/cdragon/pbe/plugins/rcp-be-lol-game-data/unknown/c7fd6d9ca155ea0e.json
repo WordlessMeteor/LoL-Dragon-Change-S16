@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "卡尔玛基于她的百分比已损失生命值获得额外法术强度。"
+        "description": "卡尔玛基于她的已损失生命值获得法术强度。"
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "卡尔玛从折扇中射出隐藏的刀锋，对她前方锥形范围内的单位造成魔法伤害。<br><br>梵咒加成：除了对敌人造成伤害之外，【天国之刃】还会治疗锥形范围内的友方一部分已损失生命值。",
-            "dynamicDescription": "卡尔玛从折扇中射出隐藏的刀锋，对她前方锥形范围内的单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br><keywordMajor>梵咒加成：</keywordMajor>除了对敌人造成伤害之外，<spellName>天国之刃</spellName>还会<healing>治疗</healing>锥形范围内的友方<healing>@BaseHealth@外加@AdditionalHealPercentTT@%</healing>的<scaleHealth>已损失生命值</scaleHealth>。@SpellModifierDescriptionAppend@",
+            "description": "卡尔玛从折扇中射出隐藏的刀锋，对她前方锥形范围内的敌人们造成伤害。<br><br>梵咒：【天国之刃】还会治疗锥形范围内的友方一部分已损失生命值。",
+            "dynamicDescription": "卡尔从折扇中射出隐藏的刀锋，对她前方锥形范围内的敌人们造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br><keywordMajor>梵咒：</keywordMajor><spellName>天国之刃</spellName>还会<healing>治疗</healing>锥形范围内的友方<healing>@BaseHealth@外加@AdditionalHealPercent@</healing>的<scaleHealth>已损失生命值</scaleHealth>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "卡尔玛在一个友军或敌军之间生成一道灵链。友方目标移动得更快并且敌方目标会被减速。该灵链会对敌人们造成魔法伤害并对它途经的任何英雄施加该目标受到的等额移速调整。<br><br>梵咒加成：卡尔玛加固该灵链以造成双倍的该移速修正效果。",
-            "dynamicDescription": "卡尔玛在一个友军或敌军之间生成一道持续@Duration@秒的灵链。友方目标<speed>移动加快@MoveSpeedMod*100@%</speed>并且敌方目标会<status>被减速@MoveSpeedMod*100@%</status>。该灵链会对敌人们造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>并对它途经的任何英雄施加该目标受到的等额移速调整。<br><br>该灵链会在所系目标处于<keywordStealth>潜行</keywordStealth>状态时被打破。<br><br><keywordMajor>梵咒加成：</keywordMajor>卡尔玛卡尔玛加固该灵链以造成双倍的该移速修正效果。@SpellModifierDescriptionAppend@",
+            "description": "卡尔玛在一个友军或敌军之间生成一道灵链。友方目标移动得更快并且敌方目标会被减速。该灵链会伤害敌人们，并对它途经的任何英雄施加相同的移速调整。<br><br>梵咒：卡尔玛加固该灵链以提升该移速调整效果。",
+            "dynamicDescription": "卡尔玛在一个友军或敌军之间生成一道持续@Duration@秒的灵链。友方目标，包括她自己，获得<speed>@MoveSpeedMod*100@%移动速度</speed>。敌方目标会<status>被减速</status>@MoveSpeedMod*100@%。<br><br>该灵链会对它触碰到的所有敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。友军和敌方英雄会获得与目标相同的移速调整。<br><br><keywordMajor>梵咒：</keywordMajor>卡尔玛加固该灵链，从而将该移速调整效果提升至@MantraMoveSpeedMod@。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,15 +408,15 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "卡尔玛召唤一个保护型护盾来吸收即将到来的伤害。<br><br>梵咒加成：除了施放该护盾之外，能量会从该护盾处四散，从而对卡尔玛的目标周围的敌方单位们造成伤害。",
-            "dynamicDescription": "卡尔玛召唤一个保护型<shield>护盾</shield>来吸收<shield>@TotalShield@伤害</shield>，持续@Duration@秒。<br><br><keywordMajor>梵咒加成：</keywordMajor>除了施放该<shield>护盾</shield>之外，能量会从护盾处四散而出，从而对卡尔玛的目标周围的敌方单位们造成<magicDamage>@TotalShield@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "卡尔玛召唤一个保护型护盾来吸收即将到来的伤害。<br><br>梵咒：除了施放该护盾之外，能量会从该护盾处四散，从而对她的目标周围的敌人造成伤害。",
+            "dynamicDescription": "卡尔玛召唤一个保护型<shield>护盾</shield>来吸收<shield>@TotalShield@伤害</shield>，持续@Duration@秒。<br><br><keywordMajor>梵咒：</keywordMajor>能量会从护盾处四散而出，从而对卡尔玛的目标周围的敌方单位们造成<magicDamage>@TotalShield@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
             ],
             "costCoefficients": [
                 70.0,
@@ -556,10 +556,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaMantra_Jade34.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
-            "cost": "@Cost@ @AbilityResourceName@",
+            "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "卡尔玛的下个技能会获得强化以造成一个额外效果。梵咒在1级时就可以使用，并且不需要投入技能点。",
-            "dynamicDescription": "卡尔玛的下个技能会获得强化以具有一个额外效果。卡尔玛每<attention>@f1@</attention>秒获得一层充能，至多至2层。<br><br>充能间隔可通过冷却缩减属性来缩减。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡尔玛的下个技能会获得强化以具有一个额外效果。卡尔玛每<attention>@MantraCooldown@</attention>秒获得一层充能，至多至2层。<br><br>充能间隔可通过冷却缩减属性来缩减。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

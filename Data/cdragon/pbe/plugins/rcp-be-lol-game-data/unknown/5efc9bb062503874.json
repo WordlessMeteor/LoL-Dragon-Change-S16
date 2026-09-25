@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "附近的每个敌方英雄都会减少你受到的晕眩、减速、嘲讽、恐惧、诱捕和禁锢的持续时间。"
+        "description": "附近的每个敌方英雄都会为艾瑞莉娅提供韧性。"
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "艾瑞莉娅向前冲刺以打击她的目标。如果这个技能击杀了目标，那么【利刃冲击】的冷却时间会刷新并返还35法力值。",
-            "dynamicDescription": "艾瑞莉娅向前冲刺以打击她的目标，从而造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果这个技能击杀了目标，那么<spellName>利刃冲击</spellName>的冷却时间会刷新并返还<scaleMana>@ManaReturn@法力值</scaleMana>。@SpellModifierDescriptionAppend@",
+            "description": "艾瑞莉娅冲刺以打击她的目标。如果这个技能击杀了目标，那么【利刃冲击】的冷却时间会刷新并返还一些法力值。",
+            "dynamicDescription": "艾瑞莉娅冲刺以打击她的目标，从而造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果这个技能击杀了她的目标，那么<spellName>利刃冲击</spellName>的冷却时间会刷新并返还<scaleMana>@ManaReturn@法力值</scaleMana>。@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "艾瑞莉娅精通飞天之技艺，从而被动地为她的物理攻击提供生命回复。激活【飞天姿态】会在短期内为她的普通攻击提供真实伤害。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>普通攻击<healing>回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive>艾瑞莉娅的普通攻击造成<trueDamage>@Damage@真实伤害</trueDamage>和双倍<healing>生命回复</healing>，持续@HealthRestoreDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "被动：艾瑞莉娅精通飞天之技艺，从而使她的攻击可以回复生命值。<br><br>主动：普攻会在若干秒内造成额外真实伤害并提升回复值。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>普通攻击<healing>回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive>艾瑞莉娅的普通攻击造成<trueDamage>@Damage@真实伤害</trueDamage>并且<healing>回复@HealthRestoreActive@生命值</healing>，持续@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "艾瑞莉娅的攻击会使战斗的天平变得平衡，从而对目标造成伤害和减速。但是，如果目标的生命值百分比高于艾瑞莉娅，则会转而晕眩该目标。",
-            "dynamicDescription": "艾瑞莉娅穿刺她的目标，从而对目标造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和持续秒@StunDuration@秒的@SlowAmount@%<status>减速</status> 。<br><br>如果目标的<scaleHealth>生命值百分比</scaleHealth>高于艾瑞莉娅，那么她会转而<status>晕眩</status>该目标相同的时长。@SpellModifierDescriptionAppend@",
+            "description": "艾瑞莉娅的攻击会使战斗的天平变得平衡，从而对她的目标造成伤害和减速。如果目标的生命值百分比高于她，则会转而晕眩该目标。",
+            "dynamicDescription": "艾瑞莉娅穿刺她的目标，从而对其造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和持续秒@StunDuration@秒的@SlowAmount@%<status>减速</status> 。<br><br>如果目标的<scaleHealth>生命值百分比</scaleHealth>高于艾瑞莉娅，那么她会转而将其晕眩<status>晕眩</status>相同的时长。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "艾瑞莉娅召唤4柄灵刃供她投掷，以造成物理伤害并从它们途经的敌人们身上虹吸生命力。",
+            "description": "艾瑞莉娅召唤4柄灵刃供她投掷，以造成伤害并从它们途经的敌人们身上虹吸生命力。",
             "dynamicDescription": "艾瑞莉娅召唤4柄灵刃供她投掷，以对它们途经的敌人们造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。她<healing>治疗</healing>自身，数额相当于对英雄的@ChampionHealPercent@%造成伤害和对其他敌人的@MinionHealPercent@%造成伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,

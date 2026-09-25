@@ -309,7 +309,7 @@
             "abilityVideoImagePath": "",
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "被动：在触发易损时获得属性<br><br>作为华洛的被动效果：获得属性<br><br>主动：显形一个区域",
+            "description": "作为奎因的被动效果：在触发易损时获得持续若干秒的攻速和移速。<br><br>作为华洛的被动效果：获得攻击速度。<br><br>主动：显形奎因和华洛周围的一大片区域。",
             "dynamicDescription": "<keywordMajor>作为奎因的被动效果</keywordMajor>：攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供持续@BuffDuration@秒的<speed>@AttackSpeedBonus*100@%攻击速度</speed>和<speed>@MovespeedAmount@%移动速度</speed>。<br><br><keywordMajor>作为华洛的被动效果</keywordMajor>：获得@ValorAttackSpeed*100@%攻击速度。<br><br><keywordMajor>主动</keywordMajor>：华洛显形附近的一大片区域，持续@VisionDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -459,7 +459,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "奎因进行冲刺。<br><br>作为华洛，她也会进行冲刺。",
+            "description": "奎因或华洛冲刺至一个敌人身旁，从而对目标造成伤害、击退和减速。如果作为奎因施放，则她会后跳远离该目标，从而保持她与目标相隔的距离并让华洛给其打上【侵扰】标记。",
             "dynamicDescription": "<keywordMajor>作为奎因或华洛</keywordMajor>：对一个敌人进行冲刺，从而对该目标造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>、<status>击退</status>和在@SlowDecayTime@秒里持续衰减的@SlowAmount*100@%<status>减速</status>。<br><br><keywordMajor>作为奎因</keywordMajor>：除此之外，还会从她的目标处跳开，并且华洛会将其标记为<keywordMajor>易损</keywordMajor>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -609,7 +609,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "华洛代替奎因出现在战场上，定位为一个高机动普攻型近战，从而获得移动速度并替换她的技能。再次施放可以进行【鹰翼天翔】，从而对附近的所有敌人造成伤害。",
+            "description": "华洛代替奎因出现在战场上，定位为一个高机动普攻型近战，从而获得移动速度并修改她的技能。再次施放可以进行【鹰翼天翔】，从而对附近的所有敌人造成伤害。",
             "dynamicDescription": "<keywordMajor>首次施放</keywordMajor>：华洛代替奎因出现在战场上，定位为一个高机动普攻型近战，持续@TransformDuration@秒。华洛处于幽灵状态，并获得@OoCMoveSpeed*100@%移动速度，在战斗状态下逐步降低至@CombatMoveSpeed*100@%。华洛随后能够施放<keywordMajor>鹰翼天翔</keywordMajor>。<br><br><keywordMajor>鹰翼天翔</keywordMajor>：奎因重返战场，从而对一个大范围内的所有敌人们造成<physicalDamage>@TotalDamage@ - @TotalDamageMaximum@物理伤害</physicalDamage>，基于他们各自的已损失生命值。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

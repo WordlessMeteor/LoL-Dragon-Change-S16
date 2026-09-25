@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma gains increased Ability Power corresponding to her % of missing Health."
+        "description": "Karma gains Ability Power based on her missing Health."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma sends forth hidden blades from her fans, dealing magic damage to units in a cone in front of her.<br><br>Mantra Bonus: In addition to dealing damage to enemies, Heavenly Wave will also heal allies in the cone based on a % of their missing life.",
-            "dynamicDescription": "Karma sends forth hidden blades from her fans, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to units in a cone in front of her.<br><br><keywordMajor>Mantra Bonus:</keywordMajor> In addition to dealing damage to enemies, <spellName>Heavenly Wave</spellName> will also <healing>Heal</healing> allies in the cone for <healing>@BaseHealth@ plus @AdditionalHealPercentTT@%</healing> of their <scaleHealth>missing Health</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma sends forth hidden blades from her fans, damaging enemies in a cone.<br><br>Mantra: Heavenly Wave also heals allies in the cone based on their missing Health.",
+            "dynamicDescription": "Karma sends forth hidden blades from her fans, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies in a cone.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Heavenly Wave</spellName> also <healing>Heals</healing> allies in the cone for <healing>@BaseHealth@ plus @AdditionalHealPercent@</healing> of their <scaleHealth>missing Health</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma creates a beam between an ally or enemy. Allied anchors move faster and enemy anchors are slowed. The beam deals magic damage to enemies and applies the same movement speed adjustment anchors receive to any champion it passes through.<br><br>Mantra Bonus: Karma strengthens the bond to double the effect of the movement speed modifier.",
-            "dynamicDescription": "Karma creates a beam between an ally or enemy for up to @Duration@ seconds. Allied anchors <speed>move @MoveSpeedMod*100@% faster</speed> and enemy anchors are <status>Slowed by @MoveSpeedMod*100@%</status>. The beam deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies and applies the same movement speed adjustment anchors receive to any champion it passes through.<br><br>The beam breaks if the bonded target is <keywordStealth>Stealthed</keywordStealth>.<br><br><keywordMajor>Mantra Bonus:</keywordMajor> Karma strengthens the bond to double the effect of the movement speed modifier.@SpellModifierDescriptionAppend@",
+            "description": "Karma creates a beam between her and another unit. Allied anchors move faster and enemy anchors are slowed. The beam damages enemies and applies the same movement speed adjustment to any champion it passes through.<br><br>Mantra: Karma strengthens the bond to increase the movement speed effect.",
+            "dynamicDescription": "Karma creates a beam between her and another unit for up to @Duration@ seconds. Allied anchors, including herself, gain <speed>@MoveSpeedMod*100@% move speed</speed>. Enemy anchors are <status>Slowed</status> by @MoveSpeedMod*100@%.<br><br>The beam deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to all enemies it touches. Allied and enemy Champions receive the same movement speed adjustment as the anchors.<br><br><keywordMajor>Mantra:</keywordMajor> Karma strengthens the bond, increasing the movement speed modifiers to @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,15 +408,15 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma summons a protective shield that absorbs incoming damage.<br><br>Mantra Bonus: In addition to casting the shield, energy radiates out from the shield, dealing damage to enemy units around Karma's target.",
-            "dynamicDescription": "Karma summons a protective <shield>Shield</shield> that absorbs <shield>@TotalShield@ damage</shield> for @Duration@ seconds.<br><br><keywordMajor>Mantra Bonus:</keywordMajor> In addition to casting the <shield>Shield</shield>, energy radiates out from the shield, dealing <magicDamage>@TotalShield@ magic damage</magicDamage> to enemy units around her target.@SpellModifierDescriptionAppend@",
+            "description": "Karma summons a protective shield on an ally that absorbs incoming damage.<br><br>Mantra: In addition to casting the shield, energy radiates out from the shield, damaging enemies around her target.",
+            "dynamicDescription": "Karma summons a protective <shield>Shield</shield> that absorbs <shield>@TotalShield@ damage</shield> for @Duration@ seconds.<br><br><keywordMajor>Mantra:</keywordMajor> Energy radiates out from the shield, dealing <magicDamage>@TotalShield@ magic damage</magicDamage> to enemy units around her target.@SpellModifierDescriptionAppend@",
             "range": [
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
             ],
             "costCoefficients": [
                 70.0,
@@ -556,10 +556,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaMantra_Jade34.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
-            "cost": "@Cost@ @AbilityResourceName@",
+            "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karma empowers her next ability to do an additional effect. Mantra is available at level 1 and does not require a skill point.",
-            "dynamicDescription": "Karma empowers her next ability with an additional effect. Karma gains a charge every <attention>@f1@</attention> seconds up to 2 charges.<br><br>The refresh rate is reduced by Cooldown Reduction.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma empowers her next ability with an additional effect. Karma gains a charge every <attention>@MantraCooldown@</attention> seconds up to 2 charges.<br><br>The refresh rate is reduced by Cooldown Reduction.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

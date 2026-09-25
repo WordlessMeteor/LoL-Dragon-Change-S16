@@ -168,8 +168,8 @@
                         EventShopCategoryNavBarTabComponent: M.default,
                         EventShopCategoryOffersComponent: N.default,
                         EventShopFallbackComponent: D.default,
-                        EventShopMainViewComponent: B.default,
-                        EventShopOfferCardComponent: H.default,
+                        EventShopMainViewComponent: H.default,
+                        EventShopOfferCardComponent: B.default,
                         EventShopProgressionComponent: U.default,
                         EventShopRewardTrackWrapperComponent: V.default,
                         EventShopTokenBalanceAmountComponent: j.default,
@@ -232,8 +232,8 @@
                             "components/event-shop-progression": Me.default,
                             "components/event-shop-reward-track-wrapper": Ne.default,
                             "components/event-shop-token-shop": De.default,
-                            "components/event-shop-xp": Be.default,
-                            "components/hol-level-icon-flames": He.default,
+                            "components/event-shop-xp": He.default,
+                            "components/hol-level-icon-flames": Be.default,
                             "components/hol-narrative": Ue.default,
                             "components/hol-promotion-banner": Ve.default,
                             "components/season-pass-chapter-card": Ye.default,
@@ -290,8 +290,8 @@
                 M = We(n(37)),
                 N = We(n(38)),
                 D = We(n(39)),
-                B = We(n(40)),
-                H = We(n(41)),
+                H = We(n(40)),
+                B = We(n(41)),
                 U = We(n(62)),
                 V = We(n(63)),
                 j = We(n(88)),
@@ -344,8 +344,8 @@
                 Me = We(n(137)),
                 Ne = We(n(138)),
                 De = We(n(139)),
-                Be = We(n(140)),
-                He = We(n(141)),
+                He = We(n(140)),
+                Be = We(n(141)),
                 Ue = We(n(142)),
                 Ve = We(n(143)),
                 je = We(n(95)),
@@ -885,11 +885,15 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.getRouteByEventInfo = t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
+            }), t.getRouteByEventInfo = t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getLocalizedAssetPath = t.getCategoryOffersId = t.default = void 0;
             var s = n(5);
             const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
             t.getCategoryOffersId = a;
-            const l = e => {
+            const l = (e, t) => {
+                if (e && "/lol-game-data/assets/" !== e) return t ? e.replace("/en_US/", `/${t}/`) : e
+            };
+            t.getLocalizedAssetPath = l;
+            const o = e => {
                 if (1 === e.items.length) {
                     const t = e.items[0];
                     return {
@@ -906,24 +910,25 @@
                     price: e.price
                 }
             };
-            t.getOfferPurchaseConstraints = l;
-            const o = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
-            t.getRouteByEventHubType = o;
-            const r = (e = {}) => {
+            t.getOfferPurchaseConstraints = o;
+            const r = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
+            t.getRouteByEventHubType = r;
+            const i = (e = {}) => {
                 const {
                     eventType: t,
                     seasonPassSubType: n
                 } = e;
-                return t === s.EVENT_HUB_TYPES.SEASON_PASS && n === s.SEASON_PASS_SUB_TYPES.MAYHEM_CUSTOM_HUB ? s.ROUTES.EMBEDDED_PLUGIN : o(t)
+                return t === s.EVENT_HUB_TYPES.SEASON_PASS && n === s.SEASON_PASS_SUB_TYPES.MAYHEM_CUSTOM_HUB ? s.ROUTES.EMBEDDED_PLUGIN : r(t)
             };
-            t.getRouteByEventInfo = r;
-            var i = {
+            t.getRouteByEventInfo = i;
+            var c = {
                 getCategoryOffersId: a,
-                getOfferPurchaseConstraints: l,
-                getRouteByEventInfo: r,
-                getRouteByEventHubType: o
+                getLocalizedAssetPath: l,
+                getOfferPurchaseConstraints: o,
+                getRouteByEventInfo: i,
+                getRouteByEventHubType: r
             };
-            t.default = i
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1297,10 +1302,11 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(5),
-                l = n(5);
-            const o = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-hover.ogg",
-                r = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-click.ogg";
-            var i = s.Ember.Component.extend({
+                l = n(5),
+                o = n(15);
+            const r = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-hover.ogg",
+                i = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-click.ogg";
+            var c = s.Ember.Component.extend({
                 classNames: ["eh-page-header"],
                 classNameBindings: ["showBottomBorder:eh-page-header-show-bottom-border", "showShroudGradient:eh-page-header-show-shroud-gradient"],
                 showShroudGradient: !0,
@@ -1340,10 +1346,8 @@
                 })),
                 eventSubtitle: s.Ember.computed.alias("eventHubService.info.localizedEventSubtitle"),
                 tokenBundlesCatalogEntry: s.Ember.computed.alias("eventHubService.tokenShopData.tokenBundlesCatalogEntry"),
-                localizedLogoPath: s.Ember.computed("eventHubService.info.localizedLogo", (function() {
-                    const e = this.get("eventHubService.info.localizedLogo"),
-                        t = this.get("tra.metadata.locale.id");
-                    if (e && "/lol-game-data/assets/" !== e) return t ? e.replace("/en_US/", `/${t}/`) : e
+                localizedLogoPath: s.Ember.computed("eventHubService.info.localizedLogo", "tra.metadata.locale.id", (function() {
+                    return (0, o.getLocalizedAssetPath)(this.get("eventHubService.info.localizedLogo"), this.get("tra.metadata.locale.id"))
                 })),
                 displayHeaderLogo: s.Ember.computed("eventHubService.activeEventType", (function() {
                     return l.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.displayHeaderLogo
@@ -1395,7 +1399,9 @@
                         timeText: l
                     })
                 },
-                headerTitleImageSrc: s.Ember.computed.alias("eventHubService.eventDetailsData.headerTitleImagePath"),
+                headerTitleImageSrc: s.Ember.computed("eventHubService.eventDetailsData.headerTitleImagePath", "tra.metadata.locale.id", (function() {
+                    return (0, o.getLocalizedAssetPath)(this.get("eventHubService.eventDetailsData.headerTitleImagePath"), this.get("tra.metadata.locale.id"))
+                })),
                 hasHeaderTitleImage: s.Ember.computed("headerTitleImageSrc", (function() {
                     const e = this.get("headerTitleImageSrc");
                     return !(!e || "/lol-game-data/assets/" === e)
@@ -1406,7 +1412,7 @@
                         this.set("showHelpModal", !0)
                     },
                     openHelpLink() {
-                        s.AudioPlugin.getChannel("sfx-ui").playSound(r), window.open(this.get("eventHubService.info.localizedHelpUrl"), "_blank")
+                        s.AudioPlugin.getChannel("sfx-ui").playSound(i), window.open(this.get("eventHubService.info.localizedHelpUrl"), "_blank")
                     },
                     navigateToStore() {
                         s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
@@ -1425,11 +1431,11 @@
                         })
                     },
                     onHelpButtonHover() {
-                        s.AudioPlugin.getChannel("sfx-ui").playSound(o)
+                        s.AudioPlugin.getChannel("sfx-ui").playSound(r)
                     }
                 }
             });
-            t.default = i
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

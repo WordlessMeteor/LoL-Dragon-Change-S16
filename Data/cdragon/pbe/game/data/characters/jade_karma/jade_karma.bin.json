@@ -1,17 +1,17 @@
 {
-    "{682fbe5e}": {
-        "mRootSpell": "{0a837d05}",
+    "Characters/Jade_Karma/Spells/Jade_KarmaQAbility": {
+        "mRootSpell": "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ",
         "mChildSpells": [
-            "{0a837d05}",
+            "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ",
             "{d4dc9155}",
             "{6f5f7eb7}"
         ],
         "mName": "Jade_KarmaQAbility",
         "__type": "AbilityObject"
     },
-    "{0a837d05}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ": {
         "ObjectName": "Jade_KarmaQ",
-        "objectPath": "{0a837d05}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ",
         "mScriptName": "Jade_KarmaQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -31,6 +31,19 @@
                     "__type": "SpellDataValue"
                 },
                 {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "BaseHealth",
                     "values": [
                         15.0,
@@ -46,26 +59,26 @@
                 {
                     "name": "HealingAPRatio",
                     "values": [
-                        0.00019999999494757503,
-                        0.00019999999494757503,
-                        0.00019999999494757503,
-                        0.00019999999494757503,
-                        0.00019999999494757503,
-                        0.00019999999494757503,
-                        0.00019999999494757503
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseHealingPercent",
                     "values": [
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -78,29 +91,20 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{893d383f}": {
-                    "mFormulaParts": [
-                        {
-                            "mNumber": 5.0,
-                            "__type": "NumberCalculationPart"
-                        },
-                        {
-                            "mDataValue": "HealingAPRatio",
+                            "mDataValue": "DamageAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
                 "{79bb037f}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{cffb9287}",
+                            "mDataValue": "BaseHealingPercent",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -108,6 +112,8 @@
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 }
             },
@@ -435,7 +441,7 @@
         "mSpell": {
             "mAffectsTypeFlags": 6155,
             "mAlternateName": "Jade_KarmaQ",
-            "mAnimationName": "Spell1_R",
+            "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/KarmaHeavenlyWave_Jade34.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/KarmaHeavenlyWave_Jade34.dds"
@@ -544,7 +550,7 @@
             },
             "mCastingBreaksStealth": true,
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{0a837d05}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ",
                 "mTargeterDefinitions": [
                     {
                         "endLocator": {
@@ -711,17 +717,17 @@
         },
         "__type": "SpellObject"
     },
-    "{14c59365}": {
-        "mRootSpell": "{792602c3}",
+    "Characters/Jade_Karma/Spells/Jade_KarmaRAbility": {
+        "mRootSpell": "Characters/Jade_Karma/Spells/Jade_KarmaRAbility/Jade_KarmaR",
         "mChildSpells": [
-            "{792602c3}"
+            "Characters/Jade_Karma/Spells/Jade_KarmaRAbility/Jade_KarmaR"
         ],
         "mName": "Jade_KarmaRAbility",
         "__type": "AbilityObject"
     },
-    "{293948b9}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack2": {
         "ObjectName": "Jade_KarmaBasicAttack2",
-        "objectPath": "{293948b9}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack2",
         "mScriptName": "Jade_KarmaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1024,10 +1030,10 @@
         "mScriptName": "Jade_KarmaSkin70Manager",
         "__type": "SpellObject"
     },
-    "{94ea4ad0}": {
-        "mRootSpell": "{765a9d6d}",
+    "Characters/Jade_Karma/Spells/Jade_KarmaWAbility": {
+        "mRootSpell": "Characters/Jade_Karma/Spells/Jade_KarmaWAbility/Jade_KarmaW",
         "mChildSpells": [
-            "{765a9d6d}",
+            "Characters/Jade_Karma/Spells/Jade_KarmaWAbility/Jade_KarmaW",
             "{4b56234b}",
             "{e6d5ccf9}",
             "{f86e1c7f}"
@@ -1350,12 +1356,12 @@
         },
         "__type": "SpellObject"
     },
-    "{765a9d6d}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaWAbility/Jade_KarmaW": {
         "ObjectName": "Jade_KarmaW",
-        "objectPath": "{765a9d6d}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaWAbility/Jade_KarmaW",
         "mScriptName": "Jade_KarmaW",
         "mSpell": {
-            "mAffectsTypeFlags": 16387,
+            "mAffectsTypeFlags": 18447,
             "mAlternateName": "Jade_KarmaW",
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
@@ -1414,19 +1420,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "NegMoveSpeedMod",
-                    "values": [
-                        -0.07999999821186066,
-                        -0.10000000149011612,
-                        -0.11999999731779099,
-                        -0.14000000059604645,
-                        -0.1599999964237213,
-                        -0.18000000715255737,
-                        -0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "Duration",
                     "values": [
                         5.0,
@@ -1451,6 +1444,32 @@
                         3.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MantraMultiplier",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1461,23 +1480,25 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "{cd99c788}": {
+                "{6c9d3064}": {
+                    "mMultiplier": {
+                        "mDataValue": "{d9e109bf}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseDamage",
+                            "mDataValue": "MoveSpeedMod",
                             "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
+                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 }
             },
@@ -1499,7 +1520,7 @@
             ],
             "Cooldown": {
                 "values": [
-                    15.0,
+                    16.0,
                     15.0,
                     14.0,
                     13.0,
@@ -1507,6 +1528,7 @@
                     11.0,
                     10.0
                 ],
+                "{0a3e0478}": 16.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1602,7 +1624,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_KarmaW_Jade_Name",
                         "keySummary": "Spell_KarmaW_Jade_Summary",
-                        "keyTooltip": "Spell_KarmaW_Jade_Tooltip"
+                        "keyTooltip": "Spell_KarmaW_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_KarmaW_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2331,28 +2354,22 @@
         },
         "__type": "SpellObject"
     },
-    "{fd99a182}": {
-        "mRootSpell": "{55db327d}",
+    "Characters/Jade_Karma/Spells/Jade_KarmaEAbility": {
+        "mRootSpell": "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE",
         "mChildSpells": [
-            "{55db327d}",
+            "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE",
             "{7c10597f}"
         ],
         "mName": "Jade_KarmaEAbility",
         "__type": "AbilityObject"
     },
-    "{55db327d}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE": {
         "ObjectName": "Jade_KarmaE",
-        "objectPath": "{55db327d}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE",
         "mScriptName": "Jade_KarmaE",
         "mSpell": {
             "flags": 4,
-            "mAffectsTypeFlags": 1,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}"
-                ],
-                "__type": "ObjectTags"
-            },
+            "mAffectsTypeFlags": 5,
             "mAlternateName": "Jade_KarmaSolKimShield",
             "mSpellTags": [
                 "PositiveEffect_Boon"
@@ -2433,25 +2450,25 @@
             ],
             "castRangeValues": {
                 "values": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
                 ],
-                "{0a3e0478}": 800.0,
+                "{0a3e0478}": 650.0,
                 "__type": "{0a0eddc9}"
             },
             "castRangeDisplayOverride": [
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
             ],
             "castRadius": [
                 100.0,
@@ -2547,12 +2564,12 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Cost",
+                                    "type": "BaseShield",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseShield",
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2658,13 +2675,7 @@
         "mScriptName": "Jade_KarmaE_C",
         "mSpell": {
             "flags": 4,
-            "mAffectsTypeFlags": 1,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}"
-                ],
-                "__type": "ObjectTags"
-            },
+            "mAffectsTypeFlags": 5,
             "mAlternateName": "Jade_KarmaSolKimShield",
             "mSpellTags": [
                 "PositiveEffect_Boon"
@@ -2740,25 +2751,25 @@
             ],
             "castRangeValues": {
                 "values": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
                 ],
-                "{0a3e0478}": 800.0,
+                "{0a3e0478}": 650.0,
                 "__type": "{0a0eddc9}"
             },
             "castRangeDisplayOverride": [
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0,
-                800.0
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
             ],
             "castRadius": [
                 100.0,
@@ -2809,14 +2820,14 @@
             ],
             "manaValues": {
                 "values": [
-                    50.0,
-                    55.0,
-                    60.0,
-                    65.0,
                     70.0,
-                    75.0
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0
                 ],
-                "{0a3e0478}": 50.0,
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 2,
@@ -2844,7 +2855,7 @@
                 "19": "Play_sfx_Karma_KarmaSolKimShield_OnBuffDeactivate"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{55db327d}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE",
                 "mTargeterDefinitions": [
                     {
                         "useCasterBoundingBox": false,
@@ -2857,12 +2868,12 @@
                         },
                         "overrideRadius": {
                             "mPerLevelValues": [
-                                600.0,
-                                600.0,
-                                600.0,
-                                600.0,
-                                600.0,
-                                600.0
+                                500.0,
+                                500.0,
+                                500.0,
+                                500.0,
+                                500.0,
+                                500.0
                             ],
                             "mValueType": 2,
                             "__type": "FloatPerSpellLevel"
@@ -2948,9 +2959,9 @@
         },
         "__type": "SpellObject"
     },
-    "{792602c3}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaRAbility/Jade_KarmaR": {
         "ObjectName": "Jade_KarmaR",
-        "objectPath": "{792602c3}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaRAbility/Jade_KarmaR",
         "mScriptName": "Jade_KarmaR",
         "mSpell": {
             "flags": 4,
@@ -2959,6 +2970,29 @@
                 "Trait_Ultimate",
                 "Trait_Transformation"
             ],
+            "mSpellCalculations": {
+                "{3a1c6d59}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 30.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": -5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": -5.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/KarmaMantra_Jade34.dds"
@@ -3075,7 +3109,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{1641391b}",
+            "mMissileEffectKey": "Jade_Karma_R_mantra_mis_01",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -3106,11 +3140,23 @@
                 "mTooltipData": {
                     "mObjectName": "Jade_KarmaR",
                     "mFormat": "{d7c27163}",
-                    "EnableExtendedTooltip": false,
                     "mLocKeys": {
                         "keyName": "Spell_KarmaR_Jade_Name",
                         "keySummary": "Spell_KarmaR_Jade_Summary",
-                        "keyTooltip": "Spell_KarmaR_Jade_Tooltip"
+                        "keyTooltip": "Spell_KarmaR_Jade_Tooltip",
+                        "keyCost": "Spell_Cost_NoCost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "AmmoRechargeTime",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
                     },
                     "__type": "TooltipInstanceSpell"
                 },
@@ -3252,9 +3298,9 @@
         },
         "__type": "SpellObject"
     },
-    "{79b16ae1}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaCritAttack": {
         "ObjectName": "Jade_KarmaCritAttack",
-        "objectPath": "{79b16ae1}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaCritAttack",
         "mScriptName": "Jade_KarmaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -3362,9 +3408,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cabc2c31}": {
+    "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack": {
         "ObjectName": "Jade_KarmaBasicAttack",
-        "objectPath": "{cabc2c31}",
+        "objectPath": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack",
         "mScriptName": "Jade_KarmaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -3471,7 +3517,7 @@
         },
         "__type": "SpellObject"
     },
-    "{14211e80}": {
+    "Characters/Jade_Karma/CharacterRecords/Root": {
         "mCharacterName": "Jade_Karma",
         "baseHPModifiable": {
             "baseValue": 496.0,
@@ -3587,10 +3633,10 @@
             "Jade_KarmaRAbility/Jade_KarmaR"
         ],
         "spells": [
-            "{0a837d05}",
-            "{765a9d6d}",
-            "{55db327d}",
-            "{792602c3}"
+            "Characters/Jade_Karma/Spells/Jade_KarmaQAbility/Jade_KarmaQ",
+            "Characters/Jade_Karma/Spells/Jade_KarmaWAbility/Jade_KarmaW",
+            "Characters/Jade_Karma/Spells/Jade_KarmaEAbility/Jade_KarmaE",
+            "Characters/Jade_Karma/Spells/Jade_KarmaRAbility/Jade_KarmaR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -3629,16 +3675,16 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{14c59365}",
+            "Characters/Jade_Karma/Spells/Jade_KarmaRAbility",
             "{6c2a05f0}",
-            "{682fbe5e}",
-            "{fd99a182}",
-            "{94ea4ad0}"
+            "Characters/Jade_Karma/Spells/Jade_KarmaQAbility",
+            "Characters/Jade_Karma/Spells/Jade_KarmaEAbility",
+            "Characters/Jade_Karma/Spells/Jade_KarmaWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Karma",
         "passiveLuaName": "Jade_KarmaPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Karma",
-        "passive1IconName": "{6b0106d9428e488e}",
+        "passive1IconName": "assets/characters/jade_karma/hud/icons2d/jade_karma_passive.dds",
         "name": "game_character_displayname_Jade_Karma",
         "selectionHeight": 145.0,
         "selectionRadius": 120.0,
@@ -3931,7 +3977,7 @@
         "Script": "{8648fdb7}",
         "__type": "CharacterRecord"
     },
-    "{6cdb4698}": {
+    "Characters/Jade_Karma/CAC/Jade_Karma_Skin54": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -4488,7 +4534,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{cabc2c31}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4514,7 +4560,7 @@
                         "mRuleName": "Basic 2",
                         "mConditions": [
                             {
-                                "mSpell": "{293948b9}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack2",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4540,7 +4586,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{79b16ae1}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5254,7 +5300,7 @@
         "mObjectPath": "Characters/Jade_Karma/CAC/Jade_Karma_Skin54",
         "__type": "ContextualActionData"
     },
-    "{dce07416}": {
+    "Characters/Jade_Karma/CAC/Jade_Karma_Skin70": {
         "mCooldown": 15.0,
         "mSituations": {
             "AssistKill": {
@@ -6422,7 +6468,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{cabc2c31}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6448,7 +6494,7 @@
                         "mRuleName": "Basic 2",
                         "mConditions": [
                             {
-                                "mSpell": "{293948b9}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaBasicAttack2",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6474,7 +6520,7 @@
                         "mRuleName": "Crit 1",
                         "mConditions": [
                             {
-                                "mSpell": "{79b16ae1}",
+                                "mSpell": "Characters/Jade_Karma/Spells/Jade_KarmaCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6823,222 +6869,15 @@
             },
             "{6a7835b9}": {
                 "blocks": [
-                    {
-                        "{d851ffa3}": "64f507da-1025-4c8e-861e-bf3c11222ec9",
-                        "Src": {
-                            "value": 30,
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "CharacterVars"
-                            },
-                            "Var": "MantraTimerCooldown",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
+                    null,
                     null,
                     null,
                     null
                 ],
                 "__type": "RootScriptSequence"
             },
-            "{bd909891}": {
-                "blocks": [
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "8c464586-cde7-4922-a7c1-32da5da1f373",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{e19a6b2d}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 3,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "df057fb4-39e3-4350-b808-92b592b2a23f",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "9f253047-afc2-4dcf-ae14-f3644b5c4d6f",
-                                    "Condition": null,
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "d9f30a05-dfe6-4d75-a3bf-91259f6a131b",
-                                                "Condition": {
-                                                    "Value1": {
-                                                        "Var": "{822e38a2}",
-                                                        "__type": "ScriptTableGet"
-                                                    },
-                                                    "Value2": {
-                                                        "value": "Jade_KarmaE_C",
-                                                        "__type": "StringGet"
-                                                    },
-                                                    "__type": "ComparisonScriptCondition"
-                                                },
-                                                "Sequence": {
-                                                    "blocks": [
-                                                        null,
-                                                        {
-                                                            "{d851ffa3}": "b316cc8a-4e9c-4a56-9988-0d64a61d446c",
-                                                            "Src": {
-                                                                "value": 10,
-                                                                "__type": "IntGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "BaseCooldown",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        },
-                                                        {
-                                                            "{d851ffa3}": "8aa5f47e-35f6-42e9-ba0f-588d7bd4c527",
-                                                            "Formula": "1 + ptp.CooldownStat",
-                                                            "Dest": {
-                                                                "Var": "Multiplier",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        {
-                                                            "{d851ffa3}": "16c59f71-116a-43ce-8917-64a9b624ea08",
-                                                            "Formula": "ptp.Multiplier * ptp.BaseCooldown",
-                                                            "Dest": {
-                                                                "Var": "NewCooldown",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        null,
-                                                        null
-                                                    ],
-                                                    "__type": "ScriptSequence"
-                                                },
-                                                "__type": "{e524b2fc}"
-                                            },
-                                            {
-                                                "{d851ffa3}": "860a46e1-9877-4f2d-945e-a3f23babd7be",
-                                                "Condition": {
-                                                    "Value1": {
-                                                        "Var": "{822e38a2}",
-                                                        "__type": "ScriptTableGet"
-                                                    },
-                                                    "Value2": {
-                                                        "value": "Jade_KarmaW",
-                                                        "__type": "StringGet"
-                                                    },
-                                                    "__type": "ComparisonScriptCondition"
-                                                },
-                                                "type": 3,
-                                                "Sequence": {
-                                                    "blocks": [
-                                                        null,
-                                                        null,
-                                                        null,
-                                                        {
-                                                            "{d851ffa3}": "ca80294d-608e-4c28-b4d4-146533ad7c3f",
-                                                            "Formula": "1 + ptp.CooldownStat",
-                                                            "Dest": {
-                                                                "Var": "Multiplier",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        {
-                                                            "{d851ffa3}": "0a2f2e0c-56df-47fa-9149-bd5321045407",
-                                                            "Formula": "ptp.Multiplier * ptp.BaseCooldown",
-                                                            "Dest": {
-                                                                "Var": "NewCooldown",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        null,
-                                                        null
-                                                    ],
-                                                    "__type": "ScriptSequence"
-                                                },
-                                                "__type": "{e524b2fc}"
-                                            },
-                                            {
-                                                "{d851ffa3}": "13ed5d78-b68a-4480-b857-0733e5defea6",
-                                                "Condition": {
-                                                    "Value1": {
-                                                        "Var": "{822e38a2}",
-                                                        "__type": "ScriptTableGet"
-                                                    },
-                                                    "Value2": {
-                                                        "value": "Jade_KarmaQ_C",
-                                                        "__type": "StringGet"
-                                                    },
-                                                    "__type": "ComparisonScriptCondition"
-                                                },
-                                                "type": 3,
-                                                "Sequence": {
-                                                    "blocks": [
-                                                        null,
-                                                        {
-                                                            "{d851ffa3}": "81c59714-8ac8-429c-bf44-8dcd3cf8c2b5",
-                                                            "Src": {
-                                                                "value": 6,
-                                                                "__type": "IntGet"
-                                                            },
-                                                            "Dest": {
-                                                                "Var": "BaseCooldown",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "SetVarInTableBlock"
-                                                        },
-                                                        {
-                                                            "{d851ffa3}": "9377e676-d2b7-45d6-b167-34278c5d1a55",
-                                                            "Formula": "1 + ptp.CooldownStat",
-                                                            "Dest": {
-                                                                "Var": "Multiplier",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        {
-                                                            "{d851ffa3}": "56692687-5aa3-4e22-a821-71de74841003",
-                                                            "Formula": "ptp.Multiplier * ptp.BaseCooldown",
-                                                            "Dest": {
-                                                                "Var": "NewCooldown",
-                                                                "__type": "ScriptTableSet"
-                                                            },
-                                                            "__type": "{15ebaa9c}"
-                                                        },
-                                                        null,
-                                                        null
-                                                    ],
-                                                    "__type": "ScriptSequence"
-                                                },
-                                                "__type": "{e524b2fc}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
             "{eb530788}": {
                 "blocks": [
-                    null,
                     null,
                     {
                         "{d851ffa3}": "65422ba1-c99b-43a7-9c97-ea5ce7591ae8",
@@ -7099,11 +6938,18 @@
                     }
                 ],
                 "__type": "RootScriptSequence"
+            },
+            "{edb2eab3}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
             }
         },
         "__type": "CharScript"
     },
-    "{ab68df56}": {
+    "Characters/Jade_Karma/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{f5a6dc92}": {

@@ -1,8 +1,8 @@
 {
-    "{b921ab86}": {
-        "mRootSpell": "{9a76a4ee}",
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility": {
+        "mRootSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW",
         "mChildSpells": [
-            "{9a76a4ee}",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW",
             "{04c58654}",
             "{c21cd27f}",
             "{33c47f66}",
@@ -137,7 +137,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{11da7d8d}",
+                            "mDataValue": "WDamageADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -146,13 +146,13 @@
                 "{fc3ca7f8}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{b1004ea9}",
+                            "mDataValue": "WBaseHeal",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{014b66bc}",
+                            "mDataValue": "WHealADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -160,7 +160,7 @@
                 },
                 "{10284fb6}": {
                     "mMultiplier": {
-                        "mDataValue": "{014b66bc}",
+                        "mDataValue": "WHealADRatio",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -171,7 +171,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{11da7d8d}",
+                            "mDataValue": "WDamageADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -185,17 +185,15 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mSubparts": [
-                                {
-                                    "mDataValue": "{ec1f6283}",
-                                    "__type": "NamedDataValueCalculationPart"
-                                },
-                                {
-                                    "mNumber": 0.009999999776482582,
-                                    "__type": "NumberCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
+                            "mPart1": {
+                                "mDataValue": "WLowHealthHealBonus",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mNumber": 0.009999999776482582,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -340,7 +338,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{b1004ea9}",
+                                "mDataValue": "WBaseHeal",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -520,9 +518,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9a76a4ee}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW": {
         "ObjectName": "Jade_AatroxW",
-        "objectPath": "{9a76a4ee}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW",
         "mScriptName": "Jade_AatroxW",
         "mSpell": {
             "flags": 4,
@@ -617,7 +615,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{11da7d8d}",
+                            "mDataValue": "WDamageADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -626,13 +624,13 @@
                 "{fc3ca7f8}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{b1004ea9}",
+                            "mDataValue": "WBaseHeal",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{014b66bc}",
+                            "mDataValue": "WHealADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -640,7 +638,7 @@
                 },
                 "{10284fb6}": {
                     "mMultiplier": {
-                        "mDataValue": "{014b66bc}",
+                        "mDataValue": "WHealADRatio",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -651,7 +649,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{11da7d8d}",
+                            "mDataValue": "WDamageADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -666,7 +664,7 @@
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mDataValue": "{ec1f6283}",
+                                "mDataValue": "WLowHealthHealBonus",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mPart2": {
@@ -814,7 +812,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{b1004ea9}",
+                                "mDataValue": "WBaseHeal",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -899,7 +897,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{3903b00c}",
+            "mHitEffectKey": "Jade_Aatrox_W_hit_impact_tar_bloodless",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -912,10 +910,10 @@
         },
         "__type": "SpellObject"
     },
-    "{a929cc94}": {
-        "mRootSpell": "{f0bb3dbe}",
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility": {
+        "mRootSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE",
         "mChildSpells": [
-            "{f0bb3dbe}",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE",
             "{080b9d23}",
             "{bb4841c3}"
         ],
@@ -1010,7 +1008,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{41ddb211}",
+                            "mDataValue": "EBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1099,9 +1097,9 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1250.0,
-            "mMissileEffectKey": "{26ac13af}",
+            "mMissileEffectKey": "Jade_Aatrox_AatroxEMissile_2",
             "mLineWidth": 40.0,
-            "mHitEffectKey": "{fe500513}",
+            "mHitEffectKey": "Jade_Aatrox_Aatrox_EMissile_Hit",
             "selectionPriority": 1,
             "mTargetingTypeData": {
                 "__type": "Location"
@@ -1210,7 +1208,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{41ddb211}",
+                            "mDataValue": "EBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1289,9 +1287,9 @@
             },
             "mCastType": 1,
             "missileSpeed": 1250.0,
-            "mMissileEffectKey": "{93491622}",
+            "mMissileEffectKey": "Jade_Aatrox_AatroxEMissile",
             "mLineWidth": 15.0,
-            "mHitEffectKey": "{fe500513}",
+            "mHitEffectKey": "Jade_Aatrox_Aatrox_EMissile_Hit",
             "selectionPriority": 1,
             "mTargetingTypeData": {
                 "__type": "Location"
@@ -1305,9 +1303,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f0bb3dbe}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE": {
         "ObjectName": "Jade_AatroxE",
-        "objectPath": "{f0bb3dbe}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE",
         "mScriptName": "Jade_AatroxE",
         "mSpell": {
             "mAffectsTypeFlags": 23567,
@@ -1401,7 +1399,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{41ddb211}",
+                            "mDataValue": "EBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
@@ -1415,7 +1413,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 13,
-                            "mDataValue": "{a502176c}",
+                            "mDataValue": "EHealthCostPercent",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1631,18 +1629,18 @@
         },
         "__type": "SpellObject"
     },
-    "{0bf0a7e3}": {
-        "mRootSpell": "{9c914902}",
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility": {
+        "mRootSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR",
         "mChildSpells": [
-            "{9c914902}",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR",
             "{5074bb04}"
         ],
         "mName": "Jade_AatroxRAbility",
         "__type": "AbilityObject"
     },
-    "{0d8c241f}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxCritAttack": {
         "ObjectName": "Jade_AatroxCritAttack",
-        "objectPath": "{0d8c241f}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxCritAttack",
         "mScriptName": "Jade_AatroxCritAttack",
         "mSpell": {
             "mAnimationName": "Crit",
@@ -1768,7 +1766,7 @@
             "mCastType": 1,
             "castFrame": 1.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{08c3f44d}",
+            "mMissileEffectKey": "Jade_Aatrox_R_active_mis",
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -1782,9 +1780,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9c914902}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR": {
         "ObjectName": "Jade_AatroxR",
-        "objectPath": "{9c914902}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR",
         "mScriptName": "Jade_AatroxR",
         "mSpell": {
             "flags": 32,
@@ -2088,9 +2086,9 @@
         },
         "__type": "SpellObject"
     },
-    "{809cf2d7}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxCritAttack2": {
         "ObjectName": "Jade_AatroxCritAttack2",
-        "objectPath": "{809cf2d7}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxCritAttack2",
         "mScriptName": "Jade_AatroxCritAttack2",
         "mSpell": {
             "mAnimationName": "Crit2",
@@ -2131,10 +2129,10 @@
         },
         "__type": "SpellObject"
     },
-    "{9a10c4d8}": {
-        "mRootSpell": "{af953f36}",
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility": {
+        "mRootSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ",
         "mChildSpells": [
-            "{af953f36}"
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ"
         ],
         "mName": "Jade_AatroxQAbility",
         "__type": "AbilityObject"
@@ -2373,9 +2371,9 @@
         "mScriptName": "Jade_AatroxRevive",
         "__type": "SpellObject"
     },
-    "{af953f36}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ": {
         "ObjectName": "Jade_AatroxQ",
-        "objectPath": "{af953f36}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ",
         "mScriptName": "Jade_AatroxQ",
         "mSpell": {
             "flags": 4,
@@ -2486,7 +2484,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{dad3016d}",
+                            "mDataValue": "QBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2496,7 +2494,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 13,
-                            "mDataValue": "{d6a57858}",
+                            "mDataValue": "QHealthCostPercent",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2729,9 +2727,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bb3f00bc}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxBasicAttack3": {
         "ObjectName": "Jade_AatroxBasicAttack3",
-        "objectPath": "{bb3f00bc}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxBasicAttack3",
         "mScriptName": "Jade_AatroxBasicAttack3",
         "mSpell": {
             "mAnimationName": "Attack3",
@@ -2772,9 +2770,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bc3f024f}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxBasicAttack2": {
         "ObjectName": "Jade_AatroxBasicAttack2",
-        "objectPath": "{bc3f024f}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxBasicAttack2",
         "mScriptName": "Jade_AatroxBasicAttack2",
         "mSpell": {
             "mAnimationName": "Attack2",
@@ -2821,9 +2819,9 @@
         "mScriptName": "Jade_AatroxBannerWings",
         "__type": "SpellObject"
     },
-    "{f34f4fdf}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxRAttack2": {
         "ObjectName": "Jade_AatroxRAttack2",
-        "objectPath": "{f34f4fdf}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxRAttack2",
         "mScriptName": "Jade_AatroxRAttack2",
         "mSpell": {
             "mAnimationName": "Attack2_ULT",
@@ -2863,9 +2861,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f44f5172}": {
+    "Characters/Jade_Aatrox/Spells/Jade_AatroxRAttack1": {
         "ObjectName": "Jade_AatroxRAttack1",
-        "objectPath": "{f44f5172}",
+        "objectPath": "Characters/Jade_Aatrox/Spells/Jade_AatroxRAttack1",
         "mScriptName": "Jade_AatroxRAttack1",
         "mSpell": {
             "mAnimationName": "Attack1_ULT",
@@ -3288,7 +3286,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{758eef23}": {
+    "Characters/Jade_Aatrox/CAC/Jade_Aatrox_Skin33": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -3994,7 +3992,7 @@
                         "mRuleName": "Q1",
                         "mConditions": [
                             {
-                                "mSpell": "{af953f36}",
+                                "mSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4020,7 +4018,7 @@
                         "mRuleName": "W",
                         "mConditions": [
                             {
-                                "mSpell": "{9a76a4ee}",
+                                "mSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4046,7 +4044,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{f0bb3dbe}",
+                                "mSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -4072,7 +4070,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{9c914902}",
+                                "mSpell": "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4775,7 +4773,7 @@
         "mObjectPath": "Characters/Jade_Aatrox/CAC/Jade_Aatrox_Skin33",
         "__type": "ContextualActionData"
     },
-    "{9f77f999}": {
+    "Characters/Jade_Aatrox/CharacterRecords/Root": {
         "mCharacterName": "Jade_Aatrox",
         "baseHPModifiable": {
             "baseValue": 480.0,
@@ -4913,10 +4911,10 @@
             "Jade_AatroxRAbility/Jade_AatroxR"
         ],
         "spells": [
-            "{af953f36}",
-            "{9a76a4ee}",
-            "{f0bb3dbe}",
-            "{9c914902}"
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility/Jade_AatroxQ",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility/Jade_AatroxW",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility/Jade_AatroxE",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility/Jade_AatroxR"
         ],
         "extraSpells": [
             "Jade_AatroxE_ConeMissile2",
@@ -4955,17 +4953,17 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{a929cc94}",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxEAbility",
             "{6c0e4e0e}",
-            "{9a10c4d8}",
-            "{0bf0a7e3}",
-            "{b921ab86}"
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxQAbility",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxRAbility",
+            "Characters/Jade_Aatrox/Spells/Jade_AatroxWAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_AatroxPassive",
         "passiveToolTip": "",
         "passiveSpell": "Jade_AatroxPassive",
-        "passive1IconName": "{744ba16701f84c26}",
+        "passive1IconName": "assets/characters/jade_aatrox/hud/icons2d/jade_aatrox_passive.dds",
         "name": "Character_Jade_Aatrox_Name",
         "selectionHeight": 180.0,
         "selectionRadius": 135.0,
@@ -5070,7 +5068,7 @@
         "Script": "{27456a9f}",
         "__type": "CharacterRecord"
     },
-    "{c1e27879}": {
+    "Characters/Jade_Aatrox/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

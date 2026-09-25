@@ -2228,7 +2228,7 @@
                     this._firstExperienceContextualNotification && r.ContextualNotificationManager.remove(this._firstExperienceContextualNotification)
                 }
                 settingsUpdated(e) {
-                    e && (this._pttKey = e.pttKey ? e.pttKey.replace(/^\[|\]$/g, "") : e.pttKey, this._pttTeamKey = e.pushToTalkTeamKey ? e.pushToTalkTeamKey.replace(/^\[|\]$/g, "") : e.pushToTalkTeamKey, this._pttActive = e.pttActive)
+                    e && (this._pttKey = e.pttKey ? e.pttKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pttKey, this._pttTeamKey = e.pushToTalkTeamKey ? e.pushToTalkTeamKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pushToTalkTeamKey, this._pttActive = e.pttActive)
                 }
                 teamVoiceEnabledUpdated(e) {
                     this._teamVoicePluginEnabled = e, this._updateCombinedAvailability(), this._checkIfTeamVoiceEATNeeded()

@@ -1,5 +1,5 @@
 {
-    "{a10fd27f}": {
+    "Characters/Sett/Skins/Skin77": {
         "skinClassification": 2,
         "championSkinId": 875077,
         "championSkinName": "SettSkin77",
@@ -120,7 +120,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{f8f86a75}",
+            "animationGraphData": "Characters/Sett/Animations/Skin76",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -134,7 +134,7 @@
                 250.0,
                 110.0
             ],
-            "Material": "{d426f315}",
+            "Material": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Body_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -165,7 +165,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{31b8a266}",
+                    "Material": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_BodyGlow_inst",
                     "submesh": "Recall_Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -175,12 +175,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{d426f315}",
+                    "Material": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Body_inst",
                     "submesh": "Shirt",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{114c8d15}",
+                    "Material": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Hair_Inst",
                     "submesh": "Hairw",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -241,7 +241,7 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{3b1810d5}",
+        "mResourceResolver": "Characters/Sett/Skins/Skin77/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -249,15 +249,6 @@
                         {
                             "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        {
-                            "mDriver": {
-                                "mAnimationNames": [
-                                    "Death"
-                                ],
-                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                            },
-                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -289,13 +280,48 @@
                     "Tear"
                 ],
                 "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "__type": "AbilityResourceDynamicMaterialFloatDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.6000000238418579,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Death"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{8ba02840}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Sett/Skins/Skin77/ChromaPreview.tex",
-        "objectPath": "{a10fd27f}",
+        "objectPath": "Characters/Sett/Skins/Skin77",
         "__type": "SkinCharacterDataProperties"
     },
-    "{114c8d15}": {
+    "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Hair_Inst": {
         "name": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Hair_Inst",
         "samplerValues": [
             {
@@ -1354,7 +1380,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{31b8a266}": {
+    "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_BodyGlow_inst": {
         "name": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_BodyGlow_inst",
         "samplerValues": [
             {
@@ -1836,7 +1862,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{d426f315}": {
+    "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Body_inst": {
         "name": "Characters/Sett/Skins/Skin77/Materials/Sett_Skin77_Body_inst",
         "samplerValues": [
             {
@@ -2206,82 +2232,83 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{3b1810d5}": {
+    "Characters/Sett/Skins/Skin77/Resources": {
         "resourceMap": {
-            "Sett_R_AoE": "{844947a7}",
-            "Sett_R_Mis": "{5ee9cb37}",
-            "{27f474f8}": "{be9a6b61}",
-            "{cda2764c}": "{322c0782}",
-            "{70e6a503}": "{c2170794}",
-            "{71e6a696}": "{c5170c4d}",
-            "{443c4844}": "{8dd2991f}",
-            "{7bcda55a}": "{c367b873}",
-            "{c42cd18b}": "{7d5c4597}",
-            "{c6cda5c1}": "{4202404b}",
-            "Sett_E_cas": "{4b6f8bd4}",
-            "Sett_E_tar_avatar": "{13bc7877}",
-            "{9d244816}": "{5419d201}",
-            "Sett_R_AoE_Crater": "{891f35c4}",
-            "{4d9d5044}": "{a9548a22}",
-            "{5bb0ee06}": "{f909edb4}",
-            "Sett_E_tar_single_back": "{cb47514d}",
-            "Sett_Q_Buf_Avatar": "{920ab655}",
-            "Sett_Q_Buf_Hands": "{cbeb649a}",
-            "Sett_P_Buf_Regen": "{8f44fd10}",
-            "Sett_E_tar_double": "{ecf4598b}",
-            "Sett_E_tar_single_front": "{147743f9}",
-            "Sett_BA_Swipe_01": "{27a925af}",
-            "Sett_BA_Swipe_02": "{28a92742}",
-            "Sett_Q_Buf_Haste": "{c7126fd7}",
-            "Sett_Q_Buf_Feet": "{14818d48}",
-            "{5b0f5975}": "{939fec33}",
-            "Sett_Q_Swipe_A": "{0d55659e}",
-            "Sett_Q_Swipe_A_Hands": "{d6cf26f0}",
-            "Sett_Q_Swipe_B_Hands": "{b3258543}",
-            "Sett_Q_Swipe_B": "{0c55640b}",
-            "Sett_Q_Hit": "{b6100ae4}",
-            "Sett_Emote_Death_Impact": "{33dd6a77}",
-            "{24a147ee}": "{32d1921f}",
-            "{413e956c}": "{5e6ed8cd}",
-            "{17c90320}": "{2ad59475}",
-            "{e7c3124c}": "{5a21f321}",
-            "{6b7c91e6}": "{a004515f}",
-            "{7afed70d}": "{fe17c096}",
-            "{4522be8b}": "{11cb8e59}",
-            "Sett_E_tar_child_hit": "{96497239}",
-            "Sett_E_tar_child_middle": "{8e92fcc1}",
-            "{6875aa0e}": "{d3b97f95}",
-            "Sett_E_tar_child_hit_ground": "{075eab2a}",
-            "Sett_E_tar_child_miss": "{849284b4}",
-            "Sett_E_cas_child": "{cc91e822}",
-            "Sett_E_tar_child_dust": "{dff164e0}",
-            "Sett_Z_blank": "{abb95662}",
-            "Sett_R_Cas_Avatar": "{23688954}",
-            "Sett_R_Cas_Body": "{03c17545}",
-            "Sett_R_Mis_Trail": "{b26dcab5}",
-            "{7ae09043}": "{abb95662}",
-            "Sett_W_Max_AoE_Mis_Head": "{b22e6c35}",
-            "Sett_Emote_Taunt_Ground_Line": "{867c9a96}",
-            "Sett_Emote_Recall_Gleam": "{0db6022c}",
-            "Sett_Emote_Dance_Dust": "{c2c9ae8e}",
-            "Sett_Emote_Joke_Blush": "{76220bec}",
-            "Sett_Emote_Joke_Heart": "{7325923a}",
-            "Sett_Emote_Dance_Ab_Sparkle": "{24aedf75}",
-            "Sett_Emote_Dance_Ab_Sparkle_Child": "{f0de936d}",
-            "Sett_W_Shared_Warning_Allies": "{b0373a3a}",
-            "Sett_Q_Hit_2": "{b6100ae4}",
-            "{b636c2d1}": "{05067555}",
-            "{13fbf41a}": "{9bb3e937}",
-            "{a560f084}": "{f5a26b7c}",
-            "{19c00335}": "{7257fd1d}",
-            "{462a8481}": "{2e309fe2}",
-            "{97e92465}": "{7e797b3e}",
-            "{1b8f3582}": "{1f640ca3}",
-            "{a0e7630e}": "{98310520}"
+            "Sett_R_AoE": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_AoE",
+            "Sett_R_Mis": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_Mis",
+            "{27f474f8}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_SharedWarningPlayer",
+            "{cda2764c}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxBuf",
+            "{70e6a503}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_BAHit01",
+            "{71e6a696}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_BAHit02",
+            "{443c4844}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_BAHitCrit",
+            "{7bcda55a}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxBufAvatar",
+            "{c42cd18b}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MinTarCenter",
+            "{c6cda5c1}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MinTarEdge",
+            "Sett_E_cas": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_cas",
+            "Sett_E_tar_avatar": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarAvatar",
+            "{9d244816}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_SharedCas",
+            "Sett_R_AoE_Crater": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_AoECrater",
+            "{4d9d5044}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MinAoE",
+            "{5bb0ee06}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxAoE",
+            "Sett_E_tar_single_back": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarSingleBack",
+            "Sett_Q_Buf_Avatar": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufAvatar",
+            "Sett_Q_Buf_Hands": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufHands",
+            "Sett_P_Buf_Regen": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_P_BufRegen",
+            "Sett_E_tar_double": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarDouble",
+            "Sett_E_tar_single_front": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarSingleFront",
+            "Sett_BA_Swipe_01": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_BASwipe01",
+            "Sett_BA_Swipe_02": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_BASwipe02",
+            "Sett_Q_Buf_Haste": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufHaste",
+            "Sett_Q_Buf_Feet": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufFeet",
+            "{5b0f5975}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MinSwipe",
+            "Sett_Q_Swipe_A": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_SwipeA",
+            "Sett_Q_Swipe_A_Hands": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_SwipeAHands",
+            "Sett_Q_Swipe_B_Hands": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_SwipeBHands",
+            "Sett_Q_Swipe_B": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_SwipeB",
+            "Sett_Q_Hit": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_Hit",
+            "Sett_Emote_Death_Impact": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Death_Impact",
+            "{24a147ee}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxBufShoulders",
+            "{413e956c}": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MinAoEMis",
+            "{17c90320}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxTarCenter",
+            "{e7c3124c}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxTarEdge",
+            "{6b7c91e6}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxAoEMis",
+            "{7afed70d}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxWarningAvatar",
+            "{4522be8b}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxSwipe",
+            "Sett_E_tar_child_hit": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarChildHit",
+            "Sett_E_tar_child_middle": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarChildMiddle",
+            "{6875aa0e}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_P_BufRegenEnd",
+            "Sett_E_tar_child_hit_ground": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarChildHitGround",
+            "Sett_E_tar_child_miss": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarChildMiss",
+            "Sett_E_cas_child": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_CasChild",
+            "Sett_E_tar_child_dust": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_E_TarChildDust",
+            "Sett_Z_blank": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_blank",
+            "Sett_R_Cas_Avatar": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_CasAvatar",
+            "Sett_R_Cas_Body": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_CasBody",
+            "Sett_R_Mis_Trail": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_R_MisTrail",
+            "{7ae09043}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_blank",
+            "Sett_W_Max_AoE_Mis_Head": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MaxAoEMisHead",
+            "Sett_Emote_Taunt_Ground_Line": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Taunt_GroundLine",
+            "Sett_Emote_Recall_Gleam": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Recall_Gleam",
+            "Sett_Emote_Dance_Dust": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Dance_Dust",
+            "Sett_Emote_Joke_Blush": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Joke_Blush",
+            "Sett_Emote_Joke_Heart": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Joke_Heart",
+            "Sett_Emote_Dance_Ab_Sparkle": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Dance_AbSparkle",
+            "Sett_Emote_Dance_Ab_Sparkle_Child": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Emote_Dance_AbSparkleChild",
+            "Sett_W_Shared_Warning_Allies": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_SharedWarningAllies",
+            "Sett_Q_Hit_2": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_Hit",
+            "{b636c2d1}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MinAOEMisChild",
+            "Sett_Z_Ground": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_Ground",
+            "{a560f084}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_AvatarRap",
+            "{19c00335}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_TrailBall",
+            "Sett_Z_Dribble": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_Dribble",
+            "Sett_Z_CatchBall": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_CatchBall",
+            "Sett_Z_Camera": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_Camera",
+            "{a0e7630e}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufHandsChild",
+            "{8ba02840}": "{90559eaf}"
         },
         "__type": "ResourceResolver"
     },
-    "{5e6ed8cd}": {
+    "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MinAoEMis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4804,10 +4831,10 @@
         ],
         "particleName": "Sett_Skin77_W_MinAoEMis",
         "particlePath": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MinAoEMis",
-        "objectPath": "{5e6ed8cd}",
+        "objectPath": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MinAoEMis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b22e6c35}": {
+    "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MaxAoEMisHead": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -8648,7 +8675,7 @@
         ],
         "particleName": "Sett_Skin77_W_MaxAoEMisHead",
         "particlePath": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MaxAoEMisHead",
-        "objectPath": "{b22e6c35}",
+        "objectPath": "Characters/Sett/Skins/Skin77/Particles/Sett_Skin77_W_MaxAoEMisHead",
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": [

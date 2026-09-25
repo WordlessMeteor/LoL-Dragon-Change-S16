@@ -3012,11 +3012,11 @@
         "name": "SRU_Murkwolf",
         "__type": "Character"
     },
-    "{d7f88447}": {
+    "Characters/Jade_SR_Turtle": {
         "name": "Jade_SR_Turtle",
         "__type": "Character"
     },
-    "{db794820}": {
+    "Characters/Jade_SR_Duck": {
         "name": "Jade_SR_Duck",
         "__type": "Character"
     },
@@ -8986,7 +8986,7 @@
         "objectPath": "Maps/Shipping/Map453/Particles/Jade_Pings_NeedVision",
         "__type": "VfxSystemDefinitionData"
     },
-    "{8bad39e2}": {
+    "Maps/Shipping/Map453/Particles/Jade_Pings_Defend": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -9464,7 +9464,7 @@
         "particlePath": "Maps/Shipping/Map453/Particles/Jade_Pings_Defend",
         "flags": 396,
         "drawingLayer": 1,
-        "objectPath": "{8bad39e2}",
+        "objectPath": "Maps/Shipping/Map453/Particles/Jade_Pings_Defend",
         "__type": "VfxSystemDefinitionData"
     },
     "Maps/Shipping/Map453/Particles/Jade_Pings_Missing": {
@@ -20957,7 +20957,7 @@
             "{bc0a8359}": "Maps/Shipping/Map453/Particles/Jade_Pings_EnemyVision",
             "{e0968db0}": "Maps/Shipping/Map453/Particles/Jade_Pings_Blue",
             "{e29690d6}": "Maps/Shipping/Map453/Particles/Jade_Pings_Caution",
-            "{c70a94aa}": "{8bad39e2}"
+            "{c70a94aa}": "Maps/Shipping/Map453/Particles/Jade_Pings_Defend"
         },
         "__type": "ResourceResolver"
     },
@@ -21099,8 +21099,8 @@
             "Characters/SummonerBeacon",
             "Characters/S3_PromoteMinion",
             "Characters/TwinShadowsGhost",
-            "{db794820}",
-            "{d7f88447}"
+            "Characters/Jade_SR_Duck",
+            "Characters/Jade_SR_Turtle"
         ],
         "__type": "MapCharacterList"
     },
@@ -84938,94 +84938,6 @@
             }
         },
         "__type": "DesignerEvent"
-    },
-    "{214f0cca}": {
-        "{be672e4a}": "JADE_RUNE_PAGE",
-        "{fd229168}": "fee1e5cb-4d1c-4626-a883-4301c3c55cc7",
-        "{9240af8c}": 30,
-        "{a59ea1ab}": "game_data_inventory_types/jaderunepage-inventorytypes.json",
-        "NameTraKey": "inventory_type.jade_rune_page",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/jade-rune-pages.json",
-        "{f18ff8ac}": "iconPath",
-        "__type": "{4945c5ac}"
-    },
-    "{3000399e}": {
-        "{be672e4a}": "CHAMPION_SKIN",
-        "{fd229168}": "d620ae7b-cf87-496c-96c5-893c99dc2791",
-        "{a59ea1ab}": "game_data_inventory_types/championskin-inventorytypes.json",
-        "NameTraKey": "inventory_type.champion_skin",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/skins.json",
-        "{2c8f269b}": true,
-        "{b67be02d}": "id",
-        "{f18ff8ac}": "tilePath",
-        "__type": "{4945c5ac}"
-    },
-    "{417ca207}": {
-        "{be672e4a}": "SUMMONER_ICON",
-        "{fd229168}": "bb69c4a5-35a6-423c-a61a-a1eb4ca1aae7",
-        "{a59ea1ab}": "game_data_inventory_types/summonericon-inventorytypes.json",
-        "NameTraKey": "inventory_type.summoner_icon",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/summoner-icons.json",
-        "{b67be02d}": "id",
-        "{87855774}": "title",
-        "{f18ff8ac}": "imagePath",
-        "__type": "{4945c5ac}"
-    },
-    "{531d96d7}": {
-        "{be672e4a}": "EMOTE",
-        "{fd229168}": "5cee03fb-af16-4bc9-89f7-064b49e1233f",
-        "{a59ea1ab}": "game_data_inventory_types/emote-inventorytypes.json",
-        "NameTraKey": "inventory_type.emote",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/summoner-emotes.json",
-        "{b67be02d}": "id",
-        "{f18ff8ac}": "inventoryIcon",
-        "__type": "{4945c5ac}"
-    },
-    "{58848426}": {
-        "{be672e4a}": "PORTRAIT",
-        "{fd229168}": "0255df48-58ac-4cf5-a9d9-63e50c5124dd",
-        "{a59ea1ab}": "game_data_inventory_types/portrait-inventorytypes.json",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/portraits.json",
-        "{f18ff8ac}": "image",
-        "__type": "{4945c5ac}"
-    },
-    "{6c446f55}": {
-        "{be672e4a}": "ACHIEVEMENT_TITLE",
-        "{fd229168}": "f559e052-8ce5-4b09-baa8-dc36b296842b",
-        "{a59ea1ab}": "game_data_inventory_types/achievementtitle-inventorytypes.json",
-        "NameTraKey": "inventory_type.achievement_title",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/achievementtitles.json",
-        "{87855774}": "titleName",
-        "{8c5d92bb}": "titleDescription",
-        "{f18ff8ac}": "iconPath",
-        "__type": "{4945c5ac}"
-    },
-    "{e20af511}": {
-        "{be672e4a}": "WARD_SKIN",
-        "{fd229168}": "93b91332-509a-4848-b534-8facbdc94315",
-        "{a59ea1ab}": "game_data_inventory_types/wardskin-inventorytypes.json",
-        "NameTraKey": "inventory_type.ward_skin",
-        "{15f5f197}": true,
-        "{18c4e976}": "/lol-game-data/assets/v1/ward-skins.json",
-        "{b67be02d}": "id",
-        "{f18ff8ac}": "wardImagePath",
-        "__type": "{4945c5ac}"
-    },
-    "{ec4afced}": {
-        "{be672e4a}": "JADE_RUNE_SLOT",
-        "{fd229168}": "97e13102-78bb-438b-a643-ad9c2d5ad4b4",
-        "{9240af8c}": 30,
-        "{a59ea1ab}": "game_data_inventory_types/jaderune-slot-inventorytypes.json",
-        "{87855774}": "title",
-        "{8c5d92bb}": "tooltip",
-        "{f18ff8ac}": "iconPath",
-        "__type": "{4945c5ac}"
     },
     "Shared/Particles/Teleport_Arrival_Jade_Enemy": {
         "complexEmitterDefinitionData": [

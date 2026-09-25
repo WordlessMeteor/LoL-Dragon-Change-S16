@@ -447,23 +447,35 @@
             },
             {
                 "OwnerCondition": {
-                    "mDriver": {
-                        "mDrivers": [
-                            {
-                                "Spell": "Characters/Senna/Spells/SennaEWraithForm",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                    "mDrivers": [
+                        {
+                            "mAnimationNames": [
+                                "Dance_In",
+                                "Dance_Loop"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mDrivers": [
+                                    {
+                                        "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "Spell": "Characters/Senna/Spells/SennaECamo",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    }
+                                ],
+                                "__type": "AllTrueMaterialDriver"
                             },
-                            {
-                                "mDriver": {
-                                    "Spell": "Characters/Senna/Spells/SennaECamo",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "__type": "NotMaterialDriver"
-                            }
-                        ],
-                        "__type": "AllTrueMaterialDriver"
-                    },
-                    "__type": "NotMaterialDriver"
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {

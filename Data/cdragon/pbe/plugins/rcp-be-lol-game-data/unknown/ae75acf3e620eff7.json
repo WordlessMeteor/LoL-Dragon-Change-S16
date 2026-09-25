@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Reduces the duration of Stuns, Slows, Taunts, Fears, Snares, and Roots for each nearby enemy champion."
+        "description": "Irelia gains Tenacity for each nearby enemy champion."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia dashes forward to strike her target. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana.",
-            "dynamicDescription": "Irelia dashes forward to strike her target, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>If it kills the target, <spellName>Bladesurge's</spellName> cooldown refreshes and refunds <scaleMana>@ManaReturn@ Mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia dashes to strike her target. If it kills, Bladesurge's cooldown refreshes and refunds some of its Mana cost.",
+            "dynamicDescription": "Irelia dashes to strike her target, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>If it kills her target, <spellName>Bladesurge's</spellName> cooldown refreshes and refunds <scaleMana>@ManaReturn@ Mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia is skilled in the art of Hiten, passively giving her physical attacks health restoration.  Activating Hiten Style gives her basic attacks true damage for a short period.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Basic attacks <healing>restore @Health@ health</healing>.<br><br><spellActive>Active:</spellActive> Irelia's basic attacks deal <trueDamage>@Damage@ true damage</trueDamage> and doubles <healing>health restored</healing> for @HealthRestoreDuration@ seconds.@SpellModifierDescriptionAppend@",
+            "description": "Passive: Irelia is skilled in the art of Hiten causing her attacks to restore Health.<br><br>Active: Basic attacks deal bonus true damage and their healing is increased for a few seconds.",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Basic attacks <healing>restore @Health@ health</healing>.<br><br><spellActive>Active:</spellActive> Irelia's basic attacks deal <trueDamage>@Damage@ true damage</trueDamage> and now <healing>restore @HealthRestoreActive@ health</healing> for @ActiveDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia's attack balances the scales, dealing damage and slowing the target.  However, if the target has a higher Health % than Irelia, then the blow stuns the target instead.",
-            "dynamicDescription": "Irelia pierces her target, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> the target by @SlowAmount@% for @StunDuration@ second(s).<br><br>If the target has a higher <scaleHealth>Health %</scaleHealth> than Irelia, she <status>Stuns</status> the target for the duration instead.@SpellModifierDescriptionAppend@",
+            "description": "Irelia's attack balances the scales, dealing damage and slowing her target. If they have a higher Health % than her, the blow stuns them instead.",
+            "dynamicDescription": "Irelia pierces her target, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> them by @SlowAmount@% for @StunDuration@ second(s).<br><br>If the target has a higher <scaleHealth>Health %</scaleHealth> than Irelia, she <status>Stuns</status> them for the duration instead.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia summons 4 spirit blades that she can fling to deal physical damage and siphon life from enemies they pass through.",
+            "description": "Irelia summons 4 spirit blades that she can fling to damage and siphon life from enemies they pass through.",
             "dynamicDescription": "Irelia summons 4 spirit blades that she can fling to deal <physicalDamage>@TotalDamage@ physical damage</physicalDamage> to enemies they pass through. She <healing>heals</healing> for @ChampionHealPercent@% of the damage dealt against champions and @MinionHealPercent@% against other enemies.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
