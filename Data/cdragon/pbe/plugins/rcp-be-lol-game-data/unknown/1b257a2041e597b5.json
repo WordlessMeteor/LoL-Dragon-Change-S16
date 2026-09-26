@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "주변의 적 챔피언 수에 비례해 기절, 둔화, 도발, 공포, 이동 불가 효과의 지속시간이 감소합니다."
+        "description": "이렐리아가 주변의 적 챔피언 수에 비례해 강인함을 얻습니다."
     },
     "spells": [
         {
@@ -105,7 +105,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "이렐리아가 대상에게 돌진하여 타격합니다. 칼날 쇄도로 대상을 처치하면 재사용 대기시간이 초기화되고 35의 마나를 돌려받습니다.",
+            "description": "이렐리아가 대상에게 돌진하여 타격합니다. 칼날 쇄도로 대상을 처치하면 재사용 대기시간이 초기화되고 마나를 일부분 돌려받습니다.",
             "dynamicDescription": "이렐리아가 대상에게 돌진하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다.<br><br>대상을 처치하면 <spellName>칼날 쇄도</spellName>의 재사용 대기시간이 초기화되고 <scaleMana>@ManaReturn@의 마나</scaleMana>를 돌려받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "이렐리아는 비천어검류의 달인으로, 기본 공격 시 기본 지속 효과로 체력을 회복합니다.  비천어검류를 사용하면 일정 시간 동안 기본 공격으로 고정 피해를 입힙니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 <healing>@Health@의 체력을 회복</healing>합니다.<br><br><spellActive>사용 시:</spellActive> @HealthRestoreDuration@초 동안 이렐리아의 기본 공격이 <trueDamage>@Damage@의 고정 피해</trueDamage>를 입히고, <healing>체력 회복량</healing>이 두 배가 됩니다.@SpellModifierDescriptionAppend@",
+            "description": "기본 지속 효과: 이렐리아는 비천어검류의 달인으로, 기본 공격 시 체력을 회복합니다.<br><br>사용 시: 몇 초 동안 기본 공격 시 추가 고정 피해를 입히고, 체력 회복량이 증가합니다.",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 <healing>@Health@의 체력을 회복</healing>합니다.<br><br><spellActive>사용 시:</spellActive> @ActiveDuration@초 동안 이렐리아의 기본 공격이 <trueDamage>@Damage@의 고정 피해</trueDamage>를 입히고, <healing>@HealthRestoreActive@의 체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "이렐리아의 공격이 균형을 바로잡아, 대상에게 피해를 입히고 둔화시킵니다.  대상의 남은 체력 비율이 이렐리아보다 높다면 대신 기절을 적용합니다.",
-            "dynamicDescription": "이렐리아가 대상을 검으로 꿰뚫어, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @StunDuration@초 동안 @SlowAmount@% <status>둔화</status>시킵니다.<br><br>대상의 <scaleHealth>남은 체력 비율</scaleHealth>이 이렐리아보다 높다면 대신 <status>기절</status>을 적용합니다.@SpellModifierDescriptionAppend@",
+            "description": "이렐리아의 공격이 균형을 바로잡아, 대상에게 피해를 입히고 둔화시킵니다. 대상의 현재 체력 비율이 이렐리아보다 높다면 대신 기절을 적용합니다.",
+            "dynamicDescription": "이렐리아가 대상을 검으로 꿰뚫어, <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @StunDuration@초 동안 @SlowAmount@% <status>둔화</status>시킵니다.<br><br>대상의 <scaleHealth>현재 체력 비율</scaleHealth>이 이렐리아보다 높다면 대신 <status>기절</status>을 적용합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "이렐리아가 4개의 영혼검을 소환합니다. 이후 검을 던져 경로상의 적에게 물리 피해를 입히고 체력을 흡수할 수 있습니다.",
+            "description": "이렐리아가 4개의 영혼검을 소환합니다. 이후 검을 던져 경로상의 적에게 피해를 입히고 체력을 흡수할 수 있습니다.",
             "dynamicDescription": "이렐리아가 4개의 영혼검을 소환합니다. 이후 검을 던져 경로상의 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힐 수 있습니다. 챔피언에게 입힌 피해의 @ChampionHealPercent@%만큼, 그 외의 적에게 입힌 피해의 @MinionHealPercent@%만큼 이렐리아가 <healing>체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
