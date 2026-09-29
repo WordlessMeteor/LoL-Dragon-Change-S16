@@ -1,20 +1,70 @@
 {
-    "{9c921ea6}": {
+    "Characters/Jade_KogMaw/Skins/Skin66": {
         "skinClassification": 2,
         "championSkinId": 60096066,
         "championSkinName": "Jade_KogMawSkin66",
         "skinParent": 65,
-        "metaDataTags": "faction:void,gender:male,element:dark,race:monster,skinline:arcanist",
+        "metaDataTags": "faction:void,gender:male,element:dark,race:monster",
         "loadscreen": {
             "image": "assets/characters/kogmaw/skins/skin65/kogmawloadscreen_65.tex",
             "__type": "CensoredImage"
         },
+        "loadscreenVintage": {
+            "image": "assets/characters/jade_kogmaw/skins/base/jade_kogmawloadscreen_0_le.tex",
+            "__type": "CensoredImage"
+        },
         "skinAudioProperties": {
             "tagEventList": [
-                "KogMaw",
-                "KogMawSkin65"
+                "KogMaw"
             ],
             "bankUnits": [
+                {
+                    "name": "Kogmaw_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Kogmaw/Skins/Base/Kogmaw_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Kogmaw/Skins/Base/Kogmaw_Base_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_KogMaw_KogMawBasicAttack2_OnCast",
+                        "Play_sfx_KogMaw_KogMawBasicAttack2_OnHit",
+                        "Play_sfx_KogMaw_KogMawBasicAttack2_OnMissileLaunch",
+                        "Play_sfx_KogMaw_KogMawBasicAttack_OnCast",
+                        "Play_sfx_KogMaw_KogMawBasicAttack_OnHit",
+                        "Play_sfx_KogMaw_KogMawBasicAttack_OnMissileLaunch",
+                        "Play_sfx_KogMaw_KogMawBioArcaneBarrage_OnBuffActivate",
+                        "Play_sfx_KogMaw_KogMawBioArcaneBarrage_OnCast",
+                        "Play_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnCast",
+                        "Play_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnHit",
+                        "Play_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnMissileLaunch",
+                        "Play_sfx_KogMaw_KogMawCausticSpittleCharged_OnBuffActivate",
+                        "Play_sfx_KogMaw_KogMawCritAttack_OnCast",
+                        "Play_sfx_KogMaw_KogMawCritAttack_OnHit",
+                        "Play_sfx_KogMaw_KogMawCritAttack_OnMissileLaunch",
+                        "Play_sfx_KogMaw_KogMawIcathianSurprise_buffdeactivate",
+                        "Play_sfx_KogMaw_KogMawIcathianSurprise_OnBuffActivate",
+                        "Play_sfx_KogMaw_KogMawLivingArtillery_fall",
+                        "Play_sfx_KogMaw_KogMawLivingArtillery_hit",
+                        "Play_sfx_KogMaw_KogMawLivingArtillery_OnCast",
+                        "Play_sfx_KogMaw_KogMawQ_hit",
+                        "Play_sfx_KogMaw_KogMawQ_OnCast",
+                        "Play_sfx_KogMaw_KogMawQ_OnMissileLaunch",
+                        "Play_sfx_KogMaw_KogMawVoidOoze_OnCast",
+                        "Play_sfx_KogMaw_KogMawVoidOozeMissile_buffactivate",
+                        "Play_sfx_KogMaw_KogMawVoidOozeMissile_hit",
+                        "Play_sfx_KogMaw_KogMawVoidOozeMissile_OnMissileLaunch",
+                        "Play_sfx_KogMaw_Recall3D_buffactivate",
+                        "Stop_sfx_KogMaw_KogMawBasicAttack2_OnMissileLaunch",
+                        "Stop_sfx_KogMaw_KogMawBasicAttack_OnMissileLaunch",
+                        "Stop_sfx_KogMaw_KogMawBioArcaneBarrage_OnBuffActivate",
+                        "Stop_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnMissileLaunch",
+                        "Stop_sfx_KogMaw_KogMawCausticSpittleCharged_OnBuffActivate",
+                        "Stop_sfx_KogMaw_KogMawCritAttack_OnMissileLaunch",
+                        "Stop_sfx_KogMaw_KogMawQ_OnMissileLaunch",
+                        "Stop_sfx_KogMaw_KogMawVoidOozeMissile_buffactivate",
+                        "Stop_sfx_KogMaw_KogMawVoidOozeMissile_OnMissileLaunch"
+                    ],
+                    "__type": "BankUnit"
+                },
                 {
                     "name": "Kogmaw_Base_VO",
                     "bankPath": [
@@ -23,7 +73,7 @@
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Kogmaw/Skins/Base/Kogmaw_Base_VO_audio.wpk"
                     ],
                     "events": [
-                        "Play_vo_KogMaw_AttackChampion2D",
+                        "Play_vo_KogMaw_Attack2DGeneral",
                         "Play_vo_KogMaw_Death3D",
                         "Play_vo_KogMaw_Joke3DGeneral",
                         "Play_vo_KogMaw_KogMawBasicAttack2_cast3D",
@@ -31,12 +81,16 @@
                         "Play_vo_KogMaw_KogMawBioArcaneBarrage_OnBuffActivate",
                         "Play_vo_KogMaw_KogMawBioArcaneBarrageAttack_cast3D",
                         "Play_vo_KogMaw_KogMawCritAttack_cast3D",
-                        "Play_vo_KogMaw_KogMawIcathianSurprise_OnBuffActivate",
                         "Play_vo_KogMaw_KogMawLivingArtillery_cast3D",
                         "Play_vo_KogMaw_KogMawQ_cast3D",
                         "Play_vo_KogMaw_KogMawVoidOoze_cast3D",
                         "Play_vo_KogMaw_Laugh3DGeneral",
-                        "Play_vo_KogMaw_MoveOrder2D",
+                        "Play_vo_KogMaw_Move2DStandard",
+                        "Play_vo_KogMaw_Spell3DBasic",
+                        "Play_vo_KogMaw_Spell3DECast",
+                        "Play_vo_KogMaw_Spell3DQCast",
+                        "Play_vo_KogMaw_Spell3DWAttack",
+                        "Play_vo_KogMaw_Spell3DWCast",
                         "Play_vo_KogMaw_Taunt3DGeneral"
                     ],
                     "voiceOver": true,
@@ -94,7 +148,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{ed9ffa68}",
+            "animationGraphData": "Characters/Jade_KogMaw/Animations/Skin65",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -103,11 +157,7 @@
             "texture": "assets/characters/kogmaw/skins/skin66/kogmaw_skin66_tx_cm.tex",
             "skinScale": 0.6399999856948853,
             "selfIllumination": 0.699999988079071,
-            "overrideBoundingBox": [
-                262.79998779296875,
-                262.79998779296875,
-                262.79998779296875
-            ],
+            "Material": "Characters/Jade_KogMaw/Skins/Skin0/Materials/Jade_KogMaw_ScreenSpace_Pan_Masked_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -119,12 +169,12 @@
             "submeshRenderOrder": "EyesLids Body Eyes Dragon EyesHighlights Recall_Recall_Skin65_Mat Tongue",
             "materialOverride": [
                 {
-                    "Material": "{87393bdc}",
+                    "Material": "Characters/KogMaw/Skins/Skin66/Materials/KogMaw_Skin66_Bloom_Body",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{87393bdc}",
+                    "Material": "Characters/KogMaw/Skins/Skin66/Materials/KogMaw_Skin66_Bloom_Body",
                     "submesh": "Tongue",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -134,12 +184,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{f07d14089a559f56}",
+                    "texture": "assets/characters/jade_kogmaw/skins/skin65/jade_kogmaw_skin65_baron_tx_cm.tex",
                     "submesh": "Dragon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{f1ddde62}",
+                    "Material": "Characters/KogMaw/Skins/Skin66/Materials/KogMaw_Skin66_Bloom_Eyes",
                     "submesh": "Eyes",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -150,6 +200,11 @@
                 }
             ],
             "OutlineCategorySubmeshes": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "MAT_KOGMAW",
+                    "__type": "CharacterOutlineSubmeshes"
+                },
                 {
                     "category": "{e1043940}",
                     "Submeshes": "Body",
@@ -193,16 +248,16 @@
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "Characters/KogMaw/CAC/KogMaw_Base",
-        "iconCircle": "assets/characters/kogmaw/hud/kogmaw_circle_0.tex",
-        "iconSquare": "assets/characters/kogmaw/hud/kogmaw_square_0.tex",
-        "iconAvatar": "assets/characters/kogmaw/hud/kogmaw_circle_19.tex",
+        "mContextualActionData": "Characters/Jade_KogMaw/CAC/Jade_KogMaw_Base",
+        "iconCircle": "assets/characters/jade_kogmaw/hud/jade_kogmaw_circle_0.tex",
+        "iconSquare": "assets/characters/jade_kogmaw/hud/jade_kogmaw_square_0.tex",
+        "iconAvatar": "assets/characters/jade_kogmaw/hud/jade_kogmaw_circle_0.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_CSTM_Healthbar",
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{b0ab9f7c}",
+        "mResourceResolver": "Characters/Jade_KogMaw/Skins/Skin66/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -220,10 +275,10 @@
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Jade_KogMaw/Skins/Skin66/ChromaPreview.tex",
-        "objectPath": "{9c921ea6}",
+        "objectPath": "Characters/Jade_KogMaw/Skins/Skin66",
         "__type": "SkinCharacterDataProperties"
     },
-    "{70e4cc74}": {
+    "Characters/Jade_KogMaw/Skins/Skin66/Particles/Jade_KogMaw_Skin66_W_buf": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2735,40 +2790,40 @@
         ],
         "particleName": "Jade_KogMaw_Skin66_W_buf",
         "particlePath": "Characters/Jade_KogMaw/Skins/Skin66/Particles/Jade_KogMaw_Skin66_W_buf",
-        "objectPath": "{70e4cc74}",
+        "objectPath": "Characters/Jade_KogMaw/Skins/Skin66/Particles/Jade_KogMaw_Skin66_W_buf",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b0ab9f7c}": {
+    "Characters/Jade_KogMaw/Skins/Skin66/Resources": {
         "resourceMap": {
-            "Jade_KogMaw_BA_mis": "{e69559ac}",
-            "Jade_KogMaw_BA_tar": "{c0fb4268}",
-            "Jade_KogMaw_BA_tar_crit": "{e13734ac}",
-            "Jade_KogMaw_E_mis": "{9e1c3c27}",
-            "Jade_KogMaw_E_tar": "{6104ac5b}",
-            "Jade_KogMaw_E_zone_green": "{5cc9d49d}",
-            "Jade_KogMaw_E_zone_red": "{8773ccd9}",
-            "Jade_KogMaw_P_aoe_explosion": "{e930202f}",
-            "Jade_KogMaw_P_backBeam": "{bac99e81}",
+            "Jade_KogMaw_BA_mis": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_BAMis",
+            "Jade_KogMaw_BA_tar": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_BATar",
+            "Jade_KogMaw_BA_tar_crit": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_BATarCrit",
+            "Jade_KogMaw_E_mis": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_E_mis",
+            "Jade_KogMaw_E_tar": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_E_tar",
+            "Jade_KogMaw_E_zone_green": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_E_ZoneGreen",
+            "Jade_KogMaw_E_zone_red": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_E_ZoneRed",
+            "Jade_KogMaw_P_aoe_explosion": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_AoeExplosion",
+            "Jade_KogMaw_P_backBeam": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_backBeam",
             "Jade_KogMaw_Base_P_foam": "{00000000}",
-            "Jade_KogMaw_P_idle": "{bba59917}",
-            "Jade_KogMaw_P_proc": "{0ae92845}",
-            "Jade_KogMaw_P_splats": "{a0ed19f4}",
-            "Jade_KogMaw_Q_buf": "{e2c11e25}",
-            "Jade_KogMaw_Q_mis": "{cee4c333}",
-            "Jade_KogMaw_Q_tar": "{1204a3d7}",
-            "Jade_KogMaw_R_aoe_explosion": "{f1764501}",
-            "Jade_KogMaw_R_cas_green": "{be8f584f}",
-            "Jade_KogMaw_R_cas_red": "{1f37e133}",
-            "Jade_KogMaw_R_mis": "{030006ca}",
-            "Jade_KogMaw_W_buf": "{70e4cc74}",
-            "Jade_KogMaw_W_buff_mouth": "{2a8323f6}",
-            "Jade_KogMaw_W_mis": "{f43880f5}",
-            "{7ea8a670}": "{986efd66}",
-            "Jade_KogMaw_W_tar": "{b54458e9}",
-            "Jade_KogMaw_R_tar": "{8a938af6}",
-            "Jade_KogMaw_R_tar_mis_child": "{18e32d21}",
-            "Jade_KogMaw_R_cas_mis_child": "{d38c645f}",
-            "Jade_KogMaw_W_Activate_Child": "{e4af0cc3}",
+            "Jade_KogMaw_P_idle": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_idle",
+            "Jade_KogMaw_P_proc": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_proc",
+            "Jade_KogMaw_P_splats": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_splats",
+            "Jade_KogMaw_Q_buf": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Q_buf",
+            "Jade_KogMaw_Q_mis": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Q_mis",
+            "Jade_KogMaw_Q_tar": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Q_tar",
+            "Jade_KogMaw_R_aoe_explosion": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_AoeExplosion",
+            "Jade_KogMaw_R_cas_green": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_CasGreen",
+            "Jade_KogMaw_R_cas_red": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_CasRed",
+            "Jade_KogMaw_R_mis": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_mis",
+            "Jade_KogMaw_W_buf": "Characters/Jade_KogMaw/Skins/Skin66/Particles/Jade_KogMaw_Skin66_W_buf",
+            "Jade_KogMaw_W_buff_mouth": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_BuffMouth",
+            "Jade_KogMaw_W_mis": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_mis",
+            "{7ea8a670}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_EyeGlow",
+            "Jade_KogMaw_W_tar": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_tar",
+            "Jade_KogMaw_R_tar": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_tar",
+            "Jade_KogMaw_R_tar_mis_child": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_TarMisChild",
+            "Jade_KogMaw_R_cas_mis_child": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_CasMisChild",
+            "Jade_KogMaw_W_Activate_Child": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_ActivateChild",
             "Jade_KogMaw_R_mis_child": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin37_R_mis_child",
             "Jade_KogMaw_Skin37_Passive_Cry_L": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin37_Passive_Cry_L",
             "Jade_KogMaw_Skin37_E_mis_child": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin37_E_mis_child",
@@ -2788,34 +2843,36 @@
             "Jade_KogMaw_Skin37_R_Lighting_Child": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin37_R_Lighting_Child",
             "Jade_KogMaw_Skin37_Passive_Cry_R": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin37_Passive_Cry_R",
             "Jade_KogMaw_R_mis_child_02": "Characters/Jade_KogMaw/Skins/Skin37/Particles/Jade_KogMaw_Skin19_R_mis_child_02",
-            "{5448b703}": "{0b731cc4}",
-            "{f45a2947}": "{c88b1857}",
-            "{0013017e}": "{6b61be39}",
-            "{9aac5250}": "{65b982c0}",
-            "{0d42d481}": "{2b952331}",
-            "{44eee61c}": "{60dcec2c}",
-            "{b71d6b66}": "{9fe7e1b6}",
-            "{84804bef}": "{fa9025b1}",
-            "{90a9e958}": "{f700f386}",
-            "{93a9ee11}": "{f600f1f3}",
-            "{0d8c6c2c}": "{9dec641c}",
-            "{b5de5e6f}": "{7869f13f}",
-            "{a82d78f7}": "{a8b24986}",
-            "{5c54bac7}": "{4c86a137}",
-            "{d674cc65}": "{60616f35}",
-            "{5bc5c99f}": "{a1aa6fef}",
-            "{21a05dc9}": "{4f33e570}",
-            "{c633629f}": "{df15de58}",
-            "{44919fd9}": "{72dee3a0}",
-            "{d346ffef}": "{961c2165}",
-            "{d151ce9b}": "{b246288b}",
-            "{2ca02a04}": "{887900b3}"
+            "{5448b703}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Longkeng01",
+            "{f45a2947}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_E_MisChild",
+            "{0013017e}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_W_BuffMouth01",
+            "{9aac5250}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_P_foam",
+            "{0d42d481}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Splash",
+            "{44eee61c}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_watersurface",
+            "{b71d6b66}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Idle_Glow",
+            "{84804bef}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_AoeExplosionChild",
+            "{90a9e958}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_AoeExplosionChild01",
+            "{93a9ee11}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_R_AoeExplosionChild02",
+            "{0d8c6c2c}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Sand",
+            "{b5de5e6f}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Longkeng",
+            "{a82d78f7}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_SandLR",
+            "{5c54bac7}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Glow",
+            "{d674cc65}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Water",
+            "{5bc5c99f}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Highlights",
+            "{21a05dc9}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_HighlightsSmoke",
+            "{c633629f}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Smoke01",
+            "{44919fd9}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_ExhaleSmoke",
+            "{d346ffef}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_ExhaleSmokeChlld",
+            "{d151ce9b}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Recall_Glow_01",
+            "{2ca02a04}": "Characters/Jade_KogMaw/Skins/Skin65/Particles/KogMaw_Skin65_Death_EyeFire01"
         },
         "__type": "ResourceResolver"
     },
     "__linked": [
         "DATA/Characters/Jade_KogMaw/Jade_KogMaw.bin",
+        "DATA/Characters/Jade_KogMaw/Jade_KogMaw_Multi_Skins_Skin0_Skins_Skin65_Skins_Skin66.bin",
         "DATA/Characters/Jade_KogMaw/Animations/Skin65.bin",
+        "DATA/Characters/Jade_KogMaw/Jade_KogMaw_Multi_Skins_Root_Skins_Skin0_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin40_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin55_Skins_Skin56_Skins_Skin57_Skins_Skin58_Skins_Skin59_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin9.bin",
         "DATA/Characters/Jade_KogMaw/Jade_KogMaw_Multi_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin40_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin65_Skins_Skin66.bin",
         "DATA/Characters/Jade_KogMaw/Jade_KogMaw_Multi_Skins_Skin37_Skins_Skin65_Skins_Skin66.bin",
         "DATA/Characters/Jade_KogMaw/Jade_KogMaw_Multi_Skins_Skin65_Skins_Skin66.bin"

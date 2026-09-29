@@ -256,7 +256,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "开启时，厄萨斯每进行第三次连续攻击会造成额外伤害，但会消耗自身生命值。关闭时，厄萨斯每进行三次连续攻击会回复生命值。",
-            "dynamicDescription": "关闭时，厄萨斯会获得 <keywordMajor>嗜血</keywordMajor>效果，开启时则激活 <keywordMajor>血的代价</keywordMajor> ，并移除 <keywordMajor>嗜血</keywordMajor>。<br><br><keywordMajor>嗜血：</keywordMajor>厄萨斯每进行第三次攻击时，会回复 <healing>@WHeal@ 生命值</healing>，当生命值低于<scaleHealth>一半</scaleHealth>时，回复量提升 @WLowHealthHealBonus@%。<br><br><keywordMajor>血的代价：</keywordMajor>每进行第三次攻击时，厄萨斯会造成 <physicalDamage>@WDamage@ 额外物理伤害</physicalDamage> ，并损失 <scaleHealth>@SelfDamage@ 生命值</scaleHealth>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>切换：</toggle>厄萨斯在<keywordMajor>嗜血</keywordMajor>和<keywordMajor>血的代价</keywordMajor>之间切换，每<attention>第三次</attention>攻击会获得额外效果。<br><br><keywordMajor>嗜血：</keywordMajor>厄萨斯回复<healing>@WHeal@生命值</healing>，当生命值低于<scaleHealth>@LowHealthPercent@%</scaleHealth>时，回复量提升至<healing>@TTLowHealthHeal@</healing>。<br><br><keywordMajor>血的代价：</keywordMajor>厄萨斯会造成<physicalDamage>@WDamage@额外物理伤害</physicalDamage>，并<font color='#FF3300'>损失@SelfDamage@生命值</font>。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

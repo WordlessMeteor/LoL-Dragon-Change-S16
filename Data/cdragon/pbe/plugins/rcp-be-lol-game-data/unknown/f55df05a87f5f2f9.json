@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "卡玛会基于自身已损失生命值的百分比获得额外魔法攻击。"
+        "description": "卡玛会根据她已损失的生命值获得魔法攻击。"
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡玛从扇子中射出隐藏利刃，对前方锥形范围内的单位造成魔法伤害。<br><br>真言符印加成：除了对敌人造成伤害外，“天国之刃”还会根据友军已损失生命值的百分比，为锥形范围内的友军提供治疗。",
-            "dynamicDescription": "卡玛从扇子中射出隐藏利刃，对前方锥形范围内的单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br><keywordMajor>真言符印加成：</keywordMajor>除了对敌人造成伤害外，<spellName>“天国之刃”</spellName>还会<healing>治疗</healing>锥形范围内的友方<healing>@BaseHealth@外加@AdditionalHealPercentTT@%</healing>的<scaleHealth>已损失生命值</scaleHealth>。@SpellModifierDescriptionAppend@",
+            "description": "卡玛从她的扇子中释放隐藏刀刃，对锥形范围内的敌人造成伤害。<br><br>真言符印：“天国之刃”还会根据友军已损失生命值，为锥形范围内的友军提供治疗。",
+            "dynamicDescription": "卡玛从扇子中射出隐藏利刃，对锥形范围内的单位造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br><keywordMajor>真言符印：</keywordMajor><spellName>“天国之刃”</spellName>还会根据友军<scaleHealth>已损失生命值</scaleHealth>，为锥形范围内的友军提供<healing>@BaseHealth@外加@AdditionalHealPercent@</healing>的<healing>已损失的生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡玛与一名友军或敌人之间建立一条灵链。友方被链接目标会获得移速加成，敌方被链接目标则会被减速。灵链会对敌人造成魔法伤害，任何穿过灵链的英雄都会受到与链接目标相同的移速修正效果。<br><br>真言符印加成：卡玛强化灵链，使移速修正的效果翻倍。",
-            "dynamicDescription": "卡玛与一名友军或敌人之间建立一条灵链，持续@Duration@秒。友方被链接目标的<speed>移动速度提升@MoveSpeedMod*100@%</speed>，敌方被链接目标的<status>移动速度降低@MoveSpeedMod*100@%</status>。灵链会对敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，任何穿过灵链的英雄都会受到与被链接目标相同的移速修正效果。<br><br>如果被链接目标进入<keywordStealth>潜行状态</keywordStealth>，光束会断开。<br><br><keywordMajor>真言符印加成：</keywordMajor>卡玛强化灵链，使移速修正的效果翻倍。@SpellModifierDescriptionAppend@",
+            "description": "卡玛与另一名友军或敌人之间建立一条灵链。友方被链接目标会获得移速加成，敌方被链接目标则会被减速。灵链会对敌人造成伤害，任何穿过灵链的英雄都会受到相同的移速修正效果。<br><br>真言符印：卡玛强化灵链，提升移速效果。",
+            "dynamicDescription": "卡玛与另一名友军或敌人之间建立一条灵链，最多持续@Duration@秒。包括她自己在内的友方被链接目标会获得 <speed>@MoveSpeedMod*100@%移动速度</speed>。敌方被链接目标被<status>减速</status>@MoveSpeedMod*100@%。<br><br>灵链会对所有接触到的敌人造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage> 。友方和敌方英雄将获得与被链接目标相同的移动速度调整。<br><br><keywordMajor>真言符印：</keywordMajor>卡玛强化灵链，提升移速修正效果至@MantraMoveSpeedMod@。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡玛召唤一道防护护盾，吸收即将来袭的伤害。<br><br>真言符印加成：除了施放护盾外，护盾还会向外释放能量，对卡玛目标周围的敌方单位造成伤害。",
-            "dynamicDescription": "卡玛召唤一道防护<shield>护盾</shield>，可吸收<shield>@TotalShield@伤害</shield>，持续@Duration@秒。<br><br><keywordMajor>真言符印加成：</keywordMajor>除了施放<shield>护盾</shield>外，护盾还会向外释放能量，对目标周围的敌方单位造成<magicDamage>@TotalShield@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "卡玛为一名友军召唤一道护盾，吸收即将受到的伤害。<br><br>真言符印：除了施放护盾外，护盾还会向外释放能量，对她目标周围的敌人造成伤害。",
+            "dynamicDescription": "卡玛召唤一道防护<shield>护盾</shield>，可吸收<shield>@TotalShield@伤害</shield>，持续@Duration@秒。<br><br><keywordMajor>真言符印：</keywordMajor>护盾还会向外释放能量，对目标周围的敌方单位造成<magicDamage>@TotalShield@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡玛强化她的下一个技能，使其获得额外效果。真言符印在1级时即可使用，且不需要分配技能点。",
-            "dynamicDescription": "卡玛强化她的下一个技能，使其获得额外效果。卡玛每过<attention>@f1@</attention>秒获得1次充能，上限为2次充能。<br><br>冷却时间减免会缩短刷新时间。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡玛强化她的下一个技能，使其获得额外效果。卡玛每过<attention>@MantraCooldown@</attention>秒获得1次充能，上限为2次充能。<br><br>冷却时间减免会缩短刷新时间。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

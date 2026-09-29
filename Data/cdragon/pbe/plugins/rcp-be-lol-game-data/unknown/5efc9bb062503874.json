@@ -106,7 +106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "艾瑞莉娅冲刺以打击她的目标。如果这个技能击杀了目标，那么【利刃冲击】的冷却时间会刷新并返还一些法力值。",
-            "dynamicDescription": "艾瑞莉娅冲刺以打击她的目标，从而造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果这个技能击杀了她的目标，那么<spellName>利刃冲击</spellName>的冷却时间会刷新并返还<scaleMana>@ManaReturn@法力值</scaleMana>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "艾瑞莉娅冲刺至一个敌人，从而造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并附带攻击特效。<br><br>如果【利刃冲击】击杀了她的目标，那么它的冷却时间会刷新并且艾瑞莉娅会回复<scaleMana>@ManaReturn@法力值</scaleMana>。@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "被动：艾瑞莉娅精通飞天之技艺，从而使她的攻击可以回复生命值。<br><br>主动：普攻会在若干秒内造成额外真实伤害并提升回复值。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>普通攻击<healing>回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive>艾瑞莉娅的普通攻击造成<trueDamage>@Damage@真实伤害</trueDamage>并且<healing>回复@HealthRestoreActive@生命值</healing>，持续@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "被动：艾瑞莉娅的攻击可以回复生命值。<br><br>主动：艾瑞莉娅的攻击会在若干秒内造成额外真实伤害并回复更多生命值。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>艾瑞莉娅的普通攻击<healing>回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive>艾瑞莉娅的普通攻击造成<trueDamage>@Damage@真实伤害</trueDamage>并且<healing>回复@HealthRestoreActive@生命值</healing>，持续@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

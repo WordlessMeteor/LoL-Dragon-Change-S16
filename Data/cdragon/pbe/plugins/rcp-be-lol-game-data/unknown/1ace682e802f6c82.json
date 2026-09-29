@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Reduce la duración de los aturdimientos, las ralentizaciones, las provocaciones, el miedo, las inmovilizaciones y los enraizamientos por cada campeón enemigo cerca."
+        "description": "Irelia obtiene tenacidad por cada campeón enemigo cercano."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Irelia se desliza hacia delante y golpea a su objetivo. Si lo mata, el enfriamiento de Embate de espada se restaura y recupera 35 de maná.",
-            "dynamicDescription": "Irelia se desliza hacia delante y golpea a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Si lo mata, el enfriamiento de <spellName>Embate de espada</spellName> se restaura y recupera <scaleMana>@ManaReturn@ de maná</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia se desliza y golpea a su objetivo. Si lo mata, el enfriamiento de Embate de espada se restaura y recupera parte de su coste de maná.",
+            "dynamicDescription": "Irelia se desliza y golpea a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Si mata a su objetivo, el enfriamiento de <spellName>Embate de espada</spellName> se restaura y recupera <scaleMana>@ManaReturn@ de maná</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Irelia domina el arte del Hiten, lo que permite que sus ataques físicos restauren vida de forma pasiva.  Al activar Estilo Hiten, sus ataques básicos infligen daño verdadero durante un breve periodo de tiempo.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques básicos <healing>restauran @Health@ de vida</healing>.<br><br><spellActive>Activa:</spellActive> Los ataques básicos de Irelia infligen <trueDamage>@Damage@ de daño verdadero</trueDamage> y se duplica la <healing>vida restaurada</healing> durante @HealthRestoreDuration@ s.@SpellModifierDescriptionAppend@",
+            "description": "Pasiva: Irelia domina el arte del Hiten, lo que permite que sus ataques restauren vida.<br><br>Activa: Los ataques básicos infligen daño verdadero adicional y su curación aumenta durante unos segundos.",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques básicos <healing>restauran @Health@ de vida</healing>.<br><br><spellActive>Activa:</spellActive> Los ataques básicos de Irelia infligen <trueDamage>@Damage@ de daño verdadero</trueDamage> y <healing>restauran @HealthRestoreActive@ de vida</healing> durante @ActiveDuration@&nbsp;s.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "El ataque de Irelia equilibra la balanza al infligir daño y ralentizar al objetivo.  Sin embargo, si el objetivo tiene más vida que Irelia, el golpe aturde al objetivo.",
+            "description": "El ataque de Irelia equilibra la balanza al infligir daño y ralentizar a su objetivo. Si este tiene un porcentaje de vida mayor que el de ella, el golpe lo aturde.",
             "dynamicDescription": "Irelia atraviesa a su objetivo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y lo <status>ralentiza</status> un @SlowAmount@% durante @StunDuration@ s.<br><br>Si el objetivo tiene un <scaleHealth>porcentaje de vida</scaleHealth> mayor que el de Irelia, lo <status>aturde</status> durante ese tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Irelia invoca 4 hojas espirituales que puede lanzar para infligir daño físico y absorber vida de los enemigos a los que atraviesen.",
+            "description": "Irelia invoca 4 hojas espirituales que puede lanzar para infligir daño y absorber vida de los enemigos a los que atraviesen.",
             "dynamicDescription": "Irelia invoca 4 hojas espirituales que puede lanzar para infligir <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a los enemigos a los que atraviesen. Se <healing>cura</healing> un @ChampionHealPercent@% del daño infligido a campeones y un @MinionHealPercent@% del infligido a otros enemigos.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

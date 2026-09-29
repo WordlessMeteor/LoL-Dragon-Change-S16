@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Passiv: Erhält Werte, wenn „verwundbar“ ausgelöst wird.<br><br>Passiv als Valor: Erhält Werte.<br><br>Aktiv: Deckt einen Bereich auf.",
+            "description": "Passiv als Quinn: Du erhältst ein paar Sekunden lang Angriffstempo und Lauftempo, wenn du „Adleraugen“ auslöst.<br><br>Passiv als Valor: Du erhältst Angriffstempo.<br><br>Aktiv: Decke einen großen Bereich um Quinn und Valor auf.",
             "dynamicDescription": "<keywordMajor>Passiv als Quinn</keywordMajor>: Greift Quinn ein <keywordMajor>verwundbares</keywordMajor> Ziel an, erhält sie @BuffDuration@ Sekunden lang <speed>@AttackSpeedBonus*100@ % Angriffstempo</speed> und <speed>@MovespeedAmount@ Lauftempo</speed>.<br><br><keywordMajor>Passiv als Valor</keywordMajor>: Erhält @ValorAttackSpeed*100@ % Angriffstempo.<br><br><keywordMajor>Aktiv:</keywordMajor> Valor deckt @VisionDuration@ Sekunden lang einen großen Bereich in der Nähe auf.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Quinn springt.<br><br>Wenn Valor springt, springt sie ebenfalls.",
+            "description": "Quinn oder Valor stürzt sich auf einen Gegner, fügt ihm Schaden zu, stößt ihn zurück und verlangsamt ihn. Wenn die Fähigkeit als Quinn gewirkt wird, stößt sie sich von ihnen ab, um auf Abstand zu bleiben, während Valor ihn mit „Adleraugen“ markiert.",
             "dynamicDescription": "<keywordMajor>Als Quinn oder Valor</keywordMajor>: Springt zu einem Gegner, fügt ihm <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zu, <status>stößt ihn zurück</status> und <status>verlangsamt</status> sein Lauftempo @SlowDecayTime@ Sekunden lang um @SlowAmount*100@ %.<br><br><keywordMajor>Als Quinn</keywordMajor>: Springt zusätzlich von ihrem Ziel ab, während Valor es als <keywordMajor>verwundbar</keywordMajor> markiert.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Valor ersetzt Quinn auf dem Schlachtfeld als mobiler Nahkämpfer, erhält Lauftempo und ersetzt ihre Fähigkeiten. Kann erneut aktiviert werden, um „Himmelsschlag“ auszuführen und allen Gegnern in der Nähe Schaden zuzufügen.",
+            "description": "Valor ersetzt Quinn auf dem Schlachtfeld als mobiler Nahkämpfer, erhält Lauftempo und modifiziert ihre Fähigkeiten. Kann erneut aktiviert werden, um „Himmelsschlag“ auszuführen und allen Gegnern in der Nähe Schaden zuzufügen.",
             "dynamicDescription": "<keywordMajor>Erste Aktivierung</keywordMajor>: Valor ersetzt Quinn auf dem Schlachtfeld @TransformDuration@ Sekunden lang als mobiler Nahkämpfer. Valor erhält „Geist“ und @OoCMoveSpeed*100@ % Lauftempo, das im Kampf allmählich auf @CombatMoveSpeed*100@ % verringert wird. Anschließend kann Valor <keywordMajor>Himmelsschlag</keywordMajor> einsetzen.<br><br><keywordMajor>Himmelsschlag</keywordMajor>: Quinn kehrt zurück und fügt allen Gegnern in einem großen Bereich abhängig von ihrem fehlenden Leben <physicalDamage>@TotalDamage@–@TotalDamageMaximum@ normalen Schaden</physicalDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

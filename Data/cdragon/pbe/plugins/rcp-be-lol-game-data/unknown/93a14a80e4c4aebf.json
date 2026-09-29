@@ -256,7 +256,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "啟用時，厄薩斯每連續普攻三次就會造成額外傷害，但會消耗自身生命。關閉時，厄薩斯每連續普攻三次則會回復生命。",
-            "dynamicDescription": "<toggle>切換：</toggle>厄薩斯在<keywordMajor>狂暴噬血</keywordMajor>與<keywordMajor>熾靈獻祭</keywordMajor>間切換，每普攻<attention>三次</attention>，就會獲得額外效果。<br><br><keywordMajor>狂暴噬血：</keywordMajor>厄薩斯恢復<healing>@WHeal@生命</healing>，當生命低於<scaleHealth>@LowHealthPercent@%</scaleHealth>時，恢復量提升<healing>@WLowHealthHealBonus@%(@TTLowHealthHeal@)</healing>。<br><br><keywordMajor>熾靈獻祭：</keywordMajor>厄薩斯額外造成<physicalDamage>@WDamage@物理傷害</physicalDamage>，並<font color='#FF3300'>損失@SelfDamage@生命</font>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>切換：</toggle>厄薩斯在<keywordMajor>狂暴噬血</keywordMajor>與<keywordMajor>熾靈獻祭</keywordMajor>間切換，每普攻<attention>三次</attention>，就會獲得額外效果。<br><br><keywordMajor>狂暴噬血：</keywordMajor>厄薩斯恢復<healing>@WHeal@生命</healing>。當生命低於<scaleHealth>@LowHealthPercent@%</scaleHealth>時，恢復量提升至<healing>@TTLowHealthHeal@</healing>。<br><br><keywordMajor>熾靈獻祭：</keywordMajor>厄薩斯額外造成<physicalDamage>@WDamage@物理傷害</physicalDamage>，並<font color='#FF3300'>損失@SelfDamage@生命</font>。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

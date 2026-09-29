@@ -291,8 +291,8 @@
             "abilityVideoImagePath": "",
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Nội tại: Nhận chỉ số khi kích hoạt dấu ấn suy yếu<br><br>Nội tại khi ở dạng Valor: Nhận chỉ số<br><br>Kích hoạt: Làm lộ diện một khu vực",
-            "dynamicDescription": "<keywordMajor>Nội tại khi ở dạng Quinn</keywordMajor>: Tấn công một mục tiêu <keywordMajor>Suy Yếu</keywordMajor> trao cho Quinn <speed>@AttackSpeedBonus*100@% Tốc Độ Đánh</speed> và <speed>@MovespeedAmount@ Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây.<br><br><keywordMajor>Nội tại khi ở dạng Valor</keywordMajor>: Nhận @ValorAttackSpeed*100@% Tốc Độ Đánh.<br><br><keywordMajor>Kích Hoạt</keywordMajor>: Valor soi sáng một khu vực lớn xung quanh trong @VisionDuration@ giây.@SpellModifierDescriptionAppend@",
+            "description": "Nội Tại khi là Quinn: Nhận tốc độ đánh và tốc độ di chuyển trong vài giây khi kích hoạt Chim Săn Mồi.<br><br>Nội Tại khi là Valor: Nhận tốc độ đánh.<br><br>Kích Hoạt: Làm lộ diện một khu vực rộng xung quanh Quinn và Valor.",
+            "dynamicDescription": "<keywordMajor>Nội tại khi ở dạng Quinn</keywordMajor>: Tấn công một mục tiêu <keywordMajor>Suy Yếu</keywordMajor> trao cho Quinn <speed>@AttackSpeedBonus*100@% Tốc Độ Đánh</speed> và <speed>@MovespeedAmount@ Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây.<br><br><keywordMajor>Nội tại khi ở dạng Valor</keywordMajor>: Nhận <speed>@ValorAttackSpeed*100@% Tốc Độ Đánh</speed>.<br><br><keywordMajor>Kích Hoạt</keywordMajor>: Valor soi sáng một khu vực lớn xung quanh trong @VisionDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -441,8 +441,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Quinn lướt đi.<br><br>Cô ấy cũng lướt đi khi ở dạng Valor.",
-            "dynamicDescription": "<keywordMajor>Khi ở dạng Quinn hoặc Valor</keywordMajor>: Lướt tới kẻ địch, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>, <status>Đẩy Lùi</status> và <status>Làm Chậm</status> Tốc Độ Di Chuyển của mục tiêu đi @SlowAmount*100@%, giảm dần trong @SlowDecayTime@ giây.<br><br><keywordMajor>Ở dạng Quinn</keywordMajor>: Ngoài ra, nhảy khỏi mục tiêu và Valor sẽ đánh dấu mục tiêu với <keywordMajor>Suy Yếu</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Quinn hoặc Valor lao tới một kẻ địch, gây sát thương, đẩy lùi và làm chậm mục tiêu. Nếu thi triển khi đang là Quinn, cô sẽ bật ngược khỏi mục tiêu để giữ khoảng cách, đồng thời Valor đánh dấu chúng bằng Chim Săn Mồi.",
+            "dynamicDescription": "<keywordMajor>Ở dạng Quinn hoặc Valor</keywordMajor>: Lướt tới kẻ địch, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>, <status>Đẩy Lùi</status> và <status>Làm Chậm</status> mục tiêu đi @SlowAmount*100@%, giảm dần trong @SlowDecayTime@ giây.<br><br><keywordMajor>Ở dạng Quinn</keywordMajor>: Ngoài ra, nhảy khỏi mục tiêu và Valor sẽ đánh dấu mục tiêu với <keywordMajor>Suy Yếu</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -591,8 +591,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Valor thay thế Quinn trên chiến trường và đảm nhiệm vai trò tấn công cận chiến cơ động, nhận tốc độ di chuyển và thay thế bộ kỹ năng của cô ấy. Thi triển lần nữa để tung ra Oanh Tạc, gây sát thương lên tất cả kẻ địch xung quanh.",
-            "dynamicDescription": "<keywordMajor>Thi triển lần đầu</keywordMajor>: Valor thay thế Quinn trên chiến trường và đảm nhiệm vai trò tấn công cận chiến cơ động trong @TransformDuration@ giây. Valor Đi Xuyên Vật Thể và nhận @OoCMoveSpeed*100@% Tốc Độ Di Chuyển, giảm dần xuống còn @CombatMoveSpeed*100@% khi đang giao tranh. Valor sau đó có thể thi triển <keywordMajor>Oanh Tạc</keywordMajor>.<br><br><keywordMajor>Oanh Tạc</keywordMajor>: Quinn tái xuất, gây <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ sát thương vật lý</physicalDamage> lên tất cả kẻ địch trong một khu vực lớn, dựa trên lượng máu đã mất của chúng.@SpellModifierDescriptionAppend@",
+            "description": "Valor thay thế Quinn trên chiến trường và đảm nhiệm vai trò tấn công cận chiến cơ động, nhận tốc độ di chuyển và thay đổi bộ kỹ năng của cô ấy. Thi triển lần nữa để tung ra Oanh Tạc, gây sát thương lên tất cả kẻ địch xung quanh.",
+            "dynamicDescription": "<keywordMajor>Ở dạng Quinn</keywordMajor>: Valor thay thế Quinn trên chiến trường, đảm nhiệm vai trò tấn công cận chiến cơ động trong @TransformDuration@ giây. Valor <status>Đi Xuyên Vật Thể</status> và nhận <speed>@OoCMoveSpeed*100@% Tốc Độ Di Chuyển</speed>, giảm dần xuống còn @CombatMoveSpeed*100@% khi giao tranh. Valor sau đó có thể thi triển <keywordMajor>Oanh Tạc</keywordMajor>.<br><br><keywordMajor>Ở dạng Valor: Oanh Tạc</keywordMajor>: Quinn tái xuất, gây <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ sát thương vật lý</physicalDamage> lên tất cả kẻ địch trong một khu vực lớn, dựa trên lượng máu đã mất của chúng.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Réduit la durée des effets d'étourdissement, de ralentissement, de provocation, de peur et d'immobilisation pour chaque champion ennemi proche."
+        "description": "Irelia gagne de la ténacité pour chaque champion ennemi proche."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Irelia se rue vers l'avant pour frapper sa cible. Si elle tue la cible, le délai de récupération de Rush fatal prend fin et Irelia récupère 35 pts de mana.",
-            "dynamicDescription": "Irelia se rue vers l'avant pour frapper sa cible, lui infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>.<br><br>Si elle tue la cible, le délai de récupération de <spellName>Rush fatal</spellName> prend fin et Irelia <scaleMana>récupère @ManaReturn@ pts de mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia se rue pour frapper sa cible. Si elle tue la cible, le délai de récupération de Rush fatal prend fin et Irelia récupère une partie du coût en mana de la compétence.",
+            "dynamicDescription": "Irelia se rue pour frapper sa cible, lui infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>.<br><br>Si elle tue sa cible, le délai de récupération de <spellName>Rush fatal</spellName> prend fin et Irelia récupère <scaleMana>@ManaReturn@ pts de mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Irelia maîtrise l'art du Hiten, ce qui permet à ses attaques physiques de lui rendre des PV passivement.  L'activation de Style Hiten octroie à ses attaques de base des dégâts bruts pendant une courte durée.",
-            "dynamicDescription": "<spellPassive>Passif :</spellPassive> les attaques de base <healing>rendent @Health@ PV</healing>.<br><br><spellActive>Actif :</spellActive> les attaques de base d'Irelia infligent <trueDamage>@Damage@ pts de dégâts bruts</trueDamage> et les <healing>PV restaurés</healing> sont doublés pendant @HealthRestoreDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Passif : Irelia maîtrise l'art du Hiten, ce qui permet à ses attaques de lui rendre des PV.<br><br>Actif : les attaques de base infligent des dégâts bruts bonus et rendent davantage de PV pendant quelques secondes.",
+            "dynamicDescription": "<spellPassive>Passif :</spellPassive> les attaques de base <healing>rendent @Health@ PV</healing>.<br><br><spellActive>Actif :</spellActive> les attaques de base d'Irelia infligent <trueDamage>@Damage@ pts de dégâts bruts</trueDamage> et lui <healing>rendent @HealthRestoreActive@ PV</healing> pendant @ActiveDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "L'attaque d'Irelia rétablit l'équilibre, infligeant des dégâts et ralentissant la cible.  Si le pourcentage de PV de la cible est supérieur à celui d'Irelia, alors l'attaque étourdit la cible au lieu de la ralentir.",
+            "description": "L'attaque d'Irelia rétablit l'équilibre, infligeant des dégâts et ralentissant sa cible. Si le pourcentage de PV de la cible est supérieur à celui d'Irelia, l'attaque l'étourdit à la place.",
             "dynamicDescription": "Irelia transperce sa cible, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> la cible de @SlowAmount@% pendant @StunDuration@ sec.<br><br>Si le pourcentage de <scaleHealth>PV</scaleHealth> de la cible est supérieur à celui d'Irelia, elle <status>étourdit</status> la cible au lieu de la ralentir.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Irelia invoque 4 lames spirituelles qu'elle peut lancer pour infliger des dégâts physiques et voler la vie des ennemis transpercés.",
+            "description": "Irelia invoque 4 lames spirituelles qu'elle peut lancer pour infliger des dégâts et voler la vie des ennemis transpercés.",
             "dynamicDescription": "Irelia invoque 4 lames spirituelles qu'elle peut lancer pour infliger <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> aux ennemis transpercés. Elle se <healing>soigne</healing> de @ChampionHealPercent@% des dégâts infligés aux champions ou de @MinionHealPercent@% des dégâts infligés aux autres ennemis.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

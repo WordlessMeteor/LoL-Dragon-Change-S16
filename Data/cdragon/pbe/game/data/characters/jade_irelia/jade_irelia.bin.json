@@ -578,14 +578,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    125.0,
+                    80.0,
                     70.0,
                     60.0,
                     50.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    40.0,
+                    30.0,
+                    20.0
                 ],
+                "{0a3e0478}": 80.0,
                 "__type": "{0a0eddc9}"
             },
             "mPostCastLockoutDeltaTime": 0.10000000149011612,
@@ -765,39 +766,10 @@
         },
         "__type": "SpellObject"
     },
-    "{575de2d8}": {
-        "ObjectName": "Jade_IreliaMark",
-        "objectPath": "{575de2d8}",
-        "mScriptName": "Jade_IreliaMark",
-        "mBuff": {
-            "mDescription": "game_buff_tooltip_Jade_IreliaMark",
-            "mFloatVarsDecimals": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
     "{ec2ef434}": {
         "mRootSpell": "{5eeb74a9}",
         "mChildSpells": [
-            "{5eeb74a9}",
-            "{c6aa3fc2}"
+            "{5eeb74a9}"
         ],
         "mName": "Jade_IreliaPassiveAbility",
         "__type": "AbilityObject"
@@ -818,6 +790,45 @@
                         1400.0,
                         1400.0,
                         1400.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "OneEnemyValue",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TwoEnemiesValue",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ThreeEnemiesValue",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -890,6 +901,7 @@
                 "mTooltipData": {
                     "mObjectName": "Jade_IreliaPassive",
                     "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
                     "mLocKeys": {
                         "keyName": "Spell_IreliaPassive_Jade_Name",
                         "keySummary": "Spell_IreliaPassive_Jade_Summary",
@@ -905,129 +917,6 @@
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "{c6aa3fc2}": {
-        "ObjectName": "Jade_IreliaPassive_TT",
-        "objectPath": "{c6aa3fc2}",
-        "mScriptName": "Jade_IreliaPassive_TT",
-        "mSpell": {
-            "DataValues": [
-                {
-                    "name": "PassiveRange",
-                    "values": [
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "__type": "SpellDataValueVector"
-                }
-            },
-            "mAnimationName": "",
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.dds"
-            ],
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Cooldown": {
-                "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "{0a3e0478}": 0.0,
-                "__type": "{0a0eddc9}"
-            },
-            "cannotBeSuppressed": true,
-            "canCastWhileDisabled": true,
-            "castRange": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "castRangeValues": {
-                "values": [
-                    1400.0,
-                    1400.0,
-                    1400.0,
-                    1400.0,
-                    1400.0,
-                    1400.0,
-                    1400.0
-                ],
-                "{0a3e0478}": 1400.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRangeDisplayOverride": [
-                1400.0,
-                1400.0,
-                1400.0,
-                1400.0,
-                1400.0,
-                1400.0,
-                1400.0
-            ],
-            "castConeAngle": 0.0,
-            "castConeDistance": 0.0,
-            "mTargetingTypeData": {
-                "__type": "SelfAoe"
-            },
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_IreliaPassive_TT",
-                    "mFormat": "{476ec0b8}",
-                    "mLocKeys": {
-                        "keyName": "Spell_IreliaPassive_Jade_Name",
-                        "keySummary": "Spell_IreliaPassive_Jade_Summary",
-                        "keyTooltip": "Spell_IreliaPassive_Jade_Tooltip"
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "mTargeterDefinitions": [
-                    {
-                        "__type": "TargeterDefinitionRange"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mTooltipData": {
-                "mObjectName": "Jade_IreliaPassive_TT",
-                "mFormat": "{b34f999a}",
-                "mLocKeys": {
-                    "keyName": "Spell_IreliaPassive_Jade_Name",
-                    "keyTooltip": "buff_desc_Jade_IreliaPassive"
-                },
-                "__type": "TooltipInstanceBuff"
-            },
-            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },
@@ -1177,7 +1066,6 @@
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1727,20 +1615,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        0.0,
-                        16.0,
-                        15.0,
-                        14.0,
-                        13.0,
-                        12.0,
-                        0.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Irelia_HitenStyle.dds"
@@ -2176,25 +2050,6 @@
                 ],
                 "__type": "RootScriptSequence"
             },
-            "{eb530788}": {
-                "blocks": [
-                    null,
-                    {
-                        "{d851ffa3}": "f3071b97-82af-4628-95ae-0189eb52716e",
-                        "Formula": "ptp.BonusAD * 0.6",
-                        "Dest": {
-                            "Var": "BonusAD",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "{6b1c1b08}": {
-                "__type": "RootScriptSequence"
-            },
             "{b415ce8f}": {
                 "blocks": [
                     {
@@ -2233,9 +2088,6 @@
                         "__type": "{e524b2fc}"
                     }
                 ],
-                "__type": "RootScriptSequence"
-            },
-            "{78e4e28e}": {
                 "__type": "RootScriptSequence"
             }
         },

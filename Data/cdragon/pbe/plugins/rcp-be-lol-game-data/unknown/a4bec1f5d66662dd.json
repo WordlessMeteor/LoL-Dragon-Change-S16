@@ -256,7 +256,7 @@
             "cost": "Без затрат",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Когда умение включено, Атрокс при каждой 3-й автоатаке наносит доп. урон за счет собственного здоровья. Когда умение выключено, Атрокс при каждой 3-й автоатаке восстанавливает здоровье.",
-            "dynamicDescription": "<toggle>Переключение:</toggle> Атрокс переключается между <keywordMajor>Жаждой крови</keywordMajor> и <keywordMajor>Ценой крови</keywordMajor>, получая доп. эффекты при каждой <attention>3-й</attention> автоатаке.<br><br><keywordMajor>Жажда крови:</keywordMajor> Атрокс восстанавливает <healing>@WHeal@ здоровья</healing> (выше на <healing>@WLowHealthHealBonus@% (@TTLowHealthHeal@)</healing>, если здоровья менее <scaleHealth>@LowHealthPercent@%</scaleHealth>).<br><br><keywordMajor>Цена крови:</keywordMajor> Атрокс наносит дополнительно <physicalDamage>@WDamage@ ед. физ. урона</physicalDamage>, <font color='#FF3300'>теряя @SelfDamage@ здоровья</font>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Переключение:</toggle> Атрокс переключается между <keywordMajor>Жаждой крови</keywordMajor> и <keywordMajor>Ценой крови</keywordMajor>, получая доп. эффекты при каждой <attention>3-й</attention> автоатаке.<br><br><keywordMajor>Жажда крови:</keywordMajor> Атрокс восстанавливает <healing>@WHeal@ здоровья</healing> (растет до <healing>@TTLowHealthHeal@</healing>, если здоровья менее <scaleHealth>@LowHealthPercent@%</scaleHealth>).<br><br><keywordMajor>Цена крови:</keywordMajor> Атрокс наносит дополнительно <physicalDamage>@WDamage@ ед. физ. урона</physicalDamage>, <font color='#FF3300'>теряя @SelfDamage@ здоровья</font>.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

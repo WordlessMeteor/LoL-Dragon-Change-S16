@@ -256,7 +256,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Solange die Fähigkeit aktiv ist, verursacht Aatrox mit jedem dritten aufeinanderfolgenden Angriff zusätzlichen Schaden auf Kosten seines eigenen Lebens. Solange die Fähigkeit deaktiviert ist, stellt Aatrox mit jedem dritten darauffolgenden Angriff Leben wieder her.",
-            "dynamicDescription": "<toggle>Aktivierbar:</toggle> Aatrox wechselt zwischen <keywordMajor>Blutdurst</keywordMajor> und <keywordMajor>Blutzoll</keywordMajor> und erhält bei jedem <attention>dritten</attention> Angriff zusätzliche Effekte.<br><br><keywordMajor>Blutdurst: </keywordMajor>Aatrox stellt <healing>@WHeal@ Leben</healing> wieder her. Dieser Wert wird um <healing>@WLowHealthHealBonus@ % (@TTLowHealthHeal@)</healing> erhöht, wenn sein <scaleHealth>Leben unter @LowHealthPercent@ %</scaleHealth> fällt.<br><br><keywordMajor>Blutzoll: </keywordMajor>Aatrox verursacht <physicalDamage>@WDamage@ zusätzlichen normalen Schaden</physicalDamage> und <font color='#FF3300'>verliert @SelfDamage@ Leben</font>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Aktivierbar:</toggle> Aatrox wechselt zwischen <keywordMajor>Blutdurst</keywordMajor> und <keywordMajor>Blutzoll</keywordMajor> und erhält bei jedem <attention>dritten</attention> Angriff zusätzliche Effekte.<br><br><keywordMajor>Blutdurst: </keywordMajor>Aatrox stellt <healing>@WHeal@ Leben</healing> wieder her. Dieser Wert wird auf <healing>@TTLowHealthHeal@</healing> erhöht, wenn sein <scaleHealth>Leben unter @LowHealthPercent@ %</scaleHealth> fällt.<br><br><keywordMajor>Blutzoll: </keywordMajor>Aatrox verursacht <physicalDamage>@WDamage@ zusätzlichen normalen Schaden</physicalDamage> und <font color='#FF3300'>verliert @SelfDamage@ Leben</font>.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

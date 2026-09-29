@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma ottiene potere magico bonus in base alla percentuale di salute mancante."
+        "description": "Karma ottiene potere magico in base alla sua salute mancante."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Karma scaglia lame nascoste dai suoi ventagli, infliggendo danni magici ai nemici in un cono davanti a sé.<br><br>Bonus Mantra: oltre a infliggere danni ai nemici, Onda divina fornirà anche guarigione agli alleati nel cono in base a una % della loro salute mancante.",
-            "dynamicDescription": "Karma scaglia lame nascoste dai suoi ventagli, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici in un cono davanti a sé.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> oltre a infliggere danni ai nemici, <spellName>Onda divina</spellName> fornirà anche <healing>guarigione</healing> agli alleati nel cono per <healing>@BaseHealth@ più un @AdditionalHealPercentTT@%</healing> della loro <scaleHealth>salute mancante.</scaleHealth>@SpellModifierDescriptionAppend@",
+            "description": "Karma scaglia lame nascoste dai suoi ventagli, infliggendo danni ai nemici in un'area a cono.<br><br>Mantra: Onda divina cura anche gli alleati nell'area a cono in base alla loro salute mancante.",
+            "dynamicDescription": "Karma scaglia lame nascoste dai suoi ventagli, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici in un'area a cono.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Onda divina</spellName> inoltre <healing>cura</healing> gli alleati nell'area a cono di <healing>@BaseHealth@ più @AdditionalHealPercent@</healing> della loro <scaleHealth>salute mancante</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Karma crea un raggio tra un alleato o un nemico. Gli alleati collegati si muovono più velocemente mentre i nemici collegati sono rallentati. Il raggio infligge danni magici ai nemici e applica la stessa modifica alla velocità di movimento ricevuta dai collegamenti a qualsiasi campione che attraversa.<br><br>Bonus Mantra: Karma rafforza il legame per raddoppiare l'effetto del modificatore di velocità di movimento.",
-            "dynamicDescription": "Karma crea un raggio tra un alleato o un nemico per un massimo di @Duration@ secondi. Gli alleati collegati <speed>si muovono un @MoveSpeedMod*100@% più velocemente</speed> mentre i nemici sono <status>rallentati di un @MoveSpeedMod*100@%</status>. Il raggio infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici e applica la stessa modifica alla velocità di movimento ricevuta dai collegamenti a qualsiasi campione che attraversa.<br><br>Il raggio si interrompe se il bersaglio collegato va in <keywordStealth>furtività</keywordStealth>.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> Karma rafforza il legame per raddoppiare l'effetto del modificatore di velocità di movimento.@SpellModifierDescriptionAppend@",
+            "description": "Karma crea un raggio tra sé e un'altra unità. Gli alleati collegati si muovono più velocemente mentre i nemici collegati sono rallentati. Il raggio infligge danni ai nemici e applica la stessa modifica alla velocità di movimento a qualsiasi campione che attraversa.<br><br>Mantra: Karma rafforza il legame per aumentare l'effetto della velocità di movimento.",
+            "dynamicDescription": "Karma crea un raggio tra sé e un'altra unità per un massimo di @Duration@ secondi. Gli alleati collegati, compresa se stessa, ottengono <speed>@MoveSpeedMod*100@% velocità di movimento</speed>. I nemici collegati sono <status>rallentati</status> di un @MoveSpeedMod*100@%.<br><br>Il raggio infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> a tutti i nemici che tocca. I campioni alleati e nemici attraversati dal raggio ricevono la stessa modifica alla velocità di movimento di quelli collegati.<br><br><keywordMajor>Mantra:</keywordMajor> Karma rafforza il legame, aumentando i modificatori di velocità di movimento a @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Karma evoca uno scudo protettivo che assorbe i danni in arrivo.<br><br>Bonus Mantra: oltre a lanciare lo scudo, dell'energia si irradia dallo scudo, infliggendo danni alle unità nemiche intorno al bersaglio di Karma.",
-            "dynamicDescription": "Karma evoca uno <shield>scudo</shield> protettivo che assorbe <shield>@TotalShield@ danni</shield> per @Duration@ secondo/i.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> oltre a lanciare lo <shield>scudo</shield>, dell'energia si irradia dallo scudo, infliggendo <magicDamage>@TotalShield@ danni magici</magicDamage> alle unità nemiche intorno al suo bersaglio.@SpellModifierDescriptionAppend@",
+            "description": "Karma evoca su un alleato bersaglio uno scudo protettivo che assorbe i danni in arrivo.<br><br>Mantra: oltre a lanciare lo scudo, dell'energia si irradia dallo scudo, infliggendo danni ai nemici intorno al suo bersaglio.",
+            "dynamicDescription": "Karma evoca uno <shield>scudo</shield> protettivo che assorbe <shield>@TotalShield@ danni</shield> per @Duration@ secondo/i.<br><br><keywordMajor>Mantra:</keywordMajor> dell'energia si irradia dallo scudo, infliggendo <magicDamage>@TotalShield@ danni magici</magicDamage> alle unità nemiche intorno al suo bersaglio.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Karma potenzia la sua prossima abilità con un effetto bonus. Mantra è disponibile al livello 1 e non richiede punti abilità.",
-            "dynamicDescription": "Karma potenzia la sua prossima abilità con un effetto bonus. Karma ottiene una carica ogni <attention>@f1@</attention> secondi, fino a un massimo di 2.<br><br>La frequenza di aggiornamento viene ridotta dalla riduzione ricarica.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma potenzia la sua prossima abilità con un effetto bonus. Karma ottiene una carica ogni <attention>@MantraCooldown@</attention> secondi, fino a un massimo di 2.<br><br>La frequenza di aggiornamento viene ridotta dalla riduzione ricarica.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

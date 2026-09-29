@@ -229,8 +229,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Caitlyn mengisi senapannya untuk melepaskan tembakan tembus yang menghasilkan physical damage (menghasilkan damage lebih kecil kepada target-target berikutnya).",
-            "dynamicDescription": "Caitlyn mengaktifkan senapannya selama @CastTime@ detik untuk mengeluarkan tembakan penembus yang menghasilkan <physicalDamage>@InitialDamage@ physical damage</physicalDamage>. Menghasilkan @ExtraHitPercentReduction*100@% lebih sedikit damage ke tiap target berikutnya hingga minimum @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn melepaskan tembakan menembus yang memberikan damage ke semua musuh dalam satu garis.",
+            "dynamicDescription": "Caitlyn menembakkan peluru tembus yang memberikan <physicalDamage>@InitialDamage@ physical damage</physicalDamage>, berkurang sebesar @ExtraHitPercentReduction*100@% untuk setiap musuh berikutnya hingga minimum <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -245,7 +245,7 @@
                 70.0,
                 80.0,
                 90.0,
-                80.0
+                100.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -253,7 +253,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -279,31 +279,31 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1.3,
-                    1.3,
-                    1.45,
-                    1.6,
-                    1.75,
-                    1.9,
-                    2.05
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Caitlyn memasang jebakan untuk menemukan yordle cerdik. Saat terpicu, jebakan ini menerapkan immobilize pada champion, mengungkap posisi mereka dan menghasilkan magic damage selama beberapa saat.",
-            "dynamicDescription": "Caitlyn memasang jebakan yang bisa dipicu oleh Champion musuh, yang akan <status>Root</status> mereka  selama beberapa saat dan mengunkap mereka selama @VisibilityDuration@ detik. Jebakan ini menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @DOTTime@ detik, dan bertahan selama @Duration@ menit. Hanya @MaxTraps@ jebakan yang bisa aktif sekaligus.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn memasang jebakan untuk menemukan yordle cerdik. Saat terpicu oleh champion, jebakan ini membuat mereka tidak bisa bergerak, terlihat, dan menerima damage selama beberapa saat.",
+            "dynamicDescription": "Caitlyn memasang jebakan selama @Duration@ menit yang akan aktif saat Champion musuh menginjaknya, menerapkan <status>Root</status> pada mereka dan memberikan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @RootDuration@ detik, serta memperlihatkan mereka selama @VisibilityDuration@ detik.<br><br>Hanya @MaxTraps@ jebakan yang bisa aktif sekaligus.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -403,75 +403,75 @@
                 14.0,
                 11.0,
                 8.0,
-                8.0
+                5.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -530,7 +530,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Caitlyn menembakkan jaring berat yang menyebabkan slow ke target. Rekoil membuat Caitlyn terdorong mundur.",
-            "dynamicDescription": "Caitlyn menembakkan jaring yang menghasilkan <magicDamage>@NetDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada target sebesar @SlowAmount*-100@% selama @SlowDuration@ detik. Membuat Caitlyn terkena knock back.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn melompat mundur sambil menembakkan jaring yang memberikan <magicDamage>@NetDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada musuh pertama yang terkena sebesar @SlowAmount*-100@% selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -553,39 +553,39 @@
                 14.0,
                 12.0,
                 10.0,
-                10.0
+                8.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    40.0,
-                    80.0,
-                    130.0,
-                    180.0,
-                    230.0,
-                    280.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -679,8 +679,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Caitlyn mengambil waktu sejenak untuk mempersiapkan tembakan sempurna, menghasilkan damage yang besar ke satu target di jarak yang sangat jauh. Champion musuh bisa mencegat pelurunya sebelum mengenai sekutu musuh.",
-            "dynamicDescription": "Caitlyn meluangkan waktu sejenak untuk membidik dengan sempurna, menembakkan peluru ke Champion musuh dan menghasilkan <physicalDamage>@RTotalDamage@ physical damage</physicalDamage> dari jarak @CastRange@ range. Champion musuh lain bisa mencegat pelurunya.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn mengambil waktu sejenak untuk mempersiapkan tembakan sempurna, menghasilkan damage yang besar ke champion musuh di jarak yang sangat jauh. Champion musuh lain bisa mencegat peluru sebelum mengenai sekutu.",
+            "dynamicDescription": "Caitlyn meluangkan waktu sejenak untuk membidik dengan sempurna pada champion musuh, menghasilkan <physicalDamage>@RTotalDamage@ physical damage</physicalDamage> dari jarak @CastRange@ range. Champion musuh lain bisa mencegat pelurunya.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,
@@ -693,9 +693,9 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 90.0,

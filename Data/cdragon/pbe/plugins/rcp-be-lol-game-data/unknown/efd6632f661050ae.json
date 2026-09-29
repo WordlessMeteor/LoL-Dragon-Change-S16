@@ -229,8 +229,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn revs up her rifle for to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets).",
-            "dynamicDescription": "Caitlyn revs her rifle for @CastTime@ second to fire a piercing shot dealing <physicalDamage>@InitialDamage@ physical damage</physicalDamage>. Deals @ExtraHitPercentReduction*100@% less damage to each subsequent target down to a minimum of @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn unleashes a penetrating shot that damages all enemies in a line.",
+            "dynamicDescription": "Caitlyn fires a piercing shot that deals <physicalDamage>@InitialDamage@ physical damage</physicalDamage>, reduced by @ExtraHitPercentReduction*100@% for each subsequent enemy to a minimum of <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -245,7 +245,7 @@
                 70.0,
                 80.0,
                 90.0,
-                80.0
+                100.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -253,7 +253,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -279,31 +279,31 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1.3,
-                    1.3,
-                    1.45,
-                    1.6,
-                    1.75,
-                    1.9,
-                    2.05
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn sets a trap to find sneaky yordles. When sprung, the trap immobilizes the champion, reveals them and deals magic damage over a short duration.",
-            "dynamicDescription": "Caitlyn sets a trap that an enemy Champion can spring <status>Rooting</status> them for a short duration and revealing them for @VisibilityDuration@ seconds. The trap deals <magicDamage>@TotalDamage@ magic damage</magicDamage> over @DOTTime@ seconds, and lasts for @Duration@ minutes. Only @MaxTraps@ traps may be active at once.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn sets a trap to find sneaky yordles. When sprung by a champion, the trap immobilizes, reveals, and damages them over a short duration.",
+            "dynamicDescription": "Caitlyn sets a trap for @Duration@ minutes that springs on enemy Champions, <status>Rooting</status> them and dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> over @RootDuration@ seconds, revealing them for @VisibilityDuration@ seconds.<br><br>Only @MaxTraps@ traps may be active at once.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -403,75 +403,75 @@
                 14.0,
                 11.0,
                 8.0,
-                8.0
+                5.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -530,7 +530,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back.",
-            "dynamicDescription": "Caitlyn fires a net dealing <magicDamage>@NetDamage@ magic damage</magicDamage> and <status>Slows</status> the target by @SlowAmount*-100@% for @SlowDuration@ second(s). Knocks Caitlyn back.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn flies backward as she fires a net that deals <magicDamage>@NetDamage@ magic damage</magicDamage> and <status>Slows</status> the first enemy hit by @SlowAmount*-100@% for @SlowDuration@ second(s).@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -553,39 +553,39 @@
                 14.0,
                 12.0,
                 10.0,
-                10.0
+                8.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    40.0,
-                    80.0,
-                    130.0,
-                    180.0,
-                    230.0,
-                    280.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -679,8 +679,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally.",
-            "dynamicDescription": "Caitlyn takes a second to line up the perfect shot, firing a bullet at an enemy Champion dealing <physicalDamage>@RTotalDamage@ physical damage</physicalDamage> at @CastRange@ range. Other enemy Champions can intercept the bullet.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to an enemy champion at a huge range. Other enemy champions can intercept the bullet for their ally.",
+            "dynamicDescription": "Caitlyn takes a second to line up the perfect shot at an enemy Champion, dealing <physicalDamage>@RTotalDamage@ physical damage</physicalDamage> at @CastRange@ range. Other enemy Champions can intercept the bullet.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,
@@ -693,9 +693,9 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 90.0,

@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Za každého nepřátelského šampiona v okolí se Irelii zkrátí doba trvání omráčení, zpomalení, provokací, zastrašení, omezení pohybu a znehybnění."
+        "description": "Irelia získá bonus k houževnatosti za každého nepřátelského šampiona v okolí."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia popoběhne dopředu a zaútočí na svůj cíl. Pokud tím svůj cíl zabije, přebíjecí doba Prudkých ostří se obnoví a Irelii se vrátí 35 bodů many.",
-            "dynamicDescription": "Irelia se přeběhem přesune k cíli a způsobí mu <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Pokud tím svůj cíl zabije, přebíjecí doba <spellName>Prudkých ostří</spellName> se obnoví a Irelii se vrátí <scaleMana>@ManaReturn@ bodů many</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia popoběhne a zaútočí na svůj cíl. Pokud jej tím zabije, přebíjecí doba Prudkých ostří se obnoví a schopnost vrátí část many spotřebované na své seslání.",
+            "dynamicDescription": "Irelia se přeběhem přesune k cíli a způsobí mu <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Pokud jej tím zabije, přebíjecí doba <spellName>Prudkých ostří</spellName> se obnoví a Irelii se vrátí <scaleMana>@ManaReturn@ bodů many</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia je znalkyní umění Hiten, díky čemuž jí fyzické útoky pasivně obnovují zdraví.  Při aktivaci Hitenského stylu budou její základní útoky po krátkou dobu způsobovat přímé poškození.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Základní útoky <healing>obnovují @Health@ zdraví</healing>.<br><br><spellActive>Aktivace:</spellActive> Ireliiny základní útoky způsobují <trueDamage>@Damage@ bodů přímého poškození</trueDamage> a na @HealthRestoreDuration@ sek. zdvojnásobují množství <healing>obnoveného zdraví</healing>.@SpellModifierDescriptionAppend@",
+            "description": "Pasivní efekt: Irelia je znalkyní umění Hiten, díky čemuž si svými útoky obnovuje zdraví.<br><br>Aktivace: Základní útoky způsobují bonusové přímé poškození a jejich léčení je na pár sekund účinnější.",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Základní útoky <healing>obnovují @Health@ zdraví</healing>.<br><br><spellActive>Aktivace:</spellActive> Ireliiny základní útoky způsobují <trueDamage>@Damage@ bodů přímého poškození</trueDamage> a po dobu @ActiveDuration@ sek. <healing>obnovují @HealthRestoreActive@ zdraví</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Ireliin útok vytvoří na bojišti rovnovážný stav, čímž cíl poškodí a zpomalí.  Pokud má cíl vyšší procento zdraví než Irelia, úder jej místo zpomalení omráčí.",
+            "description": "Ireliin útok vytvoří na bojišti rovnovážný stav, čímž cíl poškodí a zpomalí. Pokud má protivník vyšší procento zdraví než ona, úder jej místo toho omráčí.",
             "dynamicDescription": "Irelia probodne svůj cíl, čímž mu způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @StunDuration@ sek. ho <status>zpomalí</status> o @SlowAmount@ %.<br><br>Pokud má cíl vyšší <scaleHealth>procento zdraví</scaleHealth> než Irelia, bude namísto toho po uvedenou dobu <status>omráčen</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia vyvolá 4 přízračné čepele, které může mrštit po nepřátelích. Protivníkům, kterými zbraně projdou, způsobí fyzické poškození a vysaje jim část zdraví.",
+            "description": "Irelia vyvolá 4 přízračné čepele, které může mrštit po nepřátelích. Protivníkům, kterými zbraně projdou, způsobí poškození a vysaje jim část zdraví.",
             "dynamicDescription": "Irelia vyvolá 4 přízračné čepele, které může mrštit po nepřátelích. Protivníkům, kterými zbraně projdou, způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>. Sama se naopak <healing>vyléčí</healing> ve výši @ChampionHealPercent@ % poškození způsobeného šampionům a @MinionHealPercent@ % poškození způsobeného jiným nepřátelům.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

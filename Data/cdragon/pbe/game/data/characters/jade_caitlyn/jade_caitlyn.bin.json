@@ -1,8 +1,8 @@
 {
-    "{102fcead}": {
-        "mRootSpell": "{498881d3}",
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility": {
+        "mRootSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR",
         "mChildSpells": [
-            "{498881d3}",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR",
             "{27f6d5b5}"
         ],
         "mName": "Jade_CaitlynRAbility",
@@ -123,7 +123,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{5123d50d}",
+                            "mDataValue": "HeadshotChampNoCritTimes",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -134,7 +134,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{786b5584}",
+                            "mDataValue": "HeadshotNonChampNoCritTimes",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -379,8 +379,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 3000.0,
-            "mMissileEffectKey": "{2bcd63db}",
-            "mHitEffectKey": "{cad82140}",
+            "mMissileEffectKey": "Jade_Caitlyn_P_mis",
+            "mHitEffectKey": "Jade_Caitlyn_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Head_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -578,7 +578,7 @@
             "mCastType": 3,
             "castFrame": 58.0,
             "missileSpeed": 3200.0,
-            "mMissileEffectKey": "{ddbc3389}",
+            "mMissileEffectKey": "Jade_Caitlyn_R_mis",
             "mLineWidth": 40.0,
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
@@ -589,9 +589,9 @@
         },
         "__type": "SpellObject"
     },
-    "{498881d3}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR": {
         "ObjectName": "Jade_CaitlynR",
-        "objectPath": "{498881d3}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR",
         "mScriptName": "Jade_CaitlynR",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -610,13 +610,13 @@
                 {
                     "name": "RBaseDamage",
                     "values": [
-                        125.0,
+                        25.0,
                         250.0,
                         475.0,
                         700.0,
-                        825.0,
-                        1000.0,
-                        1175.0
+                        925.0,
+                        1150.0,
+                        1375.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -630,19 +630,6 @@
                         2.0,
                         2.0,
                         2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CritChanceAmp",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -761,10 +748,11 @@
                     100.0,
                     100.0,
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0
                 ],
+                "{0a3e0478}": 100.0,
                 "__type": "{630af303}"
             },
             "SpellEventToAudioEventSuffix": {
@@ -842,10 +830,10 @@
         },
         "__type": "SpellObject"
     },
-    "{50be5a0a}": {
-        "mRootSpell": "{56e82605}",
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility": {
+        "mRootSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
         "mChildSpells": [
-            "{56e82605}",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
             "{2aff79c3}"
         ],
         "mName": "Jade_CaitlynEAbility",
@@ -1012,7 +1000,7 @@
             "mCastType": 3,
             "castFrame": 5.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{b22efc68}",
+            "mMissileEffectKey": "Jade_Caitlyn_E_mis",
             "mLineWidth": 80.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
@@ -1028,74 +1016,15 @@
         },
         "__type": "SpellObject"
     },
-    "{56e82605}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE": {
         "ObjectName": "Jade_CaitlynE",
-        "objectPath": "{56e82605}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
         "mScriptName": "Jade_CaitlynE",
         "mSpell": {
             "mAffectsTypeFlags": 15375,
             "mAlternateName": "Jade_CaitlynE",
             "mSpellTags": [
                 "PositiveEffect_MoveBlock"
-            ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        40.0,
-                        80.0,
-                        130.0,
-                        180.0,
-                        230.0,
-                        280.0,
-                        310.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
             ],
             "DataValues": [
                 {
@@ -1153,7 +1082,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_90CaliberNet.dds"
@@ -1171,14 +1099,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    18.0,
+                    20.0,
                     18.0,
                     16.0,
                     14.0,
                     12.0,
                     10.0,
-                    10.0
+                    8.0
                 ],
+                "{0a3e0478}": 20.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1370,9 +1299,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4e99a0c9}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynBasicAttack": {
         "ObjectName": "Jade_CaitlynBasicAttack",
-        "objectPath": "{4e99a0c9}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynBasicAttack",
         "mScriptName": "Jade_CaitlynBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1465,9 +1394,9 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{40a324a4}",
+            "mMissileEffectKey": "Jade_Caitlyn_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{cad82140}",
+            "mHitEffectKey": "Jade_Caitlyn_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1485,10 +1414,10 @@
         "mScriptName": "Jade_CaitlynSkin22Manager",
         "__type": "SpellObject"
     },
-    "{c361df38}": {
-        "mRootSpell": "{d690f08d}",
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility": {
+        "mRootSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW",
         "mChildSpells": [
-            "{d690f08d}",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW",
             "{cd514804}",
             "{9d7e7cef}"
         ],
@@ -1535,9 +1464,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d690f08d}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW": {
         "ObjectName": "Jade_CaitlynW",
-        "objectPath": "{d690f08d}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW",
         "mScriptName": "Jade_CaitlynW",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1550,112 +1479,17 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        35.0,
-                        35.0,
-                        80.0,
-                        125.0,
-                        170.0,
-                        215.0,
-                        215.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0,
-                        50.0,
-                        55.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        3.0,
-                        3.0,
-                        4.0,
-                        4.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        3.0,
-                        3.0,
-                        4.0,
-                        4.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
                     "values": [
-                        0.0,
+                        30.0,
                         80.0,
                         130.0,
                         180.0,
                         230.0,
                         280.0,
-                        0.0
+                        330.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1740,7 +1574,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Caitlyn_YordleSnapTrap.dds"
@@ -1758,14 +1591,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    20.0,
+                    23.0,
                     20.0,
                     17.0,
                     14.0,
                     11.0,
                     8.0,
-                    8.0
+                    5.0
                 ],
+                "{0a3e0478}": 23.0,
                 "__type": "{0a0eddc9}"
             },
             "mMaxAmmo": [
@@ -1950,9 +1784,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a011f409}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynCritAttack": {
         "ObjectName": "Jade_CaitlynCritAttack",
-        "objectPath": "{a011f409}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynCritAttack",
         "mScriptName": "Jade_CaitlynCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -2045,9 +1879,9 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{d93252b1}",
+            "mMissileEffectKey": "Jade_Caitlyn_Crit_Mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{b3512fe1}",
+            "mHitEffectKey": "Jade_Caitlyn_BA_Crit_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2059,80 +1893,21 @@
         },
         "__type": "SpellObject"
     },
-    "{d20692e6}": {
-        "mRootSpell": "{a12d4d1d}",
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility": {
+        "mRootSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ",
         "mChildSpells": [
-            "{a12d4d1d}"
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ"
         ],
         "mName": "Jade_CaitlynQAbility",
         "__type": "AbilityObject"
     },
-    "{a12d4d1d}": {
+    "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ": {
         "ObjectName": "Jade_CaitlynQ",
-        "objectPath": "{a12d4d1d}",
+        "objectPath": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ",
         "mScriptName": "Jade_CaitlynQ",
         "mSpell": {
             "flags": 4194304,
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.2999999523162842,
-                        1.2999999523162842,
-                        1.4500000476837158,
-                        1.600000023841858,
-                        1.75,
-                        1.899999976158142,
-                        2.049999952316284
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -2227,6 +2002,15 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{c529f643}": {
+                    "mMultiplier": {
+                        "mDataValue": "MinimumDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "InitialDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell1",
@@ -2253,8 +2037,9 @@
                     8.0,
                     7.0,
                     6.0,
-                    6.0
+                    5.0
                 ],
+                "{0a3e0478}": 11.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2331,7 +2116,7 @@
             "mCastType": 3,
             "castFrame": 30.0,
             "missileSpeed": 2200.0,
-            "mMissileEffectKey": "{477d1e32}",
+            "mMissileEffectKey": "Jade_Caitlyn_Q_mis2",
             "mLineWidth": 90.0,
             "mFloatVarsDecimals": [
                 0,
@@ -2366,8 +2151,9 @@
                     70.0,
                     80.0,
                     90.0,
-                    80.0
+                    100.0
                 ],
+                "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -2619,7 +2405,7 @@
         },
         "__type": "CharScript"
     },
-    "{34006081}": {
+    "Characters/Jade_Caitlyn/CAC/Jade_Caitlyn_Skin22": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -3184,7 +2970,7 @@
                         "mRuleName": "Basic",
                         "mConditions": [
                             {
-                                "mSpell": "{4e99a0c9}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3210,7 +2996,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{a011f409}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3236,7 +3022,7 @@
                         "mRuleName": "Q 1",
                         "mConditions": [
                             {
-                                "mSpell": "{a12d4d1d}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3262,7 +3048,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{56e82605}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3288,7 +3074,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{498881d3}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -3797,7 +3583,7 @@
         "mObjectPath": "Characters/Jade_Caitlyn/CAC/Jade_Caitlyn_Skin22",
         "__type": "ContextualActionData"
     },
-    "{a0f8bd53}": {
+    "Characters/Jade_Caitlyn/CAC/Jade_Caitlyn_Skin11": {
         "mCooldown": 15.0,
         "mSituations": {
             "KillChampion": {
@@ -4862,7 +4648,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{a12d4d1d}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4888,7 +4674,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{d690f08d}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4914,7 +4700,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{56e82605}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4936,7 +4722,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{498881d3}",
+                                "mSpell": "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -5010,7 +4796,7 @@
     "{416867aa}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
-    "{9d4f2ef8}": {
+    "Characters/Jade_Caitlyn/CharacterRecords/Root": {
         "mCharacterName": "Jade_Caitlyn",
         "baseHPModifiable": {
             "baseValue": 470.0,
@@ -5110,10 +4896,10 @@
             "Jade_CaitlynRAbility/Jade_CaitlynR"
         ],
         "spells": [
-            "{a12d4d1d}",
-            "{d690f08d}",
-            "{56e82605}",
-            "{498881d3}"
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility/Jade_CaitlynQ",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility/Jade_CaitlynW",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility/Jade_CaitlynE",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility/Jade_CaitlynR"
         ],
         "extraSpells": [
             "Jade_CaitlynRMissile",
@@ -5152,17 +4938,17 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{50be5a0a}",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynEAbility",
             "{29193f88}",
-            "{d20692e6}",
-            "{102fcead}",
-            "{c361df38}"
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynQAbility",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynRAbility",
+            "Characters/Jade_Caitlyn/Spells/Jade_CaitlynWAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_CaitlynPassive_Jade",
         "passiveToolTip": "",
         "passiveSpell": "Jade_CaitlynPassive_Jade",
-        "passive1IconName": "{a619772463613a4e}",
+        "passive1IconName": "assets/characters/jade_caitlyn/hud/icons2d/jade_caitlyn_headshot.dds",
         "name": "game_character_displayname_Jade_Caitlyn",
         "mUseCCAnimations": true,
         "selectionHeight": 155.0,
@@ -5239,7 +5025,7 @@
         "Script": "{26ab7d27}",
         "__type": "CharacterRecord"
     },
-    "{b0fbbffe}": {
+    "Characters/Jade_Caitlyn/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

@@ -256,7 +256,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Quand la compétence est active, Aatrox inflige des dégâts bonus toutes les trois attaques aux dépens de ses PV. Quand elle est inactive, Aatrox récupère des PV toutes les trois attaques.",
-            "dynamicDescription": "<toggle>Activer :</toggle> Aatrox alterne entre <keywordMajor>Soif de sang</keywordMajor> et <keywordMajor>Prix du sang</keywordMajor>, obtenant des effets bonus toutes les <attention>trois</attention> attaques.<br><br><keywordMajor>Soif de sang : </keywordMajor>Aatrox récupère <healing>@WHeal@ PV</healing>, valeur augmentée de <healing>@WLowHealthHealBonus@% (@TTLowHealthHeal@)</healing> s'il a moins de <scaleHealth>@LowHealthPercent@% de ses PV</scaleHealth>.<br><br><keywordMajor>Prix du sang : </keywordMajor>Aatrox inflige <physicalDamage>@WDamage@ pts de dégâts physiques bonus</physicalDamage> et <font color='#FF3300'>perd @SelfDamage@ PV</font>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Activer :</toggle> Aatrox alterne entre <keywordMajor>Soif de sang</keywordMajor> et <keywordMajor>Prix du sang</keywordMajor>, obtenant des effets bonus toutes les <attention>trois</attention> attaques.<br><br><keywordMajor>Soif de sang : </keywordMajor>Aatrox récupère <healing>@WHeal@ PV</healing>, valeur augmentée à <healing>@TTLowHealthHeal@</healing> s'il a moins de <scaleHealth>@LowHealthPercent@% de ses PV</scaleHealth>.<br><br><keywordMajor>Prix du sang : </keywordMajor>Aatrox inflige <physicalDamage>@WDamage@ pts de dégâts physiques bonus</physicalDamage> et <font color='#FF3300'>perd @SelfDamage@ PV</font>.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

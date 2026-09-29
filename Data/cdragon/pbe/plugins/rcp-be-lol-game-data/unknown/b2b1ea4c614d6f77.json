@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Pasiva: Otorga estadísticas al aplicar vulnerabilidad.<br><br>Pasiva de Valor: Otorga estadísticas.<br><br>Activa: Revela una zona.",
+            "description": "Pasiva de Quinn: Otorga velocidad de ataque y de movimiento durante unos segundos al activar Acosar.<br><br>Pasiva de Valor: Otorga velocidad de ataque.<br><br>Activa: Revela una zona amplia alrededor de Quinn y Valor.",
             "dynamicDescription": "<keywordMajor>Pasiva de Quinn</keywordMajor>: Atacar a un objetivo <keywordMajor>vulnerable</keywordMajor> otorga a Quinn un <speed>@AttackSpeedBonus*100@% de velocidad de ataque</speed> y <speed>@MovespeedAmount@ de velocidad de movimiento</speed> durante @BuffDuration@ s.<br><br><keywordMajor>Pasiva de Valor</keywordMajor>: Otorga un @ValorAttackSpeed*100@% de velocidad de ataque.<br><br><keywordMajor>Activa</keywordMajor>: Valor revela una amplia zona cercana durante @VisionDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Quinn se desliza.<br><br>Como Valor, también se desliza.",
+            "description": "Quinn o Valor se abalanzan sobre un enemigo, lo que inflige daño, empuja y ralentiza a su objetivo. Si se lanza como Quinn, salta alejándose del enemigo para mantener la distancia mientras Valor los marca con Acosar.",
             "dynamicDescription": "<keywordMajor>Como Quinn o Valor</keywordMajor>: Se desliza hacia un enemigo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>, lo <status>empuja</status> y lo <status>ralentiza</status> un @SlowAmount*100@%, que disminuye a lo largo de @SlowDecayTime@ s.<br><br><keywordMajor>Como Quinn</keywordMajor>: Además, salta alejándose del objetivo y Valor lo marca para dejarlo <keywordMajor>vulnerable</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Valor sustituye a Quinn en el campo de batalla como atacante cuerpo a cuerpo con una gran movilidad, lo que le otorga velocidad de movimiento y sustituye sus habilidades. Al reactivar la habilidad, usa Golpe celestial, que inflige daño a todos los enemigos cercanos.",
+            "description": "Valor sustituye a Quinn en el campo de batalla como atacante cuerpo a cuerpo con una gran movilidad, lo que le otorga velocidad de movimiento y modifica sus habilidades. Al reactivar la habilidad, usa Golpe celestial, que inflige daño a todos los enemigos cercanos.",
             "dynamicDescription": "<keywordMajor>Primer lanzamiento</keywordMajor>: Valor sustituye a Quinn en el campo de batalla como atacante cuerpo a cuerpo con gran movilidad durante @TransformDuration@ s. Valor se vuelve fantasmal y obtiene un @OoCMoveSpeed*100@% de velocidad de movimiento, que se reduce gradualmente a un @CombatMoveSpeed*100@% al entrar en combate. Después, Valor puede usar <keywordMajor>Golpe celestial</keywordMajor>.<br><br><keywordMajor>Golpe celestial</keywordMajor>: Quinn regresa e inflige <physicalDamage>@TotalDamage@-@TotalDamageMaximum@ de daño físico</physicalDamage> a todos los enemigos en una zona amplia, según la vida que les falte.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

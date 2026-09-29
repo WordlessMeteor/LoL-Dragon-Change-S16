@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Μειώνει τη διάρκεια των επιδράσεων Ακινητοποίησης, Επιβράδυνσης, Πρόκλησης, Φόβου, Παγίδευσης και Ριζώματος για κάθε κοντινό εχθρικό Ήρωα."
+        "description": "Η Ιρέλια αποκτά Εμμονή για κάθε κοντινό αντίπαλο Ήρωα."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Ιρέλια εφορμά προς τα εμπρός για να χτυπήσει τον στόχο της. Αν σκοτωθεί ο στόχος, ο Χρόνος Επαναφόρτισης της Ορμής Λεπίδας μηδενίζεται και ανακτά 35 Μάνα.",
-            "dynamicDescription": "Η Ιρέλια εφορμά προς τα εμπρός για να χτυπήσει τον στόχο της, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>.<br><br>Αν σκοτωθεί ο στόχος, ο Χρόνος Επαναφόρτισης της <spellName>Ορμής Λεπίδας</spellName> μηδενίζεται και ανακτά <scaleMana>@ManaReturn@ Μάνα</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Η Ιρέλια εφορμά για να χτυπήσει τον στόχο της. Αν κάνει εκτέλεση, ο χρόνος επαναφόρτισης της Ορμής Λεπίδας ανανεώνεται και ανακτά μέρος του κόστους της σε Μάνα.",
+            "dynamicDescription": "Η Ιρέλια εφορμά για να χτυπήσει τον στόχο της, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage>.<br><br>Αν σκοτωθεί ο στόχος, ο Χρόνος Επαναφόρτισης της <spellName>Ορμής Λεπίδας</spellName> ανανεώνεται και ανακτά <scaleMana>@ManaReturn@ Μάνα</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Ιρέλια κατέχει την τέχνη Χίτεν, η οποία επιτρέπει στις σωματικές επιθέσεις της να αναπληρώνουν τη Ζωή της.  Όταν ενεργοποιεί την Τεχνική Χίτεν, οι βασικές της επιθέσεις προκαλούν Πραγματική Ζημιά για μικρό χρονικό διάστημα.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι βασικές επιθέσεις <healing>αναπληρώνουν @Health@ Ζωή</healing>.<br><br><spellActive>Ενεργή:</spellActive> Οι βασικές επιθέσεις της Ιρέλια προκαλούν <trueDamage>@Damage@Πραγματική Ζημιά</trueDamage> και διπλασιάζουν τη <healing>Ζωή που αναπληρώνεται</healing> για @HealthRestoreDuration@δευτ.@SpellModifierDescriptionAppend@",
+            "description": "Παθητική: Η Ιρέλια είναι εξειδικευμένη στην τέχνη Χίτεν, με αποτέλεσμα οι επιθέσεις της να αποκαθιστούν Ζωή.<br><br>Ενεργή: Οι βασικές επιθέσεις προκαλούν μπόνους Πραγματική Ζημιά και η Θεραπεία τους αυξάνεται για μερικά δευτ.",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι βασικές επιθέσεις <healing>αναπληρώνουν @Health@ Ζωή</healing>.<br><br><spellActive>Ενεργή:</spellActive> Οι βασικές επιθέσεις της Ιρέλια προκαλούν <trueDamage>@Damage@ Πραγματική Ζημιά</trueDamage> και πλέον <healing>αποκαθιστούν @HealthRestoreActive@ Ζωή</healing> για @ActiveDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η επίθεση της Ιρέλια φέρνει την ισορροπία, προκαλώντας ζημιά και Επιβραδύνοντας τον στόχο.  Ωστόσο, αν ο στόχος έχει υψηλότερο ποσοστό Ζωής από την Ιρέλια, τότε το χτύπημα τον Ακινητοποιεί.",
-            "dynamicDescription": "Η Ιρέλια διαπερνά τον στόχο της, προκαλώντας <magicDamage>@TotalDamage@Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνοντάς</status> τον κατά @SlowAmount@% για @StunDuration@ δευτ.<br><br>Αν ο στόχος έχει μεγαλύτερο <scaleHealth>% Ζωής</scaleHealth> από την Ιρέλια, τον <status>Ακινητοποιεί</status> για όλη τη διάρκεια της ικανότητας.@SpellModifierDescriptionAppend@",
+            "description": "Η επίθεση της Ιρέλια φέρνει την ισορροπία, προκαλώντας ζημιά και Επιβραδύνοντας τον στόχο της. Αν έχουν υψηλότερο ποσοστό Ζωής από εκείνη, το χτύπημα τους ακινητοποιεί.",
+            "dynamicDescription": "Η Ιρέλια διαπερνά τον στόχο της, προκαλώντας <magicDamage>@TotalDamage@Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνοντάς</status> τον κατά @SlowAmount@% για @StunDuration@ δευτ.<br><br>Αν ο στόχος έχει μεγαλύτερο <scaleHealth>ποσοστό Ζωής</scaleHealth> από την Ιρέλια, τον <status>Ακινητοποιεί</status> για όλη τη διάρκεια της ικανότητας.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Ιρέλια καλεί 4 λεπίδες πνεύματος τις οποίες μπορεί να χρησιμοποιήσει για να προκαλέσει Σωματική Ζημιά και να απορροφήσει τη Ζωή των εχθρών που χτυπούν.",
+            "description": "Η Ιρέλια καλεί 4 λεπίδες πνεύματος τις οποίες μπορεί να χρησιμοποιήσει για να προκαλέσει Ζημιά και να απορροφήσει Ζωή των εχθρών που διαπερνούν.",
             "dynamicDescription": "Η Ιρέλια καλεί 4 λεπίδες πνεύματος τις οποίες μπορεί να πετάξει, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> στους εχθρούς που διαπερνούν. Η Ιρέλια <healing>θεραπεύεται</healing> για το @ChampionHealPercent@% της ζημιάς που προκαλεί σε Ήρωες και το @MinionHealPercent@% της ζημιάς που προκαλεί σε άλλους εχθρούς.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

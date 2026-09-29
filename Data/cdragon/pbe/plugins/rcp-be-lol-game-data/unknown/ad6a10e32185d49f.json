@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Yakınındaki her rakip şampiyon başına sersemletme, yavaşlatma, kışkırtma, korkutma, kıstırma ve sabitleme etkilerinin süresini azaltır."
+        "description": "Irelia yakınındaki her rakip şampiyon için sıvışma kazanır."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Irelia hedefine saldırmak için ileri atılır. Uçarbıçak hedefi katlederse bekleme süresi yenilenir ve 35 Mana iade edilir.",
-            "dynamicDescription": "Irelia ileri atılıp hedefine saldırarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Uçarbıçak</spellName> hedefi katlederse bekleme süresi yenilenir ve <scaleMana>@ManaReturn@ Mana</scaleMana> iade edilir.@SpellModifierDescriptionAppend@",
+            "description": "Irelia hedefine saldırmak için atılır. Uçarbıçak hedefi katlederse bekleme süresi yenilenir ve mana bedelinin bir kısmı iade edilir.",
+            "dynamicDescription": "Irelia atılıp hedefine saldırarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Uçarbıçak</spellName> hedefini katlederse bekleme süresi yenilenir ve <scaleMana>@ManaReturn@ Mana</scaleMana> iade edilir.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Irelia'nın Hiten sanatındaki yeteneği, fiziksel saldırılarına pasif olarak can yenilenmesi kazandırır.  Hiten Stili'ni etkinleştirdiğinde normal saldırıları kısa süreliğine gerçek hasar verir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Normal saldırılar <healing>@Health@ Can yeniler</healing>.<br><br><spellActive>Aktif:</spellActive> Irelia'nın normal saldırıları <trueDamage>@Damage@ Gerçek Hasar</trueDamage> verir ve <healing>can yenilenmesi</healing> @HealthRestoreDuration@ saniyeliğine iki katına çıkar.@SpellModifierDescriptionAppend@",
+            "description": "Pasif: Irelia'nın Hiten sanatındaki ustalığı, saldırılarının can yenilemesini sağlar.<br><br>Aktif: Normal saldırılar ilave gerçek hasar verir ve sağladıkları iyileştirme etkisi birkaç saniyeliğine artar.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Normal saldırılar <healing>@Health@ Can yeniler</healing>.<br><br><spellActive>Aktif:</spellActive> Irelia'nın normal saldırıları <trueDamage>@Damage@ Gerçek Hasar</trueDamage> verir ve @ActiveDuration@ saniyeliğine <healing>@HealthRestoreActive@ Can yeniler</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Irelia'nın saldırısı dengeyi yakalayarak hedefe hasar verir ve onun yavaşlamasını sağlar.  Ancak hedefinin Irelia'dan daha fazla yüzdelik cana sahip olması durumunda darbe hedefi yavaşlatmak yerine sersemletir.",
+            "description": "Irelia'nın saldırısı dengeyi yakalayarak hedefine hasar verir ve onun yavaşlamasını sağlar. Yüzdelik canı Irelia'nınkinden fazlaysa darbe rakibi sersemletir.",
             "dynamicDescription": "Irelia hedefini deşerek <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onu @StunDuration@ saniyeliğine %@SlowAmount@ <status>yavaşlatır</status>.<br><br>Hedefinin Irelia'dan daha fazla <scaleHealth>yüzdelik cana</scaleHealth> sahip olması durumunda Irelia, hedefi etki süresi boyunca <status>sersemletir</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Irelia, çağırdığı 4 ruh bıçağını fırlatır. Bıçaklar fiziksel hasar verir ve deşip geçtikleri hedeflerden can sömürür.",
+            "description": "Irelia, çağırdığı 4 ruh bıçağını fırlatır. Bıçaklar hasar verir ve deşip geçtikleri hedeflerden can sömürür.",
             "dynamicDescription": "Irelia çağırdığı 4 ruh bıçağını fırlatarak deştiği rakiplere <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Şampiyonlara verdiği hasarın %@ChampionHealPercent@ kadarına ve diğer rakiplere verdiği hasarın %@MinionHealPercent@ kadarına eşdeğer miktarda <healing>can yeniler</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

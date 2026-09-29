@@ -163,11 +163,6 @@
                     EosNotificationsComponent: n(123),
                     SeasonMemorialModalComponent: n(126).default,
                     LeaguesDialogsComponent: n(129)
-                }), t.setFactoryDefinition({
-                    name: "RankedFtuxModalComponent",
-                    tra: s,
-                    ComponentFactory: e,
-                    RankedFtuxModalComponent: n(132).default
                 })
             };
             var s, a = (s = n(1)) && s.__esModule ? s : {
@@ -3209,10 +3204,6 @@
                 willDestroyElement() {
                     this._super(...arguments), a.db.unobserve(this)
                 },
-                didRender() {
-                    this._super(...arguments);
-                    this.get("shouldShowRankedInfoModal") && this._showRankedInfoModal()
-                },
                 handleAccountLeaguesSettings(e) {
                     this.set("accountLeaguesSettings", e)
                 },
@@ -3259,13 +3250,6 @@
                         s = Boolean(this.get("activeSeason"));
                     return !e && t && n && s
                 })),
-                shouldShowRankedInfoModal: a.Ember.computed("isGameflowPhaseValid", "isDependenciesInitialized", "accountLeaguesSettings.data.ranked-5s-ftux-seen", "accountLeaguesSettings", "rankedInfoModalShown", (function() {
-                    const e = Boolean(this.get("isDependenciesInitialized")),
-                        t = this.get("isGameflowPhaseValid"),
-                        n = !!this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen") || void 0 === this.get("accountLeaguesSettings"),
-                        s = this.get("rankedInfoModalShown");
-                    return e && t && !n && !s
-                })),
                 activeSeason: a.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [],
                         t = Date.now();
@@ -3288,28 +3272,6 @@
                         l = Boolean(this.get("regionLocale"));
                     return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && s && a && i && o && l
                 })),
-                _showRankedInfoModal() {
-                    this.set("rankedInfoModalShown", !0);
-                    const e = a.componentFactory.create("RankedFtuxModalComponent"),
-                        t = a.ModalManager.add({
-                            type: "DialogAlert",
-                            data: {
-                                contents: e.domNode,
-                                okText: this.get("tra.RANKED_FIVES_FTUX_CLOSE_BUTTON_TEXT"),
-                                dismissible: !0,
-                                dismissibleType: "inside",
-                                onClose: () => this._saveRankedFivesFtuxModalSeen()
-                            },
-                            show: !0
-                        });
-                    t.okPromise.then((() => {
-                        a.ModalManager.remove(t), e && e.componentPromise && e.componentPromise.then((e => a.Ember.run((() => {
-                            e.app.destroy()
-                        }))))
-                    })).catch((e => {
-                        a.logger.error(`Failed to destroy modal: ${e}`)
-                    }))
-                },
                 _isLoginSessionInvalid: e => "SUCCEEDED" !== e,
                 _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag,
                 _saveRankedFivesFtuxModalSeen() {
@@ -4238,39 +4200,6 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
-            var s = n(1);
-            n(133);
-            var a = s.Ember.Component.extend({
-                layout: n(134),
-                classNames: ["ranked-ftux-modal"],
-                queueTypeQueueId: 710,
-                region: window.RIOT.CONSTANTS.regionLocale.region,
-                infoUrl: s.Ember.computed("region", (function() {
-                    return "TENCENT" === this.get("region") ? "https://lol.qq.com/news/detail.shtml?docid=3793875343098578394" : "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
-                })),
-                gameModeTitleText: s.Ember.computed("tra", "infoUrl", (function() {
-                    const e = this.get("infoUrl");
-                    return this.get("tra").formatString("RANKED_FIVES_FTUX_TITLE_TEXT_1", {
-                        url: e
-                    })
-                }))
-            });
-            t.default = a
-        }, (e, t, n) => {
-            "use strict";
-            n.r(t)
-        }, (e, t, n) => {
-            const s = n(1).Ember;
-            e.exports = s.HTMLBars.template({
-                id: "BgZ5+ov+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
-                meta: {}
-            })
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
             }), t.default = function(e, t, n) {
                 const a = document.createElement("div");
                 a.className = "lol-leagues lol-leagues-full", a.type = "LeaguesRootComponent";
@@ -4306,7 +4235,7 @@
             };
             var s = n(1),
                 a = n(29),
-                i = n(136);
+                i = n(133);
             const o = "/lol-ranked",
                 l = "/v1/league-ladders/";
 
@@ -4473,7 +4402,7 @@
                     } = e.default, l = (0, t.default)(s, i);
                     e.default.tra = i;
                     const r = n(3).default,
-                        c = n(135).default;
+                        c = n(132).default;
                     return r(o, a, l), c(e.default.getProvider(), o, i), {}
                 }))
             }))

@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Пассивно: показатели растут при срабатывании уязвимости<br><br>Пассивно (за Вэлора): показатели растут<br><br>Активно: раскрывает область",
+            "description": "Пассивно (Квинн): при срабатывании Хищной птицы вы на несколько секунд получаете скорость атаки и скорость передвижения.<br><br>Пассивно (Вэлор): вы получаете скорость атаки.<br><br>Активно: вы раскрываете большую область вокруг Квинн и Вэлора.",
             "dynamicDescription": "<keywordMajor>Пассивно (за Квинн)</keywordMajor>: атакуя <keywordMajor>уязвимую</keywordMajor> цель, Квинн получает <speed>@AttackSpeedBonus*100@% скорости атаки</speed> и <speed>@MovespeedAmount@ скорости передвижения</speed> на @BuffDuration@ сек.<br><br><keywordMajor>Пассивно (за Вэлора)</keywordMajor>: получает @ValorAttackSpeed*100@% скорости атаки.<br><br><keywordMajor>Активно</keywordMajor>: Вэлор раскрывает большую область поблизости на @VisionDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Квинн совершает рывок.<br><br>При игре за Вэлора она тоже совершает рывок.",
+            "description": "Квинн или Вэлор совершает рывок к врагу, нанося урон, отбрасывая и замедляя цель. Если умение применяет Квинн, она отпрыгивает от цели, сохраняя дистанцию, а Вэлор ставит на нее метку Хищной птицы.",
             "dynamicDescription": "<keywordMajor>За Квинн или Вэлора</keywordMajor>: совершает рывок к врагу, нанося цели <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>, <status>отбрасывая</status> ее и <status>снижая</status> ее скорость передвижения на @SlowAmount*100@% (ослабевает за @SlowDecayTime@ сек.).<br><br><keywordMajor>За Квинн</keywordMajor>: также отпрыгивает от цели, а Вэлор ставит на нее метку <keywordMajor>уязвимости</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Вэлор заменяет Квинн на поле боя в роли мобильного бойца ближнего боя, получая бонус к скорости передвижения и заменяя ее умения. При повт. применении срабатывает Небесный удар, нанося урон всем врагам поблизости.",
+            "description": "Вэлор заменяет Квинн на поле боя в роли мобильного бойца ближ. боя, получая бонус к скорости передвижения и изменяя ее умения. При повт. применении срабатывает Небесный удар, нанося урон всем врагам поблизости.",
             "dynamicDescription": "<keywordMajor>Первое применение</keywordMajor>: заменяет Квинн на поле боя в роли мобильного бойца ближнего боя на @TransformDuration@ сек. Он получает призрачность и @OoCMoveSpeed*100@% скорости передвижения (в бою бонус постепенно падает до @CombatMoveSpeed*100@%). Затем Вэлор может применить <keywordMajor>Небесный удар</keywordMajor>.<br><br><keywordMajor>Небесный удар</keywordMajor>: Квинн возвращается, нанося <physicalDamage>@TotalDamage@–@TotalDamageMaximum@ ед. физ. урона</physicalDamage> всем врагам в большой области. Урон зависит от их недост. здоровья.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

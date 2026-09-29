@@ -292,7 +292,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "퀸 기본 지속 효과: 매사냥 표식 발동 시 몇 초 동안 공격 속도 및 이동 속도를 얻습니다.<br><br>발로 기본 지속 효과: 공격 속도를 얻습니다.<br><br>사용 시: 퀸과 발러 주변의 시야를 드러냅니다.",
-            "dynamicDescription": "<keywordMajor>퀸 기본 지속 효과</keywordMajor>: <keywordMajor>취약</keywordMajor> 상태인 대상에게 기본 공격을 가하면 @BuffDuration@초 동안 <speed>@AttackSpeedBonus*100@%의 공격 속도</speed>와 <speed>@MovespeedAmount@의 이동 속도</speed>를 얻습니다.<br><br><keywordMajor>발러 기본 지속 효과</keywordMajor>: @ValorAttackSpeed*100@%의 공격 속도를 얻습니다.<br><br><keywordMajor>사용 시</keywordMajor>: 발러가 @VisionDuration@초 동안 주변의 넓은 지역을 드러냅니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>퀸 기본 지속 효과</keywordMajor>: <keywordMajor>취약</keywordMajor> 상태인 대상에게 기본 공격을 가하면 @BuffDuration@초 동안 <speed>@AttackSpeedBonus*100@%의 공격 속도</speed>와 <speed>@MovespeedAmount@의 이동 속도</speed>를 얻습니다.<br><br><keywordMajor>발러 기본 지속 효과</keywordMajor>: <speed>@ValorAttackSpeed*100@%의 공격 속도</speed>를 얻습니다.<br><br><keywordMajor>사용 시</keywordMajor>: 발러가 @VisionDuration@초 동안 주변의 넓은 지역을 드러냅니다.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -592,7 +592,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "발러가 퀸을 대신하며 근접 챔피언이 되고, 이동 속도를 얻으며 스킬이 변경됩니다. 재사용하면 공습을 가해 주변의 모든 적에게 피해를 입힙니다.",
-            "dynamicDescription": "<keywordMajor>첫 사용 시</keywordMajor>: 발러가 @TransformDuration@초 동안 퀸을 대신하며 근접 챔피언이 되고, 그동안 유체화 상태가 되어 @OoCMoveSpeed*100@%의 이동 속도를 얻습니다. 이 추가 이동 속도는 전투에 돌입하면 점차 감소하여 @CombatMoveSpeed*100@%까지 줄어듭니다. 이후 <keywordMajor>공습</keywordMajor>을 사용할 수 있습니다.<br><br><keywordMajor>공습</keywordMajor>: 퀸과 교대하며, 넓은 범위 내의 모든 적에게 잃은 체력에 비례해 <physicalDamage>@TotalDamage@~@TotalDamageMaximum@의 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>퀸</keywordMajor>: 발러가 @TransformDuration@초 동안 퀸을 대신하여 근접 챔피언이 되고, 그동안 <status>유체화</status> 상태가 되어 <speed>@OoCMoveSpeed*100@%의 이동 속도</speed>를 얻습니다. 이 추가 이동 속도는 전투에 돌입하면 점차 감소하여 @CombatMoveSpeed*100@%까지 줄어듭니다. 이후 <keywordMajor>공습</keywordMajor>을 사용할 수 있습니다.<br><br><keywordMajor>발러 - 공습</keywordMajor>: 퀸과 교대하며 넓은 범위 내의 모든 적에게 잃은 체력에 비례하는 <physicalDamage>@TotalDamage@~@TotalDamageMaximum@의 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

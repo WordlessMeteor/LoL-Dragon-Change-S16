@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Сокращает длительность эффектов оглушения, замедления, провокации, страха и обездвиживания за каждого враж. чемпиона поблизости."
+        "description": "Ирелия получает стойкость за каждого враж. чемпиона поблизости."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Ирелия совершает рывок вперед, поражая цель. Если удар убивает цель, перезарядка Пульсирующего клинка сбрасывается и Ирелия восстанавливает 35 ед. маны.",
-            "dynamicDescription": "Ирелия совершает рывок вперед, поражая цель и нанося <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>.<br><br>Если удар убивает цель, перезарядка <spellName>Пульсирующего клинка</spellName> сбрасывается и Ирелия восстанавливает <scaleMana>@ManaReturn@ ед. маны</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Ирелия совершает рывок, поражая цель. Если удар убивает, перезарядка Пульсирующего клинка сбрасывается и Ирелия восстанавливает часть затрат маны.",
+            "dynamicDescription": "Ирелия совершает рывок, поражая цель и нанося <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>.<br><br>Если удар убивает цель, перезарядка <spellName>Пульсирующего клинка</spellName> сбрасывается и Ирелия восстанавливает <scaleMana>@ManaReturn@ ед. маны</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Используя искусство хитен, Ирелия пассивно восстанавливает здоровье при автоатаках. При активации умения автоатаки наносят чистый урон в течение краткого срока.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки <healing>восстанавливают @Health@ здоровья</healing>.<br><br><spellActive>Активно:</spellActive> автоатаки Ирелии наносят <trueDamage>@Damage@ ед. чист. урона</trueDamage>, <healing>восстанавливая вдвое больше здоровья</healing> за @HealthRestoreDuration@ сек.@SpellModifierDescriptionAppend@",
+            "description": "Пассивно: Ирелия мастерски владеет стилем хитен, отчего ее атаки восстанавливают здоровье.<br><br>Активно: автоатаки наносят доп. чистый урон, лечение от них повышено на несколько секунд.",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки <healing>восстанавливают @Health@ здоровья</healing>.<br><br><spellActive>Активно:</spellActive> автоатаки Ирелии наносят <trueDamage>@Damage@ ед. чист. урона</trueDamage>, теперь <healing>восстанавливая @HealthRestoreActive@ здоровья</healing> за @ActiveDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -406,7 +406,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пытаясь уравнять шансы, Ирелия пронзает цель, нанося урон и замедляя ее. Если здоровье цели (в процентах) выше, чем у Ирелии, цель оглушается.",
-            "dynamicDescription": "Ирелия пронзает цель, нанося ей <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>замедляя</status> ее на @SlowAmount@% на @StunDuration@ сек.<br><br>Если <scaleHealth>здоровье цели (в процентах)</scaleHealth> выше, чем у Ирелии, цель <status>оглушается</status> на тот же срок.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ирелия пронзает цель, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>замедляя</status> ее на @SlowAmount@% на @StunDuration@ сек.<br><br>Если <scaleHealth>здоровье цели (в процентах)</scaleHealth> выше, чем у Ирелии, цель <status>оглушается</status> на время действия умения.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Ирелия призывает 4 магических клинка. Она может метнуть их, нанося физ. урон всем врагам на пути и восстанавливая здоровье.",
+            "description": "Ирелия призывает 4 магических клинка. Она может метнуть их, нанося урон всем врагам на пути и вытягивая из них жизнь.",
             "dynamicDescription": "Ирелия призывает 4 магических клинка. Она может метнуть их, нанеся <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> врагам на пути и <healing>восстановив здоровье</healing> (@ChampionHealPercent@% от урона чемпионам, @MinionHealPercent@% от урона прочим врагам).@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

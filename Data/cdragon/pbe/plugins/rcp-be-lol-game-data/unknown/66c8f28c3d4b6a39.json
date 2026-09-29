@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma primește puterea abilităților bonus, în funcție de procentajul de viață lipsă."
+        "description": "Karma primește puterea abilităților în funcție de viața lipsă."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Karma trimite lame ascunse din evantaiele ei, provocându-le daune magice unităților aflate într-o zonă de con din fața ei.<br><br>Bonus ''Mantră'': pe lângă faptul că provoacă le daune inamicilor, ''Valul ceresc'' va și vindeca aliații din zona de con, în funcție de un procentaj din viața lor lipsă.",
-            "dynamicDescription": "Karma trimite lame ascunse din evantaiele ei, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> unităților aflate într-o zonă de con din fața ei.<br><br><keywordMajor>Bonus ''Mantră'':</keywordMajor> pe lângă faptul că provoacă le daune inamicilor, <spellName>''Valul ceresc''</spellName> va și <healing>vindeca</healing> aliații din zona de con în valoare de <healing>@BaseHealth@ plus @AdditionalHealPercentTT@%</healing> din <scaleHealth>viața lor lipsă</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma trimite lame ascunse din evantaiele ei, provocându-le daune inamicilor dintr-un con.<br><br>''Mantră'': în plus, ''Valul ceresc'' vindecă aliații din con în funcție de viața lor lipsă.",
+            "dynamicDescription": "Karma trimite lame ascunse din evantaiele ei, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor aflați într-un con.<br><br><keywordMajor>''Mantră'':</keywordMajor> în plus, <spellName>''Valul ceresc''</spellName> <healing>vindecă</healing> aliații din con în valoare de <healing>@BaseHealth@ plus @AdditionalHealPercent@</healing> din <scaleHealth>viața lor lipsă</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Karma creează o rază între ea și un aliat sau un inamic. Aliații se mișcă mai repede, iar inamicii mai încet. Raza le provoacă daune magice inamicilor și îi aplică fiecărui campion prin care trece aceeași ajustare a vitezei de mișcare primită de campionul legat.<br><br>Bonus ''Mantră'': Karma întărește legătura pentru a dubla efectul modificatorului vitezei de mișcare.",
-            "dynamicDescription": "Karma creează o rază între ea și un aliat sau un inamic timp de până la @Duration@ secunde. Aliații se <speed>mișcă cu @MoveSpeedMod*100@% mai repede</speed>, iar inamicii cu <status>@MoveSpeedMod*100@% mai încet</status>. Raza le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor și îi aplică fiecărui campion prin care trece aceeași ajustare a vitezei de mișcare primită de campionul legat.<br><br>Raza se rupe dacă ținta legată are <keywordStealth>prezența mascată</keywordStealth>.<br><br><keywordMajor>Bonus ''Mantră'':</keywordMajor> Karma întărește legătura pentru a dubla efectul modificatorului vitezei de mișcare.@SpellModifierDescriptionAppend@",
+            "description": "Karma creează o rază între ea și o altă unitate. Aliații se mișcă mai repede, iar inamicii mai încet. Raza le provoacă daune inamicilor și îi aplică fiecărui campion prin care trece aceeași ajustare a vitezei de mișcare.<br><br>''Mantră'': Karma întărește legătura pentru a crește efectul de viteză de mișcare.",
+            "dynamicDescription": "Karma creează o rază între ea și o altă unitate timp de până la @Duration@ secunde. Aliații afectați, inclusiv ea, primesc <speed>@MoveSpeedMod*100@% viteză de mișcare</speed>. Inamicii afectați sunt <status>încetiniți</status> cu @MoveSpeedMod*100@%.<br><br>Raza le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> tuturor inamicilor prin care trece. Campionii aliați și inamici primesc aceeași ajustare a vitezei de mișcare ca ținta razei.<br><br><keywordMajor>''Mantră'':</keywordMajor> Karma întărește legătura, crescând modificatorii vitezei de mișcare la @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Karma invocă un scut protector care absoarbe daunele primite.<br><br>Bonus ''Mantră'': pe lângă efectul protector al scutului, din acesta iradiază o energie care le provoacă daune unităților inamice din jurul țintei Karmei.",
-            "dynamicDescription": "Karma invocă un <shield>scut</shield> protector care absoarbe <shield>@TotalShield@ daune</shield> timp de @Duration@ secunde.<br><br><keywordMajor>Bonus ''Mantră'':</keywordMajor> pe lângă efectul protector al <shield>scutului</shield>, din acesta iradiază o energie care le provoacă <magicDamage>@TotalShield@ daune magice</magicDamage> unităților inamice din jurul țintei ei.@SpellModifierDescriptionAppend@",
+            "description": "Karma invocă un scut protector asupra unui aliat care absoarbe daunele primite.<br><br>''Mantră'': pe lângă aplicarea scutului, din acesta radiază energie, care le provoacă daune inamicilor din jurul țintei ei.",
+            "dynamicDescription": "Karma invocă un <shield>scut</shield> protector care absoarbe <shield>@TotalShield@ daune</shield> timp de @Duration@ secunde.<br><br><keywordMajor>''Mantră'':</keywordMajor> din scut radiază energie, care le provoacă <magicDamage>@TotalShield@ daune magice</magicDamage> unităților inamice din jurul țintei ei.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Karma își augmentează următoarea abilitate, pentru un efect suplimentar. ''Mantra'' este disponibilă la nivelul 1 și nu necesită un punct de abilitate.",
-            "dynamicDescription": "Karma își augmentează următoarea abilitate, pentru un efect suplimentar. Primește un cumul la fiecare <attention>@f1@</attention> secunde. Stochează maximum 2 cumuluri.<br><br>Rata de reîmprospătare scade în funcție de reducerea timpilor de reactivare.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma își augmentează următoarea abilitate, pentru un efect suplimentar. Primește un cumul la fiecare <attention>@MantraCooldown@</attention> secunde. Stochează maximum 2 cumuluri.<br><br>Rata de reîmprospătare scade în funcție de reducerea timpilor de reactivare.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

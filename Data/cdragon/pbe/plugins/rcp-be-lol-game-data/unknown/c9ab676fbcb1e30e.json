@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma získá bonus k síle schopností, jehož výše odpovídá určitému procentu jejího chybějícího zdraví."
+        "description": "Karma získává bonus k síle schopností, který se odvíjí od jejího chybějícího zdraví."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma vyšle čepele ukryté ve svých vějířích a způsobí magické poškození jednotkám ve výseči před sebou.<br><br>Bonus Mantry: Nebeská vlna kromě poškození nepřátel také vyléčí spojence, kteří se ve výseči nacházejí, síla tohoto léčení se odvíjí od procenta jejich chybějícího zdraví.",
-            "dynamicDescription": "Karma vyšle čepele ukryté ve svých vějířích a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> jednotkám ve výseči před sebou.<br><br><keywordMajor>Bonus Mantry:</keywordMajor> <spellName>Nebeská vlna</spellName> kromě poškození nepřátel také <healing>vyléčí</healing> spojence, kteří se ve výseči nacházejí, a to ve výši <healing>@BaseHealth@ bodů plus @AdditionalHealPercentTT@ %</healing> jejich <scaleHealth>chybějícího zdraví</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma vyšle čepele ukryté ve svých vějířích, které způsobí poškození nepřátelům ve výseči.<br><br>Mantra: Nebeská vlna také léčí spojence, kteří se v dané výseči nacházejí, míra léčení se odvíjí od jejich chybějícího zdraví.",
+            "dynamicDescription": "Karma vyšle čepele ukryté ve svých vějířích a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> nepřátelům v zasažené výseči.<br><br><keywordMajor>Mantra:</keywordMajor> Spojencům, kteří se v dané výseči nacházejí, navíc <spellName>Nebeská vlna</spellName> <healing>vyléčí</healing> <healing>@BaseHealth@ zdraví plus @AdditionalHealPercent@</healing> jejich <scaleHealth>chybějícího zdraví</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma si vytvoří světelné pouto mezi spojencem nebo nepřítelem. Spojenecké jednotky se díky tomu pohybují rychleji, ty nepřátelské naopak pomaleji. Nepřátelům způsobuje paprsek magické poškození a na každého šampiona, kterým projde, aplikuje stejnou úpravu rychlosti, jakou má propojená jednotka.<br><br>Bonus Mantry: Karma posílí pouto, čímž zdvojnásobí účinek modifikátoru rychlosti pohybu.",
-            "dynamicDescription": "Karma si na až @Duration@ sek. vytvoří světelné pouto mezi spojencem nebo nepřítelem. Spojenecké jednotky se díky tomu <speed>pohybují o @MoveSpeedMod*100@ % rychleji</speed>, ty nepřátelské naopak o <status>@MoveSpeedMod*100@ % zpomalí</status>. Nepřátelům způsobuje paprsek <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na každého šampiona, kterým projde, aplikuje stejnou úpravu rychlosti, jakou má propojená jednotka.<br><br>Pokud se propojený cíl <keywordStealth>zneviditelní</keywordStealth>, paprsek se zničí.<br><br><keywordMajor>Bonus Mantry:</keywordMajor> Karma posílí pouto, čímž zdvojnásobí účinek modifikátoru rychlosti pohybu.@SpellModifierDescriptionAppend@",
+            "description": "Karma vytvoří světelné pouto mezi sebou a jinou jednotkou. Spojenecké jednotky se díky tomu pohybují rychleji, ty nepřátelské naopak pomaleji. Nepřátelům způsobí paprsek poškození a na každého šampiona, kterým projde, aplikuje stejnou úpravu rychlosti.<br><br>Mantra: Karma posílí pouto, čímž umocní efekt ovlivňující rychlost pohybu.",
+            "dynamicDescription": "Karma na dobu až @Duration@ sek. vytvoří světelné pouto mezi sebou a jinou jednotkou. Koncové spojenecké jednotky včetně jí samotné získají <speed>@MoveSpeedMod*100@ % k rychlosti pohybu</speed>. Koncoví nepřátelé budou o @MoveSpeedMod*100@ % <status>zpomaleni</status>.<br><br>Všichni nepřátelé, kterých se paprsek dotkne, utrpí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Spojenečtí i nepřátelští šampioni obdrží stejnou úpravu rychlosti pohybu jako jednotky na koncích paprsku.<br><br><keywordMajor>Mantra:</keywordMajor> Karma posílí pouto, čímž zvýší modifikátor rychlosti pohybu na @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma vyvolá ochranný štít, který pohltí utrpěné poškození.<br><br>Bonus Mantry: Ze seslaného štítu navíc vyzařuje energie, která poškozuje nepřátelské jednotky kolem Karmina cíle.",
-            "dynamicDescription": "Karma vyvolá ochranný <shield>štít</shield>, který dokáže během @Duration@ sek. pohltit až <shield>@TotalShield@ bodů poškození</shield>.<br><br><keywordMajor>Bonus Mantry:</keywordMajor> Ze seslaného <shield>štítu</shield> navíc vyzařuje energie, která nepřátelským jednotkám kolem Karmina cíle způsobí <magicDamage>@TotalShield@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Karma vyvolá na spojenci ochranný štít, který pohltí utrpěné poškození.<br><br>Mantra: Ze seslaného štítu navíc vyzařuje energie, která způsobuje poškození nepřátelům kolem Karmina cíle.",
+            "dynamicDescription": "Karma vyvolá ochranný <shield>štít</shield>, který dokáže během @Duration@ sek. pohltit až <shield>@TotalShield@ bodů poškození</shield>.<br><br><keywordMajor>Mantra:</keywordMajor> Ze seslaného štítu vyzařuje energie, která nepřátelům kolem Karmina cíle způsobí <magicDamage>@TotalShield@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Karma si posílí příští schopnost, která tak bude mít dodatečný účinek. Mantra je dostupná na 1. úrovni a nevyžaduje bod dovedností.",
-            "dynamicDescription": "Karma si posílí příští schopnost, která tak bude mít dodatečný účinek. Karma získává nabití v pravidelném intervalu <attention>@f1@</attention> sek., celkem může mít až 2 nabití.<br><br>Rychlost obnovování se zkracuje prostřednictvím zkrácení přebíjecích dob.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma si posílí příští schopnost, která tak bude mít dodatečný účinek. Karma získává nabití v pravidelném intervalu <attention>@MantraCooldown@</attention> sek., celkem může mít až 2 nabití.<br><br>Rychlost obnovování se zkracuje prostřednictvím zkrácení přebíjecích dob.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

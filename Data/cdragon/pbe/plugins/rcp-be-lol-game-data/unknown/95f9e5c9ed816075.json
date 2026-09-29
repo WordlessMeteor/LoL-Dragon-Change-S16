@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma eksik yüzdelik canına bağlı olarak yetenek gücü kazanır."
+        "description": "Karma eksik canına bağlı olarak yetenek gücü kazanır."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Karma yelpazelerinden gizli bıçaklar fırlatarak önündeki koni şeklindeki alanda bulunan birimlere büyü hasarı verir.<br><br>Mantra İlavesi: Semavi Dalga rakiplere hasar vermenin yanı sıra koni şeklindeki alanda bulunan takım arkadaşlarını eksik canlarının belli bir yüzdesine eşdeğer miktarda iyileştirir.",
-            "dynamicDescription": "Karma yelpazelerinden gizli bıçaklar fırlatarak önündeki koni şeklindeki alanda bulunan birimlere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br><keywordMajor>Mantra İlavesi:</keywordMajor> <spellName>Semavi Dalga</spellName> rakiplere hasar vermenin yanı sıra koni şeklindeki alanda bulunan takım arkadaşlarını <healing>@BaseHealth@ artı</healing> <scaleHealth>eksik canlarının</scaleHealth> %@AdditionalHealPercentTT@ kadarına eşdeğer miktarda <healing>iyileştirir</healing>.@SpellModifierDescriptionAppend@",
+            "description": "Karma yelpazelerinden gizli bıçaklar fırlatarak koni şeklindeki alanda bulunan rakiplere hasar verir.<br><br>Mantra: Semavi Dalga ayrıca koni şeklindeki alanda bulunan takım arkadaşlarını eksik canlarına bağlı olarak iyileştirir.",
+            "dynamicDescription": "Karma yelpazelerinden gizli bıçaklar fırlatarak önündeki koni şeklindeki alanda bulunan rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Semavi Dalga</spellName> ayrıca koni şeklindeki alanda bulunan takım arkadaşlarını <healing>@BaseHealth@ artı</healing> <scaleHealth>eksik canlarının</scaleHealth> @AdditionalHealPercent@ kadarına eşdeğer miktarda <healing>iyileştirir</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Karma bir takım arkadaşı veya rakiple arasında bir bağ kurar. Bağ kurduğu takım arkadaşları daha hızlı hareket eder, bağ kurduğu rakiplerse yavaşlar. Bağ rakiplere büyü hasarı verir ve temas ettiği şampiyonlara bağlı hedeflerin aldığı hareket hızı değişikliğini uygular.<br><br>Mantra İlavesi: Karma bağı güçlendirerek hareket hızı etkisini iki katına çıkarır.",
-            "dynamicDescription": "Karma en fazla @Duration@ saniyeliğine bir takım arkadaşı veya rakiple arasında bir bağ kurar. Bağ kurduğu takım arkadaşları <speed>%@MoveSpeedMod*100@ daha hızlı hareket eder</speed>, bağ kurduğu rakiplerse <status>%@MoveSpeedMod*100@ yavaşlar</status>. Bağ rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve temas ettiği şampiyonlara bağlı hedeflerin aldığı hareket hızı değişikliğini uygular.<br><br>Bağlı hedef <keywordStealth>gizlenirse</keywordStealth> bağ kopar.<br><br><keywordMajor>Mantra İlavesi:</keywordMajor> Karma bağı güçlendirerek hareket hızı etkisini iki katına çıkarır.@SpellModifierDescriptionAppend@",
+            "description": "Karma, kendisi ile başka bir birim arasında bir bağ kurar. Bağ kurduğu takım arkadaşları daha hızlı hareket eder, bağ kurduğu rakiplerse yavaşlar. Bağ rakiplere hasar verir ve temas ettiği şampiyonlara bağlı hedeflerin aldığı hareket hızı değişikliğini uygular.<br><br>Mantra: Karma bağı güçlendirerek hareket hızı etkisini arttırır.",
+            "dynamicDescription": "Karma, kendisi ile başka bir birim arasında en fazla @Duration@ saniyeliğine bir bağ kurar. Kendisi de dahil olmak üzere bağ kurduğu takım arkadaşları <speed>%@MoveSpeedMod*100@ Hareket Hızı</speed> kazanır. Bağ kurduğu rakiplerse %@MoveSpeedMod*100@ <status>yavaşlar</status>.<br><br>Bağ temas ettiği tüm rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Takım arkadaşlarına ve rakip şampiyonlara bağlı hedeflerin aldığı hareket hızı değişikliği uygulanır.<br><br><keywordMajor>Mantra:</keywordMajor> Karma bağı güçlendirir ve hareket hızı etkileri artarak @MantraMoveSpeedMod@ olur.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Karma, gelen hasarı soğuran koruyucu bir kalkan oluşturur.<br><br>Mantra İlavesi: Kalkan sağlamanın yanı sıra kalkandan enerji yayarak Karma'nın hedefinin etrafındaki rakip birimlere hasar verir.",
-            "dynamicDescription": "Karma @Duration@ saniyeliğine <shield>@TotalShield@ Hasar</shield> soğuran koruyucu bir <shield>kalkan</shield> oluşturur.<br><br><keywordMajor>Mantra İlavesi:</keywordMajor> <shield>Kalkan</shield> sağlamanın yanı sıra kalkandan enerji yayarak Karma'nın hedefinin etrafındaki rakip birimlere <magicDamage>@TotalShield@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "description": "Karma, bir takım arkadaşının üstünde gelen hasarı soğuran koruyucu bir kalkan oluşturur.<br><br>Mantra: Kalkan sağlamanın yanı sıra kalkandan enerji yayarak Karma'nın hedefinin etrafındaki rakiplere hasar verir.",
+            "dynamicDescription": "Karma @Duration@ saniyeliğine <shield>@TotalShield@ Hasar</shield> soğuran koruyucu bir <shield>kalkan</shield> oluşturur.<br><br><keywordMajor>Mantra İlavesi:</keywordMajor> Kalkandan enerji yayarak Karma'nın hedefinin etrafındaki rakiplere <magicDamage>@TotalShield@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Karma bir sonraki yeteneğini güçlendirerek yeteneğe ilave bir etki kazandırır. Mantra 1. seviyeden itibaren kullanılabilir ve yetenek puanı gerektirmez.",
-            "dynamicDescription": "Karma bir sonraki yeteneğini güçlendirerek yeteneğe ilave bir etki kazandırır. Karma her <attention>@f1@</attention> saniyede bir yük biriktirir. En fazla 2 yük tutar.<br><br>Yenilenme hızı, bekleme süresinde azalma oranına bağlı olarak azalır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma bir sonraki yeteneğini güçlendirerek yeteneğe ilave bir etki kazandırır. Karma her <attention>@MantraCooldown@</attention> saniyede bir yük biriktirir. En fazla 2 yük tutar.<br><br>Yenilenme hızı, bekleme süresinde azalma oranına bağlı olarak azalır.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

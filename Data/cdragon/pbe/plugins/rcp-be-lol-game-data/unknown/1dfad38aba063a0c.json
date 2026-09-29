@@ -256,7 +256,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "เมื่อเปิดใช้งาน Aatrox จะสร้างโบนัสความเสียหายในทุกการโจมตีต่อเนื่องครั้งที่สาม โดยแลกกับการเสียพลังชีวิตของตัวเอง เมื่อไม่ได้เปิดใช้งาน Aatrox จะฟื้นฟูพลังชีวิตทุกการโจมตีต่อเนื่องครั้งที่สาม",
-            "dynamicDescription": "<toggle>เปิด/ปิด:</toggle> Aatrox จะสลับระหว่าง <keywordMajor>Blood Thirst</keywordMajor> และ <keywordMajor>Blood Price</keywordMajor> เพื่อรับเอฟเฟกต์โบนัสในการโจมตีครบทุก<attention>สาม</attention>ครั้ง<br><br><keywordMajor>Blood Thirst: </keywordMajor>Aatrox ฟื้นฟู<healing>พลังชีวิต @WHeal@ หน่วย</healing> ซึ่งจะเพิ่มขึ้น <healing>@WLowHealthHealBonus@% (@TTLowHealthHeal@)</healing> เมื่อมี<scaleHealth>พลังชีวิตต่ำกว่า @LowHealthPercent@%</scaleHealth><br><br><keywordMajor>Blood Price: </keywordMajor>Aatrox จะสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ @WDamage@ หน่วย</physicalDamage> และ<font color='#FF3300'>เสียพลังชีวิต @SelfDamage@ หน่วย</font>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>เปิด/ปิด:</toggle> Aatrox สลับไปมาระหว่าง <keywordMajor>Blood Thirst</keywordMajor> และ <keywordMajor>Blood Price</keywordMajor> ซึ่งสร้างเอฟเฟกต์โบนัสเมื่อโจมตีครบทุก<attention>สาม</attention>ครั้ง<br><br><keywordMajor>Blood Thirst: </keywordMajor>Aatrox ฟื้นฟู<healing>พลังชีวิต @WHeal@ หน่วย</healing> เพิ่มขึ้นเป็น <healing>@LowHealthHeal@ หน่วย</healing> เมื่อ<scaleHealth>พลังชีวิตต่ำกว่า @LowHealthPercent@%</scaleHealth><br><br><keywordMajor>Blood Price: </keywordMajor>Aatrox สร้าง<physicalDamage>โบนัสความเสียหายกายภาพ @WDamage@ หน่วย</physicalDamage> และ<font color='#FF3300'>สูญเสียพลังชีวิต @SelfDamage@ หน่วย</font>@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

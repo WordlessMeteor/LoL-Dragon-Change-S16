@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "يتم تقليص مدة كلٍ من الصعق والإبطاء والاستفزاز والخوف والكمائن والتثبيت مقابل كل بطل معادٍ في الجوار."
+        "description": "تكسب إيريليا التماسك مقابل كل بطل عدو قريب."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تندفع إيريليا إلى الأمام لتضرب هدفها. إذا قتلت الضربة الهدف، تتجدد فترة تبريد إشهار النصل ويتم استرداد 35 مانا.",
-            "dynamicDescription": "تندفع إيريليا إلى الأمام لتضرب هدفها، فتلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>.<br><br>إذا قتلت الضربة الهدف، تتجدد فترة تبريد <spellName>إشهار النصل</spellName> ويتم استرداد <scaleMana>@ManaReturn@ مانا</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "تندفع إيريليا لتضرب هدفها. إذا قتلت هدفها، تتجدد فترة تبريد إشهار النصل وتسترد بعضًا من تكلفة المانا الخاصة بها.",
+            "dynamicDescription": "تندفع إيريليا لتضرب هدفها، فتلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>.<br><br>إذا قتلت الضربة هدفها، تتجدد فترة تبريد <spellName>إشهار النصل</spellName> ويتم استرداد <scaleMana>@ManaReturn@ مانا</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تتقن إيريليا فن هيتين، مما يمنح هجماتها المادية استعادةً للصحة بشكل تلقائي.  يمنح تفعيل أسلوب هيتين هجماتها الأساسية ضررًا حقيقيًا لفترة قصيرة.",
-            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> <healing>تستعيد الهجمات الأساسية @Health@ صحة</healing>.<br><br><spellActive>تأثير نشط:</spellActive> تلحق هجمات إيريليا الأساسية <trueDamage>@Damage@ ضرر حقيقي</trueDamage> وتضاعف <healing>الصحة المستعادة</healing> لمدة @HealthRestoreDuration@ث.@SpellModifierDescriptionAppend@",
+            "description": "تأثير كامن: تتقن إيريليا \"فن هيتين\"، مما يمنح هجماتها استرداد صحة.<br><br>تأثير نشط: تلحق الهجمات الأساسية ضررًا حقيقيًا إضافيًا ويزداد مقدار العلاج منها لبضع ثوانٍ.",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> <healing>تستعيد الهجمات الأساسية @Health@ صحة</healing>.<br><br><spellActive>تأثير نشط:</spellActive> تلحق هجمات إيريليا الأساسية <trueDamage>@Damage@ ضرر حقيقي</trueDamage> كما <healing>تسترد @HealthRestoreActive@ صحة</healing> لمدة @ActiveDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "يوازن هجوم إيريليا الكفتين، فيلحق الضرر بالهدف ويبطئه.  لكن إذا كانت نسبة صحة الهدف أعلى من نسبة صحة إيريليا، فإن الضربة تصعق الهدف بدل ذلك.",
+            "description": "يوازن هجوم إيريليا الكفتين، فيلحق الضرر بهدفها ويبطئه. إذا كانت نسبة صحته أعلى منها، تصعقه الضربة بدل ذلك.",
             "dynamicDescription": "تخترق إيريليا هدفها، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالهدف كما <status>تبطئه</status> بنسبة @SlowAmount@% لمدة @StunDuration@ث.<br><br>إذا كانت <scaleHealth>نسبة صحة</scaleHealth> الهدف أعلى من نسبة صحة إيريليا، فإنها <status>تصعق</status> الهدف طوال المدة بدل ذلك.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تستدعي إيريليا 4 نصال روح يمكنها رميها لإلحاق ضرر مادي وامتصاص الحياة من الأعداء الذين تمر عبرهم.",
+            "description": "تستدعي إيريليا 4 نصال روح يمكنها رميها لإلحاق الضرر وامتصاص الحياة من الأعداء الذين تمر عبرهم.",
             "dynamicDescription": "تستدعي إيريليا 4 نصال روح يمكنها رميها لإلحاق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> بالأعداء الذين تمر عبرهم. <healing>تعالج</healing> بنسبة @ChampionHealPercent@% من الضرر الذي تلحقه بالأبطال و @MinionHealPercent@% من الضرر الذي تلحقه بالأعداء الآخرين.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

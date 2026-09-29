@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passivo: recebe atributos ao infligir Vulnerável.<br><br>Passivo como Valor: recebe atributos.<br><br>Ativo: revela uma área.",
+            "description": "Passivo de Quinn: recebe Velocidade de Movimento e de Ataque por alguns segundos ao acionar Rapina.<br><br>Passivo de Valor: recebe Velocidade de Ataque.<br><br>Ativo: revela uma grande área ao redor de Quinn e Valor.",
             "dynamicDescription": "<keywordMajor>Passivo como Quinn</keywordMajor>: atacar um alvo <keywordMajor>Vulnerável</keywordMajor> concede a Quinn <speed>@AttackSpeedBonus*100@% de Velocidade de Ataque</speed> e <speed>@MovespeedAmount@ de Velocidade de Movimento</speed> por @BuffDuration@s.<br><br><keywordMajor>Passivo como Valor</keywordMajor>: recebe @ValorAttackSpeed*100@% de Velocidade de Ataque.<br><br><keywordMajor>Ativo</keywordMajor>: Valor revela uma grande área próxima por @VisionDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Quinn avança.<br><br>Como Valor, ela também avança.",
+            "description": "Quinn ou Valor avança até um inimigo. Causa dano, Lentidão e empurra o alvo para trás. Se a Habilidade for conjurada como Quinn, a Campeã então saltará para longe do alvo, mantendo distância enquanto Valor marca o inimigo com Rapina.",
             "dynamicDescription": "<keywordMajor>Como Quinn ou Valor</keywordMajor>: avança contra um inimigo, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage>, <status>Empurrando</status> e causando @SlowAmount*100@% de <status>Lentidão</status>, que decai ao longo de @SlowDecayTime@s.<br><br><keywordMajor>Como Quinn</keywordMajor>: além disso, salta para longe do alvo e Valor o marca como <keywordMajor>Vulnerável</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Valor substitui Quinn no campo de batalha como um atacante corpo a corpo ágil, recebendo Velocidade de Movimento e substituindo as Habilidades dela. Reconjure para executar Bombardeio, causando dano a todos os inimigos próximos.",
+            "description": "Valor substitui Quinn no campo de batalha como um atacante corpo a corpo ágil, recebendo Velocidade de Movimento e modificando as Habilidades disponíveis. Conjure outra vez para executar Bombardeio, que causa dano a todos os inimigos próximos.",
             "dynamicDescription": "<keywordMajor>Primeira conjuração</keywordMajor>: Valor substitui Quinn no campo de batalha como um atacante corpo a corpo ágil por @TransformDuration@s. Valor recebe efeito Fantasma e @OoCMoveSpeed*100@% de Velocidade de Movimento que diminui gradualmente para @CombatMoveSpeed*100@% em combate. Em seguida, Valor pode conjurar <keywordMajor>Bombardeio</keywordMajor>.<br><br><keywordMajor>Bombardeio</keywordMajor>: Quinn retorna, causando <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ de Dano Físico</physicalDamage> a todos os inimigos em uma área ampla com base na Vida perdida deles.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

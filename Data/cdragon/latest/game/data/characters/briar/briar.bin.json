@@ -1951,20 +1951,20 @@
         },
         "__type": "SpellObject"
     },
-    "{2c27b469}": {
-        "mRootSpell": "{cf6ed5a6}",
+    "Characters/Briar/Spells/BriarPAbility": {
+        "mRootSpell": "Characters/Briar/Spells/BriarPAbility/BriarP",
         "mChildSpells": [
-            "{cf6ed5a6}",
-            "{0e50dfde}"
+            "Characters/Briar/Spells/BriarPAbility/BriarP",
+            "Characters/Briar/Spells/BriarPAbility/BriarPBleed"
         ],
         "mName": "BriarPAbility",
         "mType": 3,
         "AbilityTraits": 4,
         "__type": "AbilityObject"
     },
-    "{0e50dfde}": {
+    "Characters/Briar/Spells/BriarPAbility/BriarPBleed": {
         "ObjectName": "BriarPBleed",
-        "objectPath": "{0e50dfde}",
+        "objectPath": "Characters/Briar/Spells/BriarPAbility/BriarPBleed",
         "mScriptName": "BriarPBleed",
         "mBuff": {
             "mTooltipData": {
@@ -1980,9 +1980,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cf6ed5a6}": {
+    "Characters/Briar/Spells/BriarPAbility/BriarP": {
         "ObjectName": "BriarP",
-        "objectPath": "{cf6ed5a6}",
+        "objectPath": "Characters/Briar/Spells/BriarPAbility/BriarP",
         "mScriptName": "BriarP",
         "mSpell": {
             "DataValues": [
@@ -5232,7 +5232,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{2c27b469}",
+            "Characters/Briar/Spells/BriarPAbility",
             "Characters/Briar/Spells/BriarWAbility",
             "Characters/Briar/Spells/BriarQAbility",
             "Characters/Briar/Spells/BriarRAbility",
@@ -5309,10 +5309,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{cf6ed5a6}",
+        "mCharacterPassiveSpell": "Characters/Briar/Spells/BriarPAbility/BriarP",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{cf6ed5a6}",
+                "mParentPassiveBuff": "Characters/Briar/Spells/BriarPAbility/BriarP",
                 "__type": "CharacterPassiveData"
             }
         ],

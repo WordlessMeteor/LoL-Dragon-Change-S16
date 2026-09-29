@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Reduce la duración de aturdimientos, ralentizaciones, provocaciones, terrores e inmovilizaciones por cada campeón enemigo cercano."
+        "description": "Irelia obtiene tenacidad por cada campeón enemigo cercano."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Irelia se desplaza hacia adelante para golpear a su objetivo. Si asesina al objetivo, el enfriamiento de Embate de Cuchillas se restablece y restaura 35 de Maná.",
-            "dynamicDescription": "Irelia se desplaza hacia adelante para golpear a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Si asesina al objetivo, el enfriamiento de <spellName>Embate de Cuchillas</spellName> se restablece y restaura <scaleMana>@ManaReturn@ de Maná</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia se desplaza para golpear a su objetivo. Si asesina al objetivo, el enfriamiento de Embate de Cuchillas se reinicia y una parte de su costo de maná se restaura.",
+            "dynamicDescription": "Irelia se desplaza para golpear a su objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage>.<br><br>Si asesina a su objetivo, el enfriamiento de <spellName>Embate de Cuchillas</spellName> se restablece y restaura <scaleMana>@ManaReturn@ de Maná</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Irelia es experta en el arte del Hiten, lo que le otorga a sus ataques físicos restauración de vida de forma pasiva.  Al activar Estilo Hiten, sus ataques básicos infligen daño verdadero durante un breve periodo.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques básicos <healing>restauran @Health@ de Vida</healing>.<br><br><spellActive>Activa:</spellActive> Los ataques básicos de Irelia infligen <trueDamage>@Damage@ de daño verdadero</trueDamage> y duplican la <healing>vida restaurada</healing> durante @HealthRestoreDuration@ seg.@SpellModifierDescriptionAppend@",
+            "description": "Pasiva: Irelia domina el arte de Hiten, lo que hace que sus ataques restauren vida.<br><br>Activa: Los ataques básicos infligen daño verdadero adicional y la curación que otorgan aumenta durante unos seg.",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques básicos <healing>restauran @Health@ de Vida</healing>.<br><br><spellActive>Activa:</spellActive> Los ataques básicos de Irelia infligen <trueDamage>@Damage@ de daño verdadero</trueDamage> y ahora <healing>restauran @HealthRestoreActive@ de vida</healing> durante @ActiveDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "El ataque de Irelia inclina la balanza, lo que inflige daño y ralentiza al objetivo.  Sin embargo, si el objetivo tiene un porcentaje de vida mayor que Irelia, el golpe lo aturdirá.",
-            "dynamicDescription": "Irelia perfora a su objetivo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y lo <status>ralentiza</status> un @SlowAmount@% durante @StunDuration@ seg.<br><br>Si el objetivo tiene un <scaleHealth>porcentaje</scaleHealth> de vida mayor al de Irelia, lo <status>aturde</status> por la misma duración.@SpellModifierDescriptionAppend@",
+            "description": "El ataque de Irelia inclina la balanza, lo que inflige daño y ralentiza a su objetivo. Si tienen un porcentaje de vida mayor que ella, el golpe los aturde.",
+            "dynamicDescription": "Irelia perfora a su objetivo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y lo <status>ralentiza</status> un @SlowAmount@% durante @StunDuration@ seg.<br><br>Si el objetivo tiene un <scaleHealth>porcentaje</scaleHealth> de vida mayor que el de Irelia, lo <status>aturde</status> durante el mismo tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Irelia invoca 4 cuchillas espirituales que puede lanzar para infligir daño físico y absorber vida de los enemigos que atraviesan.",
+            "description": "Irelia invoca 4 cuchillas espirituales que puede lanzar para infligir daño y absorber vida de los enemigos que atraviesan.",
             "dynamicDescription": "Irelia invoca 4 cuchillas espirituales que puede lanzar para infligir <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a los enemigos que atraviesan. <healing>Se cura</healing> un @ChampionHealPercent@% del daño infligido a campeones y un @MinionHealPercent@% del daño infligido a otros enemigos.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

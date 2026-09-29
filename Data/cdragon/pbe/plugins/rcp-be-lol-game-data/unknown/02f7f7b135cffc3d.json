@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma ได้รับพลังเวทเพิ่มขึ้นตามเปอร์เซ็นต์พลังชีวิตที่หายไปของเธอ"
+        "description": "Karma จะได้รับพลังเวทตามพลังชีวิตที่หายไป"
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Karma ปล่อยใบมีดลับออกมาจากพัด สร้างความเสียหายเวทแก่ยูนิตเป็นรูปกรวยด้านหน้า<br><br>โบนัส Mantra: นอกจากสร้างความเสียหายแก่ศัตรู Heavenly Wave จะฮีลเพื่อนร่วมทีมในระยะตามเปอร์เซ็นต์พลังชีวิตที่หายไปของพวกเขาด้วย",
-            "dynamicDescription": "Karma ปล่อยใบมีดลับออกมาจากพัด สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ยูนิตเป็นรูปกรวยด้านหน้า<br><br><keywordMajor>โบนัส Mantra:</keywordMajor> นอกจากสร้างความเสียหายแก่ศัตรู <spellName>Heavenly Wave</spellName> จะ<healing>ฮีล</healing>เพื่อนร่วมทีมในระยะเป็นจำนวน <healing>@BaseHealth@ หน่วย บวกด้วย @AdditionalHealPercentTT@%</healing> จาก<scaleHealth>พลังชีวิตที่หายไป</scaleHealth>ของพวกเขา@SpellModifierDescriptionAppend@",
+            "description": "Karma ปล่อยใบมีดลับออกมาจากพัด สร้างความเสียหายแก่ศัตรูเป็นรูปกรวย<br><br>Mantra: Heavenly Wave จะฮีลให้แก่เพื่อนร่วมทีมในพื้นที่รูปกรวยตามพลังชีวิตที่หายไปของพวกเขาด้วย",
+            "dynamicDescription": "Karma ปล่อยใบมีดลับออกมาจากพัด สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูเป็นรูปกรวย<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Heavenly Wave</spellName> จะ<healing>ฮีล</healing>เพื่อนร่วมทีมในพื้นที่ทรงกรวย <healing>@BaseHealth@ หน่วย บวกกับ @AdditionalHealPercent@</healing> ของ<scaleHealth>พลังชีวิตที่หายไป</scaleHealth>@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Karma สร้างลำแสงเชื่อมต่อระหว่างเพื่อนร่วมทีมหรือศัตรู ทำให้เพื่อนร่วมทีมที่เชื่อมต่อเคลื่อนที่เร็วขึ้น ส่วนศัตรูที่เชื่อมต่อจะถูกสโลว์ โดยลำแสงจะสร้างความเสียหายเวทแก่ศัตรู และส่งผลเพิ่มหรือลดความเร็วเคลื่อนที่แก่แชมเปี้ยนทุกตัวที่เข้ามาโดนลำแสง<br><br>โบนัส Mantra: Karma ทำให้ลำแสงแข็งแกร่งขึ้น ส่งผลเพิ่มหรือลดความเร็วเคลื่อนที่เป็นสองเท่า",
-            "dynamicDescription": "Karma สร้างลำแสงเชื่อมต่อระหว่างเพื่อนร่วมทีมหรือศัตรูเป็นเวลาสูงสุด @Duration@ วินาที ทำให้เพื่อนร่วมทีมที่เชื่อมต่อ<speed>เคลื่อนที่เร็วขึ้น @MoveSpeedMod*100@%</speed> ส่วนศัตรูที่เชื่อมต่อจะถูก<status>สโลว์ @MoveSpeedMod*100@%</status> โดยลำแสงจะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรู และส่งผลเพิ่มหรือลดความเร็วเคลื่อนที่แก่แชมเปี้ยนทุกตัวที่เข้ามาโดนลำแสง<br><br>ลำแสงจะสลายหายไปหากเป้าหมายที่เชื่อมต่อเข้าสู่สถานะ<keywordStealth>ล่องหน</keywordStealth><br><br><keywordMajor>โบนัส Mantra:</keywordMajor> Karma ทำให้ลำแสงแข็งแกร่งขึ้น ส่งผลเพิ่มหรือลดความเร็วเคลื่อนที่เป็นสองเท่า@SpellModifierDescriptionAppend@",
+            "description": "Karma สร้างลำแสงเชื่อมต่อระหว่างตัวเธอกับยูนิตอื่น ทำให้เพื่อนร่วมทีมที่เชื่อมต่อเคลื่อนที่เร็วขึ้น ส่วนศัตรูที่เชื่อมต่อจะถูกสโลว์ โดยลำแสงจะสร้างความเสียหายแก่ศัตรู และส่งผลเพิ่มหรือลดความเร็วเคลื่อนที่แก่แชมเปี้ยนทุกตัวที่เข้ามาโดนลำแสง<br><br>Mantra: Karma ทำให้ลำแสงแข็งแกร่งขึ้นเพื่อเพิ่มเอฟเฟกต์ความเร็วเคลื่อนที่",
+            "dynamicDescription": "Karma สร้างลำแสงเชื่อมระหว่างเธอกับยูนิตอื่นได้สูงสุด @Duration@ วินาที แชมเปี้ยนร่วมทีมที่เชื่อมต่อ รวมถึงตัวเธอเอง จะได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed> ศัตรูที่ถูกเชื่อมต่อจะถูก<status>สโลว์</status> @MoveSpeedMod*100@%<br><br>ลำแสงจะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูทั้งหมดที่ลำแสงสัมผัส แชมเปี้ยนร่วมทีมและศัตรูจะถูกปรับความเร็วเคลื่อนที่ให้เท่ากันกับตัวละครเป้าหมาย<br><br><keywordMajor>Mantra:</keywordMajor> Karma เสริมความแข็งแกร่งของลำแสงเชื่อม เพิ่มเอฟเฟกต์ดัดแปลงความเร็วเคลื่อนที่ @MantraMoveSpeedMod@@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Karma เรียกโล่ป้องกันขึ้นมาดูดซับความเสียหายที่ได้รับ<br><br>โบนัส Mantra: นอกจากการร่ายโล่ป้องกัน พลังงานจะแผ่ออกมาจากโล่ดังกล่าว สร้างความเสียหายแก่ยูนิตศัตรูรอบ ๆ เป้าหมายของ Karma",
-            "dynamicDescription": "Karma เรียก<shield>โล่ป้องกัน</shield>ขึ้นมาดูดซับความเสียหาย <shield>@TotalShield@ หน่วย</shield>เป็นเวลา @Duration@ วินาที<br><br><keywordMajor>โบนัส Mantra:</keywordMajor> นอกจากที่ร่าย<shield>โล่ป้องกัน</shield>แล้ว พลังงานจะแผ่ออกมาจากโล่เพื่อสร้าง<magicDamage>ความเสียหายเวท @TotalShield@ หน่วย</magicDamage>แก่ศัตรูรอบ ๆ เป้าหมายของเธอ@SpellModifierDescriptionAppend@",
+            "description": "Karma เรียกโล่ป้องกันขึ้นมาดูดซับความเสียหายที่เพื่อนร่วมทีมได้รับ<br><br>Mantra: นอกจากที่ร่ายโล่ป้องกันแล้ว พลังงานจะแผ่ออกมาจากโล่เพื่อสร้างความเสียหายแก่ศัตรูรอบ ๆ เป้าหมาย",
+            "dynamicDescription": "Karma เรียก<shield>โล่ป้องกัน</shield>ขึ้นมาดูดซับ<shield>ความเสียหาย @TotalShield@ หน่วย</shield>เป็นเวลา @Duration@ วินาที<br><br><keywordMajor>Mantra:</keywordMajor> แผ่พลังงานออกมาจากโล่ป้องกันเพื่อสร้าง<magicDamage>ความเสียหายเวท @TotalShield@ หน่วย</magicDamage>แก่ศัตรูรอบ ๆ เป้าหมายของเธอ@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Karma เสริมพลังสกิลครั้งถัดไปเพื่อเพิ่มเอฟเฟกต์พิเศษ Mantra สามารถใช้ได้ตั้งแต่เลเวล 1 และไม่⁠จำ⁠เป็นต้องใช้แต้มสกิล",
-            "dynamicDescription": "Karma เสริมพลังสกิลครั้งถัดไปเพื่อเพิ่มเอฟเฟกต์พิเศษ และได้รับชาร์จในทุก ๆ <attention>@f1@</attention> วินาที สูงสุดที่ 2 ชาร์จ<br><br>ระยะเวลารีเฟรชลดลงตามค่าลดคูลดาวน์@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma เสริมพลังสกิลครั้งถัดไปเพื่อเพิ่มเอฟเฟกต์พิเศษ และได้รับชาร์จในทุก ๆ <attention>@MantraCooldown@</attention> วินาที สูงสุดที่ 2 ชาร์จ<br><br>ระยะเวลารีเฟรชลดลงตามค่าลดคูลดาวน์@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

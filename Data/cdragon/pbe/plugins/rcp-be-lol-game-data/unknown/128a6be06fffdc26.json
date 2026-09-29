@@ -229,8 +229,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Caitlyn nâng khẩu súng trường của mình lên rồi bắn ra một phát đạn xuyên phá gây sát thương vật lý (sát thương giảm dần lên các mục tiêu trúng đòn tiếp theo).",
-            "dynamicDescription": "Caitlyn lên nòng súng trong @CastTime@ giây để bắn ra một phát đạn xuyên thấu, gây <physicalDamage>@InitialDamage@ sát thương vật lý</physicalDamage>. Giảm @ExtraHitPercentReduction*100@% sát thương với mỗi đơn vị trúng đòn, giảm tối thiểu còn @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn bắn một phát đạn xuyên phá gây sát thương lên tất cả kẻ địch trên một đường thẳng.",
+            "dynamicDescription": "Caitlyn bắn ra một phát đạn xuyên phá gây <physicalDamage>@InitialDamage@ sát thương vật lý</physicalDamage>, giảm @ExtraHitPercentReduction*100@% với mỗi kẻ địch trúng phải tiếp theo, tối thiểu còn <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -245,7 +245,7 @@
                 70.0,
                 80.0,
                 90.0,
-                80.0
+                100.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -253,7 +253,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -279,31 +279,31 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1.3,
-                    1.3,
-                    1.45,
-                    1.6,
-                    1.75,
-                    1.9,
-                    2.05
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Caitlyn đặt bẫy để tìm đám Yordle lén lút. Khi kích hoạt, bẫy sẽ trói chân tướng, làm lộ diện mục tiêu trong khoảng thời gian ngắn và gây sát thương phép trong thời gian ngắn.",
-            "dynamicDescription": "Caitlyn đặt một cái bẫy, khi Tướng địch dẫm phải sẽ bị <status>Trói Chân</status> trong thời gian ngắn và lộ diện trong @VisibilityDuration@ giây. Bẫy gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong @DOTTime@ giây và tồn tại trong @Duration@ phút. Chỉ có thể kích hoạt cùng lúc @MaxTraps@ bẫy.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn đặt bẫy để tìm đám Yordle lén lút. Khi tướng sập bẫy, bẫy sẽ trói chân, làm lộ diện và gây sát thương lên tướng đó trong thời gian ngắn.",
+            "dynamicDescription": "Caitlyn đặt một bẫy tồn tại trong @Duration@ phút, bẫy sập khi Tướng địch giẫm phải, <status>Trói Chân</status> và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên tướng đó trong @RootDuration@ giây, đồng thời làm lộ diện tướng đó trong @VisibilityDuration@ giây.<br><br>Chỉ có thể kích hoạt cùng lúc @MaxTraps@ bẫy.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -403,75 +403,75 @@
                 14.0,
                 11.0,
                 8.0,
-                8.0
+                5.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -530,7 +530,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Caitlyn bắn ra một tấm lưới làm chậm mục tiêu. Còn Caitlyn sẽ bay ngược về phía sau.",
-            "dynamicDescription": "Caitlyn bắn ra một tấm lưới gây <magicDamage>@NetDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> mục tiêu đi @SlowAmount*-100@% trong @SlowDuration@ giây. Đẩy lùi Caitlyn.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn bay lùi về sau khi bắn ra một tấm lưới gây <magicDamage>@NetDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch đầu tiên trúng phải đi @SlowAmount*-100@% trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -553,39 +553,39 @@
                 14.0,
                 12.0,
                 10.0,
-                10.0
+                8.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    40.0,
-                    80.0,
-                    130.0,
-                    180.0,
-                    230.0,
-                    280.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -679,8 +679,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Caitlyn ngắm cẩn thận cho một cú bắn chuẩn xác, gây sát thương khủng khiếp lên một mục tiêu ở cự ly xa. Tướng địch có thể đỡ đạn hộ đồng minh.",
-            "dynamicDescription": "Caitlyn mất một chút thời gian để căn chỉnh phát bắn hoàn hảo, bắn ra một viên đạn vào một Tướng địch, gây <physicalDamage>@RTotalDamage@ sát thương vật lý</physicalDamage> ở khoảng cách @CastRange@. Tướng địch khác có thể đỡ đạn.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn mất một chút thời gian để căn chỉnh phát bắn hoàn hảo, gây sát thương khủng khiếp lên một tướng địch ở cự ly xa. Các tướng địch khác có thể đỡ đạn thay cho đồng minh.",
+            "dynamicDescription": "Caitlyn mất một chút thời gian để căn chỉnh phát bắn hoàn hảo vào một Tướng địch, gây <physicalDamage>@RTotalDamage@ sát thương vật lý</physicalDamage> ở khoảng cách @CastRange@. Tướng địch khác có thể đỡ đạn.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,
@@ -693,9 +693,9 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 90.0,

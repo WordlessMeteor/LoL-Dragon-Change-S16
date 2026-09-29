@@ -106,7 +106,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Irelia dashes to strike her target. If it kills, Bladesurge's cooldown refreshes and refunds some of its Mana cost.",
-            "dynamicDescription": "Irelia dashes to strike her target, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>If it kills her target, <spellName>Bladesurge's</spellName> cooldown refreshes and refunds <scaleMana>@ManaReturn@ Mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Irelia dashes to an enemy, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and applying on-hit effects.<br><br>If Bladesurge kills her target, its cooldown refreshes and Irelia restores <scaleMana>@ManaReturn@ Mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Passive: Irelia is skilled in the art of Hiten causing her attacks to restore Health.<br><br>Active: Basic attacks deal bonus true damage and their healing is increased for a few seconds.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Basic attacks <healing>restore @Health@ health</healing>.<br><br><spellActive>Active:</spellActive> Irelia's basic attacks deal <trueDamage>@Damage@ true damage</trueDamage> and now <healing>restore @HealthRestoreActive@ health</healing> for @ActiveDuration@ seconds.@SpellModifierDescriptionAppend@",
+            "description": "Passive: Irelia's attacks restore Health.<br><br>Active: Irelia's attacks deal bonus true damage and restore more Health for a few seconds.",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Irelia's basic attacks <healing>restore @Health@ health</healing>.<br><br><spellActive>Active:</spellActive> Irelia's basic attacks deal <trueDamage>@Damage@ true damage</trueDamage> and now <healing>restore @HealthRestoreActive@ health</healing> for @ActiveDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

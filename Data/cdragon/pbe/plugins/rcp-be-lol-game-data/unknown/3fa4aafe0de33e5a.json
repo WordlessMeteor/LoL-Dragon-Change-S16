@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Skraca czas działania ogłuszeń, spowolnień, prowokacji, przestraszeń, usidleń i unieruchomień za każdego pobliskiego wrogiego bohatera."
+        "description": "Irelia zyskuje nieustępliwość za każdego pobliskiego wrogiego bohatera."
     },
     "spells": [
         {
@@ -105,7 +105,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia doskakuje do przodu, by uderzyć w cel. Jeśli spowoduje to śmierć celu, czas odnowienia Fali Ostrzy zresetuje się, a Irelia odzyska 35 pkt. many.",
+            "description": "Irelia doskakuje do przodu, by uderzyć w cel. Jeśli umiejętność ta doprowadzi do zabójstwa, czas odnowienia Fali Ostrzy zostanie zresetowany, a część jej kosztu many — zwrócona.",
             "dynamicDescription": "Irelia doskakuje do przodu, by uderzyć swój cel, zadając <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage>.<br><br>Jeśli spowoduje to śmierć celu, czas odnowienia <spellName>Fali Ostrzy</spellName> zresetuje się, a Irelia odzyska <scaleMana>@ManaReturn@ pkt. many</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia jest biegła w sztuce Hiten, co biernie zapewnia jej atakom fizycznym zdolność przywracania zdrowia.  Aktywacja Stylu Hiten sprawia, że jej ataki podstawowe przez krótki czas zadają obrażenia nieuchronne.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Ataki podstawowe <healing>przywracają @Health@ pkt. zdrowia</healing>.<br><br><spellActive>Użycie:</spellActive> Ataki podstawowe Irelii przez @HealthRestoreDuration@ sek. zadają <trueDamage>@Damage@ pkt. obrażeń nieuchronnych</trueDamage> i przywracają <healing>dwa razy więcej zdrowia</healing>.@SpellModifierDescriptionAppend@",
+            "description": "Biernie: Irelia jest mistrzynią sztuki Hiten, dzięki czemu jej ataki przywracają zdrowie.<br><br>Użycie: Ataki podstawowe zadają dodatkowe obrażenia nieuchronne, a ich leczenie jest zwiększone na kilka sekund.",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Ataki podstawowe <healing>przywracają @Health@ pkt. zdrowia</healing>.<br><br><spellActive>Użycie:</spellActive> Ataki podstawowe Irelii zadają <trueDamage>@Damage@ pkt. obrażeń nieuchronnych</trueDamage> i teraz <healing>przywracają @HealthRestoreActive@ pkt. zdrowia</healing> przez @ActiveDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia wyrównuje szanse, zadając celowi obrażenia i spowalniając go.  Jeśli jednak procentowa wartość zdrowia celu jest wyższa niż Irelii, cios zamiast tego ogłusza.",
-            "dynamicDescription": "Irelia przebija swój cel, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalniając</status> go o @SlowAmount@% na @StunDuration@ sek.<br><br>Jeśli <scaleHealth>procentowa wartość zdrowia</scaleHealth> celu jest wyższa niż Irelii, cios zamiast tego <status>ogłusza</status> go na ten sam czas.@SpellModifierDescriptionAppend@",
+            "description": "Ataki Irelii wyrównują szanse, zadając celowi obrażenia i spowalniając go. Jeśli cel ma wyższą procentową wartość zdrowia niż ona, ciosy zamiast tego go ogłuszają.",
+            "dynamicDescription": "Irelia przebija swój cel, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalniając</status> go o @SlowAmount@% na @StunDuration@ sek.<br><br>Jeśli <scaleHealth>procentowa wartość zdrowia</scaleHealth> celu jest wyższa niż Irelii, zamiast tego <status>ogłusza</status> go na ten sam czas.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Irelia przywołuje 4 widmowe ostrza, którymi może cisnąć, aby zadawać obrażenia fizyczne i wysysać życie z trafionych wrogów.",
+            "description": "Irelia przywołuje 4 widmowe ostrza, którymi może cisnąć, aby zadawać obrażenia i wysysać życie z trafionych wrogów.",
             "dynamicDescription": "Irelia przywołuje 4 widmowe ostrza, którymi może cisnąć, aby zadać <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> trafionym wrogom. Irelia <healing>leczy się</healing> o @ChampionHealPercent@% obrażeń zadanych bohaterom i @MinionHealPercent@% obrażeń zadanych innym wrogom.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

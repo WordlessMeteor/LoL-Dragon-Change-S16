@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma gagne de la puissance bonus en fonction de son pourcentage de PV manquants."
+        "description": "Karma gagne de la puissance selon ses PV manquants."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Karma projette des lames dissimulées dans ses éventails, infligeant des dégâts magiques aux unités dans un cône devant elle.<br><br>Bonus de Mantra : en plus d'infliger des dégâts aux ennemis, Vague divine soigne également les alliés se trouvant dans le cône, en fonction du pourcentage de leurs PV manquants.",
-            "dynamicDescription": "Karma projette des lames dissimulées dans ses éventails, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux unités dans un cône devant elle.<br><br><keywordMajor>Bonus de Mantra :</keywordMajor> en plus d'infliger des dégâts aux ennemis, <spellName>Vague divine</spellName> <healing>soigne</healing> également les alliés se trouvant dans le cône de <healing>@BaseHealth@ plus @AdditionalHealPercentTT@%</healing> de leurs <scaleHealth>PV manquants.</scaleHealth>@SpellModifierDescriptionAppend@",
+            "description": "Karma projette des lames dissimulées dans ses éventails, infligeant des dégâts aux ennemis dans un cône.<br><br>Mantra : Vague divine soigne également les alliés dans le cône selon leurs PV manquants.",
+            "dynamicDescription": "Karma projette des lames dissimulées dans ses éventails, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis dans un cône.<br><br><keywordMajor>Mantra :</keywordMajor> <spellName>Vague divine</spellName> <healing>soigne</healing> également les alliés dans le cône d'un montant équivalent à <healing>@BaseHealth@ plus @AdditionalHealPercent@</healing> de leurs <scaleHealth>PV manquants</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Karma crée un lien entre un allié ou un ennemi. Les alliés liés se déplacent plus vite, tandis que les ennemis liés sont ralentis. Ce lien inflige des dégâts magiques aux ennemis et applique à tout champion qu'il traverse le même ajustement de vitesse de déplacement que celui dont bénéficient les champions liés.<br><br>Bonus de Mantra : Karma renforce le lien pour doubler l'effet du modificateur de vitesse de déplacement.",
-            "dynamicDescription": "Karma crée un lien entre un allié ou un ennemi pendant @Duration@ sec maximum. Les alliés liés se <speed>déplacent @MoveSpeedMod*100@% plus vite</speed>, tandis que les ennemis liés sont <status>ralentis de @MoveSpeedMod*100@%</status>. Ce lien inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis et applique à tout champion qu'il traverse le même ajustement de vitesse de déplacement que celui dont bénéficient les champions liés.<br><br>Le lien se brise si la cible liée entre en <keywordStealth>Furtivité</keywordStealth>.<br><br><keywordMajor>Bonus de Mantra :</keywordMajor> Karma renforce le lien pour doubler l'effet du modificateur de vitesse de déplacement.@SpellModifierDescriptionAppend@",
+            "description": "Karma crée un lien entre un allié ou un ennemi. Les alliés liés se déplacent plus vite, tandis que les ennemis liés sont ralentis. Ce lien inflige des dégâts aux ennemis et applique à tout champion qu'il traverse le même ajustement de vitesse de déplacement.<br><br>Mantra : Karma renforce le lien pour augmenter l'effet de vitesse de déplacement.",
+            "dynamicDescription": "Karma crée un lien entre un allié ou un ennemi pendant un maximum de @Duration@ sec. Les alliés reliés, dont Karma, gagnent <speed>@MoveSpeedMod*100@% de vitesse de déplacement</speed>. Les ennemis reliés sont <status>ralentis</status> de @MoveSpeedMod*100@%.<br><br>Le rayon inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à tous les ennemis qu'il touche. Les champions alliés et ennemis reçoivent le même ajustement de vitesse de déplacement que la cible reliée.<br><br><keywordMajor>Mantra :</keywordMajor> Karma renforce le lien, augmentant les modificateurs de vitesse de déplacement à @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Karma invoque un bouclier qui absorbe les dégâts.<br><br>Bonus de Mantra : en plus d'invoquer le bouclier, de l'énergie se propage depuis le bouclier, infligeant des dégâts aux unités ennemies situées autour de la cible de Karma.",
-            "dynamicDescription": "Karma invoque un <shield>bouclier</shield> qui absorbe <shield>@TotalShield@ pts de dégâts</shield> pendant @Duration@ sec.<br><br><keywordMajor>Bonus de Mantra :</keywordMajor> en plus d'invoquer le <shield>bouclier</shield>, de l'énergie se propage depuis le bouclier, infligeant <magicDamage>@TotalShield@ pts de dégâts magiques</magicDamage> aux unités ennemies situées autour de sa cible.@SpellModifierDescriptionAppend@",
+            "description": "Karma invoque un bouclier sur un allié qui absorbe les dégâts.<br><br>Mantra : en plus d'invoquer le bouclier, de l'énergie se propage depuis le bouclier, infligeant des dégâts autour de sa cible.",
+            "dynamicDescription": "Karma invoque un <shield>bouclier</shield> qui absorbe <shield>@TotalShield@ pts de dégâts</shield> pendant @Duration@ sec.<br><br><keywordMajor>Mantra :</keywordMajor> de l'énergie se propage depuis le bouclier, infligeant <magicDamage>@TotalShield@ pts de dégâts magiques</magicDamage> aux unités ennemies situées autour de sa cible.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Karma renforce sa prochaine compétence pour qu'elle ait un effet supplémentaire. Mantra est disponible au niveau 1 sans nécessiter de point de compétence.",
-            "dynamicDescription": "Karma renforce sa prochaine compétence avec un effet supplémentaire. Karma gagne une charge toutes les <attention>@f1@</attention> sec (max : 2 charges).<br><br>La fréquence de réinitialisation est réduite par la réduction des délais de récupération.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma renforce sa prochaine compétence avec un effet supplémentaire. Karma gagne une charge toutes les <attention>@MantraCooldown@</attention> sec (max : 2 charges).<br><br>La fréquence de réinitialisation est réduite par la réduction des délais de récupération.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

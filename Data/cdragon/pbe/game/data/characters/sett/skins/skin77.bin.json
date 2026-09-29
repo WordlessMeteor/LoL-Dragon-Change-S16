@@ -145,12 +145,12 @@
             "submeshRenderOrder": "Body Recall_Body Joke Recall_Props Recall_Shirt Shirt Wolverine Tear",
             "materialOverride": [
                 {
-                    "texture": "{dbef70633e174bbf}",
+                    "texture": "assets/characters/sett/skins/skin77/sett_skin77_wolverine_tx_cm.tex",
                     "submesh": "Wolverine",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{e74770c961ad2038}",
+                    "texture": "assets/characters/sett/skins/skin77/sett_skin77_mom_tx_cm.tex",
                     "submesh": "Joke",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -185,7 +185,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{623a2269e756a9b7}",
+                    "texture": "assets/characters/sett/skins/skin77/sett_skin77_recallnet_tx_cm.tex",
                     "submesh": "Recall_Net",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -285,17 +285,6 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "mOperator": 4,
-                            "mValueA": {
-                                "__type": "AbilityResourceDynamicMaterialFloatDriver"
-                            },
-                            "mValueB": {
-                                "mValue": 0.6000000238418579,
-                                "__type": "FloatLiteralMaterialDriver"
-                            },
-                            "__type": "FloatComparisonMaterialDriver"
-                        },
-                        {
                             "mDriver": {
                                 "mAnimationNames": [
                                     "Death"
@@ -303,6 +292,21 @@
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mOperator": 4,
+                            "mValueA": {
+                                "__type": "AbilityResourceDynamicMaterialFloatDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.75,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        {
+                            "Spell": "Characters/Sett/Spells/SettWMaxGrit",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -310,7 +314,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "Root",
-                        "effectKey": "{8ba02840}",
+                        "effectKey": "Sett_W_MaxBufEnd",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -331,7 +335,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "{d1f1a2ce7824541a}",
+                "texturePath": "assets/characters/sett/skins/skin77/sett_skin77_hairw_tx_cm.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -374,7 +378,7 @@
             },
             {
                 "TextureName": "Gradient",
-                "texturePath": "{fc0a077b00accd18}",
+                "texturePath": "assets/characters/sett/skins/skin76/sett_skin76_colortexture_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -407,7 +411,7 @@
             },
             {
                 "TextureName": "Fresnel_Color_Texture",
-                "texturePath": "{fc0a077b00accd18}",
+                "texturePath": "assets/characters/sett/skins/skin76/sett_skin76_colortexture_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1400,7 +1404,7 @@
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "{f16d1d091b4267b5}",
+                "texturePath": "assets/characters/sett/skins/skin76/sett_skin76_maskbody_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -2304,7 +2308,7 @@
             "Sett_Z_CatchBall": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_CatchBall",
             "Sett_Z_Camera": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Z_Camera",
             "{a0e7630e}": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_Q_BufHandsChild",
-            "{8ba02840}": "{90559eaf}"
+            "Sett_W_MaxBufEnd": "Characters/Sett/Skins/Skin76/Particles/Sett_Skin76_W_MaxBufEnd"
         },
         "__type": "ResourceResolver"
     },

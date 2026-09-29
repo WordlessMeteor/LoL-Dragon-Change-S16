@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "附近敵方英雄越多，暈眩、緩速、嘲諷、恐懼、誘捕、定身的持續時間縮短幅度越大。"
+        "description": "附近有敵方英雄時，伊瑞莉雅會獲得相應的韌性。"
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅向前衝刺，攻擊目標。若成功擊殺目標，重置「利刃衝擊」的冷卻時間並返還35魔力。",
-            "dynamicDescription": "伊瑞莉雅向前衝刺，攻擊目標，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。<br><br>若成功擊殺目標，重置<spellName>利刃衝擊</spellName>的冷卻時間並返還<scaleMana>@ManaReturn@魔力</scaleMana>。@SpellModifierDescriptionAppend@",
+            "description": "伊瑞莉雅衝向目標並發動攻擊。若成功擊殺目標，重置利刃衝擊的冷卻時間並返還部分消耗的魔力。",
+            "dynamicDescription": "伊瑞莉雅衝向目標並發動攻擊，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。<br><br>若成功擊殺目標，重置<spellName>利刃衝擊</spellName>的冷卻時間並返還<scaleMana>@ManaReturn@魔力</scaleMana>。@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅精通飛天劍舞，使她的物理攻擊能回復生命。發動「飛天御劍」後，她的普攻在短時間內會造成真實傷害。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>普攻<healing>回復@Health@生命</healing>。<br><br><spellActive>主動：</spellActive>伊瑞莉雅的普攻造成<trueDamage>@Damage@真實傷害</trueDamage>，且<healing>生命回復效果</healing>加倍，持續@HealthRestoreDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "被動：伊瑞莉雅精通飛天御劍，普攻會回復生命。<br><br>主動：普攻額外造成真實傷害，且生命回復量提升，持續數秒。",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>普攻<healing>回復@Health@生命</healing>。<br><br><spellActive>主動：</spellActive>伊瑞莉雅的普攻造成<trueDamage>@Damage@真實傷害</trueDamage>，且回復<healing>@HealthRestoreActive@生命</healing>，持續@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅的普攻能重整局勢，對目標造成傷害和緩速效果。但若目標的生命百分比高於伊瑞莉雅，該攻擊改為暈眩目標。",
+            "description": "伊瑞莉雅的普攻能重整局勢，對目標造成傷害和緩速效果。若目標的生命百分比高於伊瑞莉雅，則改為使其暈眩。",
             "dynamicDescription": "伊瑞莉雅刺穿目標，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>和@SlowAmount@%<status>緩速效果</status>，持續@StunDuration@秒。<br><br>若目標的<scaleHealth>生命百分比</scaleHealth>高於伊瑞莉雅，則改為使其<status>暈眩</status>相同時間。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅召喚4把靈氣利刃，將其擲出，對沿途敵軍造成物理傷害並汲取其生命。",
+            "description": "伊瑞莉雅召喚4把靈氣利刃，將其擲出，對沿途敵軍造成傷害並汲取其生命。",
             "dynamicDescription": "伊瑞莉雅召喚4把靈氣利刃，將其擲出，對沿途敵軍造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。對英雄造成傷害時，<healing>回復</healing>該傷害@ChampionHealPercent@%的生命，對其他敵軍則為@MinionHealPercent@%。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

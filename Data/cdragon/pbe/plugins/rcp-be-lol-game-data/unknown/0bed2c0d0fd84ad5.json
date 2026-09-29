@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma nhận thêm Sức Mạnh Phép Thuật dựa trên % Máu đã mất của cô ấy."
+        "description": "Karma nhận Sức Mạnh Phép Thuật theo Máu đã mất."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Karma phóng ra những lưỡi dao ẩn từ chiếc quạt của mình, gây sát thương phép lên các đơn vị trong một hình nón phía trước cô.<br><br>Kinh Mantra - Cường Hóa: Ngoài việc gây sát thương lên kẻ địch, Sóng Thiên Giới còn hồi máu cho đồng minh trong hình nón dựa trên phần trăm máu đã mất của họ.",
-            "dynamicDescription": "Karma phóng ra những lưỡi dao ẩn từ chiếc quạt của mình, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên các đơn vị trong hình nón phía trước cô ấy.<br><br><keywordMajor>Kinh Mantra - Cường Hóa:</keywordMajor> Ngoài việc gây sát thương lên kẻ địch, <spellName>Sóng Thiên Giới</spellName> còn <healing>Hồi Máu</healing> cho đồng minh trong hình nón <healing>@BaseHealth@ Máu + @AdditionalHealPercentTT@%</healing> <scaleHealth>Máu đã mất</scaleHealth> của họ.@SpellModifierDescriptionAppend@",
+            "description": "Karma phóng ra những lưỡi dao ẩn từ chiếc quạt của mình, gây sát thương lên các kẻ địch trong hình nón.<br><br>Kinh Mantra: Sóng Thiên Giới cũng hồi máu cho các đồng minh trong hình nón dựa trên lượng Máu đã mất của họ.",
+            "dynamicDescription": "Karma phóng ra những lưỡi dao ẩn từ chiếc quạt của mình, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên các kẻ địch trong hình nón.<br><br><keywordMajor>Kinh Mantra:</keywordMajor> <spellName>Sóng Thiên Giới</spellName> cũng <healing>Hồi Máu</healing> cho đồng minh trong hình nón <healing>@BaseHealth@ Máu + @AdditionalHealPercent@</healing> <scaleHealth>Máu đã mất</scaleHealth> của họ.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Karma tạo ra một tia sáng kết nối với một đồng minh hoặc kẻ địch. Đồng minh kết nối di chuyển nhanh hơn và kẻ địch kết nối bị làm chậm. Tia sáng gây sát thương phép lên kẻ địch và áp dụng hiệu ứng thay đổi tốc độ di chuyển giống như với tướng đang kết nối lên bất kỳ tướng nào mà nó đi qua.<br><br>Kinh Mantra - Cường Hóa: Karma cường hóa kết nối để nhân đôi hiệu ứng thay đổi tốc độ di chuyển.",
-            "dynamicDescription": "Karma tạo ra một tia sáng kết nối với đồng minh hoặc kẻ địch trong tối đa @Duration@ giây. Đồng minh kết nối <speed>di chuyển nhanh hơn @MoveSpeedMod*100@%</speed> và kẻ địch kết nối bị <status>Làm Chậm @MoveSpeedMod*100@%</status>. Tia sáng gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên kẻ địch và áp dụng hiệu ứng thay đổi tốc độ di chuyển giống như với tướng đang kết nối lên bất kỳ tướng nào mà nó đi qua.<br><br>Tia sáng sẽ bị đứt nếu mục tiêu kết nối trở nên <keywordStealth>Tàng Hình</keywordStealth>.<br><br><keywordMajor>Kinh Mantra - Cường Hóa:</keywordMajor> Karma cường hóa kết nối để nhân đôi hiệu ứng thay đổi tốc độ di chuyển.@SpellModifierDescriptionAppend@",
+            "description": "Karma tạo ra một tia sáng kết nối cô và một đơn vị khác. Đồng minh kết nối di chuyển nhanh hơn và kẻ địch kết nối bị làm chậm. Tia sáng gây sát thương lên các kẻ địch và áp dụng hiệu ứng thay đổi tốc độ di chuyển lên bất kỳ tướng nào mà nó đi qua.<br><br>Kinh Mantra: Karma cường hóa kết nối để tăng hiệu ứng tốc độ di chuyển.",
+            "dynamicDescription": "Karma tạo ra một tia sáng kết nối cô và một đơn vị khác trong tối đa @Duration@ giây. Đồng minh được kết nối, bao gồm cả bản thân Karma, nhận <speed>@MoveSpeedMod*100@% tốc độ di chuyển</speed>. Kẻ địch được kết nối bị <status>Làm Chậm</status> @MoveSpeedMod*100@%.<br><br>Tia sáng gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên tất cả kẻ địch mà nó chạm phải. Tướng đồng minh và tướng địch cũng nhận cùng mức điều chỉnh tốc độ di chuyển như các đơn vị được kết nối.<br><br><keywordMajor>Kinh Mantra:</keywordMajor> Karma cường hóa kết nối, tăng hiệu ứng thay đổi tốc độ di chuyển thành @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Karma triệu hồi một lá chắn bảo vệ, giúp hấp thụ sát thương nhận vào.<br><br>Kinh Mantra - Cường Hóa: Ngoài việc tạo lá chắn, năng lượng sẽ tỏa ra từ lá chắn để gây sát thương lên các đơn vị địch xung quanh mục tiêu của Karma.",
-            "dynamicDescription": "Karma triệu hồi một <shield>Lá Chắn</shield> bảo vệ, giúp hấp thụ <shield>@TotalShield@ sát thương</shield> trong @Duration@ giây.<br><br><keywordMajor>Kinh Mantra - Cường Hóa:</keywordMajor> Ngoài việc tạo <shield>Lá Chắn</shield>, năng lượng sẽ tỏa ra từ lá chắn, gây <magicDamage>@TotalShield@ sát thương phép</magicDamage> lên các đơn vị địch xung quanh mục tiêu của cô ấy.@SpellModifierDescriptionAppend@",
+            "description": "Karma triệu hồi một lá chắn bảo vệ lên một đồng minh, giúp hấp thụ sát thương nhận vào.<br><br>Kinh Mantra: Ngoài việc tạo lá chắn, năng lượng sẽ tỏa ra từ lá chắn, gây sát thương lên các kẻ địch xung quanh mục tiêu của cô ấy.",
+            "dynamicDescription": "Karma triệu hồi một <shield>Lá Chắn</shield> bảo vệ, giúp hấp thụ <shield>@TotalShield@ sát thương</shield> trong @Duration@ giây.<br><br><keywordMajor>Kinh Mantra:</keywordMajor> Năng lượng sẽ tỏa ra từ lá chắn, gây <magicDamage>@TotalShield@ sát thương phép</magicDamage> lên các đơn vị địch xung quanh mục tiêu của cô ấy.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Karma cường hóa kỹ năng tiếp theo để có thêm hiệu ứng. Kinh Mantra xuất hiện từ ngay cấp 1 và không cần điểm kỹ năng để tăng cấp.",
-            "dynamicDescription": "Karma cường hóa kỹ năng tiếp theo của mình với một hiệu ứng bổ sung. Karma nhận 1 điểm tích trữ mỗi <attention>@f1@</attention> giây, tối đa 2 tích trữ.<br><br>Tốc độ làm mới được giảm bởi Giảm Hồi Chiêu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma cường hóa kỹ năng tiếp theo của mình với một hiệu ứng bổ sung. Karma nhận 1 điểm tích trữ mỗi <attention>@MantraCooldown@</attention> giây, tối đa 2 tích trữ.<br><br>Tốc độ làm mới được giảm bởi Giảm Hồi Chiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

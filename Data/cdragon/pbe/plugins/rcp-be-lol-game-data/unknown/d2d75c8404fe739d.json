@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Reduz a duração de Atordoamentos, Lentidões, Provocações, Temores, Imobilizações e Enraizamentos com base no número de Campeões inimigos próximos."
+        "description": "Irelia recebe Tenacidade para cada Campeão inimigo próximo."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia avança e golpeia o alvo. Se o alvo for abatido, o Tempo de Recarga de Surto da Lâmina é zerado e 35 de Mana são restituídos.",
-            "dynamicDescription": "Irelia avança e golpeia o alvo, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage>.<br><br>Se o alvo for abatido, o Tempo de Recarga de <spellName>Surto da Lâmina</spellName> é zerado e o restitui <scaleMana>@ManaReturn@ de Mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia avança e golpeia o alvo. Se ele for abatido, o Tempo de Recarga de Surto da Lâmina zerará e parte do Custo de Mana da Habilidade será restituído.",
+            "dynamicDescription": "Irelia avança e golpeia o alvo, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage>.<br><br>Se o alvo for abatido, o Tempo de Recarga de <spellName>Surto da Lâmina</spellName> zerará e <scaleMana>@ManaReturn@ de Mana</scaleMana> serão restituídos.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia domina a arte do Hiten, que faz com que seus Ataques físicos restaurem Vida passivamente.  Ativar o Estilo Hiten concede Dano Verdadeiro aos Ataques básicos dela por um curto período.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Ataques básicos <healing>restauram @Health@ de Vida</healing>.<br><br><spellActive>Ativo:</spellActive> os Ataques básicos de Irelia causam <trueDamage>@Damage@ de Dano Verdadeiro</trueDamage> e dobram a <healing>Vida restaurada</healing> por @HealthRestoreDuration@s.@SpellModifierDescriptionAppend@",
+            "description": "Passivo: Irelia domina a arte do Hiten, de modo que seus Ataques restauram Vida.<br><br>Ativo: os Ataques básicos causam Dano Verdadeiro adicional, e a cura que proporcionam aumenta por alguns segundos.",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Ataques básicos <healing>restauram @Health@ de Vida</healing>.<br><br><spellActive>Ativo:</spellActive> os Ataques básicos de Irelia causam <trueDamage>@Damage@ de Dano Verdadeiro</trueDamage> e agora <healing>restauram @HealthRestoreActive@ de Vida</healing> por @ActiveDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "O Ataque de Irelia equilibra a balança, causando dano e Lentidão ao alvo.  No entanto, se o alvo tiver uma porcentagem de Vida maior que a da Irelia, o golpe o Atordoará.",
-            "dynamicDescription": "Irelia perfura o alvo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e @SlowAmount@% de <status>Lentidão</status> por @StunDuration@s.<br><br>Se o alvo tiver uma <scaleHealth>porcentagem de Vida</scaleHealth> maior que a de Irelia, ficará <status>Atordoado</status> enquanto durar a Habilidade.@SpellModifierDescriptionAppend@",
+            "description": "O Ataque de Irelia equilibra a balança, causando dano e Lentidão ao alvo. Se o alvo tiver uma porcentagem de Vida maior que a de Irelia, em vez disso o golpe o atordoará.",
+            "dynamicDescription": "Irelia perfura o alvo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e @SlowAmount@% de <status>Lentidão</status> por @StunDuration@s.<br><br>Se o alvo tiver uma <scaleHealth>porcentagem de Vida</scaleHealth> maior que a de Irelia, em vez disso ele ficará <status>Atordoado</status> pela mesma duração.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Irelia invoca 4 lâminas espirituais que ela pode lançar para causar Dano Físico e drenar Vida dos inimigos atravessados.",
+            "description": "Irelia invoca 4 lâminas espirituais que ela pode lançar para causar dano e drenar Vida dos inimigos atravessados.",
             "dynamicDescription": "Irelia invoca 4 lâminas espirituais que ela pode lançar para causar <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> aos inimigos atravessados. Ela <healing>se cura</healing> em @ChampionHealPercent@% do dano causado a Campeões e em @MinionHealPercent@% do dano causado a outros inimigos.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -256,7 +256,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Al estar activa, Aatrox inflige daño adicional cada tres ataques consecutivos, a costa de su propia vida. Al estar desactivada, Aatrox recupera vida cada tercer ataque consecutivo.",
-            "dynamicDescription": "<toggle>Activación:</toggle> Aatrox alterna entre <keywordMajor>Sed de sangre</keywordMajor> y <keywordMajor>Precio sangriento</keywordMajor>, lo que le otorga efectos adicionales cada <attention>tres</attention> ataques.<br><br><keywordMajor>Sed de sangre:</keywordMajor> Aatrox recupera <healing>@WHeal@ de vida</healing>, que aumenta un <healing>@WLowHealthHealBonus@% (@TTLowHealthHeal@)</healing> con menos de un <scaleHealth>@LowHealthPercent@% de vida</scaleHealth>.<br><br><keywordMajor>Precio sangriento:</keywordMajor> Aatrox inflige <physicalDamage>@WDamage@ de daño físico</physicalDamage> adicional y <font color='#FF3300'>pierde @SelfDamage@ de vida</font>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Activación:</toggle> Aatrox alterna entre <keywordMajor>Sed de sangre</keywordMajor> y <keywordMajor>Precio sangriento</keywordMajor>, lo que le otorga efectos adicionales cada <attention>tres</attention> ataques.<br><br><keywordMajor>Sed de sangre:</keywordMajor> Aatrox recupera <healing>@WHeal@ de vida</healing>, que aumenta hasta <healing>@TTLowHealthHeal@</healing> con menos de un <scaleHealth>@LowHealthPercent@% de vida</scaleHealth>.<br><br><keywordMajor>Precio sangriento:</keywordMajor> Aatrox inflige <physicalDamage>@WDamage@ de daño físico</physicalDamage> adicional y <font color='#FF3300'>pierde @SelfDamage@ de vida</font>.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

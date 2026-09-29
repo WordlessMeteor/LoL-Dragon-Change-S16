@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "被动：触发易损时获得属性加成<br><br>操控威洛时的被动：获得属性加成<br><br>主动：揭示一片区域",
+            "description": "葵恩被动：触发追猎印记时，获得数秒攻击速度和移动速度加成。<br><br>操控威洛时的被动：获得攻击速度。<br><br>主动：揭示葵恩与威洛周围的大范围区域。",
             "dynamicDescription": "<keywordMajor>操控葵恩时的被动</keywordMajor>：攻击<keywordMajor>易损</keywordMajor>目标时，葵恩会获得<speed>@AttackSpeedBonus*100@%攻击速度</speed>和<speed>@MovespeedAmount@移动速度</speed>，持续@BuffDuration@秒。<br><br><keywordMajor>操控威洛时的被动</keywordMajor>：获得@ValorAttackSpeed*100@%攻击速度。<br><br><keywordMajor>主动：</keywordMajor>威洛会揭示周围一大片区域的视野，持续@VisionDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "葵恩进行突进。<br><br>操控威洛时，她同样会突进。",
+            "description": "葵恩或威洛冲向一名敌人，造成伤害，击退目标并使其减速。如果由葵恩施放，她会从目标身上跃开，拉开距离，同时威洛会为目标施加追猎印记。",
             "dynamicDescription": "<keywordMajor>操控葵恩或威洛时</keywordMajor>：冲向一名敌人，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，<status>击退</status>目标并使其<status>减速</status>@SlowAmount*100@%，减速效果在@SlowDecayTime@秒内持续衰减。<br><br><keywordMajor>操控葵恩时</keywordMajor>：她还会从目标身上跃开，威洛会将其标记为<keywordMajor>易损</keywordMajor>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "威洛会取代葵恩在战场上作战，化身为一名灵活的近战攻击者，获得移速加成，并替换她的技能。再次施放可发动“天空强袭”，对附近所有敌人造成伤害。",
+            "description": "威洛会取代葵恩在战场上作战，化身为一名灵活的近战攻击者，获得移速加成，并调整她的技能。再次施放可发动“天空强袭”，对附近所有敌人造成伤害。",
             "dynamicDescription": "<keywordMajor>首次施放</keywordMajor>：威洛会取代葵恩在战场上作战，化身为一名灵活的近战攻击者，持续@TransformDuration@秒。威洛无视单位碰撞，并获得@OoCMoveSpeed*100@%移速加成，进入战斗后，该加成会逐渐降低至@CombatMoveSpeed*100@%。威洛随后可以施放<keywordMajor>天空强袭</keywordMajor>。<br><br><keywordMajor>天空强袭</keywordMajor>：葵恩重返战场，对大范围内所有敌人造成<physicalDamage>@TotalDamage@ - @TotalDamageMaximum@物理伤害</physicalDamage>，伤害会随目标已损失生命值而提升。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma zyskuje dodatkową moc umiejętności w zależności od procentu jej brakującego zdrowia."
+        "description": "Karma zyskuje moc umiejętności w zależności od brakującego zdrowia."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma ciska ukrytymi ostrzami ze swoich wachlarzy, zadając obrażenia magiczne jednostkom w stożku przed nią.<br><br>Premia od Mantry: Oprócz zadawania obrażeń wrogom Niebiańska Fala leczy również sojuszników w stożku, opierając się przy tym o procent ich brakującego zdrowia.",
-            "dynamicDescription": "Karma ciska ukrytymi ostrzami ze swoich wachlarzy, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> jednostkom w stożku przed nią.<br><br><keywordMajor>Premia od Mantry:</keywordMajor> Oprócz zadawania obrażeń wrogom <spellName>Niebiańska Fala</spellName> <healing>leczy</healing> również sojuszników w stożku o <healing>@BaseHealth@ pkt. plus @AdditionalHealPercentTT@%</healing> ich <scaleHealth>brakującego zdrowia</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma ciska ukrytymi ostrzami ze swoich wachlarzy, zadając obrażenia wrogom na obszarze w kształcie stożka.<br><br>Mantra: Niebiańska Fala leczy również sojuszników w stożku w zależności od ich brakującego zdrowia.",
+            "dynamicDescription": "Karma ciska ukrytymi ostrzami ze swoich wachlarzy, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> jednostkom w stożku przed nią.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Niebiańska Fala</spellName> dodatkowo <healing>leczy</healing> sojuszników w stożku o <healing>@BaseHealth@ pkt. plus @AdditionalHealPercent@</healing> ich <scaleHealth>brakującego zdrowia</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma tworzy promień między sobą a sojusznikiem lub wrogiem. Połączeni tak sojusznicy poruszają się szybciej, a wrogowie zostają spowolnieni. Promień zadaje obrażenia magiczne wrogom i nakłada to samo dopasowanie prędkości ruchu na każdego bohatera, przez którego przejdzie.<br><br>Premia od Mantry: Karma wzmacnia więź, by podwoić modyfikator prędkości ruchu.",
-            "dynamicDescription": "Karma tworzy na maks. @Duration@ sek. promień między sobą a sojusznikiem lub wrogiem. Połączeni tak sojusznicy <speed>poruszają się o @MoveSpeedMod*100@% szybciej</speed>, a wrogowie zostają <status>spowolnieni o @MoveSpeedMod*100@%</status>. Promień zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom i nakłada to samo dopasowanie prędkości ruchu na każdego bohatera, przez którego przejdzie.<br><br>Promień zostaje przerwany, jeśli połączony nim bohater stanie się <keywordStealth>ukryty</keywordStealth>.<br><br><keywordMajor>Premia od Mantry:</keywordMajor> Karma wzmacnia więź, by podwoić modyfikator prędkości ruchu.@SpellModifierDescriptionAppend@",
+            "description": "Karma tworzy promień między sobą a inną jednostką. Połączeni tak sojusznicy poruszają się szybciej, a wrogowie zostają spowolnieni. Promień zadaje obrażenia wrogom i nakłada to samo dopasowanie prędkości ruchu na każdego bohatera, przez którego przejdzie.<br><br>Mantra: Karma wzmacnia więź, aby zwiększyć efekt prędkości ruchu.",
+            "dynamicDescription": "Karma tworzy promień między sobą a inną jednostką na maks. @Duration@ sek. Sojusznicze kotwice, w tym ona sama, zyskują <speed>@MoveSpeedMod*100@% prędkości ruchu</speed>. Wrogie kotwice są <status>spowolnione</status> o @MoveSpeedMod*100@%.<br><br>Promień zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wszystkim wrogom, których dotknie. Sojuszniczy i wrodzy bohaterowie otrzymują taką samą modyfikację prędkości ruchu jak kotwice.<br><br><keywordMajor>Mantra:</keywordMajor> Karma wzmacnia więź, zwiększając modyfikatory prędkości ruchu do @MantraMoveSpeedMod@ jedn.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Karma przywołuje ochronną tarczę, która pochłania nadchodzące obrażenia.<br><br>Premia od Mantry: Z przywołanej tarczy wydobywa się energia, która zadaje obrażenia pobliskim wrogim jednostkom.",
-            "dynamicDescription": "Karma przywołuje ochronną <shield>tarczę</shield>, która pochłania <shield>@TotalShield@ pkt. obrażeń</shield> przez @Duration@ sek.<br><br><keywordMajor>Premia od Mantry:</keywordMajor> Z przywołanej <shield>tarczy</shield> wydobywa się energia, która zadaje <magicDamage>@TotalShield@ pkt. obrażeń magicznych</magicDamage> wrogim jednostkom znajdującym się w pobliżu jej celu.@SpellModifierDescriptionAppend@",
+            "description": "Karma przywołuje ochronną tarczę dla sojusznika, która pochłania nadchodzące obrażenia.<br><br>Mantra: Oprócz rzucenia tarczy dodatkowo promieniuje z niej energia, zadając obrażenia otaczającym cel wrogom.",
+            "dynamicDescription": "Karma przywołuje ochronną <shield>tarczę</shield>, która pochłania <shield>@TotalShield@ pkt. obrażeń</shield> przez @Duration@ sek.<br><br><keywordMajor>Mantra:</keywordMajor> Z przywołanej tarczy wydobywa się energia, która zadaje <magicDamage>@TotalShield@ pkt. obrażeń magicznych</magicDamage> wrogim jednostkom znajdującym się w pobliżu jej celu.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Karma wzmacnia następną umiejętność, aby miała dodatkowe efekty. Mantra jest dostępna od 1. poziomu i nie wymaga punktu umiejętności.",
-            "dynamicDescription": "Karma wzmacnia następną umiejętność, aby miała dodatkowe efekty. Karma zyskuje co <attention>@f1@</attention> sek. ładunek i może ich mieć maksymalnie 2.<br><br>Czas tego odświeżania jest skracany przez skrócenie czasu odnowienia.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma wzmacnia następną umiejętność, aby miała dodatkowe efekty. Karma zyskuje co <attention>@MantraCooldown@</attention> sek. ładunek i może ich mieć maksymalnie 2.<br><br>Czas tego odświeżania jest skracany przez skrócenie czasu odnowienia.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

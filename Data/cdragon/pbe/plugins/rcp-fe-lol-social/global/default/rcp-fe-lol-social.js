@@ -3831,14 +3831,19 @@
                 init: function(e) {
                     const t = o.uri + "/fe/lol-social/sounds";
                     this._sfxChannel = e.getChannel("sfx-ui"), Object.keys(i).forEach((function(e) {
-                        const n = this._setupSound(e, t + "/" + i[e]);
-                        n && (this[e] = n)
+                        if (null !== i[e]) {
+                            const n = this._setupSound(e, t + "/" + i[e]);
+                            n && (this[e] = n)
+                        }
                     }), this), Object.keys(a).forEach((function(e) {
-                        const t = this._setupSound(e, o.uri + a[e]);
-                        t && (this[e] = t)
+                        if (e) {
+                            const t = this._setupSound(e, o.uri + a[e]);
+                            t && (this[e] = t)
+                        }
                     }), this)
                 },
                 _setupSound: function(e, t) {
+                    if (!t) return r.logger.error("sound path does not exist", t), null;
                     const n = this._sfxChannel.createSound(t);
                     if (!n) return r.logger.error("error setting up sound", e), null;
                     const {
@@ -3854,12 +3859,7 @@
                 play: function(e) {
                     const t = o?.gameflow?.gameMode,
                         n = `${t}_${e}`;
-                    if (t && Object.prototype.hasOwnProperty.call(this, n)) return this[n].play();
-                    if (Object.prototype.hasOwnProperty.call(this, e)) {
-                        if (null === this[e]) return;
-                        return this[e].play()
-                    }
-                    r.logger.error("error playing sound", e)
+                    return t && Object.prototype.hasOwnProperty.call(this, n) ? this[n].play() : Object.prototype.hasOwnProperty.call(this, e) ? null === this[e] || null === this[e]?._events ? (r.logger.warning("sound is null", this[e]), null) : this[e].play() : void r.logger.warning("cannot play sound", e)
                 },
                 delayedPlay: function(e, t) {
                     Object.prototype.hasOwnProperty.call(this, e) ? this[e].delayedPlay(t) : r.logger.error("error playing delayed sound", e)

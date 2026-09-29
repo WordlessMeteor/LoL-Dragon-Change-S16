@@ -14621,7 +14621,7 @@
                 showPersistentLayerManager(e) {
                     this._activityCenterApi._showActivityCenterPersistentLayerManager(e)
                 }
-                hidePersistentLayerManager(e = !0) {
+                hidePersistentLayerManager(e = !1) {
                     this._activityCenterApi._hideActivityCenterPersistentLayerManager(e)
                 }
                 mutePersistentLayerManagerActiveIframe() {
@@ -14838,9 +14838,9 @@
                     }), this._activityCenterPersistentLayerManager && this._activityCenterPersistentLayerManager.getActiveIframeId() ? this._activityCenterPersistentLayerManager.unmuteActiveIframe() : this._startMusicAmbience()
                 }
                 hide() {
-                    this._application && (this._screenRoot.release(), this._persistentScreenRoot.release(), this._isVisible = !1, this._stopMusicAmbience({
+                    this._application && (this._screenRoot.release(), this._persistentScreenRoot.release(), this._isVisible = !1, this._hideInfoHub(), this._hidePersistentIframeModal(), this._activityCenterPersistentLayerManager && this._activityCenterPersistentLayerManager.muteActiveIframe(), this._stopMusicAmbience({
                         stopAllMusicAmbience: !0
-                    }), this._hideInfoHub(), this._hidePersistentIframeModal(), this._activityCenterPersistentLayerManager && this._activityCenterPersistentLayerManager.muteActiveIframe())
+                    }))
                 }
                 async _mainNavigationSetActive(e = {}) {
                     const t = this._navigationItem;
@@ -14864,7 +14864,7 @@
                 _showActivityCenterPersistentLayerManager(e) {
                     this._activityCenterPersistentLayerManager.show(e)
                 }
-                _hideActivityCenterPersistentLayerManager(e = !0) {
+                _hideActivityCenterPersistentLayerManager(e = !1) {
                     this._activityCenterPersistentLayerManager.hide(e)
                 }
                 _mutePersistentLayerManagerActiveIframe() {
@@ -14895,7 +14895,7 @@
                     }
                 }
                 _startMusicAmbience() {
-                    !this._ambienceMusicPlaying && this._unlocked && (this._audioManager.playClientAmbienceMusic(s.CLIENT_AMBIENCE.AC_MAIN.options), this._ambienceMusicPlaying = !0)
+                    !this._ambienceMusicPlaying && this._unlocked && this._isVisible && (this._audioManager.playClientAmbienceMusic(s.CLIENT_AMBIENCE.AC_MAIN.options), this._ambienceMusicPlaying = !0)
                 }
                 _stopMusicAmbience() {
                     this._audioManager.destroy({
@@ -16209,7 +16209,7 @@
                     this.playbackEnabled = !0
                 }
                 destroy(e) {
-                    this.stopAll(e), this.primaryIntroSound = null, this.primaryAmbienceSound = null, this.secondaryIntroSound = null, this.secondaryAmbienceSound = null, this.uiSounds.clear(), this.voSounds.clear()
+                    this.stopAll(e), this.activityCenterMusicAmbience = null, this.primaryIntroSound = null, this.primaryAmbienceSound = null, this.secondaryIntroSound = null, this.secondaryAmbienceSound = null, this.uiSounds.clear(), this.voSounds.clear()
                 }
             }
             let u;

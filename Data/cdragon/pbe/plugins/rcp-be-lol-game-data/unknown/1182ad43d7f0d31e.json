@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Riduce la durata di stordimenti, rallentamenti, provocazioni, paure, immobilizzazioni e trattenimenti per ogni campione nemico vicino."
+        "description": "Irelia ottiene tenacia per ogni campione nemico nelle vicinanze."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Irelia scatta in avanti per colpire il suo bersaglio. Se uccide il bersaglio, il tempo di ricarica di Impeto della lama si azzera e recupera 35 mana.",
-            "dynamicDescription": "Irelia scatta in avanti per colpire il suo bersaglio, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>.<br><br>Se uccide il bersaglio, il tempo di ricarica di <spellName>Impeto della lama</spellName> si azzera e recupera <scaleMana>@ManaReturn@ mana</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia scatta per colpire il suo bersaglio. Se lo uccide, il tempo di ricarica di Impeto della lama si azzera e parte del suo costo in mana viene rimborsato.",
+            "dynamicDescription": "Irelia scatta per colpire il suo bersaglio, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>.<br><br>Se uccide il bersaglio, il tempo di ricarica di <spellName>Impeto della lama</spellName> si azzera e recupera <scaleMana>@ManaReturn@ mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Irelia è esperta nell'arte di Hiten, che le permette di ripristinare salute con i suoi attacchi fisici.  Attivare Stile Hiten conferisce ai suoi attacchi base danni puri per un breve periodo.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> gli attacchi base <healing>ripristinano @Health@ salute</healing>.<br><br><spellActive>Attiva:</spellActive> gli attacchi base di Irelia infliggono <trueDamage>@Damage@ danni puri</trueDamage> e raddoppiano la <healing>salute ripristinata</healing> per @HealthRestoreDuration@ secondo/i.@SpellModifierDescriptionAppend@",
+            "description": "Passiva: Irelia è esperta nell'arte di Hiten, che le permette di ripristinare salute con i suoi attacchi.<br><br>Attiva: gli attacchi base infliggono danni puri bonus e la guarigione è aumentata per alcuni secondi.",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> gli attacchi base <healing>ripristinano @Health@ salute</healing>.<br><br><spellActive>Attiva:</spellActive> gli attacchi base di Irelia infliggono <trueDamage>@Damage@ danni puri</trueDamage> e ora <healing>ripristinano @HealthRestoreActive@ salute</healing> per @ActiveDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "L'attacco di Irelia riequilibra le sorti, infliggendo danni e rallentando il bersaglio.  Però, se il bersaglio ha una percentuale di salute più alta di Irelia, il colpo stordisce invece di rallentare.",
-            "dynamicDescription": "Irelia trafigge il suo bersaglio, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>rallentando</status> il bersaglio di un @SlowAmount@% per @StunDuration@ secondo/i.<br><br>Se il bersaglio ha una <scaleHealth>percentuale di salute</scaleHealth> superiore a quella di Irelia, <status>stordisce</status> il bersaglio per tutta la durata.@SpellModifierDescriptionAppend@",
+            "description": "L'attacco di Irelia riequilibra le sorti, infliggendo danni e rallentando il bersaglio. Se ha una percentuale di salute superiore alla sua, il colpo invece lo stordisce.",
+            "dynamicDescription": "Irelia trafigge il suo bersaglio, infliggendogli <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>rallentandolo</status> di un @SlowAmount@% per @StunDuration@ secondo/i.<br><br>Se il bersaglio ha una <scaleHealth>percentuale di salute</scaleHealth> superiore a quella di Irelia, lo <status>stordisce</status> invece per tutta la durata.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Irelia evoca 4 lame spiritate che può scagliare per infliggere danni fisici e sottrarre vita ai nemici che trafiggono.",
+            "description": "Irelia evoca 4 lame spirituali che può scagliare per infliggere danni e sottrarre vita ai nemici che trafiggono.",
             "dynamicDescription": "Irelia evoca 4 lame spirituali che può scagliare per infliggere <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> ai nemici che trafiggono. Si <healing>cura</healing> di un @ChampionHealPercent@% dei danni inflitti ai campioni e di un @MinionHealPercent@% di quelli inflitti ad altri nemici.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

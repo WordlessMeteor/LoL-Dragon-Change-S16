@@ -106,7 +106,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "이렐리아가 대상에게 돌진하여 타격합니다. 칼날 쇄도로 대상을 처치하면 재사용 대기시간이 초기화되고 마나를 일부분 돌려받습니다.",
-            "dynamicDescription": "이렐리아가 대상에게 돌진하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다.<br><br>대상을 처치하면 <spellName>칼날 쇄도</spellName>의 재사용 대기시간이 초기화되고 <scaleMana>@ManaReturn@의 마나</scaleMana>를 돌려받습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "이렐리아가 적에게 돌진하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 적중 시 효과를 적용합니다.<br><br>대상을 처치하면 칼날 쇄도의 재사용 대기시간이 초기화되고 <scaleMana>@ManaReturn@의 마나</scaleMana>를 돌려받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "기본 지속 효과: 이렐리아는 비천어검류의 달인으로, 기본 공격 시 체력을 회복합니다.<br><br>사용 시: 몇 초 동안 기본 공격 시 추가 고정 피해를 입히고, 체력 회복량이 증가합니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 <healing>@Health@의 체력을 회복</healing>합니다.<br><br><spellActive>사용 시:</spellActive> @ActiveDuration@초 동안 이렐리아의 기본 공격이 <trueDamage>@Damage@의 고정 피해</trueDamage>를 입히고, <healing>@HealthRestoreActive@의 체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
+            "description": "기본 지속 효과: 이렐리아가 기본 공격 시 체력을 회복합니다.<br><br>사용 시: 이렐리아의 기본 공격이 몇 초 동안 추가 고정 피해를 입히고, 체력 회복량이 증가합니다.",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 이렐리아가 기본 공격 시 <healing>@Health@의 체력을 회복</healing>합니다.<br><br><spellActive>사용 시:</spellActive> @ActiveDuration@초 동안 이렐리아의 기본 공격이 <trueDamage>@Damage@의 고정 피해</trueDamage>를 입히고, <healing>@HealthRestoreActive@의 체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

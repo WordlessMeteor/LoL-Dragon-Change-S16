@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma recebe um aumento de Poder de Habilidade com base na porcentagem de Vida perdida."
+        "description": "Karma recebe Poder de Habilidade com base na própria Vida perdida."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma lança lâminas ocultas de seus leques, causando Dano Mágico a unidades em uma área cônica à sua frente.<br><br>Efeito de Mantra: além de causar dano a inimigos, a Onda Celestial também cura aliados na área cônica com base em uma porcentagem da Vida perdida deles.",
-            "dynamicDescription": "Karma lança lâminas ocultas de seus leques, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a unidades em uma área cônica à sua frente.<br><br><keywordMajor>Efeito de Mantra:</keywordMajor> além de causar dano aos inimigos, <spellName>Onda Celestial</spellName> também <healing>cura</healing> aliados na área cônica em <healing>@BaseHealth@ mais @AdditionalHealPercentTT@%</healing> da <scaleHealth>Vida perdida</scaleHealth> deles.@SpellModifierDescriptionAppend@",
+            "description": "Karma lança lâminas ocultas de seus leques, causando dano a inimigos numa área cônica.<br><br>Mantra: Onda Celestial também cura aliados na área cônica com base na Vida perdida deles.",
+            "dynamicDescription": "Karma lança lâminas ocultas de seus leques, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos numa área cônica.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Onda Celestial</spellName> também <healing>Cura</healing> aliados na área cônica em <healing>@BaseHealth@ mais @AdditionalHealPercent@</healing> da <scaleHealth>Vida perdida</scaleHealth> deles.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma cria um feixe entre um aliado ou um inimigo. Âncoras aliadas se movem mais rápido e âncoras inimigas sofrem Lentidão. O feixe causa Dano Mágico a inimigos e aplica o mesmo ajuste de Velocidade de Movimento recebido pelas âncoras a qualquer Campeão atravessado.<br><br>Efeito de Mantra: Karma fortalece o vínculo para dobrar o efeito do modificador de Velocidade de Movimento.",
-            "dynamicDescription": "Karma cria um feixe entre um aliado ou inimigo por até @Duration@s. Âncoras aliadas <speed>se movem @MoveSpeedMod*100@% mais rápido</speed> e âncoras inimigas <status>sofrem @MoveSpeedMod*100@% de Lentidão</status>. O feixe causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a inimigos e aplica o mesmo ajuste de Velocidade de Movimento recebido pelas âncoras a qualquer Campeão atravessado.<br><br>O feixe se quebra se o alvo vinculado entrar em <keywordStealth>estado furtivo</keywordStealth>.<br><br><keywordMajor>Efeito de Mantra:</keywordMajor> Karma fortalece o vínculo para dobrar o efeito do modificador de Velocidade de Movimento.@SpellModifierDescriptionAppend@",
+            "description": "Karma cria um feixe de energia entre si e outra unidade. Âncoras aliadas se movem mais rápido e âncoras inimigas sofrem Lentidão. O feixe causa dano a inimigos e aplica o mesmo ajuste de Velocidade de Movimento a qualquer Campeão que atravessar<br><br>Mantra: Karma fortalece o vínculo para potencializar o efeito de Velocidade de Movimento.",
+            "dynamicDescription": "Karma cria um feixe de energia entre si e outra unidade por até @Duration@s. Âncoras aliadas, incluindo ela mesma, recebem <speed>@MoveSpeedMod*100@% de Velocidade de Movimento</speed>. Âncoras inimigas sofrem @MoveSpeedMod*100@% de <status>Lentidão</status>.<br><br>O feixe causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os inimigos que toca. Campeões aliados e inimigos recebem o mesmo ajuste de Velocidade de Movimento que as âncoras.<br><br><keywordMajor>Mantra:</keywordMajor> Karma fortalece o vínculo, potencializando os modificadores de Velocidade de Movimento para @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Karma invoca um Escudo protetor que absorve o dano sofrido.<br><br>Efeito de Mantra: o Escudo irradia energia que causa dano a unidades inimigas ao redor do alvo de Karma.",
-            "dynamicDescription": "Karma conjura um <shield>Escudo</shield> protetor que absorve <shield>@TotalShield@ de dano</shield> por @Duration@s.<br><br><keywordMajor>Efeito de Mantra:</keywordMajor> o <shield>Escudo</shield> irradia energia que causa <magicDamage>@TotalShield@ de Dano Mágico</magicDamage> a unidades inimigas ao redor do alvo.@SpellModifierDescriptionAppend@",
+            "description": "Karma invoca um Escudo protetor que absorve o dano sofrido por um aliado.<br><br>Mantra: o Escudo irradia energia que causa dano aos inimigos ao redor do alvo.",
+            "dynamicDescription": "Karma conjura um <shield>Escudo</shield> protetor que absorve <shield>@TotalShield@ de dano</shield> por @Duration@s.<br><br><keywordMajor>Mantra:</keywordMajor> o Escudo irradia energia que causa <magicDamage>@TotalShield@ de Dano Mágico</magicDamage> a unidades inimigas ao redor do alvo.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karma fortalece sua próxima Habilidade para aplicar um efeito adicional. Mantra está disponível no nível 1 e não exige um ponto de Habilidade.",
-            "dynamicDescription": "Karma fortalece sua próxima Habilidade com mais um efeito. Ela recebe uma carga a cada <attention>@f1@</attention>s, até o máximo de 2 cargas.<br><br>A taxa de atualização é reduzida por Redução do Tempo de Recarga.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma fortalece sua próxima Habilidade com mais um efeito. Ela recebe uma carga a cada <attention>@MantraCooldown@</attention>s, até o máximo de 2 cargas.<br><br>A taxa de atualização é reduzida por Redução do Tempo de Recarga.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

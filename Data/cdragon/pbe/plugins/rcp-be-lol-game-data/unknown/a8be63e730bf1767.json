@@ -256,7 +256,7 @@
             "cost": "Darmowe",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Po włączeniu Aatrox zadaje dodatkowe obrażenia przy co trzecim ataku, tracąc przy tym zdrowie. Po wyłączeniu Aatrox przywraca sobie zdrowie każdym co trzecim atakiem.",
-            "dynamicDescription": "<toggle>Po włączeniu:</toggle> Aatrox przełącza się między <keywordMajor>Żądzą Krwi</keywordMajor> a <keywordMajor>Ceną Krwi</keywordMajor>, zyskując dodatkowe efekty przy co <attention>trzecim</attention> ataku.<br><br><keywordMajor>Żądza Krwi:</keywordMajor> Aatrox odzyskuje <healing>@WHeal@ pkt. zdrowia</healing>. Wartość wzrasta o <healing>@WLowHealthHealBonus@% (@TTLowHealthHeal@)</healing>, gdy jego <scaleHealth>zdrowie spadnie poniżej @LowHealthPercent@%</scaleHealth>.<br><br><keywordMajor>Cena Krwi:</keywordMajor> Aatrox zadaje <physicalDamage>@WDamage@ pkt. dodatkowych obrażeń fizycznych</physicalDamage> i <font color='#FF3300'>traci @SelfDamage@ pkt. zdrowia</font>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Po włączeniu:</toggle> Aatrox przełącza się między <keywordMajor>Żądzą Krwi</keywordMajor> a <keywordMajor>Ceną Krwi</keywordMajor>, zyskując dodatkowe efekty przy co <attention>trzecim</attention> ataku.<br><br><keywordMajor>Żądza Krwi:</keywordMajor> Aatrox odzyskuje <healing>@WHeal@ pkt. zdrowia</healing>. Wartość wzrasta do <healing>@TTLowHealthHeal@ pkt.</healing>, gdy jego zdrowie spadnie poniżej <scaleHealth>@LowHealthPercent@%</scaleHealth>.<br><br><keywordMajor>Cena Krwi:</keywordMajor> Aatrox zadaje <physicalDamage>@WDamage@ pkt. dodatkowych obrażeń fizycznych</physicalDamage> i <font color='#FF3300'>traci @SelfDamage@ pkt. zdrowia</font>.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

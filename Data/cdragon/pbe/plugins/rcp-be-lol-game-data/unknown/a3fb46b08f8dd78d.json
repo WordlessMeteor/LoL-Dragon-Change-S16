@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma obtiene poder de habilidad adicional equivalente a un porcentaje de la vida que le falte."
+        "description": "Karma obtiene poder de habilidad en función de la vida que le falte."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Karma lanza las cuchillas ocultas de sus abanicos e inflige daño mágico a las unidades que se encuentren en un cono frente a ella.<br><br>Bonificación de Mantra: Además de infligir daño a los enemigos, Ola celestial también cura a los aliados que se encuentren en el cono según el porcentaje de vida que les falte.",
-            "dynamicDescription": "Karma lanza las cuchillas ocultas de sus abanicos e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades que se encuentren en un cono frente a ella.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Además de infligir daño a los enemigos, <spellName>Ola celestial</spellName> también <healing>cura</healing> <healing>@BaseHealth@ + @AdditionalHealPercentTT@%</healing> de la <scaleHealth>vida que falte</scaleHealth> a los aliados que se encuentren en el cono.@SpellModifierDescriptionAppend@",
+            "description": "Karma lanza las cuchillas ocultas de sus abanicos, lo que inflige daño a los enemigos en un cono.<br><br>Mantra: Ola celestial también cura a los aliados en el cono según la vida que les falte.",
+            "dynamicDescription": "Karma lanza las cuchillas ocultas de sus abanicos e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos en un cono.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Ola celestial</spellName> también <healing>cura</healing> <healing>@BaseHealth@ + @AdditionalHealPercent@</healing> de la <scaleHealth>vida que les falte</scaleHealth> a los aliados en un cono.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Karma crea un vínculo entre sí misma y un aliado o un enemigo. Los aliados vinculados se mueven más rápido y los enemigos vinculados sufren una ralentización. El vínculo inflige daño mágico a los enemigos y aplica la misma ralentización que sufra el objetivo vinculado a todos los campeones atravesados.<br><br>Bonificación de Mantra: Karma refuerza el vínculo para duplicar el efecto del modificador de la velocidad de movimiento.",
-            "dynamicDescription": "Karma crea un vínculo entre sí misma y un aliado o un enemigo durante un máximo de @Duration@ s. Los aliados vinculados se <speed>mueven un @MoveSpeedMod*100@% más rápido</speed> y <status>ralentiza un @MoveSpeedMod*100@%</status> a los enemigos vinculados. El vínculo inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos y aplica la misma ralentización que sufra el objetivo vinculado a todos los campeones atravesados.<br><br>El vínculo se rompe si el objetivo vinculado entra en <keywordStealth>sigilo</keywordStealth>.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Karma refuerza el vínculo para duplicar el efecto del modificador de la velocidad de movimiento.@SpellModifierDescriptionAppend@",
+            "description": "Karma crea un vínculo entre ella y otra unidad. Los aliados vinculados se mueven más rápido y los enemigos vinculados sufren una ralentización. El vínculo inflige daño a los enemigos y aplica el mismo ajuste de velocidad de movimiento a todos los campeones atravesados.<br><br>Mantra: Karma fortalece el vínculo para aumentar el efecto de velocidad de movimiento.",
+            "dynamicDescription": "Karma crea un vínculo entre ella y otra unidad durante un máximo de @Duration@&nbsp;s. Los aliados vinculados, así como ella misma, obtienen un <speed>@MoveSpeedMod*100@% de velocidad de movimiento</speed>. <status>Ralentiza</status> a los enemigos vinculados un @MoveSpeedMod*100@%.<br><br>El vínculo inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a todos los enemigos que toca. Los campeones aliados y enemigos reciben el mismo ajuste de velocidad de movimiento que los campeones vinculados.<br><br><keywordMajor>Mantra:</keywordMajor> Karma fortalece el vínculo, lo que aumenta los modificadores de velocidad de movimiento a @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Karma invoca un escudo protector que absorbe el daño recibido.<br><br>Bonificación de Mantra: Además de invocar el escudo, este emana una energía que inflige daño a las unidades enemigas cercanas al objetivo de Karma.",
-            "dynamicDescription": "Karma invoca un <shield>escudo</shield> protector que absorbe <shield>@TotalShield@ de daño</shield> durante @Duration@&nbsp;s.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Además de invocar el <shield>escudo</shield>, este emana una energía que inflige <magicDamage>@TotalShield@ de daño mágico</magicDamage> a las unidades enemigas alrededor del objetivo.@SpellModifierDescriptionAppend@",
+            "description": "Karma invoca un escudo protector sobre un aliado que absorbe el daño recibido.<br><br>Mantra: Además de invocar el escudo, este emana una energía que inflige daño a los enemigos alrededor del objetivo.",
+            "dynamicDescription": "Karma invoca un <shield>escudo</shield> protector que absorbe <shield>@TotalShield@ de daño</shield> durante @Duration@&nbsp;s.<br><br><keywordMajor>Mantra:</keywordMajor> El escudo emana energía, lo que inflige <magicDamage>@TotalShield@ de daño mágico</magicDamage> a las unidades enemigas alrededor del objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Karma potencia su siguiente habilidad para conseguir un efecto adicional. Mantra está disponible al nivel 1 y no necesita puntos de habilidad.",
-            "dynamicDescription": "Karma potencia su siguiente habilidad con un efecto adicional. Karma obtiene una carga cada <attention>@f1@</attention> s, hasta un máximo de 2 cargas.<br><br>El periodo de obtención disminuye con la reducción de enfriamiento.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma potencia su siguiente habilidad con un efecto adicional. Karma obtiene una carga cada <attention>@MantraCooldown@</attention>&nbsp;s, hasta un máximo de 2 cargas.<br><br>El periodo de obtención disminuye con la reducción de enfriamiento.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

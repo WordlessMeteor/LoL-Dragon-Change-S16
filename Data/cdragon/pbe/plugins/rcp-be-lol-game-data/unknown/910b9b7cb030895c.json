@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Карма получает силу умений в размере доли недостающего здоровья."
+        "description": "Карма получает силу умений в зависимости от недост. здоровья."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Карма посылает вперед спрятанные в рукавах лезвия, нанося маг. урон бойцам в конусе перед собой.<br><br>Эффект Мантры: вдобавок к урону, Небесная волна также восстанавливает союзникам в конусе здоровье в размере доли их недост. здоровья.",
-            "dynamicDescription": "Карма посылает вперед спрятанные в рукавах лезвия, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> бойцам в конусе перед собой.<br><br><keywordMajor>Эффект Мантры:</keywordMajor> вдобавок к урону, <spellName>Небесная волна</spellName> также <healing>восстанавливает здоровье</healing> союзникам в конусе в размере <healing>@BaseHealth@ + @AdditionalHealPercentTT@%</healing> от их <scaleHealth>недост. здоровья</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Карма посылает вперед спрятанные в рукавах лезвия, нанося урон врагам в конусе.<br><br>Мантра: Небесная волна также лечит союзников в конусе в зависимости от их недост. здоровья.",
+            "dynamicDescription": "Карма посылает вперед спрятанные в рукавах лезвия, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам в конусе.<br><br><keywordMajor>Мантра:</keywordMajor> <spellName>Небесная волна</spellName> также <healing>лечит</healing> союзников в конусе на <healing>@BaseHealth@ плюс @AdditionalHealPercent@</healing> от их <scaleHealth>недост. здоровья</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Карма создает луч между собой и союзником (или врагом), повышая скорость передвижения союзника и замедляя врага. Луч наносит маг. урон врагам и накладывает на задетых им чемпионов те же эффекты, что и на связанные им цели.<br><br>Эффект Мантры: Карма укрепляет связь, усиливая влияние эффекта на скорость передвижения в 2 р.",
-            "dynamicDescription": "Карма создает луч между собой и союзником (или врагом) на время до @Duration@ сек. Луч повышает <speed>скорость передвижения союзника на @MoveSpeedMod*100@%</speed> и <status>замедляет врага на @MoveSpeedMod*100@%</status>, также нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам и накладывая на задетых им чемпионов те же эффекты, что и на связанные им цели.<br><br>Луч разрывается, если связанная им цель получает <keywordStealth>невидимость</keywordStealth>.<br><br><keywordMajor>Эффект Мантры:</keywordMajor> Карма укрепляет связь, усиливая влияние эффекта на скорость передвижения в 2 р.@SpellModifierDescriptionAppend@",
+            "description": "Карма создает луч между собой и другим бойцом, повышая скорость передвижения союзника и замедляя врага. Луч наносит урон врагам и накладывает на задетых им чемпионов те же эффекты, что и на связанные им цели.<br><br>Мантра: Карма укрепляет связь, усиливая эффект скорости передвижения.",
+            "dynamicDescription": "Карма создает луч между собой и другим бойцом на время до @Duration@ сек. Связанные союзники, включая ее саму, получают <speed>@MoveSpeedMod*100@% скорости передвижения</speed>. Связанные враги <status>замедляются</status> на @MoveSpeedMod*100@%.<br><br>Луч наносит всем задетым врагам <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Союзные и враж. чемпионы получают те же эффекты, что и связанные лучом цели.<br><br><keywordMajor>Мантра:</keywordMajor> Карма укрепляет связь, повышая коэфф. эффекта скорости передвижения до @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Карма призывает щит, поглощающий получаемый урон.<br><br>Эффект Мантры: вдобавок к щиту, энергия от его вызова рассеивается вокруг, нанося урон всем врагам поблизости.",
-            "dynamicDescription": "Карма призывает <shield>щит</shield>, поглощающий <shield>@TotalShield@ ед. урона</shield>, на @Duration@ сек.<br><br><keywordMajor>Эффект Мантры:</keywordMajor> вдобавок к <shield>щиту</shield>, энергия от его вызова рассеивается вокруг, нанося <magicDamage>@TotalShield@ ед. маг. урона</magicDamage> врагам рядом с целью.@SpellModifierDescriptionAppend@",
+            "description": "Карма призывает для союзника щит, поглощающий получаемый урон.<br><br>Мантра: вдобавок к щиту, энергия от его вызова рассеивается вокруг, нанося урон врагам вокруг цели.",
+            "dynamicDescription": "Карма призывает <shield>щит</shield>, поглощающий <shield>@TotalShield@ ед. урона</shield>, на @Duration@ сек.<br><br><keywordMajor>Мантра:</keywordMajor> энергия от щита рассеивается вокруг, нанося <magicDamage>@TotalShield@ ед. маг. урона</magicDamage> врагам вокруг цели.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Карма усиливает свое следующее умение доп. эффектом. Мантра доступна на 1-м уровне и не требует очка умений.",
-            "dynamicDescription": "Карма усиливает свое следующее умение доп. эффектом, получая заряд Мантры раз в <attention>@f1@</attention> сек. (до 2 зар.).<br><br>Скорость накопления зарядов растет в зависимости от сокращения перезарядки.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Карма усиливает свое следующее умение доп. эффектом, получая заряд Мантры раз в <attention>@MantraCooldown@</attention> сек. (до 2 зар.).<br><br>Скорость накопления зарядов растет в зависимости от сокращения перезарядки.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

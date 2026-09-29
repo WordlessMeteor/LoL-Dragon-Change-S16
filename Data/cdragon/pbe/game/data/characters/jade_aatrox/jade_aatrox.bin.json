@@ -577,13 +577,13 @@
                 {
                     "name": "WLowHealthHealBonus",
                     "values": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -651,26 +651,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{4e552c11}": {
+                "{049d8bc1}": {
                     "mMultiplier": {
-                        "mSpellCalculationKey": "{fc3ca7f8}",
-                        "__type": "{f3cbe7b2}"
+                        "mDataValue": "WLowHealthHealBonus",
+                        "__type": "NamedDataValueCalculationPart"
                     },
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mPart1": {
-                                "mDataValue": "WLowHealthHealBonus",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mPart2": {
-                                "mNumber": 0.009999999776482582,
-                                "__type": "NumberCalculationPart"
-                            },
-                            "__type": "ProductOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mModifiedGameCalculation": "{fc3ca7f8}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell2",
@@ -1533,10 +1520,6 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "EBaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
@@ -1544,6 +1527,10 @@
                                 {
                                     "type": "ESlowDuration",
                                     "nameOverride": "Spell_ListType_Duration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1874,7 +1861,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_R.dds"
@@ -2240,12 +2226,7 @@
                 "{735c0acf}": {
                     "mFormulaParts": [
                         {
-                            "mCoefficient": 0.3499999940395355,
-                            "mAbilityResource": 10,
-                            "__type": "AbilityResourceByCoefficientCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 1.350000023841858,
                             "mAbilityResource": 10,
                             "__type": "AbilityResourceByCoefficientCalculationPart"
                         }
@@ -2258,6 +2239,20 @@
                             "mCoefficient": 0.3499999940395355,
                             "mAbilityResource": 10,
                             "__type": "AbilityResourceByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{a95da23c}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "DataValue": "DecayRate",
+                            "AbilityResource": 10,
+                            "__type": "{2b25a73a}"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2309,7 +2304,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_AatroxPassive_Jade_Name",
                         "keySummary": "Spell_AatroxPassive_Jade_Summary",
-                        "keyTooltip": "Spell_AatroxPassive_Jade_Tooltip"
+                        "keyTooltip": "Spell_AatroxPassive_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_Jade_AatroxPassive_TooltipExtendedBelowLine"
                     },
                     "__type": "TooltipInstanceSpell"
                 },
@@ -2616,13 +2612,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "QBaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

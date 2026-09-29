@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Pasivní efekt: Při aktivaci zranitelnosti získáš bonus k atributům.<br><br>Pasivní efekt jako Valor: Získáš bonus k atributům.<br><br>Aktivace: Odhalíš oblast.",
+            "description": "Pasivní efekt jako Quinn: Po aktivaci Dravce získáš na několik sekund bonus k rychlosti útoků a rychlosti pohybu.<br><br>Pasivní efekt jako Valor: Získáš bonus k rychlosti útoků.<br><br>Aktivace: Odhalíš širokou oblast kolem Quinn a Valora.",
             "dynamicDescription": "<keywordMajor>Pasivní efekt jako Quinn</keywordMajor>: Útokem na <keywordMajor>zranitelného</keywordMajor> nepřítele získá Quinn na @BuffDuration@ sek. <speed>@AttackSpeedBonus*100@ % k rychlosti útoků</speed> a <speed>@MovespeedAmount@ % k rychlosti pohybu</speed>.<br><br><keywordMajor>Pasivní efekt jako Valor</keywordMajor>: Získáš @ValorAttackSpeed*100@ % k rychlosti útoků.<br><br><keywordMajor>Aktivace:</keywordMajor> Valor na @VisionDuration@ sek. odhalí rozlehlou oblast kolem sebe.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Quinn rychle přeběhne.<br><br>Přeběh provede i v podobě Valora.",
+            "description": "Quinn nebo Valor se přeběhem přesunou k nepříteli, způsobí mu poškození, odhodí ho a zpomalí. Pokud schopnost sešle Quinn, odrazí se následně od cíle, čímž si od něj udrží odstup, a Valor jej označí schopností Dravec.",
             "dynamicDescription": "<keywordMajor>Jako Quinn nebo Valor</keywordMajor>: Přeběhem se přesuneš k nepříteli, čímž mu způsobíš <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>, <status>odhodíš</status> ho a <status>zpomalíš</status> o @SlowAmount*100@ %, tento postih během @SlowDecayTime@ sek. postupně odeznívá.<br><br><keywordMajor>Jako Quinn</keywordMajor>: Navíc od svého cíle odskočíš a Valor ho označí jako <keywordMajor>zranitelný</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Valor nahradí na bojišti Quinn jako pohyblivý kontaktní útočník, získá bonus k rychlosti pohybu a nahradí její schopnosti. Opětovným sesláním provedeš Nebeský úder, který způsobí poškození všem okolním nepřátelům.",
+            "description": "Valor nahradí na bojišti Quinn jako pohyblivý kontaktní útočník, získá bonus k rychlosti pohybu a změní její schopnosti. Opětovným sesláním provedeš Nebeský úder, který způsobí poškození všem okolním nepřátelům.",
             "dynamicDescription": "<keywordMajor>První seslání</keywordMajor>: Valor na @TransformDuration@ sek. nahradí Quinn na bojišti jako pohyblivý kontaktní útočník. Valor má efekt Duch a získá @OoCMoveSpeed*100@ % k rychlosti pohybu, v boji se tento bonus postupně snižuje na @CombatMoveSpeed*100@ %. Valor může následně seslat <keywordMajor>Nebeský úder</keywordMajor>.<br><br><keywordMajor>Nebeský úder</keywordMajor>: Na bojiště se vrátí Quinn a všem nepřátelům ve velké oblasti způsobí <physicalDamage>@TotalDamage@–@TotalDamageMaximum@ bodů fyzického poškození</physicalDamage>, hodnota se odvíjí od jejich chybějícího zdraví.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

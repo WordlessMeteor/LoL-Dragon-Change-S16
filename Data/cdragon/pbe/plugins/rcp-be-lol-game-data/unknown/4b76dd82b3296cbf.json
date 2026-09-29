@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma obtiene poder de habilidad adicional según su porcentaje de vida faltante."
+        "description": "Karma obtiene poder de habilidad según su vida faltante."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Karma lanza cuchillas ocultas desde sus abanicos, lo que inflige daño mágico a las unidades en un área cónica frente a ella.<br><br>Bonificación de Mantra: Además de infligir daño a los enemigos, Oleada Celestial también cura a los aliados en el área según un porcentaje de su vida faltante.",
-            "dynamicDescription": "Karma lanza cuchillas ocultas desde sus abanicos, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a las unidades en un área cónica frente a ella.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Además de infligir daño a los enemigos, <spellName>Oleada Celestial</spellName> también <healing>cura</healing> a los aliados en el área en <healing>@BaseHealth@ más un @AdditionalHealPercentTT@%</healing> de su <scaleHealth>Vida faltante</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma lanza cuchillas ocultas desde sus abanicos e inflige daño a los enemigos en un área cónica.<br><br>Mantra: Oleada Celestial también cura a los aliados dentro del área según su vida faltante.",
+            "dynamicDescription": "Karma lanza cuchillas ocultas desde sus abanicos, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos en un área cónica.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Oleada Celestial</spellName> también <healing>cura</healing> a los aliados dentro del área por <healing>@BaseHealth@ más @AdditionalHealPercent@</healing> de su <scaleHealth>Vida Faltante</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Karma crea un rayo entre ella y un aliado o un enemigo. Los aliados anclados se mueven más rápido y los enemigos anclados son ralentizados. El rayo inflige daño mágico a los enemigos y aplica, a cualquier campeón que toque, el mismo ajuste de velocidad de movimiento que reciben las anclas.<br><br>Bonificación de Mantra: Karma fortalece el vínculo para duplicar el efecto del modificador de velocidad de movimiento.",
-            "dynamicDescription": "Karma crea un rayo entre ella y un aliado o un enemigo por hasta @Duration@ seg. Los aliados anclados se <speed>mueven un @MoveSpeedMod*100@%</speed> más rápido y los enemigos anclados son <status>ralentizados en un @MoveSpeedMod*100@%</status>. El rayo inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos y aplica, a cualquier campeón que toque, el mismo ajuste de velocidad de movimiento que reciben las anclas.<br><br>El rayo se interrumpe si el objetivo vinculado entra en <keywordStealth>sigilo</keywordStealth>.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Karma fortalece el vínculo para duplicar el efecto del modificador de velocidad de movimiento.@SpellModifierDescriptionAppend@",
+            "description": "Karma crea un rayo de energía que la conecta con otra unidad. Los aliados anclados se mueven más rápido y los enemigos anclados quedan ralentizados. El rayo inflige daño a los enemigos y aplica el mismo efecto de velocidad de movimiento a cualquier campeón que toque.<br><br>Mantra: Karma fortalece el vínculo para aumentar el efecto de velocidad de movimiento.",
+            "dynamicDescription": "Karma crea un rayo de energía que la conecta con otra unidad hasta por @Duration@ seg. Las unidades aliadas ancladas, incluida ella, obtienen un <speed>@MoveSpeedMod*100@% de Velocidad de Movimiento</speed>. Las unidades enemigas ancladas quedan <status>ralentizadas</status> en un @MoveSpeedMod*100@%.<br><br>El rayo inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a todos los enemigos que toca. Los campeones aliados y enemigos reciben el mismo efecto de velocidad de movimiento que las unidades ancladas.<br><br><keywordMajor>Mantra:</keywordMajor> Karma fortalece el vínculo, lo que aumenta los modificadores de Velocidad de Movimiento a @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Karma invoca un escudo protector que absorbe daño recibido.<br><br>Bonificación de Mantra: Además de lanzar el escudo, este irradia energía que inflige daño a las unidades enemigas alrededor del objetivo de Karma.",
-            "dynamicDescription": "Karma invoca un <shield>escudo</shield> protector que absorbe <shield>@TotalShield@ de daño</shield> durante @Duration@ seg.<br><br><keywordMajor>Bonificación de Mantra:</keywordMajor> Además de lanzar el <shield>escudo</shield>, este irradia energía, lo que inflige <magicDamage>@TotalShield@ de daño mágico</magicDamage> a las unidades enemigas alrededor del objetivo.@SpellModifierDescriptionAppend@",
+            "description": "Karma invoca un escudo que protege a un aliado y absorbe daño recibido.<br><br>Mantra: Además de proteger al objetivo, el escudo irradia energía que inflige daño a los enemigos que estén cerca de él.",
+            "dynamicDescription": "Karma invoca un <shield>escudo</shield> protector que absorbe <shield>@TotalShield@ de daño</shield> durante @Duration@ seg.<br><br><keywordMajor>Mantra:</keywordMajor> El escudo irradia energía, lo que inflige <magicDamage>@TotalShield@ de daño mágico</magicDamage> a las unidades enemigas alrededor del objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Sin costo",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Karma potencia su siguiente habilidad para que tenga un efecto adicional. Mantra está disponible en el nivel 1 y no requiere un punto de habilidad.",
-            "dynamicDescription": "Karma le confiere un efecto adicional a su siguiente habilidad. Karma obtiene una carga cada <attention>@f1@</attention> seg, hasta un máximo de 2 cargas.<br><br>La reducción de enfriamiento disminuye la reduccción de enfriamiento.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma le confiere un efecto adicional a su siguiente habilidad. Karma obtiene una carga cada <attention>@MantraCooldown@</attention> seg, hasta un máximo de 2 cargas.<br><br>La reducción de enfriamiento disminuye la tasa de recarga.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

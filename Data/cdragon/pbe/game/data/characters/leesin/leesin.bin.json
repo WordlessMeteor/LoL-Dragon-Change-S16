@@ -422,6 +422,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "{bffdf499}": {
+                    "SpellDataValues": [
+                        {
+                            "name": "PassiveAS",
+                            "values": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "EnergyReturn": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -453,6 +473,35 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mModifiedGameCalculation": "EnergyReturn",
                     "__type": "GameCalculationModified"
+                }
+            },
+            "{66185ec4}": {
+                "{bffdf499}": {
+                    "{79b24f3f}": {
+                        "EnergyReturn": {
+                            "mSimpleTooltipCalculationDisplay": 6,
+                            "mFormulaParts": [
+                                {
+                                    "mLevel1Value": 15.0,
+                                    "mBreakpoints": [
+                                        {
+                                            "mLevel": 7,
+                                            "mAdditionalBonusAtThisLevel": 5.0,
+                                            "__type": "Breakpoint"
+                                        },
+                                        {
+                                            "mLevel": 13,
+                                            "mAdditionalBonusAtThisLevel": 5.0,
+                                            "__type": "Breakpoint"
+                                        }
+                                    ],
+                                    "__type": "ByCharLevelBreakpointsCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mImgIconName": [
@@ -631,6 +680,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "{bffdf499}": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Q2BaseDamage",
+                            "values": [
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -2731,6 +2800,24 @@
                                 280.0,
                                 350.0,
                                 420.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                },
+                "{bffdf499}": {
+                    "SpellDataValues": [
+                        {
+                            "name": "ShieldValue",
+                            "values": [
+                                80.0,
+                                80.0,
+                                140.0,
+                                200.0,
+                                260.0,
+                                320.0,
+                                380.0
                             ],
                             "__type": "SpellDataValue"
                         }

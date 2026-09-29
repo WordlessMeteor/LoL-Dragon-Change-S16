@@ -291,8 +291,8 @@
             "abilityVideoImagePath": "",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Pasif: Dapatkan stat saat memicu vulnerable<br><br>Pasif sebagai Valor: Dapatkan stat<br><br>Aktif: Mengungkap area",
-            "dynamicDescription": "<keywordMajor>Pasif sebagai Quinn</keywordMajor>: Menyerang target yang <keywordMajor>Vulnerable</keywordMajor> memberi Quinn <speed>@AttackSpeedBonus*100@% Attack Speed</speed> dan <speed>@MovespeedAmount@ Movement Speed</speed> selama @BuffDuration@ detik.<br><br><keywordMajor>Pasif sebagai Valor</keywordMajor>: Dapatkan @ValorAttackSpeed*100@% Attack Speed.<br><br><keywordMajor>Aktif</keywordMajor>: Valor mengungkap area luas di sekitar selama @VisionDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Pasif sebagai Quinn: Dapatkan attack dan move speed selama beberapa detik saat memicu Harrier.<br><br>Pasif sebagai Valor: Dapatkan Attack Speed.<br><br>Aktif: Mengungkap area luas di sekitar Quinn dan Valor.",
+            "dynamicDescription": "<keywordMajor>Pasif sebagai Quinn</keywordMajor>: Menyerang target yang <keywordMajor>Vulnerable</keywordMajor> memberi Quinn <speed>@AttackSpeedBonus*100@% Attack Speed</speed> dan <speed>@MovespeedAmount@ Movement Speed</speed> selama @BuffDuration@ detik.<br><br><keywordMajor>Pasif sebagai Valor</keywordMajor>: Dapatkan <speed>@ValorAttackSpeed*100@% Attack Speed</speed>.<br><br><keywordMajor>Aktif</keywordMajor>: Valor mengungkap area luas di sekitar selama @VisionDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -441,8 +441,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Quinn melakukan dash.<br><br>Sebagai Valor, dia juga melakukan dash.",
-            "dynamicDescription": "<keywordMajor>Menggunakan Quinn atau Valor</keywordMajor>: Dash ke musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>, melakukan <status>knock back</status>, dan <status>Memperlambat</status> Movement Speed target sebesar @SlowAmount*100@%, berkurang selama @SlowDecayTime@ detik.<br><br><keywordMajor>Menggunakan Quinn</keywordMajor>: Selain itu, ia akan melompat dari targetnya dan Valor akan menandai mereka sebagai <keywordMajor>Vulnerable</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "description": "Quinn atau Valor dash ke musuh, memberikan damage, melakukan knock back, dan menerapkan slow pada target mereka. Jika di-cast dengan Quinn, dia akan melompat menjauh dari mereka, menjaga jarak sambil Valor menandai mereka dengan Harrier.",
+            "dynamicDescription": "<keywordMajor>Menggunakan Quinn atau Valor</keywordMajor>: Dash ke musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>, melakukan <status>knock back</status>, dan menerapkan <status>Slow</status> pada target sebesar @SlowAmount*100@%, berkurang selama @SlowDecayTime@ detik.<br><br><keywordMajor>Menggunakan Quinn</keywordMajor>: Selain itu, ia akan melompat dari targetnya dan Valor akan menandai mereka sebagai <keywordMajor>Vulnerable</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -591,8 +591,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Valor menggantikan Quinn di battlefield sebagai penyerang melee yang lincah, mendapatkan movement speed dan menggantikan ability miliknya. Cast lagi untuk melakukan Skystrike, menghasilkan damage ke semua musuh di sekitarmu.",
-            "dynamicDescription": "<keywordMajor>Cast pertama</keywordMajor>: Valor menggantikan Quinn di battlefield sebagai penyerang melee yang lincah selama @TransformDuration@ detik. Valor menjadi Ghost dan mendapatkan @OoCMoveSpeed*100@% Move Speed, yang berkurang secara bertahap menjadi @CombatMoveSpeed*100@% saat dalam combat. Valor kemudian bisa cast <keywordMajor>Skystrike</keywordMajor>.<br><br><keywordMajor>Skystrike</keywordMajor>: Quinn kembali, menghasilkan <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ physical damage</physicalDamage> ke semua musuh di area luas, berdasarkan seberapa banyak health yang hilang dari mereka.@SpellModifierDescriptionAppend@",
+            "description": "Valor menggantikan Quinn di battlefield sebagai penyerang melee yang lincah, mendapatkan movement speed dan mengubah ability miliknya. Cast lagi untuk melakukan Skystrike, menghasilkan damage ke semua musuh di sekitarmu.",
+            "dynamicDescription": "<keywordMajor>Menggunakan Quinn</keywordMajor>: Valor menggantikan Quinn di battlefield sebagai penyerang melee yang lincah selama @TransformDuration@ detik. Valor menjadi <status>Ghost</status> dan mendapatkan <speed>@OoCMoveSpeed*100@% Move Speed</speed>, yang berkurang menjadi @CombatMoveSpeed*100@% saat dalam combat. Valor kemudian bisa cast <keywordMajor>Skystrike</keywordMajor>.<br><br><keywordMajor>Menggunakan Valor: Skystrike</keywordMajor>: Quinn kembali, menghasilkan <physicalDamage>@TotalDamage@–@TotalDamageMaximum@ physical damage</physicalDamage> ke semua musuh di area luas, berdasarkan seberapa banyak health yang hilang dari mereka.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

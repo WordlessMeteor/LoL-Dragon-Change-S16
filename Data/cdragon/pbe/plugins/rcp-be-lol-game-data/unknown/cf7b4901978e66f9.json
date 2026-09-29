@@ -256,7 +256,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Açıkken Aatrox her üçüncü saldırısında kendi canını feda ederek ilave hasar verir. Kapalıyken Aatrox sonraki her üçüncü saldırısında can yeniler.",
-            "dynamicDescription": "<toggle>Aç/Kapat:</toggle> Aatrox <keywordMajor>Can Alan</keywordMajor> ve <keywordMajor>Kan Bedeli</keywordMajor> arasında geçiş yaparak her <attention>üçüncü</attention> saldırısında ilave etkiler kazanır.<br><br><keywordMajor>Can Alan: </keywordMajor>Aatrox <healing>@WHeal@ Can</healing> yeniler ve bu miktar <scaleHealth>%@LowHealthPercent@ Canın</scaleHealth> altındayken <healing>%@WLowHealthHealBonus@ (@TTLowHealthHeal@)</healing> artar.<br><br><keywordMajor>Kan Bedeli: </keywordMajor>Aatrox <physicalDamage>@WDamage@ İlave Fiziksel Hasar</physicalDamage> verir ve <font color='#FF3300'>@SelfDamage@ Can</font> kaybeder.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<toggle>Aç/Kapat:</toggle> Aatrox <keywordMajor>Can Alan</keywordMajor> ve <keywordMajor>Kan Bedeli</keywordMajor> arasında geçiş yaparak her <attention>üçüncü</attention> saldırısında ilave etkiler kazanır.<br><br><keywordMajor>Can Alan:</keywordMajor> Aatrox <healing>@WHeal@ Can</healing> yeniler ve bu miktar <scaleHealth>canı %@LowHealthPercent@</scaleHealth> değerinin altındayken artarak <healing>@TTLowHealthHeal@</healing> olur.<br><br><keywordMajor>Kan Bedeli:</keywordMajor> Aatrox <physicalDamage>@WDamage@ İlave Fiziksel Hasar</physicalDamage> verir ve <font color='#FF3300'>@SelfDamage@ Can</font> kaybeder.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -582,7 +582,7 @@
                 25.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

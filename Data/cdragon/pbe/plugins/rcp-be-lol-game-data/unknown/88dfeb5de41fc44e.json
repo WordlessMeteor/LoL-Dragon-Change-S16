@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Mengurangi durasi Stun, Slow, Taunt, Fear, Snare, dan Root untuk setiap champion musuh di sekitar."
+        "description": "Irelia mendapatkan Tenacity untuk setiap champion musuh di sekitarnya."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Irelia dash maju lalu menyerang targetnya. Jika target terbunuh, cooldown Bladesurge akan di-refresh dan 35 Mana akan dikembalikan.",
-            "dynamicDescription": "Irelia dash maju untuk menyerang targetnya, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>.<br><br>Jika target terbunuh, cooldown <spellName>Bladesurge</spellName> akan di-refresh dan <scaleMana>@ManaReturn@ Mana</scaleMana> akan dikembalikan.@SpellModifierDescriptionAppend@",
+            "description": "Irelia dash ke depan untuk menyerang targetnya. Jika target terbunuh, cooldown Bladesurge akan di-refresh dan sebagian biaya Mana-nya dikembalikan.",
+            "dynamicDescription": "Irelia dash ke arah musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menerapkan efek on-hit.<br><br>Jika Bladesurge kill targetnya, cooldown-nya akan direset dan Irelia memulihkan <scaleMana>@ManaReturn@ Mana</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Irelia ahli dalam seni Hiten, secara pasif membuat physical attack-nya memulihkan health.  Mengaktifkan Hiten Style membuat basic attack-nya menghasilkan true damage selama beberapa saat.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Basic attack <healing>memulihkan @Health@ health</healing>.<br><br><spellActive>Aktif:</spellActive> Basic attack Irelia menghasilkan <trueDamage>@Damage@ true damage</trueDamage> dan melipatgandakan <healing>health yang dipulihkan</healing> selama @HealthRestoreDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Pasif: Serangan Irelia memulihkan Health.<br><br>Aktif: Serangan Irelia memberikan bonus true damage dan memulihkan lebih banyak Health selama beberapa detik.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Basic attack Irelia <healing>memulihkan @Health@ Health</healing>.<br><br><spellActive>Aktif:</spellActive> Basic attack Irelia menghasilkan <trueDamage>@Damage@ true damage</trueDamage> dan sekarang <healing>memulihkan @HealthRestoreActive@ health</healing> selama @ActiveDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Serangan Irelia menyeimbangkan keadaan, menghasilkan damage, dan menerapkan slow pada target.  Namun, jika target memiliki persentase Health yang lebih tinggi dari Irelia, serangannya jadi menerapkan stun pada target.",
-            "dynamicDescription": "Irelia menembus targetnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada target sebesar @SlowAmount@% selama @StunDuration@ detik.<br><br>Jika target memiliki <scaleHealth>persentase Health</scaleHealth> yang lebih tinggi dari Irelia, dia jadi menerapkan <status>Stun</status> pada target selama durasi tersebut.@SpellModifierDescriptionAppend@",
+            "description": "Serangan Irelia menyeimbangkan keadaan, menghasilkan damage, dan menerapkan slow pada targetnya. Jika mereka punya persentase Health lebih tinggi darinya, serangannya justru membuat mereka terkena stun.",
+            "dynamicDescription": "Irelia menembus targetnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> pada mereka sebesar @SlowAmount@% selama @StunDuration@ detik.<br><br>Jika target memiliki <scaleHealth>persentase Health</scaleHealth> yang lebih tinggi dari Irelia, dia akan menerapkan <status>Stun</status> pada mereka selama durasi tersebut.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Irelia memanggil 4 spirit blade yang bisa dia lempar untuk menghasilkan physical damage dan mengisap nyawa dari musuh yang ditembus blade.",
+            "description": "Irelia memanggil 4 spirit blade yang bisa dia lempar untuk menghasilkan damage dan mengisap nyawa dari musuh yang ditembus blade.",
             "dynamicDescription": "Irelia memanggil 4 spirit blade yang bisa dia lempar untuk menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> pada musuh yang ditembus blade. Dia <healing>heal</healing> sebesar @ChampionHealPercent@% dari damage yang dihasilkan pada champion dan @MinionHealPercent@% pada musuh lain.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

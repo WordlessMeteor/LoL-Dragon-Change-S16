@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "卡瑪會根據已損失生命的一定百分比獲得魔攻。"
+        "description": "卡瑪根據已損失生命獲得魔攻。"
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡瑪射出隱藏在扇子裡的小刀，對前方扇形範圍內的單位造成魔法傷害。<br><br>真言符印加成：除了對敵軍造成傷害，「天界漣漪」還會依據扇形範圍內友軍已損失生命的一定百分比，為其回復生命。",
-            "dynamicDescription": "卡瑪射出隱藏在扇子裡的小刀，對前方扇形範圍內的單位造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br><keywordMajor>真言符印加成：</keywordMajor>除了對敵軍造成傷害，<spellName>「天界漣漪」</spellName>還會為扇形範圍內的友軍<healing>治療</healing>，回復量為<healing>@BaseHealth@加上其<scaleHealth>已損失生命</scaleHealth>的@AdditionalHealPercentTT@%</healing>。@SpellModifierDescriptionAppend@",
+            "description": "卡瑪射出隱藏在扇子裡的小刀，對扇形範圍內的敵軍造成傷害。<br><br>真言符印：天界漣漪還會依據扇形範圍內友軍已損失生命，為其回復生命。",
+            "dynamicDescription": "卡瑪射出隱藏在扇子裡的小刀，對扇形範圍內的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br><keywordMajor>真言符印：</keywordMajor><spellName>天界漣漪</spellName>還會<healing>治療</healing>扇形範圍內的友軍，回復量為<healing>@BaseHealth@加上其<scaleHealth>已損失生命</scaleHealth>的@AdditionalHealPercent@</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡瑪放出一條光繩，連結友軍或敵軍。被連結的友軍提升跑速，敵軍則遭到緩速。光繩會對敵軍造成魔法傷害，並對通過光繩的所有英雄造成相同的加速/緩速效果。<br><br>真言符印加成：卡瑪強化連結，造成2倍的加速/緩速效果。",
-            "dynamicDescription": "卡瑪放出一條光繩，連結友軍或敵軍，最多持續@Duration@秒。被連結的友軍<speed>跑速提升@MoveSpeedMod*100@%</speed>，敵軍則<status>緩速@MoveSpeedMod*100@%</status>。光繩對敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並對通過光繩的所有英雄造成相同的加速/緩速效果。<br><br>若連結的目標進入<keywordStealth>潛行</keywordStealth>狀態，光繩會斷裂。<br><br><keywordMajor>真言符印加成：</keywordMajor>卡瑪強化連結，造成2倍的加速/緩速效果。@SpellModifierDescriptionAppend@",
+            "description": "卡瑪放出一條光繩，連結自己與另一個單位。被連結的友軍提升跑速，敵軍則遭到緩速。光繩會對敵軍造成傷害，並對通過光繩的所有英雄造成相同的加速/緩速效果。<br><br>真言符印：卡瑪強化連結，造成的加速/緩速效果提升。",
+            "dynamicDescription": "卡瑪施放一道光繩，連結自己與另一個單位，最多持續@Duration@秒。被連結的友軍(包括卡瑪自己)獲得<speed>@MoveSpeedMod*100@%跑速</speed>。被連結的敵軍緩速@MoveSpeedMod*100@%<status></status>。<br><br>光繩會對所有接觸到的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。通過光繩的友方及敵方英雄會受到與被連結單位相同的加速/緩速效果。<br><br><keywordMajor>真言符印：</keywordMajor>卡瑪強化連結，造成的加速/緩速效果提升至@MantraMoveSpeedMod@。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡瑪召喚一道可吸收傷害的護盾。<br><br>真言符印加成：除了施放護盾外，護盾還會釋放能量，對卡瑪的目標周圍的敵軍單位造成傷害。",
-            "dynamicDescription": "卡瑪召喚一道<shield>護盾</shield>，在@Duration@秒內吸收<shield>@TotalShield@傷害</shield>。<br><br><keywordMajor>真言加成：</keywordMajor>除了施放<shield>護盾</shield>外，護盾還會釋放能量，對她目標周圍的敵軍單位造成<magicDamage>@TotalShield@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "卡瑪為一名友軍召喚一道可吸收傷害的護盾。<br><br>真言符印：除了施放護盾外，護盾還會釋放能量，對目標周圍的敵軍造成傷害。",
+            "dynamicDescription": "卡瑪召喚一道<shield>護盾</shield>，在@Duration@秒內吸收<shield>@TotalShield@傷害</shield>。<br><br><keywordMajor>真言符印：</keywordMajor>護盾會釋放能量，對目標周圍的敵軍單位造成<magicDamage>@TotalShield@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡瑪強化下一個技能，賦予額外效果。「真言符印」從英雄等級1時就可開始使用，且不需升級。",
-            "dynamicDescription": "卡瑪強化下一個技能，賦予額外效果。卡瑪<attention>@f1@</attention>秒獲得一個充能，最多2個。<br><br>冷卻時間減免會縮短重置速度。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡瑪強化下一個技能，賦予額外效果。卡瑪每<attention>@MantraCooldown@</attention>秒獲得一個充能，最多2個。<br><br>冷卻時間減免會縮短重置速度。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

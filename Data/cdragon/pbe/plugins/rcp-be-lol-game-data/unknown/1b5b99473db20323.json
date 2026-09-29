@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Csökkenti a közeli ellenséges hősök által okozott kábítás, lassítás, felbőszítés, rettegés, megbéklyózás és mozgásképtelenné tétel időtartamát."
+        "description": "Irelia kitartásra tesz szert minden közeli ellenséges hős után."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Irelia előretör és lecsap a célpontjára. Ha ezzel megöli az ellenfelét, az Acélugrás töltési ideje nullázódik, Irelia pedig visszanyer 35 manát.",
-            "dynamicDescription": "Irelia előretör és lecsap a célpontjára, amivel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz.<br><br>Ha ezzel megöli az ellenfelét, az <spellName>Acélugrás</spellName> töltési ideje nullázódik, Irelia pedig visszanyer <scaleMana>@ManaReturn@ manát</scaleMana>.@SpellModifierDescriptionAppend@",
+            "description": "Irelia előretör, és lecsap a célpontjára. Ha ezzel megöli, az Acélugrás töltési ideje nullázódik, Irelia pedig visszanyeri a manaköltség egy részét.",
+            "dynamicDescription": "Irelia előretör, és lecsap a célpontjára, amivel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz.<br><br>Ha ezzel megöli az ellenfelét, az <spellName>Acélugrás</spellName> töltési ideje nullázódik, Irelia pedig visszanyer <scaleMana>@ManaReturn@ manát</scaleMana>.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Irelia a Hiten harcművészet mestere, így a fizikai támadásai passzívan életerőt töltenek vissza neki.  A Hiten stílus aktiválásával az alaptámadásai egy rövid ideig tényleges sebzést okoznak.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> az alaptámadások <healing>@Health@ életerőt töltenek vissza</healing>.<br><br><spellActive>Aktív:</spellActive> Irelia alaptámadásai <trueDamage>@Damage@ tényleges sebzést</trueDamage> okoznak, és @HealthRestoreDuration@ másodpercig megduplázzák a <healing>visszanyert életerőt</healing>.@SpellModifierDescriptionAppend@",
+            "description": "Passzív: Irelia a Hiten harcművészet mestere, és életerőt nyer vissza a támadásaival.<br><br>Aktív: az alaptámadások néhány másodpercig bónusz tényleges sebzést okoznak, és megnő a gyógyítás mértéke.",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> az alaptámadások <healing>@Health@ életerőt töltenek vissza</healing>.<br><br><spellActive>Aktív:</spellActive> Irelia alaptámadásai @ActiveDuration@ másodpercig <trueDamage>@Damage@ tényleges sebzést</trueDamage> okoznak, és <healing>@HealthRestoreActive@ életerőt töltenek vissza</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Irelia támadása kiegyenlíti az esélyeket, megsebzi és lassítja a célpontot.  Ha a célpont életerejének százalékos értéke nagyobb, mint Ireliáé, a csapás lassítás helyett elkábítja az ellenfelet.",
+            "description": "Irelia támadása kiegyenlíti az esélyeket, megsebzi és lassítja a célpontot. Ha a célpont százalékos életereje magasabb, mint Ireliáé, lassítás helyett kábítást okoz.",
             "dynamicDescription": "Irelia megszúrja a célpontját, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, és @StunDuration@ másodpercre @SlowAmount@%-kal <status>le is lassítja</status> az egységet.<br><br>Ha a célpont <scaleHealth>életerejének százalékos értéke</scaleHealth> nagyobb, mint Ireliáé, akkor a hatás időtartamára lassítás helyett <status>elkábítja</status> az ellenfelet.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Irelia 4 szellemkardot idéz meg, amelyek fizikai sebzést okoznak és életerőt szívnak el attól, akit eltalálnak.",
+            "description": "Irelia 4 szellemkardot idéz meg, amelyek megsebzik az ellenfeleket, akiken áthaladnak, és életerőt szívnak el tőlük.",
             "dynamicDescription": "Irelia 4 szellemkardot idéz meg, amelyek <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoznak annak, akit eltalálnak. Az ellenséges hősöknek okozott sebzés @ChampionHealPercent@%-ával és a más ellenfeleknek okozott sebzés @MinionHealPercent@%-ával <healing>gyógyul</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

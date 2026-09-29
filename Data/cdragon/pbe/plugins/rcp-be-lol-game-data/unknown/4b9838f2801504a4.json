@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma mendapatkan peningkatan Ability Power yang sebanding dengan persentase Health-nya yang hilang."
+        "description": "Karma mendapatkan Ability Power berdasarkan Health yang hilang."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Karma melontarkan pisau tersembunyi dari kipasnya, menghasilkan magic damage pada unit dalam area kerucut di depannya.<br><br>Bonus Mantra: Selain menghasilkan damage pada musuh, Heavenly Wave juga akan heal sekutu dalam area kerucut berdasarkan persentase Health mereka yang hilang.",
-            "dynamicDescription": "Karma melontarkan pisau tersembunyi dari kipasnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada unit dalam area kerucut di depannya.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> Selain menghasilkan damage pada musuh, <spellName>Heavenly Wave</spellName> juga akan <healing>Heal</healing> sekutu dalam area kerucut sebesar <healing>@BaseHealth@ plus @AdditionalHealPercentTT@%</healing> dari <scaleHealth>Health mereka yang hilang</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma melontarkan blade tersembunyi dari kipasnya, memberikan damage ke musuh dalam area berbentuk kerucut.<br><br>Mantra: Heavenly Wave juga memulihkan Health sekutu di dalam area kerucut berdasarkan Health yang hilang.",
+            "dynamicDescription": "Karma melontarkan blade tersembunyi dari kipasnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada musuh dalam area kerucut di depannya.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Heavenly Wave</spellName> juga memulihkan <healing>Health</healing> sekutu di dalam area kerucut sebesar <healing>@BaseHealth@ plus @AdditionalHealPercent@</healing> berdasarkan <scaleHealth>Health yang hilang</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Karma menciptakan sinar antara sekutu atau musuh. Anchor sekutu bergerak lebih cepat dan anchor musuh melambat. Sinar ini menghasilkan magic damage pada musuh dan menerapkan penyesuaian movement speed yang sama seperti yang diterima anchor pada champion mana pun yang dilewatinya.<br><br>Bonus Mantra: Karma memperkuat ikatan untuk menggandakan efek modifier movement speed.",
-            "dynamicDescription": "Karma menciptakan sinar antara sekutu atau musuh selama hingga @Duration@ detik. Anchor sekutu <speed>bergerak @MoveSpeedMod*100@% lebih cepat</speed> dan anchor musuh <status>melambat sebesar @MoveSpeedMod*100@%</status>. Sinar ini menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada musuh dan menerapkan penyesuaian movement speed yang sama seperti yang diterima anchor pada champion mana pun yang dilewatinya.<br><br>Sinar ini akan terputus jika target yang terikat masuk <keywordStealth>Stealth</keywordStealth>.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> Karma memperkuat ikatan untuk menggandakan efek modifier movement speed.@SpellModifierDescriptionAppend@",
+            "description": "Karma menciptakan pancaran sinar yang menghubungkan dirinya dengan unit lain. Anchor sekutu bergerak lebih cepat dan anchor musuh melambat. Sinar ini menghasilkan damage pada musuh dan menerapkan penyesuaian movement speed yang sama pada setiap champion yang dilewatinya.<br><br>Mantra: Karma memperkuat ikatan untuk meningkatkan efek movement speed.",
+            "dynamicDescription": "Karma menciptakan pancaran sinar yang menghubungkan dirinya dengan unit lain selama hingga @Duration@ detik. Anchor sekutu, termasuk dirinya sendiri, mendapatkan <speed>@MoveSpeedMod*100@% move speed</speed>. Anchor musuh terkena <status>Slow</status> sebesar @MoveSpeedMod*100@%.<br><br>Sinar ini menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke semua musuh yang terkena. Champion sekutu dan musuh menerima penyesuaian movement speed yang sama seperti anchor.<br><br><keywordMajor>Mantra:</keywordMajor> Karma memperkuat ikatan, meningkatkan modifier movement speed menjadi @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Karma memanggil shield pelindung yang menyerap damage yang datang.<br><br>Bonus Mantra: Selain mengaktifkan shield, energi juga akan memancar dari shield, menghasilkan damage pada unit musuh di sekitar target Karma.",
-            "dynamicDescription": "Karma memanggil <shield>Shield</shield> pelindung yang menyerap <shield>@TotalShield@ damage</shield> selama @Duration@ detik.<br><br><keywordMajor>Bonus Mantra:</keywordMajor> Selain mengaktifkan <shield>Shield</shield>, energi juga akan memancar dari shield, menghasilkan <magicDamage>@TotalShield@ magic damage</magicDamage> pada unit musuh di sekitar targetnya.@SpellModifierDescriptionAppend@",
+            "description": "Karma memanggil shield pelindung pada sekutu yang menyerap damage yang datang.<br><br>Mantra: Selain memberikan shield, energi memancar dari shield tersebut, memberikan damage ke musuh di sekitar targetnya.",
+            "dynamicDescription": "Karma memanggil <shield>Shield</shield> pelindung yang menyerap <shield>@TotalShield@ damage</shield> selama @Duration@ detik.<br><br><keywordMajor>Mantra:</keywordMajor> Energi memancar dari shield, menghasilkan <magicDamage>@TotalShield@ magic damage</magicDamage> pada unit musuh di sekitar targetnya.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Karma memperkuat ability berikutnya untuk memberikan efek tambahan. Mantra tersedia di level 1 dan tidak memerlukan poin skill.",
-            "dynamicDescription": "Karma memperkuat ability berikutnya dengan efek tambahan. Karma mendapatkan charge setiap <attention>@f1@</attention> detik, hingga 2 charge.<br><br>Refresh rate akan berkurang oleh Cooldown Reduction.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma memperkuat ability berikutnya dengan efek tambahan. Karma mendapatkan charge setiap <attention>@MantraCooldown@</attention> detik, hingga 2 charge.<br><br>Refresh rate akan berkurang oleh Cooldown Reduction.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

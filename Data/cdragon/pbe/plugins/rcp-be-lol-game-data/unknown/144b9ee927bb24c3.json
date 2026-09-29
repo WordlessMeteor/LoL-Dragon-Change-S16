@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "周囲の敵チャンピオンの数に応じて、スタン、スロウ、タウント、フィアー、スネアの効果時間が短縮される。"
+        "description": "近くにいる敵チャンピオンの数に応じて、「行動妨害耐性」が増加する。"
     },
     "spells": [
         {
@@ -105,7 +105,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "前方にダッシュして対象を攻撃する。この攻撃で対象を倒すと、「瞬刃」のクールダウンが解消され、マナが35回復する。",
+            "description": "ダッシュして対象を攻撃する。この攻撃で対象を倒すと、「瞬刃」のクールダウンが解消され、マナの一部が回復する。",
             "dynamicDescription": "前方にダッシュして対象を攻撃し、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br>この攻撃で対象を倒すと、<spellName>瞬刃</spellName>のクールダウンが解消され、<scaleMana>マナが@ManaReturn@</scaleMana>回復する。@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "イレリアの攻撃が平衡をもたらし、対象にダメージとスロウ効果を与える。ただし、対象の体力割合がイレリアよりも高かった場合、この攻撃は代わりに対象をスタンさせる。",
+            "description": "イレリアの攻撃が平衡をもたらし、対象にダメージとスロウ効果を与える。対象の体力割合が自身より高い場合、代わりにスタンさせる。",
             "dynamicDescription": "対象を貫き、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@StunDuration@秒間、@SlowAmount@%の<status>スロウ効果</status>を付与する。<br><br>対象の<scaleHealth>体力割合</scaleHealth>がイレリアよりも高かった場合、代わりに対象を同じ時間<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "4本の霊剣を召喚して投げつけ、触れた敵に物理ダメージを与えて、体力を吸収する。",
+            "description": "4本の霊剣を召喚して投げつけ、触れた敵にダメージを与えて、体力を吸収する。",
             "dynamicDescription": "4本の霊剣を召喚して投げつけ、触れた敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。さらに、これでチャンピオンに与えたダメージの@ChampionHealPercent@%、およびチャンピオン以外の敵に与えたダメージの@MinionHealPercent@%にあたる体力を<healing>回復</healing>する。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

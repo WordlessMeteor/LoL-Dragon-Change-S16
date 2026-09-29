@@ -1681,8 +1681,9 @@
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/KogMaw/Skins/Skin65/Images/kogmaw_splash_uncentered_65.SKINS_KogMaw_Skin65.jpg",
             "tilePath": "/lol-game-data/assets/ASSETS/Characters/KogMaw/Skins/Skin65/Images/kogmaw_splash_tile_65.SKINS_KogMaw_Skin65.jpg",
             "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/KogMaw/Skins/Skin65/KogMawLoadScreen_65.SKINS_KogMaw_Skin65.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_KogMaw/Skins/Base/Jade_KogMawLoadScreen_0_LE.project_jade.jpg",
             "skinType": "",
-            "rarity": "kEpic",
+            "rarity": "kNoRarity",
             "isLegacy": false,
             "splashVideoPath": null,
             "previewVideoUrl": null,
@@ -1693,11 +1694,7 @@
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
-            "skinLines": [
-                {
-                    "id": 95
-                }
-            ],
+            "skinLines": null,
             "description": "정의의 저널이라 알려진 고대의 두루마리에는 전설의 내셔 남작이 소환사의 협곡에 불러온 살육과 절망이 매우 상세하게 묘사되어 있습니다. 하지만 그건 내셔 남작이 아니었습니다. 남작을 흉내 낸 코그모일 뿐이었지만, 킬을 달성하고 미니언을 사냥하도록 둔다면, 어쩌면 원조 전설보다 더 공포스러운 존재가 될지도 모릅니다."
         }
     ],
@@ -2168,7 +2165,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "코그모가 매우 먼 거리로 생체 포탄을 발사하여, 대상에게 피해를 입히고 위치를 드러냅니다.  살아있는 곡사포는 짧은 시간 동안 여러 차례 사용하면 마나 소모량이 증가합니다.",
-            "dynamicDescription": "코그모가 매우 먼 거리로 산성 포탄을 발사하여 잠시 후 착탄시킵니다. 산성 포탄은 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @VisionDebuffDuration@초 동안 위치를 드러냅니다. 챔피언에게는 <magicDamage>@ChampionTotalDamage@의 증가한 마법 피해</magicDamage>를 입힙니다.<br><br>@ManaCostDuration@초 이내에 스킬을 재사용하면 <scaleMana>@BaseCost@의 마나</scaleMana>를 추가로 소모합니다. (최대 <scaleMana>@ManaCostCap@의 마나</scaleMana> 소모)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "코그모가 폭발하는 산성 포탄을 매우 먼 거리로 발사하여, 범위 내에 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 챔피언에게는 입히는 피해가 <magicDamage>@ChampionTotalDamage@</magicDamage>만큼으로 증가합니다. 적중한 적은 @VisionDebuffDuration@초 동안 위치가 드러납니다.<br><br>@ManaCostDuration@초 이내에 스킬을 재사용하면 <scaleMana>@BaseCost@의 마나</scaleMana>를 추가로 소모합니다. (최대 <scaleMana>@ManaCostCap@의 마나</scaleMana> 소모)@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1700.0,

@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karmas Fähigkeitsstärke erhöht sich basierend auf ihrem prozentual fehlenden Leben."
+        "description": "Karmas Fähigkeitsstärke erhöht sich basierend auf ihrem fehlenden Leben."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Karma schleudert verborgene Klingen aus ihren Fächern und fügt Einheiten in einem kegelförmigen Bereich vor ihr magischen Schaden zu.<br><br>Mantra-Bonus: „Himmelswelle“ fügt Gegnern nicht nur Schaden zu, sondern heilt auch Verbündete in dem Kegel, basierend auf einem Prozentsatz ihres fehlenden Lebens.",
-            "dynamicDescription": "Karma schleudert verborgene Klingen aus ihren Fächern und fügt Einheiten in einem kegelförmigen Bereich vor ihr <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu.<br><br><keywordMajor>Mantra-Bonus:</keywordMajor> <spellName>Himmelswelle</spellName> fügt Gegnern nicht nur Schaden zu, sondern <healing>heilt</healing> auch Verbündete in dem Kegel um <healing>@BaseHealth@ plus @AdditionalHealPercentTT@ %</healing> ihres <scaleHealth>fehlenden Lebens</scaleHealth>.@SpellModifierDescriptionAppend@",
+            "description": "Karma schleudert verborgene Klingen aus ihren Fächern und fügt Gegnern in einem kegelförmigen Bereich Schaden zu.<br><br>Mantra: „Himmelswelle“ heilt außerdem Verbündete im Wirkbereich basierend auf ihrem fehlenden Leben.",
+            "dynamicDescription": "Karma schleudert verborgene Klingen aus ihren Fächern und fügt Einheiten in einem kegelförmigen Bereich <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu.<br><br><keywordMajor>Mantra:</keywordMajor> <spellName>Himmelswelle</spellName> <healing>heilt</healing> außerdem Verbündete im Wirkbereich um <healing>@BaseHealth@ plus @AdditionalHealPercent@</healing> ihres <scaleHealth>fehlenden Lebens</scaleHealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Karma erschafft einen Strahl zwischen einem Verbündeten oder einem Gegner. Verbündete Anker bewegen sich schneller und gegnerische Anker werden verlangsamt. Der Strahl fügt Gegnern magischen Schaden zu und belegt jeden Champion, den er durchdringt, mit derselben Lauftempo-Anpassung wie die Anker.<br><br>Mantra-Bonus: Karma verstärkt die Bindung, um den Effekt des Lauftempo-Modifikators zu verdoppeln.",
-            "dynamicDescription": "Karma erschafft für bis zu @Duration@ Sekunden einen Strahl zwischen einem Verbündeten oder Gegner. Verbündete Anker <speed>bewegen sich @MoveSpeedMod*100@ % schneller</speed> und gegnerische Anker werden um <status>@MoveSpeedMod*100@ % verlangsamt</status>. Der Strahl fügt Gegnern <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu und belegt jeden Champion, den er durchdringt, mit derselben Lauftempo-Anpassung wie die Anker.<br><br>Der Strahl bricht ab, wenn das verbundene Ziel <keywordStealth>getarnt</keywordStealth> wird.<br><br><keywordMajor>Mantra-Bonus:</keywordMajor> Karma verstärkt die Bindung, um den Effekt des Lauftempo-Modifikators zu verdoppeln.@SpellModifierDescriptionAppend@",
+            "description": "Karma erschafft einen Strahl zwischen sich und einer anderen Einheit. Verbündete Anker bewegen sich schneller und gegnerische Anker werden verlangsamt. Der Strahl fügt Gegnern Schaden zu und belegt jeden Champion, den er durchdringt, mit derselben Lauftempo-Anpassung.<br><br>Mantra: Karma verstärkt die Bindung, um den Lauftempo-Effekt zu erhöhen.",
+            "dynamicDescription": "Karma erschafft bis zu @Duration@ Sekunden lang einen Strahl zwischen sich und einer anderen Einheit. Verbündete Anker, einschließlich sie selbst, erhalten <speed>@MoveSpeedMod*100@ % Lauftempo</speed>. Gegnerische Anker werden um @MoveSpeedMod*100@ % <status>verlangsamt</status>.<br><br>Der Strahl fügt allen Gegnern, die er berührt, <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu. Verbündete und gegnerische Champions erhalten dieselbe Lauftempoanpassung wie die Anker.<br><br><keywordMajor>Mantra:</keywordMajor> Karma verstärkt die Bindung und erhöht die Lauftempo-Modifikatoren auf @MantraMoveSpeedMod@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Karma beschwört einen schützenden Schild, der eingehenden Schaden absorbiert.<br><br>Mantra-Bonus: Zusätzlich zur Aktivierung strahlt der Schild Energie aus, die gegnerischen Einheiten um Karmas Ziel herum Schaden zufügt.",
-            "dynamicDescription": "Karma beschwört einen schützenden <shield>Schild</shield>, der @Duration@ Sekunden lang <shield>@TotalShield@ Schaden</shield> absorbiert.<br><br><keywordMajor>Mantra-Bonus:</keywordMajor> Zusätzlich zur Aktivierung strahlt der <shield>Schild</shield> Energie aus, die gegnerischen Einheiten um ihr Ziel herum <magicDamage>@TotalShield@ magischen Schaden</magicDamage> zufügt.@SpellModifierDescriptionAppend@",
+            "description": "Karma beschwört einen schützenden Schild für einen Verbündeten, der eingehenden Schaden absorbiert.<br><br>Mantra: Zusätzlich zur Aktivierung strahlt der Schild Energie aus, die gegnerischen Einheiten um ihr Ziel herum Schaden zufügt.",
+            "dynamicDescription": "Karma beschwört einen schützenden <shield>Schild</shield>, der @Duration@ Sekunden lang <shield>@TotalShield@ Schaden</shield> absorbiert.<br><br><keywordMajor>Mantra:</keywordMajor> Der Schild strahlt Energie aus, die gegnerischen Einheiten um ihr Ziel herum <magicDamage>@TotalShield@ magischen Schaden</magicDamage> zufügt.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Karma verstärkt ihre nächste gewirkte Fähigkeit mit einem zusätzlichen Effekt. „Mantra“ ist bereits auf Stufe 1 verfügbar und muss nicht erst erlernt werden.",
-            "dynamicDescription": "Karma verstärkt ihre nächste gewirkte Fähigkeit mit einem zusätzlichen Effekt. Karma erhält alle <attention>@f1@</attention> Sekunden eine Aufladung (max. 2 Aufladungen).<br><br>Die Rücksetzungsrate wird durch Abklingzeitverringerung reduziert.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma verstärkt ihre nächste gewirkte Fähigkeit mit einem zusätzlichen Effekt. Karma erhält alle <attention>@MantraCooldown@</attention> Sekunden eine Aufladung (max. 2 Aufladungen).<br><br>Die Rücksetzungsrate wird durch Abklingzeitverringerung reduziert.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

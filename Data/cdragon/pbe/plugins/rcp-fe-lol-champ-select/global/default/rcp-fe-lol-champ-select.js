@@ -10836,34 +10836,36 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, a = n(1),
-                i = n(6),
-                o = (s = n(17)) && s.__esModule ? s : {
-                    default: s
-                };
+            var s = n(1),
+                a = n(6);
             const {
-                RunMixin: l
-            } = a.EmberAddons.EmberLifeline;
-            var r = a.Ember.Service.extend(l, o.default, {
+                RunMixin: i
+            } = s.EmberAddons.EmberLifeline;
+            var o = s.Ember.Service.extend(i, {
+                dynamicConfigService: s.Ember.inject.service("dynamic-config"),
                 init: function() {
-                    this._super(...arguments), this.champSelectBinding = (0, a.DataBinding)("/lol-champ-select", (0, a.getProvider)().getSocket()), this.champSelectBinding.observe("/v1/session", this, this._handleChampSelectSession)
+                    this._super(...arguments), s.db.observe("/lol-champ-select/v1/session", this, this._handleChampSelectSession)
                 },
                 _handleChampSelectSession: function(e) {
-                    e && (this._setToConnected(), this._cancelDisconnectTimeouts(), this._createDisconnectTimeout(e.timer.adjustedTimeLeftInPhase + this._getDisconnectDelayMs()), this._createDisconnectShouldExitTimeout(e.timer.adjustedTimeLeftInPhase + this._getDisconnectShouldExitDelayMs()), this._session = e)
+                    if (this._setToConnected(), this._cancelTimeouts(), e) {
+                        const t = e.timer.adjustedTimeLeftInPhase;
+                        this._createDisconnectTimeout(t + this._getDisconnectDelayMs()), this._createDisconnectShouldExitTimeout(t + this._getDisconnectShouldExitDelayMs());
+                        const n = this.get("dynamicConfigService.retrieveLatestGameDtoTimeRemainingMs");
+                        n && t > n && this._createRetrieveLatestGameDtoTimeout(t - n)
+                    }
+                    this._session = e
                 },
                 _setToConnected: function() {
                     this.set("isDisconnected", !1), this._setDisconnectShouldExit(!1)
                 },
                 _getDisconnectDelayMs: function() {
-                    const e = this.get("jmxSettings.LcuChampionSelect.DisconnectDelayMs");
-                    return e || i.DEFAULT_DISCONNECT_DELAY_MS
+                    return this.get("dynamicConfigService.disconnectDelayMs")
                 },
                 _getDisconnectShouldExitDelayMs: function() {
-                    const e = this.get("jmxSettings.LcuChampionSelect.DisconnectShouldExitDelayMs");
-                    return e || i.DEFAULT_DISCONNECT_SHOULD_EXIT_DELAY_MS
+                    return this.get("dynamicConfigService.disconnectShouldExitDelayMs")
                 },
-                _cancelDisconnectTimeouts: function() {
-                    this.cancelTask(this._setDisconnectTimeout), this.cancelTask(this._setDisconnectShouldExitTimeout), this._setDisconnectTimeout = null, this._setDisconnectShouldExitTimeout = null
+                _cancelTimeouts: function() {
+                    this.cancelTask(this._setDisconnectTimeout), this.cancelTask(this._setDisconnectShouldExitTimeout), this.cancelTask(this._retrieveLatestGameDtoTimeout), this._setDisconnectTimeout = null, this._setDisconnectShouldExitTimeout = null
                 },
                 _createDisconnectTimeout: function(e) {
                     this._setDisconnectTimeout = this.runTask((() => {
@@ -10873,6 +10875,11 @@
                 _createDisconnectShouldExitTimeout: function(e) {
                     this._setDisconnectShouldExitTimeout = this.runTask((() => {
                         this._setDisconnectShouldExit(!0)
+                    }), e)
+                },
+                _createRetrieveLatestGameDtoTimeout(e) {
+                    this._retrieveLatestGameDtoTimeout = this.runTask((() => {
+                        this.retrieveLatestGameDto()
                     }), e)
                 },
                 _setDisconnectShouldExit: function(e) {
@@ -10886,18 +10893,19 @@
                 receivedServiceCallResponse: function(e = null) {
                     if (!this._session) return;
                     const t = this.get("isDisconnected");
-                    t && !e ? (this._cancelDisconnectTimeouts(), this._setToConnected(), this._createDisconnectTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectDelayMs()), this._createDisconnectShouldExitTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectShouldExitDelayMs())) : !t && this._isDisconnectError(e) && (this._cancelDisconnectTimeouts(), this._createDisconnectTimeout(0), this._createDisconnectShouldExitTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectShouldExitDelayMs()))
+                    t && !e ? (this._cancelTimeouts(), this._setToConnected(), this._createDisconnectTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectDelayMs()), this._createDisconnectShouldExitTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectShouldExitDelayMs())) : !t && this._isDisconnectError(e) && (this._cancelTimeouts(), this._createDisconnectTimeout(0), this._createDisconnectShouldExitTimeout(this._session.timer.adjustedTimeLeftInPhase + this._getDisconnectShouldExitDelayMs()))
                 },
                 _isDisconnectError: function(e) {
                     if (e && e.responseJSON && e.responseJSON.message) {
                         const t = e.responseJSON.message;
-                        for (const e in i.DISCONNECT_ERROR_INDICATORS)
+                        for (const e in a.DISCONNECT_ERROR_INDICATORS)
                             if (t.includes(e)) return !0
                     }
                     return !1
-                }
+                },
+                retrieveLatestGameDto: () => s.db.post("/lol-champ-select/v1/retrieve-latest-game-dto")
             });
-            t.default = r
+            t.default = o
         }, function(e, t, n) {
             "use strict";
             var s = this && this.__importDefault || function(e) {
@@ -10978,7 +10986,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.CONFIG_PROVIDERS = void 0;
-            const s = n(1);
+            const s = n(1),
+                a = n(6);
             t.CONFIG_PROVIDERS = [{
                 baseUrl: "/lol-client-config/v3/client-config/",
                 configs: [{
@@ -11024,6 +11033,18 @@
                     key: "lol.client_settings.champion_select.enemy_scouting_card_mastery_and_recent_enabled",
                     propName: "scoutingCardMasteryAndRecentEnabled",
                     defaultValue: !1
+                }, {
+                    key: "lol.client_settings.champion_select.retrieve_latest_game_dto_time_remaining_ms",
+                    propName: "retrieveLatestGameDtoTimeRemainingMs",
+                    defaultValue: 0
+                }, {
+                    key: "lol.client_settings.champion_select.show_disconnect_delay_ms",
+                    propName: "disconnectDelayMs",
+                    defaultValue: a.DEFAULT_DISCONNECT_DELAY_MS
+                }, {
+                    key: "lol.client_settings.champion_select.show_disconnect_should_exit_delay_ms",
+                    propName: "disconnectShouldExitDelayMs",
+                    defaultValue: a.DEFAULT_DISCONNECT_SHOULD_EXIT_DELAY_MS
                 }, {
                     key: "lol.client_settings.navigation.enableRewardsProgram",
                     propName: "UseNewLoyaltyIcon",
@@ -17591,15 +17612,15 @@
                     G = V?.currency ?? q[0]?.currency ?? (0, i.getItemCurrency)(e),
                     W = C[G],
                     Y = V?.cost ?? j ?? q[0]?.cost ?? null,
-                    K = [...s.get(e.id) || []],
-                    $ = K.includes(u.PORTRAITS?.ID),
-                    z = e.overrideTileSize || ($ ? "tall-tile" : null),
+                    $ = [...s.get(e.id) || []],
+                    K = $.includes(u.PORTRAITS?.ID),
+                    z = e.overrideTileSize || (K ? "tall-tile" : null),
                     J = e.purchaseUnits?.[0]?.fulfillment,
                     X = J?.itemId || J?.itemInstanceId || null,
                     Q = M && M.get(X),
-                    Z = $ && Q?.holoFoilPath || "",
+                    Z = K && Q?.holoFoilPath || "",
                     ee = !!Z,
-                    te = $ && A[d.CHAMPION]?.has(Q?.championId),
+                    te = K && A[d.CHAMPION]?.has(Q?.championId),
                     ne = (0, o.getRequirementText)(e, A),
                     se = k.has(e.inventoryTypeId),
                     ae = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
@@ -17665,13 +17686,13 @@
                     tileSizeClass: z ? "jade-tile-" + z : "",
                     holoFoilPath: Z,
                     hasHoloFoil: ee,
-                    isPortrait: $,
-                    championName: $ && Q?.championName || "",
+                    isPortrait: K,
+                    championName: K && Q?.championName || "",
                     isOwned: de,
                     isPurchasable: ue,
                     _prereqKey: ne,
                     catalogItem: e,
-                    shopCategories: K,
+                    shopCategories: $,
                     contentType: fe,
                     isBundle: ye,
                     isQuantityPurchasable: ce,
@@ -20387,23 +20408,27 @@
                     const e = this.get("navigationButtonData") || [],
                         t = this.get("eventsById") || {};
                     return e.slice().sort(((e, n) => o(t[n.activeEventId]) - o(t[e.activeEventId]))).map((e => {
-                        const n = t[e.activeEventId]?.eventInfo?.unclaimedRewardCount || 0;
+                        const n = t[e.activeEventId]?.eventInfo,
+                            s = n?.unclaimedRewardCount || 0;
                         return {
                             eventId: e.activeEventId,
                             eventName: e.eventName,
                             eventType: e.eventType,
-                            route: (0, a.getRouteByEventHubType)(e.eventType),
+                            route: (0, a.getRouteByEventInfo)(n || {
+                                eventType: e.eventType
+                            }),
                             showPip: e.showPip || !1,
                             showGlow: e.showGlow || !1,
-                            unclaimedRewardCount: n,
-                            cappedUnclaimedRewardCount: Math.min(n, 99)
+                            unclaimedRewardCount: s,
+                            cappedUnclaimedRewardCount: Math.min(s, 99)
                         }
                     }))
                 })),
                 setActiveEvent(e) {
                     if (!e) return this.resetPassState(), this.clearEventSpecificData(), void this.setProperties({
                         activeEventId: null,
-                        activeEventType: null
+                        activeEventType: null,
+                        activeSeasonPassSubType: null
                     });
                     const t = this.get("activeEventId");
                     if (!t || t !== e) {
@@ -20554,7 +20579,8 @@
                 HALL_OF_LEGENDS: "hall-of-legends",
                 SEASON_PASS: "season-pass",
                 ACTIVITY_CENTER_MILESTONES: "activity-center-milestones",
-                DEMACIA_PASS: "demacia-pass"
+                DEMACIA_PASS: "demacia-pass",
+                EMBEDDED_PLUGIN: "embedded-plugin"
             };
             t.ROUTES = o;
             const l = {
@@ -20567,7 +20593,8 @@
             t.EVENT_HUB_TYPES = l;
             const r = {
                 DEFAULT: "Default",
-                MAYHEM: "Mayhem"
+                MAYHEM: "Mayhem",
+                MAYHEM_CUSTOM_HUB: "MayhemCustomHub"
             };
             t.SEASON_PASS_SUB_TYPES = r;
             const c = {
@@ -20757,11 +20784,15 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
+            }), t.getRouteByEventInfo = t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getLocalizedAssetPath = t.getCategoryOffersId = t.default = void 0;
             var s = n(354);
             const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
             t.getCategoryOffersId = a;
-            const i = e => {
+            const i = (e, t) => {
+                if (e && "/lol-game-data/assets/" !== e) return t ? e.replace("/en_US/", `/${t}/`) : e
+            };
+            t.getLocalizedAssetPath = i;
+            const o = e => {
                 if (1 === e.items.length) {
                     const t = e.items[0];
                     return {
@@ -20778,15 +20809,25 @@
                     price: e.price
                 }
             };
-            t.getOfferPurchaseConstraints = i;
-            const o = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
-            t.getRouteByEventHubType = o;
-            var l = {
-                getCategoryOffersId: a,
-                getOfferPurchaseConstraints: i,
-                getRouteByEventHubType: o
+            t.getOfferPurchaseConstraints = o;
+            const l = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
+            t.getRouteByEventHubType = l;
+            const r = (e = {}) => {
+                const {
+                    eventType: t,
+                    seasonPassSubType: n
+                } = e;
+                return t === s.EVENT_HUB_TYPES.SEASON_PASS && n === s.SEASON_PASS_SUB_TYPES.MAYHEM_CUSTOM_HUB ? s.ROUTES.EMBEDDED_PLUGIN : l(t)
             };
-            t.default = l
+            t.getRouteByEventInfo = r;
+            var c = {
+                getCategoryOffersId: a,
+                getLocalizedAssetPath: i,
+                getOfferPurchaseConstraints: o,
+                getRouteByEventInfo: r,
+                getRouteByEventHubType: l
+            };
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

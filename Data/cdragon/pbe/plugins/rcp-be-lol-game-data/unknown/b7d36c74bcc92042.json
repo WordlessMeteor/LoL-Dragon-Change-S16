@@ -229,8 +229,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "케이틀린이 소총을 조준한 후, 관통하는 탄환을 발사하여 물리 피해를 입힙니다. (추가로 적중하는 대상은 감소한 피해를 받습니다.)",
-            "dynamicDescription": "케이틀린이 소총을 @CastTime@초 동안 조준한 후, 관통하는 탄환을 발사하여 <physicalDamage>@InitialDamage@의 물리 피해</physicalDamage>를 입힙니다. 대상을 추가로 맞힐 때마다 피해량이 @ExtraHitPercentReduction*100@%씩, 최소 @MinimumDamagePercent*100@%까지 감소합니다.@SpellModifierDescriptionAppend@",
+            "description": "케이틀린이 관통하는 탄환을 발사해, 일직선상의 모든 적에게 피해를 입힙니다.",
+            "dynamicDescription": "케이틀린이 관통하는 탄환을 발사해 <physicalDamage>@InitialDamage@의 물리 피해</physicalDamage>를 입힙니다. 적을 추가로 맞힐 때마다 피해량이 @ExtraHitPercentReduction*100@%씩, 최소 <physicalDamage>@MinimumDamageCalc@</physicalDamage>까지 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -245,7 +245,7 @@
                 70.0,
                 80.0,
                 90.0,
-                80.0
+                100.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -253,7 +253,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -279,31 +279,31 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1.3,
-                    1.3,
-                    1.45,
-                    1.6,
-                    1.75,
-                    1.9,
-                    2.05
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -379,8 +379,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "케이틀린이 교활한 요들을 잡기 위한 덫을 설치합니다. 덫은 발동 시 대상 챔피언을 이동 불가 상태로 만들고, 위치를 드러내며, 짧은 시간에 걸쳐 마법 피해를 입힙니다.",
-            "dynamicDescription": "케이틀린이 덫을 설치해, 이를 밟은 적 챔피언을 잠시 <status>속박</status>하고 @VisibilityDuration@초 동안 위치를 드러냅니다. 덫은 @DOTTime@초에 걸쳐 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @Duration@분간 유지됩니다. 한 번에 @MaxTraps@개까지만 설치할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "description": "케이틀린이 교활한 요들을 잡기 위한 덫을 설치합니다. 덫은 발동 시 챔피언을 이동 불가 상태로 만들고, 위치를 드러내며, 짧은 시간에 걸쳐 피해를 입힙니다.",
+            "dynamicDescription": "케이틀린이 @Duration@분 동안 지속되는 덫을 설치해, 이를 발동시킨 적 챔피언을 @RootDuration@초간 <status>속박</status>하고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히며, @VisibilityDuration@초 동안 위치를 드러냅니다.<br><br>한 번에 @MaxTraps@개까지만 설치할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -403,75 +403,75 @@
                 14.0,
                 11.0,
                 8.0,
-                8.0
+                5.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -530,7 +530,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "케이틀린이 무거운 그물을 발사하여 대상을 둔화시킵니다. 발사 시 케이틀린이 반동으로 밀려납니다.",
-            "dynamicDescription": "케이틀린이 그물을 발사해, 대상에게 <magicDamage>@NetDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowAmount*-100@% <status>둔화</status>시킵니다. 발사 시 케이틀린이 밀려납니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "케이틀린이 뒤로 밀려나며 그물을 발사해, 처음 적중한 적에게 <magicDamage>@NetDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowAmount*-100@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -553,39 +553,39 @@
                 14.0,
                 12.0,
                 10.0,
-                10.0
+                8.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    40.0,
-                    80.0,
-                    130.0,
-                    180.0,
-                    230.0,
-                    280.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -679,8 +679,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "케이틀린이 공을 들인 완벽한 사격을 하여 먼 거리에서 하나의 대상에게 큰 피해를 입힙니다. 이 탄환은 다른 적 챔피언에게 가로막힐 수 있습니다.",
-            "dynamicDescription": "케이틀린이 잠시 시간을 들여 목표를 조준한 뒤 완벽한 사격을 가해, 거리 @CastRange@ 내에 있는 적 챔피언에게 <physicalDamage>@RTotalDamage@의 물리 피해</physicalDamage>를 입힙니다. 이 탄환은 다른 적 챔피언에게 가로막힐 수 있습니다.@SpellModifierDescriptionAppend@",
+            "description": "케이틀린이 공을 들인 완벽한 사격을 가해, 먼 거리에서 한 명의 적 챔피언에게 막대한 피해를 입힙니다. 이 사격은 다른 적 챔피언에게 가로막힐 수 있습니다.",
+            "dynamicDescription": "케이틀린이 잠시 시간을 들여 목표를 조준한 뒤 완벽한 사격을 가해, 거리 @CastRange@ 내에 있는 적 챔피언에게 <physicalDamage>@RTotalDamage@의 물리 피해</physicalDamage>를 입힙니다. 이 사격은 다른 적 챔피언에게 가로막힐 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,
@@ -693,9 +693,9 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 90.0,

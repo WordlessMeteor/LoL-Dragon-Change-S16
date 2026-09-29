@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Reduce durata efectelor de amețire, încetinire, provocare, terifiere, prindere în capcană și țintuire pentru fiecare campion inamic din apropiere."
+        "description": "Irelia primește tenacitate pentru fiecare campion inamic din apropiere."
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Irelia se năpustește înainte și își lovește ținta. Dacă lamele ucid ținta, abilitatea returnează 35 mană și timpul de reactivare se resetează.",
-            "dynamicDescription": "Irelia se năpustește în față pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Dacă lamele ucid ținta, <spellName>''Atacul fulgerător''</spellName> returnează <scaleMana>@ManaReturn@ mană</scaleMana> și timpul de reactivare se resetează.@SpellModifierDescriptionAppend@",
+            "description": "Irelia se năpustește și își lovește ținta. Dacă lamele o ucid, ''Atacul fulgerător'' returnează o parte din costul de mană și timpul de reactivare se resetează.",
+            "dynamicDescription": "Irelia se năpustește pentru a-și lovi ținta, provocându-i <physicalDamage>@TotalDamage@ daune fizice</physicalDamage>.<br><br>Dacă lamele ucid ținta, <spellName>''Atacul fulgerător''</spellName> returnează <scaleMana>@ManaReturn@ mană</scaleMana> și timpul de reactivare se resetează.@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Irelia este foarte pricepută în stilul Hiten, a cărui folosire îi acordă în mod pasiv refacerea vieții în urma atacurilor fizice.  Activarea ''Stilului Hiten'' îi dublează nivelul de viață refăcută și provoacă daune reale cu atacurile de bază pentru scurt timp.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> atacurile de bază <healing>refac @Health@ viață</healing>.<br><br><spellActive>Activă:</spellActive> atacurile de bază ale Ireliei provoacă <trueDamage>@Damage@ daune reale</trueDamage> și dublează <healing>viața regenerată</healing> timp de @HealthRestoreDuration@ secunde.@SpellModifierDescriptionAppend@",
+            "description": "Pasivă: Irelia este foarte pricepută în stilul Hiten, iar atacurile ei îi refac viața.<br><br>Activă: atacurile de bază provoacă daune reale bonus, iar vindecarea crește timp de câteva secunde.",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> atacurile de bază <healing>refac @Health@ viață</healing>.<br><br><spellActive>Activă:</spellActive> atacurile de bază ale Ireliei provoacă <trueDamage>@Damage@ daune reale</trueDamage>, iar acum <healing>refac @HealthRestoreActive@ viață</healing> timp de @ActiveDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,8 +405,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Atacul Ireliei echilibrează balanța, provocând daune și încetinind ținta.  Totuși, dacă ținta are un procentaj de viață mai mare decât Irelia, atunci lovitura amețește ținta în loc s-o încetinească.",
-            "dynamicDescription": "Irelia își străpunge ținta, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinind</status> ținta cu @SlowAmount@% timp de @StunDuration@ sec.<br><br>Dacă ținta are un <scaleHealth>procentaj de viață</scaleHealth> mai mare decât Irelia, o <status>amețește</status> pe durata efectului, în schimb.@SpellModifierDescriptionAppend@",
+            "description": "Atacul Ireliei echilibrează balanța, provocând daune și încetinind ținta. Dacă are un procentaj de viață mai mare decât ea, lovitura o amețește în schimb.",
+            "dynamicDescription": "Irelia își străpunge ținta, provocându-i <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinind-o</status> cu @SlowAmount@% timp de @StunDuration@ sec.<br><br>Dacă ținta are un <scaleHealth>procentaj de viață</scaleHealth> mai mare decât Irelia, o <status>amețește</status> pe durata efectului, în schimb.@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Irelia invocă 4 lame-spirit pe care le poate lansa pentru a provoca daune fizice și a sorbi viața din inamicii prin care trec.",
+            "description": "Irelia invocă 4 lame-spirit pe care le poate lansa pentru a provoca daune și a sorbi viața din inamicii prin care trec.",
             "dynamicDescription": "Irelia invocă 4 lame-spirit pe care le poate lansa pentru a le provoca <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> inamicilor prin care trec. Irelia se <healing>vindecă</healing> cu @ChampionHealPercent@% din daunele provocate împotriva campionilor și cu @MinionHealPercent@% din daunele provocate împotriva altor inamici.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

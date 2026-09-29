@@ -97,7 +97,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/KarmaInnerFlame_Jade34.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Karma a hiányzó életerejével arányosan megnövelt varázserőre tesz szert."
+        "description": "Karma varázserőre tesz szert a hiányzó életereje alapján."
     },
     "spells": [
         {
@@ -108,8 +108,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Karma rejtett pengéket lő ki a legyezőiből, amelyek tölcsér alakban varázssebzést okoznak az előtte álló egységeknek.<br><br>Mantrabónusz: a Mennyei hullám az ellenfelek megsebzése mellett tölcsér alakban a szövetségeseket is gyógyítja a hiányzó életerejükkel arányosan.",
-            "dynamicDescription": "Karma rejtett pengéket lő ki a legyezőiből, amelyek tölcsér alakban <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak az előtte álló egységeknek.<br><br><keywordMajor>Mantrabónusz:</keywordMajor> a <spellName>Mennyei hullám</spellName> az ellenfelek megsebzése mellett tölcsér alakban a szövetségeseket is <healing>gyógyítja</healing> <healing>@BaseHealth@ + a <scaleHealth>hiányzó életerejük</scaleHealth> @AdditionalHealPercentTT@%-ával</healing> egyenlő mértékben.@SpellModifierDescriptionAppend@",
+            "description": "Karma rejtett pengéket lő ki a legyezőiből, sebzést okozva egy tölcsér alakú területen.<br><br>Mantra: a Mennyei hullám ezenfelül a hiányzó életerejükkel arányosan gyógyítja a szövetségeseket a területen belül.",
+            "dynamicDescription": "Karma rejtett pengéket lő ki a legyezőiből, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozva az ellenfeleknek egy tölcsér alakú területen.<br><br><keywordMajor>Mantra:</keywordMajor> a <spellName>Mennyei hullám</spellName> ezenfelül <healing>gyógyítja</healing> a területen belüli szövetségeseket, amivel <healing>@BaseHealth@ plusz a <scaleHealth>hiányzó életerő</scaleHealth> @AdditionalHealPercent@-ával egyenlő</healing> életerőt tölt vissza.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -258,8 +258,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Karma egy sugárnyalábbal magához láncol egy szövetségest vagy egy ellenfelet. A megbéklyózott szövetségesek gyorsabban mozognak, az ellenfelek pedig lelassulnak. A sugárnyaláb varázssebzést okoz az ellenfeleknek, és a megbéklyózott hős mozgásisebesség-módosítóját alkalmazza minden olyan hősön, akin áthalad.<br><br>Mantrabónusz: Karma megerősíti a köteléket, amivel megduplázza a mozgásisebesség-módosító hatását.",
-            "dynamicDescription": "Karma egy sugárnyalábbal legfeljebb @Duration@ másodpercre magához láncol egy szövetségest vagy egy ellenfelet. A megbéklyózott szövetségesek <speed>@MoveSpeedMod*100@%-kal gyorsabban mozognak</speed>, az ellenfelek pedig <status>@MoveSpeedMod*100@%-kal lassulnak</status>. A sugárnyaláb <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz az ellenfeleknek, és a megbéklyózott hős mozgásisebesség-módosítóját alkalmazza minden olyan hősön, akin áthalad.<br><br>A sugárnyaláb megszűnik, ha a megbéklyózott célpont <keywordStealth>láthatatlanná</keywordStealth> válik.<br><br><keywordMajor>Mantrabónusz:</keywordMajor> Karma megerősíti a köteléket, amivel megduplázza a mozgásisebesség-módosító hatását.@SpellModifierDescriptionAppend@",
+            "description": "Karma egy sugárnyalábbal magához láncol egy másik egységet. A megbéklyózott szövetségesek gyorsabban mozognak, az ellenfelek pedig lelassulnak. A sugárnyaláb megsebzi az ellenfeleket, és ugyanezt a mozgásisebesség-módosítót alkalmazza minden olyan hősre, akin áthalad.<br><br>Mantra: Karma erősíti a köteléket, megnövelve a mozgási sebességre gyakorolt hatást.",
+            "dynamicDescription": "Karma @Duration@ másodpercre egy sugárnyalábbal magához láncol egy másik egységet. A szövetséges hősök, beleértve őt is, <speed>@MoveSpeedMod*100@% mozgási sebességre</speed> tesznek szert. Az ellenséges hősöket @MoveSpeedMod*100@%-kal <status>lelassítja</status>.<br><br>A sugárnyaláb <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz minden megérintett ellenfélnek. A szövetséges és ellenséges hősök mozgási sebességét a végponton állókhoz hasonlóan módosítja.<br><br><keywordMajor>Mantra:</keywordMajor> Karma erősíti a köteléket, @MantraMoveSpeedMod@ értékre növelve a mozgásisebesség-módosítót.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -408,8 +408,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Karma megidéz egy védőpajzsot, amely elnyeli a beérkező sebzést.<br><br>Mantrabónusz: a megidézett pajzsból energia sugárzik, amely a Karma célpontjának közelében lévő ellenséges egységeket sebzi.",
-            "dynamicDescription": "Karma megidéz egy <shield>védőpajzsot</shield>, amely @Duration@ másodpercig <shield>@TotalShield@ sebzést</shield> nyel el.<br><br><keywordMajor>Mantra bónusz:</keywordMajor> a megidézett <shield>pajzsból</shield> energia sugárzik, amely a hős célpontjának közelében lévő ellenséges egységeknek <magicDamage>@TotalShield@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
+            "description": "Karma védőpajzsot idéz egy szövetségesre, amely elnyeli a beérkező sebzést.<br><br>Mantra: a megidézett pajzsból energia sugárzik, megsebezve a célpont körüli ellenfeleket.",
+            "dynamicDescription": "Karma megidéz egy <shield>védőpajzsot</shield>, amely @Duration@ másodpercig <shield>@TotalShield@ sebzést</shield> nyel el.<br><br><keywordMajor>Mantra:</keywordMajor> a pajzsból energia sugárzik, amely <magicDamage>@TotalShield@ varázssebzést</magicDamage> okoz a célpont körüli ellenséges egységeknek.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -559,7 +559,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Karma felerősíti a következő képességét egy további hatással. A Mantra az 1. szinttől elérhető, és nem kell rá képességpontot költeni.",
-            "dynamicDescription": "Karma felerősíti a következő képességét egy további hatással. Karma <attention>@f1@</attention> másodpercenként kap új töltetet, legfeljebb összesen kettőt.<br><br>A frissítés gyakoriságát a töltésiidő-csökkentés gyorsítja.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma felerősíti a következő képességét egy további hatással. Karma <attention>@MantraCooldown@</attention> másodpercenként kap egy új töltetet, legfeljebb összesen kettőt.<br><br>A frissítés gyakoriságát a töltésiidő-csökkentés gyorsítja.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

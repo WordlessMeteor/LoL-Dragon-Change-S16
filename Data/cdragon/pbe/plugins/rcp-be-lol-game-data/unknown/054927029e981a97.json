@@ -142,7 +142,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヴァロールが飛んでいき、最初に触れた敵を攻撃して周囲にいるすべての敵にダメージとブラインド効果を与える。",
-            "dynamicDescription": "<keywordMajor>クイン</keywordMajor>: ヴァロールが飛んでいき、最初に触れた敵を攻撃する。その後、周囲にいるすべての敵を攻撃して<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@BlindDuration@秒間<status>ブラインド</status>効果を付与する。<br><br><keywordMajor>ヴァロール</keywordMajor>: 周囲にいるすべての敵を攻撃して<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@BlindDuration@秒間<status>ブラインド</status>効果を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>クイン</keywordMajor>: ヴァロールが飛んでいき、最初に触れた敵を攻撃する。その後、周囲にいるすべての敵を攻撃して<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@BlindDuration@秒間<status>ブラインド効果</status>を付与する。<br><br><keywordMajor>ヴァロール</keywordMajor>: 周囲にいるすべての敵を攻撃して<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@BlindDuration@秒間<status>ブラインド効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -291,7 +291,7 @@
             "abilityVideoImagePath": "",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "自動効果: 「弱点」を付与するとステータスが増加する<br><br>ヴァロールの自動効果: ステータスが増加する<br><br>発動効果: エリアの視界を得る",
+            "description": "クインの自動効果: 「鷲匠」を発動すると、数秒間攻撃速度と移動速度が増加する。<br><br>ヴァロールの自動効果: 攻撃速度が増加する。<br><br>発動効果: クインとヴァロールの付近の広い視界を得る。",
             "dynamicDescription": "<keywordMajor>クインの自動効果</keywordMajor>: <keywordMajor>弱点</keywordMajor>のマークを付与された対象に通常攻撃を行うと、@BuffDuration@秒間、<speed>攻撃速度が@AttackSpeedBonus*100@%</speed>、<speed>移動速度が@MovespeedAmount@</speed>増加する。<br><br><keywordMajor>ヴァロールの自動効果</keywordMajor>: 攻撃速度が@ValorAttackSpeed*100@%増加する。<br><br><keywordMajor>発動効果:</keywordMajor> ヴァロールが周囲を偵察し、@VisionDuration@秒間、自身を中心とした広範囲の視界を確保する。@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
@@ -441,7 +441,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "クインがダッシュする。<br><br>ヴァロールの場合でもダッシュする。",
+            "description": "クインまたはヴァロールが敵に向かってダッシュし、対象にダメージを与えてノックバックし、スロウ効果を付与する。クインとして発動した場合、クインは対象を蹴って跳び退き、距離を取り、ヴァロールが対象に「鷲匠」のマークを付与する。",
             "dynamicDescription": "<keywordMajor>クインまたはヴァロール</keywordMajor>: 敵に向かってダッシュし、対象に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えて<status>ノックバック</status>し、@SlowAmount*100@%の<status>スロウ効果</status>を付与する。対象の移動速度は@SlowDecayTime@秒かけて元に戻る。<br><br><keywordMajor>クイン</keywordMajor>: 対象から飛び降りた後にヴァロールがその対象に<keywordMajor>弱点</keywordMajor>のマークをつける。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
@@ -591,7 +591,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "ヴァロールが高機動型の近接アタッカーとしてクインと入れ替わる。入れ替わっている間は、移動速度が増加し、スキルが置き換えられる。再発動すると「スカイストライク」を繰り出し、周囲にいるすべての敵にダメージを与える。",
+            "description": "ヴァロールが高機動型の近接アタッカーとしてクインと入れ替わる。入れ替わっている間は、移動速度が増加し、スキルが変化する。再発動すると「スカイストライク」を繰り出し、周囲にいるすべての敵にダメージを与える。",
             "dynamicDescription": "<keywordMajor>1回目の発動</keywordMajor>: ヴァロールが@TransformDuration@秒間、高機動型の近接アタッカーとしてクインと入れ替わる。ヴァロールがゴースト化して、移動速度が@OoCMoveSpeed*100@%増加する。戦闘状態に入ると、移動速度が徐々に@CombatMoveSpeed*100@%まで減少する。その後、ヴァロールは<keywordMajor>スカイストライク</keywordMajor>が発動可能になる。<br><br><keywordMajor>スカイストライク</keywordMajor>: クインが戦場に戻り、広範囲内のすべての敵に<physicalDamage>@TotalDamage@ - @TotalDamageMaximum@の物理ダメージ</physicalDamage>を与える。このダメージ量は、対象の体力の残量に応じて変化する。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,

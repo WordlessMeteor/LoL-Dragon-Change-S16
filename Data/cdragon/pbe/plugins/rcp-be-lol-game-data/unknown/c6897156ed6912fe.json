@@ -94,7 +94,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Irelia_IonianFervor.project_jade_16_18.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "附近每有一名敌方英雄，晕眩、减速、嘲讽、恐惧、禁锢和定身效果的持续时间都会缩短。"
+        "description": "伊瑞莉雅每有一名附近的敌方英雄，便获得韧性。"
     },
     "spells": [
         {
@@ -105,8 +105,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅向前冲刺，打击目标。如果击杀目标，“利刃冲击”的冷却时间将会重置，并返还35魔力值。",
-            "dynamicDescription": "伊瑞莉雅向前冲刺，斩击目标，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果击杀目标，<spellName>“利刃冲击”</spellName>的冷却时间将会重置，并返还<scaleMana>@ManaReturn@魔力值</scaleMana>。@SpellModifierDescriptionAppend@",
+            "description": "伊瑞莉雅冲刺，打击目标。如果击杀目标，利刃冲击的冷却时间将重置，并返还部分魔力值消耗。",
+            "dynamicDescription": "伊瑞莉雅冲刺，打击目标，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果击杀目标，<spellName>“利刃冲击”的</spellName>冷却时间将会重置，并返还<scaleMana>@ManaReturn@魔力值</scaleMana>。@SpellModifierDescriptionAppend@",
             "range": [
                 620.0,
                 620.0,
@@ -255,8 +255,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅精通刀锋之术，被动使她的物理攻击回复生命值。激活“刀锋姿态”后，她的普攻会在短时间内造成真实伤害。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>普攻<healing>会回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive>伊瑞莉雅的普攻会造成<trueDamage>@Damage@真实伤害</trueDamage>，并获得双倍<healing>治疗效果</healing>，持续@HealthRestoreDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "被动：伊瑞莉雅精通刀锋之术，她的攻击会回复生命值。<br><br>主动：普通攻击会造成额外真实伤害，并在数秒内提升治疗效果。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>普攻<healing>会回复@Health@生命值</healing>。<br><br><spellActive>主动：</spellActive> 伊瑞莉雅的普攻会造成 <trueDamage>@Damage@ 真实伤害</trueDamage> ，并现在<healing>回复@HealthRestoreActive@生命值</healing>，持续@ActiveDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -405,7 +405,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅的攻击会维持均衡，对目标造成伤害和减速效果。但如果目标的生命值百分比高于伊瑞莉雅，则此次打击会改为击晕目标。",
+            "description": "伊瑞莉雅的攻击会维持均衡，对目标造成伤害和减速效果。如果他们的生命值百分比高于她，这一击会改为晕眩目标。",
             "dynamicDescription": "伊瑞莉雅刺击目标，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并使目标<status>减速</status>@SlowAmount@%，持续@StunDuration@秒。<br><br>如果目标的<scaleHealth>生命值百分比</scaleHealth>高于伊瑞莉雅，则改为将目标<status>晕眩</status>相同时间。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
@@ -555,7 +555,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "伊瑞莉雅召唤4把灵刃，并可将其掷出，对穿过的敌人造成物理伤害并吸取生命值。",
+            "description": "伊瑞莉雅召唤4把灵气利刃，并可将其掷出，对穿过的敌人造成伤害并吸取生命值。",
             "dynamicDescription": "伊瑞莉雅召唤4把灵刃，并可将其掷出，对穿过的敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。她会获得相当于对英雄造成伤害@ChampionHealPercent@%的<healing>治疗</healing>，以及对敌人造成伤害@MinionHealPercent@%的治疗。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
@@ -577,9 +577,9 @@
                 70.0,
                 60.0,
                 50.0,
-                0.0,
-                0.0,
-                0.0
+                40.0,
+                30.0,
+                20.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

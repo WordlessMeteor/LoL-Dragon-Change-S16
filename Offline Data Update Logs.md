@@ -2531,5 +2531,21 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-28 08-27-34</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>No changes</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-29 08-38-01</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.20.822.0103 -> 16.20.822.4341</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

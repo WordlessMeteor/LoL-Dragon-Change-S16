@@ -256,8 +256,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "凯特琳加速转动步枪以释放一颗贯穿性的子弹，造成物理伤害(对后续目标造成较少伤害)。",
-            "dynamicDescription": "凯特琳转动她的步枪@CastTime@秒以发射一颗贯穿子弹，从而造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。对每个后续目标造成的伤害减少@ExtraHitPercentReduction*100@%，最低减少至@MinimumDamagePercent*100@%。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳释放一颗贯穿性的子弹以对一条直线上的所有对人造成伤害。",
+            "dynamicDescription": "凯特琳发射一颗贯穿子弹以造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>，对每个后续目标造成的伤害减少@ExtraHitPercentReduction*100@%，最低减少至<physicalDamage>@MinimumDamageCalc@</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -272,7 +272,7 @@
                 70.0,
                 80.0,
                 90.0,
-                80.0
+                100.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -280,7 +280,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -306,31 +306,31 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    1.3,
-                    1.3,
-                    1.45,
-                    1.6,
-                    1.75,
-                    1.9,
-                    2.05
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,
@@ -406,8 +406,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "凯特琳设下一个陷阱，来让鬼鬼祟祟的约德尔人暴露无遗。当被敌方英雄踩到时，该陷阱会将其显形并在一段短时间内持续造成魔法伤害。",
-            "dynamicDescription": "凯特琳设置一个陷阱，来对踩到它的一个敌方英雄造成短时间的<status>禁锢</status>和持续@VisibilityDuration@秒的显形。这个陷阱会在@DOTTime@秒里持续造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并且持续@Duration@分钟。同一时间仅可存在@MaxTraps@个已激活的陷阱。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳设下一个陷阱，来让鬼鬼祟祟的约德尔人暴露无遗。当被一个英雄踩到时，该陷阱会将其禁锢、显形、并在一段短时间内持续造成魔法伤害。",
+            "dynamicDescription": "凯特琳设置一个持续@Duration@分钟的陷阱，来对踩到它的一个敌方英雄造成持续@RootDuration@秒的<status>禁锢</status>并在此期间持续造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并将其显形@VisibilityDuration@秒。<br><br>同一时间仅可存在@MaxTraps@个已激活的陷阱。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -430,75 +430,75 @@
                 14.0,
                 11.0,
                 8.0,
-                8.0
+                5.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -557,7 +557,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "凯特琳朝目标放出一张网，对其减速。对凯特琳造成一定的反冲效果。",
-            "dynamicDescription": "凯特琳发射一张绳网，对目标造成<magicDamage>@NetDamage@魔法伤害</magicDamage>和持续@SlowDuration@秒的@SlowAmount*-100@%<status>减速</status>。对凯特琳造成反冲效果。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "凯特琳在因反冲力后退的同时发射一张绳网，对命中的第一个敌人造成<magicDamage>@NetDamage@魔法伤害</magicDamage>和持续@SlowDuration@秒的@SlowAmount*-100@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -580,39 +580,39 @@
                 14.0,
                 12.0,
                 10.0,
-                10.0
+                8.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    40.0,
-                    80.0,
-                    130.0,
-                    180.0,
-                    230.0,
-                    280.0,
-                    310.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,
@@ -706,8 +706,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "凯特琳精心准备完美一击，拥有超远射程并对单个目标造成巨大伤害。敌方英雄能为其友军拦截该子弹。",
-            "dynamicDescription": "凯特琳花费一秒钟来准备一次完美射击，从而对@CastRange@码内的一个英雄发射一颗子弹，以造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>。其他敌方英雄能拦截该子弹。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳精心准备完美一击，对超远距离内的一个敌方英雄造成巨大伤害。其他敌方英雄能为其友军拦截该子弹。",
+            "dynamicDescription": "凯特琳花费一秒钟对@CastRange@码内的一个敌方英雄准备一次完美射击，从而造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>。其他敌方英雄能拦截该子弹。@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,
@@ -720,9 +720,9 @@
                 100.0,
                 100.0,
                 100.0,
-                0.0,
-                0.0,
-                0.0
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 90.0,
