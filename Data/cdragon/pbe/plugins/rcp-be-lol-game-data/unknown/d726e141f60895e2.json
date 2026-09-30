@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn prepara seu rifle para executar um disparo penetrante que causa Dano Físico (causa menos dano a alvos subsequentes).",
-            "dynamicDescription": "Caitlyn prepara seu rifle por @CastTime@s para disparar um projétil perfurante que causa <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage>. Causa @ExtraHitPercentReduction*100@% a menos de dano a cada alvo subsequente. O dano total é reduzido em até @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn dispara um tiro penetrante que causa dano a todos os inimigos em uma linha.",
+            "dynamicDescription": "Caitlyn dispara um tiro perfurante que causa <physicalDamage>@InitialDamage@ de Dano Físico</physicalDamage>, reduzido em @ExtraHitPercentReduction*100@% para cada inimigo subsequente até um mínimo de <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn coloca uma armadilha para encontrar yordles sorrateiros. Ao ser acionada, a armadilha imobiliza o Campeão, revelando-o e causando Dano Mágico por um breve período.",
-            "dynamicDescription": "Caitlyn posiciona uma armadilha que, ao ser acionada por um Campeão inimigo, o <status>Enraíza</status> e revela por @VisibilityDuration@s. A armadilha causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> por @DOTTime@s e dura @Duration@min. Apenas @MaxTraps@ armadilhas podem ficar ativas ao mesmo tempo.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn coloca uma armadilha para encontrar yordles sorrateiros. Ao ser ativada por um Campeão, a armadilha imobiliza, revela e causa dano ao longo de um curto período.",
+            "dynamicDescription": "Caitlyn posiciona uma armadilha por @Duration@min que é ativada por Campeões inimigos, <status>Enraizando-os</status>, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> ao longo de @RootDuration@s e revelando-os por @VisibilityDuration@s.<br><br>Apenas @MaxTraps@ armadilhas podem ficar ativas ao mesmo tempo.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Caitlyn atira uma rede pesada para causar Lentidão ao alvo. O recuo projeta Caitlyn para trás.",
-            "dynamicDescription": "Caitlyn dispara uma rede que causa <magicDamage>@NetDamage@ de Dano Mágico</magicDamage> e @SlowAmount*-100@% de <status>Lentidão</status> ao alvo por @SlowDuration@s. O recuo empurra Caitlyn para trás.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn é lançada para trás enquanto dispara uma rede que causa <magicDamage>@NetDamage@ de Dano Mágico</magicDamage> e @SlowAmount*-100@% de <status>Lentidão</status> ao primeiro inimigo atingido por @SlowDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,7 +715,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Caitlyn se concentra para fazer o disparo perfeito, causando muito dano a um único alvo a uma longa distância. Campeões inimigos podem interceptar o projétil e tomar dano no lugar de seu aliado.",
+            "description": "Caitlyn se concentra para fazer o disparo perfeito, causando muito dano a um único Campeão inimigo a uma longa distância. Outros Campeões inimigos podem interceptar o projétil e sofrer dano no lugar de seu aliado.",
             "dynamicDescription": "Caitlyn leva um instante para preparar o tiro perfeito, disparando uma bala contra um Campeão inimigo e causando <physicalDamage>@RTotalDamage@ de Dano Físico</physicalDamage> a uma distância de @CastRange@. Outros Campeões inimigos podem interceptar o projétil.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,

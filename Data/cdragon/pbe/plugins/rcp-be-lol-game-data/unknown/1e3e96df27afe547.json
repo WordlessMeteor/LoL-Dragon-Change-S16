@@ -292,7 +292,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Passif en tant que Quinn : Quinn gagne de la vitesse d'attaque et de la vitesse de déplacement pendant quelques secondes après avoir lancé Busard.<br><br>Passif en tant que Valor : gagne de la vitesse d'attaque.<br><br>Actif : révèle une large zone autour de Quinn et Valor.",
-            "dynamicDescription": "<keywordMajor>Passif en tant que Quinn</keywordMajor> : attaquer une cible <keywordMajor>vulnérable</keywordMajor> confère à Quinn <speed>@AttackSpeedBonus*100@% de vitesse d'attaque</speed> et <speed>@MovespeedAmount@ de vitesse de déplacement</speed> pendant @BuffDuration@ sec.<br><br><keywordMajor>Passif en tant que Valor</keywordMajor> : vous gagnez @ValorAttackSpeed*100@% de vitesse d'attaque.<br><br><keywordMajor>Actif :</keywordMajor> Valor révèle une large zone proche pendant @VisionDuration@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Passif en tant que Quinn</keywordMajor> : attaquer une cible <keywordMajor>vulnérable</keywordMajor> confère à Quinn <speed>@AttackSpeedBonus*100@% de vitesse d'attaque</speed> et <speed>@MovespeedAmount@ de vitesse de déplacement</speed> pendant @BuffDuration@ sec.<br><br><keywordMajor>Passif en tant que Valor</keywordMajor> : vous gagnez <speed>@ValorAttackSpeed*100@% de vitesse d'attaque</speed>.<br><br><keywordMajor>Actif :</keywordMajor> Valor révèle une large zone proche pendant @VisionDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Quinn ou Valor fonce vers un ennemi, inflige des dégâts, repousse et ralentit la cible. Si la compétence est lancée en tant que Quinn, cette dernière prend appui sur la cible pour s'en éloigner, tandis que Valor la marque avec Busard.",
-            "dynamicDescription": "<keywordMajor>En tant que Quinn ou Valor</keywordMajor> : s'élance vers un ennemi, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>, <status>repoussant</status> et <status>ralentissant</status> la vitesse de déplacement de la cible de @SlowAmount*100@%, cet effet diminuant pendant @SlowDecayTime@ sec.<br><br><keywordMajor>En tant que Quinn</keywordMajor> : s'éloigne également de sa cible en sautant, et Valor la marquera comme <keywordMajor>vulnérable</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>En tant que Quinn ou Valor</keywordMajor> : s'élance vers un ennemi, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>, <status>repoussant</status> et <status>réduisant</status> la vitesse de déplacement de la cible de @SlowAmount*100@%. Cet effet diminue en @SlowDecayTime@ sec.<br><br><keywordMajor>En tant que Quinn</keywordMajor> : s'éloigne également de sa cible en sautant, et Valor la marquera comme <keywordMajor>vulnérable</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Valor remplace Quinn sur le champ de bataille en tant qu'attaquant de mêlée mobile, gagne de la vitesse de déplacement et modifie ses compétences. Lancez à nouveau pour effectuer Volée fatale, infligeant des dégâts à tous les ennemis à proximité.",
-            "dynamicDescription": "<keywordMajor>Première activation</keywordMajor> : Valor remplace Quinn sur le champ de bataille en tant qu'attaquant de mêlée mobile pendant @TransformDuration@ sec. Valor est fantomatique et gagne @OoCMoveSpeed*100@% de vitesse de déplacement, diminuant progressivement jusqu'à @CombatMoveSpeed*100@% en combat. Valor peut alors lancer <keywordMajor>Volée fatale</keywordMajor>.<br><br><keywordMajor>Volée fatale</keywordMajor> : Quinn revient et inflige <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ pts de dégâts physiques</physicalDamage> à tous les ennemis dans une large zone, en fonction des PV manquants.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>En tant que Quinn</keywordMajor> : Valor remplace Quinn sur le champ de bataille en tant qu'attaquant de mêlée mobile pendant @TransformDuration@ sec. Valor est <status>fantomatique</status> et gagne <speed>@OoCMoveSpeed*100@% de vitesse de déplacement</speed>, diminuant progressivement jusqu'à @CombatMoveSpeed*100@% en combat. Valor peut alors lancer <keywordMajor>Volée fatale</keywordMajor>.<br><br><keywordMajor>En tant que Valor : Volée fatale</keywordMajor> : Quinn revient et inflige <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ pts de dégâts physiques</physicalDamage> à tous les ennemis dans une large zone, en fonction des PV manquants.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

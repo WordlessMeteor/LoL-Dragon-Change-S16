@@ -20368,12 +20368,48 @@ lol-uikit-tooltip[add-part-selector=voting-system__power-tooltip]::part(lol-uiki
 }
 
 .jade-runes-page .page-selector {
+    margin-bottom: 13px;
+    margin-top: 5px
+}
+
+.jade-runes-page .page-selector,
+.jade-runes-page .page-selector__tabs {
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
-    gap: 4px;
-    margin-bottom: 13px;
-    margin-top: 5px
+    gap: 4px
+}
+
+.jade-runes-page .page-selector__navigation {
+    align-self: flex-start;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 15px;
+    padding: 0;
+    width: 20px
+}
+
+.jade-runes-page .page-selector__navigation--previous .page-selector__navigation-icon {
+    transform: scaleX(-1)
+}
+
+.jade-runes-page .page-selector__navigation-icon {
+    display: block;
+    height: 15px;
+    object-fit: contain;
+    width: 20px
+}
+
+.jade-runes-page:lang(ar-AE) .page-selector__navigation--previous .page-selector__navigation-icon,
+[dir=rtl] .jade-runes-page .page-selector__navigation--previous .page-selector__navigation-icon {
+    transform: scaleX(1)
+}
+
+.jade-runes-page:lang(ar-AE) .page-selector__navigation--next .page-selector__navigation-icon,
+[dir=rtl] .jade-runes-page .page-selector__navigation--next .page-selector__navigation-icon {
+    transform: scaleX(-1)
 }
 
 .jade-runes-page .page-tab {

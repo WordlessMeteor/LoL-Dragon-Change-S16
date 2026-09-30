@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Caitlyn carga su rifle para disparar un tiro penetrante que inflige daño físico (inflige menos daño a los objetivos posteriores).",
-            "dynamicDescription": "Caitlyn carga su rifle durante @CastTime@ s para liberar un disparo penetrante que inflige <physicalDamage>@InitialDamage@ de daño físico</physicalDamage>. Inflige un @ExtraHitPercentReduction*100@% menos de daño a cada objetivo subsiguiente, hasta un mínimo del @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn dispara un tiro penetrante que inflige daño a todos los enemigos en una línea.",
+            "dynamicDescription": "Caitlyn dispara un tiro penetrante que inflige <physicalDamage>@InitialDamage@ de daño físico</physicalDamage>, que se reduce en un @ExtraHitPercentReduction*100@% por cada enemigo consecutivo alcanzado, hasta un mínimo de <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Caitlyn pone una trampa para encontrar a los yordles furtivos. Al activarse, la trampa inmoviliza al campeón, lo revela y le inflige daño mágico durante un breve periodo.",
-            "dynamicDescription": "Caitlyn coloca una trampa que un campeón enemigo puede activar, lo que lo <status>enraíza</status> brevemente y lo revela durante @VisibilityDuration@&nbsp;s. La trampa inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a lo largo de @DOTTime@&nbsp;s y dura @Duration@&nbsp;min. Puede haber @MaxTraps@ trampas activas al mismo tiempo.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pone una trampa para encontrar a los yordles furtivos. Cuando un campeón la activa, la trampa lo inmoviliza, lo revela y le inflige daño durante un breve periodo de tiempo.",
+            "dynamicDescription": "Caitlyn coloca una trampa durante @Duration@ min que se activa al entrar en contacto con campeones enemigos, a los que <status>enraíza</status> y les inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> durante @RootDuration@ s, además de revelarlos durante @VisibilityDuration@ s.<br><br>Solo puede haber @MaxTraps@ trampas activas al mismo tiempo.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Caitlyn lanza una red pesada para ralentizar a su objetivo. El retroceso empuja a Caitlyn hacia atrás.",
-            "dynamicDescription": "Caitlyn lanza una red que inflige <magicDamage>@NetDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> un @SlowAmount*-100@% al objetivo durante @SlowDuration@ s. Hace retroceder a Caitlyn.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn se impulsa hacia atrás mientras dispara una red que inflige <magicDamage>@NetDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> un @SlowAmount*-100@% durante @SlowDuration@ s al primer enemigo que alcanza.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Caitlyn se toma su tiempo para preparar el tiro perfecto, que inflige una gran cantidad de daño a un solo objetivo a gran distancia. Los campeones enemigos pueden interceptar la bala por sus aliados.",
-            "dynamicDescription": "Caitlyn se toma su tiempo para preparar el tiro perfecto y dispara una bala al campeón enemigo que inflige <physicalDamage>@RTotalDamage@ de daño físico</physicalDamage> a una distancia de @CastRange@. Los demás campeones enemigos pueden interceptar la bala.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn se toma su tiempo para preparar el tiro perfecto, que inflige una gran cantidad de daño a un campeón enemigo a gran distancia. Los demás campeones enemigos pueden interceptar la bala por sus aliados.",
+            "dynamicDescription": "Caitlyn se toma su tiempo para preparar el tiro perfecto contra un campeón enemigo, que inflige <physicalDamage>@RTotalDamage@ de daño físico</physicalDamage> a una distancia de @CastRange@. Los demás campeones enemigos pueden interceptar la bala.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

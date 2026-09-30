@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Caitlyn silahını kurduktan sonra fiziksel hasar veren ve önündeki rakipleri deşip geçen bir atış yapar. İlk hedeften sonraki hedeflere daha az hasar verir.",
-            "dynamicDescription": "Caitlyn @CastTime@ saniyeliğini tüfeğini kurarak yaptığı delici atışla <physicalDamage>@InitialDamage@ Fiziksel Hasar</physicalDamage> verir. Atışlar ilkinden sonraki her hedefe %@ExtraHitPercentReduction*100@ daha az hasar verir (en az %@MinimumDamagePercent*100@).@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn düz bir hat üzerindeki tüm rakipleri deşip geçen ve onlara hasar veren bir atış yapar.",
+            "dynamicDescription": "Caitlyn, <physicalDamage>@InitialDamage@ Fiziksel Hasar</physicalDamage> veren delici bir atış yapar. Atışın verdiği hasar, isabet ettiği her rakip için %@ExtraHitPercentReduction*100@ azalarak en az <physicalDamage>@MinimumDamageCalc@</physicalDamage> olabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Caitlyn ele avuca sığmaz yordle'ları yakalamak için bir kapan kurar. Kapan tetiklendiğinde şampiyonu hareketsiz bırakır, açığa çıkarır ve kısa süreliğine büyü hasarı verir.",
-            "dynamicDescription": "Caitlyn yakalanan bir rakip şampiyonu kısa süreliğine <status>sabitleyen</status> ve @VisibilityDuration@ saniyeliğine açığa çıkaran bir kapan kurar. Kapan @DOTTime@ saniye boyunca <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve @Duration@ dakika boyunca varlığını korur. Aynı anda @MaxTraps@ kapan etkin olabilir.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn ele avuca sığmaz yordle'ları yakalamak için bir kapan kurar. Kapan bir şampiyon tarafından tetiklendiğinde onu kısa süreliğine hareketsiz bırakır, açığa çıkarır ve ona hasar verir.",
+            "dynamicDescription": "Caitlyn @Duration@ dakikalığına etkin kalan ve rakip şampiyonlar üzerine bastığında tetiklenen bir kapan kurar. Bu kapan <status>sabitleyerek</status> @RootDuration@ saniye içinde onlara <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onları @VisibilityDuration@ saniyeliğine açığa çıkarır.<br><br>Aynı anda @MaxTraps@ kapan etkin olabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Caitlyn hedefini yavaşlatan ağır bir ağ fırlatır. Tüfeğinin tepmesiyle Caitlyn geri savrulur.",
-            "dynamicDescription": "Caitlyn <magicDamage>@NetDamage@ Büyü Hasarı</magicDamage> veren ve hedefi @SlowDuration@ saniyeliğine %@SlowAmount*-100@ <status>yavaşlatan</status> bir ağ ateşler. Caitlyn'i geri savurur.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn geriye doğru savrulur ve isabet ettiği ilk rakibe <magicDamage>@NetDamage@ Büyü Hasarı</magicDamage> veren ve onu @SlowDuration@ saniyeliğine %@SlowAmount*-100@ <status>yavaşlatan</status> bir ağ ateşler.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Caitlyn mükemmel atış için sabırla nişan alır ve uzakta duran bir tek hedefe yüksek miktarda hasar verir. Rakip şampiyonlar takım arkadaşlarını korumak için merminin önüne atlayabilir.",
-            "dynamicDescription": "Caitlyn mükemmel atış için yapılan bir saniyelik hazırlıktan sonra @CastRange@ birim mesafedeki bir rakip şampiyona mermi ateşleyerek <physicalDamage>@RTotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakip şampiyonlar takım arkadaşlarını korumak için merminin önüne atlayabilir.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn mükemmel atış için sabırla nişan alır ve uzakta duran bir rakip şampiyona yüksek miktarda hasar verir. Diğer rakip şampiyonlar, takım arkadaşlarını korumak için merminin önüne atlayabilir.",
+            "dynamicDescription": "Caitlyn mükemmel atış için yapılan bir saniyelik hazırlıktan sonra @CastRange@ Birim mesafedeki bir rakip şampiyona <physicalDamage>@RTotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakip şampiyonlar takım arkadaşlarını korumak için merminin önüne atlayabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

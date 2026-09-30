@@ -658,6 +658,20 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
+    "{66d4a0d3}": {
+        "name": "DebugMainTexSizeCB",
+        "type": 1,
+        "constants": [
+            {
+                "name": "MAIN_TEX_SIZE",
+                "type": 3,
+                "register": 31,
+                "SetManually": true,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
     "Shaders/SharedData/ConstantBuffers/PerFramePixel": {
         "name": "PerFramePixelCB",
         "type": 1,
@@ -818,6 +832,21 @@
                 "name": "WATER_DISTURBANCE_XFORM",
                 "type": 3,
                 "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "RENDERTARGET_IS_SRGB",
+                "type": 4,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "ALBEDO_IS_SRGB",
+                "type": 4,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "BACK_BUFFER_COPY_IS_SRGB",
+                "type": 4,
+                "__type": "X3DSharedConstantDef"
             }
         ],
         "__type": "X3DSharedConstantBufferDef"
@@ -826,13 +855,6 @@
         "name": "DebugPixelCB",
         "type": 1,
         "constants": [
-            {
-                "name": "MAIN_TEX_SIZE",
-                "type": 3,
-                "register": 31,
-                "SetManually": true,
-                "__type": "X3DSharedConstantDef"
-            },
             {
                 "name": "DEBUG_GENERIC_SHADER_VIEW_INDEX",
                 "type": 4,
@@ -1206,6 +1228,18 @@
             {
                 "name": "EMITTER_DEPTH_PUSH_PULL",
                 "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "USE_INSTANCE_DRAW",
+                "type": 4,
+                "{a1d375b5}": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "INSTANCE_OFFSET",
+                "type": 4,
+                "{a1d375b5}": 2,
+                "__type": "X3DSharedConstantDef"
             }
         ],
         "__type": "X3DSharedConstantBufferDef"
@@ -1218,6 +1252,12 @@
             {
                 "name": "PARTICLE_COLOR_FACTOR",
                 "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "USE_INSTANCE_DRAW",
+                "type": 4,
+                "{a1d375b5}": 2,
                 "__type": "X3DSharedConstantDef"
             }
         ],

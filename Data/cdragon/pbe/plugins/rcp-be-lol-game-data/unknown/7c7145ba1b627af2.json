@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κέιτλιν προετοιμάζει το τουφέκι της για να εξαπολύσει μια διεισδυτική βολή που προκαλεί Σωματική Ζημιά (προκαλεί λιγότερη ζημιά στους επόμενους στόχους).",
-            "dynamicDescription": "Η Κέιτλιν προετοιμάζει το τουφέκι της για @CastTime@ δευτ. για να εξαπολύσει μια διαπεραστική βολή που προκαλεί <physicalDamage>@InitialDamage@ Σωματική Ζημιά</physicalDamage>. Προκαλεί @ExtraHitPercentReduction*100@% λιγότερη ζημιά σε κάθε επόμενο στόχο, με ελάχιστη ζημιά @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Η Κέιτλιν εξαπολύει μια διαπεραστική βολή που προκαλεί ζημιά σε όλους τους εχθρούς σε μια ευθεία γραμμή.",
+            "dynamicDescription": "Η Κέιτλιν εξαπολύει μια διαπεραστική βολή που προκαλεί <physicalDamage>@InitialDamage@ Σωματική Ζημιά</physicalDamage>, η οποία μειώνεται κατά @ExtraHitPercentReduction*100@% για κάθε επόμενο εχθρό, με ελάχιστη ζημιά <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κέιτλιν τοποθετεί μια παγίδα για να πιάσει ύπουλα Γιορντλ. Μόλις ενεργοποιηθεί, η παγίδα ακινητοποιεί τον Ήρωα, τον αποκαλύπτει και προκαλεί Μαγική Ζημιά μέσα σε ένα σύντομο χρονικό διάστημα.",
-            "dynamicDescription": "Η Κέιτλιν τοποθετεί μια παγίδα, η οποία μπορεί να ενεργοποιηθεί από αντίπαλο Ήρωα, <status>ριζώνοντάς</status> τον για μικρό χρονικό διάστημα και αποκαλύπτοντάς τον για @VisibilityDuration@ δευτ. Η παγίδα προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> σε διάστημα @DOTTime@ δευτ. και διαρκεί για @Duration@ λεπτά. Μπορούν να είναι ενεργές ταυτόχρονα μόνο έως @MaxTraps@ παγίδες.@SpellModifierDescriptionAppend@",
+            "description": "Η Κέιτλιν τοποθετεί μια παγίδα για να πιάσει ύπουλα Γιορντλ. Όταν ενεργοποιηθεί από έναν Ήρωα, η παγίδα τον ακινητοποιεί, τον αποκαλύπτει και του προκαλεί ζημιά μέσα σε ένα μικρό χρονικό διάστημα.",
+            "dynamicDescription": "Η Κέιτλιν τοποθετεί μια παγίδα για @Duration@ λεπτά που ενεργοποιείται όταν πατήσει πάνω της ένας αντίπαλος Ήρωας και που τον <status>Ακινητοποιεί</status> και του προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> μέσα σε @RootDuration@ δευτ., αποκαλύπτοντάς τον για @VisibilityDuration@ δευτ.<br><br>Μπορούν να είναι ενεργές ταυτόχρονα μόνο έως @MaxTraps@ παγίδες.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Κέιτλιν εξαπολύει ένα βαρύ δίχτυ για να επιβραδύνει τον στόχο της. Η ανάκρουση σπρώχνει την Κέιτλιν προς τα πίσω.",
-            "dynamicDescription": "Η Κέιτλιν ρίχνει ένα δίχτυ που προκαλεί <magicDamage>@NetDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνει</status> τον στόχο κατά @SlowAmount*-100@% για @SlowDuration@ δευτ. Σπρώχνει την Κέιτλιν προς τα πίσω.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Κέιτλιν πετάγεται προς τα πίσω καθώς εκτοξεύει ένα δίχτυ που προκαλεί <magicDamage>@NetDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβραδύνει</status> τον πρώτο εχθρό που θα χτυπήσει κατά @SlowAmount*-100@% για @SlowDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κέιτλιν χρειάζεται χρόνο για να προετοιμάσει την τέλεια βολή, η οποία προκαλεί τεράστια ζημιά από μεγάλη απόσταση. Οι αντίπαλοι Ήρωες μπορούν να ανακόψουν την πορεία της σφαίρας προς τον σύμμαχό τους.",
-            "dynamicDescription": "Η Κέιτλιν σημαδεύει για ένα δευτερόλεπτο και προετοιμάζει την τέλεια βολή. Στη συνέχεια, εκτοξεύει μια σφαίρα σε έναν αντίπαλο Ήρωα που προκαλεί <physicalDamage>@RTotalDamage@ Σωματική Ζημιά</physicalDamage> σε απόσταση @CastRange@. Οι αντίπαλοι Ήρωες μπορούν να ανακόψουν την πορεία της σφαίρας.@SpellModifierDescriptionAppend@",
+            "description": "Η Κέιτλιν χρειάζεται χρόνο για να προετοιμάσει την τέλεια βολή, η οποία προκαλεί τεράστια ζημιά σε έναν αντίπαλο Ήρωα από μεγάλη απόσταση. Άλλοι αντίπαλοι Ήρωες μπορούν να ανακόψουν την πορεία της σφαίρας προς τον σύμμαχό τους.",
+            "dynamicDescription": "Η Κέιτλιν σημαδεύει για ένα δευτερόλεπτο και προετοιμάζει την τέλεια βολή προς έναν αντίπαλο Ήρωα, προκαλώντας <physicalDamage>@RTotalDamage@ Σωματική Ζημιά</physicalDamage> σε απόσταση @CastRange@. Άλλοι αντίπαλοι Ήρωες μπορούν να ανακόψουν την πορεία της σφαίρας.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

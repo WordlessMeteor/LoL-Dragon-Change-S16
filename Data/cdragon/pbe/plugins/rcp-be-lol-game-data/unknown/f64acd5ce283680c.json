@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn przymierza się do strzału, po czym wystrzeliwuje penetrujący pocisk, który zadaje obrażenia fizyczne zmniejszające się wraz z każdym trafionym celem.",
-            "dynamicDescription": "Caitlyn celuje przez @CastTime@ sek. i wystrzeliwuje penetrujący pocisk zadający <physicalDamage>@InitialDamage@ pkt. obrażeń fizycznych</physicalDamage>. Obrażenia te są zmniejszone o @ExtraHitPercentReduction*100@% dla każdego kolejnego celu – minimalnie do @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn wystrzeliwuje pocisk penetrujący, który zadaje obrażenia wszystkim wrogom w linii.",
+            "dynamicDescription": "Caitlyn wystrzeliwuje przebijający pocisk, który zadaje <physicalDamage>@InitialDamage@ pkt. obrażeń fizycznych</physicalDamage>, zmniejszonych o @ExtraHitPercentReduction*100@% za każdego kolejnego trafionego wroga (do min. <physicalDamage>@MinimumDamageCalc@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn zastawia pułapkę na Yordle. Gdy wrogi bohater wchodzi w pułapkę, zostaje unieruchomiony, ujawniony i otrzymuje obrażenia magiczne przez krótki czas.",
-            "dynamicDescription": "Caitlyn ustawia pułapkę, która po aktywowaniu przez wrogiego bohatera <status>unieruchamia</status> go na krótką chwilę i ujawnia na @VisibilityDuration@ sek. Pułapka zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DOTTime@ sek. i pozostaje aktywna przez @Duration@ min. Jednocześnie można zastawić następującą liczbę pułapek: @MaxTraps@.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn zastawia pułapkę na Yordle. Gdy pułapka zostanie aktywowana przez bohatera, unieruchamia go, ujawnia i przez chwilę zadaje mu obrażenia.",
+            "dynamicDescription": "Caitlyn zastawia pułapkę aktywną przez @Duration@ min, która aktywuje się po wejściu na nią wrogiego bohatera, <status>unieruchamiając</status> go i zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @RootDuration@ sek. oraz ujawniając go na @VisibilityDuration@ sek.<br><br>Jednocześnie można zastawić następującą liczbę pułapek: @MaxTraps@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Caitlyn wystrzeliwuje ciężką sieć, która spowalnia cel. Wystrzelenie sieci odrzuca Caitlyn.",
-            "dynamicDescription": "Caitlyn wystrzeliwuje sieć, która zadaje <magicDamage>@NetDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalnia</status> cel o @SlowAmount*-100@% na @SlowDuration@ sek. Wystrzelenie odrzuca Caitlyn.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn odskakuje do tyłu, wystrzeliwując sieć, która zadaje <magicDamage>@NetDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalnia</status> pierwszego trafionego wroga o @SlowAmount*-100@% na @SlowDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn ustawia się do idealnego strzału, który zada ogromne obrażenia jednemu celowi z bardzo dużej odległości. Wrodzy bohaterowie mogą stanąć na drodze pocisku i przyjąć go na siebie.",
-            "dynamicDescription": "Caitlyn przygotowuje się, po czym strzela do wrogiego bohatera. Pocisk zadaje <physicalDamage>@RTotalDamage@ pkt. obrażeń fizycznych</physicalDamage> z odległości @CastRange@ jedn. Inni wrodzy bohaterowie mogą przyjąć ten pocisk na siebie.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn ustawia się do idealnego strzału, który zada ogromne obrażenia wrogiemu bohaterowi z bardzo dużej odległości. Pozostali wrodzy bohaterowie mogą przeciąć tor lotu pocisku i przyjąć go na siebie, ratując swojego sojusznika.",
+            "dynamicDescription": "Caitlyn przygotowuje się, po czym strzela do wrogiego bohatera, zadając <physicalDamage>@RTotalDamage@ pkt. obrażeń fizycznych</physicalDamage> z odległości @CastRange@ jedn. Inni wrodzy bohaterowie mogą przyjąć ten pocisk na siebie.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

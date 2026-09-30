@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Caitlyn fait monter son fusil en puissance pour effectuer un tir perforant qui inflige des dégâts physiques (les cibles consécutives subissent moins de dégâts).",
-            "dynamicDescription": "Caitlyn fait monter son fusil en puissance pendant @CastTime@ sec pour effectuer un tir perforant qui inflige <physicalDamage>@InitialDamage@ pts de dégâts physiques</physicalDamage>. Elle inflige des dégâts réduits de @ExtraHitPercentReduction*100@% à chaque cible suivante, jusqu'à un minimum de @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn déclenche un tir pénétrant qui inflige des dégâts à tous les ennemis sur la ligne de l'attaque.",
+            "dynamicDescription": "Caitlyn tire un tir perçant qui inflige <physicalDamage>@InitialDamage@ pts de dégâts physiques</physicalDamage>, réduits de @ExtraHitPercentReduction*100@% pour chaque ennemi supplémentaire, jusqu'à un minimum de <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Caitlyn pose un piège pour trouver des yordles sournois. Quand il est déclenché, le piège immobilise le champion, le révèle et inflige des dégâts magiques pendant une courte durée.",
-            "dynamicDescription": "Caitlyn pose un piège qui se déclenche au passage d'un champion ennemi, <status>l'immobilisant</status> brièvement et le révélant pendant @VisibilityDuration@ sec. Le piège inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en @DOTTime@ sec et reste actif pendant @Duration@ min. Il peut y avoir @MaxTraps@ pièges actifs simultanément.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pose un piège pour trouver des yordles sournois. Lorsqu'un champion le déclenche, ce dernier est immobilisé, révélé, et il subit des dégâts pendant une courte durée.",
+            "dynamicDescription": "Caitlyn pose un piège pendant @Duration@ minutes qui se déclenche au passage des champions ennemis, les <status>immobilisant</status> et infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en @RootDuration@ secondes, tout en les révélant pendant @VisibilityDuration@ sec.<br><br>Il ne peut y avoir que @MaxTraps@ pièges actifs simultanément.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Caitlyn lance un filet lourd qui ralentit sa cible. Le recul repousse Caitlyn en arrière.",
-            "dynamicDescription": "Caitlyn tire un filet infligeant <magicDamage>@NetDamage@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> la cible de @SlowAmount*-100@% pendant @SlowDuration@ sec. Repousse Caitlyn en arrière.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn est projetée en arrière lorsqu'elle tire un filet qui inflige <magicDamage>@NetDamage@ pts de dégâts magiques</magicDamage> et <status>ralentit</status> le premier ennemi touché de @SlowAmount*-100@% pendant @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,

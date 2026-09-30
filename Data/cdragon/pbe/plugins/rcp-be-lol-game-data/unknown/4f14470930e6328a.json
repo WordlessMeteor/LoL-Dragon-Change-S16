@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Caitlyn își armează pușca, pentru a trage un glonț care străpunge țintele, provocând daune fizice (mai mici la țintele secundare următoare).",
-            "dynamicDescription": "Caitlyn armează pușca timp de @CastTime@ secundă pentru a lansa o lovitură puternică, ce provoacă <physicalDamage>@InitialDamage@ daune fizice</physicalDamage>. Provoacă cu @ExtraHitPercentReduction*100@% mai puține daune fiecărei ținte lovite ulterior, până la un minimum de @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn trage un foc care trece prin țintă, ce provoacă daune tuturor inamicilor aflați într-o linie.",
+            "dynamicDescription": "Caitlyn trage un foc care trece prin țintă, ce provoacă <physicalDamage>@InitialDamage@ daune fizice</physicalDamage>, valoare redusă cu @ExtraHitPercentReduction*100@% pentru fiecare inamic ulterior, până la un minimum de <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Caitlyn pune o capcană pentru a prinde yordelii buclucași. Când se declanșează, capcana imobilizează campionii, dezvăluindu-i, și provoacă daune magice pentru scurt timp.",
-            "dynamicDescription": "Caitlyn pune o capcană pe care un campion inamic o poate activa, rămânând <status>țintuit</status> pentru scurt timp și fiind dezvăluit timp de @VisibilityDuration@ secunde. Capcana provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> de-a lungul a @DOTTime@ secunde și durează @Duration@ minute. Pot fi active doar @MaxTraps@ capcane în același timp.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn pune o capcană pentru a prinde yordelii buclucași. Când este declanșată de un campion, capcana îl imobilizează, îl dezvăluie și îi provoacă daune pentru o perioadă scurtă.",
+            "dynamicDescription": "Caitlyn pune o capcană timp de @Duration@ minute, care se declanșează asupra campionilor inamici, <status>imobilizându-i</status> și provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> de-a lungul a @RootDuration@ secunde, dezvăluindu-i timp de @VisibilityDuration@ secunde.<br><br>Pot fi active doar @MaxTraps@ capcane în același timp.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Caitlyn trage o plasă grea asupra țintei, pentru a o încetini. Reculul o împinge puțin în spate.",
-            "dynamicDescription": "Caitlyn aruncă o plasă care provoacă <magicDamage>@NetDamage@ daune magice</magicDamage> și <status>încetinește</status> ținta cu @SlowAmount*-100@% timp de @SlowDuration@ sec. O aruncă pe Caitlyn în spate.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn este aruncată în spate în timp ce lansează o plasă care provoacă <magicDamage>@NetDamage@ daune magice</magicDamage> și <status>încetinește</status> primul inamic lovit cu @SlowAmount*-100@% timp de @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Caitlyn țintește cu mare grijă și poate provoca daune masive împotriva unei singure ținte, de la o distanță uriașă. Campionii inamici pot intercepta glonțul în locul aliatului lor.",
-            "dynamicDescription": "Caitlyn țintește cu atenție, apoi trage un glonț într-un campion inamic aflat la maximum @CastRange@ unități distanță, provocându-i <physicalDamage>@RTotalDamage@ daune fizice</physicalDamage>. Alți campioni inamici pot intercepta glonțul.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn țintește cu mare grijă și poate provoca daune masive împotriva unui campion inamic, de la o distanță uriașă. Ceilalți campioni inamici pot intercepta glonțul în locul aliatului lor.",
+            "dynamicDescription": "Caitlyn țintește cu atenție, apoi trage într-un campion inamic aflat la maximum @CastRange@ unități distanță, provocându-i <physicalDamage>@RTotalDamage@ daune fizice</physicalDamage>. Alți campioni inamici pot intercepta glonțul.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Caitlyn felpörgeti a puskáját, majd kilő egy lövedéket, ami áthatol a célpontokon, és fizikai sebzést okoz (a sorban következő ellenfeleket kevésbé sebzi).",
-            "dynamicDescription": "Caitlyn @CastTime@ másodpercre felpörgeti a puskáját, és egy lövést ad le, amely áthatol a célponton, és <physicalDamage>@InitialDamage@ fizikai sebzést okoz</physicalDamage>. Minden további célpontnak @ExtraHitPercentReduction*100@%-kal kevesebb sebzést okoz, de legalább @MinimumDamagePercent*100@%-ot.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn kilő egy átütő lövedéket, amely egy vonalban minden ellenfelet megsebez.",
+            "dynamicDescription": "Caitlyn kilő egy átütő lövedéket <physicalDamage>@InitialDamage@ fizikai sebzést</physicalDamage> okozva, amely @ExtraHitPercentReduction*100@%-kal csökken minden eltalált ellenfél után. A minimális sebzés <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Caitlyn felállít egy csapdát a trükkös yordle-ök elfogására. A csapdába lépő hős mozgásképtelenné és rövid időre láthatóvá válik, valamint varázssebzést szenved el.",
-            "dynamicDescription": "Caitlyn kihelyez egy csapdát, amely @VisibilityDuration@ másodpercre <status>mozgásképtelenné teszi</status> és felfedi a belelépő ellenséges hőst. A csapda <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz @DOTTime@ másodperc alatt, és @Duration@ percig marad aktív. Egyszerre legfeljebb @MaxTraps@ csapda lehet aktív.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn felállít egy csapdát a trükkös yordle-ök elfogására. Ha egy hős rálép a csapdára, rövid ideig mozgásképtelenné teszi, felfedi és sebzi őt.",
+            "dynamicDescription": "Caitlyn @Duration@ percre felállít egy csapdát, amelyre rálépve az ellenséges hősök <status>földbe gyökereznek</status>, @RootDuration@ másodperc alatt <magicDamage>@TotalDamage@ varázssebzést</magicDamage> szenvednek el, és @VisibilityDuration@ másodpercre láthatóvá válnak.<br><br>Egyszerre legfeljebb @MaxTraps@ csapda lehet aktív.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Caitlyn egy nehéz hálót lő a célpontjára, hogy lelassítsa azt. A lövés visszarúgása hátralöki Caitlynt.",
-            "dynamicDescription": "Caitlyn kilő egy hálót, amely <magicDamage>@NetDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja</status> a célpontot. A visszarúgás hátralöki Caitlynt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn hátrarepül, miközben kilő egy hálót, amely <magicDamage>@NetDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja</status> az első eltalált ellenfelet.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,7 +715,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Caitlyn gondos célzást követően egy tökéletes lövést ad le, hatalmas sebzést okozva ezzel egy nagyon távoli célpontnak. A többi ellenséges hős a lövedék útjába állhat.",
+            "description": "Caitlyn gondos célzást követően egy tökéletes lövést ad le, hatalmas sebzést okozva ezzel egy ellenséges hősnek nagy távolságból. A többi ellenséges hős a lövedék útjába állhat.",
             "dynamicDescription": "Caitlyn egy másodpercig tartó célzás után tökéletes lövést ad le egy @CastRange@ egységnyi távolságra lévő ellenséges hősre, <physicalDamage>@RTotalDamage@ fizikai sebzést</physicalDamage> okozva. A többi ellenséges hős a lövedék útjába állhat.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,

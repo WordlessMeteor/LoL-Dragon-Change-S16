@@ -12769,7 +12769,7 @@
                         d = new Date(Date.UTC(Number(c.year), Number(c.month) - 1, Number(c.day))).getUTCDay(),
                         p = Number(c.hour),
                         h = new Date(u);
-                    if (1 === d && p >= 2 || d > 1 && d < 5) {
+                    if (1 === d && p >= 4 || d > 1 && d < 5) {
                         const e = 5 - d;
                         h.setUTCDate(h.getUTCDate() + e)
                     }
@@ -16978,7 +16978,10 @@
                     return this.get("discordIntegrationService.isOOGIJEnabled") && !this.get("isTFT")
                 })),
                 hasGameModeTutorial: o.Ember.computed.alias("tutorialData.tutorialCards.length"),
-                hasGameModeInfo: o.Ember.computed.equal("lobbiesService.currentQueue.type", l.QUEUE_TYPE.RANKED_PREMADE_5x5),
+                hasGameModeInfo: o.Ember.computed("lobbiesService.currentQueue.type", (function() {
+                    const e = "TENCENT" === window.RIOT.CONSTANTS.regionLocale.region;
+                    return this.get("lobbiesService.currentQueue.type") === l.QUEUE_TYPE.RANKED_PREMADE_5x5 && !e
+                })),
                 shouldShowInviteButton: o.Ember.computed.alias("isTFT"),
                 currentPlayerCanInvite: o.Ember.computed.alias("lobbiesService.currentPlayerCanInvite"),
                 isCurrentPlayerPartyLeader: o.Ember.computed.alias("lobbiesService.isCurrentPlayerPartyLeader"),

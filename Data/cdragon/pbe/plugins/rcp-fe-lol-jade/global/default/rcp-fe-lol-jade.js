@@ -3650,29 +3650,29 @@
                 [c.RUNE_TYPES.YELLOW]: m.INVENTORY_TYPES.RUNE_SEAL,
                 [c.RUNE_TYPES.BLUE]: m.INVENTORY_TYPES.RUNE_GLYPH,
                 [c.RUNE_TYPES.BLACK]: m.INVENTORY_TYPES.RUNE_QUINTESSENCE
-            }, v = "/lol-settings/v2/account/LCUPreferences/jade-ftux", b = -1;
+            }, v = "/lol-settings/v2/account/LCUPreferences/jade-ftux", b = -1, y = 20;
 
-            function y(e, t) {
+            function E(e, t) {
                 return !e || (null == t || t >= e)
             }
 
-            function E(e) {
+            function x(e) {
                 const t = e?.itemId;
                 return !(!t || t === b || (!0 === e?.data?.default || "true" === e?.data?.default))
             }
 
-            function x(e, t, n) {
+            function S(e, t, n) {
                 if (!e) return !0;
                 for (let s = 0; s < f.length; s++) {
                     const a = f[s];
-                    if (!y(a.unlockLevel, n)) continue;
+                    if (!E(a.unlockLevel, n)) continue;
                     const o = (0, r.getColorAndSlotNum)(a.id);
                     if (!o) continue;
-                    if (!E(e[(0, r.buildSlotKey)(t, o.color, o.slotNum)])) return !0
+                    if (!x(e[(0, r.buildSlotKey)(t, o.color, o.slotNum)])) return !0
                 }
                 return !1
             }
-            var S = p.Controller.extend({
+            var P = p.Controller.extend({
                 applicationController: p.inject.controller("application"),
                 storeController: p.inject.controller("store"),
                 loadoutsService: p.inject.service("loadouts"),
@@ -3682,6 +3682,7 @@
                 runeDict: null,
                 pages: null,
                 activePageNumber: 1,
+                pageTabGroup: 0,
                 currentPageName: null,
                 statsExpanded: !1,
                 pageChanging: !1,
@@ -3779,7 +3780,7 @@
                         } if (!this._pagesInitialized) {
                         this._pagesInitialized = !0;
                         const t = e.getActiveRunePage();
-                        this.set("activePageNumber", t), e.set("currentPageNumber", t)
+                        this.set("activePageNumber", t), this._showPageTabGroupForPage(t), e.set("currentPageNumber", t)
                     }
                 })),
                 syncPageNamesFromLoadout: p.observer("loadoutsService.localRuneLoadout", (function() {
@@ -3797,22 +3798,30 @@
                         t = this.get("activePageNumber");
                     return e ? e.findBy("id", t) : null
                 })),
-                pageTabs: p.computed("pages.[]", "activePageNumber", "loadoutsService.localRuneLoadout", "loadoutsService.accountLevel", (function() {
+                pageTabs: p.computed("pages.[]", "activePageNumber", "pageTabGroup", "loadoutsService.localRuneLoadout", "loadoutsService.accountLevel", (function() {
                     const e = this.get("pages") || [],
                         t = this.get("activePageNumber"),
                         n = this.get("loadoutsService.localRuneLoadout"),
-                        s = this.get("loadoutsService.accountLevel");
-                    return e.map((e => {
+                        s = this.get("loadoutsService.accountLevel"),
+                        a = this.get("pageTabGroup") * y;
+                    return e.slice(a, a + y).map((e => {
                         const a = e.get("id");
                         return {
                             id: a,
                             isActive: a === t,
-                            isIncomplete: x(n, a, s)
+                            isIncomplete: S(n, a, s)
                         }
                     }))
                 })),
+                hasPreviousPageTabs: p.computed("pages.length", "pageTabGroup", (function() {
+                    return this.get("pages.length") > y && this.get("pageTabGroup") > 0
+                })),
+                hasNextPageTabs: p.computed("pages.length", "pageTabGroup", (function() {
+                    const e = this.get("pages.length");
+                    return e > y && (this.get("pageTabGroup") + 1) * y < e
+                })),
                 isActivePageIncomplete: p.computed("activePageNumber", "loadoutsService.localRuneLoadout", "loadoutsService.accountLevel", (function() {
-                    return x(this.get("loadoutsService.localRuneLoadout"), this.get("activePageNumber"), this.get("loadoutsService.accountLevel"))
+                    return S(this.get("loadoutsService.localRuneLoadout"), this.get("activePageNumber"), this.get("loadoutsService.accountLevel"))
                 })),
                 runePage: p.computed("activePageNumber", "loadoutsService.localRuneLoadout", (function() {
                     const e = this.get("activePageNumber"),
@@ -3874,8 +3883,11 @@
                     const e = this.get("runeSlotEffects");
                     e && e.clear()
                 },
+                _showPageTabGroupForPage(e) {
+                    this.set("pageTabGroup", Math.floor((e - 1) / y))
+                },
                 _performSelectPage(e) {
-                    this._clearRuneSlotEffects(), this.set("pageChanging", !0), this.set("activePageNumber", e), l.RUNE_SFX.selectPage.play();
+                    this._clearRuneSlotEffects(), this.set("pageChanging", !0), this.set("activePageNumber", e), this._showPageTabGroupForPage(e), l.RUNE_SFX.selectPage.play();
                     const t = this.get("loadoutsService");
                     t && (t.setActiveRunePage(e), t.debouncedSaveRuneLoadout());
                     const n = this.get("pages").findBy("id", e);
@@ -3895,6 +3907,12 @@
                 actions: {
                     toggleStats() {
                         this.toggleProperty("statsExpanded")
+                    },
+                    showPreviousPageTabs() {
+                        this.get("hasPreviousPageTabs") && this.decrementProperty("pageTabGroup")
+                    },
+                    showNextPageTabs() {
+                        this.get("hasNextPageTabs") && this.incrementProperty("pageTabGroup")
                     },
                     selectPage(e) {
                         if (this.get("activePageNumber") !== e) return this.get("hasUnsavedChanges") ? (this._pendingPage = e, void this._promptUnsavedConfirmation()) : void this._performSelectPage(e)
@@ -3994,7 +4012,7 @@
                             contentData: {
                                 pageName: o,
                                 statsForPage: l.aggregateStatsForPage(i),
-                                isIncomplete: x(a, e?.id, s?.get("accountLevel")),
+                                isIncomplete: S(a, e?.id, s?.get("accountLevel")),
                                 warningIcon: m.MASTERY_WARNING_ICON,
                                 incompleteText: this.get("tra.jade_page_incomplete")
                             },
@@ -4030,7 +4048,7 @@
                     }
                 }
             });
-            t.default = S
+            t.default = P
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -6432,7 +6450,7 @@
             const y = Object.fromEntries(Object.entries(c.RUNE_INVENTORY_TYPE_IDS).map((e => [e[1], e[0]]))),
                 E = 3,
                 x = 9,
-                S = 20,
+                S = 30,
                 P = new Set([c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_MARK, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_SEAL, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_GLYPH, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE]),
                 k = new Set(Object.values(c.RUNE_INVENTORY_TYPE_IDS));
 
@@ -6637,7 +6655,7 @@
                     Fallback: "loot_odds_generic_desc"
                 },
                 f = "lol_jade_random_rune",
-                _ = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
+                _ = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward", "lol_jade_random_rune_fist"],
                 v = "client.xp.jade.battlepass.drop_autospend",
                 b = [{
                     number: 1,
@@ -9441,11 +9459,15 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.getRouteByEventInfo = t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
+            }), t.getRouteByEventInfo = t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getLocalizedAssetPath = t.getCategoryOffersId = t.default = void 0;
             var s = n(123);
             const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
             t.getCategoryOffersId = a;
-            const o = e => {
+            const o = (e, t) => {
+                if (e && "/lol-game-data/assets/" !== e) return t ? e.replace("/en_US/", `/${t}/`) : e
+            };
+            t.getLocalizedAssetPath = o;
+            const l = e => {
                 if (1 === e.items.length) {
                     const t = e.items[0];
                     return {
@@ -9462,24 +9484,25 @@
                     price: e.price
                 }
             };
-            t.getOfferPurchaseConstraints = o;
-            const l = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
-            t.getRouteByEventHubType = l;
-            const i = (e = {}) => {
+            t.getOfferPurchaseConstraints = l;
+            const i = e => s.EVENT_CONFIGS_BY_TYPE[e]?.route || s.ROUTES.EVENT_SHOP;
+            t.getRouteByEventHubType = i;
+            const r = (e = {}) => {
                 const {
                     eventType: t,
                     seasonPassSubType: n
                 } = e;
-                return t === s.EVENT_HUB_TYPES.SEASON_PASS && n === s.SEASON_PASS_SUB_TYPES.MAYHEM_CUSTOM_HUB ? s.ROUTES.EMBEDDED_PLUGIN : l(t)
+                return t === s.EVENT_HUB_TYPES.SEASON_PASS && n === s.SEASON_PASS_SUB_TYPES.MAYHEM_CUSTOM_HUB ? s.ROUTES.EMBEDDED_PLUGIN : i(t)
             };
-            t.getRouteByEventInfo = i;
-            var r = {
+            t.getRouteByEventInfo = r;
+            var c = {
                 getCategoryOffersId: a,
-                getOfferPurchaseConstraints: o,
-                getRouteByEventInfo: i,
-                getRouteByEventHubType: l
+                getLocalizedAssetPath: o,
+                getOfferPurchaseConstraints: l,
+                getRouteByEventInfo: r,
+                getRouteByEventHubType: i
             };
-            t.default = r
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -17135,8 +17158,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "96kzHhS1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\runes.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-runes-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","runes-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","inventory-panel"],["flush-element"],["text","\\n      "],["append",["helper",["rune-inventory"],null,[["runes","runePicker","registerInventory","onPurchaseRunes","onRuneSlotted"],[["get",["ownedRunes"]],["get",["runePicker"]],["helper",["action"],[["get",[null]],"registerInventory"],null],["helper",["action"],[["get",[null]],"goToRuneStore"],null],["helper",["action"],[["get",[null]],"playRuneSlotEffect"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n    \\n    "],["open-element","div",[]],["static-attr","class","rune-plate-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","page-header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","page-selector"],["flush-element"],["text","\\n"],["block",["each"],[["get",["pageTabs"]]],null,11],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","rune-plate-and-stats"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rune-plate-with-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRunesLocked"]]],null,9,8],["text","            \\n"],["block",["if"],[["get",["runeSlots"]]],null,6,4],["text","        "],["close-element"],["text","\\n        \\n        "],["open-element","div",[]],["static-attr","class","stats-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","stats-header"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","jade_runes_stats_header"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","stats-content"],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregateStats"]]],null,3],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["component"],["tooltip"],[["onRegister"],[["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["tooltipComponent"]]],null]],null]]]],false],["text","\\n\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showRunesFtux"]],["helper",["action"],[["get",[null]],"closeRunesFtux"],null],["get",["tra","jade_ftux_runes_explore"]],["helper",["action"],[["get",[null]],"exploreRunesFtux"],null]]],2],["text","\\n"],["block",["if"],[["get",["showLeaveConfirmation"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","delete-confirmation-modal"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","delete-confirmation-message"],["flush-element"],["append",["unknown",["tra","jade_runes_unsaved_confirm"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","delete-confirmation-buttons"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","delete-confirm-yes"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSaveAndLeave"],null],null],["flush-element"],["append",["unknown",["tra","jade_runes_confirm_yes"]],false],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","delete-confirm-no"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmDiscardAndLeave"],null],null],["flush-element"],["append",["unknown",["tra","jade_runes_confirm_no"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"outside",["helper",["action"],[["get",[null]],"cancelLeave"],null]]],0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-progression.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-unlock.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-equip.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","stat-item"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","stat-name"],["flush-element"],["append",["unknown",["stat","statLoc"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","stat-value"],["flush-element"],["append",["unknown",["stat","valueLoc"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["stat"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loading"],["flush-element"],["append",["unknown",["tra","jade_runes_loading"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","rune-page-actions"],["flush-element"],["text","\\n                "],["open-element","button",[]],["dynamic-attr","class",["concat",["save-runes-btn ",["helper",["if"],[["get",["hasUnsavedChanges"]],"save-runes-btn--active","save-runes-btn--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["saveDisabled"]],null],["modifier",["action"],[["get",[null]],"save"]],["flush-element"],["append",["unknown",["tra","jade_runes_save_button"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","clear-runes-btn"],["modifier",["action"],[["get",[null]],"clearCurrentPage"]],["flush-element"],["append",["unknown",["tra","jade_runes_clear_button"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["rune-plate"],null,[["runeSlots","runePicker","runeSlotEffects","readOnly","pageChanging","onSlotEffectComplete","onSlotTypeClick"],[["get",["runeSlots"]],["get",["runePicker"]],["get",["runeSlotEffects"]],false,["get",["pageChanging"]],["helper",["action"],[["get",[null]],"clearRuneSlotEffect"],null],["helper",["action"],[["get",[null]],"filterInventoryByType"],null]]]],false],["text","\\n"],["block",["unless"],[["get",["isRunesLocked"]]],null,5]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["dynamic-attr","src",["unknown",["pageWarningIcon"]],null],["static-attr","alt",""],["static-attr","class","rune-plate-header__warning-icon"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showIncompleteTooltip"],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"updateTooltipPosition"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"hideTooltip"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","rune-plate-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isActivePageIncomplete"]]],null,7],["text","              "],["append",["helper",["input"],null,[["type","class","value","maxlength","focus-in","focus-out","enter","placeholder"],["text","page-name-input",["get",["runePage","name"]],["get",["runePageNameLengthMax"]],["helper",["action"],[["get",[null]],"pageNameFocusIn"],null],["helper",["action"],[["get",[null]],"renamePage",["get",["activePageNumber"]]],null],["helper",["action"],[["get",[null]],"renamePage",["get",["activePageNumber"]]],null],["get",["tra","jade_runes_page_name_placeholder"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","runes-locked"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","runes-locked-banner"],["flush-element"],["text","\\n                "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["flush-element"],["text","\\n                  "],["open-element","path",[]],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M14 8H8V6C8 5.46957 8.21071 4.96086 8.58578 4.58578C8.96086 4.21071 9.46957 4 10 4C10.5304 4 11.0391 4.21071 11.4142 4.58578C11.7893 4.96086 12 5.46957 12 6V8H14V6C14 4.93913 13.5786 3.92172 12.8284 3.17157C12.0783 2.42142 11.0609 2 10 2C8.93913 2 7.92172 2.42142 7.17157 3.17157C6.42142 3.92172 6 4.93913 6 6V8H5V15L10 18L15 15V8H14ZM11 14V15H9V14C8.4564 13.461 8.10503 12.7583 8 12C8 11.4696 8.21071 10.9609 8.58578 10.5858C8.96086 10.2107 9.46957 10 10 10C10.5304 10 11.0391 10.2107 11.4142 10.5858C11.7893 10.9609 12 11.4696 12 12C11.895 12.7583 11.5436 13.461 11 14Z"],["static-attr","fill","#660000"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","runes-locked-banner__text"],["flush-element"],["append",["unknown",["tra","jade_runes_locked_banner"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","page-tab__incomplete-dot"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["dynamic-attr","class",["concat",["page-tab ",["helper",["if"],[["get",["page","isActive"]],"active"],null]]]],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showPageTooltip",["get",["page"]]],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"updateTooltipPosition"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"hideTooltip"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectPage",["get",["page","id"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["page","id"]],false],["text","\\n"],["block",["if"],[["get",["page","isIncomplete"]]],null,10],["text","            "],["close-element"],["text","\\n"]],"locals":["page"]}],"hasPartials":false}',
+                id: "Nao1l7KI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\runes.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-runes-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","runes-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","inventory-panel"],["flush-element"],["text","\\n      "],["append",["helper",["rune-inventory"],null,[["runes","runePicker","registerInventory","onPurchaseRunes","onRuneSlotted"],[["get",["ownedRunes"]],["get",["runePicker"]],["helper",["action"],[["get",[null]],"registerInventory"],null],["helper",["action"],[["get",[null]],"goToRuneStore"],null],["helper",["action"],[["get",[null]],"playRuneSlotEffect"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n    \\n    "],["open-element","div",[]],["static-attr","class","rune-plate-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","page-header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","page-selector"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPreviousPageTabs"]]],null,13],["text","          "],["open-element","div",[]],["static-attr","class","page-selector__tabs"],["flush-element"],["text","\\n"],["block",["each"],[["get",["pageTabs"]]],null,12],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasNextPageTabs"]]],null,10],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","rune-plate-and-stats"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rune-plate-with-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRunesLocked"]]],null,9,8],["text","            \\n"],["block",["if"],[["get",["runeSlots"]]],null,6,4],["text","        "],["close-element"],["text","\\n        \\n        "],["open-element","div",[]],["static-attr","class","stats-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","stats-header"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","jade_runes_stats_header"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","stats-content"],["flush-element"],["text","\\n"],["block",["each"],[["get",["aggregateStats"]]],null,3],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["component"],["tooltip"],[["onRegister"],[["helper",["action"],[["get",[null]],["helper",["mut"],[["get",["tooltipComponent"]]],null]],null]]]],false],["text","\\n\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showRunesFtux"]],["helper",["action"],[["get",[null]],"closeRunesFtux"],null],["get",["tra","jade_ftux_runes_explore"]],["helper",["action"],[["get",[null]],"exploreRunesFtux"],null]]],2],["text","\\n"],["block",["if"],[["get",["showLeaveConfirmation"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","delete-confirmation-modal"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","delete-confirmation-message"],["flush-element"],["append",["unknown",["tra","jade_runes_unsaved_confirm"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","delete-confirmation-buttons"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","delete-confirm-yes"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmSaveAndLeave"],null],null],["flush-element"],["append",["unknown",["tra","jade_runes_confirm_yes"]],false],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","delete-confirm-no"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmDiscardAndLeave"],null],null],["flush-element"],["append",["unknown",["tra","jade_runes_confirm_no"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"outside",["helper",["action"],[["get",[null]],"cancelLeave"],null]]],0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-progression.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-unlock.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-col-equip.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_runes_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","stat-item"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","stat-name"],["flush-element"],["append",["unknown",["stat","statLoc"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","stat-value"],["flush-element"],["append",["unknown",["stat","valueLoc"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["stat"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","loading"],["flush-element"],["append",["unknown",["tra","jade_runes_loading"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","rune-page-actions"],["flush-element"],["text","\\n                "],["open-element","button",[]],["dynamic-attr","class",["concat",["save-runes-btn ",["helper",["if"],[["get",["hasUnsavedChanges"]],"save-runes-btn--active","save-runes-btn--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["saveDisabled"]],null],["modifier",["action"],[["get",[null]],"save"]],["flush-element"],["append",["unknown",["tra","jade_runes_save_button"]],false],["close-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","clear-runes-btn"],["modifier",["action"],[["get",[null]],"clearCurrentPage"]],["flush-element"],["append",["unknown",["tra","jade_runes_clear_button"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["rune-plate"],null,[["runeSlots","runePicker","runeSlotEffects","readOnly","pageChanging","onSlotEffectComplete","onSlotTypeClick"],[["get",["runeSlots"]],["get",["runePicker"]],["get",["runeSlotEffects"]],false,["get",["pageChanging"]],["helper",["action"],[["get",[null]],"clearRuneSlotEffect"],null],["helper",["action"],[["get",[null]],"filterInventoryByType"],null]]]],false],["text","\\n"],["block",["unless"],[["get",["isRunesLocked"]]],null,5]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["dynamic-attr","src",["unknown",["pageWarningIcon"]],null],["static-attr","alt",""],["static-attr","class","rune-plate-header__warning-icon"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showIncompleteTooltip"],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"updateTooltipPosition"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"hideTooltip"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","rune-plate-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isActivePageIncomplete"]]],null,7],["text","              "],["append",["helper",["input"],null,[["type","class","value","maxlength","focus-in","focus-out","enter","placeholder"],["text","page-name-input",["get",["runePage","name"]],["get",["runePageNameLengthMax"]],["helper",["action"],[["get",[null]],"pageNameFocusIn"],null],["helper",["action"],[["get",[null]],"renamePage",["get",["activePageNumber"]]],null],["helper",["action"],[["get",[null]],"renamePage",["get",["activePageNumber"]]],null],["get",["tra","jade_runes_page_name_placeholder"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","runes-locked"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","runes-locked-banner"],["flush-element"],["text","\\n                "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["flush-element"],["text","\\n                  "],["open-element","path",[]],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M14 8H8V6C8 5.46957 8.21071 4.96086 8.58578 4.58578C8.96086 4.21071 9.46957 4 10 4C10.5304 4 11.0391 4.21071 11.4142 4.58578C11.7893 4.96086 12 5.46957 12 6V8H14V6C14 4.93913 13.5786 3.92172 12.8284 3.17157C12.0783 2.42142 11.0609 2 10 2C8.93913 2 7.92172 2.42142 7.17157 3.17157C6.42142 3.92172 6 4.93913 6 6V8H5V15L10 18L15 15V8H14ZM11 14V15H9V14C8.4564 13.461 8.10503 12.7583 8 12C8 11.4696 8.21071 10.9609 8.58578 10.5858C8.96086 10.2107 9.46957 10 10 10C10.5304 10 11.0391 10.2107 11.4142 10.5858C11.7893 10.9609 12 11.4696 12 12C11.895 12.7583 11.5436 13.461 11 14Z"],["static-attr","fill","#660000"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","runes-locked-banner__text"],["flush-element"],["append",["unknown",["tra","jade_runes_locked_banner"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","page-selector__navigation page-selector__navigation--next"],["static-attr","aria-label","Next rune pages"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showNextPageTabs"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","page-selector__navigation-icon"],["static-attr","src","/fe/lol-jade/images/rune_page_arrow.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","page-tab__incomplete-dot"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","button",[]],["dynamic-attr","class",["concat",["page-tab ",["helper",["if"],[["get",["page","isActive"]],"active"],null]]]],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showPageTooltip",["get",["page"]]],null],null],["dynamic-attr","onmousemove",["helper",["action"],[["get",[null]],"updateTooltipPosition"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"hideTooltip"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectPage",["get",["page","id"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["page","id"]],false],["text","\\n"],["block",["if"],[["get",["page","isIncomplete"]]],null,11],["text","              "],["close-element"],["text","\\n"]],"locals":["page"]},{"statements":[["text","            "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","page-selector__navigation page-selector__navigation--previous"],["static-attr","aria-label","Previous rune pages"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showPreviousPageTabs"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","page-selector__navigation-icon"],["static-attr","src","/fe/lol-jade/images/rune_page_arrow.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

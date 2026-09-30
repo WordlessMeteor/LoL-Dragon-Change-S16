@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Caitlyn legt ihr Gewehr an und feuert einen durchdringenden Schuss ab, der normalen Schaden verursacht (weitere getroffene Gegner erleiden weniger Schaden).",
-            "dynamicDescription": "Caitlyn legt ihr Gewehr @CastTime@ Sekunde lang an und feuert einen durchdringenden Schuss ab, der <physicalDamage>@InitialDamage@ normalen Schaden</physicalDamage> verursacht. Verursacht bei jedem weiteren Ziel @ExtraHitPercentReduction*100@ % weniger Schaden, bis zu einem Minimum von @MinimumDamagePercent*100@ %.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn feuert einen durchdringenden Schuss ab, der allen Gegnern in einer Linie Schaden zufügt.",
+            "dynamicDescription": "Caitlyn feuert einen durchdringenden Schuss ab, der <physicalDamage>@InitialDamage@ normalen Schaden</physicalDamage> verursacht. Der Schaden wird für jeden weiteren getroffenen Gegner um @ExtraHitPercentReduction*100@ % bis auf ein Minimum von <physicalDamage>@MinimumDamageCalc@</physicalDamage> verringert.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Caitlyn stellt eine Falle auf, um hinterhältige Yordle zu finden. Wird sie ausgelöst, macht sie den Champion bewegungsunfähig, deckt ihn auf und verursacht für kurze Zeit magischen Schaden.",
-            "dynamicDescription": "Caitlyn stellt eine Falle auf, die ein gegnerischer Champion auslösen kann, woraufhin er für kurze Zeit <status>bewegungsunfähig</status> ist und @VisibilityDuration@ Sekunden lang aufgedeckt wird. Die Falle verursacht über @DOTTime@ Sekunden hinweg <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und hält @Duration@ Minuten lang an. Es können höchstens @MaxTraps@ Fallen gleichzeitig aktiv sein.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn stellt eine Falle auf, um hinterhältige Yordle zu finden. Wird die Falle von einem Champion ausgelöst, macht sie ihn für kurze Zeit bewegungsunfähig, deckt ihn auf und fügt ihm Schaden zu.",
+            "dynamicDescription": "Caitlyn stellt eine Falle auf, die @Duration@ Minuten lang bestehen bleibt und bei gegnerischen Champions auslöst. Sie werden <status>festgehalten</status> und erleiden über @RootDuration@ Sekunden <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>. Außerdem werden sie @VisibilityDuration@ Sekunden lang aufgedeckt.<br><br>Es können höchstens @MaxTraps@ Fallen gleichzeitig aktiv sein.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Caitlyn feuert ein schweres Netz, das ihr Ziel verlangsamt und sie zurückstößt.",
-            "dynamicDescription": "Caitlyn feuert ein Netz ab, das <magicDamage>@NetDamage@ magischen Schaden</magicDamage> verursacht und das Ziel @SlowDuration@ Sekunde(n) lang um @SlowAmount*-100@ % <status>verlangsamt</status>. Schleudert Caitlyn zurück.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn fliegt nach hinten und feuert ein Netz ab, das dem ersten getroffenen Gegner <magicDamage>@NetDamage@ magischen Schaden</magicDamage> zufügt und ihn @SlowDuration@ Sekunde(n) lang um @SlowAmount*-100@ % <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Caitlyn nimmt sich die Zeit für einen perfekten Schuss, wonach sie an einem einzigen Ziel gewaltigen Schaden auf sehr große Distanz anrichtet. Gegnerische Champions können das Geschoss für ihren Verbündeten abfangen.",
-            "dynamicDescription": "Caitlyn visiert eine Sekunde lang für den perfekten Schuss an und feuert eine Kugel auf einen gegnerischen Champion, die ihm bei @CastRange@ Reichweite <physicalDamage>@RTotalDamage@ normalen Schaden</physicalDamage> zufügt. Andere gegnerische Champions können das Geschoss abfangen.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn nimmt sich die Zeit für einen perfekten Schuss, bei dem sie bei einem gegnerischen Champion gewaltigen Schaden auf sehr große Distanz verursacht. Andere gegnerische Champions können das Geschoss für ihren Verbündeten abfangen.",
+            "dynamicDescription": "Caitlyn visiert eine Sekunde lang für den perfekten Schuss einen gegnerischen Champion an, der ihm bei @CastRange@ Reichweite <physicalDamage>@RTotalDamage@ normalen Schaden</physicalDamage> zufügt. Andere gegnerische Champions können das Geschoss abfangen.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Кейтлин готовится, а затем делает пробивающий врагов насквозь выстрел, нанося физ. урон. Цели после 1-й получают меньше урона.",
-            "dynamicDescription": "Кейтлин готовится @CastTime@ сек. и совершает пробивающий выстрел, наносящий <physicalDamage>@InitialDamage@ ед. физ. урона</physicalDamage>. Каждая последующая цель получает на @ExtraHitPercentReduction*100@% меньше урона (мин. @MinimumDamagePercent*100@%).@SpellModifierDescriptionAppend@",
+            "description": "Кейтлин делает пробивающий врагов насквозь выстрел, наносящий урон всем врагам на прямой линии.",
+            "dynamicDescription": "Кейтлин делает пробивающий врагов насквозь выстрел, наносящий <physicalDamage>@InitialDamage@ ед. физ. урона</physicalDamage> (снижается на @ExtraHitPercentReduction*100@% за каждого следующего врага, но не менее <physicalDamage>@MinimumDamageCalc@</physicalDamage> ед.).@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Кейтлин устанавливает ловушку на скрытных йордлов. Ловушка обездвиживает враж. чемпиона, ненадолго раскрывая его и нанося маг. урон.",
-            "dynamicDescription": "Кейтлин устанавливает ловушку. Ловушка ненадолго <status>обездвиживает</status> враж. чемпиона, раскрывая его на @VisibilityDuration@ сек. Ловушка наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @DOTTime@ сек. и существует @Duration@ мин. Макс. ловушек одновременно: @MaxTraps@.@SpellModifierDescriptionAppend@",
+            "description": "Кейтлин устанавливает ловушку на скрытных йордлов. Ловушка обездвиживает чемпиона, ненадолго раскрывая его и нанося урон.",
+            "dynamicDescription": "Кейтлин на @Duration@ мин. устанавливает ловушку. Ловушка <status>обездвиживает</status> враж. чемпионов, раскрывая их на @VisibilityDuration@ сек. Ловушка наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> за @RootDuration@ сек.<br><br>Макс. ловушек одновременно: @MaxTraps@.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Кейтлин выстреливает тяжелой сетью, замедляя цель. Отдача отбрасывает Кейтлин.",
-            "dynamicDescription": "Кейтлин выстреливает сетью, нанося <magicDamage>@NetDamage@ ед. маг. урона</magicDamage> и <status>замедляя</status> цель на @SlowAmount*-100@% на @SlowDuration@ сек. Отдача отбрасывает Кейтлин.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Кейтлин отлетает назад при выстреле тяжелой сетью, наносящей <magicDamage>@NetDamage@ ед. маг. урона</magicDamage> 1-му пораженному врагу и <status>замедляющей</status> его на @SlowAmount*-100@% на @SlowDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,7 +715,7 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Кейтлин тщательно целится и делает превосходный выстрел, наносящий огромный урон одиночной цели на большом расстоянии. Вражеские чемпионы могут заслонить собой союзника.",
+            "description": "Кейтлин тщательно целится и делает превосходный выстрел, наносящий огромный урон враж. чемпиону на большом расстоянии. Другие враж. чемпионы могут заслонить собой союзника.",
             "dynamicDescription": "Кейтлин тщательно целится, чтобы сделать превосходный выстрел, наносящий <physicalDamage>@RTotalDamage@ ед. физ. урона</physicalDamage> враж. чемпиону на расстоянии до @CastRange@ ед. Другие враж. чемпионы могут заслонить собой союзника.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,

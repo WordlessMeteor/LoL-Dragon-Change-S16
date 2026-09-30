@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تشحن كايتلين بندقيتها، ثم تطلق طلقة نافذة تلحق ضررًا ماديًا (تلحق ضررًا أقل بالأهداف اللاحقة).",
-            "dynamicDescription": "تشحن كايتلين بندقيتها لمدة @CastTime@ث لتطلق رصاصة نافذة تلحق <physicalDamage>@InitialDamage@ ضرر مادي</physicalDamage>. تلحق ضررًا أقل بنسبة @ExtraHitPercentReduction*100@% بكل هدف لاحق، وصولًا إلى حدٍ أدنى قدره @MinimumDamagePercent*100@%.@SpellModifierDescriptionAppend@",
+            "description": "تطلق كايتلين طلقة مخترقة تلحق الضرر بجميع الأعداء في خط مستقيم.",
+            "dynamicDescription": "تطلق كايتلين طلقة مخترقة تلحق <physicalDamage>@InitialDamage@ ضرر مادي</physicalDamage>، يتقلص بنسبة @ExtraHitPercentReduction*100@% لكل عدو لاحق وصولًا إلى حد أدنى يبلغ <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تنصب كايتلين فخًا للعثور على المتسللين من اليوردل. عند تفعيله، يشل الفخ حركة البطل، ويكشفه ويلحق به ضرر سحر خلال فترة قصيرة.",
-            "dynamicDescription": "تنصب كايتلين فخًا يمكن لبطل معادٍ الوقوع فيه، مما يؤدي إلى <status>تثبيته</status> لمدة قصيرة وكشفه لمدة @VisibilityDuration@ث. يلحق الفخ <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> خلال @DOTTime@ث، ويستمر لمدة @Duration@د. يمكن تفعيل @MaxTraps@ من الفخاخ فقط في الوقت نفسه.@SpellModifierDescriptionAppend@",
+            "description": "تنصب كايتلين فخًا للعثور على المتسللين من اليوردل. عند تفعيله من قبل بطل، يشل الفخ حركته ويكشفه ويلحق به الضرر لفترة قصيرة.",
+            "dynamicDescription": "تنصب كايتلين فخًا لمدة @Duration@د يتم تفعيله على الأبطال الأعداء، مما <status>يثبتهم</status> ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> على مدار @RootDuration@ث، ويكشفهم لمدة @VisibilityDuration@ث.<br><br>يمكن تفعيل @MaxTraps@ من الفخاخ فقط في الوقت نفسه.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق كايتلين شبكة ثقيلة لإبطاء هدفها. يطيح الارتداد بكايتلين إلى الخلف.",
-            "dynamicDescription": "تطلق كايتلين شبكة تلحق <magicDamage>@NetDamage@ ضرر سحر</magicDamage> كما <status>تبطئ</status> الهدف بنسبة @SlowAmount*-100@% لمدة @SlowDuration@ث. تطيح بكايتلين إلى الخلف.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطير كايتلين إلى الخلف أثناء إطلاقها شبكة تلحق <magicDamage>@NetDamage@ ضرر سحر</magicDamage> كما <status>تبطئ</status> أول عدو تصيبه بنسبة @SlowAmount*-100@% لمدة @SlowDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تستغرق كايتلين بعض الوقت لتصويب الطلقة المثالية، فتلحق ضررًا هائلًا بهدف واحد على بعد كبير. يستطيع أبطال العدو اعتراض الرصاصة نيابة عن حليفهم.",
-            "dynamicDescription": "تستغرق كايتلين برهة لتصويب الطلقة المثالية، ثم تطلق رصاصة على بطل معادٍ تلحق <physicalDamage>@RTotalDamage@ ضرر مادي</physicalDamage> ضمن نطاق @CastRange@. يستطيع أبطال العدو الآخرون اعتراض الرصاصة.@SpellModifierDescriptionAppend@",
+            "description": "تستغرق كايتلين بعض الوقت لتصويب الطلقة المثالية، فتلحق ضررًا هائلًا ببطلٍ معادٍ على بعد كبير. يستطيع الأبطال المعادون الآخرون اعتراض الرصاصة نيابة عن حليفهم.",
+            "dynamicDescription": "تستغرق كايتلين برهة لتصويب الطلقة المثالية على بطلٍ معاد، فتلحق <physicalDamage>@RTotalDamage@ ضرر مادي</physicalDamage> ضمن نطاق @CastRange@. يستطيع أبطال العدو اعتراض الرصاصة.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

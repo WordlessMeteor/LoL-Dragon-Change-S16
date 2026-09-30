@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凯特琳为步枪蓄力，并发射一颗大型穿透弹，造成物理伤害。（对后续目标的伤害递减）。",
-            "dynamicDescription": "凯特琳为步枪蓄力@CastTime@秒，发射一颗穿透弹，造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>。每穿过一个后续目标，伤害就会递减@ExtraHitPercentReduction*100@%，最低降至@MinimumDamagePercent*100@%。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳释放一道穿透射击，对一条直线上的所有敌人造成伤害。",
+            "dynamicDescription": "凯特琳发射一道穿透性射击，造成<physicalDamage>@InitialDamage@物理伤害</physicalDamage>，每命中一个后续敌人伤害降低@ExtraHitPercentReduction*100@%，最低至 <physicalDamage>@MinimumDamageCalc@</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凯特琳设置一个陷阱来捕捉狡猾的约德尔人。陷阱被触发时，会使英雄禁锢和现形，并短时间内造成魔法伤害。",
-            "dynamicDescription": "凯特琳设置一个陷阱，敌方英雄触发陷阱后，会被<status>禁锢</status>短暂时间，并被显形，持续@VisibilityDuration@秒。陷阱会在@DOTTime@秒内造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并持续@Duration@分钟。最多只能同时存在@MaxTraps@个陷阱。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳设置一个陷阱来捕捉狡猾的约德尔人。当有英雄触发陷阱时，陷阱会在短时间内定身、现形并造成伤害。",
+            "dynamicDescription": "凯特琳布置一个陷阱，持续 @Duration@ 分钟，对敌方英雄触发时将其 <status>禁锢</status> ，并在 @RootDuration@ 秒内造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage> ，同时在 @VisibilityDuration@ 秒内现形。<br><br>最多只能同时存在@MaxTraps@个陷阱。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凯特琳花费时间准备一发完美射击，对极远距离的单个目标造成巨额伤害。敌方英雄可以为友军拦截这发子弹。",
-            "dynamicDescription": "凯特琳花费1秒时间准备一发完美射击，朝一名敌方英雄发射子弹，在@CastRange@距离内造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>。子弹可被其他敌方英雄拦截。@SpellModifierDescriptionAppend@",
+            "description": "凯特琳花费时间准备一发完美射击，对极远距离的敌方英雄造成巨额伤害。子弹可被其他敌方英雄拦截。",
+            "dynamicDescription": "凯特琳花费1秒时间朝一名敌方英雄发射一次完美射击，在@CastRange@距离内造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>。子弹可被其他敌方英雄拦截。@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

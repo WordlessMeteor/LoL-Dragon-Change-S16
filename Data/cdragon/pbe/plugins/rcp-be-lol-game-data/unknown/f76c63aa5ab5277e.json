@@ -205,7 +205,43 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin301/ChromaPreview.project_jade_16_20.png",
+            "chromas": [
+                {
+                    "id": 60051302,
+                    "name": "",
+                    "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
+                    "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
+                    "relatedPrimeItemId": 51001,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin302/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#B6E084",
+                        "#B6E084"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                },
+                {
+                    "id": 60051303,
+                    "name": "",
+                    "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
+                    "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
+                    "relatedPrimeItemId": 51002,
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Skin303/ChromaPreview.project_jade_16_20.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -229,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn pečlivě zamíří a vystřelí průraznou střelu, která způsobí fyzické poškození (následným cílům způsobí menší poškození).",
-            "dynamicDescription": "Po přípravě dlouhé @CastTime@ sek. vypálí Caitlyn průraznou střelu, která způsobí <physicalDamage>@InitialDamage@ bodů fyzického poškození</physicalDamage>. Poškození způsobené každému následujícímu cíli se snižuje o @ExtraHitPercentReduction*100@ % až na minimální hodnotu @MinimumDamagePercent*100@ %.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn vystřelí průrazný projektil, který poškodí všechny nepřátele v řadě.",
+            "dynamicDescription": "Caitlyn vystřelí průrazný projektil, který způsobí <physicalDamage>@InitialDamage@ bodů fyzického poškození</physicalDamage>. Toto poškození se snižuje o @ExtraHitPercentReduction*100@ % za každého dalšího zasaženého nepřítele, a to až na minimální hodnotu <physicalDamage>@MinimumDamageCalc@</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -379,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn nastraží past na záludné yordly. Když se past spustí, znehybní šampiona, na krátkou dobu ho odhalí a způsobí mu magické poškození rozložené do krátkého časového úseku.",
-            "dynamicDescription": "Caitlyn nastraží past na nepřátelské šampiony, která je po spuštění na chvíli <status>znehybní</status> a na @VisibilityDuration@ sek. odhalí jejich pozici. Past způsobuje <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> rozloženého do @DOTTime@ sek. a vydrží @Duration@ min. V jeden okamžik lze na mapě mít sadu až @MaxTraps@ pastí.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn nastraží past na záludné yordly. Když past spustí šampion, znehybní ho, odhalí a po krátkou dobu mu způsobuje poškození.",
+            "dynamicDescription": "Caitlyn nastraží na @Duration@ min. past na nepřátelské šampiony. Past zasaženého šampiona <status>znehybní</status> a během @RootDuration@ sek. mu způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Na @VisibilityDuration@ sek. ho také odhalí.<br><br>V jeden okamžik lze na mapě mít sadu až @MaxTraps@ pastí.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -530,7 +566,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Caitlyn vystřelí těžkou síť, která jejího nepřítele zpomalí. Zpětný ráz odhodí Caitlyn zpět.",
-            "dynamicDescription": "Caitlyn vystřelí síť, která cíli způsobí <magicDamage>@NetDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@ sek. ho <status>zpomalí</status> o @SlowAmount*-100@ %. Zpětný ráz odhodí Caitlyn zpět.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn odskočí dozadu a vystřelí síť, která prvnímu zasaženému nepříteli způsobí <magicDamage>@NetDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@ sek. ho <status>zpomalí</status> o @SlowAmount*-100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -679,8 +715,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Caitlyn si načasuje dokonalý výstřel, kterým způsobí výrazné poškození jednomu cíli na obrovskou vzdálenost. Jiný nepřátelský šampion může svého spojence před střelou ochránit.",
-            "dynamicDescription": "Caitlyn na chvíli pečlivě zamíří a pak na nepřátelského šampiona vypálí střelu, která mu na vzdálenost až @CastRange@ jednotek způsobí <physicalDamage>@RTotalDamage@ bodů fyzického poškození</physicalDamage>. Jiný nepřátelský šampion může svého spojence před střelou ochránit vlastním tělem.@SpellModifierDescriptionAppend@",
+            "description": "Caitlyn si načasuje dokonalý výstřel, kterým způsobí výrazné poškození nepřátelskému šampionovi na obrovskou vzdálenost. Jiný nepřátelský šampion může svého spojence před střelou ochránit vlastním tělem.",
+            "dynamicDescription": "Caitlyn na sekundu pečlivě zamíří a pak na nepřátelského šampiona vypálí střelu, která mu na vzdálenost až @CastRange@ jednotek způsobí <physicalDamage>@RTotalDamage@ bodů fyzického poškození</physicalDamage>. Jiný nepřátelský šampion může svého spojence před střelou ochránit vlastním tělem.@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,
                 2500.0,

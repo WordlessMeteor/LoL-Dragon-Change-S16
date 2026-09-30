@@ -292,7 +292,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Passiva come Quinn: ottieni attacco e velocità di movimento per alcuni secondi quando attivi Rapace.<br><br>Passiva come Valor: ottieni velocità d'attacco.<br><br>Attiva: rivela un'ampia area intorno a Quinn e Valor.",
-            "dynamicDescription": "<keywordMajor>Passiva con Quinn</keywordMajor>: attaccare un bersaglio <keywordMajor>vulnerabile</keywordMajor> fornisce a Quinn <speed>@AttackSpeedBonus*100@% velocità d'attacco</speed> e <speed>@MovespeedAmount@ velocità di movimento</speed> per @BuffDuration@ secondo/i.<br><br><keywordMajor>Passiva con Valor</keywordMajor>: ottieni @ValorAttackSpeed*100@% velocità d'attacco.<br><br><keywordMajor>Attiva</keywordMajor>: Valor rivela una grande area vicina per @VisionDuration@ secondo/i.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Passiva con Quinn</keywordMajor>: attaccare un bersaglio <keywordMajor>vulnerabile</keywordMajor> fornisce a Quinn <speed>@AttackSpeedBonus*100@% velocità d'attacco</speed> e <speed>@MovespeedAmount@ velocità di movimento</speed> per @BuffDuration@ secondo/i.<br><br><keywordMajor>Passiva con Valor</keywordMajor>: ottieni <speed>@ValorAttackSpeed*100@% velocità d'attacco</speed>.<br><br><keywordMajor>Attiva</keywordMajor>: Valor rivela una grande area vicina per @VisionDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -442,7 +442,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Quinn o Valor scattano verso un nemico, infliggendo danni, respingendo e rallentando il bersaglio. Se lanciata come Quinn, in seguito balza via dal bersaglio, mantenendo le distanze mentre Valor li marchia con Rapace.",
-            "dynamicDescription": "<keywordMajor>Con Quinn o Valor</keywordMajor>: scatta verso un nemico infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>, lo <status>respinge</status> e <status>rallenta</status> la velocità di movimento del bersaglio di un @SlowAmount*100@%, che decresce nell'arco di @SlowDecayTime@ secondi.<br><br><keywordMajor>Con Quinn</keywordMajor>: effettua anche un balzo lontano dal suo bersaglio e Valor lo marchia come <keywordMajor>vulnerabile</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Con Quinn o Valor</keywordMajor>: scatta verso un nemico infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage>, <status>respingendolo</status> e <status>rallentandolo</status> di un @SlowAmount*100@%, che decresce nell'arco di @SlowDecayTime@ secondo/i.<br><br><keywordMajor>Con Quinn</keywordMajor>: effettua anche un balzo lontano dal suo bersaglio e Valor lo marchia come <keywordMajor>vulnerabile</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -592,7 +592,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Valor sostituisce Quinn sul campo di battaglia come attaccante mobile da mischia, ottenendo velocità di movimento e modificando le sue abilità. Lancia di nuovo per attivare Attacco dal cielo, infliggendo danni a tutti i nemici vicini.",
-            "dynamicDescription": "<keywordMajor>Primo lancio</keywordMajor>: Valor sostituisce Quinn sul campo di battaglia come attaccante mobile da mischia per @TransformDuration@ secondo/i. Valor diventa spettrale e ottiene @OoCMoveSpeed*100@% velocità di movimento, che si riduce gradualmente fino a @CombatMoveSpeed*100@% quando è in combattimento. Valor può quindi lanciare <keywordMajor>Attacco dal cielo</keywordMajor>.<br><br><keywordMajor>Attacco dal cielo</keywordMajor>: Quinn ritorna, infliggendo <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ danni fisici</physicalDamage> a tutti i nemici in un'ampia area, in base alla loro salute mancante.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Con Quinn</keywordMajor>: Valor sostituisce Quinn sul campo di battaglia come attaccante mobile da mischia per @TransformDuration@ secondo/i. Valor diventa <status>spettrale</status> e ottiene <speed>@OoCMoveSpeed*100@% velocità di movimento</speed>, che si riduce gradualmente fino a un @CombatMoveSpeed*100@% quando è in combattimento. Valor può quindi lanciare <keywordMajor>Attacco dal cielo</keywordMajor>.<br><br><keywordMajor>Con Valor - Attacco dal cielo</keywordMajor>: Quinn ritorna, infliggendo <physicalDamage>@TotalDamage@ - @TotalDamageMaximum@ danni fisici</physicalDamage> a tutti i nemici in un'ampia area, in base alla loro salute mancante.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
