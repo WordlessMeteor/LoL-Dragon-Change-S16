@@ -413,13 +413,39 @@
                 {
                     "name": "RFalloffDamage",
                     "values": [
-                        30.0,
+                        50.0,
                         140.0,
-                        250.0,
-                        360.0,
-                        470.0,
-                        580.0,
-                        690.0
+                        230.0,
+                        320.0,
+                        410.0,
+                        500.0,
+                        590.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BulletADRatio",
+                    "values": [
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ConeADRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -435,8 +461,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.399999976158142,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{3aa32c2f}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -451,15 +477,13 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.2000000476837158,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{97738dea}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.5,
-            "mCoefficient2": 1.2000000476837158,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/GravesHighNoon.dds"
@@ -1972,119 +1996,6 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_PlayerSelectedDashDirection"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BuffDuration",
@@ -3117,83 +3028,6 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mEffectAmount": [
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        110.0,
-                        160.0,
-                        210.0,
-                        260.0,
-                        310.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -3276,7 +3110,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/GravesSmokeGrenade.dds"
@@ -3971,11 +3804,11 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 54.099998474121094,
+            "baseValue": 50.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
-            "baseValue": 3.0999999046325684,
+            "baseValue": 2.5,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -4008,7 +3841,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 2.9000000953674316,
+            "baseValue": 2.5,
             "__type": "ModifiableFloat"
         },
         "basicAttack": {

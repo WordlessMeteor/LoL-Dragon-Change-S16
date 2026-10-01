@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 51,
     "name": "凱特琳",
     "alias": "Jade_Caitlyn",
-    "title": "",
-    "shortBio": "",
+    "title": "皮爾托福執法者",
+    "shortBio": "- 捕獲陷阱(W)和九零式獵網(E)不會觸發爆頭(被動)。",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 2,
@@ -191,7 +191,7 @@
             "relatedPrimeContentId": "cc34df2a-87f9-4555-a91e-70546f8b7a36",
             "relatedPrimeItemId": 51000,
             "isBase": false,
-            "name": "",
+            "name": "經典 凱特琳",
             "skinClassification": "kChampion",
             "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Base/Images/Jade_Caitlyn_splash_centered_0.project_jade.jpg",
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Base/Images/Jade_Caitlyn_splash_uncentered_0.project_jade.jpg",
@@ -209,7 +209,7 @@
             "chromas": [
                 {
                     "id": 60051302,
-                    "name": "",
+                    "name": "經典 凱特琳(政府反抗軍)",
                     "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
                     "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
                     "relatedPrimeItemId": 51001,
@@ -226,7 +226,7 @@
                 },
                 {
                     "id": 60051303,
-                    "name": "",
+                    "name": "經典 凱特琳(荒野保安官)",
                     "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
                     "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
                     "relatedPrimeItemId": 51002,
@@ -265,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凱特琳的步槍蓄能後射出會穿透目標的子彈，造成物理傷害(穿透後傷害遞減)。",
-            "dynamicDescription": "凱特琳為她的步槍蓄能@CastTime@秒，發射一發穿透子彈，造成<physicalDamage>@InitialDamage@物理傷害</physicalDamage>。對後續目標的傷害逐個降低@ExtraHitPercentReduction*100@%，最低降至@MinimumDamagePercent*100@%。@SpellModifierDescriptionAppend@",
+            "description": "凱特琳發射穿透子彈，對直線上的所有敵軍造成傷害。",
+            "dynamicDescription": "凱特琳對目標發射穿透子彈，造成<physicalDamage>@InitialDamage@物理傷害</physicalDamage>，每命中一名敵軍，傷害就會降低@ExtraHitPercentReduction*100@%，最低<physicalDamage>@MinimumDamageCalc@</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -415,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凱特琳設置陷阱來捕捉狡猾的約德爾人。陷阱觸發時，會硬控場英雄、揭露其位置，並在短時間內持續造成魔法傷害。",
-            "dynamicDescription": "凱特琳設置一個陷阱，敵方英雄觸發後將被<status>定身</status>並揭露位置@VisibilityDuration@秒。陷阱會在場上持續@Duration@分鐘並在觸發後@DOTTime@秒內造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。可同時放置@MaxTraps@個陷阱。@SpellModifierDescriptionAppend@",
+            "description": "凱特琳設置陷阱來捕捉狡猾的約德爾人，英雄踩到時將被硬控場，並且暴露出他的位置一小段時間。",
+            "dynamicDescription": "凱特琳設置一個持續@Duration@分鐘的陷阱，敵方英雄觸發後將被<status>定身</status>，並在 @RootDuration@秒內受到<magicDamage>@TotalDamage@ 魔法傷害</magicDamage>，並揭露位置@VisibilityDuration@秒。<br><br>可同時放置@MaxTraps@個陷阱。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -566,7 +566,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "凱特琳發射沉重的獵網緩速目標。後座力會將凱特琳震退。",
-            "dynamicDescription": "凱特琳發射一張網，造成<magicDamage>@NetDamage@魔法傷害</magicDamage>，並使目標<status>緩速</status>@SlowAmount*-100@%，持續@SlowDuration@秒。凱特琳會向後退。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "凱特琳向後飛跳，發射一張網，造成<magicDamage>@NetDamage@魔法傷害</magicDamage>，並使第一個命中的敵軍<status>緩速</status>@SlowAmount*-100@%，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -715,7 +715,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "凱特琳仔細瞄準，射出一發完美攻擊，從遠距離對單一目標造成大量傷害。敵方英雄可為其友軍擋下子彈。",
+            "description": "凱特琳仔細瞄準，射出一發完美攻擊，從遠距離對敵方英雄造成大量傷害。其他敵方英雄可為友軍擋下子彈。",
             "dynamicDescription": "凱特琳花費1秒進行完美射擊瞄準，向一名敵方英雄發射子彈，造成<physicalDamage>@RTotalDamage@物理傷害</physicalDamage>，射程為@CastRange@。其他敵方英雄可擋下此子彈。@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,

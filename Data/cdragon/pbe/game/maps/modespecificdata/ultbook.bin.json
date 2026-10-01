@@ -84553,7 +84553,7 @@
                     "name": "BasePercentHPPerStack",
                     "values": [
                         0.02500000037252903,
-                        0.029999999329447746,
+                        0.030000001192092896,
                         0.03500000014901161,
                         0.03999999910593033,
                         0.04500000178813934,
@@ -84731,7 +84731,7 @@
                     "__type": "GameCalculation"
                 },
                 "OnHitDamage": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mDataValue": "VarusWOnHitDamage",
@@ -84771,7 +84771,7 @@
             "{fe87f21e}": [
                 {
                     "{6166b756}": "OnHitDamage",
-                    "{01987941}": [
+                    "Requirements": [
                         {
                             "level": 1,
                             "__type": "SpellSlotEqualOrGreaterThanLevelRequirement"
@@ -85583,7 +85583,7 @@
                     "__type": "GameCalculation"
                 },
                 "{540bce84}": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mNumber": 1.0,
@@ -85678,7 +85678,7 @@
                     "__type": "GameCalculation"
                 },
                 "ExecuteDamage": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mStartValue": 8.0,
@@ -85696,10 +85696,10 @@
                 },
                 {
                     "{6166b756}": "ExecuteDamage",
-                    "{01987941}": [
+                    "Requirements": [
                         {
                             "mInvertResult": true,
-                            "{137cf12a}": "ExecuteThreshold",
+                            "DataValue": "ExecuteThreshold",
                             "__type": "AboveHealthPercentCastRequirement"
                         }
                     ],

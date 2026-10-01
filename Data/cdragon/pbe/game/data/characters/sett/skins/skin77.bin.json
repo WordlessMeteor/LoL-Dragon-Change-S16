@@ -241,6 +241,13 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/51",
+                "mLoadingScreenAnchor": 1,
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Sett/Skins/Skin77/Resources",
         "PersistentEffectConditions": [
             {
@@ -249,6 +256,15 @@
                         {
                             "Spell": "Characters/Sett/Spells/SettWMaxGrit",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Death"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"

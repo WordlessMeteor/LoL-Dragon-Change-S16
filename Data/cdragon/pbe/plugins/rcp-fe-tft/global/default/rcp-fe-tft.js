@@ -400,32 +400,35 @@
                 a = "/lol-client-config/v3/client-config/",
                 s = a + "lol.client_settings.tft.bridge_enabled",
                 l = a + "lol.client_settings.tft.bridge_tooltips_enabled",
-                o = "/lol-settings/v2/local/lol-user-experience",
-                r = "/lol-gameflow/v1/session",
-                c = "/riotclient/region-locale",
-                d = "/lol-settings/v2/account/LCUPreferences/lol-tft",
-                u = "tftBridgeAnnouncementSeen";
+                o = a + "lol.client_settings.tft.bugReport.enabled",
+                r = "/lol-settings/v2/local/lol-user-experience",
+                c = "/lol-gameflow/v1/session",
+                d = "/riotclient/region-locale",
+                u = "/lol-settings/v2/account/LCUPreferences/lol-tft",
+                m = "tftBridgeAnnouncementSeen";
             t.default = i.Ember.Service.extend({
                 locale: null,
                 init: function() {
-                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), i.dataBinding.observe(s, this, (e => {
+                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("bugReportButtonEnabled", !1), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), i.dataBinding.observe(s, this, (e => {
                         this.set("bridgeEnabled", e), this.set("showPardonOurDustButton", e)
                     })), i.dataBinding.observe(l, this, (e => {
                         this.set("bridgeTooltipsEnabled", e)
-                    })), i.dataBinding.observe(c, this, (e => {
+                    })), i.dataBinding.observe(o, this, (e => {
+                        this.set("bugReportButtonEnabled", e)
+                    })), i.dataBinding.observe(d, this, (e => {
                         this.set("isTencentRegion", "TENCENT" === e?.region)
                     })), i.dataBinding.get("/riotclient/system-info/v1/basic-info").then((e => {
                         const t = e.operatingSystem.versionMajor,
                             n = parseInt(t) || 0,
                             i = "Windows" === e.operatingSystem.platform && n >= 10;
                         this.set("blockPartyInvites", !i), this.set("blockTFTMode", !i)
-                    })), i.dataBinding.observe(o, this, (e => {
+                    })), i.dataBinding.observe(r, this, (e => {
                         this.set("hasSeenBridgeTftTooltip", e?.data?.hasSeenBridgeTftTooltip ?? !1)
-                    })), i.dataBinding.observe(o, this, (e => {
+                    })), i.dataBinding.observe(r, this, (e => {
                         this.set("showPardonOurDustPip", e?.data?.showPardonOurDustPip ?? !0)
-                    })), i.dataBinding.observe(d, this, (e => {
-                        this.set("bridgeAnnouncementSeen", Boolean(e?.data?.[u]))
-                    })), i.dataBinding.addObserver(r, this, (e => {
+                    })), i.dataBinding.observe(u, this, (e => {
+                        this.set("bridgeAnnouncementSeen", Boolean(e?.data?.[m]))
+                    })), i.dataBinding.addObserver(c, this, (e => {
                         const t = "TFT" === e?.gameData?.queue?.gameMode,
                             n = e?.phase;
                         t && ("GameStart" === n || ("WaitingForStats" === n || "PreEndOfGame" === n || "EndOfGame" === n)) && this.recordPersistedSeenBridgeTooltip()
@@ -437,6 +440,9 @@
                 shouldShowPardonOurDustButton: function() {
                     return this.get("showPardonOurDustButton")
                 },
+                shouldShowBugReportButton: function() {
+                    return this.get("bugReportButtonEnabled")
+                },
                 shouldBlockTFTMode: function() {
                     return this.get("blockTFTMode")
                 },
@@ -444,7 +450,7 @@
                     return this.get("bridgeEnabled")
                 },
                 recordPersistedSeenBridgeTooltip() {
-                    this.get("hasSeenBridgeTftTooltip") || i.dataBinding.patch(o, {
+                    this.get("hasSeenBridgeTftTooltip") || i.dataBinding.patch(r, {
                         data: {
                             hasSeenBridgeTftTooltip: !0
                         },
@@ -454,13 +460,13 @@
                 recordBridgeAnnouncementSeen() {
                     this.set("bridgeAnnouncementSeen", !0);
                     const e = {};
-                    e[u] = !0, i.dataBinding.patch(d, {
+                    e[m] = !0, i.dataBinding.patch(u, {
                         data: e,
                         schemaVersion: 1
                     })
                 },
                 recordPersistedClickedPardonOurDustButton() {
-                    this.get("showPardonOurDustPip") && i.dataBinding.patch(o, {
+                    this.get("showPardonOurDustPip") && i.dataBinding.patch(r, {
                         data: {
                             showPardonOurDustPip: !1
                         },
@@ -468,7 +474,7 @@
                     })
                 },
                 willDestroy: function() {
-                    this._super(...arguments), i.dataBinding.unobserve(s, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(c, this), i.dataBinding.unobserve(o, this), i.dataBinding.removeObserver(r, this), i.dataBinding.unobserve(d, this)
+                    this._super(...arguments), i.dataBinding.unobserve(s, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(o, this), i.dataBinding.unobserve(d, this), i.dataBinding.unobserve(r, this), i.dataBinding.removeObserver(c, this), i.dataBinding.unobserve(u, this)
                 }
             })
         }, (e, t, n) => {
@@ -666,7 +672,7 @@
                     this.set("directLaunchEnabled", !this.get("directLaunchEnabled"))
                 },
                 isSet17ExtensionEnabled() {
-                    return !0 === this.get("set17ExtensionConfig")?.enabled
+                    return this.isFullLaunchEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries.length > 0
                 },
                 getTFTuQueueEntries() {
                     return this.isSet17ExtensionEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries || []

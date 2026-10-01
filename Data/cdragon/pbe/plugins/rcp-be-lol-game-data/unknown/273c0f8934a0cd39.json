@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 51,
     "name": "ケイトリン",
     "alias": "Jade_Caitlyn",
-    "title": "",
-    "shortBio": "",
+    "title": "ピルトーヴァーの保安官",
+    "shortBio": "- 「ヨードルトラップ(W)」と「L-90 カリバーネット(E)」では「ヘッドショット(P)」が発動しない。",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 2,
@@ -191,7 +191,7 @@
             "relatedPrimeContentId": "cc34df2a-87f9-4555-a91e-70546f8b7a36",
             "relatedPrimeItemId": 51000,
             "isBase": false,
-            "name": "",
+            "name": "クラシック ケイトリン",
             "skinClassification": "kChampion",
             "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Base/Images/Jade_Caitlyn_splash_centered_0.project_jade.jpg",
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Caitlyn/Skins/Base/Images/Jade_Caitlyn_splash_uncentered_0.project_jade.jpg",
@@ -209,7 +209,7 @@
             "chromas": [
                 {
                     "id": 60051302,
-                    "name": "",
+                    "name": "クラシック ケイトリン (レジスタンス)",
                     "contentId": "d9c95cb1-566c-43c6-b51c-12cae1b96098",
                     "relatedPrimeContentId": "7d8d0b89-dbb4-4a11-bd85-18e5e8ba0590",
                     "relatedPrimeItemId": 51001,
@@ -226,7 +226,7 @@
                 },
                 {
                     "id": 60051303,
-                    "name": "",
+                    "name": "クラシック ケイトリン (保安官)",
                     "contentId": "86b0242d-9fe6-40a5-be69-af5d15fac294",
                     "relatedPrimeContentId": "2f246641-8491-4f57-87a0-df7db0b1eb46",
                     "relatedPrimeItemId": 51002,
@@ -265,8 +265,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "ライフルをチャージし、指定方向に貫通弾を発射する。貫通弾は命中した敵ユニットに物理ダメージを与える(2体目以降へのダメージは徐々に減少する)。",
-            "dynamicDescription": "@CastTime@秒間ライフルをチャージし、貫通弾を発射して<physicalDamage>@InitialDamage@の物理ダメージ</physicalDamage>を与える。追加の敵に命中するたびにダメージが@ExtraHitPercentReduction*100@%ずつ低下していく(最小@MinimumDamagePercent*100@%)。@SpellModifierDescriptionAppend@",
+            "description": "ケイトリンが貫通弾を放ち、直線状にいるすべての敵にダメージを与える。",
+            "dynamicDescription": "貫通弾を発射し、<physicalDamage>@InitialDamage@物理ダメージ</physicalDamage>を与える。このダメージは2体目以降の敵に命中するたびに@ExtraHitPercentReduction*100@%ずつ減少し、最低で<physicalDamage>@MinimumDamageCalc@</physicalDamage>になる。@SpellModifierDescriptionAppend@",
             "range": [
                 1250.0,
                 1250.0,
@@ -415,8 +415,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "こそこそと動き回るヨードルを狙うトラップを仕掛ける。トラップに触れた敵チャンピオンを移動不能状態にして可視化し、短い時間をかけて魔法ダメージを与える。",
-            "dynamicDescription": "指定地点に敵チャンピオンが踏むと発動するトラップを仕掛ける。トラップはかかったチャンピオンに少しの間<status>スネア効果</status>を付与し、@VisibilityDuration@秒間可視化する。トラップは@DOTTime@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@Duration@分間持続する。トラップは同時に@MaxTraps@個まで設置しておくことができる。@SpellModifierDescriptionAppend@",
+            "description": "こそこそと動き回るヨードルを狙うトラップを仕掛ける。チャンピオンが踏むと、トラップが発動して対象を移動不能にして可視化し、短時間かけてダメージを与える。",
+            "dynamicDescription": "敵チャンピオンが踏むと作動する罠を@Duration@分間設置する。罠にかかった敵チャンピオンは<status>スネア効果</status>を受け、@RootDuration@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を受け、@VisibilityDuration@秒間可視状態になる。<br><br>トラップは同時に@MaxTraps@個まで設置しておくことができる。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -566,7 +566,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "重たいネットを発射して、対象にスロウ効果を与える。自分は反動で反対方向にとぶ。",
-            "dynamicDescription": "ネットを発射して<magicDamage>@NetDamage@の魔法ダメージ</magicDamage>を与え、対象に@SlowDuration@秒間、@SlowAmount*-100@%の<status>スロウ効果</status>を付与する。自身はノックバックを受ける。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ケイトリンは後方へと飛び退きながらネットを発射する。ネットは最初に命中した敵に<magicDamage>@NetDamage@魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@SlowAmount*-100@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -715,7 +715,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "特大の射程で狙いを定め、対象を狙撃して大ダメージを与える。別の敵チャンピオンが射線を塞いだ場合、弾丸はそのチャンピオンに命中する。",
+            "description": "特大の射程で狙いを定め、敵チャンピオンを狙撃して大ダメージを与える。別の敵チャンピオンが射線を塞いだ場合、弾丸はそのチャンピオンに命中する。",
             "dynamicDescription": "1秒間かけて狙いを定め、敵チャンピオンに向けて弾丸を発射して、@CastRange@の射程で<physicalDamage>@RTotalDamage@の物理ダメージ</physicalDamage>を与える。別の敵チャンピオンが射線を塞いだ場合、弾丸はそのチャンピオンに命中する。@SpellModifierDescriptionAppend@",
             "range": [
                 2000.0,

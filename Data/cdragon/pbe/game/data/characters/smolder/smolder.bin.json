@@ -2130,8 +2130,8 @@
         },
         "__type": "SpellObject"
     },
-    "{2a2b96b5}": {
-        "mRootSpell": "{c72a53d8}",
+    "Characters/Smolder/Spells/SmolderPAbility": {
+        "mRootSpell": "Characters/Smolder/Spells/SmolderPAbility/SmolderP",
         "mName": "SmolderPAbility",
         "mType": 3,
         "__type": "AbilityObject"
@@ -2432,13 +2432,13 @@
                 {
                     "name": "MomHeal",
                     "values": [
-                        65.0,
+                        25.0,
                         100.0,
-                        135.0,
-                        170.0,
-                        205.0,
-                        240.0,
-                        275.0
+                        175.0,
+                        250.0,
+                        325.0,
+                        400.0,
+                        475.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2588,7 +2588,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.5,
+                            "mCoefficient": 0.75,
                             "__type": "StatByCoefficientCalculationPart"
                         },
                         {
@@ -3587,22 +3587,22 @@
         },
         "__type": "SpellObject"
     },
-    "{c72a53d8}": {
+    "Characters/Smolder/Spells/SmolderPAbility/SmolderP": {
         "ObjectName": "SmolderP",
-        "objectPath": "{c72a53d8}",
+        "objectPath": "Characters/Smolder/Spells/SmolderPAbility/SmolderP",
         "mScriptName": "SmolderP",
         "mSpell": {
             "DataValues": [
                 {
                     "name": "QCritRatio",
                     "values": [
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3751,7 +3751,7 @@
                             {
                                 "mPart1": {
                                     "mStat": 8,
-                                    "mCoefficient": 0.6000000238418579,
+                                    "mCoefficient": 0.75,
                                     "__type": "StatByCoefficientCalculationPart"
                                 },
                                 "mPart2": {
@@ -4653,7 +4653,7 @@
             "Characters/Smolder/Spells/SmolderRAbility/SmolderR"
         ],
         "mAbilities": [
-            "{2a2b96b5}",
+            "Characters/Smolder/Spells/SmolderPAbility",
             "Characters/Smolder/Spells/SmolderQAbility",
             "Characters/Smolder/Spells/SmolderWAbility",
             "Characters/Smolder/Spells/SmolderEAbility",
@@ -4757,10 +4757,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{c72a53d8}",
+        "mCharacterPassiveSpell": "Characters/Smolder/Spells/SmolderPAbility/SmolderP",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{c72a53d8}",
+                "mParentPassiveBuff": "Characters/Smolder/Spells/SmolderPAbility/SmolderP",
                 "__type": "CharacterPassiveData"
             }
         ],

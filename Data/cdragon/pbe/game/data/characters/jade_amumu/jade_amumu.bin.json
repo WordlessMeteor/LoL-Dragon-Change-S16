@@ -213,15 +213,15 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "HealthDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_AmumuR_ListType_Jade_PercentHealthDamage",
                                     "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -479,17 +479,17 @@
                                 {
                                     "type": "RDamage",
                                     "typeIndex": 1,
-                                    "nameOverride": "Spell_AmumuR_ListType_Jade_DamageDealt",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
-                                    "nameOverride": "Spell_ListType_ManaCost",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "Cooldown",
                                     "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "nameOverride": "Spell_ListType_ManaCost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -598,19 +598,19 @@
         },
         "__type": "SpellObject"
     },
-    "{5dd6d7fb}": {
-        "mRootSpell": "{a1f6917e}",
+    "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility": {
+        "mRootSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP",
         "mChildSpells": [
-            "{a1f6917e}",
-            "{5cd8f5af}"
+            "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuCursedTouch"
         ],
         "mName": "Jade_AmumuPAbility",
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{5cd8f5af}": {
+    "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuCursedTouch": {
         "ObjectName": "Jade_AmumuCursedTouch",
-        "objectPath": "{5cd8f5af}",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuCursedTouch",
         "mScriptName": "Jade_AmumuCursedTouch",
         "mSpell": {
             "mImgIconName": [
@@ -633,9 +633,9 @@
         },
         "__type": "SpellObject"
     },
-    "{a1f6917e}": {
+    "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP": {
         "ObjectName": "Jade_AmumuP",
-        "objectPath": "{a1f6917e}",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP",
         "mScriptName": "Jade_AmumuP",
         "mSpell": {
             "DataValues": [
@@ -757,74 +757,6 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "Jade_Amumu_Tantrum",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.0,
-                        2.0,
-                        4.0,
-                        6.0,
-                        8.0,
-                        10.0,
-                        15.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        65.0,
-                        65.0,
-                        95.0,
-                        125.0,
-                        155.0,
-                        185.0,
-                        185.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.029999999329447746,
-                        0.029999999329447746,
-                        0.029999999329447746,
-                        0.029999999329447746,
-                        0.029999999329447746,
-                        0.029999999329447746,
-                        0.029999999329447746
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "PassiveDamageReduction",
@@ -867,28 +799,6 @@
                 }
             ],
             "mSpellCalculations": {
-                "DamageReduction": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
-                        },
-                        {
-                            "mStat": 1,
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.029999999329447746,
-                            "__type": "StatByCoefficientCalculationPart"
-                        },
-                        {
-                            "mStat": 6,
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.029999999329447746,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
                 "TantrumDamage": {
                     "mFormulaParts": [
                         {
@@ -903,7 +813,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.5,
             "mAnimationName": "Crit",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_Tantrum.dds"
@@ -921,14 +830,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    10.0,
+                    11.0,
                     10.0,
                     9.0,
                     8.0,
                     7.0,
                     6.0,
-                    6.0
+                    5.0
                 ],
+                "{0a3e0478}": 11.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1006,20 +916,20 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "PassiveDamageReduction",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_DamageReduced",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Cooldown",
-                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "type": "BaseDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_Damage",
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2348,7 +2258,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{5dd6d7fb}",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility",
             "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility",
             "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility",
             "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility",
@@ -2462,10 +2372,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{a1f6917e}",
+        "mCharacterPassiveSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{a1f6917e}",
+                "mParentPassiveBuff": "Characters/Jade_Amumu/Spells/Jade_AmumuPAbility/Jade_AmumuP",
                 "__type": "CharacterPassiveData"
             }
         ],
