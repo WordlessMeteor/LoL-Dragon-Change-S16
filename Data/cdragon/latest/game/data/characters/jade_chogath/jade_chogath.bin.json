@@ -171,7 +171,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Chogath_Feeney",
-        "{55bb9b57}": 19,
+        "PortraitId": 19,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
             "image": "assets/characters/jade_chogath/skins/base/jade_chogathloadscreen_feeney.tex",
@@ -187,7 +187,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Chogath_Legacy_02",
-        "{55bb9b57}": 5,
+        "PortraitId": 5,
         "{ff3c9ff8}": "{79c259f7}",
         "image": {
             "image": "assets/characters/jade_chogath/skins/base/jade_chogathloadscreen_portrait_legacy_02.tex",
@@ -3555,65 +3555,6 @@
                 "__type": "RootScriptSequence"
             },
             "{b415ce8f}": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "fc17db34-abb2-42c8-a6ca-5ba61dbef655",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{70954771}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 2,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "48e39f52-ac04-45e2-a269-999a6a3c25ba",
-                                    "ToSay": {
-                                        "value": "level:",
-                                        "__type": "StringGet"
-                                    },
-                                    "Src": {
-                                        "Var": "Level",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "__type": "DebugPrintToChatBlock"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "69788f4d-10cd-4f11-bb12-43112efb3b18",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "Level",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Value2": {
-                                            "value": 1,
-                                            "__type": "IntGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
                 "__type": "RootScriptSequence"
             },
             "{edb2eab3}": {
@@ -3738,9 +3679,6 @@
                 "__type": "RootScriptSequence"
             },
             "{eb530788}": {
-                "blocks": [
-                    null
-                ],
                 "__type": "RootScriptSequence"
             },
             "{d576330f}": {

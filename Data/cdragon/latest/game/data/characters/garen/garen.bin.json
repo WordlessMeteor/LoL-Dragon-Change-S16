@@ -118,6 +118,41 @@
                     "__type": "GameCalculation"
                 }
             },
+            "{66185ec4}": {
+                "Kiwi": {
+                    "Calculations": {
+                        "RegenCalc": {
+                            "mMultiplier": {
+                                "mNumber": 0.009999999776482582,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "mFormulaParts": [
+                                {
+                                    "mLevel1Value": 2.0,
+                                    "mInitialBonusPerLevel": 0.23255814611911774,
+                                    "mBreakpoints": [
+                                        {
+                                            "mLevel": 7,
+                                            "mBonusPerLevelAtAndAfter": 0.930232584476471,
+                                            "__type": "Breakpoint"
+                                        },
+                                        {
+                                            "mLevel": 14,
+                                            "mBonusPerLevelAtAndAfter": 0.4651162922382355,
+                                            "__type": "Breakpoint"
+                                        }
+                                    ],
+                                    "__type": "ByCharLevelBreakpointsCalculationPart"
+                                }
+                            ],
+                            "mDisplayAsPercent": true,
+                            "mPrecision": 1,
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
+                }
+            },
             "mImgIconName": [
                 "ASSETS/Characters/Garen/HUD/Icons2D/Garen_Passive.dds"
             ],
@@ -384,18 +419,31 @@
                     ],
                     "__type": "SpellDataValueVector"
                 },
-                "{bffdf499}": {
+                "Kiwi": {
                     "SpellDataValues": [
                         {
                             "name": "ResistGainOnKillTooltip",
                             "values": [
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "ShieldHealthRatio",
+                            "values": [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -445,6 +493,20 @@
                         }
                     ],
                     "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "Kiwi": {
+                    "value": [
+                        18.0,
+                        18.0,
+                        16.5,
+                        15.0,
+                        13.5,
+                        12.0,
+                        10.5
+                    ],
+                    "__type": "SpellEffectAmount"
                 }
             },
             "mSpellCalculations": {
@@ -2571,7 +2633,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenQTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2599,7 +2661,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenEShredDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2627,7 +2689,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenQCleanses",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2709,7 +2771,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 232,
+                "EventToTrack": 234,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2820,7 +2882,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenRExecutes",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2848,7 +2910,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2876,7 +2938,7 @@
         "mDescriptionTraKey": "stat_stone_description_GarenWBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.19.1",
+    "version": "16.20.1",
     "data": {
         "Jade_Amumu": {
             "id": "Jade_Amumu",
@@ -12,7 +12,7 @@
                 "full": "Jade_Amumu.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 144,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -389,8 +389,8 @@
                         "full": "Jade_AmumuBandageToss.png",
                         "sprite": "spell0.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 96,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -403,12 +403,12 @@
                     "tooltip": "<toggle>Toggle:</toggle> Amumu begins crying, dealing <magicDamage>{{ basedamage }} plus {{ totalhealthdamage }}% max health magic damage</magicDamage> to nearby enemies each second.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "% Health Damage",
-                            "Base Damage"
+                            "Base Damage",
+                            "% Health Damage"
                         ],
                         "effect": [
-                            "{{ healthdamage }}% -> {{ healthdamageNL }}%",
-                            "{{ basedamage }} -> {{ basedamageNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ healthdamage }}% -> {{ healthdamageNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -530,8 +530,8 @@
                         "full": "Jade_AmumuAuraofDespair.png",
                         "sprite": "spell0.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 144,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -545,13 +545,13 @@
                     "leveltip": {
                         "label": [
                             "Damage Reduced",
-                            "Cooldown",
-                            "Damage"
+                            "Damage",
+                            "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ passivedamagereduction }} -> {{ passivedamagereductionNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -575,25 +575,25 @@
                     "effect": [
                         null,
                         [
-                            2,
-                            4,
-                            6,
-                            8,
-                            10
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            65,
-                            95,
-                            125,
-                            155,
-                            185
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -617,11 +617,11 @@
                             0
                         ],
                         [
-                            0.03,
-                            0.03,
-                            0.03,
-                            0.03,
-                            0.03
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -647,13 +647,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "2/4/6/8/10",
-                        "65/95/125/155/185",
-                        "0.75",
                         "0",
                         "0",
                         "0",
-                        "0.03",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -673,7 +673,7 @@
                         "full": "Jade_AmumuTantrum.png",
                         "sprite": "spell0.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -687,14 +687,14 @@
                     "tooltip": "Amumu entangles surrounding enemy units, dealing <magicDamage>{{ rcalculateddamage }} Magic Damage</magicDamage> and preventing attacks and movement for {{ debuffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Damage Dealt",
-                            "Mana Cost",
-                            "Cooldown"
+                            "Damage",
+                            "Cooldown",
+                            "Mana Cost"
                         ],
                         "effect": [
                             "{{ rdamage }} -> {{ rdamageNL }}",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 3,
@@ -790,7 +790,7 @@
                         "full": "Jade_AmumuCurseoftheSadMummy.png",
                         "sprite": "spell0.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -805,7 +805,7 @@
                     "full": "Jade_Amumu_Passive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 192,
                     "y": 0,
                     "w": 48,
                     "h": 48

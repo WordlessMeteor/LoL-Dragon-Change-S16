@@ -17782,6 +17782,23 @@
     "Shaders/UI/UI_Masked": {
         "parameters": [
             {
+                "name": "Saturation_Blend_Amount",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Saturation_Blend_Amount",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Refraction_Texture_Tile",
                 "data": [
                     1.0,
@@ -17933,6 +17950,23 @@
                 "logicalParameters": [
                     {
                         "name": "Refraction_Chromatic_Aberration_B_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Blend_Amount",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Blend_Amount",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -18155,6 +18189,10 @@
             }
         ],
         "staticSwitches": [
+            {
+                "name": "ENABLE_SATURATION",
+                "__type": "ShaderStaticSwitch"
+            },
             {
                 "name": "ENABLE_REFRACTION",
                 "__type": "ShaderStaticSwitch"

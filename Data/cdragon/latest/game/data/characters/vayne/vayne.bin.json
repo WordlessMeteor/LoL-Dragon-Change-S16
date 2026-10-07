@@ -44,16 +44,16 @@
         "mRootSpell": "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemn",
         "mChildSpells": [
             "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemn",
-            "{0522a9f5}",
-            "{3c1abe72}"
+            "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnMissile",
+            "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnAALock"
         ],
         "mName": "VayneCondemnAbility",
         "AbilityTraits": 2560,
         "__type": "AbilityObject"
     },
-    "{0522a9f5}": {
+    "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnMissile": {
         "ObjectName": "VayneCondemnMissile",
-        "objectPath": "{0522a9f5}",
+        "objectPath": "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnMissile",
         "mScriptName": "VayneCondemnMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -552,9 +552,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3c1abe72}": {
+    "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnAALock": {
         "ObjectName": "VayneCondemnAALock",
-        "objectPath": "{3c1abe72}",
+        "objectPath": "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnAALock",
         "mScriptName": "VayneCondemnAALock",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RumbleDangerZone",
@@ -562,15 +562,15 @@
         },
         "__type": "SpellObject"
     },
-    "{52d8f7b6}": {
+    "Characters/Vayne/Spells/VayneCondemnAbility/VayneRdamagedMarker": {
         "ObjectName": "VayneRdamagedMarker",
-        "objectPath": "{52d8f7b6}",
+        "objectPath": "Characters/Vayne/Spells/VayneCondemnAbility/VayneRdamagedMarker",
         "mScriptName": "VayneRdamagedMarker",
         "__type": "SpellObject"
     },
-    "{9694cb98}": {
+    "Characters/Vayne/Spells/VayneCondemnAbility/VayneEStun": {
         "ObjectName": "VayneEStun",
-        "objectPath": "{9694cb98}",
+        "objectPath": "Characters/Vayne/Spells/VayneCondemnAbility/VayneEStun",
         "mScriptName": "VayneEStun",
         "__type": "SpellObject"
     },
@@ -1677,14 +1677,14 @@
             ],
             "manaValues": {
                 "values": [
-                    46.0,
-                    42.0,
-                    38.0,
-                    34.0,
                     30.0,
-                    26.0
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0
                 ],
-                "{0a3e0478}": 46.0,
+                "{0a3e0478}": 30.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -1713,10 +1713,6 @@
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_VayneQ_Ratio",
                                     "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2111,9 +2107,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e12ab174}": {
+    "Characters/Vayne/Spells/VayneTumbleUltAttack/VayneTumbleAttack": {
         "ObjectName": "VayneTumbleAttack",
-        "objectPath": "{e12ab174}",
+        "objectPath": "Characters/Vayne/Spells/VayneTumbleUltAttack/VayneTumbleAttack",
         "mScriptName": "VayneTumbleAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5375,
@@ -2955,7 +2951,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneQWETriggers",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2983,7 +2979,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneWDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3011,7 +3007,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneRTumbles",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3178,7 +3174,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 232,
+                "EventToTrack": 234,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3204,7 +3200,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneQDodges",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3232,7 +3228,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneKillWhileCondemned",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3260,7 +3256,7 @@
         "mDescriptionTraKey": "stat_stone_description_VayneRToKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3289,11 +3285,11 @@
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
-            "baseValue": 0.800000011920929,
+            "baseValue": 1.100000023841858,
             "__type": "ModifiableFloat"
         },
         "hpRegenPerLevelModifiable": {
-            "baseValue": 0.10000000149011612,
+            "baseValue": 0.07999999821186066,
             "__type": "ModifiableFloat"
         },
         "primaryAbilityResource": {
@@ -3421,8 +3417,8 @@
         ],
         "extraSpellsList": [
             "Shared/Spells/BaseSpell",
-            "{0522a9f5}",
-            "{e12ab174}",
+            "Characters/Vayne/Spells/VayneCondemnAbility/VayneCondemnMissile",
+            "Characters/Vayne/Spells/VayneTumbleUltAttack/VayneTumbleAttack",
             "Shared/Spells/BaseSpell",
             "Characters/Vayne/Spells/VayneUltAttack",
             "Characters/Vayne/Spells/VayneTumbleUltAttack",

@@ -1304,16 +1304,16 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "{fe87f21e}": [
+            "LastHitData": [
                 {
                     "{6166b756}": "ImpactCalculatedDamage",
-                    "{01987941}": [
+                    "Requirements": [
                         {
                             "level": 1,
                             "__type": "SpellSlotEqualOrGreaterThanLevelRequirement"
                         }
                     ],
-                    "__type": "{fe87f21e}"
+                    "__type": "LastHitData"
                 }
             ],
             "mAnimationName": "Spell4",
@@ -2418,7 +2418,6 @@
                 "blocks": [
                     null,
                     null,
-                    null,
                     null
                 ],
                 "__type": "RootScriptSequence"
@@ -2460,8 +2459,7 @@
                             "__type": "ScriptSequence"
                         },
                         "__type": "{e524b2fc}"
-                    },
-                    null
+                    }
                 ],
                 "__type": "RootScriptSequence"
             },
@@ -2597,6 +2595,45 @@
                         "Sequence": {
                             "blocks": [
                                 null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "3eff7d89-353a-4ba8-913c-90d91381f4df",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 3,
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "7e63ed06-5e88-4961-9f60-3adec363edf0",
+                                    "Condition": null,
+                                    "Invert": true,
+                                    "Sequence": {
+                                        "blocks": [
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
                             ],
                             "__type": "ScriptSequence"
                         },

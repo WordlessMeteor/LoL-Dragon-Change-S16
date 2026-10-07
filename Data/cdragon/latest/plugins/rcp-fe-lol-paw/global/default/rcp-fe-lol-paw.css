@@ -1660,6 +1660,58 @@
     cursor: pointer
 }
 
+.paw-warning .paw-link {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.paw-warning .paw-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.paw-warning .paw-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.paw-warning .paw-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.paw-warning .paw-link.hover,
+.paw-warning .paw-link:hover {
+    color: #cdfafa
+}
+
+.paw-warning .paw-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-paw/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.paw-warning .paw-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.paw-warning .paw-link:hover:after {
+    background-color: #cdfafa
+}
+
 .scrollable-paw-warnings {
     margin: 0 0 10px;
     max-height: 48px;
@@ -1670,6 +1722,11 @@
     font-size: 12px;
     line-height: 1.4;
     max-height: 38px
+}
+
+.paw-warning .paw-link {
+    font-size: inherit;
+    line-height: inherit
 }
 
 .paw-silvershields-promo-text {

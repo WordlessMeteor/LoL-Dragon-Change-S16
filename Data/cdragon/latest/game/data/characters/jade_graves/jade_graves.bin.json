@@ -1,7 +1,7 @@
 {
-    "{078a5e76}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesAttackSequencer": {
         "ObjectName": "Jade_GravesAttackSequencer",
-        "objectPath": "{078a5e76}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesAttackSequencer",
         "mScriptName": "Jade_GravesAttackSequencer",
         "__type": "SpellObject"
     },
@@ -21,23 +21,23 @@
         "mName": "Jade_GravesQAbility",
         "__type": "AbilityObject"
     },
-    "{1aff4cf9}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesSkin35_GearManager": {
         "ObjectName": "Jade_GravesSkin35_GearManager",
-        "objectPath": "{1aff4cf9}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesSkin35_GearManager",
         "mScriptName": "Jade_GravesSkin35_GearManager",
         "__type": "SpellObject"
     },
-    "{e843909c}": {
-        "mRootSpell": "{b8da9de7}",
+    "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility": {
+        "mRootSpell": "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive",
         "mChildSpells": [
-            "{b8da9de7}"
+            "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive"
         ],
         "mName": "Jade_GravesPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{1b0deafc}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive_Counter": {
         "ObjectName": "Jade_GravesPassive_Counter",
-        "objectPath": "{1b0deafc}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive_Counter",
         "mScriptName": "Jade_GravesPassive_Counter",
         "mSpell": {
             "DataValues": [
@@ -132,9 +132,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b8da9de7}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive": {
         "ObjectName": "Jade_GravesPassive",
-        "objectPath": "{b8da9de7}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive",
         "mScriptName": "Jade_GravesPassive",
         "mSpell": {
             "DataValues": [
@@ -243,9 +243,9 @@
         "mName": "Jade_GravesRAbility",
         "__type": "AbilityObject"
     },
-    "{1f211142}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_Xplode": {
         "ObjectName": "Jade_GravesR_Xplode",
-        "objectPath": "{1f211142}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_Xplode",
         "mScriptName": "Jade_GravesR_Xplode",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -413,13 +413,39 @@
                 {
                     "name": "RFalloffDamage",
                     "values": [
-                        30.0,
+                        50.0,
                         140.0,
-                        250.0,
-                        360.0,
-                        470.0,
-                        580.0,
-                        690.0
+                        230.0,
+                        320.0,
+                        410.0,
+                        500.0,
+                        590.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BulletADRatio",
+                    "values": [
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ConeADRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -435,8 +461,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.399999976158142,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "BulletADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -451,15 +477,13 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.2000000476837158,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "ConeADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.5,
-            "mCoefficient2": 1.2000000476837158,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/GravesHighNoon.dds"
@@ -718,9 +742,9 @@
         },
         "__type": "SpellObject"
     },
-    "{438e8f5c}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_Shot": {
         "ObjectName": "Jade_GravesR_Shot",
-        "objectPath": "{438e8f5c}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_Shot",
         "mScriptName": "Jade_GravesR_Shot",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -916,9 +940,9 @@
         },
         "__type": "SpellObject"
     },
-    "{78a40464}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_FxMissile2": {
         "ObjectName": "Jade_GravesR_FxMissile2",
-        "objectPath": "{78a40464}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_FxMissile2",
         "mScriptName": "Jade_GravesR_FxMissile2",
         "mSpell": {
             "flags": 4,
@@ -1094,9 +1118,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fd6938be}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_FxMissile": {
         "ObjectName": "Jade_GravesR_FxMissile",
-        "objectPath": "{fd6938be}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_FxMissile",
         "mScriptName": "Jade_GravesR_FxMissile",
         "mSpell": {
             "flags": 4,
@@ -1269,9 +1293,9 @@
         },
         "__type": "SpellObject"
     },
-    "{269b4e31}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ_SoundMissile": {
         "ObjectName": "Jade_GravesQ_SoundMissile",
-        "objectPath": "{269b4e31}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ_SoundMissile",
         "mScriptName": "Jade_GravesQ_SoundMissile",
         "mSpell": {
             "mAffectsTypeFlags": 22538,
@@ -1441,9 +1465,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8fa176bc}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ_Attack": {
         "ObjectName": "Jade_GravesQ_Attack",
-        "objectPath": "{8fa176bc}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ_Attack",
         "mScriptName": "Jade_GravesQ_Attack",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1972,119 +1996,6 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_PlayerSelectedDashDirection"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0,
-                        375.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0,
-                        275.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BuffDuration",
@@ -2358,9 +2269,9 @@
         },
         "__type": "SpellObject"
     },
-    "{eb7375f9}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE_Buff": {
         "ObjectName": "Jade_GravesE_Buff",
-        "objectPath": "{eb7375f9}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesEAbility/Jade_GravesE_Buff",
         "mScriptName": "Jade_GravesE_Buff",
         "mSpell": {
             "flags": 4,
@@ -2727,7 +2638,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "castFrame": 5.0,
+            "castFrame": 7.0,
             "missileSpeed": 3400.0,
             "mMissileEffectKey": "Jade_Graves_BA_mis",
             "mHitEffectKey": "Jade_Graves_BA_tar_crit",
@@ -2742,9 +2653,9 @@
         },
         "__type": "SpellObject"
     },
-    "{718502bc}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesClusterShotRicochet": {
         "ObjectName": "Jade_GravesClusterShotRicochet",
-        "objectPath": "{718502bc}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesClusterShotRicochet",
         "mScriptName": "Jade_GravesClusterShotRicochet",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2871,9 +2782,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7bae926a}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW_BoomSlow": {
         "ObjectName": "Jade_GravesW_BoomSlow",
-        "objectPath": "{7bae926a}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW_BoomSlow",
         "mScriptName": "Jade_GravesW_BoomSlow",
         "mBuff": {
             "mTooltipData": {
@@ -2889,9 +2800,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b5418ccb}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW_Boom": {
         "ObjectName": "Jade_GravesW_Boom",
-        "objectPath": "{b5418ccb}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW_Boom",
         "mScriptName": "Jade_GravesW_Boom",
         "mSpell": {
             "flags": 4194304,
@@ -3117,83 +3028,6 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mEffectAmount": [
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        110.0,
-                        160.0,
-                        210.0,
-                        260.0,
-                        310.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -3276,7 +3110,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/GravesSmokeGrenade.dds"
@@ -3523,9 +3356,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c2ed1915}": {
+    "Characters/Jade_Graves/Spells/Jade_GravesSmokeGrenadeSecretPassive": {
         "ObjectName": "Jade_GravesSmokeGrenadeSecretPassive",
-        "objectPath": "{c2ed1915}",
+        "objectPath": "Characters/Jade_Graves/Spells/Jade_GravesSmokeGrenadeSecretPassive",
         "mScriptName": "Jade_GravesSmokeGrenadeSecretPassive",
         "__type": "SpellObject"
     },
@@ -3971,11 +3804,11 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 54.099998474121094,
+            "baseValue": 50.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
-            "baseValue": 3.0999999046325684,
+            "baseValue": 2.5,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -4008,12 +3841,11 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 2.9000000953674316,
+            "baseValue": 2.5,
             "__type": "ModifiableFloat"
         },
         "basicAttack": {
-            "mAttackTotalTime": 1.600000023841858,
-            "mAttackCastTime": 0.25,
+            "mAttackDelayCastOffsetPercent": -0.17499999701976776,
             "mAttackProbability": 0.5,
             "mAttackName": "Jade_GravesBasicAttack",
             "__type": "AttackSlotData"
@@ -4027,8 +3859,7 @@
         ],
         "critAttacks": [
             {
-                "mAttackTotalTime": 1.600000023841858,
-                "mAttackCastTime": 0.25,
+                "mAttackDelayCastOffsetPercent": -0.17499999701976776,
                 "mAttackName": "Jade_GravesCritAttack",
                 "__type": "AttackSlotData"
             }
@@ -4064,11 +3895,11 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{438e8f5c}",
+            "Characters/Jade_Graves/Spells/Jade_GravesRAbility/Jade_GravesR_Shot",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
-            "{b5418ccb}",
-            "{8fa176bc}",
+            "Characters/Jade_Graves/Spells/Jade_GravesWAbility/Jade_GravesW_Boom",
+            "Characters/Jade_Graves/Spells/Jade_GravesQAbility/Jade_GravesQ_Attack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -4084,7 +3915,7 @@
         "mAbilities": [
             "Characters/Jade_Graves/Spells/Jade_GravesRAbility",
             "Characters/Jade_Graves/Spells/Jade_GravesEAbility",
-            "{e843909c}",
+            "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility",
             "Characters/Jade_Graves/Spells/Jade_GravesQAbility",
             "Characters/Jade_Graves/Spells/Jade_GravesWAbility"
         ],
@@ -4230,10 +4061,10 @@
             ],
             "__type": "PerkReplacementList"
         },
-        "mCharacterPassiveSpell": "{b8da9de7}",
+        "mCharacterPassiveSpell": "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{1aff4cf9}",
+                "mParentPassiveBuff": "Characters/Jade_Graves/Spells/Jade_GravesSkin35_GearManager",
                 "SkinFilter": {
                     "skinIds": [
                         35
@@ -4243,11 +4074,11 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{b8da9de7}",
+                "mParentPassiveBuff": "Characters/Jade_Graves/Spells/Jade_GravesPassiveAbility/Jade_GravesPassive",
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{078a5e76}",
+                "mParentPassiveBuff": "Characters/Jade_Graves/Spells/Jade_GravesAttackSequencer",
                 "__type": "CharacterPassiveData"
             }
         ],

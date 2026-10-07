@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.19.1",
+    "version": "16.20.1",
     "data": {
         "Jade_Fiora": {
             "id": "Jade_Fiora",
@@ -12,7 +12,7 @@
                 "full": "Jade_Fiora.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -111,7 +111,7 @@
                 {
                     "id": "Jade_FioraQ",
                     "name": "Lunge",
-                    "description": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple of seconds at no mana cost",
+                    "description": "Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the dash a second time within a couple of seconds at no Mana cost.",
                     "tooltip": "Fiora dashes forward to strike her target, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage>.<br /><br />Fiora can <recast>Recast</recast> this Ability to dash within {{ recastwindow }} seconds at no <scaleMana>Mana</scaleMana> cost.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -240,10 +240,10 @@
                     "rangeBurn": "600",
                     "image": {
                         "full": "Jade_FioraQ.png",
-                        "sprite": "spell1.png",
+                        "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 144,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -383,10 +383,10 @@
                     "rangeBurn": "750",
                     "image": {
                         "full": "Jade_FioraW.png",
-                        "sprite": "spell1.png",
+                        "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 144,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -395,7 +395,7 @@
                 {
                     "id": "Jade_FioraE",
                     "name": "Burst of Speed",
-                    "description": "Fiora temporarily gains additional Attack Speed. Each attack or Lunge she lands during this time increases her Move Speed. Killing a champion refreshes the Cooldown on this Ability.",
+                    "description": "Fiora temporarily gains additional Attack Speed. Each attack or Lunge she lands during this time increases her Movement Speed. Killing a champion refreshes the cooldown on this ability.",
                     "tooltip": "Fiora gains <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed> for {{ buffduration }} seconds. Each Attack or <spellName>Lunge</spellName> she lands during this time grants Fiora <speed>{{ msbonus*100 }}% Move Speed</speed> for {{ buffduration }} seconds, stacking up to {{ maxstacks }} times.<br /><br />Killing a champion refreshes this Ability's Cooldown. (Assists reduce the Cooldown by {{ halfcooldown }} seconds){{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
@@ -526,10 +526,10 @@
                     "rangeBurn": "500",
                     "image": {
                         "full": "Jade_FioraE.png",
-                        "sprite": "spell1.png",
+                        "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -641,10 +641,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_FioraR.png",
-                        "sprite": "spell1.png",
+                        "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -653,12 +653,12 @@
             ],
             "passive": {
                 "name": "Duelist",
-                "description": "Fiora regenerates health over time when she deals damage. Striking champions will cause this effect to stack multiple times.",
+                "description": "Fiora regenerates Health over time when she deals damage. Striking champions will cause this effect to stack multiple times.",
                 "image": {
                     "full": "Jade_Fiora_P.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 240,
+                    "x": 336,
                     "y": 48,
                     "w": 48,
                     "h": 48

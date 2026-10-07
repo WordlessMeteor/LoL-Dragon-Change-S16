@@ -219,7 +219,7 @@
                 "particleLinger": 1.5,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -497,7 +497,7 @@
                 "particleLinger": 1.0,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -762,7 +762,7 @@
                 "particleLinger": 1.0,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -1138,7 +1138,7 @@
                 "particleLinger": 1.0,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -1450,7 +1450,7 @@
                 "particleLinger": 2.0,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -1743,7 +1743,7 @@
                 "isSingleParticle": 1,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -1928,7 +1928,7 @@
                 "isSingleParticle": 1,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -2161,7 +2161,7 @@
                 "isSingleParticle": 1,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -2526,7 +2526,7 @@
                 "lifetime": 10.0,
                 "emissionSurfaceDefinition": {
                     "{2808fffd}": {
-                        "__type": "{526478f0}"
+                        "__type": "VfxEmissionLinkedMeshData"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -19863,6 +19863,186 @@
         },
         "__type": "BuffScript"
     },
+    "{633129c0}": {
+        "ScriptName": "Jade_Mordekaiser_NumeroUno",
+        "path": "{633129c0}",
+        "sequences": {
+            "{69523460}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{8186aeaf}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "2bfa7d26-dec2-4584-97f8-d5ef2c77c987",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{129cc3b3}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{b4d8e527}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{72b0d61f}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{544da740}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{9207d854}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "7311fef9-d9ea-4a1c-84a2-00e728b0c041",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{27936b43}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{7eef4747}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "BuffScript"
+    },
+    "{cb677fcb}": {
+        "ScriptName": "Jade_MordeUnoEgg_Buff",
+        "path": "{cb677fcb}",
+        "sequences": {
+            "{72b0d61f}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{69523460}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "f3726afc-c99b-4aa4-805b-e4cac83c3f1e",
+                        "Src": {
+                            "value": true,
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "TimeOut",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{71b38c83}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "78f377ae-d096-446c-b3fa-eadc4826d2ad",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{97f68388}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{544da740}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "functions": {
+            "{3c4dcb66}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "e291749b-0e34-4d4d-9fe8-1445e2dc38b1",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "TimeOut",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "FunctionDef": {
+                    "__type": "{eca2da9a}"
+                },
+                "__type": "ScriptFunction"
+            }
+        },
+        "__type": "BuffScript"
+    },
     "{0c01cd6c}": {
         "CampName": "Camp_Chaos_Wolves",
         "__type": "{3f04641e}"
@@ -20492,14 +20672,14 @@
         "name": "ProgressionTrackLibraryConfig_Jade",
         "{5ac52af3}": {
             "JadeProgressGCO": {
-                "{18ba7a52}": [
+                "ProgressTracks": [
                     "{4139117a}",
                     "{3d33de9c}",
                     "{750151c8}",
                     "{5c64a102}",
                     "{91d8ae46}"
                 ],
-                "__type": "{449b05d1}"
+                "__type": "ProgressTrackList"
             }
         },
         "__type": "{ae005c94}"
@@ -20842,7 +21022,7 @@
     "{bb0a62cf}": {
         "Overrides": [
             {
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.75,
@@ -21001,7 +21181,7 @@
             },
             {
                 "{af58ae20}": 1,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.6000000238418579,
@@ -21124,7 +21304,7 @@
             },
             {
                 "{af58ae20}": 2,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.75,
@@ -21283,7 +21463,7 @@
             },
             {
                 "category": 5,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -21442,7 +21622,7 @@
             },
             {
                 "category": 18,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -21601,7 +21781,7 @@
             },
             {
                 "category": 15,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -21760,7 +21940,7 @@
             },
             {
                 "category": 4,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -21920,7 +22100,7 @@
             },
             {
                 "category": 16,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -22079,7 +22259,7 @@
             },
             {
                 "category": 6,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -22240,7 +22420,7 @@
             },
             {
                 "category": 14,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -22399,7 +22579,7 @@
             },
             {
                 "category": 3,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -22560,7 +22740,7 @@
             },
             {
                 "category": 7,
-                "{54d18cd8}": [
+                "IconData": [
                     {
                         "mEffect": {
                             "scaleStart": 0.800000011920929,
@@ -22724,7 +22904,7 @@
     },
     "{bc106544}": {
         "{07aa36d0}": "{3a78f287}",
-        "{c5b58261}": {
+        "AdditionalSettings": {
             "{8123e14e}": "{1d9ea6ed}"
         },
         "__type": "{85bf79cf}"
@@ -22740,6 +22920,7 @@
             "__type": "MinimapBackgroundConfig"
         },
         "mNavigationMesh": "ASSETS/Maps/NavGrid/Map453/AIPath.aimesh_ngrid",
+        "mWorldParticlesINI": "ASSETS/Maps/Deprecated/Map453/Particles_Jade.ini",
         "mColorizationPostEffect": {
             "mMultipliersRGB": [
                 1.100000023841858,
@@ -22830,6 +23011,7 @@
             "Jade_Ceremony_Barrier_Order_Dissolve": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_Dissolve",
             "Jade_Ceremony_Barrier_Order_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_noRecolor",
             "Jade_Ceremony_Barrier_Order_Dissolve_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_Dissolve_noRecolor",
+            "{dfdba4f7}": "{423eec40}",
             "{e79698b5}": "Maps/Shipping/Map453/Particles/Jade_Pings_Retreat",
             "{c80a963d}": "Maps/Shipping/Map453/Particles/Jade_Pings_Push",
             "{bd0a84ec}": "Maps/Shipping/Map453/Particles/Jade_Pings_OMW",
@@ -23066,7 +23248,11 @@
             "{a8009f85}",
             "{8cdcd387}",
             "{0bda2162}",
-            "{2a53c386}"
+            "{2a53c386}",
+            "{93744a16}",
+            "{7f3f1185}",
+            "{e8ae00fa}",
+            "{69dc7521}"
         ],
         "__type": "GameModeChampionList"
     },
@@ -24065,7 +24251,7 @@
         "__type": "FeatureAudioDataProperties"
     },
     "Maps/Shipping/Map453/Materials/Jade_CharacterOutline_Default_inst": {
-        "name": "Maps/Shipping/Map453/Materials/Jade_CharacterOutline_Default_inst",
+        "name": "{cf84aff4ef5206e}",
         "samplerValues": [
             {
                 "TextureName": "Outline_Mask",
@@ -24197,7 +24383,7 @@
         "__type": "StaticMaterialDef"
     },
     "Maps/Shipping/Map453/Materials/Jade_CharacterOutline_NOVFXDRIVER_inst": {
-        "name": "Maps/Shipping/Map453/Materials/Jade_CharacterOutline_NOVFXDRIVER_inst",
+        "name": "{678d846a2f734b29}",
         "samplerValues": [
             {
                 "TextureName": "Outline_Mask",
@@ -24304,7 +24490,7 @@
         "__type": "StaticMaterialDef"
     },
     "Maps/Shipping/Map453/Materials/Jade_StaticMeshOutline_NOVFXDRIVER_inst": {
-        "name": "Maps/Shipping/Map453/Materials/Jade_StaticMeshOutline_NOVFXDRIVER_inst",
+        "name": "{4275e6cc13e5da60}",
         "type": 2,
         "samplerValues": [
             {
@@ -24943,7 +25129,7 @@
     },
     "{1615bec6}": {
         "{07aa36d0}": "{3a78f287}",
-        "{c5b58261}": {
+        "AdditionalSettings": {
             "{8123e14e}": "{1d9ea6ed}"
         },
         "__type": "{85bf79cf}"
@@ -25565,7 +25751,7 @@
         "__type": "{9f30b8a6}"
     },
     "{5d4d063b}": {
-        "__type": "{c3df8115}"
+        "__type": "RoleBoundQuestConfig"
     },
     "{609e9136}": {
         "{5aa830e8}": 10.0,
@@ -25588,17 +25774,17 @@
         "__type": "SmartPingData"
     },
     "{9d314707}": {
-        "{f2c97a22}": {
+        "GreyscaleConfig": {
             "{2ac8249e}": 3.0,
             "{fdf7c618}": 1.5,
             "{9044f758}": 0.20000000298023224,
-            "__type": "{29619231}"
+            "__type": "DeathRecapGreyscaleConfig"
         },
-        "{5c333500}": {
+        "TeammateSpectatorConfig": {
             "{45258bde}": 3.0,
-            "__type": "{ce762bab}"
+            "__type": "DeathRecapTeammateSpectatorConfig"
         },
-        "__type": "{e348122d}"
+        "__type": "DeathRecapExtrasConfig"
     },
     "{de623d67}": {
         "{802223a2}": [
@@ -25641,7 +25827,7 @@
                     0,
                     128
                 ],
-                "__type": "VfxPrimitiveCameraSegmentSeriesBeam"
+                "__type": "NavGridRegionVfxData"
             },
             {
                 "name": "FaeLights_Chaos",
@@ -25658,7 +25844,7 @@
                     0,
                     128
                 ],
-                "__type": "VfxPrimitiveCameraSegmentSeriesBeam"
+                "__type": "NavGridRegionVfxData"
             },
             {
                 "name": "Squid_Ink_Chaos",
@@ -25669,10 +25855,10 @@
                     0,
                     0
                 ],
-                "__type": "VfxPrimitiveCameraSegmentSeriesBeam"
+                "__type": "NavGridRegionVfxData"
             }
         ],
-        "__type": "{6b91544a}"
+        "__type": "NavGridRegionRenderData"
     },
     "{2dec1614}": {
         "FadeStart": -100.0,
@@ -27681,10 +27867,10 @@
                     "ASSETS/Sounds/Wwise2016/SFX/Shared/MISC_Event_SFX_audio.wpk"
                 ],
                 "events": [
-                    "Play_mus_map11_arc2vi_spawn",
                     "Play_mus_map11_demaciavice2019_spawn",
                     "Play_mus_map11_hope24_spawn",
                     "Play_mus_map11_KDA2020_spawn",
+                    "Play_mus_map11_matcha_spawn",
                     "Play_mus_map11_SN2022_spawn",
                     "Play_mus_map11_starguardian2017_spawn",
                     "Play_mus_map11_starguardian2019_spawn",
@@ -27692,6 +27878,7 @@
                     "Play_mus_map11_starguardian_spawn",
                     "Play_mus_map11_teemo_spawn",
                     "Play_mus_map11_Tournaments_spawn",
+                    "Play_mus_map11_TrueDamage2026_spawn",
                     "Play_mus_map11_WMC2022_spawn",
                     "Play_mus_map11_Worlds2020_spawn",
                     "Play_mus_map11_XP12021_spawn",
@@ -28446,8 +28633,7 @@
     },
     "{db1e35d6}": {
         "mItems": [
-            "Items/2055",
-            "Items/4641"
+            "Items/2055"
         ],
         "__type": "GameModeItemList"
     },
@@ -70866,7 +71052,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "IsEnabled": false,
@@ -70903,7 +71089,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "IsEnabled": false,
@@ -70973,7 +71159,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "IsEnabled": false,
@@ -71054,7 +71240,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_HweiVsJhin_HweiStartName",
@@ -71113,7 +71299,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_BelvethVsJax_BelvethStartName",
@@ -71182,7 +71368,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_ShenVsZed_ShenStartName",
@@ -71251,7 +71437,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_NasusVsRenekton_NasusStartName",
@@ -71310,7 +71496,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_TryndamereVsKindred_Name",
@@ -71369,7 +71555,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             },
             {
                 "QuestName": "Quests_SmolderVsAurelionSol_Name",
@@ -71428,7 +71614,7 @@
                         "__type": "{5206ee88}"
                     }
                 ],
-                "__type": "{e2ff8b22}"
+                "__type": "CharacterQuestData"
             }
         ],
         "CharacterQuestDefinitionsList": [
@@ -85314,7 +85500,7 @@
                 "quantity": 9,
                 "media": {
                     "image": "{f1b2b0a9aa96c8ba}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "a9b9bf50-f01c-420e-a2b6-ec5e7cf8aabc",
                 "{0ba947a2}": "{ec4afced}",
@@ -85326,7 +85512,7 @@
                 "quantity": 4500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -85355,7 +85541,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85384,7 +85570,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85412,7 +85598,7 @@
                 "{d35466b8}": "season_reward_desc_title_ward",
                 "media": {
                     "image": "{85d47490073d61a8}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "0854cdbc-0292-465d-bb26-46ec7578530c",
                 "{0ba947a2}": "{e20af511}",
@@ -85442,7 +85628,7 @@
                 "quantity": 500,
                 "media": {
                     "image": "{38a05207336899e7}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85470,7 +85656,7 @@
                 "{d35466b8}": "rewards_details_14_Jade_PAL_Portrait",
                 "media": {
                     "image": "assets/characters/jade_zilean/skins/base/jade_zileanloadscreen_feeney.tex",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "384f8092-3adf-44de-afaf-6430a3961bf6",
                 "{0ba947a2}": "{58848426}",
@@ -85499,7 +85685,7 @@
                 "{d35466b8}": "season_reward_desc_title_emote",
                 "media": {
                     "image": "assets/loadouts/summoneremotes/events/classic/5127_caution_singed_inventory.tex",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "fa2a521d-31cc-4ffd-8ef5-8bf3c1434cc9",
                 "{0ba947a2}": "{531d96d7}",
@@ -85528,7 +85714,7 @@
                 "{d35466b8}": "rewards_details_05_Jade_PAL_VotingPower_1",
                 "media": {
                     "image": "{69ff39ef99b3f6d0}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "8f95e804-11fe-4df5-8ba8-d00132432e41",
                 "__type": "{a4fcf99f}"
@@ -85556,7 +85742,7 @@
                 "{d35466b8}": "rewards_details_13_Jade_PAL_Rune_Page",
                 "media": {
                     "image": "{cf0f930fe45bdf56}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "16af4b4b-5018-43ab-b06f-a6e9ac116f3f",
                 "{0ba947a2}": "{214f0cca}",
@@ -85586,7 +85772,7 @@
                 "quantity": 2500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -85614,7 +85800,7 @@
                 "{d35466b8}": "rewards_details_30_Jade_PAL_Skin",
                 "media": {
                     "image": "{d85fe61019254c7f}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "183c0892-add9-40b5-a041-16643b8dbbc2",
                 "{0ba947a2}": "{3000399e}",
@@ -85649,7 +85835,7 @@
                 "quantity": 3,
                 "media": {
                     "image": "{54a2669f74f293d9}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "a9b9bf50-f01c-420e-a2b6-ec5e7cf8aabc",
                 "{0ba947a2}": "{ec4afced}",
@@ -85661,7 +85847,7 @@
                 "quantity": 5000,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -85689,7 +85875,7 @@
                 "{d35466b8}": "rewards_details_13_Jade_PAL_Rune_Page",
                 "media": {
                     "image": "{cf0f930fe45bdf56}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "16af4b4b-5018-43ab-b06f-a6e9ac116f3f",
                 "{0ba947a2}": "{214f0cca}",
@@ -85719,7 +85905,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85748,7 +85934,7 @@
                 "quantity": 2500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -85776,7 +85962,7 @@
                 "{d35466b8}": "season_reward_desc_title_icon",
                 "media": {
                     "image": "{8d18a98f48640a96}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "ae932104-bfc1-4f0e-ad71-e3c813cc75a4",
                 "{0ba947a2}": "{417ca207}",
@@ -85806,7 +85992,7 @@
                 "quantity": 2500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -85834,7 +86020,7 @@
                 "{d35466b8}": "rewards_details_05_Jade_PAL_VotingPower_1",
                 "media": {
                     "image": "{69ff39ef99b3f6d0}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "8f95e804-11fe-4df5-8ba8-d00132432e41",
                 "__type": "{a4fcf99f}"
@@ -85862,7 +86048,7 @@
                 "{d35466b8}": "rewards_details_05_Jade_PAL_VotingPower_1",
                 "media": {
                     "image": "{69ff39ef99b3f6d0}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "8f95e804-11fe-4df5-8ba8-d00132432e41",
                 "__type": "{a4fcf99f}"
@@ -85891,7 +86077,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85920,7 +86106,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85949,7 +86135,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{ca4aa0d595869f4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85982,7 +86168,7 @@
                 "{d35466b8}": "rewards_details_10_Jade_PAL_Ranked",
                 "media": {
                     "image": "{3d3438d76e41db0f}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "6e4b2a5c-dfbb-5f9f-9194-718107047829",
                 "__type": "{1cfeba20}"
@@ -85993,7 +86179,7 @@
                 "quantity": 1000,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -86021,7 +86207,7 @@
                 "{d35466b8}": "season_reward_desc_title_icon",
                 "media": {
                     "image": "{d3967aa9fee4d3e7}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "ed84bb73-e272-4165-808f-50f6d2fd9c59",
                 "{0ba947a2}": "{417ca207}",
@@ -86056,7 +86242,7 @@
                 "quantity": 9,
                 "media": {
                     "image": "{6cd08ee429161893}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "a9b9bf50-f01c-420e-a2b6-ec5e7cf8aabc",
                 "{0ba947a2}": "{ec4afced}",
@@ -86068,7 +86254,7 @@
                 "quantity": 4500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -86102,7 +86288,7 @@
                 "quantity": 9,
                 "media": {
                     "image": "{0e398ade95ff5a4b}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "a9b9bf50-f01c-420e-a2b6-ec5e7cf8aabc",
                 "{0ba947a2}": "{ec4afced}",
@@ -86114,7 +86300,7 @@
                 "quantity": 4500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -86142,7 +86328,7 @@
                 "{d35466b8}": "rewards_details_14_Jade_PAL_Portrait",
                 "media": {
                     "image": "assets/characters/jade_zilean/skins/base/jade_zileanloadscreen_legacy.tex",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "4e8aa3fe-556d-4088-9dd2-28b0c8295568",
                 "{0ba947a2}": "{58848426}",
@@ -86171,7 +86357,7 @@
                 "{d35466b8}": "rewards_details_13_Jade_PAL_Rune_Page",
                 "media": {
                     "image": "{cf0f930fe45bdf56}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "16af4b4b-5018-43ab-b06f-a6e9ac116f3f",
                 "{0ba947a2}": "{214f0cca}",
@@ -86199,8 +86385,8 @@
                 "{31c5f01c}": "player_title_1438",
                 "{d35466b8}": "season_reward_desc_title_title",
                 "media": {
-                    "image": "{563507060cedd37b}",
-                    "__type": "{77274757}"
+                    "image": "assets/seasons/images/generic/achievement_title_212x212.tex",
+                    "__type": "IconPath"
                 },
                 "itemID": "f5c71992-0d18-4251-a883-6c617f922008",
                 "{0ba947a2}": "{6c446f55}",
@@ -86230,7 +86416,7 @@
                 "quantity": 2500,
                 "media": {
                     "image": "{43f246581bdb1c81}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "e85f67bb-ecfc-4eef-ac07-9bcca2443e7e",
                 "__type": "{1cfeba20}"
@@ -86745,7 +86931,7 @@
                 "quantity": 50,
                 "media": {
                     "image": "{e55f4fbade3b99b3}",
-                    "__type": "{77274757}"
+                    "__type": "IconPath"
                 },
                 "itemID": "08fbd2b9-e530-4d21-8223-e2a0708e11c1",
                 "__type": "{1cfeba20}"
@@ -86814,7 +87000,7 @@
         },
         "{87a84ec7}": true,
         "{c77cbba0}": {
-            "{a525bc7a}": 0.12999999523162842,
+            "DeadZonePercent": 0.12999999523162842,
             "__type": "{16e6e17a}"
         },
         "{d4521cf1}": true,
@@ -89827,6 +90013,101 @@
         "objectPath": "Shared/Particles/Teleport_Arrival_Jade_Enemy",
         "__type": "VfxSystemDefinitionData"
     },
+    "{423eec40}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 100.0,
+                "lifetime": 100.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 100.0,
+                "emitterName": "placeholder",
+                "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Shared/Particles/Jade/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Shared/Particles/Jade/missing_instant.tex",
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 1600,
+                        "baseTexture": "{2de7711ebd1764ad}",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 3.0,
+                "lifetime": 0.10000000149011612,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0099999904632568,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Yorick/Skins/Base/Particles/SRU_JungleBuff_Baron_MeleeMin_AvatarOverlay.tex",
+                "numFrames": 4,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "mordekeiser_cotg_skin",
+        "particlePath": "Shared/Particles/Jade/mordekeiser_cotg_skin",
+        "flags": 132,
+        "objectPath": "{423eec40}",
+        "__type": "VfxSystemDefinitionData"
+    },
     "Shared/Particles/Jade_temp_Summoner_Fortify_shield_tar": {
         "complexEmitterDefinitionData": [
             {
@@ -91254,9 +91535,9 @@
                 },
                 "particleLinger": 1.0,
                 "emissionSurfaceDefinition": {
-                    "{f8b81c77}": {
+                    "ParticleSpawnDataGenerator": {
                         "VfxGroupName": "Void",
-                        "__type": "{671b7351}"
+                        "__type": "NavigationGridParticleSpawnDataGenerator"
                     },
                     "__type": "VfxEmissionSurfaceData"
                 },
@@ -91598,7 +91879,7 @@
         "__type": "VfxSystemDefinitionData"
     },
     "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos": {
-        "name": "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos",
+        "name": "{5d0dbee1c098134e}",
         "type": 2,
         "samplerValues": [
             {
@@ -91758,7 +92039,7 @@
         "__type": "{547679fe}"
     },
     "{f9ddd6d8}": {
-        "{5fde1a0b}": [
+        "Portraits": [
             "{72e5d9d5}",
             "{acb8fa9c}",
             "{ec98e4bd}",

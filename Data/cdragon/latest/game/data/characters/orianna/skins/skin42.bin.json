@@ -12,7 +12,7 @@
                         "AugmentGroup": [
                             "{2a5ec0eb}"
                         ],
-                        "__type": "{e1555e0a}"
+                        "__type": "BasicSkinAugmentGroup"
                     }
                 ],
                 "BorderAugments": [
@@ -21,21 +21,21 @@
                             "{89649379}",
                             "{97757457}"
                         ],
-                        "__type": "{4a70b12c}"
+                        "__type": "BorderSkinAugmentGroup"
                     },
                     {
                         "AugmentGroup": [
                             "{24995c2c}"
                         ],
-                        "__type": "{4a70b12c}"
+                        "__type": "BorderSkinAugmentGroup"
                     }
                 ],
                 "__type": "SkinAugmentCategories"
             },
             "__type": "SkinUpgradeData"
         },
-        "{c3a944e7}": {
-            "{1418c47f}": "{bfa2d809}",
+        "ChromaData": {
+            "Chroma": "{bfa2d809}",
             "{a2cb8e03}": {
                 "riot": 2
             },
@@ -211,7 +211,7 @@
         },
         "mEmblems": [
             {
-                "mEmblemData": "{aa951c53}",
+                "mEmblemData": "Emblems/68",
                 "__type": "SkinEmblem"
             }
         ],
@@ -219,11 +219,60 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
-                    "AnySubmesh": false,
-                    "Submeshes": [
-                        "Ball"
+                    "mDrivers": [
+                        {
+                            "AnySubmesh": false,
+                            "Submeshes": [
+                                "Ball"
+                            ],
+                            "__type": "SubmeshVisibilityBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mDrivers": [
+                                    {
+                                        "Spell": "Shared/Spells/ZhonyasRingShield",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mDrivers": [
+                                            {
+                                                "Spell": "Characters/Senna/Spells/SennaEWraithForm",
+                                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                                            },
+                                            {
+                                                "mDriver": {
+                                                    "Spell": "Characters/Senna/Spells/SennaECamo",
+                                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                                },
+                                                "__type": "NotMaterialDriver"
+                                            }
+                                        ],
+                                        "__type": "AllTrueMaterialDriver"
+                                    },
+                                    {
+                                        "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mScriptName": "LissandraPassiveVictim",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    }
+                                ],
+                                "__type": "OneTrueMaterialDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
                     ],
-                    "__type": "SubmeshVisibilityBoolDriver"
+                    "__type": "AllTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {

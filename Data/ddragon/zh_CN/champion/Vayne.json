@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.19.1",
+    "version": "16.20.1",
     "data": {
         "Vayne": {
             "id": "Vayne",
@@ -52,7 +52,7 @@
                     "id": "67005",
                     "num": 5,
                     "name": "SKT T1 薇恩",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "67006",
@@ -515,6 +515,13 @@
                     "name": "恶魔诅咒 薇恩 毁灭附体",
                     "chromas": false,
                     "parentSkin": 67
+                },
+                {
+                    "id": "67074",
+                    "num": 74,
+                    "name": "SKT T1 薇恩 精锐",
+                    "chromas": false,
+                    "parentSkin": 5
                 }
             ],
             "lore": "来自德玛西亚的肖娜·薇恩是一位无情的怪物猎手，终其一生，都在寻找杀害她全家的恶魔。她的手臂上装着十字弩，心中燃烧着熊熊的复仇怒火，总是从暗影中射出圣银弩箭的风暴。只有在杀死那些为黑暗魔法所控制的人和生物时，薇恩才能感受到真正的愉悦。",
@@ -550,8 +557,8 @@
                 "spellblock": 33,
                 "spellblockperlevel": 1.1,
                 "attackrange": 550,
-                "hpregen": 4,
-                "hpregenperlevel": 0.5,
+                "hpregen": 5.5,
+                "hpregenperlevel": 0.4,
                 "mpregen": 7,
                 "mpregenperlevel": 0.4,
                 "crit": 0,
@@ -570,13 +577,11 @@
                     "leveltip": {
                         "label": [
                             "冷却时间",
-                            "攻击力收益率",
-                            "@AbilityResourceName@消耗"
+                            "攻击力收益率"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ totaladratio*100.000000 }}% -> {{ totaladrationl*100.000000 }}%",
-                            "{{ cost }} -> {{ costNL }}"
+                            "{{ totaladratio*100.000000 }}% -> {{ totaladrationl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -589,13 +594,13 @@
                     ],
                     "cooldownBurn": "6/5/4/3/2",
                     "cost": [
-                        46,
-                        42,
-                        38,
-                        34,
+                        30,
+                        30,
+                        30,
+                        30,
                         30
                     ],
-                    "costBurn": "46/42/38/34/30",
+                    "costBurn": "30",
                     "datavalues": {},
                     "effect": [
                         null,

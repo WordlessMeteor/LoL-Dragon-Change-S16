@@ -278,11 +278,11 @@
         },
         "__type": "SpellObject"
     },
-    "{2d758813}": {
-        "mRootSpell": "{c4962ae3}",
+    "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility": {
+        "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf",
         "mChildSpells": [
-            "{c4962ae3}",
-            "{71edd439}"
+            "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf",
+            "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwind"
         ],
         "mName": "Jade_JannaTailwindSelfAbility",
         "__type": "AbilityObject"
@@ -1035,14 +1035,14 @@
         "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
         "mChildSpells": [
             "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
-            "{8136e1fd}"
+            "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGaleSpell"
         ],
         "mName": "Jade_JannaHowlingGaleAbility",
         "__type": "AbilityObject"
     },
-    "{71edd439}": {
+    "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwind": {
         "ObjectName": "Jade_JannaTailwind",
-        "objectPath": "{71edd439}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwind",
         "mScriptName": "Jade_JannaTailwind",
         "mSpell": {
             "mImgIconName": [
@@ -1064,9 +1064,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c4962ae3}": {
+    "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf": {
         "ObjectName": "Jade_JannaTailwindSelf",
-        "objectPath": "{c4962ae3}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf",
         "mScriptName": "Jade_JannaTailwindSelf",
         "mSpell": {
             "DataValues": [
@@ -1171,9 +1171,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8136e1fd}": {
+    "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGaleSpell": {
         "ObjectName": "Jade_JannaHowlingGaleSpell",
-        "objectPath": "{8136e1fd}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGaleSpell",
         "mScriptName": "Jade_JannaHowlingGaleSpell",
         "mSpell": {
             "flags": 4,
@@ -1570,7 +1570,7 @@
                     ],
                     "__type": "SpellEffectAmount"
                 },
-                "{bffdf499}": {
+                "Kiwi": {
                     "value": [
                         16.0,
                         16.0,
@@ -2809,7 +2809,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{8136e1fd}",
+            "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGaleSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2831,7 +2831,7 @@
             "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility",
             "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility",
             "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility",
-            "{2d758813}"
+            "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Janna",
         "passiveLuaName": "Jade_JannaTailwindSelf_Jade",
@@ -2960,10 +2960,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{c4962ae3}",
+        "mCharacterPassiveSpell": "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{c4962ae3}",
+                "mParentPassiveBuff": "Characters/Jade_Janna/Spells/Jade_JannaTailwindSelfAbility/Jade_JannaTailwindSelf",
                 "__type": "CharacterPassiveData"
             },
             {
@@ -2987,7 +2987,6 @@
         "sequences": {
             "{6a7835b9}": {
                 "blocks": [
-                    null,
                     null,
                     null,
                     null,
@@ -3274,22 +3273,6 @@
             }
         },
         "__type": "CharScript"
-    },
-    "{b393c762}": {
-        "mNameTraKey": "Jade_Portrait_Name_Janna_Community_01",
-        "catalogEntry": {
-            "contentId": "33126852-a5de-4139-8393-fcd77fb71bea",
-            "itemID": 37,
-            "__type": "CatalogEntry"
-        },
-        "mDescriptionTraKey": "Jade_Portrait_Description_Janna_Community_01",
-        "{55bb9b57}": 37,
-        "{ff3c9ff8}": "{994ddedd}",
-        "image": {
-            "image": "{d4f1d9afea5e3ec2}",
-            "__type": "CensoredImage"
-        },
-        "__type": "Portrait"
     },
     "__linked": []
 }

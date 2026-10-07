@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.19.1",
+    "version": "16.20.1",
     "data": {
         "Jade_Kennen": {
             "id": "Jade_Kennen",
@@ -12,7 +12,7 @@
                 "full": "Jade_Kennen.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 0,
+                "x": 192,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -376,8 +376,8 @@
                         "full": "Jade_KennenQ.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 48,
+                        "x": 96,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -390,13 +390,13 @@
                     "tooltip": "<spellPassive>被动：</spellPassive>每{{ passivehitsrequired }}次攻击，凯南造成<magicDamage>{{ totaldamagepassive }}魔法伤害</magicDamage>额外并为他的目标施加一层【忍法！雷缚印】。<br /><br /><spellActive>主动：</spellActive>将电流涌起，从而对附近所有被施加了<spellName>忍法！雷缚印</spellName>的目标造成<magicDamage>{{ totaldamageactive }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
+                            "被动伤害",
                             "伤害",
-                            "被动总攻击力增长",
                             "冷却时间"
                         ],
                         "effect": [
+                            "{{ basedamagepassive }} -> {{ basedamagepassiveNL }}",
                             "{{ basedamageactive }} -> {{ basedamageactiveNL }}",
-                            "{{ passiveonhitadratio*100.000000 }}% -> {{ passiveonhitadrationl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -519,8 +519,8 @@
                         "full": "Jade_KennenW.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 48,
+                        "x": 144,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -664,8 +664,8 @@
                         "full": "Jade_KennenE.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 48,
+                        "x": 192,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -779,8 +779,8 @@
                         "full": "Jade_KennenR.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 48,
+                        "x": 240,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -794,7 +794,7 @@
                     "full": "Jade_Kennen_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 0,
+                    "x": 192,
                     "y": 0,
                     "w": 48,
                     "h": 48

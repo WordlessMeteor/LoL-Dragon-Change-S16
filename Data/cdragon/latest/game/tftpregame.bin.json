@@ -5301,6 +5301,12 @@
                 "title": "tft_store_pompayena_bundle",
                 "description": "tft_store_pompayena_bundle_description",
                 "__type": "{99c5a706}"
+            },
+            {
+                "{62e1b0aa}": "ASSETS/Store/Companions/Set18/TFT_18_4_Set18_Chibi-Jhin-Bundle.tex",
+                "title": "tft_store_bundle_jhin",
+                "description": "tft_store_bundle_jhin_description",
+                "__type": "{99c5a706}"
             }
         ],
         "__type": "{0f1c0b81}"
@@ -5358,6 +5364,10 @@
             "__type": "IdentityInstance"
         },
         "__type": "StoreListingData"
+    },
+    "{00ad15a7}": {
+        "NameTraKey": "tft_rotational_store_seasonal_bee_shop",
+        "__type": "{f8c18a6e}"
     },
     "{0297e9c6}": {
         "NameTraKey": "tft_rotational_store_seasonal_16_01",
@@ -5540,7 +5550,7 @@
         "__type": "{f8c18a6e}"
     },
     "{c8d1800f}": {
-        "NameTraKey": "tft_rotational_store_seasonal_bee_shop",
+        "NameTraKey": "tft_rotational_store_seasonal_scuttle_and_friends",
         "__type": "{f8c18a6e}"
     },
     "{c9221823}": {
@@ -5822,6 +5832,19 @@
         "BackgroundTexturePath": "assets/ux/tft/rotationalshop/content/chibibakatarina/chibi_bakatarina-2x-pc.tex",
         "CelebrationTheme": "{c7d0339a}",
         "NameTraKey": "companion_name_chibikatarina_battleacademia1",
+        "__type": "TftTrovesBannerData"
+    },
+    "{ec478e1b}": {
+        "ID": "71ed1d1d-2c7e-4a4a-8df0-377b053d0528",
+        "BannerCurrencyId": "8b5ab62b-c56c-5abd-bec2-f1a1ff82ccfd",
+        "BannerCurrency": "{12d24a4d}",
+        "ActivationDateTime": "2026-10-08T00:00:00",
+        "DeactivationDateTime": "2026-11-05T00:00:00",
+        "pityCounterId": "d4bb3974-963d-4cd9-85f7-650780e44d00",
+        "ThumbnailTexturePath": "{9054e4eaab05f8e4}",
+        "BackgroundTexturePath": "assets/ux/tft/rotationalshop/content/chibipsyopszeri/mythic_chibi-psyops_zeri-2x-pc.tex",
+        "CelebrationTheme": "{c7d0339a}",
+        "NameTraKey": "companion_name_chibizeri_psyops",
         "__type": "TftTrovesBannerData"
     },
     "{11cd11ed}": {
@@ -282540,7 +282563,7 @@
         "SingleBodyText": "ClientStates/TFTPreGame/UX/RiotUI/SeasonalSinglePurchaseDialog/UIBase/Scene/DescriptionFrame/BodyScroll/PurchaseDialog_BodyText",
         "SingleCloseButtonRegion": "ClientStates/TFTPreGame/UX/RiotUI/SeasonalSinglePurchaseDialog/UIBase/Scene/SingleCloseButtonRegion",
         "BottomInfoText": "ClientStates/TFTPreGame/UX/RiotUI/SeasonalSinglePurchaseDialog/UIBase/Scene/BottomInfoText",
-        "{7ca0e9d0}": [
+        "DefaultTextColor": [
             255,
             255,
             255,
@@ -282589,7 +282612,7 @@
         "{4fc30b29}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIBase/LoadoutScene/CategoryButtons/CategoryBtn2_Arenas",
         "{899e7ee7}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIBase/LoadoutScene/CategoryButtons/CategoryBtn3_Booms",
         "{2256cd1f}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIBase/LoadoutScene/CategoryButtons/CategoryBtn4_Zooms",
-        "{bfd5b639}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIRTL",
+        "RTLOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIRTL",
         "CompanionInfoPanel": {
             "ViewPaneLink": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIBase/LoadoutScene/CompanionViewPanel",
             "Scene": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UIBase/LoadoutScene/ItemInfo/CompanionItemInfo",
@@ -282796,7 +282819,7 @@
             "__type": "LoadoutItemListPanelData"
         },
         "StarShardsStoreDialog": "ClientStates/TFTPreGame/UX/RiotUI/TFTCoinsStoreDialog",
-        "__type": "{05e73536}"
+        "__type": "LoadoutViewControllerV2"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2/UITablet": {
         "FilepathHash": "clientstates/tftpregame/ux/riotui/loadoutv2/uitablet",
@@ -282829,9 +282852,9 @@
         "title": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeApexRewardModal/UIBase/Scene/TitleText",
         "description": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeApexRewardModal/UIBase/Scene/DescriptionText",
         "status": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeApexRewardModal/UIBase/Scene/StatusText",
-        "{3cebd87c}": "TFTEventHub_SkillTree_Apex_InfoStatus_Locked",
-        "{895ffcd9}": "TFTEventHub_SkillTree_Apex_InfoStatus_Inactive",
-        "{8c4da8f8}": "TFTEventHub_SkillTree_Apex_InfoStatus_Active",
+        "LockedTra": "TFTEventHub_SkillTree_Apex_InfoStatus_Locked",
+        "InactiveTra": "TFTEventHub_SkillTree_Apex_InfoStatus_Inactive",
+        "ActiveTra": "TFTEventHub_SkillTree_Apex_InfoStatus_Active",
         "{e2622bf2}": [
             32,
             32,
@@ -282877,7 +282900,7 @@
         "{2eed7e1b}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect",
         "LoadoutScene": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UIBase/LoadoutScene",
         "TabletOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UITablet",
-        "{bfd5b639}": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UIRTL",
+        "RTLOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UIRTL",
         "CompanionInfoPanel": {
             "ViewPaneLink": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UIBase/LoadoutScene/CompanionViewPanel",
             "Scene": "ClientStates/TFTPreGame/UX/RiotUI/Loadout/UIBase/LoadoutScene/CompanionItemInfo",
@@ -283094,7 +283117,7 @@
         "closeButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/CloseButton",
         "RetryButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/LoadingStatesSubscene/FailureWithRetryState/RetryButton",
         "VideoRegion": "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/VideoRegion",
-        "{1ea15738}": [
+        "LoadingStateGroups": [
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/LoadingStatesSubscene/DefaultState",
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/LoadingStatesSubscene/LoadingState",
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebViewModalViewController/UIBase/Scene/LoadingStatesSubscene/FailureWithRetryState",
@@ -283129,7 +283152,7 @@
         "ConfirmButtonDefinition": "ClientStates/TFTPreGame/UX/RiotUI/TFTContentRetierDialogModal/UIBase/TFTContentRetierDialogScene/ContentRetier_ConfirmButton",
         "ContentScene": "ClientStates/TFTPreGame/UX/RiotUI/TFTContentRetierDialogModal/UIBase/TFTContentRetierDialogScene",
         "{38eaaebf}": false,
-        "{26ebe4ed}": {
+        "ArticleLink": {
             "DisplayText": "ClientStates/TFTPreGame/UX/RiotUI/TFTContentRetierDialogModal/UIBase/TFTContentRetierDialogScene/ContentRetier_Link",
             "UrlTraKey": "tft_content_retier_article_url",
             "__type": "UiHyperlink"
@@ -283202,14 +283225,14 @@
                     "SecondRewardFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryRewards/Second/Frame",
                     "SecondRewardGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryRewards/Second",
                     "{f20dd357}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryRewards/Second/Tick",
-                    "{2da0899c}": "assets/ux/tftmobile/events/6ya/missions/rewardframe.tex",
+                    "FrameDefaultPath": "assets/ux/tftmobile/events/6ya/missions/rewardframe.tex",
                     "{be7286ec}": "assets/ux/tftmobile/events/6ya/missions/rewardframecomplete.tex",
                     "ProgressCompleteIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryProgressComplete",
                     "{892493d9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryProgressGuageHolder",
                     "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryTitleText",
                     "RewardText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryRewardText",
                     "DescriptionText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryDescriptionText",
-                    "{27688fd4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryLockedText",
+                    "LockedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryLockedText",
                     "ProgressText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryProgressText",
                     "{edc62dad}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryProgressGuage",
                     "{8c0aea87}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/PrimaryProgressGuageHolder",
@@ -283226,14 +283249,14 @@
                     "SecondRewardFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryRewards/Second/Frame",
                     "SecondRewardGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryRewards/Second",
                     "{f20dd357}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryRewards/Second/Tick",
-                    "{2da0899c}": "assets/ux/tftmobile/events/6ya/missions/rewardframe.tex",
+                    "FrameDefaultPath": "assets/ux/tftmobile/events/6ya/missions/rewardframe.tex",
                     "{be7286ec}": "assets/ux/tftmobile/events/6ya/missions/rewardframecomplete.tex",
                     "ProgressCompleteIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryProgressComplete",
                     "{892493d9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryProgressGuageHolder",
                     "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryTitleText",
                     "RewardText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryRewardText",
                     "DescriptionText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryDescriptionText",
-                    "{27688fd4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryLockedText",
+                    "LockedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryLockedText",
                     "ProgressText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryProgressText",
                     "{edc62dad}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryProgressGuage",
                     "{8c0aea87}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondaryProgressGuageHolder",
@@ -283371,7 +283394,7 @@
                 "SecondarySpacer": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGroup/SecondarySpacer",
                 "__type": "{4fbb3f5d}"
             },
-            "{715799f9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/CompleteGroup",
+            "MissionCompleteGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/CompleteGroup",
             "TimeRemainingText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/TimeRemainLayout/TimeRemainingText",
             "{720b91e8}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionsFailedToLoadIcon",
             "{550cba72}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubXSViewController/UIBase/Scene/MissionsFailedToLoadTitleText",
@@ -283422,7 +283445,7 @@
             "LegendaryVFX": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesCelebrationV2/UIBase/ParentScene/CommonScene/StandardItemLayout/ItemGroup/LegendaryVFX",
             "QuantityText": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesCelebrationV2/UIBase/ParentScene/CommonScene/StandardItemLayout/ItemGroup/QuantityText",
             "DuplicateText": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesCelebrationV2/UIBase/ParentScene/CommonScene/StandardItemLayout/ItemGroup/DuplicateText",
-            "__type": "{8190bc9f}"
+            "__type": "MultiPullStandardItemDataV2"
         },
         "{9395be56}": "assets/ux/tftmobile/particles/mograph/trovescelebration/tftm-trovescelebration-chasecontent-raritygem-legendary.tex",
         "DefaultStandardItemStarLevelTexturePath": "assets/ux/tftmobile/troves/tftm_troves_rewardsreveal_star-3.tex",
@@ -283527,7 +283550,7 @@
                 "__type": "{baf9ac75}"
             }
         },
-        "{65774e46}": "tft_troves_celebration_duplicate",
+        "DuplicateTextTra": "tft_troves_celebration_duplicate",
         "__type": "TftTrovesCelebrationViewControllerV2"
     },
     "{0cf82e56}": {
@@ -285504,7 +285527,7 @@
         "SearchbarText": "ClientStates/TFTPreGame/UX/RiotUI/LootTableDialog/UIBase/LootTableDialog/SearchBar",
         "NoDuplicatesButton": "ClientStates/TFTPreGame/UX/RiotUI/LootTableDialog/UIBase/LootTableDialog/TagsManagedLayout/LootTableNoDuplicate_Button",
         "RolloverProtectionButton": "ClientStates/TFTPreGame/UX/RiotUI/LootTableDialog/UIBase/LootTableDialog/TagsManagedLayout/LootTableRolloverProtection_Button",
-        "{a9f3c6c8}": "ClientStates/TFTPreGame/UX/RiotUI/LootTableDialog/UIBase/LootTableDialog/TagsManagedLayout/LootTableDualBounty_Button",
+        "DualBountyButton": "ClientStates/TFTPreGame/UX/RiotUI/LootTableDialog/UIBase/LootTableDialog/TagsManagedLayout/LootTableDualBounty_Button",
         "NoDuplicatesTraKey": "standalone_common_DropTable_NoDuplicates",
         "RolloverProtectionTraKey": "standalone_common_DropTable_RolloverProtection",
         "{791accf7}": "standalone_common_DropTable_TrovesPromise",
@@ -285550,7 +285573,7 @@
         "HidableUIScene": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene",
         "{be25799e}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/UIToggleScene/UIToggleButton",
         "{1e3e07ee}": 2.0,
-        "{fbf302db}": {
+        "TagData": {
             "{1bbefc93}": [
                 {
                     "{e04df972}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Rarity_Tag_Standard",
@@ -285573,9 +285596,9 @@
                 }
             ],
             "{5bf8755d}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Content_Tag",
-            "{6152a19f}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Content_Tag/Layout/Icon",
-            "{137bf219}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Content_Tag/Layout/Text",
-            "__type": "{41bdce89}"
+            "ContentTypeIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Content_Tag/Layout/Icon",
+            "ContentTypeText": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/Tags/TFT_Content_Tag/Layout/Text",
+            "__type": "TftContentTagGroupData"
         },
         "{6807f689}": {
             "Icon": "ClientStates/TFTPreGame/UX/RiotUI/TFTCraftingViewControllerV2/UIBase/Scene/HidableUIScene/FeatureTagGroup/Tags/TagTemplate/Icon",
@@ -286483,7 +286506,7 @@
         "PathHashToSelf": "clientstates/tftpregame/ux/riotui/bpclaimallcelebration",
         "BaseLoadable": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase",
         "Scene": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene",
-        "{c1c6ede2}": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene/ScrollableArea/Grid",
+        "RewardGrid": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene/ScrollableArea/Grid",
         "ContinueButton": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene/ContinueButton",
         "BackgroundImage": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene/Background_Image",
         "ScrollableArea": "ClientStates/TFTPreGame/UX/RiotUI/BPClaimAllCelebration/UIBase/Scene/ScrollableArea",
@@ -286524,7 +286547,7 @@
     "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog": {
         "PathHashToSelf": "clientstates/tftpregame/ux/riotui/tftctintrodialog",
         "BaseLoadable": "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog/UIBase",
-        "{bfd5b639}": "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog/UIRTL",
+        "RTLOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog/UIRTL",
         "CloseButtonDefinition": "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog/UIBase/TFTCTIntroDialogScene/TFTCTIntro_CloseButton",
         "ContentScene": "ClientStates/TFTPreGame/UX/RiotUI/TFTCTIntroDialog/UIBase/TFTCTIntroDialogScene",
         "__type": "ModalDialogViewController"
@@ -286575,7 +286598,7 @@
         "MissionsBadgeVFX": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_MissionsBadgeVFX",
         "NotificationsBadgeVFX": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_NotificationsBadgeVFX",
         "SocialBadgeVFX": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_SocialBadgeVFX",
-        "{d0349990}": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_SettingsBadgeVFX",
+        "SettingsButtonVfx": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_SettingsBadgeVFX",
         "{e3efc163}": "ClientStates/TFTPreGame/UX/RiotUI/NavHeader/UIBase/NavHeaderScene/NavHeader_TeamPlanImportVFX",
         "MissionsButtonHint": {
             "message": {
@@ -286856,7 +286879,7 @@
             "set16age": "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/Backdrop/Background_Set16",
             "set16agetpo": "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/Backdrop/Background_Set16TPO"
         },
-        "{1ea15738}": [
+        "LoadingStateGroups": [
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/DefaultState",
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/LoadingState",
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/FailureWithRetryState",
@@ -286864,7 +286887,7 @@
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/FailureWebViewNotSupported",
             "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase/LoadingScene/DefaultState"
         ],
-        "__type": "{dc53945d}"
+        "__type": "TftWebViewViewController"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/TFTWebView/UIBase": {
         "FilepathHash": "clientstates/tftpregame/ux/riotui/tftwebview/uibase",
@@ -287989,7 +288012,7 @@
                 "ArenaIconPath": "assets/ux/tftmobile/store/icons/tftm_store_refundicons_arena.tex",
                 "BundleIconPath": "assets/ux/tftmobile/store/icons/tftm_store_bundleicon.tex",
                 "TreasureTroveTokenIconPath": "assets/ux/tftmobile/store/icons/tftm_store_refundicons_troves.tex",
-                "{e95d41cf}": "assets/ux/tftmobile/store/icons/tftm_store_level_purchase.tex",
+                "LevelIconPath": "assets/ux/tftmobile/store/icons/tftm_store_level_purchase.tex",
                 "__type": "UiStorePurchaseRowData"
             },
             "NoPurchasesText": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/Store_MainContent/Purchases/StorePurchase_NoPurchases",
@@ -288037,7 +288060,7 @@
         "FilterArenaToggle": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/FilterToggles/FilterArenaToggle",
         "FilterFeaturedToggle": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/FilterToggles/FilterFeaturedToggle",
         "FilterButton": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/FilterToggles/FilterButton",
-        "{f2c9b3be}": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/Store_Filter/FilterModalDisplayGroup",
+        "FilterGroup": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/Store_Filter/FilterModalDisplayGroup",
         "{42cb32fc}": "ClientStates/TFTPreGame/UX/RiotUI/Store/UIBase/StoreScene/Store_Filter/FilterModalDisplayGroup/ClearButton",
         "{58104add}": [
             {
@@ -288262,7 +288285,7 @@
         "{7d88be7d}": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesV3/UIBase/Scene/HidableUIScene/BannerGroup/PillsLayout/OwnedGroup",
         "PreviewButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesV3/UIBase/Scene/HidableUIScene/BannerGroup/PreviewDropMngLayout/PreviewButton",
         "DropRateButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesV3/UIBase/Scene/HidableUIScene/BannerGroup/PreviewDropMngLayout/DropRateButton",
-        "{fbf302db}": {
+        "TagData": {
             "{1bbefc93}": [
                 {
                     "{e04df972}": "ClientStates/TFTPreGame/UX/RiotUI/TFTTrovesV3/UIBase/Scene/HidableUIScene/BannerGroup/PillsLayout/RarityGroup/TFT_Rarity_Tag_Standard",
@@ -288284,7 +288307,7 @@
                     "__type": "{f45e04e1}"
                 }
             ],
-            "__type": "{41bdce89}"
+            "__type": "TftContentTagGroupData"
         },
         "__type": "TFTTrovesViewControllerV3"
     },
@@ -288308,7 +288331,7 @@
         "{2eed7e1b}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect",
         "LoadoutScene": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UIBase/LoadoutEmoteScene",
         "TabletOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UITablet",
-        "{bfd5b639}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UIRTL",
+        "RTLOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UIRTL",
         "EmoteInfoPanel": {
             "ViewPaneLink": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UIBase/LoadoutEmoteScene/EmoteViewPanel",
             "Scene": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutV2EmoteSelect/UIBase/LoadoutEmoteScene/EmoteItemInfo",
@@ -288521,7 +288544,7 @@
                 "DisplayNameTraKey": "standalone_loadouts_NavItem_Emotes",
                 "LoadoutType": 2,
                 "IllustrationIcon": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect/UIBase/LoadoutSelect/EmoteButton/LoadoutSelect_EmoteButton_Illustration",
-                "{e10174d4}": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect/UIBase/LoadoutSelect/EmoteButton/LoadoutSelect_EmoteButton_Illustration_New",
+                "OptionalIcon": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect/UIBase/LoadoutSelect/EmoteButton/LoadoutSelect_EmoteButton_Illustration_New",
                 "Region": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect/UIBase/LoadoutSelect/EmoteButton/LoadoutSelect_EmoteButton_Region",
                 "buttonDefinition": "ClientStates/TFTPreGame/UX/RiotUI/LoadoutSelect/UIBase/LoadoutSelect/LoadoutSelectSmallSecondaryButtonDefinition",
                 "__type": "LoadoutsButtonData"
@@ -288616,7 +288639,7 @@
             "{599fcd6e}": "assets/ux/tftmobile/lobby/tftm_lobby_warning_icon.tex",
             "{7f4e86a0}": "assets/ux/tftmobile/lobby/tftm_lobby_error_icon.tex",
             "RestrictionIcon": "ClientStates/TFTPreGame/UX/RiotUI/Lobby/UIBase/LobbyScene/LobbyBottom/LobbyBottomRestrictionLayout/LobbyBottomRestriction_Icon",
-            "{3d7745f6}": "ClientStates/TFTPreGame/UX/RiotUI/Lobby/UIBase/LobbyScene/LobbyBottom/LobbyBottomRestrictionLayout/LobbyBottomRestriction_Text",
+            "RestrictionText": "ClientStates/TFTPreGame/UX/RiotUI/Lobby/UIBase/LobbyScene/LobbyBottom/LobbyBottomRestrictionLayout/LobbyBottomRestriction_Text",
             "VietnameseRatingLabel": "ClientStates/TFTPreGame/UX/RiotUI/Lobby/UIBase/LobbyScene/LobbyBottom/VietnameseRatingLabel",
             "__type": "LobbyBottomButtons"
         },
@@ -289334,7 +289357,7 @@
                 },
                 "EventPassCompletedFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/EventPassButton/EventPassComplete_FrameDefault",
                 "EventPassCompletedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/EventPassButton/EventPassCompletedText",
-                "{1bb7131a}": {
+                "EventPassNextRewardIconFrame": {
                     "IconFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/EventPassButton/EventPassNextRewardFrame",
                     "{720e4297}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/EventPassButton/FreeRewardIconBackground",
                     "{96349f57}": "assets/ux/tftmobile/battlepass/5year_free_available.tex",
@@ -289418,7 +289441,7 @@
                     "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryTitleText",
                     "RewardText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryRewardText",
                     "DescriptionText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryDescriptionText",
-                    "{27688fd4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryLockedText",
+                    "LockedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryLockedText",
                     "ProgressText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryProgressText",
                     "{edc62dad}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryProgressGuage",
                     "{8c0aea87}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/PrimaryProgressGuageHolder",
@@ -289438,7 +289461,7 @@
                     "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryTitleText",
                     "RewardText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryRewardText",
                     "DescriptionText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryDescriptionText",
-                    "{27688fd4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryLockText",
+                    "LockedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryLockText",
                     "ProgressText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryProgressText",
                     "{edc62dad}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryProgressGuage",
                     "{8c0aea87}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/MissionGrp/SecondaryProgressGuageHolder",
@@ -289574,7 +289597,7 @@
                 ],
                 "__type": "{4fbb3f5d}"
             },
-            "{715799f9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/AllMissionCompleteGroup",
+            "MissionCompleteGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/ScrollScene/MngLayout/AllMissionCompleteGroup",
             "TimeRemainingText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/TimeRemainingText",
             "TopBarIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionScroller/TopBar",
             "{720b91e8}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/MissionsFailedToLoadIcon",
@@ -289593,13 +289616,13 @@
             "__type": "TftEventTimer"
         },
         "{7d200cc1}": {
-            "{ea27ff5b}": {
+            "DailyLoginButtonData": {
                 "DailyLoginButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/DailyLoginButton/DailyLoginButton",
                 "{53d20c62}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/DailyLoginButton/DailyLoginReward",
                 "{00b63628}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/DailyLoginButton/DailyRewardFrame",
                 "{8db26ec4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/DailyLoginButton/RewardClaimed",
                 "{45bfca37}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubLargeVC/UIBase/Scene/DailyLoginButton/RewardDescription",
-                "{d98c2482}": {
+                "DailyRewardFrameData": {
                     "CompleteDefaultIcon": "assets/ux/tftmobile/events/5ya/dailylogin/5year_free_claimed.tex",
                     "CompleteHoverIcon": "assets/ux/tftmobile/events/5ya/dailylogin/5year_free_claimed_hover.tex",
                     "ClaimableDefaultIcon": "assets/ux/tftmobile/events/5ya/dailylogin/5year_free_claimable.tex",
@@ -289610,7 +289633,7 @@
                 },
                 "__type": "{f1fd1323}"
             },
-            "{c70f6a1e}": "ClientStates/TFTPreGame/UX/RiotUI/TFTDailyLoginRewardViewController",
+            "DailyLoginViewController": "ClientStates/TFTPreGame/UX/RiotUI/TFTDailyLoginRewardViewController",
             "__type": "{61902388}"
         },
         "{96dd8579}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubIntroDialog",
@@ -289706,7 +289729,7 @@
         "{67312463}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PageButtons/Prev",
         "{13e289cf}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PageButtons/First",
         "{3b294f45}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PageButtons/Last",
-        "{6a07faa0}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow",
+        "PlayerRowButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow",
         "{3669a4a4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/TitleLayout/InfoButton",
         "EmptyGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/EmptyGroup",
         "ErrorGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/ErrorGroup",
@@ -289716,7 +289739,7 @@
             "NameText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/NameGroup/Name",
             "RankText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/RankGroup/Rank",
             "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/TitleGroup/Title",
-            "{418ed755}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/PointsGroup/Points",
+            "PointsText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/PointsGroup/Points",
             "Holder": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/Holder",
             "{5ae3dbe2}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/HolderSelected",
             "RankIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/PlayerRow/MngLayout/RankGroup/RankIcon",
@@ -289730,7 +289753,7 @@
             "Flag": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Banner/Flag",
             "NameText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Banner/Name",
             "TitleText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Banner/Title",
-            "{418ed755}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Banner/Points",
+            "PointsText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Banner/Points",
             "{8e68ee55}": {
                 "0": "ASSETS/UX/TFTMobile/Events/SkillTree/Emblem_01.tex",
                 "1": "ASSETS/UX/TFTMobile/Events/SkillTree/Emblem_02.tex",
@@ -289772,10 +289795,10 @@
             "Button": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/Button",
             "RankText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/MngLayout/RankGroup/Rank",
             "NameText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/MngLayout/NameGroup/Name",
-            "{418ed755}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/MngLayout/PointsGroup/Points",
+            "PointsText": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/MngLayout/PointsGroup/Points",
             "Holder": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/Holder",
             "RankIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTSkillTreeLeaderboard/UIBase/Scene/Scroller/ScrollScene/MngLayout/Row/MngLayout/RankGroup/RankIcon",
-            "{7ca0e9d0}": [
+            "DefaultTextColor": [
                 145,
                 190,
                 205,
@@ -289811,7 +289834,7 @@
         "{3b0b9d73}": "TFTSkillTree_Leaderboard_Page",
         "{912b0d41}": "TFTSkillTree_Leaderboard_Info",
         "{a7cdb46f}": "TFTSkillTree_Leaderboard_Anonymous",
-        "__type": "{e61d489c}"
+        "__type": "TftSkillTreeLeaderboardViewController"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/SocialChat": {
         "PathHashToSelf": "{2f90f9b109918f21}",
@@ -289924,7 +289947,7 @@
         "ConfirmButtonDefinition": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPreDialogModal/UIBase/TFTLootDepPreDialogScene/LootDepPre_ConfirmButton",
         "ContentScene": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPreDialogModal/UIBase/TFTLootDepPreDialogScene",
         "{38eaaebf}": false,
-        "{26ebe4ed}": {
+        "ArticleLink": {
             "DisplayText": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPreDialogModal/UIBase/TFTLootDepPreDialogScene/LootDepPre_Link",
             "UrlTraKey": "TFT_LootDep_PreLink_URL",
             "__type": "UiHyperlink"
@@ -289954,7 +289977,7 @@
             "level": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/ScrollableScene/RewardTemplate/RewardLayout/RewardGroup/Button/LevelText",
             "title": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/ScrollableScene/RewardTemplate/RewardLayout/RewardGroup/Title",
             "Region": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/ScrollableScene/RewardTemplate/Region",
-            "__type": "{9efb6a51}"
+            "__type": "LevelPurchaseItemData"
         },
         "Grid": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/ScrollableScene/Grid",
         "{c2aa4bfd}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/PassImage",
@@ -289965,17 +289988,17 @@
         "Decrement": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/LevelGroup/LevelLayout/DecrementButton",
         "Increment": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/LevelGroup/LevelLayout/IncrementButton",
         "LevelText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/LevelGroup/LevelLayout/TotalLevelTExt",
-        "{424f9539}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/DigitalGoodLicenceText",
-        "{215bac2a}": {
+        "DisclaimerText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/DigitalGoodLicenceText",
+        "DisclaimerLink": {
             "DisplayText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/DigitalGoodLicenceText",
             "UrlTraKey": "store_complianmce_url",
             "__type": "UiHyperlink"
         },
         "purchaseButton": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/PurchaseButton",
-        "{e2c11a81}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/PurchaseButton/Text",
+        "PurchaseButtonText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/PurchaseButton/Text",
         "NewBalanceText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/NewBalanceText",
-        "{c01c3f65}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/BulkIncrement/Text",
-        "{0c3c5d21}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/BulkDecrement/DefaultText",
+        "BulkIncrementText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/BulkIncrement/Text",
+        "BulkDecrementText": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Group/BulkDecrement/DefaultText",
         "closeButton": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/CloseButton",
         "ErrorColor": [
             55,
@@ -289983,7 +290006,7 @@
             190,
             255
         ],
-        "{012c1bc1}": [
+        "DefaultColor": [
             140,
             155,
             160,
@@ -289991,7 +290014,7 @@
         ],
         "{fff98f6a}": "standalone_store_insufficient_coins",
         "{626c7955}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/NonRefundText",
-        "{ddf728ec}": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Checkbox",
+        "CheckboxButton": "ClientStates/TFTPreGame/UX/RiotUI/LevelPurchaseDialog/UIBase/Scene/LeftLayout/Description/Checkbox",
         "__type": "LevelPurchaseViewController"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeModifierModal/UIBase": {
@@ -290348,7 +290371,7 @@
         },
         "ThemeMusicStateGroup": "Client",
         "ThemeMusicState": "PreGameUI_Homescreen",
-        "{e5640335}": "ClientStates/TFTPreGame/UX/RiotUI/TFTSetAnnouncementDialog",
+        "SetAnnouncementDialogViewController": "ClientStates/TFTPreGame/UX/RiotUI/TFTSetAnnouncementDialog",
         "XboxGamePassEndedDialogViewController": "ClientStates/TFTPreGame/UX/RiotUI/TFTXBGPEndedDialog",
         "XboxGamePassIntroDialogViewController": "ClientStates/TFTPreGame/UX/RiotUI/TFTXBGPIntroDialog",
         "{e9431731}": "ClientStates/TFTPreGame/UX/RiotUI/TFTNPEIntroDialog",
@@ -290412,7 +290435,7 @@
         "{c2f2bae7}": {
             "set16agetpo": "ClientStates/TFTPreGame/UX/RiotUI/Home/UIBase/HomeScene/TFTM_TPO_Pengu"
         },
-        "{d4e6868d}": "ClientStates/TFTPreGame/UX/RiotUI/Home/UIBase/HomeScene/TFTM_Default_Pengu",
+        "DefaultPengu": "ClientStates/TFTPreGame/UX/RiotUI/Home/UIBase/HomeScene/TFTM_Default_Pengu",
         "__type": "HomeViewController"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/Home/UIBase": {
@@ -290526,7 +290549,7 @@
         "{dfccb347}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene",
         "{a3df78a2}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene",
         "TabletOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UITablet",
-        "{bfd5b639}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIRTL",
+        "RTLOverrideLoadable": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIRTL",
         "PlayAgainButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/PostGame_PlayAgainButton",
         "SkillTreeButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/SkillTreeButton",
         "RankIcons": {
@@ -290576,7 +290599,7 @@
             "PlayerLayout": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout",
             "UnitSlotsLayout": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout/UnitSlotsLayout",
             "{88f8477a}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout/EndLayout",
-            "{dd2b5b5d}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout/EndLayout/UnitPageBtn",
+            "PaginationButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout/EndLayout/UnitPageBtn",
             "TeamImportButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/ResultScene/StatsTemplate/PlayerGroup/PlayerLayout/EndLayout/ImportBtn",
             "{a8651970}": "standalone_common_ImportOpponentTeam_TeamsFull",
             "__type": "PostGamePlayerTemplate"
@@ -290652,7 +290675,7 @@
         "{b7d2df48}": {
             "{ab5cfd6e}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ScoresScroller/ScrollScene/ScoreMngLayout",
             "{359a88b9}": {
-                "{01741a1c}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ScoresScroller/ScrollScene/ScoreDetailsTemplate",
+                "ScoreGroup": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ScoresScroller/ScrollScene/ScoreDetailsTemplate",
                 "ScoreName": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ScoresScroller/ScrollScene/ScoreDetailsTemplate/ScoreName",
                 "ScoreValue": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ScoresScroller/ScrollScene/ScoreDetailsTemplate/ScoreValue",
                 "__type": "{34bf0406}"
@@ -290660,10 +290683,10 @@
             "{22673072}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/TotalScore",
             "ContinueButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/ContinueButton",
             "InfoButton": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/TitleLayout/InfoButton",
-            "{1a627229}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/PenaltyDisplayGroup",
+            "PenaltyGroup": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/PenaltyDisplayGroup",
             "__type": "{272b222f}"
         },
-        "{638add82}": {
+        "SkillTreeRankBannerData": {
             "{96e371d8}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner",
             "{ad770ba7}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeScoreboardScene/NewModifierDisplayGroup",
             "ProgressText": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/SkillTreeProgress/ProgressText",
@@ -290691,10 +290714,10 @@
                 3,
                 3
             ],
-            "{fa1f1ea0}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/WaterCeremony",
-            "{701bc96f}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/WaterCeremony",
-            "{1745c61c}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/FireCeremony",
-            "{13795538}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/LightningCeremony",
+            "UnrankedCeremonySpine": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/WaterCeremony",
+            "WaterCeremonySpine": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/WaterCeremony",
+            "FireCeremonySpine": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/FireCeremony",
+            "LightningCeremonySpine": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/LightningCeremony",
             "{9aa49f71}": {
                 "{01a24d83}": "ClientStates/TFTPreGame/UX/RiotUI/PostGame/UIBase/PostGameScene/SkillTreeBannerScene/SkillTreeRankBanner/WaterCeremony",
                 "{c2079a3f}": [
@@ -290964,7 +290987,7 @@
         "ConfirmButtonDefinition": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPostDialogModal/UIBase/TFTLootDepPostDialogScene/LootDepPost_ConfirmButton",
         "ContentScene": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPostDialogModal/UIBase/TFTLootDepPostDialogScene",
         "{38eaaebf}": false,
-        "{26ebe4ed}": {
+        "ArticleLink": {
             "DisplayText": "ClientStates/TFTPreGame/UX/RiotUI/TFTLootDepPostDialogModal/UIBase/TFTLootDepPostDialogScene/LootDepPost_Layout/LootDepPost_Link",
             "UrlTraKey": "TFT_LootDep_PostLink_URL",
             "__type": "UiHyperlink"
@@ -291196,7 +291219,7 @@
             },
             "EventPassCompletedFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubViewController/UIBase/Scene/EventPassButton/EventPassComplete_FrameDefault",
             "EventPassCompletedText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubViewController/UIBase/Scene/EventPassButton/EventPassCompletedText",
-            "{1bb7131a}": {
+            "EventPassNextRewardIconFrame": {
                 "IconFrame": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubViewController/UIBase/Scene/EventPassButton/EventPassNextRewardFrame",
                 "{720e4297}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubViewController/UIBase/Scene/EventPassButton/FreeRewardIconBackground",
                 "{96349f57}": "assets/ux/tftmobile/battlepass/lny24-free-available.tex",
@@ -291335,26 +291358,26 @@
             "RankColumnSpine": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RankColumnSpine",
             "{7b83d98e}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/EmptyColumnMask",
             "RankText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RankText",
-            "{79aa8d46}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/ProgressBar",
+            "ProgressBarGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/ProgressBar",
             "ProgressBarSpine": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/ProgressBar/ProgressBarSpine",
             "{4b0cc795}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/SingleDivGroup",
             "{9d033e24}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/SingleDivGroup/Active",
             "{1ab8f327}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/SingleDivGroup/NonActive",
             "{2ee8df04}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/Modifiers",
-            "{636f6a90}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup",
-            "{73fedbe4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button",
+            "ModifiersGroup": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup",
+            "ModifierButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button",
             "{11b00333}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Default",
             "{0570cbc0}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Hover",
             "{31eedca4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Pressed",
-            "{a35787c2}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Icon",
-            "{9e5bbdc9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Icon_Hover",
+            "ModifierIconDefault": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Icon",
+            "ModifierIconHover": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Icon_Hover",
             "{f2d26b31}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/Button/Icon_Pressed",
             "ModifierSpine": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/ModifierGroup/ModifierSpine",
-            "{c3b13882}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn",
+            "RewardButton": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn",
             "RewardIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn/Icon",
-            "{0ecd9162}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn/Mask",
+            "RewardMask": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn/Mask",
             "{d1c47d55}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/ClaimableSpine",
-            "{85827c94}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn/QuantityText",
+            "RewardQuantityText": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/RewardBtn/QuantityText",
             "{e997e673}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/AltRewardBtn",
             "{5a22f57a}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/AltRewardBtn/Icon",
             "{8f35113f}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/RankColumnScroller/ScrollScene/MngLayout/RankColumnGroup/AltRewardBtn/Mask",
@@ -291492,7 +291515,7 @@
                 "__type": "{239188d5}"
             }
         },
-        "{eff321b9}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeModifierModal",
+        "ModifierModal": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeModifierModal",
         "{b15422b4}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeSummaryModal",
         "{0291808c}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTreeInfoModal",
         "{fd8416ca}": "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase/Scene/ProgressBar/InfoBadgeVFX",
@@ -291617,7 +291640,7 @@
         },
         "{7d71fd81}": "ASSETS/UX/TFTMobile/BattlePass/SetRevival7_5/free-available.tex",
         "{267439ad}": "TFTSkillTree_HubHeaderTitle",
-        "__type": "{025ad6e2}"
+        "__type": "TftEventHubSkillTreeViewController"
     },
     "ClientStates/TFTPreGame/UX/RiotUI/TFTEventHubSkillTree/UIBase": {
         "FilepathHash": "clientstates/tftpregame/ux/riotui/tfteventhubskilltree/uibase",
@@ -291862,7 +291885,7 @@
             "{63d105a5}": "assets/ux/tftmobile/battlepass/milestone-missions-background.tex",
             "__type": "{5cb6b755}"
         },
-        "{fbf302db}": {
+        "TagData": {
             "{1bbefc93}": [
                 {
                     "{e04df972}": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Rarity_Tag_Standard",
@@ -291885,9 +291908,9 @@
                 }
             ],
             "{5bf8755d}": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Content_Tag",
-            "{6152a19f}": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Content_Tag/Layout/Icon",
-            "{137bf219}": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Content_Tag/Layout/Text",
-            "__type": "{41bdce89}"
+            "ContentTypeIcon": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Content_Tag/Layout/Icon",
+            "ContentTypeText": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/SelectedReward/SelectedReward_Info/RewardInfo/Tags/TFT_Content_Tag/Layout/Text",
+            "__type": "TftContentTagGroupData"
         },
         "ThemeDataMap": {
             "lcu-assets-tft-event-pass": {

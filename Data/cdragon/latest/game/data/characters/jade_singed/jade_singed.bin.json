@@ -3,14 +3,14 @@
         "mRootSpell": "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedPoisonTrail",
         "mChildSpells": [
             "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedPoisonTrail",
-            "{b3c01e7a}"
+            "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedPoisonTrailTarget"
         ],
         "mName": "Jade_SingedPoisonTrailAbility",
         "__type": "AbilityObject"
     },
-    "{00559bc1}": {
+    "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedDontChaseBuff": {
         "ObjectName": "Jade_SingedDontChaseBuff",
-        "objectPath": "{00559bc1}",
+        "objectPath": "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedDontChaseBuff",
         "mScriptName": "Jade_SingedDontChaseBuff",
         "mSpell": {
             "ImgIconPath": "assets/ux/jade/s3icons/samesized/singed_burnresistance.tex",
@@ -346,9 +346,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b3c01e7a}": {
+    "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedPoisonTrailTarget": {
         "ObjectName": "Jade_SingedPoisonTrailTarget",
-        "objectPath": "{b3c01e7a}",
+        "objectPath": "Characters/Jade_Singed/Spells/Jade_SingedPoisonTrailAbility/Jade_SingedPoisonTrailTarget",
         "mScriptName": "Jade_SingedPoisonTrailTarget",
         "mSpell": {
             "mImgIconName": [
@@ -686,9 +686,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c1b9ebf4}": {
+    "Characters/Jade_Singed/Spells/Jade_SingedMegaAdhesiveAbility/Jade_SingedMegaAdhesiveTarget": {
         "ObjectName": "Jade_SingedMegaAdhesiveTarget",
-        "objectPath": "{c1b9ebf4}",
+        "objectPath": "Characters/Jade_Singed/Spells/Jade_SingedMegaAdhesiveAbility/Jade_SingedMegaAdhesiveTarget",
         "mScriptName": "Jade_SingedMegaAdhesiveTarget",
         "mSpell": {
             "mImgIconName": [
@@ -1000,17 +1000,17 @@
         },
         "__type": "SpellObject"
     },
-    "{ac77f45f}": {
-        "mRootSpell": "{af2077af}",
+    "Characters/Jade_Singed/Spells/Jade_SingedPAbility": {
+        "mRootSpell": "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP",
         "mChildSpells": [
-            "{af2077af}"
+            "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP"
         ],
         "mName": "Jade_SingedPAbility",
         "__type": "AbilityObject"
     },
-    "{af2077af}": {
+    "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP": {
         "ObjectName": "Jade_SingedP",
-        "objectPath": "{af2077af}",
+        "objectPath": "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP",
         "mScriptName": "Jade_SingedP",
         "mSpell": {
             "flags": 4,
@@ -1699,7 +1699,7 @@
             "Characters/Jade_Singed/Spells/Jade_SingedMegaAdhesiveAbility",
             "Characters/Jade_Singed/Spells/Jade_SingedFlingAbility",
             "Characters/Jade_Singed/Spells/Jade_SingedInsanityPotionAbility",
-            "{ac77f45f}"
+            "Characters/Jade_Singed/Spells/Jade_SingedPAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Singed",
         "passiveLuaName": "Jade_SingedP_Jade",
@@ -1827,10 +1827,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{af2077af}",
+        "mCharacterPassiveSpell": "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{af2077af}",
+                "mParentPassiveBuff": "Characters/Jade_Singed/Spells/Jade_SingedPAbility/Jade_SingedP",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -2261,9 +2261,6 @@
         "path": "{5999fa77}",
         "sequences": {
             "{6a7835b9}": {
-                "blocks": [
-                    null
-                ],
                 "__type": "RootScriptSequence"
             },
             "{bd909891}": {
@@ -2304,7 +2301,8 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Singed_Community_01",
-        "{55bb9b57}": 36,
+        "Enabled": false,
+        "PortraitId": 36,
         "{ff3c9ff8}": "{994ddedd}",
         "image": {
             "image": "{fa06084ddf2143bf}",
