@@ -51762,7 +51762,7 @@
             "desc": "무작위 후방 챔피언이 @ASDuration@초 동안 공격 속도를 @ASMultiplier*100@% 얻습니다.",
             "effects": {
                 "ASDuration": 7.0,
-                "ASMultiplier": 0.8500000238418579
+                "ASMultiplier": 1.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -52218,26 +52218,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_TrueFriendship18",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_TrueFriendship_Description",
-            "effects": {
-                "{a25a87df}": 2.0,
-                "{b82ea48a}": 2.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_TrueFriendship_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_BearsVisit18",
             "associatedTraits": [],
             "composition": [],
@@ -52269,26 +52249,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "너덜너덜한 방어구",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_Drizzle_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_Drizzle_Upgrade_Description",
-            "effects": {
-                "Delay": 8.0,
-                "{6d8ce3e4}": 15.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_Drizzle_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -52556,7 +52516,7 @@
             "apiName": "DA_18_Drizzle",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_Drizzle_Description",
+            "desc": "전투 시작 @Delay@초 후, 아군이 마나를 @ManaToGain@ 얻습니다.",
             "effects": {
                 "Delay": 8.0,
                 "{2d7e43a8}": 10.0
@@ -52566,7 +52526,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_Drizzle_Name",
+            "name": "이슬비",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -53197,7 +53157,7 @@
             "desc": "전사가 체력이 @ExecuteThreshold@% 아래인 대상을 처형합니다. 처치 시 공격 속도를 @OnKillAtkSpdAmount*100@% 얻습니다.",
             "effects": {
                 "ExecuteThreshold": 12.0,
-                "{a074cdeb}": 0.1499999761581421
+                "{a074cdeb}": 0.2999999523162842
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53250,7 +53210,7 @@
             "apiName": "DA_PottedLifebloom18",
             "associatedTraits": [],
             "composition": [],
-            "desc": "임시 생명꽃 1개를 획득합니다.",
+            "desc": "임시 생명꽃망울 1개를 획득합니다.",
             "effects": {},
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53569,7 +53529,7 @@
             "composition": [],
             "desc": "무작위 후방 챔피언이 @ASDurationUpgrade@초 동안 공격 속도를 @ASMultiplierUpgrade*100@% 얻습니다.",
             "effects": {
-                "{6c71691e}": 1.1500000953674316,
+                "{6c71691e}": 1.2999999523162842,
                 "{707d81f7}": 8.0
             },
             "from": null,
@@ -53770,23 +53730,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "5단계 집결",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_FoundBigFriend18_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_FoundBigFriend_Upgrade_Description",
-            "effects": {},
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_FoundBigFriend_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -54360,7 +54303,7 @@
             "desc": "전사가 체력이 @UpgradeExecuteThreshold@<Set18CharmUpgrade>%</Set18CharmUpgrade> 아래인 대상을 처형합니다. 처치 시 공격 속도를 @OnKillAtkSpdAmountUpgrade*100@% 얻습니다.",
             "effects": {
                 "UpgradeExecuteThreshold": 15.0,
-                "{c2df5b31}": 0.3999999761581421
+                "{c2df5b31}": 0.6000000238418579
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -54808,6 +54751,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_ReturningFriendUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_ReturningFriend_Upgrade_Description",
+            "effects": {},
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_ReturningFriend_Upgrade_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_StandAlone18_Prismatic",
             "associatedTraits": [],
             "composition": [],
@@ -55238,6 +55198,26 @@
             "unique": false
         },
         {
+            "apiName": "DA_18_GroveArmorUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "체력이 가장 높은 아군 챔피언이 방어력을 @BonusArmorUpgrade@, 마법 저항력을 @BonusMRUpgrade@ 얻습니다.",
+            "effects": {
+                "{18e2f9a9}": 25.0,
+                "{ac3cc501}": 25.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "숲의 갑옷",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_FlipFrenzy18",
             "associatedTraits": [],
             "composition": [],
@@ -55391,26 +55371,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_GroveArmor_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_GroveArmor_Upgrade_Description",
-            "effects": {
-                "{18e2f9a9}": 25.0,
-                "{ac3cc501}": 25.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_GroveArmor_Upgrade_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_MiddlePath18",
             "associatedTraits": [],
             "composition": [],
@@ -55518,6 +55478,26 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "여진",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_18_DrizzleUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "전투 시작 @Delay@초 후, 아군이 마나를 @ManaToGainUpgrade@ 얻습니다.",
+            "effects": {
+                "Delay": 8.0,
+                "{6d8ce3e4}": 15.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "이슬비",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -55904,7 +55884,7 @@
             "composition": [],
             "desc": "가장 체력이 높은 아군 유닛이 성장하여 체력을 @HPGain@ 얻습니다.",
             "effects": {
-                "{e26d6f9e}": 750.0
+                "{e26d6f9e}": 800.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -56430,7 +56410,7 @@
             "composition": [],
             "desc": "후방에 있는 무작위 챔피언 @NumChampionsUpgrade@명이 @UntargetableDurationUpgrade@초 동안 대상으로 지정할 수 없는 상태가 됩니다.",
             "effects": {
-                "{38788569}": 10.0,
+                "{38788569}": 12.0,
                 "{3f2cae9b}": 3.0
             },
             "from": null,
@@ -56611,6 +56591,25 @@
             "unique": false
         },
         {
+            "apiName": "DA_RoomForAShroomUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_RoomForAShroom_Upgrade_Description",
+            "effects": {
+                "{6cddf9fd}": 3.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_RoomForAShroom_Upgrade_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_DoodadJar18_Upgrade",
             "associatedTraits": [],
             "composition": [],
@@ -56624,26 +56623,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "잡화 단지",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_TrueFriendship18_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_TrueFriendship_Upgrade_Description",
-            "effects": {
-                "{943e91b5}": 3.0,
-                "{c77056bc}": 2.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_TrueFriendship_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -56982,7 +56961,7 @@
             "composition": [],
             "desc": "가장 체력이 높은 아군 유닛 @NumUnitsUpgrade@명이 성장하여 체력을 @HPGainUpgrade@ 얻습니다.",
             "effects": {
-                "{58332efe}": 750.0,
+                "{58332efe}": 800.0,
                 "{6d8a71ae}": 2.0
             },
             "from": null,
@@ -57127,6 +57106,25 @@
             "unique": false
         },
         {
+            "apiName": "DA_RoomForAShroom",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_RoomForAShroom_Description",
+            "effects": {
+                "{f2956f6f}": 2.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_RoomForAShroom_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_18_Preppers_Upgrade",
             "associatedTraits": [],
             "composition": [],
@@ -57236,23 +57234,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_FoundBigFriend18",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_FoundBigFriend_Description",
-            "effects": {},
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_FoundBigFriend_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_RolyPolys18",
             "associatedTraits": [],
             "composition": [],
@@ -57353,7 +57334,7 @@
             "desc": "가장 강한 아군 전사 또는 암살자 @NumChampions@명이 @UntargetableDuration@초 동안 대상으로 지정할 수 없는 상태가 됩니다.",
             "effects": {
                 "NumChampions": 3.0,
-                "UntargetableDuration": 6.0
+                "UntargetableDuration": 8.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -57958,7 +57939,7 @@
             "apiName": "DA_18_GroveArmor",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_GroveArmor_Description",
+            "desc": "체력이 가장 높은 아군 챔피언이 방어력을 @BonusArmor@, 마법 저항력을 @BonusMR@ 얻습니다.",
             "effects": {
                 "BonusArmor": 15.0,
                 "BonusMR": 15.0
@@ -57968,7 +57949,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_GroveArmor_Name",
+            "name": "숲의 갑옷",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -83111,7 +83092,7 @@
                 "DA_Riftbeast18"
             ],
             "composition": [],
-            "desc": "이제 두 번째 우두머리 협곡야수를 선택할 수 있습니다. 바위 게, 불타는 묘목, 조약돌을 획득합니다.",
+            "desc": "이제 두 번째 우두머리 협곡야수를 선택할 수 있습니다. 우두머리 협곡야수가 최대 체력을 @BonusHP*100@%, 공격 속도를 @BonusAS*100@% 얻습니다. 바위 게, 불타는 묘목, 조약돌을 획득합니다.",
             "effects": {
                 "BonusAS": 0.12000000476837158,
                 "BonusHP": 0.1499999761581421
@@ -83131,7 +83112,7 @@
             "apiName": "DA_Min_Max",
             "associatedTraits": [],
             "composition": [],
-            "desc": "황금 아이템 제거기와 무작위 조합 아이템 4개를 획득합니다.",
+            "desc": "황금 아이템 제거기, 무작위 조합 아이템 4개, @GoldAmount@골드를 획득합니다.",
             "effects": {
                 "GoldAmount": 4.0
             },
@@ -84550,7 +84531,7 @@
             "apiName": "DA_PandorasItemsII",
             "associatedTraits": [],
             "composition": [],
-            "desc": "라운드 시작: 대기석의 아이템이 무작위로 변합니다. <br><br>무작위 조합 아이템 @NumberOfComponentsII@개를 획득합니다.",
+            "desc": "라운드 시작: 대기석의 아이템이 무작위로 변합니다. <br><br>무작위 조합 아이템 @NumberOfComponentsII@개와 @GoldAmountII@골드를 획득합니다.",
             "effects": {
                 "{739a48af}": 2.0,
                 "{98f3fe09}": 4.0
@@ -101173,7 +101154,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "현재 대상에게서 순간적으로 멀어진 다음, 대상에게 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입히고 공격 속도를 @AttackSpeedCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n스킬을 4회 사용할 때마다 자연의 분노로 얻은 공격 속도를 소모하여 가장 큰 무리를 관통하는 파동을 발사합니다. 파동은 @PhysicalDamageCalc2@%i:scaleAD%의 물리 피해를 입히며, 관통한 적 하나당 피해량이 @DamageReductionPerHit@ 감소합니다. (최소 @MinDamagePercent@)",
+                        "desc": "현재 대상에게서 순간적으로 멀어진 다음, 대상에게 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입히고 공격 속도를 @AttackSpeedCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n스킬을 4회 사용할 때마다 숲의 광풍으로 얻은 공격 속도를 소모하여 가장 큰 무리를 관통하는 파동을 발사합니다. 파동은 @PhysicalDamageCalc2@%i:scaleAD%의 물리 피해를 입히며, 관통한 적 하나당 피해량이 @DamageReductionPerHit@ 감소합니다. (최소 @MinDamagePercent@)",
                         "icon": "None",
                         "name": "숲의 광풍",
                         "variables": []
@@ -101496,7 +101477,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "가장 적이 많은 일직선상에 화살을 발사해 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 피해량은 적중한 적 하나당 @DamageFalloffPerEnemy@ 감소합니다. (최소 @MinDamagePercent@)\r\\n\r\\n화살이 @RiftDuration@초 동안 궤적을 남겨 범위 내 적에게 매초 @PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP%+최대 체력의 @MaxHealthDamagePerSecond@만큼 물리 피해를 입히고 @ChillPercent@% <Keyword>둔화</Keyword>시킵니다.\r\\n\r\\n<Rules>둔화: 공격 속도 감소</Rules>",
+                        "desc": "가장 적이 많은 일직선상에 화살을 발사해 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 피해량은 적중한 적 하나당 @DamageFalloffPerEnemy@ 감소합니다. (최소 @MinDamagePercent@) 적중한 적이 없다면 사용한 마나를 @ManaRefund@ 돌려받습니다.\r\\n\r\\n화살이 @RiftDuration@초 동안 궤적을 남겨 범위 내 적에게 매초 @PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP%+최대 체력의 @MaxHealthDamagePerSecond@만큼 물리 피해를 입히고 @ChillPercent@% <Keyword>둔화</Keyword>시킵니다.\r\\n\r\\n<Rules>둔화: 공격 속도 감소</Rules>",
                         "icon": "None",
                         "name": "정신 균열",
                         "variables": []
@@ -102722,7 +102703,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>기본 지속 효과:</bright> 기본 공격이 사거리 내 무작위 적을 대상으로 지정하고 출혈을 적용해 @BleedDuration@초 동안 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 기본 공격마다 @GenericCalc1@ %i:scaleAP% 확률로 대신 @SpinningAxeDamageRatio@의 추가 물리 피해를 입히고 @SpinningAxeBleedStacks@의 출혈을 적용합니다.\r\\n\r\\n<bright>사용 시:</bright> 출혈 중첩이 가장 많은 적을 향해 거대한 도끼 두 개를 던집니다. 적중한 적에게 @PhysicalDamageCalc3@%i:scaleAD%의 물리 피해를 입히고 대상의 출혈 효과를 소모해 즉시 남은 피해량을 입힙니다. 이후 도끼가 돌아오면서 적중한 적에게 @GenericCalc2@%i:scaleAD%의 물리 피해를 입힙니다. ",
+                        "desc": "<bright>기본 지속 효과:</bright> 기본 공격이 사거리 내 무작위 적을 대상으로 지정하고 출혈을 적용해 @BleedDuration@초 동안 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 기본 공격마다 @GenericCalc1@ %i:scaleAP% 확률로 대신 @SpinningAxeDamageRatio@의 추가 물리 피해를 입히고 @SpinningAxeBleedStacks@의 출혈을 적용합니다.\r\\n\r\\n<bright>사용 시:</bright> 출혈 중첩이 가장 많은 적을 향해 거대한 도끼 두 개를 던집니다. 적중한 적에게 @PhysicalDamageCalc3@%i:scaleAD%의 물리 피해를 입히고 대상의 출혈 효과를 소모해 즉시 남은 피해량을 입힙니다. 이후 도끼가 돌아오면서 적중한 적에게 @GenericCalc2@%i:scaleAD%의 물리 피해를 입힙니다. 적중한 적이 없다면 사용한 마나를 @ManaRefund@ 돌려받습니다.",
                         "icon": "None",
                         "name": "죽음의 소용돌이",
                         "variables": []
@@ -103233,7 +103214,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>기본 지속 효과:</bright> 스킬 사용 시, 럭스와 특성을 공유하는 모든 아군이 마나를 @ManaCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n<bright>사용 시:</bright> 적이 가장 많은 일직선 방향으로 레이저를 발사해 @MagicDamageCalc1@%i:scaleAP%의 마법 피해를 입힙니다. 적중한 적 하나당 피해가 @DamageReductionPerUnit@ 감소합니다. (최소 @MinimumFalloffDamageRatio@)\r\\n\r\\n<bright>햇빛 추가 효과:</bright> 배치한 3성 챔피언 한 종류당 @SolarBonusDamagePer3StarRadio@의 추가 피해를 입힙니다.",
+                        "desc": "<bright>기본 지속 효과:</bright> 스킬 사용 시, 럭스와 특성을 공유하는 모든 아군이 마나를 @ManaCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n<bright>사용 시:</bright> 적이 가장 많은 일직선 방향으로 레이저를 발사해 @MagicDamageCalc1@%i:scaleAP%의 마법 피해를 입힙니다. 적중한 적 하나당 피해가 @DamageReductionPerUnit@ 감소합니다. (최소 @MinimumFalloffDamageRatio@)\r\\n\r\\n<bright>햇빛 추가 효과:</bright> @SolarBonusDamageRatio@의 추가 피해를 입힙니다. 배치한 3성 챔피언 한 종류당 추가로 @SolarBonusDamagePer3StarRadio@의 추가 피해를 입힙니다.",
                         "icon": "None",
                         "name": "최후의 섬광",
                         "variables": []
@@ -103576,7 +103557,7 @@
                 "DA_18_Counterspell_Prismatic",
                 "DA_18_Counterspell_Upgrade",
                 "DA_18_Drizzle",
-                "DA_18_Drizzle_Upgrade",
+                "DA_18_DrizzleUpgrade",
                 "DA_18_EarlyFix",
                 "DA_18_EarlyFix_Upgrade",
                 "DA_18_EmblemBlackthorn",
@@ -103613,7 +103594,7 @@
                 "DA_18_GiantGrowth",
                 "DA_18_GiantGrowth_Upgrade",
                 "DA_18_GroveArmor",
-                "DA_18_GroveArmor_Upgrade",
+                "DA_18_GroveArmorUpgrade",
                 "DA_18_HeatedRivalry",
                 "DA_18_HeatedRivalry_Upgrade",
                 "DA_18_HeroicSacrifice",
@@ -103822,8 +103803,6 @@
                 "DA_ForestGuide18_Upgrade",
                 "DA_ForestTwins18",
                 "DA_ForestTwinsUpgrade18",
-                "DA_FoundBigFriend18",
-                "DA_FoundBigFriend18_Upgrade",
                 "DA_FoundFriend18",
                 "DA_FoundFriend18_Upgrade",
                 "DA_GargoyleStoneplate",
@@ -103975,6 +103954,7 @@
                 "DA_RefreshingLight18_Upgrade",
                 "DA_Regeneration18",
                 "DA_Regeneration18_Upgrade",
+                "DA_ReturningFriendUpgrade",
                 "DA_Revenge18",
                 "DA_RevengeUpgrade18",
                 "DA_RideTheWave18",
@@ -103983,6 +103963,8 @@
                 "DA_RollingBones18_Upgrade",
                 "DA_RolyPolys18",
                 "DA_RolyPolysUpgrade18",
+                "DA_RoomForAShroom",
+                "DA_RoomForAShroomUpgrade",
                 "DA_Salvager18",
                 "DA_SalvagerUpgrade18",
                 "DA_Scrappy18",
@@ -104045,8 +104027,6 @@
                 "DA_TreetopArchers_Upgrade",
                 "DA_TrophyHunter18",
                 "DA_TrophyHunter18_Upgrade",
-                "DA_TrueFriendship18",
-                "DA_TrueFriendship18_Upgrade",
                 "DA_TurtlesVisit18",
                 "DA_TurtlesVisit18_Upgrade",
                 "DA_VoidStaff",
@@ -519789,7 +519769,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "현재 대상에게서 순간적으로 멀어진 다음, 대상에게 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입히고 공격 속도를 @AttackSpeedCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n스킬을 4회 사용할 때마다 자연의 분노로 얻은 공격 속도를 소모하여 가장 큰 무리를 관통하는 파동을 발사합니다. 파동은 @PhysicalDamageCalc2@%i:scaleAD%의 물리 피해를 입히며, 관통한 적 하나당 피해량이 @DamageReductionPerHit@ 감소합니다. (최소 @MinDamagePercent@)",
+                        "desc": "현재 대상에게서 순간적으로 멀어진 다음, 대상에게 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입히고 공격 속도를 @AttackSpeedCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n스킬을 4회 사용할 때마다 숲의 광풍으로 얻은 공격 속도를 소모하여 가장 큰 무리를 관통하는 파동을 발사합니다. 파동은 @PhysicalDamageCalc2@%i:scaleAD%의 물리 피해를 입히며, 관통한 적 하나당 피해량이 @DamageReductionPerHit@ 감소합니다. (최소 @MinDamagePercent@)",
                         "icon": "None",
                         "name": "숲의 광풍",
                         "variables": []
@@ -520112,7 +520092,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "가장 적이 많은 일직선상에 화살을 발사해 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 피해량은 적중한 적 하나당 @DamageFalloffPerEnemy@ 감소합니다. (최소 @MinDamagePercent@)\r\\n\r\\n화살이 @RiftDuration@초 동안 궤적을 남겨 범위 내 적에게 매초 @PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP%+최대 체력의 @MaxHealthDamagePerSecond@만큼 물리 피해를 입히고 @ChillPercent@% <Keyword>둔화</Keyword>시킵니다.\r\\n\r\\n<Rules>둔화: 공격 속도 감소</Rules>",
+                        "desc": "가장 적이 많은 일직선상에 화살을 발사해 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 피해량은 적중한 적 하나당 @DamageFalloffPerEnemy@ 감소합니다. (최소 @MinDamagePercent@) 적중한 적이 없다면 사용한 마나를 @ManaRefund@ 돌려받습니다.\r\\n\r\\n화살이 @RiftDuration@초 동안 궤적을 남겨 범위 내 적에게 매초 @PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP%+최대 체력의 @MaxHealthDamagePerSecond@만큼 물리 피해를 입히고 @ChillPercent@% <Keyword>둔화</Keyword>시킵니다.\r\\n\r\\n<Rules>둔화: 공격 속도 감소</Rules>",
                         "icon": "None",
                         "name": "정신 균열",
                         "variables": []
@@ -521338,7 +521318,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>기본 지속 효과:</bright> 기본 공격이 사거리 내 무작위 적을 대상으로 지정하고 출혈을 적용해 @BleedDuration@초 동안 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 기본 공격마다 @GenericCalc1@ %i:scaleAP% 확률로 대신 @SpinningAxeDamageRatio@의 추가 물리 피해를 입히고 @SpinningAxeBleedStacks@의 출혈을 적용합니다.\r\\n\r\\n<bright>사용 시:</bright> 출혈 중첩이 가장 많은 적을 향해 거대한 도끼 두 개를 던집니다. 적중한 적에게 @PhysicalDamageCalc3@%i:scaleAD%의 물리 피해를 입히고 대상의 출혈 효과를 소모해 즉시 남은 피해량을 입힙니다. 이후 도끼가 돌아오면서 적중한 적에게 @GenericCalc2@%i:scaleAD%의 물리 피해를 입힙니다. ",
+                        "desc": "<bright>기본 지속 효과:</bright> 기본 공격이 사거리 내 무작위 적을 대상으로 지정하고 출혈을 적용해 @BleedDuration@초 동안 @PhysicalDamageCalc1@%i:scaleAD%의 물리 피해를 입힙니다. 기본 공격마다 @GenericCalc1@ %i:scaleAP% 확률로 대신 @SpinningAxeDamageRatio@의 추가 물리 피해를 입히고 @SpinningAxeBleedStacks@의 출혈을 적용합니다.\r\\n\r\\n<bright>사용 시:</bright> 출혈 중첩이 가장 많은 적을 향해 거대한 도끼 두 개를 던집니다. 적중한 적에게 @PhysicalDamageCalc3@%i:scaleAD%의 물리 피해를 입히고 대상의 출혈 효과를 소모해 즉시 남은 피해량을 입힙니다. 이후 도끼가 돌아오면서 적중한 적에게 @GenericCalc2@%i:scaleAD%의 물리 피해를 입힙니다. 적중한 적이 없다면 사용한 마나를 @ManaRefund@ 돌려받습니다.",
                         "icon": "None",
                         "name": "죽음의 소용돌이",
                         "variables": []
@@ -521849,7 +521829,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>기본 지속 효과:</bright> 스킬 사용 시, 럭스와 특성을 공유하는 모든 아군이 마나를 @ManaCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n<bright>사용 시:</bright> 적이 가장 많은 일직선 방향으로 레이저를 발사해 @MagicDamageCalc1@%i:scaleAP%의 마법 피해를 입힙니다. 적중한 적 하나당 피해가 @DamageReductionPerUnit@ 감소합니다. (최소 @MinimumFalloffDamageRatio@)\r\\n\r\\n<bright>햇빛 추가 효과:</bright> 배치한 3성 챔피언 한 종류당 @SolarBonusDamagePer3StarRadio@의 추가 피해를 입힙니다.",
+                        "desc": "<bright>기본 지속 효과:</bright> 스킬 사용 시, 럭스와 특성을 공유하는 모든 아군이 마나를 @ManaCalc1@ %i:scaleAP% 얻습니다.\r\\n\r\\n<bright>사용 시:</bright> 적이 가장 많은 일직선 방향으로 레이저를 발사해 @MagicDamageCalc1@%i:scaleAP%의 마법 피해를 입힙니다. 적중한 적 하나당 피해가 @DamageReductionPerUnit@ 감소합니다. (최소 @MinimumFalloffDamageRatio@)\r\\n\r\\n<bright>햇빛 추가 효과:</bright> @SolarBonusDamageRatio@의 추가 피해를 입힙니다. 배치한 3성 챔피언 한 종류당 추가로 @SolarBonusDamagePer3StarRadio@의 추가 피해를 입힙니다.",
                         "icon": "None",
                         "name": "최후의 섬광",
                         "variables": []

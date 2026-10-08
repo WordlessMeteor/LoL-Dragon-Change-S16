@@ -6,7 +6,7 @@
     "name": "Lucian",
     "alias": "Jade_Lucian",
     "title": "İnfazcı",
-    "shortBio": "Lucian'ın R'si saldırı hızına bağlı olarak ilave atışlar kazanır ve bir şampiyon katlettiğinde E'sini sıfırlar.\\nPasif artık Tetikte yükü kazandırmaz.\\nE yavaşlatma etkilerini kaldırır.",
+    "shortBio": "Lucian'ın R'si saldırı hızına bağlı olarak ilave atışlar kazanır ve bir şampiyon katlettiğinde E'sini sıfırlar.<br>Pasif artık Tetikte yükü kazandırmaz.<br>E yavaşlatma etkilerini kaldırır.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 4,
@@ -691,7 +691,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lucian, hedefini delip geçen bir ışık huzmesi gönderir.",
-            "dynamicDescription": "Bir rakip birimi delip geçen bir ışık huzmesi ateşler. Işık huzmesi bir hat üstündeki rakiplere <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Minyonlara @TotalMinionDamage@ Hasar verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian bir rakip birimi delip geçen bir ışık huzmesi ateşler. Işık huzmesi bir hat üstündeki rakiplere <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Minyonlara <physicalDamage>@TotalMinionDamage@ Hasar</physicalDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -841,7 +841,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lucian'ın yaptığı atış, yıldız şeklinde bir patlama yaratarak rakipleri işaretler. Lucian işaretli rakiplere saldırdığında hareket hızı kazanır.",
-            "dynamicDescription": "Yaptığı atış rakibe temas ettiğinde veya menzilin sonuna geldiğinde patlar. Patlama <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve rakipleri @DebuffDuration@ saniyeliğine işaretler.<br><br>İşaretli hedeflere hasar vermek Lucian'a @BuffDuration@ saniyeliğine <speed>@MoveSpeedAmount@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian'ın yaptığı atış rakibe temas ettiğinde veya menzilin sonuna geldiğinde patlar. Patlama <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve rakipleri @DebuffDuration@ saniyeliğine işaretler.<br><br>İşaretli hedeflere hasar vermek Lucian'a @BuffDuration@ saniyeliğine <speed>@MoveSpeedAmount@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -991,7 +991,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lucian kısa bir mesafe atılarak tüm yavaşlatma etkilerini kaldırır.",
-            "dynamicDescription": "Kısa bir mesafe atılarak tüm <status>yavaşlatma</status> etkilerini kaldırır. Lucian, <spellName>İnfaz</spellName> etkinken bir rakibi katlederse <spellName>Amansız Takip</spellName>'in bekleme süresi sıfırlanır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian kısa bir mesafe atılarak tüm <status>yavaşlatma</status> etkilerini kaldırır. Lucian, <spellName>İnfaz</spellName> etkinken bir rakibi katlederse <spellName>Amansız Takip</spellName>'in bekleme süresi sıfırlanır.@SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,
@@ -1141,7 +1141,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lucian silahlarıyla art arda atış yapar.",
-            "dynamicDescription": "Lucian @Duration@ saniye boyunca tek bir yöne doğru hızla ateş ederken serbestçe hareket eder. Atışların her biri isabet alan ilk rakibe <physicalDamage>@DamagePerBullet@ Fiziksel Hasar</physicalDamage> verir. Atış sayısı <attackSpeed>saldırı hızına</attackSpeed> bağlı olarak artar.<br><br>@TotalNumShots@ Atışta Toplam: <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage>. <br>İnfaz minyonlara %@PercentDamageAmpToMinions@ Hasar verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian @Duration@ saniye boyunca tek bir yöne doğru hızla ateş ederken serbestçe hareket eder. Atışların her biri isabet alan ilk rakibe <physicalDamage>@DamagePerBullet@ Fiziksel Hasar</physicalDamage> verir. Atış sayısı <attackSpeed>saldırı hızına</attackSpeed> bağlı olarak artar.<br><br>@TotalNumShots@ Atışta Toplam: <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage>. <br><spellName>İnfaz</spellName> minyonlara <attention>%@PercentDamageAmpToMinions@ Hasar</attention> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1400.0,

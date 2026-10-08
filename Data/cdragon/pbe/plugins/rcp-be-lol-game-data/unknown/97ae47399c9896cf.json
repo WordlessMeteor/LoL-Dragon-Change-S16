@@ -691,7 +691,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق لوشيان صاعقة من الضوء النافذ تخترق الأهداف.",
-            "dynamicDescription": "يطلق صاعقة من الضوء النافذ عبر وحدة معادية، فتلحق الضرر بالأعداء في خط مستقيم بمقدار <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. تلحق @TotalMinionDamage@ ضرر بالأتباع.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق لوشيان صاعقة من الضوء النافذ عبر وحدة معادية، فتلحق الضرر بالأعداء في خط مستقيم بمقدار <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. تلحق <physicalDamage>@TotalMinionDamage@ ضرر</physicalDamage> بالأتباع.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -841,7 +841,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق لوشيان قذيفة تنفجر على شكل نجمة، مما يؤدي إلى وسم الأعداء. يكسب لوشيان سرعة حركة لدى هجومه على الأعداء الموسومين.",
-            "dynamicDescription": "يطلق طلقة تنفجر عند ملامسة عدو أو عند بلوغ نهاية مسارها. يلحق الانفجار <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ويقوم بوسم الأعداء لمدة @DebuffDuration@ث.<br><br>يمنح إلحاق الضرر بالأهداف الموسومة لوشيان <speed>@MoveSpeedAmount@ سرعة حركة</speed> لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق لوشيان طلقة تنفجر عند ملامسة عدو أو عند بلوغ نهاية طريقها. يلحق الانفجار <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ويقوم بوسم الأعداء لمدة @DebuffDuration@ث.<br><br>يمنح إلحاق الضرر بالأهداف الموسومة لوشيان <speed>@MoveSpeedAmount@ سرعة حركة</speed> لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -991,7 +991,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يندفع لوشيان لمسافة قصيرة، فيزيل جميع تأثيرات الإبطاء.",
-            "dynamicDescription": "يندفع لمسافة قصيرة، فيزيل جميع تأثيرات <status>الإبطاء</status>. إذا قتل لوشيان عدوًا أثناء تفعيل قدرة <spellName>الغربلة</spellName>، تتم إعادة ضبط فترة تبريد <spellName>مطاردة بلا هوادة</spellName>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يندفع لوشيان لمسافة قصيرة، فيزيل جميع تأثيرات <status>الإبطاء</status>. إذا قتل لوشيان عدوًا أثناء تفعيل قدرة <spellName>الغربلة</spellName>، تتم إعادة ضبط فترة تبريد <spellName>مطاردة بلا هوادة</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,
@@ -1141,7 +1141,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق لوشيان سيلًا من الطلقات من سلاحيه.",
-            "dynamicDescription": "يتحرك لوشيان بحرية أثناء إطلاق النار بسرعة في اتجاه واحد لمدة @Duration@ث. تصيب طلقاته أول عدو في طريقها، وتلحق كل منها <physicalDamage>@DamagePerBullet@ ضرر مادي</physicalDamage>. يزداد عدد الطلقات حسب <attackSpeed>سرعة هجومه</attackSpeed>. <br><br>الإجمالي حتى @TotalNumShots@ من الطلقات: <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. <br>تلحق قدرة الغربلة @PercentDamageAmpToMinions@% ضرر بالأتباع.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يتحرك لوشيان بحرية أثناء إطلاق النار بسرعة في اتجاه واحد لمدة @Duration@ث. تصيب طلقاته أول عدو في طريقها، وتلحق كل منها <physicalDamage>@DamagePerBullet@ ضرر مادي</physicalDamage>. يزداد عدد الطلقات حسب <attackSpeed>سرعة هجومه</attackSpeed>. <br><br>الإجمالي حتى @TotalNumShots@ من الطلقات: <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. <br>تلحق قدرة <spellName>الغربلة</spellName> <attention>@PercentDamageAmpToMinions@%</attention> من الضرر بالأتباع.@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1400.0,

@@ -1583,7 +1583,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "弓を引き絞り、強力な一矢を放つ。構えてから発動するまでの時間が長ければ長いほど、射程距離とダメージ量が増加する。",
-            "dynamicDescription": "<attention>チャージ開始:</attention> 弓を引き絞って次の射撃を準備し、自身が@MoveSpeedMod*-100@%の<status>スロウ効果</status>を受ける。@MaxChannelDuration@秒以内に発射しなかった場合は、スキルをキャンセルしてマナコストの@ManaRefund*100@%を回復する。<br><br><attention>解放:</attention> 矢を放ち、<physicalDamage>@TotalDamageMinTooltip@の物理ダメージ</physicalDamage>を与える。敵に命中するたびにダメージが@FalloffPercent*100@%低下する(最小@MinDamagePercent*100@%)。ダメージと<keywordMajor>「枯死の呪い」</keywordMajor>の爆発効果は、チャージ時間に応じて最大@MaxChargeAmp*100@%まで増加する(最大<physicalDamage>@TotalDamageMax@</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>チャージ開始:</attention> 弓を引き絞って次の射撃を準備し、自身が@MoveSpeedMod*-100@%の<status>スロウ効果</status>を受ける。@MaxChannelDuration@秒以内に発射しなかった場合は、スキルをキャンセルしてマナコストの@ManaRefund*100@%を回復する。<br><br><attention>解放:</attention> 矢を放ち、<physicalDamage>@TotalDamageMin@の物理ダメージ</physicalDamage>を与える。敵に命中するたびにダメージが@FalloffPercent*100@%低下する(最小@MinDamagePercent*100@%)。ダメージと<keywordMajor>枯死の呪い</keywordMajor>の爆発効果は、チャージ時間に応じて最大@MaxChannelAmp*100@%まで増加する(最大<physicalDamage>@TotalDamageMax@の物理ダメージ</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1609,8 +1609,8 @@
                 11.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
-                "coefficient2": 1.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -1632,49 +1632,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1686,13 +1686,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1773,40 +1773,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    0.025,
-                    0.03,
-                    0.035,
-                    0.04,
-                    0.045,
-                    0.05,
-                    0.055
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,

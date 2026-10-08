@@ -47,6 +47,7 @@
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Base/Images/Jade_Hecarim_splash_uncentered_0.project_jade_16_21.jpg",
             "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Base/Images/Jade_Hecarim_splash_tile_0.project_jade_16_21.jpg",
             "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Base/Jade_HecarimLoadscreen_0.project_jade_16_21.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Base/Jade_HecarimLoadScreen_0_LE.project_jade_16_21.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -337,6 +338,7 @@
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Skin22/Images/Jade_Hecarim_splash_uncentered_22.project_jade_16_21.jpg",
             "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Skin22/Images/Jade_Hecarim_splash_tile_22.project_jade_16_21.jpg",
             "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Skin22/Jade_HecarimLoadscreen_22.project_jade_16_21.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/Skins/Base/Jade_HecarimLoadScreen_0_LE.project_jade_16_21.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -525,7 +527,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Hecarim/HUD/Icons2D/Jade_Hecarim_Passive.project_jade_16_21.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "増加移動速度の一定割合と同量だけ攻撃力が増加する。"
+        "description": "増加移動速度の一定割合と同量分、攻撃力が増加する。"
     },
     "spells": [
         {
@@ -836,8 +838,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "移動速度が短時間増加する。次の通常攻撃に対象をノックバックする効果と、スキル発動後の移動距離に応じた追加物理ダメージが付与される。 ",
-            "dynamicDescription": "<speed>移動速度</speed>が@Duration@秒、間徐々に増加する(@MinMovespeed*100@ - @MaxMovespeed*100@%)。次の通常攻撃に対象を<status>ノックバック</status>させる効果が付与され、<spellName>チャージ</spellName>中に移動した距離に応じて<physicalDamage>@MinDamage@-@MaxDamage@の物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
+            "description": "移動速度が短時間増加する。次の通常攻撃で対象をノックバックし、スキル発動後の自身の移動距離に応じて追加物理ダメージを与える。 ",
+            "dynamicDescription": "<speed>移動速度</speed>が@Duration@秒、間徐々に増加する(@MinMovespeed*100@ - @MaxMovespeed*100@%)。次の通常攻撃に対象を<status>ノックバック</status>させる効果が付与され、<spellName>チャージ</spellName>中に移動した距離に応じて<physicalDamage>@MinDamage@ - @MaxDamage@の物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

@@ -51762,7 +51762,7 @@
             "desc": "@ASDuration@秒間、後列のランダムなチャンピオン1体の攻撃速度が@ASMultiplier*100@%増加する。",
             "effects": {
                 "ASDuration": 7.0,
-                "ASMultiplier": 0.8500000238418579
+                "ASMultiplier": 1.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -52218,26 +52218,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_TrueFriendship18",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_TrueFriendship_Description",
-            "effects": {
-                "{a25a87df}": 2.0,
-                "{b82ea48a}": 2.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_TrueFriendship_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_BearsVisit18",
             "associatedTraits": [],
             "composition": [],
@@ -52269,26 +52249,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "錆びた鎧",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_Drizzle_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_Drizzle_Upgrade_Description",
-            "effects": {
-                "Delay": 8.0,
-                "{6d8ce3e4}": 15.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_Drizzle_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -52556,7 +52516,7 @@
             "apiName": "DA_18_Drizzle",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_Drizzle_Description",
+            "desc": "戦闘開始から@Delay@秒経過すると、味方チームが@ManaToGain@のマナを獲得する。",
             "effects": {
                 "Delay": 8.0,
                 "{2d7e43a8}": 10.0
@@ -52566,7 +52526,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_Drizzle_Name",
+            "name": "にわか雨",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -53197,7 +53157,7 @@
             "desc": "ファイターは体力が@ExecuteThreshold@%未満の対象にとどめを刺す。キル時に攻撃速度が@OnKillAtkSpdAmount*100@%増加する。",
             "effects": {
                 "ExecuteThreshold": 12.0,
-                "{a074cdeb}": 0.1499999761581421
+                "{a074cdeb}": 0.2999999523162842
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53250,7 +53210,7 @@
             "apiName": "DA_PottedLifebloom18",
             "associatedTraits": [],
             "composition": [],
-            "desc": "一時的に「ライフブロッサム」を1本獲得する。",
+            "desc": "一時的に「ライフブルーム」を1本獲得する。",
             "effects": {},
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53569,7 +53529,7 @@
             "composition": [],
             "desc": "@ASDurationUpgrade@秒間、後列のランダムなチャンピオン1体の攻撃速度が@ASMultiplierUpgrade*100@%増加する。",
             "effects": {
-                "{6c71691e}": 1.1500000953674316,
+                "{6c71691e}": 1.2999999523162842,
                 "{707d81f7}": 8.0
             },
             "from": null,
@@ -53770,23 +53730,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "オール5",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_FoundBigFriend18_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_FoundBigFriend_Upgrade_Description",
-            "effects": {},
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_FoundBigFriend_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -54360,7 +54303,7 @@
             "desc": "ファイターは体力が@UpgradeExecuteThreshold@<Set18CharmUpgrade>%</Set18CharmUpgrade>未満の対象にとどめを刺す。キル時に攻撃速度が@OnKillAtkSpdAmountUpgrade*100@%増加する。",
             "effects": {
                 "UpgradeExecuteThreshold": 15.0,
-                "{c2df5b31}": 0.3999999761581421
+                "{c2df5b31}": 0.6000000238418579
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -54808,6 +54751,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_ReturningFriendUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_ReturningFriend_Upgrade_Description",
+            "effects": {},
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_ReturningFriend_Upgrade_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_StandAlone18_Prismatic",
             "associatedTraits": [],
             "composition": [],
@@ -55238,6 +55198,26 @@
             "unique": false
         },
         {
+            "apiName": "DA_18_GroveArmorUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "最も体力が高いチャンピオンが @BonusArmorUpgrade@の物理防御と @BonusMRUpgrade@の魔法防御を獲得する。",
+            "effects": {
+                "{18e2f9a9}": 25.0,
+                "{ac3cc501}": 25.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "グローブ アーマー",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_FlipFrenzy18",
             "associatedTraits": [],
             "composition": [],
@@ -55391,26 +55371,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_GroveArmor_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_GroveArmor_Upgrade_Description",
-            "effects": {
-                "{18e2f9a9}": 25.0,
-                "{ac3cc501}": 25.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_GroveArmor_Upgrade_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_MiddlePath18",
             "associatedTraits": [],
             "composition": [],
@@ -55518,6 +55478,26 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "アフターショック",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_18_DrizzleUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "戦闘開始から@Delay@秒経過すると、味方チームが@ManaToGainUpgrade@のマナを獲得する。",
+            "effects": {
+                "Delay": 8.0,
+                "{6d8ce3e4}": 15.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "にわか雨",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -55904,7 +55884,7 @@
             "composition": [],
             "desc": "体力が最も多いユニットが巨大化し、体力が@HPGain@増加する。",
             "effects": {
-                "{e26d6f9e}": 750.0
+                "{e26d6f9e}": 800.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -56430,7 +56410,7 @@
             "composition": [],
             "desc": "後列にいる@NumChampionsUpgrade@体のランダムなチャンピオンが@UntargetableDurationUpgrade@秒間、対象指定不可になる。",
             "effects": {
-                "{38788569}": 10.0,
+                "{38788569}": 12.0,
                 "{3f2cae9b}": 3.0
             },
             "from": null,
@@ -56611,6 +56591,25 @@
             "unique": false
         },
         {
+            "apiName": "DA_RoomForAShroomUpgrade",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_RoomForAShroom_Upgrade_Description",
+            "effects": {
+                "{6cddf9fd}": 3.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_RoomForAShroom_Upgrade_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_DoodadJar18_Upgrade",
             "associatedTraits": [],
             "composition": [],
@@ -56624,26 +56623,6 @@
             "incompatibleTraits": [],
             "isAugment": false,
             "name": "装置瓶",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_TrueFriendship18_Upgrade",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_TrueFriendship_Upgrade_Description",
-            "effects": {
-                "{943e91b5}": 3.0,
-                "{c77056bc}": 2.0
-            },
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_TrueFriendship_Upgrade_Name",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -56982,7 +56961,7 @@
             "composition": [],
             "desc": "最も体力が高いユニット@NumUnitsUpgrade@体が巨大化し、体力が@HPGainUpgrade@増加する。",
             "effects": {
-                "{58332efe}": 750.0,
+                "{58332efe}": 800.0,
                 "{6d8a71ae}": 2.0
             },
             "from": null,
@@ -57127,6 +57106,25 @@
             "unique": false
         },
         {
+            "apiName": "DA_RoomForAShroom",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Charm_RoomForAShroom_Description",
+            "effects": {
+                "{f2956f6f}": 2.0
+            },
+            "from": null,
+            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": false,
+            "name": "TFT18_Charm_RoomForAShroom_Name",
+            "tags": [
+                "{5b609ae2}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_18_Preppers_Upgrade",
             "associatedTraits": [],
             "composition": [],
@@ -57236,23 +57234,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_FoundBigFriend18",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "TFT18_Charm_FoundBigFriend_Description",
-            "effects": {},
-            "from": null,
-            "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": false,
-            "name": "TFT18_Charm_FoundBigFriend_Name",
-            "tags": [
-                "{5b609ae2}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_RolyPolys18",
             "associatedTraits": [],
             "composition": [],
@@ -57353,7 +57334,7 @@
             "desc": "最も強いファイターまたはアサシン@NumChampions@体が@UntargetableDuration@秒間対象指定不可になる。",
             "effects": {
                 "NumChampions": 3.0,
-                "UntargetableDuration": 6.0
+                "UntargetableDuration": 8.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -57958,7 +57939,7 @@
             "apiName": "DA_18_GroveArmor",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_GroveArmor_Description",
+            "desc": "最も体力が高いチャンピオンが @BonusArmor@の物理防御と @BonusMR@の魔法防御を獲得する。",
             "effects": {
                 "BonusArmor": 15.0,
                 "BonusMR": 15.0
@@ -57968,7 +57949,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_GroveArmor_Name",
+            "name": "グローブ アーマー",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -83111,7 +83092,7 @@
                 "DA_Riftbeast18"
             ],
             "composition": [],
-            "desc": "2体目の「アルファ リフトビースト」を選択できるようになる。スカトルクラブ、シンダーリング、小石を1体ずつ獲得する。",
+            "desc": "2体目の「アルファ リフトビースト」を選択できるようになる。「アルファ リフトビースト」は、最大体力が@BonusHP*100@%、攻撃速度が@BonusAS*100@%増加する。スカトルクラブ、シンダーリング、小石を1体ずつ獲得する。",
             "effects": {
                 "BonusAS": 0.12000000476837158,
                 "BonusHP": 0.1499999761581421
@@ -83131,7 +83112,7 @@
             "apiName": "DA_Min_Max",
             "associatedTraits": [],
             "composition": [],
-            "desc": "「黄金のアイテム除去装置」を1個と、ランダムな素材アイテムを4個獲得する。",
+            "desc": "「黄金のアイテム除去装置」を1個、ランダムな素材アイテムを4個､@GoldAmount@ゴールドを獲得する。",
             "effects": {
                 "GoldAmount": 4.0
             },
@@ -84550,7 +84531,7 @@
             "apiName": "DA_PandorasItemsII",
             "associatedTraits": [],
             "composition": [],
-            "desc": "ラウンド開始時: ベンチのアイテムがランダムに変更される。<br><br>ランダムな素材アイテムを@NumberOfComponentsII@個獲得する。",
+            "desc": "ラウンド開始時: ベンチのアイテムがランダムに変更される。<br><br>ランダムな素材アイテムを@NumberOfComponentsII@個と、@GoldAmountII@ゴールドを獲得する。",
             "effects": {
                 "{739a48af}": 2.0,
                 "{98f3fe09}": 4.0
@@ -101173,7 +101154,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "現在対象としている敵から離れるようにブリンクして、対象に@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与え、攻撃速度を@AttackSpeedCalc1@%i:scaleAP%獲得する。\r\\n\r\\n4回目のスキル発動時に「大地の激憤」で獲得した攻撃速度をすべて消費し、最も多くの敵がいる集団を貫通する衝撃波を放つ。この衝撃波は、@PhysicalDamageCalc2@ %i:scaleAD%の物理ダメージを与え、敵を1体貫通するごとにダメージが@DamageReductionPerHit@ずつ減少する(最低@MinDamagePercent@)。",
+                        "desc": "現在対象としている敵から離れるようにブリンクして、対象に@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与え、攻撃速度を@AttackSpeedCalc1@%i:scaleAP%獲得する。\r\\n\r\\n4回目のスキル発動時に「森の突風」で獲得した攻撃速度をすべて消費し、敵の数が最も多い集団を貫通する衝撃波を放つ。この衝撃波は、@PhysicalDamageCalc2@%i:scaleAD%の物理ダメージを与え、敵を1体貫通するごとにダメージが@DamageReductionPerHit@ずつ減少する(最低@MinDamagePercent@)。",
                         "icon": "None",
                         "name": "森の突風",
                         "variables": []
@@ -101496,7 +101477,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "最も敵の数が多い直線上に向かって貫通する矢を放ち、@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。このダメージは敵に命中するたびに@DamageFalloffPerEnemy@ずつ減少する(最小@MinDamagePercent@)。\r\\n\r\\n矢が@RiftDuration@秒間軌跡を残す。軌跡の中の敵に@PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP% + 最大体力の@MaxHealthDamagePerSecond@にあたる物理ダメージを毎秒与え、@ChillPercent@%の<Keyword>スロウ効果</Keyword>を付与する。\r\\n\r\\n<Rules>スロウ効果: 攻撃速度が低下する。</Rules>",
+                        "desc": "最も敵の数が多い直線上に向かって貫通する矢を放ち、@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。このダメージは敵に命中するたびに@DamageFalloffPerEnemy@ずつ減少する(最小@MinDamagePercent@)。敵に命中しなかった場合、消費したマナの@ManaRefund@を返還する。\r\\n\r\\n矢が@RiftDuration@秒間軌跡を残す。軌跡の中の敵に@PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP% + 最大体力の@MaxHealthDamagePerSecond@にあたる物理ダメージを毎秒与え、@ChillPercent@%の<Keyword>スロウ効果</Keyword>を付与する。\r\\n\r\\n<Rules>スロウ効果: 攻撃速度が低下する。</Rules>",
                         "icon": "None",
                         "name": "精霊の裂け目",
                         "variables": []
@@ -102722,7 +102703,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>自動効果: </bright>通常攻撃が範囲内のランダムな敵を標的にして「出血」を付与し、@BleedDuration@秒かけて@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。通常攻撃のたびに@GenericCalc1@%i:scaleAP%の確率で@SpinningAxeDamageRatio@の追加物理ダメージを与え、@SpinningAxeBleedStacks@の「出血」を付与するようになる。\r\\n\r\\n<bright>発動効果:</bright>最も「出血」スタックが多い敵に向かって、巨大な斧を2本投げつける。命中した敵に@PhysicalDamageCalc3@%i:scaleAD%の物理ダメージを与え、「出血」を消費して残りのダメージを即座に与える。その後、両斧は命中した敵に@GenericCalc2@%i:scaleAD%の物理ダメージを与えながら自身の手元に戻る。 ",
+                        "desc": "<bright>自動効果: </bright>通常攻撃が範囲内のランダムな敵を標的にして「出血」を付与し、@BleedDuration@秒かけて@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。通常攻撃のたびに@GenericCalc1@%i:scaleAP%の確率で、@SpinningAxeDamageRatio@の追加物理ダメージを与え、@SpinningAxeBleedStacks@の「出血」を付与するようになる。\r\\n\r\\n<bright>発動効果:</bright>最も「出血」スタックが多い敵に向かって、巨大な斧を2本投げつける。命中した敵に@PhysicalDamageCalc3@%i:scaleAD%の物理ダメージを与え、「出血」を消費して残りのダメージを即座に与える。その後、両斧は命中した敵に@GenericCalc2@%i:scaleAD%の物理ダメージを与えながら自身の手元に戻る。敵に命中しなかった場合、消費したマナの@ManaRefund@を返還する。",
                         "icon": "None",
                         "name": "死の車輪",
                         "variables": []
@@ -103233,7 +103214,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>自動効果:</bright> スキル使用時、ラックスと特性を共有するすべての味方がマナを@ManaCalc1@%i:scaleAP%獲得する。\r\\n\r\\n<bright>発動効果:</bright> 最も敵が多い直線上にレーザーを発射し、@MagicDamageCalc1@%i:scaleAP%の魔法ダメージを与える。命中した敵1体につき、このダメージは@DamageReductionPerUnit@ずつ減少する(最小@MinimumFalloffDamageRatio@)。\r\\n\r\\n<bright>ソーラーボーナス:</bright> 配置した種類の異なる★3チャンピオン1体につき、@SolarBonusDamagePer3StarRadio@の追加ダメージを与える。",
+                        "desc": "<bright>自動効果:</bright> スキル使用時、ラックスと特性を共有するすべての味方がマナを@ManaCalc1@%i:scaleAP%獲得する。\r\\n\r\\n<bright>発動効果:</bright> 最も敵が多い一直線上にレーザーを発射し、@MagicDamageCalc1@%i:scaleAP%の魔法ダメージを与える。命中した敵1体につき、このダメージは@DamageReductionPerUnit@ずつ減少する(最小@MinimumFalloffDamageRatio@)。\r\\n\r\\n<bright>ソーラーボーナス:</bright> @SolarBonusDamageRatio@の追加ダメージを与える。配置した異なる★3チャンピオン1体ごとに@SolarBonusDamagePer3StarRadio@の追加ダメージを与える。",
                         "icon": "None",
                         "name": "ファイナルスパーク",
                         "variables": []
@@ -103576,7 +103557,7 @@
                 "DA_18_Counterspell_Prismatic",
                 "DA_18_Counterspell_Upgrade",
                 "DA_18_Drizzle",
-                "DA_18_Drizzle_Upgrade",
+                "DA_18_DrizzleUpgrade",
                 "DA_18_EarlyFix",
                 "DA_18_EarlyFix_Upgrade",
                 "DA_18_EmblemBlackthorn",
@@ -103613,7 +103594,7 @@
                 "DA_18_GiantGrowth",
                 "DA_18_GiantGrowth_Upgrade",
                 "DA_18_GroveArmor",
-                "DA_18_GroveArmor_Upgrade",
+                "DA_18_GroveArmorUpgrade",
                 "DA_18_HeatedRivalry",
                 "DA_18_HeatedRivalry_Upgrade",
                 "DA_18_HeroicSacrifice",
@@ -103822,8 +103803,6 @@
                 "DA_ForestGuide18_Upgrade",
                 "DA_ForestTwins18",
                 "DA_ForestTwinsUpgrade18",
-                "DA_FoundBigFriend18",
-                "DA_FoundBigFriend18_Upgrade",
                 "DA_FoundFriend18",
                 "DA_FoundFriend18_Upgrade",
                 "DA_GargoyleStoneplate",
@@ -103975,6 +103954,7 @@
                 "DA_RefreshingLight18_Upgrade",
                 "DA_Regeneration18",
                 "DA_Regeneration18_Upgrade",
+                "DA_ReturningFriendUpgrade",
                 "DA_Revenge18",
                 "DA_RevengeUpgrade18",
                 "DA_RideTheWave18",
@@ -103983,6 +103963,8 @@
                 "DA_RollingBones18_Upgrade",
                 "DA_RolyPolys18",
                 "DA_RolyPolysUpgrade18",
+                "DA_RoomForAShroom",
+                "DA_RoomForAShroomUpgrade",
                 "DA_Salvager18",
                 "DA_SalvagerUpgrade18",
                 "DA_Scrappy18",
@@ -104045,8 +104027,6 @@
                 "DA_TreetopArchers_Upgrade",
                 "DA_TrophyHunter18",
                 "DA_TrophyHunter18_Upgrade",
-                "DA_TrueFriendship18",
-                "DA_TrueFriendship18_Upgrade",
                 "DA_TurtlesVisit18",
                 "DA_TurtlesVisit18_Upgrade",
                 "DA_VoidStaff",
@@ -519789,7 +519769,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "現在対象としている敵から離れるようにブリンクして、対象に@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与え、攻撃速度を@AttackSpeedCalc1@%i:scaleAP%獲得する。\r\\n\r\\n4回目のスキル発動時に「大地の激憤」で獲得した攻撃速度をすべて消費し、最も多くの敵がいる集団を貫通する衝撃波を放つ。この衝撃波は、@PhysicalDamageCalc2@ %i:scaleAD%の物理ダメージを与え、敵を1体貫通するごとにダメージが@DamageReductionPerHit@ずつ減少する(最低@MinDamagePercent@)。",
+                        "desc": "現在対象としている敵から離れるようにブリンクして、対象に@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与え、攻撃速度を@AttackSpeedCalc1@%i:scaleAP%獲得する。\r\\n\r\\n4回目のスキル発動時に「森の突風」で獲得した攻撃速度をすべて消費し、敵の数が最も多い集団を貫通する衝撃波を放つ。この衝撃波は、@PhysicalDamageCalc2@%i:scaleAD%の物理ダメージを与え、敵を1体貫通するごとにダメージが@DamageReductionPerHit@ずつ減少する(最低@MinDamagePercent@)。",
                         "icon": "None",
                         "name": "森の突風",
                         "variables": []
@@ -520112,7 +520092,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "最も敵の数が多い直線上に向かって貫通する矢を放ち、@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。このダメージは敵に命中するたびに@DamageFalloffPerEnemy@ずつ減少する(最小@MinDamagePercent@)。\r\\n\r\\n矢が@RiftDuration@秒間軌跡を残す。軌跡の中の敵に@PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP% + 最大体力の@MaxHealthDamagePerSecond@にあたる物理ダメージを毎秒与え、@ChillPercent@%の<Keyword>スロウ効果</Keyword>を付与する。\r\\n\r\\n<Rules>スロウ効果: 攻撃速度が低下する。</Rules>",
+                        "desc": "最も敵の数が多い直線上に向かって貫通する矢を放ち、@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。このダメージは敵に命中するたびに@DamageFalloffPerEnemy@ずつ減少する(最小@MinDamagePercent@)。敵に命中しなかった場合、消費したマナの@ManaRefund@を返還する。\r\\n\r\\n矢が@RiftDuration@秒間軌跡を残す。軌跡の中の敵に@PhysicalDamageCalc2@%i:scaleAD%%i:scaleAP% + 最大体力の@MaxHealthDamagePerSecond@にあたる物理ダメージを毎秒与え、@ChillPercent@%の<Keyword>スロウ効果</Keyword>を付与する。\r\\n\r\\n<Rules>スロウ効果: 攻撃速度が低下する。</Rules>",
                         "icon": "None",
                         "name": "精霊の裂け目",
                         "variables": []
@@ -521338,7 +521318,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>自動効果: </bright>通常攻撃が範囲内のランダムな敵を標的にして「出血」を付与し、@BleedDuration@秒かけて@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。通常攻撃のたびに@GenericCalc1@%i:scaleAP%の確率で@SpinningAxeDamageRatio@の追加物理ダメージを与え、@SpinningAxeBleedStacks@の「出血」を付与するようになる。\r\\n\r\\n<bright>発動効果:</bright>最も「出血」スタックが多い敵に向かって、巨大な斧を2本投げつける。命中した敵に@PhysicalDamageCalc3@%i:scaleAD%の物理ダメージを与え、「出血」を消費して残りのダメージを即座に与える。その後、両斧は命中した敵に@GenericCalc2@%i:scaleAD%の物理ダメージを与えながら自身の手元に戻る。 ",
+                        "desc": "<bright>自動効果: </bright>通常攻撃が範囲内のランダムな敵を標的にして「出血」を付与し、@BleedDuration@秒かけて@PhysicalDamageCalc1@%i:scaleAD%の物理ダメージを与える。通常攻撃のたびに@GenericCalc1@%i:scaleAP%の確率で、@SpinningAxeDamageRatio@の追加物理ダメージを与え、@SpinningAxeBleedStacks@の「出血」を付与するようになる。\r\\n\r\\n<bright>発動効果:</bright>最も「出血」スタックが多い敵に向かって、巨大な斧を2本投げつける。命中した敵に@PhysicalDamageCalc3@%i:scaleAD%の物理ダメージを与え、「出血」を消費して残りのダメージを即座に与える。その後、両斧は命中した敵に@GenericCalc2@%i:scaleAD%の物理ダメージを与えながら自身の手元に戻る。敵に命中しなかった場合、消費したマナの@ManaRefund@を返還する。",
                         "icon": "None",
                         "name": "死の車輪",
                         "variables": []
@@ -521849,7 +521829,7 @@
                 },
                 {
                     "ability": {
-                        "desc": "<bright>自動効果:</bright> スキル使用時、ラックスと特性を共有するすべての味方がマナを@ManaCalc1@%i:scaleAP%獲得する。\r\\n\r\\n<bright>発動効果:</bright> 最も敵が多い直線上にレーザーを発射し、@MagicDamageCalc1@%i:scaleAP%の魔法ダメージを与える。命中した敵1体につき、このダメージは@DamageReductionPerUnit@ずつ減少する(最小@MinimumFalloffDamageRatio@)。\r\\n\r\\n<bright>ソーラーボーナス:</bright> 配置した種類の異なる★3チャンピオン1体につき、@SolarBonusDamagePer3StarRadio@の追加ダメージを与える。",
+                        "desc": "<bright>自動効果:</bright> スキル使用時、ラックスと特性を共有するすべての味方がマナを@ManaCalc1@%i:scaleAP%獲得する。\r\\n\r\\n<bright>発動効果:</bright> 最も敵が多い一直線上にレーザーを発射し、@MagicDamageCalc1@%i:scaleAP%の魔法ダメージを与える。命中した敵1体につき、このダメージは@DamageReductionPerUnit@ずつ減少する(最小@MinimumFalloffDamageRatio@)。\r\\n\r\\n<bright>ソーラーボーナス:</bright> @SolarBonusDamageRatio@の追加ダメージを与える。配置した異なる★3チャンピオン1体ごとに@SolarBonusDamagePer3StarRadio@の追加ダメージを与える。",
                         "icon": "None",
                         "name": "ファイナルスパーク",
                         "variables": []

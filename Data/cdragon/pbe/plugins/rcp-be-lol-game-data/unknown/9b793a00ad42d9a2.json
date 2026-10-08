@@ -6,7 +6,7 @@
     "name": "루시안",
     "alias": "Jade_Lucian",
     "title": "정화의 사도",
-    "shortBio": "빛의 심판 (R) 사격 횟수가 공격 속도에 비례해 증가하며, 사용 중 챔피언을 처치하면 끈질긴 추격(E)이 초기화됩니다.\\n빛의 사수(P)가 경계 중첩을 제공하지 않습니다.\\n끈질긴 추격(E)이 둔화를 해제합니다.",
+    "shortBio": "빛의 심판 (R) 사격 횟수가 공격 속도에 비례해 증가하며, 사용 중 챔피언을 처치하면 끈질긴 추격(E)이 초기화됩니다.<br>빛의 사수(P)가 경계 중첩을 제공하지 않습니다.<br>끈질긴 추격(E)이 둔화를 해제합니다.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 4,
@@ -691,7 +691,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "루시안이 대상을 관통하는 빛줄기를 발사합니다.",
-            "dynamicDescription": "적 유닛을 관통하는 빛줄기를 발사해, 일직선상의 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다. 미니언은 @TotalMinionDamage@의 피해를 받습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "루시안이 적 유닛을 관통하는 빛줄기를 발사해, 일직선상의 적에게 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입힙니다. 미니언은 <physicalDamage>@TotalMinionDamage@의 피해</physicalDamage>를 받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -841,7 +841,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "루시안이 별 모양으로 폭발하는 투사체를 발사해, 적에게 표식을 남깁니다. 표식이 남은 적을 공격하면 루시안이 이동 속도를 얻습니다.",
-            "dynamicDescription": "적을 맞히거나 사거리 끝에 도달하면 폭발하는 투사체를 발사합니다. 폭발은 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @DebuffDuration@초 동안 표식을 남깁니다.<br><br>표식이 남은 적에게 피해를 입히면 루시안이 @BuffDuration@초간 <speed>@MoveSpeedAmount@의 이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "루시안이 적을 맞히거나 사거리 끝에 도달하면 폭발하는 투사체를 발사합니다. 폭발은 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @DebuffDuration@초 동안 표식을 남깁니다.<br><br>표식이 남은 적에게 피해를 입히면 루시안이 @BuffDuration@초간 <speed>@MoveSpeedAmount@의 이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -991,7 +991,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "루시안이 짧은 거리를 돌진하며 모든 둔화 효과를 해제합니다.",
-            "dynamicDescription": "짧은 거리를 돌진하며 모든 <status>둔화</status> 효과를 해제합니다. <spellName>빛의 심판</spellName>을 사용하는 동안 루시안이 적을 처치하면 <spellName>끈질긴 추격</spellName>의 재사용 대기시간이 초기화됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "루시안이 짧은 거리를 돌진하며 모든 <status>둔화</status> 효과를 해제합니다. <spellName>빛의 심판</spellName>을 사용하는 동안 루시안이 적을 처치하면 <spellName>끈질긴 추격</spellName>의 재사용 대기시간이 초기화됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,
@@ -1141,7 +1141,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "루시안이 무기를 난사합니다.",
-            "dynamicDescription": "루시안이 @Duration@초 동안 자유롭게 이동하며, 지정한 방향으로 빠르게 사격을 가합니다. 각 사격은 유닛을 관통하지 않으며, 처음 맞히는 적에게 <physicalDamage>@DamagePerBullet@의 물리 피해</physicalDamage>를 입힙니다. 사격 횟수는 루시안의 <attackSpeed>공격 속도</attackSpeed>에 비례합니다.<br><br>총 @TotalNumShots@회 사격: <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage> <br>빛의 심판은 미니언에게 @PercentDamageAmpToMinions@%의 피해를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "루시안이 @Duration@초 동안 자유롭게 이동하며, 지정한 방향으로 빠르게 사격을 가합니다. 각 사격은 유닛을 관통하지 않으며, 처음 맞히는 적에게 <physicalDamage>@DamagePerBullet@의 물리 피해</physicalDamage>를 입힙니다. 사격 횟수는 루시안의 <attackSpeed>공격 속도</attackSpeed>에 비례합니다.<br><br>총 @TotalNumShots@회 사격: <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage> <br><spellName>빛의 심판</spellName>은 미니언에게 <attention>@PercentDamageAmpToMinions@%</attention>의 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1400.0,

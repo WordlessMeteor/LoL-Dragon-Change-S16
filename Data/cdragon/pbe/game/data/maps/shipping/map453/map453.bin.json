@@ -23012,6 +23012,7 @@
             "Jade_Ceremony_Barrier_Order_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_noRecolor",
             "Jade_Ceremony_Barrier_Order_Dissolve_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_Dissolve_noRecolor",
             "{dfdba4f7}": "{423eec40}",
+            "{544bd797}": "{fcd8e209}",
             "{e79698b5}": "Maps/Shipping/Map453/Particles/Jade_Pings_Retreat",
             "{c80a963d}": "Maps/Shipping/Map453/Particles/Jade_Pings_Push",
             "{bd0a84ec}": "Maps/Shipping/Map453/Particles/Jade_Pings_OMW",
@@ -90083,7 +90084,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Yorick/Skins/Base/Particles/SRU_JungleBuff_Baron_MeleeMin_AvatarOverlay.tex",
+                "texture": "ASSETS/Characters/Jade_Yorick/Skins/Base/Particles/Jade_Yorick_Base_R_WraithDeath.tex",
                 "numFrames": 4,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -90106,6 +90107,101 @@
         "particlePath": "Shared/Particles/Jade/mordekeiser_cotg_skin",
         "flags": 132,
         "objectPath": "{423eec40}",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{fcd8e209}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 3.0,
+                "lifetime": 0.10000000149011612,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0099999904632568,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Yorick/Skins/Base/Particles/SRU_JungleBuff_Baron_MeleeMin_AvatarOverlayLowvis.tex",
+                "numFrames": 4,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 100.0,
+                "lifetime": 100.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 100.0,
+                "emitterName": "placeholder",
+                "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Shared/Particles/Jade/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Shared/Particles/Jade/missing_instant.tex",
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 1600,
+                        "baseTexture": "{2de7711ebd1764ad}",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Yorick_ult_skin",
+        "particlePath": "Shared/Particles/Jade/Yorick_ult_skin",
+        "flags": 132,
+        "objectPath": "{fcd8e209}",
         "__type": "VfxSystemDefinitionData"
     },
     "Shared/Particles/Jade_temp_Summoner_Fortify_shield_tar": {

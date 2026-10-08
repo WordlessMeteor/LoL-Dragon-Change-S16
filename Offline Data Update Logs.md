@@ -2600,5 +2600,16 @@
 				DDragon: 16.19.1 -> 16.20.1
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-10-08 13-10-03</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.21.825.5794 -> 16.21.826.0843</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
