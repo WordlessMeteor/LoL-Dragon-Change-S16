@@ -701407,6 +701407,7 @@
         "mScriptName": "Kiwi_GoH_Disco_Gold_Missile",
         "mSpell": {
             "mAffectsTypeFlags": 3,
+            "mAffectsStatusFlags": 32,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_Q.dds"
@@ -702012,7 +702013,7 @@
             "castConeDistance": 0.0,
             "luaOnMissileUpdateDistanceInterval": 51.0,
             "mMissileSpec": {
-                "mMissileWidth": 250.0,
+                "mMissileWidth": 120.0,
                 "movementComponent": {
                     "mUseHeightOffsetAtEnd": true,
                     "mTracksTarget": false,
@@ -741546,7 +741547,7 @@
             "castConeDistance": 0.0,
             "luaOnMissileUpdateDistanceInterval": 51.0,
             "mMissileSpec": {
-                "mMissileWidth": 125.0,
+                "mMissileWidth": 100.0,
                 "movementComponent": {
                     "mUseHeightOffsetAtEnd": true,
                     "mTracksTarget": false,
@@ -741677,7 +741678,7 @@
             "castConeDistance": 0.0,
             "luaOnMissileUpdateDistanceInterval": 51.0,
             "mMissileSpec": {
-                "mMissileWidth": 250.0,
+                "mMissileWidth": 150.0,
                 "movementComponent": {
                     "mUseHeightOffsetAtEnd": true,
                     "mTracksTarget": false,
@@ -841091,6 +841092,25 @@
             "{3b7d049e}": {
                 "blocks": [
                     {
+                        "{d851ffa3}": "a337968a-7f22-4743-abbe-dc7e348c065f",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{21d06ba5}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": {
+                                "value": -1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
                         "{d851ffa3}": "0914aa7f-3624-47d6-a473-2269d9ddbfb6",
                         "Condition": {
                             "Value1": {
@@ -841105,6 +841125,7 @@
                             },
                             "__type": "ComparisonScriptCondition"
                         },
+                        "type": 1,
                         "Sequence": {
                             "blocks": [
                                 null,
@@ -844217,6 +844238,25 @@
             "{3b7d049e}": {
                 "blocks": [
                     {
+                        "{d851ffa3}": "a337968a-7f22-4743-abbe-dc7e348c065f",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{21d06ba5}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": {
+                                "value": -1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
                         "{d851ffa3}": "0914aa7f-3624-47d6-a473-2269d9ddbfb6",
                         "Condition": {
                             "Value1": {
@@ -844231,6 +844271,7 @@
                             },
                             "__type": "ComparisonScriptCondition"
                         },
+                        "type": 1,
                         "Sequence": {
                             "blocks": [
                                 null,
@@ -856618,6 +856659,234 @@
         },
         "__type": "BuffScript"
     },
+    "{9ae26fdf}": {
+        "ScriptName": "PBE_ONLY_BPPerfTest",
+        "path": "{9ae26fdf}",
+        "sequences": {
+            "{69523460}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "97e3e425-60fa-400b-91d6-be195e2a3e6c",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "dab08c24-e55d-41bb-8e50-85eac771fb9b",
+                        "Src": {
+                            "value": 10,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "IVFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "f7709b9e-9db8-4472-864f-6e209340e60b",
+                        "Src": {
+                            "value": 2.5,
+                            "__type": "FloatGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "IVFloat2",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "d526d7f8-bbc4-4355-aa5f-ead35f3e74da",
+                        "Src": {
+                            "value": 5,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "CVBPFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b8ee23c6-e56d-49fb-81ce-30ae89c636bd",
+                        "Src": {
+                            "value": 10,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "WorldVars"
+                            },
+                            "Var": "WVBPFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{ec26660f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "4bca9f63-19bb-457b-9434-2ad1d3aeb979",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "459f0b44-aa67-4f8f-9ca2-7c22888cc3c8",
+                        "Src": {
+                            "value": 3,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Var": "PTPFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "9eafbd6f-eb16-4b69-8f5b-81465ff5bdad",
+                        "Dest": {
+                            "Var": "testTable",
+                            "__type": "CustomTableSet"
+                        },
+                        "__type": "CreateCustomTableBlock"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "ca2f83cd-2924-4e99-9a3e-ead2d32b17f4",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "ee92d27f-48fb-470b-bbcb-bab5a4abaa3a",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "e1dd4cfa-f04e-4459-97b5-0f3e8ffb8844",
+                                                "Src": {
+                                                    "Var": "{2d7d4c67}",
+                                                    "__type": "ScriptTableGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "float",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "SortedByKeys": {
+                            "__type": "BoolGet"
+                        },
+                        "Table": {
+                            "Var": "{95d3677f}",
+                            "__type": "CustomTableGet"
+                        },
+                        "DestKey": {
+                            "Var": "keyUnit",
+                            "__type": "ScriptTableSet"
+                        },
+                        "DestValue": {
+                            "Var": "valDistance",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "ForEachInCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "279e89d2-4219-4c53-acc6-40e71a526cdf",
+                        "TableName": {
+                            "Var": "{95d3677f}",
+                            "__type": "CustomTableGet"
+                        },
+                        "__type": "DestroyCustomTableBlock"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "cabea517-e952-4443-b4da-df2cf6cbbe63",
+                        "Src": {
+                            "value": 10,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "IVFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "5d05a40a-22b6-4ef4-9050-8b64c3b00d50",
+                        "Src": {
+                            "value": 2.5,
+                            "__type": "FloatGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "IVFloat2",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "ad6868ad-187e-449a-984b-2c4a8dd94ee9",
+                        "Src": {
+                            "value": 5,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "CVBPFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8a8aaeb5-f004-42ba-87dc-3844f3107be1",
+                        "Src": {
+                            "value": 10,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "WorldVars"
+                            },
+                            "Var": "WVBPFloat",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "globalProperties": {
+            "PersistsThroughDeath": true,
+            "__type": "ScriptGlobalProperties"
+        },
+        "__type": "BuffScript"
+    },
     "{3afc663c}": {
         "AugmentNameId": "ARAM_StatAnvil_Hybrid1",
         "NameTra": "Cherry_StatAnvil_Hybrid1_Name",
@@ -868753,39 +869022,56 @@
         "feature": "{b5b5e0af}",
         "__type": "FeatureAudioDataProperties"
     },
-    "{2e7ce097}": {
-        "name": "{164a7d5e}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{3dbb0808}": {
-        "name": "{b4413f81}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{55dd29b8}": {
-        "name": "{80611be9}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{99b1a896}": {
-        "name": "{758ee03f}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{a8a5e851}": {
-        "name": "{cccfd056}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{fc5a2044}": {
-        "name": "{66dcb3ed}",
-        "__type": "{b5d9d3a0}"
-    },
-    "{32c302e7}": {
-        "ModifierId": "{25edba92}",
-        "{ab0ba193}": "Augment_Transmute_Modifier_Name",
-        "__type": "AugmentModifier"
-    },
-    "{5228f381}": {
-        "ModifierId": "{a153ee06}",
-        "{ab0ba193}": "Augment_SetBonus_Modifier_Name",
-        "__type": "AugmentModifier"
+    "{2745190b}": {
+        "mName": "Kiwi_GOH_Constants_Batch1",
+        "mConstants": {
+            "Bees_BurstRoll_MaxChance": {
+                "mValue": 8.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "TimeToNextShot_Min": {
+                "mValue": 3.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "TimeToNextShot_Max": {
+                "mValue": 10.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_GigaMissile_Gold": {
+                "mValue": 100.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_Missile_Gold": {
+                "mValue": 25.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_GigaMissile_HealPercent": {
+                "mValue": 0.4000000059604645,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_GigaMissile_HealPerLevel": {
+                "mValue": 50.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_Missile_HealPercent": {
+                "mValue": 0.20000000298023224,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_Missile_HealPerLevel": {
+                "mValue": 25.0,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_Missile_Bomb_DamagePercent": {
+                "mValue": 0.15000000596046448,
+                "__type": "GameModeConstantFloat"
+            },
+            "Bees_GigaMissile_Bomb_DamagePercent": {
+                "mValue": 0.30000001192092896,
+                "__type": "GameModeConstantFloat"
+            }
+        },
+        "mRequiredConstantsGroup": "{32f39c71}",
+        "__type": "ScriptDataObject"
     },
     "{32f39c71}": {
         "__type": "GameModeConstantsGroup"
@@ -869120,6 +869406,40 @@
         },
         "mRequiredConstantsGroup": "{32f39c71}",
         "__type": "ScriptDataObject"
+    },
+    "{2e7ce097}": {
+        "name": "{164a7d5e}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{3dbb0808}": {
+        "name": "{b4413f81}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{55dd29b8}": {
+        "name": "{80611be9}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{99b1a896}": {
+        "name": "{758ee03f}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{a8a5e851}": {
+        "name": "{cccfd056}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{fc5a2044}": {
+        "name": "{66dcb3ed}",
+        "__type": "{b5d9d3a0}"
+    },
+    "{32c302e7}": {
+        "ModifierId": "{25edba92}",
+        "{ab0ba193}": "Augment_Transmute_Modifier_Name",
+        "__type": "AugmentModifier"
+    },
+    "{5228f381}": {
+        "ModifierId": "{a153ee06}",
+        "{ab0ba193}": "Augment_SetBonus_Modifier_Name",
+        "__type": "AugmentModifier"
     },
     "{341d3e1c}": {
         "Upscale": false,

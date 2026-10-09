@@ -691,7 +691,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Люциан выпускает заряд света, пронзающий цель.",
-            "dynamicDescription": "Люциан выпускает заряд света, пронзающий цель и наносящий врагам на пути <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>. Наносит @TotalMinionDamage@ ед. урона миньонам.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Люциан выпускает заряд света, пронзающий цель и наносящий врагам на пути <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage>. Наносит <physicalDamage>@TotalMinionDamage@ ед. урона</physicalDamage> миньонам.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -841,7 +841,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Люциан выпускает снаряд, взрывающийся в форме звезды и помечающий врагов. Атакуя помеченных врагов, Люциан получает скорость передвижения.",
-            "dynamicDescription": "Выпускает снаряд, взрывающийся при столкновении с врагом или в конце пути. Взрыв наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>, помечая врагов на @DebuffDuration@ сек.<br><br>Нанося урон помеченным целям, Люциан получает <speed>@MoveSpeedAmount@ скорости передвижения</speed> на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Люциан выпускает снаряд, взрывающийся при столкновении с врагом или в конце пути. Взрыв наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>, помечая врагов на @DebuffDuration@ сек.<br><br>Нанося урон помеченным целям, Люциан получает <speed>@MoveSpeedAmount@ скорости передвижения</speed> на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -991,7 +991,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Люциан совершает рывок на небольшое расстояние, снимая все эффекты замедления.",
-            "dynamicDescription": "Совершает рывок на небольшое расстояние, снимая все эффекты <status>Замедления</status>. Если Люциан убивает врага, пока активен <spellName>Отстрел</spellName>, перезарядка <spellName>Нескончаемой погони</spellName> сбрасывается.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Люциан совершает рывок на небольшое расстояние, снимая все эффекты <status>Замедления</status>. Если Люциан убивает врага, пока активен <spellName>Отстрел</spellName>, перезарядка <spellName>Нескончаемой погони</spellName> сбрасывается.@SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,
@@ -1141,7 +1141,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Люциан безостановочно палит из своих пистолетов.",
-            "dynamicDescription": "Люциан свободно передвигается, выпуская серию выстрелов в одном направлении в течение @Duration@ сек. Эти выстрелы поражают 1-го врага на пути; каждый наносит <physicalDamage>@DamagePerBullet@ ед. физ. урона</physicalDamage>. Число выстрелов зависит от его <attackSpeed>скорости атаки</attackSpeed>.<br><br>Полный физ. урон от @TotalNumShots@ выстрелов: <physicalDamage>@TotalDamage@ ед.</physicalDamage><br>Отстрел наносит @PercentDamageAmpToMinions@% урона миньонам.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Люциан свободно передвигается, выпуская серию выстрелов в одном направлении в течение @Duration@ сек. Эти выстрелы поражают 1-го врага на пути; каждый наносит <physicalDamage>@DamagePerBullet@ ед. физ. урона</physicalDamage>. Число выстрелов зависит от его <attackSpeed>скорости атаки</attackSpeed>.<br><br>Полный физ. урон от @TotalNumShots@ выстрелов: <physicalDamage>@TotalDamage@ ед.</physicalDamage><br><spellName>Отстрел</spellName> наносит <attention>@PercentDamageAmpToMinions@% урона</attention> миньонам.@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1400.0,

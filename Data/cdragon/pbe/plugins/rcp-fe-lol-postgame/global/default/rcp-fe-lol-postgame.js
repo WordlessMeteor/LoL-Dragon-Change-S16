@@ -7256,8 +7256,10 @@
                 showAddPerksPageButton: s.Ember.computed("perks.isCurrentPageTemporary", "perks.isCustomPageCreationUnlocked", "hasAddedTempPage", "gameMode", (function() {
                     const e = this.get("perks.isCurrentPageTemporary"),
                         t = this.get("perks.isCustomPageCreationUnlocked"),
-                        n = this.get("hasAddedTempPage");
-                    return !(this.get("gameMode") === a.GAME_MODES.CHERRY) && t && (e || n)
+                        n = this.get("hasAddedTempPage"),
+                        s = this.get("gameMode") === a.GAME_MODES.CHERRY,
+                        o = this.get("gameMode") === a.GAME_MODES.KIWI;
+                    return !s && !o && t && (e || n)
                 })),
                 isTempPageNotAdded: s.Ember.computed.not("hasAddedTempPage"),
                 addPerksPageButtonEnabled: s.Ember.computed.and("perks.canAddCustomPage", "isTempPageNotAdded"),
@@ -9915,12 +9917,13 @@
                     }))) : this.set("_isBXPLoading", !1)
                 })),
                 telemetryEventOrigin: o.TELEMETRY_EVENT_ORIGIN_LOCATIONS.POSTGAME,
-                previousProgressPercent: s.Ember.computed("BXPbeforeGame", "nextLevelXP", "isLevelUp", (function() {
-                    const e = this.get("BXPbeforeGame"),
-                        t = this.get("nextLevelXP"),
-                        n = e % t,
-                        s = this.get("isLevelUp");
-                    return 0 === t || s ? 0 : n / t * 100
+                previousProgressPercent: s.Ember.computed("currentXP", "deltaBXP", "nextLevelXP", "isLevelUp", (function() {
+                    const e = this.get("currentXP"),
+                        t = this.get("deltaBXP"),
+                        n = this.get("nextLevelXP"),
+                        s = Math.max(0, e - t),
+                        a = this.get("isLevelUp");
+                    return 0 === n || a ? 0 : s / n * 100
                 })),
                 currentTotalPassProgress: s.Ember.computed("isMayhemSeasonPass", "eventHubService.seasonPassTrackCurrentTotalPassProgress", "eventHubService.mayhemPassTrackCurrentTotalPassProgress", (function() {
                     return this.get("isMayhemSeasonPass") ? this.get("eventHubService.mayhemPassTrackCurrentTotalPassProgress") : this.get("eventHubService.seasonPassTrackCurrentTotalPassProgress")
@@ -9963,10 +9966,12 @@
                         n = t >= 0 && t <= 5 ? t : 0;
                     return this.get("tra").get(`kiwi_s3_progression_rank${n}_title`)
                 })),
-                mayhemS3ProgressCounter: s.Ember.computed("isLevelUp", "currentXP", "nextLevelXP", "tra", (function() {
-                    return this.get("isLevelUp") ? this.get("tra").get("kiwi_s3_progression_rank_up") : this.get("tra").formatString("kiwi_s3_progression_counter", {
-                        currentProgress: this.get("currentXP"),
-                        nextLevelProgress: this.get("nextLevelXP")
+                mayhemS3ProgressCounter: s.Ember.computed("isLevelUp", "currentTotalPassProgress", "currentXP", "nextLevelXP", "tra", (function() {
+                    if (this.get("isLevelUp")) return this.get("tra").get("kiwi_s3_progression_rank_up");
+                    const e = this.get("currentTotalPassProgress");
+                    return this.get("tra").formatString("kiwi_s3_progression_counter", {
+                        currentProgress: e,
+                        nextLevelProgress: e - this.get("currentXP") + this.get("nextLevelXP")
                     })
                 })),
                 isMaxLevel: s.Ember.computed("nextReward", "isMayhemS3SeasonPass", (function() {

@@ -3840,14 +3840,14 @@
                 d = y(n(192)),
                 u = y(n(193)),
                 m = y(n(195)),
-                h = y(n(199)),
-                p = y(n(200)),
-                g = y(n(201)),
-                f = y(n(204)),
+                h = y(n(201)),
+                p = y(n(202)),
+                g = y(n(203)),
+                f = y(n(205)),
                 _ = y(n(194)),
-                v = y(n(205)),
-                E = n(369),
-                b = n(203);
+                v = y(n(206)),
+                E = n(370),
+                b = n(199);
 
             function y(e) {
                 return e && e.__esModule ? e : {
@@ -4102,9 +4102,9 @@
                 }
                 getMissionsButton() {
                     return {
-                        MissionsButtonComponent: n(395),
-                        MissionsButtonComponentStyles: n(396),
-                        MissionsButtonComponentTemplate: n(398),
+                        MissionsButtonComponent: n(396),
+                        MissionsButtonComponentStyles: n(397),
+                        MissionsButtonComponentTemplate: n(399),
                         MissionsService: n(144)
                     }
                 }
@@ -13734,12 +13734,14 @@
                 a = r(n(196)),
                 s = r(n(198)),
                 o = r(n(194));
+            n(199);
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
+            n(200);
             const l = "/v2/account/LCUPreferences/lol-loot",
                 c = "sanctumEATSeen",
                 d = "rcp_fe_lol_loot_event";
@@ -13751,8 +13753,9 @@
                     this.NavigationPlugin = e, this.menuItemId = e.getNavBarMenuItemId("LOOT"), this.navigationItem = void 0, this.summonerLevel = void 0, this.lootEnabled = !1, this.summonerBinding = void 0, this.platformConfigBinding = void 0, this.settingsBinding = void 0, this._navTooltip = document.createElement("div"), this._lootCallToActionObserver = null, this._requirements = {
                         settingsReady: !1,
                         eatPlatformConfigEnabled: !1,
-                        eatSeen: !0
-                    }, this.lootSettings = null
+                        eatSeen: !0,
+                        habaneroActivationEatSeen: !0
+                    }, this._eatShownThisSession = !1, this.lootSettings = null
                 }
                 init() {
                     this.navigationItem = this.createNavigationItem(), this.summonerBinding = (0, i.dataBinding)("/lol-summoner", i.websocket), this.platformConfigBinding = (0, i.dataBinding)("/lol-platform-config", i.websocket), this.settingsBinding = (0, i.dataBinding)("/lol-settings", i.websocket), this.clientConfigBinding = (0, i.dataBinding)("/lol-client-config", i.websocket), this.summonerBinding.observe("/v1/current-summoner", this, (e => {
@@ -13806,10 +13809,10 @@
                     })
                 }
                 _shouldShowSanctumEat() {
-                    return this._requirements.settingsReady && this._requirements.eatPlatformConfigEnabled && !this._requirements.eatSeen
+                    return this._requirements.settingsReady && this._requirements.eatPlatformConfigEnabled && !this._requirements.eatSeen && !this._eatShownThisSession
                 }
                 _enableSanctumEAT() {
-                    this.NavigationPlugin.setItemAlert(this.navigationItem, !0), this.NavigationPlugin.setAttentionTooltip(this.navigationItem, {
+                    this._eatShownThisSession = !0, this.NavigationPlugin.setItemAlert(this.navigationItem, !0), this.NavigationPlugin.setAttentionTooltip(this.navigationItem, {
                         title: i.tra.get("loot_sanctum_eat_title"),
                         description: i.tra.get("loot_sanctum_eat_description"),
                         iconUrl: "/fe/lol-static-assets/images/eat-icon-loot.png",
@@ -13824,6 +13827,12 @@
                     }).catch((e => {
                         i.logger.error(`sanctum-eat-tooltip -- error saving seen: ${e}`)
                     }))
+                }
+                _shouldShowHabaneroEat() {
+                    return !1
+                }
+                _enableHabaneroEAT() {
+                    0
                 }
             }
         }, (e, t, n) => {
@@ -13919,6 +13928,54 @@
                     }))
                 }
             }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.VALID_GAMEFLOW_TOAST_DISPLAY_STATES = t.PRODUCT = t.PATCHER_STATE_UNDETERMINED = t.PATCHER_STATE_REPAIRING = t.PATCHER_STATE_PATCHING = t.PATCHER_STATE_DONE = t.PATCHER_STATE_CORRUPTED = t.PATCHER_STATE_CHECKING = t.PATCHER_EVENT_TFT_LOBBY = t.NAV_BAR_MENU_ITEM_NAME_TO_ID = t.NAV_BAR_MENU_ITEMS = t.NAV_BAR_DISPLAY_MODES = t.EAT_TEXT_DISPLAY = t.ACTIVITY_CENTER_CONFIG_URL = void 0;
+            t.PATCHER_STATE_DONE = "done";
+            t.PATCHER_STATE_CHECKING = "checking";
+            t.PATCHER_STATE_CORRUPTED = "corrupted";
+            t.PATCHER_STATE_PATCHING = "patching";
+            t.PATCHER_STATE_REPAIRING = "repairing";
+            t.PATCHER_STATE_UNDETERMINED = "undetermined";
+            t.ACTIVITY_CENTER_CONFIG_URL = "/v3/client-config/lol.client_settings.client_navigability.activity_center_config";
+            t.PATCHER_EVENT_TFT_LOBBY = "tftLobby";
+            t.VALID_GAMEFLOW_TOAST_DISPLAY_STATES = ["None", "Lobby", "Matchmaking"];
+            const n = {
+                HOME: "rcp-fe-lol-home-main",
+                LEAGUE: "rcp-fe-lol-activity-center",
+                TFT: "rcp-fe-lol-tft",
+                YOURSHOP: "rcp-fe-lol-yourshop",
+                CLASH: "rcp-fe-lol-clash-full",
+                PROFILES: "rcp-fe-lol-profiles-main",
+                COLLECTIONS: "rcp-fe-lol-collections",
+                LOOT: "rcp-fe-lol-loot",
+                STORE: "rcp-fe-lol-store",
+                EVENTHUB: "rcp-fe-lol-event-hub"
+            };
+            t.NAV_BAR_MENU_ITEM_NAME_TO_ID = n;
+            const i = {
+                MAIN: [n.LEAGUE, n.HOME, n.TFT],
+                EPHEMERAL_EVENT: [n.EVENTHUB],
+                EPHEMERAL_CLASH: [n.CLASH],
+                PERMANENT: [n.COLLECTIONS, n.LOOT],
+                PURCHASE: [n.YOURSHOP, n.STORE]
+            };
+            t.NAV_BAR_MENU_ITEMS = i, n.TFTU = "rcp-fe-tft", i.MAIN.push(n.TFTU);
+            t.EAT_TEXT_DISPLAY = {
+                LARGE: "large",
+                SMALL: "small"
+            };
+            t.NAV_BAR_DISPLAY_MODES = ["ICONS", "TEXT_AND_ICONS"];
+            const a = {
+                TFT: "tft",
+                LOL: "lol"
+            };
+            t.PRODUCT = a, n.JADE = "rcp-fe-lol-jade", i.MAIN.splice(1, 0, n.JADE), a.JADE = "jade"
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14107,8 +14164,8 @@
                 s = (i = n(194)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(202),
-                r = n(203);
+                o = n(204),
+                r = n(199);
             const l = "/events",
                 c = "nav-bar",
                 d = "/v2/account/LCUPreferences/event-hub",
@@ -14451,51 +14508,6 @@
                 DEFAULT: "Default",
                 MAYHEM: "Mayhem"
             }
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.VALID_GAMEFLOW_TOAST_DISPLAY_STATES = t.PRODUCT = t.PATCHER_STATE_UNDETERMINED = t.PATCHER_STATE_REPAIRING = t.PATCHER_STATE_PATCHING = t.PATCHER_STATE_DONE = t.PATCHER_STATE_CORRUPTED = t.PATCHER_STATE_CHECKING = t.PATCHER_EVENT_TFT_LOBBY = t.NAV_BAR_MENU_ITEM_NAME_TO_ID = t.NAV_BAR_MENU_ITEMS = t.NAV_BAR_DISPLAY_MODES = t.EAT_TEXT_DISPLAY = t.ACTIVITY_CENTER_CONFIG_URL = void 0;
-            t.PATCHER_STATE_DONE = "done";
-            t.PATCHER_STATE_CHECKING = "checking";
-            t.PATCHER_STATE_CORRUPTED = "corrupted";
-            t.PATCHER_STATE_PATCHING = "patching";
-            t.PATCHER_STATE_REPAIRING = "repairing";
-            t.PATCHER_STATE_UNDETERMINED = "undetermined";
-            t.ACTIVITY_CENTER_CONFIG_URL = "/v3/client-config/lol.client_settings.client_navigability.activity_center_config";
-            t.PATCHER_EVENT_TFT_LOBBY = "tftLobby";
-            t.VALID_GAMEFLOW_TOAST_DISPLAY_STATES = ["None", "Lobby", "Matchmaking"];
-            const n = {
-                HOME: "rcp-fe-lol-home-main",
-                LEAGUE: "rcp-fe-lol-activity-center",
-                TFT: "rcp-fe-lol-tft",
-                YOURSHOP: "rcp-fe-lol-yourshop",
-                CLASH: "rcp-fe-lol-clash-full",
-                PROFILES: "rcp-fe-lol-profiles-main",
-                COLLECTIONS: "rcp-fe-lol-collections",
-                LOOT: "rcp-fe-lol-loot",
-                STORE: "rcp-fe-lol-store",
-                EVENTHUB: "rcp-fe-lol-event-hub"
-            };
-            t.NAV_BAR_MENU_ITEM_NAME_TO_ID = n;
-            const i = {
-                MAIN: [n.LEAGUE, n.HOME, n.TFT],
-                EPHEMERAL_EVENT: [n.EVENTHUB],
-                EPHEMERAL_CLASH: [n.CLASH],
-                PERMANENT: [n.COLLECTIONS, n.LOOT],
-                PURCHASE: [n.YOURSHOP, n.STORE]
-            };
-            t.NAV_BAR_MENU_ITEMS = i, n.TFTU = "rcp-fe-tft", i.MAIN.push(n.TFTU);
-            t.EAT_TEXT_DISPLAY = {
-                LARGE: "large",
-                SMALL: "small"
-            };
-            t.NAV_BAR_DISPLAY_MODES = ["ICONS", "TEXT_AND_ICONS"];
-            const a = {
-                TFT: "tft",
-                LOL: "lol"
-            };
-            t.PRODUCT = a, n.JADE = "rcp-fe-lol-jade", i.MAIN.splice(1, 0, n.JADE), a.JADE = "jade"
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14565,10 +14577,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function(e) {
-                const t = new(0, n(208).default)(e);
+                const t = new(0, n(209).default)(e);
                 return t.init(), new a.default(t)
             };
-            var i, a = (i = n(206)) && i.__esModule ? i : {
+            var i, a = (i = n(207)) && i.__esModule ? i : {
                 default: i
             }
         }, (e, t, n) => {
@@ -14576,7 +14588,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(207);
+            var i = n(208);
             t.default = class {
                 constructor(e) {
                     this._activityCenterApi = e
@@ -14686,17 +14698,17 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(209),
-                s = n(210),
-                o = n(222),
-                r = n(226),
-                l = g(n(357)),
-                c = g(n(358)),
-                d = g(n(359)),
-                u = g(n(271)),
-                m = g(n(220)),
-                h = g(n(360)),
-                p = n(207);
+                a = n(210),
+                s = n(211),
+                o = n(223),
+                r = n(227),
+                l = g(n(358)),
+                c = g(n(359)),
+                d = g(n(360)),
+                u = g(n(272)),
+                m = g(n(221)),
+                h = g(n(361)),
+                p = n(208);
 
             function g(e) {
                 return e && e.__esModule ? e : {
@@ -15213,120 +15225,120 @@
                 }), i.EmberApplicationFactory.setFactoryDefinition(t)
             };
             var i = n(1),
-                a = n(210),
-                s = dt(n(212)),
-                o = dt(n(213)),
-                r = dt(n(214)),
-                l = dt(n(216)),
-                c = dt(n(218)),
-                d = dt(n(225)),
-                u = dt(n(238)),
-                m = dt(n(239)),
-                h = dt(n(240)),
-                p = dt(n(242)),
-                g = dt(n(245)),
-                f = dt(n(246)),
-                _ = dt(n(247)),
-                v = dt(n(249)),
-                E = dt(n(250)),
-                b = dt(n(251)),
-                y = dt(n(252)),
-                T = dt(n(253)),
-                S = dt(n(254)),
-                C = dt(n(256)),
-                I = dt(n(257)),
-                x = dt(n(258)),
-                w = dt(n(260)),
-                A = dt(n(262)),
-                k = dt(n(263)),
-                O = dt(n(264)),
-                N = dt(n(265)),
-                R = dt(n(266)),
-                P = dt(n(267)),
-                L = dt(n(268)),
-                M = dt(n(269)),
-                D = dt(n(270)),
-                B = dt(n(271)),
-                H = dt(n(273)),
-                U = dt(n(275)),
-                F = dt(n(278)),
-                V = dt(n(279)),
-                j = dt(n(280)),
-                G = dt(n(281)),
-                Y = dt(n(282)),
-                W = dt(n(283)),
-                K = dt(n(284)),
-                q = dt(n(285)),
-                $ = dt(n(286)),
-                z = dt(n(287)),
-                X = dt(n(288)),
-                Q = dt(n(289)),
-                J = dt(n(290)),
-                Z = dt(n(292)),
-                ee = dt(n(293)),
-                te = dt(n(294)),
-                ne = dt(n(295)),
-                ie = dt(n(296)),
-                ae = dt(n(297)),
-                se = dt(n(298)),
-                oe = dt(n(299)),
-                re = dt(n(300)),
-                le = dt(n(302)),
-                ce = dt(n(303)),
-                de = dt(n(304)),
-                ue = dt(n(305)),
-                me = dt(n(306)),
-                he = dt(n(307)),
-                pe = dt(n(308)),
-                ge = dt(n(309)),
-                fe = dt(n(310)),
-                _e = dt(n(311)),
-                ve = dt(n(312)),
-                Ee = dt(n(313)),
-                be = dt(n(314)),
-                ye = dt(n(315)),
-                Te = dt(n(316)),
-                Se = dt(n(317)),
-                Ce = dt(n(318)),
-                Ie = dt(n(319)),
-                xe = dt(n(320)),
-                we = dt(n(321)),
-                Ae = dt(n(322)),
-                ke = dt(n(323)),
-                Oe = dt(n(324)),
-                Ne = dt(n(325)),
-                Re = dt(n(326)),
-                Pe = dt(n(327)),
-                Le = dt(n(328)),
-                Me = dt(n(329)),
-                De = dt(n(330)),
-                Be = dt(n(331)),
-                He = dt(n(332)),
-                Ue = dt(n(333)),
-                Fe = dt(n(334)),
-                Ve = dt(n(335)),
-                je = dt(n(336)),
-                Ge = dt(n(272)),
-                Ye = dt(n(337)),
-                We = dt(n(338)),
-                Ke = dt(n(339)),
-                qe = dt(n(340)),
-                $e = dt(n(341)),
-                ze = dt(n(342)),
-                Xe = dt(n(343)),
-                Qe = dt(n(344)),
-                Je = dt(n(345)),
-                Ze = dt(n(346)),
-                et = dt(n(347)),
-                tt = dt(n(348)),
-                nt = dt(n(349)),
-                it = dt(n(350)),
-                at = dt(n(351)),
-                st = dt(n(352)),
-                ot = dt(n(353)),
-                rt = dt(n(354)),
-                lt = dt(n(355)),
-                ct = dt(n(356));
+                a = n(211),
+                s = dt(n(213)),
+                o = dt(n(214)),
+                r = dt(n(215)),
+                l = dt(n(217)),
+                c = dt(n(219)),
+                d = dt(n(226)),
+                u = dt(n(239)),
+                m = dt(n(240)),
+                h = dt(n(241)),
+                p = dt(n(243)),
+                g = dt(n(246)),
+                f = dt(n(247)),
+                _ = dt(n(248)),
+                v = dt(n(250)),
+                E = dt(n(251)),
+                b = dt(n(252)),
+                y = dt(n(253)),
+                T = dt(n(254)),
+                S = dt(n(255)),
+                C = dt(n(257)),
+                I = dt(n(258)),
+                x = dt(n(259)),
+                w = dt(n(261)),
+                A = dt(n(263)),
+                k = dt(n(264)),
+                O = dt(n(265)),
+                N = dt(n(266)),
+                R = dt(n(267)),
+                P = dt(n(268)),
+                L = dt(n(269)),
+                M = dt(n(270)),
+                D = dt(n(271)),
+                B = dt(n(272)),
+                H = dt(n(274)),
+                U = dt(n(276)),
+                F = dt(n(279)),
+                V = dt(n(280)),
+                j = dt(n(281)),
+                G = dt(n(282)),
+                Y = dt(n(283)),
+                W = dt(n(284)),
+                K = dt(n(285)),
+                q = dt(n(286)),
+                $ = dt(n(287)),
+                z = dt(n(288)),
+                X = dt(n(289)),
+                Q = dt(n(290)),
+                J = dt(n(291)),
+                Z = dt(n(293)),
+                ee = dt(n(294)),
+                te = dt(n(295)),
+                ne = dt(n(296)),
+                ie = dt(n(297)),
+                ae = dt(n(298)),
+                se = dt(n(299)),
+                oe = dt(n(300)),
+                re = dt(n(301)),
+                le = dt(n(303)),
+                ce = dt(n(304)),
+                de = dt(n(305)),
+                ue = dt(n(306)),
+                me = dt(n(307)),
+                he = dt(n(308)),
+                pe = dt(n(309)),
+                ge = dt(n(310)),
+                fe = dt(n(311)),
+                _e = dt(n(312)),
+                ve = dt(n(313)),
+                Ee = dt(n(314)),
+                be = dt(n(315)),
+                ye = dt(n(316)),
+                Te = dt(n(317)),
+                Se = dt(n(318)),
+                Ce = dt(n(319)),
+                Ie = dt(n(320)),
+                xe = dt(n(321)),
+                we = dt(n(322)),
+                Ae = dt(n(323)),
+                ke = dt(n(324)),
+                Oe = dt(n(325)),
+                Ne = dt(n(326)),
+                Re = dt(n(327)),
+                Pe = dt(n(328)),
+                Le = dt(n(329)),
+                Me = dt(n(330)),
+                De = dt(n(331)),
+                Be = dt(n(332)),
+                He = dt(n(333)),
+                Ue = dt(n(334)),
+                Fe = dt(n(335)),
+                Ve = dt(n(336)),
+                je = dt(n(337)),
+                Ge = dt(n(273)),
+                Ye = dt(n(338)),
+                We = dt(n(339)),
+                Ke = dt(n(340)),
+                qe = dt(n(341)),
+                $e = dt(n(342)),
+                ze = dt(n(343)),
+                Xe = dt(n(344)),
+                Qe = dt(n(345)),
+                Je = dt(n(346)),
+                Ze = dt(n(347)),
+                et = dt(n(348)),
+                tt = dt(n(349)),
+                nt = dt(n(350)),
+                it = dt(n(351)),
+                at = dt(n(352)),
+                st = dt(n(353)),
+                ot = dt(n(354)),
+                rt = dt(n(355)),
+                lt = dt(n(356)),
+                ct = dt(n(357));
 
             function dt(e) {
                 return e && e.__esModule ? e : {
@@ -15471,7 +15483,7 @@
             };
             const s = {
                 AC_MAIN: {
-                    src: n(211),
+                    src: n(212),
                     options: {
                         isLoop: !0,
                         crossfadeTime: !0,
@@ -15555,7 +15567,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(215),
+                a = n(216),
                 s = i.Ember.Route.extend({
                     queryParams: {
                         initialSelectedActivityId: {
@@ -15630,7 +15642,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(217);
+            n(218);
             var a = i.Ember.Controller.extend({
                 actions: {
                     routeTo(e) {
@@ -15648,17 +15660,17 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(219),
-                o = (i = n(220)) && i.__esModule ? i : {
+                s = n(220),
+                o = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(215),
-                l = n(221),
-                c = n(210),
-                d = n(222),
-                u = n(223),
-                m = n(207),
-                h = n(224);
+                r = n(216),
+                l = n(222),
+                c = n(211),
+                d = n(223),
+                u = n(224),
+                m = n(208),
+                h = n(225);
             var p = a.Ember.Controller.extend({
                 queryParams: ["initialSelectedActivityId", "applicationExisted", "timeStamp"],
                 initialSelectedActivityId: null,
@@ -16088,7 +16100,7 @@
                 return u
             };
             var i = n(1),
-                a = n(210);
+                a = n(211);
             const s = "primaryIntroSound",
                 o = "primaryAmbienceSound",
                 r = "secondaryIntroSound",
@@ -16247,7 +16259,7 @@
             }, t.isAcPersistentLayerTab = function(e) {
                 return s.includes(e?.action?.type)
             };
-            var i = n(210);
+            var i = n(211);
             t.ACTIVITY_CENTER_LAYER_CONTAINER_CLASS = "activity-center__persistent-layer-container";
             const a = {
                 OPEN_METAGAME: "lc_open_metagame"
@@ -16329,12 +16341,12 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(226),
-                o = (i = n(220)) && i.__esModule ? i : {
+                s = n(227),
+                o = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(210),
-                l = n(223),
+                r = n(211),
+                l = n(224),
                 c = n(53);
             const {
                 MILLISECONDS_IN_A_DAY: d
@@ -16454,12 +16466,12 @@
                     return o.SHOW_OVERLAY_HANDLER
                 }
             }), t.setActionHandlerApiInstance = t.getApiInstance = void 0;
-            var i = n(227),
-                a = n(229),
-                s = n(233),
-                o = n(235),
-                r = n(219),
-                l = n(237);
+            var i = n(228),
+                a = n(230),
+                s = n(234),
+                o = n(236),
+                r = n(220),
+                l = n(238);
             let c = null;
             t.setActionHandlerApiInstance = e => {
                 c = e
@@ -16473,8 +16485,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.GET_HANDLER = void 0;
-            var i = n(219),
-                a = n(228);
+            var i = n(220),
+                a = n(229);
             const s = {
                 [i.ACTION.GET_INVENTORY_BY_TYPE]: a.getInventoryByTypeHandler,
                 [i.ACTION.GET_CATALOG_ITEM]: a.getCatalogItemHandler,
@@ -16530,8 +16542,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.OBSERVE_HANDLER = void 0;
-            var i = n(219),
-                a = n(230);
+            var i = n(220),
+                a = n(231);
             const s = {
                 [i.ACTION.OBSERVE_EVENT_PASS]: a.eventPassObserverHandler,
                 [i.ACTION.OBSERVE_INVENTORY_OWNERSHIP]: a.inventoryOwnershipObserveHandler,
@@ -16545,8 +16557,8 @@
                 value: !0
             }), t.subscribeAwConfig = t.isAwExperimentNearingEnd = t.inventoryOwnershipObserveHandler = t.inventoryNotificationObserveHandler = t.getAwExperimentEndMs = t.eventPassProgressObserveHandler = t.eventPassObserverHandler = t.AW_EXPERIMENT_END_THRESHOLD_DAYS = void 0;
             var i = n(1),
-                a = n(231),
-                s = n(232);
+                a = n(232),
+                s = n(233);
             const o = "/lol-client-config/v3/client-config/operational.awConfig";
             let r = null,
                 l = !1,
@@ -16719,8 +16731,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.ROUTE_HANDLER = void 0;
-            var i = n(219),
-                a = n(234);
+            var i = n(220),
+                a = n(235);
             const s = {
                 [i.ACTION.ROUTE_STORE]: a.openStoreHandler,
                 [i.ACTION.ROUTE_FREE_CHAMPION_ROTATION]: a.freeChampRotationHandler,
@@ -16750,15 +16762,15 @@
                 value: !0
             }), t.setInfoHubDeeplinkFunctionHandler = t.setHomeTabDeeplinkFunctionHandler = t.openYourShopHandler = t.openTutorialHandler = t.openTFTHubHandler = t.openStoreHandler = t.openQueueHandler = t.openPawHandler = t.openObjectivesHandler = t.openMetagamePersistentIframeHandler = t.openLootHandler = t.openLeagueClientSettingsHandler = t.openInfoHubDeeplinkHandler = t.openIframeModalHandler = t.openHomeTabHandler = t.openExternalLinkHandler = t.openEventShopHandler = t.openClassicStoreHandler = t.openClassicHomeTabHandler = t.openClashHandler = t.freeChampRotationHandler = t.championDetailsHandler = void 0;
             var i, a = n(1),
-                s = n(231),
+                s = n(232),
                 o = n(53),
-                r = (i = n(220)) && i.__esModule ? i : {
+                r = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                l = n(210),
-                c = n(223),
-                d = n(226),
-                u = n(224);
+                l = n(211),
+                c = n(224),
+                d = n(227),
+                u = n(225);
             const m = {
                 handler: (e, {
                     page: t,
@@ -17094,8 +17106,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SHOW_OVERLAY_HANDLER = void 0;
-            var i = n(219),
-                a = n(236);
+            var i = n(220),
+                a = n(237);
             const s = {
                 [i.ACTION.ROUTE_OPEN_IFRAME_MODAL]: a.openIframeModalHandler,
                 [i.ACTION.ROUTE_EXTERNAL_WEBLINK]: a.openExternalLinkHandler,
@@ -17114,12 +17126,12 @@
             }), t.setInfoHubDeeplinkFunctionHandler = t.openPawHandler = t.openObjectivesHandler = t.openMetagamePersistentIframeHandler = t.openLeagueClientSettingsHandler = t.openInfoHubDeeplinkHandler = t.openIframeModalHandler = t.openExternalLinkHandler = t.championDetailsHandler = void 0;
             var i, a = n(1),
                 s = n(53),
-                o = (i = n(220)) && i.__esModule ? i : {
+                o = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(210),
-                l = n(223),
-                c = n(224);
+                r = n(211),
+                l = n(224),
+                c = n(225);
             const d = {
                 handler: async (e, t) => {
                     const {
@@ -17247,8 +17259,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.ADD_CALLBACK_HANDLER = void 0;
-            var i = n(219),
-                a = n(234);
+            var i = n(220),
+                a = n(235);
             const s = {
                 [i.ACTION.SET_DEEP_LINK_CALLBACK]: a.setHomeTabDeeplinkFunctionHandler,
                 [i.ACTION.SET_DEEP_LINK_OPEN_INFO_HUB_CALLBACK]: a.setInfoHubDeeplinkFunctionHandler
@@ -17269,9 +17281,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = n(226),
-                o = n(223),
+                a = n(211),
+                s = n(227),
+                o = n(224),
                 r = i.Ember.Component.extend({
                     classNames: ["ac-error-screen"],
                     errorContent: null,
@@ -17310,10 +17322,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(210),
-                o = n(223),
-                r = n(221);
-            var l = ((i = n(241)) && i.__esModule ? i : {
+                s = n(211),
+                o = n(224),
+                r = n(222);
+            var l = ((i = n(242)) && i.__esModule ? i : {
                 default: i
             }).default.extend({
                 isLoading: !0,
@@ -17353,7 +17365,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(223),
+                a = n(224),
                 s = i.Ember.Component.extend({
                     telemetryEventOrigin: null,
                     id: null,
@@ -17380,11 +17392,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = n(223),
-                o = n(221),
-                r = c(n(220)),
-                l = c(n(241));
+                a = n(211),
+                s = n(224),
+                o = n(222),
+                r = c(n(221)),
+                l = c(n(242));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -17394,12 +17406,12 @@
             const d = "boba-minigame-qa",
                 u = {
                     ["25-6-boba-minigame"]: {
-                        hover: n(243),
-                        click: n(244)
+                        hover: n(244),
+                        click: n(245)
                     },
                     [d]: {
-                        hover: n(243),
-                        click: n(244)
+                        hover: n(244),
+                        click: n(245)
                     }
                 };
             var m = l.default.extend({
@@ -17506,10 +17518,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(210),
-                o = n(223),
-                r = n(221);
-            var l = ((i = n(241)) && i.__esModule ? i : {
+                s = n(211),
+                o = n(224),
+                r = n(222);
+            var l = ((i = n(242)) && i.__esModule ? i : {
                 default: i
             }).default.extend({
                 isLoading: !0,
@@ -17563,14 +17575,14 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(210),
-                o = n(223),
-                r = n(232),
-                l = n(221),
-                c = (i = n(241)) && i.__esModule ? i : {
+                s = n(211),
+                o = n(224),
+                r = n(233),
+                l = n(222),
+                c = (i = n(242)) && i.__esModule ? i : {
                     default: i
                 },
-                d = n(248);
+                d = n(249);
             const u = "CHAMPION_SKIN",
                 m = "BUNDLES",
                 h = {
@@ -17921,7 +17933,7 @@
                 return i.Ember.RSVP.allSettled(t)
             }, t.loadVideo = o;
             var i = n(1),
-                a = n(210);
+                a = n(211);
 
             function s(e) {
                 if (e) return new i.Ember.RSVP.Promise(((t, n) => {
@@ -17959,9 +17971,9 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(223),
-                o = n(221);
-            var r = ((i = n(241)) && i.__esModule ? i : {
+                s = n(224),
+                o = n(222);
+            var r = ((i = n(242)) && i.__esModule ? i : {
                 default: i
             }).default.extend({
                 isLoading: !0,
@@ -18020,10 +18032,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(226),
-                o = n(202),
-                r = n(223);
-            var l = ((i = n(241)) && i.__esModule ? i : {
+                s = n(227),
+                o = n(204),
+                r = n(224);
+            var l = ((i = n(242)) && i.__esModule ? i : {
                 default: i
             }).default.extend({
                 isLoading: !0,
@@ -18107,8 +18119,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = n(248),
+                a = n(211),
+                s = n(249),
                 o = i.Ember.Component.extend({
                     classNames: ["activity-center__background-component"],
                     classNameBindings: ["hasOverride:activity-center__background-component--override"],
@@ -18172,11 +18184,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = n(210),
-                o = (i = n(220)) && i.__esModule ? i : {
+                s = n(211),
+                o = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(223);
+                r = n(224);
             const l = "left",
                 c = "right",
                 d = "clicked",
@@ -18541,10 +18553,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = n(223),
-                o = l(n(241)),
-                r = l(n(220));
+                a = n(211),
+                s = n(224),
+                o = l(n(242)),
+                r = l(n(221));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -18597,9 +18609,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(255),
-                s = n(248),
-                o = n(210),
+                a = n(256),
+                s = n(249),
+                o = n(211),
                 r = i.Ember.Component.extend({
                     classNames: ["activity-center__parallax-background"],
                     isParallaxEventAttached: !1,
@@ -18738,13 +18750,13 @@
             }), t.default = void 0;
             var i = n(1),
                 a = n(53),
-                s = n(226),
-                o = m(n(220)),
-                r = n(210),
-                l = n(232),
-                c = n(223),
-                d = n(230),
-                u = m(n(241));
+                s = n(227),
+                o = m(n(221)),
+                r = n(211),
+                l = n(233),
+                c = n(224),
+                d = n(231),
+                u = m(n(242));
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -19034,8 +19046,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = n(223),
+                a = n(211),
+                s = n(224),
                 o = i.Ember.Component.extend({
                     classNames: ["activity-center__media-group"],
                     mediaGroups: null,
@@ -19098,11 +19110,11 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(210),
-                r = n(259);
+                o = n(211),
+                r = n(260);
             var l = a.Ember.Component.extend({
                 classNames: ["activity-center-count-down"],
                 endDateTime: "",
@@ -19175,15 +19187,15 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(210),
-                o = n(223),
-                r = (i = n(241)) && i.__esModule ? i : {
+                s = n(211),
+                o = n(224),
+                r = (i = n(242)) && i.__esModule ? i : {
                     default: i
                 },
-                l = n(226),
-                c = n(261),
-                d = n(232),
-                u = n(230);
+                l = n(227),
+                c = n(262),
+                d = n(233),
+                u = n(231);
             var m = r.default.extend({
                 classNames: ["activity-center-cta-button"],
                 patcherService: a.Ember.inject.service("patcher"),
@@ -19288,18 +19300,18 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(226),
-                s = n(210),
-                o = n(223),
-                r = n(202),
-                l = c(n(220));
+                a = n(227),
+                s = n(211),
+                o = n(224),
+                r = n(204),
+                l = c(n(221));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            var d = c(n(241)).default.extend({
+            var d = c(n(242)).default.extend({
                 classNames: ["activity-center-objectives-card-wrapper"],
                 classNameBindings: ["isErrored:activity-center-objectives-card-wrapper--error", "shouldOpenCampaignTracker:activity-center-objectives-card-wrapper--show-objectives"],
                 audioManager: null,
@@ -19433,10 +19445,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = l(n(220)),
-                s = n(210),
-                o = n(223),
-                r = l(n(241));
+                a = l(n(221)),
+                s = n(211),
+                o = n(224),
+                r = l(n(242));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -19530,9 +19542,9 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(210),
-                o = n(223),
-                r = (i = n(241)) && i.__esModule ? i : {
+                s = n(211),
+                o = n(224),
+                r = (i = n(242)) && i.__esModule ? i : {
                     default: i
                 };
             const l = "resting",
@@ -19650,7 +19662,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210);
+                a = n(211);
             var s = i.Ember.Component.extend({
                 classNames: ["ac-mute-button"],
                 musicEnabled: !0,
@@ -19734,10 +19746,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(226),
-                s = n(210),
-                o = l(n(241)),
-                r = l(n(220));
+                a = n(227),
+                s = n(211),
+                o = l(n(242)),
+                r = l(n(221));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -19838,11 +19850,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(226),
-                s = n(210),
-                o = n(223),
-                r = c(n(241)),
-                l = c(n(220));
+                a = n(227),
+                s = n(211),
+                o = n(224),
+                r = c(n(242)),
+                l = c(n(221));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -19923,11 +19935,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(226),
-                s = n(210),
-                o = n(223),
-                r = c(n(241)),
-                l = c(n(220));
+                a = n(227),
+                s = n(211),
+                o = n(224),
+                r = c(n(242)),
+                l = c(n(221));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -19936,7 +19948,7 @@
             }
             var d = r.default.extend({
                 classNames: ["activity-center-objectives-tracker"],
-                layout: n(272),
+                layout: n(273),
                 audioManager: null,
                 dailyObjectivesCompletions: [],
                 weeklyObjectivesCompletions: [],
@@ -19994,11 +20006,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(210),
-                s = c(n(241)),
-                o = c(n(220)),
-                r = n(274),
-                l = n(223);
+                a = n(211),
+                s = c(n(242)),
+                o = c(n(221)),
+                r = n(275),
+                l = n(224);
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -20150,16 +20162,16 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = n(226),
-                o = (i = n(220)) && i.__esModule ? i : {
+                s = n(227),
+                o = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(223);
+                r = n(224);
             const l = "26-01-ac-demacia-rising",
                 c = "opal-local-loading",
                 d = {
-                    hover: n(276),
-                    click: n(277)
+                    hover: n(277),
+                    click: n(278)
                 },
                 u = {
                     [l]: d,
@@ -20354,7 +20366,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(219),
+                a = n(220),
                 s = i.Ember.Component.extend({
                     classNames: ["new-player-pack-component"],
                     classNameBindings: ["renderModeCarousel:render-mode-carousel"],
@@ -20783,8 +20795,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(219),
-                s = n(223),
+                a = n(220),
+                s = n(224),
                 o = i.Ember.Component.extend({
                     classNames: ["beginners-journey-root"],
                     init() {
@@ -20901,7 +20913,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(291),
+                a = n(292),
                 s = i.Ember.Component.extend({
                     classNames: ["beginners-journey-level-rewards"],
                     currentSummoner: {},
@@ -21054,7 +21066,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(223),
+                a = n(224),
                 s = i.Ember.Component.extend({
                     classNames: ["daily-play-rewards-root"],
                     rewardsService: i.Ember.inject.service("rewards"),
@@ -21104,7 +21116,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(291),
+                a = n(292),
                 s = i.Ember.Service.extend({
                     init() {
                         this._super(...arguments), this.platformConfig = (0, i.dataBinding)("/lol-platform-config", i.websocket), this.npeRewardsState = (0, i.dataBinding)("/lol-npe-rewards", i.websocket), this.accountData = (0, i.dataBinding)("/lol-summoner", i.websocket), this.clientConfig = (0, i.dataBinding)("/client-config", i.websocket), this.missions = (0, i.dataBinding)("/lol-missions", i.websocket), this.addObservers(), this.shouldDisplayOnlyNpeTabsSync = this.shouldDisplayOnlyNpeTabsSync.bind(this), this.npeTabsSync = this.npeTabsSync.bind(this)
@@ -21475,8 +21487,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(301),
-                s = n(222);
+                a = n(302),
+                s = n(223);
             const o = "info-hub";
             var r = i.Ember.Service.extend({
                 isFoundationReady: !1,
@@ -21762,9 +21774,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(226),
+            var i = n(227),
                 a = n(1),
-                s = n(232);
+                s = n(233);
             var o = a.Ember.Service.extend(a.Ember.Evented, {
                 _bundleDebounceTimers: null,
                 attachObservers(e, t, {
@@ -22261,12 +22273,12 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(210),
-                r = n(207),
-                l = n(224);
+                o = n(211),
+                r = n(208),
+                l = n(225);
             const c = new Set([r.GAMEPHASE.CHAMP_SELECT]);
             var d = class {
                 constructor(e) {
@@ -22403,13 +22415,13 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(222),
-                r = n(210),
-                l = n(223),
-                c = n(207);
+                o = n(223),
+                r = n(211),
+                l = n(224),
+                c = n(208);
             const d = new Set([c.GAMEPHASE.NONE]),
                 u = "onShowMessage",
                 m = "onHideMessage";
@@ -22637,9 +22649,9 @@
                 return l
             };
             var i = n(1),
-                a = n(210),
-                s = n(223),
-                o = n(207);
+                a = n(211),
+                s = n(224),
+                o = n(208);
             class r {
                 constructor() {
                     this._shouldAutoOpenInfoHubRequirements = {
@@ -22784,33 +22796,33 @@
                         name: a.APP_NAME_INFO_HUB,
                         tra: i.traService,
                         ComponentFactory: i.ComponentFactory,
-                        InfoHubComponent: n(361).default,
-                        InfoHubRiotComponent: n(362).default,
-                        InfoHubCarouselComponent: n(363).default,
-                        InfoHubGameSelectorComponent: n(364).default,
-                        ActivityHeaderComponent: n(253).default,
-                        MediaCardComponent: n(256).default,
-                        MediaGroupComponent: n(257).default,
-                        CtaButtonComponent: n(260).default,
-                        ErrorMessageComponent: n(265).default,
+                        InfoHubComponent: n(362).default,
+                        InfoHubRiotComponent: n(363).default,
+                        InfoHubCarouselComponent: n(364).default,
+                        InfoHubGameSelectorComponent: n(365).default,
+                        ActivityHeaderComponent: n(254).default,
+                        MediaCardComponent: n(257).default,
+                        MediaGroupComponent: n(258).default,
+                        CtaButtonComponent: n(261).default,
+                        ErrorMessageComponent: n(266).default,
                         ManagedIframeComponent: i.SharedEmberComponents.ManagedIframeComponent,
-                        InfoHubService: n(294).default,
-                        TencentExperienceService: n(297).default,
-                        PatcherService: n(298).default,
-                        UserExperienceService: n(299).default,
-                        ActivityCenterService: n(300).default,
-                        InventoryService: n(307).default,
-                        EqHelper: n(353).default,
+                        InfoHubService: n(295).default,
+                        TencentExperienceService: n(298).default,
+                        PatcherService: n(299).default,
+                        UserExperienceService: n(300).default,
+                        ActivityCenterService: n(301).default,
+                        InventoryService: n(308).default,
+                        EqHelper: n(354).default,
                         TEMPLATES: {
-                            "components/info-hub": n(365),
-                            "components/info-hub-riot": n(366),
-                            "components/info-hub-carousel": n(367),
-                            "components/info-hub-game-selector": n(368),
-                            "components/activity-header": n(322),
-                            "components/media-card": n(324),
-                            "components/media-group": n(325),
-                            "components/cta-button": n(327),
-                            "components/error-message": n(328)
+                            "components/info-hub": n(366),
+                            "components/info-hub-riot": n(367),
+                            "components/info-hub-carousel": n(368),
+                            "components/info-hub-game-selector": n(369),
+                            "components/activity-header": n(323),
+                            "components/media-card": n(325),
+                            "components/media-group": n(326),
+                            "components/cta-button": n(328),
+                            "components/error-message": n(329)
                         }
                     })
                 }
@@ -22823,12 +22835,12 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(226),
-                r = n(210),
-                l = n(223);
+                o = n(227),
+                r = n(211),
+                l = n(224);
             var c = a.Ember.Component.extend({
                 classNames: ["info-hub"],
                 attributeBindings: ["tabindex"],
@@ -22891,12 +22903,12 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(210),
-                r = n(223),
-                l = n(248);
+                o = n(211),
+                r = n(224),
+                l = n(249);
             const c = ["cta-unhovered", "media-card-unhovered"],
                 d = ["cta-hovered", "media-card-hovered"],
                 u = ["cta-clicked", "media-card-clicked"],
@@ -23162,10 +23174,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(210);
+                o = n(211);
             var r = a.Ember.Component.extend({
                 classNames: ["info-hub-carousel"],
                 audioManager: null,
@@ -23206,10 +23218,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(220)) && i.__esModule ? i : {
+                s = (i = n(221)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(210);
+                o = n(211);
             const r = {
                 [o.INFO_HUB_GAME_SELECTION.LOL_INFO_HUB]: {
                     active: "/fe/lol-navigation/activity-center/league-logo-active.svg",
@@ -23283,7 +23295,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.initEmailVerification = function(e) {
-                const t = n(370);
+                const t = n(371);
                 return {
                     api: t(e)
                 }
@@ -23291,8 +23303,8 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = o(n(371)),
-                s = o(n(393));
+                a = o(n(372)),
+                s = o(n(394));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -23314,7 +23326,7 @@
                 value: !0
             }), t.default = t.PrivateAPI = void 0;
             var i, a = n(1),
-                s = (i = n(372)) && i.__esModule ? i : {
+                s = (i = n(373)) && i.__esModule ? i : {
                     default: i
                 };
             class o {
@@ -23330,12 +23342,12 @@
                             name: "rcp-fe-lol-email-verification",
                             tra: a.traService,
                             ComponentFactory: a.ComponentFactory,
-                            EmailVerificationComponent: n(374),
-                            UnverifiedPromptComponent: n(377),
-                            ChangeEmailComponent: n(381),
-                            EmailSentComponent: n(384),
-                            ErrorDisplayComponent: n(387),
-                            VerificationSuccessComponent: n(390)
+                            EmailVerificationComponent: n(375),
+                            UnverifiedPromptComponent: n(378),
+                            ChangeEmailComponent: n(382),
+                            EmailSentComponent: n(385),
+                            ErrorDisplayComponent: n(388),
+                            VerificationSuccessComponent: n(391)
                         };
                         return a.emberApplicationFactory.setFactoryDefinition(e), a.ComponentFactory.create(e.name)
                     }(), this.application.renderPromise.then().then((() => Promise.all([s.default.get("IsOptional"), s.default.get("MaxOptionalLevel"), (0, a.dataBinding)("/lol-summoner").get("/v1/current-summoner")]))).then((([e, t, n]) => {
@@ -23376,7 +23388,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(373);
+                a = n(374);
 
             function s() {
                 return (0, i.dataBinding)("/lol-platform-config").get("/v1/namespaces/LcuEmailVerification")
@@ -23398,10 +23410,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
-            n(375);
+            n(376);
             const a = ["prompt", "changeEmail", "emailSent", "success", "error"];
             e.exports = i.Ember.Component.extend({
-                layout: n(376),
+                layout: n(377),
                 classNames: ["rcp-fe-lol-email-verification"],
                 shownScreen: "prompt",
                 showPrompt: i.Ember.computed("shownScreen", (function() {
@@ -23459,9 +23471,9 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = r(n(371)),
-                s = r(n(378)),
-                o = r(n(372));
+                a = r(n(372)),
+                s = r(n(379)),
+                o = r(n(373));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -23477,7 +23489,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(379);
+            n(380);
             const c = (0, i.emberDataBinding)({
                 Ember: i.Ember,
                 boundProperties: {
@@ -23488,7 +23500,7 @@
                 websocket: i.default.getProvider().getSocket()
             });
             e.exports = i.Ember.Component.extend(s.default, c, {
-                layout: n(380),
+                layout: n(381),
                 classNames: ["prompt"],
                 isModalOptional: !0,
                 isModalNotOptional: i.Ember.computed.not("isModalOptional"),
@@ -23602,8 +23614,8 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = o(n(371)),
-                s = o(n(378));
+                a = o(n(372)),
+                s = o(n(379));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -23619,7 +23631,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(382);
+            n(383);
             const l = (0, i.emberDataBinding)({
                     Ember: i.Ember,
                     boundProperties: {
@@ -23631,7 +23643,7 @@
                 }),
                 c = ["EMAIL_TOO_LONG", "INVALID_EMAIL", "EMAIL_SAME"];
             e.exports = i.Ember.Component.extend(s.default, l, {
-                layout: n(383),
+                layout: n(384),
                 classNames: ["change-email"],
                 submitClicked: !1,
                 showPasswordConflictError: !1,
@@ -23764,7 +23776,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(371)) && i.__esModule ? i : {
+                s = (i = n(372)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -23776,7 +23788,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(385);
+            n(386);
             const {
                 RunMixin: r
             } = a.EmberAddons.EmberLifeline, l = (0, a.emberDataBinding)({
@@ -23789,7 +23801,7 @@
                 websocket: a.default.getProvider().getSocket()
             });
             e.exports = a.Ember.Component.extend(r, l, {
-                layout: n(386),
+                layout: n(387),
                 classNames: ["email-sent"],
                 showConnectionError: !1,
                 didInsertElement() {
@@ -23860,7 +23872,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(371)) && i.__esModule ? i : {
+                s = (i = n(372)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -23872,7 +23884,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(388);
+            n(389);
             const r = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 boundProperties: {
@@ -23883,7 +23895,7 @@
                 websocket: a.default.getProvider().getSocket()
             });
             e.exports = a.Ember.Component.extend(r, {
-                layout: n(389),
+                layout: n(390),
                 classNames: ["error-component"],
                 didInsertElement() {
                     s.default.modal && a.Ember.$(s.default.modal.domNode).find("lol-uikit-flat-button.button-accept").text(this.get("tra.email_verification_success_button"))
@@ -23920,7 +23932,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(371)) && i.__esModule ? i : {
+                s = (i = n(372)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -23932,7 +23944,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(391);
+            n(392);
             const r = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 boundProperties: {
@@ -23943,7 +23955,7 @@
                 websocket: a.default.getProvider().getSocket()
             });
             e.exports = a.Ember.Component.extend(r, {
-                layout: n(392),
+                layout: n(393),
                 classNames: ["success"],
                 showConnectionError: !1,
                 didInsertElement() {
@@ -23979,8 +23991,8 @@
                 }))
             }, t.userPassesWhitelist = d, t.waitForLogin = c;
             var i = n(1),
-                a = o(n(372)),
-                s = o(n(394));
+                a = o(n(373)),
+                s = o(n(395));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -24045,7 +24057,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(373);
+                a = n(374);
 
             function s() {
                 return (0, i.dataBinding)("/lol-settings").get("/v2/account/LCUPreferences/lol-email-verification")
@@ -24066,17 +24078,17 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
-            n(396);
+            n(397);
             var a, s = n(83),
                 o = n(90),
                 r = (a = n(85)) && a.__esModule ? a : {
                     default: a
                 },
-                l = n(397);
+                l = n(398);
             const c = ["PENDING", "UPCOMING", "REWARDS_PENDING"],
                 d = i.Ember.Component.extend({
                     classNames: ["mission-button-component"],
-                    layout: n(398),
+                    layout: n(399),
                     isTrackerOpen: !1,
                     uxSettingsObserver: null,
                     requestedSeries: "all_missions",
@@ -24244,8 +24256,8 @@
                             o && (o.get || o.set) ? Object.defineProperty(i, s, o) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
-                }(n(400)),
-                o = (i = n(502)) && i.__esModule ? i : {
+                }(n(401)),
+                o = (i = n(503)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -24277,42 +24289,42 @@
                         name: "HonorLateRecognitionComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLateRecognitionComponent: n(506).default,
-                        HonorLateRecognitionIconComponent: n(509).default
+                        HonorLateRecognitionComponent: n(507).default,
+                        HonorLateRecognitionIconComponent: n(510).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelupVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelupVignetteComponent: n(512).default
+                        HonorLevelupVignetteComponent: n(513).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorSeasonRewardComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorSeasonRewardComponent: n(516).default,
+                        HonorSeasonRewardComponent: n(517).default,
                         MissionCelebrationRewardComponent: n(155)
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelChangeTooltipComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelChangeTooltipComponent: n(519).default
+                        HonorLevelChangeTooltipComponent: n(520).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "ChallengesLevelUpVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        ChallengesLevelUpVignetteComponent: n(525).default
+                        ChallengesLevelUpVignetteComponent: n(526).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "ParentalControlsModalComponent",
-                        ParentalControlsModalRootComponent: n(528).default,
+                        ParentalControlsModalRootComponent: n(529).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "VanguardIsComingModalComponent",
-                        VanguardIsComingModalRootComponent: n(531).default,
+                        VanguardIsComingModalRootComponent: n(532).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "DeprecationModalComponent",
-                        DeprecationModalRootComponent: n(534).default,
+                        DeprecationModalRootComponent: n(535).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
@@ -24323,7 +24335,7 @@
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "MacGraphicsUpgradeModalComponent",
-                        MacGraphicsUpgradeModalRootComponent: n(537).default,
+                        MacGraphicsUpgradeModalRootComponent: n(538).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     })
@@ -24343,90 +24355,90 @@
                         rootElement: e,
                         tra: i.traService,
                         ComponentFactory: i.ComponentFactory,
-                        Router: n(401),
-                        ApplicationController: n(402),
-                        CurrencyContainerComponent: n(403),
-                        DeepLinksPromoComponent: n(404),
-                        BlueEssenceCurrencyComponent: n(405),
-                        MenuItemComponent: n(406),
-                        NavBarComponent: n(407),
-                        NavigationRootComponent: n(408),
-                        StatusTickerComponent: n(409),
-                        StatusTickerIncidentComponent: n(410),
-                        ReadyCheckRootComponent: n(412),
-                        ReadyCheckMapBackgroundComponent: n(413),
-                        ReadyCheckTimerComponent: n(415),
-                        ReadyCheckIconComponent: n(416),
-                        ReadyCheckStatusTextComponent: n(417),
-                        ReadyCheckButtonAcceptComponent: n(418),
-                        ReadyCheckButtonDeclineComponent: n(419),
-                        LoyaltyBadgeComponent: n(420),
-                        TftAnnouncementModalComponent: n(423),
-                        TftLootDeprecationPreModalComponent: n(426),
-                        TftFullLaunchAnnouncementModalComponent: n(429),
-                        LegalRatingScreenComponent: n(432),
-                        LoadingTabComponent: n(433),
+                        Router: n(402),
+                        ApplicationController: n(403),
+                        CurrencyContainerComponent: n(404),
+                        DeepLinksPromoComponent: n(405),
+                        BlueEssenceCurrencyComponent: n(406),
+                        MenuItemComponent: n(407),
+                        NavBarComponent: n(408),
+                        NavigationRootComponent: n(409),
+                        StatusTickerComponent: n(410),
+                        StatusTickerIncidentComponent: n(411),
+                        ReadyCheckRootComponent: n(413),
+                        ReadyCheckMapBackgroundComponent: n(414),
+                        ReadyCheckTimerComponent: n(416),
+                        ReadyCheckIconComponent: n(417),
+                        ReadyCheckStatusTextComponent: n(418),
+                        ReadyCheckButtonAcceptComponent: n(419),
+                        ReadyCheckButtonDeclineComponent: n(420),
+                        LoyaltyBadgeComponent: n(421),
+                        TftAnnouncementModalComponent: n(424),
+                        TftLootDeprecationPreModalComponent: n(427),
+                        TftFullLaunchAnnouncementModalComponent: n(430),
+                        LegalRatingScreenComponent: n(433),
+                        LoadingTabComponent: n(434),
                         HextechLoadingAnimationComponent: o,
                         CallToActionPipComponent: s,
                         ParticleGlowOverlayComponent: r,
-                        StatusTickerContentComponent: n(434),
-                        CurrencyContainerTooltipComponent: n(436),
-                        AppUpdateService: n(438).default,
-                        AcPipManagerService: n(449).default,
-                        CelebrationsService: n(450).default,
-                        ChallengesCelebrationService: n(453).default,
-                        ChampionMasteryCelebrationsService: n(454).default,
-                        ConfigurationService: n(455).default,
-                        DeepLinksService: n(456).default,
-                        Dx9DeprecationService: n(457).default,
-                        EventHubService: n(458).default,
-                        EsportsSpectateService: n(459).default,
-                        GameflowService: n(460),
-                        LateRecognitionsService: n(461).default,
-                        LootOddsService: n(462).default,
-                        MacGraphicsUpgradeService: n(463).default,
-                        ModalManagerObserverService: n(464).default,
-                        NavigationService: n(465),
-                        ParentalControlsModalService: n(466).default,
-                        PlayerFeedbackService: n(467).default,
-                        PlaytimeReminderService: n(468),
-                        ReadyCheckService: n(470),
-                        ServiceStatusService: n(471).default,
-                        SessionService: n(472),
-                        ShutdownLawService: n(473),
-                        StatusTickerService: n(474),
-                        SummonerService: n(475).default,
-                        TftService: n(476).default,
-                        VanguardIsComingModalService: n(477),
-                        VanguardSessionService: n(478).default,
-                        Win7DeprecationService: n(479).default,
-                        TftOsCompatibilityService: n(480).default,
-                        IndexRoute: n(481),
+                        StatusTickerContentComponent: n(435),
+                        CurrencyContainerTooltipComponent: n(437),
+                        AppUpdateService: n(439).default,
+                        AcPipManagerService: n(450).default,
+                        CelebrationsService: n(451).default,
+                        ChallengesCelebrationService: n(454).default,
+                        ChampionMasteryCelebrationsService: n(455).default,
+                        ConfigurationService: n(456).default,
+                        DeepLinksService: n(457).default,
+                        Dx9DeprecationService: n(458).default,
+                        EventHubService: n(459).default,
+                        EsportsSpectateService: n(460).default,
+                        GameflowService: n(461),
+                        LateRecognitionsService: n(462).default,
+                        LootOddsService: n(463).default,
+                        MacGraphicsUpgradeService: n(464).default,
+                        ModalManagerObserverService: n(465).default,
+                        NavigationService: n(466),
+                        ParentalControlsModalService: n(467).default,
+                        PlayerFeedbackService: n(468).default,
+                        PlaytimeReminderService: n(469),
+                        ReadyCheckService: n(471),
+                        ServiceStatusService: n(472).default,
+                        SessionService: n(473),
+                        ShutdownLawService: n(474),
+                        StatusTickerService: n(475),
+                        SummonerService: n(476).default,
+                        TftService: n(477).default,
+                        VanguardIsComingModalService: n(478),
+                        VanguardSessionService: n(479).default,
+                        Win7DeprecationService: n(480).default,
+                        TftOsCompatibilityService: n(481).default,
+                        IndexRoute: n(482),
                         TEMPLATES: {
-                            application: n(482),
-                            index: n(483),
-                            loading: n(484),
-                            "components/blue-essence-currency": n(485),
-                            "components/currency-container": n(486),
-                            "components/deep-links-promo": n(487),
-                            "components/menu-item": n(488),
-                            "components/nav-bar": n(489),
-                            "components/navigation-root": n(490),
-                            "components/status-ticker": n(491),
-                            "components/status-ticker-incident": n(411),
-                            "components/ready-check-button-accept": n(492),
-                            "components/ready-check-button-decline": n(493),
-                            "components/ready-check-icon": n(494),
-                            "components/ready-check-map-background": n(495),
-                            "components/ready-check-root": n(496),
-                            "components/ready-check-status-text": n(497),
-                            "components/ready-check-timer": n(498),
-                            "components/loyalty-badge": n(499),
-                            "components/legal-rating-screen": n(500),
-                            "components/loading-tab": n(501),
-                            "components/tft-announcement-modal": n(424),
-                            "components/tft-loot-deprecation-pre-modal": n(427),
-                            "components/tft-full-launch-announcement-modal": n(430)
+                            application: n(483),
+                            index: n(484),
+                            loading: n(485),
+                            "components/blue-essence-currency": n(486),
+                            "components/currency-container": n(487),
+                            "components/deep-links-promo": n(488),
+                            "components/menu-item": n(489),
+                            "components/nav-bar": n(490),
+                            "components/navigation-root": n(491),
+                            "components/status-ticker": n(492),
+                            "components/status-ticker-incident": n(412),
+                            "components/ready-check-button-accept": n(493),
+                            "components/ready-check-button-decline": n(494),
+                            "components/ready-check-icon": n(495),
+                            "components/ready-check-map-background": n(496),
+                            "components/ready-check-root": n(497),
+                            "components/ready-check-status-text": n(498),
+                            "components/ready-check-timer": n(499),
+                            "components/loyalty-badge": n(500),
+                            "components/legal-rating-screen": n(501),
+                            "components/loading-tab": n(502),
+                            "components/tft-announcement-modal": n(425),
+                            "components/tft-loot-deprecation-pre-modal": n(428),
+                            "components/tft-full-launch-announcement-modal": n(431)
                         }
                     };
                     return t
@@ -24745,7 +24757,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(203);
+                a = n(199);
             e.exports = i.Ember.Component.extend({
                 init() {
                     this._super(...arguments);
@@ -24897,7 +24909,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(203);
+                a = n(199);
             e.exports = i.Ember.Component.extend({
                 tagName: "lol-uikit-navigation-bar",
                 classNames: ["rcp-fe-lol-navigation", "main-nav-bar"],
@@ -25180,7 +25192,7 @@
         }, (e, t, n) => {
             "use strict";
             const i = n(1).Ember.Component.extend({
-                layout: n(411),
+                layout: n(412),
                 classNames: ["status-ticker-incident"]
             });
             i.reopenClass({
@@ -25269,7 +25281,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(414)) && i.__esModule ? i : {
+                s = (i = n(415)) && i.__esModule ? i : {
                     default: i
                 };
             e.exports = a.Ember.Component.extend({
@@ -25434,7 +25446,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(421)) && i.__esModule ? i : {
+                s = (i = n(422)) && i.__esModule ? i : {
                     default: i
                 };
             e.exports = a.Ember.Component.extend({
@@ -25473,7 +25485,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = n(422);
+                a = n(423);
 
             function s(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -25749,10 +25761,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(424)) && i.__esModule ? i : {
+                s = (i = n(425)) && i.__esModule ? i : {
                     default: i
                 };
-            n(425), e.exports = a.Ember.Component.extend({
+            n(426), e.exports = a.Ember.Component.extend({
                 classNames: ["tft-set-announcement-root-element"],
                 layout: s.default,
                 tra: a.tra,
@@ -25824,10 +25836,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(427)) && i.__esModule ? i : {
+                s = (i = n(428)) && i.__esModule ? i : {
                     default: i
                 };
-            n(428);
+            n(429);
             const o = "TFTLootDepPreModalViewed",
                 r = "/lol-client-config/v3/client-config/lol.client_settings.tft.tft_content_retiering_loot_deprecation",
                 l = "/lol-settings/v2/account/LCUPreferences/lol-tft";
@@ -25887,10 +25899,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(430)) && i.__esModule ? i : {
+                s = (i = n(431)) && i.__esModule ? i : {
                     default: i
                 };
-            n(431);
+            n(432);
             const o = [{
                 imagePath: "/fe/lol-navigation/images/tft-tftu-modal-1.png",
                 headerKey: "tft_full_launch_announcement_item_1_header",
@@ -25990,7 +26002,7 @@
         }, (e, t, n) => {
             "use strict";
             const i = n(1).Ember.Component.extend({
-                layout: n(435),
+                layout: n(436),
                 classNames: ["navigation-status-ticker-content"],
                 init() {
                     this._super(...arguments), this.externalLinkText = this.get("tra.externalLink")
@@ -26035,7 +26047,7 @@
                 })(e)
             }
             const s = i.Ember.Component.extend({
-                layout: n(437),
+                layout: n(438),
                 classNames: ["currency-container-tooltip"],
                 text: i.Ember.computed("traString", "tra.metadata", (function() {
                     return this.get("tra").get(this.get("traString"))
@@ -26059,7 +26071,7 @@
                 value: !0
             });
             const i = n(1),
-                a = n(439),
+                a = n(440),
                 s = "/lol-patch/v1/product-integration/app-update/available";
             t.default = i.Ember.Service.extend({
                 initDataBindings() {
@@ -26113,8 +26125,8 @@
                     once: !0
                 })
             };
-            const o = s(n(440));
-            a(n(441), t), a(n(445), t), a(n(448), t);
+            const o = s(n(441));
+            a(n(442), t), a(n(446), t), a(n(449), t);
             const r = new o.default;
             t.default = r
         }, (e, t) => {
@@ -26185,15 +26197,15 @@
                 };
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.SettingsCategoryName = t.SettingsCategory = void 0, a(n(442), t);
-            var s = n(443);
+            }), t.SettingsCategoryName = t.SettingsCategory = void 0, a(n(443), t);
+            var s = n(444);
             Object.defineProperty(t, "SettingsCategory", {
                 enumerable: !0,
                 get: function() {
                     return s.SettingsCategory
                 }
             });
-            var o = n(444);
+            var o = n(445);
             Object.defineProperty(t, "SettingsCategoryName", {
                 enumerable: !0,
                 get: function() {
@@ -26274,7 +26286,7 @@
                 };
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), a(n(446), t), a(n(447), t)
+            }), a(n(447), t), a(n(448), t)
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -26376,8 +26388,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(451),
-                s = n(452);
+                a = n(452),
+                s = n(453);
             const o = (0, i.emberDataBinding)({
                     Ember: i.Ember,
                     websocket: (0, i.getProvider)().getSocket(),
@@ -27131,7 +27143,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getTranslationKey = t.getAssetPath = t.deepTreeMapTraverse = void 0;
-            var i = n(451);
+            var i = n(452);
             const a = function(e, t) {
                 let n = e;
                 for (let e = 0; e < t.length; e++) {
@@ -27154,7 +27166,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(203);
+                a = n(199);
             const s = "/lol-challenges/v1/notifications",
                 o = "/lol-platform-config/v1/namespaces/Challenges/LevelUpCelebrationEnabled",
                 r = "/lol-gameflow/v1/session",
@@ -27468,7 +27480,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(203);
+                a = n(199);
             const s = "/lol-client-config/v3/client-config",
                 o = `${s}/lol.client_settings.navigation.navBarDisplayMode`,
                 r = `${s}/lol.client_settings.navigation.enableRewardsProgram`,
@@ -27781,7 +27793,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(203);
+                a = n(199);
             const s = new WeakMap;
             e.exports = i.Ember.Service.extend({
                 init() {
@@ -27982,7 +27994,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(469);
+                a = n(470);
             const s = "/lol-kr-playtime-reminder",
                 o = "/v1/hours-played";
             e.exports = i.Ember.Service.extend({
@@ -28034,7 +28046,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
-                s = (i = n(414)) && i.__esModule ? i : {
+                s = (i = n(415)) && i.__esModule ? i : {
                     default: i
                 },
                 o = n(53);
@@ -28339,7 +28351,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = n(469);
+                a = n(470);
             const s = "/lol-kr-shutdown-law",
                 o = "/v1/notification",
                 r = "/v1/queue-status",
@@ -29244,8 +29256,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = o(n(503)),
-                s = o(n(505));
+                a = o(n(504)),
+                s = o(n(506));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29296,7 +29308,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(504);
+            n(505);
             var a = class {
                 constructor() {}
                 showNotification(e, t, n) {
@@ -29356,9 +29368,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(451);
-            n(507);
-            var s, o = (s = n(508)) && s.__esModule ? s : {
+                a = n(452);
+            n(508);
+            var s, o = (s = n(509)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -29397,9 +29409,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(451);
-            n(510);
-            var s, o = (s = n(511)) && s.__esModule ? s : {
+                a = n(452);
+            n(511);
+            var s, o = (s = n(512)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -29439,11 +29451,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(451),
-                s = n(452),
-                o = l(n(513));
-            n(514);
-            var r = l(n(515));
+                a = n(452),
+                s = n(453),
+                o = l(n(514));
+            n(515);
+            var r = l(n(516));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29780,12 +29792,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(517);
-            var a, s = (a = n(518)) && a.__esModule ? a : {
+            n(518);
+            var a, s = (a = n(519)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(452),
-                r = n(451);
+                o = n(453),
+                r = n(452);
             var l = i.Ember.Component.extend({
                 classNames: ["honor-season-rewards-vignette"],
                 layout: s.default,
@@ -29845,11 +29857,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(520);
-            var a = l(n(521)),
-                s = l(n(522)),
-                o = l(n(523)),
-                r = l(n(524));
+            n(521);
+            var a = l(n(522)),
+                s = l(n(523)),
+                o = l(n(524)),
+                r = l(n(525));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29907,9 +29919,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(526);
-            var a = o(n(527)),
-                s = o(n(513));
+            n(527);
+            var a = o(n(528)),
+                s = o(n(514));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30098,10 +30110,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(529)) && i.__esModule ? i : {
+                s = (i = n(530)) && i.__esModule ? i : {
                     default: i
                 };
-            n(530);
+            n(531);
             var o = a.Ember.Component.extend({
                 classNames: ["parental-controls-modal-root-element"],
                 layout: s.default,
@@ -30124,10 +30136,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(532)) && i.__esModule ? i : {
+                s = (i = n(533)) && i.__esModule ? i : {
                     default: i
                 };
-            n(533);
+            n(534);
             var o = a.Ember.Component.extend({
                 classNames: ["vanguard-is-coming-modal-root-element"],
                 layout: s.default,
@@ -30153,10 +30165,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(535)) && i.__esModule ? i : {
+                s = (i = n(536)) && i.__esModule ? i : {
                     default: i
                 };
-            n(536);
+            n(537);
             var o = a.Ember.Component.extend({
                 classNames: ["dx9-deprecation-modal-root-element"],
                 layout: s.default,
@@ -30193,10 +30205,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(538)) && i.__esModule ? i : {
+                s = (i = n(539)) && i.__esModule ? i : {
                     default: i
                 };
-            n(539);
+            n(540);
             var o = a.Ember.Component.extend({
                 classNames: ["mac-graphics-upgrade-modal-root-element"],
                 layout: s.default,
@@ -30315,10 +30327,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = l(n(542)),
-                s = l(n(544)),
-                o = l(n(543)),
-                r = l(n(545));
+                a = l(n(543)),
+                s = l(n(545)),
+                o = l(n(544)),
+                r = l(n(546));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -30363,7 +30375,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(543)) && i.__esModule ? i : {
+                s = (i = n(544)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -30450,7 +30462,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(543)) && i.__esModule ? i : {
+                s = (i = n(544)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -30473,10 +30485,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(546);
-            const a = n(547),
-                s = n(548),
-                o = n(549),
+            n(547);
+            const a = n(548),
+                s = n(549),
+                o = n(550),
                 r = "dismiss-me-pls",
                 l = {
                     celebration: {
@@ -30766,8 +30778,8 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = o(n(551)),
-                s = o(n(552));
+                a = o(n(552)),
+                s = o(n(553));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30906,10 +30918,10 @@
             t.default = o
         }, (e, t, n) => {
             "use strict";
-            var i, a = (i = n(554)) && i.__esModule ? i : {
+            var i, a = (i = n(555)) && i.__esModule ? i : {
                 default: i
             };
-            n(556), e.exports = function() {
+            n(557), e.exports = function() {
                 return new a.default
             }
         }, (e, t, n) => {
@@ -30918,7 +30930,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(555)) && i.__esModule ? i : {
+                s = (i = n(556)) && i.__esModule ? i : {
                     default: i
                 };
             const o = "lol-loading-screen-gameflow-state",
@@ -31126,7 +31138,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(558);
+            n(559);
             const a = "CHAMPION",
                 s = "CHAMPION_SKIN",
                 o = "WARD_SKIN",
@@ -31185,7 +31197,7 @@
                 }
                 _getCelebrationStaticContent(e, t) {
                     const i = document.createElement("img");
-                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(559), i.classList.add("lol-store-gift-celebration-image-generic")), i
+                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(560), i.classList.add("lol-store-gift-celebration-image-generic")), i
                 }
                 _getCelebrationContent(e, t) {
                     const n = e.type === h,
@@ -31324,7 +31336,7 @@
             var i = function() {
                 const {
                     routeToExperience: e
-                } = n(561);
+                } = n(562);
                 return e()
             };
             t.default = i
@@ -31376,11 +31388,11 @@
                 }
             };
             var i, a = n(1),
-                s = n(562),
-                o = (i = n(564)) && i.__esModule ? i : {
+                s = n(563),
+                o = (i = n(565)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(563);
+                r = n(564);
             const l = "rcp-fe-lol-npe-first-touch"
         }, (e, t, n) => {
             "use strict";
@@ -31417,7 +31429,7 @@
                 return a.SHOW_HOME
             }, t.getCommandLineInitialRouteParameter = T, t.getCurrentSummoner = m, t.getGameflowSession = h, t.getHasSeenTutorialPath = f, t.getHasSelectedGameMode = d, t.getHasSkippedTutorialPath = g, t.getIsGameSelectScreenEnabled = _, t.getIsNPEFlowEnabled = c, t.getIsUnderMaxNPELevel = p, t.getNPESettings = u, t.isInGameflow = v, t.isInTutorialModule = E, t.resolveTencentHubRedirect = b, t.updateSettings = y, t.waitForConfigReady = o, t.waitForLogin = s, t.waitForSettingsReady = r, t.waitForSummonerReady = l;
             var i = n(1),
-                a = n(563);
+                a = n(564);
 
             function s() {
                 return new Promise((e => {
@@ -31578,22 +31590,22 @@
                     name: "rcp-fe-lol-npe-first-touch",
                     tra: i.traService,
                     ComponentFactory: i.ComponentFactory,
-                    FirstTouchComponent: n(565).default,
-                    IntroVideoComponent: n(568).default,
-                    AliasCreateComponent: n(571).default,
-                    SummonerNameCreateComponent: n(577).default,
-                    PatchingExperienceComponent: n(580).default,
-                    ChampionCarouselComponent: n(583).default,
-                    ChampionCarouselItemComponent: n(586).default,
-                    ChampionInformationComponent: n(589).default,
-                    GameModeSelectComponent: n(592).default,
+                    FirstTouchComponent: n(566).default,
+                    IntroVideoComponent: n(569).default,
+                    AliasCreateComponent: n(572).default,
+                    SummonerNameCreateComponent: n(578).default,
+                    PatchingExperienceComponent: n(581).default,
+                    ChampionCarouselComponent: n(584).default,
+                    ChampionCarouselItemComponent: n(587).default,
+                    ChampionInformationComponent: n(590).default,
+                    GameModeSelectComponent: n(593).default,
                     ArrowFooterComponent: o,
                     PlayerNameComponent: r,
-                    FirstTouchService: n(595).default,
-                    LanguageFilterService: n(596).default,
-                    PlayerNameStateService: n(599).default,
-                    WaitForResolvedStringHelper: n(600).default,
-                    IsEqualHelper: n(601).default
+                    FirstTouchService: n(596).default,
+                    LanguageFilterService: n(597).default,
+                    PlayerNameStateService: n(600).default,
+                    WaitForResolvedStringHelper: n(601).default,
+                    IsEqualHelper: n(602).default
                 };
                 i.EmberApplicationFactory.setFactoryDefinition(l);
                 const c = i.ComponentFactory.create(l.name, {
@@ -31615,7 +31627,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(566);
+            n(567);
             const a = "patching-experience",
                 s = "summoner-name-create",
                 o = "game-mode-select",
@@ -31625,7 +31637,7 @@
                 d = [o, r];
             var u = i.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-npe-first-touch"],
-                layout: n(567),
+                layout: n(568),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 currentScreen: null,
                 patchingExperienceShouldShow: i.Ember.computed.equal("currentScreen", a),
@@ -31680,13 +31692,13 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(569);
+            n(570);
             const {
                 RunMixin: a
             } = i.EmberAddons.EmberLifeline;
             var s = i.Ember.Component.extend(a, {
                 classNames: ["intro-video-component"],
-                layout: n(570),
+                layout: n(571),
                 isSkipDisabled: !0,
                 init() {
                     this._super(...arguments), i.Navigation.hide(), this.handleVideoEnded = this.handleVideoEnded.bind(this)
@@ -31728,10 +31740,10 @@
                 value: !0
             }), t.errorStrings = t.dom = t.default = t.classNames = t.TAG_LINE_MAX = t.NAME_MIN = t.GAME_NAME_MAX = void 0, t.isPossiblyValid = T;
             var i = n(1),
-                a = n(572);
-            n(573);
-            var s, o = n(563),
-                r = (s = n(574)) && s.__esModule ? s : {
+                a = n(573);
+            n(574);
+            var s, o = n(564),
+                r = (s = n(575)) && s.__esModule ? s : {
                     default: s
                 };
             const l = {
@@ -31895,8 +31907,8 @@
                 messageClass: i.Ember.computed("message", (function() {
                     return b.get(this.get("message"))?.message
                 })),
-                startButtonSoundHover: n(575),
-                startButtonSoundClick: n(576),
+                startButtonSoundHover: n(576),
+                startButtonSoundClick: n(577),
                 disableRegisterButton: i.Ember.computed("isLoading", "validityVerified", (function() {
                     return this.get("isLoading") || !this.get("isValidityVerified")
                 })),
@@ -32001,7 +32013,7 @@
                 i.Telemetry.sendCustomData(t, n)
             };
             var i = n(1),
-                a = n(563)
+                a = n(564)
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -32024,15 +32036,15 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(572);
-            n(578);
-            var s = n(563);
+                a = n(573);
+            n(579);
+            var s = n(564);
             const {
                 RunMixin: o
             } = i.EmberAddons.EmberLifeline;
             var r = i.Ember.Component.extend(o, {
                 classNames: ["summoner-name-create-component"],
-                layout: n(579),
+                layout: n(580),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 languageFilterService: i.Ember.inject.service("language-filter"),
                 username: i.Ember.computed.alias("firstTouchService.session.username"),
@@ -32046,8 +32058,8 @@
                 isNameAvailabilityRequestError: !1,
                 isFormSubmitRequestErrorMessage: !1,
                 startNowButtonSound: {
-                    onHover: n(575),
-                    onClick: n(576)
+                    onHover: n(576),
+                    onClick: n(577)
                 },
                 init() {
                     this._super(...arguments);
@@ -32197,12 +32209,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(581);
-            var a = n(572),
-                s = n(563),
+            n(582);
+            var a = n(573),
+                s = n(564),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-patching-experience-component"],
-                    layout: n(582),
+                    layout: n(583),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     champions: i.Ember.computed.alias("firstTouchService.champions"),
                     didSendEvent: !1,
@@ -32234,16 +32246,16 @@
                 value: !0
             }), t.default = t.SFX_PIP_FORWARD = t.SFX_PIP_BACKWARD = void 0;
             var i = n(1);
-            n(584);
-            var a = n(572),
-                s = n(563);
+            n(585);
+            var a = n(573),
+                s = n(564);
             const o = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-backward-click.ogg";
             t.SFX_PIP_BACKWARD = o;
             const r = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-forward-click.ogg";
             t.SFX_PIP_FORWARD = r;
             var l = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-component"],
-                layout: n(585),
+                layout: n(586),
                 champions: null,
                 currentChampionIdx: 0,
                 lastChampionIdx: i.Ember.computed("champions", (function() {
@@ -32296,10 +32308,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(587);
+            n(588);
             var a = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-item-component"],
-                layout: n(588),
+                layout: n(589),
                 champion: null,
                 uncenteredSplashPath: i.Ember.computed("champion", (function() {
                     const e = this.get("champion");
@@ -32323,12 +32335,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(590);
-            var a = n(563),
-                s = n(572),
+            n(591);
+            var a = n(564),
+                s = n(573),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-champion-information-component"],
-                    layout: n(591),
+                    layout: n(592),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     locale: i.Ember.computed.alias("firstTouchService.locale"),
                     primaryRole: i.Ember.computed("champion.roles", (function() {
@@ -32371,12 +32383,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(593);
-            var a = n(572),
-                s = n(563),
+            n(594);
+            var a = n(573),
+                s = n(564),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-game-mode-select-component"],
-                    layout: n(594),
+                    layout: n(595),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     tftMapAssets: i.Ember.computed.alias("firstTouchService.tftMapAssets"),
                     init() {
@@ -32422,7 +32434,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(563);
+                a = n(564);
             const s = {
                 tftMapAssets: "/lol-maps/v2/map/22/tft",
                 tutorialPathSettings: "/lol-npe-tutorial-path/v1/settings",
@@ -32483,10 +32495,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(597)) && i.__esModule ? i : {
+                s = (i = n(598)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(598);
+                o = n(599);
             var r = a.Ember.Service.extend({
                 ready: !1,
                 init() {
@@ -32516,7 +32528,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(598);
+            var i = n(599);
             t.default = class {
                 build(e) {
                     this._allowedCharactersMap = {};
@@ -32622,7 +32634,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(603)) && i.__esModule ? i : {
+                s = (i = n(604)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -32634,24 +32646,24 @@
                     return e ? n : t
                 })(e)
             }
-            n(608);
+            n(609);
             var r = async function() {
                 const e = a.default.getProvider().get("rcp-fe-lol-l10n").tra(),
-                    t = n(616).default,
+                    t = n(617).default,
                     i = function() {
-                        const e = n(609).default,
+                        const e = n(610).default,
                             t = "rcp-fe-lol-reconnect",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     o = function() {
-                        const e = n(611).default,
+                        const e = n(612).default,
                             t = "rcp-fe-lol-game-in-progress",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     r = function() {
-                        const e = n(613).default,
+                        const e = n(614).default,
                             t = "rcp-fe-lol-repair-while-in-game",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
@@ -32680,7 +32692,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = o(n(604)),
+                a = o(n(605)),
                 s = o(n(77));
 
             function o(e) {
@@ -32796,8 +32808,8 @@
                 t.innerHTML = n, !1 !== e.showSpinner ? t.querySelector(".spinner").setAttribute("src", a.default) : t.querySelector(".spinner").style.display = "none";
                 return d(t, e), o = window.setInterval(c, 1e3, t, e), t
             };
-            var i = s(n(605)),
-                a = s(n(606));
+            var i = s(n(606)),
+                a = s(n(607));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -32829,7 +32841,7 @@
                 const s = t.lockoutText.replace(/\{\{lockoutTimeRemaining\}\}/, i);
                 r > 0 && (a += ` ${s}`), n.textContent = a
             }
-            n(607)
+            n(608)
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-uikit-dialog-frame class="dialog-frame" data-type="reconnect-notification">\r\n  <div class="dialog-content">\r\n    <lol-uikit-content-block type="dialog-medium">\r\n      <h4>{{TITLE}}</h4>\r\n      <hr class="heading-spacer" />\r\n      <p>{{BODY}}</p>\r\n\r\n      <img class="spinner" />\r\n    </lol-uikit-content-block>\r\n\r\n    <lol-uikit-flat-button-group type="dialog-frame">\r\n      <lol-uikit-flat-button class="button-shutdown" disabled> </lol-uikit-flat-button>\r\n    </lol-uikit-flat-button-group>\r\n  </div>\r\n</lol-uikit-dialog-frame>\r\n'
@@ -32848,7 +32860,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(610)) && i.__esModule ? i : {
+                s = (i = n(611)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -33041,7 +33053,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(612)) && i.__esModule ? i : {
+            var i, a = (i = n(613)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33106,7 +33118,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(614)) && i.__esModule ? i : {
+            var i, a = (i = n(615)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33162,7 +33174,7 @@
                     this._element.querySelector(".repair-body .header").innerText = e.get("game_in_progress_client_repair"), this._element.querySelector(".repair-body .body").innerText = e.get("game_in_progress_client_repair_explanation"), this._element.querySelector(".repair-body .link").innerHTML = e.get("game_in_progress_client_repair_learn")
                 }
                 _buildElement() {
-                    const e = n(615);
+                    const e = n(616);
                     return this._element = document.createElement("DIV"), this._element.innerHTML = e, this._element
                 }
             }
@@ -33404,13 +33416,13 @@
                     antlr4: c
                 });
                 const u = n(52).default,
-                    m = n(399).default,
-                    h = n(540).default,
-                    p = n(541).default;
+                    m = n(400).default,
+                    h = n(541).default,
+                    p = n(542).default;
                 t.default.SimpleDialogMessages = new p;
-                n(550)();
-                n(553)();
-                new(0, n(557).default);
+                n(551)();
+                n(554)();
+                new(0, n(558).default);
                 const g = t.default.Viewport,
                     f = g.getApiKey("rcp-fe-lol-navigation key"),
                     _ = g.overlay().getScreenRoot(f, "rcp-fe-lol-navigation-screen");
@@ -33441,8 +33453,8 @@
                 T.initLinks(), T._initMissionsAPI(), T._initRewardsAPI(), T._initAppControlsAPI(t.default), T._initEmailVerificationAPI(t.default), await t.default.add({
                     Navigation: T
                 });
-                (0, n(560).default)().then((() => (0, n(602).default)()));
-                const S = n(617);
+                (0, n(561).default)().then((() => (0, n(603).default)()));
+                const S = n(618);
                 return S.recordPotatoMode(), S.recordWebglSupport(), T
             }))
         }), {

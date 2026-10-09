@@ -5737,6 +5737,74 @@ lol-uikit-content-block[type=attention].mass-disenchant-attention-tooltip-contai
     width: 1px
 }
 
+.habanero-migration-tooltip .habanero-migration-tooltip-title,
+.loot-header-component .habanero-timer .reset-timer {
+    font-family: var(--font-display)
+}
+
+.habanero-migration-tooltip {
+    font-family: var(--font-body)
+}
+
+.habanero-migration-tooltip,
+.habanero-migration-tooltip .habanero-migration-tooltip-title,
+.loot-header-component .habanero-timer .reset-timer {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title {
+    text-transform: uppercase
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(el-gr),
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(ja-jp),
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(ko-kr),
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(th-th),
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(tr-tr),
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.habanero-migration-tooltip {
+    color: #a09b8c;
+    font-size: 12px;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.habanero-migration-tooltip:lang(ja-jp) {
+    font-size: 13px
+}
+
+.habanero-migration-tooltip:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.habanero-migration-tooltip {
+    font-weight: 400;
+    letter-spacing: .05em
+}
+
 .loot-header-component {
     align-content: center;
     justify-content: space-between;
@@ -5763,6 +5831,59 @@ lol-uikit-content-block[type=attention].mass-disenchant-attention-tooltip-contai
 
 .loot-header-component .currency-container-component+.currency-container-component {
     margin-left: 10px
+}
+
+.loot-header-component .habanero-timer {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    position: absolute;
+    right: 46px;
+    top: -2px
+}
+
+.loot-header-component .habanero-timer .reset-timer {
+    align-items: center;
+    box-sizing: border-box;
+    color: #f0e6d2;
+    display: flex;
+    font-weight: 700;
+    height: 28px;
+    letter-spacing: .075em;
+    line-height: 18px;
+    padding: 2px 8px;
+    text-transform: uppercase
+}
+
+.loot-header-component .habanero-timer .reset-timer.transparent-background {
+    background: #010a13
+}
+
+.loot-header-component .habanero-timer .reset-timer:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loot-header-component .habanero-timer .reset-timer:before {
+    background-color: #cdbe91;
+    background-size: 18px 18px;
+    flex-shrink: 0;
+    height: 18px;
+    margin: 0 6px 0 0;
+    width: 18px
+}
+
+.habanero-migration-tooltip {
+    padding: 10px 5px;
+    text-align: center;
+    width: 250px
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-title {
+    margin-bottom: 4px
+}
+
+.habanero-migration-tooltip .habanero-migration-tooltip-text {
+    white-space: pre-line
 }
 
 .shoppefront-mythic-essence-counter-root .shoppefront-mythic-essence-counter-text {

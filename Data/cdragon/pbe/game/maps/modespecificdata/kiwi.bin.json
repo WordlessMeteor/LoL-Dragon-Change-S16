@@ -104395,13 +104395,13 @@
                 {
                     "name": "OmnivampPerMissingPercentHP",
                     "values": [
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291
+                        0.0035000001080334187,
+                        0.0035000001080334187,
+                        0.0035000001080334187,
+                        0.0035000001080334187,
+                        0.0035000001080334187,
+                        0.0035000001080334187,
+                        0.0035000001080334187
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -399408,7 +399408,7 @@
                 "{3646cf34}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 350.0,
+                            "mStartValue": 200.0,
                             "mEndValue": 600.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
@@ -399428,8 +399428,8 @@
                 "{24319826}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 200.0,
-                            "mEndValue": 250.0,
+                            "mStartValue": 120.0,
+                            "mEndValue": 140.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
@@ -399896,7 +399896,7 @@
                 "{3646cf34}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 350.0,
+                            "mStartValue": 200.0,
                             "mEndValue": 600.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
@@ -399916,8 +399916,8 @@
                 "{24319826}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 200.0,
-                            "mEndValue": 250.0,
+                            "mStartValue": 120.0,
+                            "mEndValue": 140.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
@@ -399982,7 +399982,6 @@
             ],
             "{48201b0d}": 0.5,
             "mAmmoCountHiddenInUI": true,
-            "canCastWhileDisabled": true,
             "mCantCancelWhileWindingUp": true,
             "mUseChargeChanneling": true,
             "mCanMoveWhileChanneling": true,
@@ -454659,8 +454658,8 @@
                 "{6f6db7ed}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 35.0,
-                            "mEndValue": 50.0,
+                            "mStartValue": 20.0,
+                            "mEndValue": 80.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
@@ -454725,15 +454724,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
                 ],
-                "{0a3e0478}": 100.0,
+                "{0a3e0478}": 80.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1148411,17 +1148410,6 @@
         },
         "__type": "SpellObject"
     },
-    "{ad9e7e35}": {
-        "AugmentNameId": "Heavy_Metal",
-        "NameTra": "Kiwi_Heavy_Metal_Name",
-        "DescriptionTra": "Kiwi_Heavy_Metal_Description",
-        "AugmentTooltipTra": "Kiwi_Heavy_Metal_Tooltip",
-        "RootSpell": "{d53a63fd}",
-        "AugmentLargeIconPath": "assets/ux/cherry/augments/icons/adapt_large.tex",
-        "AugmentSmallIconPath": "assets/ux/cherry/augments/icons/adapt_small.tex",
-        "AugmentPlatformId": 3029,
-        "__type": "AugmentData"
-    },
     "{b2d9e618}": {
         "AugmentNameId": "NoManaNoProblem",
         "NameTra": "Kiwi_Augment_NoManaNoProblem_Name",
@@ -1149565,89 +1149553,6 @@
                     "__type": "TooltipInstanceSpell"
                 },
                 "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "{d53a63fd}": {
-        "ObjectName": "Augment_Heavy_Metal",
-        "objectPath": "{d53a63fd}",
-        "mScriptName": "Augment_Heavy_Metal",
-        "mSpell": {
-            "DataValues": [
-                {
-                    "name": "APConversionRate",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ADConversionRate",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AdditionalAmount",
-                    "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "mSpellCalculations": {
-                "{581cd96c}": {
-                    "mFormulaParts": [
-                        {
-                            "mStatFormula": 2,
-                            "mDataValue": "{931f8dbe}",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "BonusAP": {
-                    "mFormulaParts": [
-                        {
-                            "mStatFormula": 2,
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{e9f08620}": {
-                    "mFormulaParts": [
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "{30079922}",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
             },
             "__type": "SpellDataResource"
         },
@@ -1153229,7 +1153134,6 @@
             "Maps/ModeSpecificData/Augments/Upgrade_SunderedSky",
             "Maps/ModeSpecificData/Augments/Upgrade_Ravenous",
             "{2ee0fcd5}",
-            "{ad9e7e35}",
             "{652231a9}",
             "{29c88527}",
             "{6fe7d8a5}",
